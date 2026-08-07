@@ -7,7 +7,7 @@ main.py
 Description:
 Application entry point using the Query Engine,
 Noise Filter, Operational Event Filter, X collection,
-analysis, event extraction and SQLite event storage.
+analysis, event extraction, event correlation and SQLite storage.
 """
 
 from collectors.x_collector import XCollector
@@ -21,6 +21,7 @@ from analysis.event_extractor import EventExtractor
 from analysis.query_engine import QueryEngine
 from analysis.noise_filter import NoiseFilter
 from analysis.operational_event_filter import OperationalEventFilter
+from analysis.event_correlator import EventCorrelator
 
 from database.init_db import initialize_database
 from database.database import get_session
@@ -90,9 +91,14 @@ def analyze_post(
     )
 
 
-def print_event(event, saved):
+def print_event(
+    event,
+    saved,
+    correlation_result,
+):
     """
-    Prints a normalized event and database status.
+    Prints a normalized event, database status and
+    correlation information.
     """
 
     primary_location = event.get("primary_location")
@@ -139,6 +145,25 @@ def print_event(event, saved):
         f"{event.get('matched_phrases')}"
     )
 
+    if correlation_result:
+        matched_event = correlation_result.get("event") or {}
+
+        print("Correlation: MATCH")
+        print(
+            "Correlation score: "
+            f"{correlation_result.get('correlation_score')}"
+        )
+        print(
+            "Correlated source post: "
+            f"{matched_event.get('source_post_id')}"
+        )
+        print(
+            "Correlated event type: "
+            f"{matched_event.get('event_type')}"
+        )
+    else:
+        print("Correlation: NEW EVENT")
+
     print(f"Author: {event.get('author')}")
     print(f"Published: {event.get('published_at')}")
     print(f"Language: {event.get('language')}")
@@ -173,6 +198,7 @@ def main():
     query_engine = QueryEngine()
     noise_filter = NoiseFilter()
     operational_filter = OperationalEventFilter()
+    event_correlator = EventCorrelator()
     event_repository = EventRepository()
 
     session = get_session()
@@ -185,6 +211,7 @@ def main():
     )
 
     seen_post_ids = set()
+    analyzed_events = []
 
     total_posts_found = 0
     total_noise_filtered = 0
@@ -192,6 +219,8 @@ def main():
     total_operational_events = 0
     total_events_saved = 0
     total_events_existing = 0
+    total_correlated_events = 0
+    total_new_events = 0
 
     try:
         for query_definition in queries:
@@ -302,6 +331,18 @@ def main():
 
                 total_operational_events += 1
 
+                correlation_result = (
+                    event_correlator.find_match(
+                        new_event=event,
+                        existing_events=analyzed_events,
+                    )
+                )
+
+                if correlation_result:
+                    total_correlated_events += 1
+                else:
+                    total_new_events += 1
+
                 saved = event_repository.save_event(
                     session=session,
                     event=event,
@@ -315,7 +356,10 @@ def main():
                 print_event(
                     event=event,
                     saved=saved,
+                    correlation_result=correlation_result,
                 )
+
+                analyzed_events.append(event)
 
     finally:
         session.close()
@@ -347,6 +391,16 @@ def main():
     print(
         "Operational events analyzed: "
         f"{total_operational_events}"
+    )
+
+    print(
+        "New correlation groups: "
+        f"{total_new_events}"
+    )
+
+    print(
+        "Events correlated with existing groups: "
+        f"{total_correlated_events}"
     )
 
     print(
