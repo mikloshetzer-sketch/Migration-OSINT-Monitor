@@ -1,0 +1,97 @@
+name: Test Migration OSINT Dashboard
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "dashboard/**"
+      - "database/**"
+      - "requirements.txt"
+      - ".github/workflows/test-dashboard.yml"
+
+jobs:
+  test-dashboard:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Restore Migration OSINT database
+        uses: actions/cache/restore@v4
+        with:
+          path: database/migration_osint_monitor.db
+          key: migration-osint-db-${{ github.run_id }}
+          restore-keys: |
+            migration-osint-db-
+
+      - name: Show database status
+        run: |
+          if [ -f database/migration_osint_monitor.db ]; then
+            echo "Existing Migration OSINT database restored."
+            ls -lh database/migration_osint_monitor.db
+          else
+            echo "No cached database found."
+            echo "Dashboard will start with a new database."
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Initialize database
+        run: |
+          python -m database.init_db
+
+      - name: Start dashboard
+        run: |
+          nohup python -m dashboard.app > dashboard.log 2>&1 &
+          echo $! > dashboard.pid
+
+      - name: Wait for dashboard
+        run: |
+          for i in {1..20}; do
+            if curl --fail http://127.0.0.1:5000/health; then
+              echo ""
+              echo "Dashboard is running."
+              exit 0
+            fi
+
+            echo "Waiting for dashboard..."
+            sleep 2
+          done
+
+          echo "Dashboard did not start successfully."
+          cat dashboard.log
+          exit 1
+
+      - name: Test main dashboard page
+        run: |
+          curl --fail http://127.0.0.1:5000/ > dashboard-page.html
+          echo "Main dashboard page rendered successfully."
+
+      - name: Show dashboard log
+        if: always()
+        run: |
+          echo "==================================="
+          echo "DASHBOARD LOG"
+          echo "==================================="
+
+          if [ -f dashboard.log ]; then
+            cat dashboard.log
+          else
+            echo "No dashboard log found."
+          fi
+
+      - name: Stop dashboard
+        if: always()
+        run: |
+          if [ -f dashboard.pid ]; then
+            kill "$(cat dashboard.pid)" || true
+          fi
