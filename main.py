@@ -5,7 +5,8 @@ File:
 main.py
 
 Description:
-Application entry point with X API collection and basic analysis pipeline.
+Application entry point with X API collection, analysis,
+and normalized event extraction.
 """
 
 from collectors.x_collector import XCollector
@@ -14,6 +15,7 @@ from analysis.classifier import SignalClassifier
 from analysis.location_extractor import LocationExtractor
 from analysis.time_extractor import TimeExtractor
 from analysis.scoring import RelevanceScorer
+from analysis.event_extractor import EventExtractor
 from database.init_db import initialize_database
 
 
@@ -30,6 +32,7 @@ def main():
     location_extractor = LocationExtractor()
     time_extractor = TimeExtractor()
     scorer = RelevanceScorer()
+    event_extractor = EventExtractor()
 
     query = (
         '(migration OR migrant OR "irregular migration" OR crossing) '
@@ -53,7 +56,11 @@ def main():
         )
 
         classification = classifier.classify(text)
-        matched_signals = classification.get("matched_signals", [])
+
+        matched_signals = classification.get(
+            "matched_signals",
+            [],
+        )
 
         locations = location_extractor.extract_locations(text)
 
@@ -81,35 +88,62 @@ def main():
             ),
         )
 
-        location_names = [
-            location.get("name")
-            for location in locations
-        ]
+        event = event_extractor.extract_event(
+            post=post,
+            classification=classification,
+            locations=locations,
+            time_result=time_result,
+            score_result=score_result,
+        )
+
+        primary_location = event.get("primary_location")
 
         print("-----------------------------------")
-        print(f"Author: {post.get('author')}")
-        print(f"Published: {post.get('published_at')}")
-        print(f"Language: {post.get('language')}")
-        print(f"Signal type: {classification.get('signal_type')}")
-        print(f"Matched signals: {matched_signals}")
-        print(f"Score: {score_result.get('score')}")
-        print(f"Level: {score_result.get('level')}")
-        print(f"Locations: {location_names}")
+        print("EVENT")
+        print(f"Type: {event.get('event_type')}")
+        print(f"Confidence: {event.get('event_confidence')}")
+        print(f"Score: {event.get('relevance_score')}")
+        print(f"Level: {event.get('relevance_level')}")
 
-        if time_result:
+        if primary_location:
             print(
-                "Event time: "
-                f"{time_result.get('event_time_normalized')}"
+                "Primary location: "
+                f"{primary_location.get('name')}, "
+                f"{primary_location.get('country')}"
             )
             print(
-                "Time confidence: "
-                f"{time_result.get('event_time_confidence')}"
+                "Coordinates: "
+                f"{primary_location.get('latitude')}, "
+                f"{primary_location.get('longitude')}"
             )
         else:
-            print("Event time: None")
+            print("Primary location: None")
 
-        print(f"Text: {text}")
-        print(f"URL: {post.get('url')}")
+        print(
+            f"Event time: "
+            f"{event.get('event_time_normalized')}"
+        )
+
+        print(
+            f"Time confidence: "
+            f"{event.get('event_time_confidence')}"
+        )
+
+        print(
+            f"Matched signals: "
+            f"{event.get('matched_signals')}"
+        )
+
+        print(
+            f"Matched phrases: "
+            f"{event.get('matched_phrases')}"
+        )
+
+        print(f"Author: {event.get('author')}")
+        print(f"Published: {event.get('published_at')}")
+        print(f"Language: {event.get('language')}")
+        print(f"Text: {event.get('text')}")
+        print(f"URL: {event.get('source_url')}")
 
     print("-----------------------------------")
     print("System run completed successfully.")
