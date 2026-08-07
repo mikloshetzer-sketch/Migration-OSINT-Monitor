@@ -56,13 +56,9 @@ jobs:
         run: |
           python main.py
 
-      # ---------------------------------------------------
-      # DASHBOARD DATA EXPORT
-      # ---------------------------------------------------
-
       - name: Export dashboard data
         run: |
-          python dashboard/export_dashboard_data.py
+          python -m dashboard.export_dashboard_data
 
       - name: Verify dashboard JSON
         run: |
@@ -148,10 +144,6 @@ jobs:
             exit 1
           fi
 
-      # ---------------------------------------------------
-      # COMMIT DASHBOARD DATA TO MAIN
-      # ---------------------------------------------------
-
       - name: Publish dashboard data
         run: |
           git config user.name "github-actions[bot]"
@@ -166,10 +158,6 @@ jobs:
             git push origin HEAD:main
           fi
 
-      # ---------------------------------------------------
-      # DATABASE VERIFICATION
-      # ---------------------------------------------------
-
       - name: Verify database after run
         if: always()
         run: |
@@ -179,10 +167,6 @@ jobs:
           else
             echo "WARNING: migration_osint_monitor.db was not found."
           fi
-
-      # ---------------------------------------------------
-      # DATABASE PERSISTENCE
-      # ---------------------------------------------------
 
       - name: Save Migration OSINT database
         if: always()
