@@ -1,14 +1,40 @@
 {
-  "updated_at": "2026-08-07 21:23:39",
+  "updated_at": "2026-08-07 21:47:27",
   "kpis": {
-    "operational_events": 19,
-    "new_events": 11,
-    "correlated_events": 4,
-    "active_event_groups": 11,
+    "operational_events": 21,
+    "new_events": 12,
+    "correlated_events": 5,
+    "active_event_groups": 12,
     "sources": 1,
     "regions": 2
   },
   "live_events": [
+    {
+      "id": 20,
+      "event_group_id": 3,
+      "published_at": "2026-08-07 21:36:56",
+      "event_type": "SMUGGLING_ACTIVITY",
+      "location": "-",
+      "confidence": 0.5,
+      "source": "X",
+      "author": "SUR_English",
+      "text": "Police break up major Mediterranean people smuggling ring as 78 arrested. Two-way network smuggled 2,000 migrants to Alicante and shipped synthetic drugs to Algeria. https://t.co/qkZJxGMbfX",
+      "url": "https://x.com/SUR_English/status/2085842652440691072",
+      "correlation_score": 0.79
+    },
+    {
+      "id": 21,
+      "event_group_id": 12,
+      "published_at": "2026-08-07 21:24:16",
+      "event_type": "SMUGGLING_ACTIVITY",
+      "location": "-",
+      "confidence": 0.5,
+      "source": "X",
+      "author": "LazyNevarine",
+      "text": "i wouldn't be surprised if in 10-20 years we have to drone strike churches in south america for being migrant smuggling and drug running operations",
+      "url": "https://x.com/LazyNevarine/status/2085839465151353247",
+      "correlation_score": null
+    },
     {
       "id": 19,
       "event_group_id": 11,
@@ -242,19 +268,6 @@
       "text": "That's more than France does. They just facilitate the launching of boats to the UK.\n\nSpanish police dismantle major Mediterranean migrant and drugs smuggling network https://t.co/YpwDzUvaim",
       "url": "https://x.com/EmmCarr5561/status/2085718143310221317",
       "correlation_score": null
-    },
-    {
-      "id": 3,
-      "event_group_id": 3,
-      "published_at": "2026-08-07 12:47:59",
-      "event_type": "SMUGGLING_ACTIVITY",
-      "location": "-",
-      "confidence": 0.5,
-      "source": "X",
-      "author": "WorldwideNNX",
-      "text": "SPAIN-LED OPERATION DISMANTLES MEDITERRANEAN SMUGGLING NETWORK, ARRESTS 78\n\nAn international police force led by Spain says it has taken down a major criminal network that was involved in drug, weapons, and trafficking migrants rugs and weapons across the Western Mediterranean,",
-      "url": "https://x.com/WorldwideNNX/status/2085709540671078765",
-      "correlation_score": null
     }
   ],
   "event_groups": [
@@ -266,8 +279,8 @@
       "primary_location": "-",
       "country": "-",
       "first_seen": "2026-08-07 12:47:59",
-      "last_seen": "2026-08-07 16:21:33",
-      "source_count": 3,
+      "last_seen": "2026-08-07 21:36:56",
+      "source_count": 4,
       "source_types": [
         "X"
       ],
@@ -308,6 +321,23 @@
       "status": "ACTIVE",
       "confidence": 0.5,
       "representative_text": "🇪🇸🚨 BREAKING NEWS: Spanish police have dismantled one of the Mediterranean's largest migrant smuggling networks, which charged up to €12,000 per person for the journey. The gang is believed to have carried out at least 64 operations, smuggling over 2,000 migrants into Spain and https://t.co/jlzb4aqkO0"
+    },
+    {
+      "id": 12,
+      "event_type": "SMUGGLING_ACTIVITY",
+      "title": "SMUGGLING_ACTIVITY - AMERICAS",
+      "primary_region": "AMERICAS",
+      "primary_location": "-",
+      "country": "-",
+      "first_seen": "2026-08-07 21:24:16",
+      "last_seen": "2026-08-07 21:24:16",
+      "source_count": 1,
+      "source_types": [
+        "X"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.5,
+      "representative_text": "i wouldn't be surprised if in 10-20 years we have to drone strike churches in south america for being migrant smuggling and drug running operations"
     },
     {
       "id": 11,
@@ -410,23 +440,6 @@
       "status": "ACTIVE",
       "confidence": 0.5,
       "representative_text": "Spanish-led police raid smashes a vast Mediterranean smuggling network, arresting 78 #migration\nhttps://t.co/KZFf2EhgFY"
-    },
-    {
-      "id": 6,
-      "event_type": "GENERAL_DISCUSSION",
-      "title": "GENERAL_DISCUSSION",
-      "primary_region": "GLOBAL",
-      "primary_location": "-",
-      "country": "-",
-      "first_seen": "2026-08-07 16:14:34",
-      "last_seen": "2026-08-07 16:14:34",
-      "source_count": 1,
-      "source_types": [
-        "X"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.25,
-      "representative_text": "Think about how absurd this story is and why @camiloreports is even running with it.\n\nThe migrant arrived as a tourist using a Spanish passport while living in Venezuela, then filed for asylum in the U.S. If she was genuinely being persecuted in Venezuela, why wouldn’t she seek https://t.co/oOE5C71FYB"
     }
   ],
   "region_activity": [
@@ -440,42 +453,42 @@
     },
     {
       "region": "AMERICAS",
-      "count": 1
+      "count": 2
     }
   ],
   "source_activity": [
     {
       "source": "X",
-      "count": 19
+      "count": 21
     }
   ],
   "correlation": {
-    "total_posts": 19,
+    "total_posts": 21,
     "filtered_posts": 0,
-    "operational_events": 19,
-    "correlated_sources": 4,
-    "grouped_sources": 15,
-    "event_groups": 11,
+    "operational_events": 21,
+    "correlated_sources": 5,
+    "grouped_sources": 17,
+    "event_groups": 12,
     "filtering_efficiency": 0.0,
     "operational_rate": 100.0,
-    "correlation_rate": 21.05,
-    "grouping_rate": 57.89,
-    "multi_source_rate": 26.67,
-    "conversion_rate": 57.89
+    "correlation_rate": 23.81,
+    "grouping_rate": 57.14,
+    "multi_source_rate": 29.41,
+    "conversion_rate": 57.14
   },
   "operational_assessment": {
-    "operational_events_24h": 19,
-    "correlated_events_24h": 4,
-    "active_event_groups": 11,
+    "operational_events_24h": 21,
+    "correlated_events_24h": 5,
+    "active_event_groups": 12,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "dominant_event_type": "SMUGGLING_ACTIVITY",
     "dominant_source": "X",
-    "average_confidence": 0.514,
+    "average_confidence": 0.513,
     "confidence_level": "MEDIUM",
-    "correlation_rate": 21.05,
+    "correlation_rate": 23.81,
     "activity_level": "ELEVATED",
     "system_health": "ELEVATED",
-    "summary": "Az elmúlt 24 órában a rendszer 19 operatív migrációs eseményt azonosított, amelyek közül 4 esemény korábbi vagy párhuzamos forrással korrelált. Jelenleg 11 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns eseménytípus: Smuggling Activity. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.51. A jelenlegi aktivitási szint: ELEVATED."
+    "summary": "Az elmúlt 24 órában a rendszer 21 operatív migrációs eseményt azonosított, amelyek közül 5 esemény korábbi vagy párhuzamos forrással korrelált. Jelenleg 12 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns eseménytípus: Smuggling Activity. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.51. A jelenlegi aktivitási szint: ELEVATED."
   },
   "high_confidence_events": [
     {
