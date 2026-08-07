@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Migration OSINT Dashboard – globális migrációs események, operatív jelzések és eseménykorreláció elemzői áttekintése."
+    >
+
+    <title>
+        Migration OSINT Dashboard
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"
+        defer
+    ></script>
+
+    <script
+        src="script.js"
+        defer
+    ></script>
+</head>
+
+
+<body>
+
+    <!-- =========================================================
+         HEADER
+         ========================================================= -->
+
+    <header class="dashboard-header">
+
+        <div class="page-container">
+
+            <div class="header-layout">
+
+                <div class="header-copy">
+
+                    <div class="brand-label">
+                        TÖRÉSVONALAK.BLOG
+                    </div>
+
+                    <h1>
+                        Migration OSINT Dashboard
+                    </h1>
+
+                    <p class="header-description">
+                        Globális migrációs események,
+                        operatív mozgások, határhelyzetek,
+                        embercsempészeti aktivitás és
+                        többforrású eseménykorreláció
+                        elemzői áttekintése.
+                    </p>
+
+                </div>
+
+
+                <div class="header-controls">
+
+                    <div class="header-buttons">
+
+                        <button
+                            class="header-button secondary"
+                            id="refreshButton"
+                            type="button"
+                        >
+                            Adatok frissítése
+                        </button>
+
+                        <a
+                            class="header-button primary"
+                            href="#event-groups"
+                        >
+                            Elemző nézet
+                        </a>
+
+                    </div>
+
+
+                    <div class="update-meta">
+
+                        <div class="update-time">
+
+                            <span class="meta-label">
+                                Frissítés / Updated
+                            </span>
+
+                            <strong id="updatedAt">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div
+                            class="system-status"
+                            id="systemStatus"
+                        >
+                            <span class="status-dot"></span>
+
+                            OSINT LIVE
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         MAIN
+         ========================================================= -->
+
+    <main>
+
+        <div class="page-container">
+
+
+            <!-- =================================================
+                 SITUATION OVERVIEW
+                 ================================================= -->
+
+            <section class="situation-panel">
+
+                <div class="situation-content">
+
+                    <div class="section-kicker">
+                        Operational Migration Intelligence Overview
+                    </div>
+
+                    <h2>
+                        Migrációs helyzetkép
+                    </h2>
+
+                    <p>
+                        A dashboard a Migration OSINT Monitor által
+                        gyűjtött és operatívnak minősített
+                        közösségimédia-bejegyzésekből,
+                        korrelált eseményekből és tartós
+                        eseménycsoportokból készít gyors
+                        elemzői áttekintést.
+                    </p>
+
+                </div>
+
+
+                <div class="situation-meta">
+
+                    <span class="meta-label dark">
+                        Adatforrás
+                    </span>
+
+                    <strong>
+                        Migration OSINT Monitor
+                    </strong>
+
+                    <span class="situation-small">
+                        automatikus eseményfeldolgozás
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 KPI STRIP
+                 ================================================= -->
+
+            <section class="kpi-strip">
+
+
+                <article class="kpi-card kpi-blue">
+
+                    <div
+                        class="kpi-value"
+                        id="kpiOperationalEvents"
+                    >
+                        —
+                    </div>
+
+                    <div class="kpi-label">
+                        Operational Events
+                    </div>
+
+                    <div class="kpi-description">
+                        elmúlt 24 óra
+                    </div>
+
+                </article>
+
+
+                <article class="kpi-card kpi-green">
+
+                    <div
+                        class="kpi-value"
+                        id="kpiNewEvents"
+                    >
+                        —
+                    </div>
+
+                    <div class="kpi-label">
+                        New Events
+                    </div>
+
+                    <div class="kpi-description">
+                        új eseményforrás
+                    </div>
+
+                </article>
+
+
+                <article class="kpi-card kpi-purple">
+
+                    <div
+                        class="kpi-value"
+                        id="kpiCorrelatedEvents"
+                    >
+                        —
+                    </div>
+
+                    <div class="kpi-label">
+                        Correlated Events
+                    </div>
+
+                    <div class="kpi-description">
+                        korrelált esemény
+                    </div>
+
+                </article>
+
+
+                <article class="kpi-card kpi-orange">
+
+                    <div
+                        class="kpi-value"
+                        id="kpiActiveEventGroups"
+                    >
+                        —
+                    </div>
+
+                    <div class="kpi-label">
+                        Active Event Groups
+                    </div>
+
+                    <div class="kpi-description">
+                        aktív eseménycsoport
+                    </div>
+
+                </article>
+
+
+                <article class="kpi-card kpi-gold">
+
+                    <div
+                        class="kpi-value"
+                        id="kpiSources"
+                    >
+                        —
+                    </div>
+
+                    <div class="kpi-label">
+                        Sources
+                    </div>
+
+                    <div class="kpi-description">
+                        aktív forrástípus
+                    </div>
+
+                </article>
+
+
+                <article class="kpi-card kpi-red">
+
+                    <div
+                        class="kpi-value"
+                        id="kpiRegions"
+                    >
+                        —
+                    </div>
+
+                    <div class="kpi-label">
+                        Regions
+                    </div>
+
+                    <div class="kpi-description">
+                        azonosított régió
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- =================================================
+                 LIVE EVENTS + EVENT GROUPS
+                 ================================================= -->
+
+            <section class="dashboard-grid two-columns">
+
+
+                <!-- LIVE EVENT FEED -->
+
+                <article class="dashboard-panel accent-blue">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <div class="panel-kicker">
+                                REAL-TIME EVENT MONITORING
+                            </div>
+
+                            <h3>
+                                Live Event Feed
+                            </h3>
+
+                            <p>
+                                Legfrissebb operatív események
+                            </p>
+
+                        </div>
+
+
+                        <a
+                            class="panel-action"
+                            href="#high-confidence"
+                        >
+                            Kiemelt események
+                        </a>
+
+                    </div>
+
+
+                    <div class="table-container">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        ID
+                                    </th>
+
+                                    <th>
+                                        Időpont
+                                    </th>
+
+                                    <th>
+                                        Eseménytípus
+                                    </th>
+
+                                    <th>
+                                        Helyszín
+                                    </th>
+
+                                    <th>
+                                        Konfidencia
+                                    </th>
+
+                                    <th>
+                                        Forrás
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="liveEventsTable">
+
+                                <tr>
+
+                                    <td
+                                        colspan="6"
+                                        class="loading-cell"
+                                    >
+                                        Adatok betöltése...
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </article>
+
+
+                <!-- EVENT GROUPS -->
+
+                <article
+                    class="dashboard-panel accent-blue"
+                    id="event-groups"
+                >
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <div class="panel-kicker">
+                                EVENT CORRELATION
+                            </div>
+
+                            <h3>
+                                Top Event Groups
+                            </h3>
+
+                            <p>
+                                Legaktívabb korrelált
+                                eseménycsoportok
+                            </p>
+
+                        </div>
+
+
+                        <div class="panel-meta-note">
+                            Rendezés a források száma
+                            és az utolsó észlelés alapján.
+                        </div>
+
+                    </div>
+
+
+                    <div class="table-container">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Group ID
+                                    </th>
+
+                                    <th>
+                                        Eseménytípus
+                                    </th>
+
+                                    <th>
+                                        Régió
+                                    </th>
+
+                                    <th>
+                                        Utolsó látás
+                                    </th>
+
+                                    <th>
+                                        Források
+                                    </th>
+
+                                    <th>
+                                        Konfidencia
+                                    </th>
+
+                                    <th>
+                                        Állapot
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="eventGroupsTable">
+
+                                <tr>
+
+                                    <td
+                                        colspan="7"
+                                        class="loading-cell"
+                                    >
+                                        Adatok betöltése...
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- =================================================
+                 ANALYTICS
+                 ================================================= -->
+
+            <section class="dashboard-grid three-columns">
+
+
+                <!-- REGION ACTIVITY -->
+
+                <article class="dashboard-panel accent-green">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <div class="panel-kicker">
+                                GEOGRAPHIC DISTRIBUTION
+                            </div>
+
+                            <h3>
+                                Region Activity
+                            </h3>
+
+                            <p>
+                                Eseménycsoportok régió szerint
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="chart-wrapper">
+
+                        <canvas id="regionChart"></canvas>
+
+                    </div>
+
+
+                    <div
+                        class="metric-list"
+                        id="regionActivityList"
+                    >
+                    </div>
+
+                </article>
+
+
+                <!-- CORRELATION PERFORMANCE -->
+
+                <article class="dashboard-panel accent-purple">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <div class="panel-kicker">
+                                EVENT PROCESSING FUNNEL
+                            </div>
+
+                            <h3>
+                                Correlation Performance
+                            </h3>
+
+                            <p>
+                                Korrelációs teljesítmény
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="correlation-funnel">
+
+
+                        <div class="funnel-row">
+
+                            <div class="funnel-visual">
+
+                                <div class="funnel-bar funnel-posts">
+                                    Gyűjtött bejegyzések
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="funnel-number"
+                                id="correlationTotalPosts"
+                            >
+                                —
+                            </div>
+
+                        </div>
+
+
+                        <div class="funnel-row">
+
+                            <div class="funnel-visual">
+
+                                <div class="funnel-bar funnel-operational">
+                                    Operatív események
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="funnel-number"
+                                id="correlationOperationalEvents"
+                            >
+                                —
+                            </div>
+
+                        </div>
+
+
+                        <div class="funnel-row">
+
+                            <div class="funnel-visual">
+
+                                <div class="funnel-bar funnel-correlated">
+                                    Korrelált források
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="funnel-number"
+                                id="correlationCorrelatedSources"
+                            >
+                                —
+                            </div>
+
+                        </div>
+
+
+                        <div class="funnel-row">
+
+                            <div class="funnel-visual">
+
+                                <div class="funnel-bar funnel-groups">
+                                    Eseménycsoportok
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="funnel-number"
+                                id="correlationEventGroups"
+                            >
+                                —
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="analytics-insight">
+
+                        <span>
+                            EventGroup / operatív esemény arány
+                        </span>
+
+                        <strong id="conversionRate">
+                            —
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SOURCE ACTIVITY -->
+
+                <article class="dashboard-panel accent-orange">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <div class="panel-kicker">
+                                SOURCE DISTRIBUTION
+                            </div>
+
+                            <h3>
+                                Source Activity
+                            </h3>
+
+                            <p>
+                                Operatív események
+                                forrástípus szerint
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="chart-wrapper">
+
+                        <canvas id="sourceChart"></canvas>
+
+                    </div>
+
+
+                    <div
+                        class="metric-list"
+                        id="sourceActivityList"
+                    >
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- =================================================
+                 HIGH CONFIDENCE EVENTS
+                 ================================================= -->
+
+            <section
+                class="dashboard-panel accent-blue"
+                id="high-confidence"
+            >
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <div class="panel-kicker">
+                            PRIORITY EVENT REVIEW
+                        </div>
+
+                        <h3>
+                            High Confidence Events
+                        </h3>
+
+                        <p>
+                            Magasabb konfidenciájú
+                            eseménycsoportok
+                        </p>
+
+                    </div>
+
+
+                    <div class="panel-meta-note">
+
+                        Jelenlegi küszöb
+
+                        <strong>
+                            ≥ 0.75
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    ID
+                                </th>
+
+                                <th>
+                                    Utolsó látás
+                                </th>
+
+                                <th>
+                                    Eseménytípus
+                                </th>
+
+                                <th>
+                                    Helyszín
+                                </th>
+
+                                <th>
+                                    Ország
+                                </th>
+
+                                <th>
+                                    Régió
+                                </th>
+
+                                <th>
+                                    Konfidencia
+                                </th>
+
+                                <th>
+                                    Források
+                                </th>
+
+                                <th>
+                                    Szövegrészlet
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="highConfidenceTable">
+
+                            <tr>
+
+                                <td
+                                    colspan="9"
+                                    class="loading-cell"
+                                >
+                                    Adatok betöltése...
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <div class="analyst-note">
+
+                    <strong>
+                        Elemzői megjegyzés:
+                    </strong>
+
+                    A konfidencia jelenleg az automatikus
+                    eseménykinyerés eredményét jelzi.
+                    A későbbi forrás-megbízhatósági réteg
+                    ezt többforrású értékeléssel egészítheti ki.
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 DATA / METHODOLOGY SUMMARY
+                 ================================================= -->
+
+            <section class="methodology-panel">
+
+                <div class="methodology-block">
+
+                    <div class="methodology-title">
+                        Mit mutat?
+                    </div>
+
+                    <p>
+                        A rendszer által operatívnak minősített
+                        migrációs események aktivitását,
+                        eloszlását és korrelációját.
+                    </p>
+
+                </div>
+
+
+                <div class="methodology-block">
+
+                    <div class="methodology-title">
+                        Hogyan értelmezzük?
+                    </div>
+
+                    <p>
+                        Egy EventGroup több, ugyanahhoz a
+                        feltételezett valós eseményhez
+                        kapcsolódó forrást fog össze.
+                    </p>
+
+                </div>
+
+
+                <div class="methodology-block">
+
+                    <div class="methodology-title">
+                        Mire jó?
+                    </div>
+
+                    <p>
+                        Gyors helyzetértékelést és a
+                        több forrásból erősödő operatív
+                        jelzések azonosítását támogatja.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 METHODOLOGY DISCLAIMER
+                 ================================================= -->
+
+            <footer class="dashboard-footer">
+
+                <strong>
+                    Módszertani korlát / Interpretation limit:
+                </strong>
+
+                A dashboard automatikusan gyűjtött,
+                osztályozott és korrelált nyílt forrású
+                bejegyzéseket jelenít meg. A közösségi
+                médiában közzétett információ önmagában
+                nem tekintendő megerősített ténynek.
+                A rendszer által meghatározott eseménytípus,
+                régió és konfidencia algoritmikus értékelés
+                eredménye, amely elemzői ellenőrzést igényelhet.
+
+            </footer>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================================================
+         GLOBAL LOADING / ERROR MESSAGE
+         ========================================================= -->
+
+    <div
+        class="global-message hidden"
+        id="globalMessage"
+    >
+    </div>
+
+</body>
+
+</html>
