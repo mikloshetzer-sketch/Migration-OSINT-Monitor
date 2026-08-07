@@ -6,10 +6,12 @@ main.py
 
 Description:
 Application entry point using the Query Engine,
-Noise Filter, X collection, analysis and event extraction pipeline.
+Noise Filter, Operational Event Filter, X collection,
+analysis and event extraction pipeline.
 """
 
 from collectors.x_collector import XCollector
+
 from analysis.keyword_filter import KeywordFilter
 from analysis.classifier import SignalClassifier
 from analysis.location_extractor import LocationExtractor
@@ -18,6 +20,8 @@ from analysis.scoring import RelevanceScorer
 from analysis.event_extractor import EventExtractor
 from analysis.query_engine import QueryEngine
 from analysis.noise_filter import NoiseFilter
+from analysis.operational_event_filter import OperationalEventFilter
+
 from database.init_db import initialize_database
 
 
@@ -30,6 +34,10 @@ def analyze_post(
     scorer,
     event_extractor,
 ):
+    """
+    Runs the analytical pipeline for a single post.
+    """
+
     text = post.get("text", "")
 
     has_migration_keyword = (
@@ -57,6 +65,8 @@ def analyze_post(
         has_movement_signal=(
             "ROUTE_INFORMATION" in matched_signals
             or "DEPARTURE_SIGNAL" in matched_signals
+            or "BORDER_CROSSING" in matched_signals
+            or "ARRIVAL" in matched_signals
         ),
         has_advice_signal=(
             "TRAVEL_ADVICE" in matched_signals
@@ -79,6 +89,10 @@ def analyze_post(
 
 
 def print_event(event):
+    """
+    Prints a normalized event to the workflow log.
+    """
+
     primary_location = event.get("primary_location")
 
     print("-----------------------------------")
@@ -94,6 +108,7 @@ def print_event(event):
             f"{primary_location.get('name')}, "
             f"{primary_location.get('country')}"
         )
+
         print(
             "Coordinates: "
             f"{primary_location.get('latitude')}, "
@@ -103,22 +118,22 @@ def print_event(event):
         print("Primary location: None")
 
     print(
-        f"Event time: "
+        "Event time: "
         f"{event.get('event_time_normalized')}"
     )
 
     print(
-        f"Time confidence: "
+        "Time confidence: "
         f"{event.get('event_time_confidence')}"
     )
 
     print(
-        f"Matched signals: "
+        "Matched signals: "
         f"{event.get('matched_signals')}"
     )
 
     print(
-        f"Matched phrases: "
+        "Matched phrases: "
         f"{event.get('matched_phrases')}"
     )
 
@@ -130,6 +145,10 @@ def print_event(event):
 
 
 def main():
+    """
+    Main execution flow.
+    """
+
     print("===================================")
     print(" Migration OSINT Monitor")
     print("===================================")
@@ -146,6 +165,7 @@ def main():
     event_extractor = EventExtractor()
     query_engine = QueryEngine()
     noise_filter = NoiseFilter()
+    operational_filter = OperationalEventFilter()
 
     queries = query_engine.load_queries()
 
@@ -158,7 +178,8 @@ def main():
 
     total_posts_found = 0
     total_noise_filtered = 0
-    total_events_analyzed = 0
+    total_non_operational_filtered = 0
+    total_operational_events = 0
 
     for query_definition in queries:
         query_id = query_definition.get("id")
@@ -205,16 +226,56 @@ def main():
                 print("-----------------------------------")
                 print("NOISE FILTERED")
                 print(
-                    f"Categories: "
+                    "Categories: "
                     f"{noise_result.get('noise_categories')}"
                 )
                 print(
-                    f"Matched phrases: "
+                    "Matched phrases: "
                     f"{noise_result.get('matched_noise_phrases')}"
                 )
                 print(f"Text: {text}")
 
                 continue
+
+            operational_result = (
+                operational_filter.analyze(text)
+            )
+
+            if not operational_result.get("is_operational"):
+                total_non_operational_filtered += 1
+
+                print("-----------------------------------")
+                print("NON-OPERATIONAL FILTERED")
+                print(
+                    "Non-operational categories: "
+                    f"{operational_result.get('non_operational_categories')}"
+                )
+                print(
+                    "Matched non-operational phrases: "
+                    f"{operational_result.get('matched_non_operational_phrases')}"
+                )
+                print(
+                    "Operational confidence: "
+                    f"{operational_result.get('confidence')}"
+                )
+                print(f"Text: {text}")
+
+                continue
+
+            print("-----------------------------------")
+            print("OPERATIONAL SIGNAL")
+            print(
+                "Operational categories: "
+                f"{operational_result.get('operational_categories')}"
+            )
+            print(
+                "Matched operational phrases: "
+                f"{operational_result.get('matched_operational_phrases')}"
+            )
+            print(
+                "Operational confidence: "
+                f"{operational_result.get('confidence')}"
+            )
 
             event = analyze_post(
                 post=post,
@@ -226,29 +287,39 @@ def main():
                 event_extractor=event_extractor,
             )
 
-            total_events_analyzed += 1
+            total_operational_events += 1
 
             print_event(event)
 
     print("===================================")
     print("RUN SUMMARY")
     print("===================================")
+
     print(
-        f"Posts returned by queries: "
+        "Posts returned by queries: "
         f"{total_posts_found}"
     )
+
     print(
-        f"Unique posts collected: "
+        "Unique posts collected: "
         f"{len(seen_post_ids)}"
     )
+
     print(
-        f"Noise filtered: "
+        "Noise filtered: "
         f"{total_noise_filtered}"
     )
+
     print(
-        f"Posts analyzed as events: "
-        f"{total_events_analyzed}"
+        "Non-operational filtered: "
+        f"{total_non_operational_filtered}"
     )
+
+    print(
+        "Operational events analyzed: "
+        f"{total_operational_events}"
+    )
+
     print("System run completed successfully.")
 
 
