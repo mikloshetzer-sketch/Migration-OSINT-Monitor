@@ -1,0 +1,1097 @@
+{
+  "version": "1.0",
+
+  "description": "Configuration and indicator knowledge base for migration-related influence and early-warning signal detection.",
+
+  "settings": {
+    "minimum_score": 5,
+    "medium_score": 8,
+    "high_score": 12,
+    "critical_score": 18,
+    "require_migration_context": true,
+    "allow_high_value_override": true,
+    "max_confidence": 0.99
+  },
+
+  "migration_context": {
+    "weight": 1,
+    "terms": [
+      "migrant",
+      "migrants",
+      "migration",
+      "migrant movement",
+      "migration movement",
+      "irregular migration",
+      "illegal migration",
+      "undocumented migration",
+      "undocumented migrant",
+      "undocumented migrants",
+      "refugee",
+      "refugees",
+      "asylum",
+      "asylum seeker",
+      "asylum seekers",
+      "border crossing",
+      "border crossings",
+      "irregular crossing",
+      "illegal crossing",
+      "small boat migrants",
+      "boat migrants",
+      "migrant boat",
+      "migrant boats",
+      "migrant route",
+      "migration route",
+      "refugee route",
+      "human smuggling",
+      "migrant smuggling",
+      "people smuggling",
+      "smuggling network",
+      "migration corridor",
+      "migration flow",
+      "migration flows",
+
+      "migrante",
+      "migrantes",
+      "migración",
+      "inmigración",
+      "refugiado",
+      "refugiados",
+      "asilo",
+      "solicitante de asilo",
+      "solicitantes de asilo",
+      "migración irregular",
+      "migración ilegal",
+
+      "réfugié",
+      "réfugiés",
+      "asile",
+      "demandeur d'asile",
+      "demandeurs d'asile",
+      "migration irrégulière",
+      "immigration clandestine",
+
+      "migrante irregolare",
+      "migranti irregolari",
+      "rifugiato",
+      "rifugiati",
+      "richiedente asilo",
+      "richiedenti asilo",
+      "immigrazione irregolare"
+    ]
+  },
+
+  "indicator_groups": {
+    "movement": {
+      "weight": 2,
+      "terms": [
+        "moving toward",
+        "moving towards",
+        "heading toward",
+        "heading towards",
+        "travelling toward",
+        "traveling toward",
+        "on the way to",
+        "approaching the border",
+        "approaching the coast",
+        "moving to the coast",
+        "moving to the border",
+        "departing",
+        "departure",
+        "leaving",
+        "set off",
+        "setting off",
+        "crossing",
+        "attempting to cross",
+        "trying to cross",
+        "entering",
+        "arriving",
+        "arrival",
+        "landed",
+        "reached the coast",
+        "reached the border",
+
+        "dirigiéndose a",
+        "hacia la frontera",
+        "hacia la costa",
+        "cruzando",
+        "intentando cruzar",
+        "salida",
+        "saliendo",
+        "llegando",
+
+        "vers la frontière",
+        "vers la côte",
+        "en route vers",
+        "traversée",
+        "tentative de traversée",
+        "départ",
+        "arrivée",
+
+        "verso il confine",
+        "verso la costa",
+        "attraversamento",
+        "tentativo di attraversamento",
+        "partenza",
+        "arrivo"
+      ]
+    },
+
+    "mass_movement": {
+      "weight": 3,
+      "terms": [
+        "hundreds of migrants",
+        "thousands of migrants",
+        "large group of migrants",
+        "large groups of migrants",
+        "mass movement",
+        "mass arrival",
+        "mass crossing",
+        "large numbers",
+        "crowd of migrants",
+        "crowds of migrants",
+        "migrants gathering",
+        "migrants assembling",
+        "migrants waiting",
+        "migrants gathering near",
+        "large gathering",
+        "growing crowd",
+        "surge of migrants",
+        "wave of migrants",
+        "migration surge",
+        "influx of migrants",
+
+        "cientos de migrantes",
+        "miles de migrantes",
+        "grupo numeroso de migrantes",
+        "migrantes reunidos",
+        "oleada de migrantes",
+
+        "des centaines de migrants",
+        "des milliers de migrants",
+        "groupe important de migrants",
+        "migrants rassemblés",
+        "afflux de migrants",
+
+        "centinaia di migranti",
+        "migliaia di migranti",
+        "grande gruppo di migranti",
+        "migranti radunati",
+        "afflusso di migranti"
+      ]
+    },
+
+    "route_information": {
+      "weight": 2,
+      "terms": [
+        "migration route",
+        "migrant route",
+        "refugee route",
+        "crossing route",
+        "route to",
+        "route from",
+        "way to",
+        "way through",
+        "path to",
+        "corridor",
+        "migration corridor",
+        "crossing point",
+        "launch point",
+        "departure point",
+        "meeting point",
+        "entry point",
+        "border point",
+        "coastal route",
+        "sea route",
+        "land route",
+        "alternative route",
+        "new route",
+        "safe route",
+        "easier route",
+        "best route",
+
+        "ruta migratoria",
+        "ruta de migrantes",
+        "punto de cruce",
+        "punto de salida",
+        "punto de encuentro",
+        "ruta segura",
+
+        "route migratoire",
+        "route des migrants",
+        "point de passage",
+        "point de départ",
+        "point de rendez-vous",
+        "route sûre",
+
+        "rotta migratoria",
+        "rotta dei migranti",
+        "punto di attraversamento",
+        "punto di partenza",
+        "punto di incontro"
+      ]
+    },
+
+    "facilitation": {
+      "weight": 4,
+      "terms": [
+        "transport available",
+        "boat available",
+        "boats available",
+        "driver available",
+        "drivers available",
+        "car available",
+        "taxi available",
+        "seats available",
+        "places available",
+        "spaces available",
+        "book your place",
+        "reserve your place",
+        "contact me",
+        "contact us",
+        "message me",
+        "message us",
+        "dm me",
+        "dm us",
+        "meet at",
+        "meet us at",
+        "meeting point",
+        "pickup point",
+        "pick-up point",
+        "departure tonight",
+        "boat leaves tonight",
+        "boat leaving tonight",
+        "boat leaves from",
+        "boat departs from",
+        "cross tonight",
+        "leave tonight",
+        "come here",
+        "come to",
+        "cross here",
+        "you can cross",
+        "can cross here",
+        "use this route",
+        "take this route",
+
+        "transporte disponible",
+        "barco disponible",
+        "conductor disponible",
+        "plazas disponibles",
+        "contáctame",
+        "contáctanos",
+        "punto de encuentro",
+        "salida esta noche",
+        "cruza aquí",
+        "se puede cruzar",
+
+        "transport disponible",
+        "bateau disponible",
+        "chauffeur disponible",
+        "places disponibles",
+        "contactez-moi",
+        "contactez-nous",
+        "point de rendez-vous",
+        "départ ce soir",
+        "traversez ici",
+        "on peut traverser",
+
+        "trasporto disponibile",
+        "barca disponibile",
+        "autista disponibile",
+        "posti disponibili",
+        "contattami",
+        "punto di incontro",
+        "partenza stasera",
+        "attraversa qui"
+      ]
+    },
+
+    "information_spread": {
+      "weight": 2,
+      "terms": [
+        "viral",
+        "viral video",
+        "video circulating",
+        "videos circulating",
+        "circulating online",
+        "circulating on social media",
+        "shared widely",
+        "widely shared",
+        "social media",
+        "social networks",
+        "social media posts",
+        "online posts",
+        "rumour",
+        "rumours",
+        "rumor",
+        "rumors",
+        "claim spreading",
+        "claims spreading",
+        "reports circulating",
+        "message circulating",
+        "messages circulating",
+        "telegram",
+        "telegram channel",
+        "telegram group",
+        "whatsapp",
+        "whatsapp group",
+        "tiktok",
+        "facebook",
+        "instagram",
+        "youtube",
+        "signal group",
+        "shared in groups",
+
+        "vídeo viral",
+        "circula en redes",
+        "redes sociales",
+        "rumor",
+        "rumores",
+        "grupo de telegram",
+        "grupo de whatsapp",
+
+        "vidéo virale",
+        "circule sur les réseaux",
+        "réseaux sociaux",
+        "rumeur",
+        "rumeurs",
+        "groupe telegram",
+        "groupe whatsapp",
+
+        "video virale",
+        "circola sui social",
+        "social media",
+        "voce",
+        "voci",
+        "gruppo telegram",
+        "gruppo whatsapp"
+      ]
+    },
+
+    "legal_signal": {
+      "weight": 4,
+      "terms": [
+        "court ruled",
+        "court has ruled",
+        "court ruling",
+        "court decision",
+        "court judgment",
+        "court judgement",
+        "judge ruled",
+        "tribunal ruled",
+        "legal ruling",
+        "asylum ruling",
+        "migration ruling",
+        "immigration ruling",
+        "European Court of Human Rights",
+        "ECHR",
+        "ECtHR",
+        "European Court",
+        "Court of Justice of the European Union",
+        "ECJ",
+        "CJEU",
+        "cannot be deported",
+        "can't be deported",
+        "cannot deport",
+        "may not be deported",
+        "cannot be returned",
+        "can't be returned",
+        "may not be returned",
+        "cannot be sent back",
+        "can't be sent back",
+        "return prohibited",
+        "deportation prohibited",
+        "deportation suspended",
+        "deportation blocked",
+        "deportation halted",
+        "removal suspended",
+        "removal blocked",
+        "removal prohibited",
+        "protected from deportation",
+        "protected from removal",
+        "protection from return",
+        "right to remain",
+        "right to stay",
+        "right to asylum",
+        "right to protection",
+        "non-refoulement",
+        "subsidiary protection",
+        "granted asylum",
+        "asylum granted",
+        "protection granted",
+
+        "el tribunal dictaminó",
+        "sentencia judicial",
+        "decisión judicial",
+        "no puede ser deportado",
+        "no puede ser deportada",
+        "no puede ser devuelto",
+        "no puede ser devuelta",
+        "deportación suspendida",
+        "expulsión suspendida",
+        "derecho a permanecer",
+        "asilo concedido",
+
+        "le tribunal a jugé",
+        "décision de justice",
+        "jugement",
+        "ne peut pas être expulsé",
+        "ne peut pas être expulsée",
+        "ne peut pas être renvoyé",
+        "ne peut pas être renvoyée",
+        "expulsion suspendue",
+        "droit de rester",
+        "asile accordé",
+
+        "il tribunale ha stabilito",
+        "decisione del tribunale",
+        "sentenza",
+        "non può essere espulso",
+        "non può essere rimpatriato",
+        "espulsione sospesa",
+        "diritto a rimanere",
+        "asilo concesso"
+      ]
+    },
+
+    "policy_signal": {
+      "weight": 3,
+      "terms": [
+        "new asylum policy",
+        "new asylum rules",
+        "new migration policy",
+        "new immigration policy",
+        "new immigration rules",
+        "temporary protection",
+        "temporary protection scheme",
+        "temporary residence",
+        "residence permit",
+        "legal status",
+        "legal status granted",
+        "regularisation",
+        "regularization",
+        "regularisation scheme",
+        "regularization scheme",
+        "migrant amnesty",
+        "immigration amnesty",
+        "amnesty for migrants",
+        "humanitarian visa",
+        "humanitarian visas",
+        "humanitarian corridor",
+        "relocation scheme",
+        "relocation program",
+        "relocation programme",
+        "resettlement scheme",
+        "asylum applications accepted",
+        "applications accepted",
+        "protection status",
+        "family reunification",
+
+        "protección temporal",
+        "regularización",
+        "amnistía migratoria",
+        "permiso de residencia",
+        "visado humanitario",
+        "corredor humanitario",
+        "reubicación",
+
+        "protection temporaire",
+        "régularisation",
+        "amnistie",
+        "titre de séjour",
+        "visa humanitaire",
+        "couloir humanitaire",
+        "relocalisation",
+
+        "protezione temporanea",
+        "regolarizzazione",
+        "sanatoria",
+        "permesso di soggiorno",
+        "visto umanitario",
+        "corridoio umanitario",
+        "ricollocamento"
+      ]
+    },
+
+    "border_condition": {
+      "weight": 2,
+      "terms": [
+        "border open",
+        "border is open",
+        "open border",
+        "border closed",
+        "border closure",
+        "closed border",
+        "border control",
+        "border controls",
+        "border checks",
+        "reduced checks",
+        "no checks",
+        "without checks",
+        "no police",
+        "no patrol",
+        "no patrols",
+        "no guards",
+        "no border guards",
+        "checkpoint",
+        "checkpoints",
+        "border patrol",
+        "police patrol",
+        "coast guard",
+        "border police",
+        "guardia civil",
+        "reinforced border",
+        "reinforced controls",
+        "increased patrols",
+        "additional police",
+        "additional guards",
+        "fence",
+        "border fence",
+        "barrier",
+        "floating barrier",
+        "surveillance increased",
+        "security increased",
+
+        "frontera abierta",
+        "frontera cerrada",
+        "controles fronterizos",
+        "sin controles",
+        "no hay policía",
+        "guardia civil",
+        "más controles",
+        "valla fronteriza",
+
+        "frontière ouverte",
+        "frontière fermée",
+        "contrôles frontaliers",
+        "sans contrôle",
+        "pas de police",
+        "patrouilles",
+        "barrière",
+
+        "confine aperto",
+        "confine chiuso",
+        "controlli di frontiera",
+        "senza controlli",
+        "nessuna polizia",
+        "pattuglie",
+        "barriera"
+      ]
+    },
+
+    "smuggling_ecosystem": {
+      "weight": 4,
+      "terms": [
+        "smuggler",
+        "smugglers",
+        "smuggling network",
+        "smuggling networks",
+        "smuggling gang",
+        "smuggling gangs",
+        "migrant smugglers",
+        "people smugglers",
+        "human smuggling",
+        "people smuggling",
+        "migrant smuggling",
+        "facilitator",
+        "facilitators",
+        "organiser",
+        "organizer",
+        "organisers",
+        "organizers",
+        "recruiter",
+        "recruiters",
+        "payment",
+        "price per person",
+        "price for crossing",
+        "pay for crossing",
+        "crossing fee",
+        "transport fee",
+
+        "traficante",
+        "traficantes",
+        "red de tráfico",
+        "red de contrabando",
+        "precio por persona",
+
+        "passeur",
+        "passeurs",
+        "réseau de passeurs",
+        "trafic de migrants",
+
+        "scafista",
+        "scafisti",
+        "trafficanti",
+        "rete di trafficanti"
+      ]
+    }
+  },
+
+  "destination_countries": {
+    "weight": 1,
+    "countries": [
+      "Spain",
+      "Italy",
+      "France",
+      "Germany",
+      "United Kingdom",
+      "Greece",
+      "Austria",
+      "Belgium",
+      "Netherlands",
+      "Sweden",
+      "Denmark",
+      "Norway",
+      "Finland",
+      "Switzerland",
+      "Ireland",
+      "Portugal",
+      "Canada",
+      "United States",
+      "Australia",
+      "New Zealand"
+    ]
+  },
+
+  "origin_regions": {
+    "weight": 1,
+    "regions": {
+      "north_africa": [
+        "Morocco",
+        "Algeria",
+        "Tunisia",
+        "Libya",
+        "Egypt"
+      ],
+
+      "sahel": [
+        "Mali",
+        "Niger",
+        "Burkina Faso",
+        "Chad",
+        "Mauritania",
+        "Senegal"
+      ],
+
+      "west_africa": [
+        "Nigeria",
+        "Guinea",
+        "Gambia",
+        "Sierra Leone",
+        "Liberia",
+        "Ivory Coast",
+        "Ghana"
+      ],
+
+      "east_africa": [
+        "Eritrea",
+        "Ethiopia",
+        "Somalia",
+        "Sudan",
+        "South Sudan"
+      ],
+
+      "middle_east": [
+        "Syria",
+        "Iraq",
+        "Iran",
+        "Yemen",
+        "Lebanon",
+        "Palestine"
+      ],
+
+      "south_asia": [
+        "Afghanistan",
+        "Pakistan",
+        "Bangladesh",
+        "India",
+        "Sri Lanka"
+      ]
+    }
+  },
+
+  "crossing_points": {
+    "weight": 3,
+    "regions": {
+      "western_mediterranean": [
+        "Ceuta",
+        "Melilla",
+        "Tarajal",
+        "Fnideq",
+        "Castillejos",
+        "Tetouan",
+        "Tangier",
+        "Strait of Gibraltar",
+        "Alboran Sea"
+      ],
+
+      "atlantic_canary_route": [
+        "Canary Islands",
+        "Gran Canaria",
+        "Tenerife",
+        "Lanzarote",
+        "Fuerteventura",
+        "El Hierro",
+        "La Gomera",
+        "Dakhla",
+        "Laayoune",
+        "Nouadhibou"
+      ],
+
+      "central_mediterranean": [
+        "Lampedusa",
+        "Pantelleria",
+        "Sicily",
+        "Malta",
+        "Tripoli",
+        "Zuwara",
+        "Sabratha",
+        "Misrata",
+        "Sfax",
+        "Zarzis"
+      ],
+
+      "eastern_mediterranean": [
+        "Lesbos",
+        "Samos",
+        "Chios",
+        "Kos",
+        "Rhodes",
+        "Evros",
+        "Aegean Sea",
+        "Izmir",
+        "Bodrum"
+      ],
+
+      "balkan_route": [
+        "North Macedonia",
+        "Serbia",
+        "Bosnia",
+        "Croatia",
+        "Hungary",
+        "Slovenia",
+        "Subotica",
+        "Horgos",
+        "Bihac",
+        "Velika Kladusa"
+      ],
+
+      "belarus_route": [
+        "Belarus",
+        "Poland",
+        "Lithuania",
+        "Latvia",
+        "Bialowieza",
+        "Bruzgi"
+      ],
+
+      "english_channel": [
+        "Calais",
+        "Dunkirk",
+        "Dunkerque",
+        "Boulogne-sur-Mer",
+        "Wissant",
+        "Gravelines",
+        "English Channel",
+        "Dover"
+      ],
+
+      "americas": [
+        "Darién Gap",
+        "Darien Gap",
+        "Tapachula",
+        "Tijuana",
+        "Ciudad Juarez",
+        "El Paso",
+        "Matamoros",
+        "Brownsville",
+        "Rio Grande",
+        "Arizona border",
+        "Texas border"
+      ]
+    }
+  },
+
+  "crossing_methods": {
+    "weight": 2,
+    "methods": [
+      "small boat",
+      "small boats",
+      "dinghy",
+      "dinghies",
+      "rubber boat",
+      "inflatable boat",
+      "speedboat",
+      "speedboats",
+      "fishing boat",
+      "wooden boat",
+      "migrant boat",
+      "boat crossing",
+      "sea crossing",
+      "swimming",
+      "swim",
+      "swam across",
+      "cross by sea",
+      "cross by boat",
+      "truck",
+      "lorry",
+      "tractor-trailer",
+      "container truck",
+      "container",
+      "hidden in truck",
+      "hidden in lorry",
+      "train",
+      "railway",
+      "on foot",
+      "walking",
+      "forest route",
+      "river crossing",
+      "border fence",
+      "fence breach",
+      "breach the fence",
+      "climb the fence",
+      "tunnel",
+      "fake passport",
+      "false passport",
+      "false documents",
+      "forged documents",
+      "fraudulent documents",
+      "visa fraud"
+    ]
+  },
+
+  "platform_indicators": {
+    "weight": 1,
+    "platforms": [
+      "Telegram",
+      "WhatsApp",
+      "TikTok",
+      "Facebook",
+      "Instagram",
+      "YouTube",
+      "X",
+      "Twitter",
+      "Signal",
+      "Snapchat",
+      "Discord"
+    ]
+  },
+
+  "high_value_phrases": {
+    "bonus_score": 5,
+    "terms": [
+      "you can cross",
+      "border is open",
+      "no police",
+      "no border guards",
+      "no checks",
+      "boat leaves tonight",
+      "boat leaving tonight",
+      "cross tonight",
+      "transport available",
+      "boat available",
+      "driver available",
+      "seats available",
+      "contact me on telegram",
+      "contact me on whatsapp",
+      "join telegram",
+      "whatsapp group",
+      "cannot be deported",
+      "cannot be returned",
+      "cannot be sent back",
+      "deportation suspended",
+      "removal suspended",
+      "right to remain",
+      "non-refoulement",
+      "migrant amnesty",
+      "immigration amnesty",
+      "regularisation scheme",
+      "regularization scheme",
+      "hundreds of migrants gathering",
+      "thousands of migrants gathering"
+    ]
+  },
+
+  "combination_rules": [
+    {
+      "id": "migration_route_movement",
+      "required_groups": [
+        "migration_context",
+        "route_information",
+        "movement"
+      ],
+      "bonus_score": 3,
+      "result_hint": "CROSSING_FACILITATION"
+    },
+
+    {
+      "id": "migration_route_mass_movement",
+      "required_groups": [
+        "migration_context",
+        "route_information",
+        "mass_movement"
+      ],
+      "bonus_score": 4,
+      "result_hint": "CROSSING_FACILITATION"
+    },
+
+    {
+      "id": "migration_facilitation",
+      "required_groups": [
+        "migration_context",
+        "facilitation"
+      ],
+      "bonus_score": 4,
+      "result_hint": "RECRUITMENT_COORDINATION"
+    },
+
+    {
+      "id": "migration_smuggling_coordination",
+      "required_groups": [
+        "migration_context",
+        "smuggling_ecosystem",
+        "facilitation"
+      ],
+      "bonus_score": 5,
+      "result_hint": "RECRUITMENT_COORDINATION"
+    },
+
+    {
+      "id": "migration_information_route",
+      "required_groups": [
+        "migration_context",
+        "information_spread",
+        "route_information"
+      ],
+      "bonus_score": 4,
+      "result_hint": "CROSSING_FACILITATION"
+    },
+
+    {
+      "id": "migration_information_mass_movement",
+      "required_groups": [
+        "migration_context",
+        "information_spread",
+        "mass_movement"
+      ],
+      "bonus_score": 4,
+      "result_hint": "CROSSING_FACILITATION"
+    },
+
+    {
+      "id": "migration_legal",
+      "required_groups": [
+        "migration_context",
+        "legal_signal"
+      ],
+      "bonus_score": 4,
+      "result_hint": "LEGAL_MIGRATION_SIGNAL"
+    },
+
+    {
+      "id": "migration_policy",
+      "required_groups": [
+        "migration_context",
+        "policy_signal"
+      ],
+      "bonus_score": 3,
+      "result_hint": "POLICY_SIGNAL"
+    },
+
+    {
+      "id": "migration_border_change",
+      "required_groups": [
+        "migration_context",
+        "border_condition"
+      ],
+      "bonus_score": 2,
+      "result_hint": "CROSSING_FACILITATION"
+    },
+
+    {
+      "id": "route_crossing_point",
+      "required_groups": [
+        "migration_context",
+        "crossing_point",
+        "movement"
+      ],
+      "bonus_score": 4,
+      "result_hint": "CROSSING_FACILITATION"
+    },
+
+    {
+      "id": "route_crossing_method",
+      "required_groups": [
+        "migration_context",
+        "crossing_method",
+        "movement"
+      ],
+      "bonus_score": 3,
+      "result_hint": "CROSSING_FACILITATION"
+    },
+
+    {
+      "id": "destination_route_signal",
+      "required_groups": [
+        "migration_context",
+        "destination_country",
+        "route_information"
+      ],
+      "bonus_score": 2,
+      "result_hint": "CROSSING_FACILITATION"
+    }
+  ],
+
+  "signal_mapping": {
+    "CROSSING_FACILITATION": [
+      "route_information",
+      "movement",
+      "mass_movement",
+      "border_condition",
+      "crossing_point",
+      "crossing_method",
+      "information_spread"
+    ],
+
+    "LEGAL_MIGRATION_SIGNAL": [
+      "legal_signal"
+    ],
+
+    "POLICY_SIGNAL": [
+      "policy_signal"
+    ],
+
+    "RECRUITMENT_COORDINATION": [
+      "facilitation",
+      "smuggling_ecosystem"
+    ]
+  },
+
+  "base_confidence": {
+    "CROSSING_FACILITATION": 0.65,
+    "LEGAL_MIGRATION_SIGNAL": 0.72,
+    "POLICY_SIGNAL": 0.65,
+    "RECRUITMENT_COORDINATION": 0.72
+  },
+
+  "score_levels": {
+    "LOW": {
+      "minimum": 5,
+      "confidence_bonus": 0.0
+    },
+
+    "MEDIUM": {
+      "minimum": 8,
+      "confidence_bonus": 0.08
+    },
+
+    "HIGH": {
+      "minimum": 12,
+      "confidence_bonus": 0.16
+    },
+
+    "CRITICAL": {
+      "minimum": 18,
+      "confidence_bonus": 0.22
+    }
+  }
+}
