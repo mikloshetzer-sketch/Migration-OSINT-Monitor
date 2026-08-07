@@ -6,7 +6,7 @@ main.py
 
 Description:
 Application entry point using the Query Engine,
-X collection, analysis and event extraction pipeline.
+Noise Filter, X collection, analysis and event extraction pipeline.
 """
 
 from collectors.x_collector import XCollector
@@ -17,6 +17,7 @@ from analysis.time_extractor import TimeExtractor
 from analysis.scoring import RelevanceScorer
 from analysis.event_extractor import EventExtractor
 from analysis.query_engine import QueryEngine
+from analysis.noise_filter import NoiseFilter
 from database.init_db import initialize_database
 
 
@@ -144,6 +145,7 @@ def main():
     scorer = RelevanceScorer()
     event_extractor = EventExtractor()
     query_engine = QueryEngine()
+    noise_filter = NoiseFilter()
 
     queries = query_engine.load_queries()
 
@@ -153,6 +155,10 @@ def main():
     )
 
     seen_post_ids = set()
+
+    total_posts_found = 0
+    total_noise_filtered = 0
+    total_events_analyzed = 0
 
     for query_definition in queries:
         query_id = query_definition.get("id")
@@ -173,6 +179,8 @@ def main():
             max_pages=1,
         )
 
+        total_posts_found += len(posts)
+
         print(
             f"Posts found: "
             f"{len(posts)}"
@@ -187,6 +195,27 @@ def main():
             if post_id:
                 seen_post_ids.add(post_id)
 
+            text = post.get("text", "")
+
+            noise_result = noise_filter.analyze(text)
+
+            if noise_result.get("is_noise"):
+                total_noise_filtered += 1
+
+                print("-----------------------------------")
+                print("NOISE FILTERED")
+                print(
+                    f"Categories: "
+                    f"{noise_result.get('noise_categories')}"
+                )
+                print(
+                    f"Matched phrases: "
+                    f"{noise_result.get('matched_noise_phrases')}"
+                )
+                print(f"Text: {text}")
+
+                continue
+
             event = analyze_post(
                 post=post,
                 keyword_filter=keyword_filter,
@@ -197,12 +226,28 @@ def main():
                 event_extractor=event_extractor,
             )
 
+            total_events_analyzed += 1
+
             print_event(event)
 
-    print("-----------------------------------")
+    print("===================================")
+    print("RUN SUMMARY")
+    print("===================================")
     print(
-        f"Unique posts analyzed: "
+        f"Posts returned by queries: "
+        f"{total_posts_found}"
+    )
+    print(
+        f"Unique posts collected: "
         f"{len(seen_post_ids)}"
+    )
+    print(
+        f"Noise filtered: "
+        f"{total_noise_filtered}"
+    )
+    print(
+        f"Posts analyzed as events: "
+        f"{total_events_analyzed}"
     )
     print("System run completed successfully.")
 
