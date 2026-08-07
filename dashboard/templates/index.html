@@ -1,0 +1,2633 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Migration OSINT Dashboard
+    </title>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"
+    ></script>
+
+    <style>
+        :root {
+            --navy: #083f5c;
+            --navy-dark: #07354e;
+            --navy-soft: #0d5677;
+
+            --blue: #1597d4;
+            --blue-soft: #eaf6fc;
+            --blue-border: #c9e3f1;
+
+            --green: #159667;
+            --green-soft: #eaf8f1;
+
+            --orange: #dc7a00;
+            --orange-soft: #fff4df;
+
+            --red: #cb3e32;
+            --red-soft: #fdeceb;
+
+            --purple: #7954d9;
+            --purple-soft: #f1edff;
+
+            --gold: #b48600;
+
+            --page-bg: #edf4f8;
+            --card-bg: #ffffff;
+            --panel-soft: #f4f8fb;
+
+            --text: #173b50;
+            --text-soft: #60798a;
+            --text-muted: #7e93a1;
+
+            --border: #d5e2e9;
+            --border-light: #e3edf2;
+
+            --shadow:
+                0 4px 12px
+                rgba(17, 58, 82, 0.08);
+
+            --radius: 17px;
+            --radius-small: 11px;
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            margin: 0;
+            background: var(--page-bg);
+            color: var(--text);
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 14px;
+        }
+
+
+        a {
+            color: inherit;
+        }
+
+
+        /* =========================================================
+           HEADER
+           ========================================================= */
+
+        .dashboard-header {
+            background:
+                linear-gradient(
+                    108deg,
+                    #083f5c 0%,
+                    #0b5577 47%,
+                    #29a1d9 100%
+                );
+
+            color: white;
+
+            padding:
+                28px
+                0
+                34px;
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,0.18);
+        }
+
+
+        .container {
+            width: min(
+                1480px,
+                calc(100% - 42px)
+            );
+
+            margin:
+                0
+                auto;
+        }
+
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 35px;
+        }
+
+
+        .eyebrow {
+            margin-bottom: 10px;
+
+            font-size: 12px;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.93
+                );
+        }
+
+
+        .main-title {
+            margin: 0;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(
+                    38px,
+                    4vw,
+                    61px
+                );
+
+            line-height: 1.04;
+            font-weight: 700;
+
+            letter-spacing:
+                -1.3px;
+        }
+
+
+        .header-description {
+            max-width: 860px;
+
+            margin:
+                13px
+                0
+                0;
+
+            font-size: 15px;
+            line-height: 1.55;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.94
+                );
+        }
+
+
+        .header-actions {
+            min-width: 300px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 17px;
+        }
+
+
+        .header-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+
+        .header-btn {
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.32
+                );
+
+            border-radius: 23px;
+
+            padding:
+                11px
+                18px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.10
+                );
+
+            color: white;
+
+            font-size: 12px;
+            font-weight: 800;
+
+            text-decoration: none;
+
+            cursor: pointer;
+
+            transition:
+                0.2s ease;
+        }
+
+
+        .header-btn:hover {
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.18
+                );
+        }
+
+
+        .header-btn.primary {
+            background: #168fd0;
+            border-color: #168fd0;
+        }
+
+
+        .header-meta {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+
+        .update-box {
+            text-align: right;
+        }
+
+
+        .update-label {
+            display: block;
+
+            margin-bottom: 4px;
+
+            font-size: 10px;
+            font-weight: 800;
+
+            letter-spacing: 1.3px;
+            text-transform: uppercase;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.78
+                );
+        }
+
+
+        .update-value {
+            font-size: 13px;
+            font-weight: 800;
+
+            color: white;
+        }
+
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+
+            padding:
+                8px
+                13px;
+
+            border-radius: 20px;
+
+            background: #fff3da;
+            border: 1px solid #efd095;
+
+            color: #936000;
+
+            font-size: 10px;
+            font-weight: 900;
+
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
+        }
+
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+
+            border-radius: 50%;
+
+            background: #e5a100;
+        }
+
+
+        /* =========================================================
+           MAIN
+           ========================================================= */
+
+        main {
+            padding:
+                20px
+                0
+                55px;
+        }
+
+
+        /* =========================================================
+           INTRO / SITUATION CARD
+           ========================================================= */
+
+        .situation-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+
+            margin-bottom: 15px;
+
+            padding:
+                26px
+                28px;
+
+            background: white;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-left:
+                6px solid
+                var(--blue);
+
+            border-radius:
+                var(--radius);
+
+            box-shadow:
+                var(--shadow);
+        }
+
+
+        .section-eyebrow {
+            margin-bottom: 6px;
+
+            color: #06628e;
+
+            font-size: 10px;
+            font-weight: 900;
+
+            letter-spacing: 1.7px;
+            text-transform: uppercase;
+        }
+
+
+        .situation-title {
+            margin: 0;
+
+            color: var(--navy);
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(
+                    28px,
+                    3vw,
+                    43px
+                );
+
+            line-height: 1.1;
+        }
+
+
+        .situation-text {
+            max-width: 900px;
+
+            margin:
+                9px
+                0
+                0;
+
+            color: var(--text-soft);
+
+            font-size: 13px;
+            line-height: 1.55;
+        }
+
+
+        .situation-side {
+            flex-shrink: 0;
+            text-align: right;
+        }
+
+
+        /* =========================================================
+           KPI CARDS
+           ========================================================= */
+
+        .kpi-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    6,
+                    1fr
+                );
+
+            margin-bottom: 15px;
+
+            overflow: hidden;
+
+            background: white;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius:
+                var(--radius);
+
+            box-shadow:
+                var(--shadow);
+        }
+
+
+        .kpi-card {
+            position: relative;
+
+            min-height: 142px;
+
+            padding:
+                20px
+                18px
+                17px;
+
+            text-align: center;
+
+            border-right:
+                1px solid
+                var(--border-light);
+        }
+
+
+        .kpi-card:last-child {
+            border-right: 0;
+        }
+
+
+        .kpi-card::before {
+            content: "";
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+
+            height: 4px;
+        }
+
+
+        .kpi-blue::before {
+            background: var(--blue);
+        }
+
+        .kpi-green::before {
+            background: var(--green);
+        }
+
+        .kpi-purple::before {
+            background: var(--purple);
+        }
+
+        .kpi-orange::before {
+            background: var(--orange);
+        }
+
+        .kpi-gold::before {
+            background: #bc8e00;
+        }
+
+        .kpi-red::before {
+            background: var(--red);
+        }
+
+
+        .kpi-value {
+            margin-bottom: 7px;
+
+            color: var(--navy);
+
+            font-size: 29px;
+            font-weight: 900;
+
+            line-height: 1;
+        }
+
+
+        .kpi-label {
+            min-height: 30px;
+
+            color: #385c70;
+
+            font-size: 10px;
+            font-weight: 900;
+
+            letter-spacing: 0.6px;
+            line-height: 1.35;
+
+            text-transform: uppercase;
+        }
+
+
+        .kpi-sub {
+            margin-top: 7px;
+
+            color: var(--text-muted);
+
+            font-size: 10px;
+            line-height: 1.35;
+        }
+
+
+        /* =========================================================
+           GENERIC PANEL
+           ========================================================= */
+
+        .panel {
+            position: relative;
+
+            margin-bottom: 15px;
+
+            padding:
+                17px
+                18px
+                19px;
+
+            background: var(--card-bg);
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius:
+                var(--radius);
+
+            box-shadow:
+                var(--shadow);
+
+            overflow: hidden;
+        }
+
+
+        .panel.accent-blue {
+            border-top:
+                5px solid
+                var(--blue);
+        }
+
+
+        .panel.accent-orange {
+            border-top:
+                5px solid
+                var(--orange);
+        }
+
+
+        .panel.accent-green {
+            border-top:
+                5px solid
+                var(--green);
+        }
+
+
+        .panel.accent-purple {
+            border-top:
+                5px solid
+                var(--purple);
+        }
+
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+
+            margin-bottom: 13px;
+        }
+
+
+        .panel-title {
+            margin: 0;
+
+            color: var(--navy);
+
+            font-size: 20px;
+            font-weight: 900;
+
+            line-height: 1.2;
+        }
+
+
+        .panel-subtitle {
+            margin-top: 4px;
+
+            color: var(--text-muted);
+
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+
+        .panel-note {
+            max-width: 340px;
+
+            color: var(--text-muted);
+
+            font-size: 9px;
+            font-weight: 600;
+            line-height: 1.45;
+
+            text-align: right;
+        }
+
+
+        .mini-button {
+            display: inline-block;
+
+            padding:
+                8px
+                11px;
+
+            border:
+                1px solid
+                var(--blue-border);
+
+            border-radius:
+                8px;
+
+            background: #f6fbfe;
+
+            color: #167eb5;
+
+            font-size: 10px;
+            font-weight: 800;
+
+            text-decoration: none;
+        }
+
+
+        /* =========================================================
+           2-COLUMN TABLE AREA
+           ========================================================= */
+
+        .two-column {
+            display: grid;
+
+            grid-template-columns:
+                minmax(
+                    0,
+                    1fr
+                )
+                minmax(
+                    0,
+                    1fr
+                );
+
+            gap: 15px;
+        }
+
+
+        /* =========================================================
+           TABLES
+           ========================================================= */
+
+        .table-wrap {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+
+        thead th {
+            padding:
+                10px
+                9px;
+
+            background: #f4f8fa;
+
+            border-top:
+                1px solid
+                var(--border-light);
+
+            border-bottom:
+                1px solid
+                var(--border);
+
+            color: #506b7d;
+
+            font-size: 9px;
+            font-weight: 900;
+
+            letter-spacing: 0.6px;
+
+            text-align: left;
+            text-transform: uppercase;
+
+            white-space: nowrap;
+        }
+
+
+        tbody td {
+            padding:
+                11px
+                9px;
+
+            border-bottom:
+                1px solid
+                var(--border-light);
+
+            color: #315266;
+
+            font-size: 10px;
+            line-height: 1.4;
+
+            vertical-align: middle;
+        }
+
+
+        tbody tr:hover {
+            background: #f8fbfd;
+        }
+
+
+        tbody tr:last-child td {
+            border-bottom: 0;
+        }
+
+
+        .table-id {
+            color: #066b9d;
+
+            font-weight: 900;
+        }
+
+
+        .event-type {
+            color: #254c63;
+
+            font-size: 9px;
+            font-weight: 900;
+        }
+
+
+        .nowrap {
+            white-space: nowrap;
+        }
+
+
+        .truncate {
+            max-width: 380px;
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+
+        /* =========================================================
+           BADGES
+           ========================================================= */
+
+        .confidence {
+            display: inline-flex;
+            justify-content: center;
+
+            min-width: 46px;
+
+            padding:
+                5px
+                8px;
+
+            border-radius: 14px;
+
+            font-size: 10px;
+            font-weight: 900;
+        }
+
+
+        .confidence-high {
+            background: var(--green-soft);
+            border: 1px solid #b8e7d0;
+            color: #087347;
+        }
+
+
+        .confidence-medium {
+            background: var(--orange-soft);
+            border: 1px solid #efd49c;
+            color: #a16600;
+        }
+
+
+        .confidence-low {
+            background: var(--red-soft);
+            border: 1px solid #efc3bf;
+            color: #ac3128;
+        }
+
+
+        .state {
+            display: inline-flex;
+
+            padding:
+                5px
+                8px;
+
+            border-radius: 13px;
+
+            font-size: 9px;
+            font-weight: 900;
+
+            text-transform: uppercase;
+        }
+
+
+        .state-active {
+            background: var(--green-soft);
+            color: #087347;
+            border: 1px solid #bae7d1;
+        }
+
+
+        .state-other {
+            background: #eef3f6;
+            color: #617683;
+            border: 1px solid #d6e2e8;
+        }
+
+
+        /* =========================================================
+           ANALYTICS GRID
+           ========================================================= */
+
+        .analytics-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    minmax(
+                        0,
+                        1fr
+                    )
+                );
+
+            gap: 15px;
+        }
+
+
+        .chart-box {
+            min-height: 310px;
+        }
+
+
+        .chart-area {
+            position: relative;
+
+            height: 215px;
+
+            margin-top: 5px;
+        }
+
+
+        /* =========================================================
+           REGION LIST
+           ========================================================= */
+
+        .region-list,
+        .source-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            margin-top: 5px;
+        }
+
+
+        .list-row {
+            display: grid;
+
+            grid-template-columns:
+                minmax(
+                    0,
+                    1fr
+                )
+                42px
+                58px;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding:
+                8px
+                10px;
+
+            background: #f7fafc;
+
+            border:
+                1px solid
+                var(--border-light);
+
+            border-radius:
+                8px;
+        }
+
+
+        .list-label {
+            overflow: hidden;
+
+            color: #31586d;
+
+            font-size: 10px;
+            font-weight: 800;
+
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+
+        .list-number {
+            text-align: right;
+
+            color: var(--navy);
+
+            font-weight: 900;
+        }
+
+
+        .list-percent {
+            text-align: right;
+
+            color: var(--text-muted);
+
+            font-size: 9px;
+            font-weight: 800;
+        }
+
+
+        /* =========================================================
+           CORRELATION FUNNEL
+           ========================================================= */
+
+        .funnel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            gap: 7px;
+
+            margin:
+                12px
+                0
+                8px;
+        }
+
+
+        .funnel-row {
+            display: grid;
+
+            grid-template-columns:
+                minmax(
+                    120px,
+                    1fr
+                )
+                80px;
+
+            align-items: center;
+
+            width: 100%;
+
+            gap: 12px;
+        }
+
+
+        .funnel-bar {
+            height: 39px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 0 auto;
+
+            border-radius: 5px;
+
+            color: white;
+
+            font-size: 9px;
+            font-weight: 900;
+        }
+
+
+        .funnel-1 {
+            width: 100%;
+            background: #7bb7d7;
+        }
+
+
+        .funnel-2 {
+            width: 82%;
+            background: #4fc08d;
+        }
+
+
+        .funnel-3 {
+            width: 64%;
+            background: #9272d7;
+        }
+
+
+        .funnel-4 {
+            width: 48%;
+            background: #dd9f4b;
+        }
+
+
+        .funnel-value {
+            color: var(--navy);
+            font-size: 17px;
+            font-weight: 900;
+            text-align: right;
+        }
+
+
+        .funnel-footer {
+            margin-top: 12px;
+
+            padding:
+                10px
+                12px;
+
+            background: #edf7fc;
+
+            border-left:
+                4px solid
+                var(--blue);
+
+            border-radius: 7px;
+
+            color: #41657a;
+
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+
+        /* =========================================================
+           HIGH CONFIDENCE
+           ========================================================= */
+
+        .insight-strip {
+            margin-top: 14px;
+
+            padding:
+                11px
+                13px;
+
+            background: #edf7fc;
+
+            border-left:
+                5px solid
+                var(--blue);
+
+            border-radius:
+                8px;
+
+            color: #315d73;
+
+            font-size: 10px;
+            line-height: 1.5;
+
+            font-weight: 700;
+        }
+
+
+        /* =========================================================
+           EMPTY STATE
+           ========================================================= */
+
+        .empty {
+            padding:
+                30px
+                20px;
+
+            color: var(--text-muted);
+
+            font-size: 12px;
+            text-align: center;
+
+            background: #f7fafc;
+
+            border:
+                1px dashed
+                var(--border);
+
+            border-radius:
+                10px;
+        }
+
+
+        /* =========================================================
+           FOOTER
+           ========================================================= */
+
+        .dashboard-footer {
+            margin-top: 14px;
+
+            padding:
+                15px
+                18px;
+
+            background: #f4f8fa;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius:
+                var(--radius);
+
+            color: var(--text-muted);
+
+            font-size: 9px;
+            line-height: 1.55;
+        }
+
+
+        .dashboard-footer strong {
+            color: #385d72;
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+           ========================================================= */
+
+        @media (
+            max-width: 1200px
+        ) {
+
+            .kpi-grid {
+                grid-template-columns:
+                    repeat(
+                        3,
+                        1fr
+                    );
+            }
+
+
+            .kpi-card:nth-child(3) {
+                border-right: 0;
+            }
+
+
+            .kpi-card:nth-child(-n+3) {
+                border-bottom:
+                    1px solid
+                    var(--border-light);
+            }
+
+
+            .analytics-grid {
+                grid-template-columns:
+                    1fr;
+            }
+
+        }
+
+
+        @media (
+            max-width: 900px
+        ) {
+
+            .header-inner,
+            .situation-card {
+                flex-direction: column;
+            }
+
+
+            .header-actions {
+                width: 100%;
+                min-width: 0;
+
+                align-items: flex-start;
+            }
+
+
+            .header-buttons {
+                justify-content: flex-start;
+            }
+
+
+            .header-meta,
+            .situation-side {
+                text-align: left;
+            }
+
+
+            .two-column {
+                grid-template-columns:
+                    1fr;
+            }
+
+        }
+
+
+        @media (
+            max-width: 650px
+        ) {
+
+            .container {
+                width:
+                    calc(
+                        100% - 22px
+                    );
+            }
+
+
+            .dashboard-header {
+                padding:
+                    22px
+                    0
+                    27px;
+            }
+
+
+            .main-title {
+                font-size: 36px;
+            }
+
+
+            .kpi-grid {
+                grid-template-columns:
+                    repeat(
+                        2,
+                        1fr
+                    );
+            }
+
+
+            .kpi-card {
+                border-right:
+                    1px solid
+                    var(--border-light);
+
+                border-bottom:
+                    1px solid
+                    var(--border-light);
+            }
+
+
+            .kpi-card:nth-child(even) {
+                border-right: 0;
+            }
+
+
+            .panel {
+                padding:
+                    15px
+                    12px
+                    17px;
+            }
+
+
+            .panel-header {
+                flex-direction: column;
+            }
+
+
+            .panel-note {
+                text-align: left;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="dashboard-header">
+
+        <div class="container">
+
+            <div class="header-inner">
+
+                <div>
+
+                    <div class="eyebrow">
+                        TÖRÉSVONALAK.BLOG
+                    </div>
+
+                    <h1 class="main-title">
+                        Migration OSINT Dashboard
+                    </h1>
+
+                    <p class="header-description">
+                        Globális migrációs események,
+                        operatív mozgások, határhelyzetek,
+                        embercsempészeti aktivitás és
+                        többforrású eseménykorreláció
+                        elemzői áttekintése.
+                    </p>
+
+                </div>
+
+
+                <div class="header-actions">
+
+                    <div class="header-buttons">
+
+                        <a
+                            href="/"
+                            class="header-btn"
+                        >
+                            Adatok frissítése
+                        </a>
+
+                        <a
+                            href="#event-groups"
+                            class="header-btn primary"
+                        >
+                            Elemző nézet
+                        </a>
+
+                    </div>
+
+
+                    <div class="header-meta">
+
+                        <div class="update-box">
+
+                            <span class="update-label">
+                                Frissítés / Updated
+                            </span>
+
+                            <span class="update-value">
+                                {{ data.updated_at }} UTC
+                            </span>
+
+                        </div>
+
+
+                        <div class="status-badge">
+
+                            <span class="status-dot"></span>
+
+                            OSINT LIVE
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main>
+
+        <div class="container">
+
+
+            <!-- =================================================
+                 SITUATION OVERVIEW
+                 ================================================= -->
+
+            <section class="situation-card">
+
+                <div>
+
+                    <div class="section-eyebrow">
+                        Operational Migration Intelligence Overview
+                    </div>
+
+                    <h2 class="situation-title">
+                        Migrációs helyzetkép
+                    </h2>
+
+                    <p class="situation-text">
+                        A dashboard a rendszer által
+                        operatívnak minősített bejegyzések,
+                        korrelált események és tartós
+                        eseménycsoportok alapján ad gyors
+                        elemzői áttekintést a jelenlegi
+                        migrációs aktivitásról.
+                    </p>
+
+                </div>
+
+
+                <div class="situation-side">
+
+                    <span class="update-label">
+                        Adatbázis
+                    </span>
+
+                    <strong>
+                        SQLite Event Intelligence
+                    </strong>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 KPI
+                 ================================================= -->
+
+            <section class="kpi-grid">
+
+                <div class="kpi-card kpi-blue">
+
+                    <div class="kpi-value">
+                        {{ data.kpis.operational_events }}
+                    </div>
+
+                    <div class="kpi-label">
+                        Operational Events
+                    </div>
+
+                    <div class="kpi-sub">
+                        elmúlt 24 óra
+                    </div>
+
+                </div>
+
+
+                <div class="kpi-card kpi-green">
+
+                    <div class="kpi-value">
+                        {{ data.kpis.new_events }}
+                    </div>
+
+                    <div class="kpi-label">
+                        New Events
+                    </div>
+
+                    <div class="kpi-sub">
+                        új eseményforrás
+                    </div>
+
+                </div>
+
+
+                <div class="kpi-card kpi-purple">
+
+                    <div class="kpi-value">
+                        {{ data.kpis.correlated_events }}
+                    </div>
+
+                    <div class="kpi-label">
+                        Correlated Events
+                    </div>
+
+                    <div class="kpi-sub">
+                        korrelált forrás
+                    </div>
+
+                </div>
+
+
+                <div class="kpi-card kpi-orange">
+
+                    <div class="kpi-value">
+                        {{ data.kpis.active_event_groups }}
+                    </div>
+
+                    <div class="kpi-label">
+                        Active Event Groups
+                    </div>
+
+                    <div class="kpi-sub">
+                        aktív eseménycsoport
+                    </div>
+
+                </div>
+
+
+                <div class="kpi-card kpi-gold">
+
+                    <div class="kpi-value">
+                        {{ data.kpis.sources }}
+                    </div>
+
+                    <div class="kpi-label">
+                        Sources
+                    </div>
+
+                    <div class="kpi-sub">
+                        aktív forrástípus
+                    </div>
+
+                </div>
+
+
+                <div class="kpi-card kpi-red">
+
+                    <div class="kpi-value">
+                        {{ data.kpis.regions }}
+                    </div>
+
+                    <div class="kpi-label">
+                        Regions
+                    </div>
+
+                    <div class="kpi-sub">
+                        azonosított régió
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 EVENT TABLES
+                 ================================================= -->
+
+            <section class="two-column">
+
+
+                <!-- LIVE EVENTS -->
+
+                <div class="panel accent-blue">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h3 class="panel-title">
+                                Live Event Feed
+                            </h3>
+
+                            <div class="panel-subtitle">
+                                Legfrissebb operatív események
+                            </div>
+
+                        </div>
+
+                        <a
+                            href="#high-confidence"
+                            class="mini-button"
+                        >
+                            Kiemelt események
+                        </a>
+
+                    </div>
+
+
+                    {% if data.live_events %}
+
+                    <div class="table-wrap">
+
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Időpont</th>
+                                    <th>Esemény</th>
+                                    <th>Helyszín</th>
+                                    <th>Konfidencia</th>
+                                    <th>Forrás</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                {% for event in data.live_events %}
+
+                                <tr>
+
+                                    <td class="table-id">
+                                        #{{ event.id }}
+                                    </td>
+
+                                    <td class="nowrap">
+                                        {{ event.published_at or "-" }}
+                                    </td>
+
+                                    <td class="event-type">
+                                        {{ event.event_type or "-" }}
+                                    </td>
+
+                                    <td>
+                                        {{ event.location or "-" }}
+                                    </td>
+
+                                    <td>
+
+                                        {% if event.confidence_level == "HIGH" %}
+
+                                            <span
+                                                class="
+                                                    confidence
+                                                    confidence-high
+                                                "
+                                            >
+                                                {{ "%.2f"|format(event.confidence) }}
+                                            </span>
+
+                                        {% elif event.confidence_level == "MEDIUM" %}
+
+                                            <span
+                                                class="
+                                                    confidence
+                                                    confidence-medium
+                                                "
+                                            >
+                                                {{ "%.2f"|format(event.confidence) }}
+                                            </span>
+
+                                        {% else %}
+
+                                            <span
+                                                class="
+                                                    confidence
+                                                    confidence-low
+                                                "
+                                            >
+                                                {{ "%.2f"|format(event.confidence) }}
+                                            </span>
+
+                                        {% endif %}
+
+                                    </td>
+
+                                    <td>
+                                        {{ event.source or "-" }}
+                                    </td>
+
+                                </tr>
+
+                                {% endfor %}
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                    {% else %}
+
+                    <div class="empty">
+                        Nincs megjeleníthető operatív esemény.
+                    </div>
+
+                    {% endif %}
+
+                </div>
+
+
+
+                <!-- EVENT GROUPS -->
+
+                <div
+                    class="panel accent-blue"
+                    id="event-groups"
+                >
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h3 class="panel-title">
+                                Top Event Groups
+                            </h3>
+
+                            <div class="panel-subtitle">
+                                Legaktívabb korrelált eseménycsoportok
+                            </div>
+
+                        </div>
+
+                        <div class="panel-note">
+                            Rendezés a kapcsolt források száma
+                            és az utolsó észlelés alapján.
+                        </div>
+
+                    </div>
+
+
+                    {% if data.event_groups %}
+
+                    <div class="table-wrap">
+
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>Group ID</th>
+                                    <th>Eseménytípus</th>
+                                    <th>Régió</th>
+                                    <th>Utolsó látás</th>
+                                    <th>Forrás</th>
+                                    <th>Konfidencia</th>
+                                    <th>Állapot</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                {% for group in data.event_groups %}
+
+                                <tr>
+
+                                    <td class="table-id">
+                                        #{{ group.id }}
+                                    </td>
+
+                                    <td class="event-type">
+                                        {{ group.event_type }}
+                                    </td>
+
+                                    <td>
+                                        {{ group.primary_region }}
+                                    </td>
+
+                                    <td class="nowrap">
+                                        {{ group.last_seen or "-" }}
+                                    </td>
+
+                                    <td>
+                                        {{ group.source_count }}
+                                    </td>
+
+                                    <td>
+
+                                        {% if group.confidence_level == "HIGH" %}
+
+                                            <span
+                                                class="
+                                                    confidence
+                                                    confidence-high
+                                                "
+                                            >
+                                                {{ "%.2f"|format(group.confidence) }}
+                                            </span>
+
+                                        {% elif group.confidence_level == "MEDIUM" %}
+
+                                            <span
+                                                class="
+                                                    confidence
+                                                    confidence-medium
+                                                "
+                                            >
+                                                {{ "%.2f"|format(group.confidence) }}
+                                            </span>
+
+                                        {% else %}
+
+                                            <span
+                                                class="
+                                                    confidence
+                                                    confidence-low
+                                                "
+                                            >
+                                                {{ "%.2f"|format(group.confidence) }}
+                                            </span>
+
+                                        {% endif %}
+
+                                    </td>
+
+                                    <td>
+
+                                        {% if group.status == "ACTIVE" %}
+
+                                            <span
+                                                class="
+                                                    state
+                                                    state-active
+                                                "
+                                            >
+                                                Aktív
+                                            </span>
+
+                                        {% else %}
+
+                                            <span
+                                                class="
+                                                    state
+                                                    state-other
+                                                "
+                                            >
+                                                {{ group.status }}
+                                            </span>
+
+                                        {% endif %}
+
+                                    </td>
+
+                                </tr>
+
+                                {% endfor %}
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                    {% else %}
+
+                    <div class="empty">
+                        Még nincs EventGroup az adatbázisban.
+                    </div>
+
+                    {% endif %}
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 ANALYTICS
+                 ================================================= -->
+
+            <section class="analytics-grid">
+
+
+                <!-- REGION ACTIVITY -->
+
+                <div class="panel chart-box accent-green">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h3 class="panel-title">
+                                Region Activity
+                            </h3>
+
+                            <div class="panel-subtitle">
+                                Eseménycsoportok régió szerint
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="chart-area">
+
+                        <canvas
+                            id="regionChart"
+                        ></canvas>
+
+                    </div>
+
+
+                    <div
+                        class="region-list"
+                        id="regionList"
+                    ></div>
+
+                </div>
+
+
+
+                <!-- CORRELATION -->
+
+                <div class="panel chart-box accent-purple">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h3 class="panel-title">
+                                Correlation Performance
+                            </h3>
+
+                            <div class="panel-subtitle">
+                                Eseményfeldolgozási teljesítmény
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="funnel">
+
+                        <div class="funnel-row">
+
+                            <div
+                                class="
+                                    funnel-bar
+                                    funnel-1
+                                "
+                            >
+                                Gyűjtött bejegyzések
+                            </div>
+
+                            <div class="funnel-value">
+                                {{ data.correlation.total_posts }}
+                            </div>
+
+                        </div>
+
+
+                        <div class="funnel-row">
+
+                            <div
+                                class="
+                                    funnel-bar
+                                    funnel-2
+                                "
+                            >
+                                Operatív események
+                            </div>
+
+                            <div class="funnel-value">
+                                {{ data.correlation.operational_events }}
+                            </div>
+
+                        </div>
+
+
+                        <div class="funnel-row">
+
+                            <div
+                                class="
+                                    funnel-bar
+                                    funnel-3
+                                "
+                            >
+                                Korrelált források
+                            </div>
+
+                            <div class="funnel-value">
+                                {{ data.correlation.correlated_sources }}
+                            </div>
+
+                        </div>
+
+
+                        <div class="funnel-row">
+
+                            <div
+                                class="
+                                    funnel-bar
+                                    funnel-4
+                                "
+                            >
+                                Eseménycsoportok
+                            </div>
+
+                            <div class="funnel-value">
+                                {{ data.correlation.event_groups }}
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="funnel-footer">
+
+                        EventGroup / operatív esemény arány:
+
+                        <strong>
+                            {{ "%.2f"|format(data.correlation.conversion_rate) }}%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SOURCE ACTIVITY -->
+
+                <div class="panel chart-box accent-orange">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h3 class="panel-title">
+                                Source Activity
+                            </h3>
+
+                            <div class="panel-subtitle">
+                                Operatív események forrástípus szerint
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="chart-area">
+
+                        <canvas
+                            id="sourceChart"
+                        ></canvas>
+
+                    </div>
+
+
+                    <div
+                        class="source-list"
+                        id="sourceList"
+                    ></div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 HIGH CONFIDENCE EVENTS
+                 ================================================= -->
+
+            <section
+                class="panel accent-blue"
+                id="high-confidence"
+            >
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h3 class="panel-title">
+                            High Confidence Events
+                        </h3>
+
+                        <div class="panel-subtitle">
+                            Magasabb konfidenciájú eseménycsoportok
+                        </div>
+
+                    </div>
+
+                    <div class="panel-note">
+                        Jelenlegi küszöb:
+                        ≥ 0.75
+                    </div>
+
+                </div>
+
+
+                {% if data.high_confidence_events %}
+
+                <div class="table-wrap">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Utolsó látás</th>
+                                <th>Eseménytípus</th>
+                                <th>Helyszín</th>
+                                <th>Ország</th>
+                                <th>Régió</th>
+                                <th>Konfidencia</th>
+                                <th>Források</th>
+                                <th>Szövegrészlet</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            {% for event in data.high_confidence_events %}
+
+                            <tr>
+
+                                <td class="table-id">
+                                    #{{ event.id }}
+                                </td>
+
+                                <td class="nowrap">
+                                    {{ event.last_seen or "-" }}
+                                </td>
+
+                                <td class="event-type">
+                                    {{ event.event_type }}
+                                </td>
+
+                                <td>
+                                    {{ event.primary_location }}
+                                </td>
+
+                                <td>
+                                    {{ event.country }}
+                                </td>
+
+                                <td>
+                                    {{ event.region }}
+                                </td>
+
+                                <td>
+
+                                    <span
+                                        class="
+                                            confidence
+                                            confidence-high
+                                        "
+                                    >
+                                        {{ "%.2f"|format(event.confidence) }}
+                                    </span>
+
+                                </td>
+
+                                <td>
+                                    {{ event.source_count }}
+                                </td>
+
+                                <td
+                                    class="truncate"
+                                    title="{{ event.representative_text }}"
+                                >
+                                    {{ event.representative_text }}
+                                </td>
+
+                            </tr>
+
+                            {% endfor %}
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                {% else %}
+
+                <div class="empty">
+                    Jelenleg nincs a küszöböt elérő eseménycsoport.
+                </div>
+
+                {% endif %}
+
+
+                <div class="insight-strip">
+
+                    <strong>Elemzői megjegyzés:</strong>
+
+                    A konfidencia jelenleg az eseménykinyerés
+                    eredményét tükrözi. A későbbi
+                    Source Reliability Engine ezt
+                    többforrású megbízhatósági értékeléssel
+                    egészíti majd ki.
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 FOOTER / METHOD
+                 ================================================= -->
+
+            <footer class="dashboard-footer">
+
+                <strong>
+                    Módszertani megjegyzés:
+                </strong>
+
+                A dashboard a Migration OSINT Monitor által
+                gyűjtött és elemzett rekordokat jeleníti meg.
+                A nyers közösségimédia-bejegyzések önmagukban
+                nem tekintendők megerősített ténynek.
+                A rendszer célja az operatív jelzések
+                azonosítása, korrelálása és eseménycsoportokba
+                rendezése. A kijelzett régió, eseménytípus
+                és konfidencia automatikus feldolgozás
+                eredménye, ezért elemzői ellenőrzést igényelhet.
+
+            </footer>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         DASHBOARD DATA
+         ===================================================== -->
+
+    <script>
+
+        const regionActivity =
+            {{ data.region_activity | tojson }};
+
+        const sourceActivity =
+            {{ data.source_activity | tojson }};
+
+
+        function calculatePercent(
+            value,
+            total
+        ) {
+
+            if (!total) {
+                return 0;
+            }
+
+            return (
+                value
+                / total
+                * 100
+            );
+
+        }
+
+
+        /* =================================================
+           REGION CHART
+           ================================================= */
+
+        const regionLabels =
+            regionActivity.map(
+                item => item.region
+            );
+
+        const regionValues =
+            regionActivity.map(
+                item => item.count
+            );
+
+
+        const regionTotal =
+            regionValues.reduce(
+                (
+                    sum,
+                    value
+                ) => sum + value,
+                0
+            );
+
+
+        const regionCanvas =
+            document.getElementById(
+                "regionChart"
+            );
+
+
+        if (
+            regionCanvas
+            && regionValues.length
+        ) {
+
+            new Chart(
+                regionCanvas,
+                {
+                    type: "doughnut",
+
+                    data: {
+                        labels:
+                            regionLabels,
+
+                        datasets: [
+                            {
+                                data:
+                                    regionValues,
+
+                                backgroundColor: [
+                                    "#168fc7",
+                                    "#20a96b",
+                                    "#e58a00",
+                                    "#7a57d1",
+                                    "#cf473b",
+                                    "#6e8ea0",
+                                    "#3fb8b0",
+                                    "#b78e29"
+                                ],
+
+                                borderWidth: 2,
+
+                                borderColor:
+                                    "#ffffff"
+                            }
+                        ]
+                    },
+
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+
+                        cutout: "63%",
+
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+
+                            tooltip: {
+                                callbacks: {
+                                    label:
+                                        function(context) {
+
+                                            const value =
+                                                context.raw;
+
+                                            const percent =
+                                                calculatePercent(
+                                                    value,
+                                                    regionTotal
+                                                );
+
+                                            return (
+                                                context.label
+                                                + ": "
+                                                + value
+                                                + " ("
+                                                + percent.toFixed(1)
+                                                + "%)"
+                                            );
+                                        }
+                                }
+                            }
+                        }
+                    }
+                }
+            );
+
+        }
+
+
+        const regionList =
+            document.getElementById(
+                "regionList"
+            );
+
+
+        if (regionList) {
+
+            regionActivity
+                .slice(
+                    0,
+                    6
+                )
+                .forEach(
+                    item => {
+
+                        const percent =
+                            calculatePercent(
+                                item.count,
+                                regionTotal
+                            );
+
+                        const row =
+                            document.createElement(
+                                "div"
+                            );
+
+                        row.className =
+                            "list-row";
+
+                        row.innerHTML = `
+                            <div class="list-label">
+                                ${item.region}
+                            </div>
+
+                            <div class="list-number">
+                                ${item.count}
+                            </div>
+
+                            <div class="list-percent">
+                                ${percent.toFixed(1)}%
+                            </div>
+                        `;
+
+                        regionList.appendChild(
+                            row
+                        );
+
+                    }
+                );
+
+        }
+
+
+        /* =================================================
+           SOURCE CHART
+           ================================================= */
+
+        const sourceLabels =
+            sourceActivity.map(
+                item => item.source
+            );
+
+        const sourceValues =
+            sourceActivity.map(
+                item => item.count
+            );
+
+
+        const sourceTotal =
+            sourceValues.reduce(
+                (
+                    sum,
+                    value
+                ) => sum + value,
+                0
+            );
+
+
+        const sourceCanvas =
+            document.getElementById(
+                "sourceChart"
+            );
+
+
+        if (
+            sourceCanvas
+            && sourceValues.length
+        ) {
+
+            new Chart(
+                sourceCanvas,
+                {
+                    type: "doughnut",
+
+                    data: {
+                        labels:
+                            sourceLabels,
+
+                        datasets: [
+                            {
+                                data:
+                                    sourceValues,
+
+                                backgroundColor: [
+                                    "#168fc7",
+                                    "#e58a00",
+                                    "#20a96b",
+                                    "#7a57d1",
+                                    "#cf473b",
+                                    "#6e8ea0"
+                                ],
+
+                                borderWidth: 2,
+
+                                borderColor:
+                                    "#ffffff"
+                            }
+                        ]
+                    },
+
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+
+                        cutout: "63%",
+
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+
+                            tooltip: {
+                                callbacks: {
+                                    label:
+                                        function(context) {
+
+                                            const value =
+                                                context.raw;
+
+                                            const percent =
+                                                calculatePercent(
+                                                    value,
+                                                    sourceTotal
+                                                );
+
+                                            return (
+                                                context.label
+                                                + ": "
+                                                + value
+                                                + " ("
+                                                + percent.toFixed(1)
+                                                + "%)"
+                                            );
+                                        }
+                                }
+                            }
+                        }
+                    }
+                }
+            );
+
+        }
+
+
+        const sourceList =
+            document.getElementById(
+                "sourceList"
+            );
+
+
+        if (sourceList) {
+
+            sourceActivity
+                .slice(
+                    0,
+                    6
+                )
+                .forEach(
+                    item => {
+
+                        const percent =
+                            calculatePercent(
+                                item.count,
+                                sourceTotal
+                            );
+
+                        const row =
+                            document.createElement(
+                                "div"
+                            );
+
+                        row.className =
+                            "list-row";
+
+                        row.innerHTML = `
+                            <div class="list-label">
+                                ${item.source}
+                            </div>
+
+                            <div class="list-number">
+                                ${item.count}
+                            </div>
+
+                            <div class="list-percent">
+                                ${percent.toFixed(1)}%
+                            </div>
+                        `;
+
+                        sourceList.appendChild(
+                            row
+                        );
+
+                    }
+                );
+
+        }
+
+    </script>
+
+</body>
+</html>
