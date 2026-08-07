@@ -11,6 +11,7 @@ Application entry point using:
 - Noise Filter
 - Operational Event Filter
 - Signal Classification
+- Influence Signal Detection
 - Location Extraction
 - Time Extraction
 - Region Resolution
@@ -32,6 +33,7 @@ from collectors.x_collector import XCollector
 
 from analysis.keyword_filter import KeywordFilter
 from analysis.classifier import SignalClassifier
+from analysis.influence_signal_detector import InfluenceSignalDetector
 from analysis.location_extractor import LocationExtractor
 from analysis.time_extractor import TimeExtractor
 from analysis.scoring import RelevanceScorer
@@ -253,6 +255,88 @@ def build_correlation_candidates(
         )
 
     return candidates
+
+
+
+def print_influence_signal(
+    post,
+    influence_result,
+):
+    """
+    Prints a detected migration-related influence signal.
+
+    Influence signals are logged independently from the
+    operational event pipeline and do not alter event
+    correlation or EventGroup processing.
+    """
+
+    print(
+        "-----------------------------------"
+    )
+
+    print(
+        "INFLUENCE SIGNAL"
+    )
+
+    print(
+        "Primary influence signal: "
+        f"{influence_result.get('primary_signal')}"
+    )
+
+    print(
+        "Matched influence signals: "
+        f"{influence_result.get('matched_signals')}"
+    )
+
+    print(
+        "Matched influence phrases: "
+        f"{influence_result.get('matched_phrases')}"
+    )
+
+    print(
+        "Migration context: "
+        f"{influence_result.get('migration_context')}"
+    )
+
+    print(
+        "Context matches: "
+        f"{influence_result.get('context_matches')}"
+    )
+
+    print(
+        "High-value match: "
+        f"{influence_result.get('high_value_match')}"
+    )
+
+    print(
+        "Influence confidence: "
+        f"{influence_result.get('confidence')}"
+    )
+
+    print(
+        "Author: "
+        f"{post.get('author')}"
+    )
+
+    print(
+        "Published: "
+        f"{post.get('published_at')}"
+    )
+
+    print(
+        "Source: "
+        f"{post.get('source')}"
+    )
+
+    print(
+        "Text: "
+        f"{post.get('text')}"
+    )
+
+    print(
+        "URL: "
+        f"{post.get('url')}"
+    )
 
 
 def print_event(
@@ -562,6 +646,10 @@ def main():
 
     classifier = SignalClassifier()
 
+    influence_detector = (
+        InfluenceSignalDetector()
+    )
+
     location_extractor = (
         LocationExtractor()
     )
@@ -660,6 +748,15 @@ def main():
     total_operational_events = 0
     total_events_saved = 0
     total_events_existing = 0
+
+    # Influence Signal statistics
+    total_influence_signals = 0
+    influence_signal_counts = {
+        "CROSSING_FACILITATION": 0,
+        "LEGAL_MIGRATION_SIGNAL": 0,
+        "POLICY_SIGNAL": 0,
+        "RECRUITMENT_COORDINATION": 0,
+    }
 
     total_correlated_events = 0
     total_new_events = 0
@@ -801,6 +898,50 @@ def main():
                     )
 
                     continue
+
+                # --------------------------------
+                # INFLUENCE SIGNAL DETECTION
+                # --------------------------------
+                #
+                # This detector runs before the operational
+                # event filter so that legal, policy,
+                # facilitation and coordination signals can
+                # still be identified even when they are not
+                # direct operational migration events.
+                #
+                # Influence signals are currently log-only:
+                # they do not change event classification,
+                # correlation or EventGroup processing.
+
+                influence_result = (
+                    influence_detector.detect(
+                        text
+                    )
+                )
+
+                if influence_result.get(
+                    "detected"
+                ):
+                    total_influence_signals += 1
+
+                    primary_influence_signal = (
+                        influence_result.get(
+                            "primary_signal"
+                        )
+                    )
+
+                    if (
+                        primary_influence_signal
+                        in influence_signal_counts
+                    ):
+                        influence_signal_counts[
+                            primary_influence_signal
+                        ] += 1
+
+                    print_influence_signal(
+                        post=post,
+                        influence_result=influence_result,
+                    )
 
                 operational_result = (
                     operational_filter
@@ -1031,6 +1172,31 @@ def main():
     print(
         "Non-operational filtered: "
         f"{total_non_operational_filtered}"
+    )
+
+    print(
+        "Influence signals detected: "
+        f"{total_influence_signals}"
+    )
+
+    print(
+        "Crossing facilitation signals: "
+        f"{influence_signal_counts['CROSSING_FACILITATION']}"
+    )
+
+    print(
+        "Legal migration signals: "
+        f"{influence_signal_counts['LEGAL_MIGRATION_SIGNAL']}"
+    )
+
+    print(
+        "Policy signals: "
+        f"{influence_signal_counts['POLICY_SIGNAL']}"
+    )
+
+    print(
+        "Recruitment / coordination signals: "
+        f"{influence_signal_counts['RECRUITMENT_COORDINATION']}"
     )
 
     print(
