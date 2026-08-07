@@ -5,745 +5,201 @@ File:
 influence_signal_detector.py
 
 Description:
-Rule-based detector for migration-related influence and enabling signals.
+JSON-driven detector for migration-related influence,
+facilitation and early-warning signals.
 
-The detector is intentionally separated from the operational event
-classifier.
+The detector loads its knowledge base from:
 
-It identifies information that may influence, facilitate, organize,
-encourage, or legally affect migration behaviour.
+    config/influence_rules.json
 
-Main categories:
+The Python module contains detection logic only.
+Keywords, locations, routes, crossing methods,
+platform indicators, narratives, weights and
+context rules are maintained in JSON.
+
+Main output categories:
 
 - CROSSING_FACILITATION
 - LEGAL_MIGRATION_SIGNAL
 - POLICY_SIGNAL
 - RECRUITMENT_COORDINATION
 
-The detector does not determine whether a claim is true.
-It only identifies potentially relevant information signals.
+The detector does not verify whether a claim is true.
+It identifies potentially relevant migration-related
+information signals for further OSINT analysis.
 """
 
+import json
 import re
 
-from typing import Dict, List, Tuple
+from pathlib import Path
+from typing import Dict, List, Optional, Tuple
 
+
+# ==========================================================
+# PATHS
+# ==========================================================
+
+PROJECT_ROOT = (
+    Path(__file__)
+    .resolve()
+    .parent
+    .parent
+)
+
+DEFAULT_RULES_FILE = (
+    PROJECT_ROOT
+    / "config"
+    / "influence_rules.json"
+)
+
+
+# ==========================================================
+# DETECTOR
+# ==========================================================
 
 class InfluenceSignalDetector:
     """
-    Detects migration-related influence and enabling signals.
+    Detects migration-related influence and early-warning
+    signals using rules loaded from JSON.
 
-    These signals are different from direct operational events.
+    The detector is deliberately separated from the normal
+    operational event classifier.
 
     Example:
 
-        "Come to this beach tonight, there are no police."
+        Migrants are gathering near the coast.
+        Videos of the route are circulating on Telegram.
 
-    is not necessarily a BORDER_CROSSING event yet.
-
-    It is an enabling / facilitation signal that may precede
-    operational movement.
+    This may represent an early-warning / influence signal
+    even if an actual border crossing has not yet occurred.
     """
 
-    # ==========================================================
-    # MIGRATION CONTEXT
-    # ==========================================================
+    # ======================================================
+    # INITIALIZATION
+    # ======================================================
+
+    def __init__(
+        self,
+        rules_file: Optional[Path] = None,
+    ):
+        """
+        Loads the migration influence knowledge base.
+        """
+
+        self.rules_file = (
+            Path(rules_file)
+            if rules_file
+            else DEFAULT_RULES_FILE
+        )
+
+        self.rules = (
+            self._load_rules()
+        )
+
+        self.settings = (
+            self.rules.get(
+                "settings",
+                {},
+            )
+        )
+
+        self.indicator_groups = (
+            self.rules.get(
+                "indicator_groups",
+                {},
+            )
+        )
+
+        self.signal_mapping = (
+            self.rules.get(
+                "signal_mapping",
+                {},
+            )
+        )
+
+        self.base_confidence = (
+            self.rules.get(
+                "base_confidence",
+                {},
+            )
+        )
+
+        self.score_levels = (
+            self.rules.get(
+                "score_levels",
+                {},
+            )
+        )
+
+        self.context_patterns = (
+            self.rules.get(
+                "context_patterns",
+                [],
+            )
+        )
+
+    # ======================================================
+    # RULE LOADING
+    # ======================================================
+
+    def _load_rules(
+        self,
+    ) -> Dict[str, object]:
+        """
+        Loads and validates influence_rules.json.
+        """
+
+        if not self.rules_file.exists():
+
+            raise FileNotFoundError(
+                "Influence rules file not found: "
+                f"{self.rules_file}"
+            )
+
+        try:
+
+            with self.rules_file.open(
+                "r",
+                encoding="utf-8",
+            ) as file:
+
+                rules = json.load(
+                    file
+                )
+
+        except json.JSONDecodeError as error:
+
+            raise ValueError(
+                "Invalid JSON in influence rules file: "
+                f"{self.rules_file}. "
+                f"{error}"
+            ) from error
+
+        if not isinstance(
+            rules,
+            dict,
+        ):
 
-    MIGRATION_CONTEXT_PATTERNS = [
+            raise ValueError(
+                "Influence rules root must be a JSON object."
+            )
 
-        r"\bmigrant\b",
-        r"\bmigrants\b",
-        r"\bmigration\b",
+        return rules
 
-        r"\brefugee\b",
-        r"\brefugees\b",
-
-        r"\basylum\b",
-        r"\basylum seeker\b",
-        r"\basylum seekers\b",
-
-        r"\billegal migrant\b",
-        r"\billegal migrants\b",
-
-        r"\birregular migrant\b",
-        r"\birregular migrants\b",
-
-        r"\bundocumented migrant\b",
-        r"\bundocumented migrants\b",
-
-        r"\bborder crossing\b",
-        r"\bborder crossings\b",
-
-        r"\bsmall boat\b",
-        r"\bsmall boats\b",
-
-        r"\bdinghy\b",
-        r"\bdinghies\b",
-
-        r"\bdeportation\b",
-        r"\bdeported\b",
-
-        r"\breturn decision\b",
-        r"\bforced return\b",
-
-        r"\bnon-refoulement\b",
-
-        r"\bimmigration\b",
-
-        # Spanish
-
-        r"\bmigrante\b",
-        r"\bmigrantes\b",
-
-        r"\brefugiado\b",
-        r"\brefugiados\b",
-
-        r"\basilo\b",
-
-        r"\binmigración\b",
-
-        r"\bdeportación\b",
-
-        # French
-
-        r"\bmigrant\b",
-        r"\bmigrants\b",
-
-        r"\bréfugié\b",
-        r"\bréfugiés\b",
-
-        r"\bdemandeur d['’]asile\b",
-        r"\bdemandeurs d['’]asile\b",
-
-        r"\bimmigration\b",
-
-        r"\bexpulsion\b",
-    ]
-
-
-    # ==========================================================
-    # SIGNAL PATTERNS
-    # ==========================================================
-
-    SIGNAL_PATTERNS = {
-
-        # ------------------------------------------------------
-        # CROSSING FACILITATION
-        # ------------------------------------------------------
-
-        "CROSSING_FACILITATION": [
-
-            # English
-
-            r"\bcome here\b",
-            r"\bcome to\b",
-
-            r"\bgo to this\b",
-            r"\bgo to the\b",
-
-            r"\bcross here\b",
-
-            r"\byou can cross\b",
-            r"\bcan cross here\b",
-
-            r"\beasy crossing\b",
-            r"\beasier crossing\b",
-
-            r"\bsafe crossing\b",
-
-            r"\bsafe route\b",
-
-            r"\buse this route\b",
-            r"\btake this route\b",
-
-            r"\buse this crossing\b",
-            r"\btake this crossing\b",
-
-            r"\bborder is open\b",
-            r"\bborder open\b",
-
-            r"\bcheckpoint is open\b",
-
-            r"\bno police\b",
-            r"\bno border police\b",
-
-            r"\bno patrol\b",
-            r"\bno patrols\b",
-
-            r"\bno guards\b",
-            r"\bno border guards\b",
-
-            r"\bno checks\b",
-            r"\bwithout checks\b",
-
-            r"\bunguarded border\b",
-
-            r"\bavoid the police\b",
-            r"\bavoid police\b",
-
-            r"\bavoid the patrol\b",
-            r"\bavoid patrols\b",
-
-            r"\bpolice are not there\b",
-
-            r"\bguards are not there\b",
-
-            r"\bcross tonight\b",
-            r"\bcross tomorrow\b",
-
-            r"\bmove tonight\b",
-
-            r"\bleave tonight\b",
-
-            r"\bdeparture tonight\b",
-
-            r"\bboat leaves tonight\b",
-            r"\bboat leaving tonight\b",
-
-            r"\bboat leaves from\b",
-            r"\bboat departs from\b",
-
-            r"\blaunch point\b",
-
-            r"\bcrossing location\b",
-
-            r"\bcrossing point\b",
-
-            r"\bmeeting point\b",
-
-            # Spanish
-
-            r"\bven aquí\b",
-            r"\bvengan aquí\b",
-
-            r"\bven a\b",
-            r"\bvengan a\b",
-
-            r"\bcruza aquí\b",
-            r"\bcruzar aquí\b",
-
-            r"\bse puede cruzar\b",
-
-            r"\bpuedes cruzar\b",
-
-            r"\bfrontera abierta\b",
-
-            r"\bno hay policía\b",
-
-            r"\bno hay controles\b",
-
-            r"\bsin controles\b",
-
-            r"\bruta segura\b",
-
-            r"\bruta fácil\b",
-
-            r"\busa esta ruta\b",
-
-            r"\bcruzar esta noche\b",
-
-            r"\bsalimos esta noche\b",
-
-            r"\bpunto de encuentro\b",
-
-            # French
-
-            r"\bvenez ici\b",
-
-            r"\bvenez à\b",
-
-            r"\btraversez ici\b",
-
-            r"\bon peut traverser\b",
-
-            r"\bfrontière ouverte\b",
-
-            r"\bpas de police\b",
-
-            r"\bpas de contrôles\b",
-
-            r"\bsans contrôle\b",
-
-            r"\broute sûre\b",
-
-            r"\bitinéraire sûr\b",
-
-            r"\butilisez cette route\b",
-
-            r"\btraverser ce soir\b",
-
-            r"\bdépart ce soir\b",
-
-            r"\bpoint de rendez-vous\b",
-        ],
-
-
-        # ------------------------------------------------------
-        # LEGAL MIGRATION SIGNAL
-        # ------------------------------------------------------
-
-        "LEGAL_MIGRATION_SIGNAL": [
-
-            # Courts / judgments
-
-            r"\bcourt ruled\b",
-            r"\bcourt has ruled\b",
-
-            r"\bcourt decision\b",
-
-            r"\bcourt judgment\b",
-            r"\bcourt judgement\b",
-
-            r"\bjudge ruled\b",
-
-            r"\btribunal ruled\b",
-
-            r"\beuropean court ruled\b",
-
-            r"\beuropean court of human rights\b",
-
-            r"\becthr\b",
-
-            r"\bechr ruling\b",
-            r"\bechr decision\b",
-
-            r"\becj ruling\b",
-
-            r"\bcourt of justice of the european union\b",
-
-            # Deportation / return protection
-
-            r"\bcannot be deported\b",
-            r"\bcan't be deported\b",
-
-            r"\bcannot deport\b",
-
-            r"\bmay not be deported\b",
-
-            r"\bcannot be returned\b",
-            r"\bcan't be returned\b",
-
-            r"\bmay not be returned\b",
-
-            r"\breturn prohibited\b",
-
-            r"\bdeportation prohibited\b",
-
-            r"\bdeportation suspended\b",
-
-            r"\bdeportation blocked\b",
-
-            r"\bdeportation halted\b",
-
-            r"\bdeportation stopped\b",
-
-            r"\bremoval suspended\b",
-
-            r"\bremoval blocked\b",
-
-            r"\bremoval prohibited\b",
-
-            r"\bexpulsion suspended\b",
-
-            r"\bexpulsion prohibited\b",
-
-            r"\bprotected from deportation\b",
-
-            r"\bprotected from removal\b",
-
-            r"\bprotection from return\b",
-
-            # Protection concepts
-
-            r"\bnon-refoulement\b",
-
-            r"\bright to remain\b",
-
-            r"\bright to stay\b",
-
-            r"\bright to asylum\b",
-
-            r"\btemporary right to remain\b",
-
-            r"\bgranted asylum\b",
-
-            r"\basylum granted\b",
-
-            r"\bgranted protection\b",
-
-            r"\bsubsidiary protection\b",
-
-            r"\btemporary protection granted\b",
-
-            # Spanish
-
-            r"\bel tribunal dictaminó\b",
-
-            r"\bel tribunal ha dictaminado\b",
-
-            r"\bsentencia judicial\b",
-
-            r"\bno puede ser deportado\b",
-            r"\bno puede ser deportada\b",
-
-            r"\bno puede ser devuelto\b",
-            r"\bno puede ser devuelta\b",
-
-            r"\bdeportación suspendida\b",
-
-            r"\bexpulsión suspendida\b",
-
-            r"\bderecho a permanecer\b",
-
-            r"\basilo concedido\b",
-
-            # French
-
-            r"\ble tribunal a jugé\b",
-
-            r"\bdécision de justice\b",
-
-            r"\bne peut pas être expulsé\b",
-            r"\bne peut pas être expulsée\b",
-
-            r"\bne peut pas être renvoyé\b",
-            r"\bne peut pas être renvoyée\b",
-
-            r"\bexpulsion suspendue\b",
-
-            r"\bdroit de rester\b",
-
-            r"\basile accordé\b",
-        ],
-
-
-        # ------------------------------------------------------
-        # POLICY SIGNAL
-        # ------------------------------------------------------
-
-        "POLICY_SIGNAL": [
-
-            r"\btemporary protection\b",
-
-            r"\btemporary protection scheme\b",
-
-            r"\bnew asylum rules\b",
-
-            r"\bnew asylum policy\b",
-
-            r"\bnew migration policy\b",
-
-            r"\bnew immigration rules\b",
-
-            r"\bnew immigration policy\b",
-
-            r"\brelocation scheme\b",
-
-            r"\brelocation programme\b",
-            r"\brelocation program\b",
-
-            r"\bregularisation scheme\b",
-            r"\bregularization scheme\b",
-
-            r"\bmigrant amnesty\b",
-            r"\bimmigration amnesty\b",
-
-            r"\bamnesty for migrants\b",
-
-            r"\blegal status granted\b",
-
-            r"\bresidence permit granted\b",
-
-            r"\btemporary residence\b",
-
-            r"\bhumanitarian visa\b",
-
-            r"\bhumanitarian visas\b",
-
-            r"\bhumanitarian corridor\b",
-
-            r"\basylum applications accepted\b",
-
-            r"\bapplications will be accepted\b",
-
-            r"\bprotection status\b",
-
-            # Spanish
-
-            r"\bprotección temporal\b",
-
-            r"\bnuevas normas de asilo\b",
-
-            r"\bnueva política migratoria\b",
-
-            r"\bregularización\b",
-
-            r"\bamnistía migratoria\b",
-
-            r"\bpermiso de residencia\b",
-
-            r"\bvisado humanitario\b",
-
-            # French
-
-            r"\bprotection temporaire\b",
-
-            r"\bnouvelles règles d['’]asile\b",
-
-            r"\bnouvelle politique migratoire\b",
-
-            r"\brégularisation\b",
-
-            r"\bvisa humanitaire\b",
-        ],
-
-
-        # ------------------------------------------------------
-        # RECRUITMENT / COORDINATION
-        # ------------------------------------------------------
-
-        "RECRUITMENT_COORDINATION": [
-
-            r"\bcontact me\b",
-
-            r"\bcontact us\b",
-
-            r"\bdm me\b",
-
-            r"\bdm us\b",
-
-            r"\bmessage me\b",
-
-            r"\bmessage us\b",
-
-            r"\bsend me a message\b",
-
-            r"\bsend us a message\b",
-
-            r"\bjoin the group\b",
-
-            r"\bjoin our group\b",
-
-            r"\bjoin telegram\b",
-
-            r"\btelegram group\b",
-
-            r"\bwhatsapp group\b",
-
-            r"\bwhatsapp me\b",
-
-            r"\btelegram me\b",
-
-            r"\bdriver available\b",
-
-            r"\bdrivers available\b",
-
-            r"\btransport available\b",
-
-            r"\bboat available\b",
-
-            r"\bboats available\b",
-
-            r"\bseats available\b",
-
-            r"\bplaces available\b",
-
-            r"\bspaces available\b",
-
-            r"\bbook your place\b",
-
-            r"\breserve your place\b",
-
-            r"\bmeeting point\b",
-
-            r"\bmeet us at\b",
-
-            r"\bmeet at\b",
-
-            # Spanish
-
-            r"\bcontáctame\b",
-            r"\bcontáctanos\b",
-
-            r"\benvíame un mensaje\b",
-            r"\benvíanos un mensaje\b",
-
-            r"\búnete al grupo\b",
-
-            r"\bgrupo de whatsapp\b",
-
-            r"\bgrupo de telegram\b",
-
-            r"\bconductor disponible\b",
-
-            r"\btransporte disponible\b",
-
-            r"\bbarco disponible\b",
-
-            r"\bplazas disponibles\b",
-
-            # French
-
-            r"\bcontactez-moi\b",
-            r"\bcontactez-nous\b",
-
-            r"\benvoyez-moi un message\b",
-
-            r"\brejoignez le groupe\b",
-
-            r"\bgroupe whatsapp\b",
-
-            r"\bgroupe telegram\b",
-
-            r"\bchauffeur disponible\b",
-
-            r"\btransport disponible\b",
-
-            r"\bbateau disponible\b",
-
-            r"\bplaces disponibles\b",
-        ],
-    }
-
-
-    # ==========================================================
-    # HIGH VALUE PATTERNS
-    # ==========================================================
-
-    HIGH_VALUE_PATTERNS = {
-
-        "CROSSING_FACILITATION": [
-
-            r"\bborder is open\b",
-
-            r"\bcross here\b",
-
-            r"\byou can cross\b",
-
-            r"\bno police\b",
-
-            r"\bno patrols\b",
-
-            r"\bno border guards\b",
-
-            r"\bboat leaves tonight\b",
-
-            r"\bboat leaving tonight\b",
-
-            r"\bse puede cruzar\b",
-
-            r"\bfrontera abierta\b",
-
-            r"\bno hay policía\b",
-
-            r"\bon peut traverser\b",
-
-            r"\bfrontière ouverte\b",
-
-            r"\bpas de police\b",
-        ],
-
-        "LEGAL_MIGRATION_SIGNAL": [
-
-            r"\bcannot be deported\b",
-
-            r"\bcannot be returned\b",
-
-            r"\bdeportation suspended\b",
-
-            r"\bnon-refoulement\b",
-
-            r"\bright to remain\b",
-
-            r"\bcourt ruled\b",
-
-            r"\beuropean court of human rights\b",
-
-            r"\becthr\b",
-        ],
-
-        "POLICY_SIGNAL": [
-
-            r"\bmigrant amnesty\b",
-
-            r"\bimmigration amnesty\b",
-
-            r"\bregularisation scheme\b",
-
-            r"\bregularization scheme\b",
-
-            r"\btemporary protection scheme\b",
-
-            r"\bhumanitarian corridor\b",
-        ],
-
-        "RECRUITMENT_COORDINATION": [
-
-            r"\bboat available\b",
-
-            r"\bdriver available\b",
-
-            r"\btransport available\b",
-
-            r"\bjoin telegram\b",
-
-            r"\bwhatsapp group\b",
-
-            r"\bbook your place\b",
-
-            r"\breserve your place\b",
-        ],
-    }
-
-
-    # ==========================================================
-    # PRIORITY
-    # ==========================================================
-
-    PRIORITY = [
-
-        "CROSSING_FACILITATION",
-
-        "RECRUITMENT_COORDINATION",
-
-        "LEGAL_MIGRATION_SIGNAL",
-
-        "POLICY_SIGNAL",
-    ]
-
-
-    # ==========================================================
-    # BASE CONFIDENCE
-    # ==========================================================
-
-    BASE_CONFIDENCE = {
-
-        "CROSSING_FACILITATION":
-            0.78,
-
-        "RECRUITMENT_COORDINATION":
-            0.76,
-
-        "LEGAL_MIGRATION_SIGNAL":
-            0.80,
-
-        "POLICY_SIGNAL":
-            0.70,
-    }
-
-
-    # ==========================================================
-    # PUBLIC DETECTOR
-    # ==========================================================
+    # ======================================================
+    # PUBLIC API
+    # ======================================================
 
     def detect(
         self,
         text: str,
     ) -> Dict[str, object]:
         """
-        Detects influence signals in migration-related text.
+        Analyses a post for migration influence and
+        early-warning indicators.
 
-        Returns:
+        Existing main.py-compatible fields are preserved:
 
         {
             "detected": bool,
@@ -755,183 +211,320 @@ class InfluenceSignalDetector:
             "high_value_match": bool,
             "confidence": float
         }
+
+        Additional analytical fields are also returned.
         """
 
         if not text:
 
             return self._empty_result()
 
-        context_matches = (
-            self._find_context_matches(
+        normalized_text = (
+            self._normalize_text(
                 text
             )
         )
 
-        migration_context = (
-            len(
-                context_matches
-            )
-            > 0
-        )
+        # --------------------------------------------------
+        # MIGRATION CONTEXT
+        # --------------------------------------------------
 
-        matched_signals: List[str] = []
-
-        matched_phrases: List[
-            Tuple[str, str]
-        ] = []
-
-        high_value_match = False
-
-        # ------------------------------------------------------
-        # DETECT SIGNAL PATTERNS
-        # ------------------------------------------------------
-
-        for (
-            signal_type,
-            patterns,
-        ) in self.SIGNAL_PATTERNS.items():
-
-            for pattern in patterns:
-
-                match = re.search(
-                    pattern,
-                    text,
-                    flags=re.IGNORECASE,
-                )
-
-                if not match:
-                    continue
-
-                if (
-                    signal_type
-                    not in matched_signals
-                ):
-
-                    matched_signals.append(
-                        signal_type
-                    )
-
-                matched_phrases.append(
-                    (
-                        signal_type,
-                        match.group(0),
-                    )
-                )
-
-        # ------------------------------------------------------
-        # NO SIGNAL
-        # ------------------------------------------------------
-
-        if not matched_signals:
-
-            return {
-                "detected":
-                    False,
-
-                "primary_signal":
-                    None,
-
-                "matched_signals":
-                    [],
-
-                "matched_phrases":
-                    [],
-
-                "migration_context":
-                    migration_context,
-
-                "context_matches":
-                    context_matches,
-
-                "high_value_match":
-                    False,
-
-                "confidence":
-                    0.0,
-            }
-
-        # ------------------------------------------------------
-        # HIGH VALUE CHECK
-        # ------------------------------------------------------
-
-        high_value_match = (
-            self._has_high_value_match(
-                text=text,
-                signals=matched_signals,
+        context_result = (
+            self._match_simple_section(
+                normalized_text=normalized_text,
+                section=self.rules.get(
+                    "migration_context",
+                    {},
+                ),
+                value_key="terms",
             )
         )
 
-        # ------------------------------------------------------
-        # CONTEXT REQUIREMENT
-        # ------------------------------------------------------
-
-        signal_is_valid = (
-            migration_context
-            or high_value_match
+        migration_context = bool(
+            context_result["matches"]
         )
 
-        if not signal_is_valid:
+        # --------------------------------------------------
+        # INDICATOR GROUPS
+        # --------------------------------------------------
 
-            return {
-                "detected":
-                    False,
-
-                "primary_signal":
-                    None,
-
-                "matched_signals":
-                    matched_signals,
-
-                "matched_phrases":
-                    matched_phrases,
-
-                "migration_context":
-                    False,
-
-                "context_matches":
-                    [],
-
-                "high_value_match":
-                    high_value_match,
-
-                "confidence":
-                    0.0,
-            }
-
-        # ------------------------------------------------------
-        # PRIMARY SIGNAL
-        # ------------------------------------------------------
-
-        primary_signal = (
-            self._select_primary_signal(
-                matched_signals
+        indicator_results = (
+            self._match_indicator_groups(
+                normalized_text
             )
         )
 
-        # ------------------------------------------------------
-        # CONFIDENCE
-        # ------------------------------------------------------
+        # --------------------------------------------------
+        # STRUCTURED ENTITIES
+        # --------------------------------------------------
 
-        confidence = (
-            self._calculate_confidence(
-                primary_signal=primary_signal,
-                matched_signals=matched_signals,
-                matched_phrases=matched_phrases,
+        destination_result = (
+            self._match_destinations(
+                normalized_text
+            )
+        )
+
+        origin_result = (
+            self._match_origin_regions(
+                normalized_text
+            )
+        )
+
+        crossing_point_result = (
+            self._match_crossing_points(
+                normalized_text
+            )
+        )
+
+        crossing_method_result = (
+            self._match_crossing_methods(
+                normalized_text
+            )
+        )
+
+        platform_result = (
+            self._match_platforms(
+                normalized_text
+            )
+        )
+
+        # --------------------------------------------------
+        # NARRATIVES
+        # --------------------------------------------------
+
+        narrative_results = (
+            self._match_narratives(
+                normalized_text
+            )
+        )
+
+        # --------------------------------------------------
+        # HIGH VALUE PHRASES
+        # --------------------------------------------------
+
+        high_value_result = (
+            self._match_high_value_phrases(
+                normalized_text
+            )
+        )
+
+        high_value_match = bool(
+            high_value_result["matches"]
+        )
+
+        # --------------------------------------------------
+        # BUILD MATCHED GROUP MAP
+        # --------------------------------------------------
+
+        matched_group_map = (
+            self._build_group_map(
                 migration_context=(
                     migration_context
                 ),
-                context_matches=(
-                    context_matches
+                indicator_results=(
+                    indicator_results
+                ),
+                destination_result=(
+                    destination_result
+                ),
+                origin_result=(
+                    origin_result
+                ),
+                crossing_point_result=(
+                    crossing_point_result
+                ),
+                crossing_method_result=(
+                    crossing_method_result
+                ),
+                platform_result=(
+                    platform_result
+                ),
+                narrative_results=(
+                    narrative_results
+                ),
+            )
+        )
+
+        # --------------------------------------------------
+        # CONTEXT PATTERNS
+        # --------------------------------------------------
+
+        matched_context_patterns = (
+            self._evaluate_context_patterns(
+                matched_group_map
+            )
+        )
+
+        # --------------------------------------------------
+        # SCORE
+        # --------------------------------------------------
+
+        score = (
+            self._calculate_score(
+                migration_context=(
+                    migration_context
+                ),
+                context_result=(
+                    context_result
+                ),
+                indicator_results=(
+                    indicator_results
+                ),
+                destination_result=(
+                    destination_result
+                ),
+                origin_result=(
+                    origin_result
+                ),
+                crossing_point_result=(
+                    crossing_point_result
+                ),
+                crossing_method_result=(
+                    crossing_method_result
+                ),
+                platform_result=(
+                    platform_result
+                ),
+                narrative_results=(
+                    narrative_results
+                ),
+                high_value_result=(
+                    high_value_result
+                ),
+                matched_context_patterns=(
+                    matched_context_patterns
+                ),
+            )
+        )
+
+        score_level = (
+            self._get_score_level(
+                score
+            )
+        )
+
+        # --------------------------------------------------
+        # CONTEXT VALIDATION
+        # --------------------------------------------------
+
+        context_valid = (
+            self._is_context_valid(
+                migration_context=(
+                    migration_context
                 ),
                 high_value_match=(
                     high_value_match
                 ),
+                matched_group_map=(
+                    matched_group_map
+                ),
             )
         )
 
+        minimum_score = int(
+            self.settings.get(
+                "minimum_score",
+                5,
+            )
+        )
+
+        detected = (
+            context_valid
+            and score >= minimum_score
+        )
+
+        # --------------------------------------------------
+        # SIGNAL SELECTION
+        # --------------------------------------------------
+
+        matched_signals = (
+            self._derive_signals(
+                matched_group_map=(
+                    matched_group_map
+                ),
+                matched_context_patterns=(
+                    matched_context_patterns
+                ),
+            )
+        )
+
+        primary_signal = (
+            self._select_primary_signal(
+                matched_signals=(
+                    matched_signals
+                ),
+                matched_context_patterns=(
+                    matched_context_patterns
+                ),
+            )
+            if detected
+            else None
+        )
+
+        # --------------------------------------------------
+        # CONFIDENCE
+        # --------------------------------------------------
+
+        confidence = 0.0
+
+        if detected:
+
+            confidence = (
+                self._calculate_confidence(
+                    primary_signal=(
+                        primary_signal
+                    ),
+                    score=score,
+                    score_level=(
+                        score_level
+                    ),
+                    migration_context=(
+                        migration_context
+                    ),
+                    high_value_match=(
+                        high_value_match
+                    ),
+                    matched_group_map=(
+                        matched_group_map
+                    ),
+                    matched_context_patterns=(
+                        matched_context_patterns
+                    ),
+                )
+            )
+
+        # --------------------------------------------------
+        # COMPATIBILITY PHRASES
+        # --------------------------------------------------
+
+        matched_phrases = (
+            self._build_compatibility_phrases(
+                primary_signal=(
+                    primary_signal
+                ),
+                indicator_results=(
+                    indicator_results
+                ),
+                narrative_results=(
+                    narrative_results
+                ),
+                high_value_result=(
+                    high_value_result
+                ),
+            )
+        )
+
+        # --------------------------------------------------
+        # FINAL RESULT
+        # --------------------------------------------------
+
         return {
+            # ----------------------------------------------
+            # ORIGINAL COMPATIBILITY FIELDS
+            # ----------------------------------------------
+
             "detected":
-                True,
+                detected,
 
             "primary_signal":
                 primary_signal,
@@ -946,112 +539,1506 @@ class InfluenceSignalDetector:
                 migration_context,
 
             "context_matches":
-                context_matches,
+                context_result[
+                    "matches"
+                ],
 
             "high_value_match":
                 high_value_match,
 
             "confidence":
                 confidence,
+
+            # ----------------------------------------------
+            # NEW ANALYTICAL FIELDS
+            # ----------------------------------------------
+
+            "score":
+                score,
+
+            "score_level":
+                score_level,
+
+            "matched_indicator_groups":
+                self._matched_group_names(
+                    indicator_results
+                ),
+
+            "indicator_matches":
+                indicator_results,
+
+            "matched_destination_countries":
+                destination_result[
+                    "entities"
+                ],
+
+            "matched_origin_regions":
+                origin_result[
+                    "entities"
+                ],
+
+            "matched_crossing_points":
+                crossing_point_result[
+                    "entities"
+                ],
+
+            "matched_crossing_methods":
+                crossing_method_result[
+                    "entities"
+                ],
+
+            "matched_platforms":
+                platform_result[
+                    "entities"
+                ],
+
+            "matched_narratives":
+                self._matched_group_names(
+                    narrative_results
+                ),
+
+            "narrative_matches":
+                narrative_results,
+
+            "matched_context_patterns":
+                matched_context_patterns,
+
+            "high_value_matches":
+                high_value_result[
+                    "matches"
+                ],
+
+            "rules_version":
+                self.rules.get(
+                    "version"
+                ),
         }
 
+    # ======================================================
+    # TEXT NORMALIZATION
+    # ======================================================
 
-    # ==========================================================
-    # CONTEXT MATCHING
-    # ==========================================================
-
-    def _find_context_matches(
+    def _normalize_text(
         self,
         text: str,
+    ) -> str:
+        """
+        Basic text normalization.
+
+        Unicode characters are preserved because migration
+        monitoring includes multilingual content.
+        """
+
+        text = str(
+            text
+        )
+
+        text = text.replace(
+            "\n",
+            " "
+        )
+
+        text = text.replace(
+            "\r",
+            " "
+        )
+
+        text = re.sub(
+            r"\s+",
+            " ",
+            text,
+        )
+
+        return text.strip()
+
+    # ======================================================
+    # TERM MATCHING
+    # ======================================================
+
+    def _contains_term(
+        self,
+        text: str,
+        term: str,
+    ) -> Optional[str]:
+        """
+        Performs case-insensitive literal phrase matching.
+
+        Word-like terms use conservative boundaries to reduce
+        substring false positives.
+
+        Example:
+
+            "asylum" matches "asylum seekers"
+            but not an unrelated larger token.
+        """
+
+        if not term:
+
+            return None
+
+        term = str(
+            term
+        ).strip()
+
+        if not term:
+
+            return None
+
+        escaped = re.escape(
+            term
+        )
+
+        first_character = (
+            term[0]
+        )
+
+        last_character = (
+            term[-1]
+        )
+
+        prefix = (
+            r"(?<!\w)"
+            if (
+                first_character.isalnum()
+                or first_character == "_"
+            )
+            else ""
+        )
+
+        suffix = (
+            r"(?!\w)"
+            if (
+                last_character.isalnum()
+                or last_character == "_"
+            )
+            else ""
+        )
+
+        pattern = (
+            prefix
+            + escaped
+            + suffix
+        )
+
+        match = re.search(
+            pattern,
+            text,
+            flags=re.IGNORECASE,
+        )
+
+        if match:
+
+            return match.group(
+                0
+            )
+
+        return None
+
+    # ======================================================
+    # SIMPLE SECTION MATCHER
+    # ======================================================
+
+    def _match_simple_section(
+        self,
+        *,
+        normalized_text: str,
+        section: Dict[str, object],
+        value_key: str,
+    ) -> Dict[str, object]:
+        """
+        Matches a flat term section.
+        """
+
+        terms = (
+            section.get(
+                value_key,
+                [],
+            )
+            or []
+        )
+
+        matches: List[str] = []
+
+        for term in terms:
+
+            match = (
+                self._contains_term(
+                    normalized_text,
+                    str(term),
+                )
+            )
+
+            if (
+                match
+                and match.lower()
+                not in {
+                    item.lower()
+                    for item in matches
+                }
+            ):
+
+                matches.append(
+                    match
+                )
+
+        return {
+            "matched":
+                bool(matches),
+
+            "matches":
+                matches,
+
+            "weight":
+                int(
+                    section.get(
+                        "weight",
+                        0,
+                    )
+                    or 0
+                ),
+        }
+
+    # ======================================================
+    # INDICATOR GROUPS
+    # ======================================================
+
+    def _match_indicator_groups(
+        self,
+        text: str,
+    ) -> Dict[str, object]:
+        """
+        Matches all indicator groups defined in JSON.
+        """
+
+        results = {}
+
+        for (
+            group_name,
+            configuration,
+        ) in self.indicator_groups.items():
+
+            result = (
+                self._match_simple_section(
+                    normalized_text=text,
+                    section=configuration,
+                    value_key="terms",
+                )
+            )
+
+            results[
+                group_name
+            ] = result
+
+        return results
+
+    # ======================================================
+    # DESTINATION COUNTRIES
+    # ======================================================
+
+    def _match_destinations(
+        self,
+        text: str,
+    ) -> Dict[str, object]:
+        """
+        Detects configured destination countries.
+        """
+
+        section = (
+            self.rules.get(
+                "destination_countries",
+                {},
+            )
+        )
+
+        weight = int(
+            section.get(
+                "weight",
+                0,
+            )
+            or 0
+        )
+
+        entities = []
+
+        for country in (
+            section.get(
+                "countries",
+                []
+            )
+            or []
+        ):
+
+            aliases = (
+                country.get(
+                    "aliases",
+                    [],
+                )
+                or []
+            )
+
+            matched_aliases = (
+                self._match_aliases(
+                    text=text,
+                    aliases=aliases,
+                )
+            )
+
+            if not matched_aliases:
+                continue
+
+            entities.append(
+                {
+                    "name":
+                        country.get(
+                            "name"
+                        ),
+
+                    "continent":
+                        country.get(
+                            "continent"
+                        ),
+
+                    "type":
+                        country.get(
+                            "type"
+                        ),
+
+                    "schengen":
+                        country.get(
+                            "schengen"
+                        ),
+
+                    "importance":
+                        country.get(
+                            "importance"
+                        ),
+
+                    "matched_aliases":
+                        matched_aliases,
+                }
+            )
+
+        return {
+            "matched":
+                bool(entities),
+
+            "entities":
+                entities,
+
+            "weight":
+                weight,
+        }
+
+    # ======================================================
+    # ORIGIN REGIONS
+    # ======================================================
+
+    def _match_origin_regions(
+        self,
+        text: str,
+    ) -> Dict[str, object]:
+        """
+        Detects configured migration origin countries
+        and maps them to origin regions.
+        """
+
+        section = (
+            self.rules.get(
+                "origin_regions",
+                {},
+            )
+        )
+
+        weight = int(
+            section.get(
+                "weight",
+                0,
+            )
+            or 0
+        )
+
+        entities = []
+
+        for region in (
+            section.get(
+                "regions",
+                []
+            )
+            or []
+        ):
+
+            countries = (
+                region.get(
+                    "countries",
+                    [],
+                )
+                or []
+            )
+
+            matched_countries = (
+                self._match_aliases(
+                    text=text,
+                    aliases=countries,
+                )
+            )
+
+            if not matched_countries:
+                continue
+
+            entities.append(
+                {
+                    "name":
+                        region.get(
+                            "name"
+                        ),
+
+                    "importance":
+                        region.get(
+                            "importance"
+                        ),
+
+                    "matched_countries":
+                        matched_countries,
+                }
+            )
+
+        return {
+            "matched":
+                bool(entities),
+
+            "entities":
+                entities,
+
+            "weight":
+                weight,
+        }
+
+    # ======================================================
+    # CROSSING POINTS
+    # ======================================================
+
+    def _match_crossing_points(
+        self,
+        text: str,
+    ) -> Dict[str, object]:
+        """
+        Detects important migration crossing,
+        departure, transit and arrival locations.
+        """
+
+        section = (
+            self.rules.get(
+                "crossing_points",
+                {},
+            )
+        )
+
+        weight = int(
+            section.get(
+                "weight",
+                0,
+            )
+            or 0
+        )
+
+        entities = []
+
+        for point in (
+            section.get(
+                "points",
+                []
+            )
+            or []
+        ):
+
+            matched_aliases = (
+                self._match_aliases(
+                    text=text,
+                    aliases=(
+                        point.get(
+                            "aliases",
+                            [],
+                        )
+                        or []
+                    ),
+                )
+            )
+
+            if not matched_aliases:
+                continue
+
+            entities.append(
+                {
+                    "name":
+                        point.get(
+                            "name"
+                        ),
+
+                    "country":
+                        point.get(
+                            "country"
+                        ),
+
+                    "route":
+                        point.get(
+                            "route"
+                        ),
+
+                    "type":
+                        point.get(
+                            "type"
+                        ),
+
+                    "importance":
+                        point.get(
+                            "importance"
+                        ),
+
+                    "matched_aliases":
+                        matched_aliases,
+                }
+            )
+
+        return {
+            "matched":
+                bool(entities),
+
+            "entities":
+                entities,
+
+            "weight":
+                weight,
+        }
+
+    # ======================================================
+    # CROSSING METHODS
+    # ======================================================
+
+    def _match_crossing_methods(
+        self,
+        text: str,
+    ) -> Dict[str, object]:
+        """
+        Detects configured border crossing methods.
+        """
+
+        section = (
+            self.rules.get(
+                "crossing_methods",
+                {},
+            )
+        )
+
+        weight = int(
+            section.get(
+                "weight",
+                0,
+            )
+            or 0
+        )
+
+        entities = []
+
+        for method in (
+            section.get(
+                "methods",
+                []
+            )
+            or []
+        ):
+
+            matched_aliases = (
+                self._match_aliases(
+                    text=text,
+                    aliases=(
+                        method.get(
+                            "aliases",
+                            [],
+                        )
+                        or []
+                    ),
+                )
+            )
+
+            if not matched_aliases:
+                continue
+
+            entities.append(
+                {
+                    "name":
+                        method.get(
+                            "name"
+                        ),
+
+                    "type":
+                        method.get(
+                            "type"
+                        ),
+
+                    "importance":
+                        method.get(
+                            "importance"
+                        ),
+
+                    "matched_aliases":
+                        matched_aliases,
+                }
+            )
+
+        return {
+            "matched":
+                bool(entities),
+
+            "entities":
+                entities,
+
+            "weight":
+                weight,
+        }
+
+    # ======================================================
+    # PLATFORM INDICATORS
+    # ======================================================
+
+    def _match_platforms(
+        self,
+        text: str,
+    ) -> Dict[str, object]:
+        """
+        Detects references to communication
+        and social-media platforms.
+        """
+
+        section = (
+            self.rules.get(
+                "platform_indicators",
+                {},
+            )
+        )
+
+        weight = int(
+            section.get(
+                "weight",
+                0,
+            )
+            or 0
+        )
+
+        entities = []
+
+        for platform in (
+            section.get(
+                "platforms",
+                []
+            )
+            or []
+        ):
+
+            aliases = (
+                platform.get(
+                    "aliases",
+                    [],
+                )
+                or []
+            )
+
+            matched_aliases = (
+                self._match_aliases(
+                    text=text,
+                    aliases=aliases,
+                )
+            )
+
+            if not matched_aliases:
+                continue
+
+            entities.append(
+                {
+                    "name":
+                        platform.get(
+                            "name"
+                        ),
+
+                    "importance":
+                        platform.get(
+                            "importance"
+                        ),
+
+                    "risk":
+                        platform.get(
+                            "risk"
+                        ),
+
+                    "matched_aliases":
+                        matched_aliases,
+                }
+            )
+
+        return {
+            "matched":
+                bool(entities),
+
+            "entities":
+                entities,
+
+            "weight":
+                weight,
+        }
+
+    # ======================================================
+    # ALIAS MATCHING
+    # ======================================================
+
+    def _match_aliases(
+        self,
+        *,
+        text: str,
+        aliases: List[str],
     ) -> List[str]:
         """
-        Finds explicit migration context terms.
+        Matches aliases and returns unique actual strings.
         """
 
         matches: List[str] = []
 
-        for pattern in (
-            self.MIGRATION_CONTEXT_PATTERNS
-        ):
+        for alias in aliases:
 
-            match = re.search(
-                pattern,
-                text,
-                flags=re.IGNORECASE,
+            match = (
+                self._contains_term(
+                    text,
+                    str(alias),
+                )
             )
 
             if not match:
                 continue
 
-            normalized_match = (
-                match.group(0)
-            )
-
             if (
-                normalized_match
-                not in matches
+                match.lower()
+                in {
+                    existing.lower()
+                    for existing in matches
+                }
             ):
 
-                matches.append(
-                    normalized_match
-                )
+                continue
+
+            matches.append(
+                match
+            )
 
         return matches
 
+    # ======================================================
+    # NARRATIVES
+    # ======================================================
 
-    # ==========================================================
-    # HIGH VALUE MATCH
-    # ==========================================================
-
-    def _has_high_value_match(
+    def _match_narratives(
         self,
-        *,
         text: str,
-        signals: List[str],
-    ) -> bool:
+    ) -> Dict[str, object]:
         """
-        Checks whether one of the detected signals contains
-        a high-value phrase.
-
-        High-value phrases can justify detection even when
-        explicit migration terminology is missing.
+        Detects configured migration narratives.
         """
 
-        for signal in signals:
+        narratives = (
+            self.rules.get(
+                "narratives",
+                {},
+            )
+        )
 
-            patterns = (
-                self.HIGH_VALUE_PATTERNS.get(
-                    signal,
-                    [],
+        results = {}
+
+        for (
+            narrative_name,
+            configuration,
+        ) in narratives.items():
+
+            result = (
+                self._match_simple_section(
+                    normalized_text=text,
+                    section=configuration,
+                    value_key="terms",
                 )
             )
 
-            for pattern in patterns:
+            results[
+                narrative_name
+            ] = result
 
-                if re.search(
-                    pattern,
+        return results
+
+    # ======================================================
+    # HIGH VALUE PHRASES
+    # ======================================================
+
+    def _match_high_value_phrases(
+        self,
+        text: str,
+    ) -> Dict[str, object]:
+        """
+        Detects high-value phrases configured in JSON.
+        """
+
+        section = (
+            self.rules.get(
+                "high_value_phrases",
+                {},
+            )
+        )
+
+        terms = (
+            section.get(
+                "terms",
+                [],
+            )
+            or []
+        )
+
+        matches = []
+
+        for term in terms:
+
+            match = (
+                self._contains_term(
                     text,
-                    flags=re.IGNORECASE,
+                    str(term),
+                )
+            )
+
+            if not match:
+                continue
+
+            if (
+                match.lower()
+                in {
+                    existing.lower()
+                    for existing in matches
+                }
+            ):
+
+                continue
+
+            matches.append(
+                match
+            )
+
+        return {
+            "matched":
+                bool(matches),
+
+            "matches":
+                matches,
+
+            "bonus_score":
+                int(
+                    section.get(
+                        "bonus_score",
+                        0,
+                    )
+                    or 0
+                ),
+        }
+
+    # ======================================================
+    # GROUP MAP
+    # ======================================================
+
+    def _build_group_map(
+        self,
+        *,
+        migration_context: bool,
+        indicator_results: Dict[str, object],
+        destination_result: Dict[str, object],
+        origin_result: Dict[str, object],
+        crossing_point_result: Dict[str, object],
+        crossing_method_result: Dict[str, object],
+        platform_result: Dict[str, object],
+        narrative_results: Dict[str, object],
+    ) -> Dict[str, bool]:
+        """
+        Creates a normalized boolean map used by
+        context and signal rules.
+        """
+
+        result = {
+            "migration_context":
+                migration_context,
+
+            "destination_country":
+                bool(
+                    destination_result.get(
+                        "matched"
+                    )
+                ),
+
+            "origin_region":
+                bool(
+                    origin_result.get(
+                        "matched"
+                    )
+                ),
+
+            "crossing_point":
+                bool(
+                    crossing_point_result.get(
+                        "matched"
+                    )
+                ),
+
+            "crossing_method":
+                bool(
+                    crossing_method_result.get(
+                        "matched"
+                    )
+                ),
+
+            "platform_indicator":
+                bool(
+                    platform_result.get(
+                        "matched"
+                    )
+                ),
+        }
+
+        for (
+            group_name,
+            group_result,
+        ) in indicator_results.items():
+
+            result[
+                group_name
+            ] = bool(
+                group_result.get(
+                    "matched"
+                )
+            )
+
+        for (
+            narrative_name,
+            narrative_result,
+        ) in narrative_results.items():
+
+            result[
+                narrative_name
+            ] = bool(
+                narrative_result.get(
+                    "matched"
+                )
+            )
+
+        return result
+
+    # ======================================================
+    # CONTEXT PATTERNS
+    # ======================================================
+
+    def _evaluate_context_patterns(
+        self,
+        matched_group_map: Dict[str, bool],
+    ) -> List[Dict[str, object]]:
+        """
+        Evaluates multi-indicator context patterns.
+
+        Required groups must all match.
+
+        Optional groups are not required but are recorded
+        and can strengthen the analytical interpretation.
+        """
+
+        results = []
+
+        for pattern in (
+            self.context_patterns
+        ):
+
+            required_groups = (
+                pattern.get(
+                    "required_groups",
+                    [],
+                )
+                or []
+            )
+
+            optional_groups = (
+                pattern.get(
+                    "optional_groups",
+                    [],
+                )
+                or []
+            )
+
+            required_match = all(
+                matched_group_map.get(
+                    group,
+                    False,
+                )
+                for group
+                in required_groups
+            )
+
+            if not required_match:
+                continue
+
+            matched_optional = [
+                group
+                for group
+                in optional_groups
+                if matched_group_map.get(
+                    group,
+                    False,
+                )
+            ]
+
+            results.append(
+                {
+                    "id":
+                        pattern.get(
+                            "id"
+                        ),
+
+                    "name":
+                        pattern.get(
+                            "name"
+                        ),
+
+                    "score":
+                        int(
+                            pattern.get(
+                                "score",
+                                0,
+                            )
+                            or 0
+                        ),
+
+                    "result_hint":
+                        pattern.get(
+                            "result_hint"
+                        ),
+
+                    "required_groups":
+                        required_groups,
+
+                    "matched_optional_groups":
+                        matched_optional,
+                }
+            )
+
+        return results
+
+    # ======================================================
+    # SCORE
+    # ======================================================
+
+    def _calculate_score(
+        self,
+        *,
+        migration_context: bool,
+        context_result: Dict[str, object],
+        indicator_results: Dict[str, object],
+        destination_result: Dict[str, object],
+        origin_result: Dict[str, object],
+        crossing_point_result: Dict[str, object],
+        crossing_method_result: Dict[str, object],
+        platform_result: Dict[str, object],
+        narrative_results: Dict[str, object],
+        high_value_result: Dict[str, object],
+        matched_context_patterns: List[
+            Dict[str, object]
+        ],
+    ) -> int:
+        """
+        Calculates total signal score.
+
+        A category weight is counted once regardless of
+        how many terms matched inside that category.
+
+        This prevents long posts from receiving excessive
+        scores simply because the same concept is repeated.
+        """
+
+        score = 0
+
+        if migration_context:
+
+            score += int(
+                context_result.get(
+                    "weight",
+                    0,
+                )
+                or 0
+            )
+
+        for result in (
+            indicator_results.values()
+        ):
+
+            if result.get(
+                "matched"
+            ):
+
+                score += int(
+                    result.get(
+                        "weight",
+                        0,
+                    )
+                    or 0
+                )
+
+        for result in [
+            destination_result,
+            origin_result,
+            crossing_point_result,
+            crossing_method_result,
+            platform_result,
+        ]:
+
+            if result.get(
+                "matched"
+            ):
+
+                score += int(
+                    result.get(
+                        "weight",
+                        0,
+                    )
+                    or 0
+                )
+
+        for result in (
+            narrative_results.values()
+        ):
+
+            if result.get(
+                "matched"
+            ):
+
+                score += int(
+                    result.get(
+                        "weight",
+                        0,
+                    )
+                    or 0
+                )
+
+        if high_value_result.get(
+            "matched"
+        ):
+
+            score += int(
+                high_value_result.get(
+                    "bonus_score",
+                    0,
+                )
+                or 0
+            )
+
+        for pattern in (
+            matched_context_patterns
+        ):
+
+            score += int(
+                pattern.get(
+                    "score",
+                    0,
+                )
+                or 0
+            )
+
+        return score
+
+    # ======================================================
+    # SCORE LEVEL
+    # ======================================================
+
+    def _get_score_level(
+        self,
+        score: int,
+    ) -> str:
+        """
+        Converts numeric score to configured severity level.
+        """
+
+        levels = []
+
+        for (
+            level_name,
+            configuration,
+        ) in self.score_levels.items():
+
+            levels.append(
+                (
+                    int(
+                        configuration.get(
+                            "minimum",
+                            0,
+                        )
+                        or 0
+                    ),
+                    level_name,
+                )
+            )
+
+        levels.sort(
+            key=lambda item:
+                item[0],
+            reverse=True,
+        )
+
+        for (
+            minimum,
+            level_name,
+        ) in levels:
+
+            if score >= minimum:
+
+                return level_name
+
+        return "NONE"
+
+    # ======================================================
+    # CONTEXT VALIDATION
+    # ======================================================
+
+    def _is_context_valid(
+        self,
+        *,
+        migration_context: bool,
+        high_value_match: bool,
+        matched_group_map: Dict[str, bool],
+    ) -> bool:
+        """
+        Validates whether the detected indicators are
+        sufficiently migration-related.
+
+        Normally explicit migration context is required.
+
+        A high-value phrase may override this requirement,
+        but only if at least one additional meaningful
+        migration-related indicator is present.
+
+        This reduces false positives such as:
+
+            "There are no police at the concert."
+        """
+
+        require_context = bool(
+            self.settings.get(
+                "require_migration_context",
+                True,
+            )
+        )
+
+        if not require_context:
+
+            return True
+
+        if migration_context:
+
+            return True
+
+        allow_override = bool(
+            self.settings.get(
+                "allow_high_value_override",
+                False,
+            )
+        )
+
+        if not allow_override:
+
+            return False
+
+        if not high_value_match:
+
+            return False
+
+        supporting_groups = {
+            "movement",
+            "mass_movement",
+            "route_information",
+            "facilitation",
+            "legal_signal",
+            "policy_signal",
+            "border_condition",
+            "smuggling_ecosystem",
+            "destination_country",
+            "origin_region",
+            "crossing_point",
+            "crossing_method",
+            "information_spread",
+            "legal_protection",
+            "border_access",
+            "coordination",
+            "route_promotion",
+            "policy_pull_factor",
+        }
+
+        supporting_match_count = sum(
+            1
+            for group
+            in supporting_groups
+            if matched_group_map.get(
+                group,
+                False,
+            )
+        )
+
+        return (
+            supporting_match_count
+            >= 1
+        )
+
+    # ======================================================
+    # SIGNAL DERIVATION
+    # ======================================================
+
+    def _derive_signals(
+        self,
+        *,
+        matched_group_map: Dict[str, bool],
+        matched_context_patterns: List[
+            Dict[str, object]
+        ],
+    ) -> List[str]:
+        """
+        Maps matched indicators to final signal categories.
+        """
+
+        signals: List[str] = []
+
+        # --------------------------------------------------
+        # SIGNAL MAPPING
+        # --------------------------------------------------
+
+        for (
+            signal_name,
+            groups,
+        ) in self.signal_mapping.items():
+
+            if any(
+                matched_group_map.get(
+                    group,
+                    False,
+                )
+                for group
+                in groups
+            ):
+
+                if (
+                    signal_name
+                    not in signals
                 ):
 
-                    return True
+                    signals.append(
+                        signal_name
+                    )
 
-        return False
+        # --------------------------------------------------
+        # CONTEXT PATTERN HINTS
+        # --------------------------------------------------
 
+        for pattern in (
+            matched_context_patterns
+        ):
 
-    # ==========================================================
+            result_hint = (
+                pattern.get(
+                    "result_hint"
+                )
+            )
+
+            if (
+                result_hint
+                and result_hint
+                not in signals
+            ):
+
+                signals.append(
+                    result_hint
+                )
+
+        return signals
+
+    # ======================================================
     # PRIMARY SIGNAL
-    # ==========================================================
+    # ======================================================
 
     def _select_primary_signal(
         self,
+        *,
         matched_signals: List[str],
-    ) -> str:
+        matched_context_patterns: List[
+            Dict[str, object]
+        ],
+    ) -> Optional[str]:
         """
-        Selects highest priority signal.
+        Selects the strongest signal.
+
+        Context-pattern result hints are preferred because
+        they are based on combinations of indicators.
         """
 
-        for signal in self.PRIORITY:
+        if not matched_signals:
+
+            return None
+
+        pattern_scores = {}
+
+        for pattern in (
+            matched_context_patterns
+        ):
+
+            result_hint = (
+                pattern.get(
+                    "result_hint"
+                )
+            )
+
+            if not result_hint:
+                continue
+
+            pattern_scores[
+                result_hint
+            ] = (
+                pattern_scores.get(
+                    result_hint,
+                    0,
+                )
+                +
+                int(
+                    pattern.get(
+                        "score",
+                        0,
+                    )
+                    or 0
+                )
+            )
+
+        if pattern_scores:
+
+            strongest_pattern_signal = max(
+                pattern_scores,
+                key=pattern_scores.get,
+            )
+
+            if (
+                strongest_pattern_signal
+                in matched_signals
+            ):
+
+                return (
+                    strongest_pattern_signal
+                )
+
+        priority = [
+            "RECRUITMENT_COORDINATION",
+            "LEGAL_MIGRATION_SIGNAL",
+            "CROSSING_FACILITATION",
+            "POLICY_SIGNAL",
+        ]
+
+        for signal in priority:
 
             if signal in matched_signals:
 
@@ -1059,77 +2046,248 @@ class InfluenceSignalDetector:
 
         return matched_signals[0]
 
-
-    # ==========================================================
+    # ======================================================
     # CONFIDENCE
-    # ==========================================================
+    # ======================================================
 
     def _calculate_confidence(
         self,
         *,
-        primary_signal: str,
-        matched_signals: List[str],
-        matched_phrases: List[
-            Tuple[str, str]
-        ],
+        primary_signal: Optional[str],
+        score: int,
+        score_level: str,
         migration_context: bool,
-        context_matches: List[str],
         high_value_match: bool,
+        matched_group_map: Dict[str, bool],
+        matched_context_patterns: List[
+            Dict[str, object]
+        ],
     ) -> float:
         """
-        Calculates confidence for the detected influence signal.
-
-        Confidence increases when:
-
-        - explicit migration context exists
-        - several influence signals occur together
-        - several phrases match
-        - a high-value phrase is detected
+        Calculates analytical confidence from the
+        configured base confidence and score level.
         """
 
-        confidence = (
-            self.BASE_CONFIDENCE.get(
+        if not primary_signal:
+
+            return 0.0
+
+        confidence = float(
+            self.base_confidence.get(
                 primary_signal,
                 0.60,
             )
         )
 
+        level_configuration = (
+            self.score_levels.get(
+                score_level,
+                {},
+            )
+        )
+
+        confidence += float(
+            level_configuration.get(
+                "confidence_bonus",
+                0.0,
+            )
+            or 0.0
+        )
+
         if migration_context:
-
-            confidence += 0.04
-
-        if len(context_matches) >= 2:
-
-            confidence += 0.02
-
-        if len(matched_signals) >= 2:
-
-            confidence += 0.04
-
-        if len(matched_signals) >= 3:
-
-            confidence += 0.02
-
-        if len(matched_phrases) >= 3:
 
             confidence += 0.03
 
         if high_value_match:
 
-            confidence += 0.05
+            confidence += 0.04
+
+        matched_group_count = sum(
+            1
+            for matched
+            in matched_group_map.values()
+            if matched
+        )
+
+        if matched_group_count >= 4:
+
+            confidence += 0.03
+
+        if matched_group_count >= 6:
+
+            confidence += 0.02
+
+        if matched_context_patterns:
+
+            confidence += 0.03
+
+        if len(
+            matched_context_patterns
+        ) >= 2:
+
+            confidence += 0.02
+
+        maximum = float(
+            self.settings.get(
+                "max_confidence",
+                0.99,
+            )
+        )
 
         return round(
             min(
                 confidence,
-                0.99,
+                maximum,
             ),
             2,
         )
 
+    # ======================================================
+    # COMPATIBILITY MATCHED PHRASES
+    # ======================================================
 
-    # ==========================================================
+    def _build_compatibility_phrases(
+        self,
+        *,
+        primary_signal: Optional[str],
+        indicator_results: Dict[str, object],
+        narrative_results: Dict[str, object],
+        high_value_result: Dict[str, object],
+    ) -> List[Tuple[str, str]]:
+        """
+        Produces the legacy matched_phrases structure
+        expected by existing logging code.
+        """
+
+        if not primary_signal:
+
+            return []
+
+        results: List[
+            Tuple[str, str]
+        ] = []
+
+        seen = set()
+
+        for (
+            group_name,
+            group_result,
+        ) in indicator_results.items():
+
+            for phrase in (
+                group_result.get(
+                    "matches",
+                    [],
+                )
+                or []
+            ):
+
+                key = (
+                    group_name,
+                    phrase.lower(),
+                )
+
+                if key in seen:
+                    continue
+
+                seen.add(
+                    key
+                )
+
+                results.append(
+                    (
+                        group_name,
+                        phrase,
+                    )
+                )
+
+        for (
+            narrative_name,
+            narrative_result,
+        ) in narrative_results.items():
+
+            for phrase in (
+                narrative_result.get(
+                    "matches",
+                    [],
+                )
+                or []
+            ):
+
+                key = (
+                    narrative_name,
+                    phrase.lower(),
+                )
+
+                if key in seen:
+                    continue
+
+                seen.add(
+                    key
+                )
+
+                results.append(
+                    (
+                        narrative_name,
+                        phrase,
+                    )
+                )
+
+        for phrase in (
+            high_value_result.get(
+                "matches",
+                [],
+            )
+            or []
+        ):
+
+            key = (
+                "HIGH_VALUE",
+                phrase.lower(),
+            )
+
+            if key in seen:
+                continue
+
+            seen.add(
+                key
+            )
+
+            results.append(
+                (
+                    "HIGH_VALUE",
+                    phrase,
+                )
+            )
+
+        return results
+
+    # ======================================================
+    # MATCHED GROUP NAMES
+    # ======================================================
+
+    def _matched_group_names(
+        self,
+        results: Dict[str, object],
+    ) -> List[str]:
+        """
+        Returns only names of groups with at least one match.
+        """
+
+        return [
+            name
+            for (
+                name,
+                result,
+            ) in results.items()
+            if result.get(
+                "matched"
+            )
+        ]
+
+    # ======================================================
     # EMPTY RESULT
-    # ==========================================================
+    # ======================================================
 
     def _empty_result(
         self,
@@ -1162,11 +2320,55 @@ class InfluenceSignalDetector:
 
             "confidence":
                 0.0,
+
+            "score":
+                0,
+
+            "score_level":
+                "NONE",
+
+            "matched_indicator_groups":
+                [],
+
+            "indicator_matches":
+                {},
+
+            "matched_destination_countries":
+                [],
+
+            "matched_origin_regions":
+                [],
+
+            "matched_crossing_points":
+                [],
+
+            "matched_crossing_methods":
+                [],
+
+            "matched_platforms":
+                [],
+
+            "matched_narratives":
+                [],
+
+            "narrative_matches":
+                {},
+
+            "matched_context_patterns":
+                [],
+
+            "high_value_matches":
+                [],
+
+            "rules_version":
+                self.rules.get(
+                    "version"
+                ),
         }
 
 
 # ==========================================================
-# OPTIONAL MANUAL TEST
+# MANUAL TEST
 # ==========================================================
 
 if __name__ == "__main__":
@@ -1177,27 +2379,59 @@ if __name__ == "__main__":
 
     test_cases = [
 
+        # --------------------------------------------------
+        # ROUTE / MOVEMENT
+        # --------------------------------------------------
+
         (
-            "Migrants should come to this crossing tonight. "
-            "There are no police and you can cross here."
+            "Hundreds of migrants are gathering near the coast "
+            "and moving toward a known crossing point. "
+            "Videos of the route are circulating on Telegram."
         ),
+
+        # --------------------------------------------------
+        # LEGAL SIGNAL
+        # --------------------------------------------------
 
         (
             "The court ruled that asylum seekers from this "
-            "country cannot be returned."
+            "country cannot currently be returned."
         ),
 
+        # --------------------------------------------------
+        # POLICY SIGNAL
+        # --------------------------------------------------
+
         (
-            "Temporary protection has been extended for refugees."
+            "Temporary protection has been extended for "
+            "refugees and new residence permits will be issued."
         ),
+
+        # --------------------------------------------------
+        # COORDINATION
+        # --------------------------------------------------
 
         (
             "Migrants can contact us on Telegram. "
             "Transport available and seats available."
         ),
 
+        # --------------------------------------------------
+        # LOCATION + MOVEMENT
+        # --------------------------------------------------
+
         (
-            "Come to the restaurant tonight."
+            "Hundreds of migrants are moving toward Calais "
+            "and small boats have been seen near the coast."
+        ),
+
+        # --------------------------------------------------
+        # FALSE POSITIVE CONTROL
+        # --------------------------------------------------
+
+        (
+            "Come to the restaurant tonight. "
+            "There are no police nearby."
         ),
     ]
 
@@ -1206,7 +2440,19 @@ if __name__ == "__main__":
     )
 
     print(
-        "Influence Signal Detector Test"
+        "Migration Influence Detector Test"
+    )
+
+    print(
+        "Rules:",
+        detector.rules_file,
+    )
+
+    print(
+        "Rules version:",
+        detector.rules.get(
+            "version"
+        ),
     )
 
     print(
@@ -1218,12 +2464,24 @@ if __name__ == "__main__":
         start=1,
     ):
 
-        result = detector.detect(
-            text
+        result = (
+            detector.detect(
+                text
+            )
+        )
+
+        print()
+
+        print(
+            "-----------------------------------"
         )
 
         print(
-            f"\nTEST {index}"
+            f"TEST {index}"
+        )
+
+        print(
+            "-----------------------------------"
         )
 
         print(
@@ -1233,40 +2491,91 @@ if __name__ == "__main__":
 
         print(
             "Detected:",
-            result["detected"],
+            result.get(
+                "detected"
+            ),
         )
 
         print(
-            "Primary:",
-            result["primary_signal"],
+            "Primary signal:",
+            result.get(
+                "primary_signal"
+            ),
         )
 
         print(
-            "Signals:",
-            result["matched_signals"],
+            "Score:",
+            result.get(
+                "score"
+            ),
         )
 
         print(
-            "Phrases:",
-            result["matched_phrases"],
-        )
-
-        print(
-            "Migration context:",
-            result["migration_context"],
-        )
-
-        print(
-            "Context matches:",
-            result["context_matches"],
-        )
-
-        print(
-            "High value:",
-            result["high_value_match"],
+            "Score level:",
+            result.get(
+                "score_level"
+            ),
         )
 
         print(
             "Confidence:",
-            result["confidence"],
+            result.get(
+                "confidence"
+            ),
+        )
+
+        print(
+            "Migration context:",
+            result.get(
+                "migration_context"
+            ),
+        )
+
+        print(
+            "Indicator groups:",
+            result.get(
+                "matched_indicator_groups"
+            ),
+        )
+
+        print(
+            "Narratives:",
+            result.get(
+                "matched_narratives"
+            ),
+        )
+
+        print(
+            "Crossing points:",
+            result.get(
+                "matched_crossing_points"
+            ),
+        )
+
+        print(
+            "Crossing methods:",
+            result.get(
+                "matched_crossing_methods"
+            ),
+        )
+
+        print(
+            "Platforms:",
+            result.get(
+                "matched_platforms"
+            ),
+        )
+
+        print(
+            "Context patterns:",
+            result.get(
+                "matched_context_patterns"
+            ),
+        )
+
+        print(
+            "High-value:",
+            result.get(
+                "high_value_match"
+            ),
         )
