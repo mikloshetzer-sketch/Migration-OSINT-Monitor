@@ -7,7 +7,8 @@ main.py
 Description:
 Application entry point using the Query Engine,
 Noise Filter, Operational Event Filter, X collection,
-analysis, event extraction, event correlation and SQLite storage.
+analysis, event extraction, region resolution,
+event correlation and SQLite storage.
 """
 
 from collectors.x_collector import XCollector
@@ -22,6 +23,7 @@ from analysis.query_engine import QueryEngine
 from analysis.noise_filter import NoiseFilter
 from analysis.operational_event_filter import OperationalEventFilter
 from analysis.event_correlator import EventCorrelator
+from analysis.region_resolver import RegionResolver
 
 from database.init_db import initialize_database
 from database.database import get_session
@@ -36,6 +38,7 @@ def analyze_post(
     time_extractor,
     scorer,
     event_extractor,
+    region_resolver,
 ):
     """
     Runs the analytical pipeline for a single post.
@@ -82,13 +85,45 @@ def analyze_post(
         ),
     )
 
-    return event_extractor.extract_event(
+    event = event_extractor.extract_event(
         post=post,
         classification=classification,
         locations=locations,
         time_result=time_result,
         score_result=score_result,
     )
+
+    region_result = region_resolver.resolve(event)
+
+    event["primary_region"] = region_result.get(
+        "primary_region"
+    )
+
+    event["matched_regions"] = region_result.get(
+        "matched_regions",
+        [],
+    )
+
+    event["region_names"] = region_result.get(
+        "region_names",
+        [],
+    )
+
+    event["matched_countries"] = region_result.get(
+        "matched_countries",
+        [],
+    )
+
+    event["matched_region_terms"] = region_result.get(
+        "matched_region_terms",
+        [],
+    )
+
+    event["region_confidence"] = region_result.get(
+        "confidence"
+    )
+
+    return event
 
 
 def print_event(
@@ -97,8 +132,8 @@ def print_event(
     correlation_result,
 ):
     """
-    Prints a normalized event, database status and
-    correlation information.
+    Prints a normalized event, region information,
+    database status and correlation information.
     """
 
     primary_location = event.get("primary_location")
@@ -126,6 +161,36 @@ def print_event(
         print("Primary location: None")
 
     print(
+        "Primary region: "
+        f"{event.get('primary_region')}"
+    )
+
+    print(
+        "Matched regions: "
+        f"{event.get('matched_regions')}"
+    )
+
+    print(
+        "Region names: "
+        f"{event.get('region_names')}"
+    )
+
+    print(
+        "Matched countries: "
+        f"{event.get('matched_countries')}"
+    )
+
+    print(
+        "Matched region terms: "
+        f"{event.get('matched_region_terms')}"
+    )
+
+    print(
+        "Region confidence: "
+        f"{event.get('region_confidence')}"
+    )
+
+    print(
         "Event time: "
         f"{event.get('event_time_normalized')}"
     )
@@ -146,21 +211,76 @@ def print_event(
     )
 
     if correlation_result:
-        matched_event = correlation_result.get("event") or {}
+        matched_event = correlation_result.get(
+            "event"
+        ) or {}
 
         print("Correlation: MATCH")
+
         print(
             "Correlation score: "
             f"{correlation_result.get('correlation_score')}"
         )
+
+        details = correlation_result.get(
+            "correlation_details"
+        ) or {}
+
+        print(
+            "Correlation event type score: "
+            f"{details.get('event_type_score')}"
+        )
+
+        print(
+            "Correlation location score: "
+            f"{details.get('location_score')}"
+        )
+
+        print(
+            "Correlation time score: "
+            f"{details.get('time_score')}"
+        )
+
+        print(
+            "Correlation number score: "
+            f"{details.get('number_score')}"
+        )
+
+        print(
+            "Correlation entity score: "
+            f"{details.get('entity_score')}"
+        )
+
+        print(
+            "Correlation text score: "
+            f"{details.get('text_score')}"
+        )
+
+        print(
+            "Shared numbers: "
+            f"{details.get('shared_numbers')}"
+        )
+
+        print(
+            "Shared entities: "
+            f"{details.get('shared_entities')}"
+        )
+
+        print(
+            "Shared locations: "
+            f"{details.get('shared_locations')}"
+        )
+
         print(
             "Correlated source post: "
             f"{matched_event.get('source_post_id')}"
         )
+
         print(
             "Correlated event type: "
             f"{matched_event.get('event_type')}"
         )
+
     else:
         print("Correlation: NEW EVENT")
 
@@ -198,6 +318,7 @@ def main():
     query_engine = QueryEngine()
     noise_filter = NoiseFilter()
     operational_filter = OperationalEventFilter()
+    region_resolver = RegionResolver()
     event_correlator = EventCorrelator()
     event_repository = EventRepository()
 
@@ -327,6 +448,7 @@ def main():
                     time_extractor=time_extractor,
                     scorer=scorer,
                     event_extractor=event_extractor,
+                    region_resolver=region_resolver,
                 )
 
                 total_operational_events += 1
