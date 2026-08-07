@@ -15,18 +15,18 @@ jobs:
         id: restore-database
         uses: actions/cache/restore@v4
         with:
-          path: migration.db
+          path: database/migration_osint_monitor.db
           key: migration-osint-db-${{ github.run_id }}
           restore-keys: |
             migration-osint-db-
 
       - name: Show database restore status
         run: |
-          if [ -f migration.db ]; then
-            echo "Existing migration.db restored successfully."
-            ls -lh migration.db
+          if [ -f database/migration_osint_monitor.db ]; then
+            echo "Existing migration_osint_monitor.db restored successfully."
+            ls -lh database/migration_osint_monitor.db
           else
-            echo "No previous migration.db found."
+            echo "No previous migration_osint_monitor.db found."
             echo "A new database will be created during this run."
           fi
 
@@ -54,16 +54,16 @@ jobs:
       - name: Verify database after run
         if: always()
         run: |
-          if [ -f migration.db ]; then
-            echo "migration.db exists after monitor run."
-            ls -lh migration.db
+          if [ -f database/migration_osint_monitor.db ]; then
+            echo "migration_osint_monitor.db exists after monitor run."
+            ls -lh database/migration_osint_monitor.db
           else
-            echo "WARNING: migration.db was not found."
+            echo "WARNING: migration_osint_monitor.db was not found."
           fi
 
       - name: Save Migration OSINT database
         if: always()
         uses: actions/cache/save@v4
         with:
-          path: migration.db
+          path: database/migration_osint_monitor.db
           key: migration-osint-db-${{ github.run_id }}
