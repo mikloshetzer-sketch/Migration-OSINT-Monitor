@@ -14,21 +14,15 @@ This module provides the database-facing logic for:
 - tracking source count
 - tracking source types
 - maintaining a representative event record
-
-The actual database models for event groups will be introduced
-in the next step.
 """
 
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional
 
 
 class EventGroupRepository:
     """
     Repository interface for operational event groups.
-
-    This version prepares the group-management logic before
-    the SQLAlchemy EventGroup model is added.
     """
 
     def build_new_group_payload(
@@ -37,9 +31,6 @@ class EventGroupRepository:
     ) -> Dict[str, Any]:
         """
         Creates a normalized payload for a new event group.
-
-        The payload can later be passed directly into
-        an EventGroup SQLAlchemy model.
         """
 
         published_at = self._get_datetime(
@@ -121,6 +112,18 @@ class EventGroupRepository:
             new_event.get(
                 "published_at"
             )
+        )
+
+        first_seen = self._normalize_datetime(
+            first_seen
+        )
+
+        last_seen = self._normalize_datetime(
+            last_seen
+        )
+
+        new_time = self._normalize_datetime(
+            new_time
         )
 
         if new_time:
@@ -249,9 +252,6 @@ class EventGroupRepository:
     ) -> str:
         """
         Builds a short technical title for the event group.
-
-        This is intentionally deterministic.
-        AI-generated titles can be introduced later.
         """
 
         event_type = (
@@ -304,10 +304,6 @@ class EventGroupRepository:
     ) -> Optional[float]:
         """
         Combines confidence values conservatively.
-
-        For now, the strongest confidence is retained.
-        More advanced multi-source reliability scoring
-        will be handled by the Source Reliability Engine.
         """
 
         values: List[float] = []
@@ -365,3 +361,28 @@ class EventGroupRepository:
 
         except ValueError:
             return None
+
+    def _normalize_datetime(
+        self,
+        value: Optional[datetime],
+    ) -> Optional[datetime]:
+        """
+        Normalizes all datetime values to naive UTC.
+
+        This prevents comparisons between offset-aware
+        and offset-naive datetime objects.
+        """
+
+        if value is None:
+            return None
+
+        if value.tzinfo is not None:
+            return (
+                value
+                .astimezone(timezone.utc)
+                .replace(
+                    tzinfo=None
+                )
+            )
+
+        return value
