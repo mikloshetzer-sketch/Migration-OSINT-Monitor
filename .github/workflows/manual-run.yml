@@ -11,6 +11,25 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Restore Migration OSINT database
+        id: restore-database
+        uses: actions/cache/restore@v4
+        with:
+          path: migration.db
+          key: migration-osint-db-${{ github.run_id }}
+          restore-keys: |
+            migration-osint-db-
+
+      - name: Show database restore status
+        run: |
+          if [ -f migration.db ]; then
+            echo "Existing migration.db restored successfully."
+            ls -lh migration.db
+          else
+            echo "No previous migration.db found."
+            echo "A new database will be created during this run."
+          fi
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -31,3 +50,20 @@ jobs:
           MASTODON_ACCESS_TOKEN: ${{ secrets.MASTODON_ACCESS_TOKEN }}
         run: |
           python main.py
+
+      - name: Verify database after run
+        if: always()
+        run: |
+          if [ -f migration.db ]; then
+            echo "migration.db exists after monitor run."
+            ls -lh migration.db
+          else
+            echo "WARNING: migration.db was not found."
+          fi
+
+      - name: Save Migration OSINT database
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: migration.db
+          key: migration-osint-db-${{ github.run_id }}
