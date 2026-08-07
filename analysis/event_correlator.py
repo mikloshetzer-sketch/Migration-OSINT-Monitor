@@ -5,21 +5,21 @@ File:
 event_correlator.py
 
 Description:
-Event Correlator V2.
+Event Correlator V3.
 
 Correlates normalized migration events that likely refer to the same
 real-world operational event.
 
-V2 correlation uses multiple independent signals:
+V3 correlation uses:
 - event type
+- primary / matched region overlap
 - location overlap
 - time proximity
 - numeric fact overlap
-- important entity / keyword overlap
+- important entity overlap
 - text similarity
 
-The design reduces dependence on near-identical wording and improves
-correlation between differently worded reports of the same event.
+Region information is now a first-class correlation signal.
 """
 
 import re
@@ -35,11 +35,12 @@ class EventCorrelator:
     """
 
     EVENT_TYPE_WEIGHT = 0.30
-    LOCATION_WEIGHT = 0.20
+    REGION_WEIGHT = 0.20
+    LOCATION_WEIGHT = 0.15
     TIME_WEIGHT = 0.15
-    NUMBER_WEIGHT = 0.15
-    ENTITY_WEIGHT = 0.10
-    TEXT_WEIGHT = 0.10
+    NUMBER_WEIGHT = 0.10
+    ENTITY_WEIGHT = 0.05
+    TEXT_WEIGHT = 0.05
 
     DEFAULT_SIMILARITY_THRESHOLD = 0.55
     DEFAULT_MAX_TIME_DIFFERENCE_HOURS = 72
@@ -159,15 +160,6 @@ class EventCorrelator:
     ) -> Optional[Dict[str, Any]]:
         """
         Finds the strongest matching existing event.
-
-        Returns:
-            {
-                "event": matched_event,
-                "correlation_score": float,
-                "correlation_details": {...}
-            }
-
-        or None if no sufficiently strong match exists.
         """
 
         best_match = None
@@ -228,10 +220,15 @@ class EventCorrelator:
         event_b: Dict[str, Any],
     ) -> Dict[str, Any]:
         """
-        Calculates weighted similarity and exposes the component scores.
+        Calculates weighted similarity and exposes component scores.
         """
 
         event_type_score = self._event_type_similarity(
+            event_a,
+            event_b,
+        )
+
+        region_score = self._region_similarity(
             event_a,
             event_b,
         )
@@ -263,6 +260,7 @@ class EventCorrelator:
 
         weighted_score = (
             event_type_score * self.EVENT_TYPE_WEIGHT
+            + region_score * self.REGION_WEIGHT
             + location_score * self.LOCATION_WEIGHT
             + time_score * self.TIME_WEIGHT
             + number_score * self.NUMBER_WEIGHT
@@ -271,29 +269,68 @@ class EventCorrelator:
         )
 
         return {
-            "score": round(min(weighted_score, 1.0), 4),
-            "event_type_score": round(event_type_score, 3),
-            "location_score": round(location_score, 3),
-            "time_score": round(time_score, 3),
-            "number_score": round(number_score, 3),
-            "entity_score": round(entity_score, 3),
-            "text_score": round(text_score, 3),
+            "score": round(
+                min(weighted_score, 1.0),
+                4,
+            ),
+            "event_type_score": round(
+                event_type_score,
+                3,
+            ),
+            "region_score": round(
+                region_score,
+                3,
+            ),
+            "location_score": round(
+                location_score,
+                3,
+            ),
+            "time_score": round(
+                time_score,
+                3,
+            ),
+            "number_score": round(
+                number_score,
+                3,
+            ),
+            "entity_score": round(
+                entity_score,
+                3,
+            ),
+            "text_score": round(
+                text_score,
+                3,
+            ),
+            "shared_regions": sorted(
+                self._extract_regions(event_a).intersection(
+                    self._extract_regions(event_b)
+                )
+            ),
             "shared_numbers": sorted(
-                self._extract_numbers(event_a.get("text", ""))
-                .intersection(
-                    self._extract_numbers(event_b.get("text", ""))
+                self._extract_numbers(
+                    event_a.get("text", "")
+                ).intersection(
+                    self._extract_numbers(
+                        event_b.get("text", "")
+                    )
                 )
             ),
             "shared_entities": sorted(
-                self._extract_entities(event_a)
-                .intersection(
-                    self._extract_entities(event_b)
+                self._extract_entities(
+                    event_a
+                ).intersection(
+                    self._extract_entities(
+                        event_b
+                    )
                 )
             ),
             "shared_locations": sorted(
-                self._extract_location_names(event_a)
-                .intersection(
-                    self._extract_location_names(event_b)
+                self._extract_location_names(
+                    event_a
+                ).intersection(
+                    self._extract_location_names(
+                        event_b
+                    )
                 )
             ),
         }
@@ -324,17 +361,111 @@ class EventCorrelator:
         if not signals_a or not signals_b:
             return 0.0
 
-        intersection = signals_a.intersection(signals_b)
+        intersection = signals_a.intersection(
+            signals_b
+        )
 
         if not intersection:
             return 0.0
 
-        union = signals_a.union(signals_b)
+        union = signals_a.union(
+            signals_b
+        )
 
         if not union:
             return 0.0
 
         return len(intersection) / len(union)
+
+    def _region_similarity(
+        self,
+        event_a: Dict[str, Any],
+        event_b: Dict[str, Any],
+    ) -> float:
+        """
+        Scores geographic region similarity.
+
+        Primary region equality receives the strongest score.
+        Matched region overlap receives partial credit.
+        GLOBAL is not treated as meaningful geographic evidence.
+        """
+
+        primary_a = event_a.get("primary_region")
+        primary_b = event_b.get("primary_region")
+
+        if (
+            primary_a
+            and primary_b
+            and primary_a != "GLOBAL"
+            and primary_a == primary_b
+        ):
+            return 1.0
+
+        regions_a = self._extract_regions(
+            event_a
+        )
+
+        regions_b = self._extract_regions(
+            event_b
+        )
+
+        if not regions_a or not regions_b:
+            return 0.0
+
+        intersection = regions_a.intersection(
+            regions_b
+        )
+
+        if not intersection:
+            return 0.0
+
+        union = regions_a.union(
+            regions_b
+        )
+
+        if not union:
+            return 0.0
+
+        return len(intersection) / len(union)
+
+    def _extract_regions(
+        self,
+        event: Dict[str, Any],
+    ) -> Set[str]:
+        """
+        Extracts meaningful normalized regions from an event.
+        """
+
+        regions = set()
+
+        primary_region = event.get(
+            "primary_region"
+        )
+
+        if (
+            primary_region
+            and primary_region != "GLOBAL"
+        ):
+            regions.add(
+                str(primary_region).strip()
+            )
+
+        matched_regions = event.get(
+            "matched_regions"
+        ) or []
+
+        for region in matched_regions:
+            if not region:
+                continue
+
+            region = str(region).strip()
+
+            if region == "GLOBAL":
+                continue
+
+            regions.add(region)
+
+        return regions
 
     def _location_similarity(
         self,
@@ -345,18 +476,27 @@ class EventCorrelator:
         Scores overlap between detected locations.
         """
 
-        locations_a = self._extract_location_names(event_a)
-        locations_b = self._extract_location_names(event_b)
+        locations_a = self._extract_location_names(
+            event_a
+        )
+
+        locations_b = self._extract_location_names(
+            event_b
+        )
 
         if not locations_a or not locations_b:
             return 0.0
 
-        intersection = locations_a.intersection(locations_b)
+        intersection = locations_a.intersection(
+            locations_b
+        )
 
         if not intersection:
             return 0.0
 
-        union = locations_a.union(locations_b)
+        union = locations_a.union(
+            locations_b
+        )
 
         return len(intersection) / len(union)
 
@@ -367,18 +507,23 @@ class EventCorrelator:
     ) -> float:
         """
         Scores temporal proximity.
-
-        Very close reports receive a stronger score.
         """
 
-        time_a = self._get_event_datetime(event_a)
-        time_b = self._get_event_datetime(event_b)
+        time_a = self._get_event_datetime(
+            event_a
+        )
+
+        time_b = self._get_event_datetime(
+            event_b
+        )
 
         if time_a is None or time_b is None:
             return 0.0
 
         difference_hours = abs(
-            (time_a - time_b).total_seconds()
+            (
+                time_a - time_b
+            ).total_seconds()
         ) / 3600
 
         if difference_hours <= 1:
@@ -396,7 +541,10 @@ class EventCorrelator:
         if difference_hours <= 48:
             return 0.5
 
-        if difference_hours <= self.max_time_difference_hours:
+        if (
+            difference_hours
+            <= self.max_time_difference_hours
+        ):
             return 0.3
 
         return 0.0
@@ -407,15 +555,7 @@ class EventCorrelator:
         event_b: Dict[str, Any],
     ) -> float:
         """
-        Compares significant numeric facts in event texts.
-
-        Example:
-            78 arrested
-            18 boats
-            2,000 migrants
-
-        Matching numbers are strong indicators that two reports
-        describe the same event.
+        Compares significant numeric facts.
         """
 
         numbers_a = self._extract_numbers(
@@ -429,25 +569,41 @@ class EventCorrelator:
         if not numbers_a or not numbers_b:
             return 0.0
 
-        intersection = numbers_a.intersection(numbers_b)
+        intersection = numbers_a.intersection(
+            numbers_b
+        )
 
         if not intersection:
             return 0.0
 
-        union = numbers_a.union(numbers_b)
+        union = numbers_a.union(
+            numbers_b
+        )
 
         if not union:
             return 0.0
 
-        jaccard = len(intersection) / len(union)
+        jaccard = (
+            len(intersection)
+            / len(union)
+        )
 
         if len(intersection) >= 3:
-            return min(1.0, jaccard + 0.35)
+            return min(
+                1.0,
+                jaccard + 0.35,
+            )
 
         if len(intersection) == 2:
-            return min(1.0, jaccard + 0.25)
+            return min(
+                1.0,
+                jaccard + 0.25,
+            )
 
-        return min(1.0, jaccard + 0.15)
+        return min(
+            1.0,
+            jaccard + 0.15,
+        )
 
     def _entity_similarity(
         self,
@@ -455,32 +611,30 @@ class EventCorrelator:
         event_b: Dict[str, Any],
     ) -> float:
         """
-        Compares important event-specific terms.
-
-        This is intentionally lightweight and dependency-free.
-        It captures useful terms such as:
-            Spain
-            Sardinia
-            Mediterranean
-            Europol
-            Channel
-            Ceuta
-
-        while ignoring generic migration vocabulary.
+        Compares lightweight event-specific entity terms.
         """
 
-        entities_a = self._extract_entities(event_a)
-        entities_b = self._extract_entities(event_b)
+        entities_a = self._extract_entities(
+            event_a
+        )
+
+        entities_b = self._extract_entities(
+            event_b
+        )
 
         if not entities_a or not entities_b:
             return 0.0
 
-        intersection = entities_a.intersection(entities_b)
+        intersection = entities_a.intersection(
+            entities_b
+        )
 
         if not intersection:
             return 0.0
 
-        union = entities_a.union(entities_b)
+        union = entities_a.union(
+            entities_b
+        )
 
         if not union:
             return 0.0
@@ -493,9 +647,6 @@ class EventCorrelator:
     ) -> Set[str]:
         """
         Extracts potentially meaningful numeric facts.
-
-        Small standalone numbers below 2 are ignored because
-        they frequently represent dates, list numbering or noise.
         """
 
         if not text:
@@ -519,19 +670,21 @@ class EventCorrelator:
                 continue
 
             try:
-                numeric_value = int(normalized)
+                numeric_value = int(
+                    normalized
+                )
             except ValueError:
                 continue
 
             if numeric_value < 2:
                 continue
 
-            # Four-digit values that look like years are weak
-            # correlation features and are ignored.
             if 1900 <= numeric_value <= 2100:
                 continue
 
-            numbers.add(str(numeric_value))
+            numbers.add(
+                str(numeric_value)
+            )
 
         return numbers
 
@@ -541,15 +694,14 @@ class EventCorrelator:
     ) -> Set[str]:
         """
         Extracts lightweight event-specific entity terms.
-
-        Location names already detected by the Location Extractor
-        are always included.
         """
 
         entities = set()
 
         entities.update(
-            self._extract_location_names(event)
+            self._extract_location_names(
+                event
+            )
         )
 
         text = str(
@@ -562,7 +714,9 @@ class EventCorrelator:
         )
 
         for word in words:
-            normalized = word.lower().strip()
+            normalized = (
+                word.lower().strip()
+            )
 
             if normalized in self.STOP_WORDS:
                 continue
@@ -587,7 +741,9 @@ class EventCorrelator:
 
         names = set()
 
-        locations = event.get("locations") or []
+        locations = event.get(
+            "locations"
+        ) or []
 
         for location in locations:
             name = location.get("name")
@@ -595,12 +751,16 @@ class EventCorrelator:
 
             if name:
                 names.add(
-                    str(name).strip().lower()
+                    str(name)
+                    .strip()
+                    .lower()
                 )
 
             if country:
                 names.add(
-                    str(country).strip().lower()
+                    str(country)
+                    .strip()
+                    .lower()
                 )
 
         primary_location = event.get(
@@ -608,17 +768,38 @@ class EventCorrelator:
         )
 
         if primary_location:
-            name = primary_location.get("name")
-            country = primary_location.get("country")
+            name = primary_location.get(
+                "name"
+            )
+
+            country = primary_location.get(
+                "country"
+            )
 
             if name:
                 names.add(
-                    str(name).strip().lower()
+                    str(name)
+                    .strip()
+                    .lower()
                 )
 
             if country:
                 names.add(
-                    str(country).strip().lower()
+                    str(country)
+                    .strip()
+                    .lower()
+                )
+
+        matched_countries = event.get(
+            "matched_countries"
+        ) or []
+
+        for country in matched_countries:
+            if country:
+                names.add(
+                    str(country)
+                    .strip()
+                    .lower()
                 )
 
         return names
@@ -630,13 +811,15 @@ class EventCorrelator:
     ) -> float:
         """
         Calculates normalized textual similarity.
-
-        Text similarity is deliberately only a small part
-        of the final correlation score.
         """
 
-        normalized_a = self._normalize_text(text_a)
-        normalized_b = self._normalize_text(text_b)
+        normalized_a = self._normalize_text(
+            text_a
+        )
+
+        normalized_b = self._normalize_text(
+            text_b
+        )
 
         if not normalized_a or not normalized_b:
             return 0.0
@@ -690,17 +873,23 @@ class EventCorrelator:
         event: Dict[str, Any],
     ) -> Optional[datetime]:
         """
-        Uses normalized event time when available.
-        Falls back to publication time.
+        Uses normalized event time when available,
+        otherwise publication time.
         """
 
         candidates = [
-            event.get("event_time_normalized"),
-            event.get("published_at"),
+            event.get(
+                "event_time_normalized"
+            ),
+            event.get(
+                "published_at"
+            ),
         ]
 
         for value in candidates:
-            parsed = self._parse_datetime(value)
+            parsed = self._parse_datetime(
+                value
+            )
 
             if parsed is not None:
                 return parsed
@@ -718,8 +907,12 @@ class EventCorrelator:
         if not value:
             return None
 
-        if isinstance(value, datetime):
+        if isinstance(
+            value,
+            datetime,
+        ):
             parsed = value
+
         else:
             try:
                 parsed = datetime.fromisoformat(
@@ -728,6 +921,7 @@ class EventCorrelator:
                         "+00:00",
                     )
                 )
+
             except ValueError:
                 return None
 
@@ -747,36 +941,66 @@ class EventCorrelator:
         """
         Prevents weak false correlations.
 
-        Matching only because two reports are the same event type
-        and were published close together is not sufficient.
+        Matching event type alone is never sufficient.
 
-        At least one additional event-specific indicator is required.
+        At least one strong event-specific indicator must also match.
         """
 
         if details is None:
             return False
 
-        if details.get("event_type_score", 0.0) <= 0:
+        if (
+            details.get(
+                "event_type_score",
+                0.0,
+            )
+            <= 0
+        ):
             return False
 
+        region_match = (
+            details.get(
+                "region_score",
+                0.0,
+            )
+            >= 0.5
+        )
+
         location_match = (
-            details.get("location_score", 0.0) > 0
+            details.get(
+                "location_score",
+                0.0,
+            )
+            > 0
         )
 
         number_match = (
-            details.get("number_score", 0.0) > 0
+            details.get(
+                "number_score",
+                0.0,
+            )
+            > 0
         )
 
         entity_match = (
-            details.get("entity_score", 0.0) >= 0.15
+            details.get(
+                "entity_score",
+                0.0,
+            )
+            >= 0.15
         )
 
         strong_text_match = (
-            details.get("text_score", 0.0) >= 0.45
+            details.get(
+                "text_score",
+                0.0,
+            )
+            >= 0.45
         )
 
         return any(
             [
+                region_match,
                 location_match,
                 number_match,
                 entity_match,
