@@ -15,11 +15,17 @@ Application entry point using:
 - Time Extraction
 - Region Resolution
 - Database-backed Event Correlation
+- Persistent Event Groups / Clusters
 - SQLite Event Storage
 
 The correlation engine compares new operational events against:
 1. recent operational events already stored in SQLite
 2. operational events detected during the current run
+
+The Event Group Engine then:
+- creates new persistent event groups
+- attaches correlated source events to existing groups
+- maintains source counts and event-group history
 """
 
 from collectors.x_collector import XCollector
@@ -35,6 +41,7 @@ from analysis.noise_filter import NoiseFilter
 from analysis.operational_event_filter import OperationalEventFilter
 from analysis.event_correlator import EventCorrelator
 from analysis.region_resolver import RegionResolver
+from analysis.event_group_engine import EventGroupEngine
 
 from database.init_db import initialize_database
 from database.database import get_session
@@ -201,9 +208,9 @@ def build_correlation_candidates(
     Removes the exact same source post from the
     correlation candidate set.
 
-    This prevents a previously stored X post from
-    matching itself when the same post is collected
-    again in a later workflow run.
+    This prevents a previously stored source post
+    from matching itself when it is collected again
+    during a later workflow run.
     """
 
     new_source = new_event.get(
@@ -252,10 +259,11 @@ def print_event(
     event,
     saved,
     correlation_result,
+    event_group_result,
 ):
     """
-    Prints a normalized event, region information,
-    database status and correlation information.
+    Prints normalized event, region, correlation,
+    EventGroup and database information.
     """
 
     primary_location = event.get(
@@ -265,7 +273,10 @@ def print_event(
     print(
         "-----------------------------------"
     )
-    print("EVENT")
+
+    print(
+        "EVENT"
+    )
 
     print(
         f"Type: "
@@ -459,6 +470,37 @@ def print_event(
             "Correlation: NEW EVENT"
         )
 
+    if event_group_result:
+        print(
+            "Event group ID: "
+            f"{event_group_result.get('event_group_id')}"
+        )
+
+        print(
+            "Event group action: "
+            f"{event_group_result.get('group_action')}"
+        )
+
+        print(
+            "Event group source linked: "
+            f"{event_group_result.get('source_linked')}"
+        )
+
+        print(
+            "Event group source count: "
+            f"{event_group_result.get('source_count')}"
+        )
+
+        print(
+            "Event group correlation score: "
+            f"{event_group_result.get('correlation_score')}"
+        )
+
+    else:
+        print(
+            "Event group: NONE"
+        )
+
     print(
         f"Author: "
         f"{event.get('author')}"
@@ -550,6 +592,10 @@ def main():
         EventCorrelator()
     )
 
+    event_group_engine = (
+        EventGroupEngine()
+    )
+
     event_repository = (
         EventRepository()
     )
@@ -583,7 +629,7 @@ def main():
     )
 
     # Region fields are not yet stored
-    # in the current V1 database schema.
+    # in the current Post schema.
     # Reconstruct them when historical
     # events are loaded.
     for stored_event in stored_events:
@@ -621,7 +667,13 @@ def main():
     total_database_correlations = 0
     total_current_run_correlations = 0
 
-    # IDs of events loaded from SQLite.
+    # Event Group statistics
+    total_new_event_groups = 0
+    total_updated_event_groups = 0
+    total_bootstrapped_event_groups = 0
+    total_existing_event_groups = 0
+    total_group_sources_linked = 0
+
     historical_post_ids = {
         str(
             event.get(
@@ -871,6 +923,10 @@ def main():
                 else:
                     total_new_events += 1
 
+                # --------------------------------
+                # POST / EVENT STORAGE
+                # --------------------------------
+
                 saved = (
                     event_repository.save_event(
                         session=session,
@@ -884,15 +940,60 @@ def main():
                 else:
                     total_events_existing += 1
 
+                # --------------------------------
+                # EVENT GROUP / CLUSTER
+                # --------------------------------
+
+                event_group_result = (
+                    event_group_engine.process(
+                        session=session,
+                        event=event,
+                        correlation_result=correlation_result,
+                    )
+                )
+
+                group_action = (
+                    event_group_result.get(
+                        "group_action"
+                    )
+                )
+
+                if (
+                    group_action
+                    == "NEW_GROUP"
+                ):
+                    total_new_event_groups += 1
+
+                elif (
+                    group_action
+                    == "UPDATED_GROUP"
+                ):
+                    total_updated_event_groups += 1
+
+                elif (
+                    group_action
+                    == "BOOTSTRAPPED_GROUP"
+                ):
+                    total_bootstrapped_event_groups += 1
+
+                elif group_action in {
+                    "EXISTING_GROUP",
+                    "EXISTING_SOURCE",
+                }:
+                    total_existing_event_groups += 1
+
+                if event_group_result.get(
+                    "source_linked"
+                ):
+                    total_group_sources_linked += 1
+
                 print_event(
                     event=event,
                     saved=saved,
                     correlation_result=correlation_result,
+                    event_group_result=event_group_result,
                 )
 
-                # The new event becomes immediately available
-                # for correlation with later posts from the
-                # same workflow run.
                 correlation_events.append(
                     event
                 )
@@ -970,6 +1071,31 @@ def main():
     print(
         "Events already in database: "
         f"{total_events_existing}"
+    )
+
+    print(
+        "New EventGroups created: "
+        f"{total_new_event_groups}"
+    )
+
+    print(
+        "EventGroups updated: "
+        f"{total_updated_event_groups}"
+    )
+
+    print(
+        "Historical EventGroups bootstrapped: "
+        f"{total_bootstrapped_event_groups}"
+    )
+
+    print(
+        "Existing EventGroups reused: "
+        f"{total_existing_event_groups}"
+    )
+
+    print(
+        "EventGroup sources linked: "
+        f"{total_group_sources_linked}"
     )
 
     print(
