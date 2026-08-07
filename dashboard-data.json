@@ -1,14 +1,27 @@
 {
-  "updated_at": "2026-08-07 21:03:12",
+  "updated_at": "2026-08-07 21:23:39",
   "kpis": {
-    "operational_events": 18,
-    "new_events": 10,
+    "operational_events": 19,
+    "new_events": 11,
     "correlated_events": 4,
-    "active_event_groups": 10,
+    "active_event_groups": 11,
     "sources": 1,
-    "regions": 1
+    "regions": 2
   },
   "live_events": [
+    {
+      "id": 19,
+      "event_group_id": 11,
+      "published_at": "2026-08-07 21:19:52",
+      "event_type": "ARRIVAL",
+      "location": "-",
+      "confidence": 0.5,
+      "source": "X",
+      "author": "kelly241397",
+      "text": "@howardharry Those Jewish refugees arrived in the Middle Ages and didn’t expect the country to become a Jewish nation, also Potatoes coming from South America didn’t involve the local tribes of the South American continent to change our culture or practices.",
+      "url": "https://x.com/kelly241397/status/2085838360426188910",
+      "correlation_score": null
+    },
     {
       "id": 18,
       "event_group_id": 10,
@@ -297,6 +310,23 @@
       "representative_text": "🇪🇸🚨 BREAKING NEWS: Spanish police have dismantled one of the Mediterranean's largest migrant smuggling networks, which charged up to €12,000 per person for the journey. The gang is believed to have carried out at least 64 operations, smuggling over 2,000 migrants into Spain and https://t.co/jlzb4aqkO0"
     },
     {
+      "id": 11,
+      "event_type": "ARRIVAL",
+      "title": "ARRIVAL - AMERICAS",
+      "primary_region": "AMERICAS",
+      "primary_location": "-",
+      "country": "-",
+      "first_seen": "2026-08-07 21:19:52",
+      "last_seen": "2026-08-07 21:19:52",
+      "source_count": 1,
+      "source_types": [
+        "X"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.5,
+      "representative_text": "@howardharry Those Jewish refugees arrived in the Middle Ages and didn’t expect the country to become a Jewish nation, also Potatoes coming from South America didn’t involve the local tribes of the South American continent to change our culture or practices."
+    },
+    {
       "id": 10,
       "event_type": "SMUGGLING_ACTIVITY",
       "title": "SMUGGLING_ACTIVITY",
@@ -397,23 +427,6 @@
       "status": "ACTIVE",
       "confidence": 0.25,
       "representative_text": "Think about how absurd this story is and why @camiloreports is even running with it.\n\nThe migrant arrived as a tourist using a Spanish passport while living in Venezuela, then filed for asylum in the U.S. If she was genuinely being persecuted in Venezuela, why wouldn’t she seek https://t.co/oOE5C71FYB"
-    },
-    {
-      "id": 2,
-      "event_type": "ARRIVAL",
-      "title": "ARRIVAL",
-      "primary_region": "GLOBAL",
-      "primary_location": "-",
-      "country": "-",
-      "first_seen": "2026-08-07 15:45:10",
-      "last_seen": "2026-08-07 15:45:10",
-      "source_count": 1,
-      "source_types": [
-        "X"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.55,
-      "representative_text": "🚢 6 August 2026\nMigrants arrived: 0\nBoats: 0\n📊 2026 total: 14,531\n\nNo small boat crossings today, but the English Channel remains insecure as the gangs continue to instead smash Labour and Keir Starmer."
     }
   ],
   "region_activity": [
@@ -424,41 +437,45 @@
     {
       "region": "WESTERN_MEDITERRANEAN",
       "count": 4
+    },
+    {
+      "region": "AMERICAS",
+      "count": 1
     }
   ],
   "source_activity": [
     {
       "source": "X",
-      "count": 18
+      "count": 19
     }
   ],
   "correlation": {
-    "total_posts": 18,
+    "total_posts": 19,
     "filtered_posts": 0,
-    "operational_events": 18,
+    "operational_events": 19,
     "correlated_sources": 4,
-    "grouped_sources": 14,
-    "event_groups": 10,
+    "grouped_sources": 15,
+    "event_groups": 11,
     "filtering_efficiency": 0.0,
     "operational_rate": 100.0,
-    "correlation_rate": 22.22,
-    "grouping_rate": 55.56,
-    "multi_source_rate": 28.57,
-    "conversion_rate": 55.56
+    "correlation_rate": 21.05,
+    "grouping_rate": 57.89,
+    "multi_source_rate": 26.67,
+    "conversion_rate": 57.89
   },
   "operational_assessment": {
-    "operational_events_24h": 18,
+    "operational_events_24h": 19,
     "correlated_events_24h": 4,
-    "active_event_groups": 10,
+    "active_event_groups": 11,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "dominant_event_type": "SMUGGLING_ACTIVITY",
     "dominant_source": "X",
-    "average_confidence": 0.515,
+    "average_confidence": 0.514,
     "confidence_level": "MEDIUM",
-    "correlation_rate": 22.22,
+    "correlation_rate": 21.05,
     "activity_level": "ELEVATED",
     "system_health": "ELEVATED",
-    "summary": "Az elmúlt 24 órában a rendszer 18 operatív migrációs eseményt azonosított, amelyek közül 4 esemény korábbi vagy párhuzamos forrással korrelált. Jelenleg 10 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns eseménytípus: Smuggling Activity. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.52. A jelenlegi aktivitási szint: ELEVATED."
+    "summary": "Az elmúlt 24 órában a rendszer 19 operatív migrációs eseményt azonosított, amelyek közül 4 esemény korábbi vagy párhuzamos forrással korrelált. Jelenleg 11 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns eseménytípus: Smuggling Activity. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.51. A jelenlegi aktivitási szint: ELEVATED."
   },
   "high_confidence_events": [
     {
