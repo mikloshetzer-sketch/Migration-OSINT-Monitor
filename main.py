@@ -7,7 +7,7 @@ main.py
 Description:
 Application entry point using the Query Engine,
 Noise Filter, Operational Event Filter, X collection,
-analysis and event extraction pipeline.
+analysis, event extraction and SQLite event storage.
 """
 
 from collectors.x_collector import XCollector
@@ -23,6 +23,8 @@ from analysis.noise_filter import NoiseFilter
 from analysis.operational_event_filter import OperationalEventFilter
 
 from database.init_db import initialize_database
+from database.database import get_session
+from database.event_repository import EventRepository
 
 
 def analyze_post(
@@ -88,9 +90,9 @@ def analyze_post(
     )
 
 
-def print_event(event):
+def print_event(event, saved):
     """
-    Prints a normalized event to the workflow log.
+    Prints a normalized event and database status.
     """
 
     primary_location = event.get("primary_location")
@@ -143,6 +145,11 @@ def print_event(event):
     print(f"Text: {event.get('text')}")
     print(f"URL: {event.get('source_url')}")
 
+    if saved:
+        print("Database: SAVED")
+    else:
+        print("Database: ALREADY EXISTS")
+
 
 def main():
     """
@@ -166,6 +173,9 @@ def main():
     query_engine = QueryEngine()
     noise_filter = NoiseFilter()
     operational_filter = OperationalEventFilter()
+    event_repository = EventRepository()
+
+    session = get_session()
 
     queries = query_engine.load_queries()
 
@@ -180,116 +190,135 @@ def main():
     total_noise_filtered = 0
     total_non_operational_filtered = 0
     total_operational_events = 0
+    total_events_saved = 0
+    total_events_existing = 0
 
-    for query_definition in queries:
-        query_id = query_definition.get("id")
-        query_group = query_definition.get("query_group")
-        query_text = query_definition.get("query")
+    try:
+        for query_definition in queries:
+            query_id = query_definition.get("id")
+            query_group = query_definition.get("query_group")
+            query_text = query_definition.get("query")
 
-        if not query_text:
-            continue
-
-        print("===================================")
-        print(f"Query group: {query_group}")
-        print(f"Query ID: {query_id}")
-        print("===================================")
-
-        posts = collector.search_recent(
-            query=query_text,
-            max_results=10,
-            max_pages=1,
-        )
-
-        total_posts_found += len(posts)
-
-        print(
-            f"Posts found: "
-            f"{len(posts)}"
-        )
-
-        for post in posts:
-            post_id = post.get("post_id")
-
-            if post_id in seen_post_ids:
+            if not query_text:
                 continue
 
-            if post_id:
-                seen_post_ids.add(post_id)
+            print("===================================")
+            print(f"Query group: {query_group}")
+            print(f"Query ID: {query_id}")
+            print("===================================")
 
-            text = post.get("text", "")
-
-            noise_result = noise_filter.analyze(text)
-
-            if noise_result.get("is_noise"):
-                total_noise_filtered += 1
-
-                print("-----------------------------------")
-                print("NOISE FILTERED")
-                print(
-                    "Categories: "
-                    f"{noise_result.get('noise_categories')}"
-                )
-                print(
-                    "Matched phrases: "
-                    f"{noise_result.get('matched_noise_phrases')}"
-                )
-                print(f"Text: {text}")
-
-                continue
-
-            operational_result = (
-                operational_filter.analyze(text)
+            posts = collector.search_recent(
+                query=query_text,
+                max_results=10,
+                max_pages=1,
             )
 
-            if not operational_result.get("is_operational"):
-                total_non_operational_filtered += 1
+            total_posts_found += len(posts)
+
+            print(
+                f"Posts found: "
+                f"{len(posts)}"
+            )
+
+            for post in posts:
+                post_id = post.get("post_id")
+
+                if post_id in seen_post_ids:
+                    continue
+
+                if post_id:
+                    seen_post_ids.add(post_id)
+
+                text = post.get("text", "")
+
+                noise_result = noise_filter.analyze(text)
+
+                if noise_result.get("is_noise"):
+                    total_noise_filtered += 1
+
+                    print("-----------------------------------")
+                    print("NOISE FILTERED")
+                    print(
+                        "Categories: "
+                        f"{noise_result.get('noise_categories')}"
+                    )
+                    print(
+                        "Matched phrases: "
+                        f"{noise_result.get('matched_noise_phrases')}"
+                    )
+                    print(f"Text: {text}")
+
+                    continue
+
+                operational_result = (
+                    operational_filter.analyze(text)
+                )
+
+                if not operational_result.get("is_operational"):
+                    total_non_operational_filtered += 1
+
+                    print("-----------------------------------")
+                    print("NON-OPERATIONAL FILTERED")
+                    print(
+                        "Non-operational categories: "
+                        f"{operational_result.get('non_operational_categories')}"
+                    )
+                    print(
+                        "Matched non-operational phrases: "
+                        f"{operational_result.get('matched_non_operational_phrases')}"
+                    )
+                    print(
+                        "Operational confidence: "
+                        f"{operational_result.get('confidence')}"
+                    )
+                    print(f"Text: {text}")
+
+                    continue
 
                 print("-----------------------------------")
-                print("NON-OPERATIONAL FILTERED")
+                print("OPERATIONAL SIGNAL")
                 print(
-                    "Non-operational categories: "
-                    f"{operational_result.get('non_operational_categories')}"
+                    "Operational categories: "
+                    f"{operational_result.get('operational_categories')}"
                 )
                 print(
-                    "Matched non-operational phrases: "
-                    f"{operational_result.get('matched_non_operational_phrases')}"
+                    "Matched operational phrases: "
+                    f"{operational_result.get('matched_operational_phrases')}"
                 )
                 print(
                     "Operational confidence: "
                     f"{operational_result.get('confidence')}"
                 )
-                print(f"Text: {text}")
 
-                continue
+                event = analyze_post(
+                    post=post,
+                    keyword_filter=keyword_filter,
+                    classifier=classifier,
+                    location_extractor=location_extractor,
+                    time_extractor=time_extractor,
+                    scorer=scorer,
+                    event_extractor=event_extractor,
+                )
 
-            print("-----------------------------------")
-            print("OPERATIONAL SIGNAL")
-            print(
-                "Operational categories: "
-                f"{operational_result.get('operational_categories')}"
-            )
-            print(
-                "Matched operational phrases: "
-                f"{operational_result.get('matched_operational_phrases')}"
-            )
-            print(
-                "Operational confidence: "
-                f"{operational_result.get('confidence')}"
-            )
+                total_operational_events += 1
 
-            event = analyze_post(
-                post=post,
-                keyword_filter=keyword_filter,
-                classifier=classifier,
-                location_extractor=location_extractor,
-                time_extractor=time_extractor,
-                scorer=scorer,
-                event_extractor=event_extractor,
-            )
+                saved = event_repository.save_event(
+                    session=session,
+                    event=event,
+                )
 
-            total_operational_events += 1
+                if saved:
+                    total_events_saved += 1
+                else:
+                    total_events_existing += 1
 
-            print_event(event)
+                print_event(
+                    event=event,
+                    saved=saved,
+                )
+
+    finally:
+        session.close()
 
     print("===================================")
     print("RUN SUMMARY")
@@ -318,6 +347,16 @@ def main():
     print(
         "Operational events analyzed: "
         f"{total_operational_events}"
+    )
+
+    print(
+        "New events saved to database: "
+        f"{total_events_saved}"
+    )
+
+    print(
+        "Events already in database: "
+        f"{total_events_existing}"
     )
 
     print("System run completed successfully.")
