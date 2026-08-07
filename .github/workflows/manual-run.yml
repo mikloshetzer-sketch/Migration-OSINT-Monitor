@@ -3,6 +3,9 @@ name: Manual Migration OSINT Monitor Run
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   run-monitor:
     runs-on: ubuntu-latest
@@ -10,6 +13,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Restore Migration OSINT database
         id: restore-database
@@ -51,6 +56,120 @@ jobs:
         run: |
           python main.py
 
+      # ---------------------------------------------------
+      # DASHBOARD DATA EXPORT
+      # ---------------------------------------------------
+
+      - name: Export dashboard data
+        run: |
+          python dashboard/export_dashboard_data.py
+
+      - name: Verify dashboard JSON
+        run: |
+          if [ -f dashboard-data.json ]; then
+            echo "dashboard-data.json generated successfully."
+            ls -lh dashboard-data.json
+
+            echo "==================================="
+            echo "DASHBOARD JSON PREVIEW"
+            echo "==================================="
+
+            python - <<'PY'
+          import json
+
+          with open(
+              "dashboard-data.json",
+              "r",
+              encoding="utf-8"
+          ) as f:
+              data = json.load(f)
+
+          print(
+              "Updated:",
+              data.get("updated_at")
+          )
+
+          print(
+              "KPIs:",
+              data.get("kpis")
+          )
+
+          print(
+              "Live events:",
+              len(
+                  data.get(
+                      "live_events",
+                      []
+                  )
+              )
+          )
+
+          print(
+              "Event groups:",
+              len(
+                  data.get(
+                      "event_groups",
+                      []
+                  )
+              )
+          )
+
+          print(
+              "Regions:",
+              len(
+                  data.get(
+                      "region_activity",
+                      []
+                  )
+              )
+          )
+
+          print(
+              "Sources:",
+              len(
+                  data.get(
+                      "source_activity",
+                      []
+                  )
+              )
+          )
+
+          print(
+              "Operational assessment:",
+              data.get(
+                  "operational_assessment",
+                  {}
+              )
+          )
+          PY
+
+          else
+            echo "ERROR: dashboard-data.json was not generated."
+            exit 1
+          fi
+
+      # ---------------------------------------------------
+      # COMMIT DASHBOARD DATA TO MAIN
+      # ---------------------------------------------------
+
+      - name: Publish dashboard data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add dashboard-data.json
+
+          if git diff --cached --quiet; then
+            echo "No dashboard data changes to commit."
+          else
+            git commit -m "Update Migration OSINT dashboard data"
+            git push origin HEAD:main
+          fi
+
+      # ---------------------------------------------------
+      # DATABASE VERIFICATION
+      # ---------------------------------------------------
+
       - name: Verify database after run
         if: always()
         run: |
@@ -60,6 +179,10 @@ jobs:
           else
             echo "WARNING: migration_osint_monitor.db was not found."
           fi
+
+      # ---------------------------------------------------
+      # DATABASE PERSISTENCE
+      # ---------------------------------------------------
 
       - name: Save Migration OSINT database
         if: always()
