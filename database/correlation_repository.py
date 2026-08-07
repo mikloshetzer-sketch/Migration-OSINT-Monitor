@@ -8,27 +8,29 @@ Description:
 Provides database access methods used by the
 Event Correlation Engine.
 
-This repository allows the correlator to search
-previously stored operational events instead of
-only comparing events collected during the current run.
+The current V1 database stores operational events
+in the Post model. This repository loads recent
+stored operational posts and converts them into
+the dictionary structure expected by EventCorrelator.
 """
 
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta
 
 from sqlalchemy import select
 
-from database.models import Event
+from database.models import Post
 
 
 class CorrelationRepository:
     """
-    Repository used by the Event Correlator.
-
-    It exposes methods for retrieving previously
-    collected operational events.
+    Repository used by the Event Correlator
+    to retrieve previously stored operational events.
     """
 
-    def __init__(self, lookback_days: int = 7):
+    def __init__(
+        self,
+        lookback_days: int = 7,
+    ):
         self.lookback_days = lookback_days
 
     def get_recent_events(
@@ -36,21 +38,29 @@ class CorrelationRepository:
         session,
     ):
         """
-        Returns operational events collected during the
+        Returns stored operational events from the
         configured lookback window.
 
-        Events are ordered from newest to oldest.
+        Uses collected_at because this field exists
+        in the current Post storage model.
         """
 
         cutoff = (
-            datetime.now(timezone.utc)
+            datetime.utcnow()
             - timedelta(days=self.lookback_days)
         )
 
         statement = (
-            select(Event)
-            .where(Event.created_at >= cutoff)
-            .order_by(Event.created_at.desc())
+            select(Post)
+            .where(
+                Post.collected_at >= cutoff
+            )
+            .where(
+                Post.signal_type.is_not(None)
+            )
+            .order_by(
+                Post.collected_at.desc()
+            )
         )
 
         return list(
@@ -64,11 +74,13 @@ class CorrelationRepository:
         session,
     ):
         """
-        Returns recent events converted into dictionaries
-        compatible with the EventCorrelator.
+        Returns recent stored operational events
+        as dictionaries compatible with EventCorrelator.
         """
 
-        events = self.get_recent_events(session)
+        events = self.get_recent_events(
+            session
+        )
 
         results = []
 
@@ -84,34 +96,160 @@ class CorrelationRepository:
         event,
     ):
         """
-        Converts a SQLAlchemy Event model into the
-        dictionary structure used throughout the
-        analytical pipeline.
+        Converts the current Post database model into
+        an EventCorrelator-compatible dictionary.
         """
 
-        return {
-            "source_post_id": event.source_post_id,
-            "event_type": event.event_type,
-            "event_confidence": event.event_confidence,
-            "text": event.text,
-            "published_at": event.published_at,
-            "event_time_normalized": event.event_time,
-            "matched_signals": event.matched_signals or [],
-            "primary_region": getattr(
+        locations = self._deserialize_locations(
+            getattr(
                 event,
-                "primary_region",
+                "locations",
+                "",
+            )
+        )
+
+        primary_location = None
+
+        latitude = getattr(
+            event,
+            "latitude",
+            None,
+        )
+
+        longitude = getattr(
+            event,
+            "longitude",
+            None,
+        )
+
+        if (
+            locations
+            and (
+                latitude is not None
+                or longitude is not None
+            )
+        ):
+            primary_location = {
+                "name": locations[0].get(
+                    "name"
+                ),
+                "country": None,
+                "latitude": latitude,
+                "longitude": longitude,
+            }
+
+        return {
+            "source": getattr(
+                event,
+                "source",
                 None,
             ),
-            "matched_regions": getattr(
+            "source_post_id": getattr(
                 event,
-                "matched_regions",
-                [],
+                "post_id",
+                None,
             ),
-            "matched_countries": getattr(
+            "author": getattr(
                 event,
-                "matched_countries",
-                [],
+                "author",
+                None,
             ),
-            "locations": [],
-            "primary_location": None,
+            "event_type": getattr(
+                event,
+                "signal_type",
+                None,
+            ),
+            "event_confidence": getattr(
+                event,
+                "extraction_confidence",
+                None,
+            ),
+            "relevance_score": getattr(
+                event,
+                "relevance_score",
+                None,
+            ),
+            "text": getattr(
+                event,
+                "text",
+                "",
+            ),
+            "language": getattr(
+                event,
+                "language",
+                None,
+            ),
+            "published_at": getattr(
+                event,
+                "published_at",
+                None,
+            ),
+            "event_time_normalized": getattr(
+                event,
+                "event_time_normalized",
+                None,
+            ),
+            "event_time_confidence": getattr(
+                event,
+                "event_time_confidence",
+                None,
+            ),
+            "matched_signals": self._build_signals(
+                event
+            ),
+            "locations": locations,
+            "primary_location": primary_location,
+
+            # These fields are not yet persisted
+            # in the current V1 database schema.
+            # They remain available for compatibility.
+            "primary_region": None,
+            "matched_regions": [],
+            "matched_countries": [],
         }
+
+    def _build_signals(
+        self,
+        event,
+    ):
+        """
+        Reconstructs the available signal list from
+        the currently stored primary signal type.
+        """
+
+        signal_type = getattr(
+            event,
+            "signal_type",
+            None,
+        )
+
+        if not signal_type:
+            return []
+
+        return [signal_type]
+
+    def _deserialize_locations(
+        self,
+        value,
+    ):
+        """
+        Converts the current comma-separated locations
+        database field back into location dictionaries.
+        """
+
+        if not value:
+            return []
+
+        names = [
+            item.strip()
+            for item in str(value).split(",")
+            if item.strip()
+        ]
+
+        return [
+            {
+                "name": name,
+                "country": None,
+            }
+            for name in names
+        ]
