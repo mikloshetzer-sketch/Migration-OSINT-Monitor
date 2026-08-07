@@ -11,11 +11,11 @@
 
     <meta
         name="description"
-        content="Migration OSINT Dashboard – globális migrációs események, operatív jelzések és eseménykorreláció elemzői áttekintése."
+        content="Migration Intelligence Platform – OSINT alapú migrációs események, korrelációk és elemzői helyzetkép."
     >
 
     <title>
-        Migration OSINT Dashboard
+        Migration Intelligence Platform
     </title>
 
     <link
@@ -29,7 +29,8 @@
     ></script>
 
     <script
-        src="script.js"
+        type="module"
+        src="js/script.js"
         defer
     ></script>
 </head>
@@ -54,11 +55,11 @@
                     </div>
 
                     <h1>
-                        Migration OSINT Dashboard
+                        Migration Intelligence Platform
                     </h1>
 
                     <p class="header-description">
-                        Globális migrációs események,
+                        OSINT Operational Dashboard – migrációs események,
                         operatív mozgások, határhelyzetek,
                         embercsempészeti aktivitás és
                         többforrású eseménykorreláció
@@ -82,7 +83,7 @@
 
                         <a
                             class="header-button primary"
-                            href="#event-groups"
+                            href="#operational-assessment"
                         >
                             Elemző nézet
                         </a>
@@ -152,10 +153,9 @@
 
                     <p>
                         A dashboard a Migration OSINT Monitor által
-                        gyűjtött és operatívnak minősített
-                        közösségimédia-bejegyzésekből,
-                        korrelált eseményekből és tartós
-                        eseménycsoportokból készít gyors
+                        gyűjtött és operatívnak minősített nyílt
+                        forrású bejegyzésekből, korrelált eseményekből
+                        és tartós eseménycsoportokból készít gyors
                         elemzői áttekintést.
                     </p>
 
@@ -165,7 +165,7 @@
                 <div class="situation-meta">
 
                     <span class="meta-label dark">
-                        Adatforrás
+                        Rendszer
                     </span>
 
                     <strong>
@@ -186,7 +186,6 @@
                  ================================================= -->
 
             <section class="kpi-strip">
-
 
                 <article class="kpi-card kpi-blue">
 
@@ -316,7 +315,6 @@
 
             <section class="dashboard-grid two-columns">
 
-
                 <!-- LIVE EVENT FEED -->
 
                 <article class="dashboard-panel accent-blue">
@@ -409,7 +407,7 @@
                 </article>
 
 
-                <!-- EVENT GROUPS -->
+                <!-- TOP EVENT GROUPS -->
 
                 <article
                     class="dashboard-panel accent-blue"
@@ -429,15 +427,14 @@
                             </h3>
 
                             <p>
-                                Legaktívabb korrelált
-                                eseménycsoportok
+                                Legaktívabb korrelált eseménycsoportok
                             </p>
 
                         </div>
 
 
                         <div class="panel-meta-note">
-                            Rendezés a források száma
+                            Rendezés a kapcsolt források száma
                             és az utolsó észlelés alapján.
                         </div>
 
@@ -510,11 +507,122 @@
 
 
             <!-- =================================================
+                 HIGH CONFIDENCE EVENTS
+                 ================================================= -->
+
+            <section
+                class="dashboard-panel accent-blue"
+                id="high-confidence"
+            >
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <div class="panel-kicker">
+                            PRIORITY EVENT REVIEW
+                        </div>
+
+                        <h3>
+                            High Confidence Events
+                        </h3>
+
+                        <p>
+                            Magasabb konfidenciájú eseménycsoportok
+                        </p>
+
+                    </div>
+
+
+                    <div class="panel-meta-note">
+
+                        Jelenlegi küszöb:
+
+                        <strong>
+                            ≥ 0.75
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    ID
+                                </th>
+
+                                <th>
+                                    Utolsó látás
+                                </th>
+
+                                <th>
+                                    Eseménytípus
+                                </th>
+
+                                <th>
+                                    Helyszín
+                                </th>
+
+                                <th>
+                                    Ország
+                                </th>
+
+                                <th>
+                                    Régió
+                                </th>
+
+                                <th>
+                                    Konfidencia
+                                </th>
+
+                                <th>
+                                    Források
+                                </th>
+
+                                <th>
+                                    Szövegrészlet
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="highConfidenceTable">
+
+                            <tr>
+
+                                <td
+                                    colspan="9"
+                                    class="loading-cell"
+                                >
+                                    Adatok betöltése...
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
                  ANALYTICS
                  ================================================= -->
 
             <section class="dashboard-grid three-columns">
-
 
                 <!-- REGION ACTIVITY -->
 
@@ -557,7 +665,7 @@
                 </article>
 
 
-                <!-- CORRELATION PERFORMANCE -->
+                <!-- PROCESSING FUNNEL -->
 
                 <article class="dashboard-panel accent-purple">
 
@@ -574,7 +682,7 @@
                             </h3>
 
                             <p>
-                                Korrelációs teljesítmény
+                                Adatfeldolgozási és korrelációs teljesítmény
                             </p>
 
                         </div>
@@ -583,7 +691,6 @@
 
 
                     <div class="correlation-funnel">
-
 
                         <div class="funnel-row">
 
@@ -699,8 +806,7 @@
                             </h3>
 
                             <p>
-                                Operatív események
-                                forrástípus szerint
+                                Operatív események forrástípus szerint
                             </p>
 
                         </div>
@@ -727,12 +833,12 @@
 
 
             <!-- =================================================
-                 HIGH CONFIDENCE EVENTS
+                 OPERATIONAL ASSESSMENT
                  ================================================= -->
 
             <section
                 class="dashboard-panel accent-blue"
-                id="high-confidence"
+                id="operational-assessment"
             >
 
                 <div class="panel-header">
@@ -740,27 +846,97 @@
                     <div>
 
                         <div class="panel-kicker">
-                            PRIORITY EVENT REVIEW
+                            AUTOMATED ANALYTICAL ASSESSMENT
                         </div>
 
                         <h3>
-                            High Confidence Events
+                            Operational Assessment
                         </h3>
 
                         <p>
-                            Magasabb konfidenciájú
-                            eseménycsoportok
+                            Szabályalapú automatikus helyzetértékelés
                         </p>
 
                     </div>
 
+                </div>
 
-                    <div class="panel-meta-note">
 
-                        Jelenlegi küszöb
+                <div class="assessment-grid">
 
-                        <strong>
-                            ≥ 0.75
+                    <div class="assessment-card">
+
+                        <span class="assessment-label">
+                            Activity
+                        </span>
+
+                        <strong id="assessmentActivity">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="assessment-card">
+
+                        <span class="assessment-label">
+                            Hotspot
+                        </span>
+
+                        <strong id="assessmentRegion">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="assessment-card">
+
+                        <span class="assessment-label">
+                            Dominant Event
+                        </span>
+
+                        <strong id="assessmentEventType">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="assessment-card">
+
+                        <span class="assessment-label">
+                            Dominant Source
+                        </span>
+
+                        <strong id="assessmentSource">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="assessment-card">
+
+                        <span class="assessment-label">
+                            Average Confidence
+                        </span>
+
+                        <strong id="assessmentConfidence">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="assessment-card">
+
+                        <span class="assessment-label">
+                            System Health
+                        </span>
+
+                        <strong id="assessmentHealth">
+                            —
                         </strong>
 
                     </div>
@@ -768,85 +944,16 @@
                 </div>
 
 
-                <div class="table-container">
+                <div class="assessment-summary">
 
-                    <table>
+                    <div class="assessment-summary-title">
+                        Elemzői összefoglaló
+                    </div>
 
-                        <thead>
-
-                            <tr>
-
-                                <th>
-                                    ID
-                                </th>
-
-                                <th>
-                                    Utolsó látás
-                                </th>
-
-                                <th>
-                                    Eseménytípus
-                                </th>
-
-                                <th>
-                                    Helyszín
-                                </th>
-
-                                <th>
-                                    Ország
-                                </th>
-
-                                <th>
-                                    Régió
-                                </th>
-
-                                <th>
-                                    Konfidencia
-                                </th>
-
-                                <th>
-                                    Források
-                                </th>
-
-                                <th>
-                                    Szövegrészlet
-                                </th>
-
-                            </tr>
-
-                        </thead>
-
-
-                        <tbody id="highConfidenceTable">
-
-                            <tr>
-
-                                <td
-                                    colspan="9"
-                                    class="loading-cell"
-                                >
-                                    Adatok betöltése...
-                                </td>
-
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-
-                </div>
-
-
-                <div class="analyst-note">
-
-                    <strong>
-                        Elemzői megjegyzés:
-                    </strong>
-
-                    A konfidencia jelenleg az automatikus
-                    eseménykinyerés eredményét jelzi.
-                    A későbbi forrás-megbízhatósági réteg
-                    ezt többforrású értékeléssel egészítheti ki.
+                    <p id="assessmentSummary">
+                        Az automatikus elemzői összefoglaló
+                        az adatok betöltése után jelenik meg.
+                    </p>
 
                 </div>
 
@@ -854,7 +961,7 @@
 
 
             <!-- =================================================
-                 DATA / METHODOLOGY SUMMARY
+                 METHODOLOGY
                  ================================================= -->
 
             <section class="methodology-panel">
@@ -882,8 +989,8 @@
 
                     <p>
                         Egy EventGroup több, ugyanahhoz a
-                        feltételezett valós eseményhez
-                        kapcsolódó forrást fog össze.
+                        feltételezett valós eseményhez kapcsolódó
+                        forrást fog össze.
                     </p>
 
                 </div>
@@ -896,9 +1003,9 @@
                     </div>
 
                     <p>
-                        Gyors helyzetértékelést és a
-                        több forrásból erősödő operatív
-                        jelzések azonosítását támogatja.
+                        Gyors helyzetértékelést és a több forrásból
+                        erősödő operatív jelzések azonosítását
+                        támogatja.
                     </p>
 
                 </div>
@@ -907,7 +1014,7 @@
 
 
             <!-- =================================================
-                 METHODOLOGY DISCLAIMER
+                 FOOTER
                  ================================================= -->
 
             <footer class="dashboard-footer">
@@ -918,12 +1025,12 @@
 
                 A dashboard automatikusan gyűjtött,
                 osztályozott és korrelált nyílt forrású
-                bejegyzéseket jelenít meg. A közösségi
-                médiában közzétett információ önmagában
-                nem tekintendő megerősített ténynek.
-                A rendszer által meghatározott eseménytípus,
-                régió és konfidencia algoritmikus értékelés
-                eredménye, amely elemzői ellenőrzést igényelhet.
+                bejegyzéseket jelenít meg. A közösségi médiában
+                közzétett információ önmagában nem tekintendő
+                megerősített ténynek. A rendszer által meghatározott
+                eseménytípus, régió, korreláció és konfidencia
+                algoritmikus értékelés eredménye, ezért szükség
+                esetén elemzői ellenőrzést igényel.
 
             </footer>
 
@@ -933,7 +1040,7 @@
 
 
     <!-- =========================================================
-         GLOBAL LOADING / ERROR MESSAGE
+         GLOBAL MESSAGE
          ========================================================= -->
 
     <div
