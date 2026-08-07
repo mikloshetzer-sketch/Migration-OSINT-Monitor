@@ -5,10 +5,21 @@ File:
 main.py
 
 Description:
-Application entry point using the Query Engine,
-Noise Filter, Operational Event Filter, X collection,
-analysis, event extraction, region resolution,
-event correlation and SQLite storage.
+Application entry point using:
+
+- Query Engine
+- Noise Filter
+- Operational Event Filter
+- Signal Classification
+- Location Extraction
+- Time Extraction
+- Region Resolution
+- Database-backed Event Correlation
+- SQLite Event Storage
+
+The correlation engine compares new operational events against:
+1. recent operational events already stored in SQLite
+2. operational events detected during the current run
 """
 
 from collectors.x_collector import XCollector
@@ -28,6 +39,62 @@ from analysis.region_resolver import RegionResolver
 from database.init_db import initialize_database
 from database.database import get_session
 from database.event_repository import EventRepository
+from database.correlation_repository import CorrelationRepository
+
+
+def apply_region_resolution(
+    event,
+    region_resolver,
+):
+    """
+    Adds normalized region information to an event.
+    """
+
+    region_result = region_resolver.resolve(
+        event
+    )
+
+    event["primary_region"] = (
+        region_result.get(
+            "primary_region"
+        )
+    )
+
+    event["matched_regions"] = (
+        region_result.get(
+            "matched_regions",
+            [],
+        )
+    )
+
+    event["region_names"] = (
+        region_result.get(
+            "region_names",
+            [],
+        )
+    )
+
+    event["matched_countries"] = (
+        region_result.get(
+            "matched_countries",
+            [],
+        )
+    )
+
+    event["matched_region_terms"] = (
+        region_result.get(
+            "matched_region_terms",
+            [],
+        )
+    )
+
+    event["region_confidence"] = (
+        region_result.get(
+            "confidence"
+        )
+    )
+
+    return event
 
 
 def analyze_post(
@@ -44,20 +111,33 @@ def analyze_post(
     Runs the analytical pipeline for a single post.
     """
 
-    text = post.get("text", "")
+    text = post.get(
+        "text",
+        "",
+    )
 
     has_migration_keyword = (
-        keyword_filter.contains_migration_keyword(text)
+        keyword_filter.contains_migration_keyword(
+            text
+        )
     )
 
-    classification = classifier.classify(text)
-
-    matched_signals = classification.get(
-        "matched_signals",
-        [],
+    classification = classifier.classify(
+        text
     )
 
-    locations = location_extractor.extract_locations(text)
+    matched_signals = (
+        classification.get(
+            "matched_signals",
+            [],
+        )
+    )
+
+    locations = (
+        location_extractor.extract_locations(
+            text
+        )
+    )
 
     time_result = time_extractor.extract(
         text=text,
@@ -67,21 +147,33 @@ def analyze_post(
     score_result = scorer.calculate_score(
         has_migration_keyword=has_migration_keyword,
         location_count=len(locations),
-        has_time_reference=time_result is not None,
+        has_time_reference=(
+            time_result is not None
+        ),
         has_movement_signal=(
-            "ROUTE_INFORMATION" in matched_signals
-            or "DEPARTURE_SIGNAL" in matched_signals
-            or "BORDER_CROSSING" in matched_signals
-            or "ARRIVAL" in matched_signals
+            "ROUTE_INFORMATION"
+            in matched_signals
+
+            or "DEPARTURE_SIGNAL"
+            in matched_signals
+
+            or "BORDER_CROSSING"
+            in matched_signals
+
+            or "ARRIVAL"
+            in matched_signals
         ),
         has_advice_signal=(
-            "TRAVEL_ADVICE" in matched_signals
+            "TRAVEL_ADVICE"
+            in matched_signals
         ),
         has_coordination_signal=(
-            "COORDINATION" in matched_signals
+            "COORDINATION"
+            in matched_signals
         ),
         has_transport_signal=(
-            "TRANSPORT_OFFER" in matched_signals
+            "TRANSPORT_OFFER"
+            in matched_signals
         ),
     )
 
@@ -93,37 +185,67 @@ def analyze_post(
         score_result=score_result,
     )
 
-    region_result = region_resolver.resolve(event)
-
-    event["primary_region"] = region_result.get(
-        "primary_region"
-    )
-
-    event["matched_regions"] = region_result.get(
-        "matched_regions",
-        [],
-    )
-
-    event["region_names"] = region_result.get(
-        "region_names",
-        [],
-    )
-
-    event["matched_countries"] = region_result.get(
-        "matched_countries",
-        [],
-    )
-
-    event["matched_region_terms"] = region_result.get(
-        "matched_region_terms",
-        [],
-    )
-
-    event["region_confidence"] = region_result.get(
-        "confidence"
+    event = apply_region_resolution(
+        event=event,
+        region_resolver=region_resolver,
     )
 
     return event
+
+
+def build_correlation_candidates(
+    new_event,
+    correlation_events,
+):
+    """
+    Removes the exact same source post from the
+    correlation candidate set.
+
+    This prevents a previously stored X post from
+    matching itself when the same post is collected
+    again in a later workflow run.
+    """
+
+    new_source = new_event.get(
+        "source"
+    )
+
+    new_post_id = str(
+        new_event.get(
+            "source_post_id"
+        )
+        or ""
+    )
+
+    candidates = []
+
+    for event in correlation_events:
+        existing_source = event.get(
+            "source"
+        )
+
+        existing_post_id = str(
+            event.get(
+                "source_post_id"
+            )
+            or ""
+        )
+
+        same_source_post = (
+            new_post_id
+            and existing_post_id
+            and new_source == existing_source
+            and new_post_id == existing_post_id
+        )
+
+        if same_source_post:
+            continue
+
+        candidates.append(
+            event
+        )
+
+    return candidates
 
 
 def print_event(
@@ -136,14 +258,34 @@ def print_event(
     database status and correlation information.
     """
 
-    primary_location = event.get("primary_location")
+    primary_location = event.get(
+        "primary_location"
+    )
 
-    print("-----------------------------------")
+    print(
+        "-----------------------------------"
+    )
     print("EVENT")
-    print(f"Type: {event.get('event_type')}")
-    print(f"Confidence: {event.get('event_confidence')}")
-    print(f"Score: {event.get('relevance_score')}")
-    print(f"Level: {event.get('relevance_level')}")
+
+    print(
+        f"Type: "
+        f"{event.get('event_type')}"
+    )
+
+    print(
+        f"Confidence: "
+        f"{event.get('event_confidence')}"
+    )
+
+    print(
+        f"Score: "
+        f"{event.get('relevance_score')}"
+    )
+
+    print(
+        f"Level: "
+        f"{event.get('relevance_level')}"
+    )
 
     if primary_location:
         print(
@@ -157,8 +299,11 @@ def print_event(
             f"{primary_location.get('latitude')}, "
             f"{primary_location.get('longitude')}"
         )
+
     else:
-        print("Primary location: None")
+        print(
+            "Primary location: None"
+        )
 
     print(
         "Primary region: "
@@ -211,24 +356,37 @@ def print_event(
     )
 
     if correlation_result:
-        matched_event = correlation_result.get(
-            "event"
-        ) or {}
+        matched_event = (
+            correlation_result.get(
+                "event"
+            )
+            or {}
+        )
 
-        print("Correlation: MATCH")
+        details = (
+            correlation_result.get(
+                "correlation_details"
+            )
+            or {}
+        )
+
+        print(
+            "Correlation: MATCH"
+        )
 
         print(
             "Correlation score: "
             f"{correlation_result.get('correlation_score')}"
         )
 
-        details = correlation_result.get(
-            "correlation_details"
-        ) or {}
-
         print(
             "Correlation event type score: "
             f"{details.get('event_type_score')}"
+        )
+
+        print(
+            "Correlation region score: "
+            f"{details.get('region_score')}"
         )
 
         print(
@@ -257,6 +415,11 @@ def print_event(
         )
 
         print(
+            "Shared regions: "
+            f"{details.get('shared_regions')}"
+        )
+
+        print(
             "Shared numbers: "
             f"{details.get('shared_numbers')}"
         )
@@ -272,6 +435,11 @@ def print_event(
         )
 
         print(
+            "Correlated source: "
+            f"{matched_event.get('source')}"
+        )
+
+        print(
             "Correlated source post: "
             f"{matched_event.get('source_post_id')}"
         )
@@ -281,19 +449,50 @@ def print_event(
             f"{matched_event.get('event_type')}"
         )
 
-    else:
-        print("Correlation: NEW EVENT")
+        print(
+            "Correlated published: "
+            f"{matched_event.get('published_at')}"
+        )
 
-    print(f"Author: {event.get('author')}")
-    print(f"Published: {event.get('published_at')}")
-    print(f"Language: {event.get('language')}")
-    print(f"Text: {event.get('text')}")
-    print(f"URL: {event.get('source_url')}")
+    else:
+        print(
+            "Correlation: NEW EVENT"
+        )
+
+    print(
+        f"Author: "
+        f"{event.get('author')}"
+    )
+
+    print(
+        f"Published: "
+        f"{event.get('published_at')}"
+    )
+
+    print(
+        f"Language: "
+        f"{event.get('language')}"
+    )
+
+    print(
+        f"Text: "
+        f"{event.get('text')}"
+    )
+
+    print(
+        f"URL: "
+        f"{event.get('source_url')}"
+    )
 
     if saved:
-        print("Database: SAVED")
+        print(
+            "Database: SAVED"
+        )
+
     else:
-        print("Database: ALREADY EXISTS")
+        print(
+            "Database: ALREADY EXISTS"
+        )
 
 
 def main():
@@ -301,38 +500,113 @@ def main():
     Main execution flow.
     """
 
-    print("===================================")
-    print(" Migration OSINT Monitor")
-    print("===================================")
+    print(
+        "==================================="
+    )
+
+    print(
+        " Migration OSINT Monitor"
+    )
+
+    print(
+        "==================================="
+    )
 
     initialize_database()
 
     collector = XCollector()
 
     keyword_filter = KeywordFilter()
+
     classifier = SignalClassifier()
-    location_extractor = LocationExtractor()
-    time_extractor = TimeExtractor()
+
+    location_extractor = (
+        LocationExtractor()
+    )
+
+    time_extractor = (
+        TimeExtractor()
+    )
+
     scorer = RelevanceScorer()
-    event_extractor = EventExtractor()
+
+    event_extractor = (
+        EventExtractor()
+    )
+
     query_engine = QueryEngine()
+
     noise_filter = NoiseFilter()
-    operational_filter = OperationalEventFilter()
-    region_resolver = RegionResolver()
-    event_correlator = EventCorrelator()
-    event_repository = EventRepository()
+
+    operational_filter = (
+        OperationalEventFilter()
+    )
+
+    region_resolver = (
+        RegionResolver()
+    )
+
+    event_correlator = (
+        EventCorrelator()
+    )
+
+    event_repository = (
+        EventRepository()
+    )
+
+    correlation_repository = (
+        CorrelationRepository(
+            lookback_days=7
+        )
+    )
 
     session = get_session()
 
-    queries = query_engine.load_queries()
+    queries = (
+        query_engine.load_queries()
+    )
 
     print(
         f"Loaded queries: "
         f"{len(queries)}"
     )
 
+    # --------------------------------
+    # DATABASE-BACKED CORRELATION
+    # --------------------------------
+
+    stored_events = (
+        correlation_repository
+        .get_recent_events_as_dicts(
+            session
+        )
+    )
+
+    # Region fields are not yet stored
+    # in the current V1 database schema.
+    # Reconstruct them when historical
+    # events are loaded.
+    for stored_event in stored_events:
+        apply_region_resolution(
+            event=stored_event,
+            region_resolver=region_resolver,
+        )
+
+    correlation_events = list(
+        stored_events
+    )
+
+    print(
+        "Historical correlation events loaded: "
+        f"{len(stored_events)}"
+    )
+
+    print(
+        "Correlation lookback window: "
+        "7 days"
+    )
+
     seen_post_ids = set()
-    analyzed_events = []
 
     total_posts_found = 0
     total_noise_filtered = 0
@@ -340,22 +614,68 @@ def main():
     total_operational_events = 0
     total_events_saved = 0
     total_events_existing = 0
+
     total_correlated_events = 0
     total_new_events = 0
 
+    total_database_correlations = 0
+    total_current_run_correlations = 0
+
+    # IDs of events loaded from SQLite.
+    historical_post_ids = {
+        str(
+            event.get(
+                "source_post_id"
+            )
+            or ""
+        )
+        for event in stored_events
+        if event.get(
+            "source_post_id"
+        )
+    }
+
     try:
         for query_definition in queries:
-            query_id = query_definition.get("id")
-            query_group = query_definition.get("query_group")
-            query_text = query_definition.get("query")
+
+            query_id = (
+                query_definition.get(
+                    "id"
+                )
+            )
+
+            query_group = (
+                query_definition.get(
+                    "query_group"
+                )
+            )
+
+            query_text = (
+                query_definition.get(
+                    "query"
+                )
+            )
 
             if not query_text:
                 continue
 
-            print("===================================")
-            print(f"Query group: {query_group}")
-            print(f"Query ID: {query_id}")
-            print("===================================")
+            print(
+                "==================================="
+            )
+
+            print(
+                f"Query group: "
+                f"{query_group}"
+            )
+
+            print(
+                f"Query ID: "
+                f"{query_id}"
+            )
+
+            print(
+                "==================================="
+            )
 
             posts = collector.search_recent(
                 query=query_text,
@@ -363,7 +683,9 @@ def main():
                 max_pages=1,
             )
 
-            total_posts_found += len(posts)
+            total_posts_found += (
+                len(posts)
+            )
 
             print(
                 f"Posts found: "
@@ -371,70 +693,123 @@ def main():
             )
 
             for post in posts:
-                post_id = post.get("post_id")
 
-                if post_id in seen_post_ids:
+                post_id = post.get(
+                    "post_id"
+                )
+
+                if (
+                    post_id
+                    in seen_post_ids
+                ):
                     continue
 
                 if post_id:
-                    seen_post_ids.add(post_id)
+                    seen_post_ids.add(
+                        post_id
+                    )
 
-                text = post.get("text", "")
+                text = post.get(
+                    "text",
+                    "",
+                )
 
-                noise_result = noise_filter.analyze(text)
+                noise_result = (
+                    noise_filter.analyze(
+                        text
+                    )
+                )
 
-                if noise_result.get("is_noise"):
+                if noise_result.get(
+                    "is_noise"
+                ):
                     total_noise_filtered += 1
 
-                    print("-----------------------------------")
-                    print("NOISE FILTERED")
+                    print(
+                        "-----------------------------------"
+                    )
+
+                    print(
+                        "NOISE FILTERED"
+                    )
+
                     print(
                         "Categories: "
                         f"{noise_result.get('noise_categories')}"
                     )
+
                     print(
                         "Matched phrases: "
                         f"{noise_result.get('matched_noise_phrases')}"
                     )
-                    print(f"Text: {text}")
+
+                    print(
+                        f"Text: "
+                        f"{text}"
+                    )
 
                     continue
 
                 operational_result = (
-                    operational_filter.analyze(text)
+                    operational_filter
+                    .analyze(
+                        text
+                    )
                 )
 
-                if not operational_result.get("is_operational"):
+                if not operational_result.get(
+                    "is_operational"
+                ):
                     total_non_operational_filtered += 1
 
-                    print("-----------------------------------")
-                    print("NON-OPERATIONAL FILTERED")
+                    print(
+                        "-----------------------------------"
+                    )
+
+                    print(
+                        "NON-OPERATIONAL FILTERED"
+                    )
+
                     print(
                         "Non-operational categories: "
                         f"{operational_result.get('non_operational_categories')}"
                     )
+
                     print(
                         "Matched non-operational phrases: "
                         f"{operational_result.get('matched_non_operational_phrases')}"
                     )
+
                     print(
                         "Operational confidence: "
                         f"{operational_result.get('confidence')}"
                     )
-                    print(f"Text: {text}")
+
+                    print(
+                        f"Text: "
+                        f"{text}"
+                    )
 
                     continue
 
-                print("-----------------------------------")
-                print("OPERATIONAL SIGNAL")
+                print(
+                    "-----------------------------------"
+                )
+
+                print(
+                    "OPERATIONAL SIGNAL"
+                )
+
                 print(
                     "Operational categories: "
                     f"{operational_result.get('operational_categories')}"
                 )
+
                 print(
                     "Matched operational phrases: "
                     f"{operational_result.get('matched_operational_phrases')}"
                 )
+
                 print(
                     "Operational confidence: "
                     f"{operational_result.get('confidence')}"
@@ -453,25 +828,59 @@ def main():
 
                 total_operational_events += 1
 
+                candidates = (
+                    build_correlation_candidates(
+                        new_event=event,
+                        correlation_events=correlation_events,
+                    )
+                )
+
                 correlation_result = (
                     event_correlator.find_match(
                         new_event=event,
-                        existing_events=analyzed_events,
+                        existing_events=candidates,
                     )
                 )
 
                 if correlation_result:
                     total_correlated_events += 1
+
+                    matched_event = (
+                        correlation_result.get(
+                            "event"
+                        )
+                        or {}
+                    )
+
+                    matched_post_id = str(
+                        matched_event.get(
+                            "source_post_id"
+                        )
+                        or ""
+                    )
+
+                    if (
+                        matched_post_id
+                        in historical_post_ids
+                    ):
+                        total_database_correlations += 1
+
+                    else:
+                        total_current_run_correlations += 1
+
                 else:
                     total_new_events += 1
 
-                saved = event_repository.save_event(
-                    session=session,
-                    event=event,
+                saved = (
+                    event_repository.save_event(
+                        session=session,
+                        event=event,
+                    )
                 )
 
                 if saved:
                     total_events_saved += 1
+
                 else:
                     total_events_existing += 1
 
@@ -481,14 +890,27 @@ def main():
                     correlation_result=correlation_result,
                 )
 
-                analyzed_events.append(event)
+                # The new event becomes immediately available
+                # for correlation with later posts from the
+                # same workflow run.
+                correlation_events.append(
+                    event
+                )
 
     finally:
         session.close()
 
-    print("===================================")
-    print("RUN SUMMARY")
-    print("===================================")
+    print(
+        "==================================="
+    )
+
+    print(
+        "RUN SUMMARY"
+    )
+
+    print(
+        "==================================="
+    )
 
     print(
         "Posts returned by queries: "
@@ -516,6 +938,11 @@ def main():
     )
 
     print(
+        "Historical events available for correlation: "
+        f"{len(stored_events)}"
+    )
+
+    print(
         "New correlation groups: "
         f"{total_new_events}"
     )
@@ -523,6 +950,16 @@ def main():
     print(
         "Events correlated with existing groups: "
         f"{total_correlated_events}"
+    )
+
+    print(
+        "Database-backed correlations: "
+        f"{total_database_correlations}"
+    )
+
+    print(
+        "Current-run correlations: "
+        f"{total_current_run_correlations}"
     )
 
     print(
@@ -535,7 +972,9 @@ def main():
         f"{total_events_existing}"
     )
 
-    print("System run completed successfully.")
+    print(
+        "System run completed successfully."
+    )
 
 
 if __name__ == "__main__":
