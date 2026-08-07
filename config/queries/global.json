@@ -1,0 +1,31 @@
+{
+  "name": "Global Migration Monitoring",
+  "enabled": true,
+  "queries": [
+    {
+      "id": "global_migration_general",
+      "description": "General migration-related activity",
+      "query": "(migration OR migrant OR migrants OR refugee OR refugees OR asylum) -is:retweet"
+    },
+    {
+      "id": "global_border_crossing",
+      "description": "Border crossing and movement signals",
+      "query": "(migrant OR migrants OR refugee OR refugees) (border OR crossing OR route OR checkpoint OR patrol) -is:retweet"
+    },
+    {
+      "id": "global_sea_movement",
+      "description": "Sea migration and maritime incidents",
+      "query": "(migrant OR migrants OR refugee OR refugees) (boat OR vessel OR sea OR coast guard OR rescue OR intercepted) -is:retweet"
+    },
+    {
+      "id": "global_smuggling",
+      "description": "Possible migrant smuggling or facilitation activity",
+      "query": "(migrant OR migrants OR migration) (smuggler OR smuggling OR trafficking OR transport OR driver) -is:retweet"
+    },
+    {
+      "id": "global_departure_arrival",
+      "description": "Departure and arrival signals",
+      "query": "(migrant OR migrants OR refugee OR refugees) (departure OR departing OR leaving OR arrived OR arrival) -is:retweet"
+    }
+  ]
+}
