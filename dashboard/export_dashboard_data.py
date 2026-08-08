@@ -100,7 +100,8 @@ PRIORITY_SIGNAL_WEIGHTS = {
     "POLICY_SIGNAL": 8,
 }
 
-TOP_POST_SIMILARITY_THRESHOLD = 0.84
+TOP_POST_SIMILARITY_THRESHOLD = 0.72
+TOP_POST_TOKEN_OVERLAP_THRESHOLD = 0.68
 
 
 # ==========================================================
@@ -366,154 +367,188 @@ def similarity_ratio(
     ).ratio()
 
 
+def token_overlap_ratio(
+    left,
+    right,
+):
+    """
+    Jaccard-style token overlap for repost / quote-post detection.
+    """
+    if not left or not right:
+        return 0.0
+
+    left_tokens = {
+        token
+        for token in left.split()
+        if len(token) >= 3
+    }
+
+    right_tokens = {
+        token
+        for token in right.split()
+        if len(token) >= 3
+    }
+
+    if not left_tokens or not right_tokens:
+        return 0.0
+
+    union = len(
+        left_tokens
+        | right_tokens
+    )
+
+    if union <= 0:
+        return 0.0
+
+    return (
+        len(
+            left_tokens
+            & right_tokens
+        )
+        / union
+    )
+
+
+def independent_confirmation_count(
+    item,
+):
+    authors = item.get(
+        "related_authors"
+    ) or []
+
+    if isinstance(
+        authors,
+        list,
+    ):
+        return len(
+            {
+                str(author).strip().lower()
+                for author in authors
+                if author
+            }
+        )
+
+    return 0
+
+
+def platform_diversity_count(
+    item,
+):
+    platforms = item.get(
+        "related_sources"
+    ) or []
+
+    if isinstance(
+        platforms,
+        list,
+    ):
+        return len(
+            {
+                str(source).strip().upper()
+                for source in platforms
+                if source
+            }
+        )
+
+    return 1 if item.get("source") else 0
+
+
 def calculate_priority_score(
     item,
 ):
     """
-    Analyst-review priority score.
+    Analyst-review score.
 
-    The score is intentionally separate from detector confidence.
-    It combines:
-    - signal / event analytical importance
-    - confidence
-    - concrete location
-    - source diversity / related-post reinforcement
-    - recency is already handled by sorting after the score
-
-    Returned range is approximately 0..100.
+    Classification confidence is not truth confidence.
+    Repetition increases information significance, while cross-platform
+    and distinct-author reinforcement increase verification value.
     """
     signal_type = str(
-        item.get(
-            "primary_signal"
-        )
-        or item.get(
-            "signal_type"
-        )
-        or item.get(
-            "event_type"
-        )
+        item.get("primary_signal")
+        or item.get("signal_type")
+        or item.get("event_type")
         or ""
     ).upper()
 
     confidence = safe_float(
-        item.get(
-            "confidence"
-        )
-        or item.get(
-            "event_confidence"
-        )
-        or item.get(
-            "average_confidence"
-        )
+        item.get("confidence")
+        or item.get("event_confidence")
+        or item.get("average_confidence")
     )
 
-    score = (
-        confidence
-        * 45.0
-    )
-
-    score += (
-        PRIORITY_SIGNAL_WEIGHTS.get(
-            signal_type,
-            0,
-        )
-    )
+    score = confidence * 35.0
+    score += PRIORITY_SIGNAL_WEIGHTS.get(signal_type, 0)
 
     location = (
-        item.get(
-            "primary_location"
-        )
-        or item.get(
-            "location"
-        )
+        item.get("primary_location")
+        or item.get("location")
     )
 
-    if (
-        location
-        and str(
-            location
-        ).strip()
-        not in {
-            "",
-            "-",
-            "GLOBAL",
-            "UNKNOWN",
-        }
-    ):
-        score += 8.0
+    if location and str(location).strip().upper() not in {"", "-", "GLOBAL", "UNKNOWN"}:
+        score += 7.0
 
     region = (
-        item.get(
-            "primary_region"
-        )
-        or item.get(
-            "region"
-        )
+        item.get("primary_region")
+        or item.get("region")
     )
 
-    if (
-        region
-        and str(
-            region
-        ).upper()
-        not in {
-            "",
-            "GLOBAL",
-            "UNKNOWN",
-        }
-    ):
-        score += 5.0
+    if region and str(region).strip().upper() not in {"", "GLOBAL", "UNKNOWN"}:
+        score += 4.0
 
     related_posts_count = safe_int(
-        item.get(
-            "related_posts_count"
-        ),
+        item.get("related_posts_count"),
         1,
     )
 
-    source_count = safe_int(
-        item.get(
-            "source_count"
-        )
-        or item.get(
-            "sources_count"
-        ),
-        1,
-    )
+    author_count = independent_confirmation_count(item)
+    platform_count = platform_diversity_count(item)
 
-    reinforcement = max(
-        related_posts_count,
-        source_count,
-    )
-
-    if reinforcement >= 4:
-        score += 10.0
-    elif reinforcement >= 2:
+    if related_posts_count >= 8:
+        score += 8.0
+    elif related_posts_count >= 4:
         score += 6.0
+    elif related_posts_count >= 2:
+        score += 3.0
+
+    if author_count >= 5:
+        score += 7.0
+    elif author_count >= 2:
+        score += 4.0
+
+    if platform_count >= 3:
+        score += 12.0
+    elif platform_count >= 2:
+        score += 9.0
 
     return round(
-        min(
-            score,
-            100.0,
-        ),
+        min(score, 100.0),
         2,
     )
 
 
 def priority_level_from_score(
     score,
+    *,
+    related_posts_count=1,
+    independent_authors=0,
+    platform_count=1,
 ):
-    value = safe_float(
-        score
-    )
+    value = safe_float(score)
 
-    if value >= 80:
+    # CRITICAL requires reinforcement beyond one single-platform post.
+    if (
+        value >= 82
+        and (
+            platform_count >= 2
+            or independent_authors >= 3
+        )
+    ):
         return "CRITICAL"
 
-    if value >= 60:
+    if value >= 62:
         return "HIGH"
 
-    if value >= 40:
+    if value >= 42:
         return "MEDIUM"
 
     return "LOW"
@@ -1558,7 +1593,10 @@ def serialize_influence_signal(
     ] = priority_level_from_score(
         item[
             "priority_score"
-        ]
+        ],
+        related_posts_count=1,
+        independent_authors=0,
+        platform_count=1,
     )
 
     return item
@@ -1793,11 +1831,24 @@ def get_top_crossing_access_posts(
                 )
             )
 
+            token_overlap = (
+                token_overlap_ratio(
+                    normalized_text,
+                    cluster[
+                        "normalized_text"
+                    ],
+                )
+            )
+
             if (
                 same_signal
                 and same_location
-                and similarity
-                >= TOP_POST_SIMILARITY_THRESHOLD
+                and (
+                    similarity
+                    >= TOP_POST_SIMILARITY_THRESHOLD
+                    or token_overlap
+                    >= TOP_POST_TOKEN_OVERLAP_THRESHOLD
+                )
             ):
                 matched_cluster = cluster
                 break
@@ -1916,6 +1967,35 @@ def get_top_crossing_access_posts(
         ]
 
         representative[
+            "related_sources"
+        ] = sorted(
+            {
+                str(
+                    item.get("source")
+                    or ""
+                ).upper()
+                for item in cluster_items
+                if item.get("source")
+            }
+        )
+
+        representative[
+            "independent_author_count"
+        ] = len(
+            representative[
+                "related_authors"
+            ]
+        )
+
+        representative[
+            "platform_count"
+        ] = len(
+            representative[
+                "related_sources"
+            ]
+        )
+
+        representative[
             "priority_score"
         ] = calculate_priority_score(
             representative
@@ -1926,7 +2006,16 @@ def get_top_crossing_access_posts(
         ] = priority_level_from_score(
             representative[
                 "priority_score"
-            ]
+            ],
+            related_posts_count=representative[
+                "related_posts_count"
+            ],
+            independent_authors=representative[
+                "independent_author_count"
+            ],
+            platform_count=representative[
+                "platform_count"
+            ],
         )
 
         representatives.append(
@@ -2770,102 +2859,74 @@ def get_high_priority_intelligence(
     limit=12,
 ):
     """
-    Creates a dashboard analyst-review queue.
-
-    This is intentionally not the same thing as confidence ranking.
-    Duplicate records are collapsed by stable item identity.
+    Narrative-level analyst-review queue.
+    Repeated social posts are collapsed before ranking.
     """
     candidates = []
 
-    seen = set()
+    narrative_signals = get_top_crossing_access_posts(
+        list(influence_signals)
+    )
 
-    for item in (
-        list(
-            influence_signals
-        )
-        + list(
-            crossing_access_signals
-        )
-        + list(
-            high_confidence_events
-        )
-    ):
-        candidate = dict(
-            item
-        )
+    for item in narrative_signals:
+        candidate = dict(item)
 
-        identity = (
-            candidate.get(
-                "source"
-            ),
-            candidate.get(
-                "source_post_id"
-            ),
-            candidate.get(
-                "primary_signal"
-            )
-            or candidate.get(
-                "event_type"
-            ),
-            candidate.get(
-                "id"
-            ),
-        )
-
-        if identity in seen:
-            continue
-
-        seen.add(
-            identity
-        )
-
-        candidate[
-            "priority_score"
-        ] = calculate_priority_score(
+        candidate["priority_score"] = calculate_priority_score(
             candidate
         )
 
-        candidate[
-            "analyst_priority"
-        ] = priority_level_from_score(
-            candidate[
-                "priority_score"
-            ]
+        candidate["analyst_priority"] = priority_level_from_score(
+            candidate["priority_score"],
+            related_posts_count=safe_int(
+                candidate.get("related_posts_count"),
+                1,
+            ),
+            independent_authors=safe_int(
+                candidate.get("independent_author_count"),
+                0,
+            ),
+            platform_count=safe_int(
+                candidate.get("platform_count"),
+                1,
+            ),
         )
 
-        candidates.append(
+        candidates.append(candidate)
+
+    for item in high_confidence_events:
+        candidate = dict(item)
+
+        candidate["priority_score"] = calculate_priority_score(
             candidate
         )
+
+        candidate["analyst_priority"] = priority_level_from_score(
+            candidate["priority_score"],
+            related_posts_count=safe_int(
+                candidate.get("source_count"),
+                1,
+            ),
+            independent_authors=0,
+            platform_count=1,
+        )
+
+        candidates.append(candidate)
 
     candidates.sort(
         key=lambda item: (
+            safe_float(item.get("priority_score")),
             safe_float(
-                item.get(
-                    "priority_score"
-                )
+                item.get("confidence")
+                or item.get("average_confidence")
             ),
-            safe_float(
-                item.get(
-                    "confidence"
-                )
-                or item.get(
-                    "average_confidence"
-                )
-            ),
-            item.get(
-                "published_at"
-            )
-            or item.get(
-                "last_seen"
-            )
+            item.get("published_at")
+            or item.get("last_seen")
             or "",
         ),
         reverse=True,
     )
 
-    return candidates[
-        :limit
-    ]
+    return candidates[:limit]
 
 
 # ==========================================================
@@ -2936,6 +2997,12 @@ def build_dashboard_data(
         )
     )
 
+    influence_narratives = (
+        get_top_crossing_access_posts(
+            influence_signals
+        )
+    )
+
     weekly_activity = (
         get_information_activity_weekly(
             session
@@ -2964,6 +3031,35 @@ def build_dashboard_data(
                 high_confidence_events
             ),
         )
+    )
+
+    kpis["access_signals_raw"] = len(
+        crossing_access_signals
+    )
+
+    kpis["access_signals"] = len(
+        top_crossing_access_posts
+    )
+
+    kpis["influence_signals_raw"] = len(
+        influence_signals
+    )
+
+    kpis["influence_narratives"] = len(
+        influence_narratives
+    )
+
+    kpis["high_priority"] = sum(
+        1
+        for item in high_priority_intelligence
+        if str(
+            item.get("analyst_priority")
+            or ""
+        ).upper()
+        in {
+            "HIGH",
+            "CRITICAL",
+        }
     )
 
     operational_assessment = (
@@ -3042,6 +3138,9 @@ def build_dashboard_data(
         "early_warning_signals": (
             influence_signals
         ),
+        "influence_narratives": (
+            influence_narratives
+        ),
 
         "crossing_access_signals": (
             crossing_access_signals
@@ -3050,6 +3149,9 @@ def build_dashboard_data(
             crossing_access_signals
         ),
         "top_crossing_access_posts": (
+            top_crossing_access_posts
+        ),
+        "crossing_access_narratives": (
             top_crossing_access_posts
         ),
 
@@ -3213,3 +3315,4 @@ def export_dashboard_data():
 
 if __name__ == "__main__":
     export_dashboard_data()
+
