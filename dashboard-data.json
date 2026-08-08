@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-08 07:09:19",
+  "updated_at": "2026-08-08 07:18:41",
   "kpis": {
-    "operational_events": 33,
-    "new_events": 21,
+    "operational_events": 34,
+    "new_events": 22,
     "correlated_events": 8,
-    "active_event_groups": 21,
-    "sources": 1,
+    "active_event_groups": 22,
+    "sources": 2,
     "regions": 3
   },
   "live_events": [
@@ -33,6 +33,19 @@
       "author": "erosen05141948",
       "text": "@Sp00derWeb @ylab161 @voiceofrabbis Absolutely brilliantly said, my man! By no means do I think the reason Israel stands is bad, sure WW2 was a decent reason to give the Jewish a safe haven, but it has been turned into a US-funded, glorified, muslim refugee camp, those are the only people I’m seeing pro-Zionism.",
       "url": "https://x.com/erosen05141948/status/2085985472862433419",
+      "correlation_score": null
+    },
+    {
+      "id": 34,
+      "event_group_id": 22,
+      "published_at": "2026-08-08 07:01:06",
+      "event_type": "MIGRANT_CAMP",
+      "location": "-",
+      "confidence": 0.5,
+      "source": "REDDIT",
+      "author": "DogitWoofsalot",
+      "text": "Andy Burnham torn apart by Piddington councillor over plans for migrant camp: 'Have some responsibility!",
+      "url": "https://www.reddit.com/r/ukpolitics/comments/1vip3e5/andy_burnham_torn_apart_by_piddington_councillor/",
       "correlation_score": null
     },
     {
@@ -255,19 +268,6 @@
       "text": "Image captured by Palestinian photographer Ali Jadallah. \n-Jabalia refugee camp in Gaza City - November 2023\n\n\"In this war, we have witnessed an unprecedented level of devastation –  the complete obliteration of entire neighbourhoods. This man sat in disbelief, barely able to https://t.co/x6waeL2Tyb",
       "url": "https://x.com/Boudicca61AD/status/2085827654184222914",
       "correlation_score": null
-    },
-    {
-      "id": 11,
-      "event_group_id": 4,
-      "published_at": "2026-08-07 16:30:01",
-      "event_type": "SMUGGLING_ACTIVITY",
-      "location": "-",
-      "confidence": 0.5,
-      "source": "X",
-      "author": "AlixFedz",
-      "text": "Spanish-led police raid smashes a vast Mediterranean smuggling network, arresting 78 #migration\nhttps://t.co/KZFf2EhgFY",
-      "url": "https://x.com/AlixFedz/status/2085765418120028300",
-      "correlation_score": null
     }
   ],
   "event_groups": [
@@ -357,6 +357,23 @@
       "representative_text": "@Sp00derWeb @ylab161 @voiceofrabbis Absolutely brilliantly said, my man! By no means do I think the reason Israel stands is bad, sure WW2 was a decent reason to give the Jewish a safe haven, but it has been turned into a US-funded, glorified, muslim refugee camp, those are the only people I’m seeing pro-Zionism."
     },
     {
+      "id": 22,
+      "event_type": "MIGRANT_CAMP",
+      "title": "MIGRANT_CAMP",
+      "primary_region": "GLOBAL",
+      "primary_location": "-",
+      "country": "-",
+      "first_seen": "2026-08-08 07:01:06",
+      "last_seen": "2026-08-08 07:01:06",
+      "source_count": 1,
+      "source_types": [
+        "REDDIT"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.5,
+      "representative_text": "Andy Burnham torn apart by Piddington councillor over plans for migrant camp: 'Have some responsibility!"
+    },
+    {
       "id": 21,
       "event_type": "SMUGGLING_ACTIVITY",
       "title": "SMUGGLING_ACTIVITY",
@@ -423,29 +440,12 @@
       "status": "ACTIVE",
       "confidence": 0.5,
       "representative_text": "Spanish police dismantle major Mediterranean migrant smuggling network\n#worldnews #borneobulletin #topheadlines #headlines #Spanishpolice #dismantle #major #Mediterranean #migrantsmuggling #network\nhttps://t.co/XqM4n8lbtm"
-    },
-    {
-      "id": 15,
-      "event_type": "MIGRANT_CAMP",
-      "title": "MIGRANT_CAMP",
-      "primary_region": "GLOBAL",
-      "primary_location": "-",
-      "country": "-",
-      "first_seen": "2026-08-08 05:09:59",
-      "last_seen": "2026-08-08 05:09:59",
-      "source_count": 1,
-      "source_types": [
-        "X"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.45,
-      "representative_text": "🇮🇱SS-IDF fired stun grenades at journalists covering ongoing assaults on the Qalandiya refugee camp in occupied 🇵🇸East Jerusalem on August 6.\nOver 16,000 Palestinians have been under siege &amp; curfew for a second day.\n@pressfreedom @IFJGlobal @RSF_inter  https://t.co/aXX3LFOGDY"
     }
   ],
   "region_activity": [
     {
       "region": "GLOBAL",
-      "count": 11
+      "count": 12
     },
     {
       "region": "WESTERN_MEDITERRANEAN",
@@ -464,35 +464,39 @@
     {
       "source": "X",
       "count": 33
+    },
+    {
+      "source": "REDDIT",
+      "count": 1
     }
   ],
   "correlation": {
-    "total_posts": 33,
+    "total_posts": 34,
     "filtered_posts": 0,
-    "operational_events": 33,
+    "operational_events": 34,
     "correlated_sources": 8,
-    "grouped_sources": 29,
-    "event_groups": 21,
+    "grouped_sources": 30,
+    "event_groups": 22,
     "filtering_efficiency": 0.0,
     "operational_rate": 100.0,
-    "correlation_rate": 24.24,
-    "grouping_rate": 63.64,
-    "multi_source_rate": 27.59,
-    "conversion_rate": 63.64
+    "correlation_rate": 23.53,
+    "grouping_rate": 64.71,
+    "multi_source_rate": 26.67,
+    "conversion_rate": 64.71
   },
   "operational_assessment": {
-    "operational_events_24h": 33,
+    "operational_events_24h": 34,
     "correlated_events_24h": 8,
-    "active_event_groups": 21,
+    "active_event_groups": 22,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "dominant_event_type": "SMUGGLING_ACTIVITY",
     "dominant_source": "X",
-    "average_confidence": 0.529,
+    "average_confidence": 0.527,
     "confidence_level": "MEDIUM",
-    "correlation_rate": 24.24,
+    "correlation_rate": 23.53,
     "activity_level": "HIGH",
     "system_health": "HIGH ACTIVITY",
-    "summary": "Az elmúlt 24 órában a rendszer 33 operatív migrációs eseményt azonosított, amelyek közül 8 esemény korábbi vagy párhuzamos forrással korrelált. Jelenleg 21 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns eseménytípus: Smuggling Activity. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.53. A jelenlegi aktivitási szint: HIGH."
+    "summary": "Az elmúlt 24 órában a rendszer 34 operatív migrációs eseményt azonosított, amelyek közül 8 esemény korábbi vagy párhuzamos forrással korrelált. Jelenleg 22 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns eseménytípus: Smuggling Activity. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.53. A jelenlegi aktivitási szint: HIGH."
   },
   "high_confidence_events": [
     {
