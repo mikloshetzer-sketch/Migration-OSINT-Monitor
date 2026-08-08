@@ -7,6 +7,7 @@ main.py
 Description:
 Application entry point using:
 
+- X + Reddit Collectors
 - Query Engine
 - Noise Filter
 - Operational Event Filter
@@ -29,7 +30,10 @@ The Event Group Engine then:
 - maintains source counts and event-group history
 """
 
+import re
+
 from collectors.x_collector import XCollector
+from collectors.reddit_collector import RedditCollector
 
 from analysis.keyword_filter import KeywordFilter
 from analysis.classifier import SignalClassifier
@@ -49,6 +53,67 @@ from database.init_db import initialize_database
 from database.database import get_session
 from database.event_repository import EventRepository
 from database.correlation_repository import CorrelationRepository
+
+
+
+def build_reddit_query(query_text):
+    """
+    Converts an X-style query into a simpler Reddit RSS search query.
+
+    X-specific operators are removed while normal search terms, quoted
+    phrases, parentheses and Boolean OR expressions are preserved.
+    """
+
+    query = str(query_text or "").strip()
+
+    if not query:
+        return ""
+
+    # Remove common X-only search operators.
+    query = re.sub(
+        r"(?<!\S)-?is:[^\s()]+",
+        " ",
+        query,
+        flags=re.IGNORECASE,
+    )
+
+    query = re.sub(
+        r"(?<!\S)lang:[^\s()]+",
+        " ",
+        query,
+        flags=re.IGNORECASE,
+    )
+
+    query = re.sub(
+        r"(?<!\S)(?:from|to|has|url|context|conversation_id):[^\s()]+",
+        " ",
+        query,
+        flags=re.IGNORECASE,
+    )
+
+    query = re.sub(
+        r"\s+",
+        " ",
+        query,
+    ).strip()
+
+    # Avoid dangling Boolean operators after operator removal.
+    query = re.sub(
+        r"^(?:AND|OR)\s+",
+        "",
+        query,
+        flags=re.IGNORECASE,
+    )
+
+    query = re.sub(
+        r"\s+(?:AND|OR)$",
+        "",
+        query,
+        flags=re.IGNORECASE,
+    )
+
+    return query.strip()
+
 
 
 def apply_region_resolution(
@@ -150,7 +215,7 @@ def analyze_post(
 
     time_result = time_extractor.extract(
         text=text,
-        published_at=None,
+        published_at=post.get("published_at"),
     )
 
     score_result = scorer.calculate_score(
@@ -640,7 +705,11 @@ def main():
 
     initialize_database()
 
-    collector = XCollector()
+    x_collector = XCollector()
+
+    reddit_collector = (
+        RedditCollector()
+    )
 
     keyword_filter = KeywordFilter()
 
@@ -740,11 +809,25 @@ def main():
         "7 days"
     )
 
-    seen_post_ids = set()
+    # Source-aware de-duplication. The same numeric/string ID from two
+    # different platforms must not collide.
+    seen_post_keys = set()
 
     total_posts_found = 0
+    total_x_posts_found = 0
+    total_reddit_posts_found = 0
+
+    unique_source_counts = {
+        "X": 0,
+        "REDDIT": 0,
+    }
+
+    x_collector_errors = 0
+    reddit_collector_errors = 0
+
     total_noise_filtered = 0
     total_non_operational_filtered = 0
+    total_historical_filtered = 0
     total_operational_events = 0
     total_events_saved = 0
     total_events_existing = 0
@@ -756,6 +839,8 @@ def main():
         "LEGAL_MIGRATION_SIGNAL": 0,
         "POLICY_SIGNAL": 0,
         "RECRUITMENT_COORDINATION": 0,
+        "MOBILIZATION_COORDINATION": 0,
+        "DECISION_INFLUENCE": 0,
     }
 
     total_correlated_events = 0
@@ -826,10 +911,65 @@ def main():
                 "==================================="
             )
 
-            posts = collector.search_recent(
-                query=query_text,
-                max_results=10,
-                max_pages=1,
+            # --------------------------------
+            # MULTI-SOURCE COLLECTION
+            # --------------------------------
+
+            x_posts = []
+            reddit_posts = []
+
+            try:
+                x_posts = (
+                    x_collector.search_recent(
+                        query=query_text,
+                        max_results=10,
+                        max_pages=1,
+                    )
+                )
+
+            except Exception as error:
+                x_collector_errors += 1
+
+                print(
+                    "X COLLECTOR WARNING: "
+                    f"{error}"
+                )
+
+            reddit_query = (
+                build_reddit_query(
+                    query_text
+                )
+            )
+
+            if reddit_query:
+                try:
+                    reddit_posts = (
+                        reddit_collector.search_recent(
+                            query=reddit_query,
+                            max_results=10,
+                            max_pages=1,
+                        )
+                    )
+
+                except Exception as error:
+                    reddit_collector_errors += 1
+
+                    print(
+                        "REDDIT COLLECTOR WARNING: "
+                        f"{error}"
+                    )
+
+            total_x_posts_found += (
+                len(x_posts)
+            )
+
+            total_reddit_posts_found += (
+                len(reddit_posts)
+            )
+
+            posts = (
+                x_posts
+                + reddit_posts
             )
 
             total_posts_found += (
@@ -837,7 +977,22 @@ def main():
             )
 
             print(
-                f"Posts found: "
+                "X posts found: "
+                f"{len(x_posts)}"
+            )
+
+            print(
+                "Reddit query: "
+                f"{reddit_query}"
+            )
+
+            print(
+                "Reddit posts found: "
+                f"{len(reddit_posts)}"
+            )
+
+            print(
+                "Combined posts found: "
                 f"{len(posts)}"
             )
 
@@ -847,16 +1002,36 @@ def main():
                     "post_id"
                 )
 
-                if (
-                    post_id
-                    in seen_post_ids
-                ):
+                source = (
+                    str(
+                        post.get(
+                            "source"
+                        )
+                        or "UNKNOWN"
+                    )
+                    .upper()
+                )
+
+                post_key = (
+                    source,
+                    str(
+                        post_id
+                        or post.get("url")
+                        or post.get("text", "")
+                    ),
+                )
+
+                if post_key in seen_post_keys:
                     continue
 
-                if post_id:
-                    seen_post_ids.add(
-                        post_id
-                    )
+                seen_post_keys.add(
+                    post_key
+                )
+
+                if source in unique_source_counts:
+                    unique_source_counts[
+                        source
+                    ] += 1
 
                 text = post.get(
                     "text",
@@ -1019,6 +1194,39 @@ def main():
                     region_resolver=region_resolver,
                 )
 
+                if event.get("historical_reference"):
+                    total_historical_filtered += 1
+
+                    print(
+                        "-----------------------------------"
+                    )
+
+                    print(
+                        "HISTORICAL REFERENCE FILTERED"
+                    )
+
+                    print(
+                        "Reason: "
+                        f"{event.get('historical_reason')}"
+                    )
+
+                    print(
+                        "Historical reference: "
+                        f"{event.get('historical_reference_time')}"
+                    )
+
+                    print(
+                        "Detected event type: "
+                        f"{event.get('event_type')}"
+                    )
+
+                    print(
+                        "Text: "
+                        f"{text}"
+                    )
+
+                    continue
+
                 total_operational_events += 1
 
                 candidates = (
@@ -1161,7 +1369,37 @@ def main():
 
     print(
         "Unique posts collected: "
-        f"{len(seen_post_ids)}"
+        f"{len(seen_post_keys)}"
+    )
+
+    print(
+        "X posts returned: "
+        f"{total_x_posts_found}"
+    )
+
+    print(
+        "Reddit posts returned: "
+        f"{total_reddit_posts_found}"
+    )
+
+    print(
+        "Unique X posts: "
+        f"{unique_source_counts['X']}"
+    )
+
+    print(
+        "Unique Reddit posts: "
+        f"{unique_source_counts['REDDIT']}"
+    )
+
+    print(
+        "X collector errors: "
+        f"{x_collector_errors}"
+    )
+
+    print(
+        "Reddit collector errors: "
+        f"{reddit_collector_errors}"
     )
 
     print(
@@ -1172,6 +1410,11 @@ def main():
     print(
         "Non-operational filtered: "
         f"{total_non_operational_filtered}"
+    )
+
+    print(
+        "Historical references filtered: "
+        f"{total_historical_filtered}"
     )
 
     print(
@@ -1197,6 +1440,16 @@ def main():
     print(
         "Recruitment / coordination signals: "
         f"{influence_signal_counts['RECRUITMENT_COORDINATION']}"
+    )
+
+    print(
+        "Mobilization / coordination signals: "
+        f"{influence_signal_counts['MOBILIZATION_COORDINATION']}"
+    )
+
+    print(
+        "Decision influence signals: "
+        f"{influence_signal_counts['DECISION_INFLUENCE']}"
     )
 
     print(
