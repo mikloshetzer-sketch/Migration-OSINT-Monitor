@@ -7,7 +7,7 @@ main.py
 Description:
 Application entry point using:
 
-- X + Reddit Collectors
+- X + Reddit + Mastodon Collectors
 - Query Engine
 - Noise Filter
 - Operational Event Filter
@@ -39,6 +39,7 @@ from dateutil import parser as date_parser
 
 from collectors.x_collector import XCollector
 from collectors.reddit_collector import RedditCollector
+from collectors.mastodon_collector import MastodonCollector
 
 from analysis.keyword_filter import KeywordFilter
 from analysis.classifier import SignalClassifier
@@ -1474,9 +1475,11 @@ def update_monitor_run(
     seen_post_keys,
     total_x_posts_found,
     total_reddit_posts_found,
+    total_mastodon_posts_found,
     unique_source_counts,
     x_collector_errors,
     reddit_collector_errors,
+    mastodon_collector_errors,
     total_noise_filtered,
     total_non_operational_filtered,
     total_historical_filtered,
@@ -1520,6 +1523,10 @@ def update_monitor_run(
         total_reddit_posts_found
     )
 
+    monitor_run.mastodon_posts_returned = (
+        total_mastodon_posts_found
+    )
+
     monitor_run.unique_x_posts = (
         unique_source_counts.get(
             "X",
@@ -1530,6 +1537,13 @@ def update_monitor_run(
     monitor_run.unique_reddit_posts = (
         unique_source_counts.get(
             "REDDIT",
+            0,
+        )
+    )
+
+    monitor_run.unique_mastodon_posts = (
+        unique_source_counts.get(
+            "MASTODON",
             0,
         )
     )
@@ -1666,6 +1680,10 @@ def update_monitor_run(
         reddit_collector_errors
     )
 
+    monitor_run.mastodon_collector_errors = (
+        mastodon_collector_errors
+    )
+
     monitor_run.error_message = (
         str(error_message)[:4000]
         if error_message
@@ -1696,6 +1714,10 @@ def main():
 
     reddit_collector = (
         RedditCollector()
+    )
+
+    mastodon_collector = (
+        MastodonCollector()
     )
 
     keyword_filter = KeywordFilter()
@@ -1822,14 +1844,17 @@ def main():
     total_posts_found = 0
     total_x_posts_found = 0
     total_reddit_posts_found = 0
+    total_mastodon_posts_found = 0
 
     unique_source_counts = {
         "X": 0,
         "REDDIT": 0,
+        "MASTODON": 0,
     }
 
     x_collector_errors = 0
     reddit_collector_errors = 0
+    mastodon_collector_errors = 0
 
     total_noise_filtered = 0
     total_non_operational_filtered = 0
@@ -1925,6 +1950,7 @@ def main():
 
             x_posts = []
             reddit_posts = []
+            mastodon_posts = []
 
             try:
                 x_posts = (
@@ -1967,6 +1993,23 @@ def main():
                         f"{error}"
                     )
 
+            try:
+                mastodon_posts = (
+                    mastodon_collector.search_recent(
+                        query=query_text,
+                        max_results=10,
+                        max_pages=1,
+                    )
+                )
+
+            except Exception as error:
+                mastodon_collector_errors += 1
+
+                print(
+                    "MASTODON COLLECTOR WARNING: "
+                    f"{error}"
+                )
+
             total_x_posts_found += (
                 len(x_posts)
             )
@@ -1975,9 +2018,14 @@ def main():
                 len(reddit_posts)
             )
 
+            total_mastodon_posts_found += (
+                len(mastodon_posts)
+            )
+
             posts = (
                 x_posts
                 + reddit_posts
+                + mastodon_posts
             )
 
             total_posts_found += (
@@ -1997,6 +2045,11 @@ def main():
             print(
                 "Reddit posts found: "
                 f"{len(reddit_posts)}"
+            )
+
+            print(
+                "Mastodon posts found: "
+                f"{len(mastodon_posts)}"
             )
 
             print(
@@ -2438,9 +2491,11 @@ def main():
             seen_post_keys=seen_post_keys,
             total_x_posts_found=total_x_posts_found,
             total_reddit_posts_found=total_reddit_posts_found,
+            total_mastodon_posts_found=total_mastodon_posts_found,
             unique_source_counts=unique_source_counts,
             x_collector_errors=x_collector_errors,
             reddit_collector_errors=reddit_collector_errors,
+            mastodon_collector_errors=mastodon_collector_errors,
             total_noise_filtered=total_noise_filtered,
             total_non_operational_filtered=total_non_operational_filtered,
             total_historical_filtered=total_historical_filtered,
@@ -2483,9 +2538,11 @@ def main():
                     seen_post_keys=seen_post_keys,
                     total_x_posts_found=total_x_posts_found,
                     total_reddit_posts_found=total_reddit_posts_found,
+                    total_mastodon_posts_found=total_mastodon_posts_found,
                     unique_source_counts=unique_source_counts,
                     x_collector_errors=x_collector_errors,
                     reddit_collector_errors=reddit_collector_errors,
+                    mastodon_collector_errors=mastodon_collector_errors,
                     total_noise_filtered=total_noise_filtered,
                     total_non_operational_filtered=total_non_operational_filtered,
                     total_historical_filtered=total_historical_filtered,
@@ -2556,6 +2613,11 @@ def main():
     )
 
     print(
+        "Mastodon posts returned: "
+        f"{total_mastodon_posts_found}"
+    )
+
+    print(
         "Unique X posts: "
         f"{unique_source_counts['X']}"
     )
@@ -2566,6 +2628,11 @@ def main():
     )
 
     print(
+        "Unique Mastodon posts: "
+        f"{unique_source_counts['MASTODON']}"
+    )
+
+    print(
         "X collector errors: "
         f"{x_collector_errors}"
     )
@@ -2573,6 +2640,11 @@ def main():
     print(
         "Reddit collector errors: "
         f"{reddit_collector_errors}"
+    )
+
+    print(
+        "Mastodon collector errors: "
+        f"{mastodon_collector_errors}"
     )
 
     print(
