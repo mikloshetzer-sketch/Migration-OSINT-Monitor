@@ -30,6 +30,7 @@ with deeply nested boolean expressions than the X API.
 import hashlib
 import html
 import re
+from collections import defaultdict
 
 from datetime import datetime, timezone
 from typing import Dict, List, Optional, Any
@@ -48,13 +49,46 @@ class RedditCollector:
     SEARCH_ENDPOINT = "/search.rss"
 
     USER_AGENT = (
-        "MigrationOSINTMonitor/1.0 "
+        "MigrationOSINTMonitor/1.1 "
         "(public RSS OSINT research collector)"
     )
 
-    MAX_EXPANDED_QUERIES = 12
+    # Maximum number of simple RSS queries generated from one
+    # logical query.
+    MAX_EXPANDED_QUERIES = 24
+
+    # Maximum number of items accepted from one individual
+    # Reddit RSS result set before moving to the next query.
+    PER_QUERY_RESULT_LIMIT = 8
 
     DEFAULT_RECENCY = "week"
+
+    # Migration-context seed terms are used only to keep the
+    # Reddit searches human-migration focused. They do not
+    # replace the downstream analytical filters.
+    MIGRATION_SEED_TERMS = [
+        "migrant",
+        "migrants",
+        "refugee",
+        "refugees",
+        "asylum",
+        "immigrant",
+        "immigrants",
+    ]
+
+    # Small multilingual expansion for global monitoring.
+    # These are intentionally generic and not tied to Ceuta,
+    # Morocco or any other specific route/location.
+    MULTILINGUAL_MIGRATION_TERMS = [
+        "migrante",
+        "migrantes",
+        "refugiado",
+        "refugiados",
+        "réfugié",
+        "réfugiés",
+        "migrante italiano",
+        "migranti",
+    ]
 
     # ======================================================
     # INITIALIZATION
@@ -94,11 +128,13 @@ class RedditCollector:
         Searches recent Reddit posts.
 
         Complex boolean queries are expanded into multiple
-        simpler RSS search phrases.
+        simpler RSS searches. Results are gathered in a
+        balanced way so that one successful sub-query cannot
+        consume the entire result budget.
 
         Args:
             query:
-                Migration-related search query.
+                Migration-related logical search query.
 
             max_results:
                 Maximum number of unique normalized Reddit posts
@@ -113,7 +149,6 @@ class RedditCollector:
         """
 
         if not query or not query.strip():
-
             raise ValueError(
                 "Reddit search query cannot be empty."
             )
@@ -126,30 +161,29 @@ class RedditCollector:
             ),
         )
 
-        expanded_queries = (
-            self._expand_query(
-                query
-            )
+        expanded_queries = self._expand_query(
+            query
         )
 
-        all_posts: List[
-            Dict[str, Any]
-        ] = []
+        if not expanded_queries:
+            return []
 
-        seen_ids = set()
+        # First collect a small slice from each individual
+        # query. This prevents the first productive RSS feed
+        # from filling the full result budget.
+        query_buckets: Dict[
+            str,
+            List[Dict[str, Any]]
+        ] = {}
 
         for simple_query in expanded_queries:
 
-            rss_url = (
-                self._build_search_url(
-                    simple_query
-                )
+            rss_url = self._build_search_url(
+                simple_query
             )
 
-            feed = (
-                self._parse_feed(
-                    rss_url
-                )
+            feed = self._parse_feed(
+                rss_url
             )
 
             entries = (
@@ -161,22 +195,94 @@ class RedditCollector:
                 or []
             )
 
+            bucket: List[
+                Dict[str, Any]
+            ] = []
+
+            local_seen = set()
+
             for entry in entries:
 
-                normalized_post = (
-                    self._normalize_entry(
-                        entry=entry,
-                        search_query=simple_query,
-                    )
+                normalized_post = self._normalize_entry(
+                    entry=entry,
+                    search_query=simple_query,
                 )
 
                 if not normalized_post:
                     continue
 
-                post_id = (
-                    normalized_post.get(
-                        "post_id"
-                    )
+                post_id = normalized_post.get(
+                    "post_id"
+                )
+
+                if not post_id:
+                    continue
+
+                if post_id in local_seen:
+                    continue
+
+                local_seen.add(
+                    post_id
+                )
+
+                bucket.append(
+                    normalized_post
+                )
+
+                if (
+                    len(bucket)
+                    >= self.PER_QUERY_RESULT_LIMIT
+                ):
+                    break
+
+            query_buckets[
+                simple_query
+            ] = bucket
+
+        # --------------------------------------------------
+        # ROUND-ROBIN MERGE
+        # --------------------------------------------------
+        #
+        # Take one item from each productive query in turn.
+        # This provides better topical spread than appending
+        # all results from the first successful query.
+        # --------------------------------------------------
+
+        merged_posts: List[
+            Dict[str, Any]
+        ] = []
+
+        seen_ids = set()
+
+        max_bucket_size = max(
+            (
+                len(bucket)
+                for bucket
+                in query_buckets.values()
+            ),
+            default=0,
+        )
+
+        for position in range(
+            max_bucket_size
+        ):
+
+            for simple_query in expanded_queries:
+
+                bucket = query_buckets.get(
+                    simple_query,
+                    [],
+                )
+
+                if position >= len(bucket):
+                    continue
+
+                post = bucket[
+                    position
+                ]
+
+                post_id = post.get(
+                    "post_id"
                 )
 
                 if not post_id:
@@ -189,17 +295,17 @@ class RedditCollector:
                     post_id
                 )
 
-                all_posts.append(
-                    normalized_post
+                merged_posts.append(
+                    post
                 )
 
-                if len(
-                    all_posts
-                ) >= max_results:
+                if (
+                    len(merged_posts)
+                    >= max_results
+                ):
+                    return merged_posts
 
-                    return all_posts
-
-        return all_posts
+        return merged_posts
 
     # ======================================================
     # QUERY EXPANSION
@@ -210,86 +316,91 @@ class RedditCollector:
         query: str,
     ) -> List[str]:
         """
-        Converts a complex query into simpler Reddit searches.
+        Converts a complex migration query into balanced,
+        Reddit-friendly simple search phrases.
 
-        Examples:
+        Design goals:
 
-            (migrant OR migrants OR refugee)
-            (border OR crossing OR route)
-
-        becomes searches such as:
-
-            migrant border
-            migrant crossing
-            migrants border
-            refugee crossing
-
-        The function also removes X-specific operators.
+        - avoid deeply nested boolean expressions,
+        - keep searches tied to human migration,
+        - cover several terms from every concept group,
+        - avoid location-specific hard-coding,
+        - provide a small multilingual fallback layer.
         """
 
-        cleaned_query = (
-            self._clean_query(
-                query
-            )
+        cleaned_query = self._clean_query(
+            query
         )
 
         if not cleaned_query:
             return []
 
-        groups = (
-            self._extract_parenthesized_groups(
-                cleaned_query
-            )
+        groups = self._extract_parenthesized_groups(
+            cleaned_query
         )
 
+        results: List[str] = []
+
         # --------------------------------------------------
-        # TWO OR MORE GROUPS
+        # TWO OR MORE BOOLEAN GROUPS
         # --------------------------------------------------
 
         if len(groups) >= 2:
 
-            first_group = (
-                self._split_or_terms(
-                    groups[0]
-                )
+            first_group = self._split_or_terms(
+                groups[0]
             )
 
-            second_group = (
-                self._split_or_terms(
-                    groups[1]
-                )
+            second_group = self._split_or_terms(
+                groups[1]
             )
 
-            results = []
+            first_terms = self._prioritize_migration_terms(
+                first_group
+            )
 
-            # Prefer informative combinations.
-            for first_term in first_group:
+            second_terms = self._prioritize_topic_terms(
+                second_group
+            )
 
-                for second_term in second_group:
+            # Phase 1:
+            # ensure each secondary topic gets coverage with
+            # several migration-context words.
+            for second_term in second_terms:
 
-                    phrase = (
-                        f"{first_term} "
-                        f"{second_term}"
-                    ).strip()
+                for first_term in first_terms[:4]:
 
-                    if not phrase:
-                        continue
-
-                    if phrase not in results:
-
-                        results.append(
-                            phrase
-                        )
+                    self._append_unique_query(
+                        results,
+                        f"{first_term} {second_term}",
+                    )
 
                     if (
                         len(results)
                         >= self.MAX_EXPANDED_QUERIES
                     ):
-
                         return results
 
-            if results:
-                return results
+            # Phase 2:
+            # reverse ordering produces useful natural-language
+            # variants because Reddit search ranking can differ
+            # between "migrant border" and "border migrant".
+            for second_term in second_terms[:6]:
+
+                for first_term in first_terms[:2]:
+
+                    self._append_unique_query(
+                        results,
+                        f"{second_term} {first_term}",
+                    )
+
+                    if (
+                        len(results)
+                        >= self.MAX_EXPANDED_QUERIES
+                    ):
+                        return results
+
+            return results
 
         # --------------------------------------------------
         # ONE BOOLEAN GROUP
@@ -297,53 +408,238 @@ class RedditCollector:
 
         if len(groups) == 1:
 
-            terms = (
-                self._split_or_terms(
-                    groups[0]
-                )
+            group_terms = self._split_or_terms(
+                groups[0]
             )
 
-            results = []
+            prioritized = self._prioritize_migration_terms(
+                group_terms
+            )
 
-            for term in terms:
+            for term in prioritized:
 
-                if term not in results:
+                self._append_unique_query(
+                    results,
+                    term,
+                )
 
-                    results.append(
-                        term
+            # Add a small multilingual layer only for broad
+            # migration queries.
+            if self._looks_like_general_migration_query(
+                prioritized
+            ):
+
+                for term in self.MULTILINGUAL_MIGRATION_TERMS:
+
+                    self._append_unique_query(
+                        results,
+                        term,
                     )
 
-                if (
-                    len(results)
-                    >= self.MAX_EXPANDED_QUERIES
-                ):
+                    if (
+                        len(results)
+                        >= self.MAX_EXPANDED_QUERIES
+                    ):
+                        break
 
-                    break
-
-            if results:
-                return results
+            return results[
+                :self.MAX_EXPANDED_QUERIES
+            ]
 
         # --------------------------------------------------
         # NO PARENTHESIZED GROUPS
         # --------------------------------------------------
 
-        or_terms = (
-            self._split_or_terms(
-                cleaned_query
-            )
+        or_terms = self._split_or_terms(
+            cleaned_query
         )
 
         if len(or_terms) > 1:
 
-            return (
-                or_terms[
-                    :self.MAX_EXPANDED_QUERIES
-                ]
-            )
+            for term in self._prioritize_migration_terms(
+                or_terms
+            ):
+
+                self._append_unique_query(
+                    results,
+                    term,
+                )
+
+            return results[
+                :self.MAX_EXPANDED_QUERIES
+            ]
 
         return [
             cleaned_query
         ]
+
+    def _append_unique_query(
+        self,
+        results: List[str],
+        value: str,
+    ) -> None:
+        """
+        Adds a normalized search phrase only once.
+        """
+
+        value = re.sub(
+            r"\s+",
+            " ",
+            value or "",
+        ).strip()
+
+        if not value:
+            return
+
+        if value not in results:
+            results.append(
+                value
+            )
+
+    def _prioritize_migration_terms(
+        self,
+        terms: List[str],
+    ) -> List[str]:
+        """
+        Orders migration words so the most useful human
+        migration terms are searched before generic language.
+        """
+
+        normalized = []
+
+        for term in terms:
+
+            cleaned = re.sub(
+                r"\s+",
+                " ",
+                term or "",
+            ).strip()
+
+            if (
+                cleaned
+                and cleaned
+                not in normalized
+            ):
+                normalized.append(
+                    cleaned
+                )
+
+        priority = {
+            value: index
+            for index, value
+            in enumerate(
+                self.MIGRATION_SEED_TERMS
+            )
+        }
+
+        return sorted(
+            normalized,
+            key=lambda value: (
+                priority.get(
+                    value.lower(),
+                    999,
+                ),
+                len(value),
+                value.lower(),
+            ),
+        )
+
+    def _prioritize_topic_terms(
+        self,
+        terms: List[str],
+    ) -> List[str]:
+        """
+        Keeps topic coverage broad instead of repeatedly using
+        only the first few OR terms.
+        """
+
+        normalized = []
+
+        for term in terms:
+
+            cleaned = re.sub(
+                r"\s+",
+                " ",
+                term or "",
+            ).strip()
+
+            if (
+                cleaned
+                and cleaned
+                not in normalized
+            ):
+                normalized.append(
+                    cleaned
+                )
+
+        # Prefer concrete operational terms before generic ones.
+        preferred = [
+            "crossing",
+            "border",
+            "route",
+            "checkpoint",
+            "patrol",
+            "boat",
+            "vessel",
+            "sea",
+            "coast guard",
+            "rescue",
+            "intercepted",
+            "smuggler",
+            "smuggling",
+            "trafficking",
+            "transport",
+            "driver",
+            "departure",
+            "departing",
+            "leaving",
+            "arrived",
+            "arrival",
+        ]
+
+        ranking = {
+            value: index
+            for index, value
+            in enumerate(
+                preferred
+            )
+        }
+
+        return sorted(
+            normalized,
+            key=lambda value: (
+                ranking.get(
+                    value.lower(),
+                    999,
+                ),
+                len(value),
+                value.lower(),
+            ),
+        )
+
+    def _looks_like_general_migration_query(
+        self,
+        terms: List[str],
+    ) -> bool:
+        """
+        Returns True when a one-group query is broadly about
+        migration rather than a narrow technical topic.
+        """
+
+        migration_terms = {
+            value.lower()
+            for value
+            in self.MIGRATION_SEED_TERMS
+        }
+
+        hits = sum(
+            1
+            for term in terms
+            if term.lower()
+            in migration_terms
+        )
+
+        return hits >= 2
 
     # ======================================================
     # QUERY CLEANING
