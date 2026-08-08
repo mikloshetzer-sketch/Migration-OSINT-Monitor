@@ -150,7 +150,7 @@ def analyze_post(
 
     time_result = time_extractor.extract(
         text=text,
-        published_at=post.get("published_at"),
+        published_at=None,
     )
 
     score_result = scorer.calculate_score(
@@ -745,7 +745,6 @@ def main():
     total_posts_found = 0
     total_noise_filtered = 0
     total_non_operational_filtered = 0
-    total_historical_filtered = 0
     total_operational_events = 0
     total_events_saved = 0
     total_events_existing = 0
@@ -757,8 +756,6 @@ def main():
         "LEGAL_MIGRATION_SIGNAL": 0,
         "POLICY_SIGNAL": 0,
         "RECRUITMENT_COORDINATION": 0,
-        "MOBILIZATION_COORDINATION": 0,
-        "DECISION_INFLUENCE": 0,
     }
 
     total_correlated_events = 0
@@ -1022,39 +1019,6 @@ def main():
                     region_resolver=region_resolver,
                 )
 
-                if event.get("historical_reference"):
-                    total_historical_filtered += 1
-
-                    print(
-                        "-----------------------------------"
-                    )
-
-                    print(
-                        "HISTORICAL REFERENCE FILTERED"
-                    )
-
-                    print(
-                        "Reason: "
-                        f"{event.get('historical_reason')}"
-                    )
-
-                    print(
-                        "Historical reference: "
-                        f"{event.get('historical_reference_time')}"
-                    )
-
-                    print(
-                        "Detected event type: "
-                        f"{event.get('event_type')}"
-                    )
-
-                    print(
-                        "Text: "
-                        f"{text}"
-                    )
-
-                    continue
-
                 total_operational_events += 1
 
                 candidates = (
@@ -1211,11 +1175,6 @@ def main():
     )
 
     print(
-        "Historical references filtered: "
-        f"{total_historical_filtered}"
-    )
-
-    print(
         "Influence signals detected: "
         f"{total_influence_signals}"
     )
@@ -1238,16 +1197,6 @@ def main():
     print(
         "Recruitment / coordination signals: "
         f"{influence_signal_counts['RECRUITMENT_COORDINATION']}"
-    )
-
-    print(
-        "Mobilization / coordination signals: "
-        f"{influence_signal_counts['MOBILIZATION_COORDINATION']}"
-    )
-
-    print(
-        "Decision influence signals: "
-        f"{influence_signal_counts['DECISION_INFLUENCE']}"
     )
 
     print(
