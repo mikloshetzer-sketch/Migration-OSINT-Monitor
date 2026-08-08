@@ -1,7 +1,7 @@
 {
-  "version": "2.2",
+  "version": "2.3",
 
-  "description": "Structured migration OSINT knowledge base for influence, facilitation, legal, policy, route, movement and early-warning signal detection. Version 2.2 adds targeted multilingual access-method, route-guidance and decision-influence patterns while preserving stricter false-positive controls.",
+  "description": "Structured migration OSINT knowledge base for influence, facilitation, legal, policy, mobilization, decision influence, route, movement and early-warning signal detection.",
 
   "settings": {
     "minimum_score": 6,
@@ -318,6 +318,83 @@
         "ecco come attraversare",
         "questa è la via",
         "questa rotta funziona"
+      ]
+    },
+
+    "mobilization": {
+      "weight": 5,
+      "terms": [
+        "organizers",
+        "organisers",
+        "organized by",
+        "organised by",
+        "organizing migrants",
+        "organising migrants",
+        "mobilizing",
+        "mobilising",
+        "already mobilizing",
+        "already mobilising",
+        "online campaign",
+        "online campaigns",
+        "social media campaign",
+        "social media campaigns",
+        "campaign to mobilize",
+        "campaign to mobilise",
+        "call to gather",
+        "calls to gather",
+        "call to move",
+        "calls to move",
+        "call to cross",
+        "calls to cross",
+        "prepare a surge",
+        "preparing a surge",
+        "prepare another surge",
+        "preparing another surge",
+        "prepare a crossing",
+        "preparing a crossing",
+        "second migrant surge",
+        "another migrant surge",
+        "coordinated movement",
+        "coordinated crossing",
+        "coordinated crossings",
+        "mass mobilization",
+        "mass mobilisation",
+        "gather at",
+        "gather near",
+        "assemble at",
+        "assemble near",
+
+        "organizadores",
+        "organizando migrantes",
+        "movilizando",
+        "campaña online",
+        "campaña en redes sociales",
+        "llamada a reunirse",
+        "llamada a cruzar",
+        "preparando una oleada",
+        "movimiento coordinado",
+
+        "organisateurs",
+        "organiser les migrants",
+        "mobilisation",
+        "mobiliser",
+        "campagne en ligne",
+        "campagne sur les réseaux sociaux",
+        "appel à se rassembler",
+        "appel à traverser",
+        "préparer une nouvelle vague",
+        "mouvement coordonné",
+
+        "organizzatori",
+        "organizzare migranti",
+        "mobilitazione",
+        "mobilitare",
+        "campagna online",
+        "campagna sui social",
+        "appello a radunarsi",
+        "appello ad attraversare",
+        "preparare una nuova ondata",
+        "movimento coordinato"
       ]
     },
 
@@ -1153,6 +1230,34 @@
       ]
     },
 
+    "mobilization_coordination": {
+      "weight": 5,
+      "terms": [
+        "online campaigns",
+        "social media campaigns",
+        "already mobilizing",
+        "already mobilising",
+        "organizers prepare",
+        "organisers prepare",
+        "organizers are preparing",
+        "organisers are preparing",
+        "organizers mobilizing",
+        "organisers mobilising",
+        "prepare a second migrant surge",
+        "preparing a second migrant surge",
+        "prepare another migrant surge",
+        "preparing another migrant surge",
+        "call to gather",
+        "calls to gather",
+        "call to cross",
+        "calls to cross",
+        "coordinated movement",
+        "coordinated crossing",
+        "mass mobilization",
+        "mass mobilisation"
+      ]
+    },
+
     "policy_pull_factor": {
       "weight": 4,
       "terms": [
@@ -1303,8 +1408,8 @@
     },
 
     {
-      "id": "decision_influence_content",
-      "name": "Migration decision influence content",
+      "id": "migration_decision_influence",
+      "name": "Migration decision influence",
       "required_groups": [
         "migration_context",
         "decision_influence"
@@ -1316,7 +1421,41 @@
         "route_information"
       ],
       "score": 7,
-      "result_hint": "CROSSING_FACILITATION"
+      "result_hint": "DECISION_INFLUENCE"
+    },
+
+    {
+      "id": "migration_mobilization",
+      "name": "Migration mobilization and coordination",
+      "required_groups": [
+        "migration_context",
+        "mobilization"
+      ],
+      "optional_groups": [
+        "crossing_point",
+        "mass_movement",
+        "route_information",
+        "information_spread",
+        "platform_indicator"
+      ],
+      "score": 9,
+      "result_hint": "MOBILIZATION_COORDINATION"
+    },
+
+    {
+      "id": "migration_mobilization_narrative",
+      "name": "Migration mobilization narrative",
+      "required_groups": [
+        "migration_context",
+        "mobilization_coordination"
+      ],
+      "optional_groups": [
+        "crossing_point",
+        "mass_movement",
+        "information_spread"
+      ],
+      "score": 9,
+      "result_hint": "MOBILIZATION_COORDINATION"
     },
 
     {
@@ -1409,6 +1548,12 @@
       "allowed migrants to cross",
       "letting migrants through",
 
+      "already mobilizing",
+      "online campaigns",
+      "prepare a second migrant surge",
+      "preparing a second migrant surge",
+      "calls to cross",
+
       "trouvé la technique",
       "trouvé le moyen de passer",
       "laissé passer les migrants",
@@ -1425,8 +1570,7 @@
     "CROSSING_FACILITATION": [
       "mass_movement",
       "route_promotion",
-      "border_access",
-      "decision_influence"
+      "border_access"
     ],
 
     "LEGAL_MIGRATION_SIGNAL": [
@@ -1442,6 +1586,15 @@
     "RECRUITMENT_COORDINATION": [
       "facilitation",
       "coordination"
+    ],
+
+    "MOBILIZATION_COORDINATION": [
+      "mobilization",
+      "mobilization_coordination"
+    ],
+
+    "DECISION_INFLUENCE": [
+      "decision_influence"
     ]
   },
 
@@ -1449,7 +1602,9 @@
     "CROSSING_FACILITATION": 0.64,
     "LEGAL_MIGRATION_SIGNAL": 0.72,
     "POLICY_SIGNAL": 0.65,
-    "RECRUITMENT_COORDINATION": 0.72
+    "RECRUITMENT_COORDINATION": 0.72,
+    "MOBILIZATION_COORDINATION": 0.72,
+    "DECISION_INFLUENCE": 0.64
   },
 
   "score_levels": {
