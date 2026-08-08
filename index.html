@@ -1290,6 +1290,7 @@
                 <th>Forrás</th>
                 <th>Konf.</th>
                 <th>Prioritás</th>
+                <th>Score</th>
                 <th>Forráslink</th>
               </tr>
             </thead>
@@ -1549,7 +1550,7 @@
     }
 
     function priorityFromItem(item){
-      const explicit = first(item, ["priority","priority_level","severity"]);
+      const explicit = first(item, ["analyst_priority","priority","priority_level","severity"]);
       if(explicit) return String(explicit).toUpperCase();
 
       const conf = num(first(item, ["confidence","event_confidence","average_confidence"]), 0);
@@ -1695,10 +1696,13 @@
 
       const accessSignals = getAccessSignals(data);
 
-      const highPriority = [
-        ...influence,
-        ...accessSignals
-      ].filter(x => ["HIGH","CRITICAL"].includes(priorityFromItem(x))).length;
+      const exportedPriority = safeArray(data.high_priority_intelligence);
+      const highPriority = exportedPriority.length
+        ? exportedPriority.filter(x => ["HIGH","CRITICAL"].includes(priorityFromItem(x))).length
+        : [
+            ...influence,
+            ...accessSignals
+          ].filter(x => ["HIGH","CRITICAL"].includes(priorityFromItem(x))).length;
 
       const correlations = first(
         run,
@@ -1784,6 +1788,7 @@
         const conf = num(first(item, ["confidence","event_confidence"], 0));
         const excerpt = first(item, ["text_excerpt","excerpt","text","summary"], "—");
         const url = first(item, ["url","source_url"], null);
+        const relatedPosts = num(first(item, ["related_post_count","post_count","source_count","sources_count"], 1), 1);
 
         const metaLocation = [location, region && region !== location ? humanize(region) : null]
           .filter(Boolean)
@@ -1815,7 +1820,8 @@
 
             <div class="post-card-footer">
               <div class="system-class">
-                System classification: <strong>${escapeHtml(String(type))}</strong>
+                System classification: <strong>${escapeHtml(String(type))}</strong><br>
+                Related posts: <strong>${relatedPosts}</strong>
               </div>
               ${url
                 ? `<a class="source-link" href="${escapeAttr(url)}" target="_blank" rel="noopener">Open source →</a>`
@@ -1850,16 +1856,22 @@
 
       const current = rows.at(-1)?.count || 0;
       const previous = rows.at(-2)?.count || 0;
-      const change = previous > 0
+      const hasPreviousBaseline = previous > 0;
+      const change = hasPreviousBaseline
         ? ((current - previous) / previous) * 100
-        : (current > 0 ? 100 : 0);
+        : null;
 
       $("historyCurrent").textContent = current;
       $("historyPrevious").textContent = previous;
 
       const changeEl = $("historyChange");
-      changeEl.textContent = `${change >= 0 ? "+" : ""}${change.toFixed(1)}%`;
-      changeEl.className = `value ${change > 0 ? "trend-up" : change < 0 ? "trend-down" : "trend-flat"}`;
+      if(change === null){
+        changeEl.textContent = current > 0 ? "NEW BASELINE" : "—";
+        changeEl.className = "value trend-flat";
+      }else{
+        changeEl.textContent = `${change >= 0 ? "+" : ""}${change.toFixed(1)}%`;
+        changeEl.className = `value ${change > 0 ? "trend-up" : change < 0 ? "trend-down" : "trend-flat"}`;
+      }
 
       const max = Math.max(...rows.map(r => r.count), 1);
 
@@ -1979,41 +1991,55 @@
     }
 
     function renderPriority(data){
-      const influence = getInfluenceSignals(data);
-      const events = safeArray(data.high_confidence_events).length
-        ? safeArray(data.high_confidence_events)
-        : safeArray(data.live_events);
+      // Prefer the exporter-built analyst queue. This preserves backend
+      // ranking (analyst_priority + priority_score) instead of rebuilding
+      // a different order in the browser.
+      const exported = safeArray(data.high_priority_intelligence);
 
-      const merged = [
-        ...influence.map(x => ({...x, __kind:"signal"})),
-        ...events.map(x => ({...x, __kind:"event"}))
-      ];
+      let rows;
+      if(exported.length){
+        rows = [...exported].sort((a,b) => {
+          const scoreA = num(first(a,["priority_score"],0));
+          const scoreB = num(first(b,["priority_score"],0));
+          if(scoreB !== scoreA) return scoreB - scoreA;
+          const rank = {CRITICAL:4,HIGH:3,MEDIUM:2,LOW:1};
+          return (rank[priorityFromItem(b)]||0) - (rank[priorityFromItem(a)]||0);
+        }).slice(0,8);
+      }else{
+        const influence = getInfluenceSignals(data);
+        const events = safeArray(data.high_confidence_events).length
+          ? safeArray(data.high_confidence_events)
+          : safeArray(data.live_events);
+        const merged = [
+          ...influence.map(x => ({...x, __kind:"signal"})),
+          ...events.map(x => ({...x, __kind:"event"}))
+        ];
+        const rank = {CRITICAL:4,HIGH:3,MEDIUM:2,LOW:1};
+        merged.sort((a,b) => {
+          const pa = rank[priorityFromItem(a)] || 0;
+          const pb = rank[priorityFromItem(b)] || 0;
+          if(pb !== pa) return pb-pa;
+          return num(first(b,["confidence","event_confidence"],0)) - num(first(a,["confidence","event_confidence"],0));
+        });
+        rows = merged.slice(0,8);
+      }
 
-      const rank = {CRITICAL:4,HIGH:3,MEDIUM:2,LOW:1};
-
-      merged.sort((a,b) => {
-        const pa = rank[priorityFromItem(a)] || 0;
-        const pb = rank[priorityFromItem(b)] || 0;
-        if(pb !== pa) return pb-pa;
-        return num(first(b,["confidence","event_confidence"],0)) - num(first(a,["confidence","event_confidence"],0));
-      });
-
-      const rows = merged.slice(0,8);
       const body = $("priorityBody");
-
       if(!rows.length){
-        body.innerHTML = `<tr><td colspan="8">Nincs kiemelt elem.</td></tr>`;
+        body.innerHTML = `<tr><td colspan="9">Nincs kiemelt elem.</td></tr>`;
         return;
       }
 
       body.innerHTML = rows.map(item => {
-        const time = first(item, ["published_at","last_seen","created_at"], null);
+        const time = first(item, ["published_at","last_seen","created_at","timestamp"], null);
         const region = first(item, ["primary_region","region"], "GLOBAL");
         const type = first(item, ["primary_signal","signal_type","event_type","type"], "—");
         const location = locationLabel(item);
         const source = first(item, ["source","source_name"], "—");
         const conf = num(first(item, ["confidence","event_confidence","average_confidence"], 0));
         const priority = priorityFromItem(item);
+        const scoreRaw = first(item, ["priority_score"], null);
+        const score = scoreRaw === null ? "—" : num(scoreRaw).toFixed(1);
         const url = first(item, ["url","source_url"], null);
 
         return `
@@ -2025,6 +2051,7 @@
             <td><strong>${escapeHtml(String(source))}</strong></td>
             <td>${conf.toFixed(2)}</td>
             <td><span class="priority-badge ${priorityClass(priority)}">${priority}</span></td>
+            <td><strong>${escapeHtml(score)}</strong></td>
             <td>${url ? `<a class="source-link" href="${escapeAttr(url)}" target="_blank" rel="noopener">Open →</a>` : "—"}</td>
           </tr>`;
       }).join("");
@@ -2289,4 +2316,3 @@
   </script>
 </body>
 </html>
-
