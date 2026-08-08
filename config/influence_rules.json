@@ -1,8 +1,6 @@
 {
-  "version": "2.3",
-
-  "description": "Structured migration OSINT knowledge base for influence, facilitation, legal, policy, mobilization, decision influence, route, movement and early-warning signal detection.",
-
+  "version": "2.4",
+  "description": "Structured migration OSINT knowledge base for influence, facilitation, legal, policy, mobilization, decision influence, reported mobilization, online influence reporting, route, movement and early-warning signal detection.",
   "settings": {
     "minimum_score": 6,
     "medium_score": 9,
@@ -12,7 +10,6 @@
     "allow_high_value_override": true,
     "max_confidence": 0.99
   },
-
   "migration_context": {
     "weight": 1,
     "terms": [
@@ -49,7 +46,6 @@
       "migration corridor",
       "migration flow",
       "migration flows",
-
       "migrante",
       "migrantes",
       "migración",
@@ -61,7 +57,6 @@
       "solicitantes de asilo",
       "migración irregular",
       "migración ilegal",
-
       "réfugié",
       "réfugiés",
       "asile",
@@ -69,7 +64,6 @@
       "demandeurs d'asile",
       "migration irrégulière",
       "immigration clandestine",
-
       "migrante irregolare",
       "migranti irregolari",
       "rifugiato",
@@ -79,7 +73,6 @@
       "immigrazione irregolare"
     ]
   },
-
   "indicator_groups": {
     "movement": {
       "weight": 2,
@@ -99,22 +92,18 @@
         "entering the border area",
         "reached the coast",
         "reached the border",
-
         "dirigiéndose a la frontera",
         "hacia la frontera",
         "hacia la costa",
         "intentando cruzar",
-
         "vers la frontière",
         "vers la côte",
         "tentative de traversée",
-
         "verso il confine",
         "verso la costa",
         "tentativo di attraversamento"
       ]
     },
-
     "mass_movement": {
       "weight": 4,
       "terms": [
@@ -138,26 +127,22 @@
         "wave of migrants",
         "migration surge",
         "influx of migrants",
-
         "cientos de migrantes",
         "miles de migrantes",
         "grupo numeroso de migrantes",
         "migrantes reunidos",
         "oleada de migrantes",
-
         "des centaines de migrants",
         "des milliers de migrants",
         "groupe important de migrants",
         "migrants rassemblés",
         "afflux de migrants",
-
         "centinaia di migranti",
         "migliaia di migranti",
         "migranti radunati",
         "afflusso di migranti"
       ]
     },
-
     "route_information": {
       "weight": 3,
       "terms": [
@@ -186,7 +171,6 @@
         "safe route",
         "easier route",
         "best route",
-
         "how to cross",
         "how to get across",
         "how to pass the border",
@@ -199,7 +183,6 @@
         "found the route",
         "found the method",
         "found the technique",
-
         "cómo cruzar",
         "cómo pasar la frontera",
         "forma de cruzar",
@@ -208,7 +191,6 @@
         "técnica para cruzar",
         "encontraron una forma de cruzar",
         "encontraron la ruta",
-
         "comment passer la frontière",
         "comment traverser",
         "façon de traverser",
@@ -219,7 +201,6 @@
         "trouvé le moyen de passer",
         "trouvé une façon de passer",
         "trouvé la route",
-
         "come attraversare",
         "come passare il confine",
         "modo per attraversare",
@@ -229,7 +210,6 @@
         "hanno trovato la rotta"
       ]
     },
-
     "facilitation": {
       "weight": 5,
       "terms": [
@@ -268,7 +248,6 @@
         "can cross here",
         "use this route",
         "take this route",
-
         "here is how to cross",
         "this is how to cross",
         "this is the way to cross",
@@ -277,7 +256,6 @@
         "this route works",
         "this crossing works",
         "they found a way through",
-
         "transporte disponible",
         "barco disponible",
         "conductor disponible",
@@ -291,7 +269,6 @@
         "así se cruza",
         "esta es la forma de cruzar",
         "esta ruta funciona",
-
         "transport disponible",
         "bateau disponible",
         "chauffeur disponible",
@@ -306,7 +283,6 @@
         "voici comment traverser",
         "c'est comme ça qu'on passe",
         "cette route fonctionne",
-
         "trasporto disponibile",
         "barca disponibile",
         "autista disponibile",
@@ -320,7 +296,6 @@
         "questa rotta funziona"
       ]
     },
-
     "mobilization": {
       "weight": 5,
       "terms": [
@@ -363,7 +338,6 @@
         "gather near",
         "assemble at",
         "assemble near",
-
         "organizadores",
         "organizando migrantes",
         "movilizando",
@@ -373,7 +347,6 @@
         "llamada a cruzar",
         "preparando una oleada",
         "movimiento coordinado",
-
         "organisateurs",
         "organiser les migrants",
         "mobilisation",
@@ -384,7 +357,6 @@
         "appel à traverser",
         "préparer une nouvelle vague",
         "mouvement coordonné",
-
         "organizzatori",
         "organizzare migranti",
         "mobilitazione",
@@ -397,7 +369,6 @@
         "movimento coordinato"
       ]
     },
-
     "information_spread": {
       "weight": 3,
       "terms": [
@@ -426,7 +397,6 @@
         "tiktok video",
         "facebook group",
         "instagram reel",
-
         "video shows",
         "video shows how",
         "video proof",
@@ -442,7 +412,6 @@
         "help migrants decide",
         "help you make your decision",
         "help you decide",
-
         "vídeo muestra",
         "vídeo demuestra",
         "mira cómo",
@@ -450,7 +419,6 @@
         "instrucciones",
         "paso a paso",
         "guía para migrantes",
-
         "la vidéo montre",
         "preuve vidéo",
         "regardez comment",
@@ -458,7 +426,6 @@
         "instructions",
         "étape par étape",
         "guide pour migrants",
-
         "il video mostra",
         "prova video",
         "guarda come",
@@ -468,7 +435,6 @@
         "guida per migranti"
       ]
     },
-
     "legal_signal": {
       "weight": 5,
       "terms": [
@@ -518,21 +484,18 @@
         "granted asylum",
         "asylum granted",
         "protection granted",
-
         "tribunal dictaminó",
         "sentencia judicial",
         "no puede ser deportado",
         "no puede ser devuelto",
         "deportación suspendida",
         "derecho a permanecer",
-
         "le tribunal a jugé",
         "décision de justice",
         "ne peut pas être expulsé",
         "ne peut pas être renvoyé",
         "expulsion suspendue",
         "droit de rester",
-
         "il tribunale ha stabilito",
         "decisione del tribunale",
         "non può essere espulso",
@@ -541,7 +504,6 @@
         "diritto a rimanere"
       ]
     },
-
     "policy_signal": {
       "weight": 4,
       "terms": [
@@ -571,7 +533,6 @@
         "family reunification"
       ]
     },
-
     "border_condition": {
       "weight": 1,
       "terms": [
@@ -596,7 +557,6 @@
         "floating barrier",
         "surveillance increased",
         "security increased",
-
         "border gates open",
         "border gate open",
         "gates opened",
@@ -609,25 +569,21 @@
         "guards let them through",
         "police let them through",
         "border guards let them through",
-
         "puertas de la frontera abiertas",
         "abrieron las puertas de la frontera",
         "dejaron pasar a los migrantes",
         "permitieron cruzar a los migrantes",
-
         "portes de la frontière ouvertes",
         "ouverture des portes de la frontière",
         "laissé passer les migrants",
         "laisser passer les migrants",
         "les gardes les ont laissés passer",
-
         "cancelli di frontiera aperti",
         "hanno aperto i cancelli",
         "hanno lasciato passare i migranti",
         "lasciato passare i migranti"
       ]
     },
-
     "border_policy": {
       "weight": 1,
       "terms": [
@@ -649,7 +605,6 @@
         "barrier"
       ]
     },
-
     "smuggling_ecosystem": {
       "weight": 3,
       "terms": [
@@ -664,10 +619,6 @@
         "migrant smuggling",
         "facilitator",
         "facilitators",
-        "organiser",
-        "organizer",
-        "organisers",
-        "organizers",
         "recruiter",
         "recruiters",
         "price per person",
@@ -676,9 +627,117 @@
         "crossing fee",
         "transport fee"
       ]
+    },
+    "mobilization_report": {
+      "weight": 5,
+      "terms": [
+        "there are plans for migrants to",
+        "there are plans for refugees to",
+        "plans for migrants to",
+        "plans for refugees to",
+        "migrants are planning to",
+        "refugees are planning to",
+        "migrants plan to",
+        "refugees plan to",
+        "expected to cross the border",
+        "expected to cross",
+        "expect migrants to cross",
+        "expect refugees to cross",
+        "expect tens of thousands",
+        "preparing to storm the border",
+        "planning to storm the border",
+        "planning to storm",
+        "plans to storm",
+        "another surge is planned",
+        "a second surge is planned",
+        "new surge is planned",
+        "mass crossing is planned",
+        "crossing is being organized",
+        "crossing is being organised",
+        "movement is being organized",
+        "movement is being organised",
+        "online campaigns are mobilizing",
+        "online campaigns are mobilising",
+        "social media campaigns are mobilizing",
+        "social media campaigns are mobilising",
+        "calls are circulating to gather",
+        "calls are circulating to cross",
+        "messages are circulating to gather",
+        "messages are circulating to cross",
+        "reported plans to cross",
+        "reports of plans to cross",
+        "reports that migrants will cross",
+        "reports that refugees will cross",
+        "hay planes para que los migrantes",
+        "los migrantes planean cruzar",
+        "se espera que los migrantes crucen",
+        "se está organizando un cruce",
+        "campañas en línea están movilizando",
+        "llamadas para cruzar están circulando",
+        "il est prévu que des migrants",
+        "les migrants prévoient de traverser",
+        "on s'attend à ce que les migrants traversent",
+        "un passage est en cours d'organisation",
+        "des campagnes en ligne mobilisent",
+        "des appels à traverser circulent",
+        "ci sono piani per i migranti",
+        "i migranti stanno pianificando di attraversare",
+        "si prevede che i migranti attraversino",
+        "un attraversamento è in fase di organizzazione",
+        "campagne online stanno mobilitando",
+        "circolano appelli ad attraversare"
+      ]
+    },
+    "online_influence_report": {
+      "weight": 5,
+      "terms": [
+        "lured by online falsehoods",
+        "lured by social media",
+        "encouraged by social media",
+        "encouraged online",
+        "influenced by social media",
+        "influenced by online posts",
+        "influenced by online messages",
+        "misled by social media",
+        "misled by online posts",
+        "misled by online information",
+        "false information encouraged migrants",
+        "false information encouraged refugees",
+        "online falsehoods encouraged migrants",
+        "online falsehoods encouraged refugees",
+        "social media encouraged migrants",
+        "social media encouraged refugees",
+        "online posts encouraged migrants",
+        "online posts encouraged refugees",
+        "messages encouraged migrants to cross",
+        "messages encouraged refugees to cross",
+        "social media posts told migrants",
+        "social media posts told refugees",
+        "online rumours encouraged migrants",
+        "online rumors encouraged migrants",
+        "rumours prompted migrants to cross",
+        "rumors prompted migrants to cross",
+        "viral posts encouraged migrants",
+        "viral videos encouraged migrants",
+        "online information shaped migration decisions",
+        "social media shaped migration decisions",
+        "online campaign influenced migrants",
+        "online campaigns influenced migrants",
+        "atraídos por falsedades en línea",
+        "alentados por las redes sociales",
+        "influenciados por las redes sociales",
+        "engañados por información en línea",
+        "attirés par de fausses informations en ligne",
+        "encouragés par les réseaux sociaux",
+        "influencés par les réseaux sociaux",
+        "trompés par des informations en ligne",
+        "attirati da false informazioni online",
+        "incoraggiati dai social media",
+        "influenzati dai social media",
+        "ingannati da informazioni online"
+      ]
     }
   },
-
   "destination_countries": {
     "weight": 1,
     "countries": [
@@ -688,7 +747,12 @@
         "type": "destination",
         "schengen": true,
         "importance": 9,
-        "aliases": ["Spain", "España", "Espagne", "Spagna"]
+        "aliases": [
+          "Spain",
+          "España",
+          "Espagne",
+          "Spagna"
+        ]
       },
       {
         "name": "Italy",
@@ -696,7 +760,11 @@
         "type": "destination",
         "schengen": true,
         "importance": 10,
-        "aliases": ["Italy", "Italia", "Italie"]
+        "aliases": [
+          "Italy",
+          "Italia",
+          "Italie"
+        ]
       },
       {
         "name": "France",
@@ -704,7 +772,10 @@
         "type": "destination_transit",
         "schengen": true,
         "importance": 9,
-        "aliases": ["France", "Francia"]
+        "aliases": [
+          "France",
+          "Francia"
+        ]
       },
       {
         "name": "Germany",
@@ -712,7 +783,13 @@
         "type": "destination",
         "schengen": true,
         "importance": 10,
-        "aliases": ["Germany", "Deutschland", "Allemagne", "Alemania", "Germania"]
+        "aliases": [
+          "Germany",
+          "Deutschland",
+          "Allemagne",
+          "Alemania",
+          "Germania"
+        ]
       },
       {
         "name": "United Kingdom",
@@ -720,7 +797,16 @@
         "type": "destination",
         "schengen": false,
         "importance": 10,
-        "aliases": ["United Kingdom", "UK", "Britain", "Great Britain", "England", "Royaume-Uni", "Reino Unido", "Regno Unito"]
+        "aliases": [
+          "United Kingdom",
+          "UK",
+          "Britain",
+          "Great Britain",
+          "England",
+          "Royaume-Uni",
+          "Reino Unido",
+          "Regno Unito"
+        ]
       },
       {
         "name": "Greece",
@@ -728,7 +814,12 @@
         "type": "entry_destination",
         "schengen": true,
         "importance": 9,
-        "aliases": ["Greece", "Hellas", "Grecia", "Grèce"]
+        "aliases": [
+          "Greece",
+          "Hellas",
+          "Grecia",
+          "Grèce"
+        ]
       },
       {
         "name": "Austria",
@@ -736,7 +827,11 @@
         "type": "destination_transit",
         "schengen": true,
         "importance": 8,
-        "aliases": ["Austria", "Österreich", "Autriche"]
+        "aliases": [
+          "Austria",
+          "Österreich",
+          "Autriche"
+        ]
       },
       {
         "name": "Belgium",
@@ -744,7 +839,11 @@
         "type": "destination_transit",
         "schengen": true,
         "importance": 7,
-        "aliases": ["Belgium", "Belgique", "België"]
+        "aliases": [
+          "Belgium",
+          "Belgique",
+          "België"
+        ]
       },
       {
         "name": "Netherlands",
@@ -752,7 +851,11 @@
         "type": "destination",
         "schengen": true,
         "importance": 7,
-        "aliases": ["Netherlands", "Nederland", "Holland"]
+        "aliases": [
+          "Netherlands",
+          "Nederland",
+          "Holland"
+        ]
       },
       {
         "name": "Sweden",
@@ -760,7 +863,11 @@
         "type": "destination",
         "schengen": true,
         "importance": 7,
-        "aliases": ["Sweden", "Sverige", "Suède"]
+        "aliases": [
+          "Sweden",
+          "Sverige",
+          "Suède"
+        ]
       },
       {
         "name": "United States",
@@ -768,7 +875,12 @@
         "type": "destination",
         "schengen": false,
         "importance": 10,
-        "aliases": ["United States", "USA", "US", "United States of America"]
+        "aliases": [
+          "United States",
+          "USA",
+          "US",
+          "United States of America"
+        ]
       },
       {
         "name": "Canada",
@@ -776,7 +888,9 @@
         "type": "destination",
         "schengen": false,
         "importance": 7,
-        "aliases": ["Canada"]
+        "aliases": [
+          "Canada"
+        ]
       },
       {
         "name": "Australia",
@@ -784,47 +898,87 @@
         "type": "destination",
         "schengen": false,
         "importance": 6,
-        "aliases": ["Australia"]
+        "aliases": [
+          "Australia"
+        ]
       }
     ]
   },
-
   "origin_regions": {
     "weight": 1,
     "regions": [
       {
         "name": "North Africa",
         "importance": 10,
-        "countries": ["Morocco", "Algeria", "Tunisia", "Libya", "Egypt"]
+        "countries": [
+          "Morocco",
+          "Algeria",
+          "Tunisia",
+          "Libya",
+          "Egypt"
+        ]
       },
       {
         "name": "Sahel",
         "importance": 9,
-        "countries": ["Mali", "Niger", "Burkina Faso", "Chad", "Mauritania", "Senegal"]
+        "countries": [
+          "Mali",
+          "Niger",
+          "Burkina Faso",
+          "Chad",
+          "Mauritania",
+          "Senegal"
+        ]
       },
       {
         "name": "West Africa",
         "importance": 8,
-        "countries": ["Nigeria", "Guinea", "Gambia", "Sierra Leone", "Liberia", "Ivory Coast", "Ghana"]
+        "countries": [
+          "Nigeria",
+          "Guinea",
+          "Gambia",
+          "Sierra Leone",
+          "Liberia",
+          "Ivory Coast",
+          "Ghana"
+        ]
       },
       {
         "name": "East Africa",
         "importance": 8,
-        "countries": ["Eritrea", "Ethiopia", "Somalia", "Sudan", "South Sudan"]
+        "countries": [
+          "Eritrea",
+          "Ethiopia",
+          "Somalia",
+          "Sudan",
+          "South Sudan"
+        ]
       },
       {
         "name": "Middle East",
         "importance": 9,
-        "countries": ["Syria", "Iraq", "Iran", "Yemen", "Lebanon", "Palestine"]
+        "countries": [
+          "Syria",
+          "Iraq",
+          "Iran",
+          "Yemen",
+          "Lebanon",
+          "Palestine"
+        ]
       },
       {
         "name": "South Asia",
         "importance": 8,
-        "countries": ["Afghanistan", "Pakistan", "Bangladesh", "India", "Sri Lanka"]
+        "countries": [
+          "Afghanistan",
+          "Pakistan",
+          "Bangladesh",
+          "India",
+          "Sri Lanka"
+        ]
       }
     ]
   },
-
   "crossing_points": {
     "weight": 3,
     "points": [
@@ -834,7 +988,10 @@
         "route": "Western Mediterranean",
         "type": "border_enclave",
         "importance": 10,
-        "aliases": ["Ceuta", "Ciudad Autónoma de Ceuta"]
+        "aliases": [
+          "Ceuta",
+          "Ciudad Autónoma de Ceuta"
+        ]
       },
       {
         "name": "Melilla",
@@ -842,7 +999,9 @@
         "route": "Western Mediterranean",
         "type": "border_enclave",
         "importance": 10,
-        "aliases": ["Melilla"]
+        "aliases": [
+          "Melilla"
+        ]
       },
       {
         "name": "Tarajal",
@@ -850,7 +1009,10 @@
         "route": "Western Mediterranean",
         "type": "land_border_crossing",
         "importance": 9,
-        "aliases": ["Tarajal", "El Tarajal"]
+        "aliases": [
+          "Tarajal",
+          "El Tarajal"
+        ]
       },
       {
         "name": "Fnideq",
@@ -858,7 +1020,10 @@
         "route": "Western Mediterranean",
         "type": "departure_area",
         "importance": 9,
-        "aliases": ["Fnideq", "Castillejos"]
+        "aliases": [
+          "Fnideq",
+          "Castillejos"
+        ]
       },
       {
         "name": "Tangier",
@@ -866,7 +1031,10 @@
         "route": "Western Mediterranean",
         "type": "departure_area",
         "importance": 8,
-        "aliases": ["Tangier", "Tanger"]
+        "aliases": [
+          "Tangier",
+          "Tanger"
+        ]
       },
       {
         "name": "Lampedusa",
@@ -874,7 +1042,9 @@
         "route": "Central Mediterranean",
         "type": "island_arrival_point",
         "importance": 10,
-        "aliases": ["Lampedusa"]
+        "aliases": [
+          "Lampedusa"
+        ]
       },
       {
         "name": "Sfax",
@@ -882,7 +1052,9 @@
         "route": "Central Mediterranean",
         "type": "departure_area",
         "importance": 10,
-        "aliases": ["Sfax"]
+        "aliases": [
+          "Sfax"
+        ]
       },
       {
         "name": "Zuwara",
@@ -890,7 +1062,10 @@
         "route": "Central Mediterranean",
         "type": "departure_area",
         "importance": 10,
-        "aliases": ["Zuwara", "Zuwarah"]
+        "aliases": [
+          "Zuwara",
+          "Zuwarah"
+        ]
       },
       {
         "name": "Tripoli",
@@ -898,7 +1073,9 @@
         "route": "Central Mediterranean",
         "type": "departure_area",
         "importance": 8,
-        "aliases": ["Tripoli"]
+        "aliases": [
+          "Tripoli"
+        ]
       },
       {
         "name": "Lesbos",
@@ -906,7 +1083,10 @@
         "route": "Eastern Mediterranean",
         "type": "island_arrival_point",
         "importance": 10,
-        "aliases": ["Lesbos", "Lesvos"]
+        "aliases": [
+          "Lesbos",
+          "Lesvos"
+        ]
       },
       {
         "name": "Samos",
@@ -914,7 +1094,9 @@
         "route": "Eastern Mediterranean",
         "type": "island_arrival_point",
         "importance": 9,
-        "aliases": ["Samos"]
+        "aliases": [
+          "Samos"
+        ]
       },
       {
         "name": "Evros",
@@ -922,7 +1104,10 @@
         "route": "Eastern Mediterranean",
         "type": "land_border_route",
         "importance": 9,
-        "aliases": ["Evros", "Evros River"]
+        "aliases": [
+          "Evros",
+          "Evros River"
+        ]
       },
       {
         "name": "Calais",
@@ -930,7 +1115,9 @@
         "route": "English Channel",
         "type": "departure_area",
         "importance": 10,
-        "aliases": ["Calais"]
+        "aliases": [
+          "Calais"
+        ]
       },
       {
         "name": "Dunkirk",
@@ -938,7 +1125,10 @@
         "route": "English Channel",
         "type": "departure_area",
         "importance": 9,
-        "aliases": ["Dunkirk", "Dunkerque"]
+        "aliases": [
+          "Dunkirk",
+          "Dunkerque"
+        ]
       },
       {
         "name": "Dover",
@@ -946,7 +1136,9 @@
         "route": "English Channel",
         "type": "arrival_area",
         "importance": 10,
-        "aliases": ["Dover"]
+        "aliases": [
+          "Dover"
+        ]
       },
       {
         "name": "Darien Gap",
@@ -954,7 +1146,11 @@
         "route": "Americas",
         "type": "land_route",
         "importance": 10,
-        "aliases": ["Darien Gap", "Darién Gap", "Darien"]
+        "aliases": [
+          "Darien Gap",
+          "Darién Gap",
+          "Darien"
+        ]
       },
       {
         "name": "Tapachula",
@@ -962,7 +1158,9 @@
         "route": "Americas",
         "type": "transit_area",
         "importance": 9,
-        "aliases": ["Tapachula"]
+        "aliases": [
+          "Tapachula"
+        ]
       },
       {
         "name": "Tijuana",
@@ -970,7 +1168,9 @@
         "route": "US-Mexico Border",
         "type": "border_city",
         "importance": 10,
-        "aliases": ["Tijuana"]
+        "aliases": [
+          "Tijuana"
+        ]
       },
       {
         "name": "El Paso",
@@ -978,11 +1178,12 @@
         "route": "US-Mexico Border",
         "type": "border_city",
         "importance": 10,
-        "aliases": ["El Paso"]
+        "aliases": [
+          "El Paso"
+        ]
       }
     ]
   },
-
   "crossing_methods": {
     "weight": 2,
     "methods": [
@@ -990,65 +1191,110 @@
         "name": "small_boat",
         "type": "maritime",
         "importance": 10,
-        "aliases": ["small boat", "small boats", "dinghy", "dinghies", "rubber boat", "inflatable boat"]
+        "aliases": [
+          "small boat",
+          "small boats",
+          "dinghy",
+          "dinghies",
+          "rubber boat",
+          "inflatable boat"
+        ]
       },
       {
         "name": "speedboat",
         "type": "maritime",
         "importance": 9,
-        "aliases": ["speedboat", "speedboats", "fast boat"]
+        "aliases": [
+          "speedboat",
+          "speedboats",
+          "fast boat"
+        ]
       },
       {
         "name": "fishing_boat",
         "type": "maritime",
         "importance": 7,
-        "aliases": ["fishing boat", "wooden boat"]
+        "aliases": [
+          "fishing boat",
+          "wooden boat"
+        ]
       },
       {
         "name": "swimming",
         "type": "maritime",
         "importance": 9,
-        "aliases": ["swimming", "swim", "swam across"]
+        "aliases": [
+          "swimming",
+          "swim",
+          "swam across"
+        ]
       },
       {
         "name": "truck",
         "type": "land",
         "importance": 8,
-        "aliases": ["truck", "lorry", "tractor-trailer", "container truck", "hidden in truck", "hidden in lorry"]
+        "aliases": [
+          "truck",
+          "lorry",
+          "tractor-trailer",
+          "container truck",
+          "hidden in truck",
+          "hidden in lorry"
+        ]
       },
       {
         "name": "train",
         "type": "land",
         "importance": 6,
-        "aliases": ["train", "railway"]
+        "aliases": [
+          "train",
+          "railway"
+        ]
       },
       {
         "name": "foot",
         "type": "land",
         "importance": 7,
-        "aliases": ["on foot", "walking", "forest route"]
+        "aliases": [
+          "on foot",
+          "walking",
+          "forest route"
+        ]
       },
       {
         "name": "river_crossing",
         "type": "land_water",
         "importance": 7,
-        "aliases": ["river crossing", "crossing the river"]
+        "aliases": [
+          "river crossing",
+          "crossing the river"
+        ]
       },
       {
         "name": "fence_breach",
         "type": "land_border",
         "importance": 9,
-        "aliases": ["fence breach", "breach the fence", "climb the fence"]
+        "aliases": [
+          "fence breach",
+          "breach the fence",
+          "climb the fence"
+        ]
       },
       {
         "name": "document_fraud",
         "type": "document",
         "importance": 7,
-        "aliases": ["fake passport", "false passport", "false documents", "forged documents", "fraudulent documents", "visa fraud"]
+        "aliases": [
+          "fake passport",
+          "false passport",
+          "false documents",
+          "forged documents",
+          "fraudulent documents",
+          "visa fraud"
+        ]
       }
     ]
   },
-
   "platform_indicators": {
     "weight": 1,
     "platforms": [
@@ -1056,53 +1302,71 @@
         "name": "Telegram",
         "importance": 10,
         "risk": "high",
-        "aliases": ["Telegram", "Telegram channel", "Telegram group"]
+        "aliases": [
+          "Telegram",
+          "Telegram channel",
+          "Telegram group"
+        ]
       },
       {
         "name": "WhatsApp",
         "importance": 10,
         "risk": "high",
-        "aliases": ["WhatsApp", "WhatsApp group"]
+        "aliases": [
+          "WhatsApp",
+          "WhatsApp group"
+        ]
       },
       {
         "name": "TikTok",
         "importance": 8,
         "risk": "medium",
-        "aliases": ["TikTok"]
+        "aliases": [
+          "TikTok"
+        ]
       },
       {
         "name": "Facebook",
         "importance": 7,
         "risk": "medium",
-        "aliases": ["Facebook"]
+        "aliases": [
+          "Facebook"
+        ]
       },
       {
         "name": "Instagram",
         "importance": 7,
         "risk": "medium",
-        "aliases": ["Instagram"]
+        "aliases": [
+          "Instagram"
+        ]
       },
       {
         "name": "YouTube",
         "importance": 5,
         "risk": "low",
-        "aliases": ["YouTube"]
+        "aliases": [
+          "YouTube"
+        ]
       },
       {
         "name": "X",
         "importance": 4,
         "risk": "low",
-        "aliases": ["Twitter"]
+        "aliases": [
+          "Twitter"
+        ]
       },
       {
         "name": "Signal",
         "importance": 8,
         "risk": "high",
-        "aliases": ["Signal group"]
+        "aliases": [
+          "Signal group"
+        ]
       }
     ]
   },
-
   "narratives": {
     "legal_protection": {
       "weight": 5,
@@ -1117,7 +1381,6 @@
         "deportation suspended"
       ]
     },
-
     "border_access": {
       "weight": 5,
       "terms": [
@@ -1140,7 +1403,6 @@
         "police let them through"
       ]
     },
-
     "mass_movement": {
       "weight": 4,
       "terms": [
@@ -1153,7 +1415,6 @@
         "wave of migrants"
       ]
     },
-
     "coordination": {
       "weight": 5,
       "terms": [
@@ -1168,7 +1429,6 @@
         "driver available"
       ]
     },
-
     "route_promotion": {
       "weight": 5,
       "terms": [
@@ -1186,21 +1446,17 @@
         "found the technique",
         "this route works",
         "this is how to cross",
-
         "cómo cruzar",
         "método para cruzar",
         "técnica para cruzar",
-
         "comment passer la frontière",
         "trouvé la technique",
         "trouvé le moyen de passer",
-
         "come attraversare",
         "metodo per attraversare",
         "tecnica per attraversare"
       ]
     },
-
     "decision_influence": {
       "weight": 4,
       "terms": [
@@ -1215,21 +1471,17 @@
         "before you cross",
         "what to expect",
         "step by step guide",
-
         "ayudarte a decidir",
         "guía para migrantes",
         "información para migrantes",
-
         "vous aider à décider",
         "guide pour migrants",
         "informations pour migrants",
-
         "aiutarti a decidere",
         "guida per migranti",
         "informazioni per migranti"
       ]
     },
-
     "mobilization_coordination": {
       "weight": 5,
       "terms": [
@@ -1257,7 +1509,6 @@
         "mass mobilisation"
       ]
     },
-
     "policy_pull_factor": {
       "weight": 4,
       "terms": [
@@ -1270,9 +1521,39 @@
         "humanitarian visa",
         "family reunification"
       ]
+    },
+    "mobilization_report": {
+      "weight": 5,
+      "terms": [
+        "there are plans for migrants to",
+        "plans for migrants to",
+        "migrants are planning to",
+        "expected to cross",
+        "expect migrants to cross",
+        "another surge is planned",
+        "a second surge is planned",
+        "mass crossing is planned",
+        "crossing is being organized",
+        "crossing is being organised",
+        "reports of plans to cross",
+        "reported plans to cross"
+      ]
+    },
+    "online_influence_report": {
+      "weight": 5,
+      "terms": [
+        "lured by online falsehoods",
+        "lured by social media",
+        "encouraged by social media",
+        "influenced by social media",
+        "misled by social media",
+        "online falsehoods encouraged migrants",
+        "social media encouraged migrants",
+        "online posts encouraged migrants",
+        "online information shaped migration decisions"
+      ]
     }
   },
-
   "context_patterns": [
     {
       "id": "legal_pull_factor",
@@ -1288,7 +1569,6 @@
       "score": 8,
       "result_hint": "LEGAL_MIGRATION_SIGNAL"
     },
-
     {
       "id": "direct_facilitation",
       "name": "Direct crossing facilitation",
@@ -1305,7 +1585,6 @@
       "score": 10,
       "result_hint": "RECRUITMENT_COORDINATION"
     },
-
     {
       "id": "route_mass_movement",
       "name": "Route mass movement warning",
@@ -1322,7 +1601,6 @@
       "score": 8,
       "result_hint": "CROSSING_FACILITATION"
     },
-
     {
       "id": "route_movement_crossing_point",
       "name": "Movement toward known crossing point",
@@ -1339,7 +1617,6 @@
       "score": 8,
       "result_hint": "CROSSING_FACILITATION"
     },
-
     {
       "id": "route_movement_method",
       "name": "Movement with crossing method",
@@ -1355,7 +1632,6 @@
       "score": 7,
       "result_hint": "CROSSING_FACILITATION"
     },
-
     {
       "id": "route_information_spread",
       "name": "Route information spreading online",
@@ -1372,7 +1648,6 @@
       "score": 8,
       "result_hint": "CROSSING_FACILITATION"
     },
-
     {
       "id": "route_guidance",
       "name": "Migration route guidance",
@@ -1389,7 +1664,6 @@
       "score": 9,
       "result_hint": "CROSSING_FACILITATION"
     },
-
     {
       "id": "border_access_warning",
       "name": "Potential border-access opportunity",
@@ -1406,7 +1680,6 @@
       "score": 9,
       "result_hint": "CROSSING_FACILITATION"
     },
-
     {
       "id": "migration_decision_influence",
       "name": "Migration decision influence",
@@ -1423,7 +1696,6 @@
       "score": 7,
       "result_hint": "DECISION_INFLUENCE"
     },
-
     {
       "id": "migration_mobilization",
       "name": "Migration mobilization and coordination",
@@ -1441,7 +1713,6 @@
       "score": 9,
       "result_hint": "MOBILIZATION_COORDINATION"
     },
-
     {
       "id": "migration_mobilization_narrative",
       "name": "Migration mobilization narrative",
@@ -1457,7 +1728,6 @@
       "score": 9,
       "result_hint": "MOBILIZATION_COORDINATION"
     },
-
     {
       "id": "smuggling_coordination",
       "name": "Possible smuggling coordination",
@@ -1474,7 +1744,6 @@
       "score": 10,
       "result_hint": "RECRUITMENT_COORDINATION"
     },
-
     {
       "id": "smuggling_platform_coordination",
       "name": "Smuggling activity with communication platform",
@@ -1491,7 +1760,6 @@
       "score": 8,
       "result_hint": "RECRUITMENT_COORDINATION"
     },
-
     {
       "id": "policy_pull_factor",
       "name": "Policy pull factor",
@@ -1505,9 +1773,42 @@
       ],
       "score": 7,
       "result_hint": "POLICY_SIGNAL"
+    },
+    {
+      "id": "reported_migration_mobilization",
+      "name": "Reported migration mobilization or planned crossing",
+      "required_groups": [
+        "migration_context",
+        "mobilization_report"
+      ],
+      "optional_groups": [
+        "crossing_point",
+        "mass_movement",
+        "route_information",
+        "information_spread",
+        "destination_country"
+      ],
+      "score": 10,
+      "result_hint": "MOBILIZATION_REPORT"
+    },
+    {
+      "id": "reported_online_influence",
+      "name": "Reported online influence on migration movement",
+      "required_groups": [
+        "migration_context",
+        "online_influence_report"
+      ],
+      "optional_groups": [
+        "information_spread",
+        "crossing_point",
+        "mass_movement",
+        "route_information",
+        "destination_country"
+      ],
+      "score": 9,
+      "result_hint": "ONLINE_INFLUENCE_REPORT"
     }
   ],
-
   "high_value_phrases": {
     "bonus_score": 5,
     "terms": [
@@ -1540,73 +1841,75 @@
       "regularization scheme",
       "hundreds of migrants gathering",
       "thousands of migrants gathering",
-
       "found a way to cross",
       "found the technique",
       "this is how to cross",
       "opening the border gates",
       "allowed migrants to cross",
       "letting migrants through",
-
       "already mobilizing",
       "online campaigns",
       "prepare a second migrant surge",
       "preparing a second migrant surge",
       "calls to cross",
-
       "trouvé la technique",
       "trouvé le moyen de passer",
       "laissé passer les migrants",
-
       "encontraron una forma de cruzar",
       "dejaron pasar a los migrantes",
-
       "hanno trovato un modo per attraversare",
-      "hanno lasciato passare i migranti"
+      "hanno lasciato passare i migranti",
+      "there are plans for migrants to",
+      "plans for migrants to",
+      "expected to cross the border",
+      "mass crossing is planned",
+      "lured by online falsehoods",
+      "encouraged by social media",
+      "social media encouraged migrants"
     ]
   },
-
   "signal_mapping": {
     "CROSSING_FACILITATION": [
       "mass_movement",
       "route_promotion",
       "border_access"
     ],
-
     "LEGAL_MIGRATION_SIGNAL": [
       "legal_signal",
       "legal_protection"
     ],
-
     "POLICY_SIGNAL": [
       "policy_signal",
       "policy_pull_factor"
     ],
-
     "RECRUITMENT_COORDINATION": [
       "facilitation",
       "coordination"
     ],
-
     "MOBILIZATION_COORDINATION": [
       "mobilization",
       "mobilization_coordination"
     ],
-
     "DECISION_INFLUENCE": [
       "decision_influence"
+    ],
+    "MOBILIZATION_REPORT": [
+      "mobilization_report"
+    ],
+    "ONLINE_INFLUENCE_REPORT": [
+      "online_influence_report"
     ]
   },
-
   "base_confidence": {
     "CROSSING_FACILITATION": 0.64,
     "LEGAL_MIGRATION_SIGNAL": 0.72,
     "POLICY_SIGNAL": 0.65,
     "RECRUITMENT_COORDINATION": 0.72,
     "MOBILIZATION_COORDINATION": 0.72,
-    "DECISION_INFLUENCE": 0.64
+    "DECISION_INFLUENCE": 0.64,
+    "MOBILIZATION_REPORT": 0.68,
+    "ONLINE_INFLUENCE_REPORT": 0.68
   },
-
   "score_levels": {
     "LOW": {
       "minimum": 6,
