@@ -1,14 +1,53 @@
 {
-  "updated_at": "2026-08-08 06:53:30",
+  "updated_at": "2026-08-08 07:09:19",
   "kpis": {
-    "operational_events": 30,
-    "new_events": 19,
-    "correlated_events": 7,
-    "active_event_groups": 19,
+    "operational_events": 33,
+    "new_events": 21,
+    "correlated_events": 8,
+    "active_event_groups": 21,
     "sources": 1,
     "regions": 3
   },
   "live_events": [
+    {
+      "id": 33,
+      "event_group_id": 3,
+      "published_at": "2026-08-08 07:06:50",
+      "event_type": "SMUGGLING_ACTIVITY",
+      "location": "-",
+      "confidence": 0.5,
+      "source": "X",
+      "author": "PVynckier",
+      "text": "78 arrests in bust of major Western Mediterranean smuggling network in Spain - The criminal network operated like a logistics company managing two-way maritime smuggling of drugs, weapons and migrants between Europe and Algeria | Europol https://t.co/98NF1UhKGh",
+      "url": "https://x.com/PVynckier/status/2085986072505319909",
+      "correlation_score": 0.82
+    },
+    {
+      "id": 31,
+      "event_group_id": 20,
+      "published_at": "2026-08-08 07:04:27",
+      "event_type": "MIGRANT_CAMP",
+      "location": "-",
+      "confidence": 0.45,
+      "source": "X",
+      "author": "erosen05141948",
+      "text": "@Sp00derWeb @ylab161 @voiceofrabbis Absolutely brilliantly said, my man! By no means do I think the reason Israel stands is bad, sure WW2 was a decent reason to give the Jewish a safe haven, but it has been turned into a US-funded, glorified, muslim refugee camp, those are the only people I’m seeing pro-Zionism.",
+      "url": "https://x.com/erosen05141948/status/2085985472862433419",
+      "correlation_score": null
+    },
+    {
+      "id": 32,
+      "event_group_id": 21,
+      "published_at": "2026-08-08 07:00:09",
+      "event_type": "SMUGGLING_ACTIVITY",
+      "location": "-",
+      "confidence": 0.5,
+      "source": "X",
+      "author": "intel_vox",
+      "text": "@thenowherephoto Isn't this bit strange when these boats usually come pick up migrants, but now the group had the boat with them to be filled? Cops should have taken the ones filling it for human smuggling. Also the group, they are gonna try again, why not deport them back to home countries...",
+      "url": "https://x.com/intel_vox/status/2085984392770396410",
+      "correlation_score": null
+    },
     {
       "id": 27,
       "event_group_id": 17,
@@ -229,45 +268,6 @@
       "text": "Spanish-led police raid smashes a vast Mediterranean smuggling network, arresting 78 #migration\nhttps://t.co/KZFf2EhgFY",
       "url": "https://x.com/AlixFedz/status/2085765418120028300",
       "correlation_score": null
-    },
-    {
-      "id": 7,
-      "event_group_id": 1,
-      "published_at": "2026-08-07 16:21:52",
-      "event_type": "ARRIVAL",
-      "location": "Ceuta",
-      "confidence": 0.75,
-      "source": "X",
-      "author": "stevewells11",
-      "text": "Italy has said it has no intention of suspending border checks on travelers from Spain, and rebuffed Madrid’s threats to retaliate if Rome maintains the measures it instituted after the mass arrival of migrants in the Spanish exclave of Ceuta last week https://t.co/azRR6WNJvv",
-      "url": "https://x.com/stevewells11/status/2085763365721506287",
-      "correlation_score": null
-    },
-    {
-      "id": 12,
-      "event_group_id": 3,
-      "published_at": "2026-08-07 16:21:33",
-      "event_type": "SMUGGLING_ACTIVITY",
-      "location": "-",
-      "confidence": 0.5,
-      "source": "X",
-      "author": "aijesinfo",
-      "text": "Spain Dismantles Major Algerian Smuggling Network Linking Drugs to Migrants\n\nSpanish authorities announced Friday the dismantling of one of the largest criminal networks specializing in smuggling migrants across the Mediterranean, in an operation that led to the arrest of 78 https://t.co/ExZkytkf4m",
-      "url": "https://x.com/aijesinfo/status/2085763287137054904",
-      "correlation_score": 0.9
-    },
-    {
-      "id": 8,
-      "event_group_id": 1,
-      "published_at": "2026-08-07 16:17:19",
-      "event_type": "ARRIVAL",
-      "location": "Ceuta",
-      "confidence": 0.75,
-      "source": "X",
-      "author": "POLITICOEurope",
-      "text": "Italy has said it has no intention of suspending border checks on travelers from Spain, and rebuffed Madrid’s threats to retaliate if Rome maintains the measures it instituted after the mass arrival of migrants in the Spanish exclave of Ceuta last week.\nhttps://t.co/GaSH1yKS3d",
-      "url": "https://x.com/POLITICOEurope/status/2085762220642714082",
-      "correlation_score": 0.9
     }
   ],
   "event_groups": [
@@ -279,8 +279,8 @@
       "primary_location": "-",
       "country": "-",
       "first_seen": "2026-08-07 12:47:59",
-      "last_seen": "2026-08-08 04:49:19",
-      "source_count": 5,
+      "last_seen": "2026-08-08 07:06:50",
+      "source_count": 6,
       "source_types": [
         "X"
       ],
@@ -338,6 +338,40 @@
       "status": "ACTIVE",
       "confidence": 0.5,
       "representative_text": "🇪🇸🚨 BREAKING NEWS: Spanish police have dismantled one of the Mediterranean's largest migrant smuggling networks, which charged up to €12,000 per person for the journey. The gang is believed to have carried out at least 64 operations, smuggling over 2,000 migrants into Spain and https://t.co/jlzb4aqkO0"
+    },
+    {
+      "id": 20,
+      "event_type": "MIGRANT_CAMP",
+      "title": "MIGRANT_CAMP - MIDDLE_EAST",
+      "primary_region": "MIDDLE_EAST",
+      "primary_location": "-",
+      "country": "-",
+      "first_seen": "2026-08-08 07:04:27",
+      "last_seen": "2026-08-08 07:04:27",
+      "source_count": 1,
+      "source_types": [
+        "X"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.45,
+      "representative_text": "@Sp00derWeb @ylab161 @voiceofrabbis Absolutely brilliantly said, my man! By no means do I think the reason Israel stands is bad, sure WW2 was a decent reason to give the Jewish a safe haven, but it has been turned into a US-funded, glorified, muslim refugee camp, those are the only people I’m seeing pro-Zionism."
+    },
+    {
+      "id": 21,
+      "event_type": "SMUGGLING_ACTIVITY",
+      "title": "SMUGGLING_ACTIVITY",
+      "primary_region": "GLOBAL",
+      "primary_location": "-",
+      "country": "-",
+      "first_seen": "2026-08-08 07:00:09",
+      "last_seen": "2026-08-08 07:00:09",
+      "source_count": 1,
+      "source_types": [
+        "X"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.5,
+      "representative_text": "@thenowherephoto Isn't this bit strange when these boats usually come pick up migrants, but now the group had the boat with them to be filled? Cops should have taken the ones filling it for human smuggling. Also the group, they are gonna try again, why not deport them back to home countries..."
     },
     {
       "id": 17,
@@ -406,93 +440,59 @@
       "status": "ACTIVE",
       "confidence": 0.45,
       "representative_text": "🇮🇱SS-IDF fired stun grenades at journalists covering ongoing assaults on the Qalandiya refugee camp in occupied 🇵🇸East Jerusalem on August 6.\nOver 16,000 Palestinians have been under siege &amp; curfew for a second day.\n@pressfreedom @IFJGlobal @RSF_inter  https://t.co/aXX3LFOGDY"
-    },
-    {
-      "id": 16,
-      "event_type": "BORDER_CROSSING",
-      "title": "BORDER_CROSSING",
-      "primary_region": "GLOBAL",
-      "primary_location": "-",
-      "country": "-",
-      "first_seen": "2026-08-08 04:59:59",
-      "last_seen": "2026-08-08 04:59:59",
-      "source_count": 1,
-      "source_types": [
-        "X"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.55,
-      "representative_text": "@RobertJ57920725 YES, what I was not ok with was the illegal ALIEANS arrogantly crossing the border illegally. These people are NOT Migrants; they are ILLEGAL ALIENS, aliens to the USA because they ARE NOT CITIZENS. SEND THEM HOME."
-    },
-    {
-      "id": 13,
-      "event_type": "BORDER_CROSSING",
-      "title": "BORDER_CROSSING - Fnideq",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "primary_location": "Fnideq",
-      "country": "Morocco",
-      "first_seen": "2026-08-08 04:49:43",
-      "last_seen": "2026-08-08 04:49:43",
-      "source_count": 1,
-      "source_types": [
-        "X"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.8,
-      "representative_text": "Ceuta, Spain\nMigrants pass through a broken  fence as they leave Spain’s north African enclave of Ceuta towards the  Moroccan town of Fnideq following an attempted crossing at the Bab Sebta  border crossing. Photograph: Abdel Majid Bziouat/AFP/Getty Images https://t.co/eWt7RolwTi"
     }
   ],
   "region_activity": [
     {
       "region": "GLOBAL",
-      "count": 10
+      "count": 11
     },
     {
       "region": "WESTERN_MEDITERRANEAN",
       "count": 6
     },
     {
-      "region": "AMERICAS",
+      "region": "MIDDLE_EAST",
       "count": 2
     },
     {
-      "region": "MIDDLE_EAST",
-      "count": 1
+      "region": "AMERICAS",
+      "count": 2
     }
   ],
   "source_activity": [
     {
       "source": "X",
-      "count": 30
+      "count": 33
     }
   ],
   "correlation": {
-    "total_posts": 30,
+    "total_posts": 33,
     "filtered_posts": 0,
-    "operational_events": 30,
-    "correlated_sources": 7,
-    "grouped_sources": 26,
-    "event_groups": 19,
+    "operational_events": 33,
+    "correlated_sources": 8,
+    "grouped_sources": 29,
+    "event_groups": 21,
     "filtering_efficiency": 0.0,
     "operational_rate": 100.0,
-    "correlation_rate": 23.33,
-    "grouping_rate": 63.33,
-    "multi_source_rate": 26.92,
-    "conversion_rate": 63.33
+    "correlation_rate": 24.24,
+    "grouping_rate": 63.64,
+    "multi_source_rate": 27.59,
+    "conversion_rate": 63.64
   },
   "operational_assessment": {
-    "operational_events_24h": 30,
-    "correlated_events_24h": 7,
-    "active_event_groups": 19,
+    "operational_events_24h": 33,
+    "correlated_events_24h": 8,
+    "active_event_groups": 21,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "dominant_event_type": "SMUGGLING_ACTIVITY",
     "dominant_source": "X",
-    "average_confidence": 0.534,
+    "average_confidence": 0.529,
     "confidence_level": "MEDIUM",
-    "correlation_rate": 23.33,
+    "correlation_rate": 24.24,
     "activity_level": "HIGH",
     "system_health": "HIGH ACTIVITY",
-    "summary": "Az elmúlt 24 órában a rendszer 30 operatív migrációs eseményt azonosított, amelyek közül 7 esemény korábbi vagy párhuzamos forrással korrelált. Jelenleg 19 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns eseménytípus: Smuggling Activity. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.53. A jelenlegi aktivitási szint: HIGH."
+    "summary": "Az elmúlt 24 órában a rendszer 33 operatív migrációs eseményt azonosított, amelyek közül 8 esemény korábbi vagy párhuzamos forrással korrelált. Jelenleg 21 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns eseménytípus: Smuggling Activity. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.53. A jelenlegi aktivitási szint: HIGH."
   },
   "high_confidence_events": [
     {
