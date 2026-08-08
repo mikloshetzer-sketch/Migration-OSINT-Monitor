@@ -1,14 +1,53 @@
 {
-  "updated_at": "2026-08-07 21:47:27",
+  "updated_at": "2026-08-08 04:58:18",
   "kpis": {
-    "operational_events": 21,
-    "new_events": 12,
-    "correlated_events": 5,
-    "active_event_groups": 12,
+    "operational_events": 24,
+    "new_events": 14,
+    "correlated_events": 6,
+    "active_event_groups": 14,
     "sources": 1,
-    "regions": 2
+    "regions": 3
   },
   "live_events": [
+    {
+      "id": 22,
+      "event_group_id": 13,
+      "published_at": "2026-08-08 04:49:43",
+      "event_type": "BORDER_CROSSING",
+      "location": "Fnideq, Ceuta",
+      "confidence": 0.8,
+      "source": "X",
+      "author": "blr1a1",
+      "text": "Ceuta, Spain\nMigrants pass through a broken  fence as they leave Spain’s north African enclave of Ceuta towards the  Moroccan town of Fnideq following an attempted crossing at the Bab Sebta  border crossing. Photograph: Abdel Majid Bziouat/AFP/Getty Images https://t.co/eWt7RolwTi",
+      "url": "https://x.com/blr1a1/status/2085951566893195595",
+      "correlation_score": null
+    },
+    {
+      "id": 23,
+      "event_group_id": 3,
+      "published_at": "2026-08-08 04:49:19",
+      "event_type": "SMUGGLING_ACTIVITY",
+      "location": "-",
+      "confidence": 0.5,
+      "source": "X",
+      "author": "NewsUkraineRBC",
+      "text": "#Spain uncovers migrant smuggling network with its own mini-fleet\nhttps://t.co/WqDJ8dnT1n",
+      "url": "https://x.com/NewsUkraineRBC/status/2085951466758430977",
+      "correlation_score": 0.77
+    },
+    {
+      "id": 24,
+      "event_group_id": 14,
+      "published_at": "2026-08-08 03:01:48",
+      "event_type": "ARRIVAL",
+      "location": "-",
+      "confidence": 0.5,
+      "source": "X",
+      "author": "Gurujuish",
+      "text": "@CptAllenHistory Clive Myrie, @BBC £325k DEI star, cruises the Caribbean courtesy of license fee payers.\nIn Dominican Republic he's astonished to learn Jewish refugees arrived in 1947. \nZero about cruel British quotas. No mention Israel. Refers to 'Jewish colony'. And no kippah? In shul? \nVile. https://t.co/rRnM0NNT6r",
+      "url": "https://x.com/Gurujuish/status/2085924410263765095",
+      "correlation_score": null
+    },
     {
       "id": 20,
       "event_group_id": 3,
@@ -229,45 +268,6 @@
       "text": "Investigators believe the group was responsible for at least 64 migrant smuggling operations in which more than 2,000 people were brought to Spain, generating profits of more than €24 million. #EuropeNews\n➡️ https://t.co/Cdzr8xi4V5 https://t.co/eXCzdZXbnz",
       "url": "https://x.com/euronews/status/2085721115180081502",
       "correlation_score": null
-    },
-    {
-      "id": 1,
-      "event_group_id": null,
-      "published_at": "2026-08-07 13:31:55",
-      "event_type": "INTERCEPTION",
-      "location": "-",
-      "confidence": 0.5,
-      "source": "X",
-      "author": "KLawrencece62",
-      "text": "@Bradukzza @AlbionKai03 @PatriotsUtd Migrants like the King? Rupert Lowe refuses to say if the King is a 'white Briton' | LBC https://t.co/pKyrgHtuBA? Or did you actually mean asylum seekers,  who btw, are also stopped at the border?",
-      "url": "https://x.com/KLawrencece62/status/2085720595937800307",
-      "correlation_score": null
-    },
-    {
-      "id": 2,
-      "event_group_id": null,
-      "published_at": "2026-08-07 13:30:16",
-      "event_type": "BORDER_CROSSING",
-      "location": "-",
-      "confidence": 0.55,
-      "source": "X",
-      "author": "Geotactix",
-      "text": "Polish Border guards are repelling Pakistani migrants who are throwing Stones and attempting to enter Poland 🇵🇱 https://t.co/CNVjQUNi5B https://t.co/q5Kx7RMAvw",
-      "url": "https://x.com/Geotactix/status/2085720179846344816",
-      "correlation_score": null
-    },
-    {
-      "id": 6,
-      "event_group_id": null,
-      "published_at": "2026-08-07 13:22:10",
-      "event_type": "SMUGGLING_ACTIVITY",
-      "location": "-",
-      "confidence": 0.5,
-      "source": "X",
-      "author": "EmmCarr5561",
-      "text": "That's more than France does. They just facilitate the launching of boats to the UK.\n\nSpanish police dismantle major Mediterranean migrant and drugs smuggling network https://t.co/YpwDzUvaim",
-      "url": "https://x.com/EmmCarr5561/status/2085718143310221317",
-      "correlation_score": null
     }
   ],
   "event_groups": [
@@ -279,8 +279,8 @@
       "primary_location": "-",
       "country": "-",
       "first_seen": "2026-08-07 12:47:59",
-      "last_seen": "2026-08-07 21:36:56",
-      "source_count": 4,
+      "last_seen": "2026-08-08 04:49:19",
+      "source_count": 5,
       "source_types": [
         "X"
       ],
@@ -321,6 +321,40 @@
       "status": "ACTIVE",
       "confidence": 0.5,
       "representative_text": "🇪🇸🚨 BREAKING NEWS: Spanish police have dismantled one of the Mediterranean's largest migrant smuggling networks, which charged up to €12,000 per person for the journey. The gang is believed to have carried out at least 64 operations, smuggling over 2,000 migrants into Spain and https://t.co/jlzb4aqkO0"
+    },
+    {
+      "id": 13,
+      "event_type": "BORDER_CROSSING",
+      "title": "BORDER_CROSSING - Fnideq",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "primary_location": "Fnideq",
+      "country": "Morocco",
+      "first_seen": "2026-08-08 04:49:43",
+      "last_seen": "2026-08-08 04:49:43",
+      "source_count": 1,
+      "source_types": [
+        "X"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.8,
+      "representative_text": "Ceuta, Spain\nMigrants pass through a broken  fence as they leave Spain’s north African enclave of Ceuta towards the  Moroccan town of Fnideq following an attempted crossing at the Bab Sebta  border crossing. Photograph: Abdel Majid Bziouat/AFP/Getty Images https://t.co/eWt7RolwTi"
+    },
+    {
+      "id": 14,
+      "event_type": "ARRIVAL",
+      "title": "ARRIVAL - MIDDLE_EAST",
+      "primary_region": "MIDDLE_EAST",
+      "primary_location": "-",
+      "country": "-",
+      "first_seen": "2026-08-08 03:01:48",
+      "last_seen": "2026-08-08 03:01:48",
+      "source_count": 1,
+      "source_types": [
+        "X"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.5,
+      "representative_text": "@CptAllenHistory Clive Myrie, @BBC £325k DEI star, cruises the Caribbean courtesy of license fee payers.\nIn Dominican Republic he's astonished to learn Jewish refugees arrived in 1947. \nZero about cruel British quotas. No mention Israel. Refers to 'Jewish colony'. And no kippah? In shul? \nVile. https://t.co/rRnM0NNT6r"
     },
     {
       "id": 12,
@@ -406,40 +440,6 @@
       "status": "ACTIVE",
       "confidence": 0.45,
       "representative_text": "\"When a picture paints a thousand words\"\nPhoto captured by Palestinian photographer Ali Jadallah. \n-Jabalia refugee camp in Gaza City - November 2023\n\n\"In this war, we have witnessed an unprecedented level of devastation –  the complete obliteration of entire neighbourhoods. This https://t.co/QV7T6oXJen"
-    },
-    {
-      "id": 9,
-      "event_type": "MIGRANT_CAMP",
-      "title": "MIGRANT_CAMP",
-      "primary_region": "GLOBAL",
-      "primary_location": "-",
-      "country": "-",
-      "first_seen": "2026-08-07 20:37:20",
-      "last_seen": "2026-08-07 20:37:20",
-      "source_count": 1,
-      "source_types": [
-        "X"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.45,
-      "representative_text": "Image captured by Palestinian photographer Ali Jadallah. \n-Jabalia refugee camp in Gaza City - November 2023\n\n\"In this war, we have witnessed an unprecedented level of devastation –  the complete obliteration of entire neighbourhoods. This man sat in disbelief, barely able to https://t.co/x6waeL2Tyb"
-    },
-    {
-      "id": 4,
-      "event_type": "SMUGGLING_ACTIVITY",
-      "title": "SMUGGLING_ACTIVITY",
-      "primary_region": "GLOBAL",
-      "primary_location": "-",
-      "country": "-",
-      "first_seen": "2026-08-07 16:30:01",
-      "last_seen": "2026-08-07 16:30:01",
-      "source_count": 1,
-      "source_types": [
-        "X"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.5,
-      "representative_text": "Spanish-led police raid smashes a vast Mediterranean smuggling network, arresting 78 #migration\nhttps://t.co/KZFf2EhgFY"
     }
   ],
   "region_activity": [
@@ -449,48 +449,63 @@
     },
     {
       "region": "WESTERN_MEDITERRANEAN",
-      "count": 4
+      "count": 5
     },
     {
       "region": "AMERICAS",
       "count": 2
+    },
+    {
+      "region": "MIDDLE_EAST",
+      "count": 1
     }
   ],
   "source_activity": [
     {
       "source": "X",
-      "count": 21
+      "count": 24
     }
   ],
   "correlation": {
-    "total_posts": 21,
+    "total_posts": 24,
     "filtered_posts": 0,
-    "operational_events": 21,
-    "correlated_sources": 5,
-    "grouped_sources": 17,
-    "event_groups": 12,
+    "operational_events": 24,
+    "correlated_sources": 6,
+    "grouped_sources": 20,
+    "event_groups": 14,
     "filtering_efficiency": 0.0,
     "operational_rate": 100.0,
-    "correlation_rate": 23.81,
-    "grouping_rate": 57.14,
-    "multi_source_rate": 29.41,
-    "conversion_rate": 57.14
+    "correlation_rate": 25.0,
+    "grouping_rate": 58.33,
+    "multi_source_rate": 30.0,
+    "conversion_rate": 58.33
   },
   "operational_assessment": {
-    "operational_events_24h": 21,
-    "correlated_events_24h": 5,
-    "active_event_groups": 12,
+    "operational_events_24h": 24,
+    "correlated_events_24h": 6,
+    "active_event_groups": 14,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "dominant_event_type": "SMUGGLING_ACTIVITY",
     "dominant_source": "X",
-    "average_confidence": 0.513,
+    "average_confidence": 0.532,
     "confidence_level": "MEDIUM",
-    "correlation_rate": 23.81,
+    "correlation_rate": 25.0,
     "activity_level": "ELEVATED",
     "system_health": "ELEVATED",
-    "summary": "Az elmúlt 24 órában a rendszer 21 operatív migrációs eseményt azonosított, amelyek közül 5 esemény korábbi vagy párhuzamos forrással korrelált. Jelenleg 12 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns eseménytípus: Smuggling Activity. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.51. A jelenlegi aktivitási szint: ELEVATED."
+    "summary": "Az elmúlt 24 órában a rendszer 24 operatív migrációs eseményt azonosított, amelyek közül 6 esemény korábbi vagy párhuzamos forrással korrelált. Jelenleg 14 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns eseménytípus: Smuggling Activity. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.53. A jelenlegi aktivitási szint: ELEVATED."
   },
   "high_confidence_events": [
+    {
+      "id": 13,
+      "event_type": "BORDER_CROSSING",
+      "primary_location": "Fnideq",
+      "country": "Morocco",
+      "region": "WESTERN_MEDITERRANEAN",
+      "confidence": 0.8,
+      "source_count": 1,
+      "last_seen": "2026-08-08 04:49:43",
+      "representative_text": "Ceuta, Spain\nMigrants pass through a broken  fence as they leave Spain’s north African enclave of Ceuta towards the  Moroccan town of Fnideq following an attempted crossing at the Bab Sebta  border crossing. Photograph: Abdel Majid Bziouat/AFP/Getty Images https://t.co/eWt7RolwTi"
+    },
     {
       "id": 1,
       "event_type": "ARRIVAL",
