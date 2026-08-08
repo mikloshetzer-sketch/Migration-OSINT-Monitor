@@ -7,26 +7,28 @@ reddit_collector.py
 Description:
 Reddit RSS collector for recent migration-related posts.
 
-The collector uses Reddit's publicly available RSS search/feed
-output and does not require Reddit OAuth credentials.
+This collector uses Reddit's public RSS search and does not
+require OAuth credentials.
 
-Normalized output is intentionally aligned with XCollector so
-that Reddit posts can enter the same Migration OSINT analytical
-pipeline:
+The collector is designed for the Migration OSINT Monitor and
+returns normalized post dictionaries compatible with the same
+analysis pipeline used for X posts.
 
-- Noise Filter
-- Influence Signal Detector
-- Operational Event Filter
-- Signal Classification
-- Location Extraction
-- Time Extraction
-- Region Resolution
-- Correlation
-- Event Groups
-- Database Storage
+Key design:
+
+1. Accept one migration-related query.
+2. Convert complex boolean-style queries into simpler Reddit
+   RSS search phrases.
+3. Run several smaller searches.
+4. Merge and deduplicate the results.
+5. Return normalized Reddit posts.
+
+This approach is used because Reddit RSS search is less reliable
+with deeply nested boolean expressions than the X API.
 """
 
 import hashlib
+import html
 import re
 
 from datetime import datetime, timezone
@@ -38,28 +40,29 @@ import feedparser
 
 class RedditCollector:
     """
-    Collects recent Reddit posts through public RSS feeds.
-
-    No Reddit CLIENT_ID or CLIENT_SECRET is required.
-
-    The collector exposes a search_recent() method compatible
-    with the interface currently used by XCollector.
+    Collects recent Reddit posts using public Reddit RSS feeds.
     """
 
     BASE_URL = "https://www.reddit.com"
 
     SEARCH_ENDPOINT = "/search.rss"
 
-    REQUEST_TIMEOUT = 30
-
     USER_AGENT = (
         "MigrationOSINTMonitor/1.0 "
-        "(OSINT research RSS collector)"
+        "(public RSS OSINT research collector)"
     )
+
+    MAX_EXPANDED_QUERIES = 12
+
+    DEFAULT_RECENCY = "week"
+
+    # ======================================================
+    # INITIALIZATION
+    # ======================================================
 
     def __init__(self):
         """
-        Initializes the Reddit RSS collector.
+        Initializes the RSS collector.
         """
 
         feedparser.USER_AGENT = (
@@ -72,10 +75,7 @@ class RedditCollector:
 
     def is_configured(self) -> bool:
         """
-        Reddit RSS does not require API credentials.
-
-        Returns:
-            Always True.
+        Public Reddit RSS search does not require credentials.
         """
 
         return True
@@ -91,101 +91,453 @@ class RedditCollector:
         max_pages: Optional[int] = None,
     ) -> List[Dict[str, Any]]:
         """
-        Searches recent Reddit posts through Reddit RSS search.
+        Searches recent Reddit posts.
+
+        Complex boolean queries are expanded into multiple
+        simpler RSS search phrases.
 
         Args:
             query:
-                Search query.
+                Migration-related search query.
 
             max_results:
-                Maximum number of normalized Reddit posts
+                Maximum number of unique normalized Reddit posts
                 returned.
 
             max_pages:
                 Accepted for compatibility with XCollector.
-
-                Reddit RSS currently does not use the same
-                pagination model as the X API, therefore this
-                value is not used in the first implementation.
+                Reddit RSS does not use the same pagination model.
 
         Returns:
             List of normalized post dictionaries.
         """
 
         if not query or not query.strip():
+
             raise ValueError(
                 "Reddit search query cannot be empty."
             )
 
-        if max_results < 1:
-            max_results = 1
-
-        if max_results > 100:
-            max_results = 100
-
-        rss_url = self._build_search_url(
-            query=query,
+        max_results = max(
+            1,
+            min(
+                int(max_results),
+                100,
+            ),
         )
 
-        feed = self._parse_feed(
-            rss_url
-        )
-
-        entries = (
-            getattr(
-                feed,
-                "entries",
-                [],
+        expanded_queries = (
+            self._expand_query(
+                query
             )
-            or []
         )
 
-        posts: List[
+        all_posts: List[
             Dict[str, Any]
         ] = []
 
-        seen_post_ids = set()
+        seen_ids = set()
 
-        for entry in entries:
+        for simple_query in expanded_queries:
 
-            normalized_post = (
-                self._normalize_entry(
-                    entry
+            rss_url = (
+                self._build_search_url(
+                    simple_query
                 )
             )
 
-            if not normalized_post:
-                continue
-
-            post_id = (
-                normalized_post.get(
-                    "post_id"
+            feed = (
+                self._parse_feed(
+                    rss_url
                 )
             )
 
-            if (
-                post_id
-                and post_id
-                in seen_post_ids
-            ):
-                continue
+            entries = (
+                getattr(
+                    feed,
+                    "entries",
+                    [],
+                )
+                or []
+            )
 
-            if post_id:
-                seen_post_ids.add(
+            for entry in entries:
+
+                normalized_post = (
+                    self._normalize_entry(
+                        entry=entry,
+                        search_query=simple_query,
+                    )
+                )
+
+                if not normalized_post:
+                    continue
+
+                post_id = (
+                    normalized_post.get(
+                        "post_id"
+                    )
+                )
+
+                if not post_id:
+                    continue
+
+                if post_id in seen_ids:
+                    continue
+
+                seen_ids.add(
                     post_id
                 )
 
-            posts.append(
-                normalized_post
-            )
+                all_posts.append(
+                    normalized_post
+                )
 
-            if len(posts) >= max_results:
-                break
+                if len(
+                    all_posts
+                ) >= max_results:
 
-        return posts
+                    return all_posts
+
+        return all_posts
 
     # ======================================================
-    # SUBREDDIT FEED
+    # QUERY EXPANSION
+    # ======================================================
+
+    def _expand_query(
+        self,
+        query: str,
+    ) -> List[str]:
+        """
+        Converts a complex query into simpler Reddit searches.
+
+        Examples:
+
+            (migrant OR migrants OR refugee)
+            (border OR crossing OR route)
+
+        becomes searches such as:
+
+            migrant border
+            migrant crossing
+            migrants border
+            refugee crossing
+
+        The function also removes X-specific operators.
+        """
+
+        cleaned_query = (
+            self._clean_query(
+                query
+            )
+        )
+
+        if not cleaned_query:
+            return []
+
+        groups = (
+            self._extract_parenthesized_groups(
+                cleaned_query
+            )
+        )
+
+        # --------------------------------------------------
+        # TWO OR MORE GROUPS
+        # --------------------------------------------------
+
+        if len(groups) >= 2:
+
+            first_group = (
+                self._split_or_terms(
+                    groups[0]
+                )
+            )
+
+            second_group = (
+                self._split_or_terms(
+                    groups[1]
+                )
+            )
+
+            results = []
+
+            # Prefer informative combinations.
+            for first_term in first_group:
+
+                for second_term in second_group:
+
+                    phrase = (
+                        f"{first_term} "
+                        f"{second_term}"
+                    ).strip()
+
+                    if not phrase:
+                        continue
+
+                    if phrase not in results:
+
+                        results.append(
+                            phrase
+                        )
+
+                    if (
+                        len(results)
+                        >= self.MAX_EXPANDED_QUERIES
+                    ):
+
+                        return results
+
+            if results:
+                return results
+
+        # --------------------------------------------------
+        # ONE BOOLEAN GROUP
+        # --------------------------------------------------
+
+        if len(groups) == 1:
+
+            terms = (
+                self._split_or_terms(
+                    groups[0]
+                )
+            )
+
+            results = []
+
+            for term in terms:
+
+                if term not in results:
+
+                    results.append(
+                        term
+                    )
+
+                if (
+                    len(results)
+                    >= self.MAX_EXPANDED_QUERIES
+                ):
+
+                    break
+
+            if results:
+                return results
+
+        # --------------------------------------------------
+        # NO PARENTHESIZED GROUPS
+        # --------------------------------------------------
+
+        or_terms = (
+            self._split_or_terms(
+                cleaned_query
+            )
+        )
+
+        if len(or_terms) > 1:
+
+            return (
+                or_terms[
+                    :self.MAX_EXPANDED_QUERIES
+                ]
+            )
+
+        return [
+            cleaned_query
+        ]
+
+    # ======================================================
+    # QUERY CLEANING
+    # ======================================================
+
+    def _clean_query(
+        self,
+        query: str,
+    ) -> str:
+        """
+        Removes operators that are useful on X but not useful
+        for Reddit RSS search.
+        """
+
+        query = str(
+            query
+        )
+
+        # X language operator
+        query = re.sub(
+            r"\blang:[a-zA-Z-]+\b",
+            " ",
+            query,
+            flags=re.IGNORECASE,
+        )
+
+        # X negative operators
+        query = re.sub(
+            r"-is:[a-zA-Z_]+",
+            " ",
+            query,
+            flags=re.IGNORECASE,
+        )
+
+        query = re.sub(
+            r"-has:[a-zA-Z_]+",
+            " ",
+            query,
+            flags=re.IGNORECASE,
+        )
+
+        # X from/to operators
+        query = re.sub(
+            r"\b(?:from|to):[A-Za-z0-9_]+\b",
+            " ",
+            query,
+            flags=re.IGNORECASE,
+        )
+
+        # Remove doubled spaces.
+        query = re.sub(
+            r"\s+",
+            " ",
+            query,
+        )
+
+        return query.strip()
+
+    # ======================================================
+    # BOOLEAN GROUP PARSING
+    # ======================================================
+
+    def _extract_parenthesized_groups(
+        self,
+        query: str,
+    ) -> List[str]:
+        """
+        Extracts simple parenthesized boolean groups.
+        """
+
+        return [
+            match.strip()
+            for match in re.findall(
+                r"\(([^()]+)\)",
+                query,
+            )
+            if match.strip()
+        ]
+
+    def _split_or_terms(
+        self,
+        text: str,
+    ) -> List[str]:
+        """
+        Splits a boolean OR group into normalized phrases.
+        """
+
+        raw_terms = re.split(
+            r"\s+OR\s+",
+            text,
+            flags=re.IGNORECASE,
+        )
+
+        results = []
+
+        for term in raw_terms:
+
+            term = (
+                term.strip()
+                .strip('"')
+                .strip("'")
+                .strip()
+            )
+
+            term = re.sub(
+                r"[()]",
+                " ",
+                term,
+            )
+
+            term = re.sub(
+                r"\s+",
+                " ",
+                term,
+            ).strip()
+
+            if not term:
+                continue
+
+            if term.upper() in {
+                "AND",
+                "OR",
+                "NOT",
+            }:
+                continue
+
+            if term not in results:
+
+                results.append(
+                    term
+                )
+
+        return results
+
+    # ======================================================
+    # SEARCH URL
+    # ======================================================
+
+    def _build_search_url(
+        self,
+        query: str,
+    ) -> str:
+        """
+        Builds a recent Reddit RSS search URL.
+        """
+
+        encoded_query = (
+            quote_plus(
+                query.strip()
+            )
+        )
+
+        return (
+            f"{self.BASE_URL}"
+            f"{self.SEARCH_ENDPOINT}"
+            f"?q={encoded_query}"
+            f"&sort=new"
+            f"&t={self.DEFAULT_RECENCY}"
+        )
+
+    # ======================================================
+    # FEED PARSING
+    # ======================================================
+
+    def _parse_feed(
+        self,
+        url: str,
+    ):
+        """
+        Parses one Reddit RSS feed.
+        """
+
+        feedparser.USER_AGENT = (
+            self.USER_AGENT
+        )
+
+        return feedparser.parse(
+            url,
+            request_headers={
+                "User-Agent":
+                    self.USER_AGENT,
+
+                "Accept":
+                    (
+                        "application/atom+xml,"
+                        "application/rss+xml,"
+                        "application/xml,"
+                        "text/xml"
+                    ),
+            },
+        )
+
+    # ======================================================
+    # SUBREDDIT MONITORING
     # ======================================================
 
     def fetch_subreddit(
@@ -194,21 +546,14 @@ class RedditCollector:
         max_results: int = 100,
     ) -> List[Dict[str, Any]]:
         """
-        Retrieves recent posts from a specific subreddit RSS.
+        Retrieves the newest posts from one subreddit.
 
-        This is not required by the current main.py, but is
-        included because later we may want targeted migration
-        subreddit monitoring in addition to global search.
-
-        Example:
-
-            collector.fetch_subreddit(
-                "immigration",
-                max_results=25,
-            )
+        This method is kept for later targeted subreddit
+        monitoring.
         """
 
         if not subreddit:
+
             raise ValueError(
                 "Subreddit cannot be empty."
             )
@@ -223,19 +568,23 @@ class RedditCollector:
             .strip("/")
         )
 
-        if max_results < 1:
-            max_results = 1
+        max_results = max(
+            1,
+            min(
+                int(max_results),
+                100,
+            ),
+        )
 
-        if max_results > 100:
-            max_results = 100
-
-        rss_url = (
+        url = (
             f"{self.BASE_URL}"
             f"/r/{subreddit}/new/.rss"
         )
 
-        feed = self._parse_feed(
-            rss_url
+        feed = (
+            self._parse_feed(
+                url
+            )
         )
 
         entries = (
@@ -247,18 +596,17 @@ class RedditCollector:
             or []
         )
 
-        posts: List[
-            Dict[str, Any]
-        ] = []
+        posts = []
 
-        seen_post_ids = set()
+        seen_ids = set()
 
         for entry in entries:
 
             normalized_post = (
                 self._normalize_entry(
-                    entry,
+                    entry=entry,
                     subreddit_hint=subreddit,
+                    search_query=None,
                 )
             )
 
@@ -271,17 +619,15 @@ class RedditCollector:
                 )
             )
 
-            if (
-                post_id
-                and post_id
-                in seen_post_ids
-            ):
+            if not post_id:
                 continue
 
-            if post_id:
-                seen_post_ids.add(
-                    post_id
-                )
+            if post_id in seen_ids:
+                continue
+
+            seen_ids.add(
+                post_id
+            )
 
             posts.append(
                 normalized_post
@@ -293,81 +639,19 @@ class RedditCollector:
         return posts
 
     # ======================================================
-    # SEARCH URL
-    # ======================================================
-
-    def _build_search_url(
-        self,
-        query: str,
-    ) -> str:
-        """
-        Builds a Reddit RSS search URL.
-
-        sort=new:
-            newest posts first
-
-        t=week:
-            keeps the feed focused on recent material
-        """
-
-        encoded_query = quote_plus(
-            query.strip()
-        )
-
-        return (
-            f"{self.BASE_URL}"
-            f"{self.SEARCH_ENDPOINT}"
-            f"?q={encoded_query}"
-            f"&sort=new"
-            f"&t=week"
-        )
-
-    # ======================================================
-    # RSS PARSING
-    # ======================================================
-
-    def _parse_feed(
-        self,
-        url: str,
-    ):
-        """
-        Loads an RSS feed using feedparser.
-        """
-
-        feedparser.USER_AGENT = (
-            self.USER_AGENT
-        )
-
-        feed = feedparser.parse(
-            url,
-            request_headers={
-                "User-Agent":
-                    self.USER_AGENT,
-
-                "Accept":
-                    (
-                        "application/rss+xml,"
-                        "application/atom+xml,"
-                        "application/xml,"
-                        "text/xml"
-                    ),
-            },
-        )
-
-        return feed
-
-    # ======================================================
-    # NORMALIZATION
+    # ENTRY NORMALIZATION
     # ======================================================
 
     def _normalize_entry(
         self,
+        *,
         entry,
+        search_query: Optional[str],
         subreddit_hint: Optional[str] = None,
     ) -> Optional[Dict[str, Any]]:
         """
-        Converts one Reddit RSS item into the same basic
-        internal format used by XCollector.
+        Converts one Reddit RSS entry into the normalized
+        Migration OSINT post format.
         """
 
         title = (
@@ -402,21 +686,19 @@ class RedditCollector:
             or ""
         )
 
-        body = (
-            self._strip_html(
-                summary
-            )
-        )
-
         title = (
             self._clean_text(
-                title
+                self._strip_html(
+                    title
+                )
             )
         )
 
         body = (
             self._clean_text(
-                body
+                self._strip_html(
+                    summary
+                )
             )
         )
 
@@ -429,13 +711,6 @@ class RedditCollector:
 
         if not text:
             return None
-
-        reddit_id = (
-            self._extract_reddit_id(
-                entry=entry,
-                link=link,
-            )
-        )
 
         author = (
             self._extract_author(
@@ -457,6 +732,13 @@ class RedditCollector:
             )
         )
 
+        reddit_id = (
+            self._extract_reddit_id(
+                entry=entry,
+                link=link,
+            )
+        )
+
         post_id = (
             reddit_id
             or self._generate_post_id(
@@ -467,10 +749,6 @@ class RedditCollector:
         )
 
         return {
-            # ----------------------------------------------
-            # CORE FIELDS
-            # ----------------------------------------------
-
             "source":
                 "REDDIT",
 
@@ -510,20 +788,108 @@ class RedditCollector:
             "url":
                 link or None,
 
-            # ----------------------------------------------
-            # REDDIT-SPECIFIC OPTIONAL METADATA
-            # ----------------------------------------------
-
             "subreddit":
                 subreddit,
 
             "title":
                 title,
+
+            "reddit_search_query":
+                search_query,
         }
 
     # ======================================================
-    # TEXT
+    # TEXT NORMALIZATION
     # ======================================================
+
+    def _strip_html(
+        self,
+        text: str,
+    ) -> str:
+        """
+        Removes HTML from Reddit RSS content.
+        """
+
+        if not text:
+            return ""
+
+        text = html.unescape(
+            text
+        )
+
+        text = re.sub(
+            r"<br\s*/?>",
+            "\n",
+            text,
+            flags=re.IGNORECASE,
+        )
+
+        text = re.sub(
+            r"</p\s*>",
+            "\n",
+            text,
+            flags=re.IGNORECASE,
+        )
+
+        text = re.sub(
+            r"<[^>]+>",
+            " ",
+            text,
+        )
+
+        text = re.sub(
+            r"\s+",
+            " ",
+            text,
+        )
+
+        return text.strip()
+
+    def _clean_text(
+        self,
+        text: str,
+    ) -> str:
+        """
+        Cleans common Reddit RSS formatting fragments.
+        """
+
+        if not text:
+            return ""
+
+        text = html.unescape(
+            text
+        )
+
+        # Remove standard Reddit RSS footer fragments.
+        text = re.sub(
+            r"\s*submitted by\s*/?u/[^\s]+"
+            r"\s*to\s*/?r/[^\s]+.*$",
+            "",
+            text,
+            flags=re.IGNORECASE,
+        )
+
+        text = re.sub(
+            r"\s*\[link\]\s*",
+            " ",
+            text,
+            flags=re.IGNORECASE,
+        )
+
+        text = re.sub(
+            r"\s*\[comments\]\s*",
+            " ",
+            text,
+            flags=re.IGNORECASE,
+        )
+
+        text = re.sub(
+            r"\s+",
+            " ",
+            text,
+        )
+
+        return text.strip()
 
     def _combine_title_and_body(
         self,
@@ -532,8 +898,7 @@ class RedditCollector:
         body: str,
     ) -> str:
         """
-        Combines Reddit title and body while avoiding
-        unnecessary duplication.
+        Combines title and body while avoiding duplication.
         """
 
         title = (
@@ -564,86 +929,6 @@ class RedditCollector:
             f"{title}\n{body}"
         )
 
-    def _strip_html(
-        self,
-        text: str,
-    ) -> str:
-        """
-        Removes HTML produced by Reddit RSS summaries.
-        """
-
-        if not text:
-            return ""
-
-        text = re.sub(
-            r"<br\s*/?>",
-            "\n",
-            text,
-            flags=re.IGNORECASE,
-        )
-
-        text = re.sub(
-            r"</p\s*>",
-            "\n",
-            text,
-            flags=re.IGNORECASE,
-        )
-
-        text = re.sub(
-            r"<[^>]+>",
-            " ",
-            text,
-        )
-
-        replacements = {
-            "&amp;": "&",
-            "&lt;": "<",
-            "&gt;": ">",
-            "&quot;": '"',
-            "&#39;": "'",
-            "&apos;": "'",
-            "&nbsp;": " ",
-        }
-
-        for old, new in replacements.items():
-
-            text = text.replace(
-                old,
-                new,
-            )
-
-        return text
-
-    def _clean_text(
-        self,
-        text: str,
-    ) -> str:
-        """
-        Normalizes whitespace while preserving paragraphs.
-        """
-
-        if not text:
-            return ""
-
-        text = text.replace(
-            "\r",
-            "\n",
-        )
-
-        text = re.sub(
-            r"[ \t]+",
-            " ",
-            text,
-        )
-
-        text = re.sub(
-            r"\n\s*\n+",
-            "\n",
-            text,
-        )
-
-        return text.strip()
-
     # ======================================================
     # AUTHOR
     # ======================================================
@@ -653,7 +938,7 @@ class RedditCollector:
         entry,
     ) -> Optional[str]:
         """
-        Extracts Reddit author name from RSS metadata.
+        Extracts Reddit username.
         """
 
         author = (
@@ -671,14 +956,7 @@ class RedditCollector:
             ).strip()
 
             author = re.sub(
-                r"^/u/",
-                "",
-                author,
-                flags=re.IGNORECASE,
-            )
-
-            author = re.sub(
-                r"^u/",
+                r"^/?u/",
                 "",
                 author,
                 flags=re.IGNORECASE,
@@ -699,7 +977,7 @@ class RedditCollector:
 
             try:
 
-                name = (
+                author = (
                     author_detail.get(
                         "name"
                     )
@@ -707,12 +985,12 @@ class RedditCollector:
 
             except AttributeError:
 
-                name = None
+                author = None
 
-            if name:
+            if author:
 
                 return str(
-                    name
+                    author
                 ).strip()
 
         return None
@@ -729,7 +1007,7 @@ class RedditCollector:
         subreddit_hint: Optional[str],
     ) -> Optional[str]:
         """
-        Attempts to identify the subreddit.
+        Extracts subreddit name.
         """
 
         if subreddit_hint:
@@ -763,8 +1041,10 @@ class RedditCollector:
 
             try:
 
-                term = tag.get(
-                    "term"
+                term = (
+                    tag.get(
+                        "term"
+                    )
                 )
 
             except AttributeError:
@@ -774,13 +1054,9 @@ class RedditCollector:
             if not term:
                 continue
 
-            term = str(
-                term
-            )
-
             match = re.search(
                 r"(?:^|/)r/([^/\s]+)",
-                term,
+                str(term),
                 flags=re.IGNORECASE,
             )
 
@@ -803,7 +1079,7 @@ class RedditCollector:
         link: str,
     ) -> Optional[str]:
         """
-        Extracts a stable Reddit submission ID when possible.
+        Extracts Reddit submission ID.
         """
 
         entry_id = (
@@ -821,7 +1097,7 @@ class RedditCollector:
             )
 
             match = re.search(
-                r"(?:t3_)?([a-z0-9]{5,12})$",
+                r"(?:t3_)?([a-z0-9]{5,15})$",
                 entry_id,
                 flags=re.IGNORECASE,
             )
@@ -863,10 +1139,6 @@ class RedditCollector:
     ) -> str:
         """
         Generates deterministic fallback ID.
-
-        Python's built-in hash() is intentionally not used
-        because it is not guaranteed to remain stable across
-        different process runs.
         """
 
         seed = (
@@ -897,8 +1169,7 @@ class RedditCollector:
         entry,
     ) -> Optional[str]:
         """
-        Converts RSS publication metadata into an ISO-8601
-        UTC timestamp compatible with the rest of the system.
+        Converts RSS publication time to UTC ISO-8601.
         """
 
         published_parsed = (
@@ -963,7 +1234,7 @@ class RedditCollector:
             ):
                 pass
 
-        published = (
+        raw_date = (
             getattr(
                 entry,
                 "published",
@@ -976,10 +1247,10 @@ class RedditCollector:
             )
         )
 
-        if published:
+        if raw_date:
 
             return str(
-                published
+                raw_date
             )
 
         return None
@@ -995,9 +1266,24 @@ if __name__ == "__main__":
         RedditCollector()
     )
 
-    test_query = (
-        "migrant border crossing"
-    )
+    test_queries = [
+        (
+            "(migration OR migrant OR migrants OR "
+            "refugee OR refugees OR asylum)"
+        ),
+        (
+            "(migrant OR migrants OR refugee OR refugees) "
+            "(border OR crossing OR route OR checkpoint OR patrol)"
+        ),
+        (
+            "(migrant OR migrants OR refugee OR refugees) "
+            "(boat OR vessel OR sea OR coast guard OR rescue)"
+        ),
+        (
+            "(migrant OR migrants OR migration) "
+            "(smuggler OR smuggling OR trafficking OR transport)"
+        ),
+    ]
 
     print(
         "==================================="
@@ -1011,99 +1297,99 @@ if __name__ == "__main__":
         "==================================="
     )
 
-    print(
-        "Query:",
-        test_query,
-    )
-
-    print(
-        "-----------------------------------"
-    )
-
-    posts = (
-        collector.search_recent(
-            query=test_query,
-            max_results=10,
-            max_pages=1,
-        )
-    )
-
-    print(
-        "Posts collected:",
-        len(posts),
-    )
-
-    for index, post in enumerate(
-        posts,
-        start=1,
-    ):
+    for query in test_queries:
 
         print()
 
         print(
-            "-----------------------------------"
+            "Query:"
         )
 
         print(
-            f"POST {index}"
+            query
+        )
+
+        expanded = (
+            collector._expand_query(
+                query
+            )
         )
 
         print(
-            "-----------------------------------"
+            "Expanded queries:"
+        )
+
+        for item in expanded:
+
+            print(
+                " -",
+                item,
+            )
+
+        posts = (
+            collector.search_recent(
+                query=query,
+                max_results=20,
+                max_pages=1,
+            )
         )
 
         print(
-            "Source:",
-            post.get(
-                "source"
-            ),
+            "Posts collected:",
+            len(posts),
         )
 
-        print(
-            "Post ID:",
-            post.get(
-                "post_id"
-            ),
-        )
+        for post in posts[:5]:
 
-        print(
-            "Subreddit:",
-            post.get(
-                "subreddit"
-            ),
-        )
+            print(
+                "-----------------------------------"
+            )
 
-        print(
-            "Author:",
-            post.get(
-                "author"
-            ),
-        )
+            print(
+                "Source:",
+                post.get(
+                    "source"
+                ),
+            )
 
-        print(
-            "Published:",
-            post.get(
-                "published_at"
-            ),
-        )
+            print(
+                "Subreddit:",
+                post.get(
+                    "subreddit"
+                ),
+            )
 
-        print(
-            "Title:",
-            post.get(
-                "title"
-            ),
-        )
+            print(
+                "Search query:",
+                post.get(
+                    "reddit_search_query"
+                ),
+            )
 
-        print(
-            "Text:",
-            post.get(
-                "text"
-            ),
-        )
+            print(
+                "Author:",
+                post.get(
+                    "author"
+                ),
+            )
 
-        print(
-            "URL:",
-            post.get(
-                "url"
-            ),
-        )
+            print(
+                "Published:",
+                post.get(
+                    "published_at"
+                ),
+            )
+
+            print(
+                "Text:",
+                post.get(
+                    "text"
+                ),
+            )
+
+            print(
+                "URL:",
+                post.get(
+                    "url"
+                ),
+            )
