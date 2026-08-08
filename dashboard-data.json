@@ -1,14 +1,40 @@
 {
-  "updated_at": "2026-08-08 04:58:18",
+  "updated_at": "2026-08-08 05:10:42",
   "kpis": {
-    "operational_events": 24,
-    "new_events": 14,
+    "operational_events": 26,
+    "new_events": 16,
     "correlated_events": 6,
-    "active_event_groups": 14,
+    "active_event_groups": 16,
     "sources": 1,
     "regions": 3
   },
   "live_events": [
+    {
+      "id": 25,
+      "event_group_id": 15,
+      "published_at": "2026-08-08 05:09:59",
+      "event_type": "MIGRANT_CAMP",
+      "location": "-",
+      "confidence": 0.45,
+      "source": "X",
+      "author": "VoxEthicabr",
+      "text": "🇮🇱SS-IDF fired stun grenades at journalists covering ongoing assaults on the Qalandiya refugee camp in occupied 🇵🇸East Jerusalem on August 6.\nOver 16,000 Palestinians have been under siege &amp; curfew for a second day.\n@pressfreedom @IFJGlobal @RSF_inter  https://t.co/aXX3LFOGDY",
+      "url": "https://x.com/VoxEthicabr/status/2085956667183620118",
+      "correlation_score": null
+    },
+    {
+      "id": 26,
+      "event_group_id": 16,
+      "published_at": "2026-08-08 04:59:59",
+      "event_type": "BORDER_CROSSING",
+      "location": "-",
+      "confidence": 0.55,
+      "source": "X",
+      "author": "Kathryn_Byrd1",
+      "text": "@RobertJ57920725 YES, what I was not ok with was the illegal ALIEANS arrogantly crossing the border illegally. These people are NOT Migrants; they are ILLEGAL ALIENS, aliens to the USA because they ARE NOT CITIZENS. SEND THEM HOME.",
+      "url": "https://x.com/Kathryn_Byrd1/status/2085954152467693568",
+      "correlation_score": null
+    },
     {
       "id": 22,
       "event_group_id": 13,
@@ -242,32 +268,6 @@
       "text": "⚫️🟡Italian police have dismantled a migrant smuggling network allegedly run by Algerian nationals that organized illegal sea crossings from Algeria to the Italian island of Sardinia, arresting eight Algerian suspects, according to Italian authorities.\n\nRead more: https://t.co/WuoZhzxBnm",
       "url": "https://x.com/EnglishAssahifa/status/2085753727126802828",
       "correlation_score": 0.64
-    },
-    {
-      "id": 4,
-      "event_group_id": null,
-      "published_at": "2026-08-07 13:37:24",
-      "event_type": "SMUGGLING_ACTIVITY",
-      "location": "-",
-      "confidence": 0.5,
-      "source": "X",
-      "author": "Brucenewsreview",
-      "text": "Spanish police dismantle major Mediterranean migrant smuggling network\n\nREAD: https://t.co/ZjIq3H4Yh2",
-      "url": "https://x.com/Brucenewsreview/status/2085721974328693245",
-      "correlation_score": null
-    },
-    {
-      "id": 5,
-      "event_group_id": 5,
-      "published_at": "2026-08-07 13:33:59",
-      "event_type": "SMUGGLING_ACTIVITY",
-      "location": "-",
-      "confidence": 0.5,
-      "source": "X",
-      "author": "euronews",
-      "text": "Investigators believe the group was responsible for at least 64 migrant smuggling operations in which more than 2,000 people were brought to Spain, generating profits of more than €24 million. #EuropeNews\n➡️ https://t.co/Cdzr8xi4V5 https://t.co/eXCzdZXbnz",
-      "url": "https://x.com/euronews/status/2085721115180081502",
-      "correlation_score": null
     }
   ],
   "event_groups": [
@@ -321,6 +321,40 @@
       "status": "ACTIVE",
       "confidence": 0.5,
       "representative_text": "🇪🇸🚨 BREAKING NEWS: Spanish police have dismantled one of the Mediterranean's largest migrant smuggling networks, which charged up to €12,000 per person for the journey. The gang is believed to have carried out at least 64 operations, smuggling over 2,000 migrants into Spain and https://t.co/jlzb4aqkO0"
+    },
+    {
+      "id": 15,
+      "event_type": "MIGRANT_CAMP",
+      "title": "MIGRANT_CAMP",
+      "primary_region": "GLOBAL",
+      "primary_location": "-",
+      "country": "-",
+      "first_seen": "2026-08-08 05:09:59",
+      "last_seen": "2026-08-08 05:09:59",
+      "source_count": 1,
+      "source_types": [
+        "X"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.45,
+      "representative_text": "🇮🇱SS-IDF fired stun grenades at journalists covering ongoing assaults on the Qalandiya refugee camp in occupied 🇵🇸East Jerusalem on August 6.\nOver 16,000 Palestinians have been under siege &amp; curfew for a second day.\n@pressfreedom @IFJGlobal @RSF_inter  https://t.co/aXX3LFOGDY"
+    },
+    {
+      "id": 16,
+      "event_type": "BORDER_CROSSING",
+      "title": "BORDER_CROSSING",
+      "primary_region": "GLOBAL",
+      "primary_location": "-",
+      "country": "-",
+      "first_seen": "2026-08-08 04:59:59",
+      "last_seen": "2026-08-08 04:59:59",
+      "source_count": 1,
+      "source_types": [
+        "X"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.55,
+      "representative_text": "@RobertJ57920725 YES, what I was not ok with was the illegal ALIEANS arrogantly crossing the border illegally. These people are NOT Migrants; they are ILLEGAL ALIENS, aliens to the USA because they ARE NOT CITIZENS. SEND THEM HOME."
     },
     {
       "id": 13,
@@ -406,46 +440,12 @@
       "status": "ACTIVE",
       "confidence": 0.5,
       "representative_text": "Spanish police dismantle major Mediterranean migrant smuggling network\n\nREAD: https://t.co/44yrDIzlsp\n\nFollow @TheInsiderPaper for more news https://t.co/ASB9ph2jRG"
-    },
-    {
-      "id": 7,
-      "event_type": "BORDER_MEASURE",
-      "title": "BORDER_MEASURE - Ceuta",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "primary_location": "Ceuta",
-      "country": "Spain",
-      "first_seen": "2026-08-07 20:53:40",
-      "last_seen": "2026-08-07 20:53:40",
-      "source_count": 1,
-      "source_types": [
-        "X"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.7,
-      "representative_text": "Italy 🇮🇹 is refusing Spain 🇪🇸's demand to lift border restrictions over the Ceuta migrant crisis.\nRelations between Rome and Madrid are getting seriously tense.\nEurope's internal divisions are becoming harder to hide."
-    },
-    {
-      "id": 8,
-      "event_type": "MIGRANT_CAMP",
-      "title": "MIGRANT_CAMP",
-      "primary_region": "GLOBAL",
-      "primary_location": "-",
-      "country": "-",
-      "first_seen": "2026-08-07 20:38:59",
-      "last_seen": "2026-08-07 20:38:59",
-      "source_count": 1,
-      "source_types": [
-        "X"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.45,
-      "representative_text": "\"When a picture paints a thousand words\"\nPhoto captured by Palestinian photographer Ali Jadallah. \n-Jabalia refugee camp in Gaza City - November 2023\n\n\"In this war, we have witnessed an unprecedented level of devastation –  the complete obliteration of entire neighbourhoods. This https://t.co/QV7T6oXJen"
     }
   ],
   "region_activity": [
     {
       "region": "GLOBAL",
-      "count": 6
+      "count": 8
     },
     {
       "region": "WESTERN_MEDITERRANEAN",
@@ -463,36 +463,36 @@
   "source_activity": [
     {
       "source": "X",
-      "count": 24
+      "count": 26
     }
   ],
   "correlation": {
-    "total_posts": 24,
+    "total_posts": 26,
     "filtered_posts": 0,
-    "operational_events": 24,
+    "operational_events": 26,
     "correlated_sources": 6,
-    "grouped_sources": 20,
-    "event_groups": 14,
+    "grouped_sources": 22,
+    "event_groups": 16,
     "filtering_efficiency": 0.0,
     "operational_rate": 100.0,
-    "correlation_rate": 25.0,
-    "grouping_rate": 58.33,
-    "multi_source_rate": 30.0,
-    "conversion_rate": 58.33
+    "correlation_rate": 23.08,
+    "grouping_rate": 61.54,
+    "multi_source_rate": 27.27,
+    "conversion_rate": 61.54
   },
   "operational_assessment": {
-    "operational_events_24h": 24,
+    "operational_events_24h": 26,
     "correlated_events_24h": 6,
-    "active_event_groups": 14,
+    "active_event_groups": 16,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "dominant_event_type": "SMUGGLING_ACTIVITY",
     "dominant_source": "X",
-    "average_confidence": 0.532,
+    "average_confidence": 0.528,
     "confidence_level": "MEDIUM",
-    "correlation_rate": 25.0,
+    "correlation_rate": 23.08,
     "activity_level": "ELEVATED",
     "system_health": "ELEVATED",
-    "summary": "Az elmúlt 24 órában a rendszer 24 operatív migrációs eseményt azonosított, amelyek közül 6 esemény korábbi vagy párhuzamos forrással korrelált. Jelenleg 14 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns eseménytípus: Smuggling Activity. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.53. A jelenlegi aktivitási szint: ELEVATED."
+    "summary": "Az elmúlt 24 órában a rendszer 26 operatív migrációs eseményt azonosított, amelyek közül 6 esemény korábbi vagy párhuzamos forrással korrelált. Jelenleg 16 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns eseménytípus: Smuggling Activity. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.53. A jelenlegi aktivitási szint: ELEVATED."
   },
   "high_confidence_events": [
     {
