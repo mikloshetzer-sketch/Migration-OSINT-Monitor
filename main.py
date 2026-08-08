@@ -30,7 +30,10 @@ The Event Group Engine then:
 - maintains source counts and event-group history
 """
 
+import json
 import re
+import uuid
+from datetime import datetime
 
 from collectors.x_collector import XCollector
 from collectors.reddit_collector import RedditCollector
@@ -53,6 +56,7 @@ from database.init_db import initialize_database
 from database.database import get_session
 from database.event_repository import EventRepository
 from database.correlation_repository import CorrelationRepository
+from database.models import MonitorRun, CollectedPost, InfluenceSignal
 
 
 
@@ -686,6 +690,916 @@ def print_event(
         )
 
 
+
+def utcnow():
+    """
+    Returns a naive UTC datetime compatible with the existing SQLite models.
+    """
+    return datetime.utcnow()
+
+
+def json_text(value):
+    """
+    Safely serializes detector lists/dictionaries for Text columns.
+    """
+    if value is None:
+        return None
+
+    try:
+        return json.dumps(
+            value,
+            ensure_ascii=False,
+            default=str,
+        )
+    except (TypeError, ValueError):
+        return json.dumps(
+            str(value),
+            ensure_ascii=False,
+        )
+
+
+def normalize_source_post_id(post):
+    """
+    Returns the stable source post identifier used by the history tables.
+    """
+    value = (
+        post.get("post_id")
+        or post.get("url")
+    )
+
+    if value:
+        return str(value)
+
+    # Last-resort deterministic fallback for collectors that provide
+    # neither a platform ID nor a URL.
+    source = str(
+        post.get("source")
+        or "UNKNOWN"
+    ).upper()
+
+    author = str(
+        post.get("author")
+        or ""
+    )
+
+    published = str(
+        post.get("published_at")
+        or ""
+    )
+
+    body = str(
+        post.get("text")
+        or ""
+    )
+
+    return (
+        f"fallback:{source}:"
+        f"{author}:{published}:{body}"
+    )[:255]
+
+
+def get_or_create_collected_post(
+    session,
+    post,
+    monitor_run,
+    query_id=None,
+    query_group=None,
+    search_query=None,
+):
+    """
+    Persists every unique collected source post.
+
+    Repeated manual runs do not create duplicate rows. Existing records
+    receive an updated last-seen timestamp and collection counter.
+    """
+    source = str(
+        post.get("source")
+        or "UNKNOWN"
+    ).upper()
+
+    source_post_id = normalize_source_post_id(
+        post
+    )
+
+    now = utcnow()
+
+    record = (
+        session.query(CollectedPost)
+        .filter(
+            CollectedPost.source == source,
+            CollectedPost.source_post_id == source_post_id,
+        )
+        .one_or_none()
+    )
+
+    if record is None:
+        record = CollectedPost(
+            source=source,
+            source_post_id=source_post_id,
+            author=post.get("author"),
+            text=post.get("text") or "",
+            language=post.get("language"),
+            published_at=post.get("published_at"),
+            url=post.get("url"),
+            first_collected_at=now,
+            last_collected_at=now,
+            collection_count=1,
+            first_run_id=monitor_run.id,
+            last_run_id=monitor_run.id,
+            first_query_id=(
+                str(query_id)
+                if query_id is not None
+                else None
+            ),
+            last_query_id=(
+                str(query_id)
+                if query_id is not None
+                else None
+            ),
+            first_query_group=(
+                str(query_group)
+                if query_group is not None
+                else None
+            ),
+            last_query_group=(
+                str(query_group)
+                if query_group is not None
+                else None
+            ),
+            last_search_query=search_query,
+        )
+
+        session.add(record)
+        session.flush()
+
+        return record, True
+
+    record.author = (
+        post.get("author")
+        or record.author
+    )
+
+    record.text = (
+        post.get("text")
+        or record.text
+        or ""
+    )
+
+    record.language = (
+        post.get("language")
+        or record.language
+    )
+
+    record.published_at = (
+        post.get("published_at")
+        or record.published_at
+    )
+
+    record.url = (
+        post.get("url")
+        or record.url
+    )
+
+    record.last_collected_at = now
+    record.last_run_id = monitor_run.id
+    record.last_query_id = (
+        str(query_id)
+        if query_id is not None
+        else record.last_query_id
+    )
+    record.last_query_group = (
+        str(query_group)
+        if query_group is not None
+        else record.last_query_group
+    )
+    record.last_search_query = (
+        search_query
+        or record.last_search_query
+    )
+    record.collection_count = (
+        int(record.collection_count or 0)
+        + 1
+    )
+
+    session.flush()
+
+    return record, False
+
+
+def update_collected_post_analysis(
+    collected_post,
+    *,
+    is_noise=None,
+    is_operational=None,
+    operational_confidence=None,
+    influence_detected=None,
+):
+    """
+    Updates the latest analytical state of a CollectedPost without
+    affecting the existing operational Post/EventGroup pipeline.
+    """
+    if collected_post is None:
+        return
+
+    if is_noise is not None:
+        collected_post.is_noise = bool(
+            is_noise
+        )
+
+    if is_operational is not None:
+        collected_post.is_operational = bool(
+            is_operational
+        )
+
+    if operational_confidence is not None:
+        collected_post.operational_confidence = (
+            operational_confidence
+        )
+
+    if influence_detected is not None:
+        collected_post.influence_detected = bool(
+            influence_detected
+        )
+
+
+def infer_influence_priority(
+    primary_signal,
+    confidence,
+):
+    """
+    Converts detector output into a simple analyst-review priority.
+    This does not alter the detector or operational classification.
+    """
+    signal = str(
+        primary_signal
+        or ""
+    ).upper()
+
+    try:
+        confidence_value = float(
+            confidence
+            or 0.0
+        )
+    except (TypeError, ValueError):
+        confidence_value = 0.0
+
+    high_value_signals = {
+        "CROSSING_FACILITATION",
+        "RECRUITMENT_COORDINATION",
+        "MOBILIZATION_COORDINATION",
+        "MOBILIZATION_REPORT",
+    }
+
+    medium_value_signals = {
+        "DECISION_INFLUENCE",
+        "ONLINE_INFLUENCE_REPORT",
+        "LEGAL_MIGRATION_SIGNAL",
+    }
+
+    if (
+        signal in high_value_signals
+        and confidence_value >= 0.75
+    ):
+        return "HIGH"
+
+    if (
+        signal in high_value_signals
+        or signal in medium_value_signals
+        or confidence_value >= 0.65
+    ):
+        return "MEDIUM"
+
+    return "LOW"
+
+
+def infer_signal_intent(primary_signal):
+    """
+    Human-facing intent label used later by the dashboard exporter.
+    """
+    mapping = {
+        "CROSSING_FACILITATION": "EASIER_CROSSING",
+        "LEGAL_MIGRATION_SIGNAL": "LEGAL_ACCESS",
+        "POLICY_SIGNAL": "POLICY_CHANGE",
+        "RECRUITMENT_COORDINATION": "RECRUITMENT_COORDINATION",
+        "MOBILIZATION_COORDINATION": "MOBILIZATION_COORDINATION",
+        "MOBILIZATION_REPORT": "PLANNED_CROSSING",
+        "DECISION_INFLUENCE": "DECISION_INFLUENCE",
+        "ONLINE_INFLUENCE_REPORT": "ONLINE_INFLUENCE",
+    }
+
+    signal = str(
+        primary_signal
+        or ""
+    ).upper()
+
+    return mapping.get(
+        signal,
+        signal or None,
+    )
+
+
+def save_influence_signal(
+    session,
+    *,
+    post,
+    collected_post,
+    influence_result,
+    monitor_run,
+    location_extractor,
+    region_resolver,
+):
+    """
+    Persists one detected influence signal independently from the
+    operational event pipeline.
+
+    The same source post + primary signal is updated on later runs
+    rather than inserted repeatedly.
+    """
+    source = str(
+        post.get("source")
+        or "UNKNOWN"
+    ).upper()
+
+    source_post_id = normalize_source_post_id(
+        post
+    )
+
+    primary_signal = str(
+        influence_result.get(
+            "primary_signal"
+        )
+        or "UNKNOWN_INFLUENCE_SIGNAL"
+    ).upper()
+
+    now = utcnow()
+
+    locations = (
+        location_extractor
+        .extract_locations(
+            post.get("text") or ""
+        )
+    )
+
+    primary_location = (
+        locations[0]
+        if locations
+        else None
+    )
+
+    location_name = None
+    country = None
+    latitude = None
+    longitude = None
+
+    if isinstance(
+        primary_location,
+        dict,
+    ):
+        location_name = (
+            primary_location.get("name")
+        )
+
+        country = (
+            primary_location.get("country")
+        )
+
+        latitude = (
+            primary_location.get("latitude")
+        )
+
+        longitude = (
+            primary_location.get("longitude")
+        )
+
+    region_event = {
+        "text": post.get("text") or "",
+        "primary_location": primary_location,
+        "locations": locations,
+    }
+
+    region_result = (
+        region_resolver.resolve(
+            region_event
+        )
+        or {}
+    )
+
+    primary_region = (
+        region_result.get(
+            "primary_region"
+        )
+    )
+
+    confidence = (
+        influence_result.get(
+            "confidence"
+        )
+    )
+
+    record = (
+        session.query(InfluenceSignal)
+        .filter(
+            InfluenceSignal.source == source,
+            InfluenceSignal.source_post_id == source_post_id,
+            InfluenceSignal.primary_signal == primary_signal,
+        )
+        .one_or_none()
+    )
+
+    if record is None:
+        record = InfluenceSignal(
+            collected_post_id=(
+                collected_post.id
+                if collected_post
+                else None
+            ),
+            source=source,
+            source_post_id=source_post_id,
+            author=post.get("author"),
+            language=post.get("language"),
+            published_at=post.get("published_at"),
+            text=post.get("text") or "",
+            source_url=post.get("url"),
+            primary_signal=primary_signal,
+            signal_mode=influence_result.get(
+                "signal_mode"
+            ),
+            signal_intent=infer_signal_intent(
+                primary_signal
+            ),
+            priority=infer_influence_priority(
+                primary_signal,
+                confidence,
+            ),
+            confidence=confidence,
+            score=influence_result.get(
+                "score"
+            ),
+            matched_signals=json_text(
+                influence_result.get(
+                    "matched_signals"
+                )
+            ),
+            matched_phrases=json_text(
+                influence_result.get(
+                    "matched_phrases"
+                )
+            ),
+            matched_groups=json_text(
+                influence_result.get(
+                    "matched_groups"
+                )
+            ),
+            context_matches=json_text(
+                influence_result.get(
+                    "context_matches"
+                )
+            ),
+            high_value_matches=json_text(
+                influence_result.get(
+                    "high_value_matches"
+                )
+                or influence_result.get(
+                    "high_value_match"
+                )
+            ),
+            signal_context_rejections=json_text(
+                influence_result.get(
+                    "signal_context_rejections"
+                )
+            ),
+            rules_version=influence_result.get(
+                "rules_version"
+            ),
+            migration_context=influence_result.get(
+                "migration_context"
+            ),
+            human_migration_context=influence_result.get(
+                "human_migration_context"
+            ),
+            historical_reference=bool(
+                influence_result.get(
+                    "historical_reference"
+                )
+            ),
+            historical_reason=influence_result.get(
+                "historical_reason"
+            ),
+            historical_reference_text=influence_result.get(
+                "historical_reference_text"
+            ),
+            primary_location=location_name,
+            country=country,
+            primary_region=primary_region,
+            latitude=latitude,
+            longitude=longitude,
+            first_detected_at=now,
+            last_detected_at=now,
+            detection_count=1,
+            first_run_id=monitor_run.id,
+            last_run_id=monitor_run.id,
+        )
+
+        session.add(record)
+        session.flush()
+
+        return record, True
+
+    record.collected_post_id = (
+        collected_post.id
+        if collected_post
+        else record.collected_post_id
+    )
+
+    record.author = (
+        post.get("author")
+        or record.author
+    )
+
+    record.language = (
+        post.get("language")
+        or record.language
+    )
+
+    record.published_at = (
+        post.get("published_at")
+        or record.published_at
+    )
+
+    record.text = (
+        post.get("text")
+        or record.text
+        or ""
+    )
+
+    record.source_url = (
+        post.get("url")
+        or record.source_url
+    )
+
+    record.signal_mode = (
+        influence_result.get(
+            "signal_mode"
+        )
+        or record.signal_mode
+    )
+
+    record.signal_intent = (
+        infer_signal_intent(
+            primary_signal
+        )
+    )
+
+    record.priority = (
+        infer_influence_priority(
+            primary_signal,
+            confidence,
+        )
+    )
+
+    record.confidence = (
+        confidence
+        if confidence is not None
+        else record.confidence
+    )
+
+    record.score = (
+        influence_result.get(
+            "score"
+        )
+        if influence_result.get(
+            "score"
+        ) is not None
+        else record.score
+    )
+
+    record.matched_signals = json_text(
+        influence_result.get(
+            "matched_signals"
+        )
+    )
+
+    record.matched_phrases = json_text(
+        influence_result.get(
+            "matched_phrases"
+        )
+    )
+
+    record.matched_groups = json_text(
+        influence_result.get(
+            "matched_groups"
+        )
+    )
+
+    record.context_matches = json_text(
+        influence_result.get(
+            "context_matches"
+        )
+    )
+
+    record.high_value_matches = json_text(
+        influence_result.get(
+            "high_value_matches"
+        )
+        or influence_result.get(
+            "high_value_match"
+        )
+    )
+
+    record.signal_context_rejections = json_text(
+        influence_result.get(
+            "signal_context_rejections"
+        )
+    )
+
+    record.rules_version = (
+        influence_result.get(
+            "rules_version"
+        )
+        or record.rules_version
+    )
+
+    if influence_result.get(
+        "migration_context"
+    ) is not None:
+        record.migration_context = (
+            influence_result.get(
+                "migration_context"
+            )
+        )
+
+    if influence_result.get(
+        "human_migration_context"
+    ) is not None:
+        record.human_migration_context = (
+            influence_result.get(
+                "human_migration_context"
+            )
+        )
+
+    record.historical_reference = bool(
+        influence_result.get(
+            "historical_reference"
+        )
+    )
+
+    record.historical_reason = (
+        influence_result.get(
+            "historical_reason"
+        )
+    )
+
+    record.historical_reference_text = (
+        influence_result.get(
+            "historical_reference_text"
+        )
+    )
+
+    record.primary_location = (
+        location_name
+        or record.primary_location
+    )
+
+    record.country = (
+        country
+        or record.country
+    )
+
+    record.primary_region = (
+        primary_region
+        or record.primary_region
+    )
+
+    record.latitude = (
+        latitude
+        if latitude is not None
+        else record.latitude
+    )
+
+    record.longitude = (
+        longitude
+        if longitude is not None
+        else record.longitude
+    )
+
+    record.last_detected_at = now
+    record.last_run_id = monitor_run.id
+    record.detection_count = (
+        int(record.detection_count or 0)
+        + 1
+    )
+
+    session.flush()
+
+    return record, False
+
+
+def update_monitor_run(
+    monitor_run,
+    *,
+    total_posts_found,
+    seen_post_keys,
+    total_x_posts_found,
+    total_reddit_posts_found,
+    unique_source_counts,
+    x_collector_errors,
+    reddit_collector_errors,
+    total_noise_filtered,
+    total_non_operational_filtered,
+    total_historical_filtered,
+    total_influence_signals,
+    influence_signal_counts,
+    total_operational_events,
+    stored_events,
+    total_new_events,
+    total_correlated_events,
+    total_database_correlations,
+    total_current_run_correlations,
+    total_events_saved,
+    total_events_existing,
+    total_new_event_groups,
+    total_updated_event_groups,
+    total_bootstrapped_event_groups,
+    total_existing_event_groups,
+    total_group_sources_linked,
+    status,
+    error_message=None,
+):
+    """
+    Copies current run counters into MonitorRun.
+    """
+    monitor_run.completed_at = utcnow()
+    monitor_run.status = status
+
+    monitor_run.posts_returned = (
+        total_posts_found
+    )
+
+    monitor_run.unique_posts_collected = (
+        len(seen_post_keys)
+    )
+
+    monitor_run.x_posts_returned = (
+        total_x_posts_found
+    )
+
+    monitor_run.reddit_posts_returned = (
+        total_reddit_posts_found
+    )
+
+    monitor_run.unique_x_posts = (
+        unique_source_counts.get(
+            "X",
+            0,
+        )
+    )
+
+    monitor_run.unique_reddit_posts = (
+        unique_source_counts.get(
+            "REDDIT",
+            0,
+        )
+    )
+
+    monitor_run.noise_filtered = (
+        total_noise_filtered
+    )
+
+    monitor_run.non_operational_filtered = (
+        total_non_operational_filtered
+    )
+
+    monitor_run.historical_references_filtered = (
+        total_historical_filtered
+    )
+
+    monitor_run.influence_signals_detected = (
+        total_influence_signals
+    )
+
+    monitor_run.crossing_facilitation_signals = (
+        influence_signal_counts.get(
+            "CROSSING_FACILITATION",
+            0,
+        )
+    )
+
+    monitor_run.legal_migration_signals = (
+        influence_signal_counts.get(
+            "LEGAL_MIGRATION_SIGNAL",
+            0,
+        )
+    )
+
+    monitor_run.policy_signals = (
+        influence_signal_counts.get(
+            "POLICY_SIGNAL",
+            0,
+        )
+    )
+
+    monitor_run.recruitment_coordination_signals = (
+        influence_signal_counts.get(
+            "RECRUITMENT_COORDINATION",
+            0,
+        )
+    )
+
+    monitor_run.mobilization_coordination_signals = (
+        influence_signal_counts.get(
+            "MOBILIZATION_COORDINATION",
+            0,
+        )
+    )
+
+    monitor_run.mobilization_report_signals = (
+        influence_signal_counts.get(
+            "MOBILIZATION_REPORT",
+            0,
+        )
+    )
+
+    monitor_run.decision_influence_signals = (
+        influence_signal_counts.get(
+            "DECISION_INFLUENCE",
+            0,
+        )
+    )
+
+    monitor_run.online_influence_report_signals = (
+        influence_signal_counts.get(
+            "ONLINE_INFLUENCE_REPORT",
+            0,
+        )
+    )
+
+    monitor_run.operational_events_analyzed = (
+        total_operational_events
+    )
+
+    monitor_run.historical_events_available = (
+        len(stored_events)
+    )
+
+    monitor_run.new_correlation_groups = (
+        total_new_events
+    )
+
+    monitor_run.events_correlated_existing = (
+        total_correlated_events
+    )
+
+    monitor_run.database_correlations = (
+        total_database_correlations
+    )
+
+    monitor_run.current_run_correlations = (
+        total_current_run_correlations
+    )
+
+    monitor_run.new_events_saved = (
+        total_events_saved
+    )
+
+    monitor_run.events_already_existing = (
+        total_events_existing
+    )
+
+    monitor_run.new_event_groups = (
+        total_new_event_groups
+    )
+
+    monitor_run.updated_event_groups = (
+        total_updated_event_groups
+    )
+
+    monitor_run.bootstrapped_event_groups = (
+        total_bootstrapped_event_groups
+    )
+
+    monitor_run.existing_event_groups_reused = (
+        total_existing_event_groups
+    )
+
+    monitor_run.event_group_sources_linked = (
+        total_group_sources_linked
+    )
+
+    monitor_run.x_collector_errors = (
+        x_collector_errors
+    )
+
+    monitor_run.reddit_collector_errors = (
+        reddit_collector_errors
+    )
+
+    monitor_run.error_message = (
+        str(error_message)[:4000]
+        if error_message
+        else None
+    )
+
+
 def main():
     """
     Main execution flow.
@@ -765,6 +1679,25 @@ def main():
 
     session = get_session()
 
+    monitor_run = MonitorRun(
+        run_uuid=str(uuid.uuid4()),
+        started_at=utcnow(),
+        status="RUNNING",
+    )
+
+    session.add(monitor_run)
+    session.commit()
+
+    print(
+        "Monitor run ID: "
+        f"{monitor_run.id}"
+    )
+
+    print(
+        "Monitor run UUID: "
+        f"{monitor_run.run_uuid}"
+    )
+
     queries = (
         query_engine.load_queries()
     )
@@ -840,7 +1773,9 @@ def main():
         "POLICY_SIGNAL": 0,
         "RECRUITMENT_COORDINATION": 0,
         "MOBILIZATION_COORDINATION": 0,
+        "MOBILIZATION_REPORT": 0,
         "DECISION_INFLUENCE": 0,
+        "ONLINE_INFLUENCE_REPORT": 0,
     }
 
     total_correlated_events = 0
@@ -1033,6 +1968,17 @@ def main():
                         source
                     ] += 1
 
+                collected_post, collected_post_created = (
+                    get_or_create_collected_post(
+                        session=session,
+                        post=post,
+                        monitor_run=monitor_run,
+                        query_id=query_id,
+                        query_group=query_group,
+                        search_query=query_text,
+                    )
+                )
+
                 text = post.get(
                     "text",
                     "",
@@ -1048,6 +1994,15 @@ def main():
                     "is_noise"
                 ):
                     total_noise_filtered += 1
+
+                    update_collected_post_analysis(
+                        collected_post,
+                        is_noise=True,
+                        is_operational=False,
+                        influence_detected=False,
+                    )
+
+                    session.commit()
 
                     print(
                         "-----------------------------------"
@@ -1084,9 +2039,9 @@ def main():
                 # still be identified even when they are not
                 # direct operational migration events.
                 #
-                # Influence signals are currently log-only:
-                # they do not change event classification,
-                # correlation or EventGroup processing.
+                # Influence signals are persisted in a parallel
+                # history layer. They still do not change event
+                # classification, correlation or EventGroup processing.
 
                 influence_result = (
                     influence_detector.detect(
@@ -1113,6 +2068,21 @@ def main():
                             primary_influence_signal
                         ] += 1
 
+                    save_influence_signal(
+                        session=session,
+                        post=post,
+                        collected_post=collected_post,
+                        influence_result=influence_result,
+                        monitor_run=monitor_run,
+                        location_extractor=location_extractor,
+                        region_resolver=region_resolver,
+                    )
+
+                    update_collected_post_analysis(
+                        collected_post,
+                        influence_detected=True,
+                    )
+
                     print_influence_signal(
                         post=post,
                         influence_result=influence_result,
@@ -1129,6 +2099,26 @@ def main():
                     "is_operational"
                 ):
                     total_non_operational_filtered += 1
+
+                    update_collected_post_analysis(
+                        collected_post,
+                        is_noise=False,
+                        is_operational=False,
+                        operational_confidence=(
+                            operational_result.get(
+                                "confidence"
+                            )
+                        ),
+                        influence_detected=(
+                            bool(
+                                influence_result.get(
+                                    "detected"
+                                )
+                            )
+                        ),
+                    )
+
+                    session.commit()
 
                     print(
                         "-----------------------------------"
@@ -1159,6 +2149,24 @@ def main():
                     )
 
                     continue
+
+                update_collected_post_analysis(
+                    collected_post,
+                    is_noise=False,
+                    is_operational=True,
+                    operational_confidence=(
+                        operational_result.get(
+                            "confidence"
+                        )
+                    ),
+                    influence_detected=(
+                        bool(
+                            influence_result.get(
+                                "detected"
+                            )
+                        )
+                    ),
+                )
 
                 print(
                     "-----------------------------------"
@@ -1224,6 +2232,8 @@ def main():
                         "Text: "
                         f"{text}"
                     )
+
+                    session.commit()
 
                     continue
 
@@ -1347,6 +2357,96 @@ def main():
                     event
                 )
 
+                session.commit()
+
+        update_monitor_run(
+            monitor_run,
+            total_posts_found=total_posts_found,
+            seen_post_keys=seen_post_keys,
+            total_x_posts_found=total_x_posts_found,
+            total_reddit_posts_found=total_reddit_posts_found,
+            unique_source_counts=unique_source_counts,
+            x_collector_errors=x_collector_errors,
+            reddit_collector_errors=reddit_collector_errors,
+            total_noise_filtered=total_noise_filtered,
+            total_non_operational_filtered=total_non_operational_filtered,
+            total_historical_filtered=total_historical_filtered,
+            total_influence_signals=total_influence_signals,
+            influence_signal_counts=influence_signal_counts,
+            total_operational_events=total_operational_events,
+            stored_events=stored_events,
+            total_new_events=total_new_events,
+            total_correlated_events=total_correlated_events,
+            total_database_correlations=total_database_correlations,
+            total_current_run_correlations=total_current_run_correlations,
+            total_events_saved=total_events_saved,
+            total_events_existing=total_events_existing,
+            total_new_event_groups=total_new_event_groups,
+            total_updated_event_groups=total_updated_event_groups,
+            total_bootstrapped_event_groups=total_bootstrapped_event_groups,
+            total_existing_event_groups=total_existing_event_groups,
+            total_group_sources_linked=total_group_sources_linked,
+            status="SUCCESS",
+        )
+
+        session.commit()
+
+    except Exception as error:
+        session.rollback()
+
+        try:
+            monitor_run = (
+                session.query(MonitorRun)
+                .filter(
+                    MonitorRun.id == monitor_run.id
+                )
+                .one_or_none()
+            )
+
+            if monitor_run is not None:
+                update_monitor_run(
+                    monitor_run,
+                    total_posts_found=total_posts_found,
+                    seen_post_keys=seen_post_keys,
+                    total_x_posts_found=total_x_posts_found,
+                    total_reddit_posts_found=total_reddit_posts_found,
+                    unique_source_counts=unique_source_counts,
+                    x_collector_errors=x_collector_errors,
+                    reddit_collector_errors=reddit_collector_errors,
+                    total_noise_filtered=total_noise_filtered,
+                    total_non_operational_filtered=total_non_operational_filtered,
+                    total_historical_filtered=total_historical_filtered,
+                    total_influence_signals=total_influence_signals,
+                    influence_signal_counts=influence_signal_counts,
+                    total_operational_events=total_operational_events,
+                    stored_events=stored_events,
+                    total_new_events=total_new_events,
+                    total_correlated_events=total_correlated_events,
+                    total_database_correlations=total_database_correlations,
+                    total_current_run_correlations=total_current_run_correlations,
+                    total_events_saved=total_events_saved,
+                    total_events_existing=total_events_existing,
+                    total_new_event_groups=total_new_event_groups,
+                    total_updated_event_groups=total_updated_event_groups,
+                    total_bootstrapped_event_groups=total_bootstrapped_event_groups,
+                    total_existing_event_groups=total_existing_event_groups,
+                    total_group_sources_linked=total_group_sources_linked,
+                    status="FAILED",
+                    error_message=error,
+                )
+
+                session.commit()
+
+        except Exception as run_update_error:
+            session.rollback()
+
+            print(
+                "MONITOR RUN HISTORY WARNING: "
+                f"{run_update_error}"
+            )
+
+        raise
+
     finally:
         session.close()
 
@@ -1448,8 +2548,18 @@ def main():
     )
 
     print(
+        "Mobilization report signals: "
+        f"{influence_signal_counts['MOBILIZATION_REPORT']}"
+    )
+
+    print(
         "Decision influence signals: "
         f"{influence_signal_counts['DECISION_INFLUENCE']}"
+    )
+
+    print(
+        "Online influence report signals: "
+        f"{influence_signal_counts['ONLINE_INFLUENCE_REPORT']}"
     )
 
     print(
