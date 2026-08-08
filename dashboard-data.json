@@ -1,529 +1,3034 @@
 {
-  "updated_at": "2026-08-08 08:55:56",
+  "schema_version": "3.0",
+  "updated_at": "2026-08-08T09:10:31Z",
+  "generated_at": "2026-08-08T09:10:31Z",
+  "current_run": {
+    "available": true,
+    "id": 3,
+    "run_uuid": "b082e89d-b5d9-4759-9fb3-e2750fbb9d08",
+    "started_at": "2026-08-08T09:08:42Z",
+    "completed_at": "2026-08-08T09:10:30Z",
+    "status": "SUCCESS",
+    "posts_returned": 68,
+    "unique_posts_collected": 64,
+    "x_posts_returned": 50,
+    "reddit_posts_returned": 18,
+    "mastodon_posts_returned": 0,
+    "unique_x_posts": 47,
+    "unique_reddit_posts": 17,
+    "unique_mastodon_posts": 0,
+    "noise_filtered": 0,
+    "non_operational_filtered": 57,
+    "historical_references_filtered": 0,
+    "influence_signals": 5,
+    "influence_signals_detected": 5,
+    "crossing_facilitation_signals": 2,
+    "legal_migration_signals": 0,
+    "policy_signals": 0,
+    "recruitment_coordination_signals": 0,
+    "mobilization_coordination_signals": 0,
+    "mobilization_report_signals": 3,
+    "decision_influence_signals": 0,
+    "online_influence_report_signals": 0,
+    "operational_events": 7,
+    "operational_events_analyzed": 7,
+    "historical_events_available": 38,
+    "new_correlations": 1,
+    "correlated_events": 1,
+    "new_correlation_groups": 6,
+    "database_correlations": 1,
+    "current_run_correlations": 0,
+    "new_events": 3,
+    "new_events_saved": 3,
+    "events_already_existing": 4,
+    "new_event_groups": 2,
+    "updated_event_groups": 1,
+    "bootstrapped_event_groups": 0,
+    "existing_event_groups_reused": 4,
+    "event_group_sources_linked": 3,
+    "x_collector_errors": 0,
+    "reddit_collector_errors": 0,
+    "mastodon_collector_errors": 0,
+    "error_message": null
+  },
   "kpis": {
-    "operational_events": 38,
-    "new_events": 26,
-    "correlated_events": 8,
-    "active_event_groups": 26,
+    "operational_events": 40,
+    "new_events": 3,
+    "correlated_events": 9,
+    "active_event_groups": 28,
     "sources": 2,
-    "regions": 4
+    "regions": 6,
+    "collected_posts_24h": 81,
+    "influence_signals": 6,
+    "access_signals": 6,
+    "current_run_operational_events": 7,
+    "current_run_unique_posts": 64
   },
   "live_events": [
     {
-      "id": 36,
-      "event_group_id": 24,
-      "published_at": "2026-08-08 08:52:47",
-      "event_type": "GENERAL_DISCUSSION",
-      "location": "Ceuta",
-      "confidence": 0.45,
+      "id": 41,
+      "event_id": 41,
       "source": "X",
+      "source_post_id": "2086016999302349208",
+      "author": "DREAMERCUP",
+      "published_at": "2026-08-08T09:09:43Z",
+      "collected_at": "2026-08-08T09:10:30Z",
+      "event_type": "ARRIVAL",
+      "signal_type": "ARRIVAL",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.55,
+      "event_confidence": 0.55,
+      "relevance_score": 30.0,
+      "text": "French Algeria is turning a blind eye to the tragedy that has struck its own people. A boat carrying 17 undocumented migrants arrived in Spain a few days ago. Major international newspapers and television channels have confirmed the information. https://t.co/iZejOTeYTD",
+      "url": "https://x.com/DREAMERCUP/status/2086016999302349208",
+      "source_url": "https://x.com/DREAMERCUP/status/2086016999302349208"
+    },
+    {
+      "id": 36,
+      "event_id": 36,
+      "source": "X",
+      "source_post_id": "2086012735578382440",
       "author": "CapitalContrl",
+      "published_at": "2026-08-08T08:52:47Z",
+      "collected_at": "2026-08-08T08:53:05Z",
+      "event_type": "GENERAL_DISCUSSION",
+      "signal_type": "GENERAL_DISCUSSION",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "confidence": 0.45,
+      "event_confidence": 0.45,
+      "relevance_score": 20.0,
       "text": "Spain and Italy are now checking each other's travellers at the border,  inside supposedly borderless Schengen.\n\nAfter 50-60k migrants crossed into Ceuta from Morocco in days, Italy invoked emergency Schengen powers to screen arrivals from Spain. Spain hit back with its own https://t.co/ngT6qA3Ddr",
       "url": "https://x.com/CapitalContrl/status/2086012735578382440",
-      "correlation_score": null
+      "source_url": "https://x.com/CapitalContrl/status/2086012735578382440"
     },
     {
       "id": 37,
-      "event_group_id": 25,
-      "published_at": "2026-08-08 08:11:07",
-      "event_type": "ARRIVAL",
-      "location": "-",
-      "confidence": 0.55,
+      "event_id": 37,
       "source": "X",
+      "source_post_id": "2086002253295432036",
       "author": "milletworld",
+      "published_at": "2026-08-08T08:11:07Z",
+      "collected_at": "2026-08-08T08:53:31Z",
+      "event_type": "ARRIVAL",
+      "signal_type": "ARRIVAL",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.55,
+      "event_confidence": 0.55,
+      "relevance_score": 30.0,
       "text": "More than a #dozen #arrested over #migrant #smuggling in northern #Greece \nThirteen people were arrested over three days after allegedly transporting 56 migrants in cars through northern Greece, while more than 100 additional migrants arrived on #Crete from #Libya.",
       "url": "https://x.com/milletworld/status/2086002253295432036",
-      "correlation_score": null
+      "source_url": "https://x.com/milletworld/status/2086002253295432036"
     },
     {
       "id": 38,
-      "event_group_id": 26,
-      "published_at": "2026-08-08 07:46:13",
-      "event_type": "SMUGGLING_ACTIVITY",
-      "location": "-",
-      "confidence": 0.5,
+      "event_id": 38,
       "source": "X",
+      "source_post_id": "2085995986653204724",
       "author": "FactsBayInfo",
+      "published_at": "2026-08-08T07:46:13Z",
+      "collected_at": "2026-08-08T08:53:31Z",
+      "event_type": "SMUGGLING_ACTIVITY",
+      "signal_type": "SMUGGLING_ACTIVITY",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.5,
+      "event_confidence": 0.5,
+      "relevance_score": 10.0,
       "text": "🚨 Europol has busted a suspected migrant-smuggling network, arresting three people in an operation targeting the illegal movement of migrants across Europe.\nRead more: https://t.co/WAJuL13rKI \n#Europol #MigrantSmuggling #Europe #CrimeNews #BreakingNews #WorldNews #FactsBay https://t.co/lH1EO28mPn",
       "url": "https://x.com/FactsBayInfo/status/2085995986653204724",
-      "correlation_score": null
+      "source_url": "https://x.com/FactsBayInfo/status/2085995986653204724"
     },
     {
       "id": 33,
-      "event_group_id": 3,
-      "published_at": "2026-08-08 07:06:50",
-      "event_type": "SMUGGLING_ACTIVITY",
-      "location": "-",
-      "confidence": 0.5,
+      "event_id": 33,
       "source": "X",
+      "source_post_id": "2085986072505319909",
       "author": "PVynckier",
+      "published_at": "2026-08-08T07:06:50Z",
+      "collected_at": "2026-08-08T07:09:16Z",
+      "event_type": "SMUGGLING_ACTIVITY",
+      "signal_type": "SMUGGLING_ACTIVITY",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.5,
+      "event_confidence": 0.5,
+      "relevance_score": 10.0,
       "text": "78 arrests in bust of major Western Mediterranean smuggling network in Spain - The criminal network operated like a logistics company managing two-way maritime smuggling of drugs, weapons and migrants between Europe and Algeria | Europol https://t.co/98NF1UhKGh",
       "url": "https://x.com/PVynckier/status/2085986072505319909",
-      "correlation_score": 0.82
+      "source_url": "https://x.com/PVynckier/status/2085986072505319909"
     },
     {
       "id": 31,
-      "event_group_id": 20,
-      "published_at": "2026-08-08 07:04:27",
-      "event_type": "MIGRANT_CAMP",
-      "location": "-",
-      "confidence": 0.45,
+      "event_id": 31,
       "source": "X",
+      "source_post_id": "2085985472862433419",
       "author": "erosen05141948",
+      "published_at": "2026-08-08T07:04:27Z",
+      "collected_at": "2026-08-08T07:04:57Z",
+      "event_type": "MIGRANT_CAMP",
+      "signal_type": "MIGRANT_CAMP",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.45,
+      "event_confidence": 0.45,
+      "relevance_score": 0.0,
       "text": "@Sp00derWeb @ylab161 @voiceofrabbis Absolutely brilliantly said, my man! By no means do I think the reason Israel stands is bad, sure WW2 was a decent reason to give the Jewish a safe haven, but it has been turned into a US-funded, glorified, muslim refugee camp, those are the only people I’m seeing pro-Zionism.",
       "url": "https://x.com/erosen05141948/status/2085985472862433419",
-      "correlation_score": null
+      "source_url": "https://x.com/erosen05141948/status/2085985472862433419"
     },
     {
       "id": 34,
-      "event_group_id": 22,
-      "published_at": "2026-08-08 07:01:06",
-      "event_type": "MIGRANT_CAMP",
-      "location": "-",
-      "confidence": 0.5,
+      "event_id": 34,
       "source": "REDDIT",
+      "source_post_id": "reddit_1vip3e5",
       "author": "DogitWoofsalot",
+      "published_at": "2026-08-08T07:01:06Z",
+      "collected_at": "2026-08-08T07:16:23Z",
+      "event_type": "MIGRANT_CAMP",
+      "signal_type": "MIGRANT_CAMP",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.5,
+      "event_confidence": 0.5,
+      "relevance_score": 10.0,
       "text": "Andy Burnham torn apart by Piddington councillor over plans for migrant camp: 'Have some responsibility!",
       "url": "https://www.reddit.com/r/ukpolitics/comments/1vip3e5/andy_burnham_torn_apart_by_piddington_councillor/",
-      "correlation_score": null
+      "source_url": "https://www.reddit.com/r/ukpolitics/comments/1vip3e5/andy_burnham_torn_apart_by_piddington_councillor/"
     },
     {
       "id": 32,
-      "event_group_id": 21,
-      "published_at": "2026-08-08 07:00:09",
-      "event_type": "SMUGGLING_ACTIVITY",
-      "location": "-",
-      "confidence": 0.5,
+      "event_id": 32,
       "source": "X",
+      "source_post_id": "2085984392770396410",
       "author": "intel_vox",
+      "published_at": "2026-08-08T07:00:09Z",
+      "collected_at": "2026-08-08T07:09:14Z",
+      "event_type": "SMUGGLING_ACTIVITY",
+      "signal_type": "SMUGGLING_ACTIVITY",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.5,
+      "event_confidence": 0.5,
+      "relevance_score": 10.0,
       "text": "@thenowherephoto Isn't this bit strange when these boats usually come pick up migrants, but now the group had the boat with them to be filled? Cops should have taken the ones filling it for human smuggling. Also the group, they are gonna try again, why not deport them back to home countries...",
       "url": "https://x.com/intel_vox/status/2085984392770396410",
-      "correlation_score": null
+      "source_url": "https://x.com/intel_vox/status/2085984392770396410"
     },
     {
       "id": 27,
-      "event_group_id": 17,
-      "published_at": "2026-08-08 06:27:49",
-      "event_type": "BORDER_CONDITION",
-      "location": "Ceuta",
-      "confidence": 0.7,
+      "event_id": 27,
       "source": "X",
+      "source_post_id": "2085976253761229281",
       "author": "ParamjeetBerwal",
+      "published_at": "2026-08-08T06:27:49Z",
+      "collected_at": "2026-08-08T06:38:07Z",
+      "event_type": "BORDER_CONDITION",
+      "signal_type": "BORDER_CONDITION",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "confidence": 0.7,
+      "event_confidence": 0.7,
+      "relevance_score": 20.0,
       "text": "Ceuta migrant crisis: \n\nRoughly 80,000 migrants crossed from Morocco into the Spanish exclave of Ceuta, with at least 100+ deaths reported. Spain imposed border controls on travelers from Italy amid a row; Italy had earlier tightened its own controls. Spanish police also busted a",
       "url": "https://x.com/ParamjeetBerwal/status/2085976253761229281",
-      "correlation_score": null
+      "source_url": "https://x.com/ParamjeetBerwal/status/2085976253761229281"
     },
     {
       "id": 28,
-      "event_group_id": 7,
-      "published_at": "2026-08-08 06:26:18",
-      "event_type": "BORDER_MEASURE",
-      "location": "Ceuta",
-      "confidence": 0.7,
+      "event_id": 28,
       "source": "X",
+      "source_post_id": "2085975872217989350",
       "author": "JackStr42679640",
+      "published_at": "2026-08-08T06:26:18Z",
+      "collected_at": "2026-08-08T06:38:07Z",
+      "event_type": "BORDER_MEASURE",
+      "signal_type": "BORDER_MEASURE",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "confidence": 0.7,
+      "event_confidence": 0.7,
+      "relevance_score": 20.0,
       "text": "🇪🇸❌🇮🇹 – A few hours ago, new border controls on all air and sea travel from Italy imposed by Spain came into effect, increasing tensions between both European nations.\n\n▶️ The disagreement comes after more than 78,000 Moroccan migrants entered the Spanish enclave of Ceuta, which",
       "url": "https://x.com/JackStr42679640/status/2085975872217989350",
-      "correlation_score": 0.78
+      "source_url": "https://x.com/JackStr42679640/status/2085975872217989350"
     },
     {
       "id": 29,
-      "event_group_id": 18,
-      "published_at": "2026-08-08 06:05:16",
-      "event_type": "SMUGGLING_ACTIVITY",
-      "location": "-",
-      "confidence": 0.5,
+      "event_id": 29,
       "source": "X",
+      "source_post_id": "2085970579807748437",
       "author": "borneo_bulletin",
+      "published_at": "2026-08-08T06:05:16Z",
+      "collected_at": "2026-08-08T06:38:08Z",
+      "event_type": "SMUGGLING_ACTIVITY",
+      "signal_type": "SMUGGLING_ACTIVITY",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.5,
+      "event_confidence": 0.5,
+      "relevance_score": 10.0,
       "text": "Spanish police dismantle major Mediterranean migrant smuggling network\n#worldnews #borneobulletin #topheadlines #headlines #Spanishpolice #dismantle #major #Mediterranean #migrantsmuggling #network\nhttps://t.co/CmEfGgChOQ",
       "url": "https://x.com/borneo_bulletin/status/2085970579807748437",
-      "correlation_score": null
+      "source_url": "https://x.com/borneo_bulletin/status/2085970579807748437"
     },
     {
       "id": 30,
-      "event_group_id": 19,
-      "published_at": "2026-08-08 06:05:10",
-      "event_type": "SMUGGLING_ACTIVITY",
-      "location": "-",
-      "confidence": 0.5,
+      "event_id": 30,
       "source": "X",
+      "source_post_id": "2085970553513673164",
       "author": "borneo_bulletin",
+      "published_at": "2026-08-08T06:05:10Z",
+      "collected_at": "2026-08-08T06:38:08Z",
+      "event_type": "SMUGGLING_ACTIVITY",
+      "signal_type": "SMUGGLING_ACTIVITY",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.5,
+      "event_confidence": 0.5,
+      "relevance_score": 10.0,
       "text": "Spanish police dismantle major Mediterranean migrant smuggling network\n#worldnews #borneobulletin #topheadlines #headlines #Spanishpolice #dismantle #major #Mediterranean #migrantsmuggling #network\nhttps://t.co/XqM4n8lbtm",
       "url": "https://x.com/borneo_bulletin/status/2085970553513673164",
-      "correlation_score": null
+      "source_url": "https://x.com/borneo_bulletin/status/2085970553513673164"
     },
     {
       "id": 25,
-      "event_group_id": 15,
-      "published_at": "2026-08-08 05:09:59",
-      "event_type": "MIGRANT_CAMP",
-      "location": "-",
-      "confidence": 0.45,
+      "event_id": 25,
       "source": "X",
+      "source_post_id": "2085956667183620118",
       "author": "VoxEthicabr",
+      "published_at": "2026-08-08T05:09:59Z",
+      "collected_at": "2026-08-08T05:10:40Z",
+      "event_type": "MIGRANT_CAMP",
+      "signal_type": "MIGRANT_CAMP",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.45,
+      "event_confidence": 0.45,
+      "relevance_score": 0.0,
       "text": "🇮🇱SS-IDF fired stun grenades at journalists covering ongoing assaults on the Qalandiya refugee camp in occupied 🇵🇸East Jerusalem on August 6.\nOver 16,000 Palestinians have been under siege &amp; curfew for a second day.\n@pressfreedom @IFJGlobal @RSF_inter  https://t.co/aXX3LFOGDY",
       "url": "https://x.com/VoxEthicabr/status/2085956667183620118",
-      "correlation_score": null
+      "source_url": "https://x.com/VoxEthicabr/status/2085956667183620118"
     },
     {
       "id": 26,
-      "event_group_id": 16,
-      "published_at": "2026-08-08 04:59:59",
-      "event_type": "BORDER_CROSSING",
-      "location": "-",
-      "confidence": 0.55,
+      "event_id": 26,
       "source": "X",
+      "source_post_id": "2085954152467693568",
       "author": "Kathryn_Byrd1",
+      "published_at": "2026-08-08T04:59:59Z",
+      "collected_at": "2026-08-08T05:10:40Z",
+      "event_type": "BORDER_CROSSING",
+      "signal_type": "BORDER_CROSSING",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.55,
+      "event_confidence": 0.55,
+      "relevance_score": 30.0,
       "text": "@RobertJ57920725 YES, what I was not ok with was the illegal ALIEANS arrogantly crossing the border illegally. These people are NOT Migrants; they are ILLEGAL ALIENS, aliens to the USA because they ARE NOT CITIZENS. SEND THEM HOME.",
       "url": "https://x.com/Kathryn_Byrd1/status/2085954152467693568",
-      "correlation_score": null
+      "source_url": "https://x.com/Kathryn_Byrd1/status/2085954152467693568"
     },
     {
       "id": 22,
-      "event_group_id": 13,
-      "published_at": "2026-08-08 04:49:43",
-      "event_type": "BORDER_CROSSING",
-      "location": "Fnideq, Ceuta",
-      "confidence": 0.8,
+      "event_id": 22,
       "source": "X",
+      "source_post_id": "2085951566893195595",
       "author": "blr1a1",
+      "published_at": "2026-08-08T04:49:43Z",
+      "collected_at": "2026-08-08T04:58:15Z",
+      "event_type": "BORDER_CROSSING",
+      "signal_type": "BORDER_CROSSING",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": 35.8498,
+      "longitude": -5.3578,
+      "confidence": 0.8,
+      "event_confidence": 0.8,
+      "relevance_score": 50.0,
       "text": "Ceuta, Spain\nMigrants pass through a broken  fence as they leave Spain’s north African enclave of Ceuta towards the  Moroccan town of Fnideq following an attempted crossing at the Bab Sebta  border crossing. Photograph: Abdel Majid Bziouat/AFP/Getty Images https://t.co/eWt7RolwTi",
       "url": "https://x.com/blr1a1/status/2085951566893195595",
-      "correlation_score": null
+      "source_url": "https://x.com/blr1a1/status/2085951566893195595"
     },
     {
       "id": 23,
-      "event_group_id": 3,
-      "published_at": "2026-08-08 04:49:19",
-      "event_type": "SMUGGLING_ACTIVITY",
-      "location": "-",
-      "confidence": 0.5,
+      "event_id": 23,
       "source": "X",
+      "source_post_id": "2085951466758430977",
       "author": "NewsUkraineRBC",
+      "published_at": "2026-08-08T04:49:19Z",
+      "collected_at": "2026-08-08T04:58:16Z",
+      "event_type": "SMUGGLING_ACTIVITY",
+      "signal_type": "SMUGGLING_ACTIVITY",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.5,
+      "event_confidence": 0.5,
+      "relevance_score": 10.0,
       "text": "#Spain uncovers migrant smuggling network with its own mini-fleet\nhttps://t.co/WqDJ8dnT1n",
       "url": "https://x.com/NewsUkraineRBC/status/2085951466758430977",
-      "correlation_score": 0.77
+      "source_url": "https://x.com/NewsUkraineRBC/status/2085951466758430977"
+    },
+    {
+      "id": 39,
+      "event_id": 39,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1vilhjd",
+      "author": "donutloop",
+      "published_at": "2026-08-08T03:44:39Z",
+      "collected_at": "2026-08-08T09:10:25Z",
+      "event_type": "SMUGGLING_ACTIVITY",
+      "signal_type": "SMUGGLING_ACTIVITY",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.5,
+      "event_confidence": 0.5,
+      "relevance_score": 10.0,
+      "text": "Syrian migrant smugglers arrested in coordinated strike in Germany and Serbia",
+      "url": "https://www.reddit.com/r/berlin_public/comments/1vilhjd/syrian_migrant_smugglers_arrested_in_coordinated/",
+      "source_url": "https://www.reddit.com/r/berlin_public/comments/1vilhjd/syrian_migrant_smugglers_arrested_in_coordinated/"
     },
     {
       "id": 24,
-      "event_group_id": 14,
-      "published_at": "2026-08-08 03:01:48",
-      "event_type": "ARRIVAL",
-      "location": "-",
-      "confidence": 0.5,
+      "event_id": 24,
       "source": "X",
+      "source_post_id": "2085924410263765095",
       "author": "Gurujuish",
+      "published_at": "2026-08-08T03:01:48Z",
+      "collected_at": "2026-08-08T04:58:17Z",
+      "event_type": "ARRIVAL",
+      "signal_type": "ARRIVAL",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.5,
+      "event_confidence": 0.5,
+      "relevance_score": 20.0,
       "text": "@CptAllenHistory Clive Myrie, @BBC £325k DEI star, cruises the Caribbean courtesy of license fee payers.\nIn Dominican Republic he's astonished to learn Jewish refugees arrived in 1947. \nZero about cruel British quotas. No mention Israel. Refers to 'Jewish colony'. And no kippah? In shul? \nVile. https://t.co/rRnM0NNT6r",
       "url": "https://x.com/Gurujuish/status/2085924410263765095",
-      "correlation_score": null
+      "source_url": "https://x.com/Gurujuish/status/2085924410263765095"
     },
     {
       "id": 35,
-      "event_group_id": 23,
-      "published_at": "2026-08-07 22:54:58",
-      "event_type": "SMUGGLING_ACTIVITY",
-      "location": "-",
-      "confidence": 0.5,
+      "event_id": 35,
       "source": "REDDIT",
+      "source_post_id": "reddit_1viff8v",
       "author": "PomeloTraditional971",
+      "published_at": "2026-08-07T22:54:58Z",
+      "collected_at": "2026-08-08T07:40:20Z",
+      "event_type": "SMUGGLING_ACTIVITY",
+      "signal_type": "SMUGGLING_ACTIVITY",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.5,
+      "event_confidence": 0.5,
+      "relevance_score": 10.0,
       "text": "'No surprise' mig­rants using fake passports to get through Channel Tunnel, Home Office source tells Sky News\nAs a Sky News investigation reveals the business model of a people smuggler claiming to use fake documents to bring mig­rants via the Channel Tunnel, we have spoken to an officer who formerly worked in border control who says staff felt \"overwhelmed\". The officer – who worked extensively within Border Force in the UK and Europe – claims there are staff shortages and told us they believe there needs to be continuing investment in training and technology to help with the sheer volume of passengers coming through the Channel Tunnel. A separate source – a civil servant at the Home Office who works in immigration and asylum enforcement – told us it was \"no surprise\" the Channel Tunnel is being targeted. \"We deal with people in imm­igration cases who tell us they came through the Channel Tunnel using fake passports,\" they said. \"Some of them actually say that they saw a customs officer or a Border Force officer and they presented the document and they allowed them through.\" 'There's potential for people to slip through' Our investigation shows an Albanian people smuggler claiming that for £24,000 he can arrange for a migr­ant to be brought to London in the passenger seat of a £100,000 Range Rover. The officer who formerly worked within border control told us: \"It's very difficult, but if somebody's managing to get through and they're that confident that they can sit openly in the car, then you have to ask yourself, is it the technology, or is it the officer on the desk? \"The pressures that staff are under are immense. At times it can be overwhelming. You might look at a vehicle and think, 'Okay, it's a British vehicle – they're coming home.' \"So you may well then consider that actually it's British vehicles, so it's less likely there'll be anybody in the vehicle that would potentially be an imposter.\" Passing through border control, documents are scanned, and there may be additional checks. The officer said: \"If an officer's looking out the window and there’s a lot of traffic and it's up on the board saying 'waiting times are X amount of time', it's going to put pressure on them to think, 'Well, I need to get them through more quickly.' \"But I guess it's always in the back of your mind that it's so busy there’s potential for people to slip through. But we always did our best to make sure that we checked everybody as thoroughly as we possibly could using the technology that we had available to us.\" How smugglers try to game the system Both of our sources told us the technology at border controls is very good – but they admit it's a constant battle to stay one step ahead of those trying to reach the UK illegally. The officer who formerly worked within border control said: \"Individuals chancing it run a very high risk of getting caught. A lot of people do get stopped. But there are people out there with extensive skills who attempt to bypass document safeguards. \"People may try to use genuine documents, but they are not the person in that document, so the document could be stolen. You get a lot of imposters. It is entirely possible that they [officers] may have missed something from someone in a vehicle that might have looked very similar to the person in the document. \"People are becoming more creative as to how they can circumvent the checks and balances put in place, which means you always have to be on the front foot to stop these people.\" The officer who formerly worked within border control told us following a fast-track migr­ant returns deal between the UK and Albania – designed to deter illegal small boat crossings – they noticed a rise in Albanians and other nationalities trying to reach Britain using fake documents. They said: \"I think it had a big impact. When it’s more difficult to get through one way, people try another.\" The Home Office civil servant told us the Channel Tunnel \"is still a problem\" – but small boat crossings \"are taking up a lot of the publicity because that's what you see every day\". Exploitation and debt bondage Our investigation raises concerns not only about security checks at the Channel Tunnel but also migrants coming to the UK illegally, then working in crime to pay back people smugglers who brought them here. And in particular, fuelling the drugs trade in Britain. Those who work in the anti-slavery sector have told us there needs to be a \"concerted effort\" to \"go after criminal gangs\". Justine Carter, deputy CEO at anti-slavery charity Unseen, told us their caseload has risen \"exponentially\" since 2018, and last year 44% of their cases involved some kind of financial control. She said: \"Debt bondage is used as a deliberate tool to coerce and trap victims through inflated or manipulated debts. \"I'm very concerned about people who sign up to this because I don’t think they understand the repercussions of being here illegally, which creates specific vulnerability. \"In most situations of debt bondage, you never pay off the debt, so you're beholden to that individual crime gang. \"It’s important that we follow the money. Exploitation, debt bondage – it's all about money. And it's absolutely imperative that when we get victim testimony we go after the criminals.\" 'Now easier for people smugglers to move around' Dr Andi Hoxhaj, an associate fellow at the RUSI think tank, says there are 3.5 million regular cannabis users in the UK. He has written a research project on Albanian migrants in the UK. He says: \"My sense is there’s something important missing from the conversation – and that's why in the first place we have a drugs trade and a drug market in the UK. There's a big market that needs drugs to be grown in the UK or transported into the UK.\" Dr Hoxhaj says Brexit has impacted the amount of time it takes UK law enforcement agencies to obtain information from European counterparts. He said: \"One of the biggest issues that law enforcement agencies are struggling with is to identify people who have been involved in drug smuggling and other sorts of crime in parts of Europe when they arrive in the UK. \"Now it takes double the time when we used to be part of the EU to get the data and information, and that puts pressure on tackling organised crime and how you identify them so it’s easier for them to move around.\" A spokesperson for the Home Office, who are in charge of border checks, said: \"We have extensive checks and world-leading technology protecting our borders at the Channel Tunnel. For that reason, the instances of illegal entry through the Channel are extremely small. \"Asylum claims from those entering illegally via lorry or car are down by 25% in the past year, showing our approach is working. \"Those who attempt to cross should be in no doubt you will be removed, with 70,000 people with no right to be in the UK removed since the election.\"",
       "url": "https://www.reddit.com/r/uknews/comments/1viff8v/no_surprise_migrants_using_fake_passports_to_get/",
-      "correlation_score": null
+      "source_url": "https://www.reddit.com/r/uknews/comments/1viff8v/no_surprise_migrants_using_fake_passports_to_get/"
     },
     {
       "id": 20,
-      "event_group_id": 3,
-      "published_at": "2026-08-07 21:36:56",
-      "event_type": "SMUGGLING_ACTIVITY",
-      "location": "-",
-      "confidence": 0.5,
+      "event_id": 20,
       "source": "X",
+      "source_post_id": "2085842652440691072",
       "author": "SUR_English",
+      "published_at": "2026-08-07T21:36:56Z",
+      "collected_at": "2026-08-07T21:47:26Z",
+      "event_type": "SMUGGLING_ACTIVITY",
+      "signal_type": "SMUGGLING_ACTIVITY",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.5,
+      "event_confidence": 0.5,
+      "relevance_score": 10.0,
       "text": "Police break up major Mediterranean people smuggling ring as 78 arrested. Two-way network smuggled 2,000 migrants to Alicante and shipped synthetic drugs to Algeria. https://t.co/qkZJxGMbfX",
       "url": "https://x.com/SUR_English/status/2085842652440691072",
-      "correlation_score": 0.79
-    },
-    {
-      "id": 21,
-      "event_group_id": 12,
-      "published_at": "2026-08-07 21:24:16",
-      "event_type": "SMUGGLING_ACTIVITY",
-      "location": "-",
-      "confidence": 0.5,
-      "source": "X",
-      "author": "LazyNevarine",
-      "text": "i wouldn't be surprised if in 10-20 years we have to drone strike churches in south america for being migrant smuggling and drug running operations",
-      "url": "https://x.com/LazyNevarine/status/2085839465151353247",
-      "correlation_score": null
-    },
-    {
-      "id": 19,
-      "event_group_id": 11,
-      "published_at": "2026-08-07 21:19:52",
-      "event_type": "ARRIVAL",
-      "location": "-",
-      "confidence": 0.5,
-      "source": "X",
-      "author": "kelly241397",
-      "text": "@howardharry Those Jewish refugees arrived in the Middle Ages and didn’t expect the country to become a Jewish nation, also Potatoes coming from South America didn’t involve the local tribes of the South American continent to change our culture or practices.",
-      "url": "https://x.com/kelly241397/status/2085838360426188910",
-      "correlation_score": null
+      "source_url": "https://x.com/SUR_English/status/2085842652440691072"
     }
   ],
   "event_groups": [
     {
-      "id": 3,
-      "event_type": "SMUGGLING_ACTIVITY",
-      "title": "SMUGGLING_ACTIVITY - WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "primary_location": "-",
-      "country": "-",
-      "first_seen": "2026-08-07 12:47:59",
-      "last_seen": "2026-08-08 07:06:50",
-      "source_count": 6,
-      "source_types": [
-        "X"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.5,
-      "representative_text": "Spain Dismantles Major Algerian Smuggling Network Linking Drugs to Migrants\n\nSpanish authorities announced Friday the dismantling of one of the largest criminal networks specializing in smuggling migrants across the Mediterranean, in an operation that led to the arrest of 78 https://t.co/ExZkytkf4m"
-    },
-    {
-      "id": 7,
-      "event_type": "BORDER_MEASURE",
-      "title": "BORDER_MEASURE - Ceuta",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "primary_location": "Ceuta",
-      "country": "Spain",
-      "first_seen": "2026-08-07 20:53:40",
-      "last_seen": "2026-08-08 06:26:18",
-      "source_count": 2,
-      "source_types": [
-        "X"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.7,
-      "representative_text": "🇪🇸❌🇮🇹 – A few hours ago, new border controls on all air and sea travel from Italy imposed by Spain came into effect, increasing tensions between both European nations.\n\n▶️ The disagreement comes after more than 78,000 Moroccan migrants entered the Spanish enclave of Ceuta, which"
-    },
-    {
       "id": 1,
+      "group_id": 1,
       "event_type": "ARRIVAL",
+      "dominant_event_type": "ARRIVAL",
       "title": "ARRIVAL - Ceuta",
+      "representative_text": "Italy has said it has no intention of suspending border checks on travelers from Spain, and rebuffed Madrid’s threats to retaliate if Rome maintains the measures it instituted after the mass arrival of migrants in the Spanish exclave of Ceuta last week https://t.co/azRR6WNJvv",
+      "region": "WESTERN_MEDITERRANEAN",
       "primary_region": "WESTERN_MEDITERRANEAN",
       "primary_location": "Ceuta",
       "country": "Spain",
-      "first_seen": "2026-08-07 16:17:19",
-      "last_seen": "2026-08-07 16:21:52",
-      "source_count": 2,
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "first_seen": "2026-08-07T16:17:19Z",
+      "last_seen": "2026-08-08T09:09:43Z",
+      "source_count": 3,
+      "sources_count": 3,
       "source_types": [
+        "X"
+      ],
+      "sources": [
         "X"
       ],
       "status": "ACTIVE",
       "confidence": 0.75,
-      "representative_text": "Italy has said it has no intention of suspending border checks on travelers from Spain, and rebuffed Madrid’s threats to retaliate if Rome maintains the measures it instituted after the mass arrival of migrants in the Spanish exclave of Ceuta last week https://t.co/azRR6WNJvv"
-    },
-    {
-      "id": 5,
-      "event_type": "SMUGGLING_ACTIVITY",
-      "title": "SMUGGLING_ACTIVITY - WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "primary_location": "-",
-      "country": "-",
-      "first_seen": "2026-08-07 13:33:59",
-      "last_seen": "2026-08-07 16:04:32",
-      "source_count": 2,
-      "source_types": [
-        "X"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.5,
-      "representative_text": "🇪🇸🚨 BREAKING NEWS: Spanish police have dismantled one of the Mediterranean's largest migrant smuggling networks, which charged up to €12,000 per person for the journey. The gang is believed to have carried out at least 64 operations, smuggling over 2,000 migrants into Spain and https://t.co/jlzb4aqkO0"
+      "average_confidence": 0.75,
+      "created_at": "2026-08-07T16:26:23Z",
+      "updated_at": "2026-08-08T09:10:30Z"
     },
     {
       "id": 24,
+      "group_id": 24,
       "event_type": "GENERAL_DISCUSSION",
+      "dominant_event_type": "GENERAL_DISCUSSION",
       "title": "GENERAL_DISCUSSION - Ceuta",
+      "representative_text": "Spain and Italy are now checking each other's travellers at the border,  inside supposedly borderless Schengen.\n\nAfter 50-60k migrants crossed into Ceuta from Morocco in days, Italy invoked emergency Schengen powers to screen arrivals from Spain. Spain hit back with its own https://t.co/ngT6qA3Ddr",
+      "region": "WESTERN_MEDITERRANEAN",
       "primary_region": "WESTERN_MEDITERRANEAN",
       "primary_location": "Ceuta",
       "country": "Spain",
-      "first_seen": "2026-08-08 08:52:47",
-      "last_seen": "2026-08-08 08:52:47",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "first_seen": "2026-08-08T08:52:47Z",
+      "last_seen": "2026-08-08T08:52:47Z",
       "source_count": 1,
+      "sources_count": 1,
       "source_types": [
+        "X"
+      ],
+      "sources": [
         "X"
       ],
       "status": "ACTIVE",
       "confidence": 0.45,
-      "representative_text": "Spain and Italy are now checking each other's travellers at the border,  inside supposedly borderless Schengen.\n\nAfter 50-60k migrants crossed into Ceuta from Morocco in days, Italy invoked emergency Schengen powers to screen arrivals from Spain. Spain hit back with its own https://t.co/ngT6qA3Ddr"
+      "average_confidence": 0.45,
+      "created_at": "2026-08-08T08:53:05Z",
+      "updated_at": "2026-08-08T08:53:05Z"
     },
     {
       "id": 25,
+      "group_id": 25,
       "event_type": "ARRIVAL",
+      "dominant_event_type": "ARRIVAL",
       "title": "ARRIVAL - CENTRAL_MEDITERRANEAN",
+      "representative_text": "More than a #dozen #arrested over #migrant #smuggling in northern #Greece \nThirteen people were arrested over three days after allegedly transporting 56 migrants in cars through northern Greece, while more than 100 additional migrants arrived on #Crete from #Libya.",
+      "region": "CENTRAL_MEDITERRANEAN",
       "primary_region": "CENTRAL_MEDITERRANEAN",
       "primary_location": "-",
       "country": "-",
-      "first_seen": "2026-08-08 08:11:07",
-      "last_seen": "2026-08-08 08:11:07",
+      "latitude": null,
+      "longitude": null,
+      "first_seen": "2026-08-08T08:11:07Z",
+      "last_seen": "2026-08-08T08:11:07Z",
       "source_count": 1,
+      "sources_count": 1,
       "source_types": [
+        "X"
+      ],
+      "sources": [
         "X"
       ],
       "status": "ACTIVE",
       "confidence": 0.55,
-      "representative_text": "More than a #dozen #arrested over #migrant #smuggling in northern #Greece \nThirteen people were arrested over three days after allegedly transporting 56 migrants in cars through northern Greece, while more than 100 additional migrants arrived on #Crete from #Libya."
+      "average_confidence": 0.55,
+      "created_at": "2026-08-08T08:53:31Z",
+      "updated_at": "2026-08-08T08:53:31Z"
     },
     {
       "id": 26,
+      "group_id": 26,
       "event_type": "SMUGGLING_ACTIVITY",
+      "dominant_event_type": "SMUGGLING_ACTIVITY",
       "title": "SMUGGLING_ACTIVITY",
+      "representative_text": "🚨 Europol has busted a suspected migrant-smuggling network, arresting three people in an operation targeting the illegal movement of migrants across Europe.\nRead more: https://t.co/WAJuL13rKI \n#Europol #MigrantSmuggling #Europe #CrimeNews #BreakingNews #WorldNews #FactsBay https://t.co/lH1EO28mPn",
+      "region": "GLOBAL",
       "primary_region": "GLOBAL",
       "primary_location": "-",
       "country": "-",
-      "first_seen": "2026-08-08 07:46:13",
-      "last_seen": "2026-08-08 07:46:13",
+      "latitude": null,
+      "longitude": null,
+      "first_seen": "2026-08-08T07:46:13Z",
+      "last_seen": "2026-08-08T07:46:13Z",
       "source_count": 1,
+      "sources_count": 1,
       "source_types": [
+        "X"
+      ],
+      "sources": [
         "X"
       ],
       "status": "ACTIVE",
       "confidence": 0.5,
-      "representative_text": "🚨 Europol has busted a suspected migrant-smuggling network, arresting three people in an operation targeting the illegal movement of migrants across Europe.\nRead more: https://t.co/WAJuL13rKI \n#Europol #MigrantSmuggling #Europe #CrimeNews #BreakingNews #WorldNews #FactsBay https://t.co/lH1EO28mPn"
+      "average_confidence": 0.5,
+      "created_at": "2026-08-08T08:53:31Z",
+      "updated_at": "2026-08-08T08:53:31Z"
+    },
+    {
+      "id": 3,
+      "group_id": 3,
+      "event_type": "SMUGGLING_ACTIVITY",
+      "dominant_event_type": "SMUGGLING_ACTIVITY",
+      "title": "SMUGGLING_ACTIVITY - WESTERN_MEDITERRANEAN",
+      "representative_text": "Spain Dismantles Major Algerian Smuggling Network Linking Drugs to Migrants\n\nSpanish authorities announced Friday the dismantling of one of the largest criminal networks specializing in smuggling migrants across the Mediterranean, in an operation that led to the arrest of 78 https://t.co/ExZkytkf4m",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "primary_location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "first_seen": "2026-08-07T12:47:59Z",
+      "last_seen": "2026-08-08T07:06:50Z",
+      "source_count": 6,
+      "sources_count": 6,
+      "source_types": [
+        "X"
+      ],
+      "sources": [
+        "X"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.5,
+      "average_confidence": 0.5,
+      "created_at": "2026-08-07T16:30:44Z",
+      "updated_at": "2026-08-08T07:40:19Z"
     },
     {
       "id": 20,
+      "group_id": 20,
       "event_type": "MIGRANT_CAMP",
+      "dominant_event_type": "MIGRANT_CAMP",
       "title": "MIGRANT_CAMP - MIDDLE_EAST",
+      "representative_text": "@Sp00derWeb @ylab161 @voiceofrabbis Absolutely brilliantly said, my man! By no means do I think the reason Israel stands is bad, sure WW2 was a decent reason to give the Jewish a safe haven, but it has been turned into a US-funded, glorified, muslim refugee camp, those are the only people I’m seeing pro-Zionism.",
+      "region": "MIDDLE_EAST",
       "primary_region": "MIDDLE_EAST",
       "primary_location": "-",
       "country": "-",
-      "first_seen": "2026-08-08 07:04:27",
-      "last_seen": "2026-08-08 07:04:27",
+      "latitude": null,
+      "longitude": null,
+      "first_seen": "2026-08-08T07:04:27Z",
+      "last_seen": "2026-08-08T07:04:27Z",
       "source_count": 1,
+      "sources_count": 1,
       "source_types": [
+        "X"
+      ],
+      "sources": [
         "X"
       ],
       "status": "ACTIVE",
       "confidence": 0.45,
-      "representative_text": "@Sp00derWeb @ylab161 @voiceofrabbis Absolutely brilliantly said, my man! By no means do I think the reason Israel stands is bad, sure WW2 was a decent reason to give the Jewish a safe haven, but it has been turned into a US-funded, glorified, muslim refugee camp, those are the only people I’m seeing pro-Zionism."
+      "average_confidence": 0.45,
+      "created_at": "2026-08-08T07:04:57Z",
+      "updated_at": "2026-08-08T07:04:57Z"
     },
     {
       "id": 22,
+      "group_id": 22,
       "event_type": "MIGRANT_CAMP",
+      "dominant_event_type": "MIGRANT_CAMP",
       "title": "MIGRANT_CAMP",
+      "representative_text": "Andy Burnham torn apart by Piddington councillor over plans for migrant camp: 'Have some responsibility!",
+      "region": "GLOBAL",
       "primary_region": "GLOBAL",
       "primary_location": "-",
       "country": "-",
-      "first_seen": "2026-08-08 07:01:06",
-      "last_seen": "2026-08-08 07:01:06",
+      "latitude": null,
+      "longitude": null,
+      "first_seen": "2026-08-08T07:01:06Z",
+      "last_seen": "2026-08-08T07:01:06Z",
       "source_count": 1,
+      "sources_count": 1,
       "source_types": [
+        "REDDIT"
+      ],
+      "sources": [
         "REDDIT"
       ],
       "status": "ACTIVE",
       "confidence": 0.5,
-      "representative_text": "Andy Burnham torn apart by Piddington councillor over plans for migrant camp: 'Have some responsibility!"
+      "average_confidence": 0.5,
+      "created_at": "2026-08-08T07:16:23Z",
+      "updated_at": "2026-08-08T07:16:23Z"
     },
     {
       "id": 21,
+      "group_id": 21,
       "event_type": "SMUGGLING_ACTIVITY",
+      "dominant_event_type": "SMUGGLING_ACTIVITY",
       "title": "SMUGGLING_ACTIVITY",
+      "representative_text": "@thenowherephoto Isn't this bit strange when these boats usually come pick up migrants, but now the group had the boat with them to be filled? Cops should have taken the ones filling it for human smuggling. Also the group, they are gonna try again, why not deport them back to home countries...",
+      "region": "GLOBAL",
       "primary_region": "GLOBAL",
       "primary_location": "-",
       "country": "-",
-      "first_seen": "2026-08-08 07:00:09",
-      "last_seen": "2026-08-08 07:00:09",
+      "latitude": null,
+      "longitude": null,
+      "first_seen": "2026-08-08T07:00:09Z",
+      "last_seen": "2026-08-08T07:00:09Z",
       "source_count": 1,
+      "sources_count": 1,
       "source_types": [
+        "X"
+      ],
+      "sources": [
         "X"
       ],
       "status": "ACTIVE",
       "confidence": 0.5,
-      "representative_text": "@thenowherephoto Isn't this bit strange when these boats usually come pick up migrants, but now the group had the boat with them to be filled? Cops should have taken the ones filling it for human smuggling. Also the group, they are gonna try again, why not deport them back to home countries..."
+      "average_confidence": 0.5,
+      "created_at": "2026-08-08T07:09:14Z",
+      "updated_at": "2026-08-08T07:09:14Z"
+    },
+    {
+      "id": 17,
+      "group_id": 17,
+      "event_type": "BORDER_CONDITION",
+      "dominant_event_type": "BORDER_CONDITION",
+      "title": "BORDER_CONDITION - Ceuta",
+      "representative_text": "Ceuta migrant crisis: \n\nRoughly 80,000 migrants crossed from Morocco into the Spanish exclave of Ceuta, with at least 100+ deaths reported. Spain imposed border controls on travelers from Italy amid a row; Italy had earlier tightened its own controls. Spanish police also busted a",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "first_seen": "2026-08-08T06:27:49Z",
+      "last_seen": "2026-08-08T06:27:49Z",
+      "source_count": 1,
+      "sources_count": 1,
+      "source_types": [
+        "X"
+      ],
+      "sources": [
+        "X"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.7,
+      "average_confidence": 0.7,
+      "created_at": "2026-08-08T06:38:07Z",
+      "updated_at": "2026-08-08T06:38:07Z"
+    },
+    {
+      "id": 7,
+      "group_id": 7,
+      "event_type": "BORDER_MEASURE",
+      "dominant_event_type": "BORDER_MEASURE",
+      "title": "BORDER_MEASURE - Ceuta",
+      "representative_text": "🇪🇸❌🇮🇹 – A few hours ago, new border controls on all air and sea travel from Italy imposed by Spain came into effect, increasing tensions between both European nations.\n\n▶️ The disagreement comes after more than 78,000 Moroccan migrants entered the Spanish enclave of Ceuta, which",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "first_seen": "2026-08-07T20:53:40Z",
+      "last_seen": "2026-08-08T06:26:18Z",
+      "source_count": 2,
+      "sources_count": 2,
+      "source_types": [
+        "X"
+      ],
+      "sources": [
+        "X"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.7,
+      "average_confidence": 0.7,
+      "created_at": "2026-08-07T20:59:23Z",
+      "updated_at": "2026-08-08T06:45:11Z"
+    }
+  ],
+  "regions": [
+    {
+      "name": "GLOBAL",
+      "region": "GLOBAL",
+      "count": 14,
+      "events": 14,
+      "percentage": 51.85
+    },
+    {
+      "name": "WESTERN_MEDITERRANEAN",
+      "region": "WESTERN_MEDITERRANEAN",
+      "count": 7,
+      "events": 7,
+      "percentage": 25.93
+    },
+    {
+      "name": "MIDDLE_EAST",
+      "region": "MIDDLE_EAST",
+      "count": 2,
+      "events": 2,
+      "percentage": 7.41
+    },
+    {
+      "name": "AMERICAS",
+      "region": "AMERICAS",
+      "count": 2,
+      "events": 2,
+      "percentage": 7.41
+    },
+    {
+      "name": "WESTERN_BALKANS",
+      "region": "WESTERN_BALKANS",
+      "count": 1,
+      "events": 1,
+      "percentage": 3.7
+    },
+    {
+      "name": "CENTRAL_MEDITERRANEAN",
+      "region": "CENTRAL_MEDITERRANEAN",
+      "count": 1,
+      "events": 1,
+      "percentage": 3.7
+    }
+  ],
+  "sources": [
+    {
+      "source": "X",
+      "name": "X",
+      "count": 67,
+      "posts": 67,
+      "percentage": 82.72
+    },
+    {
+      "source": "REDDIT",
+      "name": "REDDIT",
+      "count": 14,
+      "posts": 14,
+      "percentage": 17.28
     }
   ],
   "region_activity": [
     {
+      "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 14
+      "count": 14,
+      "events": 14,
+      "percentage": 51.85
     },
     {
+      "name": "WESTERN_MEDITERRANEAN",
       "region": "WESTERN_MEDITERRANEAN",
-      "count": 7
+      "count": 7,
+      "events": 7,
+      "percentage": 25.93
     },
     {
+      "name": "MIDDLE_EAST",
       "region": "MIDDLE_EAST",
-      "count": 2
+      "count": 2,
+      "events": 2,
+      "percentage": 7.41
     },
     {
+      "name": "AMERICAS",
       "region": "AMERICAS",
-      "count": 2
+      "count": 2,
+      "events": 2,
+      "percentage": 7.41
     },
     {
+      "name": "WESTERN_BALKANS",
+      "region": "WESTERN_BALKANS",
+      "count": 1,
+      "events": 1,
+      "percentage": 3.7
+    },
+    {
+      "name": "CENTRAL_MEDITERRANEAN",
       "region": "CENTRAL_MEDITERRANEAN",
-      "count": 1
+      "count": 1,
+      "events": 1,
+      "percentage": 3.7
     }
   ],
   "source_activity": [
     {
       "source": "X",
-      "count": 36
+      "name": "X",
+      "count": 67,
+      "posts": 67,
+      "percentage": 82.72
     },
     {
       "source": "REDDIT",
-      "count": 2
+      "name": "REDDIT",
+      "count": 14,
+      "posts": 14,
+      "percentage": 17.28
     }
   ],
   "correlation": {
-    "total_posts": 38,
-    "filtered_posts": 0,
-    "operational_events": 38,
-    "correlated_sources": 8,
-    "grouped_sources": 34,
-    "event_groups": 26,
-    "filtering_efficiency": 0.0,
-    "operational_rate": 100.0,
-    "correlation_rate": 21.05,
-    "grouping_rate": 68.42,
-    "multi_source_rate": 23.53,
-    "conversion_rate": 68.42
+    "correlated_events": 9,
+    "correlated_sources": 9,
+    "grouped_sources": 36,
+    "event_groups": 28,
+    "active_groups": 28,
+    "multi_source_groups": 4,
+    "strongest_match": 0.9,
+    "correlation_rate": 22.5
+  },
+  "technical_health": "HEALTHY",
+  "collector_health": "HEALTHY",
+  "technical_health_detail": {
+    "status": "HEALTHY",
+    "healthy": true,
+    "run_status": "SUCCESS",
+    "collector_errors": 0,
+    "x_collector_errors": 0,
+    "reddit_collector_errors": 0,
+    "mastodon_collector_errors": 0,
+    "database": "AVAILABLE",
+    "last_run_id": 3,
+    "last_completed_at": "2026-08-08T09:10:30Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 38,
-    "correlated_events_24h": 8,
-    "active_event_groups": 26,
-    "dominant_region": "WESTERN_MEDITERRANEAN",
+    "operational_events_24h": 40,
+    "influence_signals_24h": 6,
+    "access_signals_24h": 6,
+    "correlated_events_24h": 9,
+    "active_event_groups": 28,
+    "dominant_region": "GLOBAL",
+    "hotspot": "GLOBAL",
     "dominant_event_type": "SMUGGLING_ACTIVITY",
     "dominant_source": "X",
-    "average_confidence": 0.523,
+    "average_confidence": 0.532,
     "confidence_level": "MEDIUM",
-    "correlation_rate": 21.05,
+    "correlation_rate": 22.5,
     "activity_level": "HIGH",
-    "system_health": "HIGH ACTIVITY",
-    "summary": "Az elmúlt 24 órában a rendszer 38 operatív migrációs eseményt azonosított, amelyek közül 8 esemény korábbi vagy párhuzamos forrással korrelált. Jelenleg 26 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns eseménytípus: Smuggling Activity. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.52. A jelenlegi aktivitási szint: HIGH."
+    "system_health": "HEALTHY",
+    "summary": "Az elmúlt 24 órában a rendszer 40 operatív migrációs eseményt, 6 influence/early-warning jelzést és 6 átkelési vagy bejutási jelzést tart nyilván. 9 friss eseményforrás korrelált más forrással. Jelenleg 28 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Global. A domináns operatív eseménytípus: Smuggling Activity. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.53. A jelenlegi aktivitási szint: HIGH."
+  },
+  "analytical_assessment": {
+    "operational_events_24h": 40,
+    "influence_signals_24h": 6,
+    "access_signals_24h": 6,
+    "correlated_events_24h": 9,
+    "active_event_groups": 28,
+    "dominant_region": "GLOBAL",
+    "hotspot": "GLOBAL",
+    "dominant_event_type": "SMUGGLING_ACTIVITY",
+    "dominant_source": "X",
+    "average_confidence": 0.532,
+    "confidence_level": "MEDIUM",
+    "correlation_rate": 22.5,
+    "activity_level": "HIGH",
+    "system_health": "HEALTHY",
+    "summary": "Az elmúlt 24 órában a rendszer 40 operatív migrációs eseményt, 6 influence/early-warning jelzést és 6 átkelési vagy bejutási jelzést tart nyilván. 9 friss eseményforrás korrelált más forrással. Jelenleg 28 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Global. A domináns operatív eseménytípus: Smuggling Activity. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.53. A jelenlegi aktivitási szint: HIGH."
   },
   "high_confidence_events": [
     {
       "id": 13,
+      "group_id": 13,
       "event_type": "BORDER_CROSSING",
       "primary_location": "Fnideq",
+      "location": "Fnideq",
       "country": "Morocco",
       "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
       "confidence": 0.8,
+      "average_confidence": 0.8,
       "source_count": 1,
-      "last_seen": "2026-08-08 04:49:43",
-      "representative_text": "Ceuta, Spain\nMigrants pass through a broken  fence as they leave Spain’s north African enclave of Ceuta towards the  Moroccan town of Fnideq following an attempted crossing at the Bab Sebta  border crossing. Photograph: Abdel Majid Bziouat/AFP/Getty Images https://t.co/eWt7RolwTi"
+      "last_seen": "2026-08-08T04:49:43Z",
+      "representative_text": "Ceuta, Spain\nMigrants pass through a broken  fence as they leave Spain’s north African enclave of Ceuta towards the  Moroccan town of Fnideq following an attempted crossing at the Bab Sebta  border crossing. Photograph: Abdel Majid Bziouat/AFP/Getty Images https://t.co/eWt7RolwTi",
+      "text": "Ceuta, Spain\nMigrants pass through a broken  fence as they leave Spain’s north African enclave of Ceuta towards the  Moroccan town of Fnideq following an attempted crossing at the Bab Sebta  border crossing. Photograph: Abdel Majid Bziouat/AFP/Getty Images https://t.co/eWt7RolwTi"
+    },
+    {
+      "id": 28,
+      "group_id": 28,
+      "event_type": "INTERCEPTION",
+      "primary_location": "Fnideq",
+      "location": "Fnideq",
+      "country": "Morocco",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "confidence": 0.8,
+      "average_confidence": 0.8,
+      "source_count": 1,
+      "last_seen": "2026-08-07T01:52:50Z",
+      "representative_text": "What really happened in Ceuta: Debunking the geopolitical theories behind the mass crossings\n*(Note: Most of the timeline and analysis in this thread comes from an excellent breakdown by Marouane Lamharzi Alaoui. If you want a more detailed explanation with evidence, I highly recommend reading his article on X: Marouane Lamharzi Alaoui on X: \"The Ceuta Crossing, How One Missing Phrase Became a Snowball of Misinformation.\" / X )* As a Moroccan, I've spent the past couple of days watching social media get flooded with wild theories regarding the massive wave of illegal immigrants crossing into Ceuta. If you've been reading the news or browsing Twitter, you’ve probably seen the propaganda: \"Morocco did it on purpose:\" Many claimed the Moroccan government intentionally opened the borders to punish Pedro Sánchez, weaponize migration, or retaliate for geopolitical slights. \"Spain's policies are to blame:\" Others argued that the Spanish government's left-wing migration policies acted as a deliberate \"pull factor.\" \"Foreign Interference:\" There are even bizarre conspiracy theories circulating that try to drag Algerian intelligence or Israel into the mix, framing the crisis as a shadow operation designed to destabilize the region. While it's easy to blame a coordinated geopolitical master plan, the reality is much more modern and arguably more dangerous. This wasn't a state-sponsored attack. It was a devastating \"snowball effect\" driven by fake news, TikTok algorithms, human smugglers, and a perfectly timed security gap. Here is the step-by-step breakdown of how a digital rumor turned into a physical crisis involving tens of thousands of people. 1. The Spark: A Misinterpreted Legal Ruling & Media Oversimplification The foundation of this crisis began with a legitimate Spanish Supreme Court ruling on July 8 . The court ruled that migrants intercepted at sea while swimming could not be subjected to immediate, on the spot pushbacks (devoluciones en caliente). Instead, they had to undergo the standard legal deportation process, which includes identification, access to a lawyer, and the right to apply for asylum. However, the way local Spanish media reported this ruling unwittingly handed fuel to the rumor engine. Outlets published articles covering the decision, and while their headlines were legally accurate, the meta descriptions and snippets on pages like El Faro de Ceuta condensed the news into highly ambiguous statements, such as: \"En una sentencia confirma que los inmigrantes que son interceptados en el mar al querer cruzar a Ceuta o Melilla a nado no pueden ser devueltos.\" English translation: \"In a ruling, it confirms that migrants who are intercepted at sea when wanting to swim into Ceuta or Melilla cannot be returned.\" By dropping the critical legal qualification \"en caliente\" (immediate pushbacks) from the summary, it sounded as though Spain had banned deportations altogether for anyone arriving by sea. A massive fake news campaign spread across Moroccan Facebook and TikTok claiming that Spain had completely stopped returning migrants. The rumor was: If you make it to the water in Ceuta, you are legally untouchable. 2. The Viral Catalyst: The \"Two Girls\" Video While rumors were brewing in early July, the ultimate trigger was a single viral video in late July . The video showed two teenage girls who had successfully and easily crossed the border into Ceuta. This video exploded, accumulating over 20 million views across various platforms. It created a massive wave of FOMO (Fear Of Missing Out) among anyone who had even a slight, lingering intention to illegaly emigrate. The prevailing logic became: \"If two young girls can cross so easily, why can't I?\" 3. Smugglers Exploit the Algorithm Human trafficking networks, opportunists, and anonymous organizers immediately capitalized on the social media frenzy. They created massive WhatsApp, Telegram, and Facebook groups to organize mass crossings, the largest and most viral of which was known as \"Kriyaj Sebta.\" An analysis of these group chats revealed that the administrators running them operated using phone numbers registered with country codes from Morocco, Algeria, and other foreign nations. These digital guides didn't just spread hype; they provided tactical information, actively monitoring weather forecasts, tide schedules, and security positions so participants could time the crossings perfectly. 4. The Perfect Storm: July 30th The theory that Morocco intentionally opened the gates falls apart when you look at the timeline. Throughout July, Moroccan authorities were actively intercepting, arresting, and returning thousands of people trying to approach the border with news footage showing police deploying tear gas, water cannons, and setting up inland roadblocks to stop buses and taxis heading toward Fnideq. However, July 30th was Throne Day (Eid Al Arsh), one of Morocco's biggest national holidays. Security forces and police were heavily preoccupied with holiday protocols and ceremonies elsewhere. This created a critical 6 to 7 hour window where the border at Fnideq was severely understaffed. Combined with an unusually low tide which allowed people to simply walk around the Tarajal breakwater rather than swim thousands of people rushed the border simultaneously. The remaining guards were completely overwhelmed by the sheer mass of humanity. 5. Control Restored and the Tragic Aftermath Once the holiday ended on July 31st, Moroccan authorities immediately deployed heavy reinforcements, including three rows of riot police, armored vehicles, and water cannons, effectively shutting the border back down. Through Spanish Moroccan security coordination, the vast majority of those who attempted to enter were turned back or processed under standard procedures. Tragically, this digital illusion cost lives. Dozens of people drowned or were injured during the mass attempts, making it one of the most chaotic incidents at the border in recent memory. The Ceuta crisis wasn't a geopolitical attack orchestrated by Morocco, Spain, or foreign intelligence. It was a mass panic engineered by oversimplified legal news and social media misinformation about Spanish deportation laws, amplified by human smugglers, and executed during a brief window when Moroccan border guards were distracted by a national holiday.",
+      "text": "What really happened in Ceuta: Debunking the geopolitical theories behind the mass crossings\n*(Note: Most of the timeline and analysis in this thread comes from an excellent breakdown by Marouane Lamharzi Alaoui. If you want a more detailed explanation with evidence, I highly recommend reading his article on X: Marouane Lamharzi Alaoui on X: \"The Ceuta Crossing, How One Missing Phrase Became a Snowball of Misinformation.\" / X )* As a Moroccan, I've spent the past couple of days watching social media get flooded with wild theories regarding the massive wave of illegal immigrants crossing into Ceuta. If you've been reading the news or browsing Twitter, you’ve probably seen the propaganda: \"Morocco did it on purpose:\" Many claimed the Moroccan government intentionally opened the borders to punish Pedro Sánchez, weaponize migration, or retaliate for geopolitical slights. \"Spain's policies are to blame:\" Others argued that the Spanish government's left-wing migration policies acted as a deliberate \"pull factor.\" \"Foreign Interference:\" There are even bizarre conspiracy theories circulating that try to drag Algerian intelligence or Israel into the mix, framing the crisis as a shadow operation designed to destabilize the region. While it's easy to blame a coordinated geopolitical master plan, the reality is much more modern and arguably more dangerous. This wasn't a state-sponsored attack. It was a devastating \"snowball effect\" driven by fake news, TikTok algorithms, human smugglers, and a perfectly timed security gap. Here is the step-by-step breakdown of how a digital rumor turned into a physical crisis involving tens of thousands of people. 1. The Spark: A Misinterpreted Legal Ruling & Media Oversimplification The foundation of this crisis began with a legitimate Spanish Supreme Court ruling on July 8 . The court ruled that migrants intercepted at sea while swimming could not be subjected to immediate, on the spot pushbacks (devoluciones en caliente). Instead, they had to undergo the standard legal deportation process, which includes identification, access to a lawyer, and the right to apply for asylum. However, the way local Spanish media reported this ruling unwittingly handed fuel to the rumor engine. Outlets published articles covering the decision, and while their headlines were legally accurate, the meta descriptions and snippets on pages like El Faro de Ceuta condensed the news into highly ambiguous statements, such as: \"En una sentencia confirma que los inmigrantes que son interceptados en el mar al querer cruzar a Ceuta o Melilla a nado no pueden ser devueltos.\" English translation: \"In a ruling, it confirms that migrants who are intercepted at sea when wanting to swim into Ceuta or Melilla cannot be returned.\" By dropping the critical legal qualification \"en caliente\" (immediate pushbacks) from the summary, it sounded as though Spain had banned deportations altogether for anyone arriving by sea. A massive fake news campaign spread across Moroccan Facebook and TikTok claiming that Spain had completely stopped returning migrants. The rumor was: If you make it to the water in Ceuta, you are legally untouchable. 2. The Viral Catalyst: The \"Two Girls\" Video While rumors were brewing in early July, the ultimate trigger was a single viral video in late July . The video showed two teenage girls who had successfully and easily crossed the border into Ceuta. This video exploded, accumulating over 20 million views across various platforms. It created a massive wave of FOMO (Fear Of Missing Out) among anyone who had even a slight, lingering intention to illegaly emigrate. The prevailing logic became: \"If two young girls can cross so easily, why can't I?\" 3. Smugglers Exploit the Algorithm Human trafficking networks, opportunists, and anonymous organizers immediately capitalized on the social media frenzy. They created massive WhatsApp, Telegram, and Facebook groups to organize mass crossings, the largest and most viral of which was known as \"Kriyaj Sebta.\" An analysis of these group chats revealed that the administrators running them operated using phone numbers registered with country codes from Morocco, Algeria, and other foreign nations. These digital guides didn't just spread hype; they provided tactical information, actively monitoring weather forecasts, tide schedules, and security positions so participants could time the crossings perfectly. 4. The Perfect Storm: July 30th The theory that Morocco intentionally opened the gates falls apart when you look at the timeline. Throughout July, Moroccan authorities were actively intercepting, arresting, and returning thousands of people trying to approach the border with news footage showing police deploying tear gas, water cannons, and setting up inland roadblocks to stop buses and taxis heading toward Fnideq. However, July 30th was Throne Day (Eid Al Arsh), one of Morocco's biggest national holidays. Security forces and police were heavily preoccupied with holiday protocols and ceremonies elsewhere. This created a critical 6 to 7 hour window where the border at Fnideq was severely understaffed. Combined with an unusually low tide which allowed people to simply walk around the Tarajal breakwater rather than swim thousands of people rushed the border simultaneously. The remaining guards were completely overwhelmed by the sheer mass of humanity. 5. Control Restored and the Tragic Aftermath Once the holiday ended on July 31st, Moroccan authorities immediately deployed heavy reinforcements, including three rows of riot police, armored vehicles, and water cannons, effectively shutting the border back down. Through Spanish Moroccan security coordination, the vast majority of those who attempted to enter were turned back or processed under standard procedures. Tragically, this digital illusion cost lives. Dozens of people drowned or were injured during the mass attempts, making it one of the most chaotic incidents at the border in recent memory. The Ceuta crisis wasn't a geopolitical attack orchestrated by Morocco, Spain, or foreign intelligence. It was a mass panic engineered by oversimplified legal news and social media misinformation about Spanish deportation laws, amplified by human smugglers, and executed during a brief window when Moroccan border guards were distracted by a national holiday."
     },
     {
       "id": 1,
+      "group_id": 1,
       "event_type": "ARRIVAL",
+      "primary_location": "Ceuta",
+      "location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "confidence": 0.75,
+      "average_confidence": 0.75,
+      "source_count": 3,
+      "last_seen": "2026-08-08T09:09:43Z",
+      "representative_text": "Italy has said it has no intention of suspending border checks on travelers from Spain, and rebuffed Madrid’s threats to retaliate if Rome maintains the measures it instituted after the mass arrival of migrants in the Spanish exclave of Ceuta last week https://t.co/azRR6WNJvv",
+      "text": "Italy has said it has no intention of suspending border checks on travelers from Spain, and rebuffed Madrid’s threats to retaliate if Rome maintains the measures it instituted after the mass arrival of migrants in the Spanish exclave of Ceuta last week https://t.co/azRR6WNJvv"
+    }
+  ],
+  "influence_signals": [
+    {
+      "id": 5,
+      "source": "X",
+      "source_post_id": "2086014406198981071",
+      "author": "Justin270835",
+      "language": "en",
+      "published_at": "2026-08-08T08:59:25Z",
+      "first_detected_at": "2026-08-08T09:08:49Z",
+      "last_detected_at": "2026-08-08T09:08:49Z",
+      "detection_count": 1,
+      "text": "@edatvoficial There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/FjZfs0Qmzb",
+      "text_excerpt": "@edatvoficial There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/FjZfs0Qmzb",
+      "url": "https://x.com/Justin270835/status/2086014406198981071",
+      "source_url": "https://x.com/Justin270835/status/2086014406198981071",
+      "primary_signal": "MOBILIZATION_REPORT",
+      "signal_type": "MOBILIZATION_REPORT",
+      "signal_mode": "REPORT",
+      "signal_intent": "PLANNED_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 29.0,
+      "matched_signals": [
+        "MOBILIZATION_REPORT"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization_report",
+          "There are plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "expect tens of thousands"
+        ],
+        [
+          "HIGH_VALUE",
+          "There are plans for migrants to"
+        ],
+        [
+          "HIGH_VALUE",
+          "plans for migrants to"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "There are plans for migrants to",
+        "plans for migrants to"
+      ],
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
       "primary_location": "Ceuta",
       "country": "Spain",
       "region": "WESTERN_MEDITERRANEAN",
-      "confidence": 0.75,
-      "source_count": 2,
-      "last_seen": "2026-08-07 16:21:52",
-      "representative_text": "Italy has said it has no intention of suspending border checks on travelers from Spain, and rebuffed Madrid’s threats to retaliate if Rome maintains the measures it instituted after the mass arrival of migrants in the Spanish exclave of Ceuta last week https://t.co/azRR6WNJvv"
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
+    },
+    {
+      "id": 6,
+      "source": "X",
+      "source_post_id": "2086014298694844820",
+      "author": "Justin270835",
+      "language": "en",
+      "published_at": "2026-08-08T08:58:59Z",
+      "first_detected_at": "2026-08-08T09:08:49Z",
+      "last_detected_at": "2026-08-08T09:08:49Z",
+      "detection_count": 1,
+      "text": "@jlopezar There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/9LmyoqO5Ow",
+      "text_excerpt": "@jlopezar There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/9LmyoqO5Ow",
+      "url": "https://x.com/Justin270835/status/2086014298694844820",
+      "source_url": "https://x.com/Justin270835/status/2086014298694844820",
+      "primary_signal": "MOBILIZATION_REPORT",
+      "signal_type": "MOBILIZATION_REPORT",
+      "signal_mode": "REPORT",
+      "signal_intent": "PLANNED_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 29.0,
+      "matched_signals": [
+        "MOBILIZATION_REPORT"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization_report",
+          "There are plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "expect tens of thousands"
+        ],
+        [
+          "HIGH_VALUE",
+          "There are plans for migrants to"
+        ],
+        [
+          "HIGH_VALUE",
+          "plans for migrants to"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "There are plans for migrants to",
+        "plans for migrants to"
+      ],
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
+    },
+    {
+      "id": 7,
+      "source": "X",
+      "source_post_id": "2086014168889516277",
+      "author": "Justin270835",
+      "language": "en",
+      "published_at": "2026-08-08T08:58:28Z",
+      "first_detected_at": "2026-08-08T09:08:49Z",
+      "last_detected_at": "2026-08-08T09:08:49Z",
+      "detection_count": 1,
+      "text": "@ADnl There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/jd5KgON2Qh",
+      "text_excerpt": "@ADnl There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/jd5KgON2Qh",
+      "url": "https://x.com/Justin270835/status/2086014168889516277",
+      "source_url": "https://x.com/Justin270835/status/2086014168889516277",
+      "primary_signal": "MOBILIZATION_REPORT",
+      "signal_type": "MOBILIZATION_REPORT",
+      "signal_mode": "REPORT",
+      "signal_intent": "PLANNED_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 29.0,
+      "matched_signals": [
+        "MOBILIZATION_REPORT"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization_report",
+          "There are plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "expect tens of thousands"
+        ],
+        [
+          "HIGH_VALUE",
+          "There are plans for migrants to"
+        ],
+        [
+          "HIGH_VALUE",
+          "plans for migrants to"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "There are plans for migrants to",
+        "plans for migrants to"
+      ],
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
+    },
+    {
+      "id": 1,
+      "source": "X",
+      "source_post_id": "2086011047786217805",
+      "author": "Justin270835",
+      "language": "en",
+      "published_at": "2026-08-08T08:46:04Z",
+      "first_detected_at": "2026-08-08T08:53:06Z",
+      "last_detected_at": "2026-08-08T08:53:06Z",
+      "detection_count": 1,
+      "text": "@EvaVlaar @SaveEuropeAct There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/rtVrsZvrMy",
+      "text_excerpt": "@EvaVlaar @SaveEuropeAct There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/rtVrsZvrMy",
+      "url": "https://x.com/Justin270835/status/2086011047786217805",
+      "source_url": "https://x.com/Justin270835/status/2086011047786217805",
+      "primary_signal": "MOBILIZATION_REPORT",
+      "signal_type": "MOBILIZATION_REPORT",
+      "signal_mode": "REPORT",
+      "signal_intent": "PLANNED_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 29.0,
+      "matched_signals": [
+        "MOBILIZATION_REPORT"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization_report",
+          "There are plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "expect tens of thousands"
+        ],
+        [
+          "HIGH_VALUE",
+          "There are plans for migrants to"
+        ],
+        [
+          "HIGH_VALUE",
+          "plans for migrants to"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "There are plans for migrants to",
+        "plans for migrants to"
+      ],
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
+    },
+    {
+      "id": 2,
+      "source": "X",
+      "source_post_id": "2086010994145312800",
+      "author": "Justin270835",
+      "language": "en",
+      "published_at": "2026-08-08T08:45:51Z",
+      "first_detected_at": "2026-08-08T08:53:06Z",
+      "last_detected_at": "2026-08-08T08:53:06Z",
+      "detection_count": 1,
+      "text": "@geertwilderspvv There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/45If4btr1b",
+      "text_excerpt": "@geertwilderspvv There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/45If4btr1b",
+      "url": "https://x.com/Justin270835/status/2086010994145312800",
+      "source_url": "https://x.com/Justin270835/status/2086010994145312800",
+      "primary_signal": "MOBILIZATION_REPORT",
+      "signal_type": "MOBILIZATION_REPORT",
+      "signal_mode": "REPORT",
+      "signal_intent": "PLANNED_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 29.0,
+      "matched_signals": [
+        "MOBILIZATION_REPORT"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization_report",
+          "There are plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "expect tens of thousands"
+        ],
+        [
+          "HIGH_VALUE",
+          "There are plans for migrants to"
+        ],
+        [
+          "HIGH_VALUE",
+          "plans for migrants to"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "There are plans for migrants to",
+        "plans for migrants to"
+      ],
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
+    },
+    {
+      "id": 3,
+      "source": "X",
+      "source_post_id": "2086008816093528501",
+      "author": "EJoplix",
+      "language": "en",
+      "published_at": "2026-08-08T08:37:12Z",
+      "first_detected_at": "2026-08-08T08:55:55Z",
+      "last_detected_at": "2026-08-08T09:10:30Z",
+      "detection_count": 2,
+      "text": "@EricTropicalTX @FedupCitiz9n @bennyjohnson Virtually none of the migrants who recently entered Ceuta have been brought or allowed to travel to mainland Spain.\n​Following the arrival of tens of thousands of migrants at the enclave border in late July 2026, Spanish authorities prevented movement to the mainland..",
+      "text_excerpt": "@EricTropicalTX @FedupCitiz9n @bennyjohnson Virtually none of the migrants who recently entered Ceuta have been brought or allowed to travel to mainland Spain.\n​Following the arrival of tens of thousands of migrants at the enclave border in late July 2026, Spanish authorities prevented movement to the mainland..",
+      "url": "https://x.com/EJoplix/status/2086008816093528501",
+      "source_url": "https://x.com/EJoplix/status/2086008816093528501",
+      "primary_signal": "CROSSING_FACILITATION",
+      "signal_type": "CROSSING_FACILITATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "EASIER_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.95,
+      "score": 21.0,
+      "matched_signals": [
+        "CROSSING_FACILITATION"
+      ],
+      "matched_phrases": [
+        [
+          "mass_movement",
+          "thousands of migrants"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
     }
-  ]
+  ],
+  "early_warning_signals": [
+    {
+      "id": 5,
+      "source": "X",
+      "source_post_id": "2086014406198981071",
+      "author": "Justin270835",
+      "language": "en",
+      "published_at": "2026-08-08T08:59:25Z",
+      "first_detected_at": "2026-08-08T09:08:49Z",
+      "last_detected_at": "2026-08-08T09:08:49Z",
+      "detection_count": 1,
+      "text": "@edatvoficial There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/FjZfs0Qmzb",
+      "text_excerpt": "@edatvoficial There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/FjZfs0Qmzb",
+      "url": "https://x.com/Justin270835/status/2086014406198981071",
+      "source_url": "https://x.com/Justin270835/status/2086014406198981071",
+      "primary_signal": "MOBILIZATION_REPORT",
+      "signal_type": "MOBILIZATION_REPORT",
+      "signal_mode": "REPORT",
+      "signal_intent": "PLANNED_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 29.0,
+      "matched_signals": [
+        "MOBILIZATION_REPORT"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization_report",
+          "There are plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "expect tens of thousands"
+        ],
+        [
+          "HIGH_VALUE",
+          "There are plans for migrants to"
+        ],
+        [
+          "HIGH_VALUE",
+          "plans for migrants to"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "There are plans for migrants to",
+        "plans for migrants to"
+      ],
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
+    },
+    {
+      "id": 6,
+      "source": "X",
+      "source_post_id": "2086014298694844820",
+      "author": "Justin270835",
+      "language": "en",
+      "published_at": "2026-08-08T08:58:59Z",
+      "first_detected_at": "2026-08-08T09:08:49Z",
+      "last_detected_at": "2026-08-08T09:08:49Z",
+      "detection_count": 1,
+      "text": "@jlopezar There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/9LmyoqO5Ow",
+      "text_excerpt": "@jlopezar There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/9LmyoqO5Ow",
+      "url": "https://x.com/Justin270835/status/2086014298694844820",
+      "source_url": "https://x.com/Justin270835/status/2086014298694844820",
+      "primary_signal": "MOBILIZATION_REPORT",
+      "signal_type": "MOBILIZATION_REPORT",
+      "signal_mode": "REPORT",
+      "signal_intent": "PLANNED_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 29.0,
+      "matched_signals": [
+        "MOBILIZATION_REPORT"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization_report",
+          "There are plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "expect tens of thousands"
+        ],
+        [
+          "HIGH_VALUE",
+          "There are plans for migrants to"
+        ],
+        [
+          "HIGH_VALUE",
+          "plans for migrants to"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "There are plans for migrants to",
+        "plans for migrants to"
+      ],
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
+    },
+    {
+      "id": 7,
+      "source": "X",
+      "source_post_id": "2086014168889516277",
+      "author": "Justin270835",
+      "language": "en",
+      "published_at": "2026-08-08T08:58:28Z",
+      "first_detected_at": "2026-08-08T09:08:49Z",
+      "last_detected_at": "2026-08-08T09:08:49Z",
+      "detection_count": 1,
+      "text": "@ADnl There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/jd5KgON2Qh",
+      "text_excerpt": "@ADnl There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/jd5KgON2Qh",
+      "url": "https://x.com/Justin270835/status/2086014168889516277",
+      "source_url": "https://x.com/Justin270835/status/2086014168889516277",
+      "primary_signal": "MOBILIZATION_REPORT",
+      "signal_type": "MOBILIZATION_REPORT",
+      "signal_mode": "REPORT",
+      "signal_intent": "PLANNED_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 29.0,
+      "matched_signals": [
+        "MOBILIZATION_REPORT"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization_report",
+          "There are plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "expect tens of thousands"
+        ],
+        [
+          "HIGH_VALUE",
+          "There are plans for migrants to"
+        ],
+        [
+          "HIGH_VALUE",
+          "plans for migrants to"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "There are plans for migrants to",
+        "plans for migrants to"
+      ],
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
+    },
+    {
+      "id": 1,
+      "source": "X",
+      "source_post_id": "2086011047786217805",
+      "author": "Justin270835",
+      "language": "en",
+      "published_at": "2026-08-08T08:46:04Z",
+      "first_detected_at": "2026-08-08T08:53:06Z",
+      "last_detected_at": "2026-08-08T08:53:06Z",
+      "detection_count": 1,
+      "text": "@EvaVlaar @SaveEuropeAct There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/rtVrsZvrMy",
+      "text_excerpt": "@EvaVlaar @SaveEuropeAct There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/rtVrsZvrMy",
+      "url": "https://x.com/Justin270835/status/2086011047786217805",
+      "source_url": "https://x.com/Justin270835/status/2086011047786217805",
+      "primary_signal": "MOBILIZATION_REPORT",
+      "signal_type": "MOBILIZATION_REPORT",
+      "signal_mode": "REPORT",
+      "signal_intent": "PLANNED_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 29.0,
+      "matched_signals": [
+        "MOBILIZATION_REPORT"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization_report",
+          "There are plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "expect tens of thousands"
+        ],
+        [
+          "HIGH_VALUE",
+          "There are plans for migrants to"
+        ],
+        [
+          "HIGH_VALUE",
+          "plans for migrants to"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "There are plans for migrants to",
+        "plans for migrants to"
+      ],
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
+    },
+    {
+      "id": 2,
+      "source": "X",
+      "source_post_id": "2086010994145312800",
+      "author": "Justin270835",
+      "language": "en",
+      "published_at": "2026-08-08T08:45:51Z",
+      "first_detected_at": "2026-08-08T08:53:06Z",
+      "last_detected_at": "2026-08-08T08:53:06Z",
+      "detection_count": 1,
+      "text": "@geertwilderspvv There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/45If4btr1b",
+      "text_excerpt": "@geertwilderspvv There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/45If4btr1b",
+      "url": "https://x.com/Justin270835/status/2086010994145312800",
+      "source_url": "https://x.com/Justin270835/status/2086010994145312800",
+      "primary_signal": "MOBILIZATION_REPORT",
+      "signal_type": "MOBILIZATION_REPORT",
+      "signal_mode": "REPORT",
+      "signal_intent": "PLANNED_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 29.0,
+      "matched_signals": [
+        "MOBILIZATION_REPORT"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization_report",
+          "There are plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "expect tens of thousands"
+        ],
+        [
+          "HIGH_VALUE",
+          "There are plans for migrants to"
+        ],
+        [
+          "HIGH_VALUE",
+          "plans for migrants to"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "There are plans for migrants to",
+        "plans for migrants to"
+      ],
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
+    },
+    {
+      "id": 3,
+      "source": "X",
+      "source_post_id": "2086008816093528501",
+      "author": "EJoplix",
+      "language": "en",
+      "published_at": "2026-08-08T08:37:12Z",
+      "first_detected_at": "2026-08-08T08:55:55Z",
+      "last_detected_at": "2026-08-08T09:10:30Z",
+      "detection_count": 2,
+      "text": "@EricTropicalTX @FedupCitiz9n @bennyjohnson Virtually none of the migrants who recently entered Ceuta have been brought or allowed to travel to mainland Spain.\n​Following the arrival of tens of thousands of migrants at the enclave border in late July 2026, Spanish authorities prevented movement to the mainland..",
+      "text_excerpt": "@EricTropicalTX @FedupCitiz9n @bennyjohnson Virtually none of the migrants who recently entered Ceuta have been brought or allowed to travel to mainland Spain.\n​Following the arrival of tens of thousands of migrants at the enclave border in late July 2026, Spanish authorities prevented movement to the mainland..",
+      "url": "https://x.com/EJoplix/status/2086008816093528501",
+      "source_url": "https://x.com/EJoplix/status/2086008816093528501",
+      "primary_signal": "CROSSING_FACILITATION",
+      "signal_type": "CROSSING_FACILITATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "EASIER_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.95,
+      "score": 21.0,
+      "matched_signals": [
+        "CROSSING_FACILITATION"
+      ],
+      "matched_phrases": [
+        [
+          "mass_movement",
+          "thousands of migrants"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
+    }
+  ],
+  "crossing_access_signals": [
+    {
+      "id": 5,
+      "source": "X",
+      "source_post_id": "2086014406198981071",
+      "author": "Justin270835",
+      "language": "en",
+      "published_at": "2026-08-08T08:59:25Z",
+      "first_detected_at": "2026-08-08T09:08:49Z",
+      "last_detected_at": "2026-08-08T09:08:49Z",
+      "detection_count": 1,
+      "text": "@edatvoficial There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/FjZfs0Qmzb",
+      "text_excerpt": "@edatvoficial There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/FjZfs0Qmzb",
+      "url": "https://x.com/Justin270835/status/2086014406198981071",
+      "source_url": "https://x.com/Justin270835/status/2086014406198981071",
+      "primary_signal": "MOBILIZATION_REPORT",
+      "signal_type": "MOBILIZATION_REPORT",
+      "signal_mode": "REPORT",
+      "signal_intent": "PLANNED_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 29.0,
+      "matched_signals": [
+        "MOBILIZATION_REPORT"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization_report",
+          "There are plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "expect tens of thousands"
+        ],
+        [
+          "HIGH_VALUE",
+          "There are plans for migrants to"
+        ],
+        [
+          "HIGH_VALUE",
+          "plans for migrants to"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "There are plans for migrants to",
+        "plans for migrants to"
+      ],
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
+    },
+    {
+      "id": 6,
+      "source": "X",
+      "source_post_id": "2086014298694844820",
+      "author": "Justin270835",
+      "language": "en",
+      "published_at": "2026-08-08T08:58:59Z",
+      "first_detected_at": "2026-08-08T09:08:49Z",
+      "last_detected_at": "2026-08-08T09:08:49Z",
+      "detection_count": 1,
+      "text": "@jlopezar There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/9LmyoqO5Ow",
+      "text_excerpt": "@jlopezar There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/9LmyoqO5Ow",
+      "url": "https://x.com/Justin270835/status/2086014298694844820",
+      "source_url": "https://x.com/Justin270835/status/2086014298694844820",
+      "primary_signal": "MOBILIZATION_REPORT",
+      "signal_type": "MOBILIZATION_REPORT",
+      "signal_mode": "REPORT",
+      "signal_intent": "PLANNED_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 29.0,
+      "matched_signals": [
+        "MOBILIZATION_REPORT"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization_report",
+          "There are plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "expect tens of thousands"
+        ],
+        [
+          "HIGH_VALUE",
+          "There are plans for migrants to"
+        ],
+        [
+          "HIGH_VALUE",
+          "plans for migrants to"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "There are plans for migrants to",
+        "plans for migrants to"
+      ],
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
+    },
+    {
+      "id": 7,
+      "source": "X",
+      "source_post_id": "2086014168889516277",
+      "author": "Justin270835",
+      "language": "en",
+      "published_at": "2026-08-08T08:58:28Z",
+      "first_detected_at": "2026-08-08T09:08:49Z",
+      "last_detected_at": "2026-08-08T09:08:49Z",
+      "detection_count": 1,
+      "text": "@ADnl There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/jd5KgON2Qh",
+      "text_excerpt": "@ADnl There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/jd5KgON2Qh",
+      "url": "https://x.com/Justin270835/status/2086014168889516277",
+      "source_url": "https://x.com/Justin270835/status/2086014168889516277",
+      "primary_signal": "MOBILIZATION_REPORT",
+      "signal_type": "MOBILIZATION_REPORT",
+      "signal_mode": "REPORT",
+      "signal_intent": "PLANNED_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 29.0,
+      "matched_signals": [
+        "MOBILIZATION_REPORT"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization_report",
+          "There are plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "expect tens of thousands"
+        ],
+        [
+          "HIGH_VALUE",
+          "There are plans for migrants to"
+        ],
+        [
+          "HIGH_VALUE",
+          "plans for migrants to"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "There are plans for migrants to",
+        "plans for migrants to"
+      ],
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
+    },
+    {
+      "id": 1,
+      "source": "X",
+      "source_post_id": "2086011047786217805",
+      "author": "Justin270835",
+      "language": "en",
+      "published_at": "2026-08-08T08:46:04Z",
+      "first_detected_at": "2026-08-08T08:53:06Z",
+      "last_detected_at": "2026-08-08T08:53:06Z",
+      "detection_count": 1,
+      "text": "@EvaVlaar @SaveEuropeAct There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/rtVrsZvrMy",
+      "text_excerpt": "@EvaVlaar @SaveEuropeAct There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/rtVrsZvrMy",
+      "url": "https://x.com/Justin270835/status/2086011047786217805",
+      "source_url": "https://x.com/Justin270835/status/2086011047786217805",
+      "primary_signal": "MOBILIZATION_REPORT",
+      "signal_type": "MOBILIZATION_REPORT",
+      "signal_mode": "REPORT",
+      "signal_intent": "PLANNED_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 29.0,
+      "matched_signals": [
+        "MOBILIZATION_REPORT"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization_report",
+          "There are plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "expect tens of thousands"
+        ],
+        [
+          "HIGH_VALUE",
+          "There are plans for migrants to"
+        ],
+        [
+          "HIGH_VALUE",
+          "plans for migrants to"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "There are plans for migrants to",
+        "plans for migrants to"
+      ],
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
+    },
+    {
+      "id": 2,
+      "source": "X",
+      "source_post_id": "2086010994145312800",
+      "author": "Justin270835",
+      "language": "en",
+      "published_at": "2026-08-08T08:45:51Z",
+      "first_detected_at": "2026-08-08T08:53:06Z",
+      "last_detected_at": "2026-08-08T08:53:06Z",
+      "detection_count": 1,
+      "text": "@geertwilderspvv There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/45If4btr1b",
+      "text_excerpt": "@geertwilderspvv There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/45If4btr1b",
+      "url": "https://x.com/Justin270835/status/2086010994145312800",
+      "source_url": "https://x.com/Justin270835/status/2086010994145312800",
+      "primary_signal": "MOBILIZATION_REPORT",
+      "signal_type": "MOBILIZATION_REPORT",
+      "signal_mode": "REPORT",
+      "signal_intent": "PLANNED_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 29.0,
+      "matched_signals": [
+        "MOBILIZATION_REPORT"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization_report",
+          "There are plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "expect tens of thousands"
+        ],
+        [
+          "HIGH_VALUE",
+          "There are plans for migrants to"
+        ],
+        [
+          "HIGH_VALUE",
+          "plans for migrants to"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "There are plans for migrants to",
+        "plans for migrants to"
+      ],
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
+    },
+    {
+      "id": 3,
+      "source": "X",
+      "source_post_id": "2086008816093528501",
+      "author": "EJoplix",
+      "language": "en",
+      "published_at": "2026-08-08T08:37:12Z",
+      "first_detected_at": "2026-08-08T08:55:55Z",
+      "last_detected_at": "2026-08-08T09:10:30Z",
+      "detection_count": 2,
+      "text": "@EricTropicalTX @FedupCitiz9n @bennyjohnson Virtually none of the migrants who recently entered Ceuta have been brought or allowed to travel to mainland Spain.\n​Following the arrival of tens of thousands of migrants at the enclave border in late July 2026, Spanish authorities prevented movement to the mainland..",
+      "text_excerpt": "@EricTropicalTX @FedupCitiz9n @bennyjohnson Virtually none of the migrants who recently entered Ceuta have been brought or allowed to travel to mainland Spain.\n​Following the arrival of tens of thousands of migrants at the enclave border in late July 2026, Spanish authorities prevented movement to the mainland..",
+      "url": "https://x.com/EJoplix/status/2086008816093528501",
+      "source_url": "https://x.com/EJoplix/status/2086008816093528501",
+      "primary_signal": "CROSSING_FACILITATION",
+      "signal_type": "CROSSING_FACILITATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "EASIER_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.95,
+      "score": 21.0,
+      "matched_signals": [
+        "CROSSING_FACILITATION"
+      ],
+      "matched_phrases": [
+        [
+          "mass_movement",
+          "thousands of migrants"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
+    }
+  ],
+  "access_signals": [
+    {
+      "id": 5,
+      "source": "X",
+      "source_post_id": "2086014406198981071",
+      "author": "Justin270835",
+      "language": "en",
+      "published_at": "2026-08-08T08:59:25Z",
+      "first_detected_at": "2026-08-08T09:08:49Z",
+      "last_detected_at": "2026-08-08T09:08:49Z",
+      "detection_count": 1,
+      "text": "@edatvoficial There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/FjZfs0Qmzb",
+      "text_excerpt": "@edatvoficial There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/FjZfs0Qmzb",
+      "url": "https://x.com/Justin270835/status/2086014406198981071",
+      "source_url": "https://x.com/Justin270835/status/2086014406198981071",
+      "primary_signal": "MOBILIZATION_REPORT",
+      "signal_type": "MOBILIZATION_REPORT",
+      "signal_mode": "REPORT",
+      "signal_intent": "PLANNED_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 29.0,
+      "matched_signals": [
+        "MOBILIZATION_REPORT"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization_report",
+          "There are plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "expect tens of thousands"
+        ],
+        [
+          "HIGH_VALUE",
+          "There are plans for migrants to"
+        ],
+        [
+          "HIGH_VALUE",
+          "plans for migrants to"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "There are plans for migrants to",
+        "plans for migrants to"
+      ],
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
+    },
+    {
+      "id": 6,
+      "source": "X",
+      "source_post_id": "2086014298694844820",
+      "author": "Justin270835",
+      "language": "en",
+      "published_at": "2026-08-08T08:58:59Z",
+      "first_detected_at": "2026-08-08T09:08:49Z",
+      "last_detected_at": "2026-08-08T09:08:49Z",
+      "detection_count": 1,
+      "text": "@jlopezar There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/9LmyoqO5Ow",
+      "text_excerpt": "@jlopezar There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/9LmyoqO5Ow",
+      "url": "https://x.com/Justin270835/status/2086014298694844820",
+      "source_url": "https://x.com/Justin270835/status/2086014298694844820",
+      "primary_signal": "MOBILIZATION_REPORT",
+      "signal_type": "MOBILIZATION_REPORT",
+      "signal_mode": "REPORT",
+      "signal_intent": "PLANNED_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 29.0,
+      "matched_signals": [
+        "MOBILIZATION_REPORT"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization_report",
+          "There are plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "expect tens of thousands"
+        ],
+        [
+          "HIGH_VALUE",
+          "There are plans for migrants to"
+        ],
+        [
+          "HIGH_VALUE",
+          "plans for migrants to"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "There are plans for migrants to",
+        "plans for migrants to"
+      ],
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
+    },
+    {
+      "id": 7,
+      "source": "X",
+      "source_post_id": "2086014168889516277",
+      "author": "Justin270835",
+      "language": "en",
+      "published_at": "2026-08-08T08:58:28Z",
+      "first_detected_at": "2026-08-08T09:08:49Z",
+      "last_detected_at": "2026-08-08T09:08:49Z",
+      "detection_count": 1,
+      "text": "@ADnl There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/jd5KgON2Qh",
+      "text_excerpt": "@ADnl There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/jd5KgON2Qh",
+      "url": "https://x.com/Justin270835/status/2086014168889516277",
+      "source_url": "https://x.com/Justin270835/status/2086014168889516277",
+      "primary_signal": "MOBILIZATION_REPORT",
+      "signal_type": "MOBILIZATION_REPORT",
+      "signal_mode": "REPORT",
+      "signal_intent": "PLANNED_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 29.0,
+      "matched_signals": [
+        "MOBILIZATION_REPORT"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization_report",
+          "There are plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "expect tens of thousands"
+        ],
+        [
+          "HIGH_VALUE",
+          "There are plans for migrants to"
+        ],
+        [
+          "HIGH_VALUE",
+          "plans for migrants to"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "There are plans for migrants to",
+        "plans for migrants to"
+      ],
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
+    },
+    {
+      "id": 1,
+      "source": "X",
+      "source_post_id": "2086011047786217805",
+      "author": "Justin270835",
+      "language": "en",
+      "published_at": "2026-08-08T08:46:04Z",
+      "first_detected_at": "2026-08-08T08:53:06Z",
+      "last_detected_at": "2026-08-08T08:53:06Z",
+      "detection_count": 1,
+      "text": "@EvaVlaar @SaveEuropeAct There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/rtVrsZvrMy",
+      "text_excerpt": "@EvaVlaar @SaveEuropeAct There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/rtVrsZvrMy",
+      "url": "https://x.com/Justin270835/status/2086011047786217805",
+      "source_url": "https://x.com/Justin270835/status/2086011047786217805",
+      "primary_signal": "MOBILIZATION_REPORT",
+      "signal_type": "MOBILIZATION_REPORT",
+      "signal_mode": "REPORT",
+      "signal_intent": "PLANNED_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 29.0,
+      "matched_signals": [
+        "MOBILIZATION_REPORT"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization_report",
+          "There are plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "expect tens of thousands"
+        ],
+        [
+          "HIGH_VALUE",
+          "There are plans for migrants to"
+        ],
+        [
+          "HIGH_VALUE",
+          "plans for migrants to"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "There are plans for migrants to",
+        "plans for migrants to"
+      ],
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
+    },
+    {
+      "id": 2,
+      "source": "X",
+      "source_post_id": "2086010994145312800",
+      "author": "Justin270835",
+      "language": "en",
+      "published_at": "2026-08-08T08:45:51Z",
+      "first_detected_at": "2026-08-08T08:53:06Z",
+      "last_detected_at": "2026-08-08T08:53:06Z",
+      "detection_count": 1,
+      "text": "@geertwilderspvv There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/45If4btr1b",
+      "text_excerpt": "@geertwilderspvv There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/45If4btr1b",
+      "url": "https://x.com/Justin270835/status/2086010994145312800",
+      "source_url": "https://x.com/Justin270835/status/2086010994145312800",
+      "primary_signal": "MOBILIZATION_REPORT",
+      "signal_type": "MOBILIZATION_REPORT",
+      "signal_mode": "REPORT",
+      "signal_intent": "PLANNED_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 29.0,
+      "matched_signals": [
+        "MOBILIZATION_REPORT"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization_report",
+          "There are plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "expect tens of thousands"
+        ],
+        [
+          "HIGH_VALUE",
+          "There are plans for migrants to"
+        ],
+        [
+          "HIGH_VALUE",
+          "plans for migrants to"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "There are plans for migrants to",
+        "plans for migrants to"
+      ],
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
+    },
+    {
+      "id": 3,
+      "source": "X",
+      "source_post_id": "2086008816093528501",
+      "author": "EJoplix",
+      "language": "en",
+      "published_at": "2026-08-08T08:37:12Z",
+      "first_detected_at": "2026-08-08T08:55:55Z",
+      "last_detected_at": "2026-08-08T09:10:30Z",
+      "detection_count": 2,
+      "text": "@EricTropicalTX @FedupCitiz9n @bennyjohnson Virtually none of the migrants who recently entered Ceuta have been brought or allowed to travel to mainland Spain.\n​Following the arrival of tens of thousands of migrants at the enclave border in late July 2026, Spanish authorities prevented movement to the mainland..",
+      "text_excerpt": "@EricTropicalTX @FedupCitiz9n @bennyjohnson Virtually none of the migrants who recently entered Ceuta have been brought or allowed to travel to mainland Spain.\n​Following the arrival of tens of thousands of migrants at the enclave border in late July 2026, Spanish authorities prevented movement to the mainland..",
+      "url": "https://x.com/EJoplix/status/2086008816093528501",
+      "source_url": "https://x.com/EJoplix/status/2086008816093528501",
+      "primary_signal": "CROSSING_FACILITATION",
+      "signal_type": "CROSSING_FACILITATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "EASIER_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.95,
+      "score": 21.0,
+      "matched_signals": [
+        "CROSSING_FACILITATION"
+      ],
+      "matched_phrases": [
+        [
+          "mass_movement",
+          "thousands of migrants"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
+    }
+  ],
+  "top_crossing_access_posts": [
+    {
+      "id": 5,
+      "source": "X",
+      "source_post_id": "2086014406198981071",
+      "author": "Justin270835",
+      "language": "en",
+      "published_at": "2026-08-08T08:59:25Z",
+      "first_detected_at": "2026-08-08T09:08:49Z",
+      "last_detected_at": "2026-08-08T09:08:49Z",
+      "detection_count": 1,
+      "text": "@edatvoficial There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/FjZfs0Qmzb",
+      "text_excerpt": "@edatvoficial There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/FjZfs0Qmzb",
+      "url": "https://x.com/Justin270835/status/2086014406198981071",
+      "source_url": "https://x.com/Justin270835/status/2086014406198981071",
+      "primary_signal": "MOBILIZATION_REPORT",
+      "signal_type": "MOBILIZATION_REPORT",
+      "signal_mode": "REPORT",
+      "signal_intent": "PLANNED_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 29.0,
+      "matched_signals": [
+        "MOBILIZATION_REPORT"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization_report",
+          "There are plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "expect tens of thousands"
+        ],
+        [
+          "HIGH_VALUE",
+          "There are plans for migrants to"
+        ],
+        [
+          "HIGH_VALUE",
+          "plans for migrants to"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "There are plans for migrants to",
+        "plans for migrants to"
+      ],
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
+    },
+    {
+      "id": 6,
+      "source": "X",
+      "source_post_id": "2086014298694844820",
+      "author": "Justin270835",
+      "language": "en",
+      "published_at": "2026-08-08T08:58:59Z",
+      "first_detected_at": "2026-08-08T09:08:49Z",
+      "last_detected_at": "2026-08-08T09:08:49Z",
+      "detection_count": 1,
+      "text": "@jlopezar There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/9LmyoqO5Ow",
+      "text_excerpt": "@jlopezar There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/9LmyoqO5Ow",
+      "url": "https://x.com/Justin270835/status/2086014298694844820",
+      "source_url": "https://x.com/Justin270835/status/2086014298694844820",
+      "primary_signal": "MOBILIZATION_REPORT",
+      "signal_type": "MOBILIZATION_REPORT",
+      "signal_mode": "REPORT",
+      "signal_intent": "PLANNED_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 29.0,
+      "matched_signals": [
+        "MOBILIZATION_REPORT"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization_report",
+          "There are plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "expect tens of thousands"
+        ],
+        [
+          "HIGH_VALUE",
+          "There are plans for migrants to"
+        ],
+        [
+          "HIGH_VALUE",
+          "plans for migrants to"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "There are plans for migrants to",
+        "plans for migrants to"
+      ],
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
+    },
+    {
+      "id": 7,
+      "source": "X",
+      "source_post_id": "2086014168889516277",
+      "author": "Justin270835",
+      "language": "en",
+      "published_at": "2026-08-08T08:58:28Z",
+      "first_detected_at": "2026-08-08T09:08:49Z",
+      "last_detected_at": "2026-08-08T09:08:49Z",
+      "detection_count": 1,
+      "text": "@ADnl There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/jd5KgON2Qh",
+      "text_excerpt": "@ADnl There are plans for migrants to storm the Spanish city of Ceuta again this month on August 15th. This time we also expect tens of thousands of Africans and Moroccans to cross the border by force. Let hope they will be prepared to defend themselves against the coming storm! 🇪🇸✊🏻 https://t.co/jd5KgON2Qh",
+      "url": "https://x.com/Justin270835/status/2086014168889516277",
+      "source_url": "https://x.com/Justin270835/status/2086014168889516277",
+      "primary_signal": "MOBILIZATION_REPORT",
+      "signal_type": "MOBILIZATION_REPORT",
+      "signal_mode": "REPORT",
+      "signal_intent": "PLANNED_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 29.0,
+      "matched_signals": [
+        "MOBILIZATION_REPORT"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization_report",
+          "There are plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "plans for migrants to"
+        ],
+        [
+          "mobilization_report",
+          "expect tens of thousands"
+        ],
+        [
+          "HIGH_VALUE",
+          "There are plans for migrants to"
+        ],
+        [
+          "HIGH_VALUE",
+          "plans for migrants to"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "There are plans for migrants to",
+        "plans for migrants to"
+      ],
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.4"
+    }
+  ],
+  "information_activity_weekly": [
+    {
+      "year": 2026,
+      "week": 25,
+      "label": "W25",
+      "week_label": "W25",
+      "week_start": "2026-06-15T00:00:00Z",
+      "posts": 0,
+      "post_count": 0,
+      "operational_posts": 0,
+      "influence_signals": 0,
+      "source_counts": {}
+    },
+    {
+      "year": 2026,
+      "week": 26,
+      "label": "W26",
+      "week_label": "W26",
+      "week_start": "2026-06-22T00:00:00Z",
+      "posts": 0,
+      "post_count": 0,
+      "operational_posts": 0,
+      "influence_signals": 0,
+      "source_counts": {}
+    },
+    {
+      "year": 2026,
+      "week": 27,
+      "label": "W27",
+      "week_label": "W27",
+      "week_start": "2026-06-29T00:00:00Z",
+      "posts": 0,
+      "post_count": 0,
+      "operational_posts": 0,
+      "influence_signals": 0,
+      "source_counts": {}
+    },
+    {
+      "year": 2026,
+      "week": 28,
+      "label": "W28",
+      "week_label": "W28",
+      "week_start": "2026-07-06T00:00:00Z",
+      "posts": 0,
+      "post_count": 0,
+      "operational_posts": 0,
+      "influence_signals": 0,
+      "source_counts": {}
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "label": "W29",
+      "week_label": "W29",
+      "week_start": "2026-07-13T00:00:00Z",
+      "posts": 0,
+      "post_count": 0,
+      "operational_posts": 0,
+      "influence_signals": 0,
+      "source_counts": {}
+    },
+    {
+      "year": 2026,
+      "week": 30,
+      "label": "W30",
+      "week_label": "W30",
+      "week_start": "2026-07-20T00:00:00Z",
+      "posts": 0,
+      "post_count": 0,
+      "operational_posts": 0,
+      "influence_signals": 0,
+      "source_counts": {}
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "label": "W31",
+      "week_label": "W31",
+      "week_start": "2026-07-27T00:00:00Z",
+      "posts": 0,
+      "post_count": 0,
+      "operational_posts": 0,
+      "influence_signals": 0,
+      "source_counts": {}
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "label": "W32",
+      "week_label": "W32",
+      "week_start": "2026-08-03T00:00:00Z",
+      "posts": 85,
+      "post_count": 85,
+      "operational_posts": 6,
+      "influence_signals": 8,
+      "source_counts": {
+        "X": 67,
+        "REDDIT": 18
+      }
+    }
+  ],
+  "weekly_post_activity": [
+    {
+      "year": 2026,
+      "week": 25,
+      "label": "W25",
+      "week_label": "W25",
+      "week_start": "2026-06-15T00:00:00Z",
+      "posts": 0,
+      "post_count": 0,
+      "operational_posts": 0,
+      "influence_signals": 0,
+      "source_counts": {}
+    },
+    {
+      "year": 2026,
+      "week": 26,
+      "label": "W26",
+      "week_label": "W26",
+      "week_start": "2026-06-22T00:00:00Z",
+      "posts": 0,
+      "post_count": 0,
+      "operational_posts": 0,
+      "influence_signals": 0,
+      "source_counts": {}
+    },
+    {
+      "year": 2026,
+      "week": 27,
+      "label": "W27",
+      "week_label": "W27",
+      "week_start": "2026-06-29T00:00:00Z",
+      "posts": 0,
+      "post_count": 0,
+      "operational_posts": 0,
+      "influence_signals": 0,
+      "source_counts": {}
+    },
+    {
+      "year": 2026,
+      "week": 28,
+      "label": "W28",
+      "week_label": "W28",
+      "week_start": "2026-07-06T00:00:00Z",
+      "posts": 0,
+      "post_count": 0,
+      "operational_posts": 0,
+      "influence_signals": 0,
+      "source_counts": {}
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "label": "W29",
+      "week_label": "W29",
+      "week_start": "2026-07-13T00:00:00Z",
+      "posts": 0,
+      "post_count": 0,
+      "operational_posts": 0,
+      "influence_signals": 0,
+      "source_counts": {}
+    },
+    {
+      "year": 2026,
+      "week": 30,
+      "label": "W30",
+      "week_label": "W30",
+      "week_start": "2026-07-20T00:00:00Z",
+      "posts": 0,
+      "post_count": 0,
+      "operational_posts": 0,
+      "influence_signals": 0,
+      "source_counts": {}
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "label": "W31",
+      "week_label": "W31",
+      "week_start": "2026-07-27T00:00:00Z",
+      "posts": 0,
+      "post_count": 0,
+      "operational_posts": 0,
+      "influence_signals": 0,
+      "source_counts": {}
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "label": "W32",
+      "week_label": "W32",
+      "week_start": "2026-08-03T00:00:00Z",
+      "posts": 85,
+      "post_count": 85,
+      "operational_posts": 6,
+      "influence_signals": 8,
+      "source_counts": {
+        "X": 67,
+        "REDDIT": 18
+      }
+    }
+  ],
+  "information_activity_summary": {
+    "current_week": 85,
+    "previous_week": 0,
+    "change_percent": 100.0,
+    "direction": "UP"
+  }
 }
