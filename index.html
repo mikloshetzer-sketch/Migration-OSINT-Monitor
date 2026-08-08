@@ -1173,21 +1173,21 @@
               útvonalra, gyülekezésre, tervezett átkelésre vagy visszaküldéssel kapcsolatos információra utalnak.
             </div>
           </div>
-          <span class="section-sub">TOP 3 source posts</span>
+          <span class="section-sub">TOP 3 narratives</span>
         </div>
 
         <div class="access-summary">
           <div class="access-summary-item">
-            <div class="label">Aktív jelzések</div>
-            <div class="value" id="accessActiveCount">—</div>
+            <div class="label">Forráspostok</div>
+            <div class="value" id="accessSourcePostsCount">—</div>
+          </div>
+          <div class="access-summary-item">
+            <div class="label">Narratívák</div>
+            <div class="value" id="accessNarrativesCount">—</div>
           </div>
           <div class="access-summary-item">
             <div class="label">Érintett helyszínek</div>
             <div class="value" id="accessLocationsCount">—</div>
-          </div>
-          <div class="access-summary-item">
-            <div class="label">Források</div>
-            <div class="value" id="accessSourcesCount">—</div>
           </div>
           <div class="access-summary-item">
             <div class="label">High priority</div>
@@ -1751,12 +1751,26 @@
 
       const kpis = data.kpis || {};
 
-      const rawCount = num(
-        first(kpis, ["access_signals_raw"], rawSignals.length),
+      const sourcePostCount = num(
+        first(
+          kpis,
+          ["access_source_posts","access_signals_raw"],
+          rawSignals.length
+        ),
         rawSignals.length
       );
 
-      $("accessActiveCount").textContent = rawCount;
+      const narrativeCount = num(
+        first(
+          kpis,
+          ["access_narratives","access_signals"],
+          narratives.length || cards.length
+        ),
+        narratives.length || cards.length
+      );
+
+      $("accessSourcePostsCount").textContent = sourcePostCount;
+      $("accessNarrativesCount").textContent = narrativeCount;
 
       const locations = uniqueNonEmpty(
         rawSignals.map(item => {
@@ -1765,16 +1779,11 @@
         })
       );
 
-      const sources = uniqueNonEmpty(
-        rawSignals.map(item => first(item, ["source","source_name"], null))
-      );
-
       const highCount = cards.filter(item =>
         ["HIGH","CRITICAL"].includes(priorityFromItem(item))
       ).length;
 
       $("accessLocationsCount").textContent = locations.length;
-      $("accessSourcesCount").textContent = sources.length;
       $("accessHighCount").textContent = highCount;
 
       const container = $("topAccessPosts");
@@ -1843,7 +1852,6 @@
           </article>`;
       }).join("");
     }
-
 
     function renderInformationHistory(data){
       const history = safeArray(
