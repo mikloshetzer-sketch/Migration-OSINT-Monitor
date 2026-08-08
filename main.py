@@ -33,7 +33,9 @@ The Event Group Engine then:
 import json
 import re
 import uuid
-from datetime import datetime
+from datetime import datetime, timezone
+
+from dateutil import parser as date_parser
 
 from collectors.x_collector import XCollector
 from collectors.reddit_collector import RedditCollector
@@ -698,6 +700,61 @@ def utcnow():
     return datetime.utcnow()
 
 
+def normalize_datetime(value):
+    """
+    Converts collector timestamps into naive UTC datetime objects
+    compatible with the existing SQLite DateTime columns.
+
+    Accepts:
+    - datetime
+    - ISO/RFC3339 strings, including values ending in Z
+    - None
+
+    Invalid or empty values return None.
+    """
+    if value is None:
+        return None
+
+    if isinstance(value, datetime):
+        parsed = value
+
+    elif isinstance(value, str):
+        raw = value.strip()
+
+        if not raw:
+            return None
+
+        try:
+            parsed = date_parser.parse(raw)
+        except (
+            ValueError,
+            TypeError,
+            OverflowError,
+        ):
+            return None
+
+    else:
+        try:
+            parsed = date_parser.parse(
+                str(value)
+            )
+        except (
+            ValueError,
+            TypeError,
+            OverflowError,
+        ):
+            return None
+
+    if parsed.tzinfo is not None:
+        parsed = (
+            parsed
+            .astimezone(timezone.utc)
+            .replace(tzinfo=None)
+        )
+
+    return parsed
+
+
 def json_text(value):
     """
     Safely serializes detector lists/dictionaries for Text columns.
@@ -799,7 +856,9 @@ def get_or_create_collected_post(
             author=post.get("author"),
             text=post.get("text") or "",
             language=post.get("language"),
-            published_at=post.get("published_at"),
+            published_at=normalize_datetime(
+                post.get("published_at")
+            ),
             url=post.get("url"),
             first_collected_at=now,
             last_collected_at=now,
@@ -850,8 +909,14 @@ def get_or_create_collected_post(
         or record.language
     )
 
+    normalized_published_at = (
+        normalize_datetime(
+            post.get("published_at")
+        )
+    )
+
     record.published_at = (
-        post.get("published_at")
+        normalized_published_at
         or record.published_at
     )
 
@@ -1117,7 +1182,9 @@ def save_influence_signal(
             source_post_id=source_post_id,
             author=post.get("author"),
             language=post.get("language"),
-            published_at=post.get("published_at"),
+            published_at=normalize_datetime(
+                post.get("published_at")
+            ),
             text=post.get("text") or "",
             source_url=post.get("url"),
             primary_signal=primary_signal,
@@ -1221,8 +1288,14 @@ def save_influence_signal(
         or record.language
     )
 
+    normalized_published_at = (
+        normalize_datetime(
+            post.get("published_at")
+        )
+    )
+
     record.published_at = (
-        post.get("published_at")
+        normalized_published_at
         or record.published_at
     )
 
