@@ -1689,20 +1689,29 @@
       );
 
       const influenceCount = first(
-        run,
-        ["influence_signals","influence_signals_detected"],
-        influence.length
+        kpis,
+        ["influence_narratives","influence_signals"],
+        first(
+          run,
+          ["influence_signals","influence_signals_detected"],
+          influence.length
+        )
       );
 
       const accessSignals = getAccessSignals(data);
 
-      const exportedPriority = safeArray(data.high_priority_intelligence);
-      const highPriority = exportedPriority.length
-        ? exportedPriority.filter(x => ["HIGH","CRITICAL"].includes(priorityFromItem(x))).length
-        : [
-            ...influence,
-            ...accessSignals
-          ].filter(x => ["HIGH","CRITICAL"].includes(priorityFromItem(x))).length;
+      const accessCount = first(
+        kpis,
+        ["access_signals"],
+        safeArray(first(data, ["crossing_access_narratives"], [])).length || accessSignals.length
+      );
+
+      const highPriority = first(
+        kpis,
+        ["high_priority"],
+        safeArray(data.high_priority_intelligence)
+          .filter(x => ["HIGH","CRITICAL"].includes(priorityFromItem(x))).length
+      );
 
       const correlations = first(
         run,
@@ -1716,38 +1725,51 @@
         safeArray(data.event_groups).length
       );
 
-      const sources = first(
-        kpis,
-        ["sources"],
-        deriveSources(data).length
-      );
-
       $("kpiNewEvents").textContent = newEvents ?? 0;
       $("kpiInfluence").textContent = influenceCount ?? 0;
-      $("kpiAccess").textContent = accessSignals.length;
-      $("kpiPriority").textContent = highPriority;
+      $("kpiAccess").textContent = accessCount ?? 0;
+      $("kpiPriority").textContent = highPriority ?? 0;
       $("kpiCorrelations").textContent = correlations ?? 0;
       $("kpiGroups").textContent = groups ?? 0;
     }
 
 
     function renderAccessSignals(data){
-      const signals = getAccessSignals(data);
+      const rawSignals = getAccessSignals(data);
 
-      $("accessActiveCount").textContent = signals.length;
+      const narratives = safeArray(
+        first(
+          data,
+          ["crossing_access_narratives","top_crossing_access_posts"],
+          []
+        )
+      );
+
+      const cards = narratives.length
+        ? narratives
+        : rawSignals.slice(0,3);
+
+      const kpis = data.kpis || {};
+
+      const rawCount = num(
+        first(kpis, ["access_signals_raw"], rawSignals.length),
+        rawSignals.length
+      );
+
+      $("accessActiveCount").textContent = rawCount;
 
       const locations = uniqueNonEmpty(
-        signals.map(item => {
+        rawSignals.map(item => {
           const loc = locationLabel(item);
           return loc === "—" ? null : loc;
         })
       );
 
       const sources = uniqueNonEmpty(
-        signals.map(item => first(item, ["source","source_name"], null))
+        rawSignals.map(item => first(item, ["source","source_name"], null))
       );
 
-      const highCount = signals.filter(item =>
+      const highCount = cards.filter(item =>
         ["HIGH","CRITICAL"].includes(priorityFromItem(item))
       ).length;
 
@@ -1757,28 +1779,15 @@
 
       const container = $("topAccessPosts");
 
-      if(!signals.length){
+      if(!cards.length){
         container.innerHTML = `
           <div class="empty-state" style="grid-column:1/-1">
-            A jelenlegi dashboard-data.json még nem tartalmaz konkrét crossing/access signal rekordokat.
-            Az exporter bővítése után itt automatikusan megjelenik a TOP 3 releváns forráspost.
+            Nincs megjeleníthető crossing/access narratíva a jelenlegi időablakban.
           </div>`;
         return;
       }
 
-      const rank = {CRITICAL:4,HIGH:3,MEDIUM:2,LOW:1};
-
-      const sorted = [...signals].sort((a,b)=>{
-        const pa = rank[priorityFromItem(a)] || 0;
-        const pb = rank[priorityFromItem(b)] || 0;
-        if(pb !== pa) return pb - pa;
-
-        const ca = num(first(a,["confidence","event_confidence"],0));
-        const cb = num(first(b,["confidence","event_confidence"],0));
-        return cb - ca;
-      }).slice(0,3);
-
-      container.innerHTML = sorted.map(item => {
+      container.innerHTML = cards.slice(0,3).map(item => {
         const priority = priorityFromItem(item);
         const type = first(item, ["primary_signal","signal_type","type"], "ACCESS_SIGNAL");
         const source = first(item, ["source","source_name"], "—");
@@ -1788,7 +1797,9 @@
         const conf = num(first(item, ["confidence","event_confidence"], 0));
         const excerpt = first(item, ["text_excerpt","excerpt","text","summary"], "—");
         const url = first(item, ["url","source_url"], null);
-        const relatedPosts = num(first(item, ["related_post_count","post_count","source_count","sources_count"], 1), 1);
+        const relatedPosts = num(first(item, ["related_posts_count"], 1), 1);
+        const independentAuthors = num(first(item, ["independent_author_count"], 0), 0);
+        const platformCount = num(first(item, ["platform_count"], 1), 1);
 
         const metaLocation = [location, region && region !== location ? humanize(region) : null]
           .filter(Boolean)
@@ -1821,7 +1832,9 @@
             <div class="post-card-footer">
               <div class="system-class">
                 System classification: <strong>${escapeHtml(String(type))}</strong><br>
-                Related posts: <strong>${relatedPosts}</strong>
+                Related posts: <strong>${relatedPosts}</strong> ·
+                Authors: <strong>${independentAuthors}</strong> ·
+                Platforms: <strong>${platformCount}</strong>
               </div>
               ${url
                 ? `<a class="source-link" href="${escapeAttr(url)}" target="_blank" rel="noopener">Open source →</a>`
@@ -1830,6 +1843,7 @@
           </article>`;
       }).join("");
     }
+
 
     function renderInformationHistory(data){
       const history = safeArray(
@@ -1889,7 +1903,14 @@
     }
 
     function renderWarnings(data){
-      const signals = getInfluenceSignals(data);
+      const narrativeSignals = safeArray(
+        first(data, ["influence_narratives"], [])
+      );
+
+      const signals = narrativeSignals.length
+        ? narrativeSignals
+        : getInfluenceSignals(data);
+
       const list = $("warningList");
 
       if(!signals.length){
@@ -1916,6 +1937,7 @@
         const conf = first(item, ["confidence","event_confidence"], 0);
         const summary = first(item, ["summary","text","text_excerpt","excerpt"], "—");
         const url = first(item, ["url","source_url"], null);
+        const relatedPosts = num(first(item, ["related_posts_count"], 1), 1);
 
         return `
           <div class="warning-item">
@@ -1924,7 +1946,7 @@
             <div class="warning-location">${humanize(location)}</div>
             <div class="warning-source">${source}</div>
             <div class="warning-confidence">${num(conf).toFixed(2)}</div>
-            <div class="warning-summary" title="${escapeHtml(summary)}">${escapeHtml(summary)}</div>
+            <div class="warning-summary" title="${escapeHtml(summary)}">${escapeHtml(summary)}${relatedPosts > 1 ? ` · ${relatedPosts} related posts` : ""}</div>
             ${url ? `<a class="source-link" href="${escapeAttr(url)}" target="_blank" rel="noopener">Open source →</a>` : `<span class="source-link">—</span>`}
           </div>`;
       }).join("");
@@ -2091,7 +2113,11 @@
 
         return `
           <div class="rank-row">
-            <div class="rank-name">${escapeHtml(humanize(r.name))}</div>
+            <div class="rank-name">${escapeHtml(
+              String(r.name).toUpperCase() === "GLOBAL"
+                ? "Unresolved / Unlocated"
+                : humanize(r.name)
+            )}</div>
             <div class="rank-bar"><div class="rank-fill" style="width:${width}%"></div></div>
             <div class="rank-value">${r.count} ${trendHtml}</div>
           </div>`;
