@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Migration Intelligence Platform | Törésvonalak.blog</title>
+  <title>Migration Intelligence Platform V3 | Törésvonalak.blog</title>
   <meta name="description" content="Migration OSINT Monitor – operational migration intelligence, early warning and event correlation dashboard." />
 
   <style>
@@ -805,6 +805,231 @@
     .method-note strong{color:#31596d}
 
     /* =====================================================
+       CROSSING & ACCESS INTELLIGENCE
+       ===================================================== */
+
+    .access-panel{
+      margin-bottom:16px;
+    }
+
+    .access-summary{
+      display:grid;
+      grid-template-columns:repeat(4, minmax(0,1fr));
+      gap:10px;
+      margin-bottom:14px;
+    }
+
+    .access-summary-item{
+      background:#f8fbfc;
+      border:1px solid var(--line);
+      border-radius:10px;
+      padding:12px 14px;
+    }
+
+    .access-summary-item .label{
+      font-size:9px;
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      font-weight:900;
+    }
+
+    .access-summary-item .value{
+      margin-top:4px;
+      font-size:22px;
+      font-weight:950;
+    }
+
+    .top-posts{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:12px;
+    }
+
+    .post-card{
+      position:relative;
+      background:#fbfdfe;
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:16px;
+      min-height:310px;
+      display:flex;
+      flex-direction:column;
+      gap:11px;
+    }
+
+    .post-card-header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+    }
+
+    .post-card-title{
+      font-size:12px;
+      font-weight:950;
+      line-height:1.25;
+      letter-spacing:.01em;
+    }
+
+    .post-card-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px 12px;
+      font-size:10px;
+      color:var(--muted);
+    }
+
+    .post-card-quote{
+      background:#fff;
+      border:1px solid #e2ebef;
+      border-radius:9px;
+      padding:12px 13px;
+      font-size:11px;
+      line-height:1.55;
+      color:#304f60;
+      min-height:92px;
+      overflow:hidden;
+    }
+
+    .post-card-analysis{
+      border-left:4px solid var(--blue);
+      background:#eef8fc;
+      border-radius:8px;
+      padding:11px 12px;
+    }
+
+    .post-card-analysis .label{
+      font-size:8px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#0b76ab;
+      font-weight:950;
+      margin-bottom:4px;
+    }
+
+    .post-card-analysis .text{
+      font-size:10px;
+      color:#355f73;
+      line-height:1.45;
+    }
+
+    .post-card-footer{
+      margin-top:auto;
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      align-items:flex-end;
+      font-size:9px;
+      color:var(--muted);
+    }
+
+    .system-class{
+      max-width:70%;
+    }
+
+    /* =====================================================
+       INFORMATION ACTIVITY TREND
+       ===================================================== */
+
+    .history-panel{
+      margin-bottom:16px;
+    }
+
+    .history-kpis{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:10px;
+      margin-bottom:14px;
+    }
+
+    .history-kpi{
+      border:1px solid var(--line);
+      background:#f8fbfc;
+      border-radius:10px;
+      padding:12px 14px;
+    }
+
+    .history-kpi .label{
+      font-size:9px;
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      font-weight:900;
+    }
+
+    .history-kpi .value{
+      font-size:23px;
+      font-weight:950;
+      margin-top:4px;
+    }
+
+    .history-chart-wrap{
+      border:1px solid var(--line);
+      background:#fbfdfe;
+      border-radius:11px;
+      padding:18px 16px 12px;
+    }
+
+    .history-chart{
+      min-height:250px;
+      display:flex;
+      align-items:flex-end;
+      gap:12px;
+      padding:14px 6px 8px;
+      border-bottom:1px solid var(--line-2);
+      position:relative;
+    }
+
+    .history-col{
+      flex:1;
+      min-width:46px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:flex-end;
+      gap:7px;
+      height:220px;
+    }
+
+    .history-value{
+      font-size:9px;
+      font-weight:900;
+      color:var(--text);
+    }
+
+    .history-bar-shell{
+      height:178px;
+      width:min(52px, 70%);
+      display:flex;
+      align-items:flex-end;
+      background:linear-gradient(to top, rgba(17,153,211,.05), rgba(17,153,211,.015));
+      border-radius:7px 7px 0 0;
+      overflow:hidden;
+    }
+
+    .history-bar{
+      width:100%;
+      height:0;
+      background:linear-gradient(180deg, #1aa0d8 0%, #0d7eb5 100%);
+      border-radius:7px 7px 0 0;
+      min-height:2px;
+    }
+
+    .history-label{
+      font-size:9px;
+      color:var(--muted);
+      white-space:nowrap;
+    }
+
+    .history-note{
+      margin-top:10px;
+      color:var(--muted);
+      font-size:9px;
+      line-height:1.5;
+    }
+
+    /* =====================================================
        RESPONSIVE
        ===================================================== */
 
@@ -813,6 +1038,8 @@
       .kpi-grid{grid-template-columns:repeat(3, 1fr); gap:1px}
       .kpi{border-radius:0 !important}
       .analytics-grid{grid-template-columns:1fr}
+      .top-posts{grid-template-columns:1fr}
+      .access-summary{grid-template-columns:repeat(2,1fr)}
       .assessment-grid{grid-template-columns:repeat(3, 1fr)}
       .warning-item{
         grid-template-columns:80px 1fr 1fr 80px;
@@ -839,6 +1066,8 @@
       .topbar{padding-top:18px}
       .kpi-grid{grid-template-columns:repeat(2, 1fr)}
       .assessment-grid{grid-template-columns:repeat(2, 1fr)}
+      .access-summary{grid-template-columns:1fr}
+      .history-kpis{grid-template-columns:1fr}
       .warning-item{grid-template-columns:1fr}
       .warning-summary,.source-link{grid-column:auto}
       .hero-card h2{font-size:36px}
@@ -912,6 +1141,11 @@
           <div class="kpi-sub">current run</div>
         </div>
         <div class="kpi">
+          <div class="kpi-value" id="kpiAccess">—</div>
+          <div class="kpi-label">Access Signals</div>
+          <div class="kpi-sub">crossing / route / legal</div>
+        </div>
+        <div class="kpi">
           <div class="kpi-value" id="kpiPriority">—</div>
           <div class="kpi-label">High Priority</div>
           <div class="kpi-sub">analyst review</div>
@@ -926,10 +1160,43 @@
           <div class="kpi-label">Active Event Groups</div>
           <div class="kpi-sub">active clusters</div>
         </div>
-        <div class="kpi">
-          <div class="kpi-value" id="kpiSources">—</div>
-          <div class="kpi-label">Sources</div>
-          <div class="kpi-sub" id="kpiSourceHealth">collector status</div>
+      </section>
+
+
+      <section class="panel accent-red access-panel section-pad" id="accessPanel">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Crossing &amp; Access Intelligence</div>
+            <h3>Átkelési és bejutási jelzések</h3>
+            <div class="section-sub">
+              Olyan közösségi médiás jelzések, amelyek konkrét átkelési lehetőségre, könnyebb bejutásra,
+              útvonalra, gyülekezésre, tervezett átkelésre vagy visszaküldéssel kapcsolatos információra utalnak.
+            </div>
+          </div>
+          <span class="section-sub">TOP 3 source posts</span>
+        </div>
+
+        <div class="access-summary">
+          <div class="access-summary-item">
+            <div class="label">Aktív jelzések</div>
+            <div class="value" id="accessActiveCount">—</div>
+          </div>
+          <div class="access-summary-item">
+            <div class="label">Érintett helyszínek</div>
+            <div class="value" id="accessLocationsCount">—</div>
+          </div>
+          <div class="access-summary-item">
+            <div class="label">Források</div>
+            <div class="value" id="accessSourcesCount">—</div>
+          </div>
+          <div class="access-summary-item">
+            <div class="label">High priority</div>
+            <div class="value" id="accessHighCount">—</div>
+          </div>
+        </div>
+
+        <div class="top-posts" id="topAccessPosts">
+          <div class="empty-state">Átkelési és bejutási jelzések betöltése…</div>
         </div>
       </section>
 
@@ -1028,6 +1295,44 @@
             </thead>
             <tbody id="priorityBody"></tbody>
           </table>
+        </div>
+      </section>
+
+
+      <section class="panel accent-blue history-panel section-pad" id="historyPanel">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Information Activity Trend</div>
+            <h3>Heti információs aktivitás</h3>
+            <div class="section-sub">
+              A rendszer által tárolt releváns forráspostok heti mennyisége. A grafikon a publikálási időpont alapján készül,
+              ezért nem a kézi futtatások számát mutatja.
+            </div>
+          </div>
+          <span class="section-sub">Last 8 weeks</span>
+        </div>
+
+        <div class="history-kpis">
+          <div class="history-kpi">
+            <div class="label">Current week</div>
+            <div class="value" id="historyCurrent">—</div>
+          </div>
+          <div class="history-kpi">
+            <div class="label">Previous week</div>
+            <div class="value" id="historyPrevious">—</div>
+          </div>
+          <div class="history-kpi">
+            <div class="label">Change</div>
+            <div class="value" id="historyChange">—</div>
+          </div>
+        </div>
+
+        <div class="history-chart-wrap">
+          <div class="history-chart" id="historyChart"></div>
+          <div class="history-note">
+            Értelmezés: a növekvő oszlopsor a migrációhoz kapcsolódó információs tér aktivitásának emelkedését jelzi.
+            A növekedés önmagában nem jelent operatív migrációs eszkalációt; azt az operational event és influence signal adatokkal együtt kell értékelni.
+          </div>
         </div>
       </section>
 
@@ -1300,6 +1605,77 @@
       return Object.entries(counts).map(([source,count]) => ({source,count}));
     }
 
+
+    const ACCESS_SIGNAL_TYPES = new Set([
+      "CROSSING_FACILITATION",
+      "DECISION_INFLUENCE",
+      "MOBILIZATION_COORDINATION",
+      "MOBILIZATION_REPORT",
+      "LEGAL_MIGRATION_SIGNAL",
+      "ONLINE_INFLUENCE_REPORT"
+    ]);
+
+    function getAccessSignals(data){
+      const direct = safeArray(
+        first(data, ["crossing_access_signals","access_signals"], [])
+      );
+
+      if(direct.length) return direct;
+
+      return getInfluenceSignals(data).filter(item => {
+        const type = String(
+          first(item, ["primary_signal","signal_type","type"], "")
+        ).toUpperCase();
+        return ACCESS_SIGNAL_TYPES.has(type);
+      });
+    }
+
+    function accessIntentLabel(item){
+      const explicit = first(item, ["signal_intent","intent_label","human_label"], null);
+      if(explicit) return humanize(explicit);
+
+      const type = String(first(item, ["primary_signal","signal_type","type"], "")).toUpperCase();
+
+      const map = {
+        "CROSSING_FACILITATION":"Könnyebb átkelési lehetőség",
+        "DECISION_INFLUENCE":"Migrációs döntést befolyásoló információ",
+        "MOBILIZATION_COORDINATION":"Gyülekezési / mozgósítási felhívás",
+        "MOBILIZATION_REPORT":"Tervezett / szervezett átkelés",
+        "LEGAL_MIGRATION_SIGNAL":"Jogi vagy visszaküldési lehetőség",
+        "ONLINE_INFLUENCE_REPORT":"Online információs befolyás"
+      };
+
+      return map[type] || humanize(type || "Access signal");
+    }
+
+    function accessAnalyticalText(item){
+      const explicit = first(item, ["analytical_summary","analysis","interpretation"], null);
+      if(explicit) return explicit;
+
+      const type = String(first(item, ["primary_signal","signal_type","type"], "")).toUpperCase();
+
+      const map = {
+        "CROSSING_FACILITATION":
+          "A bejegyzés konkrét átkelési pontra, útvonalra vagy könnyebb bejutási lehetőségre utal.",
+        "DECISION_INFLUENCE":
+          "A bejegyzés olyan információt közöl, amely befolyásolhatja a migrációs döntést vagy az átkelési kísérlet időzítését.",
+        "MOBILIZATION_COORDINATION":
+          "A bejegyzés migrációs mozgás szervezésére, gyülekezésre vagy koordinált átkelésre utal.",
+        "MOBILIZATION_REPORT":
+          "A forrás tervezett vagy szervezett migrációs átkelésről számol be.",
+        "LEGAL_MIGRATION_SIGNAL":
+          "A bejegyzés jogi védelemre, visszaküldési korlátozásra vagy tartózkodási lehetőségre utal.",
+        "ONLINE_INFLUENCE_REPORT":
+          "A forrás szerint online információ vagy dezinformáció befolyásolhat migrációs mozgást."
+      };
+
+      return map[type] || "A bejegyzés elemzői ellenőrzést igénylő migrációs hozzáférési jelzést tartalmaz.";
+    }
+
+    function uniqueNonEmpty(values){
+      return [...new Set(values.filter(Boolean).map(v => String(v)))];
+    }
+
     function renderKPIs(data){
       const kpis = data.kpis || {};
       const run = getCurrentRun(data);
@@ -1317,7 +1693,12 @@
         influence.length
       );
 
-      const highPriority = influence.filter(x => ["HIGH","CRITICAL"].includes(priorityFromItem(x))).length;
+      const accessSignals = getAccessSignals(data);
+
+      const highPriority = [
+        ...influence,
+        ...accessSignals
+      ].filter(x => ["HIGH","CRITICAL"].includes(priorityFromItem(x))).length;
 
       const correlations = first(
         run,
@@ -1339,12 +1720,160 @@
 
       $("kpiNewEvents").textContent = newEvents ?? 0;
       $("kpiInfluence").textContent = influenceCount ?? 0;
+      $("kpiAccess").textContent = accessSignals.length;
       $("kpiPriority").textContent = highPriority;
       $("kpiCorrelations").textContent = correlations ?? 0;
       $("kpiGroups").textContent = groups ?? 0;
-      $("kpiSources").textContent = sources ?? 0;
+    }
 
-      $("kpiSourceHealth").textContent = "collector status";
+
+    function renderAccessSignals(data){
+      const signals = getAccessSignals(data);
+
+      $("accessActiveCount").textContent = signals.length;
+
+      const locations = uniqueNonEmpty(
+        signals.map(item => {
+          const loc = locationLabel(item);
+          return loc === "—" ? null : loc;
+        })
+      );
+
+      const sources = uniqueNonEmpty(
+        signals.map(item => first(item, ["source","source_name"], null))
+      );
+
+      const highCount = signals.filter(item =>
+        ["HIGH","CRITICAL"].includes(priorityFromItem(item))
+      ).length;
+
+      $("accessLocationsCount").textContent = locations.length;
+      $("accessSourcesCount").textContent = sources.length;
+      $("accessHighCount").textContent = highCount;
+
+      const container = $("topAccessPosts");
+
+      if(!signals.length){
+        container.innerHTML = `
+          <div class="empty-state" style="grid-column:1/-1">
+            A jelenlegi dashboard-data.json még nem tartalmaz konkrét crossing/access signal rekordokat.
+            Az exporter bővítése után itt automatikusan megjelenik a TOP 3 releváns forráspost.
+          </div>`;
+        return;
+      }
+
+      const rank = {CRITICAL:4,HIGH:3,MEDIUM:2,LOW:1};
+
+      const sorted = [...signals].sort((a,b)=>{
+        const pa = rank[priorityFromItem(a)] || 0;
+        const pb = rank[priorityFromItem(b)] || 0;
+        if(pb !== pa) return pb - pa;
+
+        const ca = num(first(a,["confidence","event_confidence"],0));
+        const cb = num(first(b,["confidence","event_confidence"],0));
+        return cb - ca;
+      }).slice(0,3);
+
+      container.innerHTML = sorted.map(item => {
+        const priority = priorityFromItem(item);
+        const type = first(item, ["primary_signal","signal_type","type"], "ACCESS_SIGNAL");
+        const source = first(item, ["source","source_name"], "—");
+        const published = first(item, ["published_at","created_at","timestamp"], null);
+        const location = locationLabel(item);
+        const region = first(item, ["primary_region","region"], null);
+        const conf = num(first(item, ["confidence","event_confidence"], 0));
+        const excerpt = first(item, ["text_excerpt","excerpt","text","summary"], "—");
+        const url = first(item, ["url","source_url"], null);
+
+        const metaLocation = [location, region && region !== location ? humanize(region) : null]
+          .filter(Boolean)
+          .join(" · ");
+
+        return `
+          <article class="post-card">
+            <div class="post-card-header">
+              <span class="priority-badge ${priorityClass(priority)}">${priority}</span>
+              <span class="warning-confidence">${conf.toFixed(2)}</span>
+            </div>
+
+            <div class="post-card-title">${escapeHtml(accessIntentLabel(item))}</div>
+
+            <div class="post-card-meta">
+              <span><strong>${escapeHtml(String(source))}</strong></span>
+              <span>${escapeHtml(metaLocation || "—")}</span>
+              <span>${escapeHtml(shortTime(published))}</span>
+            </div>
+
+            <div class="post-card-quote">
+              “${escapeHtml(String(excerpt).slice(0,520))}${String(excerpt).length > 520 ? "…" : ""}”
+            </div>
+
+            <div class="post-card-analysis">
+              <div class="label">Analitikai értelmezés</div>
+              <div class="text">${escapeHtml(accessAnalyticalText(item))}</div>
+            </div>
+
+            <div class="post-card-footer">
+              <div class="system-class">
+                System classification: <strong>${escapeHtml(String(type))}</strong>
+              </div>
+              ${url
+                ? `<a class="source-link" href="${escapeAttr(url)}" target="_blank" rel="noopener">Open source →</a>`
+                : `<span class="source-link">—</span>`}
+            </div>
+          </article>`;
+      }).join("");
+    }
+
+    function renderInformationHistory(data){
+      const history = safeArray(
+        first(data, ["information_activity_weekly","weekly_post_activity","history_weekly"], [])
+      );
+
+      const chart = $("historyChart");
+
+      if(!history.length){
+        $("historyCurrent").textContent = "—";
+        $("historyPrevious").textContent = "—";
+        $("historyChange").textContent = "—";
+        chart.innerHTML = `
+          <div class="empty-state" style="width:100%;align-self:center">
+            Heti history adatok még nem szerepelnek a dashboard-data.json exportban.
+          </div>`;
+        return;
+      }
+
+      const rows = history.slice(-8).map((row, index) => ({
+        label: first(row, ["label","week_label","week","period"], `W${index+1}`),
+        count: num(first(row, ["posts","post_count","count","total_posts"], 0))
+      }));
+
+      const current = rows.at(-1)?.count || 0;
+      const previous = rows.at(-2)?.count || 0;
+      const change = previous > 0
+        ? ((current - previous) / previous) * 100
+        : (current > 0 ? 100 : 0);
+
+      $("historyCurrent").textContent = current;
+      $("historyPrevious").textContent = previous;
+
+      const changeEl = $("historyChange");
+      changeEl.textContent = `${change >= 0 ? "+" : ""}${change.toFixed(1)}%`;
+      changeEl.className = `value ${change > 0 ? "trend-up" : change < 0 ? "trend-down" : "trend-flat"}`;
+
+      const max = Math.max(...rows.map(r => r.count), 1);
+
+      chart.innerHTML = rows.map(row => {
+        const height = Math.max(2, Math.round((row.count / max) * 100));
+        return `
+          <div class="history-col">
+            <div class="history-value">${row.count}</div>
+            <div class="history-bar-shell">
+              <div class="history-bar" style="height:${height}%"></div>
+            </div>
+            <div class="history-label">${escapeHtml(String(row.label))}</div>
+          </div>`;
+      }).join("");
     }
 
     function renderWarnings(data){
@@ -1702,10 +2231,12 @@
       $("headerUpdated").textContent = formatUpdated(first(data,["updated","updated_at","generated_at"],null));
 
       renderKPIs(data);
+      renderAccessSignals(data);
       renderWarnings(data);
       renderLiveEvents(data);
       renderEventGroups(data);
       renderPriority(data);
+      renderInformationHistory(data);
       renderRegions(data);
       renderDistribution(data);
       renderSources(data);
@@ -1758,3 +2289,4 @@
   </script>
 </body>
 </html>
+
