@@ -33,10 +33,8 @@ the persistent history / influence layer introduced by:
 """
 
 import json
-import re
 
 from collections import Counter
-from difflib import SequenceMatcher
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -87,21 +85,6 @@ ACCESS_SIGNAL_TYPES = {
     "LEGAL_MIGRATION_SIGNAL",
     "ONLINE_INFLUENCE_REPORT",
 }
-
-
-PRIORITY_SIGNAL_WEIGHTS = {
-    "MOBILIZATION_COORDINATION": 30,
-    "MOBILIZATION_REPORT": 28,
-    "CROSSING_FACILITATION": 26,
-    "RECRUITMENT_COORDINATION": 24,
-    "DECISION_INFLUENCE": 20,
-    "ONLINE_INFLUENCE_REPORT": 18,
-    "LEGAL_MIGRATION_SIGNAL": 16,
-    "POLICY_SIGNAL": 8,
-}
-
-TOP_POST_SIMILARITY_THRESHOLD = 0.72
-TOP_POST_TOKEN_OVERLAP_THRESHOLD = 0.68
 
 
 # ==========================================================
@@ -294,264 +277,6 @@ def humanize_token(
         )
         .title()
     )
-
-
-# ==========================================================
-# PRIORITY / DEDUPLICATION HELPERS
-# ==========================================================
-
-def normalize_post_text_for_similarity(
-    value,
-):
-    """
-    Normalizes social-media text for near-duplicate detection.
-
-    Removes:
-    - URLs
-    - leading @mentions
-    - repeated whitespace
-    - punctuation noise
-
-    The purpose is dashboard presentation only. It does not alter
-    stored source text or detector decisions.
-    """
-    if not value:
-        return ""
-
-    text = str(
-        value
-    ).lower()
-
-    text = re.sub(
-        r"https?://\S+",
-        " ",
-        text,
-    )
-
-    text = re.sub(
-        r"(?:^|\s)@\w+",
-        " ",
-        text,
-    )
-
-    text = re.sub(
-        r"[^a-z0-9áéíóöőúüűà-ÿ\s]",
-        " ",
-        text,
-        flags=re.IGNORECASE,
-    )
-
-    text = re.sub(
-        r"\s+",
-        " ",
-        text,
-    ).strip()
-
-    return text
-
-
-def similarity_ratio(
-    left,
-    right,
-):
-    """
-    Returns a 0..1 similarity ratio for normalized post text.
-    """
-    if not left or not right:
-        return 0.0
-
-    return SequenceMatcher(
-        None,
-        left,
-        right,
-    ).ratio()
-
-
-def token_overlap_ratio(
-    left,
-    right,
-):
-    """
-    Jaccard-style token overlap for repost / quote-post detection.
-    """
-    if not left or not right:
-        return 0.0
-
-    left_tokens = {
-        token
-        for token in left.split()
-        if len(token) >= 3
-    }
-
-    right_tokens = {
-        token
-        for token in right.split()
-        if len(token) >= 3
-    }
-
-    if not left_tokens or not right_tokens:
-        return 0.0
-
-    union = len(
-        left_tokens
-        | right_tokens
-    )
-
-    if union <= 0:
-        return 0.0
-
-    return (
-        len(
-            left_tokens
-            & right_tokens
-        )
-        / union
-    )
-
-
-def independent_confirmation_count(
-    item,
-):
-    authors = item.get(
-        "related_authors"
-    ) or []
-
-    if isinstance(
-        authors,
-        list,
-    ):
-        return len(
-            {
-                str(author).strip().lower()
-                for author in authors
-                if author
-            }
-        )
-
-    return 0
-
-
-def platform_diversity_count(
-    item,
-):
-    platforms = item.get(
-        "related_sources"
-    ) or []
-
-    if isinstance(
-        platforms,
-        list,
-    ):
-        return len(
-            {
-                str(source).strip().upper()
-                for source in platforms
-                if source
-            }
-        )
-
-    return 1 if item.get("source") else 0
-
-
-def calculate_priority_score(
-    item,
-):
-    """
-    Analyst-review score.
-
-    Classification confidence is not truth confidence.
-    Repetition increases information significance, while cross-platform
-    and distinct-author reinforcement increase verification value.
-    """
-    signal_type = str(
-        item.get("primary_signal")
-        or item.get("signal_type")
-        or item.get("event_type")
-        or ""
-    ).upper()
-
-    confidence = safe_float(
-        item.get("confidence")
-        or item.get("event_confidence")
-        or item.get("average_confidence")
-    )
-
-    score = confidence * 35.0
-    score += PRIORITY_SIGNAL_WEIGHTS.get(signal_type, 0)
-
-    location = (
-        item.get("primary_location")
-        or item.get("location")
-    )
-
-    if location and str(location).strip().upper() not in {"", "-", "GLOBAL", "UNKNOWN"}:
-        score += 7.0
-
-    region = (
-        item.get("primary_region")
-        or item.get("region")
-    )
-
-    if region and str(region).strip().upper() not in {"", "GLOBAL", "UNKNOWN"}:
-        score += 4.0
-
-    related_posts_count = safe_int(
-        item.get("related_posts_count"),
-        1,
-    )
-
-    author_count = independent_confirmation_count(item)
-    platform_count = platform_diversity_count(item)
-
-    if related_posts_count >= 8:
-        score += 8.0
-    elif related_posts_count >= 4:
-        score += 6.0
-    elif related_posts_count >= 2:
-        score += 3.0
-
-    if author_count >= 5:
-        score += 7.0
-    elif author_count >= 2:
-        score += 4.0
-
-    if platform_count >= 3:
-        score += 12.0
-    elif platform_count >= 2:
-        score += 9.0
-
-    return round(
-        min(score, 100.0),
-        2,
-    )
-
-
-def priority_level_from_score(
-    score,
-    *,
-    related_posts_count=1,
-    independent_authors=0,
-    platform_count=1,
-):
-    value = safe_float(score)
-
-    # CRITICAL requires reinforcement beyond one single-platform post.
-    if (
-        value >= 82
-        and (
-            platform_count >= 2
-            or independent_authors >= 3
-        )
-    ):
-        return "CRITICAL"
-
-    if value >= 62:
-        return "HIGH"
-
-    if value >= 42:
-        return "MEDIUM"
-
-    return "LOW"
 
 
 # ==========================================================
@@ -1019,33 +744,6 @@ def get_kpis(
         "collected_posts_24h": collected_posts_24h,
         "influence_signals": influence_signals,
         "access_signals": access_signals,
-        "high_priority": safe_int(
-            session.execute(
-                select(
-                    func.count(
-                        InfluenceSignal.id
-                    )
-                )
-                .where(
-                    InfluenceSignal.published_at
-                    .is_not(None)
-                )
-                .where(
-                    InfluenceSignal.published_at
-                    >= cutoff
-                )
-                .where(
-                    InfluenceSignal.priority
-                    .in_(
-                        [
-                            "HIGH",
-                            "CRITICAL",
-                        ]
-                    )
-                )
-            )
-            .scalar_one()
-        ),
         "current_run_operational_events": safe_int(
             current_run.get(
                 "operational_events_analyzed"
@@ -1474,7 +1172,7 @@ def serialize_influence_signal(
     """
     Converts one persistent InfluenceSignal into dashboard JSON.
     """
-    item = {
+    return {
         "id": signal.id,
         "source": signal.source,
         "source_post_id": signal.source_post_id,
@@ -1579,27 +1277,6 @@ def serialize_influence_signal(
 
         "rules_version": signal.rules_version,
     }
-
-    item[
-        "priority_score"
-    ] = calculate_priority_score(
-        item
-    )
-
-    # Keep the stored detector-derived priority available, but expose
-    # a separate analyst-review level based on the composite score.
-    item[
-        "analyst_priority"
-    ] = priority_level_from_score(
-        item[
-            "priority_score"
-        ],
-        related_posts_count=1,
-        independent_authors=0,
-        platform_count=1,
-    )
-
-    return item
 
 
 def influence_priority_rank(
@@ -1750,307 +1427,13 @@ def get_top_crossing_access_posts(
     crossing_access_signals,
 ):
     """
-    Returns TOP 3 DISTINCT crossing/access intelligence items.
-
-    Near-identical reposts / quote-post variants are clustered so the
-    dashboard does not waste all three cards on the same information.
-
-    Each representative receives:
-    - related_posts_count
-    - related_post_ids
-    - related_authors
-    - related_urls
-    - priority_score
-    - analyst_priority
+    TOP 3 source posts for the dashboard crossing/access panel.
     """
-    if not crossing_access_signals:
-        return []
-
-    clusters = []
-
-    for item in crossing_access_signals:
-        normalized_text = (
-            normalize_post_text_for_similarity(
-                item.get(
-                    "text"
-                )
-                or item.get(
-                    "text_excerpt"
-                )
-                or ""
-            )
-        )
-
-        signal_type = str(
-            item.get(
-                "primary_signal"
-            )
-            or item.get(
-                "signal_type"
-            )
-            or ""
-        ).upper()
-
-        location = str(
-            item.get(
-                "primary_location"
-            )
-            or item.get(
-                "location"
-            )
-            or ""
-        ).strip().lower()
-
-        matched_cluster = None
-
-        for cluster in clusters:
-            same_signal = (
-                cluster[
-                    "signal_type"
-                ]
-                == signal_type
-            )
-
-            same_location = (
-                not location
-                or not cluster[
-                    "location"
-                ]
-                or cluster[
-                    "location"
-                ]
-                == location
-            )
-
-            similarity = (
-                similarity_ratio(
-                    normalized_text,
-                    cluster[
-                        "normalized_text"
-                    ],
-                )
-            )
-
-            token_overlap = (
-                token_overlap_ratio(
-                    normalized_text,
-                    cluster[
-                        "normalized_text"
-                    ],
-                )
-            )
-
-            if (
-                same_signal
-                and same_location
-                and (
-                    similarity
-                    >= TOP_POST_SIMILARITY_THRESHOLD
-                    or token_overlap
-                    >= TOP_POST_TOKEN_OVERLAP_THRESHOLD
-                )
-            ):
-                matched_cluster = cluster
-                break
-
-        if matched_cluster is None:
-            clusters.append(
-                {
-                    "signal_type": signal_type,
-                    "location": location,
-                    "normalized_text": normalized_text,
-                    "items": [
-                        item
-                    ],
-                }
-            )
-
-            continue
-
-        matched_cluster[
-            "items"
-        ].append(
-            item
-        )
-
-    representatives = []
-
-    for cluster in clusters:
-        cluster_items = cluster[
-            "items"
+    return (
+        crossing_access_signals[
+            :TOP_ACCESS_POST_LIMIT
         ]
-
-        cluster_items.sort(
-            key=lambda item: (
-                influence_priority_rank(
-                    item.get(
-                        "analyst_priority"
-                    )
-                    or item.get(
-                        "priority"
-                    )
-                ),
-                safe_float(
-                    item.get(
-                        "priority_score"
-                    )
-                ),
-                safe_float(
-                    item.get(
-                        "confidence"
-                    )
-                ),
-                item.get(
-                    "published_at"
-                )
-                or "",
-            ),
-            reverse=True,
-        )
-
-        representative = dict(
-            cluster_items[
-                0
-            ]
-        )
-
-        representative[
-            "related_posts_count"
-        ] = len(
-            cluster_items
-        )
-
-        representative[
-            "related_post_ids"
-        ] = [
-            item.get(
-                "source_post_id"
-            )
-            for item in cluster_items
-            if item.get(
-                "source_post_id"
-            )
-        ]
-
-        representative[
-            "related_authors"
-        ] = sorted(
-            {
-                item.get(
-                    "author"
-                )
-                for item in cluster_items
-                if item.get(
-                    "author"
-                )
-            }
-        )
-
-        representative[
-            "related_urls"
-        ] = [
-            item.get(
-                "source_url"
-            )
-            or item.get(
-                "url"
-            )
-            for item in cluster_items
-            if (
-                item.get(
-                    "source_url"
-                )
-                or item.get(
-                    "url"
-                )
-            )
-        ]
-
-        representative[
-            "related_sources"
-        ] = sorted(
-            {
-                str(
-                    item.get("source")
-                    or ""
-                ).upper()
-                for item in cluster_items
-                if item.get("source")
-            }
-        )
-
-        representative[
-            "independent_author_count"
-        ] = len(
-            representative[
-                "related_authors"
-            ]
-        )
-
-        representative[
-            "platform_count"
-        ] = len(
-            representative[
-                "related_sources"
-            ]
-        )
-
-        representative[
-            "priority_score"
-        ] = calculate_priority_score(
-            representative
-        )
-
-        representative[
-            "analyst_priority"
-        ] = priority_level_from_score(
-            representative[
-                "priority_score"
-            ],
-            related_posts_count=representative[
-                "related_posts_count"
-            ],
-            independent_authors=representative[
-                "independent_author_count"
-            ],
-            platform_count=representative[
-                "platform_count"
-            ],
-        )
-
-        representatives.append(
-            representative
-        )
-
-    representatives.sort(
-        key=lambda item: (
-            safe_float(
-                item.get(
-                    "priority_score"
-                )
-            ),
-            safe_float(
-                item.get(
-                    "confidence"
-                )
-            ),
-            safe_int(
-                item.get(
-                    "related_posts_count"
-                ),
-                1,
-            ),
-            item.get(
-                "published_at"
-            )
-            or "",
-        ),
-        reverse=True,
     )
-
-    return representatives[
-        :TOP_ACCESS_POST_LIMIT
-    ]
 
 
 # ==========================================================
@@ -2316,41 +1699,23 @@ def get_information_activity_summary(
             * 100,
             2,
         )
-
-        if change > 0:
-            direction = "UP"
-        elif change < 0:
-            direction = "DOWN"
-        else:
-            direction = "FLAT"
-
-        change_label = (
-            f"{change:+.1f}%"
-        )
-
-        comparable = True
-
     elif current > 0:
-        # No historical baseline exists yet. Reporting +100% would imply
-        # a valid week-on-week comparison, which would be misleading.
-        change = None
-        direction = "BASELINE"
-        change_label = "NEW BASELINE"
-        comparable = False
-
+        change = 100.0
     else:
         change = 0.0
+
+    if change > 0:
+        direction = "UP"
+    elif change < 0:
+        direction = "DOWN"
+    else:
         direction = "FLAT"
-        change_label = "0.0%"
-        comparable = False
 
     return {
         "current_week": current,
         "previous_week": previous,
         "change_percent": change,
-        "change_label": change_label,
         "direction": direction,
-        "comparable": comparable,
     }
 
 
@@ -2668,39 +2033,14 @@ def get_operational_assessment(
         )
     )
 
-    geographic_regions = [
-        row
-        for row in region_activity
-        if str(
-            row.get(
-                "region"
-            )
-            or ""
-        ).upper()
-        not in {
-            "",
-            "GLOBAL",
-            "UNKNOWN",
-            "N/A",
-        }
-    ]
-
     dominant_region = (
-        geographic_regions[
+        region_activity[
             0
         ].get(
             "region"
         )
-        if geographic_regions
-        else (
-            region_activity[
-                0
-            ].get(
-                "region"
-            )
-            if region_activity
-            else "GLOBAL"
-        )
+        if region_activity
+        else "GLOBAL"
     )
 
     dominant_source = (
@@ -2848,88 +2188,6 @@ def get_operational_assessment(
 
 
 # ==========================================================
-# HIGH PRIORITY ANALYST QUEUE
-# ==========================================================
-
-def get_high_priority_intelligence(
-    *,
-    influence_signals,
-    crossing_access_signals,
-    high_confidence_events,
-    limit=12,
-):
-    """
-    Narrative-level analyst-review queue.
-    Repeated social posts are collapsed before ranking.
-    """
-    candidates = []
-
-    narrative_signals = get_top_crossing_access_posts(
-        list(influence_signals)
-    )
-
-    for item in narrative_signals:
-        candidate = dict(item)
-
-        candidate["priority_score"] = calculate_priority_score(
-            candidate
-        )
-
-        candidate["analyst_priority"] = priority_level_from_score(
-            candidate["priority_score"],
-            related_posts_count=safe_int(
-                candidate.get("related_posts_count"),
-                1,
-            ),
-            independent_authors=safe_int(
-                candidate.get("independent_author_count"),
-                0,
-            ),
-            platform_count=safe_int(
-                candidate.get("platform_count"),
-                1,
-            ),
-        )
-
-        candidates.append(candidate)
-
-    for item in high_confidence_events:
-        candidate = dict(item)
-
-        candidate["priority_score"] = calculate_priority_score(
-            candidate
-        )
-
-        candidate["analyst_priority"] = priority_level_from_score(
-            candidate["priority_score"],
-            related_posts_count=safe_int(
-                candidate.get("source_count"),
-                1,
-            ),
-            independent_authors=0,
-            platform_count=1,
-        )
-
-        candidates.append(candidate)
-
-    candidates.sort(
-        key=lambda item: (
-            safe_float(item.get("priority_score")),
-            safe_float(
-                item.get("confidence")
-                or item.get("average_confidence")
-            ),
-            item.get("published_at")
-            or item.get("last_seen")
-            or "",
-        ),
-        reverse=True,
-    )
-
-    return candidates[:limit]
-
-
-# ==========================================================
 # COMPLETE DASHBOARD PAYLOAD
 # ==========================================================
 
@@ -2997,12 +2255,6 @@ def build_dashboard_data(
         )
     )
 
-    influence_narratives = (
-        get_top_crossing_access_posts(
-            influence_signals
-        )
-    )
-
     weekly_activity = (
         get_information_activity_weekly(
             session
@@ -3019,47 +2271,6 @@ def build_dashboard_data(
         get_high_confidence_events(
             session
         )
-    )
-
-    high_priority_intelligence = (
-        get_high_priority_intelligence(
-            influence_signals=influence_signals,
-            crossing_access_signals=(
-                crossing_access_signals
-            ),
-            high_confidence_events=(
-                high_confidence_events
-            ),
-        )
-    )
-
-    kpis["access_signals_raw"] = len(
-        crossing_access_signals
-    )
-
-    kpis["access_signals"] = len(
-        top_crossing_access_posts
-    )
-
-    kpis["influence_signals_raw"] = len(
-        influence_signals
-    )
-
-    kpis["influence_narratives"] = len(
-        influence_narratives
-    )
-
-    kpis["high_priority"] = sum(
-        1
-        for item in high_priority_intelligence
-        if str(
-            item.get("analyst_priority")
-            or ""
-        ).upper()
-        in {
-            "HIGH",
-            "CRITICAL",
-        }
     )
 
     operational_assessment = (
@@ -3128,18 +2339,11 @@ def build_dashboard_data(
             high_confidence_events
         ),
 
-        "high_priority_intelligence": (
-            high_priority_intelligence
-        ),
-
         "influence_signals": (
             influence_signals
         ),
         "early_warning_signals": (
             influence_signals
-        ),
-        "influence_narratives": (
-            influence_narratives
         ),
 
         "crossing_access_signals": (
@@ -3149,9 +2353,6 @@ def build_dashboard_data(
             crossing_access_signals
         ),
         "top_crossing_access_posts": (
-            top_crossing_access_posts
-        ),
-        "crossing_access_narratives": (
             top_crossing_access_posts
         ),
 
@@ -3241,11 +2442,6 @@ def export_dashboard_data():
         )
 
         print(
-            "High-priority analyst queue: "
-            f"{len(data['high_priority_intelligence'])}"
-        )
-
-        print(
             "Active event groups: "
             f"{data['kpis']['active_event_groups']}"
         )
@@ -3277,7 +2473,7 @@ def export_dashboard_data():
 
         print(
             "Weekly change: "
-            f"{data['information_activity_summary']['change_label']}"
+            f"{data['information_activity_summary']['change_percent']}%"
         )
 
         print(
@@ -3315,4 +2511,5 @@ def export_dashboard_data():
 
 if __name__ == "__main__":
     export_dashboard_data()
+
 
