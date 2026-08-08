@@ -1,6 +1,6 @@
 {
-  "version": "2.4",
-  "description": "Structured migration OSINT knowledge base for influence, facilitation, legal, policy, mobilization, decision influence, reported mobilization, online influence reporting, route, movement and early-warning signal detection.",
+  "version": "2.5",
+  "description": "Structured migration OSINT knowledge base for influence, facilitation, legal, policy, mobilization, decision influence, reported mobilization, online influence reporting, route, movement and early-warning signal detection. Version 2.5 separates mass-movement context from actionable crossing facilitation.",
   "settings": {
     "minimum_score": 6,
     "medium_score": 9,
@@ -1587,7 +1587,7 @@
     },
     {
       "id": "route_mass_movement",
-      "name": "Route mass movement warning",
+      "name": "Mass movement context warning",
       "required_groups": [
         "migration_context",
         "mass_movement"
@@ -1598,8 +1598,8 @@
         "crossing_method",
         "information_spread"
       ],
-      "score": 8,
-      "result_hint": "CROSSING_FACILITATION"
+      "score": 4,
+      "result_hint": null
     },
     {
       "id": "route_movement_crossing_point",
@@ -1870,7 +1870,6 @@
   },
   "signal_mapping": {
     "CROSSING_FACILITATION": [
-      "mass_movement",
       "route_promotion",
       "border_access"
     ],
