@@ -8,6 +8,10 @@ Description:
 JSON-driven detector for migration-related influence,
 facilitation and early-warning signals.
 
+Version 2.5 precision tuning prevents generic mass-movement
+language from becoming crossing facilitation without separate
+actionable crossing/access evidence.
+
 Knowledge base:
 
     config/influence_rules.json
@@ -368,6 +372,39 @@ class InfluenceSignalDetector:
 
         matched_signals = (
             self._derive_signals(
+                matched_group_map=(
+                    matched_group_map
+                ),
+                matched_context_patterns=(
+                    matched_context_patterns
+                ),
+            )
+        )
+
+        # --------------------------------------------------
+        # CROSSING FACILITATION SEMANTIC GUARD
+        # --------------------------------------------------
+        #
+        # Mass movement is an important early-warning context,
+        # but it is not, by itself, evidence of crossing
+        # facilitation.
+        #
+        # Examples that must NOT become CROSSING_FACILITATION
+        # solely because of mass-movement language:
+        #
+        #   "thousands of migrants"
+        #   "migration surge"
+        #   "wave of migrants"
+        #
+        # CROSSING_FACILITATION is retained only when there is
+        # separate actionable crossing/access evidence or when
+        # a dedicated crossing context pattern matched.
+
+        matched_signals = (
+            self._apply_crossing_facilitation_guard(
+                matched_signals=(
+                    matched_signals
+                ),
                 matched_group_map=(
                     matched_group_map
                 ),
@@ -2210,6 +2247,86 @@ class InfluenceSignalDetector:
                 )
 
         return signals
+
+    # ======================================================
+    # CROSSING FACILITATION GUARD
+    # ======================================================
+
+    def _apply_crossing_facilitation_guard(
+        self,
+        *,
+        matched_signals: List[str],
+        matched_group_map: Dict[str, bool],
+        matched_context_patterns: List[
+            Dict[str, object]
+        ],
+    ) -> List[str]:
+        """
+        Prevents generic mass-movement language from being
+        classified as CROSSING_FACILITATION.
+
+        CROSSING_FACILITATION should represent actionable
+        crossing/access information rather than merely the
+        existence, scale or reporting of migrant movement.
+
+        The signal is retained when at least one strong
+        facilitation/access group is present or when a dedicated
+        crossing context pattern other than the generic
+        route_mass_movement pattern matched.
+        """
+
+        if (
+            "CROSSING_FACILITATION"
+            not in matched_signals
+        ):
+            return matched_signals
+
+        strong_groups = {
+            "facilitation",
+            "route_promotion",
+            "border_access",
+        }
+
+        has_strong_group = any(
+            matched_group_map.get(
+                group,
+                False,
+            )
+            for group
+            in strong_groups
+        )
+
+        valid_crossing_pattern_ids = {
+            "route_movement_crossing_point",
+            "route_movement_method",
+            "route_information_spread",
+            "route_guidance",
+            "border_access_warning",
+        }
+
+        has_valid_crossing_pattern = any(
+            pattern.get(
+                "id"
+            )
+            in valid_crossing_pattern_ids
+            for pattern
+            in matched_context_patterns
+        )
+
+        if (
+            has_strong_group
+            or has_valid_crossing_pattern
+        ):
+            return matched_signals
+
+        return [
+            signal
+            for signal
+            in matched_signals
+            if signal
+            != "CROSSING_FACILITATION"
+        ]
+
 
     # ======================================================
     # PRIMARY SIGNAL
