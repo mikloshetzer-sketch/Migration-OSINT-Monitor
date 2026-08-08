@@ -20,6 +20,10 @@ The detector identifies:
 - LEGAL_MIGRATION_SIGNAL
 - POLICY_SIGNAL
 - RECRUITMENT_COORDINATION
+- MOBILIZATION_COORDINATION
+- DECISION_INFLUENCE
+- MOBILIZATION_REPORT
+- ONLINE_INFLUENCE_REPORT
 
 Important:
 
@@ -36,6 +40,7 @@ but do not match a meaningful influence category.
 
 import json
 import re
+from datetime import datetime, timezone
 
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
@@ -200,6 +205,26 @@ class InfluenceSignalDetector:
         normalized_text = (
             self._normalize_text(
                 text
+            )
+        )
+
+        # --------------------------------------------------
+        # HISTORICAL REFERENCE GUARD
+        # --------------------------------------------------
+        #
+        # Influence signals are meant to describe current or
+        # forward-looking information conditions. A historical
+        # retrospective such as "11 years ago ... first wave of
+        # migrants" must not be counted as a current influence
+        # signal merely because it contains migration / movement
+        # vocabulary.
+        #
+        # Mixed texts that also contain a strong current or future
+        # cue are not automatically suppressed.
+
+        historical_result = (
+            self._detect_historical_reference(
+                normalized_text
             )
         )
 
@@ -451,6 +476,10 @@ class InfluenceSignalDetector:
             and len(
                 matched_signals
             ) > 0
+            and not historical_result.get(
+                "is_historical",
+                False,
+            )
         )
 
         # --------------------------------------------------
@@ -659,11 +688,259 @@ class InfluenceSignalDetector:
                     [],
                 ),
 
+            "historical_reference":
+                historical_result.get(
+                    "is_historical",
+                    False,
+                ),
+
+            "historical_reason":
+                historical_result.get(
+                    "reason"
+                ),
+
+            "historical_reference_text":
+                historical_result.get(
+                    "reference_text"
+                ),
+
+            "signal_mode":
+                self._get_signal_mode(
+                    primary_signal
+                ),
+
             "rules_version":
                 self.rules.get(
                     "version"
                 ),
         }
+
+    # ======================================================
+    # HISTORICAL REFERENCE DETECTION
+    # ======================================================
+
+    def _detect_historical_reference(
+        self,
+        text: str,
+    ) -> Dict[str, object]:
+        """
+        Detects clear retrospective references that should not
+        be treated as current influence signals.
+
+        The method is deliberately conservative. It suppresses
+        historical-only statements, but allows mixed posts when
+        they also contain a strong current or future cue.
+
+        Examples suppressed:
+
+            "11 years ago ... first wave of migrants"
+            "In 1947 refugees arrived ..."
+            "During the 2015 migration crisis ..."
+
+        Examples not automatically suppressed:
+
+            "In 2015 this happened, but today migrants are
+             gathering again."
+
+            "11 years ago this route was used; on August 15
+             another crossing is planned."
+        """
+
+        if not text:
+
+            return {
+                "is_historical": False,
+                "reason": None,
+                "reference_text": None,
+            }
+
+        # Strong present / future cues override a purely
+        # retrospective interpretation.
+        current_or_future_patterns = [
+            r"\btoday\b",
+            r"\btonight\b",
+            r"\bnow\b",
+            r"\bcurrently\b",
+            r"\bthis\s+week\b",
+            r"\bthis\s+month\b",
+            r"\bthis\s+year\b",
+            r"\btomorrow\b",
+            r"\bnext\s+week\b",
+            r"\bnext\s+month\b",
+            r"\bnext\s+year\b",
+            r"\bupcoming\b",
+            r"\bplanned\b",
+            r"\bis\s+planned\b",
+            r"\bare\s+planned\b",
+            r"\bplans\s+to\b",
+            r"\bplans\s+for\b",
+            r"\bthere\s+are\s+plans\b",
+            r"\bpreparing\b",
+            r"\bexpected\s+to\b",
+            r"\bexpect(?:ed|s|ing)?\b",
+            r"\bwill\s+cross\b",
+            r"\bwill\s+arrive\b",
+            r"\bwill\s+gather\b",
+            r"\bwill\s+move\b",
+            r"\bon\s+[A-Z][a-z]+\s+\d{1,2}(?:st|nd|rd|th)?\b",
+            r"\bon\s+\d{1,2}\s+[A-Z][a-z]+\b",
+            r"\baujourd'hui\b",
+            r"\bmaintenant\b",
+            r"\bdemain\b",
+            r"\bhoy\b",
+            r"\bahora\b",
+            r"\bmañana\b",
+            r"\boggi\b",
+            r"\badesso\b",
+            r"\bdomani\b",
+        ]
+
+        has_current_or_future_cue = any(
+            re.search(
+                pattern,
+                text,
+                flags=re.IGNORECASE,
+            )
+            for pattern in current_or_future_patterns
+        )
+
+        # "N years ago", including written numbers.
+        years_ago_pattern = re.compile(
+            r"\b("
+            r"\d{1,3}|"
+            r"one|two|three|four|five|six|seven|eight|nine|ten|"
+            r"eleven|twelve|thirteen|fourteen|fifteen|sixteen|"
+            r"seventeen|eighteen|nineteen|twenty"
+            r")\s+years?\s+ago\b",
+            flags=re.IGNORECASE,
+        )
+
+        match = years_ago_pattern.search(
+            text
+        )
+
+        if (
+            match
+            and not has_current_or_future_cue
+        ):
+
+            return {
+                "is_historical": True,
+                "reason": "YEARS_AGO_REFERENCE",
+                "reference_text": match.group(0),
+            }
+
+        # "decades ago", "years ago", etc.
+        relative_history_pattern = re.compile(
+            r"\b("
+            r"decades?\s+ago|"
+            r"many\s+years\s+ago|"
+            r"several\s+years\s+ago|"
+            r"back\s+in\s+the\s+\d{4}s?|"
+            r"looking\s+back"
+            r")\b",
+            flags=re.IGNORECASE,
+        )
+
+        match = relative_history_pattern.search(
+            text
+        )
+
+        if (
+            match
+            and not has_current_or_future_cue
+        ):
+
+            return {
+                "is_historical": True,
+                "reason": "RETROSPECTIVE_REFERENCE",
+                "reference_text": match.group(0),
+            }
+
+        # Explicit previous calendar years.
+        current_year = datetime.now(
+            timezone.utc
+        ).year
+
+        explicit_years = [
+            int(value)
+            for value in re.findall(
+                r"(?<!\d)(19\d{2}|20\d{2})(?!\d)",
+                text,
+            )
+        ]
+
+        old_years = [
+            year
+            for year in explicit_years
+            if year < current_year
+        ]
+
+        if (
+            old_years
+            and not has_current_or_future_cue
+        ):
+
+            newest_old_year = max(
+                old_years
+            )
+
+            return {
+                "is_historical": True,
+                "reason": "EXPLICIT_PREVIOUS_YEAR",
+                "reference_text": str(
+                    newest_old_year
+                ),
+            }
+
+        # Decade references such as "1870s" or "1990s".
+        decade_match = re.search(
+            r"(?<!\d)(18|19|20)\d0s(?!\d)",
+            text,
+            flags=re.IGNORECASE,
+        )
+
+        if (
+            decade_match
+            and not has_current_or_future_cue
+        ):
+
+            return {
+                "is_historical": True,
+                "reason": "HISTORICAL_DECADE_REFERENCE",
+                "reference_text": decade_match.group(0),
+            }
+
+        return {
+            "is_historical": False,
+            "reason": None,
+            "reference_text": None,
+        }
+
+    def _get_signal_mode(
+        self,
+        primary_signal: Optional[str],
+    ) -> Optional[str]:
+        """
+        Distinguishes direct influence / facilitation content
+        from reporting about influence or mobilization.
+
+        This does not change the primary signal name. It adds
+        an analytical field that downstream components can use.
+        """
+
+        if not primary_signal:
+
+            return None
+
+        if primary_signal in {
+            "MOBILIZATION_REPORT",
+            "ONLINE_INFLUENCE_REPORT",
+        }:
+            return "REPORT"
+
+        return "DIRECT"
+
 
     # ======================================================
     # TEXT NORMALIZATION
@@ -1844,6 +2121,11 @@ class InfluenceSignalDetector:
             "coordination",
             "route_promotion",
             "policy_pull_factor",
+            "mobilization",
+            "mobilization_coordination",
+            "decision_influence",
+            "mobilization_report",
+            "online_influence_report",
         }
 
         supporting_match_count = sum(
@@ -1991,7 +2273,11 @@ class InfluenceSignalDetector:
 
         priority = [
             "RECRUITMENT_COORDINATION",
+            "MOBILIZATION_COORDINATION",
+            "MOBILIZATION_REPORT",
+            "ONLINE_INFLUENCE_REPORT",
             "LEGAL_MIGRATION_SIGNAL",
+            "DECISION_INFLUENCE",
             "CROSSING_FACILITATION",
             "POLICY_SIGNAL",
         ]
@@ -2305,6 +2591,18 @@ class InfluenceSignalDetector:
             "high_value_matches":
                 [],
 
+            "historical_reference":
+                False,
+
+            "historical_reason":
+                None,
+
+            "historical_reference_text":
+                None,
+
+            "signal_mode":
+                None,
+
             "rules_version":
                 self.rules.get(
                     "version"
@@ -2342,6 +2640,20 @@ if __name__ == "__main__":
         (
             "Come to the restaurant tonight. "
             "There are no police nearby."
+        ),
+        (
+            "There are plans for migrants to storm the Spanish "
+            "city of Ceuta again this month on August 15th. "
+            "We expect tens of thousands to cross the border."
+        ),
+        (
+            "Over 70,000 migrants swam from Morocco, lured by "
+            "online falsehoods circulating on social media."
+        ),
+        (
+            "11 years ago, I was in Athens when the first wave "
+            "of migrants arrived. Looking back, I did not know "
+            "how large it would become."
         ),
     ]
 
