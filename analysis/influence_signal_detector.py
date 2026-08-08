@@ -8,25 +8,30 @@ Description:
 JSON-driven detector for migration-related influence,
 facilitation and early-warning signals.
 
-The detector loads its knowledge base from:
+Knowledge base:
 
     config/influence_rules.json
 
 The Python module contains detection logic only.
-Keywords, locations, routes, crossing methods,
-platform indicators, narratives, weights and
-context rules are maintained in JSON.
 
-Main output categories:
+The detector identifies:
 
 - CROSSING_FACILITATION
 - LEGAL_MIGRATION_SIGNAL
 - POLICY_SIGNAL
 - RECRUITMENT_COORDINATION
 
-The detector does not verify whether a claim is true.
-It identifies potentially relevant migration-related
-information signals for further OSINT analysis.
+Important:
+
+A post is considered a detected influence signal only when:
+
+1. migration context is valid
+2. the configured minimum score is reached
+3. at least one valid influence signal category is derived
+
+This prevents candidate posts from being counted as real
+influence signals when they contain relevant migration terms
+but do not match a meaningful influence category.
 """
 
 import json
@@ -60,19 +65,7 @@ DEFAULT_RULES_FILE = (
 
 class InfluenceSignalDetector:
     """
-    Detects migration-related influence and early-warning
-    signals using rules loaded from JSON.
-
-    The detector is deliberately separated from the normal
-    operational event classifier.
-
-    Example:
-
-        Migrants are gathering near the coast.
-        Videos of the route are circulating on Telegram.
-
-    This may represent an early-warning / influence signal
-    even if an actual border crossing has not yet occurred.
+    JSON-driven migration influence and early-warning detector.
     """
 
     # ======================================================
@@ -84,7 +77,7 @@ class InfluenceSignalDetector:
         rules_file: Optional[Path] = None,
     ):
         """
-        Loads the migration influence knowledge base.
+        Loads detector configuration.
         """
 
         self.rules_file = (
@@ -147,7 +140,7 @@ class InfluenceSignalDetector:
         self,
     ) -> Dict[str, object]:
         """
-        Loads and validates influence_rules.json.
+        Loads influence_rules.json.
         """
 
         if not self.rules_file.exists():
@@ -198,21 +191,6 @@ class InfluenceSignalDetector:
         """
         Analyses a post for migration influence and
         early-warning indicators.
-
-        Existing main.py-compatible fields are preserved:
-
-        {
-            "detected": bool,
-            "primary_signal": str | None,
-            "matched_signals": list[str],
-            "matched_phrases": list[tuple[str, str]],
-            "migration_context": bool,
-            "context_matches": list[str],
-            "high_value_match": bool,
-            "confidence": float
-        }
-
-        Additional analytical fields are also returned.
         """
 
         if not text:
@@ -241,7 +219,9 @@ class InfluenceSignalDetector:
         )
 
         migration_context = bool(
-            context_result["matches"]
+            context_result.get(
+                "matches"
+            )
         )
 
         # --------------------------------------------------
@@ -299,7 +279,7 @@ class InfluenceSignalDetector:
         )
 
         # --------------------------------------------------
-        # HIGH VALUE PHRASES
+        # HIGH VALUE
         # --------------------------------------------------
 
         high_value_result = (
@@ -309,11 +289,13 @@ class InfluenceSignalDetector:
         )
 
         high_value_match = bool(
-            high_value_result["matches"]
+            high_value_result.get(
+                "matches"
+            )
         )
 
         # --------------------------------------------------
-        # BUILD MATCHED GROUP MAP
+        # NORMALIZED MATCH MAP
         # --------------------------------------------------
 
         matched_group_map = (
@@ -352,6 +334,21 @@ class InfluenceSignalDetector:
         matched_context_patterns = (
             self._evaluate_context_patterns(
                 matched_group_map
+            )
+        )
+
+        # --------------------------------------------------
+        # DERIVE SIGNALS BEFORE FINAL DETECTION
+        # --------------------------------------------------
+
+        matched_signals = (
+            self._derive_signals(
+                matched_group_map=(
+                    matched_group_map
+                ),
+                matched_context_patterns=(
+                    matched_context_patterns
+                ),
             )
         )
 
@@ -424,42 +421,65 @@ class InfluenceSignalDetector:
         minimum_score = int(
             self.settings.get(
                 "minimum_score",
-                5,
+                6,
             )
         )
+
+        # --------------------------------------------------
+        # FINAL DETECTION RULE
+        # --------------------------------------------------
+        #
+        # IMPORTANT:
+        #
+        # A high score is NOT sufficient.
+        #
+        # At least one actual influence signal must also
+        # have been derived.
+        #
+        # This fixes cases such as:
+        #
+        # migration context
+        # + destination country
+        # + border-policy information
+        #
+        # which may produce a useful candidate score but
+        # must not automatically become an influence signal.
 
         detected = (
             context_valid
             and score >= minimum_score
+            and len(
+                matched_signals
+            ) > 0
         )
 
         # --------------------------------------------------
-        # SIGNAL SELECTION
+        # PRIMARY SIGNAL
         # --------------------------------------------------
 
-        matched_signals = (
-            self._derive_signals(
-                matched_group_map=(
-                    matched_group_map
-                ),
-                matched_context_patterns=(
-                    matched_context_patterns
-                ),
-            )
-        )
+        primary_signal = None
 
-        primary_signal = (
-            self._select_primary_signal(
-                matched_signals=(
-                    matched_signals
-                ),
-                matched_context_patterns=(
-                    matched_context_patterns
-                ),
+        if detected:
+
+            primary_signal = (
+                self._select_primary_signal(
+                    matched_signals=(
+                        matched_signals
+                    ),
+                    matched_context_patterns=(
+                        matched_context_patterns
+                    ),
+                )
             )
-            if detected
-            else None
-        )
+
+        # Secondary safeguard.
+        #
+        # A detected result is never allowed without a
+        # primary signal.
+
+        if not primary_signal:
+
+            detected = False
 
         # --------------------------------------------------
         # CONFIDENCE
@@ -494,7 +514,7 @@ class InfluenceSignalDetector:
             )
 
         # --------------------------------------------------
-        # COMPATIBILITY PHRASES
+        # LEGACY / MAIN.PY COMPATIBILITY
         # --------------------------------------------------
 
         matched_phrases = (
@@ -515,12 +535,21 @@ class InfluenceSignalDetector:
         )
 
         # --------------------------------------------------
-        # FINAL RESULT
+        # CANDIDATE STATUS
+        # --------------------------------------------------
+
+        candidate = (
+            migration_context
+            and score > 0
+        )
+
+        # --------------------------------------------------
+        # RESULT
         # --------------------------------------------------
 
         return {
             # ----------------------------------------------
-            # ORIGINAL COMPATIBILITY FIELDS
+            # MAIN.PY COMPATIBILITY
             # ----------------------------------------------
 
             "detected":
@@ -530,18 +559,27 @@ class InfluenceSignalDetector:
                 primary_signal,
 
             "matched_signals":
-                matched_signals,
+                (
+                    matched_signals
+                    if detected
+                    else []
+                ),
 
             "matched_phrases":
-                matched_phrases,
+                (
+                    matched_phrases
+                    if detected
+                    else []
+                ),
 
             "migration_context":
                 migration_context,
 
             "context_matches":
-                context_result[
-                    "matches"
-                ],
+                context_result.get(
+                    "matches",
+                    [],
+                ),
 
             "high_value_match":
                 high_value_match,
@@ -550,7 +588,14 @@ class InfluenceSignalDetector:
                 confidence,
 
             # ----------------------------------------------
-            # NEW ANALYTICAL FIELDS
+            # CANDIDATE INFORMATION
+            # ----------------------------------------------
+
+            "candidate":
+                candidate,
+
+            # ----------------------------------------------
+            # ANALYTICAL FIELDS
             # ----------------------------------------------
 
             "score":
@@ -568,29 +613,34 @@ class InfluenceSignalDetector:
                 indicator_results,
 
             "matched_destination_countries":
-                destination_result[
-                    "entities"
-                ],
+                destination_result.get(
+                    "entities",
+                    [],
+                ),
 
             "matched_origin_regions":
-                origin_result[
-                    "entities"
-                ],
+                origin_result.get(
+                    "entities",
+                    [],
+                ),
 
             "matched_crossing_points":
-                crossing_point_result[
-                    "entities"
-                ],
+                crossing_point_result.get(
+                    "entities",
+                    [],
+                ),
 
             "matched_crossing_methods":
-                crossing_method_result[
-                    "entities"
-                ],
+                crossing_method_result.get(
+                    "entities",
+                    [],
+                ),
 
             "matched_platforms":
-                platform_result[
-                    "entities"
-                ],
+                platform_result.get(
+                    "entities",
+                    [],
+                ),
 
             "matched_narratives":
                 self._matched_group_names(
@@ -604,9 +654,10 @@ class InfluenceSignalDetector:
                 matched_context_patterns,
 
             "high_value_matches":
-                high_value_result[
-                    "matches"
-                ],
+                high_value_result.get(
+                    "matches",
+                    [],
+                ),
 
             "rules_version":
                 self.rules.get(
@@ -623,10 +674,7 @@ class InfluenceSignalDetector:
         text: str,
     ) -> str:
         """
-        Basic text normalization.
-
-        Unicode characters are preserved because migration
-        monitoring includes multilingual content.
+        Normalizes whitespace while preserving Unicode.
         """
 
         text = str(
@@ -661,15 +709,10 @@ class InfluenceSignalDetector:
         term: str,
     ) -> Optional[str]:
         """
-        Performs case-insensitive literal phrase matching.
+        Case-insensitive literal matching.
 
-        Word-like terms use conservative boundaries to reduce
-        substring false positives.
-
-        Example:
-
-            "asylum" matches "asylum seekers"
-            but not an unrelated larger token.
+        Conservative token boundaries reduce substring
+        false positives.
         """
 
         if not term:
@@ -735,7 +778,7 @@ class InfluenceSignalDetector:
         return None
 
     # ======================================================
-    # SIMPLE SECTION MATCHER
+    # SIMPLE SECTION
     # ======================================================
 
     def _match_simple_section(
@@ -746,7 +789,7 @@ class InfluenceSignalDetector:
         value_key: str,
     ) -> Dict[str, object]:
         """
-        Matches a flat term section.
+        Matches a flat configured term list.
         """
 
         terms = (
@@ -759,6 +802,8 @@ class InfluenceSignalDetector:
 
         matches: List[str] = []
 
+        normalized_seen = set()
+
         for term in terms:
 
             match = (
@@ -768,18 +813,23 @@ class InfluenceSignalDetector:
                 )
             )
 
-            if (
-                match
-                and match.lower()
-                not in {
-                    item.lower()
-                    for item in matches
-                }
-            ):
+            if not match:
+                continue
 
-                matches.append(
-                    match
-                )
+            match_key = (
+                match.lower()
+            )
+
+            if match_key in normalized_seen:
+                continue
+
+            normalized_seen.add(
+                match_key
+            )
+
+            matches.append(
+                match
+            )
 
         return {
             "matched":
@@ -807,7 +857,7 @@ class InfluenceSignalDetector:
         text: str,
     ) -> Dict[str, object]:
         """
-        Matches all indicator groups defined in JSON.
+        Matches configured indicator groups.
         """
 
         results = {}
@@ -817,7 +867,9 @@ class InfluenceSignalDetector:
             configuration,
         ) in self.indicator_groups.items():
 
-            result = (
+            results[
+                group_name
+            ] = (
                 self._match_simple_section(
                     normalized_text=text,
                     section=configuration,
@@ -825,23 +877,63 @@ class InfluenceSignalDetector:
                 )
             )
 
-            results[
-                group_name
-            ] = result
-
         return results
 
     # ======================================================
-    # DESTINATION COUNTRIES
+    # ALIASES
+    # ======================================================
+
+    def _match_aliases(
+        self,
+        *,
+        text: str,
+        aliases: List[str],
+    ) -> List[str]:
+        """
+        Matches configured aliases.
+        """
+
+        matches = []
+
+        seen = set()
+
+        for alias in aliases:
+
+            match = (
+                self._contains_term(
+                    text,
+                    str(alias),
+                )
+            )
+
+            if not match:
+                continue
+
+            key = (
+                match.lower()
+            )
+
+            if key in seen:
+                continue
+
+            seen.add(
+                key
+            )
+
+            matches.append(
+                match
+            )
+
+        return matches
+
+    # ======================================================
+    # DESTINATIONS
     # ======================================================
 
     def _match_destinations(
         self,
         text: str,
     ) -> Dict[str, object]:
-        """
-        Detects configured destination countries.
-        """
 
         section = (
             self.rules.get(
@@ -850,36 +942,26 @@ class InfluenceSignalDetector:
             )
         )
 
-        weight = int(
-            section.get(
-                "weight",
-                0,
-            )
-            or 0
-        )
-
         entities = []
 
         for country in (
             section.get(
                 "countries",
-                []
+                [],
             )
             or []
         ):
 
-            aliases = (
-                country.get(
-                    "aliases",
-                    [],
-                )
-                or []
-            )
-
             matched_aliases = (
                 self._match_aliases(
                     text=text,
-                    aliases=aliases,
+                    aliases=(
+                        country.get(
+                            "aliases",
+                            [],
+                        )
+                        or []
+                    ),
                 )
             )
 
@@ -926,7 +1008,13 @@ class InfluenceSignalDetector:
                 entities,
 
             "weight":
-                weight,
+                int(
+                    section.get(
+                        "weight",
+                        0,
+                    )
+                    or 0
+                ),
         }
 
     # ======================================================
@@ -937,10 +1025,6 @@ class InfluenceSignalDetector:
         self,
         text: str,
     ) -> Dict[str, object]:
-        """
-        Detects configured migration origin countries
-        and maps them to origin regions.
-        """
 
         section = (
             self.rules.get(
@@ -949,36 +1033,26 @@ class InfluenceSignalDetector:
             )
         )
 
-        weight = int(
-            section.get(
-                "weight",
-                0,
-            )
-            or 0
-        )
-
         entities = []
 
         for region in (
             section.get(
                 "regions",
-                []
+                [],
             )
             or []
         ):
 
-            countries = (
-                region.get(
-                    "countries",
-                    [],
-                )
-                or []
-            )
-
             matched_countries = (
                 self._match_aliases(
                     text=text,
-                    aliases=countries,
+                    aliases=(
+                        region.get(
+                            "countries",
+                            [],
+                        )
+                        or []
+                    ),
                 )
             )
 
@@ -1010,7 +1084,13 @@ class InfluenceSignalDetector:
                 entities,
 
             "weight":
-                weight,
+                int(
+                    section.get(
+                        "weight",
+                        0,
+                    )
+                    or 0
+                ),
         }
 
     # ======================================================
@@ -1021,10 +1101,6 @@ class InfluenceSignalDetector:
         self,
         text: str,
     ) -> Dict[str, object]:
-        """
-        Detects important migration crossing,
-        departure, transit and arrival locations.
-        """
 
         section = (
             self.rules.get(
@@ -1033,20 +1109,12 @@ class InfluenceSignalDetector:
             )
         )
 
-        weight = int(
-            section.get(
-                "weight",
-                0,
-            )
-            or 0
-        )
-
         entities = []
 
         for point in (
             section.get(
                 "points",
-                []
+                [],
             )
             or []
         ):
@@ -1107,7 +1175,13 @@ class InfluenceSignalDetector:
                 entities,
 
             "weight":
-                weight,
+                int(
+                    section.get(
+                        "weight",
+                        0,
+                    )
+                    or 0
+                ),
         }
 
     # ======================================================
@@ -1118,9 +1192,6 @@ class InfluenceSignalDetector:
         self,
         text: str,
     ) -> Dict[str, object]:
-        """
-        Detects configured border crossing methods.
-        """
 
         section = (
             self.rules.get(
@@ -1129,20 +1200,12 @@ class InfluenceSignalDetector:
             )
         )
 
-        weight = int(
-            section.get(
-                "weight",
-                0,
-            )
-            or 0
-        )
-
         entities = []
 
         for method in (
             section.get(
                 "methods",
-                []
+                [],
             )
             or []
         ):
@@ -1193,21 +1256,23 @@ class InfluenceSignalDetector:
                 entities,
 
             "weight":
-                weight,
+                int(
+                    section.get(
+                        "weight",
+                        0,
+                    )
+                    or 0
+                ),
         }
 
     # ======================================================
-    # PLATFORM INDICATORS
+    # PLATFORMS
     # ======================================================
 
     def _match_platforms(
         self,
         text: str,
     ) -> Dict[str, object]:
-        """
-        Detects references to communication
-        and social-media platforms.
-        """
 
         section = (
             self.rules.get(
@@ -1216,36 +1281,26 @@ class InfluenceSignalDetector:
             )
         )
 
-        weight = int(
-            section.get(
-                "weight",
-                0,
-            )
-            or 0
-        )
-
         entities = []
 
         for platform in (
             section.get(
                 "platforms",
-                []
+                [],
             )
             or []
         ):
 
-            aliases = (
-                platform.get(
-                    "aliases",
-                    [],
-                )
-                or []
-            )
-
             matched_aliases = (
                 self._match_aliases(
                     text=text,
-                    aliases=aliases,
+                    aliases=(
+                        platform.get(
+                            "aliases",
+                            [],
+                        )
+                        or []
+                    ),
                 )
             )
 
@@ -1282,52 +1337,14 @@ class InfluenceSignalDetector:
                 entities,
 
             "weight":
-                weight,
+                int(
+                    section.get(
+                        "weight",
+                        0,
+                    )
+                    or 0
+                ),
         }
-
-    # ======================================================
-    # ALIAS MATCHING
-    # ======================================================
-
-    def _match_aliases(
-        self,
-        *,
-        text: str,
-        aliases: List[str],
-    ) -> List[str]:
-        """
-        Matches aliases and returns unique actual strings.
-        """
-
-        matches: List[str] = []
-
-        for alias in aliases:
-
-            match = (
-                self._contains_term(
-                    text,
-                    str(alias),
-                )
-            )
-
-            if not match:
-                continue
-
-            if (
-                match.lower()
-                in {
-                    existing.lower()
-                    for existing in matches
-                }
-            ):
-
-                continue
-
-            matches.append(
-                match
-            )
-
-        return matches
 
     # ======================================================
     # NARRATIVES
@@ -1337,9 +1354,6 @@ class InfluenceSignalDetector:
         self,
         text: str,
     ) -> Dict[str, object]:
-        """
-        Detects configured migration narratives.
-        """
 
         narratives = (
             self.rules.get(
@@ -1355,7 +1369,9 @@ class InfluenceSignalDetector:
             configuration,
         ) in narratives.items():
 
-            result = (
+            results[
+                narrative_name
+            ] = (
                 self._match_simple_section(
                     normalized_text=text,
                     section=configuration,
@@ -1363,23 +1379,16 @@ class InfluenceSignalDetector:
                 )
             )
 
-            results[
-                narrative_name
-            ] = result
-
         return results
 
     # ======================================================
-    # HIGH VALUE PHRASES
+    # HIGH VALUE
     # ======================================================
 
     def _match_high_value_phrases(
         self,
         text: str,
     ) -> Dict[str, object]:
-        """
-        Detects high-value phrases configured in JSON.
-        """
 
         section = (
             self.rules.get(
@@ -1388,17 +1397,17 @@ class InfluenceSignalDetector:
             )
         )
 
-        terms = (
+        matches = []
+
+        seen = set()
+
+        for term in (
             section.get(
                 "terms",
                 [],
             )
             or []
-        )
-
-        matches = []
-
-        for term in terms:
+        ):
 
             match = (
                 self._contains_term(
@@ -1410,15 +1419,16 @@ class InfluenceSignalDetector:
             if not match:
                 continue
 
-            if (
+            key = (
                 match.lower()
-                in {
-                    existing.lower()
-                    for existing in matches
-                }
-            ):
+            )
 
+            if key in seen:
                 continue
+
+            seen.add(
+                key
+            )
 
             matches.append(
                 match
@@ -1457,10 +1467,6 @@ class InfluenceSignalDetector:
         platform_result: Dict[str, object],
         narrative_results: Dict[str, object],
     ) -> Dict[str, bool]:
-        """
-        Creates a normalized boolean map used by
-        context and signal rules.
-        """
 
         result = {
             "migration_context":
@@ -1538,14 +1544,6 @@ class InfluenceSignalDetector:
         self,
         matched_group_map: Dict[str, bool],
     ) -> List[Dict[str, object]]:
-        """
-        Evaluates multi-indicator context patterns.
-
-        Required groups must all match.
-
-        Optional groups are not required but are recorded
-        and can strengthen the analytical interpretation.
-        """
 
         results = []
 
@@ -1648,15 +1646,6 @@ class InfluenceSignalDetector:
             Dict[str, object]
         ],
     ) -> int:
-        """
-        Calculates total signal score.
-
-        A category weight is counted once regardless of
-        how many terms matched inside that category.
-
-        This prevents long posts from receiving excessive
-        scores simply because the same concept is repeated.
-        """
 
         score = 0
 
@@ -1756,9 +1745,6 @@ class InfluenceSignalDetector:
         self,
         score: int,
     ) -> str:
-        """
-        Converts numeric score to configured severity level.
-        """
 
         levels = []
 
@@ -1808,20 +1794,6 @@ class InfluenceSignalDetector:
         high_value_match: bool,
         matched_group_map: Dict[str, bool],
     ) -> bool:
-        """
-        Validates whether the detected indicators are
-        sufficiently migration-related.
-
-        Normally explicit migration context is required.
-
-        A high-value phrase may override this requirement,
-        but only if at least one additional meaningful
-        migration-related indicator is present.
-
-        This reduces false positives such as:
-
-            "There are no police at the concert."
-        """
 
         require_context = bool(
             self.settings.get(
@@ -1901,14 +1873,11 @@ class InfluenceSignalDetector:
             Dict[str, object]
         ],
     ) -> List[str]:
-        """
-        Maps matched indicators to final signal categories.
-        """
 
-        signals: List[str] = []
+        signals = []
 
         # --------------------------------------------------
-        # SIGNAL MAPPING
+        # DIRECT SIGNAL MAPPING
         # --------------------------------------------------
 
         for (
@@ -1935,7 +1904,7 @@ class InfluenceSignalDetector:
                     )
 
         # --------------------------------------------------
-        # CONTEXT PATTERN HINTS
+        # CONTEXT PATTERN RESULT HINTS
         # --------------------------------------------------
 
         for pattern in (
@@ -1972,12 +1941,6 @@ class InfluenceSignalDetector:
             Dict[str, object]
         ],
     ) -> Optional[str]:
-        """
-        Selects the strongest signal.
-
-        Context-pattern result hints are preferred because
-        they are based on combinations of indicators.
-        """
 
         if not matched_signals:
 
@@ -2017,19 +1980,14 @@ class InfluenceSignalDetector:
 
         if pattern_scores:
 
-            strongest_pattern_signal = max(
+            strongest_signal = max(
                 pattern_scores,
                 key=pattern_scores.get,
             )
 
-            if (
-                strongest_pattern_signal
-                in matched_signals
-            ):
+            if strongest_signal in matched_signals:
 
-                return (
-                    strongest_pattern_signal
-                )
+                return strongest_signal
 
         priority = [
             "RECRUITMENT_COORDINATION",
@@ -2063,10 +2021,6 @@ class InfluenceSignalDetector:
             Dict[str, object]
         ],
     ) -> float:
-        """
-        Calculates analytical confidence from the
-        configured base confidence and score level.
-        """
 
         if not primary_signal:
 
@@ -2143,7 +2097,7 @@ class InfluenceSignalDetector:
         )
 
     # ======================================================
-    # COMPATIBILITY MATCHED PHRASES
+    # COMPATIBILITY PHRASES
     # ======================================================
 
     def _build_compatibility_phrases(
@@ -2154,18 +2108,12 @@ class InfluenceSignalDetector:
         narrative_results: Dict[str, object],
         high_value_result: Dict[str, object],
     ) -> List[Tuple[str, str]]:
-        """
-        Produces the legacy matched_phrases structure
-        expected by existing logging code.
-        """
 
         if not primary_signal:
 
             return []
 
-        results: List[
-            Tuple[str, str]
-        ] = []
+        results = []
 
         seen = set()
 
@@ -2270,9 +2218,6 @@ class InfluenceSignalDetector:
         self,
         results: Dict[str, object],
     ) -> List[str]:
-        """
-        Returns only names of groups with at least one match.
-        """
 
         return [
             name
@@ -2292,12 +2237,12 @@ class InfluenceSignalDetector:
     def _empty_result(
         self,
     ) -> Dict[str, object]:
-        """
-        Standard empty detector response.
-        """
 
         return {
             "detected":
+                False,
+
+            "candidate":
                 False,
 
             "primary_signal":
@@ -2378,57 +2323,22 @@ if __name__ == "__main__":
     )
 
     test_cases = [
-
-        # --------------------------------------------------
-        # ROUTE / MOVEMENT
-        # --------------------------------------------------
-
         (
-            "Hundreds of migrants are gathering near the coast "
-            "and moving toward a known crossing point. "
-            "Videos of the route are circulating on Telegram."
+            "Hundreds of migrants are gathering near Calais "
+            "and moving toward small boat launch locations."
         ),
-
-        # --------------------------------------------------
-        # LEGAL SIGNAL
-        # --------------------------------------------------
-
         (
-            "The court ruled that asylum seekers from this "
-            "country cannot currently be returned."
+            "The court ruled that asylum seekers cannot "
+            "currently be returned."
         ),
-
-        # --------------------------------------------------
-        # POLICY SIGNAL
-        # --------------------------------------------------
-
-        (
-            "Temporary protection has been extended for "
-            "refugees and new residence permits will be issued."
-        ),
-
-        # --------------------------------------------------
-        # COORDINATION
-        # --------------------------------------------------
-
         (
             "Migrants can contact us on Telegram. "
             "Transport available and seats available."
         ),
-
-        # --------------------------------------------------
-        # LOCATION + MOVEMENT
-        # --------------------------------------------------
-
         (
-            "Hundreds of migrants are moving toward Calais "
-            "and small boats have been seen near the coast."
+            "Spain introduced temporary border controls "
+            "because of migration pressure."
         ),
-
-        # --------------------------------------------------
-        # FALSE POSITIVE CONTROL
-        # --------------------------------------------------
-
         (
             "Come to the restaurant tonight. "
             "There are no police nearby."
@@ -2490,6 +2400,13 @@ if __name__ == "__main__":
         )
 
         print(
+            "Candidate:",
+            result.get(
+                "candidate"
+            ),
+        )
+
+        print(
             "Detected:",
             result.get(
                 "detected"
@@ -2500,6 +2417,13 @@ if __name__ == "__main__":
             "Primary signal:",
             result.get(
                 "primary_signal"
+            ),
+        )
+
+        print(
+            "Matched signals:",
+            result.get(
+                "matched_signals"
             ),
         )
 
@@ -2525,13 +2449,6 @@ if __name__ == "__main__":
         )
 
         print(
-            "Migration context:",
-            result.get(
-                "migration_context"
-            ),
-        )
-
-        print(
             "Indicator groups:",
             result.get(
                 "matched_indicator_groups"
@@ -2539,43 +2456,8 @@ if __name__ == "__main__":
         )
 
         print(
-            "Narratives:",
-            result.get(
-                "matched_narratives"
-            ),
-        )
-
-        print(
-            "Crossing points:",
-            result.get(
-                "matched_crossing_points"
-            ),
-        )
-
-        print(
-            "Crossing methods:",
-            result.get(
-                "matched_crossing_methods"
-            ),
-        )
-
-        print(
-            "Platforms:",
-            result.get(
-                "matched_platforms"
-            ),
-        )
-
-        print(
             "Context patterns:",
             result.get(
                 "matched_context_patterns"
-            ),
-        )
-
-        print(
-            "High-value:",
-            result.get(
-                "high_value_match"
             ),
         )
