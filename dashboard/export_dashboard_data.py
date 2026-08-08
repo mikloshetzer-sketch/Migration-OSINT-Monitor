@@ -2,25 +2,34 @@
 Migration OSINT Monitor
 
 File:
-export_dashboard_data.py
+dashboard/export_dashboard_data.py
 
 Description:
-Exports dashboard-ready JSON data from the existing SQLite database.
+Exports dashboard-ready JSON data from the persistent SQLite database.
 
-The generated dashboard-data.json file is consumed by the
-static GitHub Pages dashboard.
-
-Exported sections:
-
+V3 dashboard sections:
 - updated_at
+- current_run
 - kpis
 - live_events
 - event_groups
-- region_activity
-- source_activity
+- regions / region_activity
+- sources / source_activity
 - correlation
 - operational_assessment
+- technical_health
 - high_confidence_events
+- influence_signals
+- crossing_access_signals
+- top_crossing_access_posts
+- information_activity_weekly
+- information_activity_summary
+
+The exporter preserves the existing operational dashboard data while adding
+the persistent history / influence layer introduced by:
+- MonitorRun
+- CollectedPost
+- InfluenceSignal
 """
 
 import json
@@ -36,11 +45,14 @@ from database.models import (
     Post,
     EventGroup,
     EventGroupSource,
+    MonitorRun,
+    CollectedPost,
+    InfluenceSignal,
 )
 
 
 # ==========================================================
-# PATHS
+# PATHS / CONSTANTS
 # ==========================================================
 
 PROJECT_ROOT = (
@@ -55,20 +67,24 @@ OUTPUT_FILE = (
     / "dashboard-data.json"
 )
 
-
-# ==========================================================
-# CONSTANTS
-# ==========================================================
-
 RECENT_HOURS = 24
-
 LIVE_EVENT_LIMIT = 20
-
 EVENT_GROUP_LIMIT = 10
-
 HIGH_CONFIDENCE_LIMIT = 10
+INFLUENCE_LIMIT = 20
+TOP_ACCESS_POST_LIMIT = 3
+WEEK_HISTORY_COUNT = 8
 
 HIGH_CONFIDENCE_THRESHOLD = 0.75
+
+ACCESS_SIGNAL_TYPES = {
+    "CROSSING_FACILITATION",
+    "DECISION_INFLUENCE",
+    "MOBILIZATION_COORDINATION",
+    "MOBILIZATION_REPORT",
+    "LEGAL_MIGRATION_SIGNAL",
+    "ONLINE_INFLUENCE_REPORT",
+}
 
 
 # ==========================================================
@@ -77,12 +93,10 @@ HIGH_CONFIDENCE_THRESHOLD = 0.75
 
 def utc_now():
     """
-    Returns current UTC time as naive datetime.
+    Returns current UTC time as a naive datetime.
 
-    The existing SQLite schema currently uses
-    naive DateTime fields.
+    Existing SQLite DateTime columns are stored as naive UTC.
     """
-
     return (
         datetime.now(
             timezone.utc
@@ -97,9 +111,8 @@ def recent_cutoff(
     hours=RECENT_HOURS,
 ):
     """
-    Returns the datetime cutoff used for recent statistics.
+    Returns the UTC cutoff for recent dashboard statistics.
     """
-
     return (
         utc_now()
         - timedelta(
@@ -108,18 +121,57 @@ def recent_cutoff(
     )
 
 
+def format_datetime(
+    value,
+):
+    """
+    Converts datetime values to dashboard-friendly ISO UTC strings.
+    """
+    if value is None:
+        return None
+
+    if isinstance(
+        value,
+        datetime,
+    ):
+        return (
+            value.strftime(
+                "%Y-%m-%dT%H:%M:%SZ"
+            )
+        )
+
+    return str(
+        value
+    )
+
+
+def start_of_iso_week(
+    value,
+):
+    """
+    Returns Monday 00:00:00 for the ISO week containing value.
+    """
+    return (
+        value
+        - timedelta(
+            days=value.weekday()
+        )
+    ).replace(
+        hour=0,
+        minute=0,
+        second=0,
+        microsecond=0,
+    )
+
+
 # ==========================================================
-# SAFE CONVERSION
+# SAFE CONVERSION / JSON
 # ==========================================================
 
 def safe_int(
     value,
     default=0,
 ):
-    """
-    Safely converts a value to int.
-    """
-
     if value is None:
         return default
 
@@ -127,7 +179,6 @@ def safe_int(
         return int(
             value
         )
-
     except (
         TypeError,
         ValueError,
@@ -139,10 +190,6 @@ def safe_float(
     value,
     default=0.0,
 ):
-    """
-    Safely converts a value to float.
-    """
-
     if value is None:
         return default
 
@@ -150,7 +197,6 @@ def safe_float(
         return float(
             value
         )
-
     except (
         TypeError,
         ValueError,
@@ -162,10 +208,6 @@ def safe_percent(
     numerator,
     denominator,
 ):
-    """
-    Returns percentage safely.
-    """
-
     numerator = safe_float(
         numerator
     )
@@ -187,62 +229,320 @@ def safe_percent(
     )
 
 
-# ==========================================================
-# FORMAT HELPERS
-# ==========================================================
-
-def format_datetime(
+def deserialize_json_text(
     value,
+    default=None,
 ):
     """
-    Converts datetime values to a JSON-friendly UTC string.
+    Reads JSON serialized into Text columns.
     """
+    if default is None:
+        default = []
 
     if value is None:
-        return None
+        return default
 
     if isinstance(
         value,
-        datetime,
+        (
+            list,
+            dict,
+        ),
     ):
-        return value.strftime(
-            "%Y-%m-%d %H:%M:%S"
-        )
-
-    return str(
-        value
-    )
-
-
-def deserialize_source_types(
-    value,
-):
-    """
-    Reads JSON stored in EventGroup.source_types.
-    """
-
-    if not value:
-        return []
+        return value
 
     try:
-        result = json.loads(
+        return json.loads(
             value
         )
-
-        if isinstance(
-            result,
-            list,
-        ):
-            return result
-
     except (
         TypeError,
         ValueError,
         json.JSONDecodeError,
     ):
-        pass
+        return default
 
-    return []
+
+def humanize_token(
+    value,
+):
+    if not value:
+        return "N/A"
+
+    return (
+        str(value)
+        .replace(
+            "_",
+            " "
+        )
+        .title()
+    )
+
+
+# ==========================================================
+# TECHNICAL HEALTH
+# ==========================================================
+
+def get_latest_monitor_run(
+    session,
+):
+    """
+    Returns the latest MonitorRun regardless of status.
+    """
+    return (
+        session.execute(
+            select(
+                MonitorRun
+            )
+            .order_by(
+                MonitorRun.started_at.desc(),
+                MonitorRun.id.desc(),
+            )
+            .limit(1)
+        )
+        .scalars()
+        .first()
+    )
+
+
+def get_current_run(
+    session,
+):
+    """
+    Dashboard representation of the latest monitor execution.
+    """
+    run = get_latest_monitor_run(
+        session
+    )
+
+    if run is None:
+        return {
+            "available": False,
+            "status": "UNKNOWN",
+        }
+
+    return {
+        "available": True,
+        "id": run.id,
+        "run_uuid": run.run_uuid,
+        "started_at": format_datetime(
+            run.started_at
+        ),
+        "completed_at": format_datetime(
+            run.completed_at
+        ),
+        "status": run.status,
+
+        "posts_returned": safe_int(
+            run.posts_returned
+        ),
+        "unique_posts_collected": safe_int(
+            run.unique_posts_collected
+        ),
+
+        "x_posts_returned": safe_int(
+            run.x_posts_returned
+        ),
+        "reddit_posts_returned": safe_int(
+            run.reddit_posts_returned
+        ),
+        "mastodon_posts_returned": safe_int(
+            run.mastodon_posts_returned
+        ),
+
+        "unique_x_posts": safe_int(
+            run.unique_x_posts
+        ),
+        "unique_reddit_posts": safe_int(
+            run.unique_reddit_posts
+        ),
+        "unique_mastodon_posts": safe_int(
+            run.unique_mastodon_posts
+        ),
+
+        "noise_filtered": safe_int(
+            run.noise_filtered
+        ),
+        "non_operational_filtered": safe_int(
+            run.non_operational_filtered
+        ),
+        "historical_references_filtered": safe_int(
+            run.historical_references_filtered
+        ),
+
+        "influence_signals": safe_int(
+            run.influence_signals_detected
+        ),
+        "influence_signals_detected": safe_int(
+            run.influence_signals_detected
+        ),
+
+        "crossing_facilitation_signals": safe_int(
+            run.crossing_facilitation_signals
+        ),
+        "legal_migration_signals": safe_int(
+            run.legal_migration_signals
+        ),
+        "policy_signals": safe_int(
+            run.policy_signals
+        ),
+        "recruitment_coordination_signals": safe_int(
+            run.recruitment_coordination_signals
+        ),
+        "mobilization_coordination_signals": safe_int(
+            run.mobilization_coordination_signals
+        ),
+        "mobilization_report_signals": safe_int(
+            run.mobilization_report_signals
+        ),
+        "decision_influence_signals": safe_int(
+            run.decision_influence_signals
+        ),
+        "online_influence_report_signals": safe_int(
+            run.online_influence_report_signals
+        ),
+
+        "operational_events": safe_int(
+            run.operational_events_analyzed
+        ),
+        "operational_events_analyzed": safe_int(
+            run.operational_events_analyzed
+        ),
+
+        "historical_events_available": safe_int(
+            run.historical_events_available
+        ),
+
+        "new_correlations": (
+            safe_int(
+                run.events_correlated_existing
+            )
+        ),
+        "correlated_events": (
+            safe_int(
+                run.events_correlated_existing
+            )
+        ),
+
+        "new_correlation_groups": safe_int(
+            run.new_correlation_groups
+        ),
+        "database_correlations": safe_int(
+            run.database_correlations
+        ),
+        "current_run_correlations": safe_int(
+            run.current_run_correlations
+        ),
+
+        "new_events": safe_int(
+            run.new_events_saved
+        ),
+        "new_events_saved": safe_int(
+            run.new_events_saved
+        ),
+        "events_already_existing": safe_int(
+            run.events_already_existing
+        ),
+
+        "new_event_groups": safe_int(
+            run.new_event_groups
+        ),
+        "updated_event_groups": safe_int(
+            run.updated_event_groups
+        ),
+        "bootstrapped_event_groups": safe_int(
+            run.bootstrapped_event_groups
+        ),
+        "existing_event_groups_reused": safe_int(
+            run.existing_event_groups_reused
+        ),
+        "event_group_sources_linked": safe_int(
+            run.event_group_sources_linked
+        ),
+
+        "x_collector_errors": safe_int(
+            run.x_collector_errors
+        ),
+        "reddit_collector_errors": safe_int(
+            run.reddit_collector_errors
+        ),
+        "mastodon_collector_errors": safe_int(
+            run.mastodon_collector_errors
+        ),
+
+        "error_message": run.error_message,
+    }
+
+
+def get_technical_health(
+    session,
+):
+    """
+    Technical system health, intentionally separate from activity level.
+    """
+    run = get_latest_monitor_run(
+        session
+    )
+
+    if run is None:
+        return {
+            "status": "UNKNOWN",
+            "healthy": False,
+            "collector_errors": None,
+            "database": "AVAILABLE",
+        }
+
+    collector_errors = (
+        safe_int(
+            run.x_collector_errors
+        )
+        + safe_int(
+            run.reddit_collector_errors
+        )
+        + safe_int(
+            run.mastodon_collector_errors
+        )
+    )
+
+    status = str(
+        run.status
+        or "UNKNOWN"
+    ).upper()
+
+    healthy = (
+        status == "SUCCESS"
+        and collector_errors == 0
+    )
+
+    if healthy:
+        health_status = "HEALTHY"
+    elif status == "SUCCESS":
+        health_status = "DEGRADED"
+    elif status == "RUNNING":
+        health_status = "RUNNING"
+    else:
+        health_status = "ERROR"
+
+    return {
+        "status": health_status,
+        "healthy": healthy,
+        "run_status": status,
+        "collector_errors": collector_errors,
+        "x_collector_errors": safe_int(
+            run.x_collector_errors
+        ),
+        "reddit_collector_errors": safe_int(
+            run.reddit_collector_errors
+        ),
+        "mastodon_collector_errors": safe_int(
+            run.mastodon_collector_errors
+        ),
+        "database": "AVAILABLE",
+        "last_run_id": run.id,
+        "last_completed_at": format_datetime(
+            run.completed_at
+        ),
+    }
 
 
 # ==========================================================
@@ -253,12 +553,11 @@ def get_kpis(
     session,
 ):
     """
-    Builds top dashboard KPI values.
+    Existing 24h operational KPI block, plus V3 history/influence KPIs.
     """
-
     cutoff = recent_cutoff()
 
-    operational_events = (
+    operational_events = safe_int(
         session.execute(
             select(
                 func.count(
@@ -266,18 +565,18 @@ def get_kpis(
                 )
             )
             .where(
-                Post.signal_type
+                Post.published_at
                 .is_not(None)
             )
             .where(
-                Post.collected_at
+                Post.published_at
                 >= cutoff
             )
         )
         .scalar_one()
     )
 
-    active_event_groups = (
+    active_event_groups = safe_int(
         session.execute(
             select(
                 func.count(
@@ -292,24 +591,7 @@ def get_kpis(
         .scalar_one()
     )
 
-    sources = (
-        session.execute(
-            select(
-                func.count(
-                    func.distinct(
-                        Post.source
-                    )
-                )
-            )
-            .where(
-                Post.signal_type
-                .is_not(None)
-            )
-        )
-        .scalar_one()
-    )
-
-    correlated_events = (
+    correlated_events = safe_int(
         session.execute(
             select(
                 func.count(
@@ -322,18 +604,7 @@ def get_kpis(
             )
             .where(
                 EventGroupSource.published_at
-                >= cutoff
-            )
-        )
-        .scalar_one()
-    )
-
-    grouped_sources = (
-        session.execute(
-            select(
-                func.count(
-                    EventGroupSource.id
-                )
+                .is_not(None)
             )
             .where(
                 EventGroupSource.published_at
@@ -343,58 +614,145 @@ def get_kpis(
         .scalar_one()
     )
 
-    new_events = max(
-        safe_int(
-            grouped_sources
-        )
-        - safe_int(
-            correlated_events
-        ),
-        0,
-    )
-
-    region_values = (
+    influence_signals = safe_int(
         session.execute(
             select(
-                EventGroup.primary_region
+                func.count(
+                    InfluenceSignal.id
+                )
+            )
+            .where(
+                InfluenceSignal.published_at
+                .is_not(None)
+            )
+            .where(
+                InfluenceSignal.published_at
+                >= cutoff
+            )
+        )
+        .scalar_one()
+    )
+
+    access_signals = safe_int(
+        session.execute(
+            select(
+                func.count(
+                    InfluenceSignal.id
+                )
+            )
+            .where(
+                InfluenceSignal.primary_signal
+                .in_(
+                    ACCESS_SIGNAL_TYPES
+                )
+            )
+            .where(
+                InfluenceSignal.published_at
+                .is_not(None)
+            )
+            .where(
+                InfluenceSignal.published_at
+                >= cutoff
+            )
+        )
+        .scalar_one()
+    )
+
+    collected_posts_24h = safe_int(
+        session.execute(
+            select(
+                func.count(
+                    CollectedPost.id
+                )
+            )
+            .where(
+                CollectedPost.published_at
+                .is_not(None)
+            )
+            .where(
+                CollectedPost.published_at
+                >= cutoff
+            )
+        )
+        .scalar_one()
+    )
+
+    source_count = safe_int(
+        session.execute(
+            select(
+                func.count(
+                    func.distinct(
+                        CollectedPost.source
+                    )
+                )
+            )
+            .where(
+                CollectedPost.published_at
+                .is_not(None)
+            )
+            .where(
+                CollectedPost.published_at
+                >= cutoff
+            )
+        )
+        .scalar_one()
+    )
+
+    region_count = safe_int(
+        session.execute(
+            select(
+                func.count(
+                    func.distinct(
+                        EventGroup.primary_region
+                    )
+                )
             )
             .where(
                 EventGroup.primary_region
                 .is_not(None)
             )
             .where(
-                EventGroup.primary_region
-                != "GLOBAL"
+                EventGroup.last_seen
+                .is_not(None)
+            )
+            .where(
+                EventGroup.last_seen
+                >= cutoff
             )
         )
-        .scalars()
-        .all()
+        .scalar_one()
     )
 
-    regions = len(
-        set(
-            region_values
-        )
+    current_run = get_current_run(
+        session
     )
 
     return {
-        "operational_events": safe_int(
-            operational_events
-        ),
+        # Legacy names
+        "operational_events": operational_events,
         "new_events": safe_int(
-            new_events
+            current_run.get(
+                "new_events_saved"
+            )
         ),
-        "correlated_events": safe_int(
-            correlated_events
+        "correlated_events": correlated_events,
+        "active_event_groups": active_event_groups,
+        "sources": source_count,
+        "regions": region_count,
+
+        # V3 additions
+        "collected_posts_24h": collected_posts_24h,
+        "influence_signals": influence_signals,
+        "access_signals": access_signals,
+        "current_run_operational_events": safe_int(
+            current_run.get(
+                "operational_events_analyzed"
+            )
         ),
-        "active_event_groups": safe_int(
-            active_event_groups
-        ),
-        "sources": safe_int(
-            sources
-        ),
-        "regions": safe_int(
-            regions
+        "current_run_unique_posts": safe_int(
+            current_run.get(
+                "unique_posts_collected"
+            )
         ),
     }
 
@@ -407,102 +765,115 @@ def get_live_events(
     session,
 ):
     """
-    Returns the latest operational posts.
+    Returns latest operational Post records.
     """
-
     rows = (
         session.execute(
             select(
-                Post,
-                EventGroupSource.event_group_id,
-                EventGroupSource.correlation_score,
-            )
-            .outerjoin(
-                EventGroupSource,
-                (
-                    EventGroupSource.source
-                    == Post.source
-                )
-                & (
-                    EventGroupSource.source_post_id
-                    == Post.post_id
-                ),
-            )
-            .where(
-                Post.signal_type
-                .is_not(None)
+                Post
             )
             .order_by(
-                Post.published_at.desc()
+                Post.published_at.desc(),
+                Post.id.desc(),
             )
             .limit(
                 LIVE_EVENT_LIMIT
             )
         )
+        .scalars()
         .all()
     )
 
     results = []
 
-    for (
-        post,
-        event_group_id,
-        correlation_score,
-    ) in rows:
+    for post in rows:
+        locations = (
+            deserialize_json_text(
+                post.locations,
+                default=[],
+            )
+        )
+
+        primary_location = None
+
+        if (
+            isinstance(
+                locations,
+                list,
+            )
+            and locations
+            and isinstance(
+                locations[0],
+                dict,
+            )
+        ):
+            primary_location = (
+                locations[0]
+            )
+
+        location_name = (
+            primary_location.get(
+                "name"
+            )
+            if primary_location
+            else None
+        )
+
+        country = (
+            primary_location.get(
+                "country"
+            )
+            if primary_location
+            else None
+        )
 
         results.append(
             {
                 "id": post.id,
-
-                "event_group_id": (
-                    event_group_id
-                ),
-
+                "event_id": post.id,
+                "source": post.source,
+                "source_post_id": post.post_id,
+                "author": post.author,
                 "published_at": format_datetime(
                     post.published_at
                 ),
-
+                "collected_at": format_datetime(
+                    post.collected_at
+                ),
                 "event_type": (
                     post.signal_type
+                    or "GENERAL_DISCUSSION"
                 ),
-
-                "location": (
-                    post.locations
+                "signal_type": (
+                    post.signal_type
+                    or "GENERAL_DISCUSSION"
+                ),
+                "primary_location": (
+                    location_name
                     or "-"
                 ),
-
+                "location": (
+                    location_name
+                    or "-"
+                ),
+                "country": (
+                    country
+                    or "-"
+                ),
+                "latitude": post.latitude,
+                "longitude": post.longitude,
                 "confidence": safe_float(
                     post.extraction_confidence
                 ),
-
-                "source": (
-                    post.source
-                    or "UNKNOWN"
+                "event_confidence": safe_float(
+                    post.extraction_confidence
                 ),
-
-                "author": (
-                    post.author
-                    or "-"
+                "relevance_score": safe_float(
+                    post.relevance_score
                 ),
-
-                "text": (
-                    post.text
-                    or ""
-                ),
-
-                "url": (
-                    post.url
-                    or ""
-                ),
-
-                "correlation_score": (
-                    safe_float(
-                        correlation_score
-                    )
-                    if correlation_score
-                    is not None
-                    else None
-                ),
+                "text": post.text or "",
+                "url": post.url,
+                "source_url": post.url,
             }
         )
 
@@ -513,21 +884,42 @@ def get_live_events(
 # EVENT GROUPS
 # ==========================================================
 
+def deserialize_source_types(
+    value,
+):
+    result = deserialize_json_text(
+        value,
+        default=[],
+    )
+
+    if isinstance(
+        result,
+        list,
+    ):
+        return result
+
+    return []
+
+
 def get_event_groups(
     session,
 ):
     """
-    Returns the most active event groups.
+    Returns highest-priority active EventGroups.
     """
-
     groups = (
         session.execute(
             select(
                 EventGroup
             )
+            .where(
+                EventGroup.status
+                == "ACTIVE"
+            )
             .order_by(
-                EventGroup.source_count.desc(),
                 EventGroup.last_seen.desc(),
+                EventGroup.source_count.desc(),
+                EventGroup.confidence.desc(),
             )
             .limit(
                 EVENT_GROUP_LIMIT
@@ -540,65 +932,72 @@ def get_event_groups(
     results = []
 
     for group in groups:
+        source_types = (
+            deserialize_source_types(
+                group.source_types
+            )
+        )
 
         results.append(
             {
                 "id": group.id,
-
-                "event_type": (
-                    group.event_type
-                ),
-
-                "title": (
-                    group.title
+                "group_id": group.id,
+                "event_type": group.event_type,
+                "dominant_event_type": group.event_type,
+                "title": group.title,
+                "representative_text": (
+                    group.representative_text
                     or ""
                 ),
-
+                "region": (
+                    group.primary_region
+                    or "GLOBAL"
+                ),
                 "primary_region": (
                     group.primary_region
                     or "GLOBAL"
                 ),
-
                 "primary_location": (
                     group.primary_location
                     or "-"
                 ),
-
                 "country": (
                     group.country
                     or "-"
                 ),
-
+                "latitude": group.latitude,
+                "longitude": group.longitude,
                 "first_seen": format_datetime(
                     group.first_seen
                 ),
-
                 "last_seen": format_datetime(
                     group.last_seen
                 ),
-
                 "source_count": safe_int(
-                    group.source_count
+                    group.source_count,
+                    1,
                 ),
-
-                "source_types": (
-                    deserialize_source_types(
-                        group.source_types
-                    )
+                "sources_count": safe_int(
+                    group.source_count,
+                    1,
                 ),
-
+                "source_types": source_types,
+                "sources": source_types,
                 "status": (
                     group.status
                     or "ACTIVE"
                 ),
-
                 "confidence": safe_float(
                     group.confidence
                 ),
-
-                "representative_text": (
-                    group.representative_text
-                    or ""
+                "average_confidence": safe_float(
+                    group.confidence
+                ),
+                "created_at": format_datetime(
+                    group.created_at
+                ),
+                "updated_at": format_datetime(
+                    group.updated_at
                 ),
             }
         )
@@ -614,8 +1013,9 @@ def get_region_activity(
     session,
 ):
     """
-    Groups EventGroups by primary region.
+    Returns recent EventGroup activity by region.
     """
+    cutoff = recent_cutoff()
 
     rows = (
         session.execute(
@@ -624,6 +1024,14 @@ def get_region_activity(
                 func.count(
                     EventGroup.id
                 ),
+            )
+            .where(
+                EventGroup.last_seen
+                .is_not(None)
+            )
+            .where(
+                EventGroup.last_seen
+                >= cutoff
             )
             .group_by(
                 EventGroup.primary_region
@@ -637,18 +1045,41 @@ def get_region_activity(
         .all()
     )
 
-    return [
-        {
-            "region": (
-                region
-                or "GLOBAL"
-            ),
-            "count": safe_int(
-                count
-            ),
-        }
-        for region, count in rows
-    ]
+    total = sum(
+        safe_int(
+            count
+        )
+        for _region, count
+        in rows
+    )
+
+    results = []
+
+    for region, count in rows:
+        count = safe_int(
+            count
+        )
+
+        results.append(
+            {
+                "name": (
+                    region
+                    or "GLOBAL"
+                ),
+                "region": (
+                    region
+                    or "GLOBAL"
+                ),
+                "count": count,
+                "events": count,
+                "percentage": safe_percent(
+                    count,
+                    total,
+                ),
+            }
+        )
+
+    return results
 
 
 # ==========================================================
@@ -659,45 +1090,633 @@ def get_source_activity(
     session,
 ):
     """
-    Groups operational posts by source.
+    Returns unique collected social posts by source in last 24h.
+
+    This uses CollectedPost instead of operational Post, so it measures
+    the information environment rather than only operational events.
     """
+    cutoff = recent_cutoff()
 
     rows = (
         session.execute(
             select(
-                Post.source,
+                CollectedPost.source,
                 func.count(
-                    Post.id
+                    CollectedPost.id
                 ),
             )
             .where(
-                Post.signal_type
+                CollectedPost.published_at
                 .is_not(None)
             )
+            .where(
+                CollectedPost.published_at
+                >= cutoff
+            )
             .group_by(
-                Post.source
+                CollectedPost.source
             )
             .order_by(
                 func.count(
-                    Post.id
+                    CollectedPost.id
                 ).desc()
             )
         )
         .all()
     )
 
-    return [
-        {
-            "source": (
-                source
-                or "UNKNOWN"
-            ),
-            "count": safe_int(
-                count
-            ),
-        }
-        for source, count in rows
+    total = sum(
+        safe_int(
+            count
+        )
+        for _source, count
+        in rows
+    )
+
+    results = []
+
+    for source, count in rows:
+        count = safe_int(
+            count
+        )
+
+        results.append(
+            {
+                "source": (
+                    source
+                    or "UNKNOWN"
+                ),
+                "name": (
+                    source
+                    or "UNKNOWN"
+                ),
+                "count": count,
+                "posts": count,
+                "percentage": safe_percent(
+                    count,
+                    total,
+                ),
+            }
+        )
+
+    return results
+
+
+# ==========================================================
+# INFLUENCE SIGNALS
+# ==========================================================
+
+def serialize_influence_signal(
+    signal,
+):
+    """
+    Converts one persistent InfluenceSignal into dashboard JSON.
+    """
+    return {
+        "id": signal.id,
+        "source": signal.source,
+        "source_post_id": signal.source_post_id,
+        "author": signal.author,
+        "language": signal.language,
+        "published_at": format_datetime(
+            signal.published_at
+        ),
+        "first_detected_at": format_datetime(
+            signal.first_detected_at
+        ),
+        "last_detected_at": format_datetime(
+            signal.last_detected_at
+        ),
+        "detection_count": safe_int(
+            signal.detection_count,
+            1,
+        ),
+
+        "text": signal.text or "",
+        "text_excerpt": (
+            (signal.text or "")[:700]
+        ),
+        "url": signal.source_url,
+        "source_url": signal.source_url,
+
+        "primary_signal": signal.primary_signal,
+        "signal_type": signal.primary_signal,
+        "signal_mode": signal.signal_mode,
+        "signal_intent": signal.signal_intent,
+        "priority": (
+            signal.priority
+            or "LOW"
+        ),
+        "confidence": safe_float(
+            signal.confidence
+        ),
+        "score": safe_float(
+            signal.score
+        ),
+
+        "matched_signals": deserialize_json_text(
+            signal.matched_signals,
+            default=[],
+        ),
+        "matched_phrases": deserialize_json_text(
+            signal.matched_phrases,
+            default=[],
+        ),
+        "matched_groups": deserialize_json_text(
+            signal.matched_groups,
+            default=[],
+        ),
+        "context_matches": deserialize_json_text(
+            signal.context_matches,
+            default=[],
+        ),
+        "high_value_matches": deserialize_json_text(
+            signal.high_value_matches,
+            default=[],
+        ),
+        "signal_context_rejections": deserialize_json_text(
+            signal.signal_context_rejections,
+            default={},
+        ),
+
+        "migration_context": signal.migration_context,
+        "human_migration_context": (
+            signal.human_migration_context
+        ),
+
+        "historical_reference": bool(
+            signal.historical_reference
+        ),
+        "historical_reason": signal.historical_reason,
+        "historical_reference_text": (
+            signal.historical_reference_text
+        ),
+
+        "location": (
+            signal.primary_location
+            or "-"
+        ),
+        "primary_location": (
+            signal.primary_location
+            or "-"
+        ),
+        "country": (
+            signal.country
+            or "-"
+        ),
+        "region": (
+            signal.primary_region
+            or "GLOBAL"
+        ),
+        "primary_region": (
+            signal.primary_region
+            or "GLOBAL"
+        ),
+        "latitude": signal.latitude,
+        "longitude": signal.longitude,
+
+        "rules_version": signal.rules_version,
+    }
+
+
+def influence_priority_rank(
+    value,
+):
+    ranking = {
+        "CRITICAL": 4,
+        "HIGH": 3,
+        "MEDIUM": 2,
+        "LOW": 1,
+    }
+
+    return ranking.get(
+        str(
+            value
+            or ""
+        ).upper(),
+        0,
+    )
+
+
+def get_influence_signals(
+    session,
+):
+    """
+    Returns recent persistent influence / early-warning signals.
+    """
+    cutoff = recent_cutoff()
+
+    signals = (
+        session.execute(
+            select(
+                InfluenceSignal
+            )
+            .where(
+                InfluenceSignal.published_at
+                .is_not(None)
+            )
+            .where(
+                InfluenceSignal.published_at
+                >= cutoff
+            )
+            .order_by(
+                InfluenceSignal.published_at.desc(),
+                InfluenceSignal.confidence.desc(),
+            )
+            .limit(
+                INFLUENCE_LIMIT
+            )
+        )
+        .scalars()
+        .all()
+    )
+
+    results = [
+        serialize_influence_signal(
+            signal
+        )
+        for signal in signals
     ]
+
+    results.sort(
+        key=lambda item: (
+            influence_priority_rank(
+                item.get(
+                    "priority"
+                )
+            ),
+            safe_float(
+                item.get(
+                    "confidence"
+                )
+            ),
+            item.get(
+                "published_at"
+            )
+            or "",
+        ),
+        reverse=True,
+    )
+
+    return results
+
+
+def get_crossing_access_signals(
+    session,
+):
+    """
+    Returns recent signals relevant to crossing/access intelligence.
+    """
+    cutoff = recent_cutoff()
+
+    signals = (
+        session.execute(
+            select(
+                InfluenceSignal
+            )
+            .where(
+                InfluenceSignal.primary_signal
+                .in_(
+                    ACCESS_SIGNAL_TYPES
+                )
+            )
+            .where(
+                InfluenceSignal.published_at
+                .is_not(None)
+            )
+            .where(
+                InfluenceSignal.published_at
+                >= cutoff
+            )
+        )
+        .scalars()
+        .all()
+    )
+
+    results = [
+        serialize_influence_signal(
+            signal
+        )
+        for signal in signals
+    ]
+
+    results.sort(
+        key=lambda item: (
+            influence_priority_rank(
+                item.get(
+                    "priority"
+                )
+            ),
+            safe_float(
+                item.get(
+                    "confidence"
+                )
+            ),
+            item.get(
+                "published_at"
+            )
+            or "",
+        ),
+        reverse=True,
+    )
+
+    return results
+
+
+def get_top_crossing_access_posts(
+    crossing_access_signals,
+):
+    """
+    TOP 3 source posts for the dashboard crossing/access panel.
+    """
+    return (
+        crossing_access_signals[
+            :TOP_ACCESS_POST_LIMIT
+        ]
+    )
+
+
+# ==========================================================
+# WEEKLY INFORMATION ACTIVITY
+# ==========================================================
+
+def get_information_activity_weekly(
+    session,
+    week_count=WEEK_HISTORY_COUNT,
+):
+    """
+    Returns unique collected-post volume for the last N ISO weeks.
+
+    Important:
+    - counts unique CollectedPost records
+    - uses published_at
+    - repeated manual workflow runs do not inflate the trend
+    """
+    now = utc_now()
+
+    current_week_start = (
+        start_of_iso_week(
+            now
+        )
+    )
+
+    oldest_week_start = (
+        current_week_start
+        - timedelta(
+            weeks=week_count - 1
+        )
+    )
+
+    posts = (
+        session.execute(
+            select(
+                CollectedPost.published_at,
+                CollectedPost.source,
+                CollectedPost.influence_detected,
+                CollectedPost.is_operational,
+            )
+            .where(
+                CollectedPost.published_at
+                .is_not(None)
+            )
+            .where(
+                CollectedPost.published_at
+                >= oldest_week_start
+            )
+        )
+        .all()
+    )
+
+    influence_rows = (
+        session.execute(
+            select(
+                InfluenceSignal.published_at
+            )
+            .where(
+                InfluenceSignal.published_at
+                .is_not(None)
+            )
+            .where(
+                InfluenceSignal.published_at
+                >= oldest_week_start
+            )
+        )
+        .scalars()
+        .all()
+    )
+
+    buckets = {}
+
+    for offset in range(
+        week_count
+    ):
+        week_start = (
+            oldest_week_start
+            + timedelta(
+                weeks=offset
+            )
+        )
+
+        iso_year, iso_week, _ = (
+            week_start.isocalendar()
+        )
+
+        key = (
+            iso_year,
+            iso_week,
+        )
+
+        buckets[
+            key
+        ] = {
+            "week_start": week_start,
+            "posts": 0,
+            "operational_posts": 0,
+            "influence_posts": 0,
+            "sources": Counter(),
+        }
+
+    for (
+        published_at,
+        source,
+        influence_detected,
+        is_operational,
+    ) in posts:
+
+        iso_year, iso_week, _ = (
+            published_at.isocalendar()
+        )
+
+        key = (
+            iso_year,
+            iso_week,
+        )
+
+        if key not in buckets:
+            continue
+
+        bucket = buckets[
+            key
+        ]
+
+        bucket[
+            "posts"
+        ] += 1
+
+        if is_operational:
+            bucket[
+                "operational_posts"
+            ] += 1
+
+        if influence_detected:
+            bucket[
+                "influence_posts"
+            ] += 1
+
+        bucket[
+            "sources"
+        ][
+            source
+            or "UNKNOWN"
+        ] += 1
+
+    # InfluenceSignal is the authoritative persistent signal history.
+    # Replace the collected-post flag count with the exact stored count.
+    authoritative_influence = Counter()
+
+    for published_at in influence_rows:
+        iso_year, iso_week, _ = (
+            published_at.isocalendar()
+        )
+
+        authoritative_influence[
+            (
+                iso_year,
+                iso_week,
+            )
+        ] += 1
+
+    output = []
+
+    for key in sorted(
+        buckets.keys()
+    ):
+        bucket = buckets[
+            key
+        ]
+
+        iso_year, iso_week = key
+
+        source_counts = dict(
+            bucket[
+                "sources"
+            ]
+        )
+
+        output.append(
+            {
+                "year": iso_year,
+                "week": iso_week,
+                "label": f"W{iso_week:02d}",
+                "week_label": f"W{iso_week:02d}",
+                "week_start": format_datetime(
+                    bucket[
+                        "week_start"
+                    ]
+                ),
+                "posts": safe_int(
+                    bucket[
+                        "posts"
+                    ]
+                ),
+                "post_count": safe_int(
+                    bucket[
+                        "posts"
+                    ]
+                ),
+                "operational_posts": safe_int(
+                    bucket[
+                        "operational_posts"
+                    ]
+                ),
+                "influence_signals": safe_int(
+                    authoritative_influence.get(
+                        key,
+                        0,
+                    )
+                ),
+                "source_counts": source_counts,
+            }
+        )
+
+    return output
+
+
+def get_information_activity_summary(
+    weekly_activity,
+):
+    """
+    Current week / previous week / percentage change.
+    """
+    if not weekly_activity:
+        return {
+            "current_week": 0,
+            "previous_week": 0,
+            "change_percent": 0.0,
+            "direction": "FLAT",
+        }
+
+    current = safe_int(
+        weekly_activity[
+            -1
+        ].get(
+            "posts"
+        )
+    )
+
+    previous = 0
+
+    if len(
+        weekly_activity
+    ) >= 2:
+        previous = safe_int(
+            weekly_activity[
+                -2
+            ].get(
+                "posts"
+            )
+        )
+
+    if previous > 0:
+        change = round(
+            (
+                (
+                    current
+                    - previous
+                )
+                / previous
+            )
+            * 100,
+            2,
+        )
+    elif current > 0:
+        change = 100.0
+    else:
+        change = 0.0
+
+    if change > 0:
+        direction = "UP"
+    elif change < 0:
+        direction = "DOWN"
+    else:
+        direction = "FLAT"
+
+    return {
+        "current_week": current,
+        "previous_week": previous,
+        "change_percent": change,
+        "direction": direction,
+    }
 
 
 # ==========================================================
@@ -708,37 +1727,11 @@ def get_correlation_performance(
     session,
 ):
     """
-    Returns high-level event processing statistics
-    and derived efficiency metrics.
+    Correlation metrics for the current persistent dataset.
     """
+    cutoff = recent_cutoff()
 
-    total_posts = (
-        session.execute(
-            select(
-                func.count(
-                    Post.id
-                )
-            )
-        )
-        .scalar_one()
-    )
-
-    operational_events = (
-        session.execute(
-            select(
-                func.count(
-                    Post.id
-                )
-            )
-            .where(
-                Post.signal_type
-                .is_not(None)
-            )
-        )
-        .scalar_one()
-    )
-
-    correlated_sources = (
+    correlated_sources = safe_int(
         session.execute(
             select(
                 func.count(
@@ -749,143 +1742,115 @@ def get_correlation_performance(
                 EventGroupSource.correlation_score
                 .is_not(None)
             )
+            .where(
+                EventGroupSource.published_at
+                .is_not(None)
+            )
+            .where(
+                EventGroupSource.published_at
+                >= cutoff
+            )
         )
         .scalar_one()
     )
 
-    grouped_sources = (
+    grouped_sources = safe_int(
         session.execute(
             select(
                 func.count(
                     EventGroupSource.id
                 )
             )
+            .where(
+                EventGroupSource.published_at
+                .is_not(None)
+            )
+            .where(
+                EventGroupSource.published_at
+                >= cutoff
+            )
         )
         .scalar_one()
     )
 
-    event_groups = (
+    event_groups = safe_int(
         session.execute(
             select(
                 func.count(
                     EventGroup.id
                 )
             )
+            .where(
+                EventGroup.status
+                == "ACTIVE"
+            )
         )
         .scalar_one()
     )
 
-    total_posts = safe_int(
-        total_posts
+    multi_source_groups = safe_int(
+        session.execute(
+            select(
+                func.count(
+                    EventGroup.id
+                )
+            )
+            .where(
+                EventGroup.source_count
+                >= 2
+            )
+            .where(
+                EventGroup.status
+                == "ACTIVE"
+            )
+        )
+        .scalar_one()
+    )
+
+    strongest_match = safe_float(
+        session.execute(
+            select(
+                func.max(
+                    EventGroupSource.correlation_score
+                )
+            )
+        )
+        .scalar_one()
     )
 
     operational_events = safe_int(
-        operational_events
-    )
-
-    correlated_sources = safe_int(
-        correlated_sources
-    )
-
-    grouped_sources = safe_int(
-        grouped_sources
-    )
-
-    event_groups = safe_int(
-        event_groups
-    )
-
-    filtered_posts = max(
-        total_posts
-        - operational_events,
-        0,
-    )
-
-    filtering_efficiency = (
-        safe_percent(
-            filtered_posts,
-            total_posts,
+        session.execute(
+            select(
+                func.count(
+                    Post.id
+                )
+            )
+            .where(
+                Post.published_at
+                .is_not(None)
+            )
+            .where(
+                Post.published_at
+                >= cutoff
+            )
         )
-    )
-
-    operational_rate = (
-        safe_percent(
-            operational_events,
-            total_posts,
-        )
-    )
-
-    correlation_rate = (
-        safe_percent(
-            correlated_sources,
-            operational_events,
-        )
-    )
-
-    grouping_rate = (
-        safe_percent(
-            event_groups,
-            operational_events,
-        )
-    )
-
-    multi_source_rate = (
-        safe_percent(
-            correlated_sources,
-            grouped_sources,
-        )
-    )
-
-    conversion_rate = (
-        safe_percent(
-            event_groups,
-            operational_events,
-        )
+        .scalar_one()
     )
 
     return {
-        "total_posts": total_posts,
-
-        "filtered_posts": filtered_posts,
-
-        "operational_events": (
-            operational_events
+        "correlated_events": correlated_sources,
+        "correlated_sources": correlated_sources,
+        "grouped_sources": grouped_sources,
+        "event_groups": event_groups,
+        "active_groups": event_groups,
+        "multi_source_groups": multi_source_groups,
+        "strongest_match": round(
+            strongest_match,
+            3,
         ),
-
-        "correlated_sources": (
-            correlated_sources
-        ),
-
-        "grouped_sources": (
-            grouped_sources
-        ),
-
-        "event_groups": (
-            event_groups
-        ),
-
-        "filtering_efficiency": (
-            filtering_efficiency
-        ),
-
-        "operational_rate": (
-            operational_rate
-        ),
-
-        "correlation_rate": (
-            correlation_rate
-        ),
-
-        "grouping_rate": (
-            grouping_rate
-        ),
-
-        "multi_source_rate": (
-            multi_source_rate
-        ),
-
-        "conversion_rate": (
-            conversion_rate
+        "correlation_rate": safe_percent(
+            correlated_sources,
+            operational_events,
         ),
     }
 
@@ -900,7 +1865,6 @@ def get_high_confidence_events(
     """
     Returns high-confidence EventGroups.
     """
-
     groups = (
         session.execute(
             select(
@@ -929,43 +1893,48 @@ def get_high_confidence_events(
     results = []
 
     for group in groups:
-
         results.append(
             {
                 "id": group.id,
-
-                "event_type": (
-                    group.event_type
-                ),
-
+                "group_id": group.id,
+                "event_type": group.event_type,
                 "primary_location": (
                     group.primary_location
                     or "-"
                 ),
-
+                "location": (
+                    group.primary_location
+                    or "-"
+                ),
                 "country": (
                     group.country
                     or "-"
                 ),
-
                 "region": (
                     group.primary_region
                     or "GLOBAL"
                 ),
-
+                "primary_region": (
+                    group.primary_region
+                    or "GLOBAL"
+                ),
                 "confidence": safe_float(
                     group.confidence
                 ),
-
+                "average_confidence": safe_float(
+                    group.confidence
+                ),
                 "source_count": safe_int(
                     group.source_count
                 ),
-
                 "last_seen": format_datetime(
                     group.last_seen
                 ),
-
                 "representative_text": (
+                    group.representative_text
+                    or ""
+                ),
+                "text": (
                     group.representative_text
                     or ""
                 ),
@@ -976,360 +1945,12 @@ def get_high_confidence_events(
 
 
 # ==========================================================
-# OPERATIONAL ASSESSMENT
+# ASSESSMENT
 # ==========================================================
-
-def get_operational_assessment(
-    session,
-    kpis,
-    region_activity,
-    source_activity,
-    correlation,
-):
-    """
-    Builds deterministic rule-based analytical assessment.
-
-    This is intentionally not AI-generated.
-
-    It summarizes:
-    - operational activity
-    - active event groups
-    - dominant region
-    - dominant event type
-    - primary source
-    - average confidence
-    - correlation performance
-    - system assessment
-    """
-
-    dominant_region = (
-        get_dominant_region(
-            region_activity
-        )
-    )
-
-    dominant_source = (
-        get_dominant_source(
-            source_activity
-        )
-    )
-
-    dominant_event = (
-        get_dominant_event_type(
-            session
-        )
-    )
-
-    average_confidence = (
-        get_average_confidence(
-            session
-        )
-    )
-
-    active_groups = safe_int(
-        kpis.get(
-            "active_event_groups"
-        )
-    )
-
-    recent_operational = safe_int(
-        kpis.get(
-            "operational_events"
-        )
-    )
-
-    recent_correlated = safe_int(
-        kpis.get(
-            "correlated_events"
-        )
-    )
-
-    correlation_rate = safe_float(
-        correlation.get(
-            "correlation_rate"
-        )
-    )
-
-    system_health = (
-        determine_system_health(
-            operational_events=(
-                recent_operational
-            ),
-            active_groups=(
-                active_groups
-            ),
-            average_confidence=(
-                average_confidence
-            ),
-        )
-    )
-
-    activity_level = (
-        determine_activity_level(
-            recent_operational
-        )
-    )
-
-    confidence_level = (
-        determine_confidence_level(
-            average_confidence
-        )
-    )
-
-    summary = (
-        build_assessment_summary(
-            operational_events=(
-                recent_operational
-            ),
-            correlated_events=(
-                recent_correlated
-            ),
-            active_groups=(
-                active_groups
-            ),
-            dominant_region=(
-                dominant_region
-            ),
-            dominant_event=(
-                dominant_event
-            ),
-            dominant_source=(
-                dominant_source
-            ),
-            average_confidence=(
-                average_confidence
-            ),
-            activity_level=(
-                activity_level
-            ),
-        )
-    )
-
-    return {
-        "operational_events_24h": (
-            recent_operational
-        ),
-
-        "correlated_events_24h": (
-            recent_correlated
-        ),
-
-        "active_event_groups": (
-            active_groups
-        ),
-
-        "dominant_region": (
-            dominant_region
-        ),
-
-        "dominant_event_type": (
-            dominant_event
-        ),
-
-        "dominant_source": (
-            dominant_source
-        ),
-
-        "average_confidence": round(
-            average_confidence,
-            3,
-        ),
-
-        "confidence_level": (
-            confidence_level
-        ),
-
-        "correlation_rate": round(
-            correlation_rate,
-            2,
-        ),
-
-        "activity_level": (
-            activity_level
-        ),
-
-        "system_health": (
-            system_health
-        ),
-
-        "summary": (
-            summary
-        ),
-    }
-
-
-# ==========================================================
-# ASSESSMENT HELPERS
-# ==========================================================
-
-def get_dominant_region(
-    region_activity,
-):
-    """
-    Returns the most active meaningful region.
-
-    GLOBAL is ignored when a real region exists.
-    """
-
-    if not region_activity:
-        return "N/A"
-
-    meaningful_regions = [
-        item
-        for item in region_activity
-        if (
-            item.get(
-                "region"
-            )
-            not in {
-                None,
-                "",
-                "GLOBAL",
-            }
-        )
-    ]
-
-    candidates = (
-        meaningful_regions
-        if meaningful_regions
-        else region_activity
-    )
-
-    if not candidates:
-        return "N/A"
-
-    dominant = max(
-        candidates,
-        key=lambda item: safe_int(
-            item.get(
-                "count"
-            )
-        ),
-    )
-
-    return (
-        dominant.get(
-            "region"
-        )
-        or "N/A"
-    )
-
-
-def get_dominant_source(
-    source_activity,
-):
-    """
-    Returns the most active source type.
-    """
-
-    if not source_activity:
-        return "N/A"
-
-    dominant = max(
-        source_activity,
-        key=lambda item: safe_int(
-            item.get(
-                "count"
-            )
-        ),
-    )
-
-    return (
-        dominant.get(
-            "source"
-        )
-        or "N/A"
-    )
-
-
-def get_dominant_event_type(
-    session,
-):
-    """
-    Finds the dominant operational event type
-    in the last 24 hours.
-    """
-
-    cutoff = recent_cutoff()
-
-    event_types = (
-        session.execute(
-            select(
-                Post.signal_type
-            )
-            .where(
-                Post.signal_type
-                .is_not(None)
-            )
-            .where(
-                Post.collected_at
-                >= cutoff
-            )
-        )
-        .scalars()
-        .all()
-    )
-
-    normalized = [
-        event_type
-        for event_type in event_types
-        if event_type
-    ]
-
-    if not normalized:
-        return "N/A"
-
-    counts = Counter(
-        normalized
-    )
-
-    return (
-        counts
-        .most_common(1)[0][0]
-    )
-
-
-def get_average_confidence(
-    session,
-):
-    """
-    Calculates average EventGroup confidence.
-    """
-
-    result = (
-        session.execute(
-            select(
-                func.avg(
-                    EventGroup.confidence
-                )
-            )
-            .where(
-                EventGroup.confidence
-                .is_not(None)
-            )
-            .where(
-                EventGroup.status
-                == "ACTIVE"
-            )
-        )
-        .scalar_one_or_none()
-    )
-
-    return safe_float(
-        result
-    )
-
 
 def determine_activity_level(
     operational_events,
 ):
-    """
-    Simple rule-based 24h activity classification.
-
-    Thresholds are intentionally conservative
-    and can later be calibrated from historical data.
-    """
-
     value = safe_int(
         operational_events
     )
@@ -1346,101 +1967,11 @@ def determine_activity_level(
     return "LOW"
 
 
-def determine_confidence_level(
-    confidence,
-):
-    """
-    Human-readable confidence level.
-    """
-
-    value = safe_float(
-        confidence
-    )
-
-    if value >= 0.75:
-        return "HIGH"
-
-    if value >= 0.50:
-        return "MEDIUM"
-
-    return "LOW"
-
-
-def determine_system_health(
-    operational_events,
-    active_groups,
-    average_confidence,
-):
-    """
-    Provides a dashboard analytical state.
-
-    This is not infrastructure health.
-    It represents the current analytical signal state.
-    """
-
-    operational_events = safe_int(
-        operational_events
-    )
-
-    active_groups = safe_int(
-        active_groups
-    )
-
-    average_confidence = safe_float(
-        average_confidence
-    )
-
-    if (
-        operational_events >= 30
-        and active_groups >= 10
-    ):
-        return "HIGH ACTIVITY"
-
-    if (
-        operational_events >= 10
-        or active_groups >= 5
-    ):
-        return "ELEVATED"
-
-    if (
-        operational_events == 0
-        and active_groups == 0
-    ):
-        return "LOW ACTIVITY"
-
-    if average_confidence < 0.40:
-        return "LOW CONFIDENCE"
-
-    return "NORMAL"
-
-
-def humanize_token(
-    value,
-):
-    """
-    Converts internal constant names into readable text.
-
-    Example:
-    WESTERN_MEDITERRANEAN
-        ->
-    Western Mediterranean
-    """
-
-    if not value:
-        return "N/A"
-
-    return (
-        str(value)
-        .replace(
-            "_",
-            " "
-        )
-        .title()
-    )
-
-
 def build_assessment_summary(
+    *,
     operational_events,
+    influence_signals,
+    access_signals,
     correlated_events,
     active_groups,
     dominant_region,
@@ -1450,57 +1981,231 @@ def build_assessment_summary(
     activity_level,
 ):
     """
-    Creates a deterministic short dashboard assessment.
-
-    This is deliberately factual and avoids
-    interpretation beyond available system data.
+    Deterministic dashboard summary. No generated claims are added.
     """
-
-    region_text = (
-        humanize_token(
-            dominant_region
-        )
-    )
-
-    event_text = (
-        humanize_token(
-            dominant_event
-        )
-    )
-
-    source_text = (
-        humanize_token(
-            dominant_source
-        )
-    )
-
     return (
         f"Az elmúlt 24 órában a rendszer "
-        f"{operational_events} operatív migrációs eseményt "
-        f"azonosított, amelyek közül "
-        f"{correlated_events} esemény korábbi vagy párhuzamos "
-        f"forrással korrelált. "
-        f"Jelenleg {active_groups} aktív eseménycsoport szerepel "
-        f"az adatbázisban. "
-        f"A legerősebb regionális aktivitás: {region_text}. "
-        f"A domináns eseménytípus: {event_text}. "
-        f"A legaktívabb adatforrás: {source_text}. "
+        f"{operational_events} operatív migrációs eseményt, "
+        f"{influence_signals} influence/early-warning jelzést és "
+        f"{access_signals} átkelési vagy bejutási jelzést tart nyilván. "
+        f"{correlated_events} friss eseményforrás korrelált más forrással. "
+        f"Jelenleg {active_groups} aktív eseménycsoport szerepel az adatbázisban. "
+        f"A legerősebb regionális aktivitás: "
+        f"{humanize_token(dominant_region)}. "
+        f"A domináns operatív eseménytípus: "
+        f"{humanize_token(dominant_event)}. "
+        f"A legaktívabb adatforrás: "
+        f"{humanize_token(dominant_source)}. "
         f"Az aktív eseménycsoportok átlagos konfidenciája "
         f"{average_confidence:.2f}. "
         f"A jelenlegi aktivitási szint: {activity_level}."
     )
 
 
+def get_operational_assessment(
+    session,
+    *,
+    kpis,
+    region_activity,
+    source_activity,
+    correlation,
+    influence_signals,
+    crossing_access_signals,
+):
+    """
+    Builds the analytical state shown on the dashboard.
+    """
+    operational_events = safe_int(
+        kpis.get(
+            "operational_events"
+        )
+    )
+
+    active_groups = safe_int(
+        kpis.get(
+            "active_event_groups"
+        )
+    )
+
+    correlated_events = safe_int(
+        correlation.get(
+            "correlated_events"
+        )
+    )
+
+    dominant_region = (
+        region_activity[
+            0
+        ].get(
+            "region"
+        )
+        if region_activity
+        else "GLOBAL"
+    )
+
+    dominant_source = (
+        source_activity[
+            0
+        ].get(
+            "source"
+        )
+        if source_activity
+        else "UNKNOWN"
+    )
+
+    event_type_rows = (
+        session.execute(
+            select(
+                Post.signal_type,
+                func.count(
+                    Post.id
+                ),
+            )
+            .where(
+                Post.published_at
+                .is_not(None)
+            )
+            .where(
+                Post.published_at
+                >= recent_cutoff()
+            )
+            .group_by(
+                Post.signal_type
+            )
+            .order_by(
+                func.count(
+                    Post.id
+                ).desc()
+            )
+        )
+        .all()
+    )
+
+    dominant_event = (
+        event_type_rows[
+            0
+        ][
+            0
+        ]
+        if event_type_rows
+        else "GENERAL_DISCUSSION"
+    )
+
+    average_confidence = safe_float(
+        session.execute(
+            select(
+                func.avg(
+                    EventGroup.confidence
+                )
+            )
+            .where(
+                EventGroup.status
+                == "ACTIVE"
+            )
+            .where(
+                EventGroup.confidence
+                .is_not(None)
+            )
+        )
+        .scalar_one()
+    )
+
+    activity_level = (
+        determine_activity_level(
+            operational_events
+        )
+    )
+
+    technical_health = (
+        get_technical_health(
+            session
+        )
+    )
+
+    summary = build_assessment_summary(
+        operational_events=operational_events,
+        influence_signals=len(
+            influence_signals
+        ),
+        access_signals=len(
+            crossing_access_signals
+        ),
+        correlated_events=correlated_events,
+        active_groups=active_groups,
+        dominant_region=dominant_region,
+        dominant_event=dominant_event,
+        dominant_source=dominant_source,
+        average_confidence=average_confidence,
+        activity_level=activity_level,
+    )
+
+    return {
+        "operational_events_24h": operational_events,
+        "influence_signals_24h": len(
+            influence_signals
+        ),
+        "access_signals_24h": len(
+            crossing_access_signals
+        ),
+        "correlated_events_24h": correlated_events,
+        "active_event_groups": active_groups,
+
+        "dominant_region": dominant_region,
+        "hotspot": dominant_region,
+        "dominant_event_type": dominant_event,
+        "dominant_source": dominant_source,
+
+        "average_confidence": round(
+            average_confidence,
+            3,
+        ),
+
+        "confidence_level": (
+            "HIGH"
+            if average_confidence >= 0.75
+            else (
+                "MEDIUM"
+                if average_confidence >= 0.50
+                else "LOW"
+            )
+        ),
+
+        "correlation_rate": safe_float(
+            correlation.get(
+                "correlation_rate"
+            )
+        ),
+
+        "activity_level": activity_level,
+
+        # Legacy field retained, but now correctly technical.
+        "system_health": technical_health.get(
+            "status"
+        ),
+
+        "summary": summary,
+    }
+
+
 # ==========================================================
-# COMPLETE DASHBOARD DATA
+# COMPLETE DASHBOARD PAYLOAD
 # ==========================================================
 
 def build_dashboard_data(
     session,
 ):
     """
-    Builds the complete dashboard JSON structure.
+    Builds the complete V3 dashboard JSON structure.
     """
+    current_run = get_current_run(
+        session
+    )
+
+    technical_health = (
+        get_technical_health(
+            session
+        )
+    )
 
     kpis = get_kpis(
         session
@@ -1532,13 +2237,33 @@ def build_dashboard_data(
         )
     )
 
-    operational_assessment = (
-        get_operational_assessment(
-            session=session,
-            kpis=kpis,
-            region_activity=region_activity,
-            source_activity=source_activity,
-            correlation=correlation,
+    influence_signals = (
+        get_influence_signals(
+            session
+        )
+    )
+
+    crossing_access_signals = (
+        get_crossing_access_signals(
+            session
+        )
+    )
+
+    top_crossing_access_posts = (
+        get_top_crossing_access_posts(
+            crossing_access_signals
+        )
+    )
+
+    weekly_activity = (
+        get_information_activity_weekly(
+            session
+        )
+    )
+
+    weekly_summary = (
+        get_information_activity_summary(
+            weekly_activity
         )
     )
 
@@ -1548,41 +2273,97 @@ def build_dashboard_data(
         )
     )
 
+    operational_assessment = (
+        get_operational_assessment(
+            session=session,
+            kpis=kpis,
+            region_activity=region_activity,
+            source_activity=source_activity,
+            correlation=correlation,
+            influence_signals=influence_signals,
+            crossing_access_signals=(
+                crossing_access_signals
+            ),
+        )
+    )
+
     return {
+        "schema_version": "3.0",
+
         "updated_at": format_datetime(
             utc_now()
         ),
-
-        "kpis": (
-            kpis
+        "generated_at": format_datetime(
+            utc_now()
         ),
 
-        "live_events": (
-            live_events
-        ),
+        "current_run": current_run,
 
-        "event_groups": (
-            event_groups
-        ),
+        "kpis": kpis,
 
-        "region_activity": (
-            region_activity
-        ),
+        "live_events": live_events,
+        "event_groups": event_groups,
 
-        "source_activity": (
-            source_activity
-        ),
+        # New V3 names
+        "regions": region_activity,
+        "sources": source_activity,
 
-        "correlation": (
-            correlation
+        # Legacy names kept for compatibility
+        "region_activity": region_activity,
+        "source_activity": source_activity,
+
+        "correlation": correlation,
+
+        "technical_health": (
+            technical_health.get(
+                "status"
+            )
+        ),
+        "collector_health": (
+            technical_health.get(
+                "status"
+            )
+        ),
+        "technical_health_detail": (
+            technical_health
         ),
 
         "operational_assessment": (
             operational_assessment
         ),
+        "analytical_assessment": (
+            operational_assessment
+        ),
 
         "high_confidence_events": (
             high_confidence_events
+        ),
+
+        "influence_signals": (
+            influence_signals
+        ),
+        "early_warning_signals": (
+            influence_signals
+        ),
+
+        "crossing_access_signals": (
+            crossing_access_signals
+        ),
+        "access_signals": (
+            crossing_access_signals
+        ),
+        "top_crossing_access_posts": (
+            top_crossing_access_posts
+        ),
+
+        "information_activity_weekly": (
+            weekly_activity
+        ),
+        "weekly_post_activity": (
+            weekly_activity
+        ),
+        "information_activity_summary": (
+            weekly_summary
         ),
     }
 
@@ -1593,25 +2374,19 @@ def build_dashboard_data(
 
 def export_dashboard_data():
     """
-    Exports dashboard data to dashboard-data.json
-    in the repository root.
+    Exports dashboard-data.json to the repository root.
     """
-
     session = get_session()
 
     try:
-
-        data = (
-            build_dashboard_data(
-                session
-            )
+        data = build_dashboard_data(
+            session
         )
 
         with OUTPUT_FILE.open(
             "w",
             encoding="utf-8",
         ) as file:
-
             json.dump(
                 data,
                 file,
@@ -1624,7 +2399,7 @@ def export_dashboard_data():
         )
 
         print(
-            "DASHBOARD DATA EXPORT"
+            "DASHBOARD DATA EXPORT V3"
         )
 
         print(
@@ -1637,8 +2412,33 @@ def export_dashboard_data():
         )
 
         print(
+            "Current run ID: "
+            f"{data['current_run'].get('id')}"
+        )
+
+        print(
+            "Current run status: "
+            f"{data['current_run'].get('status')}"
+        )
+
+        print(
             "Operational events (24h): "
             f"{data['kpis']['operational_events']}"
+        )
+
+        print(
+            "Influence signals (24h): "
+            f"{len(data['influence_signals'])}"
+        )
+
+        print(
+            "Crossing/access signals (24h): "
+            f"{len(data['crossing_access_signals'])}"
+        )
+
+        print(
+            "Top crossing/access posts: "
+            f"{len(data['top_crossing_access_posts'])}"
         )
 
         print(
@@ -1657,6 +2457,26 @@ def export_dashboard_data():
         )
 
         print(
+            "Weekly history rows: "
+            f"{len(data['information_activity_weekly'])}"
+        )
+
+        print(
+            "Current week posts: "
+            f"{data['information_activity_summary']['current_week']}"
+        )
+
+        print(
+            "Previous week posts: "
+            f"{data['information_activity_summary']['previous_week']}"
+        )
+
+        print(
+            "Weekly change: "
+            f"{data['information_activity_summary']['change_percent']}%"
+        )
+
+        print(
             "Dominant region: "
             f"{data['operational_assessment']['dominant_region']}"
         )
@@ -1672,18 +2492,13 @@ def export_dashboard_data():
         )
 
         print(
-            "Average confidence: "
-            f"{data['operational_assessment']['average_confidence']}"
-        )
-
-        print(
             "Activity level: "
             f"{data['operational_assessment']['activity_level']}"
         )
 
         print(
-            "System health: "
-            f"{data['operational_assessment']['system_health']}"
+            "Technical health: "
+            f"{data['technical_health']}"
         )
 
         print(
@@ -1691,7 +2506,6 @@ def export_dashboard_data():
         )
 
     finally:
-
         session.close()
 
 
