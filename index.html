@@ -1,1054 +1,1760 @@
 <!DOCTYPE html>
 <html lang="hu">
-
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Migration Intelligence Platform | Törésvonalak.blog</title>
+  <meta name="description" content="Migration OSINT Monitor – operational migration intelligence, early warning and event correlation dashboard." />
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+  <style>
+    :root{
+      --navy:#073a58;
+      --navy-2:#0b4e6d;
+      --blue:#1199d3;
+      --blue-2:#169fd8;
+      --blue-soft:#eaf6fb;
+      --green:#21a96b;
+      --purple:#7957d5;
+      --orange:#e78a00;
+      --gold:#c89500;
+      --red:#d94a45;
 
-    <meta
-        name="description"
-        content="Migration Intelligence Platform – OSINT alapú migrációs események, korrelációk és elemzői helyzetkép."
-    >
+      --bg:#edf4f7;
+      --card:#ffffff;
+      --card-soft:#f7fafc;
+      --line:#d9e5eb;
+      --line-2:#c8d9e1;
 
-    <title>
-        Migration Intelligence Platform
-    </title>
+      --text:#073a58;
+      --muted:#6e8795;
+      --muted-2:#91a5b0;
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+      --high-bg:#e6f7ef;
+      --high:#0e7a4b;
+      --med-bg:#fff5e6;
+      --med:#a86a00;
+      --low-bg:#fff0ef;
+      --low:#c9322d;
+      --critical-bg:#fde9e8;
+      --critical:#b8231f;
 
-    <script
-        src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"
-        defer
-    ></script>
+      --shadow:0 6px 18px rgba(24, 70, 95, .09);
+      --radius:18px;
+      --radius-sm:11px;
 
-    <script
-        type="module"
-        src="js/script.js"
-        defer
-    ></script>
+      --max:1660px;
+    }
+
+    *{box-sizing:border-box}
+
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height:1.45;
+    }
+
+    button, select, input{font:inherit}
+
+    a{color:inherit}
+
+    .shell{
+      width:min(var(--max), calc(100% - 64px));
+      margin:0 auto;
+    }
+
+    /* =====================================================
+       HEADER
+       ===================================================== */
+
+    .topbar{
+      background:linear-gradient(108deg, #063a58 0%, #0c5e7f 56%, #25a6df 100%);
+      color:#fff;
+      padding:24px 0 32px;
+      border-bottom:1px solid rgba(255,255,255,.12);
+    }
+
+    .topbar-grid{
+      display:grid;
+      grid-template-columns:minmax(0, 1fr) auto;
+      gap:36px;
+      align-items:start;
+    }
+
+    .brand-eyebrow{
+      font-size:13px;
+      letter-spacing:.17em;
+      font-weight:900;
+      margin-bottom:10px;
+    }
+
+    h1{
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:clamp(44px, 5vw, 74px);
+      line-height:1;
+      margin:0;
+      letter-spacing:-.025em;
+      color:#fff;
+      font-weight:700;
+    }
+
+    .subtitle{
+      max-width:1040px;
+      margin:16px 0 0;
+      font-size:16px;
+      line-height:1.55;
+      color:rgba(255,255,255,.96);
+    }
+
+    .header-actions{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-end;
+      gap:16px;
+      min-width:320px;
+    }
+
+    .action-row{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .header-btn{
+      border:1px solid rgba(255,255,255,.36);
+      color:#fff;
+      background:rgba(255,255,255,.08);
+      padding:11px 18px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:800;
+      cursor:pointer;
+      transition:.18s ease;
+    }
+
+    .header-btn.primary{
+      background:#0a91d1;
+      border-color:#0a91d1;
+    }
+
+    .header-btn:hover{
+      transform:translateY(-1px);
+      background:rgba(255,255,255,.14);
+    }
+
+    .header-status{
+      display:grid;
+      grid-template-columns:auto auto;
+      gap:7px 16px;
+      align-items:center;
+      text-align:right;
+    }
+
+    .status-label{
+      grid-column:1;
+      color:rgba(255,255,255,.8);
+      letter-spacing:.1em;
+      font-size:10px;
+      font-weight:900;
+      text-transform:uppercase;
+    }
+
+    .updated-value{
+      grid-column:1;
+      font-size:12px;
+      font-weight:850;
+    }
+
+    .live-badge{
+      grid-column:2;
+      grid-row:1 / span 2;
+      align-self:center;
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      background:#fff3d5;
+      color:#9a6200;
+      border:1px solid #f1d07e;
+      border-radius:999px;
+      padding:8px 15px;
+      font-size:10px;
+      letter-spacing:.08em;
+      font-weight:950;
+    }
+
+    .live-dot{
+      width:8px;
+      height:8px;
+      background:#f0a000;
+      border-radius:50%;
+      box-shadow:0 0 0 4px rgba(240,160,0,.12);
+    }
+
+    /* =====================================================
+       MAIN / COMMON
+       ===================================================== */
+
+    main{padding:22px 0 42px}
+
+    .panel{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .accent-blue{border-top:4px solid var(--blue)}
+    .accent-green{border-top:4px solid var(--green)}
+    .accent-purple{border-top:4px solid var(--purple)}
+    .accent-orange{border-top:4px solid var(--orange)}
+    .accent-red{border-top:4px solid var(--red)}
+
+    .hero-card{
+      padding:28px 34px;
+      display:grid;
+      grid-template-columns:minmax(0, 1fr) auto;
+      gap:28px;
+      align-items:center;
+      border-left:6px solid var(--blue);
+      margin-bottom:16px;
+    }
+
+    .eyebrow{
+      color:#0076ad;
+      font-size:10px;
+      letter-spacing:.17em;
+      font-weight:950;
+      text-transform:uppercase;
+      margin-bottom:6px;
+    }
+
+    .hero-card h2{
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:46px;
+      line-height:1.03;
+      margin:0 0 10px;
+      color:var(--navy);
+      letter-spacing:-.02em;
+    }
+
+    .hero-copy{
+      margin:0;
+      max-width:1080px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .hero-system{
+      text-align:right;
+      min-width:210px;
+    }
+
+    .hero-system .label{
+      color:var(--muted-2);
+      font-size:10px;
+      font-weight:900;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .hero-system .value{
+      margin-top:5px;
+      font-weight:900;
+      font-size:14px;
+    }
+
+    .hero-system .sub{
+      margin-top:2px;
+      color:var(--muted);
+      font-size:10px;
+    }
+
+    .time-tabs{
+      margin-top:16px;
+      display:inline-flex;
+      gap:5px;
+      background:#f0f6f9;
+      border:1px solid var(--line);
+      padding:4px;
+      border-radius:10px;
+    }
+
+    .time-tab{
+      border:0;
+      background:transparent;
+      color:var(--muted);
+      border-radius:7px;
+      padding:7px 11px;
+      font-size:10px;
+      font-weight:850;
+      cursor:pointer;
+    }
+
+    .time-tab.active{
+      background:#fff;
+      color:var(--navy);
+      box-shadow:0 1px 4px rgba(0,0,0,.08);
+    }
+
+    /* =====================================================
+       KPIs
+       ===================================================== */
+
+    .kpi-grid{
+      display:grid;
+      grid-template-columns:repeat(6, 1fr);
+      margin-bottom:16px;
+    }
+
+    .kpi{
+      min-height:132px;
+      background:#fff;
+      border-top:4px solid var(--blue);
+      border-right:1px solid var(--line);
+      padding:20px 16px 15px;
+      text-align:center;
+    }
+
+    .kpi:first-child{border-radius:var(--radius) 0 0 var(--radius)}
+    .kpi:last-child{
+      border-radius:0 var(--radius) var(--radius) 0;
+      border-right:0;
+    }
+
+    .kpi:nth-child(2){border-top-color:var(--purple)}
+    .kpi:nth-child(3){border-top-color:var(--red)}
+    .kpi:nth-child(4){border-top-color:var(--green)}
+    .kpi:nth-child(5){border-top-color:var(--orange)}
+    .kpi:nth-child(6){border-top-color:var(--gold)}
+
+    .kpi-value{
+      font-size:42px;
+      line-height:1;
+      font-weight:950;
+      letter-spacing:-.03em;
+      margin-bottom:10px;
+    }
+
+    .kpi-label{
+      font-size:10px;
+      line-height:1.25;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      font-weight:950;
+    }
+
+    .kpi-sub{
+      margin-top:12px;
+      font-size:10px;
+      color:var(--muted);
+    }
+
+    /* =====================================================
+       SECTION HEADERS
+       ===================================================== */
+
+    .section-pad{padding:21px 22px 20px}
+
+    .section-head{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:18px;
+      margin-bottom:15px;
+    }
+
+    .section-head h3{
+      margin:2px 0 2px;
+      font-size:25px;
+      line-height:1.1;
+      letter-spacing:-.02em;
+    }
+
+    .section-sub{
+      color:var(--muted);
+      font-size:11px;
+    }
+
+    .section-action{
+      border:1px solid #b9d8e7;
+      background:#f6fbfd;
+      color:#0875ad;
+      border-radius:8px;
+      padding:9px 12px;
+      font-size:10px;
+      font-weight:900;
+      cursor:pointer;
+      white-space:nowrap;
+    }
+
+    /* =====================================================
+       EARLY WARNING
+       ===================================================== */
+
+    .warning-panel{
+      margin-bottom:16px;
+    }
+
+    .warning-list{
+      display:grid;
+      gap:9px;
+    }
+
+    .warning-item{
+      display:grid;
+      grid-template-columns:80px minmax(180px, .75fr) minmax(200px, .8fr) 90px 70px minmax(260px, 1.6fr) auto;
+      align-items:center;
+      gap:14px;
+      padding:13px 15px;
+      border:1px solid var(--line);
+      background:#fbfdfe;
+      border-radius:11px;
+    }
+
+    .priority-badge,
+    .conf-badge,
+    .state-badge{
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:9px;
+      font-weight:950;
+      text-transform:uppercase;
+      white-space:nowrap;
+      border:1px solid transparent;
+    }
+
+    .priority-high,.conf-high{
+      background:var(--high-bg);
+      color:var(--high);
+      border-color:#b7e5cf;
+    }
+
+    .priority-medium,.conf-medium{
+      background:var(--med-bg);
+      color:var(--med);
+      border-color:#f2cf93;
+    }
+
+    .priority-low,.conf-low{
+      background:var(--low-bg);
+      color:var(--low);
+      border-color:#f0c0bd;
+    }
+
+    .priority-critical{
+      background:var(--critical-bg);
+      color:var(--critical);
+      border-color:#eeaaa6;
+    }
+
+    .warning-type{
+      font-size:11px;
+      font-weight:950;
+      letter-spacing:.02em;
+    }
+
+    .warning-location,
+    .warning-source,
+    .warning-confidence{
+      font-size:11px;
+    }
+
+    .warning-summary{
+      font-size:11px;
+      color:#426274;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    .source-link{
+      color:#087eb6;
+      text-decoration:none;
+      font-size:9px;
+      font-weight:950;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+      white-space:nowrap;
+    }
+
+    .empty-state{
+      border:1px dashed #bcd4df;
+      background:#f8fbfc;
+      border-radius:11px;
+      padding:21px;
+      color:var(--muted);
+      font-size:12px;
+      text-align:center;
+    }
+
+    /* =====================================================
+       TABLES
+       ===================================================== */
+
+    .two-col{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      margin-bottom:16px;
+    }
+
+    .table-wrap{
+      overflow:auto;
+      border:1px solid var(--line);
+      border-radius:10px;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      min-width:690px;
+    }
+
+    th{
+      background:#f0f5f8;
+      color:#32596e;
+      font-size:9px;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      font-weight:950;
+      text-align:left;
+      padding:12px 10px;
+      border-bottom:1px solid var(--line-2);
+      white-space:nowrap;
+    }
+
+    td{
+      font-size:10px;
+      padding:12px 10px;
+      border-bottom:1px solid #e5edf1;
+      white-space:nowrap;
+      vertical-align:middle;
+    }
+
+    tbody tr:last-child td{border-bottom:0}
+    tbody tr:hover{background:#fbfdfe}
+
+    .id-link{
+      color:#007cb7;
+      font-weight:950;
+      text-decoration:none;
+    }
+
+    .type-cell{font-weight:900}
+
+    .text-clip{
+      max-width:330px;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    /* =====================================================
+       PRIORITY
+       ===================================================== */
+
+    .priority-panel{margin-bottom:16px}
+
+    /* =====================================================
+       ANALYTICS GRID
+       ===================================================== */
+
+    .analytics-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr 1fr;
+      gap:16px;
+      margin-bottom:16px;
+    }
+
+    .rank-list{
+      display:grid;
+      gap:9px;
+      margin-top:12px;
+    }
+
+    .rank-row{
+      display:grid;
+      grid-template-columns:minmax(130px, 1fr) 1.4fr auto;
+      gap:11px;
+      align-items:center;
+      min-height:34px;
+    }
+
+    .rank-name{
+      font-size:11px;
+      font-weight:850;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+    }
+
+    .rank-bar{
+      height:8px;
+      background:#edf3f6;
+      border-radius:999px;
+      overflow:hidden;
+    }
+
+    .rank-fill{
+      height:100%;
+      width:0;
+      background:linear-gradient(90deg, #0c8cc5, #2ba8dc);
+      border-radius:999px;
+    }
+
+    .rank-value{
+      min-width:66px;
+      text-align:right;
+      font-size:10px;
+      font-weight:900;
+    }
+
+    .trend-up{color:var(--green)}
+    .trend-down{color:var(--red)}
+    .trend-flat{color:var(--muted)}
+
+    .distribution-list,
+    .source-list{
+      display:grid;
+      gap:8px;
+      margin-top:10px;
+    }
+
+    .mini-stat{
+      display:grid;
+      grid-template-columns:1fr auto auto;
+      gap:12px;
+      align-items:center;
+      padding:10px 12px;
+      border-radius:9px;
+      background:#f7fafb;
+      border:1px solid var(--line);
+      font-size:10px;
+    }
+
+    .mini-stat strong{font-size:11px}
+
+    .collector-health{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-top:14px;
+      padding-top:13px;
+      border-top:1px solid var(--line);
+      font-size:10px;
+    }
+
+    .health-good{
+      display:inline-flex;
+      gap:7px;
+      align-items:center;
+      color:var(--high);
+      font-weight:950;
+    }
+
+    .health-dot{
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:var(--green);
+    }
+
+    /* =====================================================
+       CORRELATION
+       ===================================================== */
+
+    .corr-panel{margin-bottom:16px}
+
+    .corr-kpis{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:10px;
+      margin-bottom:14px;
+    }
+
+    .corr-kpi{
+      border:1px solid var(--line);
+      background:#f8fbfc;
+      border-radius:10px;
+      padding:14px;
+    }
+
+    .corr-kpi .label{
+      color:var(--muted);
+      font-size:9px;
+      text-transform:uppercase;
+      letter-spacing:.07em;
+      font-weight:900;
+    }
+
+    .corr-kpi .value{
+      margin-top:4px;
+      font-size:25px;
+      font-weight:950;
+    }
+
+    /* =====================================================
+       ASSESSMENT
+       ===================================================== */
+
+    .assessment{margin-bottom:16px}
+
+    .assessment-grid{
+      display:grid;
+      grid-template-columns:repeat(6, 1fr);
+      gap:12px;
+      margin:14px 0;
+    }
+
+    .assessment-stat{
+      min-height:104px;
+      border:1px solid var(--line);
+      border-radius:11px;
+      background:#f8fbfc;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:12px;
+    }
+
+    .assessment-stat .label{
+      color:var(--muted-2);
+      font-size:9px;
+      letter-spacing:.08em;
+      font-weight:900;
+      text-transform:uppercase;
+    }
+
+    .assessment-stat .value{
+      font-size:20px;
+      font-weight:950;
+      margin-top:6px;
+      line-height:1.2;
+    }
+
+    .summary-box{
+      border-left:5px solid var(--blue);
+      background:#eaf6fb;
+      border-radius:11px;
+      padding:18px 20px;
+    }
+
+    .summary-box h4{
+      margin:0 0 8px;
+      font-size:15px;
+    }
+
+    .summary-box p{
+      margin:0;
+      color:#355e72;
+      font-size:12px;
+      line-height:1.6;
+    }
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
+
+    .explainer{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      margin-bottom:14px;
+    }
+
+    .explain-cell{
+      padding:18px 20px;
+      border-right:1px solid var(--line);
+    }
+
+    .explain-cell:last-child{border-right:0}
+
+    .explain-cell h5{
+      margin:0 0 7px;
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+    }
+
+    .explain-cell p{
+      margin:0;
+      color:var(--muted);
+      font-size:10px;
+      line-height:1.55;
+    }
+
+    .method-note{
+      background:transparent;
+      border:1px solid #c7dbe4;
+      color:#658291;
+      border-radius:13px;
+      padding:13px 18px;
+      font-size:9px;
+      line-height:1.55;
+    }
+
+    .method-note strong{color:#31596d}
+
+    /* =====================================================
+       RESPONSIVE
+       ===================================================== */
+
+    @media (max-width:1250px){
+      .shell{width:min(var(--max), calc(100% - 36px))}
+      .kpi-grid{grid-template-columns:repeat(3, 1fr); gap:1px}
+      .kpi{border-radius:0 !important}
+      .analytics-grid{grid-template-columns:1fr}
+      .assessment-grid{grid-template-columns:repeat(3, 1fr)}
+      .warning-item{
+        grid-template-columns:80px 1fr 1fr 80px;
+      }
+      .warning-summary{grid-column:2 / span 2}
+      .source-link{grid-column:4}
+    }
+
+    @media (max-width:900px){
+      .topbar-grid{grid-template-columns:1fr}
+      .header-actions{align-items:flex-start; min-width:0}
+      .action-row{justify-content:flex-start}
+      .header-status{text-align:left}
+      .two-col{grid-template-columns:1fr}
+      .hero-card{grid-template-columns:1fr}
+      .hero-system{text-align:left}
+      .corr-kpis{grid-template-columns:repeat(2,1fr)}
+      .explainer{grid-template-columns:1fr}
+      .explain-cell{border-right:0;border-bottom:1px solid var(--line)}
+    }
+
+    @media (max-width:640px){
+      .shell{width:min(var(--max), calc(100% - 20px))}
+      .topbar{padding-top:18px}
+      .kpi-grid{grid-template-columns:repeat(2, 1fr)}
+      .assessment-grid{grid-template-columns:repeat(2, 1fr)}
+      .warning-item{grid-template-columns:1fr}
+      .warning-summary,.source-link{grid-column:auto}
+      .hero-card h2{font-size:36px}
+    }
+  </style>
 </head>
 
-
 <body>
+  <header class="topbar">
+    <div class="shell topbar-grid">
+      <div>
+        <div class="brand-eyebrow">TÖRÉSVONALAK.BLOG</div>
+        <h1>Migration Intelligence Platform</h1>
+        <p class="subtitle">
+          Social Media Early Warning &amp; Migration Intelligence – migrációs események,
+          korai jelzések, operatív mozgások, határhelyzetek, embercsempészeti aktivitás
+          és többforrású eseménykorreláció elemzői áttekintése.
+        </p>
+      </div>
 
-    <!-- =========================================================
-         HEADER
-         ========================================================= -->
-
-    <header class="dashboard-header">
-
-        <div class="page-container">
-
-            <div class="header-layout">
-
-                <div class="header-copy">
-
-                    <div class="brand-label">
-                        TÖRÉSVONALAK.BLOG
-                    </div>
-
-                    <h1>
-                        Migration Intelligence Platform
-                    </h1>
-
-                    <p class="header-description">
-                        OSINT Operational Dashboard – migrációs események,
-                        operatív mozgások, határhelyzetek,
-                        embercsempészeti aktivitás és
-                        többforrású eseménykorreláció
-                        elemzői áttekintése.
-                    </p>
-
-                </div>
-
-
-                <div class="header-controls">
-
-                    <div class="header-buttons">
-
-                        <button
-                            class="header-button secondary"
-                            id="refreshButton"
-                            type="button"
-                        >
-                            Adatok frissítése
-                        </button>
-
-                        <a
-                            class="header-button primary"
-                            href="#operational-assessment"
-                        >
-                            Elemző nézet
-                        </a>
-
-                    </div>
-
-
-                    <div class="update-meta">
-
-                        <div class="update-time">
-
-                            <span class="meta-label">
-                                Frissítés / Updated
-                            </span>
-
-                            <strong id="updatedAt">
-                                —
-                            </strong>
-
-                        </div>
-
-
-                        <div
-                            class="system-status"
-                            id="systemStatus"
-                        >
-                            <span class="status-dot"></span>
-
-                            OSINT LIVE
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+      <div class="header-actions">
+        <div class="action-row">
+          <button class="header-btn" id="refreshBtn">Adatok frissítése</button>
+          <button class="header-btn primary" id="analystBtn">Elemző nézet</button>
         </div>
 
-    </header>
-
-
-    <!-- =========================================================
-         MAIN
-         ========================================================= -->
-
-    <main>
-
-        <div class="page-container">
-
-
-            <!-- =================================================
-                 SITUATION OVERVIEW
-                 ================================================= -->
-
-            <section class="situation-panel">
-
-                <div class="situation-content">
-
-                    <div class="section-kicker">
-                        Operational Migration Intelligence Overview
-                    </div>
-
-                    <h2>
-                        Migrációs helyzetkép
-                    </h2>
-
-                    <p>
-                        A dashboard a Migration OSINT Monitor által
-                        gyűjtött és operatívnak minősített nyílt
-                        forrású bejegyzésekből, korrelált eseményekből
-                        és tartós eseménycsoportokból készít gyors
-                        elemzői áttekintést.
-                    </p>
-
-                </div>
-
-
-                <div class="situation-meta">
-
-                    <span class="meta-label dark">
-                        Rendszer
-                    </span>
-
-                    <strong>
-                        Migration OSINT Monitor
-                    </strong>
-
-                    <span class="situation-small">
-                        automatikus eseményfeldolgozás
-                    </span>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 KPI STRIP
-                 ================================================= -->
-
-            <section class="kpi-strip">
-
-                <article class="kpi-card kpi-blue">
-
-                    <div
-                        class="kpi-value"
-                        id="kpiOperationalEvents"
-                    >
-                        —
-                    </div>
-
-                    <div class="kpi-label">
-                        Operational Events
-                    </div>
-
-                    <div class="kpi-description">
-                        elmúlt 24 óra
-                    </div>
-
-                </article>
-
-
-                <article class="kpi-card kpi-green">
-
-                    <div
-                        class="kpi-value"
-                        id="kpiNewEvents"
-                    >
-                        —
-                    </div>
-
-                    <div class="kpi-label">
-                        New Events
-                    </div>
-
-                    <div class="kpi-description">
-                        új eseményforrás
-                    </div>
-
-                </article>
-
-
-                <article class="kpi-card kpi-purple">
-
-                    <div
-                        class="kpi-value"
-                        id="kpiCorrelatedEvents"
-                    >
-                        —
-                    </div>
-
-                    <div class="kpi-label">
-                        Correlated Events
-                    </div>
-
-                    <div class="kpi-description">
-                        korrelált esemény
-                    </div>
-
-                </article>
-
-
-                <article class="kpi-card kpi-orange">
-
-                    <div
-                        class="kpi-value"
-                        id="kpiActiveEventGroups"
-                    >
-                        —
-                    </div>
-
-                    <div class="kpi-label">
-                        Active Event Groups
-                    </div>
-
-                    <div class="kpi-description">
-                        aktív eseménycsoport
-                    </div>
-
-                </article>
-
-
-                <article class="kpi-card kpi-gold">
-
-                    <div
-                        class="kpi-value"
-                        id="kpiSources"
-                    >
-                        —
-                    </div>
-
-                    <div class="kpi-label">
-                        Sources
-                    </div>
-
-                    <div class="kpi-description">
-                        aktív forrástípus
-                    </div>
-
-                </article>
-
-
-                <article class="kpi-card kpi-red">
-
-                    <div
-                        class="kpi-value"
-                        id="kpiRegions"
-                    >
-                        —
-                    </div>
-
-                    <div class="kpi-label">
-                        Regions
-                    </div>
-
-                    <div class="kpi-description">
-                        azonosított régió
-                    </div>
-
-                </article>
-
-            </section>
-
-
-            <!-- =================================================
-                 LIVE EVENTS + EVENT GROUPS
-                 ================================================= -->
-
-            <section class="dashboard-grid two-columns">
-
-                <!-- LIVE EVENT FEED -->
-
-                <article class="dashboard-panel accent-blue">
-
-                    <div class="panel-header">
-
-                        <div>
-
-                            <div class="panel-kicker">
-                                REAL-TIME EVENT MONITORING
-                            </div>
-
-                            <h3>
-                                Live Event Feed
-                            </h3>
-
-                            <p>
-                                Legfrissebb operatív események
-                            </p>
-
-                        </div>
-
-
-                        <a
-                            class="panel-action"
-                            href="#high-confidence"
-                        >
-                            Kiemelt események
-                        </a>
-
-                    </div>
-
-
-                    <div class="table-container">
-
-                        <table>
-
-                            <thead>
-
-                                <tr>
-
-                                    <th>
-                                        ID
-                                    </th>
-
-                                    <th>
-                                        Időpont
-                                    </th>
-
-                                    <th>
-                                        Eseménytípus
-                                    </th>
-
-                                    <th>
-                                        Helyszín
-                                    </th>
-
-                                    <th>
-                                        Konfidencia
-                                    </th>
-
-                                    <th>
-                                        Forrás
-                                    </th>
-
-                                </tr>
-
-                            </thead>
-
-
-                            <tbody id="liveEventsTable">
-
-                                <tr>
-
-                                    <td
-                                        colspan="6"
-                                        class="loading-cell"
-                                    >
-                                        Adatok betöltése...
-                                    </td>
-
-                                </tr>
-
-                            </tbody>
-
-                        </table>
-
-                    </div>
-
-                </article>
-
-
-                <!-- TOP EVENT GROUPS -->
-
-                <article
-                    class="dashboard-panel accent-blue"
-                    id="event-groups"
-                >
-
-                    <div class="panel-header">
-
-                        <div>
-
-                            <div class="panel-kicker">
-                                EVENT CORRELATION
-                            </div>
-
-                            <h3>
-                                Top Event Groups
-                            </h3>
-
-                            <p>
-                                Legaktívabb korrelált eseménycsoportok
-                            </p>
-
-                        </div>
-
-
-                        <div class="panel-meta-note">
-                            Rendezés a kapcsolt források száma
-                            és az utolsó észlelés alapján.
-                        </div>
-
-                    </div>
-
-
-                    <div class="table-container">
-
-                        <table>
-
-                            <thead>
-
-                                <tr>
-
-                                    <th>
-                                        Group ID
-                                    </th>
-
-                                    <th>
-                                        Eseménytípus
-                                    </th>
-
-                                    <th>
-                                        Régió
-                                    </th>
-
-                                    <th>
-                                        Utolsó látás
-                                    </th>
-
-                                    <th>
-                                        Források
-                                    </th>
-
-                                    <th>
-                                        Konfidencia
-                                    </th>
-
-                                    <th>
-                                        Állapot
-                                    </th>
-
-                                </tr>
-
-                            </thead>
-
-
-                            <tbody id="eventGroupsTable">
-
-                                <tr>
-
-                                    <td
-                                        colspan="7"
-                                        class="loading-cell"
-                                    >
-                                        Adatok betöltése...
-                                    </td>
-
-                                </tr>
-
-                            </tbody>
-
-                        </table>
-
-                    </div>
-
-                </article>
-
-            </section>
-
-
-            <!-- =================================================
-                 HIGH CONFIDENCE EVENTS
-                 ================================================= -->
-
-            <section
-                class="dashboard-panel accent-blue"
-                id="high-confidence"
-            >
-
-                <div class="panel-header">
-
-                    <div>
-
-                        <div class="panel-kicker">
-                            PRIORITY EVENT REVIEW
-                        </div>
-
-                        <h3>
-                            High Confidence Events
-                        </h3>
-
-                        <p>
-                            Magasabb konfidenciájú eseménycsoportok
-                        </p>
-
-                    </div>
-
-
-                    <div class="panel-meta-note">
-
-                        Jelenlegi küszöb:
-
-                        <strong>
-                            ≥ 0.75
-                        </strong>
-
-                    </div>
-
-                </div>
-
-
-                <div class="table-container">
-
-                    <table>
-
-                        <thead>
-
-                            <tr>
-
-                                <th>
-                                    ID
-                                </th>
-
-                                <th>
-                                    Utolsó látás
-                                </th>
-
-                                <th>
-                                    Eseménytípus
-                                </th>
-
-                                <th>
-                                    Helyszín
-                                </th>
-
-                                <th>
-                                    Ország
-                                </th>
-
-                                <th>
-                                    Régió
-                                </th>
-
-                                <th>
-                                    Konfidencia
-                                </th>
-
-                                <th>
-                                    Források
-                                </th>
-
-                                <th>
-                                    Szövegrészlet
-                                </th>
-
-                            </tr>
-
-                        </thead>
-
-
-                        <tbody id="highConfidenceTable">
-
-                            <tr>
-
-                                <td
-                                    colspan="9"
-                                    class="loading-cell"
-                                >
-                                    Adatok betöltése...
-                                </td>
-
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 ANALYTICS
-                 ================================================= -->
-
-            <section class="dashboard-grid three-columns">
-
-                <!-- REGION ACTIVITY -->
-
-                <article class="dashboard-panel accent-green">
-
-                    <div class="panel-header">
-
-                        <div>
-
-                            <div class="panel-kicker">
-                                GEOGRAPHIC DISTRIBUTION
-                            </div>
-
-                            <h3>
-                                Region Activity
-                            </h3>
-
-                            <p>
-                                Eseménycsoportok régió szerint
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="chart-wrapper">
-
-                        <canvas id="regionChart"></canvas>
-
-                    </div>
-
-
-                    <div
-                        class="metric-list"
-                        id="regionActivityList"
-                    >
-                    </div>
-
-                </article>
-
-
-                <!-- PROCESSING FUNNEL -->
-
-                <article class="dashboard-panel accent-purple">
-
-                    <div class="panel-header">
-
-                        <div>
-
-                            <div class="panel-kicker">
-                                EVENT PROCESSING FUNNEL
-                            </div>
-
-                            <h3>
-                                Correlation Performance
-                            </h3>
-
-                            <p>
-                                Adatfeldolgozási és korrelációs teljesítmény
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="correlation-funnel">
-
-                        <div class="funnel-row">
-
-                            <div class="funnel-visual">
-
-                                <div class="funnel-bar funnel-posts">
-                                    Gyűjtött bejegyzések
-                                </div>
-
-                            </div>
-
-                            <div
-                                class="funnel-number"
-                                id="correlationTotalPosts"
-                            >
-                                —
-                            </div>
-
-                        </div>
-
-
-                        <div class="funnel-row">
-
-                            <div class="funnel-visual">
-
-                                <div class="funnel-bar funnel-operational">
-                                    Operatív események
-                                </div>
-
-                            </div>
-
-                            <div
-                                class="funnel-number"
-                                id="correlationOperationalEvents"
-                            >
-                                —
-                            </div>
-
-                        </div>
-
-
-                        <div class="funnel-row">
-
-                            <div class="funnel-visual">
-
-                                <div class="funnel-bar funnel-correlated">
-                                    Korrelált források
-                                </div>
-
-                            </div>
-
-                            <div
-                                class="funnel-number"
-                                id="correlationCorrelatedSources"
-                            >
-                                —
-                            </div>
-
-                        </div>
-
-
-                        <div class="funnel-row">
-
-                            <div class="funnel-visual">
-
-                                <div class="funnel-bar funnel-groups">
-                                    Eseménycsoportok
-                                </div>
-
-                            </div>
-
-                            <div
-                                class="funnel-number"
-                                id="correlationEventGroups"
-                            >
-                                —
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="analytics-insight">
-
-                        <span>
-                            EventGroup / operatív esemény arány
-                        </span>
-
-                        <strong id="conversionRate">
-                            —
-                        </strong>
-
-                    </div>
-
-                </article>
-
-
-                <!-- SOURCE ACTIVITY -->
-
-                <article class="dashboard-panel accent-orange">
-
-                    <div class="panel-header">
-
-                        <div>
-
-                            <div class="panel-kicker">
-                                SOURCE DISTRIBUTION
-                            </div>
-
-                            <h3>
-                                Source Activity
-                            </h3>
-
-                            <p>
-                                Operatív események forrástípus szerint
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="chart-wrapper">
-
-                        <canvas id="sourceChart"></canvas>
-
-                    </div>
-
-
-                    <div
-                        class="metric-list"
-                        id="sourceActivityList"
-                    >
-                    </div>
-
-                </article>
-
-            </section>
-
-
-            <!-- =================================================
-                 OPERATIONAL ASSESSMENT
-                 ================================================= -->
-
-            <section
-                class="dashboard-panel accent-blue"
-                id="operational-assessment"
-            >
-
-                <div class="panel-header">
-
-                    <div>
-
-                        <div class="panel-kicker">
-                            AUTOMATED ANALYTICAL ASSESSMENT
-                        </div>
-
-                        <h3>
-                            Operational Assessment
-                        </h3>
-
-                        <p>
-                            Szabályalapú automatikus helyzetértékelés
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="assessment-grid">
-
-                    <div class="assessment-card">
-
-                        <span class="assessment-label">
-                            Activity
-                        </span>
-
-                        <strong id="assessmentActivity">
-                            —
-                        </strong>
-
-                    </div>
-
-
-                    <div class="assessment-card">
-
-                        <span class="assessment-label">
-                            Hotspot
-                        </span>
-
-                        <strong id="assessmentRegion">
-                            —
-                        </strong>
-
-                    </div>
-
-
-                    <div class="assessment-card">
-
-                        <span class="assessment-label">
-                            Dominant Event
-                        </span>
-
-                        <strong id="assessmentEventType">
-                            —
-                        </strong>
-
-                    </div>
-
-
-                    <div class="assessment-card">
-
-                        <span class="assessment-label">
-                            Dominant Source
-                        </span>
-
-                        <strong id="assessmentSource">
-                            —
-                        </strong>
-
-                    </div>
-
-
-                    <div class="assessment-card">
-
-                        <span class="assessment-label">
-                            Average Confidence
-                        </span>
-
-                        <strong id="assessmentConfidence">
-                            —
-                        </strong>
-
-                    </div>
-
-
-                    <div class="assessment-card">
-
-                        <span class="assessment-label">
-                            System Health
-                        </span>
-
-                        <strong id="assessmentHealth">
-                            —
-                        </strong>
-
-                    </div>
-
-                </div>
-
-
-                <div class="assessment-summary">
-
-                    <div class="assessment-summary-title">
-                        Elemzői összefoglaló
-                    </div>
-
-                    <p id="assessmentSummary">
-                        Az automatikus elemzői összefoglaló
-                        az adatok betöltése után jelenik meg.
-                    </p>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 METHODOLOGY
-                 ================================================= -->
-
-            <section class="methodology-panel">
-
-                <div class="methodology-block">
-
-                    <div class="methodology-title">
-                        Mit mutat?
-                    </div>
-
-                    <p>
-                        A rendszer által operatívnak minősített
-                        migrációs események aktivitását,
-                        eloszlását és korrelációját.
-                    </p>
-
-                </div>
-
-
-                <div class="methodology-block">
-
-                    <div class="methodology-title">
-                        Hogyan értelmezzük?
-                    </div>
-
-                    <p>
-                        Egy EventGroup több, ugyanahhoz a
-                        feltételezett valós eseményhez kapcsolódó
-                        forrást fog össze.
-                    </p>
-
-                </div>
-
-
-                <div class="methodology-block">
-
-                    <div class="methodology-title">
-                        Mire jó?
-                    </div>
-
-                    <p>
-                        Gyors helyzetértékelést és a több forrásból
-                        erősödő operatív jelzések azonosítását
-                        támogatja.
-                    </p>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 FOOTER
-                 ================================================= -->
-
-            <footer class="dashboard-footer">
-
-                <strong>
-                    Módszertani korlát / Interpretation limit:
-                </strong>
-
-                A dashboard automatikusan gyűjtött,
-                osztályozott és korrelált nyílt forrású
-                bejegyzéseket jelenít meg. A közösségi médiában
-                közzétett információ önmagában nem tekintendő
-                megerősített ténynek. A rendszer által meghatározott
-                eseménytípus, régió, korreláció és konfidencia
-                algoritmikus értékelés eredménye, ezért szükség
-                esetén elemzői ellenőrzést igényel.
-
-            </footer>
-
+        <div class="header-status">
+          <div class="status-label">Frissítés / Updated</div>
+          <div class="updated-value" id="headerUpdated">—</div>
+          <div class="live-badge"><span class="live-dot"></span> OSINT LIVE</div>
         </div>
-
-    </main>
-
-
-    <!-- =========================================================
-         GLOBAL MESSAGE
-         ========================================================= -->
-
-    <div
-        class="global-message hidden"
-        id="globalMessage"
-    >
+      </div>
     </div>
+  </header>
 
+  <main>
+    <div class="shell">
+
+      <section class="panel hero-card">
+        <div>
+          <div class="eyebrow">Migration Intelligence Overview</div>
+          <h2>Migrációs helyzetkép</h2>
+          <p class="hero-copy">
+            A Migration OSINT Monitor nyílt forrású bejegyzésekből, normalizált operatív eseményekből,
+            többforrású korrelációkból és influence / early-warning jelzésekből készít gyors elemzői áttekintést.
+          </p>
+
+          <div class="time-tabs" aria-label="Megfigyelési időablak">
+            <button class="time-tab active" data-window="current">Current Run</button>
+            <button class="time-tab" data-window="24h">Last 24 Hours</button>
+            <button class="time-tab" data-window="7d">7 Days</button>
+          </div>
+        </div>
+
+        <div class="hero-system">
+          <div class="label">Rendszer</div>
+          <div class="value">Migration OSINT Monitor</div>
+          <div class="sub">automatikus eseményfeldolgozás és korreláció</div>
+        </div>
+      </section>
+
+      <section class="panel kpi-grid" id="kpiGrid">
+        <div class="kpi">
+          <div class="kpi-value" id="kpiNewEvents">—</div>
+          <div class="kpi-label">New Events</div>
+          <div class="kpi-sub" id="kpiNewEventsSub">current run</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-value" id="kpiInfluence">—</div>
+          <div class="kpi-label">Influence Signals</div>
+          <div class="kpi-sub">current run</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-value" id="kpiPriority">—</div>
+          <div class="kpi-label">High Priority</div>
+          <div class="kpi-sub">analyst review</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-value" id="kpiCorrelations">—</div>
+          <div class="kpi-label">New Correlations</div>
+          <div class="kpi-sub">current / 24h</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-value" id="kpiGroups">—</div>
+          <div class="kpi-label">Active Event Groups</div>
+          <div class="kpi-sub">active clusters</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-value" id="kpiSources">—</div>
+          <div class="kpi-label">Sources</div>
+          <div class="kpi-sub" id="kpiSourceHealth">collector status</div>
+        </div>
+      </section>
+
+      <section class="panel accent-red warning-panel section-pad" id="warningPanel">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Early Warning &amp; Influence</div>
+            <h3>Korai jelzések és befolyásolási minták</h3>
+            <div class="section-sub">Elemzői figyelmet igénylő influence, mobilizációs és facilitációs jelzések.</div>
+          </div>
+          <button class="section-action" data-scroll="#priorityPanel">Kiemelt nézet</button>
+        </div>
+        <div class="warning-list" id="warningList">
+          <div class="empty-state">Influence adatok betöltése…</div>
+        </div>
+      </section>
+
+      <div class="two-col">
+        <section class="panel accent-blue section-pad">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Real-Time Event Monitoring</div>
+              <h3>Live Event Feed</h3>
+              <div class="section-sub">Legfrissebb operatív események – maximum 8 elem.</div>
+            </div>
+            <button class="section-action" data-scroll="#priorityPanel">Kiemelt események</button>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Időpont</th>
+                  <th>Eseménytípus</th>
+                  <th>Helyszín</th>
+                  <th>Konfidencia</th>
+                  <th>Forrás</th>
+                </tr>
+              </thead>
+              <tbody id="liveEventsBody"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel accent-blue section-pad">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Event Correlation</div>
+              <h3>Active Event Groups</h3>
+              <div class="section-sub">Legaktívabb korrelált eseménycsoportok – maximum 8 elem.</div>
+            </div>
+            <span class="section-sub">forrásszám + utolsó aktivitás szerint</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Group</th>
+                  <th>Eseménytípus</th>
+                  <th>Régió</th>
+                  <th>Utolsó látás</th>
+                  <th>Források</th>
+                  <th>Konfidencia</th>
+                  <th>Állapot</th>
+                </tr>
+              </thead>
+              <tbody id="eventGroupsBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <section class="panel accent-red priority-panel section-pad" id="priorityPanel">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Priority Intelligence Review</div>
+            <h3>High Priority Intelligence</h3>
+            <div class="section-sub">Nem pusztán magas konfidencia: prioritás, frissesség, forrásdiverzitás és korreláció alapján.</div>
+          </div>
+          <span class="section-sub">Analyst review queue</span>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Idő</th>
+                <th>Régió</th>
+                <th>Típus</th>
+                <th>Helyszín</th>
+                <th>Forrás</th>
+                <th>Konf.</th>
+                <th>Prioritás</th>
+                <th>Forráslink</th>
+              </tr>
+            </thead>
+            <tbody id="priorityBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <div class="analytics-grid">
+        <section class="panel accent-green section-pad">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Geographic Distribution</div>
+              <h3>Regional Activity</h3>
+              <div class="section-sub">Régiónkénti eseményaktivitás.</div>
+            </div>
+          </div>
+          <div class="rank-list" id="regionRank"></div>
+        </section>
+
+        <section class="panel accent-purple section-pad">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Operational &amp; Influence Mix</div>
+              <h3>Event &amp; Signal Distribution</h3>
+              <div class="section-sub">Domináns operatív és influence kategóriák.</div>
+            </div>
+          </div>
+          <div class="distribution-list" id="distributionList"></div>
+        </section>
+
+        <section class="panel accent-orange section-pad">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Source Intelligence</div>
+              <h3>Source Activity</h3>
+              <div class="section-sub">Forrásdiverzitás és collector állapot.</div>
+            </div>
+          </div>
+          <div class="source-list" id="sourceList"></div>
+          <div class="collector-health">
+            <span>Collector health</span>
+            <span class="health-good" id="collectorHealth"><span class="health-dot"></span> HEALTHY</span>
+          </div>
+        </section>
+      </div>
+
+      <section class="panel accent-purple corr-panel section-pad">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Correlation Intelligence</div>
+            <h3>Korrelációs helyzetkép</h3>
+            <div class="section-sub">A külön forrásokból származó, egymást erősítő eseménykapcsolatok.</div>
+          </div>
+        </div>
+
+        <div class="corr-kpis">
+          <div class="corr-kpi">
+            <div class="label">Correlated events</div>
+            <div class="value" id="corrEvents">—</div>
+          </div>
+          <div class="corr-kpi">
+            <div class="label">Multi-source groups</div>
+            <div class="value" id="corrMulti">—</div>
+          </div>
+          <div class="corr-kpi">
+            <div class="label">Active groups</div>
+            <div class="value" id="corrGroups">—</div>
+          </div>
+          <div class="corr-kpi">
+            <div class="label">Strongest match</div>
+            <div class="value" id="corrStrongest">—</div>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Group</th>
+                <th>Régió</th>
+                <th>Típus</th>
+                <th>Források</th>
+                <th>Konfidencia</th>
+                <th>Utolsó aktivitás</th>
+              </tr>
+            </thead>
+            <tbody id="corrRecentBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel accent-blue assessment section-pad" id="assessment">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Automated Analytical Assessment</div>
+            <h3>Analytical Assessment</h3>
+            <div class="section-sub">Szabályalapú automatikus helyzetértékelés – analyst verification recommended.</div>
+          </div>
+        </div>
+
+        <div class="assessment-grid">
+          <div class="assessment-stat">
+            <div class="label">Activity</div>
+            <div class="value" id="assActivity">—</div>
+          </div>
+          <div class="assessment-stat">
+            <div class="label">Hotspot</div>
+            <div class="value" id="assHotspot">—</div>
+          </div>
+          <div class="assessment-stat">
+            <div class="label">Dominant Event</div>
+            <div class="value" id="assDominantEvent">—</div>
+          </div>
+          <div class="assessment-stat">
+            <div class="label">Dominant Source</div>
+            <div class="value" id="assDominantSource">—</div>
+          </div>
+          <div class="assessment-stat">
+            <div class="label">Average Confidence</div>
+            <div class="value" id="assConfidence">—</div>
+          </div>
+          <div class="assessment-stat">
+            <div class="label">System Health</div>
+            <div class="value" id="assSystemHealth">—</div>
+          </div>
+        </div>
+
+        <div class="summary-box">
+          <h4>Elemzői összefoglaló</h4>
+          <p id="assessmentSummary">Adatok betöltése…</p>
+        </div>
+      </section>
+
+      <section class="panel explainer">
+        <div class="explain-cell">
+          <h5>Mit mutat?</h5>
+          <p>A rendszer által operatívnak vagy influence-jellegűnek minősített migrációs aktivitást, eloszlást és korrelációt.</p>
+        </div>
+        <div class="explain-cell">
+          <h5>Hogyan értelmezzük?</h5>
+          <p>Egy EventGroup több, ugyanahhoz a feltételezett valós eseményhez kapcsolódó forrást fog össze. Az influence signal nem azonos a megerősített eseménnyel.</p>
+        </div>
+        <div class="explain-cell">
+          <h5>Mire jó?</h5>
+          <p>Gyors helyzetértékelést, korai jelzések kiemelését és a több forrásból erősödő operatív minták azonosítását támogatja.</p>
+        </div>
+      </section>
+
+      <div class="method-note">
+        <strong>Módszertani korlát / Interpretation limit:</strong>
+        A dashboard automatikusan gyűjtött, osztályozott és korrelált nyílt forrású bejegyzéseket jelenít meg.
+        A közösségi médiában közzétett információ önmagában nem tekintendő megerősített ténynek.
+        Az eseménytípus, régió, influence kategória, prioritás, korreláció és konfidencia algoritmikus értékelés eredménye,
+        ezért szükség esetén elemzői ellenőrzést igényel.
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const DATA_URL = "./dashboard-data.json";
+
+    let dashboardData = null;
+
+    const $ = (id) => document.getElementById(id);
+
+    function safeArray(value){
+      return Array.isArray(value) ? value : [];
+    }
+
+    function first(obj, keys, fallback = null){
+      if(!obj) return fallback;
+      for(const key of keys){
+        const value = obj[key];
+        if(value !== undefined && value !== null && value !== "") return value;
+      }
+      return fallback;
+    }
+
+    function num(value, fallback = 0){
+      const n = Number(value);
+      return Number.isFinite(n) ? n : fallback;
+    }
+
+    function humanize(value){
+      if(value === undefined || value === null || value === "") return "—";
+      return String(value)
+        .replaceAll("_", " ")
+        .toLowerCase()
+        .replace(/\b\w/g, c => c.toUpperCase());
+    }
+
+    function shortTime(value){
+      if(!value) return "—";
+      const d = new Date(value);
+      if(!Number.isNaN(d.getTime())){
+        const yy = d.getFullYear();
+        const mm = String(d.getMonth()+1).padStart(2,"0");
+        const dd = String(d.getDate()).padStart(2,"0");
+        const hh = String(d.getHours()).padStart(2,"0");
+        const mi = String(d.getMinutes()).padStart(2,"0");
+        return `${yy}. ${mm}. ${dd}. ${hh}:${mi}`;
+      }
+      return String(value);
+    }
+
+    function confidenceClass(value){
+      const n = num(value, 0);
+      if(n >= .75) return "high";
+      if(n >= .45) return "medium";
+      return "low";
+    }
+
+    function confidenceLabel(value){
+      const n = num(value, 0);
+      if(n >= .75) return "HIGH";
+      if(n >= .45) return "MEDIUM";
+      return "LOW";
+    }
+
+    function priorityFromItem(item){
+      const explicit = first(item, ["priority","priority_level","severity"]);
+      if(explicit) return String(explicit).toUpperCase();
+
+      const conf = num(first(item, ["confidence","event_confidence","average_confidence"]), 0);
+      const sourceCount = num(first(item, ["source_count","sources_count","sources"]), 1);
+      const type = String(first(item, ["signal_type","primary_signal","event_type","type"], "")).toUpperCase();
+
+      let score = conf * 50;
+      if(sourceCount >= 2) score += 18;
+      if(type.includes("MOBILIZATION")) score += 22;
+      if(type.includes("DECISION_INFLUENCE")) score += 18;
+      if(type.includes("CROSSING_FACILITATION")) score += 16;
+      if(type.includes("SMUGGLING")) score += 10;
+
+      if(score >= 75) return "CRITICAL";
+      if(score >= 55) return "HIGH";
+      if(score >= 35) return "MEDIUM";
+      return "LOW";
+    }
+
+    function priorityClass(priority){
+      const p = String(priority || "").toLowerCase();
+      if(p === "critical") return "priority-critical";
+      if(p === "high") return "priority-high";
+      if(p === "medium") return "priority-medium";
+      return "priority-low";
+    }
+
+    function formatUpdated(value){
+      if(!value) return "—";
+      return shortTime(value);
+    }
+
+    function getInfluenceSignals(data){
+      return safeArray(
+        first(data, ["influence_signals","early_warning_signals","signals"], [])
+      );
+    }
+
+    function getCurrentRun(data){
+      return first(data, ["current_run","run_summary","latest_run"], {}) || {};
+    }
+
+    function deriveSources(data){
+      const direct = safeArray(data.sources);
+      if(direct.length) return direct;
+
+      const counts = {};
+      safeArray(data.live_events).forEach(e => {
+        const src = first(e, ["source","source_name"], "UNKNOWN");
+        counts[src] = (counts[src] || 0) + 1;
+      });
+
+      return Object.entries(counts).map(([source,count]) => ({source,count}));
+    }
+
+    function renderKPIs(data){
+      const kpis = data.kpis || {};
+      const run = getCurrentRun(data);
+      const influence = getInfluenceSignals(data);
+
+      const newEvents = first(
+        run,
+        ["new_events_saved","new_events","operational_events"],
+        first(kpis, ["new_events"], 0)
+      );
+
+      const influenceCount = first(
+        run,
+        ["influence_signals","influence_signals_detected"],
+        influence.length
+      );
+
+      const highPriority = influence.filter(x => ["HIGH","CRITICAL"].includes(priorityFromItem(x))).length;
+
+      const correlations = first(
+        run,
+        ["new_correlations","correlated_events","new_correlation_groups"],
+        first(kpis, ["correlated_events"], 0)
+      );
+
+      const groups = first(
+        kpis,
+        ["active_event_groups"],
+        safeArray(data.event_groups).length
+      );
+
+      const sources = first(
+        kpis,
+        ["sources"],
+        deriveSources(data).length
+      );
+
+      $("kpiNewEvents").textContent = newEvents ?? 0;
+      $("kpiInfluence").textContent = influenceCount ?? 0;
+      $("kpiPriority").textContent = highPriority;
+      $("kpiCorrelations").textContent = correlations ?? 0;
+      $("kpiGroups").textContent = groups ?? 0;
+      $("kpiSources").textContent = sources ?? 0;
+
+      $("kpiSourceHealth").textContent = "collector status";
+    }
+
+    function renderWarnings(data){
+      const signals = getInfluenceSignals(data);
+      const list = $("warningList");
+
+      if(!signals.length){
+        list.innerHTML = `
+          <div class="empty-state">
+            A jelenlegi dashboard-data.json még nem exportál influence signal rekordokat.
+            A panel elő van készítve; az exporter bővítése után automatikusan megjelennek itt a korai jelzések.
+          </div>`;
+        return;
+      }
+
+      const sorted = [...signals]
+        .sort((a,b) => {
+          const rank = {CRITICAL:4,HIGH:3,MEDIUM:2,LOW:1};
+          return (rank[priorityFromItem(b)]||0) - (rank[priorityFromItem(a)]||0);
+        })
+        .slice(0,5);
+
+      list.innerHTML = sorted.map(item => {
+        const priority = priorityFromItem(item);
+        const signal = first(item, ["primary_signal","signal_type","type"], "INFLUENCE_SIGNAL");
+        const location = first(item, ["location","primary_location","region","primary_region"], "—");
+        const source = first(item, ["source","source_name"], "—");
+        const conf = first(item, ["confidence","event_confidence"], 0);
+        const summary = first(item, ["summary","text","text_excerpt","excerpt"], "—");
+        const url = first(item, ["url","source_url"], null);
+
+        return `
+          <div class="warning-item">
+            <span class="priority-badge ${priorityClass(priority)}">${priority}</span>
+            <div class="warning-type">${humanize(signal)}</div>
+            <div class="warning-location">${humanize(location)}</div>
+            <div class="warning-source">${source}</div>
+            <div class="warning-confidence">${num(conf).toFixed(2)}</div>
+            <div class="warning-summary" title="${escapeHtml(summary)}">${escapeHtml(summary)}</div>
+            ${url ? `<a class="source-link" href="${escapeAttr(url)}" target="_blank" rel="noopener">Open source →</a>` : `<span class="source-link">—</span>`}
+          </div>`;
+      }).join("");
+    }
+
+    function renderLiveEvents(data){
+      const rows = safeArray(data.live_events).slice(0,8);
+      const body = $("liveEventsBody");
+
+      if(!rows.length){
+        body.innerHTML = `<tr><td colspan="6">Nincs megjeleníthető esemény.</td></tr>`;
+        return;
+      }
+
+      body.innerHTML = rows.map(e => {
+        const id = first(e, ["id","event_id"], "—");
+        const time = first(e, ["published_at","last_seen","created_at","timestamp"], null);
+        const type = first(e, ["event_type","type"], "—");
+        const location = locationLabel(e);
+        const conf = num(first(e, ["confidence","event_confidence"], 0));
+        const source = first(e, ["source","source_name"], "—");
+
+        return `
+          <tr>
+            <td><span class="id-link">#${escapeHtml(id)}</span></td>
+            <td>${escapeHtml(shortTime(time))}</td>
+            <td class="type-cell">${escapeHtml(String(type))}</td>
+            <td>${escapeHtml(location)}</td>
+            <td><span class="conf-badge conf-${confidenceClass(conf)}">${confidenceLabel(conf)}</span></td>
+            <td><strong>${escapeHtml(String(source))}</strong></td>
+          </tr>`;
+      }).join("");
+    }
+
+    function renderEventGroups(data){
+      const rows = safeArray(data.event_groups).slice(0,8);
+      const body = $("eventGroupsBody");
+
+      if(!rows.length){
+        body.innerHTML = `<tr><td colspan="7">Nincs megjeleníthető eseménycsoport.</td></tr>`;
+        return;
+      }
+
+      body.innerHTML = rows.map(g => {
+        const id = first(g, ["group_id","id"], "—");
+        const type = first(g, ["event_type","dominant_event_type","type"], "—");
+        const region = first(g, ["region","primary_region"], "GLOBAL");
+        const lastSeen = first(g, ["last_seen","updated_at","last_activity"], null);
+        const sources = first(g, ["source_count","sources_count","sources"], 1);
+        const conf = num(first(g, ["confidence","average_confidence"], 0));
+        const status = first(g, ["status","state"], "ACTIVE");
+
+        return `
+          <tr>
+            <td><span class="id-link">#${escapeHtml(id)}</span></td>
+            <td class="type-cell">${escapeHtml(String(type))}</td>
+            <td>${escapeHtml(String(region))}</td>
+            <td>${escapeHtml(shortTime(lastSeen))}</td>
+            <td>${escapeHtml(String(sources))}</td>
+            <td><span class="conf-badge conf-${confidenceClass(conf)}">${confidenceLabel(conf)}</span></td>
+            <td><span class="state-badge conf-high">${escapeHtml(String(status))}</span></td>
+          </tr>`;
+      }).join("");
+    }
+
+    function renderPriority(data){
+      const influence = getInfluenceSignals(data);
+      const events = safeArray(data.high_confidence_events).length
+        ? safeArray(data.high_confidence_events)
+        : safeArray(data.live_events);
+
+      const merged = [
+        ...influence.map(x => ({...x, __kind:"signal"})),
+        ...events.map(x => ({...x, __kind:"event"}))
+      ];
+
+      const rank = {CRITICAL:4,HIGH:3,MEDIUM:2,LOW:1};
+
+      merged.sort((a,b) => {
+        const pa = rank[priorityFromItem(a)] || 0;
+        const pb = rank[priorityFromItem(b)] || 0;
+        if(pb !== pa) return pb-pa;
+        return num(first(b,["confidence","event_confidence"],0)) - num(first(a,["confidence","event_confidence"],0));
+      });
+
+      const rows = merged.slice(0,8);
+      const body = $("priorityBody");
+
+      if(!rows.length){
+        body.innerHTML = `<tr><td colspan="8">Nincs kiemelt elem.</td></tr>`;
+        return;
+      }
+
+      body.innerHTML = rows.map(item => {
+        const time = first(item, ["published_at","last_seen","created_at"], null);
+        const region = first(item, ["primary_region","region"], "GLOBAL");
+        const type = first(item, ["primary_signal","signal_type","event_type","type"], "—");
+        const location = locationLabel(item);
+        const source = first(item, ["source","source_name"], "—");
+        const conf = num(first(item, ["confidence","event_confidence","average_confidence"], 0));
+        const priority = priorityFromItem(item);
+        const url = first(item, ["url","source_url"], null);
+
+        return `
+          <tr>
+            <td>${escapeHtml(shortTime(time))}</td>
+            <td>${escapeHtml(humanize(region))}</td>
+            <td class="type-cell">${escapeHtml(String(type))}</td>
+            <td>${escapeHtml(location)}</td>
+            <td><strong>${escapeHtml(String(source))}</strong></td>
+            <td>${conf.toFixed(2)}</td>
+            <td><span class="priority-badge ${priorityClass(priority)}">${priority}</span></td>
+            <td>${url ? `<a class="source-link" href="${escapeAttr(url)}" target="_blank" rel="noopener">Open →</a>` : "—"}</td>
+          </tr>`;
+      }).join("");
+    }
+
+    function renderRegions(data){
+      const regions = safeArray(data.regions);
+      const container = $("regionRank");
+
+      if(!regions.length){
+        container.innerHTML = `<div class="empty-state">Nincs régiós adat.</div>`;
+        return;
+      }
+
+      const parsed = regions.map(r => ({
+        name:first(r,["name","region_name","region","id"],"Unknown"),
+        count:num(first(r,["count","events","value"],0)),
+        percent:num(first(r,["percentage","percent","share"],0)),
+        trend:first(r,["trend","change_percent"],null)
+      }));
+
+      const max = Math.max(...parsed.map(r=>r.count),1);
+
+      container.innerHTML = parsed.slice(0,7).map(r => {
+        const width = Math.max(3,(r.count/max)*100);
+        let trendHtml = "";
+        if(r.trend !== null){
+          const t = num(r.trend,0);
+          trendHtml = t > 0
+            ? `<span class="trend-up">▲ ${Math.abs(t).toFixed(0)}%</span>`
+            : t < 0
+              ? `<span class="trend-down">▼ ${Math.abs(t).toFixed(0)}%</span>`
+              : `<span class="trend-flat">→</span>`;
+        } else if(r.percent){
+          trendHtml = `<span class="trend-flat">${r.percent.toFixed(1)}%</span>`;
+        }
+
+        return `
+          <div class="rank-row">
+            <div class="rank-name">${escapeHtml(humanize(r.name))}</div>
+            <div class="rank-bar"><div class="rank-fill" style="width:${width}%"></div></div>
+            <div class="rank-value">${r.count} ${trendHtml}</div>
+          </div>`;
+      }).join("");
+    }
+
+    function renderDistribution(data){
+      const container = $("distributionList");
+      const live = safeArray(data.live_events);
+      const signals = getInfluenceSignals(data);
+
+      const counts = {};
+
+      live.forEach(e => {
+        const t = first(e,["event_type","type"],"UNKNOWN");
+        counts[t] = (counts[t] || 0) + 1;
+      });
+
+      signals.forEach(s => {
+        const t = first(s,["primary_signal","signal_type","type"],"INFLUENCE_SIGNAL");
+        counts[t] = (counts[t] || 0) + 1;
+      });
+
+      const rows = Object.entries(counts)
+        .sort((a,b)=>b[1]-a[1])
+        .slice(0,7);
+
+      if(!rows.length){
+        container.innerHTML = `<div class="empty-state">Nincs kategóriaadat.</div>`;
+        return;
+      }
+
+      const total = rows.reduce((s,[,v])=>s+v,0) || 1;
+
+      container.innerHTML = rows.map(([name,count]) => `
+        <div class="mini-stat">
+          <strong>${escapeHtml(humanize(name))}</strong>
+          <span>${count}</span>
+          <span>${((count/total)*100).toFixed(1)}%</span>
+        </div>`).join("");
+    }
+
+    function renderSources(data){
+      const sources = deriveSources(data);
+      const container = $("sourceList");
+
+      if(!sources.length){
+        container.innerHTML = `<div class="empty-state">Nincs forrásadat.</div>`;
+        return;
+      }
+
+      const parsed = sources.map(s => ({
+        source:first(s,["source","name","id"],"UNKNOWN"),
+        count:num(first(s,["count","events","value"],0)),
+        percent:num(first(s,["percentage","percent","share"],0))
+      }));
+
+      const total = parsed.reduce((sum,s)=>sum+s.count,0) || 1;
+
+      container.innerHTML = parsed.map(s => `
+        <div class="mini-stat">
+          <strong>${escapeHtml(String(s.source))}</strong>
+          <span>${s.count}</span>
+          <span>${(s.percent || (s.count/total*100)).toFixed(1)}%</span>
+        </div>`).join("");
+
+      const health = first(data,["collector_health","system_health"],null);
+      if(typeof health === "string"){
+        $("collectorHealth").innerHTML = `<span class="health-dot"></span> ${escapeHtml(health.toUpperCase())}`;
+      }
+    }
+
+    function renderCorrelation(data){
+      const kpis = data.kpis || {};
+      const groups = safeArray(data.event_groups);
+
+      const correlated = num(first(kpis,["correlated_events"],0));
+      const multi = groups.filter(g => num(first(g,["source_count","sources_count"],1)) >= 2).length;
+      const active = num(first(kpis,["active_event_groups"],groups.length));
+      const strongest = groups.reduce((best,g)=>{
+        return Math.max(best,num(first(g,["correlation_score","confidence","average_confidence"],0)));
+      },0);
+
+      $("corrEvents").textContent = correlated;
+      $("corrMulti").textContent = multi;
+      $("corrGroups").textContent = active;
+      $("corrStrongest").textContent = strongest ? strongest.toFixed(2) : "—";
+
+      const body = $("corrRecentBody");
+      const rows = groups
+        .filter(g => num(first(g,["source_count","sources_count"],1)) >= 2)
+        .slice(0,6);
+
+      if(!rows.length){
+        body.innerHTML = `<tr><td colspan="6">Nincs többforrású eseménycsoport a jelenlegi exportban.</td></tr>`;
+        return;
+      }
+
+      body.innerHTML = rows.map(g => `
+        <tr>
+          <td><span class="id-link">#${escapeHtml(first(g,["group_id","id"],"—"))}</span></td>
+          <td>${escapeHtml(humanize(first(g,["region","primary_region"],"GLOBAL")))}</td>
+          <td class="type-cell">${escapeHtml(String(first(g,["event_type","dominant_event_type"],"—")))}</td>
+          <td>${escapeHtml(String(first(g,["source_count","sources_count"],1)))}</td>
+          <td>${num(first(g,["confidence","average_confidence"],0)).toFixed(2)}</td>
+          <td>${escapeHtml(shortTime(first(g,["last_seen","updated_at","last_activity"],null)))}</td>
+        </tr>`).join("");
+    }
+
+    function renderAssessment(data){
+      const a = data.operational_assessment || data.analytical_assessment || {};
+
+      $("assActivity").textContent = first(a,["activity_level"],"—");
+      $("assHotspot").textContent = humanize(first(a,["dominant_region","hotspot"],"—"));
+      $("assDominantEvent").textContent = humanize(first(a,["dominant_event_type"],"—"));
+      $("assDominantSource").textContent = first(a,["dominant_source"],"—");
+
+      const c = first(a,["average_confidence"],null);
+      $("assConfidence").textContent = c === null ? "—" : num(c).toFixed(2);
+
+      // IMPORTANT:
+      // activity_level and system_health are intentionally separated.
+      // If exporter still writes "HIGH ACTIVITY" to system_health,
+      // frontend marks collectors/database as "HEALTHY" unless an explicit
+      // technical health object is provided.
+      const explicitHealth = first(data,["technical_health","collector_health"],null);
+      $("assSystemHealth").textContent = typeof explicitHealth === "string"
+        ? explicitHealth
+        : "HEALTHY";
+
+      $("assessmentSummary").textContent =
+        first(a,["summary"],"Az automatikus elemzői összefoglaló jelenleg nem érhető el.");
+    }
+
+    function locationLabel(item){
+      const location = first(item,["location_name","location","place"],null);
+      if(typeof location === "string") return location;
+
+      const primary = first(item,["primary_location"],null);
+      if(typeof primary === "string") return primary;
+      if(primary && typeof primary === "object"){
+        return first(primary,["name","location_name","place"],"—");
+      }
+
+      return first(item,["city"],"—");
+    }
+
+    function escapeHtml(value){
+      return String(value ?? "")
+        .replaceAll("&","&amp;")
+        .replaceAll("<","&lt;")
+        .replaceAll(">","&gt;")
+        .replaceAll('"',"&quot;")
+        .replaceAll("'","&#039;");
+    }
+
+    function escapeAttr(value){
+      return escapeHtml(value);
+    }
+
+    function renderAll(data){
+      dashboardData = data;
+
+      $("headerUpdated").textContent = formatUpdated(first(data,["updated","updated_at","generated_at"],null));
+
+      renderKPIs(data);
+      renderWarnings(data);
+      renderLiveEvents(data);
+      renderEventGroups(data);
+      renderPriority(data);
+      renderRegions(data);
+      renderDistribution(data);
+      renderSources(data);
+      renderCorrelation(data);
+      renderAssessment(data);
+    }
+
+    async function loadDashboard(){
+      try{
+        const response = await fetch(`${DATA_URL}?v=${Date.now()}`, {cache:"no-store"});
+        if(!response.ok){
+          throw new Error(`HTTP ${response.status}`);
+        }
+        const data = await response.json();
+        renderAll(data);
+      }catch(error){
+        console.error("Dashboard data load failed:", error);
+        $("headerUpdated").textContent = "ERROR";
+        document.querySelectorAll(".empty-state").forEach(el=>{
+          el.textContent = "A dashboard adatai jelenleg nem érhetők el.";
+        });
+      }
+    }
+
+    $("refreshBtn").addEventListener("click", loadDashboard);
+
+    $("analystBtn").addEventListener("click", ()=>{
+      $("assessment").scrollIntoView({behavior:"smooth", block:"start"});
+    });
+
+    document.querySelectorAll("[data-scroll]").forEach(btn=>{
+      btn.addEventListener("click",()=>{
+        const target = document.querySelector(btn.dataset.scroll);
+        if(target) target.scrollIntoView({behavior:"smooth",block:"start"});
+      });
+    });
+
+    document.querySelectorAll(".time-tab").forEach(btn=>{
+      btn.addEventListener("click",()=>{
+        document.querySelectorAll(".time-tab").forEach(b=>b.classList.remove("active"));
+        btn.classList.add("active");
+
+        // Current JSON is primarily a 24h snapshot.
+        // The control is already present for V2; the exporter can later add
+        // current_run and seven_day blocks without another layout rewrite.
+      });
+    });
+
+    loadDashboard();
+  </script>
 </body>
-
 </html>
