@@ -8,9 +8,10 @@ Description:
 JSON-driven detector for migration-related influence,
 facilitation and early-warning signals.
 
-Version 2.5 precision tuning prevents generic mass-movement
-language from becoming crossing facilitation without separate
-actionable crossing/access evidence.
+Version 2.6 precision tuning prevents generic mass-movement
+language from becoming crossing facilitation and generic contact
+language from becoming recruitment/coordination without separate
+operational migration evidence.
 
 Knowledge base:
 
@@ -402,6 +403,34 @@ class InfluenceSignalDetector:
 
         matched_signals = (
             self._apply_crossing_facilitation_guard(
+                matched_signals=(
+                    matched_signals
+                ),
+                matched_group_map=(
+                    matched_group_map
+                ),
+                matched_context_patterns=(
+                    matched_context_patterns
+                ),
+            )
+        )
+
+        # --------------------------------------------------
+        # RECRUITMENT / COORDINATION SEMANTIC GUARD
+        # --------------------------------------------------
+        #
+        # Generic commercial or conversational contact language
+        # must not become RECRUITMENT_COORDINATION merely because
+        # the same post also contains migration vocabulary.
+        #
+        # Recruitment / coordination is retained only when there
+        # is separate operational evidence such as a crossing
+        # method, route, meeting / pickup arrangement, smuggling
+        # ecosystem, mobilization or a dedicated coordination
+        # context pattern.
+
+        matched_signals = (
+            self._apply_recruitment_coordination_guard(
                 matched_signals=(
                     matched_signals
                 ),
@@ -2325,6 +2354,94 @@ class InfluenceSignalDetector:
             in matched_signals
             if signal
             != "CROSSING_FACILITATION"
+        ]
+
+
+    # ======================================================
+    # RECRUITMENT / COORDINATION GUARD
+    # ======================================================
+
+    def _apply_recruitment_coordination_guard(
+        self,
+        *,
+        matched_signals: List[str],
+        matched_group_map: Dict[str, bool],
+        matched_context_patterns: List[
+            Dict[str, object]
+        ],
+    ) -> List[str]:
+        """
+        Prevents generic contact language from becoming
+        RECRUITMENT_COORDINATION without operational migration
+        context.
+
+        Strong supporting evidence includes:
+        - route information or route promotion
+        - known crossing point or crossing method
+        - border-access opportunity
+        - smuggling ecosystem
+        - mobilization / coordination
+        - dedicated facilitation or smuggling context patterns
+        """
+
+        if (
+            "RECRUITMENT_COORDINATION"
+            not in matched_signals
+        ):
+            return matched_signals
+
+        strong_groups = {
+            "route_information",
+            "route_promotion",
+            "crossing_point",
+            "crossing_method",
+            "border_access",
+            "smuggling_ecosystem",
+            "mobilization",
+            "mobilization_coordination",
+        }
+
+        has_strong_group = any(
+            matched_group_map.get(
+                group,
+                False,
+            )
+            for group
+            in strong_groups
+        )
+
+        valid_pattern_ids = {
+            "direct_facilitation",
+            "smuggling_coordination",
+            "smuggling_platform_coordination",
+            "migration_mobilization",
+            "migration_mobilization_narrative",
+        }
+
+        has_valid_pattern = any(
+            pattern.get(
+                "id"
+            )
+            in valid_pattern_ids
+            for pattern
+            in matched_context_patterns
+        )
+
+        # direct_facilitation itself is only accepted when the
+        # facilitation group is backed by a non-generic operational
+        # phrase after v2.6 rules cleanup.
+        if (
+            has_strong_group
+            or has_valid_pattern
+        ):
+            return matched_signals
+
+        return [
+            signal
+            for signal
+            in matched_signals
+            if signal
+            != "RECRUITMENT_COORDINATION"
         ]
 
 
