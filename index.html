@@ -1465,6 +1465,157 @@
     .matrix-assessment-badge{display:inline-flex;border-radius:999px;padding:6px 9px;font-size:9px;font-weight:950;letter-spacing:.04em}.matrix-assessment-badge.normal{background:#eef4f7;color:#627b89}.matrix-assessment-badge.elevated{background:#fff3dd;color:#a66500}.matrix-assessment-badge.high{background:#e9f8f0;color:#087c4b}.matrix-assessment-badge.critical{background:#fff0ef;color:#b93430}
     .matrix-assessment-score{margin-top:7px;font-size:9px;color:var(--muted);line-height:1.45}
     .matrix-legend{margin-top:10px;color:var(--muted);font-size:9px;line-height:1.55}
+
+    .matrix-day-weekday{
+      margin-top:2px;
+      font-size:9px;
+      color:var(--navy);
+      font-weight:850;
+    }
+
+    .matrix-row-label{
+      flex-direction:column;
+      gap:3px;
+    }
+
+    .matrix-row-label-main{
+      font-size:14px;
+      line-height:1.1;
+    }
+
+    .matrix-row-label-sub{
+      font-size:8.5px;
+      font-weight:800;
+      opacity:.88;
+    }
+
+    .matrix-row-label-desc{
+      margin-top:7px;
+      font-size:9px;
+      line-height:1.42;
+      color:#496978;
+      font-weight:650;
+    }
+
+    .matrix-label-summary{
+      background:#f7fafc;
+      color:var(--navy);
+      border-left:4px solid #496f84;
+    }
+
+    .matrix-data-summary{
+      background:#fff;
+      min-height:128px;
+    }
+
+    .matrix-hotspot-place{
+      margin-top:2px;
+      margin-bottom:4px;
+      color:#17623f;
+      font-size:10px;
+      font-weight:900;
+    }
+
+    .matrix-assessment-card{
+      min-height:82px;
+      border:1px solid var(--line);
+      border-radius:10px;
+      padding:9px 10px;
+      background:#f7fafc;
+    }
+
+    .matrix-assessment-card.normal{
+      background:#effaf4;
+      border-color:#d1eadb;
+    }
+
+    .matrix-assessment-card.elevated{
+      background:#fff7e8;
+      border-color:#f2dba8;
+    }
+
+    .matrix-assessment-card.high{
+      background:#fff5e8;
+      border-color:#efd2a4;
+    }
+
+    .matrix-assessment-card.critical{
+      background:#fff0ef;
+      border-color:#f2c4c1;
+    }
+
+    .matrix-assessment-note{
+      margin-top:5px;
+      color:#38586a;
+      font-size:8.5px;
+      line-height:1.38;
+      font-weight:700;
+    }
+
+    .matrix-summary-head{
+      display:flex;
+      align-items:center;
+      gap:6px;
+      margin-bottom:6px;
+      color:var(--navy);
+      font-size:9px;
+      font-weight:950;
+    }
+
+    .matrix-summary-icon{
+      width:15px;
+      height:15px;
+      border-radius:50%;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      flex:0 0 auto;
+      font-size:9px;
+      font-weight:950;
+    }
+
+    .matrix-summary-icon.normal{
+      background:#daf4e6;
+      color:#087c4b;
+    }
+
+    .matrix-summary-icon.elevated,
+    .matrix-summary-icon.high{
+      background:#fff0cb;
+      color:#a66500;
+    }
+
+    .matrix-summary-icon.critical{
+      background:#ffe0de;
+      color:#c73531;
+    }
+
+    .matrix-summary-text{
+      color:#476575;
+      font-size:8.8px;
+      line-height:1.44;
+    }
+
+    .matrix-summary-expected{
+      margin-top:6px;
+      color:#284e63;
+      font-size:8.7px;
+      line-height:1.42;
+      font-weight:750;
+    }
+
+    .matrix-legend{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .matrix-legend-status{
+      margin-left:auto;
+      text-align:right;
+    }
+
     @media(max-width:800px){.matrix-grid{grid-template-columns:135px repeat(7,minmax(145px,1fr));min-width:1150px}.matrix-cell{padding:10px}.matrix-range{width:100%}}
 
   </style>
@@ -1613,8 +1764,8 @@
       <section class="panel accent-purple matrix-panel section-pad" id="timelinePanel">
         <div class="section-head">
           <div>
-            <div class="eyebrow">7-Day Migration Intelligence Matrix</div>
-            <h3>Early Warning &amp; Operational Timeline</h3>
+            <div class="eyebrow">Migration Intelligence History</div>
+            <h3>7-Day Migration Intelligence Matrix</h3>
             <div class="section-sub">Napi összkép: információs kontextus → korai jelzés → operatív esemény → korreláció. A részletek cellánként nyithatók le.</div>
           </div>
           <span class="section-sub" id="timelineVisibleLabel">—</span>
@@ -1622,7 +1773,7 @@
         <div class="matrix-nav">
           <div class="matrix-nav-left">
             <button class="matrix-nav-btn" id="matrixPrev" type="button">← Previous 7 days</button>
-            <button class="matrix-nav-btn" id="matrixLatest" type="button">Legutóbbi 7 nap</button>
+            <button class="matrix-nav-btn" id="matrixLatest" type="button" style="background:var(--navy);color:#fff;border-color:var(--navy)">Legutóbbi 7 nap</button>
             <button class="matrix-nav-btn" id="matrixNext" type="button">Next 7 days →</button>
           </div>
           <div class="matrix-range" id="matrixRange">—</div>
@@ -1632,7 +1783,16 @@
           <select class="matrix-select" id="timelineRegionFilter"><option value="ALL">Minden régió</option></select>
         </div>
         <div class="matrix-scroll"><div class="matrix-grid" id="signalTimelineList"><div class="matrix-empty">Timeline adatok betöltése…</div></div></div>
-        <div class="matrix-legend"><strong>Értelmezés:</strong> az INFORMATION szűrt kontextus, az EARLY WARNING mobilizációs/facilitációs jelzés, az OPERATIONAL azonosított esemény, a CORRELATED pedig EventGrouphoz kapcsolt forrás. Az Assessment összetett aktivitási jelző, nem önálló kockázati előrejelzés.</div>
+        <div class="matrix-legend">
+          <div>
+            <strong>Activity score:</strong>
+            Information ×1.5 + Early Warning ×3.0 + Operational ×1.2 + Correlation ×1.5.
+            A pontszám összehasonlító aktivitási mutató, nem önálló kockázati előrejelzés.
+          </div>
+          <div class="matrix-legend-status">
+            <span id="matrixUpdated">—</span> · Időzóna: helyi böngészőidő
+          </div>
+        </div>
       </section>
 
       <div class="two-col">
@@ -2674,99 +2834,636 @@
         regions.map(x=>`<option value="${escapeAttr(x)}">${escapeHtml(x.replaceAll("_"," "))}</option>`).join("");
     }
 
+
+    const MATRIX_DAY_NAMES_HU = [
+      "Vasárnap","Hétfő","Kedd","Szerda","Csütörtök","Péntek","Szombat"
+    ];
+
+    const MATRIX_TYPE_HU = {
+      INFORMATION_SIGNAL:"információs jelzés",
+      CROSSING_FACILITATION:"átkelést segítő jelzés",
+      MOBILIZATION_REPORT:"mobilizációs jelzés",
+      MOBILIZATION_COORDINATION:"mobilizáció / koordináció",
+      LEGAL_MIGRATION_SIGNAL:"legális migrációs jelzés",
+      POLICY_SIGNAL:"szakpolitikai jelzés",
+      SMUGGLING_ACTIVITY:"csempészeti aktivitás",
+      ARRIVAL:"érkezés",
+      MIGRANT_CAMP:"migránstábor / befogadóhely",
+      BORDER_CROSSING:"határátkelés",
+      BORDER_CONDITION:"határhelyzet",
+      BORDER_MEASURE:"határintézkedés",
+      INTERCEPTION:"elfogás / feltartóztatás",
+      RESCUE_OPERATION:"mentési művelet",
+      CASUALTY:"haláleset / sérülés",
+      COORDINATION:"koordináció",
+      GENERAL_DISCUSSION:"általános információs aktivitás"
+    };
+
+    function matrixTypeHu(value){
+      const key=String(value||"").toUpperCase();
+      return MATRIX_TYPE_HU[key] || String(value||"jelzés").replaceAll("_"," ").toLowerCase();
+    }
+
     function matrixAnchorDate(){
-      const d = new Date(timelineState.generatedAt || Date.now());
-      const anchor = Number.isNaN(d.getTime()) ? new Date() : d;
+      const d=new Date(timelineState.generatedAt||Date.now());
+      const anchor=Number.isNaN(d.getTime())?new Date():d;
       anchor.setHours(23,59,59,999);
-      anchor.setDate(anchor.getDate() + timelineState.weekOffset * 7);
+      anchor.setDate(anchor.getDate()+timelineState.weekOffset*7);
       return anchor;
     }
 
     function matrixDays(){
-      const end = matrixAnchorDate();
+      const end=matrixAnchorDate();
       const days=[];
       for(let i=6;i>=0;i--){
-        const d=new Date(end); d.setDate(end.getDate()-i); d.setHours(0,0,0,0); days.push(d);
+        const d=new Date(end);
+        d.setDate(end.getDate()-i);
+        d.setHours(0,0,0,0);
+        days.push(d);
       }
       return days;
     }
 
-    function sameLocalDay(a,b){return a.getFullYear()===b.getFullYear()&&a.getMonth()===b.getMonth()&&a.getDate()===b.getDate()}
+    function sameLocalDay(a,b){
+      return a.getFullYear()===b.getFullYear()
+        && a.getMonth()===b.getMonth()
+        && a.getDate()===b.getDate();
+    }
+
     function matrixItemsForDay(day){
       return timelineState.items.filter(item=>{
-        const ts=new Date(item.timestamp||0); if(Number.isNaN(ts.getTime())||!sameLocalDay(ts,day)) return false;
-        if(timelineState.source!=="ALL" && String(item.source||"")!==timelineState.source) return false;
+        const ts=new Date(item.timestamp||0);
+        if(Number.isNaN(ts.getTime())||!sameLocalDay(ts,day))return false;
+
+        if(
+          timelineState.source!=="ALL"
+          && String(item.source||"")!==timelineState.source
+        )return false;
+
         const region=String(item.primary_region||item.region||"");
-        if(timelineState.region!=="ALL" && region!==timelineState.region) return false;
+
+        if(
+          timelineState.region!=="ALL"
+          && region!==timelineState.region
+        )return false;
+
         return true;
       });
     }
-    function layerItems(items,layer){return items.filter(x=>String(x.layer||"").toUpperCase()===layer)}
-    function topTypes(items,limit=3){
-      const m={}; items.forEach(x=>{const t=String(first(x,["type","signal_type","event_type"],"Signal")).replaceAll("_"," ");m[t]=(m[t]||0)+1});
-      return Object.entries(m).sort((a,b)=>b[1]-a[1]).slice(0,limit).map(([k,v])=>`${v} ${k}`).join(" · ");
+
+    function layerItems(items,layer){
+      return items.filter(
+        x=>String(x.layer||"").toUpperCase()===layer
+      );
     }
+
+    function typeCounter(items){
+      const counts={};
+
+      items.forEach(item=>{
+        const type=String(
+          first(item,["type","signal_type","event_type"],"SIGNAL")
+        ).toUpperCase();
+
+        counts[type]=(counts[type]||0)+1;
+      });
+
+      return counts;
+    }
+
+    function topTypeEntries(items,limit=3){
+      return Object.entries(typeCounter(items))
+        .sort((a,b)=>b[1]-a[1])
+        .slice(0,limit);
+    }
+
+    function topTypes(items,limit=3){
+      return topTypeEntries(items,limit)
+        .map(([type,count])=>`${count} ${type.replaceAll("_"," ")}`)
+        .join(" · ");
+    }
+
     function matrixDetailHtml(items){
       return items.slice(0,8).map(item=>{
-        const d=timelineDateParts(item.timestamp), type=String(first(item,["type","signal_type","event_type"],"Signal")).replaceAll("_"," ");
-        const text=first(item,["text_excerpt","text"],""); const url=first(item,["source_url","url"],null);
-        return `<div class="matrix-detail-item"><span class="matrix-detail-time">${escapeHtml(d.time)}</span> · <strong>${escapeHtml(type)}</strong><br>${escapeHtml(String(text).slice(0,170))}${String(text).length>170?"…":""}${url?`<br><a class="matrix-detail-link" href="${escapeAttr(url)}" target="_blank" rel="noopener noreferrer">Forrás ↗</a>`:""}</div>`;
+        const d=timelineDateParts(item.timestamp);
+        const type=String(
+          first(item,["type","signal_type","event_type"],"Signal")
+        ).replaceAll("_"," ");
+
+        const text=first(item,["text_excerpt","text"],"");
+        const url=first(item,["source_url","url"],null);
+
+        return `
+          <div class="matrix-detail-item">
+            <span class="matrix-detail-time">${escapeHtml(d.time)}</span>
+            · <strong>${escapeHtml(type)}</strong>
+            <br>
+            ${escapeHtml(String(text).slice(0,170))}
+            ${String(text).length>170?"…":""}
+            ${url?`<br><a class="matrix-detail-link" href="${escapeAttr(url)}" target="_blank" rel="noopener noreferrer">Forrás ↗</a>`:""}
+          </div>
+        `;
       }).join("");
     }
+
     function matrixLayerCell(items,layer,klass){
-      const arr=layerItems(items,layer); if(!arr.length)return `<div class="matrix-cell matrix-data-${klass}"><div class="matrix-empty">No signals</div></div>`;
-      const breakdown=topTypes(arr); const conf=Math.max(...arr.map(x=>Number(x.confidence)||0));
-      return `<div class="matrix-cell matrix-data-${klass}"><div class="matrix-count ${klass}">${arr.length} ${arr.length===1?"signal":"signals"}</div><div class="matrix-breakdown">${escapeHtml(breakdown||"—")}<br>Peak confidence: ${escapeHtml(conf.toFixed(2))}</div><details class="matrix-details"><summary>▼ Details</summary>${matrixDetailHtml(arr)}</details></div>`;
+      const arr=layerItems(items,layer);
+
+      if(!arr.length){
+        return `<div class="matrix-cell matrix-data-${klass}"><div class="matrix-empty">No signals</div></div>`;
+      }
+
+      const breakdown=topTypes(arr);
+      const conf=Math.max(...arr.map(x=>Number(x.confidence)||0));
+
+      const noun=layer==="CORRELATED"
+        ? (arr.length===1?"group":"groups")
+        : (arr.length===1?"signal":"signals");
+
+      return `
+        <div class="matrix-cell matrix-data-${klass}">
+          <div class="matrix-count ${klass}">${arr.length} ${noun}</div>
+          <div class="matrix-breakdown">
+            ${escapeHtml(breakdown||"—")}
+            <br>
+            ${layer==="CORRELATED"?"Peak group confidence":"Peak confidence"}: ${escapeHtml(conf.toFixed(2))}
+          </div>
+          <details class="matrix-details">
+            <summary>▼ Details</summary>
+            ${matrixDetailHtml(arr)}
+          </details>
+        </div>
+      `;
     }
+
     function matrixOperationalCell(items){
-      const arr=layerItems(items,"OPERATIONAL"); if(!arr.length)return `<div class="matrix-cell matrix-data-operational"><div class="matrix-empty">No events</div></div>`;
-      const breakdown=topTypes(arr); const conf=Math.max(...arr.map(x=>Number(x.confidence)||0));
-      return `<div class="matrix-cell matrix-data-operational"><div class="matrix-count operational">${arr.length} ${arr.length===1?"event":"events"}</div><div class="matrix-breakdown">${escapeHtml(breakdown||"—")}<br>Peak confidence: ${escapeHtml(conf.toFixed(2))}</div><details class="matrix-details"><summary>▼ Details</summary>${matrixDetailHtml(arr)}</details></div>`;
+      const arr=layerItems(items,"OPERATIONAL");
+
+      if(!arr.length){
+        return `<div class="matrix-cell matrix-data-operational"><div class="matrix-empty">No events</div></div>`;
+      }
+
+      const breakdown=topTypes(arr,4);
+      const conf=Math.max(...arr.map(x=>Number(x.confidence)||0));
+
+      return `
+        <div class="matrix-cell matrix-data-operational">
+          <div class="matrix-count operational">
+            ${arr.length} ${arr.length===1?"event":"events"}
+          </div>
+          <div class="matrix-breakdown">
+            ${escapeHtml(breakdown||"—")}
+            <br>
+            Peak confidence: ${escapeHtml(conf.toFixed(2))}
+          </div>
+          <details class="matrix-details">
+            <summary>▼ Details</summary>
+            ${matrixDetailHtml(arr)}
+          </details>
+        </div>
+      `;
     }
+
+    function matrixResolvedHotspot(items){
+      if(!items.length)return null;
+
+      const analytical=items.filter(
+        x=>String(x.layer||"").toUpperCase()!=="INFORMATION"
+      );
+
+      const base=analytical.length?analytical:items;
+      const regionCounts={};
+
+      base.forEach(item=>{
+        const region=String(item.primary_region||item.region||"").trim();
+        const upper=region.toUpperCase();
+
+        if(
+          !region
+          || region==="-"
+          || upper==="GLOBAL"
+          || upper.includes("UNRESOLVED")
+        )return;
+
+        regionCounts[region]=(regionCounts[region]||0)+1;
+      });
+
+      let selectedRegion=null;
+
+      if(Object.keys(regionCounts).length){
+        selectedRegion=Object.entries(regionCounts)
+          .sort((a,b)=>b[1]-a[1])[0][0];
+      }
+
+      const regionItems=selectedRegion
+        ? base.filter(x=>String(x.primary_region||x.region||"")===selectedRegion)
+        : base;
+
+      const locationCounts={};
+
+      regionItems.forEach(item=>{
+        const loc=first(item,["primary_location","location"],null);
+        if(loc&&loc!=="-"){
+          locationCounts[loc]=(locationCounts[loc]||0)+1;
+        }
+      });
+
+      const location=Object.entries(locationCounts)
+        .sort((a,b)=>b[1]-a[1])[0];
+
+      const sourceCounts={};
+
+      regionItems.forEach(item=>{
+        const src=String(item.source||"UNKNOWN").toUpperCase();
+        sourceCounts[src]=(sourceCounts[src]||0)+1;
+      });
+
+      return {
+        region:selectedRegion||"Unresolved / Global",
+        location:location?location[0]:null,
+        count:regionItems.length,
+        sourceCounts
+      };
+    }
+
     function matrixHotspotCell(items){
-      if(!items.length)return `<div class="matrix-cell matrix-data-hotspot"><div class="matrix-empty">No activity</div></div>`;
-      const counts={}; items.forEach(x=>{const r=String(x.primary_region||x.region||"Unresolved / Unlocated").replaceAll("_"," ");counts[r]=(counts[r]||0)+1});
-      const [region,count]=Object.entries(counts).sort((a,b)=>b[1]-a[1])[0];
-      const loc={}; items.forEach(x=>{const v=first(x,["primary_location","location"],null);if(v&&v!=="-")loc[v]=(loc[v]||0)+1});
-      const place=Object.entries(loc).sort((a,b)=>b[1]-a[1])[0];
-      return `<div class="matrix-cell matrix-data-hotspot"><div class="matrix-hotspot-main">${escapeHtml(region)}</div><div class="matrix-hotspot-sub">${count} timeline record${count===1?"":"s"}${place?`<br>Hotspot: <strong>${escapeHtml(place[0])}</strong>`:""}</div></div>`;
+      if(!items.length){
+        return `<div class="matrix-cell matrix-data-hotspot"><div class="matrix-empty">No activity</div></div>`;
+      }
+
+      const hotspot=matrixResolvedHotspot(items);
+
+      const sources=Object.entries(hotspot.sourceCounts||{})
+        .sort((a,b)=>b[1]-a[1])
+        .slice(0,3)
+        .map(([src,count])=>`${src} (${count})`)
+        .join(", ");
+
+      return `
+        <div class="matrix-cell matrix-data-hotspot">
+          <div class="matrix-hotspot-main">
+            ${escapeHtml(String(hotspot.region).replaceAll("_"," "))}
+          </div>
+          ${hotspot.location?`<div class="matrix-hotspot-place">${escapeHtml(hotspot.location)}</div>`:""}
+          <div class="matrix-hotspot-sub">
+            ${hotspot.count} records
+            ${sources?`<br>Források: ${escapeHtml(sources)}`:""}
+          </div>
+        </div>
+      `;
     }
+
+    function matrixActivityStats(items){
+      const info=layerItems(items,"INFORMATION").length;
+      const ew=layerItems(items,"EARLY_WARNING").length;
+      const op=layerItems(items,"OPERATIONAL").length;
+      const co=layerItems(items,"CORRELATED").length;
+
+      const score=Math.round(
+        (info*1.5 + ew*3.0 + op*1.2 + co*1.5)*10
+      )/10;
+
+      let level="NORMAL";
+      let cls="normal";
+
+      if(
+        ew>=10
+        || op>=25
+        || co>=10
+        || score>=80
+      ){
+        level="CRITICAL";
+        cls="critical";
+      }else if(
+        ew>=2
+        || info>=10
+        || score>=30
+      ){
+        level="HIGH";
+        cls="high";
+      }else if(
+        op>=8
+        || co>=4
+        || score>=10
+      ){
+        level="ELEVATED";
+        cls="elevated";
+      }
+
+      return {info,ew,op,co,score,level,cls};
+    }
+
+    function matrixAssessmentNote(stats){
+      if(stats.level==="CRITICAL"){
+        return "Magas, több rétegben egyszerre jelentkező aktivitás.";
+      }
+      if(stats.level==="HIGH"){
+        return "Közepesen magas aktivitás, több jelzési réteg érintett.";
+      }
+      if(stats.level==="ELEVATED"){
+        return "Növekvő aktivitás, fokozott monitorozás indokolt.";
+      }
+      return "Nincs jelentős, több rétegben megerősített aktivitás.";
+    }
+
     function matrixAssessmentCell(items){
-      const ew=layerItems(items,"EARLY_WARNING").length, op=layerItems(items,"OPERATIONAL").length, co=layerItems(items,"CORRELATED").length;
-      const high=items.filter(x=>String(x.analyst_priority||x.priority||"").toUpperCase()==="HIGH").length;
-      const score=op*3+ew*2+co*2+high;
-      let level="NORMAL",cls="normal"; if(score>=28){level="CRITICAL";cls="critical"}else if(score>=16){level="HIGH";cls="high"}else if(score>=6){level="ELEVATED";cls="elevated"}
-      return `<div class="matrix-cell matrix-data-assessment"><span class="matrix-assessment-badge ${cls}">${level}</span><div class="matrix-assessment-score">Activity score: ${score}<br>${op} operational · ${ew} warning · ${co} correlated</div></div>`;
+      const s=matrixActivityStats(items);
+
+      return `
+        <div class="matrix-cell matrix-data-assessment">
+          <div class="matrix-assessment-card ${s.cls}">
+            <span class="matrix-assessment-badge ${s.cls}">${s.level}</span>
+            <div class="matrix-assessment-score">
+              Activity score: ${s.score}
+              <br>
+              ${s.op} operational · ${s.ew} early warning · ${s.co} correlated · ${s.info} information
+            </div>
+            <div class="matrix-assessment-note">
+              Értékelés: ${escapeHtml(matrixAssessmentNote(s))}
+            </div>
+          </div>
+        </div>
+      `;
     }
+
+    function matrixSummaryExpected(items,stats){
+      const warningTypes=topTypeEntries(
+        layerItems(items,"EARLY_WARNING"),
+        2
+      ).map(([type])=>type);
+
+      if(
+        warningTypes.includes("MOBILIZATION_REPORT")
+        || warningTypes.includes("MOBILIZATION_COORDINATION")
+        || warningTypes.includes("CROSSING_FACILITATION")
+      ){
+        return "Várható: további átkelési, útvonal- vagy mobilizációs jelzések megjelenése lehetséges.";
+      }
+
+      if(
+        warningTypes.includes("POLICY_SIGNAL")
+        || warningTypes.includes("LEGAL_MIGRATION_SIGNAL")
+      ){
+        return "Várható: a szakpolitikai, hozzáférési és jogi migrációs diskurzus folytatódhat.";
+      }
+
+      if(stats.co>=2||stats.op>=8){
+        return "Várható: a már azonosított események további forrásmegerősítése és korrelációja.";
+      }
+
+      if(stats.info>0){
+        return "Várható: további információs aktivitás; erősebb operatív jelzés egyelőre nem látható.";
+      }
+
+      return "Várható: jelenleg nincs megalapozott rövid távú operatív jelzés.";
+    }
+
+    function matrixSummaryHeadline(stats,previousActive){
+      if(stats.level==="CRITICAL")return "Intenzív migrációs aktivitás.";
+      if(stats.level==="HIGH")return previousActive?"Magas aktivitás folytatódik.":"Aktivitás újra növekszik.";
+      if(stats.level==="ELEVATED")return "Fokozódó migrációs aktivitás.";
+      return "Nincs jelentős aktivitás.";
+    }
+
+    function matrixSummaryCell(items,previousItems){
+      const s=matrixActivityStats(items);
+      const p=matrixActivityStats(previousItems||[]);
+
+      if(s.info===0&&s.ew===0&&s.op===0&&s.co===0){
+        return `
+          <div class="matrix-cell matrix-data-summary">
+            <div class="matrix-summary-head">
+              <span class="matrix-summary-icon normal">✓</span>
+              Nincs jelentős aktivitás.
+            </div>
+            <div class="matrix-summary-text">
+              Alacsony online aktivitás, nem azonosított releváns operatív vagy early-warning jelzés.
+            </div>
+          </div>
+        `;
+      }
+
+      const hotspot=matrixResolvedHotspot(items);
+      const topics=[];
+
+      topTypeEntries(layerItems(items,"OPERATIONAL"),2).forEach(
+        ([type])=>topics.push(matrixTypeHu(type))
+      );
+
+      topTypeEntries(layerItems(items,"EARLY_WARNING"),2).forEach(
+        ([type])=>{
+          const label=matrixTypeHu(type);
+          if(!topics.includes(label))topics.push(label);
+        }
+      );
+
+      const topicText=topics.length
+        ? topics.slice(0,3).join(", ")
+        : "migrációs aktivitás";
+
+      let placeText="";
+
+      if(hotspot&&hotspot.location){
+        placeText=` A domináns helyszín: ${hotspot.location}.`;
+      }else if(hotspot&&hotspot.region!=="Unresolved / Global"){
+        placeText=` A domináns régió: ${String(hotspot.region).replaceAll("_"," ")}.`;
+      }
+
+      const body=
+        `A nap fő témái: ${topicText}. `
+        + `${s.op} operatív esemény, ${s.ew} korai jelzés és ${s.co} korrelált forrás/csoport jelent meg.`
+        + placeText;
+
+      const previousActive=(p.info+p.ew+p.op+p.co)>0;
+
+      return `
+        <div class="matrix-cell matrix-data-summary">
+          <div class="matrix-summary-head">
+            <span class="matrix-summary-icon ${s.cls}">
+              ${s.level==="CRITICAL"?"!":s.level==="NORMAL"?"✓":"▲"}
+            </span>
+            ${escapeHtml(matrixSummaryHeadline(s,previousActive))}
+          </div>
+          <div class="matrix-summary-text">
+            ${escapeHtml(body)}
+          </div>
+          <div class="matrix-summary-expected">
+            ${escapeHtml(matrixSummaryExpected(items,s))}
+          </div>
+        </div>
+      `;
+    }
+
+    function matrixRowLabel(title,sub,description,icon){
+      return `
+        <div class="matrix-row-label-main">
+          ${escapeHtml(title)}
+          ${icon?`<span style="float:right">${escapeHtml(icon)}</span>`:""}
+        </div>
+        <div class="matrix-row-label-sub">${escapeHtml(sub)}</div>
+        <div class="matrix-row-label-desc">${escapeHtml(description)}</div>
+      `;
+    }
+
     function renderTimeline(){
-      const grid=$("signalTimelineList"), days=matrixDays(), now=new Date();
-      const all=days.flatMap(matrixItemsForDay); $("timelineVisibleLabel").textContent=`${all.length} jelzés · 7 nap`;
-      const fmt=d=>d.toLocaleDateString("en-GB",{day:"2-digit",month:"short"});
-      $("matrixRange").textContent=`${fmt(days[0])} – ${fmt(days[6])} ${days[6].getFullYear()}`;
-      let h=`<div class="matrix-cell matrix-head matrix-corner">Daily layer</div>`;
-      days.forEach(d=>{h+=`<div class="matrix-cell matrix-head ${sameLocalDay(d,now)?"matrix-today":""}"><div class="matrix-day-name">${escapeHtml(d.toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}</div><div class="matrix-day-date">${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}</div></div>`});
+      const grid=$("signalTimelineList");
+      const days=matrixDays();
+      const now=new Date();
+
+      const all=days.flatMap(matrixItemsForDay);
+
+      $("timelineVisibleLabel").textContent=
+        `${all.length} timeline record · 7 nap`;
+
+      const fmt=d=>d.toLocaleDateString(
+        "en-GB",
+        {day:"2-digit",month:"short"}
+      );
+
+      $("matrixRange").textContent=
+        `${fmt(days[0])} – ${fmt(days[6])} ${days[6].getFullYear()}`;
+
+      $("matrixNext").disabled=timelineState.weekOffset>=0;
+
+      if($("matrixUpdated")){
+        $("matrixUpdated").textContent=timelineState.generatedAt
+          ? `Utolsó frissítés: ${new Date(timelineState.generatedAt).toLocaleString("hu-HU")}`
+          : "Utolsó frissítés: —";
+      }
+
+      let h=`
+        <div class="matrix-cell matrix-head matrix-corner">
+          <div class="matrix-corner-main">Daily layer</div>
+          <div class="matrix-corner-sub">réteg</div>
+        </div>
+      `;
+
+      days.forEach(d=>{
+        h+=`
+          <div class="matrix-cell matrix-head ${sameLocalDay(d,now)?"matrix-today":""}">
+            <div class="matrix-day-name">
+              ${escapeHtml(d.toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}
+            </div>
+            <div class="matrix-day-date">
+              ${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}
+            </div>
+            <div class="matrix-day-weekday">
+              ${escapeHtml(MATRIX_DAY_NAMES_HU[d.getDay()])}
+            </div>
+          </div>
+        `;
+      });
+
       const rows=[
-        ["Information","matrix-label-information",d=>matrixLayerCell(matrixItemsForDay(d),"INFORMATION","information")],
-        ["Early Warning","matrix-label-warning",d=>matrixLayerCell(matrixItemsForDay(d),"EARLY_WARNING","warning")],
-        ["Operational","matrix-label-operational",d=>matrixOperationalCell(matrixItemsForDay(d))],
-        ["Correlation","matrix-label-correlated",d=>matrixLayerCell(matrixItemsForDay(d),"CORRELATED","correlated")],
-        ["Hotspot / Region","matrix-label-hotspot",d=>matrixHotspotCell(matrixItemsForDay(d))],
-        ["Assessment","matrix-label-assessment",d=>matrixAssessmentCell(matrixItemsForDay(d))]
+        [
+          matrixRowLabel("Information","információs jelzések","Háttérinformációk, kontextus jelek","ⓘ"),
+          "matrix-label-information",
+          d=>matrixLayerCell(matrixItemsForDay(d),"INFORMATION","information")
+        ],
+        [
+          matrixRowLabel("Early Warning","korai figyelmeztetések","Mobilizáció, facilitáció, hozzáférés, útvonal jelek","⚠"),
+          "matrix-label-warning",
+          d=>matrixLayerCell(matrixItemsForDay(d),"EARLY_WARNING","warning")
+        ],
+        [
+          matrixRowLabel("Operational","operatív események","Érkezések, átkelések, csempészet, táborok stb.","◎"),
+          "matrix-label-operational",
+          d=>matrixOperationalCell(matrixItemsForDay(d))
+        ],
+        [
+          matrixRowLabel("Correlation","korrelált eseménycsoportok","Többforrású, összekapcsolt események","◉"),
+          "matrix-label-correlated",
+          d=>matrixLayerCell(matrixItemsForDay(d),"CORRELATED","correlated")
+        ],
+        [
+          matrixRowLabel("Hotspot / Region","fő régió / helyszín","Domináns feloldott régió és helyszín az adott napon","⌖"),
+          "matrix-label-hotspot",
+          d=>matrixHotspotCell(matrixItemsForDay(d))
+        ],
+        [
+          matrixRowLabel("Assessment","napi értékelés","Összesített aktivitási szint és rövid értékelés","◇"),
+          "matrix-label-assessment",
+          d=>matrixAssessmentCell(matrixItemsForDay(d))
+        ]
       ];
-      rows.forEach(([label,cls,fn])=>{h+=`<div class="matrix-cell matrix-row-label ${cls}">${label}</div>`;days.forEach(d=>h+=fn(d))}); grid.innerHTML=h;
+
+      rows.forEach(([label,cls,fn])=>{
+        h+=`<div class="matrix-cell matrix-row-label ${cls}">${label}</div>`;
+        days.forEach(d=>h+=fn(d));
+      });
+
+      h+=`
+        <div class="matrix-cell matrix-row-label matrix-label-summary">
+          ${matrixRowLabel(
+            "Napi összefoglaló",
+            "mi történt / miről írtak / mi várható",
+            "Automatikus, szabályalapú napi hírszerzési összegzés",
+            "▣"
+          )}
+        </div>
+      `;
+
+      days.forEach((d,index)=>{
+        const current=matrixItemsForDay(d);
+        const previous=index>0
+          ? matrixItemsForDay(days[index-1])
+          : [];
+
+        h+=matrixSummaryCell(current,previous);
+      });
+
+      grid.innerHTML=h;
     }
+
     function renderSignalTimeline(data){
       const timeline=data.signal_timeline;
-      timelineState.items=timeline&&Array.isArray(timeline.items)?[...timeline.items].sort((a,b)=>new Date(b.timestamp||0)-new Date(a.timestamp||0)):[];
-      timelineState.generatedAt=(timeline&&timeline.generated_at)||data.generated_at||data.updated_at||null; timelineState.weekOffset=0;
-      populateTimelineFilters(timelineState.items); renderTimeline();
+
+      timelineState.items=
+        timeline&&Array.isArray(timeline.items)
+          ? [...timeline.items].sort(
+              (a,b)=>new Date(b.timestamp||0)-new Date(a.timestamp||0)
+            )
+          : [];
+
+      timelineState.generatedAt=
+        (timeline&&timeline.generated_at)
+        || data.generated_at
+        || data.updated_at
+        || null;
+
+      timelineState.weekOffset=0;
+
+      populateTimelineFilters(timelineState.items);
+      renderTimeline();
     }
+
     function setupTimelineControls(){
-      $("matrixPrev").addEventListener("click",()=>{timelineState.weekOffset--;renderTimeline()});
-      $("matrixNext").addEventListener("click",()=>{timelineState.weekOffset++;renderTimeline()});
-      $("matrixLatest").addEventListener("click",()=>{timelineState.weekOffset=0;renderTimeline()});
-      $("timelineSourceFilter").addEventListener("change",e=>{timelineState.source=e.target.value||"ALL";renderTimeline()});
-      $("timelineRegionFilter").addEventListener("change",e=>{timelineState.region=e.target.value||"ALL";renderTimeline()});
+      $("matrixPrev").addEventListener("click",()=>{
+        timelineState.weekOffset--;
+        renderTimeline();
+      });
+
+      $("matrixNext").addEventListener("click",()=>{
+        if(timelineState.weekOffset<0){
+          timelineState.weekOffset++;
+          renderTimeline();
+        }
+      });
+
+      $("matrixLatest").addEventListener("click",()=>{
+        timelineState.weekOffset=0;
+        renderTimeline();
+      });
+
+      $("timelineSourceFilter").addEventListener("change",e=>{
+        timelineState.source=e.target.value||"ALL";
+        renderTimeline();
+      });
+
+      $("timelineRegionFilter").addEventListener("change",e=>{
+        timelineState.region=e.target.value||"ALL";
+        renderTimeline();
+      });
     }
 
     function locationLabel(item){
