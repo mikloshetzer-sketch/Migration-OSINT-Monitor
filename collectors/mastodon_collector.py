@@ -34,11 +34,12 @@ import hashlib
 import html
 import os
 import re
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from typing import Any, Dict, List, Optional, Tuple
 from urllib.parse import quote
 
 import feedparser
+from dateutil import parser as date_parser
 
 
 class MastodonCollector:
@@ -64,6 +65,9 @@ class MastodonCollector:
 
     # Maximum entries accepted from one individual hashtag/instance feed.
     PER_FEED_RESULT_LIMIT = 10
+
+    # Live early-warning window. Public hashtag feeds can contain old posts.
+    DEFAULT_MAX_POST_AGE_HOURS = 72
 
     # Terms that strongly indicate human migration and also work reasonably
     # well as Mastodon hashtags.
@@ -141,6 +145,10 @@ class MastodonCollector:
                 self.DEFAULT_INSTANCES
             )
 
+        self.max_post_age_hours = (
+            self._max_post_age_from_environment()
+        )
+
     # ======================================================
     # CONFIGURATION
     # ======================================================
@@ -151,6 +159,37 @@ class MastodonCollector:
         """
         return bool(
             self.instances
+        )
+
+    def _max_post_age_from_environment(
+        self,
+    ) -> int:
+        """
+        Optional env:
+            MASTODON_MAX_POST_AGE_HOURS
+
+        Default:
+            72
+        """
+        raw = os.getenv(
+            "MASTODON_MAX_POST_AGE_HOURS",
+            "",
+        ).strip()
+
+        if not raw:
+            return self.DEFAULT_MAX_POST_AGE_HOURS
+
+        try:
+            value = int(raw)
+        except (TypeError, ValueError):
+            return self.DEFAULT_MAX_POST_AGE_HOURS
+
+        return max(
+            1,
+            min(
+                value,
+                24 * 30,
+            ),
         )
 
     def _instances_from_environment(
@@ -315,6 +354,11 @@ class MastodonCollector:
                     if not normalized_post:
                         continue
 
+                    if not self._is_recent_post(
+                        normalized_post
+                    ):
+                        continue
+
                     post_id = (
                         normalized_post.get(
                             "post_id"
@@ -423,6 +467,69 @@ class MastodonCollector:
                     return merged_posts
 
         return merged_posts
+
+    # ======================================================
+    # FRESHNESS
+    # ======================================================
+
+    def _is_recent_post(
+        self,
+        post: Dict[str, Any],
+    ) -> bool:
+        """
+        Rejects timestamped Mastodon posts older than the configured
+        live-monitoring window.
+
+        Missing/unparseable timestamps are retained conservatively.
+        """
+
+        published_at = post.get(
+            "published_at"
+        )
+
+        if not published_at:
+            return True
+
+        try:
+            published = date_parser.parse(
+                str(published_at)
+            )
+        except (
+            TypeError,
+            ValueError,
+            OverflowError,
+        ):
+            return True
+
+        if published.tzinfo is None:
+            published = published.replace(
+                tzinfo=timezone.utc
+            )
+        else:
+            published = published.astimezone(
+                timezone.utc
+            )
+
+        now = datetime.now(
+            timezone.utc
+        )
+
+        if published > (
+            now
+            + timedelta(
+                minutes=10
+            )
+        ):
+            return True
+
+        cutoff = (
+            now
+            - timedelta(
+                hours=self.max_post_age_hours
+            )
+        )
+
+        return published >= cutoff
 
     # ======================================================
     # QUERY -> HASHTAGS
