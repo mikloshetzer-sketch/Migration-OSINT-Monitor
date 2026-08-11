@@ -9,7 +9,7 @@ permissions:
 jobs:
   create-telegram-session:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 12
 
     steps:
       - name: Checkout repository
@@ -41,14 +41,84 @@ jobs:
           from telethon.errors import SessionPasswordNeededError
           from telethon.sessions import StringSession
 
+
+          RESET = "\033[0m"
+          FG_BLACK = "\033[30m"
+          FG_WHITE = "\033[97m"
+          BG_BLACK = "\033[40m"
+          BG_WHITE = "\033[107m"
+
+
+          def render_qr_for_github(url: str) -> None:
+              """
+              Render a theme-independent, compact QR code.
+
+              Each terminal character represents two vertical QR modules:
+              foreground colour = upper module
+              background colour = lower module
+
+              This keeps modules close to square and avoids GitHub dark/light
+              theme inversion problems.
+              """
+
+              qr = qrcode.QRCode(
+                  version=None,
+                  error_correction=qrcode.constants.ERROR_CORRECT_M,
+                  box_size=1,
+                  border=4,
+              )
+              qr.add_data(url)
+              qr.make(fit=True)
+
+              matrix = qr.get_matrix()
+
+              if len(matrix) % 2:
+                  matrix.append(
+                      [False] * len(matrix[0])
+                  )
+
+              for row_index in range(0, len(matrix), 2):
+                  upper = matrix[row_index]
+                  lower = matrix[row_index + 1]
+
+                  parts = []
+
+                  for top_black, bottom_black in zip(upper, lower):
+                      fg = FG_BLACK if top_black else FG_WHITE
+                      bg = BG_BLACK if bottom_black else BG_WHITE
+
+                      # Upper half-block: foreground is top module,
+                      # background is bottom module.
+                      parts.append(
+                          f"{fg}{bg}▀"
+                      )
+
+                  print(
+                      "".join(parts) + RESET,
+                      flush=True,
+                  )
+
+
           async def main():
-              api_id_raw = os.environ.get("TELEGRAM_API_ID", "").strip()
-              api_hash = os.environ.get("TELEGRAM_API_HASH", "").strip()
+              api_id_raw = os.environ.get(
+                  "TELEGRAM_API_ID",
+                  "",
+              ).strip()
+
+              api_hash = os.environ.get(
+                  "TELEGRAM_API_HASH",
+                  "",
+              ).strip()
 
               if not api_id_raw.isdigit():
-                  raise SystemExit("ERROR: TELEGRAM_API_ID missing or invalid.")
+                  raise SystemExit(
+                      "ERROR: TELEGRAM_API_ID missing or invalid."
+                  )
+
               if not api_hash:
-                  raise SystemExit("ERROR: TELEGRAM_API_HASH missing.")
+                  raise SystemExit(
+                      "ERROR: TELEGRAM_API_HASH missing."
+                  )
 
               client = TelegramClient(
                   StringSession(),
@@ -65,46 +135,51 @@ jobs:
                   print("===================================", flush=True)
                   print(" TELEGRAM QR LOGIN", flush=True)
                   print("===================================", flush=True)
-                  print("Open Telegram on your phone:", flush=True)
-                  print("Settings -> Devices -> Link Desktop Device", flush=True)
-                  print("Then scan the QR code below.", flush=True)
-                  print("", flush=True)
-                  print("The workflow waits up to 5 minutes.", flush=True)
-                  print("", flush=True)
-
-                  qr = qrcode.QRCode(
-                      version=None,
-                      box_size=1,
-                      border=2,
+                  print(
+                      "Phone: Telegram -> Settings -> Devices -> Link Desktop Device",
+                      flush=True,
                   )
-                  qr.add_data(qr_login.url)
-                  qr.make(fit=True)
+                  print(
+                      "Scan the QR code below while this step is RUNNING.",
+                      flush=True,
+                  )
+                  print(
+                      "The workflow waits up to 8 minutes.",
+                      flush=True,
+                  )
+                  print("", flush=True)
 
-                  for row in qr.get_matrix():
-                      print(
-                          "".join(
-                              "██" if cell else "  "
-                              for cell in row
-                          ),
-                          flush=True,
-                      )
+                  render_qr_for_github(
+                      qr_login.url
+                  )
 
                   print("", flush=True)
-                  print("QR CODE IS READY - SCAN IT NOW.", flush=True)
-                  print("Waiting for QR confirmation...", flush=True)
+                  print(
+                      "QR CODE IS READY - SCAN IT NOW.",
+                      flush=True,
+                  )
+                  print(
+                      "Waiting for Telegram confirmation...",
+                      flush=True,
+                  )
 
                   try:
-                      await qr_login.wait(timeout=300)
+                      await qr_login.wait(
+                          timeout=480
+                      )
+
                   except asyncio.TimeoutError:
                       raise SystemExit(
-                          "ERROR: QR login timed out after 5 minutes. "
-                          "Run the workflow again and scan the QR code "
-                          "while this step is still running."
+                          "ERROR: QR login timed out after 8 minutes. "
+                          "Run the workflow again and scan the code "
+                          "while the step is still running."
                       )
+
                   except SessionPasswordNeededError:
                       raise SystemExit(
-                          "ERROR: Telegram 2-step verification password is enabled. "
-                          "Do not put that password into workflow inputs or logs."
+                          "ERROR: Telegram 2-step verification is enabled. "
+                          "For security, do not enter the 2FA password "
+                          "through GitHub workflow inputs or logs."
                       )
 
                   if not await client.is_user_authorized():
@@ -113,26 +188,28 @@ jobs:
                       )
 
                   session_string = client.session.save()
-                  Path("telegram-session.txt").write_text(
+
+                  Path(
+                      "telegram-session.txt"
+                  ).write_text(
                       session_string,
                       encoding="utf-8",
                   )
 
                   print("", flush=True)
                   print("LOGIN SUCCESSFUL", flush=True)
-                  print("telegram-session.txt created.", flush=True)
                   print(
-                      "Download the private artifact and save its contents "
-                      "as GitHub Secret TELEGRAM_SESSION.",
+                      "telegram-session.txt created.",
                       flush=True,
                   )
                   print(
-                      "The session value is NOT printed to the workflow log.",
+                      "The session value is NOT printed in the workflow log.",
                       flush=True,
                   )
 
               finally:
                   await client.disconnect()
+
 
           asyncio.run(main())
           PY
@@ -144,4 +221,3 @@ jobs:
           path: telegram-session.txt
           if-no-files-found: error
           retention-days: 1
-
