@@ -1,0 +1,127 @@
+name: One-time Telegram Session Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      public_channel:
+        description: "Public Telegram channel username (without @)"
+        required: true
+        default: "telegram"
+        type: string
+      max_messages:
+        description: "Maximum public messages to preview"
+        required: true
+        default: "10"
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  telegram-session-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Telethon
+        run: |
+          python -m pip install --upgrade pip
+          pip install "telethon>=1.36,<2"
+
+      - name: Validate Telegram session and read public channel
+        env:
+          TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
+          TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
+          TELEGRAM_SESSION: ${{ secrets.TELEGRAM_SESSION }}
+          TELEGRAM_PUBLIC_CHANNEL: ${{ inputs.public_channel }}
+          TELEGRAM_MAX_MESSAGES: ${{ inputs.max_messages }}
+        run: |
+          python - <<'PY'
+          import asyncio
+          import os
+          from telethon import TelegramClient
+          from telethon.sessions import StringSession
+
+          async def main():
+              api_id_raw = os.environ.get("TELEGRAM_API_ID", "").strip()
+              api_hash = os.environ.get("TELEGRAM_API_HASH", "").strip()
+              session_string = os.environ.get("TELEGRAM_SESSION", "").strip()
+              channel = os.environ.get("TELEGRAM_PUBLIC_CHANNEL", "telegram").strip().lstrip("@")
+              max_messages_raw = os.environ.get("TELEGRAM_MAX_MESSAGES", "10").strip()
+
+              if not api_id_raw.isdigit():
+                  raise SystemExit("ERROR: TELEGRAM_API_ID missing or invalid.")
+              if not api_hash:
+                  raise SystemExit("ERROR: TELEGRAM_API_HASH missing.")
+              if not session_string:
+                  raise SystemExit("ERROR: TELEGRAM_SESSION missing.")
+
+              try:
+                  max_messages = max(1, min(int(max_messages_raw), 20))
+              except ValueError:
+                  max_messages = 10
+
+              client = TelegramClient(
+                  StringSession(session_string),
+                  int(api_id_raw),
+                  api_hash,
+              )
+
+              await client.connect()
+
+              try:
+                  authorized = await client.is_user_authorized()
+
+                  print("===================================")
+                  print(" TELEGRAM SESSION CAPABILITY TEST")
+                  print("===================================")
+                  print("Session authorized:", authorized)
+                  print("Database writes: DISABLED")
+                  print("Private chats/groups: NOT ACCESSED")
+                  print("Public channel:", channel)
+
+                  if not authorized:
+                      raise SystemExit("ERROR: TELEGRAM_SESSION is not authorized.")
+
+                  entity = await client.get_entity(channel)
+
+                  print("Resolved public channel:", getattr(entity, "title", channel))
+                  print()
+                  print("PUBLIC MESSAGE PREVIEW")
+                  print("-----------------------------------")
+
+                  count = 0
+
+                  async for message in client.iter_messages(entity, limit=max_messages):
+                      text = (message.message or "").replace("\n", " ").strip()
+                      if len(text) > 300:
+                          text = text[:300] + "..."
+
+                      print(
+                          f"{count + 1}. "
+                          f"{message.date.isoformat() if message.date else '-'} "
+                          f"| id={message.id}"
+                      )
+                      print("   ", text or "[no text]")
+                      count += 1
+
+                  print()
+                  print("Result count:", count)
+
+                  if count:
+                      print("RESULT: TELEGRAM PUBLIC READ CAPABILITY WORKS.")
+                  else:
+                      print("WARNING: Session works, but no messages were returned.")
+
+              finally:
+                  await client.disconnect()
+
+          asyncio.run(main())
+          PY
