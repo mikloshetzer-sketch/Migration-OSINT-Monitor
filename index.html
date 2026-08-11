@@ -1173,21 +1173,21 @@
               útvonalra, gyülekezésre, tervezett átkelésre vagy visszaküldéssel kapcsolatos információra utalnak.
             </div>
           </div>
-          <span class="section-sub">TOP 3 narratives</span>
+          <span class="section-sub">TOP 3 source posts</span>
         </div>
 
         <div class="access-summary">
           <div class="access-summary-item">
-            <div class="label">Forráspostok</div>
-            <div class="value" id="accessSourcePostsCount">—</div>
-          </div>
-          <div class="access-summary-item">
-            <div class="label">Narratívák</div>
-            <div class="value" id="accessNarrativesCount">—</div>
+            <div class="label">Aktív jelzések</div>
+            <div class="value" id="accessActiveCount">—</div>
           </div>
           <div class="access-summary-item">
             <div class="label">Érintett helyszínek</div>
             <div class="value" id="accessLocationsCount">—</div>
+          </div>
+          <div class="access-summary-item">
+            <div class="label">Források</div>
+            <div class="value" id="accessSourcesCount">—</div>
           </div>
           <div class="access-summary-item">
             <div class="label">High priority</div>
@@ -1290,7 +1290,6 @@
                 <th>Forrás</th>
                 <th>Konf.</th>
                 <th>Prioritás</th>
-                <th>Score</th>
                 <th>Forráslink</th>
               </tr>
             </thead>
@@ -1315,11 +1314,11 @@
 
         <div class="history-kpis">
           <div class="history-kpi">
-            <div class="label">Current week</div>
+            <div class="label">Current week to date</div>
             <div class="value" id="historyCurrent">—</div>
           </div>
           <div class="history-kpi">
-            <div class="label">Previous week</div>
+            <div class="label">Previous week – same period</div>
             <div class="value" id="historyPrevious">—</div>
           </div>
           <div class="history-kpi">
@@ -1331,7 +1330,7 @@
         <div class="history-chart-wrap">
           <div class="history-chart" id="historyChart"></div>
           <div class="history-note">
-            Értelmezés: a növekvő oszlopsor a migrációhoz kapcsolódó információs tér aktivitásának emelkedését jelzi.
+            Értelmezés: a heti oszlopok a tényleges heti forráspost-mennyiséget mutatják. A felső változásmutató a folyó hét eddigi részét az előző hét azonos időszakával hasonlítja össze.
             A növekedés önmagában nem jelent operatív migrációs eszkalációt; azt az operational event és influence signal adatokkal együtt kell értékelni.
           </div>
         </div>
@@ -1550,7 +1549,7 @@
     }
 
     function priorityFromItem(item){
-      const explicit = first(item, ["analyst_priority","priority","priority_level","severity"]);
+      const explicit = first(item, ["priority","priority_level","severity"]);
       if(explicit) return String(explicit).toUpperCase();
 
       const conf = num(first(item, ["confidence","event_confidence","average_confidence"]), 0);
@@ -1689,29 +1688,17 @@
       );
 
       const influenceCount = first(
-        kpis,
-        ["influence_narratives","influence_signals"],
-        first(
-          run,
-          ["influence_signals","influence_signals_detected"],
-          influence.length
-        )
+        run,
+        ["influence_signals","influence_signals_detected"],
+        influence.length
       );
 
       const accessSignals = getAccessSignals(data);
 
-      const accessCount = first(
-        kpis,
-        ["access_signals"],
-        safeArray(first(data, ["crossing_access_narratives"], [])).length || accessSignals.length
-      );
-
-      const highPriority = first(
-        kpis,
-        ["high_priority"],
-        safeArray(data.high_priority_intelligence)
-          .filter(x => ["HIGH","CRITICAL"].includes(priorityFromItem(x))).length
-      );
+      const highPriority = [
+        ...influence,
+        ...accessSignals
+      ].filter(x => ["HIGH","CRITICAL"].includes(priorityFromItem(x))).length;
 
       const correlations = first(
         run,
@@ -1725,78 +1712,69 @@
         safeArray(data.event_groups).length
       );
 
+      const sources = first(
+        kpis,
+        ["sources"],
+        deriveSources(data).length
+      );
+
       $("kpiNewEvents").textContent = newEvents ?? 0;
       $("kpiInfluence").textContent = influenceCount ?? 0;
-      $("kpiAccess").textContent = accessCount ?? 0;
-      $("kpiPriority").textContent = highPriority ?? 0;
+      $("kpiAccess").textContent = accessSignals.length;
+      $("kpiPriority").textContent = highPriority;
       $("kpiCorrelations").textContent = correlations ?? 0;
       $("kpiGroups").textContent = groups ?? 0;
     }
 
 
     function renderAccessSignals(data){
-      const rawSignals = getAccessSignals(data);
+      const signals = getAccessSignals(data);
 
-      const narratives = safeArray(
-        first(
-          data,
-          ["crossing_access_narratives","top_crossing_access_posts"],
-          []
-        )
-      );
-
-      const cards = narratives.length
-        ? narratives
-        : rawSignals.slice(0,3);
-
-      const kpis = data.kpis || {};
-
-      const sourcePostCount = num(
-        first(
-          kpis,
-          ["access_source_posts","access_signals_raw"],
-          rawSignals.length
-        ),
-        rawSignals.length
-      );
-
-      const narrativeCount = num(
-        first(
-          kpis,
-          ["access_narratives","access_signals"],
-          narratives.length || cards.length
-        ),
-        narratives.length || cards.length
-      );
-
-      $("accessSourcePostsCount").textContent = sourcePostCount;
-      $("accessNarrativesCount").textContent = narrativeCount;
+      $("accessActiveCount").textContent = signals.length;
 
       const locations = uniqueNonEmpty(
-        rawSignals.map(item => {
+        signals.map(item => {
           const loc = locationLabel(item);
           return loc === "—" ? null : loc;
         })
       );
 
-      const highCount = cards.filter(item =>
+      const sources = uniqueNonEmpty(
+        signals.map(item => first(item, ["source","source_name"], null))
+      );
+
+      const highCount = signals.filter(item =>
         ["HIGH","CRITICAL"].includes(priorityFromItem(item))
       ).length;
 
       $("accessLocationsCount").textContent = locations.length;
+      $("accessSourcesCount").textContent = sources.length;
       $("accessHighCount").textContent = highCount;
 
       const container = $("topAccessPosts");
 
-      if(!cards.length){
+      if(!signals.length){
         container.innerHTML = `
           <div class="empty-state" style="grid-column:1/-1">
-            Nincs megjeleníthető crossing/access narratíva a jelenlegi időablakban.
+            A jelenlegi dashboard-data.json még nem tartalmaz konkrét crossing/access signal rekordokat.
+            Az exporter bővítése után itt automatikusan megjelenik a TOP 3 releváns forráspost.
           </div>`;
         return;
       }
 
-      container.innerHTML = cards.slice(0,3).map(item => {
+      const rank = {CRITICAL:4,HIGH:3,MEDIUM:2,LOW:1};
+
+      const sorted = [...signals].sort((a,b)=>{
+        const pa = rank[priorityFromItem(a)] || 0;
+        const pb = rank[priorityFromItem(b)] || 0;
+        if(pb !== pa) return pb - pa;
+
+        const ca = num(first(a,["confidence","event_confidence"],0));
+        const cb = num(first(b,["confidence","event_confidence"],0));
+        return cb - ca;
+      }).slice(0,3);
+
+      container.innerHTML = sorted.map(item => {
         const priority = priorityFromItem(item);
         const type = first(item, ["primary_signal","signal_type","type"], "ACCESS_SIGNAL");
         const source = first(item, ["source","source_name"], "—");
@@ -1806,9 +1784,6 @@
         const conf = num(first(item, ["confidence","event_confidence"], 0));
         const excerpt = first(item, ["text_excerpt","excerpt","text","summary"], "—");
         const url = first(item, ["url","source_url"], null);
-        const relatedPosts = num(first(item, ["related_posts_count"], 1), 1);
-        const independentAuthors = num(first(item, ["independent_author_count"], 0), 0);
-        const platformCount = num(first(item, ["platform_count"], 1), 1);
 
         const metaLocation = [location, region && region !== location ? humanize(region) : null]
           .filter(Boolean)
@@ -1840,10 +1815,7 @@
 
             <div class="post-card-footer">
               <div class="system-class">
-                System classification: <strong>${escapeHtml(String(type))}</strong><br>
-                Related posts: <strong>${relatedPosts}</strong> ·
-                Authors: <strong>${independentAuthors}</strong> ·
-                Platforms: <strong>${platformCount}</strong>
+                System classification: <strong>${escapeHtml(String(type))}</strong>
               </div>
               ${url
                 ? `<a class="source-link" href="${escapeAttr(url)}" target="_blank" rel="noopener">Open source →</a>`
@@ -1878,22 +1850,16 @@
 
       const current = rows.at(-1)?.count || 0;
       const previous = rows.at(-2)?.count || 0;
-      const hasPreviousBaseline = previous > 0;
-      const change = hasPreviousBaseline
+      const change = previous > 0
         ? ((current - previous) / previous) * 100
-        : null;
+        : (current > 0 ? 100 : 0);
 
       $("historyCurrent").textContent = current;
       $("historyPrevious").textContent = previous;
 
       const changeEl = $("historyChange");
-      if(change === null){
-        changeEl.textContent = current > 0 ? "NEW BASELINE" : "—";
-        changeEl.className = "value trend-flat";
-      }else{
-        changeEl.textContent = `${change >= 0 ? "+" : ""}${change.toFixed(1)}%`;
-        changeEl.className = `value ${change > 0 ? "trend-up" : change < 0 ? "trend-down" : "trend-flat"}`;
-      }
+      changeEl.textContent = `${change >= 0 ? "+" : ""}${change.toFixed(1)}%`;
+      changeEl.className = `value ${change > 0 ? "trend-up" : change < 0 ? "trend-down" : "trend-flat"}`;
 
       const max = Math.max(...rows.map(r => r.count), 1);
 
@@ -1911,14 +1877,7 @@
     }
 
     function renderWarnings(data){
-      const narrativeSignals = safeArray(
-        first(data, ["influence_narratives"], [])
-      );
-
-      const signals = narrativeSignals.length
-        ? narrativeSignals
-        : getInfluenceSignals(data);
-
+      const signals = getInfluenceSignals(data);
       const list = $("warningList");
 
       if(!signals.length){
@@ -1945,7 +1904,6 @@
         const conf = first(item, ["confidence","event_confidence"], 0);
         const summary = first(item, ["summary","text","text_excerpt","excerpt"], "—");
         const url = first(item, ["url","source_url"], null);
-        const relatedPosts = num(first(item, ["related_posts_count"], 1), 1);
 
         return `
           <div class="warning-item">
@@ -1954,7 +1912,7 @@
             <div class="warning-location">${humanize(location)}</div>
             <div class="warning-source">${source}</div>
             <div class="warning-confidence">${num(conf).toFixed(2)}</div>
-            <div class="warning-summary" title="${escapeHtml(summary)}">${escapeHtml(summary)}${relatedPosts > 1 ? ` · ${relatedPosts} related posts` : ""}</div>
+            <div class="warning-summary" title="${escapeHtml(summary)}">${escapeHtml(summary)}</div>
             ${url ? `<a class="source-link" href="${escapeAttr(url)}" target="_blank" rel="noopener">Open source →</a>` : `<span class="source-link">—</span>`}
           </div>`;
       }).join("");
@@ -2021,55 +1979,41 @@
     }
 
     function renderPriority(data){
-      // Prefer the exporter-built analyst queue. This preserves backend
-      // ranking (analyst_priority + priority_score) instead of rebuilding
-      // a different order in the browser.
-      const exported = safeArray(data.high_priority_intelligence);
+      const influence = getInfluenceSignals(data);
+      const events = safeArray(data.high_confidence_events).length
+        ? safeArray(data.high_confidence_events)
+        : safeArray(data.live_events);
 
-      let rows;
-      if(exported.length){
-        rows = [...exported].sort((a,b) => {
-          const scoreA = num(first(a,["priority_score"],0));
-          const scoreB = num(first(b,["priority_score"],0));
-          if(scoreB !== scoreA) return scoreB - scoreA;
-          const rank = {CRITICAL:4,HIGH:3,MEDIUM:2,LOW:1};
-          return (rank[priorityFromItem(b)]||0) - (rank[priorityFromItem(a)]||0);
-        }).slice(0,8);
-      }else{
-        const influence = getInfluenceSignals(data);
-        const events = safeArray(data.high_confidence_events).length
-          ? safeArray(data.high_confidence_events)
-          : safeArray(data.live_events);
-        const merged = [
-          ...influence.map(x => ({...x, __kind:"signal"})),
-          ...events.map(x => ({...x, __kind:"event"}))
-        ];
-        const rank = {CRITICAL:4,HIGH:3,MEDIUM:2,LOW:1};
-        merged.sort((a,b) => {
-          const pa = rank[priorityFromItem(a)] || 0;
-          const pb = rank[priorityFromItem(b)] || 0;
-          if(pb !== pa) return pb-pa;
-          return num(first(b,["confidence","event_confidence"],0)) - num(first(a,["confidence","event_confidence"],0));
-        });
-        rows = merged.slice(0,8);
-      }
+      const merged = [
+        ...influence.map(x => ({...x, __kind:"signal"})),
+        ...events.map(x => ({...x, __kind:"event"}))
+      ];
 
+      const rank = {CRITICAL:4,HIGH:3,MEDIUM:2,LOW:1};
+
+      merged.sort((a,b) => {
+        const pa = rank[priorityFromItem(a)] || 0;
+        const pb = rank[priorityFromItem(b)] || 0;
+        if(pb !== pa) return pb-pa;
+        return num(first(b,["confidence","event_confidence"],0)) - num(first(a,["confidence","event_confidence"],0));
+      });
+
+      const rows = merged.slice(0,8);
       const body = $("priorityBody");
+
       if(!rows.length){
-        body.innerHTML = `<tr><td colspan="9">Nincs kiemelt elem.</td></tr>`;
+        body.innerHTML = `<tr><td colspan="8">Nincs kiemelt elem.</td></tr>`;
         return;
       }
 
       body.innerHTML = rows.map(item => {
-        const time = first(item, ["published_at","last_seen","created_at","timestamp"], null);
+        const time = first(item, ["published_at","last_seen","created_at"], null);
         const region = first(item, ["primary_region","region"], "GLOBAL");
         const type = first(item, ["primary_signal","signal_type","event_type","type"], "—");
         const location = locationLabel(item);
         const source = first(item, ["source","source_name"], "—");
         const conf = num(first(item, ["confidence","event_confidence","average_confidence"], 0));
         const priority = priorityFromItem(item);
-        const scoreRaw = first(item, ["priority_score"], null);
-        const score = scoreRaw === null ? "—" : num(scoreRaw).toFixed(1);
         const url = first(item, ["url","source_url"], null);
 
         return `
@@ -2081,7 +2025,6 @@
             <td><strong>${escapeHtml(String(source))}</strong></td>
             <td>${conf.toFixed(2)}</td>
             <td><span class="priority-badge ${priorityClass(priority)}">${priority}</span></td>
-            <td><strong>${escapeHtml(score)}</strong></td>
             <td>${url ? `<a class="source-link" href="${escapeAttr(url)}" target="_blank" rel="noopener">Open →</a>` : "—"}</td>
           </tr>`;
       }).join("");
@@ -2121,11 +2064,7 @@
 
         return `
           <div class="rank-row">
-            <div class="rank-name">${escapeHtml(
-              String(r.name).toUpperCase() === "GLOBAL"
-                ? "Unresolved / Unlocated"
-                : humanize(r.name)
-            )}</div>
+            <div class="rank-name">${escapeHtml(humanize(r.name))}</div>
             <div class="rank-bar"><div class="rank-fill" style="width:${width}%"></div></div>
             <div class="rank-value">${r.count} ${trendHtml}</div>
           </div>`;
