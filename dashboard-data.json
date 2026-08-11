@@ -1,13 +1,13 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-08-11T07:06:42Z",
-  "generated_at": "2026-08-11T07:06:42Z",
+  "updated_at": "2026-08-11T07:21:05Z",
+  "generated_at": "2026-08-11T07:21:05Z",
   "current_run": {
     "available": true,
-    "id": 14,
-    "run_uuid": "fe6a2b23-520d-496e-90e0-b812af21dad2",
-    "started_at": "2026-08-11T07:04:17Z",
-    "completed_at": "2026-08-11T07:06:42Z",
+    "id": 15,
+    "run_uuid": "b62feda4-4674-4401-a455-1c61c2810e8d",
+    "started_at": "2026-08-11T07:18:21Z",
+    "completed_at": "2026-08-11T07:21:05Z",
     "status": "SUCCESS",
     "posts_returned": 122,
     "unique_posts_collected": 89,
@@ -17,8 +17,8 @@
     "unique_x_posts": 45,
     "unique_reddit_posts": 20,
     "unique_mastodon_posts": 24,
-    "noise_filtered": 1,
-    "non_operational_filtered": 85,
+    "noise_filtered": 2,
+    "non_operational_filtered": 83,
     "historical_references_filtered": 0,
     "influence_signals": 1,
     "influence_signals_detected": 1,
@@ -30,45 +30,67 @@
     "mobilization_report_signals": 0,
     "decision_influence_signals": 0,
     "online_influence_report_signals": 0,
-    "operational_events": 3,
-    "operational_events_analyzed": 3,
-    "historical_events_available": 72,
+    "operational_events": 4,
+    "operational_events_analyzed": 4,
+    "historical_events_available": 75,
     "new_correlations": 0,
     "correlated_events": 0,
-    "new_correlation_groups": 3,
+    "new_correlation_groups": 4,
     "database_correlations": 0,
     "current_run_correlations": 0,
-    "new_events": 3,
-    "new_events_saved": 3,
-    "events_already_existing": 0,
-    "new_event_groups": 3,
+    "new_events": 1,
+    "new_events_saved": 1,
+    "events_already_existing": 3,
+    "new_event_groups": 1,
     "updated_event_groups": 0,
     "bootstrapped_event_groups": 0,
-    "existing_event_groups_reused": 0,
-    "event_group_sources_linked": 3,
+    "existing_event_groups_reused": 3,
+    "event_group_sources_linked": 1,
     "x_collector_errors": 0,
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "error_message": null
   },
   "kpis": {
-    "operational_events": 17,
-    "new_events": 3,
+    "operational_events": 18,
+    "new_events": 1,
     "correlated_events": 4,
-    "active_event_groups": 50,
+    "active_event_groups": 51,
     "sources": 3,
     "regions": 3,
-    "collected_posts_24h": 272,
+    "collected_posts_24h": 304,
     "influence_signals": 3,
     "access_signals": 2,
     "high_priority": 0,
-    "current_run_operational_events": 3,
+    "current_run_operational_events": 4,
     "current_run_unique_posts": 89,
     "access_signals_raw": 2,
     "influence_signals_raw": 3,
     "influence_narratives": 3
   },
   "live_events": [
+    {
+      "id": 76,
+      "event_id": 76,
+      "source": "X",
+      "source_post_id": "2087074033514721510",
+      "author": "BethanyMiles__",
+      "published_at": "2026-08-11T07:10:00Z",
+      "collected_at": "2026-08-11T07:19:52Z",
+      "event_type": "SMUGGLING_ACTIVITY",
+      "signal_type": "SMUGGLING_ACTIVITY",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.5,
+      "event_confidence": 0.5,
+      "relevance_score": 10.0,
+      "text": "Andy Burnham breaking more records: 230 migrants in one mega-dinghy.\n\nFrench openly admit there’s “no limit” as the people smugglers scale up.\n\nLabour still act like this is under control while another record-breaking boat lands. Borders mean nothing if we refuse to enforce them. https://t.co/kIehFXR4Hd",
+      "url": "https://x.com/BethanyMiles__/status/2087074033514721510",
+      "source_url": "https://x.com/BethanyMiles__/status/2087074033514721510"
+    },
     {
       "id": 73,
       "event_id": 73,
@@ -486,31 +508,38 @@
       "text": "Spain announced border controls against Italy in a tit-for-tat move, as the row over the Ceuta migrant rush intensifies.\n\nFollow Press TV on Telegram: https://t.co/mtgZgtmxsz https://t.co/dqi6XB8USH",
       "url": "https://x.com/highlightsnews1/status/2086168852778344463",
       "source_url": "https://x.com/highlightsnews1/status/2086168852778344463"
-    },
-    {
-      "id": 57,
-      "event_id": 57,
-      "source": "X",
-      "source_post_id": "2086166365870682505",
-      "author": "BBrexitNews",
-      "published_at": "2026-08-08T19:03:15Z",
-      "collected_at": "2026-08-08T19:15:04Z",
-      "event_type": "GENERAL_DISCUSSION",
-      "signal_type": "GENERAL_DISCUSSION",
-      "primary_location": "-",
-      "location": "-",
-      "country": "-",
-      "latitude": 35.8894,
-      "longitude": -5.3213,
-      "confidence": 0.45,
-      "event_confidence": 0.45,
-      "relevance_score": 20.0,
-      "text": "(2 of 3) 🔹 60,000 migrants crossed into the Spanish enclave of Ceuta in just 24 hours during recent chaos\n🔹 Think tank report from Facts4EU warns of a potential mass immigration wave hitting Gibraltar within weeks\n🔹 Spanish authorities deployed military and police forces to",
-      "url": "https://x.com/BBrexitNews/status/2086166365870682505",
-      "source_url": "https://x.com/BBrexitNews/status/2086166365870682505"
     }
   ],
   "event_groups": [
+    {
+      "id": 51,
+      "group_id": 51,
+      "event_type": "SMUGGLING_ACTIVITY",
+      "dominant_event_type": "SMUGGLING_ACTIVITY",
+      "title": "SMUGGLING_ACTIVITY",
+      "representative_text": "Andy Burnham breaking more records: 230 migrants in one mega-dinghy.\n\nFrench openly admit there’s “no limit” as the people smugglers scale up.\n\nLabour still act like this is under control while another record-breaking boat lands. Borders mean nothing if we refuse to enforce them. https://t.co/kIehFXR4Hd",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "primary_location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "first_seen": "2026-08-11T07:10:00Z",
+      "last_seen": "2026-08-11T07:10:00Z",
+      "source_count": 1,
+      "sources_count": 1,
+      "source_types": [
+        "X"
+      ],
+      "sources": [
+        "X"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.5,
+      "average_confidence": 0.5,
+      "created_at": "2026-08-11T07:19:52Z",
+      "updated_at": "2026-08-11T07:19:52Z"
+    },
     {
       "id": 48,
       "group_id": 48,
@@ -773,138 +802,109 @@
       "average_confidence": 0.25,
       "created_at": "2026-08-10T20:26:13Z",
       "updated_at": "2026-08-10T20:26:13Z"
-    },
-    {
-      "id": 45,
-      "group_id": 45,
-      "event_type": "ARRIVAL",
-      "dominant_event_type": "ARRIVAL",
-      "title": "ARRIVAL",
-      "representative_text": "BREAKING: Home Office Outraged that record breaking migrant boat crosses channel\n\nThe Home Office has reportedly entered a state of full‑blown meltdown after a record 230 migrants arrived on a single small boat. They have said it has totally undermined the good news stories over https://t.co/dNN0qQgHaI",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "primary_location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "first_seen": "2026-08-10T19:56:26Z",
-      "last_seen": "2026-08-10T19:56:26Z",
-      "source_count": 1,
-      "sources_count": 1,
-      "source_types": [
-        "X"
-      ],
-      "sources": [
-        "X"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.55,
-      "average_confidence": 0.55,
-      "created_at": "2026-08-10T20:26:13Z",
-      "updated_at": "2026-08-10T20:26:13Z"
     }
   ],
   "regions": [
     {
       "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 12,
-      "events": 12,
-      "percentage": 70.59
+      "count": 13,
+      "events": 13,
+      "percentage": 72.22
     },
     {
       "name": "WESTERN_MEDITERRANEAN",
       "region": "WESTERN_MEDITERRANEAN",
       "count": 4,
       "events": 4,
-      "percentage": 23.53
+      "percentage": 22.22
     },
     {
       "name": "MIDDLE_EAST",
       "region": "MIDDLE_EAST",
       "count": 1,
       "events": 1,
-      "percentage": 5.88
+      "percentage": 5.56
     }
   ],
   "sources": [
     {
       "source": "X",
       "name": "X",
-      "count": 184,
-      "posts": 184,
-      "percentage": 67.65
+      "count": 213,
+      "posts": 213,
+      "percentage": 70.07
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 48,
-      "posts": 48,
-      "percentage": 17.65
+      "count": 51,
+      "posts": 51,
+      "percentage": 16.78
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
       "count": 40,
       "posts": 40,
-      "percentage": 14.71
+      "percentage": 13.16
     }
   ],
   "region_activity": [
     {
       "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 12,
-      "events": 12,
-      "percentage": 70.59
+      "count": 13,
+      "events": 13,
+      "percentage": 72.22
     },
     {
       "name": "WESTERN_MEDITERRANEAN",
       "region": "WESTERN_MEDITERRANEAN",
       "count": 4,
       "events": 4,
-      "percentage": 23.53
+      "percentage": 22.22
     },
     {
       "name": "MIDDLE_EAST",
       "region": "MIDDLE_EAST",
       "count": 1,
       "events": 1,
-      "percentage": 5.88
+      "percentage": 5.56
     }
   ],
   "source_activity": [
     {
       "source": "X",
       "name": "X",
-      "count": 184,
-      "posts": 184,
-      "percentage": 67.65
+      "count": 213,
+      "posts": 213,
+      "percentage": 70.07
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 48,
-      "posts": 48,
-      "percentage": 17.65
+      "count": 51,
+      "posts": 51,
+      "percentage": 16.78
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
       "count": 40,
       "posts": 40,
-      "percentage": 14.71
+      "percentage": 13.16
     }
   ],
   "correlation": {
     "correlated_events": 4,
     "correlated_sources": 4,
-    "grouped_sources": 17,
-    "event_groups": 50,
-    "active_groups": 50,
+    "grouped_sources": 18,
+    "event_groups": 51,
+    "active_groups": 51,
     "multi_source_groups": 8,
     "strongest_match": 0.9,
-    "correlation_rate": 23.53
+    "correlation_rate": 22.22
   },
   "technical_health": "HEALTHY",
   "collector_health": "HEALTHY",
@@ -917,42 +917,42 @@
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "database": "AVAILABLE",
-    "last_run_id": 14,
-    "last_completed_at": "2026-08-11T07:06:42Z"
+    "last_run_id": 15,
+    "last_completed_at": "2026-08-11T07:21:05Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 17,
+    "operational_events_24h": 18,
     "influence_signals_24h": 3,
     "access_signals_24h": 2,
     "correlated_events_24h": 4,
-    "active_event_groups": 50,
+    "active_event_groups": 51,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "hotspot": "WESTERN_MEDITERRANEAN",
-    "dominant_event_type": "GENERAL_DISCUSSION",
+    "dominant_event_type": "SMUGGLING_ACTIVITY",
     "dominant_source": "X",
     "average_confidence": 0.502,
     "confidence_level": "MEDIUM",
-    "correlation_rate": 23.53,
+    "correlation_rate": 22.22,
     "activity_level": "ELEVATED",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 17 operatív migrációs eseményt, 3 influence/early-warning jelzést és 2 átkelési vagy bejutási jelzést tart nyilván. 4 friss eseményforrás korrelált más forrással. Jelenleg 50 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: General Discussion. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.50. A jelenlegi aktivitási szint: ELEVATED."
+    "summary": "Az elmúlt 24 órában a rendszer 18 operatív migrációs eseményt, 3 influence/early-warning jelzést és 2 átkelési vagy bejutási jelzést tart nyilván. 4 friss eseményforrás korrelált más forrással. Jelenleg 51 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Smuggling Activity. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.50. A jelenlegi aktivitási szint: ELEVATED."
   },
   "analytical_assessment": {
-    "operational_events_24h": 17,
+    "operational_events_24h": 18,
     "influence_signals_24h": 3,
     "access_signals_24h": 2,
     "correlated_events_24h": 4,
-    "active_event_groups": 50,
+    "active_event_groups": 51,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "hotspot": "WESTERN_MEDITERRANEAN",
-    "dominant_event_type": "GENERAL_DISCUSSION",
+    "dominant_event_type": "SMUGGLING_ACTIVITY",
     "dominant_source": "X",
     "average_confidence": 0.502,
     "confidence_level": "MEDIUM",
-    "correlation_rate": 23.53,
+    "correlation_rate": 22.22,
     "activity_level": "ELEVATED",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 17 operatív migrációs eseményt, 3 influence/early-warning jelzést és 2 átkelési vagy bejutási jelzést tart nyilván. 4 friss eseményforrás korrelált más forrással. Jelenleg 50 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: General Discussion. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.50. A jelenlegi aktivitási szint: ELEVATED."
+    "summary": "Az elmúlt 24 órában a rendszer 18 operatív migrációs eseményt, 3 influence/early-warning jelzést és 2 átkelési vagy bejutási jelzést tart nyilván. 4 friss eseményforrás korrelált más forrással. Jelenleg 51 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Smuggling Activity. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.50. A jelenlegi aktivitási szint: ELEVATED."
   },
   "high_confidence_events": [
     {
@@ -2441,14 +2441,14 @@
       "label": "W33",
       "week_label": "W33",
       "week_start": "2026-08-10T00:00:00Z",
-      "posts": 274,
-      "post_count": 274,
-      "operational_posts": 19,
+      "posts": 306,
+      "post_count": 306,
+      "operational_posts": 20,
       "influence_signals": 3,
       "source_counts": {
-        "X": 184,
+        "X": 213,
         "REDDIT": 40,
-        "MASTODON": 50
+        "MASTODON": 53
       }
     }
   ],
@@ -2547,31 +2547,31 @@
       "label": "W33",
       "week_label": "W33",
       "week_start": "2026-08-10T00:00:00Z",
-      "posts": 274,
-      "post_count": 274,
-      "operational_posts": 19,
+      "posts": 306,
+      "post_count": 306,
+      "operational_posts": 20,
       "influence_signals": 3,
       "source_counts": {
-        "X": 184,
+        "X": 213,
         "REDDIT": 40,
-        "MASTODON": 50
+        "MASTODON": 53
       }
     }
   ],
   "information_activity_summary": {
-    "current_week": 274,
+    "current_week": 306,
     "previous_week": 5,
-    "current_week_to_date": 274,
+    "current_week_to_date": 306,
     "previous_week_same_period": 5,
     "previous_week_full": 447,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": 5380.0,
-    "change_label": "+5380.0%",
+    "change_percent": 6020.0,
+    "change_label": "+6020.0%",
     "direction": "UP",
     "comparable": true,
-    "elapsed_hours": 31.1,
+    "elapsed_hours": 31.4,
     "current_period_start": "2026-08-10T00:00:00Z",
     "previous_period_start": "2026-08-03T00:00:00Z",
-    "previous_period_end": "2026-08-04T07:06:42Z"
+    "previous_period_end": "2026-08-04T07:21:05Z"
   }
 }
