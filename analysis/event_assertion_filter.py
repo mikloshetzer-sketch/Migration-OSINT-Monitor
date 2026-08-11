@@ -83,6 +83,22 @@ class EventAssertionFilter:
         r"\bcompared?\s+to\b",
         r"\b(?:like|as)\s+(?:a\s+)?(?:migrant|refugee)\s+camp\b",
         r"\bwhat\s+if\b",
+
+        # Wish / modal / proposal context.
+        # These describe a preference, recommendation or hypothetical
+        # future action, not an asserted real-world event.
+        r"\bi\s+hope\b",
+        r"\bhopefully\b",
+        r"\bi\s+wish\b",
+        r"\bif\s+they\s+(?:put|build|open|create|establish)\b",
+        r"\bthey\s+should\s+(?:put|build|open|create|establish)\b",
+        r"\bthey\s+could\s+(?:put|build|open|create|establish)\b",
+        r"\bthey\s+would\s+(?:put|build|open|create|establish)\b",
+        r"\bthey\s+ought\s+to\s+(?:put|build|open|create|establish)\b",
+        r"\bshould\s+(?:put|build|open|create|establish)\b",
+        r"\bcould\s+(?:put|build|open|create|establish)\b",
+        r"\bwould\s+(?:put|build|open|create|establish)\b",
+        r"\bought\s+to\s+(?:put|build|open|create|establish)\b",
     ]
 
     DIRECT_EVENT_PATTERNS = [
