@@ -1,0 +1,58 @@
+name: X Full-Archive Capability Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_time:
+        description: "Historical UTC start time"
+        required: true
+        default: "2026-06-15T08:00:00Z"
+        type: string
+
+      end_time:
+        description: "Historical UTC end time"
+        required: true
+        default: "2026-06-15T09:00:00Z"
+        type: string
+
+      query:
+        description: "Small X full-archive test query"
+        required: true
+        default: "(migration OR migrant OR migrants OR refugee OR refugees OR asylum) -is:retweet"
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  test-x-full-archive:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install test dependency
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Run X full-archive capability test
+        env:
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+
+          X_FULL_ARCHIVE_TEST_START_TIME: ${{ inputs.start_time }}
+          X_FULL_ARCHIVE_TEST_END_TIME: ${{ inputs.end_time }}
+          X_FULL_ARCHIVE_TEST_QUERY: ${{ inputs.query }}
+
+          # Deliberately fixed at the API minimum:
+          # one request, at most 10 returned posts.
+          X_FULL_ARCHIVE_TEST_MAX_RESULTS: "10"
+
+        run: |
+          python tools/x_full_archive_test.py
