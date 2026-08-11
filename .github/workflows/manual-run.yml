@@ -44,15 +44,23 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install "telethon>=1.44,<2"
 
       - name: Run Migration OSINT Monitor
         env:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+
           REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
           REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
           REDDIT_USER_AGENT: ${{ secrets.REDDIT_USER_AGENT }}
+
           MASTODON_BASE_URL: ${{ secrets.MASTODON_BASE_URL }}
           MASTODON_ACCESS_TOKEN: ${{ secrets.MASTODON_ACCESS_TOKEN }}
+
+          TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
+          TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
+          TELEGRAM_SESSION: ${{ secrets.TELEGRAM_SESSION }}
+
         run: |
           python main.py
 
@@ -76,18 +84,22 @@ jobs:
           with open(
               "dashboard-data.json",
               "r",
-              encoding="utf-8"
+              encoding="utf-8",
           ) as f:
               data = json.load(f)
 
           print(
               "Updated:",
-              data.get("updated_at")
+              data.get(
+                  "updated_at"
+              ),
           )
 
           print(
               "KPIs:",
-              data.get("kpis")
+              data.get(
+                  "kpis"
+              ),
           )
 
           print(
@@ -95,9 +107,9 @@ jobs:
               len(
                   data.get(
                       "live_events",
-                      []
+                      [],
                   )
-              )
+              ),
           )
 
           print(
@@ -105,19 +117,9 @@ jobs:
               len(
                   data.get(
                       "event_groups",
-                      []
+                      [],
                   )
-              )
-          )
-
-          print(
-              "Regions:",
-              len(
-                  data.get(
-                      "region_activity",
-                      []
-                  )
-              )
+              ),
           )
 
           print(
@@ -125,17 +127,40 @@ jobs:
               len(
                   data.get(
                       "source_activity",
-                      []
+                      [],
                   )
+              ),
+          )
+
+          telegram_sources = [
+              item
+              for item
+              in (
+                  data.get(
+                      "source_activity",
+                      [],
+                  )
+                  or []
               )
+              if str(
+                  item.get(
+                      "source",
+                      ""
+                  )
+              ).upper() == "TELEGRAM"
+          ]
+
+          print(
+              "Telegram source activity:",
+              telegram_sources,
           )
 
           print(
               "Operational assessment:",
               data.get(
                   "operational_assessment",
-                  {}
-              )
+                  {},
+              ),
           )
           PY
 
