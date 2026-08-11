@@ -24,6 +24,7 @@ V3 dashboard sections:
 - top_crossing_access_posts
 - information_activity_weekly
 - information_activity_summary
+- signal_timeline
 
 The exporter preserves the existing operational dashboard data while adding
 the persistent history / influence layer introduced by:
@@ -76,6 +77,12 @@ HIGH_CONFIDENCE_LIMIT = 10
 INFLUENCE_LIMIT = 20
 TOP_ACCESS_POST_LIMIT = 3
 WEEK_HISTORY_COUNT = 8
+
+# Signal Timeline V1
+TIMELINE_WINDOW_HOURS = 24 * 7
+TIMELINE_ITEM_LIMIT = 150
+TIMELINE_INFORMATION_MIN_CONFIDENCE = 0.20
+TIMELINE_INFORMATION_MAX_CONFIDENCE = 0.49
 
 HIGH_CONFIDENCE_THRESHOLD = 0.75
 
@@ -3004,6 +3011,863 @@ def get_high_priority_intelligence(
     return candidates[:limit]
 
 
+
+# ==========================================================
+# SIGNAL TIMELINE V1
+# ==========================================================
+
+def timeline_timestamp_value(
+    item,
+):
+    """
+    Returns a sortable datetime-like string value.
+    """
+    return (
+        item.get("timestamp")
+        or ""
+    )
+
+
+def timeline_excerpt(
+    value,
+    limit=420,
+):
+    """
+    Compact text excerpt for timeline presentation.
+    """
+    text = str(
+        value
+        or ""
+    ).strip()
+
+    if len(text) <= limit:
+        return text
+
+    return (
+        text[:limit].rstrip()
+        + "…"
+    )
+
+
+def get_signal_timeline(
+    session,
+    hours=TIMELINE_WINDOW_HOURS,
+):
+    """
+    Builds one unified timeline from the existing persistent database.
+
+    Layers:
+        INFORMATION
+            Selected non-operational, non-noise CollectedPost records that
+            were close enough to the operational threshold to remain useful
+            for analyst context.
+
+        EARLY_WARNING
+            Persistent InfluenceSignal records.
+
+        OPERATIONAL
+            Operational Post records.
+
+        CORRELATED
+            EventGroupSource records that were linked to an EventGroup with
+            a non-null correlation score.
+
+    No new database table is required. This function is an export/view layer
+    only and does not mutate the analytical pipeline.
+    """
+
+    cutoff = (
+        utc_now()
+        - timedelta(
+            hours=hours
+        )
+    )
+
+    items = []
+
+    # ------------------------------------------------------
+    # INFORMATION LAYER
+    # ------------------------------------------------------
+    #
+    # We intentionally do NOT export every filtered post.
+    # The full CollectedPost history remains in SQLite, but the timeline
+    # would become unusable if all general discussion appeared here.
+    #
+    # V1 therefore keeps only "near-operational" non-noise posts with a
+    # confidence above the general 0.1 background level but below the
+    # operational threshold.
+    # ------------------------------------------------------
+
+    information_rows = (
+        session.execute(
+            select(
+                CollectedPost
+            )
+            .where(
+                CollectedPost.published_at
+                .is_not(None)
+            )
+            .where(
+                CollectedPost.published_at
+                >= cutoff
+            )
+            .where(
+                CollectedPost.is_noise
+                == False  # noqa: E712
+            )
+            .where(
+                CollectedPost.is_operational
+                == False  # noqa: E712
+            )
+            .where(
+                CollectedPost.influence_detected
+                == False  # noqa: E712
+            )
+            .where(
+                CollectedPost.operational_confidence
+                .is_not(None)
+            )
+            .where(
+                CollectedPost.operational_confidence
+                >= TIMELINE_INFORMATION_MIN_CONFIDENCE
+            )
+            .where(
+                CollectedPost.operational_confidence
+                <= TIMELINE_INFORMATION_MAX_CONFIDENCE
+            )
+            .order_by(
+                CollectedPost.published_at.desc(),
+                CollectedPost.id.desc(),
+            )
+            .limit(
+                TIMELINE_ITEM_LIMIT
+            )
+        )
+        .scalars()
+        .all()
+    )
+
+    for post in information_rows:
+        items.append(
+            {
+                "timeline_id": (
+                    f"information:{post.id}"
+                ),
+                "timestamp": format_datetime(
+                    post.published_at
+                ),
+                "layer": "INFORMATION",
+                "type": "INFORMATION_SIGNAL",
+                "signal_type": "INFORMATION_SIGNAL",
+                "event_type": None,
+
+                "source": (
+                    post.source
+                    or "UNKNOWN"
+                ),
+                "source_post_id": (
+                    post.source_post_id
+                ),
+                "author": post.author,
+                "url": post.url,
+                "source_url": post.url,
+
+                "region": "GLOBAL",
+                "primary_region": "GLOBAL",
+                "location": "-",
+                "primary_location": "-",
+                "country": "-",
+
+                "confidence": safe_float(
+                    post.operational_confidence
+                ),
+                "priority": "INFO",
+                "priority_score": round(
+                    safe_float(
+                        post.operational_confidence
+                    )
+                    * 100,
+                    2,
+                ),
+
+                "text": post.text or "",
+                "text_excerpt": timeline_excerpt(
+                    post.text
+                ),
+
+                "event_group_id": None,
+                "correlation_score": None,
+                "related_source_count": None,
+
+                "is_operational": False,
+                "influence_detected": False,
+                "first_collected_at": format_datetime(
+                    post.first_collected_at
+                ),
+                "last_collected_at": format_datetime(
+                    post.last_collected_at
+                ),
+                "collection_count": safe_int(
+                    post.collection_count,
+                    1,
+                ),
+            }
+        )
+
+    # ------------------------------------------------------
+    # EARLY-WARNING / INFLUENCE LAYER
+    # ------------------------------------------------------
+
+    influence_rows = (
+        session.execute(
+            select(
+                InfluenceSignal
+            )
+            .where(
+                InfluenceSignal.published_at
+                .is_not(None)
+            )
+            .where(
+                InfluenceSignal.published_at
+                >= cutoff
+            )
+            .order_by(
+                InfluenceSignal.published_at.desc(),
+                InfluenceSignal.confidence.desc(),
+                InfluenceSignal.id.desc(),
+            )
+            .limit(
+                TIMELINE_ITEM_LIMIT
+            )
+        )
+        .scalars()
+        .all()
+    )
+
+    for signal in influence_rows:
+        serialized = (
+            serialize_influence_signal(
+                signal
+            )
+        )
+
+        items.append(
+            {
+                "timeline_id": (
+                    f"early_warning:{signal.id}"
+                ),
+                "timestamp": format_datetime(
+                    signal.published_at
+                ),
+                "layer": "EARLY_WARNING",
+                "type": signal.primary_signal,
+                "signal_type": signal.primary_signal,
+                "event_type": None,
+
+                "source": (
+                    signal.source
+                    or "UNKNOWN"
+                ),
+                "source_post_id": (
+                    signal.source_post_id
+                ),
+                "author": signal.author,
+                "url": signal.source_url,
+                "source_url": signal.source_url,
+
+                "region": (
+                    signal.primary_region
+                    or "GLOBAL"
+                ),
+                "primary_region": (
+                    signal.primary_region
+                    or "GLOBAL"
+                ),
+                "location": (
+                    signal.primary_location
+                    or "-"
+                ),
+                "primary_location": (
+                    signal.primary_location
+                    or "-"
+                ),
+                "country": (
+                    signal.country
+                    or "-"
+                ),
+
+                "confidence": safe_float(
+                    signal.confidence
+                ),
+                "priority": (
+                    signal.priority
+                    or "LOW"
+                ),
+                "priority_score": (
+                    serialized.get(
+                        "priority_score"
+                    )
+                ),
+                "analyst_priority": (
+                    serialized.get(
+                        "analyst_priority"
+                    )
+                ),
+
+                "text": signal.text or "",
+                "text_excerpt": timeline_excerpt(
+                    signal.text
+                ),
+
+                "event_group_id": None,
+                "correlation_score": None,
+                "related_source_count": None,
+
+                "signal_mode": (
+                    signal.signal_mode
+                ),
+                "signal_intent": (
+                    signal.signal_intent
+                ),
+                "detection_count": safe_int(
+                    signal.detection_count,
+                    1,
+                ),
+                "first_detected_at": (
+                    format_datetime(
+                        signal.first_detected_at
+                    )
+                ),
+                "last_detected_at": (
+                    format_datetime(
+                        signal.last_detected_at
+                    )
+                ),
+            }
+        )
+
+    # ------------------------------------------------------
+    # OPERATIONAL EVENT LAYER
+    # ------------------------------------------------------
+
+    operational_rows = (
+        session.execute(
+            select(
+                Post
+            )
+            .where(
+                Post.published_at
+                .is_not(None)
+            )
+            .where(
+                Post.published_at
+                >= cutoff
+            )
+            .order_by(
+                Post.published_at.desc(),
+                Post.id.desc(),
+            )
+            .limit(
+                TIMELINE_ITEM_LIMIT
+            )
+        )
+        .scalars()
+        .all()
+    )
+
+    for post in operational_rows:
+        locations = deserialize_json_text(
+            post.locations,
+            default=[],
+        )
+
+        primary_location = None
+
+        if (
+            isinstance(
+                locations,
+                list,
+            )
+            and locations
+            and isinstance(
+                locations[0],
+                dict,
+            )
+        ):
+            primary_location = (
+                locations[0]
+            )
+
+        location_name = (
+            primary_location.get(
+                "name"
+            )
+            if primary_location
+            else None
+        )
+
+        country = (
+            primary_location.get(
+                "country"
+            )
+            if primary_location
+            else None
+        )
+
+        event_group_source = (
+            session.execute(
+                select(
+                    EventGroupSource
+                )
+                .where(
+                    EventGroupSource.post_id
+                    == post.id
+                )
+                .order_by(
+                    EventGroupSource.id.desc()
+                )
+                .limit(1)
+            )
+            .scalars()
+            .first()
+        )
+
+        event_group_id = (
+            event_group_source.event_group_id
+            if event_group_source
+            else None
+        )
+
+        items.append(
+            {
+                "timeline_id": (
+                    f"operational:{post.id}"
+                ),
+                "timestamp": format_datetime(
+                    post.published_at
+                ),
+                "layer": "OPERATIONAL",
+                "type": (
+                    post.signal_type
+                    or "GENERAL_DISCUSSION"
+                ),
+                "signal_type": (
+                    post.signal_type
+                    or "GENERAL_DISCUSSION"
+                ),
+                "event_type": (
+                    post.signal_type
+                    or "GENERAL_DISCUSSION"
+                ),
+
+                "source": (
+                    post.source
+                    or "UNKNOWN"
+                ),
+                "source_post_id": post.post_id,
+                "author": post.author,
+                "url": post.url,
+                "source_url": post.url,
+
+                "region": "GLOBAL",
+                "primary_region": "GLOBAL",
+                "location": (
+                    location_name
+                    or "-"
+                ),
+                "primary_location": (
+                    location_name
+                    or "-"
+                ),
+                "country": (
+                    country
+                    or "-"
+                ),
+
+                "latitude": post.latitude,
+                "longitude": post.longitude,
+
+                "confidence": safe_float(
+                    post.extraction_confidence
+                ),
+                "priority": (
+                    "HIGH"
+                    if safe_float(
+                        post.extraction_confidence
+                    ) >= HIGH_CONFIDENCE_THRESHOLD
+                    else "MEDIUM"
+                    if safe_float(
+                        post.extraction_confidence
+                    ) >= 0.50
+                    else "LOW"
+                ),
+                "priority_score": round(
+                    safe_float(
+                        post.extraction_confidence
+                    )
+                    * 100,
+                    2,
+                ),
+
+                "text": post.text or "",
+                "text_excerpt": timeline_excerpt(
+                    post.text
+                ),
+
+                "event_group_id": (
+                    event_group_id
+                ),
+                "correlation_score": (
+                    safe_float(
+                        event_group_source.correlation_score
+                    )
+                    if (
+                        event_group_source
+                        and event_group_source.correlation_score
+                        is not None
+                    )
+                    else None
+                ),
+                "related_source_count": None,
+
+                "event_time_text": (
+                    post.event_time_text
+                ),
+                "event_time_normalized": (
+                    post.event_time_normalized
+                ),
+                "event_time_confidence": (
+                    post.event_time_confidence
+                ),
+            }
+        )
+
+    # ------------------------------------------------------
+    # CORRELATED EVENT LAYER
+    # ------------------------------------------------------
+
+    correlated_rows = (
+        session.execute(
+            select(
+                EventGroupSource
+            )
+            .where(
+                EventGroupSource.correlation_score
+                .is_not(None)
+            )
+            .where(
+                EventGroupSource.published_at
+                .is_not(None)
+            )
+            .where(
+                EventGroupSource.published_at
+                >= cutoff
+            )
+            .order_by(
+                EventGroupSource.published_at.desc(),
+                EventGroupSource.correlation_score.desc(),
+                EventGroupSource.id.desc(),
+            )
+            .limit(
+                TIMELINE_ITEM_LIMIT
+            )
+        )
+        .scalars()
+        .all()
+    )
+
+    group_ids = {
+        row.event_group_id
+        for row in correlated_rows
+        if row.event_group_id is not None
+    }
+
+    group_map = {}
+
+    if group_ids:
+        groups = (
+            session.execute(
+                select(
+                    EventGroup
+                )
+                .where(
+                    EventGroup.id.in_(
+                        group_ids
+                    )
+                )
+            )
+            .scalars()
+            .all()
+        )
+
+        group_map = {
+            group.id: group
+            for group in groups
+        }
+
+    for link in correlated_rows:
+        group = group_map.get(
+            link.event_group_id
+        )
+
+        group_event_type = (
+            group.event_type
+            if group
+            else link.event_type
+        )
+
+        items.append(
+            {
+                "timeline_id": (
+                    f"correlated:{link.id}"
+                ),
+                "timestamp": format_datetime(
+                    link.published_at
+                    or link.created_at
+                ),
+                "layer": "CORRELATED",
+                "type": (
+                    group_event_type
+                    or "CORRELATED_EVENT"
+                ),
+                "signal_type": (
+                    group_event_type
+                    or "CORRELATED_EVENT"
+                ),
+                "event_type": (
+                    group_event_type
+                    or "CORRELATED_EVENT"
+                ),
+
+                "source": (
+                    link.source
+                    or "UNKNOWN"
+                ),
+                "source_post_id": (
+                    link.source_post_id
+                ),
+                "author": link.author,
+                "url": link.source_url,
+                "source_url": link.source_url,
+
+                "region": (
+                    group.primary_region
+                    if (
+                        group
+                        and group.primary_region
+                    )
+                    else "GLOBAL"
+                ),
+                "primary_region": (
+                    group.primary_region
+                    if (
+                        group
+                        and group.primary_region
+                    )
+                    else "GLOBAL"
+                ),
+                "location": (
+                    group.primary_location
+                    if (
+                        group
+                        and group.primary_location
+                    )
+                    else "-"
+                ),
+                "primary_location": (
+                    group.primary_location
+                    if (
+                        group
+                        and group.primary_location
+                    )
+                    else "-"
+                ),
+                "country": (
+                    group.country
+                    if (
+                        group
+                        and group.country
+                    )
+                    else "-"
+                ),
+
+                "latitude": (
+                    group.latitude
+                    if group
+                    else None
+                ),
+                "longitude": (
+                    group.longitude
+                    if group
+                    else None
+                ),
+
+                "confidence": (
+                    safe_float(
+                        group.confidence
+                    )
+                    if group
+                    else 0.0
+                ),
+                "priority": (
+                    "HIGH"
+                    if (
+                        group
+                        and safe_float(
+                            group.confidence
+                        )
+                        >= HIGH_CONFIDENCE_THRESHOLD
+                    )
+                    else "MEDIUM"
+                ),
+                "priority_score": (
+                    round(
+                        safe_float(
+                            group.confidence
+                        )
+                        * 100,
+                        2,
+                    )
+                    if group
+                    else 0.0
+                ),
+
+                "text": (
+                    link.text
+                    or (
+                        group.representative_text
+                        if group
+                        else ""
+                    )
+                    or ""
+                ),
+                "text_excerpt": timeline_excerpt(
+                    link.text
+                    or (
+                        group.representative_text
+                        if group
+                        else ""
+                    )
+                ),
+
+                "event_group_id": (
+                    link.event_group_id
+                ),
+                "correlation_score": (
+                    safe_float(
+                        link.correlation_score
+                    )
+                ),
+                "related_source_count": (
+                    safe_int(
+                        group.source_count,
+                        1,
+                    )
+                    if group
+                    else 1
+                ),
+                "source_types": (
+                    deserialize_source_types(
+                        group.source_types
+                    )
+                    if group
+                    else []
+                ),
+            }
+        )
+
+    # ------------------------------------------------------
+    # SORT / LIMIT / SUMMARY
+    # ------------------------------------------------------
+
+    items.sort(
+        key=timeline_timestamp_value,
+        reverse=True,
+    )
+
+    items = items[
+        :TIMELINE_ITEM_LIMIT
+    ]
+
+    layer_counts = Counter(
+        item.get(
+            "layer"
+        )
+        for item in items
+    )
+
+    source_counts = Counter(
+        item.get(
+            "source"
+        )
+        for item in items
+        if item.get(
+            "source"
+        )
+    )
+
+    type_counts = Counter(
+        item.get(
+            "type"
+        )
+        for item in items
+        if item.get(
+            "type"
+        )
+    )
+
+    return {
+        "schema_version": "1.0",
+        "window_hours": hours,
+        "default_window": "7D",
+        "available_windows_hours": [
+            24,
+            72,
+            168,
+        ],
+        "generated_at": format_datetime(
+            utc_now()
+        ),
+
+        "total_items": len(
+            items
+        ),
+
+        "information_count": safe_int(
+            layer_counts.get(
+                "INFORMATION"
+            )
+        ),
+        "early_warning_count": safe_int(
+            layer_counts.get(
+                "EARLY_WARNING"
+            )
+        ),
+        "operational_count": safe_int(
+            layer_counts.get(
+                "OPERATIONAL"
+            )
+        ),
+        "correlated_count": safe_int(
+            layer_counts.get(
+                "CORRELATED"
+            )
+        ),
+
+        "layer_counts": dict(
+            layer_counts
+        ),
+        "source_counts": dict(
+            source_counts
+        ),
+        "type_counts": dict(
+            type_counts
+        ),
+
+        "items": items,
+    }
+
+
 # ==========================================================
 # COMPLETE DASHBOARD PAYLOAD
 # ==========================================================
@@ -3093,6 +3957,12 @@ def build_dashboard_data(
 
     high_confidence_events = (
         get_high_confidence_events(
+            session
+        )
+    )
+
+    signal_timeline = (
+        get_signal_timeline(
             session
         )
     )
@@ -3240,6 +4110,11 @@ def build_dashboard_data(
         "information_activity_summary": (
             weekly_summary
         ),
+
+        # Timeline V1
+        "signal_timeline": (
+            signal_timeline
+        ),
     }
 
 
@@ -3354,6 +4229,16 @@ def export_dashboard_data():
         print(
             "Weekly change: "
             f"{data['information_activity_summary']['change_label']}"
+        )
+
+        print(
+            "Signal timeline items (7d): "
+            f"{data['signal_timeline']['total_items']}"
+        )
+
+        print(
+            "Timeline layers: "
+            f"{data['signal_timeline']['layer_counts']}"
         )
 
         print(
