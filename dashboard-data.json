@@ -1,7 +1,7 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-08-11T08:59:53Z",
-  "generated_at": "2026-08-11T08:59:53Z",
+  "updated_at": "2026-08-11T09:37:04Z",
+  "generated_at": "2026-08-11T09:37:04Z",
   "current_run": {
     "available": true,
     "id": 18,
@@ -52,13 +52,13 @@
     "error_message": null
   },
   "kpis": {
-    "operational_events": 24,
+    "operational_events": 22,
     "new_events": 4,
-    "correlated_events": 5,
+    "correlated_events": 4,
     "active_event_groups": 56,
     "sources": 3,
     "regions": 4,
-    "collected_posts_24h": 416,
+    "collected_posts_24h": 412,
     "influence_signals": 4,
     "access_signals": 3,
     "high_priority": 1,
@@ -806,30 +806,30 @@
     {
       "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 17,
-      "events": 17,
-      "percentage": 73.91
+      "count": 16,
+      "events": 16,
+      "percentage": 76.19
     },
     {
       "name": "WESTERN_MEDITERRANEAN",
       "region": "WESTERN_MEDITERRANEAN",
-      "count": 4,
-      "events": 4,
-      "percentage": 17.39
+      "count": 3,
+      "events": 3,
+      "percentage": 14.29
     },
     {
       "name": "MIDDLE_EAST",
       "region": "MIDDLE_EAST",
       "count": 1,
       "events": 1,
-      "percentage": 4.35
+      "percentage": 4.76
     },
     {
       "name": "ASIA_PACIFIC",
       "region": "ASIA_PACIFIC",
       "count": 1,
       "events": 1,
-      "percentage": 4.35
+      "percentage": 4.76
     }
   ],
   "sources": [
@@ -838,51 +838,51 @@
       "name": "X",
       "count": 310,
       "posts": 310,
-      "percentage": 74.52
+      "percentage": 75.24
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 59,
-      "posts": 59,
-      "percentage": 14.18
+      "count": 58,
+      "posts": 58,
+      "percentage": 14.08
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 47,
-      "posts": 47,
-      "percentage": 11.3
+      "count": 44,
+      "posts": 44,
+      "percentage": 10.68
     }
   ],
   "region_activity": [
     {
       "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 17,
-      "events": 17,
-      "percentage": 73.91
+      "count": 16,
+      "events": 16,
+      "percentage": 76.19
     },
     {
       "name": "WESTERN_MEDITERRANEAN",
       "region": "WESTERN_MEDITERRANEAN",
-      "count": 4,
-      "events": 4,
-      "percentage": 17.39
+      "count": 3,
+      "events": 3,
+      "percentage": 14.29
     },
     {
       "name": "MIDDLE_EAST",
       "region": "MIDDLE_EAST",
       "count": 1,
       "events": 1,
-      "percentage": 4.35
+      "percentage": 4.76
     },
     {
       "name": "ASIA_PACIFIC",
       "region": "ASIA_PACIFIC",
       "count": 1,
       "events": 1,
-      "percentage": 4.35
+      "percentage": 4.76
     }
   ],
   "source_activity": [
@@ -891,32 +891,32 @@
       "name": "X",
       "count": 310,
       "posts": 310,
-      "percentage": 74.52
+      "percentage": 75.24
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 59,
-      "posts": 59,
-      "percentage": 14.18
+      "count": 58,
+      "posts": 58,
+      "percentage": 14.08
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 47,
-      "posts": 47,
-      "percentage": 11.3
+      "count": 44,
+      "posts": 44,
+      "percentage": 10.68
     }
   ],
   "correlation": {
-    "correlated_events": 5,
-    "correlated_sources": 5,
-    "grouped_sources": 24,
+    "correlated_events": 4,
+    "correlated_sources": 4,
+    "grouped_sources": 22,
     "event_groups": 56,
     "active_groups": 56,
     "multi_source_groups": 9,
     "strongest_match": 0.9,
-    "correlation_rate": 20.83
+    "correlation_rate": 18.18
   },
   "technical_health": "HEALTHY",
   "collector_health": "HEALTHY",
@@ -933,10 +933,10 @@
     "last_completed_at": "2026-08-11T08:59:52Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 24,
+    "operational_events_24h": 22,
     "influence_signals_24h": 4,
     "access_signals_24h": 3,
-    "correlated_events_24h": 5,
+    "correlated_events_24h": 4,
     "active_event_groups": 56,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "hotspot": "WESTERN_MEDITERRANEAN",
@@ -944,16 +944,16 @@
     "dominant_source": "X",
     "average_confidence": 0.502,
     "confidence_level": "MEDIUM",
-    "correlation_rate": 20.83,
+    "correlation_rate": 18.18,
     "activity_level": "ELEVATED",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 24 operatív migrációs eseményt, 4 influence/early-warning jelzést és 3 átkelési vagy bejutási jelzést tart nyilván. 5 friss eseményforrás korrelált más forrással. Jelenleg 56 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Arrival. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.50. A jelenlegi aktivitási szint: ELEVATED."
+    "summary": "Az elmúlt 24 órában a rendszer 22 operatív migrációs eseményt, 4 influence/early-warning jelzést és 3 átkelési vagy bejutási jelzést tart nyilván. 4 friss eseményforrás korrelált más forrással. Jelenleg 56 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Arrival. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.50. A jelenlegi aktivitási szint: ELEVATED."
   },
   "analytical_assessment": {
-    "operational_events_24h": 24,
+    "operational_events_24h": 22,
     "influence_signals_24h": 4,
     "access_signals_24h": 3,
-    "correlated_events_24h": 5,
+    "correlated_events_24h": 4,
     "active_event_groups": 56,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "hotspot": "WESTERN_MEDITERRANEAN",
@@ -961,10 +961,10 @@
     "dominant_source": "X",
     "average_confidence": 0.502,
     "confidence_level": "MEDIUM",
-    "correlation_rate": 20.83,
+    "correlation_rate": 18.18,
     "activity_level": "ELEVATED",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 24 operatív migrációs eseményt, 4 influence/early-warning jelzést és 3 átkelési vagy bejutási jelzést tart nyilván. 5 friss eseményforrás korrelált más forrással. Jelenleg 56 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Arrival. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.50. A jelenlegi aktivitási szint: ELEVATED."
+    "summary": "Az elmúlt 24 órában a rendszer 22 operatív migrációs eseményt, 4 influence/early-warning jelzést és 3 átkelési vagy bejutási jelzést tart nyilván. 4 friss eseményforrás korrelált más forrással. Jelenleg 56 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Arrival. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.50. A jelenlegi aktivitási szint: ELEVATED."
   },
   "high_confidence_events": [
     {
@@ -2919,10 +2919,10 @@
     "change_label": "+8260.0%",
     "direction": "UP",
     "comparable": true,
-    "elapsed_hours": 33.0,
+    "elapsed_hours": 33.6,
     "current_period_start": "2026-08-10T00:00:00Z",
     "previous_period_start": "2026-08-03T00:00:00Z",
-    "previous_period_end": "2026-08-04T08:59:53Z"
+    "previous_period_end": "2026-08-04T09:37:03Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -2934,7 +2934,7 @@
       72,
       168
     ],
-    "generated_at": "2026-08-11T08:59:53Z",
+    "generated_at": "2026-08-11T09:37:04Z",
     "total_items": 293,
     "information_count": 155,
     "early_warning_count": 36,
