@@ -51,6 +51,7 @@ from analysis.event_extractor import EventExtractor
 from analysis.query_engine import QueryEngine
 from analysis.noise_filter import NoiseFilter
 from analysis.operational_event_filter import OperationalEventFilter
+from analysis.event_assertion_filter import EventAssertionFilter
 from analysis.event_correlator import EventCorrelator
 from analysis.region_resolver import RegionResolver
 from analysis.event_group_engine import EventGroupEngine
@@ -698,7 +699,10 @@ def utcnow():
     """
     Returns a naive UTC datetime compatible with the existing SQLite models.
     """
-    return datetime.utcnow()
+    return (
+        datetime.now(timezone.utc)
+        .replace(tzinfo=None)
+    )
 
 
 def normalize_datetime(value):
@@ -1750,6 +1754,10 @@ def main():
         OperationalEventFilter()
     )
 
+    event_assertion_filter = (
+        EventAssertionFilter()
+    )
+
     region_resolver = (
         RegionResolver()
     )
@@ -2354,6 +2362,76 @@ def main():
                         f"{event.get('event_type')}"
                     )
 
+                    print(
+                        "Text: "
+                        f"{text}"
+                    )
+
+                    session.commit()
+
+                    continue
+
+                # --------------------------------
+                # EVENT ASSERTION GATE
+                # --------------------------------
+                assertion_result = (
+                    event_assertion_filter.analyze(
+                        post=post,
+                        event=event,
+                        operational_result=operational_result,
+                    )
+                )
+
+                if not assertion_result.get(
+                    "accepted",
+                    True,
+                ):
+                    total_non_operational_filtered += 1
+
+                    update_collected_post_analysis(
+                        collected_post,
+                        is_noise=False,
+                        is_operational=False,
+                        operational_confidence=(
+                            operational_result.get(
+                                "confidence"
+                            )
+                        ),
+                        influence_detected=(
+                            bool(
+                                influence_result.get(
+                                    "detected"
+                                )
+                            )
+                        ),
+                    )
+
+                    print(
+                        "-----------------------------------"
+                    )
+                    print(
+                        "EVENT ASSERTION FILTERED"
+                    )
+                    print(
+                        "Reason: "
+                        f"{assertion_result.get('reason')}"
+                    )
+                    print(
+                        "Analytical cues: "
+                        f"{assertion_result.get('analytical_cues')}"
+                    )
+                    print(
+                        "Non-assertive cues: "
+                        f"{assertion_result.get('non_assertive_cues')}"
+                    )
+                    print(
+                        "Current cues: "
+                        f"{assertion_result.get('current_cues')}"
+                    )
+                    print(
+                        "Detected event type: "
+                        f"{event.get('event_type')}"
+                    )
                     print(
                         "Text: "
                         f"{text}"
