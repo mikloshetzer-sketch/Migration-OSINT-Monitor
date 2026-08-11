@@ -2,401 +2,1287 @@
 Migration OSINT Monitor
 
 File:
-tools/x_full_archive_test.py
+analysis/x_full_archive_test.py
 
-Purpose:
-A SAFE, read-only X full-archive capability test.
+Description:
+X-only historical backfill runner.
 
-This script:
-- uses the existing X_BEARER_TOKEN environment secret,
-- calls ONLY GET /2/tweets/search/all,
-- queries one small historical time window,
-- requests at most 10 posts,
-- does NOT write to SQLite,
-- does NOT modify dashboard-data.json,
-- does NOT run Reddit or Mastodon,
-- prints enough information to confirm whether full-archive access works.
+This file intentionally reuses the existing Migration OSINT Monitor
+pipeline in main.py instead of duplicating the analytical logic.
 
-Default test window:
-2026-06-15 08:00:00 UTC -> 2026-06-15 09:00:00 UTC
+It replaces the normal collectors only for this process:
+
+- XCollector       -> full-archive X collector
+- RedditCollector  -> disabled collector
+- MastodonCollector -> disabled collector (when present)
+
+The collected X posts then pass through the same current pipeline used by
+main.py: query definitions, noise filtering, influence detection,
+operational filtering, classification, assertion filtering, event extraction,
+region resolution, correlation, EventGroup processing and database storage.
+
+Safety:
+- X only
+- inclusive date inputs
+- shared per-day post cap
+- shared total post cap
+- per-query fair-share cap
+- pagination cap
+- existing database duplicate protection remains active
+- the backfill MonitorRun is re-dated and marked BACKFILL_SUCCESS so it does
+  not replace the latest normal monitor run on the dashboard
 """
 
 from __future__ import annotations
 
-import json
+import builtins
 import os
 import sys
-from typing import Any, Dict
+from collections import defaultdict
+from datetime import date, datetime, time, timedelta, timezone
+from pathlib import Path
+from typing import Any, Dict, Iterable, List, Optional
 
 import requests
 
 
+# ---------------------------------------------------------------------------
+# Make repository root importable when this script is executed as:
+# python analysis/x_full_archive_test.py
+# ---------------------------------------------------------------------------
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(
+        0,
+        str(REPO_ROOT),
+    )
+
+
+import main as monitor_main  # noqa: E402
+from database.database import get_session  # noqa: E402
+from database.models import MonitorRun  # noqa: E402
+
+
 API_URL = "https://api.x.com/2/tweets/search/all"
 
-DEFAULT_QUERY = (
-    "(migration OR migrant OR migrants OR refugee OR refugees OR asylum)"
-    " -is:retweet"
-)
+DEFAULT_START_DATE = "2026-06-15"
+DEFAULT_END_DATE = "2026-06-15"
 
-DEFAULT_START_TIME = "2026-06-15T08:00:00Z"
-DEFAULT_END_TIME = "2026-06-15T09:00:00Z"
-DEFAULT_MAX_RESULTS = 10
+DEFAULT_MAX_POSTS_PER_DAY = 100
+DEFAULT_MAX_TOTAL_POSTS = 500
+DEFAULT_MAX_PAGES_PER_QUERY_DAY = 3
+DEFAULT_REQUEST_PAGE_SIZE = 100
+
+MIN_X_PAGE_SIZE = 10
+MAX_X_PAGE_SIZE = 500
 
 
-def env_value(name: str, default: str) -> str:
-    value = os.getenv(name)
+def env_text(
+    name: str,
+    default: str,
+) -> str:
+    value = os.getenv(
+        name,
+    )
+
     if value is None:
         return default
+
     value = value.strip()
-    return value or default
+
+    return (
+        value
+        or default
+    )
 
 
-def safe_json(response: requests.Response) -> Dict[str, Any]:
+def env_int(
+    name: str,
+    default: int,
+    minimum: int = 1,
+    maximum: Optional[int] = None,
+) -> int:
+    raw = env_text(
+        name,
+        str(default),
+    )
+
     try:
-        payload = response.json()
-    except ValueError:
-        return {
-            "_raw_text": response.text[:4000],
+        value = int(
+            raw
+        )
+    except ValueError as exc:
+        raise ValueError(
+            f"{name} must be an integer; received {raw!r}."
+        ) from exc
+
+    value = max(
+        minimum,
+        value,
+    )
+
+    if maximum is not None:
+        value = min(
+            maximum,
+            value,
+        )
+
+    return value
+
+
+def env_bool(
+    name: str,
+    default: bool = False,
+) -> bool:
+    raw = os.getenv(
+        name,
+    )
+
+    if raw is None:
+        return default
+
+    return (
+        raw.strip().lower()
+        in {
+            "1",
+            "true",
+            "yes",
+            "on",
         }
-
-    if isinstance(payload, dict):
-        return payload
-
-    return {
-        "_payload": payload,
-    }
+    )
 
 
-def print_api_error(
-    response: requests.Response,
-    payload: Dict[str, Any],
-) -> None:
-    print("")
-    print("========================================")
-    print("X FULL-ARCHIVE TEST FAILED")
-    print("========================================")
-    print(f"HTTP status: {response.status_code}")
+def parse_iso_date(
+    value: str,
+) -> date:
+    try:
+        return date.fromisoformat(
+            value
+        )
+    except ValueError as exc:
+        raise ValueError(
+            f"Invalid ISO date {value!r}. Expected YYYY-MM-DD."
+        ) from exc
 
-    title = payload.get("title")
-    detail = payload.get("detail")
-    error_type = payload.get("type")
 
-    if title:
-        print(f"Title: {title}")
+def utc_iso(
+    value: datetime,
+) -> str:
+    if value.tzinfo is None:
+        value = value.replace(
+            tzinfo=timezone.utc,
+        )
 
-    if detail:
-        print(f"Detail: {detail}")
+    return (
+        value.astimezone(
+            timezone.utc
+        )
+        .isoformat(
+            timespec="seconds"
+        )
+        .replace(
+            "+00:00",
+            "Z",
+        )
+    )
 
-    if error_type:
-        print(f"Type: {error_type}")
 
-    errors = payload.get("errors")
+def iter_days(
+    start_date: date,
+    end_date: date,
+) -> Iterable[date]:
+    current = start_date
 
-    if errors:
-        print("Errors:")
-        print(
-            json.dumps(
-                errors,
-                indent=2,
-                ensure_ascii=False,
+    while current <= end_date:
+        yield current
+
+        current += timedelta(
+            days=1
+        )
+
+
+def historical_run_timestamp(
+    end_date: date,
+    previous_latest_started_at: Optional[datetime],
+) -> datetime:
+    """
+    Returns a naive UTC timestamp for the backfill MonitorRun.
+
+    dashboard/export_dashboard_data.py selects the newest MonitorRun by
+    started_at. Backfill processing happens today, but it must not become the
+    dashboard's "Current Run". We therefore move the bookkeeping timestamp
+    into the historical range after main.py completes.
+    """
+
+    target = datetime.combine(
+        end_date,
+        time(
+            23,
+            59,
+            0,
+        ),
+    )
+
+    if previous_latest_started_at is None:
+        return target
+
+    previous = previous_latest_started_at
+
+    if previous.tzinfo is not None:
+        previous = (
+            previous.astimezone(
+                timezone.utc
+            )
+            .replace(
+                tzinfo=None
             )
         )
 
-    if "_raw_text" in payload:
-        print("Raw response:")
-        print(payload["_raw_text"])
+    if target >= previous:
+        target = (
+            previous
+            - timedelta(
+                seconds=1
+            )
+        )
 
-    print("")
-    print("Interpretation:")
-    print(
-        "- 401 usually means an authentication/token problem."
+    return target
+
+
+class DisabledCollector:
+    """
+    Drop-in no-op collector for Reddit and Mastodon during X backfill.
+    """
+
+    def __init__(
+        self,
+        *args,
+        **kwargs,
+    ):
+        pass
+
+    def is_configured(
+        self,
+    ) -> bool:
+        return True
+
+    def search_recent(
+        self,
+        *args,
+        **kwargs,
+    ) -> List[Dict[str, Any]]:
+        return []
+
+
+class XFullArchiveBackfillCollector:
+    """
+    Drop-in XCollector replacement for main.py.
+
+    main.py still calls search_recent(query=..., max_results=10, max_pages=1).
+    For backfill we intentionally ignore those recent-search limits and use
+    the separately configured historical safety budgets below.
+    """
+
+    def __init__(
+        self,
+        *args,
+        **kwargs,
+    ):
+        self.bearer_token = os.getenv(
+            "X_BEARER_TOKEN",
+            "",
+        ).strip()
+
+        if not self.bearer_token:
+            raise RuntimeError(
+                "X_BEARER_TOKEN is missing."
+            )
+
+        self.start_date = parse_iso_date(
+            env_text(
+                "X_BACKFILL_START_DATE",
+                DEFAULT_START_DATE,
+            )
+        )
+
+        self.end_date = parse_iso_date(
+            env_text(
+                "X_BACKFILL_END_DATE",
+                DEFAULT_END_DATE,
+            )
+        )
+
+        if self.end_date < self.start_date:
+            raise ValueError(
+                "X_BACKFILL_END_DATE must be on or after "
+                "X_BACKFILL_START_DATE."
+            )
+
+        self.max_posts_per_day = env_int(
+            "X_BACKFILL_MAX_POSTS_PER_DAY",
+            DEFAULT_MAX_POSTS_PER_DAY,
+            minimum=1,
+        )
+
+        self.max_total_posts = env_int(
+            "X_BACKFILL_MAX_TOTAL_POSTS",
+            DEFAULT_MAX_TOTAL_POSTS,
+            minimum=1,
+        )
+
+        self.max_pages_per_query_day = env_int(
+            "X_BACKFILL_MAX_PAGES_PER_QUERY_DAY",
+            DEFAULT_MAX_PAGES_PER_QUERY_DAY,
+            minimum=1,
+            maximum=50,
+        )
+
+        self.request_page_size = env_int(
+            "X_BACKFILL_REQUEST_PAGE_SIZE",
+            DEFAULT_REQUEST_PAGE_SIZE,
+            minimum=MIN_X_PAGE_SIZE,
+            maximum=MAX_X_PAGE_SIZE,
+        )
+
+        self.query_count = env_int(
+            "X_BACKFILL_QUERY_COUNT",
+            1,
+            minimum=1,
+            maximum=100,
+        )
+
+        # Fair share prevents the first broad query from consuming the whole
+        # daily budget before the more specific current query groups run.
+        self.per_query_daily_cap = max(
+            1,
+            self.max_posts_per_day
+            // self.query_count,
+        )
+
+        self.total_returned = 0
+        self.day_counts = defaultdict(
+            int
+        )
+
+        self.seen_post_ids = set()
+
+        self.session = requests.Session()
+
+        self.session.headers.update(
+            {
+                "Authorization":
+                    f"Bearer {self.bearer_token}",
+                "User-Agent":
+                    (
+                        "Migration-OSINT-Monitor/"
+                        "X-Historical-Backfill"
+                    ),
+            }
+        )
+
+        print(
+            "==================================="
+        )
+        print(
+            " X FULL-ARCHIVE BACKFILL COLLECTOR"
+        )
+        print(
+            "==================================="
+        )
+        print(
+            f"Date range: {self.start_date} -> {self.end_date}"
+        )
+        print(
+            f"Max posts/day: {self.max_posts_per_day}"
+        )
+        print(
+            f"Query groups: {self.query_count}"
+        )
+        print(
+            f"Fair-share posts/query/day: {self.per_query_daily_cap}"
+        )
+        print(
+            f"Max total posts: {self.max_total_posts}"
+        )
+        print(
+            "Reddit/Mastodon: DISABLED"
+        )
+
+    def is_configured(
+        self,
+    ) -> bool:
+        return bool(
+            self.bearer_token
+        )
+
+    def search_recent(
+        self,
+        query: str,
+        max_results: int = 10,
+        max_pages: Optional[int] = None,
+    ) -> List[Dict[str, Any]]:
+        """
+        Historical full-archive collection for one existing query group.
+        """
+
+        del max_results
+        del max_pages
+
+        if self.total_returned >= self.max_total_posts:
+            print(
+                "X BACKFILL GLOBAL LIMIT REACHED: "
+                f"{self.max_total_posts}"
+            )
+            return []
+
+        results: List[
+            Dict[str, Any]
+        ] = []
+
+        for day in iter_days(
+            self.start_date,
+            self.end_date,
+        ):
+            if (
+                self.total_returned
+                >= self.max_total_posts
+            ):
+                break
+
+            day_key = (
+                day.isoformat()
+            )
+
+            remaining_day_budget = (
+                self.max_posts_per_day
+                - self.day_counts[
+                    day_key
+                ]
+            )
+
+            if remaining_day_budget <= 0:
+                continue
+
+            query_day_cap = min(
+                self.per_query_daily_cap,
+                remaining_day_budget,
+                (
+                    self.max_total_posts
+                    - self.total_returned
+                ),
+            )
+
+            if query_day_cap <= 0:
+                continue
+
+            day_results = (
+                self._search_one_day(
+                    query=query,
+                    day=day,
+                    limit=query_day_cap,
+                )
+            )
+
+            for post in day_results:
+                post_id = str(
+                    post.get(
+                        "post_id"
+                    )
+                    or ""
+                )
+
+                if (
+                    not post_id
+                    or post_id
+                    in self.seen_post_ids
+                ):
+                    continue
+
+                self.seen_post_ids.add(
+                    post_id
+                )
+
+                results.append(
+                    post
+                )
+
+                self.day_counts[
+                    day_key
+                ] += 1
+
+                self.total_returned += 1
+
+                if (
+                    self.total_returned
+                    >= self.max_total_posts
+                ):
+                    break
+
+                if (
+                    self.day_counts[
+                        day_key
+                    ]
+                    >= self.max_posts_per_day
+                ):
+                    break
+
+        print(
+            "X BACKFILL QUERY COMPLETE: "
+            f"{len(results)} unique posts returned "
+            f"(global total={self.total_returned})"
+        )
+
+        return results
+
+    def _search_one_day(
+        self,
+        *,
+        query: str,
+        day: date,
+        limit: int,
+    ) -> List[Dict[str, Any]]:
+        start_dt = datetime.combine(
+            day,
+            time.min,
+            tzinfo=timezone.utc,
+        )
+
+        end_dt = (
+            start_dt
+            + timedelta(
+                days=1
+            )
+        )
+
+        posts: List[
+            Dict[str, Any]
+        ] = []
+
+        next_token = None
+        page = 0
+
+        while (
+            len(posts) < limit
+            and page
+            < self.max_pages_per_query_day
+        ):
+            remaining = (
+                limit
+                - len(posts)
+            )
+
+            # X requires max_results >= 10. We may receive more than the
+            # remaining local quota, but only the local quota is returned
+            # into the analysis pipeline.
+            page_size = min(
+                self.request_page_size,
+                max(
+                    MIN_X_PAGE_SIZE,
+                    remaining,
+                ),
+            )
+
+            params = {
+                "query":
+                    query,
+                "start_time":
+                    utc_iso(
+                        start_dt
+                    ),
+                "end_time":
+                    utc_iso(
+                        end_dt
+                    ),
+                "max_results":
+                    page_size,
+                "sort_order":
+                    "recency",
+                "tweet.fields":
+                    (
+                        "id,text,author_id,"
+                        "created_at,lang,"
+                        "conversation_id,"
+                        "public_metrics"
+                    ),
+                "expansions":
+                    "author_id",
+                "user.fields":
+                    (
+                        "id,name,username,"
+                        "verified,location"
+                    ),
+            }
+
+            if next_token:
+                params[
+                    "next_token"
+                ] = next_token
+
+            response = (
+                self.session.get(
+                    API_URL,
+                    params=params,
+                    timeout=45,
+                )
+            )
+
+            if (
+                response.status_code
+                != 200
+            ):
+                self._raise_api_error(
+                    response=response,
+                    day=day,
+                    query=query,
+                )
+
+            payload = (
+                response.json()
+            )
+
+            data = (
+                payload.get(
+                    "data",
+                    [],
+                )
+                or []
+            )
+
+            includes = (
+                payload.get(
+                    "includes",
+                    {},
+                )
+                or {}
+            )
+
+            users = {
+                str(
+                    user.get(
+                        "id"
+                    )
+                ): user
+                for user
+                in (
+                    includes.get(
+                        "users",
+                        [],
+                    )
+                    or []
+                )
+                if isinstance(
+                    user,
+                    dict,
+                )
+            }
+
+            for tweet in data:
+                normalized = (
+                    self._normalize_tweet(
+                        tweet=tweet,
+                        users=users,
+                    )
+                )
+
+                if normalized is None:
+                    continue
+
+                post_id = str(
+                    normalized.get(
+                        "post_id"
+                    )
+                    or ""
+                )
+
+                if (
+                    not post_id
+                    or post_id
+                    in self.seen_post_ids
+                ):
+                    continue
+
+                if any(
+                    str(
+                        item.get(
+                            "post_id"
+                        )
+                        or ""
+                    )
+                    == post_id
+                    for item
+                    in posts
+                ):
+                    continue
+
+                posts.append(
+                    normalized
+                )
+
+                if (
+                    len(posts)
+                    >= limit
+                ):
+                    break
+
+            meta = (
+                payload.get(
+                    "meta",
+                    {},
+                )
+                or {}
+            )
+
+            next_token = (
+                meta.get(
+                    "next_token"
+                )
+            )
+
+            page += 1
+
+            if not next_token:
+                break
+
+        return posts[
+            :limit
+        ]
+
+    def _normalize_tweet(
+        self,
+        *,
+        tweet: Dict[str, Any],
+        users: Dict[str, Dict[str, Any]],
+    ) -> Optional[Dict[str, Any]]:
+        post_id = str(
+            tweet.get(
+                "id"
+            )
+            or ""
+        ).strip()
+
+        text_value = str(
+            tweet.get(
+                "text"
+            )
+            or ""
+        ).strip()
+
+        if (
+            not post_id
+            or not text_value
+        ):
+            return None
+
+        author_id = str(
+            tweet.get(
+                "author_id"
+            )
+            or ""
+        )
+
+        user = (
+            users.get(
+                author_id,
+                {},
+            )
+            or {}
+        )
+
+        username = (
+            user.get(
+                "username"
+            )
+        )
+
+        author = (
+            username
+            or user.get(
+                "name"
+            )
+            or author_id
+            or None
+        )
+
+        url = (
+            f"https://x.com/{username}/status/{post_id}"
+            if username
+            else f"https://x.com/i/web/status/{post_id}"
+        )
+
+        return {
+            "source":
+                "X",
+            "post_id":
+                post_id,
+            "author_id":
+                author_id
+                or None,
+            "author":
+                author,
+            "author_name":
+                user.get(
+                    "name"
+                )
+                or author,
+            "author_location":
+                user.get(
+                    "location"
+                ),
+            "author_verified":
+                user.get(
+                    "verified"
+                ),
+            "text":
+                text_value,
+            "language":
+                tweet.get(
+                    "lang"
+                ),
+            "published_at":
+                tweet.get(
+                    "created_at"
+                ),
+            "conversation_id":
+                tweet.get(
+                    "conversation_id"
+                )
+                or post_id,
+            "public_metrics":
+                tweet.get(
+                    "public_metrics"
+                )
+                or {},
+            "url":
+                url,
+        }
+
+    @staticmethod
+    def _raise_api_error(
+        *,
+        response: requests.Response,
+        day: date,
+        query: str,
+    ) -> None:
+        try:
+            payload = (
+                response.json()
+            )
+        except ValueError:
+            payload = {
+                "raw":
+                    response.text[
+                        :2000
+                    ],
+            }
+
+        raise RuntimeError(
+            "X full-archive request failed. "
+            f"HTTP={response.status_code}; "
+            f"day={day}; "
+            f"query={query!r}; "
+            f"response={payload}"
+        )
+
+
+class QuietBackfillPrinter:
+    """
+    Optional reduced logging for large backfills.
+
+    main.py is deliberately reused unchanged, but its normal per-post output
+    can become extremely large during a multi-week historical run. In quiet
+    mode we keep progress, warnings, summary values and X backfill messages.
+    """
+
+    KEEP_TERMS = (
+        "===================================",
+        "Migration OSINT Monitor",
+        "Monitor run ID",
+        "Monitor run UUID",
+        "Loaded queries",
+        "Historical correlation",
+        "Correlation lookback",
+        "Query group:",
+        "Query ID:",
+        "X posts found:",
+        "X BACKFILL",
+        "COLLECTOR WARNING",
+        "WARNING:",
+        "ERROR:",
+        "RUN SUMMARY",
+        "Posts returned by queries:",
+        "Unique posts collected:",
+        "X posts returned:",
+        "Unique X posts:",
+        "Noise filtered:",
+        "Non-operational filtered:",
+        "Historical references filtered:",
+        "Influence signals detected:",
+        "Operational events analyzed:",
+        "New correlation groups:",
+        "Events correlated with existing groups:",
+        "New events saved to database:",
+        "Events already in database:",
+        "New EventGroups created:",
+        "EventGroups updated:",
+        "Existing EventGroups reused:",
+        "EventGroup sources linked:",
+        "System run completed successfully.",
     )
-    print(
-        "- 403 usually means the endpoint is not available "
-        "for this project/account or the request is forbidden."
-    )
-    print(
-        "- 429 means rate/usage limits were reached."
-    )
-    print(
-        "- Other 4xx responses should be read from the API "
-        "error message above."
-    )
+
+    def __init__(
+        self,
+        original_print,
+    ):
+        self.original_print = (
+            original_print
+        )
+
+    def __call__(
+        self,
+        *args,
+        **kwargs,
+    ):
+        text_value = " ".join(
+            str(
+                item
+            )
+            for item
+            in args
+        )
+
+        if any(
+            term
+            in text_value
+            for term
+            in self.KEEP_TERMS
+        ):
+            self.original_print(
+                *args,
+                **kwargs,
+            )
+
+
+def latest_monitor_run_snapshot():
+    session = get_session()
+
+    try:
+        row = (
+            session.query(
+                MonitorRun
+            )
+            .order_by(
+                MonitorRun.id.desc()
+            )
+            .first()
+        )
+
+        if row is None:
+            return {
+                "max_id": 0,
+                "started_at": None,
+            }
+
+        return {
+            "max_id":
+                int(
+                    row.id
+                ),
+            "started_at":
+                row.started_at,
+        }
+
+    finally:
+        session.close()
+
+
+def mark_new_runs_as_backfill(
+    *,
+    previous_max_id: int,
+    previous_latest_started_at: Optional[datetime],
+    end_date: date,
+) -> List[int]:
+    session = get_session()
+
+    try:
+        new_runs = (
+            session.query(
+                MonitorRun
+            )
+            .filter(
+                MonitorRun.id
+                > previous_max_id
+            )
+            .order_by(
+                MonitorRun.id.asc()
+            )
+            .all()
+        )
+
+        if not new_runs:
+            raise RuntimeError(
+                "Backfill completed but no new MonitorRun row was found."
+            )
+
+        timestamp = (
+            historical_run_timestamp(
+                end_date=end_date,
+                previous_latest_started_at=(
+                    previous_latest_started_at
+                ),
+            )
+        )
+
+        updated_ids = []
+
+        for run in new_runs:
+            run.started_at = (
+                timestamp
+            )
+
+            run.completed_at = (
+                timestamp
+                + timedelta(
+                    seconds=1
+                )
+            )
+
+            run.status = (
+                "BACKFILL_SUCCESS"
+            )
+
+            updated_ids.append(
+                int(
+                    run.id
+                )
+            )
+
+        session.commit()
+
+        return updated_ids
+
+    except Exception:
+        session.rollback()
+        raise
+
+    finally:
+        session.close()
 
 
 def main() -> int:
-    bearer_token = os.getenv(
-        "X_BEARER_TOKEN",
-        "",
-    ).strip()
-
-    if not bearer_token:
-        print(
-            "ERROR: X_BEARER_TOKEN environment variable is missing."
+    start_date = parse_iso_date(
+        env_text(
+            "X_BACKFILL_START_DATE",
+            DEFAULT_START_DATE,
         )
-        return 2
-
-    query = env_value(
-        "X_FULL_ARCHIVE_TEST_QUERY",
-        DEFAULT_QUERY,
     )
 
-    start_time = env_value(
-        "X_FULL_ARCHIVE_TEST_START_TIME",
-        DEFAULT_START_TIME,
+    end_date = parse_iso_date(
+        env_text(
+            "X_BACKFILL_END_DATE",
+            DEFAULT_END_DATE,
+        )
     )
 
-    end_time = env_value(
-        "X_FULL_ARCHIVE_TEST_END_TIME",
-        DEFAULT_END_TIME,
+    if end_date < start_date:
+        raise ValueError(
+            "End date must be on or after start date."
+        )
+
+    # Read the current query count before the collectors are replaced.
+    query_engine = (
+        monitor_main.QueryEngine()
     )
 
-    raw_max_results = env_value(
-        "X_FULL_ARCHIVE_TEST_MAX_RESULTS",
-        str(DEFAULT_MAX_RESULTS),
+    query_definitions = (
+        query_engine.load_queries()
+    )
+
+    query_count = max(
+        1,
+        len(
+            query_definitions
+        ),
+    )
+
+    os.environ[
+        "X_BACKFILL_QUERY_COUNT"
+    ] = str(
+        query_count
+    )
+
+    previous = (
+        latest_monitor_run_snapshot()
+    )
+
+    original_x_collector = (
+        monitor_main.XCollector
+    )
+
+    original_reddit_collector = getattr(
+        monitor_main,
+        "RedditCollector",
+        None,
+    )
+
+    original_mastodon_collector = getattr(
+        monitor_main,
+        "MastodonCollector",
+        None,
+    )
+
+    original_module_print = getattr(
+        monitor_main,
+        "print",
+        None,
+    )
+
+    quiet = env_bool(
+        "X_BACKFILL_QUIET",
+        True,
+    )
+
+    print(
+        "==================================="
+    )
+    print(
+        " X HISTORICAL BACKFILL"
+    )
+    print(
+        "==================================="
+    )
+    print(
+        f"Start date: {start_date}"
+    )
+    print(
+        f"End date:   {end_date}"
+    )
+    print(
+        f"Existing query groups reused: {query_count}"
+    )
+    print(
+        "Analytical pipeline: CURRENT main.py"
+    )
+    print(
+        "Sources: X ONLY"
+    )
+    print(
+        "Database writes: ENABLED"
+    )
+    print(
+        "Duplicate protection: EXISTING DATABASE LOGIC"
+    )
+    print(
+        f"Quiet log mode: {quiet}"
     )
 
     try:
-        max_results = int(
-            raw_max_results
-        )
-    except ValueError:
-        print(
-            "ERROR: X_FULL_ARCHIVE_TEST_MAX_RESULTS must be an integer."
-        )
-        return 2
-
-    # X full-archive Search Posts All currently requires max_results 10..500.
-    max_results = max(
-        10,
-        min(
-            max_results,
-            10,  # keep the capability test deliberately capped at 10
-        ),
-    )
-
-    params = {
-        "query": query,
-        "start_time": start_time,
-        "end_time": end_time,
-        "max_results": max_results,
-        "sort_order": "recency",
-        "tweet.fields": (
-            "id,text,author_id,created_at,lang,"
-            "conversation_id,public_metrics"
-        ),
-        "expansions": "author_id",
-        "user.fields": "id,name,username,verified",
-    }
-
-    headers = {
-        "Authorization": (
-            f"Bearer {bearer_token}"
-        ),
-        "User-Agent": (
-            "Migration-OSINT-Monitor/"
-            "X-Full-Archive-Capability-Test"
-        ),
-    }
-
-    print(
-        "========================================"
-    )
-    print(
-        "X FULL-ARCHIVE CAPABILITY TEST"
-    )
-    print(
-        "========================================"
-    )
-    print(
-        f"Endpoint: {API_URL}"
-    )
-    print(
-        f"Start:    {start_time}"
-    )
-    print(
-        f"End:      {end_time}"
-    )
-    print(
-        f"Max posts requested: {max_results}"
-    )
-    print(
-        f"Query: {query}"
-    )
-    print(
-        "Database writes: DISABLED"
-    )
-    print(
-        "Reddit/Mastodon: DISABLED"
-    )
-    print("")
-
-    try:
-        response = requests.get(
-            API_URL,
-            headers=headers,
-            params=params,
-            timeout=30,
-        )
-    except requests.RequestException as exc:
-        print(
-            "NETWORK ERROR:"
-        )
-        print(
-            str(exc)
-        )
-        return 3
-
-    payload = safe_json(
-        response
-    )
-
-    if response.status_code != 200:
-        print_api_error(
-            response,
-            payload,
-        )
-        return 1
-
-    data = payload.get(
-        "data",
-        [],
-    )
-
-    meta = payload.get(
-        "meta",
-        {},
-    )
-
-    includes = payload.get(
-        "includes",
-        {},
-    )
-
-    users = {
-        str(user.get("id")): user
-        for user in includes.get(
-            "users",
-            [],
-        )
-        if isinstance(
-            user,
-            dict,
-        )
-    }
-
-    print(
-        "========================================"
-    )
-    print(
-        "SUCCESS: FULL-ARCHIVE ENDPOINT WORKS"
-    )
-    print(
-        "========================================"
-    )
-    print(
-        f"HTTP status: {response.status_code}"
-    )
-    print(
-        f"Result count: {meta.get('result_count', len(data))}"
-    )
-    print(
-        f"Newest ID: {meta.get('newest_id', '-')}"
-    )
-    print(
-        f"Oldest ID: {meta.get('oldest_id', '-')}"
-    )
-    print(
-        f"Pagination token present: "
-        f"{bool(meta.get('next_token'))}"
-    )
-    print("")
-
-    if not data:
-        print(
-            "The endpoint is accessible, but this exact one-hour "
-            "query returned no posts."
-        )
-        print(
-            "That is still a SUCCESSFUL capability test."
-        )
-        return 0
-
-    print(
-        "POST PREVIEW"
-    )
-    print(
-        "----------------------------------------"
-    )
-
-    for index, post in enumerate(
-        data,
-        start=1,
-    ):
-        author_id = str(
-            post.get(
-                "author_id",
-                "",
-            )
+        # Monkeypatch only this Python process. Repository source files and
+        # normal workflow behavior remain unchanged.
+        monitor_main.XCollector = (
+            XFullArchiveBackfillCollector
         )
 
-        user = users.get(
-            author_id,
-            {},
-        )
-
-        username = user.get(
-            "username",
-            "-",
-        )
-
-        created_at = post.get(
-            "created_at",
-            "-",
-        )
-
-        post_id = post.get(
-            "id",
-            "-",
-        )
-
-        lang = post.get(
-            "lang",
-            "-",
-        )
-
-        post_text = str(
-            post.get(
-                "text",
-                "",
-            )
-        ).replace(
-            "\n",
-            " ",
-        )
-
-        if len(post_text) > 240:
-            post_text = (
-                post_text[:237]
-                + "..."
+        if (
+            original_reddit_collector
+            is not None
+        ):
+            monitor_main.RedditCollector = (
+                DisabledCollector
             )
 
-        print(
-            f"{index}. {created_at} | @{username} | "
-            f"lang={lang} | id={post_id}"
-        )
-        print(
-            f"   {post_text}"
+        if (
+            original_mastodon_collector
+            is not None
+        ):
+            monitor_main.MastodonCollector = (
+                DisabledCollector
+            )
+
+        if quiet:
+            monitor_main.print = (
+                QuietBackfillPrinter(
+                    builtins.print
+                )
+            )
+
+        monitor_main.main()
+
+    finally:
+        monitor_main.XCollector = (
+            original_x_collector
         )
 
-    print("")
+        if (
+            original_reddit_collector
+            is not None
+        ):
+            monitor_main.RedditCollector = (
+                original_reddit_collector
+            )
+
+        if (
+            original_mastodon_collector
+            is not None
+        ):
+            monitor_main.MastodonCollector = (
+                original_mastodon_collector
+            )
+
+        if (
+            original_module_print
+            is None
+        ):
+            try:
+                delattr(
+                    monitor_main,
+                    "print",
+                )
+            except AttributeError:
+                pass
+        else:
+            monitor_main.print = (
+                original_module_print
+            )
+
+    updated_ids = (
+        mark_new_runs_as_backfill(
+            previous_max_id=(
+                previous[
+                    "max_id"
+                ]
+            ),
+            previous_latest_started_at=(
+                previous[
+                    "started_at"
+                ]
+            ),
+            end_date=end_date,
+        )
+    )
+
     print(
-        "NEXT STEP:"
+        "==================================="
     )
     print(
-        "If this workflow succeeds, the account can use "
-        "GET /2/tweets/search/all and we can build the "
-        "X-only historical backfill safely."
+        " BACKFILL COMPLETE"
+    )
+    print(
+        "==================================="
+    )
+    print(
+        "Backfill MonitorRun IDs: "
+        f"{updated_ids}"
+    )
+    print(
+        "Backfill run status: BACKFILL_SUCCESS"
+    )
+    print(
+        "Current normal dashboard run preserved: YES"
+    )
+    print(
+        "Next step: export dashboard-data.json."
     )
 
     return 0
