@@ -36,7 +36,7 @@ on:
       quiet_log:
         description: "Reduce per-post GitHub Actions logging"
         required: true
-        default: true
+        default: false
         type: boolean
 
 permissions:
@@ -114,11 +114,92 @@ jobs:
         run: |
           python analysis/x_full_archive_test.py
 
+      - name: Show backfill database date coverage
+        env:
+          X_BACKFILL_START_DATE: ${{ inputs.start_date }}
+          X_BACKFILL_END_DATE: ${{ inputs.end_date }}
+        run: |
+          python - <<'PY'
+          import os
+          import sqlite3
+          from datetime import date, timedelta
+
+          db = "database/migration_osint_monitor.db"
+          start = date.fromisoformat(os.environ["X_BACKFILL_START_DATE"])
+          end = date.fromisoformat(os.environ["X_BACKFILL_END_DATE"])
+          end_exclusive = end + timedelta(days=1)
+
+          con = sqlite3.connect(db)
+
+          try:
+              tables = [
+                  row[0]
+                  for row in con.execute(
+                      "SELECT name FROM sqlite_master "
+                      "WHERE type='table' "
+                      "AND name NOT LIKE 'sqlite_%' "
+                      "ORDER BY name"
+                  )
+              ]
+
+              print("Historical range:", start, "->", end)
+
+              for table in tables:
+                  safe_table = table.replace('"', '""')
+
+                  cols = [
+                      row[1]
+                      for row in con.execute(
+                          f'PRAGMA table_info("{safe_table}")'
+                      )
+                  ]
+
+                  for column in (
+                      "published_at",
+                      "event_time",
+                      "timestamp",
+                      "observed_at",
+                      "created_at",
+                  ):
+                      if column not in cols:
+                          continue
+
+                      safe_column = column.replace('"', '""')
+
+                      sql = (
+                          f'SELECT COUNT(*) '
+                          f'FROM "{safe_table}" '
+                          f'WHERE "{safe_column}" IS NOT NULL '
+                          f'AND datetime("{safe_column}") >= datetime(?) '
+                          f'AND datetime("{safe_column}") < datetime(?)'
+                      )
+
+                      count = con.execute(
+                          sql,
+                          (
+                              start.isoformat(),
+                              end_exclusive.isoformat(),
+                          ),
+                      ).fetchone()[0]
+
+                      if count:
+                          print(
+                              f"{table}.{column}: "
+                              f"{count} historical rows"
+                          )
+
+          finally:
+              con.close()
+          PY
+
       - name: Export dashboard data
         run: |
           python -m dashboard.export_dashboard_data
 
       - name: Verify historical timeline export
+        env:
+          X_BACKFILL_START_DATE: ${{ inputs.start_date }}
+          X_BACKFILL_END_DATE: ${{ inputs.end_date }}
         run: |
           python - <<'PY'
           import json
@@ -189,6 +270,92 @@ jobs:
           ):
               raise SystemExit(
                   "ERROR: Backfill incorrectly became the dashboard Current Run."
+              )
+
+          import os
+          from datetime import date, datetime
+
+          start = date.fromisoformat(
+              os.environ[
+                  "X_BACKFILL_START_DATE"
+              ]
+          )
+
+          end = date.fromisoformat(
+              os.environ[
+                  "X_BACKFILL_END_DATE"
+              ]
+          )
+
+          matching = []
+
+          for item in (
+              timeline.get(
+                  "items",
+                  [],
+              )
+              or []
+          ):
+              raw = item.get(
+                  "timestamp"
+              )
+
+              if not raw:
+                  continue
+
+              try:
+                  ts = datetime.fromisoformat(
+                      str(raw).replace(
+                          "Z",
+                          "+00:00",
+                      )
+                  )
+              except ValueError:
+                  continue
+
+              if (
+                  start
+                  <= ts.date()
+                  <= end
+              ):
+                  matching.append(
+                      item
+                  )
+
+          print(
+              "Timeline records inside backfill window:",
+              len(
+                  matching
+              ),
+          )
+
+          layer_counts = {}
+
+          for item in matching:
+              layer = str(
+                  item.get(
+                      "layer",
+                      "UNKNOWN",
+                  )
+              )
+
+              layer_counts[layer] = (
+                  layer_counts.get(
+                      layer,
+                      0,
+                  )
+                  + 1
+              )
+
+          print(
+              "Backfill-window timeline layers:",
+              layer_counts,
+          )
+
+          if not matching:
+              print(
+                  "WARNING: exporter produced ZERO timeline "
+                  "records inside the backfill date range."
               )
           PY
 
