@@ -112,6 +112,17 @@ class SignalClassifier:
             r"\bmigrants crossing\b",
             r"\brefugee crossing\b",
             r"\brefugees crossing\b",
+
+            # Precision tuning: explicit completed crossings.
+            r"\bmigrants?\s+crossed\b",
+            r"\brefugees?\s+crossed\b",
+            r"\bmigrants?\s+crossed\s+into\b",
+            r"\brefugees?\s+crossed\s+into\b",
+            r"\bmigrants?\s+crossed\s+from\b",
+            r"\brefugees?\s+crossed\s+from\b",
+            r"\bmass\s+border\s+crossing\b",
+            r"\bmass\s+crossings?\b",
+
             r"\bcrossed the border\b",
             r"\bcrossing the border\b",
             r"\bcrossing point\b",
