@@ -4,47 +4,51 @@ Migration OSINT Monitor
 File:
 collectors/telegram_collector.py
 
+Version:
+v3 - content-validated public-channel discovery
+
 Purpose:
 Read-only Telegram OSINT collector for PUBLIC broadcast channels.
 
-Why this version exists:
-The first implementation relied on Telegram global message search. In practice,
-that can return no results when the relevant public channels are not already
-part of the account's normal dialog/search context.
+Main improvements over v2:
+1. Public channels are no longer accepted only because their title/username
+   contains words such as "asylum" or "migrant".
+2. Every newly discovered public channel is sampled and content-scored.
+3. Only channels with genuine migration-related recent content are searched.
+4. False-positive title matches such as entertainment venues using "Asylum"
+   are rejected before their posts enter the analytical pipeline.
+5. Discovery is multilingual and includes Western Mediterranean / Ceuta /
+   Melilla / Morocco-relevant terms.
+6. Channel validation results are cached for the complete monitor process.
 
-This collector therefore uses a two-stage strategy:
+Safety:
+- PUBLIC broadcast channels only
+- no private chats
+- no private groups
+- no message sending
+- no Telegram-side writes
 
-1. DISCOVERY
-   Search Telegram's public directory for public broadcast channels whose
-   names/usernames match migration-related search terms.
-
-2. COLLECTION
-   Search recent messages INSIDE those discovered public broadcast channels.
-
-The collector:
-- uses the existing authorized TELEGRAM_SESSION
-- reads PUBLIC broadcast channels only
-- never accesses private chats or private groups
-- never sends messages
-- returns normalized post dictionaries compatible with the existing
-  X / Reddit / Mastodon analysis pipeline
-
-Environment variables:
+Required environment variables:
 - TELEGRAM_API_ID
 - TELEGRAM_API_HASH
 - TELEGRAM_SESSION
 
-Optional:
+Optional environment variables:
 - TELEGRAM_PUBLIC_CHANNELS
-    Comma-separated public usernames to always include, for example:
-    channel_a,channel_b,channel_c
+    Comma-separated public usernames that should always be checked.
+    Explicit channels are still content-validated.
 
 - TELEGRAM_RECENT_HOURS
-    Normal-run lookback window. Default: 72 hours.
+    Normal run lookback. Default: 72.
 
 - TELEGRAM_DISCOVERY_LIMIT
-    Maximum public-directory results checked per discovery term.
-    Default: 20.
+    Directory search limit per term. Default: 20.
+
+- TELEGRAM_CHANNEL_SAMPLE_SIZE
+    Number of recent channel posts used for source validation. Default: 20.
+
+- TELEGRAM_MIN_CHANNEL_SCORE
+    Minimum source-validation score. Default: 3.
 """
 
 from __future__ import annotations
@@ -52,7 +56,7 @@ from __future__ import annotations
 import os
 import re
 from datetime import datetime, timedelta, timezone
-from typing import Any, Dict, Iterable, List, Optional, Tuple
+from typing import Any, Dict, List, Optional
 
 from telethon import functions, types
 from telethon.errors import FloodWaitError
@@ -62,14 +66,17 @@ from telethon.sync import TelegramClient
 
 class TelegramCollector:
     """
-    Public Telegram broadcast-channel collector.
+    Content-validated public Telegram broadcast-channel collector.
     """
 
     MAX_SEARCH_TERMS = 8
-    MAX_DISCOVERY_TERMS = 6
+    MAX_DISCOVERY_TERMS = 12
     DEFAULT_RECENT_HOURS = 72
     DEFAULT_DISCOVERY_LIMIT = 20
+    DEFAULT_CHANNEL_SAMPLE_SIZE = 20
+    DEFAULT_MIN_CHANNEL_SCORE = 3
     MAX_CHANNELS_PER_QUERY = 30
+    MAX_VALIDATED_CHANNELS_PER_QUERY = 16
     MAX_MESSAGES_PER_CHANNEL_TERM = 12
 
     STOPWORDS = {
@@ -108,19 +115,236 @@ class TelegramCollector:
         "retweet",
     }
 
-    # These terms are useful for discovering likely migration-focused
-    # public channels. Query-specific terms are still added dynamically.
+    # Directory discovery terms. These are intentionally broader than the
+    # downstream migration content validator.
     DISCOVERY_SEEDS = (
         "migration",
         "migrant",
         "refugee",
-        "border",
-        "asylum",
         "immigration",
+        "migracion",
+        "migración",
+        "migrantes",
+        "refugiados",
+        "migration maroc",
+        "migration morocco",
+        "ceuta",
+        "melilla",
+        "sebta",
+        "marruecos",
+        "maroc",
+        "morocco",
+        "الهجرة",
+        "مهاجر",
+        "مهاجرين",
+        "سبتة",
+        "المغرب",
     )
 
-    # Multi-word terms are especially valuable once we are inside a
-    # discovered channel and searching its posts.
+    # Strong location / route terms. A hit here materially increases the
+    # probability that the channel is useful for the monitor.
+    ROUTE_TERMS = (
+        "ceuta",
+        "sebta",
+        "سبتة",
+        "melilla",
+        "morocco",
+        "maroc",
+        "marruecos",
+        "المغرب",
+        "fnideq",
+        "castillejos",
+        "tetouan",
+        "tétouan",
+        "tanger",
+        "tangier",
+        "strait of gibraltar",
+        "estrecho de gibraltar",
+        "western mediterranean",
+        "mediterráneo occidental",
+        "canary islands",
+        "canarias",
+        "lampedusa",
+        "libya",
+        "tunisia",
+        "calais",
+        "english channel",
+        "la manche",
+        "belarus",
+        "poland border",
+    )
+
+    # Multilingual migration-context terms used for channel validation.
+    MIGRATION_TERMS = (
+        # English
+        "migration",
+        "migrant",
+        "migrants",
+        "refugee",
+        "refugees",
+        "asylum seeker",
+        "asylum seekers",
+        "immigration",
+        "illegal immigration",
+        "irregular migration",
+        "border crossing",
+        "cross the border",
+        "migrant boat",
+        "refugee boat",
+        "smuggler",
+        "smugglers",
+        "human smuggling",
+        "human trafficking",
+        "deportation",
+        "deported",
+        "coast guard",
+
+        # Spanish
+        "migración",
+        "migracion",
+        "migrante",
+        "migrantes",
+        "refugiado",
+        "refugiados",
+        "solicitante de asilo",
+        "solicitantes de asilo",
+        "inmigración",
+        "inmigracion",
+        "inmigrante",
+        "inmigrantes",
+        "cruce fronterizo",
+        "cruzar la frontera",
+        "patera",
+        "pateras",
+        "cayuco",
+        "cayucos",
+        "tráfico de migrantes",
+        "trafico de migrantes",
+        "devolución",
+        "devolucion",
+
+        # French
+        "migration",
+        "migrant",
+        "migrants",
+        "réfugié",
+        "réfugiés",
+        "refugie",
+        "refugies",
+        "demandeur d'asile",
+        "demandeurs d'asile",
+        "immigration",
+        "frontière",
+        "frontiere",
+        "passeur",
+        "passeurs",
+
+        # Italian
+        "migrante",
+        "migranti",
+        "rifugiato",
+        "rifugiati",
+        "immigrazione",
+        "sbarco",
+        "sbarchi",
+        "scafista",
+        "scafisti",
+
+        # Arabic
+        "الهجرة",
+        "مهاجر",
+        "مهاجرين",
+        "مهاجرون",
+        "لاجئ",
+        "لاجئين",
+        "لجوء",
+        "الحدود",
+        "عبور الحدود",
+        "قارب مهاجرين",
+        "تهريب البشر",
+        "تهريب المهاجرين",
+
+        # Russian / common CIS
+        "миграция",
+        "мигрант",
+        "мигранты",
+        "беженец",
+        "беженцы",
+        "убежище",
+        "граница",
+        "нелегальная миграция",
+    )
+
+    # Terms that are much more operational than generic migration mentions.
+    OPERATIONAL_MIGRATION_TERMS = (
+        "crossing",
+        "cross the border",
+        "border crossing",
+        "arrived",
+        "arrival",
+        "departure",
+        "departing",
+        "boat",
+        "vessel",
+        "intercepted",
+        "rescued",
+        "rescue",
+        "smuggler",
+        "smugglers",
+        "smuggling",
+        "meeting point",
+        "gathering point",
+        "departure point",
+        "cruce",
+        "cruzar",
+        "llegada",
+        "llegaron",
+        "salida",
+        "patera",
+        "cayuco",
+        "interceptados",
+        "rescatados",
+        "passeur",
+        "passeurs",
+        "traversée",
+        "traversee",
+        "sbarco",
+        "sbarchi",
+        "عبور",
+        "قارب",
+        "قوارب",
+        "تهريب",
+        "пересечение",
+        "границы",
+    )
+
+    # Phrases indicating obvious title/name ambiguity and non-migration use.
+    # These do not automatically blacklist a channel; they subtract from the
+    # validation score unless genuine migration content is also present.
+    NON_MIGRATION_HINTS = (
+        "tickets",
+        "ticket",
+        "club",
+        "dj",
+        "concert",
+        "festival",
+        "music",
+        "party",
+        "album",
+        "gaming",
+        "game",
+        "movie",
+        "cinema",
+        "anime",
+        "crypto",
+        "token",
+        "trading",
+        "casino",
+        "barrel",
+        "release",
+        "tour dates",
+    )
+
     HIGH_VALUE_PHRASES = (
         "border crossing",
         "mass crossing",
@@ -140,6 +364,12 @@ class TelegramCollector:
         "meeting point",
         "gathering point",
         "crossing point",
+        "cruce fronterizo",
+        "cruzar la frontera",
+        "tráfico de migrantes",
+        "trafico de migrantes",
+        "عبور الحدود",
+        "تهريب المهاجرين",
     )
 
     def __init__(
@@ -190,12 +420,26 @@ class TelegramCollector:
             maximum=100,
         )
 
+        self.channel_sample_size = self._env_int(
+            "TELEGRAM_CHANNEL_SAMPLE_SIZE",
+            self.DEFAULT_CHANNEL_SAMPLE_SIZE,
+            minimum=5,
+            maximum=50,
+        )
+
+        self.min_channel_score = self._env_int(
+            "TELEGRAM_MIN_CHANNEL_SCORE",
+            self.DEFAULT_MIN_CHANNEL_SCORE,
+            minimum=1,
+            maximum=20,
+        )
+
         self.explicit_channels = (
             self._load_explicit_channels()
         )
 
-        # Per-process cache. main.py creates one TelegramCollector and
-        # reuses it across all QueryEngine queries.
+        # One instance is reused by main.py across every query group, so these
+        # caches significantly reduce repeated Telegram API work.
         self._channel_cache: Dict[
             str,
             Dict[str, Any]
@@ -204,6 +448,11 @@ class TelegramCollector:
         self._discovery_term_cache: Dict[
             str,
             List[str]
+        ] = {}
+
+        self._validation_cache: Dict[
+            str,
+            Dict[str, Any]
         ] = {}
 
     # ======================================================
@@ -229,10 +478,6 @@ class TelegramCollector:
         max_results: int = 10,
         max_pages: Optional[int] = None,
     ) -> List[Dict[str, Any]]:
-        """
-        Discover relevant public channels and search recent posts within them.
-        """
-
         del max_pages
 
         if not self.is_configured():
@@ -252,14 +497,9 @@ class TelegramCollector:
             ),
         )
 
-        search_terms = self._expand_query(
-            query
-        )
-
-        discovery_terms = (
-            self._build_discovery_terms(
-                query=query,
-                search_terms=search_terms,
+        search_terms = (
+            self._expand_query(
+                query
             )
         )
 
@@ -268,6 +508,13 @@ class TelegramCollector:
                 "TELEGRAM COLLECTOR: no usable search terms."
             )
             return []
+
+        discovery_terms = (
+            self._build_discovery_terms(
+                query=query,
+                search_terms=search_terms,
+            )
+        )
 
         cutoff = (
             datetime.now(
@@ -288,43 +535,89 @@ class TelegramCollector:
                     "TELEGRAM_SESSION is not authorized."
                 )
 
-            channels = self._collect_candidate_channels(
-                client=client,
-                discovery_terms=discovery_terms,
-            )
-
-            if not channels:
-                print(
-                    "TELEGRAM COLLECTOR: "
-                    "0 public broadcast channels discovered."
+            discovered = (
+                self._collect_candidate_channels(
+                    client=client,
+                    discovery_terms=discovery_terms,
                 )
-                return []
+            )
 
             print(
                 "Telegram public channels discovered: "
-                f"{len(channels)}"
+                f"{len(discovered)}"
             )
 
-            preview = [
-                (
-                    item.get("username")
-                    or item.get("title")
-                    or item.get("id")
+            if not discovered:
+                return []
+
+            validated = (
+                self._validate_candidate_channels(
+                    client=client,
+                    channels=discovered,
                 )
-                for item in channels[:8]
+            )
+
+            accepted = [
+                item
+                for item in validated
+                if item.get(
+                    "accepted"
+                )
+            ]
+
+            rejected = [
+                item
+                for item in validated
+                if not item.get(
+                    "accepted"
+                )
             ]
 
             print(
-                "Telegram channel preview: "
-                f"{preview}"
+                "Telegram channels accepted after content validation: "
+                f"{len(accepted)}"
             )
 
-            posts = self._search_channels(
-                client=client,
-                channels=channels,
-                search_terms=search_terms,
-                cutoff=cutoff,
-                max_results=max_results,
+            print(
+                "Telegram channels rejected after content validation: "
+                f"{len(rejected)}"
+            )
+
+            if accepted:
+                print(
+                    "Telegram accepted channel preview: "
+                    f"{self._validation_preview(accepted)}"
+                )
+
+            if rejected:
+                print(
+                    "Telegram rejected channel preview: "
+                    f"{self._validation_preview(rejected)}"
+                )
+
+            accepted_channels = [
+                item[
+                    "channel"
+                ]
+                for item in accepted[
+                    :self.MAX_VALIDATED_CHANNELS_PER_QUERY
+                ]
+            ]
+
+            if not accepted_channels:
+                print(
+                    "Telegram recent public-channel matches: 0"
+                )
+                return []
+
+            posts = (
+                self._search_channels(
+                    client=client,
+                    channels=accepted_channels,
+                    search_terms=search_terms,
+                    cutoff=cutoff,
+                    max_results=max_results,
+                )
             )
 
             print(
@@ -350,10 +643,11 @@ class TelegramCollector:
         max_results: int = 100,
     ) -> List[Dict[str, Any]]:
         """
-        Same public-channel discovery logic, but with a bounded UTC interval.
+        Historical collector hook for the later Telegram backfill.
 
-        This is intentionally kept here so the later Telegram backfill can use
-        the exact same source-discovery and normalization logic as normal runs.
+        Channel validation uses current/recent channel content because it is a
+        source-quality test. Message collection itself respects the requested
+        historical interval.
         """
 
         if not self.is_configured():
@@ -369,9 +663,14 @@ class TelegramCollector:
         if end_utc <= start_utc:
             return []
 
-        search_terms = self._expand_query(
-            query
+        search_terms = (
+            self._expand_query(
+                query
+            )
         )
+
+        if not search_terms:
+            return []
 
         discovery_terms = (
             self._build_discovery_terms(
@@ -390,14 +689,33 @@ class TelegramCollector:
                     "TELEGRAM_SESSION is not authorized."
                 )
 
-            channels = self._collect_candidate_channels(
-                client=client,
-                discovery_terms=discovery_terms,
+            discovered = (
+                self._collect_candidate_channels(
+                    client=client,
+                    discovery_terms=discovery_terms,
+                )
             )
+
+            validated = (
+                self._validate_candidate_channels(
+                    client=client,
+                    channels=discovered,
+                )
+            )
+
+            accepted_channels = [
+                item[
+                    "channel"
+                ]
+                for item in validated
+                if item.get(
+                    "accepted"
+                )
+            ]
 
             return self._search_channels(
                 client=client,
-                channels=channels,
+                channels=accepted_channels,
                 search_terms=search_terms,
                 cutoff=start_utc,
                 end_at=end_utc,
@@ -422,19 +740,27 @@ class TelegramCollector:
             Dict[str, Any]
         ] = {}
 
-        # 1. Explicit public channels configured by us.
+        # Explicit public channels are priority candidates, but they are not
+        # blindly trusted: they still pass the content validator below.
         for username in self.explicit_channels:
-            channel = self._resolve_public_channel(
-                client=client,
-                username=username,
+            channel = (
+                self._resolve_public_channel(
+                    client=client,
+                    username=username,
+                )
             )
 
             if channel:
+                channel[
+                    "discovery_origin"
+                ] = "EXPLICIT"
+
                 channels_by_key[
-                    channel["key"]
+                    channel[
+                        "key"
+                    ]
                 ] = channel
 
-        # 2. Telegram public directory discovery.
         for term in discovery_terms:
             discovered_keys = (
                 self._discovery_term_cache.get(
@@ -473,6 +799,12 @@ class TelegramCollector:
                         key = channel[
                             "key"
                         ]
+
+                        channel[
+                            "discovery_origin"
+                        ] = (
+                            f"DIRECTORY:{term}"
+                        )
 
                         self._channel_cache[
                             key
@@ -577,8 +909,10 @@ class TelegramCollector:
         except Exception:
             return None
 
-        channel = self._channel_from_entity(
-            entity
+        channel = (
+            self._channel_from_entity(
+                entity
+            )
         )
 
         if channel:
@@ -587,7 +921,9 @@ class TelegramCollector:
             ] = channel
 
             self._channel_cache[
-                channel["key"]
+                channel[
+                    "key"
+                ]
             ] = channel
 
         return channel
@@ -596,10 +932,6 @@ class TelegramCollector:
         self,
         entity,
     ) -> Optional[Dict[str, Any]]:
-        """
-        Accept PUBLIC broadcast channels only.
-        """
-
         if not isinstance(
             entity,
             types.Channel,
@@ -624,7 +956,8 @@ class TelegramCollector:
             or ""
         ).strip()
 
-        # No username = not a public channel URL we can audit.
+        # Auditability requirement:
+        # only channels with a public t.me username are accepted.
         if not username:
             return None
 
@@ -662,7 +995,337 @@ class TelegramCollector:
                 title,
             "entity":
                 entity,
+            "discovery_origin":
+                None,
         }
+
+    # ======================================================
+    # CONTENT-BASED SOURCE VALIDATION
+    # ======================================================
+
+    def _validate_candidate_channels(
+        self,
+        *,
+        client: TelegramClient,
+        channels: List[Dict[str, Any]],
+    ) -> List[Dict[str, Any]]:
+        results = []
+
+        for channel in channels:
+            key = channel[
+                "key"
+            ]
+
+            cached = (
+                self._validation_cache.get(
+                    key
+                )
+            )
+
+            if cached is not None:
+                results.append(
+                    cached
+                )
+                continue
+
+            validation = (
+                self._validate_one_channel(
+                    client=client,
+                    channel=channel,
+                )
+            )
+
+            self._validation_cache[
+                key
+            ] = validation
+
+            results.append(
+                validation
+            )
+
+        # Accepted channels with stronger evidence are searched first.
+        results.sort(
+            key=lambda item: (
+                bool(
+                    item.get(
+                        "accepted"
+                    )
+                ),
+                int(
+                    item.get(
+                        "score",
+                        0,
+                    )
+                ),
+                int(
+                    item.get(
+                        "migration_posts",
+                        0,
+                    )
+                ),
+            ),
+            reverse=True,
+        )
+
+        return results
+
+    def _validate_one_channel(
+        self,
+        *,
+        client: TelegramClient,
+        channel: Dict[str, Any],
+    ) -> Dict[str, Any]:
+        samples = []
+
+        try:
+            for message in client.iter_messages(
+                channel[
+                    "entity"
+                ],
+                limit=self.channel_sample_size,
+            ):
+                text = str(
+                    getattr(
+                        message,
+                        "message",
+                        "",
+                    )
+                    or ""
+                ).strip()
+
+                if text:
+                    samples.append(
+                        text
+                    )
+
+        except FloodWaitError as error:
+            raise RuntimeError(
+                "Telegram validation flood wait: "
+                f"{error.seconds} seconds."
+            ) from error
+
+        except Exception as error:
+            return {
+                "channel":
+                    channel,
+                "accepted":
+                    False,
+                "score":
+                    -10,
+                "migration_posts":
+                    0,
+                "operational_posts":
+                    0,
+                "route_posts":
+                    0,
+                "sample_posts":
+                    0,
+                "reason":
+                    (
+                        "VALIDATION_ERROR:"
+                        f"{type(error).__name__}"
+                    ),
+            }
+
+        title_blob = (
+            f"{channel.get('title', '')} "
+            f"{channel.get('username', '')}"
+        ).lower()
+
+        score = 0
+        migration_posts = 0
+        operational_posts = 0
+        route_posts = 0
+        non_migration_hits = 0
+
+        for text in samples:
+            lowered = text.lower()
+
+            migration_hits = (
+                self._count_term_hits(
+                    lowered,
+                    self.MIGRATION_TERMS,
+                )
+            )
+
+            operational_hits = (
+                self._count_term_hits(
+                    lowered,
+                    self.OPERATIONAL_MIGRATION_TERMS,
+                )
+            )
+
+            route_hits = (
+                self._count_term_hits(
+                    lowered,
+                    self.ROUTE_TERMS,
+                )
+            )
+
+            non_migration = (
+                self._count_term_hits(
+                    lowered,
+                    self.NON_MIGRATION_HINTS,
+                )
+            )
+
+            if migration_hits:
+                migration_posts += 1
+
+                # Basic migration-context evidence.
+                score += min(
+                    migration_hits,
+                    3,
+                )
+
+            if operational_hits and migration_hits:
+                operational_posts += 1
+
+                # Operational migration content is particularly useful.
+                score += 2
+
+            if route_hits and migration_hits:
+                route_posts += 1
+
+                # Named route/location + migration is high-value.
+                score += 2
+
+            non_migration_hits += (
+                non_migration
+            )
+
+        # Channel title/username helps only a little. Content remains decisive.
+        title_migration_hits = (
+            self._count_term_hits(
+                title_blob,
+                self.MIGRATION_TERMS,
+            )
+        )
+
+        title_route_hits = (
+            self._count_term_hits(
+                title_blob,
+                self.ROUTE_TERMS,
+            )
+        )
+
+        title_noise_hits = (
+            self._count_term_hits(
+                title_blob,
+                self.NON_MIGRATION_HINTS,
+            )
+        )
+
+        if title_migration_hits:
+            score += 1
+
+        if title_route_hits:
+            score += 1
+
+        # If "asylum" is merely an entertainment/brand name, this pushes
+        # the score down unless the post sample contains actual migration.
+        if title_noise_hits:
+            score -= min(
+                title_noise_hits,
+                3,
+            )
+
+        if (
+            non_migration_hits > 0
+            and migration_posts == 0
+        ):
+            score -= min(
+                non_migration_hits,
+                5,
+            )
+
+        sample_count = len(
+            samples
+        )
+
+        # Minimum evidence rules:
+        # - at least one actual migration-content post
+        # - and either sufficient score OR repeated migration content
+        accepted = bool(
+            migration_posts >= 1
+            and (
+                score >= self.min_channel_score
+                or migration_posts >= 2
+            )
+        )
+
+        if not samples:
+            reason = (
+                "NO_TEXT_SAMPLE"
+            )
+        elif migration_posts == 0:
+            reason = (
+                "NO_MIGRATION_CONTENT"
+            )
+        elif accepted:
+            reason = (
+                "CONTENT_VALIDATED"
+            )
+        else:
+            reason = (
+                "WEAK_MIGRATION_EVIDENCE"
+            )
+
+        return {
+            "channel":
+                channel,
+            "accepted":
+                accepted,
+            "score":
+                score,
+            "migration_posts":
+                migration_posts,
+            "operational_posts":
+                operational_posts,
+            "route_posts":
+                route_posts,
+            "sample_posts":
+                sample_count,
+            "reason":
+                reason,
+        }
+
+    def _validation_preview(
+        self,
+        validations: List[Dict[str, Any]],
+        limit: int = 8,
+    ) -> List[str]:
+        preview = []
+
+        for item in validations[
+            :limit
+        ]:
+            channel = item[
+                "channel"
+            ]
+
+            username = (
+                channel.get(
+                    "username"
+                )
+                or channel.get(
+                    "title"
+                )
+                or "unknown"
+            )
+
+            preview.append(
+                (
+                    f"@{username}"
+                    f"(score={item.get('score')},"
+                    f"mig={item.get('migration_posts')},"
+                    f"op={item.get('operational_posts')},"
+                    f"route={item.get('route_posts')},"
+                    f"{item.get('reason')})"
+                )
+            )
+
+        return preview
 
     # ======================================================
     # MESSAGE COLLECTION
@@ -684,22 +1347,17 @@ class TelegramCollector:
 
         seen_ids = set()
 
-        # Fair-share budget prevents one very active channel from consuming
-        # every available result.
+        if not channels:
+            return []
+
         per_channel_budget = max(
             1,
             (
                 max_results
-                + max(
-                    len(channels),
-                    1,
-                )
+                + len(channels)
                 - 1
             )
-            // max(
-                len(channels),
-                1,
-            ),
+            // len(channels),
         )
 
         for channel in channels:
@@ -747,7 +1405,6 @@ class TelegramCollector:
                             message_date is not None
                             and message_date < cutoff
                         ):
-                            # Telegram returns newest first within a channel.
                             break
 
                         if (
@@ -768,9 +1425,29 @@ class TelegramCollector:
                         if not normalized:
                             continue
 
-                        post_id = normalized[
-                            "post_id"
-                        ]
+                        # Extra post-level protection:
+                        # the message itself must contain migration context.
+                        lowered = (
+                            normalized[
+                                "text"
+                            ].lower()
+                        )
+
+                        migration_hits = (
+                            self._count_term_hits(
+                                lowered,
+                                self.MIGRATION_TERMS,
+                            )
+                        )
+
+                        if migration_hits == 0:
+                            continue
+
+                        post_id = (
+                            normalized[
+                                "post_id"
+                            ]
+                        )
 
                         if post_id in seen_ids:
                             continue
@@ -800,8 +1477,6 @@ class TelegramCollector:
                     ) from error
 
                 except Exception as error:
-                    # One inaccessible/deleted/restricted public channel
-                    # must not break the complete monitor run.
                     print(
                         "TELEGRAM CHANNEL WARNING: "
                         f"@{channel.get('username')} | "
@@ -964,7 +1639,7 @@ class TelegramCollector:
         }
 
     # ======================================================
-    # QUERY CONVERSION
+    # QUERY CONVERSION / DISCOVERY
     # ======================================================
 
     def _expand_query(
@@ -1046,64 +1721,90 @@ class TelegramCollector:
         search_terms: List[str],
     ) -> List[str]:
         """
-        Build channel-directory search terms.
+        Build a limited but multilingual directory-search set.
 
-        We prefer core migration concepts and named locations from the current
-        query. We intentionally do NOT search every operational verb because
-        that would discover huge numbers of irrelevant Telegram channels.
+        Generic migration queries automatically gain Western Mediterranean
+        discovery terms. This is source discovery only; actual messages still
+        pass content validation and the normal analytical pipeline.
         """
 
-        query_lower = str(
-            query
-            or ""
-        ).lower()
+        query_lower = (
+            str(
+                query
+                or ""
+            ).lower()
+        )
 
         result: List[str] = []
 
-        for seed in self.DISCOVERY_SEEDS:
-            if (
-                seed in query_lower
-                or seed in search_terms
-            ):
-                self._append_unique(
-                    result,
-                    seed,
-                )
+        # Core multilingual migration discovery.
+        preferred = (
+            "migration",
+            "migrant",
+            "migrantes",
+            "migración",
+            "refugee",
+            "الهجرة",
+        )
 
-        # Add useful query-specific non-generic terms such as "ceuta",
-        # "melilla", "morocco", "channel", etc.
-        generic_terms = set(
-            self.DISCOVERY_SEEDS
-        ) | {
-            "border",
-            "crossing",
-            "route",
-            "checkpoint",
-            "patrol",
-            "boat",
-            "vessel",
-            "sea",
-            "coast",
-            "guard",
-            "rescue",
-            "intercepted",
-            "departure",
-            "departing",
-            "leaving",
-            "arrived",
-            "arrival",
-            "migrants",
-            "refugees",
-        }
+        for term in preferred:
+            self._append_unique(
+                result,
+                term,
+            )
 
+        # Route-specific discovery relevant to the Western Mediterranean
+        # monitor, including Ceuta/Melilla and Moroccan terminology.
+        route_discovery = (
+            "ceuta",
+            "sebta",
+            "سبتة",
+            "melilla",
+            "morocco migration",
+            "maroc migration",
+            "marruecos migrantes",
+            "المغرب الهجرة",
+        )
+
+        for term in route_discovery:
+            self._append_unique(
+                result,
+                term,
+            )
+
+        # Query-specific terms such as "border", "boat", or named places are
+        # appended only while the cap permits.
         for term in search_terms:
-            cleaned = term.lower().strip()
+            cleaned = (
+                term.lower()
+                .strip()
+            )
 
             if (
                 not cleaned
-                or cleaned in generic_terms
-                or " " in cleaned
+                or cleaned in self.STOPWORDS
             ):
+                continue
+
+            # Generic one-word operational terms alone are weak channel names,
+            # so they are not prioritized for directory discovery.
+            if cleaned in {
+                "border",
+                "crossing",
+                "route",
+                "checkpoint",
+                "patrol",
+                "boat",
+                "vessel",
+                "sea",
+                "rescue",
+                "intercepted",
+                "departure",
+                "departing",
+                "leaving",
+                "arrived",
+                "arrival",
+            }:
                 continue
 
             self._append_unique(
@@ -1111,12 +1812,19 @@ class TelegramCollector:
                 cleaned,
             )
 
-        # Guarantee at least the two strongest generic discovery seeds.
-        if not result:
-            result = [
-                "migration",
-                "migrant",
-            ]
+        # If the current query itself names a route/location term, make sure
+        # it is present near the front of the list.
+        for route_term in self.ROUTE_TERMS:
+            if route_term in query_lower:
+                if route_term in result:
+                    result.remove(
+                        route_term
+                    )
+
+                result.insert(
+                    0,
+                    route_term,
+                )
 
         return result[
             :self.MAX_DISCOVERY_TERMS
@@ -1152,7 +1860,9 @@ class TelegramCollector:
 
         result = []
 
-        for item in raw.split(","):
+        for item in raw.split(
+            ","
+        ):
             cleaned = (
                 item.strip()
                 .lstrip("@")
@@ -1167,6 +1877,39 @@ class TelegramCollector:
                 )
 
         return result
+
+    @staticmethod
+    def _count_term_hits(
+        text: str,
+        terms,
+    ) -> int:
+        """
+        Count distinct configured terms present in normalized text.
+        Distinct-term counting avoids one repeated keyword dominating score.
+        """
+
+        normalized = (
+            str(
+                text
+                or ""
+            ).lower()
+        )
+
+        hits = 0
+
+        for term in terms:
+            cleaned = str(
+                term
+                or ""
+            ).lower().strip()
+
+            if (
+                cleaned
+                and cleaned in normalized
+            ):
+                hits += 1
+
+        return hits
 
     @staticmethod
     def _append_unique(
