@@ -7,7 +7,7 @@ main.py
 Description:
 Application entry point using:
 
-- X + Reddit + Mastodon Collectors
+- X + Reddit + Mastodon + Telegram Collectors
 - Query Engine
 - Noise Filter
 - Operational Event Filter
@@ -40,6 +40,7 @@ from dateutil import parser as date_parser
 from collectors.x_collector import XCollector
 from collectors.reddit_collector import RedditCollector
 from collectors.mastodon_collector import MastodonCollector
+from collectors.telegram_collector import TelegramCollector
 
 from analysis.keyword_filter import KeywordFilter
 from analysis.classifier import SignalClassifier
@@ -1724,6 +1725,10 @@ def main():
         MastodonCollector()
     )
 
+    telegram_collector = (
+        TelegramCollector()
+    )
+
     keyword_filter = KeywordFilter()
 
     classifier = SignalClassifier()
@@ -1853,16 +1858,19 @@ def main():
     total_x_posts_found = 0
     total_reddit_posts_found = 0
     total_mastodon_posts_found = 0
+    total_telegram_posts_found = 0
 
     unique_source_counts = {
         "X": 0,
         "REDDIT": 0,
         "MASTODON": 0,
+        "TELEGRAM": 0,
     }
 
     x_collector_errors = 0
     reddit_collector_errors = 0
     mastodon_collector_errors = 0
+    telegram_collector_errors = 0
 
     total_noise_filtered = 0
     total_non_operational_filtered = 0
@@ -1959,6 +1967,7 @@ def main():
             x_posts = []
             reddit_posts = []
             mastodon_posts = []
+            telegram_posts = []
 
             try:
                 x_posts = (
@@ -2018,6 +2027,23 @@ def main():
                     f"{error}"
                 )
 
+            try:
+                telegram_posts = (
+                    telegram_collector.search_recent(
+                        query=query_text,
+                        max_results=10,
+                        max_pages=1,
+                    )
+                )
+
+            except Exception as error:
+                telegram_collector_errors += 1
+
+                print(
+                    "TELEGRAM COLLECTOR WARNING: "
+                    f"{error}"
+                )
+
             total_x_posts_found += (
                 len(x_posts)
             )
@@ -2030,10 +2056,15 @@ def main():
                 len(mastodon_posts)
             )
 
+            total_telegram_posts_found += (
+                len(telegram_posts)
+            )
+
             posts = (
                 x_posts
                 + reddit_posts
                 + mastodon_posts
+                + telegram_posts
             )
 
             total_posts_found += (
@@ -2058,6 +2089,11 @@ def main():
             print(
                 "Mastodon posts found: "
                 f"{len(mastodon_posts)}"
+            )
+
+            print(
+                "Telegram posts found: "
+                f"{len(telegram_posts)}"
             )
 
             print(
@@ -2696,6 +2732,11 @@ def main():
     )
 
     print(
+        "Telegram posts returned: "
+        f"{total_telegram_posts_found}"
+    )
+
+    print(
         "Unique X posts: "
         f"{unique_source_counts['X']}"
     )
@@ -2711,6 +2752,11 @@ def main():
     )
 
     print(
+        "Unique Telegram posts: "
+        f"{unique_source_counts['TELEGRAM']}"
+    )
+
+    print(
         "X collector errors: "
         f"{x_collector_errors}"
     )
@@ -2723,6 +2769,11 @@ def main():
     print(
         "Mastodon collector errors: "
         f"{mastodon_collector_errors}"
+    )
+
+    print(
+        "Telegram collector errors: "
+        f"{telegram_collector_errors}"
     )
 
     print(
