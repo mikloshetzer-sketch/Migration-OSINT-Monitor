@@ -39,6 +39,24 @@ on:
         default: false
         type: boolean
 
+      max_rate_limit_retries:
+        description: "Retries after X HTTP 429"
+        required: true
+        default: "3"
+        type: string
+
+      max_rate_limit_wait_seconds:
+        description: "Maximum single wait allowed after HTTP 429"
+        required: true
+        default: "900"
+        type: string
+
+      inter_request_delay_seconds:
+        description: "Delay between successful X API requests"
+        required: true
+        default: "2"
+        type: string
+
 permissions:
   contents: write
 
@@ -94,6 +112,9 @@ jobs:
           echo "Max total posts: ${{ inputs.max_total_posts }}"
           echo "Max pages/query/day: ${{ inputs.max_pages_per_query_day }}"
           echo "Quiet log: ${{ inputs.quiet_log }}"
+          echo "Rate-limit retries: ${{ inputs.max_rate_limit_retries }}"
+          echo "Max rate-limit wait: ${{ inputs.max_rate_limit_wait_seconds }} seconds"
+          echo "Inter-request delay: ${{ inputs.inter_request_delay_seconds }} seconds"
           echo "Reddit: DISABLED"
           echo "Mastodon: DISABLED"
 
@@ -110,6 +131,10 @@ jobs:
 
           X_BACKFILL_REQUEST_PAGE_SIZE: "100"
           X_BACKFILL_QUIET: ${{ inputs.quiet_log }}
+
+          X_BACKFILL_MAX_RATE_LIMIT_RETRIES: ${{ inputs.max_rate_limit_retries }}
+          X_BACKFILL_MAX_RATE_LIMIT_WAIT_SECONDS: ${{ inputs.max_rate_limit_wait_seconds }}
+          X_BACKFILL_INTER_REQUEST_DELAY_SECONDS: ${{ inputs.inter_request_delay_seconds }}
 
         run: |
           python analysis/x_full_archive_test.py
