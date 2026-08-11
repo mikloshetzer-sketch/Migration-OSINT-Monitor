@@ -120,6 +120,18 @@ class SignalClassifier:
             r"\brefugees?\s+crossed\s+into\b",
             r"\bmigrants?\s+crossed\s+from\b",
             r"\brefugees?\s+crossed\s+from\b",
+
+            # Channel-crossing reports.
+            # This protects explicit movement events from being
+            # misclassified by a later contextual phrase such as
+            # "migrant camp".
+            #
+            # Example:
+            # "423 people crossed the channel yesterday ..."
+            r"\b(?:people|migrants?|refugees?)\s+crossed\s+the\s+channel\b",
+            r"\b\d[\d,\.]*\s+(?:people|migrants?|refugees?)\s+crossed\s+the\s+channel\b",
+            r"\b(?:hundreds?|thousands?|dozens?)\s+of\s+(?:people|migrants?|refugees?)\s+crossed\s+the\s+channel\b",
+
             r"\bmass\s+border\s+crossing\b",
             r"\bmass\s+crossings?\b",
 
