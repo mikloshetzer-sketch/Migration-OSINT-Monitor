@@ -50,9 +50,9 @@ jobs:
           X_FULL_ARCHIVE_TEST_END_TIME: ${{ inputs.end_time }}
           X_FULL_ARCHIVE_TEST_QUERY: ${{ inputs.query }}
 
-          # Deliberately fixed at the API minimum:
-          # one request, at most 10 returned posts.
+          # Deliberately fixed at 10 posts for a minimal-cost capability test.
           X_FULL_ARCHIVE_TEST_MAX_RESULTS: "10"
 
         run: |
-          python tools/x_full_archive_test.py
+          python analysis/x_full_archive_test.py
+
