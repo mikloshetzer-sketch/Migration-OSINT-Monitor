@@ -1,58 +1,224 @@
-name: X Full-Archive Capability Test
+name: X Historical Backfill
 
 on:
   workflow_dispatch:
     inputs:
-      start_time:
-        description: "Historical UTC start time"
+      start_date:
+        description: "Inclusive historical start date (YYYY-MM-DD)"
         required: true
-        default: "2026-06-15T08:00:00Z"
+        default: "2026-06-15"
         type: string
 
-      end_time:
-        description: "Historical UTC end time"
+      end_date:
+        description: "Inclusive historical end date (YYYY-MM-DD)"
         required: true
-        default: "2026-06-15T09:00:00Z"
+        default: "2026-06-15"
         type: string
 
-      query:
-        description: "Small X full-archive test query"
+      max_posts_per_day:
+        description: "Hard X post budget per calendar day across all query groups"
         required: true
-        default: "(migration OR migrant OR migrants OR refugee OR refugees OR asylum) -is:retweet"
+        default: "100"
         type: string
+
+      max_total_posts:
+        description: "Hard X post budget for the entire backfill run"
+        required: true
+        default: "500"
+        type: string
+
+      max_pages_per_query_day:
+        description: "Maximum X API pages per query group per day"
+        required: true
+        default: "3"
+        type: string
+
+      quiet_log:
+        description: "Reduce per-post GitHub Actions logging"
+        required: true
+        default: true
+        type: boolean
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  test-x-full-archive:
+  x-historical-backfill:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Restore Migration OSINT database
+        id: restore-database
+        uses: actions/cache/restore@v4
+        with:
+          path: database/migration_osint_monitor.db
+          key: migration-osint-db-${{ github.run_id }}
+          restore-keys: |
+            migration-osint-db-
+
+      - name: Verify restored database
+        run: |
+          if [ -f database/migration_osint_monitor.db ]; then
+            echo "Existing migration_osint_monitor.db restored."
+            ls -lh database/migration_osint_monitor.db
+          else
+            echo "ERROR: Backfill requires the existing Migration OSINT database."
+            echo "Run the normal monitor first so a database cache exists."
+            exit 1
+          fi
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Install test dependency
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests
+          pip install -r requirements.txt
 
-      - name: Run X full-archive capability test
+      - name: Show backfill safety limits
+        run: |
+          echo "==================================="
+          echo "X HISTORICAL BACKFILL CONFIG"
+          echo "==================================="
+          echo "Source: X ONLY"
+          echo "Start date: ${{ inputs.start_date }}"
+          echo "End date: ${{ inputs.end_date }}"
+          echo "Max posts/day: ${{ inputs.max_posts_per_day }}"
+          echo "Max total posts: ${{ inputs.max_total_posts }}"
+          echo "Max pages/query/day: ${{ inputs.max_pages_per_query_day }}"
+          echo "Quiet log: ${{ inputs.quiet_log }}"
+          echo "Reddit: DISABLED"
+          echo "Mastodon: DISABLED"
+
+      - name: Run X historical backfill
         env:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
 
-          X_FULL_ARCHIVE_TEST_START_TIME: ${{ inputs.start_time }}
-          X_FULL_ARCHIVE_TEST_END_TIME: ${{ inputs.end_time }}
-          X_FULL_ARCHIVE_TEST_QUERY: ${{ inputs.query }}
+          X_BACKFILL_START_DATE: ${{ inputs.start_date }}
+          X_BACKFILL_END_DATE: ${{ inputs.end_date }}
 
-          # Deliberately fixed at 10 posts for a minimal-cost capability test.
-          X_FULL_ARCHIVE_TEST_MAX_RESULTS: "10"
+          X_BACKFILL_MAX_POSTS_PER_DAY: ${{ inputs.max_posts_per_day }}
+          X_BACKFILL_MAX_TOTAL_POSTS: ${{ inputs.max_total_posts }}
+          X_BACKFILL_MAX_PAGES_PER_QUERY_DAY: ${{ inputs.max_pages_per_query_day }}
+
+          X_BACKFILL_REQUEST_PAGE_SIZE: "100"
+          X_BACKFILL_QUIET: ${{ inputs.quiet_log }}
 
         run: |
           python analysis/x_full_archive_test.py
 
+      - name: Export dashboard data
+        run: |
+          python -m dashboard.export_dashboard_data
+
+      - name: Verify historical timeline export
+        run: |
+          python - <<'PY'
+          import json
+
+          with open(
+              "dashboard-data.json",
+              "r",
+              encoding="utf-8",
+          ) as f:
+              data = json.load(f)
+
+          timeline = (
+              data.get(
+                  "signal_timeline",
+                  {},
+              )
+              or {}
+          )
+
+          print(
+              "Timeline schema:",
+              timeline.get(
+                  "schema_version"
+              ),
+          )
+
+          print(
+              "History days:",
+              timeline.get(
+                  "history_days"
+              ),
+          )
+
+          print(
+              "Timeline items:",
+              timeline.get(
+                  "total_items"
+              ),
+          )
+
+          print(
+              "Layer counts:",
+              timeline.get(
+                  "layer_counts"
+              ),
+          )
+
+          current_run = (
+              data.get(
+                  "current_run",
+                  {}
+              )
+              or {}
+          )
+
+          print(
+              "Dashboard current run status:",
+              current_run.get(
+                  "status"
+              ),
+          )
+
+          if (
+              current_run.get(
+                  "status"
+              )
+              == "BACKFILL_SUCCESS"
+          ):
+              raise SystemExit(
+                  "ERROR: Backfill incorrectly became the dashboard Current Run."
+              )
+          PY
+
+      - name: Publish dashboard data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add dashboard-data.json
+
+          if git diff --cached --quiet; then
+            echo "No dashboard data changes to commit."
+          else
+            git commit -m "Update Migration OSINT historical backfill data"
+            git push origin HEAD:main
+          fi
+
+      - name: Verify database after backfill
+        if: always()
+        run: |
+          if [ -f database/migration_osint_monitor.db ]; then
+            echo "migration_osint_monitor.db exists after backfill."
+            ls -lh database/migration_osint_monitor.db
+          else
+            echo "WARNING: migration_osint_monitor.db was not found."
+          fi
+
+      - name: Save Migration OSINT database
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: database/migration_osint_monitor.db
+          key: migration-osint-db-${{ github.run_id }}
