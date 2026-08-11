@@ -79,16 +79,16 @@ TOP_ACCESS_POST_LIMIT = 3
 WEEK_HISTORY_COUNT = 8
 
 # Signal Timeline V1
-TIMELINE_WINDOW_HOURS = 24 * 7
-TIMELINE_ITEM_LIMIT = 150
+TIMELINE_WINDOW_HOURS = 24 * 56
+TIMELINE_ITEM_LIMIT = 2500
 
 # INFORMATION layer:
 # Do not use operational_confidence as the primary gate. In the current
 # pipeline most rejected posts receive 0.1, so a 0.20-0.49 window produces
 # an empty INFORMATION layer. Instead, select a small number of filtered
 # posts using migration-operational context cues.
-TIMELINE_INFORMATION_CANDIDATE_LIMIT = 300
-TIMELINE_INFORMATION_LIMIT = 30
+TIMELINE_INFORMATION_CANDIDATE_LIMIT = 2500
+TIMELINE_INFORMATION_LIMIT = 400
 TIMELINE_INFORMATION_MIN_SCORE = 2
 
 HIGH_CONFIDENCE_THRESHOLD = 0.75
@@ -4147,9 +4147,10 @@ def get_signal_timeline(
     )
 
     return {
-        "schema_version": "1.1",
+        "schema_version": "2.0",
         "window_hours": hours,
         "default_window": "7D",
+        "history_days": 56,
         "available_windows_hours": [
             24,
             72,
@@ -4562,7 +4563,7 @@ def export_dashboard_data():
         )
 
         print(
-            "Signal timeline items (7d): "
+            "Signal timeline history items: "
             f"{data['signal_timeline']['total_items']}"
         )
 
