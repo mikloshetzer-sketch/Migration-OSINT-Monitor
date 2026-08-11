@@ -81,8 +81,15 @@ WEEK_HISTORY_COUNT = 8
 # Signal Timeline V1
 TIMELINE_WINDOW_HOURS = 24 * 7
 TIMELINE_ITEM_LIMIT = 150
-TIMELINE_INFORMATION_MIN_CONFIDENCE = 0.20
-TIMELINE_INFORMATION_MAX_CONFIDENCE = 0.49
+
+# INFORMATION layer:
+# Do not use operational_confidence as the primary gate. In the current
+# pipeline most rejected posts receive 0.1, so a 0.20-0.49 window produces
+# an empty INFORMATION layer. Instead, select a small number of filtered
+# posts using migration-operational context cues.
+TIMELINE_INFORMATION_CANDIDATE_LIMIT = 300
+TIMELINE_INFORMATION_LIMIT = 30
+TIMELINE_INFORMATION_MIN_SCORE = 2
 
 HIGH_CONFIDENCE_THRESHOLD = 0.75
 
@@ -3049,6 +3056,260 @@ def timeline_excerpt(
     )
 
 
+TIMELINE_INFORMATION_PATTERNS = [
+    # Physical border / crossing context
+    (
+        "border",
+        r"\bborder(?:s)?\b",
+        1,
+    ),
+    (
+        "crossing",
+        r"\bcross(?:ing|ings|ed|es)?\b",
+        1,
+    ),
+    (
+        "channel",
+        r"\bchannel\b",
+        1,
+    ),
+    (
+        "route",
+        r"\broute(?:s)?\b",
+        1,
+    ),
+    (
+        "checkpoint",
+        r"\bcheckpoint(?:s)?\b",
+        1,
+    ),
+    (
+        "tunnel",
+        r"\btunnel(?:s)?\b",
+        1,
+    ),
+
+    # Sea movement
+    (
+        "boat",
+        r"\bboat(?:s)?\b",
+        1,
+    ),
+    (
+        "dinghy",
+        r"\bdingh(?:y|ies)\b",
+        1,
+    ),
+    (
+        "vessel",
+        r"\bvessel(?:s)?\b",
+        1,
+    ),
+    (
+        "sea",
+        r"\bsea\b",
+        1,
+    ),
+    (
+        "coast_guard",
+        r"\bcoast\s+guard\b",
+        1,
+    ),
+
+    # Enforcement / rescue
+    (
+        "interception",
+        r"\bintercept(?:ed|ion|ions|ing)?\b",
+        1,
+    ),
+    (
+        "rescue",
+        r"\brescu(?:e|ed|es|ing)\b",
+        1,
+    ),
+    (
+        "detention",
+        r"\bdetain(?:ed|ing)?\b|\bdetention\b",
+        1,
+    ),
+    (
+        "deportation",
+        r"\bdeport(?:ed|ation|ations|ing)?\b",
+        1,
+    ),
+
+    # Smuggling / facilitation
+    (
+        "smuggling",
+        r"\bsmuggl(?:e|er|ers|ing)\b",
+        1,
+    ),
+    (
+        "trafficking",
+        r"\btraffick(?:er|ers|ing)\b",
+        1,
+    ),
+
+    # Reception / camp infrastructure
+    (
+        "reception_centre",
+        r"\breception\s+cent(?:er|re)s?\b",
+        1,
+    ),
+    (
+        "refugee_camp",
+        r"\brefugee\s+camp(?:s)?\b",
+        1,
+    ),
+    (
+        "migrant_camp",
+        r"\bmigrant\s+camp(?:s)?\b",
+        1,
+    ),
+
+    # Concrete movement / arrival wording
+    (
+        "arrival",
+        r"\barriv(?:e|ed|al|als|ing)\b",
+        1,
+    ),
+    (
+        "landing",
+        r"\bland(?:ed|ing|ings)\b",
+        1,
+    ),
+    (
+        "departure",
+        r"\bdepart(?:ed|ure|ures|ing)\b",
+        1,
+    ),
+]
+
+TIMELINE_INFORMATION_FRESHNESS_PATTERNS = [
+    (
+        "today",
+        r"\btoday\b",
+    ),
+    (
+        "tonight",
+        r"\btonight\b",
+    ),
+    (
+        "yesterday",
+        r"\byesterday\b",
+    ),
+    (
+        "breaking",
+        r"\bbreaking\b",
+    ),
+    (
+        "latest",
+        r"\blatest\b",
+    ),
+    (
+        "now",
+        r"\bnow\b",
+    ),
+    (
+        "hours_ago",
+        r"\bhours?\s+ago\b",
+    ),
+]
+
+
+def score_information_candidate(
+    post,
+):
+    """
+    Scores a filtered CollectedPost for the INFORMATION layer.
+
+    The INFORMATION layer is not a second event detector. It is a compact
+    analyst-context layer for posts that were rejected by the operational
+    pipeline but still contain multiple concrete migration-operational cues.
+
+    Returns:
+        {
+            "score": int,
+            "matched_cues": list[str],
+            "freshness_cues": list[str],
+        }
+    """
+
+    text = str(
+        post.text
+        or ""
+    ).strip()
+
+    if not text:
+        return {
+            "score": 0,
+            "matched_cues": [],
+            "freshness_cues": [],
+        }
+
+    matched_cues = []
+    score = 0
+
+    for (
+        cue_name,
+        pattern,
+        weight,
+    ) in TIMELINE_INFORMATION_PATTERNS:
+
+        if not re.search(
+            pattern,
+            text,
+            flags=re.IGNORECASE,
+        ):
+            continue
+
+        matched_cues.append(
+            cue_name
+        )
+
+        score += weight
+
+    freshness_cues = []
+
+    for (
+        cue_name,
+        pattern,
+    ) in TIMELINE_INFORMATION_FRESHNESS_PATTERNS:
+
+        if not re.search(
+            pattern,
+            text,
+            flags=re.IGNORECASE,
+        ):
+            continue
+
+        freshness_cues.append(
+            cue_name
+        )
+
+    # Freshness helps ranking but cannot make a generic post eligible by
+    # itself. At least two migration-operational context cues are still
+    # required below.
+    if freshness_cues:
+        score += 1
+
+    # Repeated collection across runs/queries is weak supporting evidence that
+    # a post is persistent in the monitored information space.
+    collection_count = safe_int(
+        post.collection_count,
+        1,
+    )
+
+    if collection_count >= 2:
+        score += 1
+
+    return {
+        "score": score,
+        "matched_cues": matched_cues,
+        "freshness_cues": freshness_cues,
+    }
+
+
 def get_signal_timeline(
     session,
     hours=TIMELINE_WINDOW_HOURS,
@@ -3089,16 +3350,14 @@ def get_signal_timeline(
     # INFORMATION LAYER
     # ------------------------------------------------------
     #
-    # We intentionally do NOT export every filtered post.
-    # The full CollectedPost history remains in SQLite, but the timeline
-    # would become unusable if all general discussion appeared here.
-    #
-    # V1 therefore keeps only "near-operational" non-noise posts with a
-    # confidence above the general 0.1 background level but below the
-    # operational threshold.
+    # The full filtered-post history remains stored in CollectedPost.
+    # Timeline V1.1 does NOT expose every rejected post. Instead it ranks
+    # recent non-operational, non-noise, non-influence posts by concrete
+    # migration-operational context cues and keeps only a small analyst-
+    # useful subset.
     # ------------------------------------------------------
 
-    information_rows = (
+    information_candidates = (
         session.execute(
             select(
                 CollectedPost
@@ -3123,31 +3382,90 @@ def get_signal_timeline(
                 CollectedPost.influence_detected
                 == False  # noqa: E712
             )
-            .where(
-                CollectedPost.operational_confidence
-                .is_not(None)
-            )
-            .where(
-                CollectedPost.operational_confidence
-                >= TIMELINE_INFORMATION_MIN_CONFIDENCE
-            )
-            .where(
-                CollectedPost.operational_confidence
-                <= TIMELINE_INFORMATION_MAX_CONFIDENCE
-            )
             .order_by(
                 CollectedPost.published_at.desc(),
                 CollectedPost.id.desc(),
             )
             .limit(
-                TIMELINE_ITEM_LIMIT
+                TIMELINE_INFORMATION_CANDIDATE_LIMIT
             )
         )
         .scalars()
         .all()
     )
 
-    for post in information_rows:
+    scored_information = []
+
+    for post in information_candidates:
+        score_result = (
+            score_information_candidate(
+                post
+            )
+        )
+
+        # Require at least two distinct migration-operational cues.
+        # This prevents generic political discussion containing one word
+        # such as "migration" or "refugee" from filling the timeline.
+        if (
+            len(
+                score_result.get(
+                    "matched_cues",
+                    [],
+                )
+            )
+            < 2
+        ):
+            continue
+
+        if (
+            safe_int(
+                score_result.get(
+                    "score"
+                )
+            )
+            < TIMELINE_INFORMATION_MIN_SCORE
+        ):
+            continue
+
+        scored_information.append(
+            (
+                safe_int(
+                    score_result.get(
+                        "score"
+                    )
+                ),
+                post.published_at,
+                post,
+                score_result,
+            )
+        )
+
+    scored_information.sort(
+        key=lambda row: (
+            row[0],
+            row[1]
+            or datetime.min,
+        ),
+        reverse=True,
+    )
+
+    scored_information = (
+        scored_information[
+            :TIMELINE_INFORMATION_LIMIT
+        ]
+    )
+
+    for (
+        information_score,
+        _published_at,
+        post,
+        score_result,
+    ) in scored_information:
+
+        confidence = safe_float(
+            post.operational_confidence
+        )
+
         items.append(
             {
                 "timeline_id": (
@@ -3178,16 +3496,28 @@ def get_signal_timeline(
                 "primary_location": "-",
                 "country": "-",
 
-                "confidence": safe_float(
-                    post.operational_confidence
-                ),
+                "confidence": confidence,
                 "priority": "INFO",
                 "priority_score": round(
-                    safe_float(
-                        post.operational_confidence
-                    )
-                    * 100,
+                    information_score
+                    * 10,
                     2,
+                ),
+
+                "information_score": (
+                    information_score
+                ),
+                "matched_information_cues": (
+                    score_result.get(
+                        "matched_cues",
+                        []
+                    )
+                ),
+                "freshness_cues": (
+                    score_result.get(
+                        "freshness_cues",
+                        []
+                    )
                 ),
 
                 "text": post.text or "",
@@ -3817,7 +4147,7 @@ def get_signal_timeline(
     )
 
     return {
-        "schema_version": "1.0",
+        "schema_version": "1.1",
         "window_hours": hours,
         "default_window": "7D",
         "available_windows_hours": [
