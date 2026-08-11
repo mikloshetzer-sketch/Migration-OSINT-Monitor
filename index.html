@@ -1029,6 +1029,344 @@
       line-height:1.5;
     }
 
+
+    /* =====================================================
+       EARLY WARNING TIMELINE
+       ===================================================== */
+
+    .timeline-panel{position:relative}
+
+    .timeline-toolbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+      margin:18px 0 14px;
+      padding:13px;
+      background:var(--card-soft);
+      border:1px solid var(--line);
+      border-radius:14px;
+    }
+
+    .timeline-toolbar-left,
+    .timeline-toolbar-right{
+      display:flex;
+      align-items:center;
+      gap:7px;
+      flex-wrap:wrap;
+    }
+
+    .timeline-filter-label{
+      color:var(--muted-2);
+      font-size:9px;
+      font-weight:950;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+
+    .timeline-btn{
+      border:1px solid var(--line-2);
+      background:#fff;
+      color:var(--muted);
+      padding:7px 11px;
+      border-radius:999px;
+      font-size:10px;
+      font-weight:900;
+      cursor:pointer;
+    }
+
+    .timeline-btn.active{
+      background:var(--navy);
+      color:#fff;
+      border-color:var(--navy);
+    }
+
+    .timeline-layer-btn[data-layer="INFORMATION"].active{
+      background:var(--blue);border-color:var(--blue)
+    }
+    .timeline-layer-btn[data-layer="EARLY_WARNING"].active{
+      background:var(--orange);border-color:var(--orange)
+    }
+    .timeline-layer-btn[data-layer="OPERATIONAL"].active{
+      background:var(--red);border-color:var(--red)
+    }
+    .timeline-layer-btn[data-layer="CORRELATED"].active{
+      background:var(--purple);border-color:var(--purple)
+    }
+
+    .timeline-select{
+      min-width:145px;
+      border:1px solid var(--line-2);
+      background:#fff;
+      color:var(--navy);
+      border-radius:10px;
+      padding:8px 10px;
+      font-size:10px;
+      font-weight:850;
+    }
+
+    .timeline-summary{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:9px;
+      margin-bottom:15px;
+    }
+
+    .timeline-summary-card{
+      position:relative;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:12px 14px 12px 16px;
+      overflow:hidden;
+    }
+
+    .timeline-summary-card::before{
+      content:"";
+      position:absolute;
+      left:0;top:0;bottom:0;
+      width:4px;
+      background:var(--blue);
+    }
+    .timeline-summary-card.warning::before{background:var(--orange)}
+    .timeline-summary-card.operational::before{background:var(--red)}
+    .timeline-summary-card.correlated::before{background:var(--purple)}
+
+    .timeline-summary-label{
+      color:var(--muted);
+      font-size:9px;
+      font-weight:950;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .timeline-summary-value{
+      margin-top:4px;
+      color:var(--navy);
+      font-size:25px;
+      line-height:1;
+      font-weight:950;
+    }
+
+    .timeline-summary-sub{
+      margin-top:4px;
+      color:var(--muted-2);
+      font-size:9px;
+    }
+
+    .timeline-list{
+      position:relative;
+      padding:2px 0;
+    }
+
+    .timeline-list::before{
+      content:"";
+      position:absolute;
+      left:114px;
+      top:8px;
+      bottom:8px;
+      width:2px;
+      background:#d7e5eb;
+    }
+
+    .timeline-item{
+      display:grid;
+      grid-template-columns:94px 40px minmax(0,1fr);
+      gap:0 10px;
+      padding:7px 0;
+      position:relative;
+    }
+
+    .timeline-time{
+      text-align:right;
+      padding-top:11px;
+    }
+
+    .timeline-time-main{
+      color:var(--navy);
+      font-size:11px;
+      font-weight:950;
+    }
+
+    .timeline-time-date{
+      color:var(--muted-2);
+      font-size:9px;
+      font-weight:800;
+      margin-top:2px;
+    }
+
+    .timeline-marker-wrap{
+      display:flex;
+      justify-content:center;
+      padding-top:12px;
+      z-index:2;
+    }
+
+    .timeline-marker{
+      width:15px;
+      height:15px;
+      border-radius:50%;
+      border:4px solid #fff;
+      background:var(--blue);
+      box-shadow:0 0 0 2px var(--blue);
+    }
+
+    .layer-EARLY_WARNING .timeline-marker{
+      background:var(--orange);box-shadow:0 0 0 2px var(--orange)
+    }
+    .layer-OPERATIONAL .timeline-marker{
+      background:var(--red);box-shadow:0 0 0 2px var(--red)
+    }
+    .layer-CORRELATED .timeline-marker{
+      background:var(--purple);box-shadow:0 0 0 2px var(--purple)
+    }
+
+    .timeline-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-left:4px solid var(--blue);
+      border-radius:12px;
+      padding:12px 14px;
+      transition:.15s ease;
+    }
+
+    .timeline-card:hover{
+      border-color:#b7d3df;
+      box-shadow:0 5px 14px rgba(24,70,95,.07);
+      transform:translateY(-1px);
+    }
+
+    .layer-EARLY_WARNING .timeline-card{border-left-color:var(--orange)}
+    .layer-OPERATIONAL .timeline-card{border-left-color:var(--red)}
+    .layer-CORRELATED .timeline-card{border-left-color:var(--purple)}
+
+    .timeline-card-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:10px;
+      margin-bottom:7px;
+    }
+
+    .timeline-card-title{
+      display:flex;
+      gap:6px;
+      flex-wrap:wrap;
+      align-items:center;
+      min-width:0;
+    }
+
+    .timeline-layer-badge,
+    .timeline-type-badge,
+    .timeline-priority{
+      display:inline-flex;
+      align-items:center;
+      border-radius:999px;
+      padding:5px 7px;
+      font-size:8px;
+      line-height:1;
+      font-weight:950;
+      letter-spacing:.05em;
+      text-transform:uppercase;
+    }
+
+    .timeline-layer-badge{background:var(--blue-soft);color:#0877a8}
+    .layer-EARLY_WARNING .timeline-layer-badge{background:#fff3dd;color:#a66500}
+    .layer-OPERATIONAL .timeline-layer-badge{background:#fff0ef;color:#b93430}
+    .layer-CORRELATED .timeline-layer-badge{background:#f1edff;color:#6541c7}
+
+    .timeline-type-badge{
+      background:#eef4f7;
+      color:var(--navy);
+      max-width:300px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    .timeline-priority{background:#eef4f7;color:var(--muted)}
+    .timeline-priority.high{background:var(--high-bg);color:var(--high)}
+    .timeline-priority.medium{background:var(--med-bg);color:var(--med)}
+    .timeline-priority.low{background:var(--low-bg);color:var(--low)}
+    .timeline-priority.info{background:var(--blue-soft);color:#0877a8}
+
+    .timeline-meta{
+      display:flex;
+      gap:5px 12px;
+      flex-wrap:wrap;
+      margin-bottom:6px;
+      color:var(--muted);
+      font-size:9px;
+      font-weight:750;
+    }
+
+    .timeline-meta strong{color:var(--navy);font-weight:900}
+
+    .timeline-text{
+      margin:0;
+      color:#3d5969;
+      font-size:11px;
+      line-height:1.48;
+      white-space:pre-line;
+    }
+
+    .timeline-foot{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      margin-top:8px;
+      padding-top:7px;
+      border-top:1px solid #edf2f5;
+    }
+
+    .timeline-foot-left{
+      display:flex;
+      gap:9px;
+      flex-wrap:wrap;
+      color:var(--muted-2);
+      font-size:8px;
+    }
+
+    .timeline-source-link{
+      color:#087eb3;
+      font-size:9px;
+      font-weight:900;
+      text-decoration:none;
+    }
+
+    .timeline-source-link:hover{text-decoration:underline}
+
+    .timeline-empty{
+      margin:10px 0 2px 154px;
+      background:var(--card-soft);
+      border:1px dashed var(--line-2);
+      border-radius:12px;
+      padding:17px;
+      color:var(--muted);
+      text-align:center;
+      font-size:11px;
+    }
+
+    .timeline-load-more{
+      display:flex;
+      justify-content:center;
+      padding-top:12px;
+    }
+
+    .timeline-method-note{
+      margin-top:13px;
+      padding:10px 12px;
+      border:1px solid var(--line);
+      border-radius:11px;
+      background:var(--card-soft);
+      color:var(--muted);
+      font-size:9px;
+      line-height:1.5;
+    }
+
+
     /* =====================================================
        RESPONSIVE
        ===================================================== */
@@ -1049,6 +1387,13 @@
     }
 
     @media (max-width:900px){
+      .timeline-summary{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .timeline-list::before{left:20px}
+      .timeline-item{grid-template-columns:40px minmax(0,1fr);gap:0 7px}
+      .timeline-time{grid-column:2;text-align:left;padding:0 0 4px}
+      .timeline-marker-wrap{grid-column:1;grid-row:1 / span 2;padding-top:18px}
+      .timeline-card{grid-column:2}
+      .timeline-empty{margin-left:0}
       .topbar-grid{grid-template-columns:1fr}
       .header-actions{align-items:flex-start; min-width:0}
       .action-row{justify-content:flex-start}
@@ -1062,6 +1407,11 @@
     }
 
     @media (max-width:640px){
+      .timeline-summary{grid-template-columns:1fr 1fr}
+      .timeline-toolbar{align-items:flex-start}
+      .timeline-toolbar-left,.timeline-toolbar-right{width:100%}
+      .timeline-select{flex:1;min-width:120px}
+      .timeline-card-head{flex-direction:column}
       .shell{width:min(var(--max), calc(100% - 20px))}
       .topbar{padding-top:18px}
       .kpi-grid{grid-template-columns:repeat(2, 1fr)}
@@ -1211,6 +1561,85 @@
         </div>
         <div class="warning-list" id="warningList">
           <div class="empty-state">Influence adatok betöltése…</div>
+        </div>
+      </section>
+
+
+      <section class="panel accent-purple timeline-panel section-pad" id="timelinePanel">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Signal Timeline</div>
+            <h3>Early Warning Timeline</h3>
+            <div class="section-sub">
+              Információs kontextus → korai jelzés → operatív esemény → korrelált eseményforrás.
+              Alapértelmezett nézet: 7 nap.
+            </div>
+          </div>
+          <span class="section-sub" id="timelineVisibleLabel">—</span>
+        </div>
+
+        <div class="timeline-toolbar">
+          <div class="timeline-toolbar-left">
+            <span class="timeline-filter-label">Időablak</span>
+            <button class="timeline-btn timeline-window-btn" data-hours="24">24H</button>
+            <button class="timeline-btn timeline-window-btn" data-hours="72">72H</button>
+            <button class="timeline-btn timeline-window-btn active" data-hours="168">7D</button>
+
+            <span class="timeline-filter-label" style="margin-left:7px">Réteg</span>
+            <button class="timeline-btn timeline-layer-btn active" data-layer="ALL">ALL</button>
+            <button class="timeline-btn timeline-layer-btn" data-layer="INFORMATION">INFO</button>
+            <button class="timeline-btn timeline-layer-btn" data-layer="EARLY_WARNING">EARLY WARNING</button>
+            <button class="timeline-btn timeline-layer-btn" data-layer="OPERATIONAL">OPERATIONAL</button>
+            <button class="timeline-btn timeline-layer-btn" data-layer="CORRELATED">CORRELATED</button>
+          </div>
+
+          <div class="timeline-toolbar-right">
+            <select class="timeline-select" id="timelineSourceFilter">
+              <option value="ALL">Minden forrás</option>
+            </select>
+            <select class="timeline-select" id="timelineRegionFilter">
+              <option value="ALL">Minden régió</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="timeline-summary">
+          <div class="timeline-summary-card">
+            <div class="timeline-summary-label">Information</div>
+            <div class="timeline-summary-value" id="timelineInformationCount">—</div>
+            <div class="timeline-summary-sub">szűrt elemzői kontextus</div>
+          </div>
+          <div class="timeline-summary-card warning">
+            <div class="timeline-summary-label">Early Warning</div>
+            <div class="timeline-summary-value" id="timelineWarningCount">—</div>
+            <div class="timeline-summary-sub">influence / mobilizáció</div>
+          </div>
+          <div class="timeline-summary-card operational">
+            <div class="timeline-summary-label">Operational</div>
+            <div class="timeline-summary-value" id="timelineOperationalCount">—</div>
+            <div class="timeline-summary-sub">azonosított esemény</div>
+          </div>
+          <div class="timeline-summary-card correlated">
+            <div class="timeline-summary-label">Correlated</div>
+            <div class="timeline-summary-value" id="timelineCorrelatedCount">—</div>
+            <div class="timeline-summary-sub">EventGrouphoz kapcsolt</div>
+          </div>
+        </div>
+
+        <div class="timeline-list" id="signalTimelineList">
+          <div class="timeline-empty">Timeline adatok betöltése…</div>
+        </div>
+
+        <div class="timeline-load-more">
+          <button class="section-action" id="timelineLoadMore" type="button" style="display:none">
+            További jelzések
+          </button>
+        </div>
+
+        <div class="timeline-method-note">
+          <strong>Értelmezés:</strong> az INFORMATION nem operatív esemény, hanem a kiszűrt posztokból
+          kiválasztott elemzői kontextus. Az EARLY WARNING influence vagy mobilizációs jelzés.
+          Az OPERATIONAL már azonosított esemény. A CORRELATED EventGrouphoz kapcsolt eseményforrás.
         </div>
       </section>
 
@@ -1491,6 +1920,17 @@
     const DATA_URL = "./dashboard-data.json";
 
     let dashboardData = null;
+
+    const timelineState = {
+      hours:168,
+      layer:"ALL",
+      source:"ALL",
+      region:"ALL",
+      visibleLimit:18,
+      pageSize:18,
+      items:[],
+      generatedAt:null
+    };
 
     const $ = (id) => document.getElementById(id);
 
@@ -2199,6 +2639,229 @@
         first(a,["summary"],"Az automatikus elemzői összefoglaló jelenleg nem érhető el.");
     }
 
+
+    function timelinePriorityClass(value){
+      const p = String(value || "").toLowerCase();
+      if(p.includes("high") || p.includes("critical")) return "high";
+      if(p.includes("medium")) return "medium";
+      if(p.includes("low")) return "low";
+      if(p.includes("info")) return "info";
+      return "";
+    }
+
+    function timelineDateParts(value){
+      const d = new Date(value);
+      if(Number.isNaN(d.getTime())) return {time:"—",date:"—"};
+      return {
+        time:d.toLocaleTimeString("hu-HU",{hour:"2-digit",minute:"2-digit"}),
+        date:d.toLocaleDateString("hu-HU",{month:"short",day:"2-digit"})
+      };
+    }
+
+    function timelineConfidence(value){
+      const n = Number(value);
+      return Number.isFinite(n) ? n.toFixed(2) : "—";
+    }
+
+    function populateTimelineFilters(items){
+      const sourceSelect = $("timelineSourceFilter");
+      const regionSelect = $("timelineRegionFilter");
+
+      const sources = [...new Set(
+        items.map(x=>String(x.source||"").trim()).filter(Boolean)
+      )].sort();
+
+      const regions = [...new Set(
+        items.map(x=>String(x.primary_region||x.region||"").trim())
+          .filter(x=>x && x !== "-")
+      )].sort();
+
+      sourceSelect.innerHTML =
+        `<option value="ALL">Minden forrás</option>` +
+        sources.map(x=>`<option value="${escapeAttr(x)}">${escapeHtml(x)}</option>`).join("");
+
+      regionSelect.innerHTML =
+        `<option value="ALL">Minden régió</option>` +
+        regions.map(x=>`<option value="${escapeAttr(x)}">${escapeHtml(x.replaceAll("_"," "))}</option>`).join("");
+    }
+
+    function filteredTimelineItems(){
+      const generated = new Date(timelineState.generatedAt || Date.now());
+      const base = Number.isNaN(generated.getTime()) ? Date.now() : generated.getTime();
+      const cutoff = base - timelineState.hours * 3600000;
+
+      return timelineState.items.filter(item=>{
+        const ts = new Date(item.timestamp || 0);
+        if(Number.isNaN(ts.getTime()) || ts.getTime() < cutoff) return false;
+
+        const layer = String(item.layer || "").toUpperCase();
+        if(timelineState.layer !== "ALL" && layer !== timelineState.layer) return false;
+
+        if(timelineState.source !== "ALL" && String(item.source||"") !== timelineState.source) return false;
+
+        const region = String(item.primary_region || item.region || "");
+        if(timelineState.region !== "ALL" && region !== timelineState.region) return false;
+
+        return true;
+      });
+    }
+
+    function updateTimelineCounts(items){
+      const counts = {INFORMATION:0,EARLY_WARNING:0,OPERATIONAL:0,CORRELATED:0};
+
+      items.forEach(item=>{
+        const layer = String(item.layer||"").toUpperCase();
+        if(counts[layer] !== undefined) counts[layer]++;
+      });
+
+      $("timelineInformationCount").textContent = counts.INFORMATION;
+      $("timelineWarningCount").textContent = counts.EARLY_WARNING;
+      $("timelineOperationalCount").textContent = counts.OPERATIONAL;
+      $("timelineCorrelatedCount").textContent = counts.CORRELATED;
+
+      $("timelineVisibleLabel").textContent =
+        `${items.length} jelzés · ${timelineState.hours === 168 ? "7 nap" : timelineState.hours + " óra"}`;
+    }
+
+    function timelineItemHtml(item){
+      const layer = String(item.layer || "INFORMATION").toUpperCase();
+      const d = timelineDateParts(item.timestamp);
+      const type = first(item,["type","signal_type","event_type"],"SIGNAL");
+      const region = String(first(item,["primary_region","region"],"GLOBAL")).replaceAll("_"," ");
+      const location = first(item,["primary_location","location"],"—");
+      const source = first(item,["source"],"UNKNOWN");
+      const priority = first(item,["analyst_priority","priority"],layer==="INFORMATION"?"INFO":"—");
+      const text = first(item,["text_excerpt","text"],"");
+      const url = first(item,["source_url","url"],null);
+
+      const foot = [];
+      if(item.information_score !== undefined && item.information_score !== null){
+        foot.push(`Info score: ${escapeHtml(item.information_score)}`);
+      }
+      if(item.event_group_id !== undefined && item.event_group_id !== null){
+        foot.push(`EventGroup #${escapeHtml(item.event_group_id)}`);
+      }
+      if(item.correlation_score !== undefined && item.correlation_score !== null){
+        foot.push(`Correlation: ${escapeHtml(Number(item.correlation_score).toFixed(2))}`);
+      }
+      if(item.related_source_count !== undefined && item.related_source_count !== null){
+        foot.push(`Források: ${escapeHtml(item.related_source_count)}`);
+      }
+
+      return `
+        <div class="timeline-item layer-${escapeAttr(layer)}">
+          <div class="timeline-time">
+            <div class="timeline-time-main">${escapeHtml(d.time)}</div>
+            <div class="timeline-time-date">${escapeHtml(d.date)}</div>
+          </div>
+
+          <div class="timeline-marker-wrap"><div class="timeline-marker"></div></div>
+
+          <article class="timeline-card">
+            <div class="timeline-card-head">
+              <div class="timeline-card-title">
+                <span class="timeline-layer-badge">${escapeHtml(layer.replaceAll("_"," "))}</span>
+                <span class="timeline-type-badge">${escapeHtml(String(type).replaceAll("_"," "))}</span>
+              </div>
+              <span class="timeline-priority ${timelinePriorityClass(priority)}">${escapeHtml(priority)}</span>
+            </div>
+
+            <div class="timeline-meta">
+              <span>Forrás: <strong>${escapeHtml(source)}</strong></span>
+              <span>Régió: <strong>${escapeHtml(region)}</strong></span>
+              <span>Hely: <strong>${escapeHtml(location || "—")}</strong></span>
+              <span>Confidence: <strong>${escapeHtml(timelineConfidence(item.confidence))}</strong></span>
+            </div>
+
+            <p class="timeline-text">${escapeHtml(text)}</p>
+
+            <div class="timeline-foot">
+              <div class="timeline-foot-left">${foot.map(x=>`<span>${x}</span>`).join("")}</div>
+              ${url ? `<a class="timeline-source-link" href="${escapeAttr(url)}" target="_blank" rel="noopener noreferrer">Forrás ↗</a>` : ""}
+            </div>
+          </article>
+        </div>
+      `;
+    }
+
+    function renderTimeline(){
+      const list = $("signalTimelineList");
+      const loadMore = $("timelineLoadMore");
+      const items = filteredTimelineItems();
+
+      updateTimelineCounts(items);
+
+      if(!items.length){
+        list.innerHTML = `<div class="timeline-empty">A kiválasztott szűréshez nincs timeline-jelzés.</div>`;
+        loadMore.style.display = "none";
+        return;
+      }
+
+      const visible = items.slice(0,timelineState.visibleLimit);
+      list.innerHTML = visible.map(timelineItemHtml).join("");
+
+      if(visible.length < items.length){
+        loadMore.style.display = "inline-flex";
+        loadMore.textContent = `További jelzések (${items.length-visible.length})`;
+      }else{
+        loadMore.style.display = "none";
+      }
+    }
+
+    function renderSignalTimeline(data){
+      const timeline = data.signal_timeline;
+
+      if(!timeline || !Array.isArray(timeline.items)){
+        timelineState.items = [];
+        renderTimeline();
+        return;
+      }
+
+      timelineState.items = [...timeline.items].sort(
+        (a,b)=>new Date(b.timestamp||0)-new Date(a.timestamp||0)
+      );
+      timelineState.generatedAt = timeline.generated_at || data.generated_at || data.updated_at || null;
+      populateTimelineFilters(timelineState.items);
+      renderTimeline();
+    }
+
+    function setupTimelineControls(){
+      document.querySelectorAll(".timeline-window-btn").forEach(btn=>{
+        btn.addEventListener("click",()=>{
+          timelineState.hours = Number(btn.dataset.hours || 168);
+          timelineState.visibleLimit = timelineState.pageSize;
+          document.querySelectorAll(".timeline-window-btn").forEach(x=>x.classList.toggle("active",x===btn));
+          renderTimeline();
+        });
+      });
+
+      document.querySelectorAll(".timeline-layer-btn").forEach(btn=>{
+        btn.addEventListener("click",()=>{
+          timelineState.layer = btn.dataset.layer || "ALL";
+          timelineState.visibleLimit = timelineState.pageSize;
+          document.querySelectorAll(".timeline-layer-btn").forEach(x=>x.classList.toggle("active",x===btn));
+          renderTimeline();
+        });
+      });
+
+      $("timelineSourceFilter").addEventListener("change",e=>{
+        timelineState.source = e.target.value || "ALL";
+        timelineState.visibleLimit = timelineState.pageSize;
+        renderTimeline();
+      });
+
+      $("timelineRegionFilter").addEventListener("change",e=>{
+        timelineState.region = e.target.value || "ALL";
+        timelineState.visibleLimit = timelineState.pageSize;
+        renderTimeline();
+      });
+
+      $("timelineLoadMore").addEventListener("click",()=>{
+        timelineState.visibleLimit += timelineState.pageSize;
+        renderTimeline();
+      });
+    }
+
     function locationLabel(item){
       const location = first(item,["location_name","location","place"],null);
       if(typeof location === "string") return location;
@@ -2237,6 +2900,7 @@
       renderEventGroups(data);
       renderPriority(data);
       renderInformationHistory(data);
+      renderSignalTimeline(data);
       renderRegions(data);
       renderDistribution(data);
       renderSources(data);
@@ -2260,6 +2924,8 @@
         });
       }
     }
+
+    setupTimelineControls();
 
     $("refreshBtn").addEventListener("click", loadDashboard);
 
