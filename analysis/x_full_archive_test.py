@@ -39,6 +39,7 @@ import builtins
 import os
 import sqlite3
 import sys
+import time as time_module
 from collections import defaultdict
 from datetime import date, datetime, time, timedelta, timezone
 from pathlib import Path
@@ -117,6 +118,41 @@ def env_int(
     except ValueError as exc:
         raise ValueError(
             f"{name} must be an integer; received {raw!r}."
+        ) from exc
+
+    value = max(
+        minimum,
+        value,
+    )
+
+    if maximum is not None:
+        value = min(
+            maximum,
+            value,
+        )
+
+    return value
+
+
+
+def env_float(
+    name: str,
+    default: float,
+    minimum: float = 0.0,
+    maximum: Optional[float] = None,
+) -> float:
+    raw = env_text(
+        name,
+        str(default),
+    )
+
+    try:
+        value = float(
+            raw
+        )
+    except ValueError as exc:
+        raise ValueError(
+            f"{name} must be a number; received {raw!r}."
         ) from exc
 
     value = max(
@@ -286,6 +322,8 @@ class XFullArchiveBackfillCollector:
     the separately configured historical safety budgets below.
     """
 
+    last_instance = None
+
     def __init__(
         self,
         *args,
@@ -354,6 +392,27 @@ class XFullArchiveBackfillCollector:
             maximum=100,
         )
 
+        self.max_rate_limit_retries = env_int(
+            "X_BACKFILL_MAX_RATE_LIMIT_RETRIES",
+            3,
+            minimum=0,
+            maximum=10,
+        )
+
+        self.max_rate_limit_wait_seconds = env_int(
+            "X_BACKFILL_MAX_RATE_LIMIT_WAIT_SECONDS",
+            900,
+            minimum=1,
+            maximum=3600,
+        )
+
+        self.inter_request_delay_seconds = env_float(
+            "X_BACKFILL_INTER_REQUEST_DELAY_SECONDS",
+            2.0,
+            minimum=0.0,
+            maximum=60.0,
+        )
+
         # Fair share prevents the first broad query from consuming the whole
         # daily budget before the more specific current query groups run.
         self.per_query_daily_cap = max(
@@ -368,6 +427,14 @@ class XFullArchiveBackfillCollector:
         )
 
         self.seen_post_ids = set()
+
+        self.successful_api_requests = 0
+        self.rate_limit_events = 0
+        self.non_rate_api_errors = 0
+        self.rate_limit_retry_count = 0
+        self.fatal_rate_limited = False
+
+        XFullArchiveBackfillCollector.last_instance = self
 
         self.session = requests.Session()
 
@@ -406,6 +473,15 @@ class XFullArchiveBackfillCollector:
         )
         print(
             f"Max total posts: {self.max_total_posts}"
+        )
+        print(
+            f"Rate-limit retries: {self.max_rate_limit_retries}"
+        )
+        print(
+            f"Max rate-limit wait: {self.max_rate_limit_wait_seconds}s"
+        )
+        print(
+            f"Inter-request delay: {self.inter_request_delay_seconds}s"
         )
         print(
             "Reddit/Mastodon: DISABLED"
@@ -537,6 +613,173 @@ class XFullArchiveBackfillCollector:
 
         return results
 
+    def _rate_limit_wait_seconds(
+        self,
+        response: requests.Response,
+        attempt: int,
+    ) -> int:
+        """
+        Prefer X response headers. Fall back to bounded exponential backoff.
+        """
+
+        retry_after = response.headers.get(
+            "retry-after"
+        )
+
+        if retry_after:
+            try:
+                return max(
+                    1,
+                    int(
+                        float(
+                            retry_after
+                        )
+                    ),
+                )
+            except ValueError:
+                pass
+
+        reset_header = response.headers.get(
+            "x-rate-limit-reset"
+        )
+
+        if reset_header:
+            try:
+                reset_epoch = int(
+                    float(
+                        reset_header
+                    )
+                )
+
+                now_epoch = int(
+                    time_module.time()
+                )
+
+                return max(
+                    1,
+                    reset_epoch
+                    - now_epoch
+                    + 2,
+                )
+            except ValueError:
+                pass
+
+        return min(
+            self.max_rate_limit_wait_seconds,
+            30
+            * (
+                2
+                ** attempt
+            ),
+        )
+
+    def _request_with_rate_limit(
+        self,
+        *,
+        params: Dict[str, Any],
+        day: date,
+        query: str,
+    ) -> requests.Response:
+        """
+        Executes one X request with explicit 429 handling.
+
+        A 429 is never silently converted into an empty result set.
+        """
+
+        attempt = 0
+
+        while True:
+            response = self.session.get(
+                API_URL,
+                params=params,
+                timeout=45,
+            )
+
+            if response.status_code == 200:
+                self.successful_api_requests += 1
+
+                if self.inter_request_delay_seconds > 0:
+                    time_module.sleep(
+                        self.inter_request_delay_seconds
+                    )
+
+                return response
+
+            if response.status_code != 429:
+                self.non_rate_api_errors += 1
+
+                self._raise_api_error(
+                    response=response,
+                    day=day,
+                    query=query,
+                )
+
+            self.rate_limit_events += 1
+
+            wait_seconds = self._rate_limit_wait_seconds(
+                response,
+                attempt,
+            )
+
+            reset_header = response.headers.get(
+                "x-rate-limit-reset"
+            )
+
+            remaining_header = response.headers.get(
+                "x-rate-limit-remaining"
+            )
+
+            limit_header = response.headers.get(
+                "x-rate-limit-limit"
+            )
+
+            print(
+                "X RATE LIMIT: "
+                f"HTTP 429 | "
+                f"attempt={attempt + 1}/"
+                f"{self.max_rate_limit_retries + 1} | "
+                f"wait={wait_seconds}s | "
+                f"limit={limit_header} | "
+                f"remaining={remaining_header} | "
+                f"reset={reset_header}"
+            )
+
+            if (
+                wait_seconds
+                > self.max_rate_limit_wait_seconds
+            ):
+                self.fatal_rate_limited = True
+
+                raise RuntimeError(
+                    "X_BACKFILL_RATE_LIMITED: "
+                    f"required wait {wait_seconds}s exceeds "
+                    f"configured maximum "
+                    f"{self.max_rate_limit_wait_seconds}s."
+                )
+
+            if (
+                attempt
+                >= self.max_rate_limit_retries
+            ):
+                self.fatal_rate_limited = True
+
+                raise RuntimeError(
+                    "X_BACKFILL_RATE_LIMITED: "
+                    "retry budget exhausted."
+                )
+
+            self.rate_limit_retry_count += 1
+
+            print(
+                "X RATE LIMIT: waiting before retry..."
+            )
+
+            time_module.sleep(
+                wait_seconds
+            )
+
+            attempt += 1
+
     def _search_one_day(
         self,
         *,
@@ -622,22 +865,12 @@ class XFullArchiveBackfillCollector:
                 ] = next_token
 
             response = (
-                self.session.get(
-                    API_URL,
+                self._request_with_rate_limit(
                     params=params,
-                    timeout=45,
-                )
-            )
-
-            if (
-                response.status_code
-                != 200
-            ):
-                self._raise_api_error(
-                    response=response,
                     day=day,
                     query=query,
                 )
+            )
 
             payload = (
                 response.json()
@@ -1003,6 +1236,7 @@ def mark_new_runs_as_backfill(
     previous_max_id: int,
     previous_latest_started_at: Optional[datetime],
     end_date: date,
+    status: str = "BACKFILL_SUCCESS",
 ) -> List[int]:
     session = get_session()
 
@@ -1050,7 +1284,7 @@ def mark_new_runs_as_backfill(
             )
 
             run.status = (
-                "BACKFILL_SUCCESS"
+                status
             )
 
             updated_ids.append(
@@ -1482,6 +1716,70 @@ def main() -> int:
                 original_module_print
             )
 
+    collector_state = (
+        XFullArchiveBackfillCollector.last_instance
+    )
+
+    successful_api_requests = (
+        collector_state.successful_api_requests
+        if collector_state is not None
+        else 0
+    )
+
+    rate_limit_events = (
+        collector_state.rate_limit_events
+        if collector_state is not None
+        else 0
+    )
+
+    rate_limit_retry_count = (
+        collector_state.rate_limit_retry_count
+        if collector_state is not None
+        else 0
+    )
+
+    fatal_rate_limited = (
+        collector_state.fatal_rate_limited
+        if collector_state is not None
+        else False
+    )
+
+    print(
+        "==================================="
+    )
+    print(
+        " X API BACKFILL REQUEST SUMMARY"
+    )
+    print(
+        "==================================="
+    )
+    print(
+        f"Successful X API requests: {successful_api_requests}"
+    )
+    print(
+        f"Rate-limit responses: {rate_limit_events}"
+    )
+    print(
+        f"Rate-limit retries performed: {rate_limit_retry_count}"
+    )
+    print(
+        f"Fatal rate-limit state: {fatal_rate_limited}"
+    )
+
+    rate_limited_run = (
+        fatal_rate_limited
+        or (
+            successful_api_requests == 0
+            and rate_limit_events > 0
+        )
+    )
+
+    backfill_status = (
+        "BACKFILL_RATE_LIMITED"
+        if rate_limited_run
+        else "BACKFILL_SUCCESS"
+    )
+
     updated_ids = (
         mark_new_runs_as_backfill(
             previous_max_id=(
@@ -1495,6 +1793,7 @@ def main() -> int:
                 ]
             ),
             end_date=end_date,
+            status=backfill_status,
         )
     )
 
@@ -1502,6 +1801,32 @@ def main() -> int:
         start_date=start_date,
         end_date=end_date,
     )
+
+    if rate_limited_run:
+        print(
+            "==================================="
+        )
+        print(
+            " BACKFILL STOPPED: RATE LIMITED"
+        )
+        print(
+            "==================================="
+        )
+        print(
+            "The run was NOT accepted as a successful historical backfill."
+        )
+        print(
+            "MonitorRun status: BACKFILL_RATE_LIMITED"
+        )
+        print(
+            "Dashboard export/publish will be skipped because this step fails."
+        )
+
+        raise RuntimeError(
+            "X historical backfill stopped because no usable "
+            "full-archive request completed before the rate-limit "
+            "retry budget was exhausted."
+        )
 
     print(
         "==================================="
@@ -1517,7 +1842,7 @@ def main() -> int:
         f"{updated_ids}"
     )
     print(
-        "Backfill run status: BACKFILL_SUCCESS"
+        f"Backfill run status: {backfill_status}"
     )
     print(
         "Current normal dashboard run preserved: YES"
@@ -1533,3 +1858,4 @@ if __name__ == "__main__":
     raise SystemExit(
         main()
     )
+
