@@ -9,6 +9,7 @@ permissions:
 jobs:
   create-telegram-session:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - name: Checkout repository
@@ -26,10 +27,11 @@ jobs:
 
       - name: Create Telegram StringSession by QR login
         env:
+          PYTHONUNBUFFERED: "1"
           TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
           TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
         run: |
-          python - <<'PY'
+          python -u - <<'PY'
           import asyncio
           import os
           from pathlib import Path
@@ -39,14 +41,12 @@ jobs:
           from telethon.errors import SessionPasswordNeededError
           from telethon.sessions import StringSession
 
-
           async def main():
               api_id_raw = os.environ.get("TELEGRAM_API_ID", "").strip()
               api_hash = os.environ.get("TELEGRAM_API_HASH", "").strip()
 
               if not api_id_raw.isdigit():
                   raise SystemExit("ERROR: TELEGRAM_API_ID missing or invalid.")
-
               if not api_hash:
                   raise SystemExit("ERROR: TELEGRAM_API_HASH missing.")
 
@@ -61,16 +61,16 @@ jobs:
               try:
                   qr_login = await client.qr_login()
 
-                  print()
-                  print("===================================")
-                  print(" TELEGRAM QR LOGIN")
-                  print("===================================")
-                  print("Open Telegram on your phone:")
-                  print("Settings -> Devices -> Link Desktop Device")
-                  print("Then scan the QR code below.")
-                  print()
-                  print("The workflow waits up to 3 minutes.")
-                  print()
+                  print("", flush=True)
+                  print("===================================", flush=True)
+                  print(" TELEGRAM QR LOGIN", flush=True)
+                  print("===================================", flush=True)
+                  print("Open Telegram on your phone:", flush=True)
+                  print("Settings -> Devices -> Link Desktop Device", flush=True)
+                  print("Then scan the QR code below.", flush=True)
+                  print("", flush=True)
+                  print("The workflow waits up to 5 minutes.", flush=True)
+                  print("", flush=True)
 
                   qr = qrcode.QRCode(
                       version=None,
@@ -80,28 +80,31 @@ jobs:
                   qr.add_data(qr_login.url)
                   qr.make(fit=True)
 
-                  matrix = qr.get_matrix()
-
-                  for row in matrix:
+                  for row in qr.get_matrix():
                       print(
                           "".join(
                               "██" if cell else "  "
                               for cell in row
-                          )
+                          ),
+                          flush=True,
                       )
 
-                  print()
-                  print("Waiting for QR confirmation...")
+                  print("", flush=True)
+                  print("QR CODE IS READY - SCAN IT NOW.", flush=True)
+                  print("Waiting for QR confirmation...", flush=True)
 
                   try:
-                      await qr_login.wait(
-                          timeout=180
+                      await qr_login.wait(timeout=300)
+                  except asyncio.TimeoutError:
+                      raise SystemExit(
+                          "ERROR: QR login timed out after 5 minutes. "
+                          "Run the workflow again and scan the QR code "
+                          "while this step is still running."
                       )
                   except SessionPasswordNeededError:
                       raise SystemExit(
                           "ERROR: Telegram 2-step verification password is enabled. "
-                          "Do not put that password into workflow inputs or logs. "
-                          "Use the local setup script once to create TELEGRAM_SESSION."
+                          "Do not put that password into workflow inputs or logs."
                       )
 
                   if not await client.is_user_authorized():
@@ -110,33 +113,26 @@ jobs:
                       )
 
                   session_string = client.session.save()
-
-                  output_path = Path(
-                      "telegram-session.txt"
-                  )
-
-                  output_path.write_text(
+                  Path("telegram-session.txt").write_text(
                       session_string,
                       encoding="utf-8",
                   )
 
-                  print()
-                  print("LOGIN SUCCESSFUL")
-                  print("telegram-session.txt created.")
-                  print()
-                  print("IMPORTANT:")
-                  print("1. Download the artifact from this workflow run.")
-                  print("2. Open telegram-session.txt.")
-                  print("3. Copy its full contents into GitHub Secret:")
-                  print("   TELEGRAM_SESSION")
-                  print("4. Delete the downloaded local file afterwards.")
-                  print("5. Delete this workflow run artifact after the secret is saved.")
-                  print()
-                  print("The session value is NOT printed to the workflow log.")
+                  print("", flush=True)
+                  print("LOGIN SUCCESSFUL", flush=True)
+                  print("telegram-session.txt created.", flush=True)
+                  print(
+                      "Download the private artifact and save its contents "
+                      "as GitHub Secret TELEGRAM_SESSION.",
+                      flush=True,
+                  )
+                  print(
+                      "The session value is NOT printed to the workflow log.",
+                      flush=True,
+                  )
 
               finally:
                   await client.disconnect()
-
 
           asyncio.run(main())
           PY
@@ -148,3 +144,4 @@ jobs:
           path: telegram-session.txt
           if-no-files-found: error
           retention-days: 1
+
