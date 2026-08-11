@@ -37,6 +37,7 @@ from __future__ import annotations
 
 import builtins
 import os
+import sqlite3
 import sys
 from collections import defaultdict
 from datetime import date, datetime, time, timedelta, timezone
@@ -1070,6 +1071,241 @@ def mark_new_runs_as_backfill(
         session.close()
 
 
+
+def verify_backfill_database(
+    *,
+    start_date: date,
+    end_date: date,
+) -> Dict[str, Any]:
+    """
+    Read-only database audit for the requested historical window.
+    """
+
+    db_path = (
+        REPO_ROOT
+        / "database"
+        / "migration_osint_monitor.db"
+    )
+
+    print("===================================")
+    print(" BACKFILL DATABASE VERIFICATION")
+    print("===================================")
+    print(f"Database: {db_path}")
+    print(f"Historical window: {start_date} -> {end_date}")
+
+    if not db_path.exists():
+        print("ERROR: database file not found.")
+        return {
+            "database_found": False,
+            "tables": {},
+        }
+
+    connection = sqlite3.connect(
+        str(db_path)
+    )
+
+    report = {
+        "database_found": True,
+        "tables": {},
+    }
+
+    start_text = start_date.isoformat()
+    end_exclusive = (
+        end_date
+        + timedelta(days=1)
+    ).isoformat()
+
+    date_columns = (
+        "published_at",
+        "event_time",
+        "timestamp",
+        "observed_at",
+        "detected_at",
+        "created_at",
+        "first_detected_at",
+        "last_detected_at",
+        "first_seen_at",
+        "last_seen_at",
+    )
+
+    try:
+        tables = [
+            row[0]
+            for row in connection.execute(
+                "SELECT name "
+                "FROM sqlite_master "
+                "WHERE type='table' "
+                "AND name NOT LIKE 'sqlite_%' "
+                "ORDER BY name"
+            ).fetchall()
+        ]
+
+        print(
+            "Tables: "
+            + ", ".join(tables)
+        )
+
+        for table_name in tables:
+            safe_table = (
+                str(table_name)
+                .replace('"', '""')
+            )
+
+            columns = [
+                row[1]
+                for row in connection.execute(
+                    f'PRAGMA table_info("{safe_table}")'
+                ).fetchall()
+            ]
+
+            table_report = {}
+
+            for column_name in date_columns:
+                if column_name not in columns:
+                    continue
+
+                safe_column = (
+                    column_name
+                    .replace('"', '""')
+                )
+
+                sql = (
+                    f'SELECT COUNT(*), '
+                    f'MIN("{safe_column}"), '
+                    f'MAX("{safe_column}") '
+                    f'FROM "{safe_table}" '
+                    f'WHERE "{safe_column}" IS NOT NULL '
+                    f'AND datetime("{safe_column}") >= datetime(?) '
+                    f'AND datetime("{safe_column}") < datetime(?)'
+                )
+
+                try:
+                    row = connection.execute(
+                        sql,
+                        (
+                            start_text,
+                            end_exclusive,
+                        ),
+                    ).fetchone()
+                except sqlite3.Error as error:
+                    table_report[column_name] = {
+                        "error": str(error),
+                    }
+                    continue
+
+                count = int(
+                    row[0]
+                    if row
+                    else 0
+                )
+
+                if count <= 0:
+                    continue
+
+                table_report[column_name] = {
+                    "count": count,
+                    "oldest": row[1],
+                    "newest": row[2],
+                }
+
+            if table_report:
+                report["tables"][table_name] = table_report
+
+        if not report["tables"]:
+            print(
+                "RESULT: ZERO historical rows found "
+                "inside the requested date range."
+            )
+        else:
+            for table_name, table_report in report["tables"].items():
+                print("-----------------------------------")
+                print(f"Table: {table_name}")
+
+                for column_name, values in table_report.items():
+                    if "count" not in values:
+                        print(
+                            f"  {column_name}: ERROR "
+                            f"{values.get('error')}"
+                        )
+                        continue
+
+                    print(
+                        f"  {column_name}: "
+                        f"{values['count']} rows"
+                    )
+                    print(
+                        f"    oldest: "
+                        f"{values['oldest']}"
+                    )
+                    print(
+                        f"    newest: "
+                        f"{values['newest']}"
+                    )
+
+        likely_collected = [
+            name
+            for name in (
+                "collected_posts",
+                "collected_post",
+            )
+            if name in report["tables"]
+        ]
+
+        likely_signals = [
+            name
+            for name in (
+                "influence_signals",
+                "influence_signal",
+            )
+            if name in report["tables"]
+        ]
+
+        likely_events = [
+            name
+            for name in (
+                "posts",
+                "events",
+            )
+            if name in report["tables"]
+        ]
+
+        print("-----------------------------------")
+        print("INTERPRETATION")
+
+        if not likely_collected:
+            print(
+                "No historical CollectedPost rows were found. "
+                "The problem is in X collection or persistence."
+            )
+        else:
+            print(
+                "Historical CollectedPost rows exist."
+            )
+
+            if (
+                likely_signals
+                or likely_events
+            ):
+                print(
+                    "Historical signal/event rows also exist. "
+                    "If the dashboard is still empty, "
+                    "the next target is the exporter."
+                )
+            else:
+                print(
+                    "No historical signal/event rows were found "
+                    "under the canonical table names. "
+                    "The analytical filters may have rejected all "
+                    "historical posts, or the event table has another name."
+                )
+
+        return report
+
+    finally:
+        connection.close()
+
+
+
 def main() -> int:
     start_date = parse_iso_date(
         env_text(
@@ -1140,7 +1376,7 @@ def main() -> int:
 
     quiet = env_bool(
         "X_BACKFILL_QUIET",
-        True,
+        False,
     )
 
     print(
@@ -1260,6 +1496,11 @@ def main() -> int:
             ),
             end_date=end_date,
         )
+    )
+
+    verify_backfill_database(
+        start_date=start_date,
+        end_date=end_date,
     )
 
     print(
