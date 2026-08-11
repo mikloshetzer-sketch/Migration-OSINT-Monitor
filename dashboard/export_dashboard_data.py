@@ -79,8 +79,8 @@ TOP_ACCESS_POST_LIMIT = 3
 WEEK_HISTORY_COUNT = 8
 
 # Signal Timeline V1
-TIMELINE_WINDOW_HOURS = 24 * 56
-TIMELINE_ITEM_LIMIT = 2500
+TIMELINE_WINDOW_HOURS = 24 * 90
+TIMELINE_ITEM_LIMIT = 5000
 
 # INFORMATION layer:
 # Do not use operational_confidence as the primary gate. In the current
