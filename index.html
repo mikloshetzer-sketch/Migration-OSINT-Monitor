@@ -1422,6 +1422,51 @@
       .warning-summary,.source-link{grid-column:auto}
       .hero-card h2{font-size:36px}
     }
+  
+
+    /* =====================================================
+       7-DAY MIGRATION INTELLIGENCE MATRIX
+       ===================================================== */
+    .matrix-panel{position:relative;overflow:hidden}
+    .matrix-nav{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:16px 0 14px}
+    .matrix-nav-left{display:flex;gap:8px;flex-wrap:wrap}
+    .matrix-nav-btn{border:1px solid var(--line-2);background:#fff;color:var(--navy);border-radius:10px;padding:9px 13px;font-size:10px;font-weight:900;cursor:pointer}
+    .matrix-nav-btn:hover{border-color:#9fc8d9;background:#f7fbfd}
+    .matrix-range{color:var(--muted);font-size:12px;font-weight:900}
+    .matrix-filterbar{display:flex;justify-content:flex-end;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+    .matrix-select{min-width:150px;border:1px solid var(--line-2);background:#fff;color:var(--navy);border-radius:10px;padding:8px 10px;font-size:10px;font-weight:850}
+    .matrix-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:#fff}
+    .matrix-grid{display:grid;grid-template-columns:170px repeat(7,minmax(155px,1fr));min-width:1255px}
+    .matrix-cell{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 13px;min-height:112px}
+    .matrix-grid > .matrix-cell:nth-child(8n){border-right:0}
+    .matrix-head{min-height:72px;background:#edf7fb;text-align:center;padding-top:14px}
+    .matrix-corner{background:linear-gradient(135deg,#123e5f,#0b5274);color:#fff;text-align:left;font-size:14px;font-weight:950}
+    .matrix-day-name{font-size:13px;font-weight:950;color:var(--navy)}
+    .matrix-day-date{margin-top:4px;font-size:9px;color:var(--muted);font-weight:800}
+    .matrix-today{box-shadow:inset 0 4px 0 var(--blue)}
+    .matrix-row-label{font-size:15px;font-weight:950;display:flex;align-items:flex-start}
+    .matrix-label-information{background:#eaf7fd;color:#0877a8;border-left:4px solid var(--blue)}
+    .matrix-label-warning{background:#fff6e7;color:#a66500;border-left:4px solid var(--orange)}
+    .matrix-label-operational{background:#fff0ef;color:#b93430;border-left:4px solid var(--red)}
+    .matrix-label-correlated{background:#f3efff;color:#6541c7;border-left:4px solid var(--purple)}
+    .matrix-label-hotspot{background:#eef9f2;color:#14784b;border-left:4px solid var(--green)}
+    .matrix-label-assessment{background:#f4f7f9;color:var(--navy);border-left:4px solid var(--navy)}
+    .matrix-data-information{background:#fbfdfe}.matrix-data-warning{background:#fffdf8}.matrix-data-operational{background:#fffafa}.matrix-data-correlated{background:#fcfbff}.matrix-data-hotspot{background:#fbfefc}.matrix-data-assessment{background:#fbfcfd}
+    .matrix-count{font-family:Georgia,'Times New Roman',serif;font-size:23px;line-height:1;color:var(--navy);font-weight:900;margin-bottom:6px}
+    .matrix-count.warning{color:#a66500}.matrix-count.operational{color:#b93430}.matrix-count.correlated{color:#6541c7}
+    .matrix-breakdown{font-size:9px;line-height:1.55;color:var(--muted);min-height:28px}
+    .matrix-empty{font-size:10px;color:#8ba5b4;padding-top:4px}
+    .matrix-details{margin-top:8px;border-top:1px solid var(--line);padding-top:7px}
+    .matrix-details summary{cursor:pointer;color:#0877a8;font-size:9px;font-weight:950;list-style:none}.matrix-details summary::-webkit-details-marker{display:none}
+    .matrix-detail-item{padding:6px 0;border-top:1px dashed #dbe8ee;font-size:8.5px;line-height:1.4;color:var(--muted)}
+    .matrix-detail-item:first-of-type{margin-top:6px}.matrix-detail-time{font-weight:950;color:var(--navy)}
+    .matrix-detail-link{color:#0877a8;text-decoration:none;font-weight:900}
+    .matrix-hotspot-main{font-size:12px;font-weight:950;color:#14784b;margin-bottom:5px}.matrix-hotspot-sub{font-size:9px;color:var(--muted);line-height:1.5}
+    .matrix-assessment-badge{display:inline-flex;border-radius:999px;padding:6px 9px;font-size:9px;font-weight:950;letter-spacing:.04em}.matrix-assessment-badge.normal{background:#eef4f7;color:#627b89}.matrix-assessment-badge.elevated{background:#fff3dd;color:#a66500}.matrix-assessment-badge.high{background:#e9f8f0;color:#087c4b}.matrix-assessment-badge.critical{background:#fff0ef;color:#b93430}
+    .matrix-assessment-score{margin-top:7px;font-size:9px;color:var(--muted);line-height:1.45}
+    .matrix-legend{margin-top:10px;color:var(--muted);font-size:9px;line-height:1.55}
+    @media(max-width:800px){.matrix-grid{grid-template-columns:135px repeat(7,minmax(145px,1fr));min-width:1150px}.matrix-cell{padding:10px}.matrix-range{width:100%}}
+
   </style>
 </head>
 
@@ -1565,82 +1610,29 @@
       </section>
 
 
-      <section class="panel accent-purple timeline-panel section-pad" id="timelinePanel">
+      <section class="panel accent-purple matrix-panel section-pad" id="timelinePanel">
         <div class="section-head">
           <div>
-            <div class="eyebrow">Signal Timeline</div>
-            <h3>Early Warning Timeline</h3>
-            <div class="section-sub">
-              Információs kontextus → korai jelzés → operatív esemény → korrelált eseményforrás.
-              Alapértelmezett nézet: 7 nap.
-            </div>
+            <div class="eyebrow">7-Day Migration Intelligence Matrix</div>
+            <h3>Early Warning &amp; Operational Timeline</h3>
+            <div class="section-sub">Napi összkép: információs kontextus → korai jelzés → operatív esemény → korreláció. A részletek cellánként nyithatók le.</div>
           </div>
           <span class="section-sub" id="timelineVisibleLabel">—</span>
         </div>
-
-        <div class="timeline-toolbar">
-          <div class="timeline-toolbar-left">
-            <span class="timeline-filter-label">Időablak</span>
-            <button class="timeline-btn timeline-window-btn" data-hours="24">24H</button>
-            <button class="timeline-btn timeline-window-btn" data-hours="72">72H</button>
-            <button class="timeline-btn timeline-window-btn active" data-hours="168">7D</button>
-
-            <span class="timeline-filter-label" style="margin-left:7px">Réteg</span>
-            <button class="timeline-btn timeline-layer-btn active" data-layer="ALL">ALL</button>
-            <button class="timeline-btn timeline-layer-btn" data-layer="INFORMATION">INFO</button>
-            <button class="timeline-btn timeline-layer-btn" data-layer="EARLY_WARNING">EARLY WARNING</button>
-            <button class="timeline-btn timeline-layer-btn" data-layer="OPERATIONAL">OPERATIONAL</button>
-            <button class="timeline-btn timeline-layer-btn" data-layer="CORRELATED">CORRELATED</button>
+        <div class="matrix-nav">
+          <div class="matrix-nav-left">
+            <button class="matrix-nav-btn" id="matrixPrev" type="button">← Previous 7 days</button>
+            <button class="matrix-nav-btn" id="matrixLatest" type="button">Legutóbbi 7 nap</button>
+            <button class="matrix-nav-btn" id="matrixNext" type="button">Next 7 days →</button>
           </div>
-
-          <div class="timeline-toolbar-right">
-            <select class="timeline-select" id="timelineSourceFilter">
-              <option value="ALL">Minden forrás</option>
-            </select>
-            <select class="timeline-select" id="timelineRegionFilter">
-              <option value="ALL">Minden régió</option>
-            </select>
-          </div>
+          <div class="matrix-range" id="matrixRange">—</div>
         </div>
-
-        <div class="timeline-summary">
-          <div class="timeline-summary-card">
-            <div class="timeline-summary-label">Information</div>
-            <div class="timeline-summary-value" id="timelineInformationCount">—</div>
-            <div class="timeline-summary-sub">szűrt elemzői kontextus</div>
-          </div>
-          <div class="timeline-summary-card warning">
-            <div class="timeline-summary-label">Early Warning</div>
-            <div class="timeline-summary-value" id="timelineWarningCount">—</div>
-            <div class="timeline-summary-sub">influence / mobilizáció</div>
-          </div>
-          <div class="timeline-summary-card operational">
-            <div class="timeline-summary-label">Operational</div>
-            <div class="timeline-summary-value" id="timelineOperationalCount">—</div>
-            <div class="timeline-summary-sub">azonosított esemény</div>
-          </div>
-          <div class="timeline-summary-card correlated">
-            <div class="timeline-summary-label">Correlated</div>
-            <div class="timeline-summary-value" id="timelineCorrelatedCount">—</div>
-            <div class="timeline-summary-sub">EventGrouphoz kapcsolt</div>
-          </div>
+        <div class="matrix-filterbar">
+          <select class="matrix-select" id="timelineSourceFilter"><option value="ALL">Minden forrás</option></select>
+          <select class="matrix-select" id="timelineRegionFilter"><option value="ALL">Minden régió</option></select>
         </div>
-
-        <div class="timeline-list" id="signalTimelineList">
-          <div class="timeline-empty">Timeline adatok betöltése…</div>
-        </div>
-
-        <div class="timeline-load-more">
-          <button class="section-action" id="timelineLoadMore" type="button" style="display:none">
-            További jelzések
-          </button>
-        </div>
-
-        <div class="timeline-method-note">
-          <strong>Értelmezés:</strong> az INFORMATION nem operatív esemény, hanem a kiszűrt posztokból
-          kiválasztott elemzői kontextus. Az EARLY WARNING influence vagy mobilizációs jelzés.
-          Az OPERATIONAL már azonosított esemény. A CORRELATED EventGrouphoz kapcsolt eseményforrás.
-        </div>
+        <div class="matrix-scroll"><div class="matrix-grid" id="signalTimelineList"><div class="matrix-empty">Timeline adatok betöltése…</div></div></div>
+        <div class="matrix-legend"><strong>Értelmezés:</strong> az INFORMATION szűrt kontextus, az EARLY WARNING mobilizációs/facilitációs jelzés, az OPERATIONAL azonosított esemény, a CORRELATED pedig EventGrouphoz kapcsolt forrás. Az Assessment összetett aktivitási jelző, nem önálló kockázati előrejelzés.</div>
       </section>
 
       <div class="two-col">
@@ -1922,14 +1914,11 @@
     let dashboardData = null;
 
     const timelineState = {
-      hours:168,
-      layer:"ALL",
       source:"ALL",
       region:"ALL",
-      visibleLimit:18,
-      pageSize:18,
       items:[],
-      generatedAt:null
+      generatedAt:null,
+      weekOffset:0
     };
 
     const $ = (id) => document.getElementById(id);
@@ -2685,181 +2674,99 @@
         regions.map(x=>`<option value="${escapeAttr(x)}">${escapeHtml(x.replaceAll("_"," "))}</option>`).join("");
     }
 
-    function filteredTimelineItems(){
-      const generated = new Date(timelineState.generatedAt || Date.now());
-      const base = Number.isNaN(generated.getTime()) ? Date.now() : generated.getTime();
-      const cutoff = base - timelineState.hours * 3600000;
+    function matrixAnchorDate(){
+      const d = new Date(timelineState.generatedAt || Date.now());
+      const anchor = Number.isNaN(d.getTime()) ? new Date() : d;
+      anchor.setHours(23,59,59,999);
+      anchor.setDate(anchor.getDate() + timelineState.weekOffset * 7);
+      return anchor;
+    }
 
+    function matrixDays(){
+      const end = matrixAnchorDate();
+      const days=[];
+      for(let i=6;i>=0;i--){
+        const d=new Date(end); d.setDate(end.getDate()-i); d.setHours(0,0,0,0); days.push(d);
+      }
+      return days;
+    }
+
+    function sameLocalDay(a,b){return a.getFullYear()===b.getFullYear()&&a.getMonth()===b.getMonth()&&a.getDate()===b.getDate()}
+    function matrixItemsForDay(day){
       return timelineState.items.filter(item=>{
-        const ts = new Date(item.timestamp || 0);
-        if(Number.isNaN(ts.getTime()) || ts.getTime() < cutoff) return false;
-
-        const layer = String(item.layer || "").toUpperCase();
-        if(timelineState.layer !== "ALL" && layer !== timelineState.layer) return false;
-
-        if(timelineState.source !== "ALL" && String(item.source||"") !== timelineState.source) return false;
-
-        const region = String(item.primary_region || item.region || "");
-        if(timelineState.region !== "ALL" && region !== timelineState.region) return false;
-
+        const ts=new Date(item.timestamp||0); if(Number.isNaN(ts.getTime())||!sameLocalDay(ts,day)) return false;
+        if(timelineState.source!=="ALL" && String(item.source||"")!==timelineState.source) return false;
+        const region=String(item.primary_region||item.region||"");
+        if(timelineState.region!=="ALL" && region!==timelineState.region) return false;
         return true;
       });
     }
-
-    function updateTimelineCounts(items){
-      const counts = {INFORMATION:0,EARLY_WARNING:0,OPERATIONAL:0,CORRELATED:0};
-
-      items.forEach(item=>{
-        const layer = String(item.layer||"").toUpperCase();
-        if(counts[layer] !== undefined) counts[layer]++;
-      });
-
-      $("timelineInformationCount").textContent = counts.INFORMATION;
-      $("timelineWarningCount").textContent = counts.EARLY_WARNING;
-      $("timelineOperationalCount").textContent = counts.OPERATIONAL;
-      $("timelineCorrelatedCount").textContent = counts.CORRELATED;
-
-      $("timelineVisibleLabel").textContent =
-        `${items.length} jelzés · ${timelineState.hours === 168 ? "7 nap" : timelineState.hours + " óra"}`;
+    function layerItems(items,layer){return items.filter(x=>String(x.layer||"").toUpperCase()===layer)}
+    function topTypes(items,limit=3){
+      const m={}; items.forEach(x=>{const t=String(first(x,["type","signal_type","event_type"],"Signal")).replaceAll("_"," ");m[t]=(m[t]||0)+1});
+      return Object.entries(m).sort((a,b)=>b[1]-a[1]).slice(0,limit).map(([k,v])=>`${v} ${k}`).join(" · ");
     }
-
-    function timelineItemHtml(item){
-      const layer = String(item.layer || "INFORMATION").toUpperCase();
-      const d = timelineDateParts(item.timestamp);
-      const type = first(item,["type","signal_type","event_type"],"SIGNAL");
-      const region = String(first(item,["primary_region","region"],"GLOBAL")).replaceAll("_"," ");
-      const location = first(item,["primary_location","location"],"—");
-      const source = first(item,["source"],"UNKNOWN");
-      const priority = first(item,["analyst_priority","priority"],layer==="INFORMATION"?"INFO":"—");
-      const text = first(item,["text_excerpt","text"],"");
-      const url = first(item,["source_url","url"],null);
-
-      const foot = [];
-      if(item.information_score !== undefined && item.information_score !== null){
-        foot.push(`Info score: ${escapeHtml(item.information_score)}`);
-      }
-      if(item.event_group_id !== undefined && item.event_group_id !== null){
-        foot.push(`EventGroup #${escapeHtml(item.event_group_id)}`);
-      }
-      if(item.correlation_score !== undefined && item.correlation_score !== null){
-        foot.push(`Correlation: ${escapeHtml(Number(item.correlation_score).toFixed(2))}`);
-      }
-      if(item.related_source_count !== undefined && item.related_source_count !== null){
-        foot.push(`Források: ${escapeHtml(item.related_source_count)}`);
-      }
-
-      return `
-        <div class="timeline-item layer-${escapeAttr(layer)}">
-          <div class="timeline-time">
-            <div class="timeline-time-main">${escapeHtml(d.time)}</div>
-            <div class="timeline-time-date">${escapeHtml(d.date)}</div>
-          </div>
-
-          <div class="timeline-marker-wrap"><div class="timeline-marker"></div></div>
-
-          <article class="timeline-card">
-            <div class="timeline-card-head">
-              <div class="timeline-card-title">
-                <span class="timeline-layer-badge">${escapeHtml(layer.replaceAll("_"," "))}</span>
-                <span class="timeline-type-badge">${escapeHtml(String(type).replaceAll("_"," "))}</span>
-              </div>
-              <span class="timeline-priority ${timelinePriorityClass(priority)}">${escapeHtml(priority)}</span>
-            </div>
-
-            <div class="timeline-meta">
-              <span>Forrás: <strong>${escapeHtml(source)}</strong></span>
-              <span>Régió: <strong>${escapeHtml(region)}</strong></span>
-              <span>Hely: <strong>${escapeHtml(location || "—")}</strong></span>
-              <span>Confidence: <strong>${escapeHtml(timelineConfidence(item.confidence))}</strong></span>
-            </div>
-
-            <p class="timeline-text">${escapeHtml(text)}</p>
-
-            <div class="timeline-foot">
-              <div class="timeline-foot-left">${foot.map(x=>`<span>${x}</span>`).join("")}</div>
-              ${url ? `<a class="timeline-source-link" href="${escapeAttr(url)}" target="_blank" rel="noopener noreferrer">Forrás ↗</a>` : ""}
-            </div>
-          </article>
-        </div>
-      `;
+    function matrixDetailHtml(items){
+      return items.slice(0,8).map(item=>{
+        const d=timelineDateParts(item.timestamp), type=String(first(item,["type","signal_type","event_type"],"Signal")).replaceAll("_"," ");
+        const text=first(item,["text_excerpt","text"],""); const url=first(item,["source_url","url"],null);
+        return `<div class="matrix-detail-item"><span class="matrix-detail-time">${escapeHtml(d.time)}</span> · <strong>${escapeHtml(type)}</strong><br>${escapeHtml(String(text).slice(0,170))}${String(text).length>170?"…":""}${url?`<br><a class="matrix-detail-link" href="${escapeAttr(url)}" target="_blank" rel="noopener noreferrer">Forrás ↗</a>`:""}</div>`;
+      }).join("");
     }
-
+    function matrixLayerCell(items,layer,klass){
+      const arr=layerItems(items,layer); if(!arr.length)return `<div class="matrix-cell matrix-data-${klass}"><div class="matrix-empty">No signals</div></div>`;
+      const breakdown=topTypes(arr); const conf=Math.max(...arr.map(x=>Number(x.confidence)||0));
+      return `<div class="matrix-cell matrix-data-${klass}"><div class="matrix-count ${klass}">${arr.length} ${arr.length===1?"signal":"signals"}</div><div class="matrix-breakdown">${escapeHtml(breakdown||"—")}<br>Peak confidence: ${escapeHtml(conf.toFixed(2))}</div><details class="matrix-details"><summary>▼ Details</summary>${matrixDetailHtml(arr)}</details></div>`;
+    }
+    function matrixOperationalCell(items){
+      const arr=layerItems(items,"OPERATIONAL"); if(!arr.length)return `<div class="matrix-cell matrix-data-operational"><div class="matrix-empty">No events</div></div>`;
+      const breakdown=topTypes(arr); const conf=Math.max(...arr.map(x=>Number(x.confidence)||0));
+      return `<div class="matrix-cell matrix-data-operational"><div class="matrix-count operational">${arr.length} ${arr.length===1?"event":"events"}</div><div class="matrix-breakdown">${escapeHtml(breakdown||"—")}<br>Peak confidence: ${escapeHtml(conf.toFixed(2))}</div><details class="matrix-details"><summary>▼ Details</summary>${matrixDetailHtml(arr)}</details></div>`;
+    }
+    function matrixHotspotCell(items){
+      if(!items.length)return `<div class="matrix-cell matrix-data-hotspot"><div class="matrix-empty">No activity</div></div>`;
+      const counts={}; items.forEach(x=>{const r=String(x.primary_region||x.region||"Unresolved / Unlocated").replaceAll("_"," ");counts[r]=(counts[r]||0)+1});
+      const [region,count]=Object.entries(counts).sort((a,b)=>b[1]-a[1])[0];
+      const loc={}; items.forEach(x=>{const v=first(x,["primary_location","location"],null);if(v&&v!=="-")loc[v]=(loc[v]||0)+1});
+      const place=Object.entries(loc).sort((a,b)=>b[1]-a[1])[0];
+      return `<div class="matrix-cell matrix-data-hotspot"><div class="matrix-hotspot-main">${escapeHtml(region)}</div><div class="matrix-hotspot-sub">${count} timeline record${count===1?"":"s"}${place?`<br>Hotspot: <strong>${escapeHtml(place[0])}</strong>`:""}</div></div>`;
+    }
+    function matrixAssessmentCell(items){
+      const ew=layerItems(items,"EARLY_WARNING").length, op=layerItems(items,"OPERATIONAL").length, co=layerItems(items,"CORRELATED").length;
+      const high=items.filter(x=>String(x.analyst_priority||x.priority||"").toUpperCase()==="HIGH").length;
+      const score=op*3+ew*2+co*2+high;
+      let level="NORMAL",cls="normal"; if(score>=28){level="CRITICAL";cls="critical"}else if(score>=16){level="HIGH";cls="high"}else if(score>=6){level="ELEVATED";cls="elevated"}
+      return `<div class="matrix-cell matrix-data-assessment"><span class="matrix-assessment-badge ${cls}">${level}</span><div class="matrix-assessment-score">Activity score: ${score}<br>${op} operational · ${ew} warning · ${co} correlated</div></div>`;
+    }
     function renderTimeline(){
-      const list = $("signalTimelineList");
-      const loadMore = $("timelineLoadMore");
-      const items = filteredTimelineItems();
-
-      updateTimelineCounts(items);
-
-      if(!items.length){
-        list.innerHTML = `<div class="timeline-empty">A kiválasztott szűréshez nincs timeline-jelzés.</div>`;
-        loadMore.style.display = "none";
-        return;
-      }
-
-      const visible = items.slice(0,timelineState.visibleLimit);
-      list.innerHTML = visible.map(timelineItemHtml).join("");
-
-      if(visible.length < items.length){
-        loadMore.style.display = "inline-flex";
-        loadMore.textContent = `További jelzések (${items.length-visible.length})`;
-      }else{
-        loadMore.style.display = "none";
-      }
+      const grid=$("signalTimelineList"), days=matrixDays(), now=new Date();
+      const all=days.flatMap(matrixItemsForDay); $("timelineVisibleLabel").textContent=`${all.length} jelzés · 7 nap`;
+      const fmt=d=>d.toLocaleDateString("en-GB",{day:"2-digit",month:"short"});
+      $("matrixRange").textContent=`${fmt(days[0])} – ${fmt(days[6])} ${days[6].getFullYear()}`;
+      let h=`<div class="matrix-cell matrix-head matrix-corner">Daily layer</div>`;
+      days.forEach(d=>{h+=`<div class="matrix-cell matrix-head ${sameLocalDay(d,now)?"matrix-today":""}"><div class="matrix-day-name">${escapeHtml(d.toLocaleDateString("en-GB",{day:"2-digit",month:"short"}))}</div><div class="matrix-day-date">${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}</div></div>`});
+      const rows=[
+        ["Information","matrix-label-information",d=>matrixLayerCell(matrixItemsForDay(d),"INFORMATION","information")],
+        ["Early Warning","matrix-label-warning",d=>matrixLayerCell(matrixItemsForDay(d),"EARLY_WARNING","warning")],
+        ["Operational","matrix-label-operational",d=>matrixOperationalCell(matrixItemsForDay(d))],
+        ["Correlation","matrix-label-correlated",d=>matrixLayerCell(matrixItemsForDay(d),"CORRELATED","correlated")],
+        ["Hotspot / Region","matrix-label-hotspot",d=>matrixHotspotCell(matrixItemsForDay(d))],
+        ["Assessment","matrix-label-assessment",d=>matrixAssessmentCell(matrixItemsForDay(d))]
+      ];
+      rows.forEach(([label,cls,fn])=>{h+=`<div class="matrix-cell matrix-row-label ${cls}">${label}</div>`;days.forEach(d=>h+=fn(d))}); grid.innerHTML=h;
     }
-
     function renderSignalTimeline(data){
-      const timeline = data.signal_timeline;
-
-      if(!timeline || !Array.isArray(timeline.items)){
-        timelineState.items = [];
-        renderTimeline();
-        return;
-      }
-
-      timelineState.items = [...timeline.items].sort(
-        (a,b)=>new Date(b.timestamp||0)-new Date(a.timestamp||0)
-      );
-      timelineState.generatedAt = timeline.generated_at || data.generated_at || data.updated_at || null;
-      populateTimelineFilters(timelineState.items);
-      renderTimeline();
+      const timeline=data.signal_timeline;
+      timelineState.items=timeline&&Array.isArray(timeline.items)?[...timeline.items].sort((a,b)=>new Date(b.timestamp||0)-new Date(a.timestamp||0)):[];
+      timelineState.generatedAt=(timeline&&timeline.generated_at)||data.generated_at||data.updated_at||null; timelineState.weekOffset=0;
+      populateTimelineFilters(timelineState.items); renderTimeline();
     }
-
     function setupTimelineControls(){
-      document.querySelectorAll(".timeline-window-btn").forEach(btn=>{
-        btn.addEventListener("click",()=>{
-          timelineState.hours = Number(btn.dataset.hours || 168);
-          timelineState.visibleLimit = timelineState.pageSize;
-          document.querySelectorAll(".timeline-window-btn").forEach(x=>x.classList.toggle("active",x===btn));
-          renderTimeline();
-        });
-      });
-
-      document.querySelectorAll(".timeline-layer-btn").forEach(btn=>{
-        btn.addEventListener("click",()=>{
-          timelineState.layer = btn.dataset.layer || "ALL";
-          timelineState.visibleLimit = timelineState.pageSize;
-          document.querySelectorAll(".timeline-layer-btn").forEach(x=>x.classList.toggle("active",x===btn));
-          renderTimeline();
-        });
-      });
-
-      $("timelineSourceFilter").addEventListener("change",e=>{
-        timelineState.source = e.target.value || "ALL";
-        timelineState.visibleLimit = timelineState.pageSize;
-        renderTimeline();
-      });
-
-      $("timelineRegionFilter").addEventListener("change",e=>{
-        timelineState.region = e.target.value || "ALL";
-        timelineState.visibleLimit = timelineState.pageSize;
-        renderTimeline();
-      });
-
-      $("timelineLoadMore").addEventListener("click",()=>{
-        timelineState.visibleLimit += timelineState.pageSize;
-        renderTimeline();
-      });
+      $("matrixPrev").addEventListener("click",()=>{timelineState.weekOffset--;renderTimeline()});
+      $("matrixNext").addEventListener("click",()=>{timelineState.weekOffset++;renderTimeline()});
+      $("matrixLatest").addEventListener("click",()=>{timelineState.weekOffset=0;renderTimeline()});
+      $("timelineSourceFilter").addEventListener("change",e=>{timelineState.source=e.target.value||"ALL";renderTimeline()});
+      $("timelineRegionFilter").addEventListener("change",e=>{timelineState.region=e.target.value||"ALL";renderTimeline()});
     }
 
     function locationLabel(item){
