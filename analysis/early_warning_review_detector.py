@@ -7,24 +7,39 @@ analysis/early_warning_review_detector.py
 Purpose:
 Generic migration early-warning / analyst-review detector.
 
+V1.2 precision model
+--------------------
 This detector is deliberately NOT route-specific and NOT Ceuta-specific.
-Locations are context only. Scoring is driven by event structure:
 
-- movement / gathering / arrivals / departures
-- route or border changes
-- facilitation / transport / documents
-- enforcement response
-- sudden pressure / influx / quantitative change
-- policy or access changes
-- repeated or current operational reporting
+It runs only after a post has failed the strict operational-event gate.
+Its job is to preserve weaker but still analyst-useful migration signals
+without promoting them to operational events.
 
-The detector is intended for posts that did NOT pass the strict operational
-event filter. A positive detection therefore creates an InfluenceSignal /
-EARLY_WARNING layer record, not an operational event.
+V1.2 adds two precision controls:
 
-Design goal:
-Recover useful weak signals without weakening the existing false-positive
-protection of the operational event pipeline.
+1. LOCAL EVIDENCE WINDOW
+   Signal groups are scored only when migration context and event structure
+   occur in the same short text window. Signals found in distant paragraphs
+   of a long article are not accumulated together.
+
+2. ACTUALITY / ASSERTION GATE
+   A structural keyword match is not enough. The best local window must also
+   contain evidence of a real recent/current development, a concrete
+   enforcement/facilitation action, or a quantified migration-pressure trend.
+
+This is intended to reject:
+- books / historical narratives,
+- hypothetical or policy debate,
+- long unrelated articles where migration terms appear far apart,
+- political commentary about what migrants "could" or "would" do,
+while keeping:
+- concrete movement / arrival / gathering reports,
+- border or route changes tied to real activity,
+- migrant smuggling/facilitation reporting,
+- raids, interceptions, detentions and returns,
+- quantified increases/decreases that may indicate route pressure changes.
+
+Locations are context only. No location receives a scoring bonus.
 """
 
 from __future__ import annotations
@@ -34,9 +49,10 @@ from typing import Any, Dict, List, Sequence, Tuple
 
 
 class EarlyWarningReviewDetector:
-    RULES_VERSION = "EARLY_WARNING_REVIEW_V1_1"
+    RULES_VERSION = "EARLY_WARNING_REVIEW_V1_2"
 
     MIN_SCORE = 5.0
+    WINDOW_MAX_CHARS = 460
 
     # ------------------------------------------------------
     # HUMAN MIGRATION CONTEXT
@@ -71,6 +87,7 @@ class EarlyWarningReviewDetector:
         r"\bмигрант\w*\b",
         r"\bбежен\w*\b",
         r"\bиммигрант\w*\b",
+        r"\bмуҳожир\w*\b",
 
         # Arabic
         r"مهاجر",
@@ -94,9 +111,9 @@ class EarlyWarningReviewDetector:
         # French / Italian
         r"\b(?:migrants?|r[ée]fugi[ée]s?|migranti|rifugiati)\b.{0,90}\b(?:arriv|d[ée]part|travers|part|sbarc|radun|rassembl)\w*",
 
-        # Russian
-        r"\b(?:мигрант\w*|бежен\w*)\b.{0,120}\b(?:прибы\w*|прибыл\w*|едут|движ\w*|направ\w*|собира\w*|скоп\w*|пересек\w*|переш\w*|въех\w*|выех\w*|наплыв\w*|нашеств\w*)\b",
-        r"\b(?:наплыв\w*|нашеств\w*|прибыл\w*|пересек\w*|въех\w*|собира\w*)\b.{0,120}\b(?:мигрант\w*|бежен\w*)\b",
+        # Russian / CIS
+        r"\b(?:мигрант\w*|бежен\w*|муҳожир\w*)\b.{0,120}\b(?:прибы\w*|прибыл\w*|едут|движ\w*|направ\w*|собира\w*|скоп\w*|пересек\w*|переш\w*|въех\w*|выех\w*|наплыв\w*|нашеств\w*)\b",
+        r"\b(?:наплыв\w*|нашеств\w*|прибыл\w*|пересек\w*|въех\w*|собира\w*)\b.{0,120}\b(?:мигрант\w*|бежен\w*|муҳожир\w*)\b",
 
         # Arabic
         r"(?:مهاجر|لاجئ).{0,90}(?:تجمع|وصول|غادر|مغادرة|عبور|دخل|يتجه)",
@@ -117,7 +134,7 @@ class EarlyWarningReviewDetector:
         r"\b(?:passeur\w*|faux\s+documents?|transport)\b",
         r"\b(?:scafist\w*|documenti\s+falsi|trasporto)\b",
         r"\b(?:контрабанд\w*|перевоз\w*|водител\w*|поддельн\w*.{0,30}(?:документ|договор)|фиктивн\w*.{0,30}(?:документ|договор))\b",
-        r"(?:تهريب|نقل المهاجرين|وثائق مزورة|عقد مزور)",
+        r"(?:تهريب|مهربين|نقل المهاجرين|وثائق مزورة|عقد مزور)",
     )
 
     ENFORCEMENT_PATTERNS = (
@@ -126,7 +143,7 @@ class EarlyWarningReviewDetector:
         r"\b(?:intercept[ée]\w*|arr[êe]t[ée]\w*|expuls[ée]\w*|secour\w*|garde-c[oô]tes|police)\b",
         r"\b(?:intercettat\w*|arrestat\w*|espuls\w*|soccors\w*|guardia\s+costiera)\b",
         r"\b(?:задерж\w*|выдвор\w*|депорт\w*|перехват\w*|рейд\w*|пограничн\w*|полици\w*)\b",
-        r"(?:اعتراض|اعتقال|احتجاز|ترحيل|إبعاد|إنقاذ|حرس الحدود|خفر السواحل)",
+        r"(?:اعتراض|اعتقال|احتجاز|ترحيل|إبعاد|إنقاذ|حرس الحدود|خفر السواحل|كبسة)",
     )
 
     PRESSURE_PATTERNS = (
@@ -135,8 +152,7 @@ class EarlyWarningReviewDetector:
         r"\b(?:increase|increased|increasing|rise|rose|rising)\b.{0,70}\b(?:migrant|migration|refugee|arrival|crossing)\w*",
         r"\b(?:migrant|migration|refugee|arrival|crossing)\w*\b.{0,70}\b(?:increase|increased|increasing|rise|rose|rising)\b",
 
-        # Decrease / diversion can also be strategically relevant because it
-        # may indicate route displacement rather than reduced total pressure.
+        # Decrease / route displacement
         r"\b(?:decrease|decreased|decline|declined|drop|dropped|fall|fell)\b.{0,70}\b(?:migrant|migration|refugee|arrival|crossing)\w*",
         r"\b(?:migrant|migration|refugee|arrival|crossing)\w*\b.{0,70}\b(?:decrease|decreased|decline|declined|drop|dropped|fall|fell)\b",
 
@@ -145,7 +161,7 @@ class EarlyWarningReviewDetector:
         r"\b(?:afflux|vague\s+de\s+migrants|hausse|baisse|diminution|pression\s+migratoire)\b",
         r"\b(?:ondata|afflusso|aumento|calo|diminuzione|pressione\s+migratoria)\b",
 
-        # Russian / Cyrillic and common Uzbek Cyrillic wording
+        # Russian / CIS Cyrillic
         r"\b(?:наплыв\w*|массов\w*.{0,30}(?:прибыт|миграц)|резк\w*.{0,30}(?:рост|увелич)|миграционн\w*.{0,30}давлен)\b",
         r"\b(?:мигрант\w*|миграц\w*)\b.{0,80}\b(?:сократ\w*|сниз\w*|уменьш\w*|вырос\w*|увелич\w*|рост\w*|камай\w*|ош\w*)\b",
         r"\b(?:сократ\w*|сниз\w*|уменьш\w*|вырос\w*|увелич\w*|камай\w*|ош\w*)\b.{0,80}\b(?:мигрант\w*|миграц\w*)\b",
@@ -162,6 +178,10 @@ class EarlyWarningReviewDetector:
         r"\b(?:нов\w*.{0,25}(?:закон|правил|требован)|закрыт\w*.{0,25}границ|огранич\w*.{0,25}въезд|ужесточ\w*.{0,25}миграц)\b",
         r"(?:قانون جديد|قواعد جديدة|إغلاق الحدود|قيود الدخول)",
     )
+
+    # ------------------------------------------------------
+    # ACTUALITY / ASSERTION EVIDENCE
+    # ------------------------------------------------------
 
     CURRENT_PATTERNS = (
         r"\btoday\b",
@@ -185,6 +205,34 @@ class EarlyWarningReviewDetector:
         r"(?:اليوم|الآن|أمس)",
     )
 
+    # Concrete real-world action forms. Gerunds such as "migrants crossing"
+    # are deliberately NOT enough on their own because they frequently appear
+    # in policy debate or hypothetical statements.
+    EVENT_ASSERTION_PATTERNS = (
+        # English
+        r"\b(?:migrants?|refugees?)\s+(?:have\s+)?(?:arrived|crossed|entered|reached|gathered|departed|left)\b",
+        r"\b(?:arrived|crossed|entered|reached|gathered|departed|left)\b.{0,80}\b(?:migrants?|refugees?)\b",
+        r"\b(?:were|was|have\s+been|has\s+been)\s+(?:intercepted|detained|arrested|rescued|deported|expelled|returned)\b",
+        r"\b(?:police|border\s+guards?|coast\s+guard|authorities)\b.{0,100}\b(?:detained|arrested|intercepted|rescued|deported|returned|expelled)\b",
+        r"\b(?:raid|operation)\s+(?:was\s+)?(?:conducted|carried\s+out|took\s+place)\b",
+
+        # Spanish / French / Italian
+        r"\b(?:migrantes?|refugiados?)\b.{0,80}\b(?:llegaron|cruzaron|entraron|alcanzaron|salieron|partieron)\b",
+        r"\b(?:fueron|han\s+sido)\s+(?:detenid\w*|interceptad\w*|rescatad\w*|expulsad\w*|deportad\w*)\b",
+        r"\b(?:migrants?|r[ée]fugi[ée]s?)\b.{0,80}\b(?:sont\s+arriv[ée]s|ont\s+travers[ée]|ont\s+quitt[ée])\b",
+        r"\b(?:ont\s+[ée]t[ée]|a\s+[ée]t[ée])\s+(?:arr[êe]t[ée]\w*|intercept[ée]\w*|expuls[ée]\w*|secour\w*)\b",
+        r"\b(?:migranti|rifugiati)\b.{0,80}\b(?:sono\s+arrivati|hanno\s+attraversato|sono\s+entrati|sono\s+partiti)\b",
+
+        # Russian / CIS
+        r"\b(?:мигрант\w*|бежен\w*|муҳожир\w*)\b.{0,110}\b(?:прибыли|прибыв\w*|пересек\w*|въех\w*|выех\w*|задерж\w*|выдвор\w*|депорт\w*)\b",
+        r"\b(?:задерж\w*|выдвор\w*|депорт\w*|перехват\w*|рейд\w*)\b.{0,110}\b(?:мигрант\w*|бежен\w*|муҳожир\w*)\b",
+        r"\b(?:рейд\w*).{0,140}\b(?:полици\w*|мигрант\w*|муҳожир\w*)\b",
+
+        # Arabic
+        r"(?:مهاجر|لاجئ).{0,100}(?:وصل|عبر|دخل|غادر|اعتقل|احتجز|رحل|أبعد)",
+        r"(?:اعتقال|احتجاز|ترحيل|إبعاد|اعتراض|إنقاذ|كبسة).{0,120}(?:مهاجر|لاجئ)",
+    )
+
     QUANTITATIVE_PATTERNS = (
         r"\b\d{2,6}\b",
         r"\b\d+(?:[.,]\d+)?\s*(?:%|percent|per\s+cent)\b",
@@ -194,69 +242,320 @@ class EarlyWarningReviewDetector:
         r"(?:عشرات|مئات|آلاف)",
     )
 
-    # Strong commentary / non-event contexts. These do not necessarily reject
-    # a post; they subtract from the score.
-    COMMENTARY_PATTERNS = (
-        r"\b(?:opinion|commentary|analysis|explainer|essay|debate)\b",
-        r"\b(?:should|could|would)\b",
-        r"\b(?:according\s+to\s+my\s+opinion|i\s+think|i\s+believe)\b",
-        r"\b(?:мнение|аналитик\w*|считаю|думаю|должны|следовало\s+бы)\b",
-        r"\b(?:opinión|analisis|análisis|deber[ií]a)\b",
+    TREND_COMPARISON_PATTERNS = (
+        r"\b(?:year[-\s]on[-\s]year|compared\s+with|compared\s+to|versus|vs\.?|from\s+last\s+year|since\s+last\s+year)\b",
+        r"\b(?:respecto\s+al\s+año\s+pasado|en\s+comparaci[oó]n\s+con|interanual)\b",
+        r"\b(?:par\s+rapport\s+[àa]|sur\s+un\s+an)\b",
+        r"\b(?:rispetto\s+all['’]anno\s+scorso|su\s+base\s+annua)\b",
+        r"\b(?:по\s+сравнению\s+с|год\s+к\s+году|за\s+год|ўтган\s+йил|нисбатан)\b",
+        r"(?:مقارنة بالعام الماضي|على أساس سنوي)",
     )
 
-    # Explicit examples of content that often mentions migrants but should not
-    # become migration early warning merely because an offender is a migrant.
+    # ------------------------------------------------------
+    # REJECTION / DOWN-RANKING CONTEXT
+    # ------------------------------------------------------
+
+    COMMENTARY_PATTERNS = (
+        r"\b(?:opinion|commentary|analysis|explainer|essay|debate)\b",
+        r"\b(?:according\s+to\s+my\s+opinion|i\s+think|i\s+believe)\b",
+        r"\b(?:мнение|аналитик\w*|считаю|думаю)\b",
+        r"\b(?:opinión|analisis|análisis)\b",
+    )
+
+    SPECULATIVE_PATTERNS = (
+        r"\b(?:could|would|should|might|may)\b",
+        r"\b(?:believe|believes|believed)\b.{0,80}\b(?:would|could|might|migrants?\s+crossing)\b",
+        r"\b(?:proposal|proposed|plan\s+to|plans\s+to|would\s+ban|would\s+allow)\b",
+        r"\b(?:if\s+migrants?|if\s+refugees?)\b",
+        r"\b(?:deber[ií]a|podr[ií]a|propuesta)\b",
+        r"\b(?:должн\w*|мог\w*\s+бы|предлага\w*)\b",
+    )
+
+    HISTORICAL_NARRATIVE_PATTERNS = (
+        r"\b(?:book|chapter|history|historical|century|dynasty|empire|colonial|treaty)\b",
+        r"\b(?:in\s+the\s+18\d{2}s|in\s+the\s+19\d{2}s|in\s+the\s+20th\s+century)\b",
+        r"\b(?:libro|cap[ií]tulo|historia|hist[oó]rico|siglo|dinast[ií]a|imperio|colonial)\b",
+        r"\b(?:livre|chapitre|histoire|historique|si[èe]cle|empire|colonial)\b",
+        r"\b(?:книг\w*|глав\w*|истори\w*|век\w*|импери\w*|колони\w*)\b",
+    )
+
     GENERIC_CRIME_PATTERNS = (
         r"\b(?:assault|murder|rape|robbery|arson|fight|terror attack)\b",
         r"\b(?:напал|убил|изнасил|ограб|драк|поджог|теракт)\w*",
         r"\b(?:agresi[oó]n|asesin|violaci[oó]n|robo|pelea)\w*",
     )
 
+    # ------------------------------------------------------
+    # PUBLIC API
+    # ------------------------------------------------------
+
     def detect(
         self,
         text: str,
     ) -> Dict[str, Any]:
-        value = str(
+        value = self._normalize_text(
             text
-            or ""
-        ).strip()
+        )
 
         if not value:
             return self._empty()
 
-        migration_matches = self._matches(
+        all_migration_matches = self._matches(
             value,
             self.MIGRATION_PATTERNS,
         )
 
-        if not migration_matches:
+        if not all_migration_matches:
             return self._empty(
                 rejection_reason="NO_HUMAN_MIGRATION_CONTEXT"
             )
 
+        windows = self._build_windows(
+            value
+        )
+
+        candidates = []
+
+        for index, window in enumerate(
+            windows
+        ):
+            candidate = self._score_window(
+                window
+            )
+
+            if candidate is None:
+                continue
+
+            candidate[
+                "window_index"
+            ] = index
+
+            candidates.append(
+                candidate
+            )
+
+        if not candidates:
+            return self._empty(
+                migration_context=True,
+                context_matches=all_migration_matches,
+                rejection_reason="NO_LOCAL_EVENT_STRUCTURE"
+            )
+
+        candidates.sort(
+            key=lambda item: (
+                bool(
+                    item.get(
+                        "actuality_gate_passed"
+                    )
+                ),
+                float(
+                    item.get(
+                        "score",
+                        0.0,
+                    )
+                ),
+                len(
+                    item.get(
+                        "matched_groups",
+                        [],
+                    )
+                ),
+            ),
+            reverse=True,
+        )
+
+        best = candidates[
+            0
+        ]
+
+        detected = bool(
+            best.get(
+                "actuality_gate_passed"
+            )
+            and float(
+                best.get(
+                    "score",
+                    0.0,
+                )
+            )
+            >= self.MIN_SCORE
+        )
+
+        primary_signal = (
+            self._primary_signal(
+                best.get(
+                    "matched_groups",
+                    [],
+                )
+            )
+            if detected
+            else None
+        )
+
+        confidence = (
+            self._confidence(
+                float(
+                    best.get(
+                        "score",
+                        0.0,
+                    )
+                )
+            )
+            if detected
+            else 0.35
+        )
+
+        return {
+            "detected":
+                detected,
+            "primary_signal":
+                primary_signal,
+            "signal_mode":
+                "ANALYST_REVIEW",
+            "signal_intent":
+                primary_signal,
+            "confidence":
+                confidence,
+            "score":
+                round(
+                    float(
+                        best.get(
+                            "score",
+                            0.0,
+                        )
+                    ),
+                    2,
+                ),
+            "matched_signals":
+                [
+                    primary_signal
+                ]
+                if detected
+                else [],
+            "matched_phrases":
+                best.get(
+                    "matched_phrases",
+                    [],
+                ),
+            "matched_groups":
+                best.get(
+                    "matched_groups",
+                    [],
+                ),
+            "context_matches":
+                best.get(
+                    "migration_matches",
+                    [],
+                ),
+            "high_value_matches":
+                best.get(
+                    "high_value_matches",
+                    [],
+                ),
+            "signal_context_rejections":
+                best.get(
+                    "rejection_matches",
+                    [],
+                ),
+            "migration_context":
+                True,
+            "human_migration_context":
+                True,
+            "historical_reference":
+                False,
+            "historical_reason":
+                None,
+            "historical_reference_text":
+                None,
+            "rules_version":
+                self.RULES_VERSION,
+            "current_cues":
+                best.get(
+                    "current_matches",
+                    [],
+                ),
+            "quantitative_cues":
+                best.get(
+                    "quantitative_matches",
+                    [],
+                ),
+            "event_assertion_cues":
+                best.get(
+                    "event_assertion_matches",
+                    [],
+                ),
+            "trend_comparison_cues":
+                best.get(
+                    "trend_comparison_matches",
+                    [],
+                ),
+            "actuality_gate_passed":
+                bool(
+                    best.get(
+                        "actuality_gate_passed"
+                    )
+                ),
+            "actuality_reason":
+                best.get(
+                    "actuality_reason"
+                ),
+            "evidence_window":
+                best.get(
+                    "window",
+                    ""
+                ),
+            "review_reason":
+                (
+                    "STRUCTURED_MIGRATION_EARLY_WARNING"
+                    if detected
+                    else (
+                        best.get(
+                            "actuality_reason"
+                        )
+                        or "BELOW_EARLY_WARNING_THRESHOLD"
+                    )
+                ),
+        }
+
+    # ------------------------------------------------------
+    # LOCAL WINDOW SCORING
+    # ------------------------------------------------------
+
+    def _score_window(
+        self,
+        window: str,
+    ) -> Dict[str, Any] | None:
+        migration_matches = self._matches(
+            window,
+            self.MIGRATION_PATTERNS,
+        )
+
+        if not migration_matches:
+            return None
+
         groups = {
             "MOVEMENT": self._matches(
-                value,
+                window,
                 self.MOVEMENT_PATTERNS,
             ),
             "ROUTE": self._matches(
-                value,
+                window,
                 self.ROUTE_PATTERNS,
             ),
             "FACILITATION": self._matches(
-                value,
+                window,
                 self.FACILITATION_PATTERNS,
             ),
             "ENFORCEMENT": self._matches(
-                value,
+                window,
                 self.ENFORCEMENT_PATTERNS,
             ),
             "PRESSURE": self._matches(
-                value,
+                window,
                 self.PRESSURE_PATTERNS,
             ),
             "POLICY_ACCESS": self._matches(
-                value,
+                window,
                 self.POLICY_ACCESS_PATTERNS,
             ),
         }
@@ -269,28 +568,119 @@ class EarlyWarningReviewDetector:
         ]
 
         if not matched_groups:
-            return self._empty(
-                migration_context=True,
-                context_matches=migration_matches,
-                rejection_reason="NO_EVENT_STRUCTURE"
-            )
+            return None
 
         current_matches = self._matches(
-            value,
+            window,
             self.CURRENT_PATTERNS,
         )
+        event_assertion_matches = self._matches(
+            window,
+            self.EVENT_ASSERTION_PATTERNS,
+        )
         quantitative_matches = self._matches(
-            value,
+            window,
             self.QUANTITATIVE_PATTERNS,
         )
+        trend_comparison_matches = self._matches(
+            window,
+            self.TREND_COMPARISON_PATTERNS,
+        )
+
         commentary_matches = self._matches(
-            value,
+            window,
             self.COMMENTARY_PATTERNS,
         )
+        speculative_matches = self._matches(
+            window,
+            self.SPECULATIVE_PATTERNS,
+        )
+        historical_matches = self._matches(
+            window,
+            self.HISTORICAL_NARRATIVE_PATTERNS,
+        )
         generic_crime_matches = self._matches(
-            value,
+            window,
             self.GENERIC_CRIME_PATTERNS,
         )
+
+        actuality_gate_passed = False
+        actuality_reason = "NO_CURRENT_EVENT_EVIDENCE"
+
+        # Strongest gate: explicit real-world action.
+        if event_assertion_matches:
+            actuality_gate_passed = True
+            actuality_reason = "CONCRETE_EVENT_ASSERTION"
+
+        # Quantified pressure/trend can be useful early warning even if it is
+        # not an operational incident.
+        elif (
+            "PRESSURE"
+            in matched_groups
+            and quantitative_matches
+            and trend_comparison_matches
+        ):
+            actuality_gate_passed = True
+            actuality_reason = "QUANTIFIED_MIGRATION_TREND"
+
+        # Current cue + strong action class. Route alone is not enough.
+        elif (
+            current_matches
+            and any(
+                group in matched_groups
+                for group in (
+                    "MOVEMENT",
+                    "FACILITATION",
+                    "ENFORCEMENT",
+                    "PRESSURE",
+                    "POLICY_ACCESS",
+                )
+            )
+        ):
+            actuality_gate_passed = True
+            actuality_reason = "CURRENT_STRUCTURED_MIGRATION_SIGNAL"
+
+        # Strong facilitation or enforcement reporting can be useful even
+        # without an explicit "today" token, but only when it is framed as
+        # concrete activity rather than generic discussion.
+        elif (
+            any(
+                group in matched_groups
+                for group in (
+                    "FACILITATION",
+                    "ENFORCEMENT",
+                )
+            )
+            and not speculative_matches
+            and not historical_matches
+            and quantitative_matches
+        ):
+            actuality_gate_passed = True
+            actuality_reason = "CONCRETE_ACTION_WITH_QUANTITY"
+
+        # Historical/narrative material cannot pass without a concrete event
+        # assertion in the same local window.
+        if (
+            historical_matches
+            and not event_assertion_matches
+        ):
+            actuality_gate_passed = False
+            actuality_reason = "HISTORICAL_OR_NARRATIVE_CONTEXT"
+
+        # Hypothetical / proposal language blocks weak movement/route claims
+        # unless a separate concrete event assertion is present.
+        if (
+            speculative_matches
+            and not event_assertion_matches
+            and not (
+                "PRESSURE"
+                in matched_groups
+                and quantitative_matches
+                and trend_comparison_matches
+            )
+        ):
+            actuality_gate_passed = False
+            actuality_reason = "SPECULATIVE_OR_POLICY_DEBATE"
 
         score = 2.0
 
@@ -308,16 +698,22 @@ class EarlyWarningReviewDetector:
                 group
             ]
 
+        if event_assertion_matches:
+            score += 2.0
+
         if current_matches:
-            score += 1.0
+            score += 0.75
 
         if quantitative_matches:
+            score += 0.75
+
+        if trend_comparison_matches:
             score += 1.0
 
         if len(
             matched_groups
         ) >= 2:
-            score += 1.5
+            score += 1.0
 
         if commentary_matches:
             score -= min(
@@ -328,8 +724,24 @@ class EarlyWarningReviewDetector:
                 ),
             )
 
-        # Migrant-linked ordinary crime is not migration early warning unless
-        # movement/route/facilitation/pressure structure is also present.
+        if speculative_matches:
+            score -= min(
+                3.0,
+                1.0
+                * len(
+                    speculative_matches
+                ),
+            )
+
+        if historical_matches:
+            score -= min(
+                4.0,
+                1.0
+                * len(
+                    historical_matches
+                ),
+            )
+
         if (
             generic_crime_matches
             and not any(
@@ -343,18 +755,6 @@ class EarlyWarningReviewDetector:
             )
         ):
             score -= 3.0
-
-        primary_signal = self._primary_signal(
-            matched_groups
-        )
-
-        detected = bool(
-            score >= self.MIN_SCORE
-        )
-
-        confidence = self._confidence(
-            score
-        )
 
         matched_phrases: List[
             Tuple[str, str]
@@ -383,62 +783,164 @@ class EarlyWarningReviewDetector:
                 )
             )
 
+        rejection_matches = (
+            commentary_matches
+            + speculative_matches
+            + historical_matches
+            + generic_crime_matches
+        )
+
         return {
-            "detected":
-                detected,
-            "primary_signal":
-                primary_signal,
-            "signal_mode":
-                "ANALYST_REVIEW",
-            "signal_intent":
-                primary_signal,
-            "confidence":
-                confidence,
+            "window":
+                window,
             "score":
                 round(
                     score,
                     2,
                 ),
-            "matched_signals":
-                [
-                    primary_signal
-                ]
-                if detected
-                else [],
-            "matched_phrases":
-                matched_phrases,
             "matched_groups":
                 matched_groups,
-            "context_matches":
+            "matched_phrases":
+                matched_phrases,
+            "migration_matches":
                 migration_matches,
+            "current_matches":
+                current_matches,
+            "event_assertion_matches":
+                event_assertion_matches,
+            "quantitative_matches":
+                quantitative_matches,
+            "trend_comparison_matches":
+                trend_comparison_matches,
             "high_value_matches":
                 high_value_matches,
-            "signal_context_rejections":
-                commentary_matches
-                + generic_crime_matches,
-            "migration_context":
-                True,
-            "human_migration_context":
-                True,
-            "historical_reference":
-                False,
-            "historical_reason":
-                None,
-            "historical_reference_text":
-                None,
-            "rules_version":
-                self.RULES_VERSION,
-            "current_cues":
-                current_matches,
-            "quantitative_cues":
-                quantitative_matches,
-            "review_reason":
-                (
-                    "STRUCTURED_MIGRATION_EARLY_WARNING"
-                    if detected
-                    else "BELOW_EARLY_WARNING_THRESHOLD"
-                ),
+            "rejection_matches":
+                rejection_matches,
+            "actuality_gate_passed":
+                actuality_gate_passed,
+            "actuality_reason":
+                actuality_reason,
         }
+
+    # ------------------------------------------------------
+    # WINDOW BUILDER
+    # ------------------------------------------------------
+
+    def _build_windows(
+        self,
+        text: str,
+    ) -> List[str]:
+        """
+        Builds short local evidence windows.
+
+        We first split on paragraph boundaries and sentence endings. Then we
+        combine at most two neighboring units, capped at WINDOW_MAX_CHARS.
+        This keeps related statements together while preventing distant
+        paragraphs in long articles from accumulating unrelated signal groups.
+        """
+
+        raw_units = re.split(
+            r"(?:\n{2,}|(?<=[.!?。！？])\s+)",
+            text,
+        )
+
+        units = []
+
+        for raw in raw_units:
+            value = (
+                raw.strip()
+            )
+
+            if not value:
+                continue
+
+            if len(
+                value
+            ) <= self.WINDOW_MAX_CHARS:
+                units.append(
+                    value
+                )
+                continue
+
+            # Long sentence/paragraph: chunk conservatively with overlap.
+            step = max(
+                180,
+                self.WINDOW_MAX_CHARS
+                - 120,
+            )
+
+            start = 0
+
+            while start < len(
+                value
+            ):
+                chunk = value[
+                    start:
+                    start
+                    + self.WINDOW_MAX_CHARS
+                ].strip()
+
+                if chunk:
+                    units.append(
+                        chunk
+                    )
+
+                start += step
+
+        windows = []
+
+        for index, unit in enumerate(
+            units
+        ):
+            windows.append(
+                unit
+            )
+
+            if (
+                index
+                + 1
+                < len(
+                    units
+                )
+            ):
+                combined = (
+                    unit
+                    + " "
+                    + units[
+                        index
+                        + 1
+                    ]
+                )
+
+                if len(
+                    combined
+                ) <= self.WINDOW_MAX_CHARS:
+                    windows.append(
+                        combined
+                    )
+
+        # Stable de-duplication.
+        seen = set()
+        unique = []
+
+        for window in windows:
+            key = window.lower()
+
+            if key in seen:
+                continue
+
+            seen.add(
+                key
+            )
+            unique.append(
+                window
+            )
+
+        return unique
+
+    # ------------------------------------------------------
+    # HELPERS
+    # ------------------------------------------------------
 
     def _primary_signal(
         self,
@@ -498,6 +1000,23 @@ class EarlyWarningReviewDetector:
             return 0.62
 
         return 0.35
+
+    @staticmethod
+    def _normalize_text(
+        text: str,
+    ) -> str:
+        value = str(
+            text
+            or ""
+        )
+
+        value = re.sub(
+            r"\s+",
+            " ",
+            value,
+        )
+
+        return value.strip()
 
     @staticmethod
     def _matches(
@@ -583,6 +1102,16 @@ class EarlyWarningReviewDetector:
                 [],
             "quantitative_cues":
                 [],
+            "event_assertion_cues":
+                [],
+            "trend_comparison_cues":
+                [],
+            "actuality_gate_passed":
+                False,
+            "actuality_reason":
+                rejection_reason,
+            "evidence_window":
+                "",
             "review_reason":
                 rejection_reason,
         }
