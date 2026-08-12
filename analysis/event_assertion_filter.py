@@ -6,8 +6,8 @@ event_assertion_filter.py
 
 Description:
 Precision gate between operational phrase detection and persistent event
-creation. V1.3 adds operational actuality, historical-year, migration-
-enforcement proximity and human-smuggling disambiguation. It rejects selected analytical, retrospective, hypothetical,
+creation. V1.3.1 adds proximity-aware trafficking disambiguation while preserving
+V1.3 historical and migration-enforcement gates. It rejects selected analytical, retrospective, hypothetical,
 comparative and weak generic coordination contexts while preserving concrete
 current event reports.
 """
@@ -129,7 +129,14 @@ class EventAssertionFilter:
         r"\b(?:smuggl\w*|traffick\w*)\s+(?:network|ring|gang)\b.{0,120}\b(?:dismantled|busted|disrupted|arrested|detained|charged|convicted)\b",
         r"\b(?:arrested|detained|charged|convicted)\b.{0,100}\b(?:smuggler|smugglers|trafficker|traffickers)\b",
         r"\b(?:network|ring|gang)\b.{0,120}\b(?:moved|transported|smuggled|brought|carried)\b.{0,100}\b(?:migrants?|refugees?|people)\b",
-        r"\b(?:migrants?|refugees?|people)\b.{0,100}\b(?:were\s+)?(?:smuggled|transported|moved)\b",
+        r"\b(?:migrants?|refugees?|people)\b.{0,100}\b(?:were\s+)?(?:smuggled|transported|moved|brought|carried)\b",
+
+        # Concrete commercial/facilitation offer or claimed method.
+        r"\b(?:people|migrant)\s+smuggler\b.{0,140}\b(?:claim\w*|offer\w*|arrang\w*|bring\w*|transport\w*|use\w*)\b",
+        r"\b(?:claim\w*|offer\w*|arrang\w*|bring\w*|transport\w*)\b.{0,140}\b(?:migrant|migrants|refugee|refugees)\b",
+        r"\b(?:fake|false|forged)\s+(?:passport|passports|document|documents)\b.{0,140}\b(?:bring|move|transport|smuggl)\w*\b.{0,100}\b(?:migrant|migrants|people)\b",
+        r"\b(?:migrant|migrants|people)\b.{0,120}\b(?:fake|false|forged)\s+(?:passport|passports|document|documents)\b",
+        r"(?:£|\$|€)\s*\d[\d,\.]*\b.{0,120}\b(?:arrang\w*|bring\w*|transport\w*)\b.{0,100}\b(?:migrant|migrants|people)\b",
     ]
 
     NON_HUMAN_TRAFFICKING_PATTERNS = [
@@ -386,6 +393,9 @@ class EventAssertionFilter:
         if (
             smuggling_sensitive
             and non_human_trafficking_cues
+            and not self._has_clean_human_smuggling_context(
+                text
+            )
         ):
             return self._reject(
                 "NON_HUMAN_TRAFFICKING_CONTEXT",
@@ -521,6 +531,47 @@ class EventAssertionFilter:
             "non_assertive_cues": non_assertive_cues,
             "direct_event_cues": direct_event_cues,
         }
+
+    def _has_clean_human_smuggling_context(
+        self,
+        text: str,
+    ) -> bool:
+        """
+        True if at least one human-smuggling cue has a clean local context.
+
+        This is intentionally local. A later paragraph about drug smuggling
+        must not invalidate an earlier, concrete migrant-smuggling account.
+        """
+
+        for pattern in self.HUMAN_SMUGGLING_CONTEXT_PATTERNS:
+            for match in re.finditer(
+                pattern,
+                text,
+                flags=re.IGNORECASE
+                | re.UNICODE,
+            ):
+                start = max(
+                    0,
+                    match.start()
+                    - 160,
+                )
+                end = min(
+                    len(text),
+                    match.end()
+                    + 160,
+                )
+
+                local = text[
+                    start:end
+                ]
+
+                if not self._find_matches(
+                    local,
+                    self.NON_HUMAN_TRAFFICKING_PATTERNS,
+                ):
+                    return True
+
+        return False
 
     def _historical_years(
         self,
