@@ -5,9 +5,13 @@ File:
 operational_event_filter.py
 
 Description:
-Determines whether a migration-related social media post describes
-a concrete operational event or is primarily commentary, opinion,
-political discussion, or other non-operational content.
+Strict first-pass detector for concrete migration operational events.
+
+V2 multilingual precision update:
+- English, Spanish, French, Italian, Russian/CIS Cyrillic and Arabic;
+- generic migration/police/crime words are not sufficient;
+- concrete event structures are required;
+- EventAssertionFilter remains the second precision gate.
 """
 
 import re
@@ -15,9 +19,6 @@ from typing import Dict, List
 
 
 class OperationalEventFilter:
-    """
-    Identifies whether a post contains a concrete migration-related event.
-    """
 
     OPERATIONAL_PATTERNS = {
         "MOVEMENT": [
@@ -33,6 +34,11 @@ class OperationalEventFilter:
             r"\bvessel departed\b",
             r"\bset off from\b",
             r"\bleft the coast\b",
+            r"\b(?:migrantes?|refugiados?)\b.{0,90}\b(?:llegaron|cruzaron|entraron|salieron|partieron)\b",
+            r"\b(?:migrants?|r[ée]fugi[ée]s?)\b.{0,90}\b(?:sont\s+arriv[ée]s|ont\s+travers[ée]|sont\s+entr[ée]s|sont\s+partis)\b",
+            r"\b(?:migranti|rifugiati)\b.{0,90}\b(?:sono\s+arrivati|hanno\s+attraversato|sono\s+entrati|sono\s+partiti)\b",
+            r"\b(?:мигрант\w*|бежен\w*|муҳожир\w*)\b.{0,120}\b(?:прибыли|прибыл\w*|пересек\w*|въех\w*|выех\w*|направ\w*|движ\w*)\b",
+            r"(?:مهاجر|لاجئ).{0,100}(?:وصل|عبر|دخل|غادر|يتجه)",
         ],
         "RESCUE": [
             r"\bmigrants? rescued\b",
@@ -40,6 +46,9 @@ class OperationalEventFilter:
             r"\brescue operation\b",
             r"\bcoast guard rescued\b",
             r"\bsaved from drowning\b",
+            r"\b(?:migrantes?|refugiados?)\b.{0,90}\b(?:rescatad\w*|salvad\w*)\b",
+            r"\b(?:мигрант\w*|бежен\w*|муҳожир\w*)\b.{0,120}\bспас\w*\b",
+            r"(?:مهاجر|لاجئ).{0,100}(?:إنقاذ|أنقذ)",
         ],
         "INTERCEPTION": [
             r"\bmigrants? intercepted\b",
@@ -48,6 +57,9 @@ class OperationalEventFilter:
             r"\bvessel intercepted\b",
             r"\bprevented from crossing\b",
             r"\bstopped at the border\b",
+            r"\b(?:migrantes?|refugiados?)\b.{0,90}\binterceptad\w*\b",
+            r"\b(?:мигрант\w*|бежен\w*|муҳожир\w*)\b.{0,120}\bперехват\w*\b",
+            r"(?:مهاجر|لاجئ).{0,100}(?:اعتراض|منع.{0,30}عبور)",
         ],
         "ARREST_DETENTION": [
             r"\bmigrants? arrested\b",
@@ -57,15 +69,30 @@ class OperationalEventFilter:
             r"\bsmugglers? arrested\b",
             r"\bsuspected smugglers? arrested\b",
             r"\bpolice arrested\b",
+            r"\b(?:migrantes?|refugiados?)\b.{0,100}\b(?:detenid\w*|arrestad\w*)\b",
+            r"\b(?:мигрант\w*|бежен\w*|муҳожир\w*|иностранц\w*)\b.{0,130}\b(?:задерж\w*|арест\w*|провер\w*)\b",
+            r"\b(?:рейд\w*|провер\w*)\b.{0,150}\b(?:мигрант\w*|муҳожир\w*|иностранц\w*)\b",
+            r"(?:мухаҷир|مهاجر|لاجئ).{0,100}(?:اعتقال|احتجاز|أوقف)",
+        ],
+        "DEPORTATION_RETURN": [
+            r"\b(?:migrants?|refugees?|immigrants?)\b.{0,110}\b(?:deported|expelled|returned|removed|repatriated)\b",
+            r"\b(?:deportation|removal|return|repatriation)\s+(?:flight|operation|order)\b",
+            r"\b(?:migrantes?|inmigrantes?|refugiados?)\b.{0,110}\b(?:deportad\w*|expulsad\w*|devuelt\w*|repatriad\w*)\b",
+            r"\b(?:мигрант\w*|муҳожир\w*|иностранц\w*|граждан\w*|фуқаро\w*)\b.{0,160}\b(?:депорт\w*|выдвор\w*|возвращ\w*|қайтар\w*)\b",
+            r"\b(?:депорт\w*|выдвор\w*|возвращ\w*|қайтар\w*|чартерн\w*.{0,40}рейс\w*|чартер\s+рейс\w*)\b.{0,160}\b(?:мигрант\w*|муҳожир\w*|иностранц\w*|граждан\w*|фуқаро\w*)\b",
+            r"(?:مهاجر|لاجئ).{0,110}(?:ترحيل|إبعاد|إعادة)",
         ],
         "SMUGGLING": [
             r"\bmigrant smuggling\b",
             r"\bpeople smuggling\b",
             r"\bpeople smugglers\b",
             r"\bmigrant smugglers\b",
-            r"\bsmuggling network\b",
-            r"\bsmuggling gang\b",
             r"\bhuman smuggling\b",
+            r"\bsmuggling network\b.{0,100}\b(?:migrants?|refugees?|people)\b",
+            r"\b(?:migrants?|refugees?|people)\b.{0,100}\bsmuggling (?:network|gang|ring)\b",
+            r"\b(?:tr[aá]fico|trata)\s+de\s+(?:migrantes|personas)\b",
+            r"\b(?:мигрант\w*|бежен\w*|муҳожир\w*)\b.{0,120}\b(?:контрабанд\w*|перевоз\w*)\b",
+            r"(?:تهريب المهاجرين|مهربو المهاجرين|مهربين).{0,180}(?:مهاجر|لاجئ|الحدود|طريق)",
         ],
         "CASUALTY": [
             r"\bmigrant died\b",
@@ -77,6 +104,8 @@ class OperationalEventFilter:
             r"\bbody recovered\b",
             r"\bbodies recovered\b",
             r"\bmissing migrants\b",
+            r"\b(?:мигрант\w*|бежен\w*|муҳожир\w*)\b.{0,100}\b(?:погиб\w*|утон\w*|пропал\w*)\b",
+            r"(?:مهاجر|لاجئ).{0,100}(?:غرق|مات|مفقود)",
         ],
         "BORDER_ACTION": [
             r"\bborder closed\b",
@@ -88,6 +117,8 @@ class OperationalEventFilter:
             r"\bdeployed to the border\b",
             r"\bfence construction\b",
             r"\bnew fence\b",
+            r"\b(?:границ\w*|погран\w*)\b.{0,110}\b(?:закрыт\w*|усилен\w*|контрол\w*|огранич\w*)\b",
+            r"(?:الحدود|المعبر).{0,100}(?:إغلاق|أغلق|تشديد|تعزيز|رقابة)",
         ],
         "HUMANITARIAN": [
             r"\bmigrant camp\b",
@@ -147,20 +178,6 @@ class OperationalEventFilter:
     }
 
     def analyze(self, text: str) -> Dict[str, object]:
-        """
-        Determines whether a post contains a concrete operational event.
-
-        Returns:
-            {
-                "is_operational": bool,
-                "operational_categories": list[str],
-                "matched_operational_phrases": list[str],
-                "non_operational_categories": list[str],
-                "matched_non_operational_phrases": list[str],
-                "confidence": float
-            }
-        """
-
         if not text:
             return {
                 "is_operational": False,
@@ -173,40 +190,26 @@ class OperationalEventFilter:
 
         operational_categories: List[str] = []
         operational_phrases: List[str] = []
-
         non_operational_categories: List[str] = []
         non_operational_phrases: List[str] = []
 
         for category, patterns in self.OPERATIONAL_PATTERNS.items():
             for pattern in patterns:
-                match = re.search(
-                    pattern,
-                    text,
-                    flags=re.IGNORECASE,
-                )
-
+                match = re.search(pattern, text, flags=re.IGNORECASE | re.UNICODE)
                 if match:
                     if category not in operational_categories:
                         operational_categories.append(category)
-
                     operational_phrases.append(match.group(0))
 
         for category, patterns in self.NON_OPERATIONAL_PATTERNS.items():
             for pattern in patterns:
-                match = re.search(
-                    pattern,
-                    text,
-                    flags=re.IGNORECASE,
-                )
-
+                match = re.search(pattern, text, flags=re.IGNORECASE | re.UNICODE)
                 if match:
                     if category not in non_operational_categories:
                         non_operational_categories.append(category)
-
                     non_operational_phrases.append(match.group(0))
 
         is_operational = bool(operational_categories)
-
         confidence = self._calculate_confidence(
             operational_categories=operational_categories,
             operational_phrases=operational_phrases,
@@ -229,40 +232,20 @@ class OperationalEventFilter:
         operational_phrases: List[str],
         non_operational_categories: List[str],
     ) -> float:
-        """
-        Calculates confidence that the post represents an operational event.
-        """
-
         if not operational_categories:
             return 0.10
 
         confidence = 0.60
-
         if len(operational_categories) >= 2:
             confidence += 0.10
-
         if len(operational_phrases) >= 2:
             confidence += 0.10
-
         if len(operational_phrases) >= 3:
             confidence += 0.05
-
         if non_operational_categories:
             confidence -= 0.10
 
-        return round(
-            max(
-                0.0,
-                min(confidence, 0.95),
-            ),
-            2,
-        )
+        return round(max(0.0, min(confidence, 0.95)), 2)
 
     def is_operational(self, text: str) -> bool:
-        """
-        Convenience method returning only the operational decision.
-        """
-
-        return bool(
-            self.analyze(text).get("is_operational")
-        )
+        return bool(self.analyze(text).get("is_operat
