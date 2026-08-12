@@ -27,6 +27,12 @@ on:
         default: "2500"
         type: string
 
+      reprocess_existing:
+        description: "Reprocess existing Telegram data in the selected interval"
+        required: true
+        default: true
+        type: boolean
+
 permissions:
   contents: write
 
@@ -79,6 +85,7 @@ jobs:
           echo "End date: ${{ inputs.end_date }}"
           echo "Max posts/day: ${{ inputs.max_posts_per_day }}"
           echo "Max total posts: ${{ inputs.max_total_posts }}"
+          echo "Reprocess existing: ${{ inputs.reprocess_existing }}"
           echo "X: DISABLED"
           echo "Reddit: DISABLED"
           echo "Mastodon: DISABLED"
@@ -94,9 +101,88 @@ jobs:
           TELEGRAM_BACKFILL_END_DATE: ${{ inputs.end_date }}
           TELEGRAM_BACKFILL_MAX_POSTS_PER_DAY: ${{ inputs.max_posts_per_day }}
           TELEGRAM_BACKFILL_MAX_TOTAL_POSTS: ${{ inputs.max_total_posts }}
+          TELEGRAM_BACKFILL_REPROCESS_EXISTING: ${{ inputs.reprocess_existing }}
 
         run: |
           python analysis/telegram_backfill.py
+
+      - name: Verify Telegram reprocess result
+        env:
+          TELEGRAM_BACKFILL_START_DATE: ${{ inputs.start_date }}
+          TELEGRAM_BACKFILL_END_DATE: ${{ inputs.end_date }}
+        run: |
+          python - <<'PY'
+          import os
+          from datetime import date, datetime, time, timedelta
+
+          from database.database import get_session
+          from database.models import CollectedPost, InfluenceSignal, Post
+
+          start_date = date.fromisoformat(
+              os.environ["TELEGRAM_BACKFILL_START_DATE"]
+          )
+          end_date = date.fromisoformat(
+              os.environ["TELEGRAM_BACKFILL_END_DATE"]
+          )
+
+          start_dt = datetime.combine(
+              start_date,
+              time.min,
+          )
+          end_dt = datetime.combine(
+              end_date + timedelta(days=1),
+              time.min,
+          )
+
+          session = get_session()
+
+          try:
+              collected = (
+                  session.query(CollectedPost)
+                  .filter(
+                      CollectedPost.source == "TELEGRAM",
+                      CollectedPost.published_at >= start_dt,
+                      CollectedPost.published_at < end_dt,
+                  )
+                  .count()
+              )
+
+              operational = (
+                  session.query(Post)
+                  .filter(
+                      Post.source == "TELEGRAM",
+                      Post.published_at >= start_dt,
+                      Post.published_at < end_dt,
+                  )
+                  .count()
+              )
+
+              influence = (
+                  session.query(InfluenceSignal)
+                  .filter(
+                      InfluenceSignal.source == "TELEGRAM",
+                      InfluenceSignal.published_at >= start_dt,
+                      InfluenceSignal.published_at < end_dt,
+                  )
+                  .count()
+              )
+
+              print(
+                  "Telegram CollectedPost rows in interval:",
+                  collected,
+              )
+              print(
+                  "Telegram operational Post rows in interval:",
+                  operational,
+              )
+              print(
+                  "Telegram InfluenceSignal rows in interval:",
+                  influence,
+              )
+
+          finally:
+              session.close()
+          PY
 
       - name: Export dashboard data
         run: |
@@ -142,3 +228,4 @@ jobs:
         with:
           path: database/migration_osint_monitor.db
           key: migration-osint-db-${{ github.run_id }}
+
