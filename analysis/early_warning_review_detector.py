@@ -50,7 +50,7 @@ from typing import Any, Dict, List, Sequence, Tuple
 
 
 class EarlyWarningReviewDetector:
-    RULES_VERSION = "EARLY_WARNING_REVIEW_V1_3_2_RC"
+    RULES_VERSION = "EARLY_WARNING_REVIEW_V1_3_3_FINAL"
 
     MIN_SCORE = 5.0
     WINDOW_MAX_CHARS = 460
@@ -168,7 +168,7 @@ class EarlyWarningReviewDetector:
         r"\b(?:interceptad\w*|detenid\w*|arrestad\w*|rescatad\w*|deportad\w*|expulsad\w*|redada|guardia\s+civil|guardia\s+costera)\b",
         r"\b(?:intercept[ée]\w*|arr[êe]t[ée]\w*|expuls[ée]\w*|secour\w*|garde-c[oô]tes|police)\b",
         r"\b(?:intercettat\w*|arrestat\w*|espuls\w*|soccors\w*|guardia\s+costiera)\b",
-        r"\b(?:задерж\w*|выдвор\w*|депорт\w*|перехват\w*|рейд\w*|пограничн\w*|полици\w*)\b",
+        r"\b(?:задерж\w*|выдвор\w*|депорт\w*|перехват\w*|рейд\w*|пограничн\w*|полици\w*|қайтар\w*)\b",
         r"(?:اعتراض|اعتقال|احتجاز|ترحيل|إبعاد|إنقاذ|حرس الحدود|خفر السواحل|كبسة)",
     )
 
@@ -191,6 +191,8 @@ class EarlyWarningReviewDetector:
         r"\b(?:наплыв\w*|массов\w*.{0,30}(?:прибыт|миграц)|резк\w*.{0,30}(?:рост|увелич)|миграционн\w*.{0,30}давлен)\b",
         r"\b(?:мигрант\w*|миграц\w*)\b.{0,80}\b(?:сократ\w*|сниз\w*|уменьш\w*|вырос\w*|увелич\w*|рост\w*|камай\w*|ош\w*)\b",
         r"\b(?:сократ\w*|сниз\w*|уменьш\w*|вырос\w*|увелич\w*|камай\w*|ош\w*)\b.{0,80}\b(?:мигрант\w*|миграц\w*)\b",
+        r"\b(?:мигрант\w*|муҳожир\w*)\b.{0,90}\b(?:оқим\w*|поток\w*)\b.{0,60}\b(?:ош\w*|камай\w*|вырос\w*|увелич\w*|сниз\w*)\b",
+        r"\b(?:оқим\w*|поток\w*)\b.{0,90}\b(?:ош\w*|камай\w*|вырос\w*|увелич\w*|сниз\w*)\b.{0,60}\b(?:мигрант\w*|муҳожир\w*)\b",
 
         # Arabic
         r"(?:تدفق|موجة مهاجرين|زيادة حادة|انخفاض|تراجع|ضغط الهجرة)",
@@ -253,6 +255,9 @@ class EarlyWarningReviewDetector:
         r"\b(?:мигрант\w*|бежен\w*|муҳожир\w*)\b.{0,110}\b(?:прибыли|прибыв\w*|пересек\w*|въех\w*|выех\w*|задерж\w*|выдвор\w*|депорт\w*)\b",
         r"\b(?:задерж\w*|выдвор\w*|депорт\w*|перехват\w*|рейд\w*)\b.{0,110}\b(?:мигрант\w*|бежен\w*|муҳожир\w*)\b",
         r"\b(?:рейд\w*).{0,140}\b(?:полици\w*|мигрант\w*|муҳожир\w*)\b",
+        r"\b(?:полици\w*|миграционн\w*|пограничн\w*)\b.{0,150}\b(?:провер\w*|задерж\w*|рейд\w*)\b.{0,150}\b(?:мигрант\w*|муҳожир\w*|иностранц\w*)\b",
+        r"\b(?:мигрант\w*|муҳожир\w*|иностранц\w*|фуқаро\w*)\b.{0,150}\b(?:провер\w*|задерж\w*|выдвор\w*|депорт\w*|қайтар\w*)\b",
+        r"\b(?:чартерн\w*.{0,40}рейс\w*|чартер\s+рейс\w*|махсус\s+чартер\s+рейс\w*)\b.{0,180}\b(?:возвращ\w*|депорт\w*|выдвор\w*|қайтар\w*)\b",
 
         # Arabic
         r"(?:مهاجر|لاجئ).{0,100}(?:وصل|عبر|دخل|غادر|اعتقل|احتجز|رحل|أبعد)",
@@ -296,6 +301,17 @@ class EarlyWarningReviewDetector:
         r"\b(?:мигрант\w*|муҳожир\w*)\b.{0,100}\b(?:выдвор\w*|депорт\w*|провер\w*.{0,30}документ)\b",
 
         r"(?:شرطة الهجرة|حرس الحدود|خفر السواحل|هجرة غير شرعية|مهاجر غير شرعي|ترحيل المهاجرين|إبعاد المهاجرين)",
+    )
+
+    STRONG_MIGRATION_ENFORCEMENT_PATTERNS = (
+        r"\b(?:immigration|migration|border|asylum)\s+(?:raid|operation|enforcement|police|officers?|authorities)\b",
+        r"\b(?:illegal|irregular|undocumented)\s+(?:migrants?|immigrants?|entry|stay|crossing)\b",
+        r"\b(?:deportation|removal|return|repatriation)\s+(?:flight|operation|order)\b",
+        r"\b(?:миграционн\w*|пограничн\w*)\b.{0,120}\b(?:рейд\w*|контрол\w*|полици\w*|провер\w*)\b",
+        r"\b(?:нелегальн\w*|незаконн\w*)\b.{0,60}\b(?:мигрант\w*|пребыван\w*|въезд\w*)\b",
+        r"\b(?:рейд\w*|провер\w*)\b.{0,150}\b(?:мигрант\w*|муҳожир\w*|иностранц\w*)\b",
+        r"\b(?:чартерн\w*.{0,40}рейс\w*|чартер\s+рейс\w*|махсус\s+чартер\s+рейс\w*)\b.{0,180}\b(?:возвращ\w*|депорт\w*|выдвор\w*|қайтар\w*)\b",
+        r"(?:شرطة الهجرة|حرس الحدود|خفر السواحل|هجرة غير شرعية|ترحيل المهاجرين|إبعاد المهاجرين)",
     )
 
     HISTORICAL_YEAR_PATTERN = r"\b(?:19|20)\d{2}\b"
@@ -358,7 +374,7 @@ class EarlyWarningReviewDetector:
 
     GENERIC_CRIME_PATTERNS = (
         r"\b(?:assault|murder|rape|robbery|arson|fight|stabbing|stabbed|shooting|drug\s+trafficking|drug\s+smuggling|pills?|narcotics?|terror\s+attack)\b",
-        r"\b(?:напал|убил|изнасил|ограб|драк|поджог|теракт|наркотик)\w*",
+        r"\b(?:напал|убил|изнасил|ограб|драк|поджог|теракт|наркотик|украл|украли|краж\w*|воров\w*)\w*",
         r"\b(?:agresi[oó]n|asesin|violaci[oó]n|robo|pelea|apuñal|drogas?)\w*",
     )
 
@@ -796,6 +812,11 @@ class EarlyWarningReviewDetector:
             self.MIGRATION_ENFORCEMENT_PATTERNS,
         )
 
+        strong_migration_enforcement_matches = self._matches(
+            window,
+            self.STRONG_MIGRATION_ENFORCEMENT_PATTERNS,
+        )
+
         historical_years = self._historical_years(
             window
         )
@@ -822,6 +843,25 @@ class EarlyWarningReviewDetector:
         ):
             actuality_gate_passed = True
             actuality_reason = "QUANTIFIED_MIGRATION_TREND"
+
+        # Concise asserted migration-flow trend. Useful for short Telegram
+        # statements that report a current increase/decrease without a number.
+        elif (
+            "PRESSURE"
+            in matched_groups
+            and self._matches(
+                window,
+                (
+                    r"\b(?:migrant|migration|refugee)\w*\b.{0,90}\b(?:increasing|rising|decreasing|declining|growing|falling)\b",
+                    r"\b(?:мигрант\w*|муҳожир\w*)\b.{0,90}\b(?:оқим\w*|поток\w*)\b.{0,60}\b(?:ош\w*|камай\w*|вырос\w*|увелич\w*|сниз\w*)\b",
+                    r"\b(?:оқим\w*|поток\w*)\b.{0,90}\b(?:ош\w*|камай\w*|вырос\w*|увелич\w*|сниз\w*)\b",
+                ),
+            )
+            and not speculative_matches
+            and not historical_matches
+        ):
+            actuality_gate_passed = True
+            actuality_reason = "ASSERTED_MIGRATION_FLOW_TREND"
 
         # Current cue + strong action class. Route alone is not enough.
         elif (
@@ -915,12 +955,13 @@ class EarlyWarningReviewDetector:
             "ENFORCEMENT"
             in matched_groups
             and generic_crime_matches
-            and not migration_enforcement_matches
+            and not strong_migration_enforcement_matches
             and not any(
                 group in matched_groups
                 for group in (
                     "MOVEMENT",
                     "ROUTE",
+                    "FACILITATION",
                     "PRESSURE",
                 )
             )
@@ -1112,6 +1153,8 @@ class EarlyWarningReviewDetector:
                 trend_comparison_matches,
             "migration_enforcement_matches":
                 migration_enforcement_matches,
+            "strong_migration_enforcement_matches":
+                strong_migration_enforcement_matches,
             "historical_years":
                 historical_years,
             "recent_date_cues":
