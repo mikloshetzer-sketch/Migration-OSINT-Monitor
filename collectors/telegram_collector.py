@@ -5,7 +5,7 @@ File:
 collectors/telegram_collector.py
 
 Version:
-v4 - local message scan after content-validated discovery
+v5 - footer-cleaned post validation + Western Mediterranean discovery
 
 Purpose:
 Read-only Telegram OSINT collector for PUBLIC broadcast channels.
@@ -70,7 +70,7 @@ class TelegramCollector:
     """
 
     MAX_SEARCH_TERMS = 8
-    MAX_DISCOVERY_TERMS = 12
+    MAX_DISCOVERY_TERMS = 24
     DEFAULT_RECENT_HOURS = 72
     DEFAULT_DISCOVERY_LIMIT = 20
     DEFAULT_CHANNEL_SAMPLE_SIZE = 20
@@ -370,6 +370,44 @@ class TelegramCollector:
         "trafico de migrantes",
         "عبور الحدود",
         "تهريب المهاجرين",
+    )
+
+    FOOTER_PATTERNS = (
+        r"(?im)^\s*[🚀📲✅🔔👉👈🏻⬅️➡️]*\s*подписаться\s+на\s+канал:.*$",
+        r"(?im)^\s*мигранты\.рф\s*\|\s*подписаться.*$",
+        r"(?im)^\s*мигранты\s*[—-]\s*всё\s+как\s+есть.*$",
+        r"(?im)^\s*обуна\s+бўлинг.*$",
+        r"(?im)^\s*россиядаги\s+ўзбеклар\s+канали.*$",
+        r"(?im)^\s*@[\w_]+\s*[⬅️➡️👈👉]*\s*$",
+        r"(?im)^\s*поділіться\s+цією\s+інформацією.*$",
+        r"(?im)^\s*записатися\s+на\s+консультацію:.*$",
+        r"(?im)^\s*дізнатися\s+більше:.*$",
+        r"(?im)^\s*facebook\.com/.*$",
+        r"(?im)^\s*telegram\.me/.*$",
+        r"(?im)^\s*t\.me/.*$",
+    )
+
+    WESTERN_MED_ROUTE_TERMS = (
+        "ceuta",
+        "sebta",
+        "سبتة",
+        "melilla",
+        "fnideq",
+        "الفنيدق",
+        "tetouan",
+        "tétouan",
+        "تطوان",
+        "tanger",
+        "tangier",
+        "طنجة",
+        "morocco",
+        "maroc",
+        "marruecos",
+        "المغرب",
+        "estrecho de gibraltar",
+        "strait of gibraltar",
+        "mediterráneo occidental",
+        "western mediterranean",
     )
 
     def __init__(
@@ -1139,7 +1177,13 @@ class TelegramCollector:
         non_migration_hits = 0
 
         for text in samples:
-            lowered = text.lower()
+            cleaned_text = self._clean_post_text(
+                text
+            )
+            lowered = cleaned_text.lower()
+
+            if not lowered:
+                continue
 
             migration_hits = (
                 self._count_term_hits(
@@ -1159,6 +1203,13 @@ class TelegramCollector:
                 self._count_term_hits(
                     lowered,
                     self.ROUTE_TERMS,
+                )
+            )
+
+            western_med_hits = (
+                self._count_term_hits(
+                    lowered,
+                    self.WESTERN_MED_ROUTE_TERMS,
                 )
             )
 
@@ -1189,6 +1240,9 @@ class TelegramCollector:
 
                 # Named route/location + migration is high-value.
                 score += 2
+
+            if western_med_hits and migration_hits:
+                score += 3
 
             non_migration_hits += (
                 non_migration
@@ -1451,9 +1505,16 @@ class TelegramCollector:
                     if not normalized:
                         continue
 
-                    text_lower = normalized[
-                        "text"
-                    ].lower()
+                    cleaned_post_text = self._clean_post_text(
+                        normalized[
+                            "text"
+                        ]
+                    )
+
+                    text_lower = cleaned_post_text.lower()
+
+                    if not text_lower:
+                        continue
 
                     migration_hits = self._count_term_hits(
                         text_lower,
@@ -1463,9 +1524,6 @@ class TelegramCollector:
                     if migration_hits == 0:
                         continue
 
-                    # For the broad migration query, migration context itself
-                    # is sufficient. For more specific QueryEngine queries,
-                    # at least one secondary topic concept must occur.
                     if (
                         query_topic_terms
                         and not self._matches_any_topic_term(
@@ -1474,6 +1532,10 @@ class TelegramCollector:
                         )
                     ):
                         continue
+
+                    normalized[
+                        "text"
+                    ] = cleaned_post_text
 
                     post_id = normalized[
                         "post_id"
@@ -2040,13 +2102,34 @@ class TelegramCollector:
         # monitor, including Ceuta/Melilla and Moroccan terminology.
         route_discovery = (
             "ceuta",
+            "ceuta migrantes",
+            "ceuta inmigracion",
             "sebta",
+            "sebta migration",
             "سبتة",
+            "سبتة مهاجرين",
             "melilla",
+            "melilla migrantes",
+            "melilla inmigracion",
+            "fnideq",
+            "fnideq migration",
+            "الفنيدق",
+            "tetouan",
+            "tétouan",
+            "tetouan migration",
+            "تطوان",
+            "tanger",
+            "tangier",
+            "tanger migration",
+            "طنجة",
             "morocco migration",
+            "morocco migrants",
             "maroc migration",
+            "maroc migrants",
             "marruecos migrantes",
+            "marruecos inmigracion",
             "المغرب الهجرة",
+            "المغرب مهاجرين",
         )
 
         for term in route_discovery:
@@ -2116,6 +2199,35 @@ class TelegramCollector:
     # ======================================================
     # HELPERS
     # ======================================================
+
+    def _clean_post_text(
+        self,
+        text: str,
+    ) -> str:
+        value = str(
+            text
+            or ""
+        )
+
+        for pattern in self.FOOTER_PATTERNS:
+            value = re.sub(
+                pattern,
+                " ",
+                value,
+            )
+
+        value = re.sub(
+            r"\n{3,}",
+            "\n\n",
+            value,
+        )
+        value = re.sub(
+            r"[ \t]{2,}",
+            " ",
+            value,
+        )
+
+        return value.strip()
 
     def _build_client(
         self,
@@ -2259,3 +2371,4 @@ class TelegramCollector:
                 maximum,
             ),
         )
+
