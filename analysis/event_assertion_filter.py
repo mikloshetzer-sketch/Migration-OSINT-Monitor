@@ -6,8 +6,9 @@ event_assertion_filter.py
 
 Description:
 Precision gate between operational phrase detection and persistent event
-creation. It rejects selected analytical, retrospective, hypothetical or
-comparative contexts while preserving concrete current event reports.
+creation. It rejects selected analytical, retrospective, hypothetical,
+comparative and weak generic coordination contexts while preserving concrete
+current event reports.
 """
 
 import re
@@ -83,22 +84,6 @@ class EventAssertionFilter:
         r"\bcompared?\s+to\b",
         r"\b(?:like|as)\s+(?:a\s+)?(?:migrant|refugee)\s+camp\b",
         r"\bwhat\s+if\b",
-
-        # Wish / modal / proposal context.
-        # These describe a preference, recommendation or hypothetical
-        # future action, not an asserted real-world event.
-        r"\bi\s+hope\b",
-        r"\bhopefully\b",
-        r"\bi\s+wish\b",
-        r"\bif\s+they\s+(?:put|build|open|create|establish)\b",
-        r"\bthey\s+should\s+(?:put|build|open|create|establish)\b",
-        r"\bthey\s+could\s+(?:put|build|open|create|establish)\b",
-        r"\bthey\s+would\s+(?:put|build|open|create|establish)\b",
-        r"\bthey\s+ought\s+to\s+(?:put|build|open|create|establish)\b",
-        r"\bshould\s+(?:put|build|open|create|establish)\b",
-        r"\bcould\s+(?:put|build|open|create|establish)\b",
-        r"\bwould\s+(?:put|build|open|create|establish)\b",
-        r"\bought\s+to\s+(?:put|build|open|create|establish)\b",
     ]
 
     DIRECT_EVENT_PATTERNS = [
@@ -107,6 +92,60 @@ class EventAssertionFilter:
         r"\b(?:migrant|refugee)\s+(?:died|drowned)\b",
         r"\b(?:smuggler|smugglers)\s+(?:was|were)?\s*arrested\b",
         r"\b(?:police|authorities|coast\s+guard)\s+(?:arrested|detained|intercepted|rescued)\b",
+    ]
+
+    # Generic phrases such as "contact me" and "recommend" occur constantly
+    # in unrelated web content. They must not be sufficient to create a
+    # migration COORDINATION / TRAVEL_ADVICE event.
+    WEAK_COORDINATION_PHRASES = {
+        "contact me",
+        "contact us",
+        "recommend",
+        "recommended",
+    }
+
+    STRONG_COORDINATION_PATTERNS = [
+        r"\bcontact\s+(?:me|us)\s+on\s+(?:telegram|whatsapp|signal)\b",
+        r"\b(?:join|message|dm)\s+(?:me|us|the\s+group)\s+(?:on\s+)?(?:telegram|whatsapp|signal)\b",
+        r"\b(?:telegram|whatsapp|signal)\s+(?:group|channel|chat)\b",
+        r"\bmeeting\s+point\b",
+        r"\bpickup\s+point\b",
+        r"\bgathering\s+point\b",
+        r"\bdeparture\s+point\b",
+        r"\btransport\s+available\b",
+        r"\bboat\s+available\b",
+        r"\bdriver\s+available\b",
+        r"\bseats?\s+available\b",
+        r"\b(?:cross|crossing|route|border|boat|transport).{0,80}\bcontact\s+(?:me|us)\b",
+        r"\bcontact\s+(?:me|us)\b.{0,80}\b(?:cross|crossing|route|border|boat|transport)\b",
+        r"\b(?:migrants?|refugees?).{0,100}\b(?:telegram|whatsapp|meeting\s+point|pickup\s+point|transport\s+available|boat\s+available)\b",
+        r"\b(?:telegram|whatsapp|meeting\s+point|pickup\s+point|transport\s+available|boat\s+available).{0,100}\b(?:migrants?|refugees?)\b",
+    ]
+
+    MIGRATION_CONTEXT_PATTERNS = [
+        r"\bmigrants?\b",
+        r"\brefugees?\b",
+        r"\basylum\s+seekers?\b",
+        r"\billegal\s+immigration\b",
+        r"\birregular\s+migration\b",
+        r"\bborder\s+crossing\b",
+        r"\bmigrant\s+boat\b",
+        r"\brefugee\s+boat\b",
+        r"\bsmuggl(?:er|ers|ing)\b",
+        r"\bmigrantes?\b",
+        r"\brefugiados?\b",
+        r"\binmigrantes?\b",
+        r"\bcruce\s+fronterizo\b",
+        r"\bpateras?\b",
+        r"\bcayucos?\b",
+        r"\bmigrants?\b",
+        r"\bréfugiés?\b",
+        r"\bfrontière\b",
+        r"الهجرة",
+        r"مهاجر",
+        r"لاجئ",
+        r"мигрант",
+        r"бежен",
     ]
 
     LONG_TEXT_THRESHOLD = 1800
@@ -162,6 +201,63 @@ class EventAssertionFilter:
             text,
             self.DIRECT_EVENT_PATTERNS,
         )
+
+        migration_context_cues = self._find_matches(
+            text,
+            self.MIGRATION_CONTEXT_PATTERNS,
+        )
+
+        strong_coordination_cues = self._find_matches(
+            text,
+            self.STRONG_COORDINATION_PATTERNS,
+        )
+
+        matched_operational_phrases = {
+            str(value).strip().lower()
+            for value in (
+                operational_result.get(
+                    "matched_operational_phrases"
+                )
+                or []
+            )
+            if value
+        }
+
+        weak_coordination_only = bool(
+            matched_operational_phrases
+        ) and matched_operational_phrases.issubset(
+            self.WEAK_COORDINATION_PHRASES
+        )
+
+        coordination_sensitive = bool(
+            event_type in {
+                "COORDINATION",
+                "TRAVEL_ADVICE",
+                "ROUTE_INFORMATION",
+            }
+            or "COORDINATION_ADVICE"
+            in operational_categories
+        )
+
+        # Precision gate for the recurring false positive seen in the live
+        # monitor: generic article/blog language such as "contact me" and
+        # "recommend" must not become a migration coordination event.
+        if (
+            coordination_sensitive
+            and not strong_coordination_cues
+            and (
+                weak_coordination_only
+                or not migration_context_cues
+            )
+            and not direct_event_cues
+        ):
+            return self._reject(
+                "WEAK_COORDINATION_WITHOUT_MIGRATION_OPERATIONAL_CONTEXT",
+                analytical_cues,
+                current_cues,
+                non_assertive_cues,
+                direct_event_cues,
+            )
 
         if (
             non_assertive_cues
