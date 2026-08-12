@@ -99,6 +99,10 @@ class EventAssertionFilter:
         r"\b(?:migrant|refugee)\s+(?:died|drowned)\b",
         r"\b(?:smuggler|smugglers)\s+(?:was|were)?\s*arrested\b",
         r"\b(?:police|authorities|coast\s+guard)\s+(?:arrested|detained|intercepted|rescued)\b",
+        r"\b(?:рейд\w*|провер\w*)\b.{0,150}\b(?:мигрант\w*|муҳожир\w*|иностранц\w*)\b",
+        r"\b(?:мигрант\w*|муҳожир\w*|иностранц\w*|фуқаро\w*)\b.{0,150}\b(?:задерж\w*|выдвор\w*|депорт\w*|қайтар\w*)\b",
+        r"\b(?:чартерн\w*.{0,40}рейс\w*|чартер\s+рейс\w*|махсус\s+чартер\s+рейс\w*)\b.{0,180}\b(?:возвращ\w*|депорт\w*|выдвор\w*|қайтар\w*)\b",
+        r"(?:مهاجر|لاجئ).{0,100}(?:اعتقال|احتجاز|ترحيل|إبعاد|اعتراض|إنقاذ)",
     ]
 
     HISTORICAL_YEAR_PATTERN = r"\b(?:19|20)\d{2}\b"
@@ -110,6 +114,17 @@ class EventAssertionFilter:
         r"\b(?:migrants?|refugees?)\b.{0,100}\b(?:deported|expelled|returned|removed|intercepted|detained\s+for\s+illegal\s+entry)\b",
         r"\b(?:миграционн\w*|пограничн\w*)\b.{0,100}\b(?:рейд\w*|контрол\w*|полици\w*|провер\w*)\b",
         r"\b(?:нелегальн\w*|незаконн\w*)\b.{0,50}\b(?:мигрант\w*|пребыван\w*|въезд\w*)\b",
+        r"(?:شرطة الهجرة|حرس الحدود|خفر السواحل|هجرة غير شرعية|ترحيل المهاجرين|إبعاد المهاجرين)",
+    ]
+
+    STRONG_MIGRATION_ENFORCEMENT_PATTERNS = [
+        r"\b(?:immigration|migration|border|asylum)\s+(?:raid|operation|enforcement|police|officers?|authorities)\b",
+        r"\b(?:illegal|irregular|undocumented)\s+(?:migrants?|immigrants?|entry|stay|crossing)\b",
+        r"\b(?:deportation|removal|return|repatriation)\s+(?:flight|operation|order)\b",
+        r"\b(?:миграционн\w*|пограничн\w*)\b.{0,120}\b(?:рейд\w*|контрол\w*|полици\w*|провер\w*)\b",
+        r"\b(?:нелегальн\w*|незаконн\w*)\b.{0,60}\b(?:мигрант\w*|пребыван\w*|въезд\w*)\b",
+        r"\b(?:рейд\w*|провер\w*)\b.{0,150}\b(?:мигрант\w*|муҳожир\w*|иностранц\w*)\b",
+        r"\b(?:чартерн\w*.{0,40}рейс\w*|чартер\s+рейс\w*|махсус\s+чартер\s+рейс\w*)\b.{0,180}\b(?:возвращ\w*|депорт\w*|выдвор\w*|қайтар\w*)\b",
         r"(?:شرطة الهجرة|حرس الحدود|خفر السواحل|هجرة غير شرعية|ترحيل المهاجرين|إبعاد المهاجرين)",
     ]
 
@@ -148,7 +163,7 @@ class EventAssertionFilter:
 
     GENERIC_CRIME_PATTERNS = [
         r"\b(?:assault|murder|rape|robbery|arson|fight|stabbing|stabbed|shooting)\b",
-        r"\b(?:напал|убил|изнасил|ограб|драк|поджог|теракт)\w*",
+        r"\b(?:напал|убил|изнасил|ограб|драк|поджог|теракт|украл|украли|краж\w*|воров\w*)\w*",
         r"\b(?:agresi[oó]n|asesin|violaci[oó]n|robo|pelea|apuñal)\w*",
     ]
 
@@ -209,6 +224,9 @@ class EventAssertionFilter:
         r"لاجئ",
         r"мигрант",
         r"бежен",
+        r"муҳожир",
+        r"иностранц",
+        r"фуқаро",
     ]
 
     LONG_TEXT_THRESHOLD = 1800
@@ -278,6 +296,11 @@ class EventAssertionFilter:
         migration_enforcement_cues = self._find_matches(
             text,
             self.MIGRATION_ENFORCEMENT_PATTERNS,
+        )
+
+        strong_migration_enforcement_cues = self._find_matches(
+            text,
+            self.STRONG_MIGRATION_ENFORCEMENT_PATTERNS,
         )
 
         human_smuggling_cues = self._find_matches(
@@ -429,8 +452,7 @@ class EventAssertionFilter:
         if (
             enforcement_sensitive
             and generic_crime_cues
-            and not migration_enforcement_cues
-            and not direct_event_cues
+            and not strong_migration_enforcement_cues
         ):
             return self._reject(
                 "ORDINARY_CRIME_NOT_MIGRATION_ENFORCEMENT",
@@ -648,4 +670,3 @@ class EventAssertionFilter:
             "non_assertive_cues": non_assertive_cues,
             "direct_event_cues": direct_event_cues,
         }
-
