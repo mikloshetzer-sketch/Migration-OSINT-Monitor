@@ -248,4 +248,4 @@ class OperationalEventFilter:
         return round(max(0.0, min(confidence, 0.95)), 2)
 
     def is_operational(self, text: str) -> bool:
-        return bool(self.analyze(text).get("is_operat
+        return bool(self.analyze(text).get("is_operational"))
