@@ -50,7 +50,7 @@ from typing import Any, Dict, List, Sequence, Tuple
 
 
 class EarlyWarningReviewDetector:
-    RULES_VERSION = "EARLY_WARNING_REVIEW_V1_3"
+    RULES_VERSION = "EARLY_WARNING_REVIEW_V1_3_1"
 
     MIN_SCORE = 5.0
     WINDOW_MAX_CHARS = 460
@@ -311,6 +311,34 @@ class EarlyWarningReviewDetector:
         r"\b(?:должн\w*|мог\w*\s+бы|предлага\w*)\b",
     )
 
+    HYPOTHETICAL_POLICY_EXAMPLE_PATTERNS = (
+        r"\bthere\s+should\s+be\b",
+        r"\bthere\s+ought\s+to\s+be\b",
+        r"\bfor\s+example\b",
+        r"\bfor\s+instance\b",
+        r"\bi\s+would\b",
+        r"\bwe\s+should\b",
+        r"\bthey\s+should\b",
+        r"\bshould\s+then\b",
+        r"\bimagine\s+(?:that|if)\b",
+        r"\bsuppose\s+(?:that|if)\b",
+        r"\blet['’]s\s+say\b",
+        r"\b(?:deber[ií]a|deberían|por\s+ejemplo)\b",
+        r"\b(?:должн\w*\s+бы|например)\b",
+    )
+
+    # Generic credibility gate for highly implausible/parodic logistics claims.
+    # It is deliberately narrow: one odd phrase is not enough. A window must
+    # contain at least TWO independent cues.
+    IMPLAUSIBILITY_PATTERNS = (
+        r"\bhalf[-\s]?kilomet(?:er|re)\b.{0,80}\b(?:dinghy|boat|vessel)\b",
+        r"\b(?:500|1,000|1000)\s*(?:metres?|meters?)\b.{0,80}\b(?:dinghy|boat|vessel|inflatable)\b",
+        r"\bkilomet(?:er|re)[-\s]long\b.{0,80}\b(?:dinghy|boat|vessel|model)\b",
+        r"\b(?:coffee\s+kiosk|selfie\s+booth|premium\s+passenger\s+experience|starlink\s+wi[- ]?fi)\b",
+        r"\bcommercial\s+social\s+experience\s+of\s+hardship\s+and\s+fun\b",
+        r"\burgent\s+talks\b.{0,60}\bsometime\s+next\s+year\b",
+    )
+
     HISTORICAL_NARRATIVE_PATTERNS = (
         r"\b(?:book|chapter|history|historical|century|dynasty|empire|colonial|treaty)\b",
         r"\b(?:in\s+the\s+18\d{2}s|in\s+the\s+19\d{2}s|in\s+the\s+20th\s+century)\b",
@@ -355,6 +383,25 @@ class EarlyWarningReviewDetector:
         if not all_migration_matches:
             return self._empty(
                 rejection_reason="NO_HUMAN_MIGRATION_CONTEXT"
+            )
+
+        # Document-level credibility check for very narrow, compound
+        # implausibility patterns. This is intentionally evaluated before
+        # local-window scoring because a satirical article may place the
+        # absurd claim and the otherwise-real migration sentence in adjacent
+        # windows. Two independent implausibility cues are required.
+        document_implausibility_matches = self._matches(
+            value,
+            self.IMPLAUSIBILITY_PATTERNS,
+        )
+
+        if len(
+            document_implausibility_matches
+        ) >= 2:
+            return self._empty(
+                migration_context=True,
+                context_matches=all_migration_matches,
+                rejection_reason="LOW_CREDIBILITY_IMPLAUSIBLE_CLAIM"
             )
 
         windows = self._build_windows(
@@ -642,6 +689,17 @@ class EarlyWarningReviewDetector:
             window,
             self.SPECULATIVE_PATTERNS,
         )
+
+        hypothetical_policy_matches = self._matches(
+            window,
+            self.HYPOTHETICAL_POLICY_EXAMPLE_PATTERNS,
+        )
+
+        implausibility_matches = self._matches(
+            window,
+            self.IMPLAUSIBILITY_PATTERNS,
+        )
+
         historical_matches = self._matches(
             window,
             self.HISTORICAL_NARRATIVE_PATTERNS,
@@ -794,13 +852,35 @@ class EarlyWarningReviewDetector:
             actuality_reason = "ORDINARY_CRIME_NOT_MIGRATION_ENFORCEMENT"
 
         # Drug / wildlife / goods trafficking is not migrant facilitation.
+        # V1.3.1 uses proximity instead of poisoning the entire window:
+        # a clean human-smuggling/facilitation phrase elsewhere in the same
+        # article remains valid.
         if (
             "FACILITATION"
             in matched_groups
             and non_human_trafficking_matches
+            and not self._has_clean_human_facilitation_context(
+                window
+            )
         ):
             actuality_gate_passed = False
             actuality_reason = "NON_HUMAN_TRAFFICKING_CONTEXT"
+
+        # Policy examples and hypothetical constructions are not observations.
+        if (
+            hypothetical_policy_matches
+            and not current_matches
+            and not event_assertion_matches
+        ):
+            actuality_gate_passed = False
+            actuality_reason = "HYPOTHETICAL_POLICY_EXAMPLE"
+
+        # Narrow implausibility gate: require at least two separate cues.
+        if len(
+            implausibility_matches
+        ) >= 2:
+            actuality_gate_passed = False
+            actuality_reason = "LOW_CREDIBILITY_IMPLAUSIBLE_CLAIM"
 
         score = 2.0
 
@@ -862,6 +942,24 @@ class EarlyWarningReviewDetector:
                 ),
             )
 
+        if hypothetical_policy_matches:
+            score -= min(
+                3.0,
+                1.0
+                * len(
+                    hypothetical_policy_matches
+                ),
+            )
+
+        if implausibility_matches:
+            score -= min(
+                4.0,
+                1.5
+                * len(
+                    implausibility_matches
+                ),
+            )
+
         if (
             generic_crime_matches
             and not any(
@@ -906,6 +1004,8 @@ class EarlyWarningReviewDetector:
         rejection_matches = (
             commentary_matches
             + speculative_matches
+            + hypothetical_policy_matches
+            + implausibility_matches
             + historical_matches
             + generic_crime_matches
             + non_human_trafficking_matches
@@ -941,6 +1041,10 @@ class EarlyWarningReviewDetector:
                 recent_date_cues,
             "non_human_trafficking_matches":
                 non_human_trafficking_matches,
+            "hypothetical_policy_matches":
+                hypothetical_policy_matches,
+            "implausibility_matches":
+                implausibility_matches,
             "high_value_matches":
                 high_value_matches,
             "rejection_matches":
@@ -1070,6 +1174,58 @@ class EarlyWarningReviewDetector:
     # ------------------------------------------------------
     # HELPERS
     # ------------------------------------------------------
+
+    def _has_clean_human_facilitation_context(
+        self,
+        text: str,
+    ) -> bool:
+        """
+        Return True when at least one human-migration facilitation phrase has a
+        local neighbourhood that is not contaminated by drug/wildlife/goods
+        trafficking language.
+
+        This prevents a long article mentioning both migrant smuggling and,
+        much later, drug smuggling from being rejected as a whole.
+        """
+
+        candidate_patterns = (
+            r"\b(?:human|people|migrant|migrants|refugee|refugees)\s+(?:smuggl\w*|traffick\w*)\b",
+            r"\b(?:smuggl\w*|traffick\w*)\s+(?:of\s+)?(?:people|persons|migrants?|refugees?)\b",
+            r"\b(?:people|migrant)\s+smugglers?\b",
+            r"\b(?:fake\s+contract|false\s+document|forged\s+document|fake\s+passport|fake\s+passports)\b",
+            r"\b(?:tr[aá]fico|trata)\s+de\s+(?:migrantes|personas)\b",
+            r"\b(?:تهريب المهاجرين|مهربو المهاجرين|مهربين)\b",
+        )
+
+        for pattern in candidate_patterns:
+            for match in re.finditer(
+                pattern,
+                text,
+                flags=re.IGNORECASE
+                | re.UNICODE,
+            ):
+                start = max(
+                    0,
+                    match.start()
+                    - 140,
+                )
+                end = min(
+                    len(text),
+                    match.end()
+                    + 140,
+                )
+
+                local = text[
+                    start:end
+                ]
+
+                if not self._matches(
+                    local,
+                    self.NON_HUMAN_TRAFFICKING_PATTERNS,
+                ):
+                    return True
+
+        return False
 
     def _recent_date_cues(
         self,
