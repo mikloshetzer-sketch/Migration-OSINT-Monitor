@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-12T17:12:36.966501+00:00",
+  "generated_at": "2026-08-12T18:38:08.709253+00:00",
   "audit_scope": {
     "source": "TELEGRAM",
     "start_date": "2026-07-01",
     "end_date": "2026-08-05",
     "backfill_run_ids": [
-      39
+      40
     ],
     "reprocess_existing": true,
     "returned_post_count": 179,
@@ -21,19 +21,21 @@
   },
   "summary": {
     "status_counts": {
-      "EARLY_WARNING": 11,
+      "EARLY_WARNING": 6,
       "HISTORICAL": 1,
       "NOISE": 1,
-      "NON_OPERATIONAL": 158
+      "NON_OPERATIONAL": 150,
+      "OPERATIONAL": 13
     },
     "signal_counts": {
-      "ENFORCEMENT_EARLY_WARNING": 7,
+      "ENFORCEMENT_EARLY_WARNING": 2,
       "PRESSURE_EARLY_WARNING": 4
     },
     "rejection_reason_counts": {
       "EXPLICIT_PREVIOUS_YEAR": 1,
       "NOISE_FILTER": 1,
-      "OPERATIONAL_FILTER_REJECTED": 155,
+      "OPERATIONAL_FILTER_REJECTED": 145,
+      "SMUGGLING_NOUN_WITHOUT_CONCRETE_ACTION": 2,
       "WEAK_COORDINATION_WITHOUT_MIGRATION_OPERATIONAL_CONTEXT": 3
     }
   },
@@ -52,7 +54,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -86,7 +88,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -120,7 +122,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -154,7 +156,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -188,7 +190,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -222,7 +224,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -253,27 +255,35 @@
       "text": "Москва. Июль ойида миграция хизмати раҳбариятининг фуқароларни қабул қилиш жадвали\n\nҚабул давомида РВП, ВНЖ, фуқаролик, миграция ҳисобига қўйиш, давлат божини қайтариш ҳамда бошқа миграция масалалари бўйича мурожаат қилиш мумкин.",
       "database_state": {
         "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
+        "is_operational": true,
+        "operational_confidence": 0.6,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
+      "final_status": "OPERATIONAL",
+      "rejection_reason": null,
       "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
+      "event_type": "GENERAL_DISCUSSION",
+      "confidence": null,
       "score": null,
       "matched_groups": [],
       "matched_phrases": [],
       "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_HUMAN_MIGRATION_CONTEXT",
-        "early_warning_actuality_reason": "NO_HUMAN_MIGRATION_CONTEXT"
+        "matched_signals": [],
+        "operational_categories": [
+          "DEPORTATION_RETURN"
+        ],
+        "matched_operational_phrases": [
+          "фуқаролик, миграция ҳисобига қўйиш, давлат божини қайтариш"
+        ],
+        "primary_region": "GLOBAL",
+        "matched_regions": [
+          "GLOBAL"
+        ],
+        "primary_location": null,
+        "country": null,
+        "latitude": null,
+        "longitude": null
       }
     },
     {
@@ -287,27 +297,35 @@
       "text": "الهجرة و (IOM) تعززان التعاون لتطوير أنظمة بيانات النازحين واللاجئين\n\nعقدت وزارة الهجرة والمهجرين، في مقرها ببغداد، إجتماعاً موسعاً بحضور مدير عام دائرة المعلومات والبحوث السيد عمار علي جمعة، ومدير عام دائرة شؤون الهجرة الدكتور صفاء حسين أحمد، مع ممثلي منظمة الهجرة الدولية (IOM)، لبحث تطوير أنظمة إدارة بيانات النازحين واللاجئين وتعزيز كفاءة العمل المؤسسي.\n\nوناقش الإجتماع تحديث أنظمة البيانات الإحصائية، والإرتقاء بجودة جمعها وتحليلها، بما يسهم في إعداد تقارير دقيقة تعكس واقع النزوح والهجرة، إلى جانب تطوير البنية التقنية، وبناء قدرات الكوادر المتخصصة، ودعم الوزارة في إستحداث مكاتب داخل المنافذ الحدودية لرصد حركة الهجرة وتعزيز حوكمتها.\n\nوأكد مسؤولو الوزارة أن هذا التعاون يندرج ضمن جهود تطوير قواعد البيانات، مشددين على أهمية الشراكة مع منظمة الهجرة الدولية في نقل الخبرات وتطبيق أفضل الممارسات بما يسهم في تعزيز كفاءة إدارة معلومات الهجرة.",
       "database_state": {
         "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
+        "is_operational": true,
+        "operational_confidence": 0.6,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
+      "final_status": "OPERATIONAL",
+      "rejection_reason": null,
       "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
+      "event_type": "GENERAL_DISCUSSION",
+      "confidence": null,
       "score": null,
       "matched_groups": [],
       "matched_phrases": [],
       "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_CURRENT_EVENT_EVIDENCE",
-        "early_warning_actuality_reason": "NO_CURRENT_EVENT_EVIDENCE"
+        "matched_signals": [],
+        "operational_categories": [
+          "BORDER_ACTION"
+        ],
+        "matched_operational_phrases": [
+          "الحدودية لرصد حركة الهجرة وتعزيز"
+        ],
+        "primary_region": "GLOBAL",
+        "matched_regions": [
+          "GLOBAL"
+        ],
+        "primary_location": null,
+        "country": null,
+        "latitude": null,
+        "longitude": null
       }
     },
     {
@@ -324,7 +342,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -358,7 +376,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -392,7 +410,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -426,7 +444,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -460,7 +478,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -494,7 +512,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -528,7 +546,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -562,7 +580,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -596,7 +614,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -630,7 +648,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -664,7 +682,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -698,7 +716,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NOISE",
       "rejection_reason": "NOISE_FILTER",
@@ -730,7 +748,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -764,7 +782,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -798,7 +816,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -832,7 +850,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -866,7 +884,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -900,7 +918,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -934,7 +952,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -968,7 +986,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1002,7 +1020,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1033,27 +1051,35 @@
       "text": "ملف المهاجرين وإعادة الإدماج على طاولة المباحثات بين النوري ووفد هولندي رفيع\n\n​في إطار تعزيز التعاون الثنائي بين جمهورية العراق ومملكة هولندا ...\nاستقبل وكيل وزارة الهجرة والمهجرين الاداري الدكتور كريم النوري، بحضور مدير عام دائرة شؤون الهجرة الدكتور صفاء حسين أحمد، سعادة سفيرة مملكة هولندا في العراق السيدة جانيت البيردا، ومبعوث وزارة الخارجية للهجرة السيد بيتر سخورمان، والوفد المرافق لهم، في مقر الوزارة وسط العاصمة بغداد، لبحث سبل تطوير آليات إدارة الهجرة ودعم برامج الاستقرار المجتمعي .\n\nوشهد الاجتماع نقاشات حول واقع مواضيع الهجرة في العراق بشكل عام والتحديات الراهنة والفرص المتاحة لإدارة هذا الملف، مع التركيز بشكل خاص على سياسات الحكومة في مجالات العودة الطوعية وإعادة الإدماج المستدام، فضلاً عن استعراض أولويات التعاون الفني وبناء القدرات وسبل تعزيز التنسيق بين المؤسسات الحكومية والشركاء الدوليين والمنظمات بما يضمن تحسين آليات الإحالة للمستفيدين وتطوير مسارات تقديم الخدمات الاجتماعية والنفسية، إضافة إلى دعم فرص كسب العيش للمهاجرين العائدين.\n​\nوذكر النوري ان\" الاجتماع تطرق الى الجوانب الفنية المتعلقة بإدارة البيانات والمتابعة والتقييم، مشيراً الى تعزيز حملات التوعية حول \"الهجرة الآمنة والمنتظمة\" للحد من مخاطر الهجرة غير النظامية.",
       "database_state": {
         "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
+        "is_operational": true,
+        "operational_confidence": 0.6,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
+      "final_status": "OPERATIONAL",
+      "rejection_reason": null,
       "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
+      "event_type": "GENERAL_DISCUSSION",
+      "confidence": null,
       "score": null,
       "matched_groups": [],
       "matched_phrases": [],
       "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_CURRENT_EVENT_EVIDENCE",
-        "early_warning_actuality_reason": "NO_CURRENT_EVENT_EVIDENCE"
+        "matched_signals": [],
+        "operational_categories": [
+          "DEPORTATION_RETURN"
+        ],
+        "matched_operational_phrases": [
+          "مهاجرين وإعادة"
+        ],
+        "primary_region": "GLOBAL",
+        "matched_regions": [
+          "GLOBAL"
+        ],
+        "primary_location": null,
+        "country": null,
+        "latitude": null,
+        "longitude": null
       }
     },
     {
@@ -1070,7 +1096,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1104,7 +1130,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1138,7 +1164,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1172,7 +1198,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1206,7 +1232,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1240,7 +1266,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1271,48 +1297,35 @@
       "text": "Европада миграция қоидалари янада қаттиқлашмоқда\n\nЕвропа Иттифоқида янги миграция ва бошпана пакти кучга кириши ортидан қатор давлатлар ўз миллий қонунларини ҳам янада кескинлаштирмоқда.\n\nАсосий мақсад — ноқонуний миграцияни камайтириш, депортацияни осонлаштириш ва Европа мамлакатларини мигрантлар учун камроқ жозибадор қилиш.\nҚисқача асосий ўзгаришлар:\n\n🇸🇪 Швеция — энди айрим ҳолатларда «ёмон хулқ-атвор» учун ҳам яшаш рухсатномаси (ВНЖ) бекор қилиниши мумкин.\n\n🇩🇪 Германия — ҳужжатсиз келган муҳожирларга нисбатан чегара назорати кучайтирилди, оилани бирлаштириш ҳуқуқига чекловлар киритилди.\n\n🇫🇷🇬🇧 Франция ва Буюк Британия — Ла-Манш орқали келувчиларга қарши қўшма чоралар кучайтирилмоқда.\n\n🇮🇹 Италия — депортация марказлари сони оширилмоқда ва Албаниядаги мигрантлар марказларидан фойдаланиш кенгайтирилмоқда.\n\n🇳🇱 Нидерландия — бошпана бериш тартиби ўзгариб, айрим тоифадаги мигрантлар учун оила аъзоларини олиб келиш имконияти чекланмоқда.",
       "database_state": {
         "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": true,
-        "collection_count": 2
+        "is_operational": true,
+        "operational_confidence": 0.6,
+        "influence_detected": false,
+        "collection_count": 3
       },
-      "final_status": "EARLY_WARNING",
+      "final_status": "OPERATIONAL",
       "rejection_reason": null,
-      "primary_signal": "PRESSURE_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "PRESSURE_EARLY_WARNING",
-      "event_type": null,
-      "confidence": 0.9,
-      "score": 10.0,
-      "matched_groups": [
-        "ENFORCEMENT",
-        "PRESSURE"
-      ],
-      "matched_phrases": [
-        [
-          "enforcement",
-          "депортацияни"
-        ],
-        [
-          "pressure",
-          "миграцияни камайтириш"
-        ],
-        [
-          "pressure",
-          "камайтириш, депортацияни осонлаштириш ва Европа мамлакатларини мигрантлар"
-        ]
-      ],
+      "primary_signal": null,
+      "event_type": "GENERAL_DISCUSSION",
+      "confidence": null,
+      "score": null,
+      "matched_groups": [],
+      "matched_phrases": [],
       "details": {
-        "rules_version": "EARLY_WARNING_REVIEW_V1_3_2_RC",
-        "review_reason": "STRUCTURED_MIGRATION_EARLY_WARNING",
-        "actuality_reason": "CONCRETE_EVENT_ASSERTION",
-        "context_matches": [
-          "мигрантлар"
+        "matched_signals": [],
+        "operational_categories": [
+          "DEPORTATION_RETURN"
         ],
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": []
+        "matched_operational_phrases": [
+          "депортацияни осонлаштириш ва Европа мамлакатларини мигрантлар"
+        ],
+        "primary_region": "GLOBAL",
+        "matched_regions": [
+          "GLOBAL"
+        ],
+        "primary_location": null,
+        "country": null,
+        "latitude": null,
+        "longitude": null
       }
     },
     {
@@ -1329,7 +1342,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1363,7 +1376,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1397,7 +1410,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1431,7 +1444,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1463,26 +1476,30 @@
       "database_state": {
         "is_noise": false,
         "is_operational": false,
-        "operational_confidence": 0.1,
+        "operational_confidence": 0.6,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
+      "rejection_reason": "SMUGGLING_NOUN_WITHOUT_CONCRETE_ACTION",
       "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
+      "event_type": "GENERAL_DISCUSSION",
+      "confidence": null,
       "score": null,
       "matched_groups": [],
       "matched_phrases": [],
       "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_CURRENT_EVENT_EVIDENCE",
-        "early_warning_actuality_reason": "NO_CURRENT_EVENT_EVIDENCE"
+        "operational_categories": [
+          "SMUGGLING"
+        ],
+        "matched_operational_phrases": [
+          "мигрантлар контрабандасига"
+        ],
+        "analytical_cues": [],
+        "current_cues": [],
+        "non_assertive_cues": [],
+        "primary_region": "GLOBAL",
+        "primary_location": null
       }
     },
     {
@@ -1499,7 +1516,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1533,7 +1550,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1564,27 +1581,35 @@
       "text": "Россияга ВСУ рамзлари туширилган футболкада келган ўзбекистонлик депортация қилинди\n\nРоссияда миграция марказига Украина Қуролли кучлари (ВСУ) рамзлари туширилган футболкада келган Ўзбекистон фуқароси мамлакатдан депортация қилиниши ҳақида суд қарори чиқарилди.\n\nАввалига унга 30 минг рубль жарима тайинланган эди. Кейинроқ суд уни Россиядан депортация қилишга қарор қилди.\n\nМаълум қилинишича, суд жараёнида у бу ҳаракати Россия Қуролли кучларини дискредитация қилиш ҳисобланишини яхши тушунганини тан олган.",
       "database_state": {
         "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
+        "is_operational": true,
+        "operational_confidence": 0.6,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
+      "final_status": "OPERATIONAL",
+      "rejection_reason": null,
       "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
+      "event_type": "GENERAL_DISCUSSION",
+      "confidence": null,
       "score": null,
       "matched_groups": [],
       "matched_phrases": [],
       "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_HUMAN_MIGRATION_CONTEXT",
-        "early_warning_actuality_reason": "NO_HUMAN_MIGRATION_CONTEXT"
+        "matched_signals": [],
+        "operational_categories": [
+          "DEPORTATION_RETURN"
+        ],
+        "matched_operational_phrases": [
+          "фуқароси мамлакатдан депортация"
+        ],
+        "primary_region": "GLOBAL",
+        "matched_regions": [
+          "GLOBAL"
+        ],
+        "primary_location": null,
+        "country": null,
+        "latitude": null,
+        "longitude": null
       }
     },
     {
@@ -1601,7 +1626,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1635,7 +1660,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1666,39 +1691,35 @@
       "text": "Митищидаги бозорда ўтказилган рейд вақтида айрим мигрантлар ҳуқуқни муҳофаза қилувчи ходимларни кўриб қочишга уринди.\n\nМаълумотларга кўра, рейд давомида бир неча хорижлик ушланиб, уларнинг ҳужжатлари текширилди. Айримлардан Россияда тақиқланган насвай аниқланган. Текширувлар якунланганидан сўнг, миграция қонунчилигини бузган деб гумон қилинган шахслар ички ишлар бўлимига олиб кетилди.",
       "database_state": {
         "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": true,
-        "collection_count": 2
+        "is_operational": true,
+        "operational_confidence": 0.6,
+        "influence_detected": false,
+        "collection_count": 3
       },
-      "final_status": "EARLY_WARNING",
+      "final_status": "OPERATIONAL",
       "rejection_reason": null,
-      "primary_signal": "ENFORCEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ENFORCEMENT_EARLY_WARNING",
-      "event_type": null,
-      "confidence": 0.62,
-      "score": 6.0,
-      "matched_groups": [
-        "ENFORCEMENT"
-      ],
-      "matched_phrases": [
-        [
-          "enforcement",
-          "рейд"
-        ]
-      ],
+      "primary_signal": null,
+      "event_type": "GENERAL_DISCUSSION",
+      "confidence": null,
+      "score": null,
+      "matched_groups": [],
+      "matched_phrases": [],
       "details": {
-        "rules_version": "EARLY_WARNING_REVIEW_V1_3_2_RC",
-        "review_reason": "STRUCTURED_MIGRATION_EARLY_WARNING",
-        "actuality_reason": "CONCRETE_EVENT_ASSERTION",
-        "context_matches": [
-          "мигрантлар"
+        "matched_signals": [],
+        "operational_categories": [
+          "ARREST_DETENTION"
         ],
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": []
+        "matched_operational_phrases": [
+          "рейд вақтида айрим мигрантлар"
+        ],
+        "primary_region": "GLOBAL",
+        "matched_regions": [
+          "GLOBAL"
+        ],
+        "primary_location": null,
+        "country": null,
+        "latitude": null,
+        "longitude": null
       }
     },
     {
@@ -1715,7 +1736,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1749,7 +1770,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1783,7 +1804,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1817,7 +1838,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1850,25 +1871,37 @@
         "is_noise": false,
         "is_operational": false,
         "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 2
+        "influence_detected": true,
+        "collection_count": 3
       },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
+      "final_status": "EARLY_WARNING",
+      "rejection_reason": null,
+      "primary_signal": "PRESSURE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "PRESSURE_EARLY_WARNING",
       "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
+      "confidence": 0.62,
+      "score": 5.0,
+      "matched_groups": [
+        "PRESSURE"
+      ],
+      "matched_phrases": [
+        [
+          "pressure",
+          "мигрантлар оқими ошиб"
+        ]
+      ],
       "details": {
+        "rules_version": "EARLY_WARNING_REVIEW_V1_3_3_FINAL",
+        "review_reason": "STRUCTURED_MIGRATION_EARLY_WARNING",
+        "actuality_reason": "ASSERTED_MIGRATION_FLOW_TREND",
+        "context_matches": [
+          "мигрантлар"
+        ],
         "operational_categories": [],
         "matched_operational_phrases": [],
         "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_CURRENT_EVENT_EVIDENCE",
-        "early_warning_actuality_reason": "NO_CURRENT_EVENT_EVIDENCE"
+        "matched_non_operational_phrases": []
       }
     },
     {
@@ -1885,7 +1918,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1919,7 +1952,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1953,7 +1986,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1987,7 +2020,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2018,39 +2051,35 @@
       "text": "На Чукотке случилось многонациональное правосудие: там кишлачница из Узбекистана, проживавшая и работавшая в Питере, по липовым справкам оформила на своих личинусов «северные пособия». \n\nВсего она таким образом получила почти полмиллиона рублей. После раскрытия мошеннической схемы, дикарку осудили, жёстко наказав её тремя годами условно с испытательным сроком. Судья посчитал, что негоже ценную специалистку сажать на нары и оставил её на свободе. Ни депортации всего её выводка (целых четыре мигрантёныша), ни реального наказания. Так и живём.",
       "database_state": {
         "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": true,
-        "collection_count": 2
+        "is_operational": true,
+        "operational_confidence": 0.6,
+        "influence_detected": false,
+        "collection_count": 3
       },
-      "final_status": "EARLY_WARNING",
+      "final_status": "OPERATIONAL",
       "rejection_reason": null,
-      "primary_signal": "ENFORCEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ENFORCEMENT_EARLY_WARNING",
-      "event_type": null,
-      "confidence": 0.62,
-      "score": 6.0,
-      "matched_groups": [
-        "ENFORCEMENT"
-      ],
-      "matched_phrases": [
-        [
-          "enforcement",
-          "депортации"
-        ]
-      ],
+      "primary_signal": null,
+      "event_type": "GENERAL_DISCUSSION",
+      "confidence": null,
+      "score": null,
+      "matched_groups": [],
+      "matched_phrases": [],
       "details": {
-        "rules_version": "EARLY_WARNING_REVIEW_V1_3_2_RC",
-        "review_reason": "STRUCTURED_MIGRATION_EARLY_WARNING",
-        "actuality_reason": "CONCRETE_EVENT_ASSERTION",
-        "context_matches": [
-          "мигрантёныша"
+        "matched_signals": [],
+        "operational_categories": [
+          "DEPORTATION_RETURN"
         ],
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": []
+        "matched_operational_phrases": [
+          "депортации всего её выводка (целых четыре мигрантёныша"
+        ],
+        "primary_region": "GLOBAL",
+        "matched_regions": [
+          "GLOBAL"
+        ],
+        "primary_location": null,
+        "country": null,
+        "latitude": null,
+        "longitude": null
       }
     },
     {
@@ -2067,7 +2096,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2101,7 +2130,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": true,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "EARLY_WARNING",
       "rejection_reason": null,
@@ -2121,7 +2150,7 @@
         ]
       ],
       "details": {
-        "rules_version": "EARLY_WARNING_REVIEW_V1_3_2_RC",
+        "rules_version": "EARLY_WARNING_REVIEW_V1_3_3_FINAL",
         "review_reason": "STRUCTURED_MIGRATION_EARLY_WARNING",
         "actuality_reason": "CONCRETE_EVENT_ASSERTION",
         "context_matches": [
@@ -2147,7 +2176,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 2
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2181,7 +2210,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2215,7 +2244,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2249,7 +2278,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 3
+        "collection_count": 4
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2283,7 +2312,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2317,7 +2346,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2351,7 +2380,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2385,7 +2414,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2419,7 +2448,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2453,7 +2482,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2487,7 +2516,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2521,7 +2550,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2555,7 +2584,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2589,7 +2618,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2623,7 +2652,7 @@
         "is_operational": false,
         "operational_confidence": 0.6,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "WEAK_COORDINATION_WITHOUT_MIGRATION_OPERATIONAL_CONTEXT",
@@ -2666,7 +2695,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2700,7 +2729,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2731,39 +2760,35 @@
       "text": "В Латвии узбеки изнасиловали лебедя, пишут тамошние СМИ. \n\nДвое узбеков приманили лебедя едой в посёлке Царникава, после чего схватили птицу за крылья и повалили на землю. Они начали его душить, сломав животному шею, а затем выщипали перья на анусе и изнасиловали минимум 5 раз. После этого мигранты поместили лебедя в чёрный пакет и увезли на съёмную квартиру. Теперь им светит 10 лет тюрьмы с депортацией и пожизненный запрет на въезд в 27 стран. \n\nУзбек - он и в Африке Латвии узбек.",
       "database_state": {
         "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": true,
-        "collection_count": 3
+        "is_operational": true,
+        "operational_confidence": 0.6,
+        "influence_detected": false,
+        "collection_count": 4
       },
-      "final_status": "EARLY_WARNING",
+      "final_status": "OPERATIONAL",
       "rejection_reason": null,
-      "primary_signal": "ENFORCEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ENFORCEMENT_EARLY_WARNING",
-      "event_type": null,
-      "confidence": 0.72,
-      "score": 6.75,
-      "matched_groups": [
-        "ENFORCEMENT"
-      ],
-      "matched_phrases": [
-        [
-          "enforcement",
-          "депортацией"
-        ]
-      ],
+      "primary_signal": null,
+      "event_type": "GENERAL_DISCUSSION",
+      "confidence": null,
+      "score": null,
+      "matched_groups": [],
+      "matched_phrases": [],
       "details": {
-        "rules_version": "EARLY_WARNING_REVIEW_V1_3_2_RC",
-        "review_reason": "STRUCTURED_MIGRATION_EARLY_WARNING",
-        "actuality_reason": "CONCRETE_EVENT_ASSERTION",
-        "context_matches": [
-          "мигранты"
+        "matched_signals": [],
+        "operational_categories": [
+          "DEPORTATION_RETURN"
         ],
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": []
+        "matched_operational_phrases": [
+          "мигранты поместили лебедя в чёрный пакет и увезли на съёмную квартиру. Теперь им светит 10 лет тюрьмы с депортацией"
+        ],
+        "primary_region": "GLOBAL",
+        "matched_regions": [
+          "GLOBAL"
+        ],
+        "primary_location": null,
+        "country": null,
+        "latitude": null,
+        "longitude": null
       }
     },
     {
@@ -2780,7 +2805,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2811,27 +2836,35 @@
       "text": "وزارة الهجرة تفتتح \"مركز موارد الهجرة\" في البصرة لتعزيز الهجرة الآمنة والحد من الهجرة غير الشرعية\n\nفي خطوة استراتيجية تهدف إلى تنظيم حركة الهجرة وتوعية الشباب بمخاطر الطرق غير النظامية وتعزيز الهجرة الآمنة والمنظمة ..\n افتتح مدير عام دائرة شؤون الهجرة الدكتور صفاء حسين أحمد، \"مركز موارد الهجرة\" في فرع الوزارة بمحافظة البصرة، بحضور عدد من المسؤولين والشركاء المعنيين.\n\nو اوضح المدير العام، خلال حفل الافتتاح أن المركز يمثل نافذة حيوية لتقديم الدعم الفني والإرشادي للمهاجرين المحتملين والعائدين من خلال تقديم المشورة والمعلومات الموثوقة التي تمكنهم من اتخاذ قرارات مستنيرة، فضلاً عن دعم جهود إعادة الإدماج المستدامة للعائدين، مؤكداً أن الهدف الأساسي من هذه الخطوة هو تمكين المهاجرين المحتملين والعائدين من اتخاذ قرارات مبنية على معلومات دقيقة وموثوقة بعيداً عن أساليب الهجرة غير الشرعية التي تهدد حياتهم .\n\nوأشار احمد إلى أن\" افتتاح المركز يأتي ضمن برامج الوزارة الهادفة إلى رفع مستوى الوعي بمخاطر الهجرة غير الشرعية والحد منها عبر تقديم خدمات التوجيه والإرشاد وتعزيز التعاون مع الشركاء المحليين والدوليين لضمان وصول الخدمات إلى الفئات المستهدفة \".",
       "database_state": {
         "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
+        "is_operational": true,
+        "operational_confidence": 0.6,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
+      "final_status": "OPERATIONAL",
+      "rejection_reason": null,
       "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
+      "event_type": "GENERAL_DISCUSSION",
+      "confidence": null,
       "score": null,
       "matched_groups": [],
       "matched_phrases": [],
       "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
+        "matched_signals": [],
+        "operational_categories": [
+          "CASUALTY"
+        ],
+        "matched_operational_phrases": [
+          "مهاجرين المحتملين والعائدين من خلال تقديم المشورة والمعلومات"
+        ],
+        "primary_region": "GLOBAL",
+        "matched_regions": [
+          "GLOBAL"
+        ],
+        "primary_location": null,
+        "country": null,
+        "latitude": null,
+        "longitude": null
       }
     },
     {
@@ -2848,7 +2881,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2882,7 +2915,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2916,7 +2949,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2950,7 +2983,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2984,7 +3017,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3018,7 +3051,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3052,7 +3085,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3086,7 +3119,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3120,7 +3153,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3154,7 +3187,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3188,7 +3221,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3222,7 +3255,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3256,7 +3289,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3290,7 +3323,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3324,7 +3357,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3358,7 +3391,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3389,27 +3422,35 @@
       "text": "Госдума перед выборами решила набить себе очки - приняла закон о выдворении иностранцев ещё более чем по 20 статьям КоАП. \n\nТеперь выдворять иностранных граждан будут за участие в несанкционированных митингах, дискредитацию российских вооружённых сил, призывы к санкционному давлению на Россию и её граждан, а также за публичные призывы к действиям, которые нарушают территориальную целостность РФ. Помимо этого, были приняты законы о запрете на проживание в России мигрантам с судимостью, а также об отказе в получении гражданства судимым иностранцам. \n\nТут главное не то, что приняли, а то, чтобы эти законы исполнялись, вот с этим у нас серьёзные проблемы. И речь идёт не только о самих мигрантах, изначально бескультурных маргиналов по-большей части, а именно про государство, кое зачастую свои же законы не исполняет, закрывает глаза на беспредел приезжих, жалеет их, наказывает очень условно, а то и вовсе не наказывает.",
       "database_state": {
         "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
+        "is_operational": true,
+        "operational_confidence": 0.6,
         "influence_detected": false,
-        "collection_count": 3
+        "collection_count": 4
       },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
+      "final_status": "OPERATIONAL",
+      "rejection_reason": null,
       "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
+      "event_type": "GENERAL_DISCUSSION",
+      "confidence": null,
       "score": null,
       "matched_groups": [],
       "matched_phrases": [],
       "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_CURRENT_EVENT_EVIDENCE",
-        "early_warning_actuality_reason": "NO_CURRENT_EVENT_EVIDENCE"
+        "matched_signals": [],
+        "operational_categories": [
+          "DEPORTATION_RETURN"
+        ],
+        "matched_operational_phrases": [
+          "выдворении иностранцев"
+        ],
+        "primary_region": "GLOBAL",
+        "matched_regions": [
+          "GLOBAL"
+        ],
+        "primary_location": null,
+        "country": null,
+        "latitude": null,
+        "longitude": null
       }
     },
     {
@@ -3426,7 +3467,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3460,7 +3501,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3494,7 +3535,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3528,7 +3569,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3562,7 +3603,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3596,7 +3637,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3630,7 +3671,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 3
+        "collection_count": 4
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3661,43 +3702,35 @@
       "text": "Слуцкий: если ЛДПР не будет выступать с жесткой позицией по мигрантам, Россию заполонят приезжие \n\nЛДПР выступила с жестким заявлением по теме миграционной политики России на своем форуме «Столпы миграционной политики ЛДПР: нулевая терпимость к правонарушениям и русский язык как мягкая сила». \nВ основе \n- нулевая терпимость к незнанию языка и культуры - депортировать семьи мигрантов которые не учат детей русской культуре, и языку; \n- образование детей мигрантов только платно, не за счет России \n- выдворение за финансовые преступления без права возврата \n- Права регионам России самостоятельно ограничивать поток мигрантов за счет квот \n- любое серьезное нарушение - чемодан, вокзал домой. автоматические обнуление патента, запрет на возвращение в Россию\n\n«ЛДПР главный антимигрантский голос страны. Приоритет — наши люди, мы должны защитить свое население. Сейчас мы предлагаем пять конкретных поправок и изменений миграционного законодательства. Опыт Европы плохой пример. Запад поставил право чужака остаться выше права своих граждан на безопасность. Результат — районы, где полиция боится появляться, а местный закон уступает правилам общин.», — отметил лидер ЛДПР Леонид Слуцкий.",
       "database_state": {
         "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": true,
-        "collection_count": 3
+        "is_operational": true,
+        "operational_confidence": 0.6,
+        "influence_detected": false,
+        "collection_count": 4
       },
-      "final_status": "EARLY_WARNING",
+      "final_status": "OPERATIONAL",
       "rejection_reason": null,
-      "primary_signal": "ENFORCEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ENFORCEMENT_EARLY_WARNING",
-      "event_type": null,
-      "confidence": 0.62,
-      "score": 6.0,
-      "matched_groups": [
-        "ENFORCEMENT"
-      ],
-      "matched_phrases": [
-        [
-          "enforcement",
-          "депортировать"
-        ],
-        [
-          "enforcement",
-          "выдворение"
-        ]
-      ],
+      "primary_signal": null,
+      "event_type": "GENERAL_DISCUSSION",
+      "confidence": null,
+      "score": null,
+      "matched_groups": [],
+      "matched_phrases": [],
       "details": {
-        "rules_version": "EARLY_WARNING_REVIEW_V1_3_2_RC",
-        "review_reason": "STRUCTURED_MIGRATION_EARLY_WARNING",
-        "actuality_reason": "CONCRETE_EVENT_ASSERTION",
-        "context_matches": [
-          "мигрантов"
+        "matched_signals": [],
+        "operational_categories": [
+          "DEPORTATION_RETURN"
         ],
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": []
+        "matched_operational_phrases": [
+          "депортировать семьи мигрантов"
+        ],
+        "primary_region": "GLOBAL",
+        "matched_regions": [
+          "GLOBAL"
+        ],
+        "primary_location": null,
+        "country": null,
+        "latitude": null,
+        "longitude": null
       }
     },
     {
@@ -3714,7 +3747,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3748,7 +3781,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3782,7 +3815,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3816,7 +3849,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3850,7 +3883,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3884,7 +3917,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3918,7 +3951,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3952,7 +3985,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3986,7 +4019,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4020,7 +4053,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4054,7 +4087,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4088,7 +4121,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4122,7 +4155,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4156,7 +4189,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4190,7 +4223,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4224,7 +4257,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4258,7 +4291,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4292,7 +4325,7 @@
         "is_operational": false,
         "operational_confidence": 0.6,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "WEAK_COORDINATION_WITHOUT_MIGRATION_OPERATIONAL_CONTEXT",
@@ -4337,7 +4370,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4371,7 +4404,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4405,7 +4438,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4439,7 +4472,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4473,7 +4506,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4507,7 +4540,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4541,7 +4574,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4575,7 +4608,7 @@
         "is_operational": true,
         "operational_confidence": 0.6,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "HISTORICAL",
       "rejection_reason": "EXPLICIT_PREVIOUS_YEAR",
@@ -4613,7 +4646,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4645,26 +4678,30 @@
       "database_state": {
         "is_noise": false,
         "is_operational": false,
-        "operational_confidence": 0.1,
+        "operational_confidence": 0.6,
         "influence_detected": false,
-        "collection_count": 3
+        "collection_count": 4
       },
       "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
+      "rejection_reason": "SMUGGLING_NOUN_WITHOUT_CONCRETE_ACTION",
       "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
+      "event_type": "GENERAL_DISCUSSION",
+      "confidence": null,
       "score": null,
       "matched_groups": [],
       "matched_phrases": [],
       "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_CURRENT_EVENT_EVIDENCE",
-        "early_warning_actuality_reason": "NO_CURRENT_EVENT_EVIDENCE"
+        "operational_categories": [
+          "SMUGGLING"
+        ],
+        "matched_operational_phrases": [
+          "мигрантам перевозить"
+        ],
+        "analytical_cues": [],
+        "current_cues": [],
+        "non_assertive_cues": [],
+        "primary_region": "GLOBAL",
+        "primary_location": null
       }
     },
     {
@@ -4681,7 +4718,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 3
+        "collection_count": 4
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4715,7 +4752,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4749,7 +4786,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": true,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "EARLY_WARNING",
       "rejection_reason": null,
@@ -4769,7 +4806,7 @@
         ]
       ],
       "details": {
-        "rules_version": "EARLY_WARNING_REVIEW_V1_3_2_RC",
+        "rules_version": "EARLY_WARNING_REVIEW_V1_3_3_FINAL",
         "review_reason": "STRUCTURED_MIGRATION_EARLY_WARNING",
         "actuality_reason": "CONCRETE_EVENT_ASSERTION",
         "context_matches": [
@@ -4795,7 +4832,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4829,7 +4866,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": true,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "EARLY_WARNING",
       "rejection_reason": null,
@@ -4849,7 +4886,7 @@
         ]
       ],
       "details": {
-        "rules_version": "EARLY_WARNING_REVIEW_V1_3_2_RC",
+        "rules_version": "EARLY_WARNING_REVIEW_V1_3_3_FINAL",
         "review_reason": "STRUCTURED_MIGRATION_EARLY_WARNING",
         "actuality_reason": "QUANTIFIED_MIGRATION_TREND",
         "context_matches": [
@@ -4876,7 +4913,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4910,7 +4947,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4944,7 +4981,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4978,7 +5015,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5012,7 +5049,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5046,7 +5083,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 3
+        "collection_count": 4
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5080,7 +5117,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": true,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "EARLY_WARNING",
       "rejection_reason": null,
@@ -5100,7 +5137,7 @@
         ]
       ],
       "details": {
-        "rules_version": "EARLY_WARNING_REVIEW_V1_3_2_RC",
+        "rules_version": "EARLY_WARNING_REVIEW_V1_3_3_FINAL",
         "review_reason": "STRUCTURED_MIGRATION_EARLY_WARNING",
         "actuality_reason": "QUANTIFIED_MIGRATION_TREND",
         "context_matches": [
@@ -5126,7 +5163,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5160,7 +5197,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5194,7 +5231,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5228,7 +5265,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": true,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "EARLY_WARNING",
       "rejection_reason": null,
@@ -5248,7 +5285,7 @@
         ]
       ],
       "details": {
-        "rules_version": "EARLY_WARNING_REVIEW_V1_3_2_RC",
+        "rules_version": "EARLY_WARNING_REVIEW_V1_3_3_FINAL",
         "review_reason": "STRUCTURED_MIGRATION_EARLY_WARNING",
         "actuality_reason": "RECENT_DATED_QUANTIFIED_MIGRATION_SIGNAL",
         "context_matches": [
@@ -5274,7 +5311,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5308,7 +5345,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5339,41 +5376,35 @@
       "text": "Владислав Даванков ва «Янги одамлар» партияси мигрантларнинг хорижга пул ўтказмаларини расмий маоши миқдори билан чеклаш, мигрантнинг рақамли профилини жорий этиш ҳамда ноқонуний даромадга шубҳа қилинганда ҳисоб рақамларини блоклашни таклиф қилди. \n\nҚоида такроран бузилса, мигрантни депортация қилиш таклиф этилмоқда.",
       "database_state": {
         "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": true,
-        "collection_count": 5
+        "is_operational": true,
+        "operational_confidence": 0.6,
+        "influence_detected": false,
+        "collection_count": 6
       },
-      "final_status": "EARLY_WARNING",
+      "final_status": "OPERATIONAL",
       "rejection_reason": null,
-      "primary_signal": "ENFORCEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ENFORCEMENT_EARLY_WARNING",
-      "event_type": null,
-      "confidence": 0.62,
-      "score": 6.0,
-      "matched_groups": [
-        "ENFORCEMENT"
-      ],
-      "matched_phrases": [
-        [
-          "enforcement",
-          "депортация"
-        ]
-      ],
+      "primary_signal": null,
+      "event_type": "GENERAL_DISCUSSION",
+      "confidence": null,
+      "score": null,
+      "matched_groups": [],
+      "matched_phrases": [],
       "details": {
-        "rules_version": "EARLY_WARNING_REVIEW_V1_3_2_RC",
-        "review_reason": "STRUCTURED_MIGRATION_EARLY_WARNING",
-        "actuality_reason": "CONCRETE_EVENT_ASSERTION",
-        "context_matches": [
-          "мигрантларнинг",
-          "мигрантнинг",
-          "мигрантни"
+        "matched_signals": [],
+        "operational_categories": [
+          "DEPORTATION_RETURN"
         ],
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": []
+        "matched_operational_phrases": [
+          "мигрантни депортация"
+        ],
+        "primary_region": "GLOBAL",
+        "matched_regions": [
+          "GLOBAL"
+        ],
+        "primary_location": null,
+        "country": null,
+        "latitude": null,
+        "longitude": null
       }
     },
     {
@@ -5390,7 +5421,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5424,7 +5455,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5458,7 +5489,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5492,7 +5523,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5526,7 +5557,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5557,27 +5588,36 @@
       "text": "🇺🇿🇺🇸 Ўзбекистон: АҚШ миграция қонунчилигини бузгани учун депортация қилинган 18 нафар Ўзбекистон фуқароси чартер рейси орқали Тошкентга олиб келинди.\n\nФуқаролар АҚШдан махсус чартер рейси билан Ўзбекистонга қайтарилган.",
       "database_state": {
         "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
+        "is_operational": true,
+        "operational_confidence": 0.7,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
+      "final_status": "OPERATIONAL",
+      "rejection_reason": null,
       "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
+      "event_type": "GENERAL_DISCUSSION",
+      "confidence": null,
       "score": null,
       "matched_groups": [],
       "matched_phrases": [],
       "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_HUMAN_MIGRATION_CONTEXT",
-        "early_warning_actuality_reason": "NO_HUMAN_MIGRATION_CONTEXT"
+        "matched_signals": [],
+        "operational_categories": [
+          "DEPORTATION_RETURN"
+        ],
+        "matched_operational_phrases": [
+          "Фуқаролар АҚШдан махсус чартер рейси билан Ўзбекистонга қайтарилган",
+          "депортация қилинган 18 нафар Ўзбекистон фуқароси"
+        ],
+        "primary_region": "GLOBAL",
+        "matched_regions": [
+          "GLOBAL"
+        ],
+        "primary_location": null,
+        "country": null,
+        "latitude": null,
+        "longitude": null
       }
     },
     {
@@ -5594,7 +5634,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5628,7 +5668,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 3
+        "collection_count": 4
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5662,7 +5702,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5696,7 +5736,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5730,7 +5770,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 3
+        "collection_count": 4
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5764,7 +5804,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5798,7 +5838,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5832,7 +5872,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5866,7 +5906,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5900,7 +5940,7 @@
         "is_operational": false,
         "operational_confidence": 0.6,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "WEAK_COORDINATION_WITHOUT_MIGRATION_OPERATIONAL_CONTEXT",
@@ -5947,7 +5987,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5981,7 +6021,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -6015,7 +6055,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
