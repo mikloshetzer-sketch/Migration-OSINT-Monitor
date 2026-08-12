@@ -5,8 +5,8 @@ File:
 analysis/telegram_backfill.py
 
 Purpose:
-One-time Telegram historical backfill using the SAME Telegram collector logic
-as the normal monitor run.
+Telegram historical backfill / reprocess runner using the SAME Telegram
+collector logic as the normal monitor run.
 
 Default test window:
 2026-07-15 -> 2026-08-05
@@ -33,7 +33,14 @@ if str(REPO_ROOT) not in sys.path:
 import main as monitor_main
 from collectors.telegram_collector import TelegramCollector
 from database.database import get_session
-from database.models import MonitorRun
+from database.models import (
+    CollectedPost,
+    EventGroup,
+    EventGroupSource,
+    InfluenceSignal,
+    MonitorRun,
+    Post,
+)
 
 DEFAULT_START_DATE = "2026-07-15"
 DEFAULT_END_DATE = "2026-08-05"
@@ -70,6 +77,26 @@ def env_int(
         value = min(value, maximum)
 
     return value
+
+
+def env_bool(
+    name: str,
+    default: bool = False,
+) -> bool:
+    raw = os.getenv(name)
+
+    if raw is None:
+        return default
+
+    return (
+        raw.strip().lower()
+        in {
+            "1",
+            "true",
+            "yes",
+            "on",
+        }
+    )
 
 
 def parse_iso_date(value: str) -> date:
@@ -242,6 +269,136 @@ class TelegramHistoricalCollector(TelegramCollector):
         return results
 
 
+def prepare_telegram_reprocess(
+    *,
+    start_date: date,
+    end_date: date,
+) -> Dict[str, int]:
+    """
+    Reset only Telegram-derived analytical products in the selected interval.
+
+    CollectedPost rows are preserved. X / Reddit / Mastodon data is untouched.
+    """
+
+    start_dt = datetime.combine(
+        start_date,
+        time.min,
+    )
+
+    end_dt = datetime.combine(
+        end_date + timedelta(days=1),
+        time.min,
+    )
+
+    session = get_session()
+
+    counts = {
+        "event_group_sources_deleted": 0,
+        "posts_deleted": 0,
+        "influence_signals_deleted": 0,
+        "orphan_event_groups_deleted": 0,
+        "collected_posts_reset": 0,
+    }
+
+    try:
+        telegram_group_links = (
+            session.query(EventGroupSource)
+            .filter(
+                EventGroupSource.source == "TELEGRAM",
+                EventGroupSource.published_at >= start_dt,
+                EventGroupSource.published_at < end_dt,
+            )
+            .all()
+        )
+
+        candidate_group_ids = {
+            int(row.event_group_id)
+            for row in telegram_group_links
+            if row.event_group_id is not None
+        }
+
+        for row in telegram_group_links:
+            session.delete(row)
+            counts["event_group_sources_deleted"] += 1
+
+        telegram_events = (
+            session.query(Post)
+            .filter(
+                Post.source == "TELEGRAM",
+                Post.published_at >= start_dt,
+                Post.published_at < end_dt,
+            )
+            .all()
+        )
+
+        for row in telegram_events:
+            session.delete(row)
+            counts["posts_deleted"] += 1
+
+        telegram_signals = (
+            session.query(InfluenceSignal)
+            .filter(
+                InfluenceSignal.source == "TELEGRAM",
+                InfluenceSignal.published_at >= start_dt,
+                InfluenceSignal.published_at < end_dt,
+            )
+            .all()
+        )
+
+        for row in telegram_signals:
+            session.delete(row)
+            counts["influence_signals_deleted"] += 1
+
+        telegram_collected_posts = (
+            session.query(CollectedPost)
+            .filter(
+                CollectedPost.source == "TELEGRAM",
+                CollectedPost.published_at >= start_dt,
+                CollectedPost.published_at < end_dt,
+            )
+            .all()
+        )
+
+        for row in telegram_collected_posts:
+            row.is_noise = False
+            row.is_operational = False
+            row.operational_confidence = 0.1
+            row.influence_detected = False
+            counts["collected_posts_reset"] += 1
+
+        session.flush()
+
+        for group_id in sorted(candidate_group_ids):
+            remaining_source = (
+                session.query(EventGroupSource.id)
+                .filter(
+                    EventGroupSource.event_group_id == group_id
+                )
+                .first()
+            )
+
+            if remaining_source is not None:
+                continue
+
+            group = session.get(EventGroup, group_id)
+
+            if group is None:
+                continue
+
+            session.delete(group)
+            counts["orphan_event_groups_deleted"] += 1
+
+        session.commit()
+        return counts
+
+    except Exception:
+        session.rollback()
+        raise
+
+    finally:
+        session.close()
+
+
 def latest_monitor_run_snapshot():
     session = get_session()
     try:
@@ -355,6 +512,11 @@ def main() -> int:
             "End date must not be before start date."
         )
 
+    reprocess_existing = env_bool(
+        "TELEGRAM_BACKFILL_REPROCESS_EXISTING",
+        False,
+    )
+
     query_engine = monitor_main.QueryEngine()
     queries = query_engine.load_queries()
 
@@ -378,7 +540,44 @@ def main() -> int:
     print("Telegram source logic: CURRENT collector")
     print("Analytical pipeline: CURRENT main.py")
     print("Database writes: ENABLED")
+    print(
+        "Reprocess existing Telegram history: "
+        f"{reprocess_existing}"
+    )
     print("Duplicate protection: EXISTING DATABASE LOGIC")
+
+    reprocess_counts = None
+
+    if reprocess_existing:
+        print("===================================")
+        print(" TELEGRAM REPROCESS PREPARATION")
+        print("===================================")
+
+        reprocess_counts = prepare_telegram_reprocess(
+            start_date=start_date,
+            end_date=end_date,
+        )
+
+        print(
+            "Telegram EventGroupSource rows removed: "
+            f"{reprocess_counts['event_group_sources_deleted']}"
+        )
+        print(
+            "Telegram operational Post rows removed: "
+            f"{reprocess_counts['posts_deleted']}"
+        )
+        print(
+            "Telegram InfluenceSignal rows removed: "
+            f"{reprocess_counts['influence_signals_deleted']}"
+        )
+        print(
+            "Orphan EventGroups removed: "
+            f"{reprocess_counts['orphan_event_groups_deleted']}"
+        )
+        print(
+            "Telegram CollectedPost states reset: "
+            f"{reprocess_counts['collected_posts_reset']}"
+        )
 
     try:
         monitor_main.XCollector = DisabledCollector
@@ -424,7 +623,17 @@ def main() -> int:
     )
     print(f"Backfill MonitorRun IDs: {updated_ids}")
     print("Backfill status: BACKFILL_SUCCESS")
+    print(
+        "Reprocess mode: "
+        f"{reprocess_existing}"
+    )
     print("Current normal dashboard run preserved: YES")
+
+    if reprocess_counts is not None:
+        print(
+            "Reprocess cleanup summary: "
+            f"{reprocess_counts}"
+        )
 
     if day_counts:
         print("Backfill daily counts:")
@@ -437,3 +646,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
