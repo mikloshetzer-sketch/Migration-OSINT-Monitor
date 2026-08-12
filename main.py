@@ -13,6 +13,7 @@ Application entry point using:
 - Operational Event Filter
 - Signal Classification
 - Influence Signal Detection
+- Generic Early-Warning / Analyst Review Detection
 - Location Extraction
 - Time Extraction
 - Region Resolution
@@ -45,6 +46,7 @@ from collectors.telegram_collector import TelegramCollector
 from analysis.keyword_filter import KeywordFilter
 from analysis.classifier import SignalClassifier
 from analysis.influence_signal_detector import InfluenceSignalDetector
+from analysis.early_warning_review_detector import EarlyWarningReviewDetector
 from analysis.location_extractor import LocationExtractor
 from analysis.time_extractor import TimeExtractor
 from analysis.scoring import RelevanceScorer
@@ -1025,6 +1027,13 @@ def infer_influence_priority(
         "DECISION_INFLUENCE",
         "ONLINE_INFLUENCE_REPORT",
         "LEGAL_MIGRATION_SIGNAL",
+        "MOVEMENT_EARLY_WARNING",
+        "PRESSURE_EARLY_WARNING",
+        "FACILITATION_EARLY_WARNING",
+        "ROUTE_EARLY_WARNING",
+        "ENFORCEMENT_EARLY_WARNING",
+        "POLICY_ACCESS_EARLY_WARNING",
+        "ANALYST_REVIEW_SIGNAL",
     }
 
     if (
@@ -1056,6 +1065,13 @@ def infer_signal_intent(primary_signal):
         "MOBILIZATION_REPORT": "PLANNED_CROSSING",
         "DECISION_INFLUENCE": "DECISION_INFLUENCE",
         "ONLINE_INFLUENCE_REPORT": "ONLINE_INFLUENCE",
+        "MOVEMENT_EARLY_WARNING": "MOVEMENT_REVIEW",
+        "PRESSURE_EARLY_WARNING": "PRESSURE_REVIEW",
+        "FACILITATION_EARLY_WARNING": "FACILITATION_REVIEW",
+        "ROUTE_EARLY_WARNING": "ROUTE_REVIEW",
+        "ENFORCEMENT_EARLY_WARNING": "ENFORCEMENT_REVIEW",
+        "POLICY_ACCESS_EARLY_WARNING": "POLICY_ACCESS_REVIEW",
+        "ANALYST_REVIEW_SIGNAL": "ANALYST_REVIEW",
     }
 
     signal = str(
@@ -1737,6 +1753,10 @@ def main():
         InfluenceSignalDetector()
     )
 
+    early_warning_detector = (
+        EarlyWarningReviewDetector()
+    )
+
     location_extractor = (
         LocationExtractor()
     )
@@ -1881,6 +1901,17 @@ def main():
 
     # Influence Signal statistics
     total_influence_signals = 0
+    total_analyst_review_signals = 0
+    analyst_review_signal_counts = {
+        "MOVEMENT_EARLY_WARNING": 0,
+        "PRESSURE_EARLY_WARNING": 0,
+        "FACILITATION_EARLY_WARNING": 0,
+        "ROUTE_EARLY_WARNING": 0,
+        "ENFORCEMENT_EARLY_WARNING": 0,
+        "POLICY_ACCESS_EARLY_WARNING": 0,
+        "ANALYST_REVIEW_SIGNAL": 0,
+    }
+
     influence_signal_counts = {
         "CROSSING_FACILITATION": 0,
         "LEGAL_MIGRATION_SIGNAL": 0,
@@ -2268,6 +2299,92 @@ def main():
                 if not operational_result.get(
                     "is_operational"
                 ):
+                    # --------------------------------
+                    # GENERIC EARLY-WARNING / ANALYST REVIEW
+                    # --------------------------------
+                    #
+                    # The strict operational filter remains unchanged.
+                    # Only posts that FAILED that strict gate are assessed
+                    # here for weaker but structured migration signals.
+                    #
+                    # If the established InfluenceSignalDetector has already
+                    # produced a signal, we keep that more specific result and
+                    # do not create a second generic review signal.
+                    early_warning_result = {
+                        "detected": False,
+                    }
+
+                    if not influence_result.get(
+                        "detected"
+                    ):
+                        early_warning_result = (
+                            early_warning_detector
+                            .detect(
+                                text
+                            )
+                        )
+
+                    if early_warning_result.get(
+                        "detected"
+                    ):
+                        total_analyst_review_signals += 1
+
+                        primary_review_signal = (
+                            early_warning_result.get(
+                                "primary_signal"
+                            )
+                        )
+
+                        if (
+                            primary_review_signal
+                            in analyst_review_signal_counts
+                        ):
+                            analyst_review_signal_counts[
+                                primary_review_signal
+                            ] += 1
+
+                        save_influence_signal(
+                            session=session,
+                            post=post,
+                            collected_post=collected_post,
+                            influence_result=early_warning_result,
+                            monitor_run=monitor_run,
+                            location_extractor=location_extractor,
+                            region_resolver=region_resolver,
+                        )
+
+                        update_collected_post_analysis(
+                            collected_post,
+                            influence_detected=True,
+                        )
+
+                        print(
+                            "-----------------------------------"
+                        )
+                        print(
+                            "EARLY WARNING / ANALYST REVIEW"
+                        )
+                        print(
+                            "Primary signal: "
+                            f"{primary_review_signal}"
+                        )
+                        print(
+                            "Matched groups: "
+                            f"{early_warning_result.get('matched_groups')}"
+                        )
+                        print(
+                            "Review score: "
+                            f"{early_warning_result.get('score')}"
+                        )
+                        print(
+                            "Review confidence: "
+                            f"{early_warning_result.get('confidence')}"
+                        )
+                        print(
+                            "Text: "
+                            f"{text}"
+                        )
+
                     total_non_operational_filtered += 1
 
                     update_collected_post_analysis(
@@ -2282,6 +2399,11 @@ def main():
                         influence_detected=(
                             bool(
                                 influence_result.get(
+                                    "detected"
+                                )
+                            )
+                            or bool(
+                                early_warning_result.get(
                                     "detected"
                                 )
                             )
@@ -2794,6 +2916,41 @@ def main():
     print(
         "Influence signals detected: "
         f"{total_influence_signals}"
+    )
+
+    print(
+        "Analyst-review early-warning signals: "
+        f"{total_analyst_review_signals}"
+    )
+
+    print(
+        "Movement early-warning signals: "
+        f"{analyst_review_signal_counts['MOVEMENT_EARLY_WARNING']}"
+    )
+
+    print(
+        "Pressure early-warning signals: "
+        f"{analyst_review_signal_counts['PRESSURE_EARLY_WARNING']}"
+    )
+
+    print(
+        "Facilitation early-warning signals: "
+        f"{analyst_review_signal_counts['FACILITATION_EARLY_WARNING']}"
+    )
+
+    print(
+        "Route early-warning signals: "
+        f"{analyst_review_signal_counts['ROUTE_EARLY_WARNING']}"
+    )
+
+    print(
+        "Enforcement early-warning signals: "
+        f"{analyst_review_signal_counts['ENFORCEMENT_EARLY_WARNING']}"
+    )
+
+    print(
+        "Policy/access early-warning signals: "
+        f"{analyst_review_signal_counts['POLICY_ACCESS_EARLY_WARNING']}"
     )
 
     print(
