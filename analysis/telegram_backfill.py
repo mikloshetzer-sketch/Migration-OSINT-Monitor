@@ -8,6 +8,12 @@ Purpose:
 Telegram historical backfill / reprocess runner using the SAME Telegram
 collector logic as the normal monitor run.
 
+V2 speed optimization:
+- one persistent Telegram client for the whole backfill;
+- channel discovery + content validation cached once per query;
+- no repeated reconnect/discovery/validation for every single day;
+- analytical pipeline and search quality remain unchanged.
+
 Default test window:
 2026-07-15 -> 2026-08-05
 
@@ -177,6 +183,28 @@ class TelegramHistoricalCollector(TelegramCollector):
         self.total_returned = 0
         self.day_counts = defaultdict(int)
 
+        # --------------------------------------------------
+        # BACKFILL V2 PERFORMANCE CACHE
+        # --------------------------------------------------
+        # The old implementation delegated every day/query slice to the base
+        # search_between(), which reconnects to Telegram and repeats channel
+        # discovery + channel-content validation each time.
+        #
+        # For a 22-day window and 5 query groups that can mean ~110 repeated
+        # setup cycles. V2 keeps one authorized client alive and validates
+        # channels only once per distinct query. Daily message scanning remains
+        # unchanged, so historical coverage / quality is preserved.
+        self._backfill_client = None
+        self._accepted_channels_cache: Dict[
+            str,
+            List[Dict[str, Any]],
+        ] = {}
+
+        self.channel_cache_hits = 0
+        self.channel_cache_misses = 0
+        self.telegram_client_connects = 0
+        self.historical_message_scans = 0
+
         TelegramHistoricalCollector.last_instance = self
 
         print("===================================")
@@ -187,6 +215,187 @@ class TelegramHistoricalCollector(TelegramCollector):
         print(f"Max total posts: {self.max_total_posts}")
         print(f"Query groups: {self.query_count}")
         print(f"Fair share/query/day: {self.per_query_daily_cap}")
+
+    def _get_backfill_client(self):
+        """
+        Return one persistent authorized Telegram client for the complete
+        historical run.
+
+        This removes repeated connect / authorize / disconnect cycles from
+        every day/query slice.
+        """
+
+        if self._backfill_client is not None:
+            return self._backfill_client
+
+        client = self._build_client()
+        client.connect()
+
+        if not client.is_user_authorized():
+            client.disconnect()
+            raise RuntimeError(
+                "TELEGRAM_SESSION is not authorized."
+            )
+
+        self._backfill_client = client
+        self.telegram_client_connects += 1
+
+        print(
+            "Telegram backfill persistent client: CONNECTED"
+        )
+
+        return client
+
+    def _accepted_channels_for_query(
+        self,
+        *,
+        query: str,
+        search_terms: List[str],
+    ) -> List[Dict[str, Any]]:
+        """
+        Discover + validate channels once per query, then cache the result.
+
+        Channel validation is a source-quality test based on recent/current
+        channel content. Re-running it for every historical day does not add
+        historical coverage; it only repeats expensive Telegram calls.
+        """
+
+        cache_key = str(
+            query
+            or ""
+        ).strip()
+
+        cached = self._accepted_channels_cache.get(
+            cache_key
+        )
+
+        if cached is not None:
+            self.channel_cache_hits += 1
+            return cached
+
+        self.channel_cache_misses += 1
+
+        client = self._get_backfill_client()
+
+        discovery_terms = self._build_discovery_terms(
+            query=query,
+            search_terms=search_terms,
+        )
+
+        discovered = self._collect_candidate_channels(
+            client=client,
+            discovery_terms=discovery_terms,
+        )
+
+        validated = self._validate_candidate_channels(
+            client=client,
+            channels=discovered,
+        )
+
+        accepted_channels = [
+            item["channel"]
+            for item in validated
+            if item.get("accepted")
+        ]
+
+        accepted_channels = accepted_channels[
+            :self.MAX_VALIDATED_CHANNELS_PER_QUERY
+        ]
+
+        self._accepted_channels_cache[
+            cache_key
+        ] = accepted_channels
+
+        print(
+            "Telegram backfill channel cache built: "
+            f"query={cache_key!r} | "
+            f"discovered={len(discovered)} | "
+            f"accepted={len(accepted_channels)}"
+        )
+
+        return accepted_channels
+
+    def search_between(
+        self,
+        *,
+        query: str,
+        start_at: datetime,
+        end_at: datetime,
+        max_results: int = 100,
+    ) -> List[Dict[str, Any]]:
+        """
+        Optimized historical query.
+
+        IMPORTANT:
+        Message scanning remains day-by-day and still uses the current
+        TelegramCollector._search_channels() implementation. Therefore the
+        post-level migration validation, topic matching, footer cleaning,
+        query semantics and per-day limits remain unchanged.
+
+        Only repeated connection + channel discovery/content validation are
+        cached.
+        """
+
+        if not self.is_configured():
+            return []
+
+        start_utc = self._ensure_utc(
+            start_at
+        )
+        end_utc = self._ensure_utc(
+            end_at
+        )
+
+        if end_utc <= start_utc:
+            return []
+
+        search_terms = self._expand_query(
+            query
+        )
+
+        if not search_terms:
+            return []
+
+        accepted_channels = self._accepted_channels_for_query(
+            query=query,
+            search_terms=search_terms,
+        )
+
+        if not accepted_channels:
+            return []
+
+        client = self._get_backfill_client()
+
+        self.historical_message_scans += 1
+
+        return self._search_channels(
+            client=client,
+            channels=accepted_channels,
+            search_terms=search_terms,
+            cutoff=start_utc,
+            end_at=end_utc,
+            max_results=max_results,
+        )
+
+    def close_backfill_client(self) -> None:
+        """
+        Cleanly close the persistent Telegram connection after monitor_main
+        finishes.
+        """
+
+        client = self._backfill_client
+
+        if client is None:
+            return
+
+        try:
+            client.disconnect()
+        finally:
+            self._backfill_client = None
+
+        print(
+            "Telegram backfill persistent client: DISCONNECTED"
+        )
 
     def search_recent(
         self,
@@ -588,6 +797,13 @@ def main() -> int:
         monitor_main.main()
 
     finally:
+        collector_instance = (
+            TelegramHistoricalCollector.last_instance
+        )
+
+        if collector_instance is not None:
+            collector_instance.close_backfill_client()
+
         monitor_main.XCollector = original_x
         monitor_main.RedditCollector = original_reddit
         monitor_main.MastodonCollector = original_mastodon
@@ -629,6 +845,24 @@ def main() -> int:
     )
     print("Current normal dashboard run preserved: YES")
 
+    if collector is not None:
+        print(
+            "Telegram persistent client connects: "
+            f"{collector.telegram_client_connects}"
+        )
+        print(
+            "Telegram channel cache builds: "
+            f"{collector.channel_cache_misses}"
+        )
+        print(
+            "Telegram channel cache hits: "
+            f"{collector.channel_cache_hits}"
+        )
+        print(
+            "Telegram historical day/query message scans: "
+            f"{collector.historical_message_scans}"
+        )
+
     if reprocess_counts is not None:
         print(
             "Reprocess cleanup summary: "
@@ -646,4 +880,5 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
 
