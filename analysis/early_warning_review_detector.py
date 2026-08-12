@@ -45,11 +45,12 @@ Locations are context only. No location receives a scoring bonus.
 from __future__ import annotations
 
 import re
+from datetime import datetime, timezone
 from typing import Any, Dict, List, Sequence, Tuple
 
 
 class EarlyWarningReviewDetector:
-    RULES_VERSION = "EARLY_WARNING_REVIEW_V1_2"
+    RULES_VERSION = "EARLY_WARNING_REVIEW_V1_3"
 
     MIN_SCORE = 5.0
     WINDOW_MAX_CHARS = 460
@@ -129,12 +130,28 @@ class EarlyWarningReviewDetector:
     )
 
     FACILITATION_PATTERNS = (
-        r"\b(?:smuggl\w*|traffick\w*|facilitat\w*|transport\w*|driver|boat\s+available|seats?\s+available|fake\s+contract|false\s+document|forged\s+document)\b",
-        r"\b(?:trafic\w*\s+de\s+migrantes|contrato\s+falso|documentos?\s+falsos?|transporte|conductor)\b",
-        r"\b(?:passeur\w*|faux\s+documents?|transport)\b",
-        r"\b(?:scafist\w*|documenti\s+falsi|trasporto)\b",
-        r"\b(?:контрабанд\w*|перевоз\w*|водител\w*|поддельн\w*.{0,30}(?:документ|договор)|фиктивн\w*.{0,30}(?:документ|договор))\b",
-        r"(?:تهريب|مهربين|نقل المهاجرين|وثائق مزورة|عقد مزور)",
+        # Human / migrant smuggling only. Generic "trafficking" is NOT
+        # sufficient because it frequently refers to drugs, wildlife or goods.
+        r"\b(?:human|people|migrant|migrants|refugee|refugees)\s+(?:smuggl\w*|traffick\w*)\b",
+        r"\b(?:smuggl\w*|traffick\w*)\s+(?:of\s+)?(?:people|persons|migrants?|refugees?)\b",
+        r"\b(?:smuggling|trafficking)\s+(?:network|ring|gang)\b.{0,100}\b(?:migrants?|refugees?|people)\b",
+        r"\b(?:migrants?|refugees?)\b.{0,100}\b(?:smuggling|trafficking)\s+(?:network|ring|gang)\b",
+        r"\b(?:facilitat\w*|transport\w*|driver|boat\s+available|seats?\s+available|fake\s+contract|false\s+document|forged\s+document)\b.{0,100}\b(?:migrants?|refugees?|border|crossing|illegal\s+entry)\b",
+        r"\b(?:migrants?|refugees?|border|crossing|illegal\s+entry)\b.{0,100}\b(?:facilitat\w*|transport\w*|driver|boat\s+available|seats?\s+available|fake\s+contract|false\s+document|forged\s+document)\b",
+
+        # Spanish / French / Italian
+        r"\b(?:tr[aá]fico|trata)\s+de\s+(?:migrantes|personas)\b",
+        r"\b(?:migrantes?|refugiados?)\b.{0,100}\b(?:transporte|conductor|documentos?\s+falsos?|contrato\s+falso)\b",
+        r"\b(?:passeur\w*|trafic\s+de\s+migrants?|faux\s+documents?)\b",
+        r"\b(?:scafist\w*|traffico\s+di\s+migranti|documenti\s+falsi)\b",
+
+        # Russian / CIS
+        r"\b(?:мигрант\w*|бежен\w*|муҳожир\w*)\b.{0,120}\b(?:контрабанд\w*|перевоз\w*|водител\w*|поддельн\w*.{0,30}(?:документ|договор)|фиктивн\w*.{0,30}(?:документ|договор))\b",
+        r"\b(?:контрабанд\w*|перевоз\w*)\b.{0,120}\b(?:мигрант\w*|бежен\w*|муҳожир\w*)\b",
+
+        # Arabic
+        r"(?:تهريب المهاجرين|مهربو المهاجرين|مهربين).{0,100}(?:مهاجر|لاجئ|الحدود|طريق)",
+        r"(?:مهاجر|لاجئ).{0,100}(?:تهريب|مهربين|نقل المهاجرين|وثائق مزورة|عقد مزور)",
     )
 
     ENFORCEMENT_PATTERNS = (
@@ -252,6 +269,29 @@ class EarlyWarningReviewDetector:
     )
 
     # ------------------------------------------------------
+    # MIGRATION-SPECIFIC ENFORCEMENT CONTEXT
+    # ------------------------------------------------------
+
+    MIGRATION_ENFORCEMENT_PATTERNS = (
+        r"\b(?:immigration|migration|border|asylum)\s+(?:raid|operation|enforcement|police|officers?|authorities)\b",
+        r"\b(?:ICE|Border\s+Patrol|border\s+guards?|coast\s+guard|immigration\s+officers?)\b",
+        r"\b(?:illegal|irregular|undocumented)\s+(?:migrants?|immigrants?|entry|stay|crossing)\b",
+        r"\b(?:deportation|removal|expulsion|return)\s+(?:order|flight|operation|of\s+migrants?)\b",
+        r"\b(?:migrants?|refugees?)\b.{0,100}\b(?:deported|expelled|returned|removed|intercepted|detained\s+for\s+illegal\s+entry)\b",
+
+        r"\b(?:migraci[oó]n|frontera|extranjer[ií]a)\b.{0,80}\b(?:operativo|redada|control|polic[ií]a)\b",
+        r"\b(?:migrantes?|inmigrantes?)\b.{0,100}\b(?:expulsad\w*|deportad\w*|interceptad\w*|devuelt\w*)\b",
+
+        r"\b(?:миграционн\w*|пограничн\w*)\b.{0,100}\b(?:рейд\w*|контрол\w*|полици\w*|провер\w*)\b",
+        r"\b(?:нелегальн\w*|незаконн\w*)\b.{0,50}\b(?:мигрант\w*|пребыван\w*|въезд\w*)\b",
+        r"\b(?:мигрант\w*|муҳожир\w*)\b.{0,100}\b(?:выдвор\w*|депорт\w*|провер\w*.{0,30}документ)\b",
+
+        r"(?:شرطة الهجرة|حرس الحدود|خفر السواحل|هجرة غير شرعية|مهاجر غير شرعي|ترحيل المهاجرين|إبعاد المهاجرين)",
+    )
+
+    HISTORICAL_YEAR_PATTERN = r"\b(?:19|20)\d{2}\b"
+
+    # ------------------------------------------------------
     # REJECTION / DOWN-RANKING CONTEXT
     # ------------------------------------------------------
 
@@ -280,9 +320,16 @@ class EarlyWarningReviewDetector:
     )
 
     GENERIC_CRIME_PATTERNS = (
-        r"\b(?:assault|murder|rape|robbery|arson|fight|terror attack)\b",
-        r"\b(?:напал|убил|изнасил|ограб|драк|поджог|теракт)\w*",
-        r"\b(?:agresi[oó]n|asesin|violaci[oó]n|robo|pelea)\w*",
+        r"\b(?:assault|murder|rape|robbery|arson|fight|stabbing|stabbed|shooting|drug\s+trafficking|drug\s+smuggling|pills?|narcotics?|terror\s+attack)\b",
+        r"\b(?:напал|убил|изнасил|ограб|драк|поджог|теракт|наркотик)\w*",
+        r"\b(?:agresi[oó]n|asesin|violaci[oó]n|robo|pelea|apuñal|drogas?)\w*",
+    )
+
+    NON_HUMAN_TRAFFICKING_PATTERNS = (
+        r"\b(?:drug|drugs|pills?|narcotics?|cocaine|heroin|meth|fentanyl)\b.{0,80}\b(?:traffick\w*|smuggl\w*)\b",
+        r"\b(?:traffick\w*|smuggl\w*)\b.{0,80}\b(?:drug|drugs|pills?|narcotics?|cocaine|heroin|meth|fentanyl)\b",
+        r"\b(?:wildlife|lizard|lizards|animal|animals|weapons?|guns?|cigarettes?|tobacco|goods)\b.{0,80}\b(?:traffick\w*|smuggl\w*)\b",
+        r"\b(?:traffick\w*|smuggl\w*)\b.{0,80}\b(?:wildlife|lizard|lizards|animal|animals|weapons?|guns?|cigarettes?|tobacco|goods)\b",
     )
 
     # ------------------------------------------------------
@@ -604,6 +651,24 @@ class EarlyWarningReviewDetector:
             self.GENERIC_CRIME_PATTERNS,
         )
 
+        non_human_trafficking_matches = self._matches(
+            window,
+            self.NON_HUMAN_TRAFFICKING_PATTERNS,
+        )
+
+        migration_enforcement_matches = self._matches(
+            window,
+            self.MIGRATION_ENFORCEMENT_PATTERNS,
+        )
+
+        historical_years = self._historical_years(
+            window
+        )
+
+        recent_date_cues = self._recent_date_cues(
+            window
+        )
+
         actuality_gate_passed = False
         actuality_reason = "NO_CURRENT_EVENT_EVIDENCE"
 
@@ -639,6 +704,24 @@ class EarlyWarningReviewDetector:
         ):
             actuality_gate_passed = True
             actuality_reason = "CURRENT_STRUCTURED_MIGRATION_SIGNAL"
+
+        # A current-year dated quantitative movement report can be a useful
+        # early-warning signal even without words such as "today". Example:
+        # "13,687 migrants arrived in Yemen in July 2026."
+        elif (
+            recent_date_cues
+            and quantitative_matches
+            and any(
+                group in matched_groups
+                for group in (
+                    "MOVEMENT",
+                    "PRESSURE",
+                    "ENFORCEMENT",
+                )
+            )
+        ):
+            actuality_gate_passed = True
+            actuality_reason = "RECENT_DATED_QUANTIFIED_MIGRATION_SIGNAL"
 
         # Strong facilitation or enforcement reporting can be useful even
         # without an explicit "today" token, but only when it is framed as
@@ -681,6 +764,43 @@ class EarlyWarningReviewDetector:
         ):
             actuality_gate_passed = False
             actuality_reason = "SPECULATIVE_OR_POLICY_DEBATE"
+
+        # Explicit old-year references are a strong retrospective cue.
+        # A current cue or a clearly separate current-event assertion is
+        # required to override this gate.
+        if (
+            historical_years
+            and not current_matches
+        ):
+            actuality_gate_passed = False
+            actuality_reason = "EXPLICIT_HISTORICAL_YEAR"
+
+        # Ordinary crime committed by a migrant is not migration enforcement.
+        if (
+            "ENFORCEMENT"
+            in matched_groups
+            and generic_crime_matches
+            and not migration_enforcement_matches
+            and not any(
+                group in matched_groups
+                for group in (
+                    "MOVEMENT",
+                    "ROUTE",
+                    "PRESSURE",
+                )
+            )
+        ):
+            actuality_gate_passed = False
+            actuality_reason = "ORDINARY_CRIME_NOT_MIGRATION_ENFORCEMENT"
+
+        # Drug / wildlife / goods trafficking is not migrant facilitation.
+        if (
+            "FACILITATION"
+            in matched_groups
+            and non_human_trafficking_matches
+        ):
+            actuality_gate_passed = False
+            actuality_reason = "NON_HUMAN_TRAFFICKING_CONTEXT"
 
         score = 2.0
 
@@ -788,6 +908,7 @@ class EarlyWarningReviewDetector:
             + speculative_matches
             + historical_matches
             + generic_crime_matches
+            + non_human_trafficking_matches
         )
 
         return {
@@ -812,6 +933,14 @@ class EarlyWarningReviewDetector:
                 quantitative_matches,
             "trend_comparison_matches":
                 trend_comparison_matches,
+            "migration_enforcement_matches":
+                migration_enforcement_matches,
+            "historical_years":
+                historical_years,
+            "recent_date_cues":
+                recent_date_cues,
+            "non_human_trafficking_matches":
+                non_human_trafficking_matches,
             "high_value_matches":
                 high_value_matches,
             "rejection_matches":
@@ -941,6 +1070,63 @@ class EarlyWarningReviewDetector:
     # ------------------------------------------------------
     # HELPERS
     # ------------------------------------------------------
+
+    def _recent_date_cues(
+        self,
+        text: str,
+    ) -> List[str]:
+        current_year = datetime.now(
+            timezone.utc
+        ).year
+
+        patterns = (
+            rf"\b{current_year}\b",
+            rf"\b(?:january|february|march|april|may|june|july|august|september|october|november|december)\s+{current_year}\b",
+            rf"\b(?:enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)\s+{current_year}\b",
+        )
+
+        return self._matches(
+            text,
+            patterns,
+        )
+
+    def _historical_years(
+        self,
+        text: str,
+    ) -> List[str]:
+        current_year = datetime.now(
+            timezone.utc
+        ).year
+
+        years = []
+
+        for value in re.findall(
+            self.HISTORICAL_YEAR_PATTERN,
+            text,
+        ):
+            try:
+                year = int(
+                    value
+                )
+            except ValueError:
+                continue
+
+            # Keep the current year and immediately previous year available
+            # for recent-event context. Older explicit years are treated as
+            # retrospective evidence.
+            if year <= (
+                current_year
+                - 2
+            ):
+                years.append(
+                    value
+                )
+
+        return list(
+            dict.fromkeys(
+                years
+            )
+        )
 
     def _primary_signal(
         self,
