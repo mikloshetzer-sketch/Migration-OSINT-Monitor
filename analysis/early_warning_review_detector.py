@@ -50,7 +50,7 @@ from typing import Any, Dict, List, Sequence, Tuple
 
 
 class EarlyWarningReviewDetector:
-    RULES_VERSION = "EARLY_WARNING_REVIEW_V1_3_1"
+    RULES_VERSION = "EARLY_WARNING_REVIEW_V1_3_2_RC"
 
     MIN_SCORE = 5.0
     WINDOW_MAX_CHARS = 460
@@ -126,7 +126,8 @@ class EarlyWarningReviewDetector:
         r"\b(?:fronti[èe]re|route|c[oô]te|mer|bateau|navire)\b",
         r"\b(?:confine|rotta|costa|mare|barca|nave)\b",
         r"\b(?:границ\w*|погран\w*|маршрут\w*|переход\w*|берег\w*|мор\w*|лодк\w*|судн\w*)\b",
-        r"(?:الحدود|معبر|طريق|مسار|ساحل|البحر|قارب|سفينة)",
+        r"(?:الحدود|معبر|طريق|مسار|ساحل|البحر|قارب|سفينة|السلك)",
+        r"(?:دخلت|دخل|يعبر|عبور).{0,80}(?:طريق|الحدود|السلك)",
     )
 
     FACILITATION_PATTERNS = (
@@ -134,6 +135,12 @@ class EarlyWarningReviewDetector:
         # sufficient because it frequently refers to drugs, wildlife or goods.
         r"\b(?:human|people|migrant|migrants|refugee|refugees)\s+(?:smuggl\w*|traffick\w*)\b",
         r"\b(?:smuggl\w*|traffick\w*)\s+(?:of\s+)?(?:people|persons|migrants?|refugees?)\b",
+
+        # Reverse-order journalistic wording, e.g.
+        # "network accused of trafficking underage migrant girls".
+        r"\b(?:smuggl\w*|traffick\w*)\b.{0,110}\b(?:migrants?|refugees?|persons?|girls?|children)\b",
+        r"\b(?:criminal\s+network|network|ring|gang)\b.{0,120}\b(?:smuggl\w*|traffick\w*)\b.{0,120}\b(?:migrants?|refugees?|persons?|girls?|children)\b",
+
         r"\b(?:smuggling|trafficking)\s+(?:network|ring|gang)\b.{0,100}\b(?:migrants?|refugees?|people)\b",
         r"\b(?:migrants?|refugees?)\b.{0,100}\b(?:smuggling|trafficking)\s+(?:network|ring|gang)\b",
         r"\b(?:facilitat\w*|transport\w*|driver|boat\s+available|seats?\s+available|fake\s+contract|false\s+document|forged\s+document)\b.{0,100}\b(?:migrants?|refugees?|border|crossing|illegal\s+entry)\b",
@@ -149,9 +156,11 @@ class EarlyWarningReviewDetector:
         r"\b(?:мигрант\w*|бежен\w*|муҳожир\w*)\b.{0,120}\b(?:контрабанд\w*|перевоз\w*|водител\w*|поддельн\w*.{0,30}(?:документ|договор)|фиктивн\w*.{0,30}(?:документ|договор))\b",
         r"\b(?:контрабанд\w*|перевоз\w*)\b.{0,120}\b(?:мигрант\w*|бежен\w*|муҳожир\w*)\b",
 
-        # Arabic
-        r"(?:تهريب المهاجرين|مهربو المهاجرين|مهربين).{0,100}(?:مهاجر|لاجئ|الحدود|طريق)",
-        r"(?:مهاجر|لاجئ).{0,100}(?:تهريب|مهربين|نقل المهاجرين|وثائق مزورة|عقد مزور)",
+        # Arabic. The slightly larger local distance is intentional because
+        # colloquial Telegram posts often introduce the smugglers first and
+        # describe the migrant/route consequence in the following sentence.
+        r"(?:تهريب المهاجرين|مهربو المهاجرين|مهربين|مهرب).{0,420}(?:مهاجر|لاجئ|الحدود|طريق|السلك)",
+        r"(?:مهاجر|لاجئ).{0,420}(?:تهريب|مهربين|مهرب|نقل المهاجرين|وثائق مزورة|عقد مزور)",
     )
 
     ENFORCEMENT_PATTERNS = (
@@ -461,6 +470,74 @@ class EarlyWarningReviewDetector:
         best = candidates[
             0
         ]
+
+        # Classification tie-break:
+        # if any LOCAL evidence window independently passes the actuality gate
+        # and contains FACILITATION, prefer the strongest such window.
+        #
+        # This prevents a nearby enforcement/movement sentence from masking
+        # the analytically more specific smuggling/facilitation signal in
+        # multilingual Telegram posts. It does NOT relax detection.
+        facilitation_candidates = [
+            item
+            for item
+            in candidates
+            if (
+                item.get(
+                    "actuality_gate_passed"
+                )
+                and "FACILITATION"
+                in item.get(
+                    "matched_groups",
+                    [],
+                )
+            )
+        ]
+
+        if facilitation_candidates:
+            facilitation_candidates.sort(
+                key=lambda item: (
+                    float(
+                        item.get(
+                            "score",
+                            0.0,
+                        )
+                    ),
+                    len(
+                        item.get(
+                            "matched_groups",
+                            [],
+                        )
+                    ),
+                ),
+                reverse=True,
+            )
+
+            best_facilitation = (
+                facilitation_candidates[
+                    0
+                ]
+            )
+
+            # Keep the original highest-score candidate if facilitation is
+            # substantially weaker. The 2.0-point tolerance is only a
+            # classification preference, not a threshold reduction.
+            if (
+                float(
+                    best_facilitation.get(
+                        "score",
+                        0.0,
+                    )
+                )
+                >= float(
+                    best.get(
+                        "score",
+                        0.0,
+                    )
+                )
+                - 2.0
+            ):
+                best = best_facilitation
 
         detected = bool(
             best.get(
@@ -1290,16 +1367,16 @@ class EarlyWarningReviewDetector:
     ) -> str:
         priority = (
             (
+                "FACILITATION",
+                "FACILITATION_EARLY_WARNING",
+            ),
+            (
                 "MOVEMENT",
                 "MOVEMENT_EARLY_WARNING",
             ),
             (
                 "PRESSURE",
                 "PRESSURE_EARLY_WARNING",
-            ),
-            (
-                "FACILITATION",
-                "FACILITATION_EARLY_WARNING",
             ),
             (
                 "ROUTE",
