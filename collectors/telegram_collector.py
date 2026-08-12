@@ -5,7 +5,7 @@ File:
 collectors/telegram_collector.py
 
 Version:
-v3 - content-validated public-channel discovery
+v4 - local message scan after content-validated discovery
 
 Purpose:
 Read-only Telegram OSINT collector for PUBLIC broadcast channels.
@@ -1341,14 +1341,51 @@ class TelegramCollector:
         max_results: int,
         end_at: Optional[datetime] = None,
     ) -> List[Dict[str, Any]]:
-        posts: List[
-            Dict[str, Any]
-        ] = []
+        """
+        Scan recent messages directly inside validated channels.
 
+        v3 still relied on Telegram's server-side search=term after channel
+        validation. That produced the observed pattern:
+
+            validated channels > 0
+            Telegram posts found = 0
+
+        v4 removes that dependency. We now:
+        1. iterate recent messages in each validated public channel;
+        2. stop at the normal-run cutoff / historical start boundary;
+        3. require genuine migration context;
+        4. apply the query's secondary topic terms locally in Python.
+
+        This is deliberately conservative: a generic migration query accepts
+        any migration-context post, while route/sea/arrival/coordination
+        queries require at least one matching secondary concept.
+        """
+
+        posts: List[Dict[str, Any]] = []
         seen_ids = set()
 
         if not channels:
             return []
+
+        query_topic_terms = self._build_post_topic_terms(
+            search_terms
+        )
+
+        print(
+            "Telegram local post topic terms: "
+            f"{query_topic_terms}"
+        )
+
+        # Scan enough recent channel messages to compensate for the fact that
+        # only a minority may match the current query. The hard cap prevents a
+        # very active channel from dominating API use.
+        scan_limit = max(
+            40,
+            min(
+                120,
+                max_results * 12,
+            ),
+        )
 
         per_channel_budget = max(
             1,
@@ -1366,122 +1403,114 @@ class TelegramCollector:
 
             accepted_from_channel = 0
 
-            entity = channel[
-                "entity"
-            ]
+            try:
+                iterator = client.iter_messages(
+                    channel["entity"],
+                    limit=scan_limit,
+                    offset_date=end_at,
+                )
 
-            for term in search_terms:
-                if len(posts) >= max_results:
-                    break
-
-                if (
-                    accepted_from_channel
-                    >= per_channel_budget
-                ):
-                    break
-
-                try:
-                    iterator = client.iter_messages(
-                        entity,
-                        search=term,
-                        limit=self.MAX_MESSAGES_PER_CHANNEL_TERM,
-                        offset_date=end_at,
+                for message in iterator:
+                    message_date = (
+                        self._ensure_utc(
+                            message.date
+                        )
+                        if getattr(
+                            message,
+                            "date",
+                            None,
+                        )
+                        else None
                     )
 
-                    for message in iterator:
-                        message_date = (
-                            self._ensure_utc(
-                                message.date
+                    if (
+                        message_date is not None
+                        and message_date < cutoff
+                    ):
+                        # Messages are newest first.
+                        break
+
+                    if (
+                        end_at is not None
+                        and message_date is not None
+                        and message_date >= end_at
+                    ):
+                        continue
+
+                    normalized = self._normalize_message(
+                        message=message,
+                        channel=channel,
+                        search_query=(
+                            "LOCAL_SCAN:"
+                            + ",".join(
+                                query_topic_terms[:8]
                             )
-                            if getattr(
-                                message,
-                                "date",
-                                None,
-                            )
-                            else None
-                        )
-
-                        if (
-                            message_date is not None
-                            and message_date < cutoff
-                        ):
-                            break
-
-                        if (
-                            end_at is not None
-                            and message_date is not None
-                            and message_date >= end_at
-                        ):
-                            continue
-
-                        normalized = (
-                            self._normalize_message(
-                                message=message,
-                                channel=channel,
-                                search_query=term,
-                            )
-                        )
-
-                        if not normalized:
-                            continue
-
-                        # Extra post-level protection:
-                        # the message itself must contain migration context.
-                        lowered = (
-                            normalized[
-                                "text"
-                            ].lower()
-                        )
-
-                        migration_hits = (
-                            self._count_term_hits(
-                                lowered,
-                                self.MIGRATION_TERMS,
-                            )
-                        )
-
-                        if migration_hits == 0:
-                            continue
-
-                        post_id = (
-                            normalized[
-                                "post_id"
-                            ]
-                        )
-
-                        if post_id in seen_ids:
-                            continue
-
-                        seen_ids.add(
-                            post_id
-                        )
-
-                        posts.append(
-                            normalized
-                        )
-
-                        accepted_from_channel += 1
-
-                        if (
-                            len(posts)
-                            >= max_results
-                            or accepted_from_channel
-                            >= per_channel_budget
-                        ):
-                            break
-
-                except FloodWaitError as error:
-                    raise RuntimeError(
-                        "Telegram message-search flood wait: "
-                        f"{error.seconds} seconds."
-                    ) from error
-
-                except Exception as error:
-                    print(
-                        "TELEGRAM CHANNEL WARNING: "
-                        f"@{channel.get('username')} | "
-                        f"{type(error).__name__}: {error}"
+                        ),
                     )
+
+                    if not normalized:
+                        continue
+
+                    text_lower = normalized[
+                        "text"
+                    ].lower()
+
+                    migration_hits = self._count_term_hits(
+                        text_lower,
+                        self.MIGRATION_TERMS,
+                    )
+
+                    if migration_hits == 0:
+                        continue
+
+                    # For the broad migration query, migration context itself
+                    # is sufficient. For more specific QueryEngine queries,
+                    # at least one secondary topic concept must occur.
+                    if (
+                        query_topic_terms
+                        and not self._matches_any_topic_term(
+                            text_lower,
+                            query_topic_terms,
+                        )
+                    ):
+                        continue
+
+                    post_id = normalized[
+                        "post_id"
+                    ]
+
+                    if post_id in seen_ids:
+                        continue
+
+                    seen_ids.add(
+                        post_id
+                    )
+
+                    posts.append(
+                        normalized
+                    )
+
+                    accepted_from_channel += 1
+
+                    if (
+                        len(posts) >= max_results
+                        or accepted_from_channel
+                        >= per_channel_budget
+                    ):
+                        break
+
+            except FloodWaitError as error:
+                raise RuntimeError(
+                    "Telegram message-scan flood wait: "
+                    f"{error.seconds} seconds."
+                ) from error
+
+            except Exception as error:
+                print(
+                    "TELEGRAM CHANNEL WARNING: "
+                    f"@{channel.get('username')} | "
+                    f"{type(error).__name__}: {error}"
+                )
 
         posts.sort(
             key=lambda item: (
@@ -1493,9 +1522,263 @@ class TelegramCollector:
             reverse=True,
         )
 
-        return posts[
-            :max_results
-        ]
+        return posts[:max_results]
+
+    def _build_post_topic_terms(
+        self,
+        search_terms: List[str],
+    ) -> List[str]:
+        """
+        Remove generic migration words from the QueryEngine terms.
+
+        What remains expresses the actual sub-topic of the query:
+        border/crossing, sea/boat, departure/arrival, coordination, etc.
+        """
+
+        generic_migration_terms = {
+            "migration",
+            "migrant",
+            "migrants",
+            "refugee",
+            "refugees",
+            "asylum",
+            "immigration",
+            "migracion",
+            "migración",
+            "migrante",
+            "migrantes",
+            "refugiado",
+            "refugiados",
+            "inmigracion",
+            "inmigración",
+            "الهجرة",
+            "مهاجر",
+            "مهاجرين",
+            "لاجئ",
+            "لاجئين",
+            "миграция",
+            "мигрант",
+            "мигранты",
+            "беженец",
+            "беженцы",
+        }
+
+        result: List[str] = []
+
+        for term in search_terms:
+            cleaned = re.sub(
+                r"\s+",
+                " ",
+                str(
+                    term
+                    or ""
+                ).lower(),
+            ).strip()
+
+            if (
+                not cleaned
+                or cleaned in generic_migration_terms
+                or cleaned in self.STOPWORDS
+            ):
+                continue
+
+            self._append_unique(
+                result,
+                cleaned,
+            )
+
+        return result[:12]
+
+    def _matches_any_topic_term(
+        self,
+        text: str,
+        topic_terms: List[str],
+    ) -> bool:
+        """
+        Query-topic matching with small multilingual concept expansions.
+        """
+
+        expansions = {
+            "border": (
+                "border",
+                "frontier",
+                "frontera",
+                "frontière",
+                "frontiere",
+                "confine",
+                "الحدود",
+                "граница",
+                "границы",
+            ),
+            "crossing": (
+                "crossing",
+                "crossed",
+                "cross the border",
+                "cruce",
+                "cruzar",
+                "traversée",
+                "traversee",
+                "عبور",
+                "пересечение",
+            ),
+            "route": (
+                "route",
+                "ruta",
+                "itinéraire",
+                "itineraire",
+                "طريق",
+                "маршрут",
+            ),
+            "checkpoint": (
+                "checkpoint",
+                "border post",
+                "puesto fronterizo",
+                "poste frontière",
+                "poste frontiere",
+            ),
+            "patrol": (
+                "patrol",
+                "border guard",
+                "guardia civil",
+                "guardia fronteriza",
+                "garde-frontière",
+                "garde frontiere",
+                "حرس الحدود",
+            ),
+            "boat": (
+                "boat",
+                "boats",
+                "patera",
+                "pateras",
+                "cayuco",
+                "cayucos",
+                "barca",
+                "bateau",
+                "bateaux",
+                "قارب",
+                "قوارب",
+            ),
+            "vessel": (
+                "vessel",
+                "ship",
+                "embarcación",
+                "embarcacion",
+                "navire",
+            ),
+            "sea": (
+                "sea",
+                "mediterranean",
+                "mediterráneo",
+                "mediterraneo",
+                "mer",
+                "البحر",
+            ),
+            "coast guard": (
+                "coast guard",
+                "guardia costiera",
+                "guardia civil",
+                "salvamento marítimo",
+                "salvamento maritimo",
+                "garde-côtes",
+                "garde cotes",
+            ),
+            "rescue": (
+                "rescue",
+                "rescued",
+                "rescatado",
+                "rescatados",
+                "sauvetage",
+                "secouru",
+                "إنقاذ",
+            ),
+            "intercepted": (
+                "intercepted",
+                "intercept",
+                "interceptado",
+                "interceptados",
+                "intercepté",
+                "interceptes",
+                "اعتراض",
+            ),
+            "departure": (
+                "departure",
+                "departed",
+                "leaving",
+                "salida",
+                "salieron",
+                "départ",
+                "depart",
+                "partenza",
+                "مغادرة",
+            ),
+            "departing": (
+                "departing",
+                "leaving",
+                "saliendo",
+                "partant",
+                "مغادرة",
+            ),
+            "leaving": (
+                "leaving",
+                "departure",
+                "salida",
+                "départ",
+                "depart",
+                "مغادرة",
+            ),
+            "arrived": (
+                "arrived",
+                "arrival",
+                "llegó",
+                "llego",
+                "llegaron",
+                "arrivée",
+                "arrivee",
+                "sbarco",
+                "وصل",
+                "وصول",
+            ),
+            "arrival": (
+                "arrival",
+                "arrived",
+                "llegada",
+                "llegaron",
+                "arrivée",
+                "arrivee",
+                "sbarco",
+                "وصول",
+            ),
+            "coordination": (
+                "coordination",
+                "coordinate",
+                "organized",
+                "organised",
+                "organizar",
+                "grupo",
+                "telegram group",
+                "whatsapp group",
+                "meeting point",
+                "gathering point",
+                "تنسيق",
+            ),
+        }
+
+        normalized = str(
+            text
+            or ""
+        ).lower()
+
+        for topic in topic_terms:
+            candidates = expansions.get(
+                topic,
+                (topic,),
+            )
+
+            for candidate in candidates:
+                if candidate in normalized:
+                    return True
+
+        return False
 
     def _normalize_message(
         self,
