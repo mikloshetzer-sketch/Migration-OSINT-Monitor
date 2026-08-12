@@ -1,0 +1,144 @@
+name: Telegram Historical Backfill
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: "Inclusive start date (YYYY-MM-DD)"
+        required: true
+        default: "2026-07-15"
+        type: string
+
+      end_date:
+        description: "Inclusive end date (YYYY-MM-DD)"
+        required: true
+        default: "2026-08-05"
+        type: string
+
+      max_posts_per_day:
+        description: "Hard Telegram post budget per day"
+        required: true
+        default: "120"
+        type: string
+
+      max_total_posts:
+        description: "Hard Telegram post budget for the whole run"
+        required: true
+        default: "2500"
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  telegram-historical-backfill:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Restore Migration OSINT database
+        id: restore-database
+        uses: actions/cache/restore@v4
+        with:
+          path: database/migration_osint_monitor.db
+          key: migration-osint-db-${{ github.run_id }}
+          restore-keys: |
+            migration-osint-db-
+
+      - name: Verify restored database
+        run: |
+          if [ -f database/migration_osint_monitor.db ]; then
+            echo "Existing migration_osint_monitor.db restored."
+            ls -lh database/migration_osint_monitor.db
+          else
+            echo "ERROR: Telegram backfill requires the existing database."
+            exit 1
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install "telethon>=1.44,<2"
+
+      - name: Show Telegram backfill configuration
+        run: |
+          echo "==================================="
+          echo "TELEGRAM HISTORICAL BACKFILL"
+          echo "==================================="
+          echo "Start date: ${{ inputs.start_date }}"
+          echo "End date: ${{ inputs.end_date }}"
+          echo "Max posts/day: ${{ inputs.max_posts_per_day }}"
+          echo "Max total posts: ${{ inputs.max_total_posts }}"
+          echo "X: DISABLED"
+          echo "Reddit: DISABLED"
+          echo "Mastodon: DISABLED"
+          echo "Telegram: ENABLED"
+
+      - name: Run Telegram historical backfill
+        env:
+          TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
+          TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
+          TELEGRAM_SESSION: ${{ secrets.TELEGRAM_SESSION }}
+
+          TELEGRAM_BACKFILL_START_DATE: ${{ inputs.start_date }}
+          TELEGRAM_BACKFILL_END_DATE: ${{ inputs.end_date }}
+          TELEGRAM_BACKFILL_MAX_POSTS_PER_DAY: ${{ inputs.max_posts_per_day }}
+          TELEGRAM_BACKFILL_MAX_TOTAL_POSTS: ${{ inputs.max_total_posts }}
+
+        run: |
+          python analysis/telegram_backfill.py
+
+      - name: Export dashboard data
+        run: |
+          python -m dashboard.export_dashboard_data
+
+      - name: Verify dashboard JSON
+        run: |
+          if [ -f dashboard-data.json ]; then
+            echo "dashboard-data.json generated successfully."
+            ls -lh dashboard-data.json
+          else
+            echo "ERROR: dashboard-data.json was not generated."
+            exit 1
+          fi
+
+      - name: Publish dashboard data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add dashboard-data.json
+
+          if git diff --cached --quiet; then
+            echo "No dashboard data changes to commit."
+          else
+            git commit -m "Update Telegram historical migration data"
+            git push origin HEAD:main
+          fi
+
+      - name: Verify database after backfill
+        if: always()
+        run: |
+          if [ -f database/migration_osint_monitor.db ]; then
+            echo "migration_osint_monitor.db exists after Telegram backfill."
+            ls -lh database/migration_osint_monitor.db
+          else
+            echo "WARNING: migration_osint_monitor.db was not found."
+          fi
+
+      - name: Save Migration OSINT database
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: database/migration_osint_monitor.db
+          key: migration-osint-db-${{ github.run_id }}
