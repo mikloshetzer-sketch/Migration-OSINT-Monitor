@@ -102,12 +102,17 @@ class EventAssertionFilter:
         "contact us",
         "recommend",
         "recommended",
+        "telegram",
+        "whatsapp",
+        "signal",
     }
 
     STRONG_COORDINATION_PATTERNS = [
         r"\bcontact\s+(?:me|us)\s+on\s+(?:telegram|whatsapp|signal)\b",
         r"\b(?:join|message|dm)\s+(?:me|us|the\s+group)\s+(?:on\s+)?(?:telegram|whatsapp|signal)\b",
         r"\b(?:telegram|whatsapp|signal)\s+(?:group|channel|chat)\b",
+        r"\b(?:telegram|whatsapp|signal)\b.{0,120}\b(?:crossing|border|route|boat|transport|smuggl|fake\s+contract|work\s+contract|documents?|illegal\s+stay)\b",
+        r"\b(?:crossing|border|route|boat|transport|smuggl|fake\s+contract|work\s+contract|documents?|illegal\s+stay)\b.{0,120}\b(?:telegram|whatsapp|signal)\b",
         r"\bmeeting\s+point\b",
         r"\bpickup\s+point\b",
         r"\bgathering\s+point\b",
