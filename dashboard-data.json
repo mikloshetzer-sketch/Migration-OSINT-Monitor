@@ -1,7 +1,7 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-08-12T15:31:19Z",
-  "generated_at": "2026-08-12T15:31:19Z",
+  "updated_at": "2026-08-12T16:33:39Z",
+  "generated_at": "2026-08-12T16:33:39Z",
   "current_run": {
     "available": true,
     "id": 36,
@@ -52,13 +52,13 @@
     "error_message": null
   },
   "kpis": {
-    "operational_events": 14,
+    "operational_events": 13,
     "new_events": 0,
     "correlated_events": 4,
     "active_event_groups": 94,
     "sources": 4,
-    "regions": 6,
-    "collected_posts_24h": 518,
+    "regions": 5,
+    "collected_posts_24h": 514,
     "influence_signals": 32,
     "access_signals": 3,
     "high_priority": 2,
@@ -812,42 +812,35 @@
       "region": "GLOBAL",
       "count": 6,
       "events": 6,
-      "percentage": 50.0
+      "percentage": 54.55
     },
     {
       "name": "WESTERN_MEDITERRANEAN",
       "region": "WESTERN_MEDITERRANEAN",
       "count": 2,
       "events": 2,
-      "percentage": 16.67
+      "percentage": 18.18
     },
     {
       "name": "HORN_OF_AFRICA",
       "region": "HORN_OF_AFRICA",
       "count": 1,
       "events": 1,
-      "percentage": 8.33
-    },
-    {
-      "name": "EASTERN_MEDITERRANEAN",
-      "region": "EASTERN_MEDITERRANEAN",
-      "count": 1,
-      "events": 1,
-      "percentage": 8.33
+      "percentage": 9.09
     },
     {
       "name": "BLACK_SEA",
       "region": "BLACK_SEA",
       "count": 1,
       "events": 1,
-      "percentage": 8.33
+      "percentage": 9.09
     },
     {
       "name": "AMERICAS",
       "region": "AMERICAS",
       "count": 1,
       "events": 1,
-      "percentage": 8.33
+      "percentage": 9.09
     }
   ],
   "sources": [
@@ -856,28 +849,28 @@
       "name": "X",
       "count": 394,
       "posts": 394,
-      "percentage": 76.06
+      "percentage": 76.65
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 65,
-      "posts": 65,
-      "percentage": 12.55
+      "count": 62,
+      "posts": 62,
+      "percentage": 12.06
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
       "count": 53,
       "posts": 53,
-      "percentage": 10.23
+      "percentage": 10.31
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 6,
-      "posts": 6,
-      "percentage": 1.16
+      "count": 5,
+      "posts": 5,
+      "percentage": 0.97
     }
   ],
   "region_activity": [
@@ -886,42 +879,35 @@
       "region": "GLOBAL",
       "count": 6,
       "events": 6,
-      "percentage": 50.0
+      "percentage": 54.55
     },
     {
       "name": "WESTERN_MEDITERRANEAN",
       "region": "WESTERN_MEDITERRANEAN",
       "count": 2,
       "events": 2,
-      "percentage": 16.67
+      "percentage": 18.18
     },
     {
       "name": "HORN_OF_AFRICA",
       "region": "HORN_OF_AFRICA",
       "count": 1,
       "events": 1,
-      "percentage": 8.33
-    },
-    {
-      "name": "EASTERN_MEDITERRANEAN",
-      "region": "EASTERN_MEDITERRANEAN",
-      "count": 1,
-      "events": 1,
-      "percentage": 8.33
+      "percentage": 9.09
     },
     {
       "name": "BLACK_SEA",
       "region": "BLACK_SEA",
       "count": 1,
       "events": 1,
-      "percentage": 8.33
+      "percentage": 9.09
     },
     {
       "name": "AMERICAS",
       "region": "AMERICAS",
       "count": 1,
       "events": 1,
-      "percentage": 8.33
+      "percentage": 9.09
     }
   ],
   "source_activity": [
@@ -930,39 +916,39 @@
       "name": "X",
       "count": 394,
       "posts": 394,
-      "percentage": 76.06
+      "percentage": 76.65
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 65,
-      "posts": 65,
-      "percentage": 12.55
+      "count": 62,
+      "posts": 62,
+      "percentage": 12.06
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
       "count": 53,
       "posts": 53,
-      "percentage": 10.23
+      "percentage": 10.31
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 6,
-      "posts": 6,
-      "percentage": 1.16
+      "count": 5,
+      "posts": 5,
+      "percentage": 0.97
     }
   ],
   "correlation": {
     "correlated_events": 4,
     "correlated_sources": 4,
-    "grouped_sources": 14,
+    "grouped_sources": 13,
     "event_groups": 94,
     "active_groups": 94,
     "multi_source_groups": 10,
     "strongest_match": 0.9,
-    "correlation_rate": 28.57
+    "correlation_rate": 30.77
   },
   "technical_health": "HEALTHY",
   "collector_health": "HEALTHY",
@@ -979,7 +965,7 @@
     "last_completed_at": "2026-08-12T14:59:19Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 14,
+    "operational_events_24h": 13,
     "influence_signals_24h": 20,
     "access_signals_24h": 6,
     "correlated_events_24h": 4,
@@ -990,13 +976,13 @@
     "dominant_source": "X",
     "average_confidence": 0.496,
     "confidence_level": "LOW",
-    "correlation_rate": 28.57,
+    "correlation_rate": 30.77,
     "activity_level": "ELEVATED",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 14 operatív migrációs eseményt, 20 influence/early-warning jelzést és 6 átkelési vagy bejutási jelzést tart nyilván. 4 friss eseményforrás korrelált más forrással. Jelenleg 94 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Arrival. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.50. A jelenlegi aktivitási szint: ELEVATED."
+    "summary": "Az elmúlt 24 órában a rendszer 13 operatív migrációs eseményt, 20 influence/early-warning jelzést és 6 átkelési vagy bejutási jelzést tart nyilván. 4 friss eseményforrás korrelált más forrással. Jelenleg 94 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Arrival. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.50. A jelenlegi aktivitási szint: ELEVATED."
   },
   "analytical_assessment": {
-    "operational_events_24h": 14,
+    "operational_events_24h": 13,
     "influence_signals_24h": 20,
     "access_signals_24h": 6,
     "correlated_events_24h": 4,
@@ -1007,10 +993,10 @@
     "dominant_source": "X",
     "average_confidence": 0.496,
     "confidence_level": "LOW",
-    "correlation_rate": 28.57,
+    "correlation_rate": 30.77,
     "activity_level": "ELEVATED",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 14 operatív migrációs eseményt, 20 influence/early-warning jelzést és 6 átkelési vagy bejutási jelzést tart nyilván. 4 friss eseményforrás korrelált más forrással. Jelenleg 94 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Arrival. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.50. A jelenlegi aktivitási szint: ELEVATED."
+    "summary": "Az elmúlt 24 órában a rendszer 13 operatív migrációs eseményt, 20 influence/early-warning jelzést és 6 átkelési vagy bejutási jelzést tart nyilván. 4 friss eseményforrás korrelált más forrással. Jelenleg 94 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Arrival. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.50. A jelenlegi aktivitási szint: ELEVATED."
   },
   "high_confidence_events": [
     {
@@ -5019,12 +5005,13 @@
       "label": "W27",
       "week_label": "W27",
       "week_start": "2026-06-29T00:00:00Z",
-      "posts": 100,
-      "post_count": 100,
+      "posts": 121,
+      "post_count": 121,
       "operational_posts": 3,
       "influence_signals": 3,
       "source_counts": {
-        "X": 100
+        "X": 100,
+        "TELEGRAM": 21
       }
     },
     {
@@ -5033,12 +5020,13 @@
       "label": "W28",
       "week_label": "W28",
       "week_start": "2026-07-06T00:00:00Z",
-      "posts": 140,
-      "post_count": 140,
+      "posts": 168,
+      "post_count": 168,
       "operational_posts": 2,
-      "influence_signals": 2,
+      "influence_signals": 4,
       "source_counts": {
-        "X": 140
+        "X": 140,
+        "TELEGRAM": 28
       }
     },
     {
@@ -5047,13 +5035,13 @@
       "label": "W29",
       "week_label": "W29",
       "week_start": "2026-07-13T00:00:00Z",
-      "posts": 192,
-      "post_count": 192,
+      "posts": 204,
+      "post_count": 204,
       "operational_posts": 6,
-      "influence_signals": 0,
+      "influence_signals": 3,
       "source_counts": {
         "X": 140,
-        "TELEGRAM": 52
+        "TELEGRAM": 64
       }
     },
     {
@@ -5065,7 +5053,7 @@
       "posts": 185,
       "post_count": 185,
       "operational_posts": 3,
-      "influence_signals": 0,
+      "influence_signals": 1,
       "source_counts": {
         "X": 120,
         "TELEGRAM": 65
@@ -5141,12 +5129,13 @@
       "label": "W27",
       "week_label": "W27",
       "week_start": "2026-06-29T00:00:00Z",
-      "posts": 100,
-      "post_count": 100,
+      "posts": 121,
+      "post_count": 121,
       "operational_posts": 3,
       "influence_signals": 3,
       "source_counts": {
-        "X": 100
+        "X": 100,
+        "TELEGRAM": 21
       }
     },
     {
@@ -5155,12 +5144,13 @@
       "label": "W28",
       "week_label": "W28",
       "week_start": "2026-07-06T00:00:00Z",
-      "posts": 140,
-      "post_count": 140,
+      "posts": 168,
+      "post_count": 168,
       "operational_posts": 2,
-      "influence_signals": 2,
+      "influence_signals": 4,
       "source_counts": {
-        "X": 140
+        "X": 140,
+        "TELEGRAM": 28
       }
     },
     {
@@ -5169,13 +5159,13 @@
       "label": "W29",
       "week_label": "W29",
       "week_start": "2026-07-13T00:00:00Z",
-      "posts": 192,
-      "post_count": 192,
+      "posts": 204,
+      "post_count": 204,
       "operational_posts": 6,
-      "influence_signals": 0,
+      "influence_signals": 3,
       "source_counts": {
         "X": 140,
-        "TELEGRAM": 52
+        "TELEGRAM": 64
       }
     },
     {
@@ -5187,7 +5177,7 @@
       "posts": 185,
       "post_count": 185,
       "operational_posts": 3,
-      "influence_signals": 0,
+      "influence_signals": 1,
       "source_counts": {
         "X": 120,
         "TELEGRAM": 65
@@ -5244,19 +5234,19 @@
   ],
   "information_activity_summary": {
     "current_week": 1005,
-    "previous_week": 32,
+    "previous_week": 35,
     "current_week_to_date": 1005,
-    "previous_week_same_period": 32,
+    "previous_week_same_period": 35,
     "previous_week_full": 479,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": 3040.62,
-    "change_label": "+3040.6%",
+    "change_percent": 2771.43,
+    "change_label": "+2771.4%",
     "direction": "UP",
     "comparable": true,
-    "elapsed_hours": 63.5,
+    "elapsed_hours": 64.6,
     "current_period_start": "2026-08-10T00:00:00Z",
     "previous_period_start": "2026-08-03T00:00:00Z",
-    "previous_period_end": "2026-08-05T15:31:18Z"
+    "previous_period_end": "2026-08-05T16:33:38Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -5268,38 +5258,38 @@
       72,
       168
     ],
-    "generated_at": "2026-08-12T15:31:19Z",
-    "total_items": 530,
-    "information_count": 295,
-    "early_warning_count": 86,
+    "generated_at": "2026-08-12T16:33:39Z",
+    "total_items": 535,
+    "information_count": 294,
+    "early_warning_count": 92,
     "operational_count": 123,
     "correlated_count": 26,
     "layer_counts": {
-      "INFORMATION": 295,
-      "EARLY_WARNING": 86,
+      "INFORMATION": 294,
+      "EARLY_WARNING": 92,
       "OPERATIONAL": 123,
       "CORRELATED": 26
     },
     "source_counts": {
-      "X": 398,
+      "X": 397,
       "REDDIT": 107,
       "MASTODON": 17,
-      "TELEGRAM": 8
+      "TELEGRAM": 14
     },
     "type_counts": {
-      "INFORMATION_SIGNAL": 295,
+      "INFORMATION_SIGNAL": 294,
       "MOVEMENT_EARLY_WARNING": 15,
       "MOBILIZATION_COORDINATION": 4,
       "LEGAL_MIGRATION_SIGNAL": 18,
       "FACILITATION_EARLY_WARNING": 5,
-      "ENFORCEMENT_EARLY_WARNING": 8,
+      "ENFORCEMENT_EARLY_WARNING": 13,
       "ARRIVAL": 27,
       "POLICY_SIGNAL": 3,
       "ROUTE_EARLY_WARNING": 3,
       "SMUGGLING_ACTIVITY": 44,
       "BORDER_CROSSING": 14,
       "MIGRANT_CAMP": 31,
-      "PRESSURE_EARLY_WARNING": 4,
+      "PRESSURE_EARLY_WARNING": 5,
       "GENERAL_DISCUSSION": 11,
       "COORDINATION": 3,
       "CROSSING_FACILITATION": 16,
@@ -21375,7 +21365,7 @@
         "collection_count": 1
       },
       {
-        "timeline_id": "early_warning:86",
+        "timeline_id": "early_warning:92",
         "timestamp": "2026-08-01T16:48:40Z",
         "layer": "EARLY_WARNING",
         "type": "ENFORCEMENT_EARLY_WARNING",
@@ -21403,11 +21393,11 @@
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "ENFORCEMENT_REVIEW",
         "detection_count": 1,
-        "first_detected_at": "2026-08-12T15:19:15Z",
-        "last_detected_at": "2026-08-12T15:19:15Z"
+        "first_detected_at": "2026-08-12T16:13:36Z",
+        "last_detected_at": "2026-08-12T16:13:36Z"
       },
       {
-        "timeline_id": "early_warning:87",
+        "timeline_id": "early_warning:93",
         "timestamp": "2026-08-01T11:09:20Z",
         "layer": "EARLY_WARNING",
         "type": "PRESSURE_EARLY_WARNING",
@@ -21435,11 +21425,11 @@
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "PRESSURE_REVIEW",
         "detection_count": 1,
-        "first_detected_at": "2026-08-12T15:19:15Z",
-        "last_detected_at": "2026-08-12T15:19:15Z"
+        "first_detected_at": "2026-08-12T16:13:36Z",
+        "last_detected_at": "2026-08-12T16:13:36Z"
       },
       {
-        "timeline_id": "early_warning:85",
+        "timeline_id": "early_warning:91",
         "timestamp": "2026-07-31T12:21:04Z",
         "layer": "EARLY_WARNING",
         "type": "PRESSURE_EARLY_WARNING",
@@ -21467,11 +21457,11 @@
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "PRESSURE_REVIEW",
         "detection_count": 1,
-        "first_detected_at": "2026-08-12T15:19:14Z",
-        "last_detected_at": "2026-08-12T15:19:14Z"
+        "first_detected_at": "2026-08-12T16:13:35Z",
+        "last_detected_at": "2026-08-12T16:13:35Z"
       },
       {
-        "timeline_id": "early_warning:84",
+        "timeline_id": "early_warning:90",
         "timestamp": "2026-07-30T06:10:01Z",
         "layer": "EARLY_WARNING",
         "type": "PRESSURE_EARLY_WARNING",
@@ -21499,11 +21489,11 @@
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "PRESSURE_REVIEW",
         "detection_count": 1,
-        "first_detected_at": "2026-08-12T15:19:14Z",
-        "last_detected_at": "2026-08-12T15:19:14Z"
+        "first_detected_at": "2026-08-12T16:13:35Z",
+        "last_detected_at": "2026-08-12T16:13:35Z"
       },
       {
-        "timeline_id": "early_warning:83",
+        "timeline_id": "early_warning:89",
         "timestamp": "2026-07-29T15:20:03Z",
         "layer": "EARLY_WARNING",
         "type": "ENFORCEMENT_EARLY_WARNING",
@@ -21531,8 +21521,8 @@
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "ENFORCEMENT_REVIEW",
         "detection_count": 1,
-        "first_detected_at": "2026-08-12T15:19:14Z",
-        "last_detected_at": "2026-08-12T15:19:14Z"
+        "first_detected_at": "2026-08-12T16:13:34Z",
+        "last_detected_at": "2026-08-12T16:13:34Z"
       },
       {
         "timeline_id": "information:2017",
@@ -21723,6 +21713,38 @@
         "first_collected_at": "2026-08-11T11:58:39Z",
         "last_collected_at": "2026-08-11T11:58:39Z",
         "collection_count": 1
+      },
+      {
+        "timeline_id": "early_warning:88",
+        "timestamp": "2026-07-23T14:22:06Z",
+        "layer": "EARLY_WARNING",
+        "type": "ENFORCEMENT_EARLY_WARNING",
+        "signal_type": "ENFORCEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "TELEGRAM",
+        "source_post_id": "1980940690:15490",
+        "author": "migranty_RUS",
+        "url": "https://t.me/migranty_RUS/15490",
+        "source_url": "https://t.me/migranty_RUS/15490",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.62,
+        "priority": "MEDIUM",
+        "priority_score": 21.7,
+        "analyst_priority": "LOW",
+        "text": "Слуцкий: если ЛДПР не будет выступать с жесткой позицией по мигрантам, Россию заполонят приезжие \n\nЛДПР выступила с жестким заявлением по теме миграционной политики России на своем форуме «Столпы миграционной политики ЛДПР: нулевая терпимость к правонарушениям и русский язык как мягкая сила». \nВ основе \n- нулевая терпимость к незнанию языка и культуры - депортировать семьи мигрантов которые не учат детей русской культуре, и языку; \n- образование детей мигрантов только платно, не за счет России \n- выдворение за финансовые преступления без права возврата \n- Права регионам России самостоятельно ограничивать поток мигрантов за счет квот \n- любое серьезное нарушение - чемодан, вокзал домой. автоматические обнуление патента, запрет на возвращение в Россию\n\n«ЛДПР главный антимигрантский голос страны. Приоритет — наши люди, мы должны защитить свое население. Сейчас мы предлагаем пять конкретных поправок и изменений миграционного законодательства. Опыт Европы плохой пример. Запад поставил право чужака остаться выше права своих граждан на безопасность. Результат — районы, где полиция боится появляться, а местный закон уступает правилам общин.», — отметил лидер ЛДПР Леонид Слуцкий.",
+        "text_excerpt": "Слуцкий: если ЛДПР не будет выступать с жесткой позицией по мигрантам, Россию заполонят приезжие \n\nЛДПР выступила с жестким заявлением по теме миграционной политики России на своем форуме «Столпы миграционной политики ЛДПР: нулевая терпимость к правонарушениям и русский язык как мягкая сила». \nВ основе \n- нулевая терпимость к незнанию языка и культуры - депортировать семьи мигрантов которые не учат детей русской куль…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "ENFORCEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-08-12T16:13:32Z",
+        "last_detected_at": "2026-08-12T16:13:32Z"
       },
       {
         "timeline_id": "operational:109",
@@ -21923,6 +21945,38 @@
         "event_time_confidence": null
       },
       {
+        "timeline_id": "early_warning:87",
+        "timestamp": "2026-07-18T15:05:45Z",
+        "layer": "EARLY_WARNING",
+        "type": "ENFORCEMENT_EARLY_WARNING",
+        "signal_type": "ENFORCEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "TELEGRAM",
+        "source_post_id": "1980940690:15432",
+        "author": "migranty_RUS",
+        "url": "https://t.me/migranty_RUS/15432",
+        "source_url": "https://t.me/migranty_RUS/15432",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.72,
+        "priority": "MEDIUM",
+        "priority_score": 25.2,
+        "analyst_priority": "LOW",
+        "text": "В Латвии узбеки изнасиловали лебедя, пишут тамошние СМИ. \n\nДвое узбеков приманили лебедя едой в посёлке Царникава, после чего схватили птицу за крылья и повалили на землю. Они начали его душить, сломав животному шею, а затем выщипали перья на анусе и изнасиловали минимум 5 раз. После этого мигранты поместили лебедя в чёрный пакет и увезли на съёмную квартиру. Теперь им светит 10 лет тюрьмы с депортацией и пожизненный запрет на въезд в 27 стран. \n\nУзбек - он и в Африке Латвии узбек.",
+        "text_excerpt": "В Латвии узбеки изнасиловали лебедя, пишут тамошние СМИ. \n\nДвое узбеков приманили лебедя едой в посёлке Царникава, после чего схватили птицу за крылья и повалили на землю. Они начали его душить, сломав животному шею, а затем выщипали перья на анусе и изнасиловали минимум 5 раз. После этого мигранты поместили лебедя в чёрный пакет и увезли на съёмную квартиру. Теперь им светит 10 лет тюрьмы с депортацией и пожизненный…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "ENFORCEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-08-12T16:13:29Z",
+        "last_detected_at": "2026-08-12T16:13:29Z"
+      },
+      {
         "timeline_id": "operational:106",
         "timestamp": "2026-07-17T23:00:51Z",
         "layer": "OPERATIONAL",
@@ -22053,6 +22107,70 @@
         "collection_count": 1
       },
       {
+        "timeline_id": "early_warning:85",
+        "timestamp": "2026-07-14T16:40:02Z",
+        "layer": "EARLY_WARNING",
+        "type": "ENFORCEMENT_EARLY_WARNING",
+        "signal_type": "ENFORCEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "TELEGRAM",
+        "source_post_id": "1604168769:10460",
+        "author": "migrantlar24",
+        "url": "https://t.me/migrantlar24/10460",
+        "source_url": "https://t.me/migrantlar24/10460",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.62,
+        "priority": "MEDIUM",
+        "priority_score": 21.7,
+        "analyst_priority": "LOW",
+        "text": "Ханти-Манси автоном округида мигрантларга қарши йирик рейд ўтказилди\n\nРоссиянинг Ханти-Манси автоном округида ҳуқуқни муҳофаза қилувчи органлар мигрантларга қарши кенг кўламли рейд ўтказди. Текширувлар давомида юзлаб хориж фуқароларининг ҳужжатлари кўздан кечирилди.\n\nРейд натижасида миграция қонунчилигини бузган бир қатор шахслар аниқланган. Уларга нисбатан маъмурий чоралар кўрилмоқда, айримлари эса Россиядан чиқариб юборилиши мумкин.\n\nШунингдек, текширувлар давомида ноқонуний меҳнатдан фойдаланган иш берувчилар ҳам назоратга олиниб, уларга нисбатан тегишли чоралар кўрилиши билдирилган.",
+        "text_excerpt": "Ханти-Манси автоном округида мигрантларга қарши йирик рейд ўтказилди\n\nРоссиянинг Ханти-Манси автоном округида ҳуқуқни муҳофаза қилувчи органлар мигрантларга қарши кенг кўламли рейд ўтказди. Текширувлар давомида юзлаб хориж фуқароларининг ҳужжатлари кўздан кечирилди.\n\nРейд натижасида миграция қонунчилигини бузган бир қатор шахслар аниқланган. Уларга нисбатан маъмурий чоралар кўрилмоқда, айримлари эса Россиядан чиқариб…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "ENFORCEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-08-12T16:13:27Z",
+        "last_detected_at": "2026-08-12T16:13:27Z"
+      },
+      {
+        "timeline_id": "early_warning:86",
+        "timestamp": "2026-07-14T14:10:35Z",
+        "layer": "EARLY_WARNING",
+        "type": "ENFORCEMENT_EARLY_WARNING",
+        "signal_type": "ENFORCEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "TELEGRAM",
+        "source_post_id": "1980940690:15386",
+        "author": "migranty_RUS",
+        "url": "https://t.me/migranty_RUS/15386",
+        "source_url": "https://t.me/migranty_RUS/15386",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.62,
+        "priority": "MEDIUM",
+        "priority_score": 21.7,
+        "analyst_priority": "LOW",
+        "text": "На Чукотке случилось многонациональное правосудие: там кишлачница из Узбекистана, проживавшая и работавшая в Питере, по липовым справкам оформила на своих личинусов «северные пособия». \n\nВсего она таким образом получила почти полмиллиона рублей. После раскрытия мошеннической схемы, дикарку осудили, жёстко наказав её тремя годами условно с испытательным сроком. Судья посчитал, что негоже ценную специалистку сажать на нары и оставил её на свободе. Ни депортации всего её выводка (целых четыре мигрантёныша), ни реального наказания. Так и живём.",
+        "text_excerpt": "На Чукотке случилось многонациональное правосудие: там кишлачница из Узбекистана, проживавшая и работавшая в Питере, по липовым справкам оформила на своих личинусов «северные пособия». \n\nВсего она таким образом получила почти полмиллиона рублей. После раскрытия мошеннической схемы, дикарку осудили, жёстко наказав её тремя годами условно с испытательным сроком. Судья посчитал, что негоже ценную специалистку сажать на…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "ENFORCEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-08-12T16:13:27Z",
+        "last_detected_at": "2026-08-12T16:13:27Z"
+      },
+      {
         "timeline_id": "information:1772",
         "timestamp": "2026-07-13T12:07:52Z",
         "layer": "INFORMATION",
@@ -22119,6 +22237,38 @@
         "event_time_text": null,
         "event_time_normalized": null,
         "event_time_confidence": null
+      },
+      {
+        "timeline_id": "early_warning:84",
+        "timestamp": "2026-07-12T13:00:13Z",
+        "layer": "EARLY_WARNING",
+        "type": "ENFORCEMENT_EARLY_WARNING",
+        "signal_type": "ENFORCEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "TELEGRAM",
+        "source_post_id": "1604168769:10416",
+        "author": "migrantlar24",
+        "url": "https://t.me/migrantlar24/10416",
+        "source_url": "https://t.me/migrantlar24/10416",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.62,
+        "priority": "MEDIUM",
+        "priority_score": 21.7,
+        "analyst_priority": "LOW",
+        "text": "Митищидаги бозорда ўтказилган рейд вақтида айрим мигрантлар ҳуқуқни муҳофаза қилувчи ходимларни кўриб қочишга уринди.\n\nМаълумотларга кўра, рейд давомида бир неча хорижлик ушланиб, уларнинг ҳужжатлари текширилди. Айримлардан Россияда тақиқланган насвай аниқланган. Текширувлар якунланганидан сўнг, миграция қонунчилигини бузган деб гумон қилинган шахслар ички ишлар бўлимига олиб кетилди.",
+        "text_excerpt": "Митищидаги бозорда ўтказилган рейд вақтида айрим мигрантлар ҳуқуқни муҳофаза қилувчи ходимларни кўриб қочишга уринди.\n\nМаълумотларга кўра, рейд давомида бир неча хорижлик ушланиб, уларнинг ҳужжатлари текширилди. Айримлардан Россияда тақиқланган насвай аниқланган. Текширувлар якунланганидан сўнг, миграция қонунчилигини бузган деб гумон қилинган шахслар ички ишлар бўлимига олиб кетилди.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "ENFORCEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-08-12T16:13:26Z",
+        "last_detected_at": "2026-08-12T16:13:26Z"
       },
       {
         "timeline_id": "information:1737",
@@ -22259,6 +22409,38 @@
         "detection_count": 1,
         "first_detected_at": "2026-08-11T11:58:18Z",
         "last_detected_at": "2026-08-11T11:58:18Z"
+      },
+      {
+        "timeline_id": "early_warning:83",
+        "timestamp": "2026-07-09T11:30:02Z",
+        "layer": "EARLY_WARNING",
+        "type": "PRESSURE_EARLY_WARNING",
+        "signal_type": "PRESSURE_EARLY_WARNING",
+        "event_type": null,
+        "source": "TELEGRAM",
+        "source_post_id": "1604168769:10342",
+        "author": "migrantlar24",
+        "url": "https://t.me/migrantlar24/10342",
+        "source_url": "https://t.me/migrantlar24/10342",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.9,
+        "priority": "MEDIUM",
+        "priority_score": 31.5,
+        "analyst_priority": "LOW",
+        "text": "Европада миграция қоидалари янада қаттиқлашмоқда\n\nЕвропа Иттифоқида янги миграция ва бошпана пакти кучга кириши ортидан қатор давлатлар ўз миллий қонунларини ҳам янада кескинлаштирмоқда.\n\nАсосий мақсад — ноқонуний миграцияни камайтириш, депортацияни осонлаштириш ва Европа мамлакатларини мигрантлар учун камроқ жозибадор қилиш.\nҚисқача асосий ўзгаришлар:\n\n🇸🇪 Швеция — энди айрим ҳолатларда «ёмон хулқ-атвор» учун ҳам яшаш рухсатномаси (ВНЖ) бекор қилиниши мумкин.\n\n🇩🇪 Германия — ҳужжатсиз келган муҳожирларга нисбатан чегара назорати кучайтирилди, оилани бирлаштириш ҳуқуқига чекловлар киритилди.\n\n🇫🇷🇬🇧 Франция ва Буюк Британия — Ла-Манш орқали келувчиларга қарши қўшма чоралар кучайтирилмоқда.\n\n🇮🇹 Италия — депортация марказлари сони оширилмоқда ва Албаниядаги мигрантлар марказларидан фойдаланиш кенгайтирилмоқда.\n\n🇳🇱 Нидерландия — бошпана бериш тартиби ўзгариб, айрим тоифадаги мигрантлар учун оила аъзоларини олиб келиш имконияти чекланмоқда.",
+        "text_excerpt": "Европада миграция қоидалари янада қаттиқлашмоқда\n\nЕвропа Иттифоқида янги миграция ва бошпана пакти кучга кириши ортидан қатор давлатлар ўз миллий қонунларини ҳам янада кескинлаштирмоқда.\n\nАсосий мақсад — ноқонуний миграцияни камайтириш, депортацияни осонлаштириш ва Европа мамлакатларини мигрантлар учун камроқ жозибадор қилиш.\nҚисқача асосий ўзгаришлар:\n\n🇸🇪 Швеция — энди айрим ҳолатларда «ёмон хулқ-атвор» учун ҳам яша…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "PRESSURE_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-08-12T16:13:25Z",
+        "last_detected_at": "2026-08-12T16:13:25Z"
       },
       {
         "timeline_id": "operational:102",
@@ -23680,45 +23862,6 @@
         "influence_detected": false,
         "first_collected_at": "2026-08-11T11:52:56Z",
         "last_collected_at": "2026-08-11T11:52:56Z",
-        "collection_count": 1
-      },
-      {
-        "timeline_id": "information:1160",
-        "timestamp": "2026-06-06T23:47:41Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2063407512771313717",
-        "author": "paulsperfect",
-        "url": "https://x.com/paulsperfect/status/2063407512771313717",
-        "source_url": "https://x.com/paulsperfect/status/2063407512771313717",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "boat",
-          "arrival"
-        ],
-        "freshness_cues": [
-          "today"
-        ],
-        "text": "@OccupyDemocrats @Maire_Elise_ Pete Hegseth…“Today, different European beaches are stormed by different dangerous ideologies. In Spain, Italy, Greece and Bulgaria, boats and men arrive.\n\nMaybe stop invading counties and displacing people, refugees need to go somewhere.",
-        "text_excerpt": "@OccupyDemocrats @Maire_Elise_ Pete Hegseth…“Today, different European beaches are stormed by different dangerous ideologies. In Spain, Italy, Greece and Bulgaria, boats and men arrive.\n\nMaybe stop invading counties and displacing people, refugees need to go somewhere.",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-08-11T11:52:54Z",
-        "last_collected_at": "2026-08-11T11:52:54Z",
         "collection_count": 1
       },
       {
