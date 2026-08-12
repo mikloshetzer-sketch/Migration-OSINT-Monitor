@@ -184,6 +184,23 @@ jobs:
               session.close()
           PY
 
+      - name: Verify Telegram audit JSON
+        run: |
+          if [ -f data/telegram_backfill_audit.json ]; then
+            echo "Telegram audit JSON generated successfully."
+            ls -lh data/telegram_backfill_audit.json
+
+            cp \
+              data/telegram_backfill_audit.json \
+              telegram-backfill-audit.json
+
+            echo "Audit JSON copied to repository root."
+            ls -lh telegram-backfill-audit.json
+          else
+            echo "ERROR: data/telegram_backfill_audit.json was not generated."
+            exit 1
+          fi
+
       - name: Export dashboard data
         run: |
           python -m dashboard.export_dashboard_data
@@ -198,17 +215,18 @@ jobs:
             exit 1
           fi
 
-      - name: Publish dashboard data
+      - name: Publish Telegram backfill outputs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add dashboard-data.json
+          git add telegram-backfill-audit.json
 
           if git diff --cached --quiet; then
-            echo "No dashboard data changes to commit."
+            echo "No Telegram backfill output changes to commit."
           else
-            git commit -m "Update Telegram historical migration data"
+            git commit -m "Update Telegram historical migration data and audit"
             git push origin HEAD:main
           fi
 
@@ -228,4 +246,3 @@ jobs:
         with:
           path: database/migration_osint_monitor.db
           key: migration-osint-db-${{ github.run_id }}
-
