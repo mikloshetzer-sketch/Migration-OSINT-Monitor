@@ -25,6 +25,7 @@ TELEGRAM_SESSION
 
 from __future__ import annotations
 
+import json
 import os
 import sys
 from collections import defaultdict
@@ -204,6 +205,11 @@ class TelegramHistoricalCollector(TelegramCollector):
         self.channel_cache_misses = 0
         self.telegram_client_connects = 0
         self.historical_message_scans = 0
+
+        # Unique source post IDs actually returned during THIS backfill.
+        # This lets the audit export describe the run itself rather than every
+        # historical Telegram row that happens to exist in the database.
+        self.audit_source_post_ids = set()
 
         TelegramHistoricalCollector.last_instance = self
 
@@ -454,6 +460,10 @@ class TelegramHistoricalCollector(TelegramCollector):
                 seen_ids.add(post_id)
                 results.append(post)
 
+                self.audit_source_post_ids.add(
+                    post_id
+                )
+
                 self.day_counts[day_key] += 1
                 self.total_returned += 1
                 accepted_this_day += 1
@@ -606,6 +616,961 @@ def prepare_telegram_reprocess(
 
     finally:
         session.close()
+
+
+def _json_safe(value):
+    if value is None:
+        return None
+
+    if isinstance(
+        value,
+        datetime,
+    ):
+        return value.isoformat()
+
+    if isinstance(
+        value,
+        (
+            str,
+            int,
+            float,
+            bool,
+        ),
+    ):
+        return value
+
+    if isinstance(
+        value,
+        dict,
+    ):
+        return {
+            str(key): _json_safe(item)
+            for key, item
+            in value.items()
+        }
+
+    if isinstance(
+        value,
+        (
+            list,
+            tuple,
+            set,
+        ),
+    ):
+        return [
+            _json_safe(item)
+            for item
+            in value
+        ]
+
+    return str(
+        value
+    )
+
+
+def _build_audit_pipeline():
+    """
+    Build the same analytical components used by the current main.py.
+
+    The audit replays classification only. It performs NO database writes.
+    """
+
+    return {
+        "noise_filter":
+            monitor_main.NoiseFilter(),
+        "influence_detector":
+            monitor_main.InfluenceSignalDetector(),
+        "early_warning_detector":
+            monitor_main.EarlyWarningReviewDetector(),
+        "operational_filter":
+            monitor_main.OperationalEventFilter(),
+        "event_assertion_filter":
+            monitor_main.EventAssertionFilter(),
+        "keyword_filter":
+            monitor_main.KeywordFilter(),
+        "classifier":
+            monitor_main.SignalClassifier(),
+        "location_extractor":
+            monitor_main.LocationExtractor(),
+        "time_extractor":
+            monitor_main.TimeExtractor(),
+        "scorer":
+            monitor_main.RelevanceScorer(),
+        "event_extractor":
+            monitor_main.EventExtractor(),
+        "region_resolver":
+            monitor_main.RegionResolver(),
+    }
+
+
+def _audit_collected_post(
+    row,
+    *,
+    pipeline: Dict[str, Any],
+) -> Dict[str, Any]:
+    """
+    Re-run the CURRENT analytical decision chain for one Telegram post.
+
+    This is intentionally read-only and exists only to explain WHY a post was
+    retained or rejected by the current rules.
+    """
+
+    post = {
+        "source":
+            row.source,
+        "post_id":
+            row.source_post_id,
+        "author":
+            row.author,
+        "text":
+            row.text
+            or "",
+        "language":
+            row.language,
+        "published_at":
+            row.published_at,
+        "url":
+            row.url,
+    }
+
+    text_value = (
+        row.text
+        or ""
+    )
+
+    noise_result = (
+        pipeline[
+            "noise_filter"
+        ]
+        .analyze(
+            text_value
+        )
+    )
+
+    base = {
+        "collected_post_id":
+            int(
+                row.id
+            ),
+        "source":
+            row.source,
+        "source_post_id":
+            row.source_post_id,
+        "author":
+            row.author,
+        "published_at":
+            _json_safe(
+                row.published_at
+            ),
+        "url":
+            row.url,
+        "language":
+            row.language,
+        "text":
+            text_value,
+        "database_state": {
+            "is_noise":
+                bool(
+                    row.is_noise
+                ),
+            "is_operational":
+                bool(
+                    row.is_operational
+                ),
+            "operational_confidence":
+                row.operational_confidence,
+            "influence_detected":
+                bool(
+                    row.influence_detected
+                ),
+            "collection_count":
+                int(
+                    row.collection_count
+                    or 0
+                ),
+        },
+    }
+
+    if noise_result.get(
+        "is_noise"
+    ):
+        base.update(
+            {
+                "final_status":
+                    "NOISE",
+                "rejection_reason":
+                    "NOISE_FILTER",
+                "primary_signal":
+                    None,
+                "event_type":
+                    None,
+                "confidence":
+                    None,
+                "score":
+                    None,
+                "matched_groups":
+                    [],
+                "matched_phrases":
+                    noise_result.get(
+                        "matched_noise_phrases",
+                        [],
+                    ),
+                "details": {
+                    "noise_categories":
+                        noise_result.get(
+                            "noise_categories",
+                            [],
+                        ),
+                },
+            }
+        )
+
+        return base
+
+    influence_result = (
+        pipeline[
+            "influence_detector"
+        ]
+        .detect(
+            text_value
+        )
+    )
+
+    operational_result = (
+        pipeline[
+            "operational_filter"
+        ]
+        .analyze(
+            text_value
+        )
+    )
+
+    if not operational_result.get(
+        "is_operational"
+    ):
+        early_warning_result = {
+            "detected":
+                False,
+        }
+
+        if not influence_result.get(
+            "detected"
+        ):
+            early_warning_result = (
+                pipeline[
+                    "early_warning_detector"
+                ]
+                .detect(
+                    text_value
+                )
+            )
+
+        selected_signal = None
+
+        if influence_result.get(
+            "detected"
+        ):
+            selected_signal = (
+                influence_result
+            )
+
+        elif early_warning_result.get(
+            "detected"
+        ):
+            selected_signal = (
+                early_warning_result
+            )
+
+        if selected_signal is not None:
+            base.update(
+                {
+                    "final_status":
+                        "EARLY_WARNING",
+                    "rejection_reason":
+                        None,
+                    "primary_signal":
+                        selected_signal.get(
+                            "primary_signal"
+                        ),
+                    "signal_mode":
+                        selected_signal.get(
+                            "signal_mode"
+                        ),
+                    "signal_intent":
+                        selected_signal.get(
+                            "signal_intent"
+                        ),
+                    "event_type":
+                        None,
+                    "confidence":
+                        selected_signal.get(
+                            "confidence"
+                        ),
+                    "score":
+                        selected_signal.get(
+                            "score"
+                        ),
+                    "matched_groups":
+                        selected_signal.get(
+                            "matched_groups",
+                            [],
+                        ),
+                    "matched_phrases":
+                        selected_signal.get(
+                            "matched_phrases",
+                            [],
+                        ),
+                    "details": {
+                        "rules_version":
+                            selected_signal.get(
+                                "rules_version"
+                            ),
+                        "review_reason":
+                            selected_signal.get(
+                                "review_reason"
+                            ),
+                        "actuality_reason":
+                            selected_signal.get(
+                                "actuality_reason"
+                            ),
+                        "context_matches":
+                            selected_signal.get(
+                                "context_matches",
+                                [],
+                            ),
+                        "operational_categories":
+                            operational_result.get(
+                                "operational_categories",
+                                [],
+                            ),
+                        "matched_operational_phrases":
+                            operational_result.get(
+                                "matched_operational_phrases",
+                                [],
+                            ),
+                        "non_operational_categories":
+                            operational_result.get(
+                                "non_operational_categories",
+                                [],
+                            ),
+                        "matched_non_operational_phrases":
+                            operational_result.get(
+                                "matched_non_operational_phrases",
+                                [],
+                            ),
+                    },
+                }
+            )
+
+            return base
+
+        base.update(
+            {
+                "final_status":
+                    "NON_OPERATIONAL",
+                "rejection_reason":
+                    "OPERATIONAL_FILTER_REJECTED",
+                "primary_signal":
+                    None,
+                "event_type":
+                    None,
+                "confidence":
+                    operational_result.get(
+                        "confidence"
+                    ),
+                "score":
+                    None,
+                "matched_groups":
+                    [],
+                "matched_phrases":
+                    operational_result.get(
+                        "matched_non_operational_phrases",
+                        [],
+                    ),
+                "details": {
+                    "operational_categories":
+                        operational_result.get(
+                            "operational_categories",
+                            [],
+                        ),
+                    "matched_operational_phrases":
+                        operational_result.get(
+                            "matched_operational_phrases",
+                            [],
+                        ),
+                    "non_operational_categories":
+                        operational_result.get(
+                            "non_operational_categories",
+                            [],
+                        ),
+                    "matched_non_operational_phrases":
+                        operational_result.get(
+                            "matched_non_operational_phrases",
+                            [],
+                        ),
+                    "influence_review_reason":
+                        influence_result.get(
+                            "review_reason"
+                        ),
+                    "early_warning_review_reason":
+                        early_warning_result.get(
+                            "review_reason"
+                        ),
+                    "early_warning_actuality_reason":
+                        early_warning_result.get(
+                            "actuality_reason"
+                        ),
+                },
+            }
+        )
+
+        return base
+
+    event = monitor_main.analyze_post(
+        post=post,
+        keyword_filter=pipeline[
+            "keyword_filter"
+        ],
+        classifier=pipeline[
+            "classifier"
+        ],
+        location_extractor=pipeline[
+            "location_extractor"
+        ],
+        time_extractor=pipeline[
+            "time_extractor"
+        ],
+        scorer=pipeline[
+            "scorer"
+        ],
+        event_extractor=pipeline[
+            "event_extractor"
+        ],
+        region_resolver=pipeline[
+            "region_resolver"
+        ],
+    )
+
+    if event.get(
+        "historical_reference"
+    ):
+        base.update(
+            {
+                "final_status":
+                    "HISTORICAL",
+                "rejection_reason":
+                    event.get(
+                        "historical_reason"
+                    )
+                    or "HISTORICAL_REFERENCE",
+                "primary_signal":
+                    None,
+                "event_type":
+                    event.get(
+                        "event_type"
+                    ),
+                "confidence":
+                    event.get(
+                        "confidence"
+                    ),
+                "score":
+                    event.get(
+                        "score"
+                    ),
+                "matched_groups":
+                    [],
+                "matched_phrases":
+                    event.get(
+                        "matched_phrases",
+                        [],
+                    ),
+                "details": {
+                    "historical_reference_time":
+                        event.get(
+                            "historical_reference_time"
+                        ),
+                    "matched_signals":
+                        event.get(
+                            "matched_signals",
+                            [],
+                        ),
+                    "primary_region":
+                        event.get(
+                            "primary_region"
+                        ),
+                    "primary_location":
+                        event.get(
+                            "primary_location"
+                        ),
+                },
+            }
+        )
+
+        return base
+
+    assertion_result = (
+        pipeline[
+            "event_assertion_filter"
+        ]
+        .analyze(
+            post=post,
+            event=event,
+            operational_result=operational_result,
+        )
+    )
+
+    if not assertion_result.get(
+        "accepted",
+        True,
+    ):
+        base.update(
+            {
+                "final_status":
+                    "NON_OPERATIONAL",
+                "rejection_reason":
+                    assertion_result.get(
+                        "reason"
+                    )
+                    or "EVENT_ASSERTION_REJECTED",
+                "primary_signal":
+                    None,
+                "event_type":
+                    event.get(
+                        "event_type"
+                    ),
+                "confidence":
+                    event.get(
+                        "confidence"
+                    ),
+                "score":
+                    event.get(
+                        "score"
+                    ),
+                "matched_groups":
+                    [],
+                "matched_phrases":
+                    event.get(
+                        "matched_phrases",
+                        [],
+                    ),
+                "details": {
+                    "operational_categories":
+                        operational_result.get(
+                            "operational_categories",
+                            [],
+                        ),
+                    "matched_operational_phrases":
+                        operational_result.get(
+                            "matched_operational_phrases",
+                            [],
+                        ),
+                    "analytical_cues":
+                        assertion_result.get(
+                            "analytical_cues",
+                            [],
+                        ),
+                    "current_cues":
+                        assertion_result.get(
+                            "current_cues",
+                            [],
+                        ),
+                    "non_assertive_cues":
+                        assertion_result.get(
+                            "non_assertive_cues",
+                            [],
+                        ),
+                    "primary_region":
+                        event.get(
+                            "primary_region"
+                        ),
+                    "primary_location":
+                        event.get(
+                            "primary_location"
+                        ),
+                },
+            }
+        )
+
+        return base
+
+    base.update(
+        {
+            "final_status":
+                "OPERATIONAL",
+            "rejection_reason":
+                None,
+            "primary_signal":
+                None,
+            "event_type":
+                event.get(
+                    "event_type"
+                ),
+            "confidence":
+                event.get(
+                    "confidence"
+                ),
+            "score":
+                event.get(
+                    "score"
+                ),
+            "matched_groups":
+                [],
+            "matched_phrases":
+                event.get(
+                    "matched_phrases",
+                    [],
+                ),
+            "details": {
+                "matched_signals":
+                    event.get(
+                        "matched_signals",
+                        [],
+                    ),
+                "operational_categories":
+                    operational_result.get(
+                        "operational_categories",
+                        [],
+                    ),
+                "matched_operational_phrases":
+                    operational_result.get(
+                        "matched_operational_phrases",
+                        [],
+                    ),
+                "primary_region":
+                    event.get(
+                        "primary_region"
+                    ),
+                "matched_regions":
+                    event.get(
+                        "matched_regions",
+                        [],
+                    ),
+                "primary_location":
+                    event.get(
+                        "primary_location"
+                    ),
+                "country":
+                    event.get(
+                        "country"
+                    ),
+                "latitude":
+                    event.get(
+                        "latitude"
+                    ),
+                "longitude":
+                    event.get(
+                        "longitude"
+                    ),
+            },
+        }
+    )
+
+    return base
+
+
+def export_telegram_backfill_audit(
+    *,
+    source_post_ids,
+    start_date: date,
+    end_date: date,
+    backfill_run_ids: List[int],
+    reprocess_existing: bool,
+    collector,
+) -> Dict[str, Any]:
+    """
+    Export a standalone, human-auditable JSON for THIS Telegram backfill.
+
+    Dashboard export is intentionally untouched.
+    """
+
+    audit_path = (
+        REPO_ROOT
+        / "data"
+        / "telegram_backfill_audit.json"
+    )
+
+    audit_path.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    normalized_ids = {
+        str(
+            value
+        )
+        for value
+        in (
+            source_post_ids
+            or []
+        )
+        if str(
+            value
+            or ""
+        ).strip()
+    }
+
+    session = get_session()
+
+    try:
+        query = (
+            session.query(
+                CollectedPost
+            )
+            .filter(
+                CollectedPost.source
+                == "TELEGRAM",
+            )
+        )
+
+        if normalized_ids:
+            query = query.filter(
+                CollectedPost.source_post_id.in_(
+                    sorted(
+                        normalized_ids
+                    )
+                )
+            )
+
+        else:
+            start_dt = datetime.combine(
+                start_date,
+                time.min,
+            )
+
+            end_dt = datetime.combine(
+                end_date
+                + timedelta(
+                    days=1
+                ),
+                time.min,
+            )
+
+            query = query.filter(
+                CollectedPost.published_at
+                >= start_dt,
+                CollectedPost.published_at
+                < end_dt,
+            )
+
+        rows = (
+            query
+            .order_by(
+                CollectedPost.published_at.asc(),
+                CollectedPost.id.asc(),
+            )
+            .all()
+        )
+
+        pipeline = (
+            _build_audit_pipeline()
+        )
+
+        posts = [
+            _audit_collected_post(
+                row,
+                pipeline=pipeline,
+            )
+            for row
+            in rows
+        ]
+
+    finally:
+        session.close()
+
+    status_counts = defaultdict(
+        int
+    )
+
+    signal_counts = defaultdict(
+        int
+    )
+
+    rejection_counts = defaultdict(
+        int
+    )
+
+    for item in posts:
+        status = str(
+            item.get(
+                "final_status"
+            )
+            or "UNKNOWN"
+        )
+
+        status_counts[
+            status
+        ] += 1
+
+        signal = item.get(
+            "primary_signal"
+        )
+
+        if signal:
+            signal_counts[
+                str(
+                    signal
+                )
+            ] += 1
+
+        rejection = item.get(
+            "rejection_reason"
+        )
+
+        if rejection:
+            rejection_counts[
+                str(
+                    rejection
+                )
+            ] += 1
+
+    payload = {
+        "schema_version":
+            "1.0",
+        "generated_at":
+            datetime.now(
+                timezone.utc
+            ).isoformat(),
+        "audit_scope": {
+            "source":
+                "TELEGRAM",
+            "start_date":
+                start_date.isoformat(),
+            "end_date":
+                end_date.isoformat(),
+            "backfill_run_ids":
+                backfill_run_ids,
+            "reprocess_existing":
+                bool(
+                    reprocess_existing
+                ),
+            "returned_post_count":
+                (
+                    int(
+                        collector.total_returned
+                    )
+                    if collector
+                    is not None
+                    else None
+                ),
+            "unique_returned_post_ids":
+                len(
+                    normalized_ids
+                ),
+            "audited_database_rows":
+                len(
+                    posts
+                ),
+            "collector_speed_metrics": {
+                "persistent_client_connects":
+                    (
+                        int(
+                            collector.telegram_client_connects
+                        )
+                        if collector
+                        is not None
+                        else None
+                    ),
+                "channel_cache_builds":
+                    (
+                        int(
+                            collector.channel_cache_misses
+                        )
+                        if collector
+                        is not None
+                        else None
+                    ),
+                "channel_cache_hits":
+                    (
+                        int(
+                            collector.channel_cache_hits
+                        )
+                        if collector
+                        is not None
+                        else None
+                    ),
+                "historical_message_scans":
+                    (
+                        int(
+                            collector.historical_message_scans
+                        )
+                        if collector
+                        is not None
+                        else None
+                    ),
+            },
+        },
+        "summary": {
+            "status_counts":
+                dict(
+                    sorted(
+                        status_counts.items()
+                    )
+                ),
+            "signal_counts":
+                dict(
+                    sorted(
+                        signal_counts.items()
+                    )
+                ),
+            "rejection_reason_counts":
+                dict(
+                    sorted(
+                        rejection_counts.items()
+                    )
+                ),
+        },
+        "posts":
+            posts,
+    }
+
+    with audit_path.open(
+        "w",
+        encoding="utf-8",
+    ) as handle:
+        json.dump(
+            _json_safe(
+                payload
+            ),
+            handle,
+            ensure_ascii=False,
+            indent=2,
+        )
+
+        handle.write(
+            "\n"
+        )
+
+    print(
+        "==================================="
+    )
+    print(
+        " TELEGRAM BACKFILL AUDIT EXPORT"
+    )
+    print(
+        "==================================="
+    )
+    print(
+        "Audit file: "
+        f"{audit_path}"
+    )
+    print(
+        "Audited rows: "
+        f"{len(posts)}"
+    )
+    print(
+        "Status counts: "
+        f"{dict(status_counts)}"
+    )
+    print(
+        "Signal counts: "
+        f"{dict(signal_counts)}"
+    )
+    print(
+        "Top rejection reasons: "
+        f"{dict(rejection_counts)}"
+    )
+
+    return payload
 
 
 def latest_monitor_run_snapshot():
@@ -817,6 +1782,19 @@ def main() -> int:
 
     collector = TelegramHistoricalCollector.last_instance
 
+    audit_payload = export_telegram_backfill_audit(
+        source_post_ids=(
+            collector.audit_source_post_ids
+            if collector is not None
+            else set()
+        ),
+        start_date=start_date,
+        end_date=end_date,
+        backfill_run_ids=updated_ids,
+        reprocess_existing=reprocess_existing,
+        collector=collector,
+    )
+
     total_returned = (
         collector.total_returned
         if collector is not None
@@ -844,6 +1822,14 @@ def main() -> int:
         f"{reprocess_existing}"
     )
     print("Current normal dashboard run preserved: YES")
+    print(
+        "Telegram audit JSON: "
+        "data/telegram_backfill_audit.json"
+    )
+    print(
+        "Telegram audit rows: "
+        f"{len(audit_payload.get('posts', []))}"
+    )
 
     if collector is not None:
         print(
