@@ -71,16 +71,21 @@ class OperationalEventFilter:
             r"\bpolice arrested\b",
             r"\b(?:migrantes?|refugiados?)\b.{0,100}\b(?:detenid\w*|arrestad\w*)\b",
             r"\b(?:мигрант\w*|бежен\w*|муҳожир\w*|иностранц\w*)\b.{0,130}\b(?:задерж\w*|арест\w*|провер\w*)\b",
-            r"\b(?:рейд\w*|провер\w*)\b.{0,150}\b(?:мигрант\w*|муҳожир\w*|иностранц\w*)\b",
+            r"\b(?:рейд\w*|провер\w*|текширув\w*)\b.{0,170}\b(?:мигрант\w*|муҳожир\w*|иностранц\w*|хорижлик\w*|чет\s+эл\s+фуқарос\w*)\b",
+            r"\b(?:миграция\s+рейд\w*|миграция\s+текширув\w*)\b",
             r"(?:мухаҷир|مهاجر|لاجئ).{0,100}(?:اعتقال|احتجاز|أوقف)",
         ],
         "DEPORTATION_RETURN": [
-            r"\b(?:migrants?|refugees?|immigrants?)\b.{0,110}\b(?:deported|expelled|returned|removed|repatriated)\b",
-            r"\b(?:deportation|removal|return|repatriation)\s+(?:flight|operation|order)\b",
-            r"\b(?:migrantes?|inmigrantes?|refugiados?)\b.{0,110}\b(?:deportad\w*|expulsad\w*|devuelt\w*|repatriad\w*)\b",
-            r"\b(?:мигрант\w*|муҳожир\w*|иностранц\w*|граждан\w*|фуқаро\w*)\b.{0,160}\b(?:депорт\w*|выдвор\w*|возвращ\w*|қайтар\w*)\b",
-            r"\b(?:депорт\w*|выдвор\w*|возвращ\w*|қайтар\w*|чартерн\w*.{0,40}рейс\w*|чартер\s+рейс\w*)\b.{0,160}\b(?:мигрант\w*|муҳожир\w*|иностранц\w*|граждан\w*|фуқаро\w*)\b",
-            r"(?:مهاجر|لاجئ).{0,110}(?:ترحيل|إبعاد|إعادة)",
+            r"\b(?:migrants?|refugees?|immigrants?)\b.{0,110}\b(?:were\s+)?(?:deported|expelled|removed|repatriated)\b",
+            r"\b(?:deportation|removal|repatriation)\s+(?:flight|operation)\b",
+            r"\b(?:migrantes?|inmigrantes?|refugiados?)\b.{0,110}\b(?:deportad\w*|expulsad\w*|repatriad\w*)\b",
+            r"\b(?:migrants?|r[ée]fugi[ée]s?)\b.{0,110}\b(?:expuls[ée]\w*|rapatri[ée]\w*)\b",
+            r"\b(?:migranti|rifugiati)\b.{0,110}\b(?:espuls\w*|rimpatri\w*)\b",
+            r"\b(?:мигрант\w*|муҳожир\w*|иностранц\w*|хорижлик\w*|чет\s+эл\s+фуқарос\w*)\b.{0,150}\b(?:депортирован\w*|выдворен\w*|возвращен\w*|қайтарил\w*|чиқариб\s+юборил\w*)\b",
+            r"\b(?:депортирован\w*|выдворен\w*|возвращен\w*|қайтарил\w*|чиқариб\s+юборил\w*)\b.{0,150}\b(?:мигрант\w*|муҳожир\w*|иностранц\w*|хорижлик\w*|чет\s+эл\s+фуқарос\w*)\b",
+            r"\b(?:махсус\s+)?чартер\s+рейс\w*\b.{0,180}\b(?:қайтарил\w*|депортация\s+қилинган|олиб\s+келин\w*)\b",
+            r"\b(?:депортация\s+қилинган|чиқариб\s+юборилган)\b.{0,140}\b(?:фуқаро\w*|мигрант\w*|муҳожир\w*)\b",
+            r"(?:مهاجر|لاجئ).{0,110}(?:تم\s+ترحيل|رُحّل|تم\s+إبعاد|أُبعد)",
         ],
         "SMUGGLING": [
             r"\bmigrant smuggling\b",
@@ -105,7 +110,7 @@ class OperationalEventFilter:
             r"\bbodies recovered\b",
             r"\bmissing migrants\b",
             r"\b(?:мигрант\w*|бежен\w*|муҳожир\w*)\b.{0,100}\b(?:погиб\w*|утон\w*|пропал\w*)\b",
-            r"(?:مهاجر|لاجئ).{0,100}(?:غرق|مات|مفقود)",
+            r"(?:مهاجر|لاجئ).{0,100}(?:\bغرق\b|\bمفقود\b|(?:^|[\s،,.])مات(?:$|[\s،,.]))",
         ],
         "BORDER_ACTION": [
             r"\bborder closed\b",
@@ -118,7 +123,7 @@ class OperationalEventFilter:
             r"\bfence construction\b",
             r"\bnew fence\b",
             r"\b(?:границ\w*|погран\w*)\b.{0,110}\b(?:закрыт\w*|усилен\w*|контрол\w*|огранич\w*)\b",
-            r"(?:الحدود|المعبر).{0,100}(?:إغلاق|أغلق|تشديد|تعزيز|رقابة)",
+            r"(?:الحدود|المعبر).{0,100}(?:إغلاق|أغلق|تشديد\s+(?:الرقابة|الحراسة)|تعزيز\s+(?:الحراسة|الانتشار)|فرض\s+رقابة)",
         ],
         "HUMANITARIAN": [
             r"\bmigrant camp\b",
@@ -177,6 +182,36 @@ class OperationalEventFilter:
         ],
     }
 
+
+    POLICY_PROPOSAL_PATTERNS = [
+        r"\b(?:proposal|proposed|would\s+deport|should\s+deport|plan\s+to\s+deport|new\s+law|draft\s+law)\b",
+        r"\b(?:таклиф|таклиф\s+қилин|таклиф\s+этил|предлага\w*|проект\s+закона|закон\s+о\s+выдворении|депортировать)\b",
+        r"\b(?:қонун|таклиф)\b.{0,120}\b(?:депортация|чиқариб\s+юбориш)\b",
+        r"\b(?:قانون|مقترح|اقتراح|سياسة)\b.{0,100}\b(?:ترحيل|إبعاد)\b",
+    ]
+
+    NEGATED_REMOVAL_PATTERNS = [
+        r"\b(?:no|without)\s+deportation\b",
+        r"\bни\s+депортаци\w*\b",
+        r"\bдепортаци\w*\s+не\s+будет\b",
+        r"\bдепортация\s+қилинмай\w*\b",
+    ]
+
+    GENERIC_CRIME_PATTERNS = [
+        r"\b(?:assault|murder|rape|robbery|arson|fight|stabbing|shooting|terror\s+attack|fraud|theft)\b",
+        r"\b(?:напал|убил|изнасил|ограб|драк|поджог|теракт|мошеннич|украл|украли|краж\w*|воров\w*)\w*",
+        r"\b(?:жиноят\w*|фирибгар\w*|ўғир\w*|зўравон\w*)\b",
+    ]
+
+    STRONG_MIGRATION_ENFORCEMENT_PATTERNS = [
+        r"\b(?:immigration|migration|border|asylum)\s+(?:raid|operation|enforcement|police|officers?|authorities)\b",
+        r"\b(?:illegal|irregular|undocumented)\s+(?:migrants?|immigrants?|entry|stay|crossing)\b",
+        r"\b(?:миграционн\w*|пограничн\w*|миграция\s+рейд\w*)\b.{0,130}\b(?:рейд\w*|провер\w*|задерж\w*|выдвор\w*|депорт\w*)\b",
+        r"\b(?:миграция\s+қонунчилиг\w*|ҳужжатсиз|ноқонуний\s+мигрант\w*)\b",
+        r"\b(?:махсус\s+)?чартер\s+рейс\w*\b.{0,180}\b(?:қайтарил\w*|депортация\s+қилинган|олиб\s+келин\w*)\b",
+        r"(?:شرطة الهجرة|حرس الحدود|خفر السواحل|هجرة غير شرعية|ترحيل المهاجرين|إبعاد المهاجرين)",
+    ]
+
     def analyze(self, text: str) -> Dict[str, object]:
         if not text:
             return {
@@ -208,6 +243,41 @@ class OperationalEventFilter:
                     if category not in non_operational_categories:
                         non_operational_categories.append(category)
                     non_operational_phrases.append(match.group(0))
+
+        policy_or_proposal = any(
+            re.search(pattern, text, flags=re.IGNORECASE | re.UNICODE)
+            for pattern in self.POLICY_PROPOSAL_PATTERNS
+        )
+        negated_removal = any(
+            re.search(pattern, text, flags=re.IGNORECASE | re.UNICODE)
+            for pattern in self.NEGATED_REMOVAL_PATTERNS
+        )
+        generic_crime = any(
+            re.search(pattern, text, flags=re.IGNORECASE | re.UNICODE)
+            for pattern in self.GENERIC_CRIME_PATTERNS
+        )
+        strong_migration_enforcement = any(
+            re.search(pattern, text, flags=re.IGNORECASE | re.UNICODE)
+            for pattern in self.STRONG_MIGRATION_ENFORCEMENT_PATTERNS
+        )
+
+        if "DEPORTATION_RETURN" in operational_categories:
+            if policy_or_proposal or negated_removal:
+                operational_categories = [
+                    category
+                    for category in operational_categories
+                    if category != "DEPORTATION_RETURN"
+                ]
+
+        if generic_crime and not strong_migration_enforcement:
+            operational_categories = [
+                category
+                for category in operational_categories
+                if category not in {
+                    "DEPORTATION_RETURN",
+                    "ARREST_DETENTION",
+                }
+            ]
 
         is_operational = bool(operational_categories)
         confidence = self._calculate_confidence(
