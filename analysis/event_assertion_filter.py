@@ -161,9 +161,24 @@ class EventAssertionFilter:
         r"\b(?:traffick\w*|smuggl\w*)\b.{0,80}\b(?:wildlife|lizard|lizards|animal|animals|weapons?|guns?|cigarettes?|tobacco|goods)\b",
     ]
 
+    ENFORCEMENT_POLICY_PATTERNS = [
+        r"\b(?:proposal|proposed|would\s+deport|should\s+deport|plan\s+to\s+deport|new\s+law|draft\s+law)\b",
+        r"\b(?:таклиф|таклиф\s+қилин|таклиф\s+этил|предлага\w*|проект\s+закона|закон\s+о\s+выдворении|депортировать)\b",
+        r"\b(?:қонун|таклиф)\b.{0,120}\b(?:депортация|чиқариб\s+юбориш)\b",
+        r"\b(?:قانون|مقترح|اقتراح|سياسة)\b.{0,100}\b(?:ترحيل|إبعاد)\b",
+    ]
+
+    NEGATED_ENFORCEMENT_PATTERNS = [
+        r"\b(?:no|without)\s+deportation\b",
+        r"\bни\s+депортаци\w*\b",
+        r"\bдепортаци\w*\s+не\s+будет\b",
+        r"\bдепортация\s+қилинмай\w*\b",
+    ]
+
     GENERIC_CRIME_PATTERNS = [
         r"\b(?:assault|murder|rape|robbery|arson|fight|stabbing|stabbed|shooting)\b",
         r"\b(?:напал|убил|изнасил|ограб|драк|поджог|теракт|украл|украли|краж\w*|воров\w*)\w*",
+        r"\b(?:жиноят\w*|фирибгар\w*|ўғир\w*|зўравон\w*)\b",
         r"\b(?:agresi[oó]n|asesin|violaci[oó]n|robo|pelea|apuñal)\w*",
     ]
 
@@ -323,6 +338,16 @@ class EventAssertionFilter:
             self.GENERIC_CRIME_PATTERNS,
         )
 
+        enforcement_policy_cues = self._find_matches(
+            text,
+            self.ENFORCEMENT_POLICY_PATTERNS,
+        )
+
+        negated_enforcement_cues = self._find_matches(
+            text,
+            self.NEGATED_ENFORCEMENT_PATTERNS,
+        )
+
         historical_years = self._historical_years(
             text
         )
@@ -386,6 +411,14 @@ class EventAssertionFilter:
                     "DETENTION",
                 }
             )
+            or bool(
+                operational_categories
+                & {
+                    "INTERCEPTION",
+                    "ARREST_DETENTION",
+                    "DEPORTATION_RETURN",
+                }
+            )
         )
 
         # --------------------------------------------------
@@ -441,6 +474,21 @@ class EventAssertionFilter:
         ):
             return self._reject(
                 "SMUGGLING_NOUN_WITHOUT_CONCRETE_ACTION",
+                analytical_cues,
+                current_cues,
+                non_assertive_cues,
+                direct_event_cues,
+            )
+
+        if (
+            enforcement_sensitive
+            and (
+                enforcement_policy_cues
+                or negated_enforcement_cues
+            )
+        ):
+            return self._reject(
+                "ENFORCEMENT_POLICY_OR_NEGATED_CONTEXT",
                 analytical_cues,
                 current_cues,
                 non_assertive_cues,
