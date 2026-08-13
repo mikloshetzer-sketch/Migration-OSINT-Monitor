@@ -50,7 +50,7 @@ from typing import Any, Dict, List, Sequence, Tuple
 
 
 class EarlyWarningReviewDetector:
-    RULES_VERSION = "EARLY_WARNING_REVIEW_V1_3_3_FINAL"
+    RULES_VERSION = "EARLY_WARNING_REVIEW_V1_3_4_FINAL"
 
     MIN_SCORE = 5.0
     WINDOW_MAX_CHARS = 460
@@ -89,6 +89,8 @@ class EarlyWarningReviewDetector:
         r"\bбежен\w*\b",
         r"\bиммигрант\w*\b",
         r"\bмуҳожир\w*\b",
+        r"\bхорижлик\w*\b",
+        r"\bчет\s+эл\s+фуқарос\w*\b",
 
         # Arabic
         r"مهاجر",
@@ -256,7 +258,8 @@ class EarlyWarningReviewDetector:
         r"\b(?:задерж\w*|выдвор\w*|депорт\w*|перехват\w*|рейд\w*)\b.{0,110}\b(?:мигрант\w*|бежен\w*|муҳожир\w*)\b",
         r"\b(?:рейд\w*).{0,140}\b(?:полици\w*|мигрант\w*|муҳожир\w*)\b",
         r"\b(?:полици\w*|миграционн\w*|пограничн\w*)\b.{0,150}\b(?:провер\w*|задерж\w*|рейд\w*)\b.{0,150}\b(?:мигрант\w*|муҳожир\w*|иностранц\w*)\b",
-        r"\b(?:мигрант\w*|муҳожир\w*|иностранц\w*|фуқаро\w*)\b.{0,150}\b(?:провер\w*|задерж\w*|выдвор\w*|депорт\w*|қайтар\w*)\b",
+        r"\b(?:мигрант\w*|муҳожир\w*|иностранц\w*|хорижлик\w*|чет\s+эл\s+фуқарос\w*|фуқаро\w*)\b.{0,160}\b(?:провер\w*|текшир\w*|задерж\w*|выдвор\w*|депорт\w*|қайтарил\w*|чиқариб\s+юборил\w*)\b",
+        r"\b(?:миграция\s+рейд\w*|миграция\s+текширув\w*)\b.{0,180}\b(?:фуқаро\w*|мигрант\w*|хорижлик\w*)\b",
         r"\b(?:чартерн\w*.{0,40}рейс\w*|чартер\s+рейс\w*|махсус\s+чартер\s+рейс\w*)\b.{0,180}\b(?:возвращ\w*|депорт\w*|выдвор\w*|қайтар\w*)\b",
 
         # Arabic
@@ -375,6 +378,7 @@ class EarlyWarningReviewDetector:
     GENERIC_CRIME_PATTERNS = (
         r"\b(?:assault|murder|rape|robbery|arson|fight|stabbing|stabbed|shooting|drug\s+trafficking|drug\s+smuggling|pills?|narcotics?|terror\s+attack)\b",
         r"\b(?:напал|убил|изнасил|ограб|драк|поджог|теракт|наркотик|украл|украли|краж\w*|воров\w*)\w*",
+        r"\b(?:жиноят\w*|фирибгар\w*|ўғир\w*|зўравон\w*)\b",
         r"\b(?:agresi[oó]n|asesin|violaci[oó]n|robo|pelea|apuñal|drogas?)\w*",
     )
 
@@ -968,6 +972,24 @@ class EarlyWarningReviewDetector:
         ):
             actuality_gate_passed = False
             actuality_reason = "ORDINARY_CRIME_NOT_MIGRATION_ENFORCEMENT"
+
+        # Crime-rate statistics involving migrants are not migration-flow
+        # pressure.
+        if (
+            "PRESSURE"
+            in matched_groups
+            and generic_crime_matches
+            and not any(
+                group in matched_groups
+                for group in (
+                    "MOVEMENT",
+                    "ROUTE",
+                    "FACILITATION",
+                )
+            )
+        ):
+            actuality_gate_passed = False
+            actuality_reason = "CRIME_STATISTICS_NOT_MIGRATION_PRESSURE"
 
         # Drug / wildlife / goods trafficking is not migrant facilitation.
         # V1.3.1 uses proximity instead of poisoning the entire window:
