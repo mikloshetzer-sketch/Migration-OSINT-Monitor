@@ -87,6 +87,22 @@ class OperationalEventFilter:
             r"\b(?:депортация\s+қилинган|чиқариб\s+юборилган)\b.{0,140}\b(?:фуқаро\w*|мигрант\w*|муҳожир\w*)\b",
             r"(?:مهاجر|لاجئ).{0,110}(?:تم\s+ترحيل|رُحّل|تم\s+إبعاد|أُبعد)",
         ],
+        "MIGRATION_FACILITATION": [
+            r"\b(?:migrants?|immigrants?|refugees?)\b.{0,140}\b(?:fake|forged|fraudulent)\s+(?:documents?|contracts?|permits?|papers?)\b",
+            r"\b(?:fake|forged|fraudulent)\s+(?:documents?|contracts?|permits?|papers?)\b.{0,140}\b(?:migrants?|immigrants?|refugees?)\b",
+            r"\b(?:helped|assisted|enabled)\b.{0,100}\b(?:migrants?|immigrants?)\b.{0,100}\b(?:illegal|irregular|undocumented)\s+(?:stay|entry|crossing)\b",
+
+            r"\b(?:мигрант\w*|муҳожир\w*|хорижлик\w*)\b.{0,160}\b(?:сохта|поддельн\w*)\b.{0,80}\b(?:ҳужжат\w*|документ\w*|шартнома\w*|договор\w*)\b",
+            r"\b(?:сохта|поддельн\w*)\b.{0,80}\b(?:ҳужжат\w*|документ\w*|шартнома\w*|договор\w*)\b.{0,160}\b(?:мигрант\w*|муҳожир\w*|хорижлик\w*)\b",
+            r"\b(?:мигрант\w*|муҳожир\w*)\b.{0,180}\b(?:ноқонуний|незаконн\w*)\b.{0,80}\b(?:қолиш\w*|пребыван\w*)\b.{0,100}\b(?:ёрдам\s+бер\w*|помог\w*|содейств\w*)\b",
+            r"\b(?:ёрдам\s+бер\w*|помог\w*|содейств\w*)\b.{0,120}\b(?:мигрант\w*|муҳожир\w*)\b.{0,120}\b(?:ноқонуний|незаконн\w*)\b.{0,80}\b(?:қолиш\w*|пребыван\w*)\b",
+
+            r"\b(?:migrants?|immigrants?)\b.{0,120}\b(?:paid|payment|fee|money)\b.{0,120}\b(?:transport|route|crossing|documents?)\b",
+            r"\b(?:пул|деньг\w*|рубл\w*)\b.{0,120}\b(?:мигрант\w*|муҳожир\w*)\b.{0,120}\b(?:ҳужжат\w*|перевоз\w*|маршрут\w*)\b",
+
+            r"(?:مهاجر|لاجئ).{0,140}(?:وثائق مزورة|عقود مزورة|إقامة غير قانونية).{0,140}(?:ساعد|سهّل|نظّم)",
+        ],
+
         "SMUGGLING": [
             r"\bmigrant smuggling\b",
             r"\bpeople smuggling\b",
