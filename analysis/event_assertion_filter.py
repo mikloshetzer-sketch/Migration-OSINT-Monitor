@@ -129,6 +129,8 @@ class EventAssertionFilter:
     ]
 
     HUMAN_SMUGGLING_CONTEXT_PATTERNS = [
+        r"\b(?:migrants?|immigrants?)\b.{0,160}\b(?:illegal|irregular|undocumented)\s+(?:stay|entry|crossing)\b",
+        r"\b(?:мигрант\w*|муҳожир\w*)\b.{0,180}\b(?:ноқонуний|незаконн\w*)\b.{0,80}\b(?:қолиш\w*|пребыван\w*)\b",
         r"\b(?:human|people|migrant|migrants|refugee|refugees)\s+(?:smuggl\w*|traffick\w*)\b",
         r"\b(?:smuggl\w*|traffick\w*)\s+(?:of\s+)?(?:people|persons|migrants?|refugees?)\b",
         r"\b(?:smuggling|trafficking)\s+(?:network|ring|gang)\b.{0,100}\b(?:migrants?|refugees?|people)\b",
@@ -140,6 +142,10 @@ class EventAssertionFilter:
     ]
 
     SMUGGLING_ACTION_PATTERNS = [
+        r"\b(?:fake|forged|fraudulent)\s+(?:documents?|contracts?|permits?|papers?)\b",
+        r"\b(?:helped|assisted|enabled)\b.{0,120}\b(?:illegal|irregular|undocumented)\s+(?:stay|entry|crossing)\b",
+        r"\b(?:сохта|поддельн\w*)\b.{0,80}\b(?:ҳужжат\w*|документ\w*|шартнома\w*|договор\w*)\b",
+        r"\b(?:ёрдам\s+бер\w*|помог\w*|содейств\w*)\b.{0,160}\b(?:ноқонуний|незаконн\w*)\b.{0,80}\b(?:қолиш\w*|пребыван\w*)\b",
         r"\b(?:police|authorities|border\s+guards?|coast\s+guard)\b.{0,120}\b(?:arrested|detained|dismantled|busted|disrupted|intercepted)\b.{0,120}\b(?:smuggl\w*|traffick\w*)\b",
         r"\b(?:smuggl\w*|traffick\w*)\s+(?:network|ring|gang)\b.{0,120}\b(?:dismantled|busted|disrupted|arrested|detained|charged|convicted)\b",
         r"\b(?:arrested|detained|charged|convicted)\b.{0,100}\b(?:smuggler|smugglers|trafficker|traffickers)\b",
@@ -395,6 +401,8 @@ class EventAssertionFilter:
             in matched_signals
             or "SMUGGLING"
             in operational_categories
+            or "MIGRATION_FACILITATION"
+            in operational_categories
         )
 
         enforcement_sensitive = bool(
@@ -515,6 +523,8 @@ class EventAssertionFilter:
         # "recommend" must not become a migration coordination event.
         if (
             coordination_sensitive
+            and "MIGRATION_FACILITATION"
+            not in operational_categories
             and not strong_coordination_cues
             and (
                 weak_coordination_only
