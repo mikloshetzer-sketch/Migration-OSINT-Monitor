@@ -1,0 +1,166 @@
+name: Telegram Source Discovery V2 Rescore
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  telegram-source-discovery-v2-rescore:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Verify required files
+        run: |
+          echo "==================================="
+          echo "TELEGRAM SOURCE DISCOVERY V2 RESCORE"
+          echo "==================================="
+
+          if [ ! -f telegram-source-discovery.json ]; then
+            echo "ERROR: telegram-source-discovery.json not found."
+            exit 1
+          fi
+
+          if [ ! -f analysis/telegram_source_discovery_v2.py ]; then
+            echo "ERROR: analysis/telegram_source_discovery_v2.py not found."
+            exit 1
+          fi
+
+          if [ ! -f analysis/telegram_source_discovery_v2_rescore.py ]; then
+            echo "ERROR: analysis/telegram_source_discovery_v2_rescore.py not found."
+            exit 1
+          fi
+
+          echo "Required files found."
+          echo
+          echo "Input JSON:"
+          ls -lh telegram-source-discovery.json
+
+      - name: Validate Python files
+        run: |
+          python -m py_compile analysis/telegram_source_discovery_v2.py
+          python -m py_compile analysis/telegram_source_discovery_v2_rescore.py
+
+      - name: Run V2 offline rescore
+        run: |
+          cd analysis
+          python telegram_source_discovery_v2_rescore.py ../telegram-source-discovery.json
+          cd ..
+
+          if [ -f analysis/telegram-source-discovery-v2-rescore.json ]; then
+            mv analysis/telegram-source-discovery-v2-rescore.json \
+              telegram-source-discovery-v2-rescore.json
+          fi
+
+      - name: Verify V2 rescore JSON
+        run: |
+          if [ ! -f telegram-source-discovery-v2-rescore.json ]; then
+            echo "ERROR: telegram-source-discovery-v2-rescore.json was not generated."
+            exit 1
+          fi
+
+          echo "V2 rescore JSON generated successfully."
+          ls -lh telegram-source-discovery-v2-rescore.json
+
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("telegram-source-discovery-v2-rescore.json")
+
+          data = json.loads(
+              path.read_text(encoding="utf-8")
+          )
+
+          summary = data.get("summary", {})
+
+          print("===================================")
+          print("V2 RESCORE SUMMARY")
+          print("===================================")
+          print(
+              "Channels rescored:",
+              summary.get("channels_rescored")
+          )
+          print(
+              "HIGH_VALUE:",
+              summary.get("high_value_channels")
+          )
+          print(
+              "WATCH:",
+              summary.get("watch_channels")
+          )
+          print(
+              "CANDIDATE:",
+              summary.get("candidate_channels")
+          )
+          print(
+              "REJECT:",
+              summary.get("reject_channels")
+          )
+          print(
+              "Channels with precursor posts:",
+              summary.get("channels_with_precursor_posts")
+          )
+
+          channels = data.get("channels", [])
+
+          print()
+          print("TOP 15 SOURCES")
+          print("-----------------------------------")
+
+          for channel in channels[:15]:
+              username = channel.get("username")
+
+              name = (
+                  f"@{username}"
+                  if username
+                  else channel.get("title")
+                  or str(channel.get("channel_id"))
+              )
+
+              print(
+                  name,
+                  "| score=",
+                  channel.get("source_score"),
+                  "| class=",
+                  channel.get("classification"),
+                  "| useful=",
+                  channel.get("useful_posts"),
+                  "| operational=",
+                  channel.get("operational_posts"),
+                  "| early=",
+                  channel.get("early_warning_posts"),
+                  "| precursor=",
+                  channel.get("precursor_posts"),
+              )
+          PY
+
+      - name: Publish V2 rescore JSON
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add telegram-source-discovery-v2-rescore.json
+
+          if git diff --cached --quiet; then
+            echo "No V2 rescore changes to commit."
+          else
+            git commit -m "Update Telegram Source Discovery V2 rescore"
+            git push origin HEAD:main
+          fi
