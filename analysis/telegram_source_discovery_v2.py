@@ -17,6 +17,11 @@ Safety / isolation:
 - no paid Telegram Stars searches;
 - writes only telegram-source-discovery-v2.json to repository root.
 
+V2.1 precursor-precision improvements:
+- distinguishes confirmed/active actions from proposals and political narrative;
+- only CONFIRMED_ACTION and ACTIVE_PREPARATION count as precursor_posts;
+- proposed/political precursor-like content is preserved diagnostically but does not score as precursor;
+
 V2 improvements:
 1. Keeps the V1 global public-channel discovery mechanism.
 2. Uses existing production filters only as read-only evidence.
@@ -182,6 +187,45 @@ INACCESSIBLE_PATTERNS = (
     r"content unavailable",
 )
 
+
+CONFIRMED_ACTION_PATTERNS: Tuple[str, ...] = (
+    r"\b(?:has|have|had)\s+(?:started|begun|built|constructed|erected|deployed|closed|reopened|restricted|suspended|reinforced|tightened)\b",
+    r"\b(?:started|began|begun|built|constructed|erected|deployed|closed|reopened|restricted|suspended|reinforced|tightened)\b",
+    r"\b(?:is|are|was|were)\s+being\s+(?:built|constructed|erected|deployed|reinforced|tightened)\b",
+    r"\b(?:is|are|was|were)\s+(?:closed|reopened|restricted|suspended|reinforced|tightened)\b",
+    r"\b(?:construction|deployment|reinforcement|closure|reopening)\s+(?:has\s+)?(?:started|begun|is\s+underway|is\s+under\s+way)\b",
+    r"\b(?:начал\w*|приступил\w*|построил\w*|возвел\w*|развернул\w*|закрыл\w*|открыл\w*|возобновил\w*|усилил\w*)\b",
+    r"\b(?:строительство|развертывание|усиление|закрытие|открытие)\b.{0,80}\b(?:начал\w*|идет|ведетс\w*|завершен\w*)\b",
+    r"\b(?:строитс\w*|возводитс\w*|развернут\w*|закрыт\w*|открыт\w*|усилен\w*)\b",
+    r"(?:بدأت|بدأ|شرعت|شيدت|بنت|نشرت|أغلقت|أعيد فتح|عززت|شددت)",
+    r"(?:بدأ بناء|بدأ تشييد|بدأ نشر|تم إغلاق|تم فتح|تم تعزيز|تم تشديد)",
+)
+
+ACTIVE_PREPARATION_PATTERNS: Tuple[str, ...] = (
+    r"\b(?:preparations?|preparing|prepares?)\b.{0,120}\b(?:border|barrier|fence|deployment|closure|checkpoint|migration)\b",
+    r"\b(?:workers?|equipment|materials?|forces?|police|troops?)\b.{0,120}\b(?:arrived|positioned|moved|mobilized|assembled)\b",
+    r"\b(?:work|construction|deployment)\b.{0,80}\b(?:underway|under\s+way|in\s+progress)\b",
+    r"\b(?:подготовк\w*|готовятс\w*|ведутс\w*\s+работ\w*)\b.{0,120}\b(?:границ\w*|забор\w*|КПП|погранич\w*|миграц\w*)\b",
+    r"\b(?:техник\w*|сил\w*|полици\w*|военн\w*)\b.{0,120}\b(?:стянут\w*|переброш\w*|сосредоточ\w*|размещ\w*)\b",
+    r"(?:استعدادات|تجهيزات|يجري التحضير|تجري الاستعدادات).{0,120}(?:الحدود|السياج|الحاجز|الشرطة|الجيش)",
+)
+
+PROPOSED_ACTION_PATTERNS: Tuple[str, ...] = (
+    r"\b(?:plan|plans|planned|proposal|proposed|consider|considering|option|could|may|might|would|should|intend|intends)\b",
+    r"\b(?:discuss|discussing|debate|debating|recommend|recommended|recommendation)\b",
+    r"\b(?:планир\w*|предлага\w*|предложен\w*|вариант\w*|может|могут|следует|рассматрива\w*|обсужда\w*)\b",
+    r"\b(?:закрытие|усиление|строительство)\b.{0,100}\b(?:остаетс\w*\s+вариант\w*|предложен\w*|обсужда\w*)\b",
+    r"(?:خطة|تخطط|اقتراح|مقترح|تدرس|قد|يمكن|ينبغي|تبحث)",
+)
+
+POLITICAL_NARRATIVE_PATTERNS: Tuple[str, ...] = (
+    r"\b(?:calls?\s+for|called\s+for|demands?|urges?|argues?|says\s+the\s+border\s+should)\b",
+    r"\b(?:political\s+debate|campaign|rhetoric|critici[sz]ed|opposition\s+said)\b",
+    r"\b(?:требует|призывает|заявил\s+что\s+надо|надо\s+закрыть|необходимо\s+закрыть|предвыборн\w*|риторик\w*|пропаганд\w*)\b",
+    r"\b(?:депутат\w*|политик\w*|партия)\b.{0,120}\b(?:требует|предлагает|призывает|настаивает)\b",
+    r"(?:يطالب|دعا إلى|يدعو إلى|يحث|انتقد|خطاب سياسي)",
+)
+
 PRECURSOR_PATTERNS: Dict[str, Tuple[str, ...]] = {
     "BORDER_HARDENING": (
         r"\b(?:build|building|construct|construction|erect)\w*\b.{0,120}\b(?:barrier|fence|wall)\b",
@@ -268,32 +312,138 @@ def matches_any(text: str, patterns: Tuple[str, ...]) -> List[str]:
     return hits
 
 
+def classify_precursor_action_state(
+    text: str,
+    *,
+    categories: List[str],
+) -> Dict[str, Any]:
+    confirmed_matches = matches_any(
+        text,
+        CONFIRMED_ACTION_PATTERNS,
+    )
+    active_matches = matches_any(
+        text,
+        ACTIVE_PREPARATION_PATTERNS,
+    )
+    proposed_matches = matches_any(
+        text,
+        PROPOSED_ACTION_PATTERNS,
+    )
+    political_matches = matches_any(
+        text,
+        POLITICAL_NARRATIVE_PATTERNS,
+    )
+
+    if confirmed_matches:
+        state = "CONFIRMED_ACTION"
+        actionable = True
+        confidence = 0.92
+        state_matches = confirmed_matches
+    elif active_matches:
+        state = "ACTIVE_PREPARATION"
+        actionable = True
+        confidence = 0.82
+        state_matches = active_matches
+    elif political_matches:
+        state = "POLITICAL_NARRATIVE"
+        actionable = False
+        confidence = 0.78
+        state_matches = political_matches
+    elif proposed_matches:
+        state = "PROPOSED_ACTION"
+        actionable = False
+        confidence = 0.74
+        state_matches = proposed_matches
+    else:
+        factual_without_auxiliary_verb = {
+            "CROSSING_STATUS_CHANGE",
+            "ROUTE_INFRASTRUCTURE",
+        }
+
+        if set(categories) & factual_without_auxiliary_verb:
+            state = "CONFIRMED_ACTION"
+            actionable = True
+            confidence = 0.72
+            state_matches = []
+        else:
+            state = "UNKNOWN"
+            actionable = False
+            confidence = 0.40
+            state_matches = []
+
+    return {
+        "state": state,
+        "actionable": actionable,
+        "confidence": confidence,
+        "matched_state_phrases": state_matches[:10],
+        "confirmed_matches": confirmed_matches[:10],
+        "active_preparation_matches": active_matches[:10],
+        "proposed_matches": proposed_matches[:10],
+        "political_narrative_matches": political_matches[:10],
+    }
+
+
 def detect_precursors(text: str) -> Dict[str, Any]:
     categories: List[str] = []
     phrases: List[str] = []
 
     for category, patterns in PRECURSOR_PATTERNS.items():
-        local_hits = matches_any(text, patterns)
+        local_hits = matches_any(
+            text,
+            patterns,
+        )
         if local_hits:
-            categories.append(category)
-            phrases.extend(local_hits)
+            categories.append(
+                category
+            )
+            phrases.extend(
+                local_hits
+            )
 
-    migration_context = bool(matches_any(text, MIGRATION_PATTERNS))
-    geographic_context = bool(matches_any(text, GEOGRAPHIC_PATTERNS))
+    migration_context = bool(
+        matches_any(
+            text,
+            MIGRATION_PATTERNS,
+        )
+    )
+    geographic_context = bool(
+        matches_any(
+            text,
+            GEOGRAPHIC_PATTERNS,
+        )
+    )
 
-    # A precursor signal must be attached to human migration and to a
-    # location/border/route context. This prevents generic security policy
-    # or infrastructure stories from becoming migration precursors.
-    detected = bool(
+    precursor_context = bool(
         categories
         and migration_context
         and geographic_context
+    )
+
+    action_state = classify_precursor_action_state(
+        text,
+        categories=categories,
+    )
+
+    detected = bool(
+        precursor_context
+        and action_state["actionable"]
     )
 
     return {
         "detected": detected,
         "categories": categories if detected else [],
         "matched_phrases": phrases[:10] if detected else [],
+        "precursor_context": precursor_context,
+        "candidate_categories": categories,
+        "candidate_matched_phrases": phrases[:10],
+        "action_state": action_state["state"],
+        "actionable": action_state["actionable"],
+        "action_state_confidence": action_state["confidence"],
+        "action_state_matches": action_state["matched_state_phrases"],
+        "confirmed_action_matches": action_state["confirmed_matches"],
+        "active_preparation_matches": action_state["active_preparation_matches"],
+        "proposed_action_matches": action_state["proposed_matches"],
+        "political_narrative_matches": action_state["political_narrative_matches"],
     }
 
 
@@ -329,6 +479,12 @@ class FilterBundle:
             "early_warning_signal": None,
             "precursor": False,
             "precursor_categories": [],
+            "precursor_context": False,
+            "precursor_candidate_categories": [],
+            "precursor_action_state": None,
+            "precursor_actionable": False,
+            "precursor_action_state_confidence": 0.0,
+            "precursor_action_state_matches": [],
             "migration_relevance": False,
             "geographic_specificity": False,
             "inaccessible_placeholder": False,
@@ -349,6 +505,12 @@ class FilterBundle:
             precursor_result = detect_precursors(text)
             result["precursor"] = precursor_result["detected"]
             result["precursor_categories"] = precursor_result["categories"]
+            result["precursor_context"] = precursor_result["precursor_context"]
+            result["precursor_candidate_categories"] = precursor_result["candidate_categories"]
+            result["precursor_action_state"] = precursor_result["action_state"]
+            result["precursor_actionable"] = precursor_result["actionable"]
+            result["precursor_action_state_confidence"] = precursor_result["action_state_confidence"]
+            result["precursor_action_state_matches"] = precursor_result["action_state_matches"]
 
             if self.noise_filter is not None:
                 noise_result = self.noise_filter.analyze(text)
@@ -402,6 +564,8 @@ def score_source(channel: Dict[str, Any]) -> Tuple[int, str, Dict[str, int], Lis
     operational_posts = channel["operational_posts"]
     early_posts = channel["early_warning_posts"]
     precursor_posts = channel["precursor_posts"]
+    proposed_precursor_posts = channel.get("proposed_precursor_posts", 0)
+    political_narrative_posts = channel.get("political_narrative_posts", 0)
     noise_posts = channel["noise_posts"]
     inaccessible_posts = channel["inaccessible_posts"]
 
@@ -421,6 +585,14 @@ def score_source(channel: Dict[str, Any]) -> Tuple[int, str, Dict[str, int], Lis
     components["operational_value"] = min(operational_posts * 2, 6)
     components["early_warning_value"] = min(early_posts * 2, 4)
     components["precursor_value"] = min(precursor_posts * 3, 6)
+    components["proposed_precursor_penalty"] = -min(
+        proposed_precursor_posts,
+        3,
+    )
+    components["political_narrative_penalty"] = -min(
+        political_narrative_posts * 2,
+        4,
+    )
 
     # 5. Repeated useful reporting is stronger than one isolated hit.
     if useful_posts >= 3:
@@ -458,6 +630,10 @@ def score_source(channel: Dict[str, Any]) -> Tuple[int, str, Dict[str, int], Lis
         reasons.append("EARLY_WARNING_REPORTING")
     if precursor_posts:
         reasons.append("PRECURSOR_REPORTING")
+    if proposed_precursor_posts:
+        reasons.append("PROPOSED_PRECURSOR_CONTENT")
+    if political_narrative_posts:
+        reasons.append("POLITICAL_NARRATIVE_CONTENT")
     if useful_posts >= 2:
         reasons.append("REPEATED_USEFUL_REPORTING")
     if geographic_posts >= 2:
@@ -479,6 +655,12 @@ def score_source(channel: Dict[str, Any]) -> Tuple[int, str, Dict[str, int], Lis
             or operational_posts >= 2
         )
         and inaccessible_posts == 0
+        and (
+            operational_posts > 0
+            or early_posts > 0
+            or precursor_posts > 0
+        )
+        and political_narrative_posts < useful_posts
     )
 
     watch_gate = (
@@ -737,6 +919,9 @@ async def run_discovery() -> Dict[str, Any]:
                             "operational_posts": 0,
                             "early_warning_posts": 0,
                             "precursor_posts": 0,
+                            "precursor_candidate_posts": 0,
+                            "proposed_precursor_posts": 0,
+                            "political_narrative_posts": 0,
                             "useful_posts": 0,
                             "noise_posts": 0,
                             "inaccessible_posts": 0,
@@ -759,6 +944,12 @@ async def run_discovery() -> Dict[str, Any]:
                         row["early_warning_posts"] += 1
                     if analysis["precursor"]:
                         row["precursor_posts"] += 1
+                    if analysis["precursor_context"]:
+                        row["precursor_candidate_posts"] += 1
+                    if analysis["precursor_action_state"] == "PROPOSED_ACTION":
+                        row["proposed_precursor_posts"] += 1
+                    if analysis["precursor_action_state"] == "POLITICAL_NARRATIVE":
+                        row["political_narrative_posts"] += 1
                     if analysis["noise"]:
                         row["noise_posts"] += 1
                     if analysis["inaccessible_placeholder"]:
@@ -851,12 +1042,26 @@ async def run_discovery() -> Dict[str, Any]:
             1 for item in final_channels if item["early_warning_posts"] > 0
         )
         summary["channels_with_precursor_posts"] = sum(
-            1 for item in final_channels if item["precursor_posts"] > 0
+            1
+            for item in final_channels
+            if item["precursor_posts"] > 0
+        )
+
+        summary["channels_with_proposed_precursor_posts"] = sum(
+            1
+            for item in final_channels
+            if item.get("proposed_precursor_posts", 0) > 0
+        )
+
+        summary["channels_with_political_narrative_posts"] = sum(
+            1
+            for item in final_channels
+            if item.get("political_narrative_posts", 0) > 0
         )
 
         return {
-            "schema_version": "2.0",
-            "run_type": "TELEGRAM_SOURCE_DISCOVERY_V2_DIAGNOSTIC",
+            "schema_version": "2.1",
+            "run_type": "TELEGRAM_SOURCE_DISCOVERY_V2_1_DIAGNOSTIC",
             "generated_at": utcnow_iso(),
             "started_at": started_at,
             "safety": {
