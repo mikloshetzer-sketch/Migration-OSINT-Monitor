@@ -50,7 +50,7 @@ from typing import Any, Dict, List, Sequence, Tuple
 
 
 class EarlyWarningReviewDetector:
-    RULES_VERSION = "EARLY_WARNING_REVIEW_V1_3_4_FINAL"
+    RULES_VERSION = "EARLY_WARNING_REVIEW_V1_3_5_FINAL"
 
     MIN_SCORE = 5.0
     WINDOW_MAX_CHARS = 460
@@ -330,6 +330,52 @@ class EarlyWarningReviewDetector:
         r"\b(?:opinión|analisis|análisis)\b",
     )
 
+
+    POLICY_CONTEXT_PATTERNS = (
+        r"\b(?:policy|law|legislation|pact|proposal|rules?|regulations?|government\s+plan)\b",
+        r"\b(?:migration|asylum)\s+(?:policy|pact|rules?|law|legislation)\b",
+        r"\b(?:қонун\w*|қоида\w*|пакт\w*|сиёсат\w*|таклиф\w*|чора\w*)\b",
+        r"\b(?:закон\w*|политик\w*|пакт\w*|правил\w*|предложен\w*|мер\w*)\b",
+        r"(?:قانون|سياسة|قواعد|اتفاق|مقترح|إجراءات)",
+    )
+
+    POLICY_INTENT_PRESSURE_PATTERNS = (
+        r"\b(?:goal|aim|objective|purpose)\b.{0,120}\b(?:reduce|decrease|limit|curb)\b.{0,80}\b(?:migration|migrants?|immigration)\b",
+        r"\b(?:reduce|decrease|limit|curb)\b.{0,80}\b(?:migration|migrants?|immigration)\b.{0,120}\b(?:policy|goal|aim|measure|deportation)\b",
+        r"\b(?:мақсад\w*)\b.{0,140}\b(?:миграция\w*|мигрант\w*)\b.{0,100}\b(?:камайтир\w*|чекла\w*)\b",
+        r"\b(?:миграция\w*|мигрант\w*)\b.{0,100}\b(?:камайтир\w*|чекла\w*)\b.{0,120}\b(?:мақсад\w*|депортация\w*|чора\w*)\b",
+        r"\b(?:депортация\w*)\b.{0,80}\b(?:осонлаштир\w*|енгиллаштир\w*)\b",
+        r"\b(?:цель|задача)\b.{0,140}\b(?:сниз\w*|сократ\w*|огранич\w*)\b.{0,80}\b(?:миграц\w*|мигрант\w*)\b",
+        r"\b(?:сниз\w*|сократ\w*|огранич\w*)\b.{0,80}\b(?:миграц\w*|мигрант\w*)\b.{0,120}\b(?:цель|мера|депортац\w*)\b",
+        r"(?:الهدف|الغرض).{0,120}(?:خفض|تقليل|الحد من).{0,80}(?:الهجرة|المهاجرين)",
+    )
+
+    NON_FLOW_PRESSURE_PATTERNS = (
+        r"\b(?:number|capacity|use|usage)\s+of\s+(?:deportation|detention|reception|migration)\s+(?:centres?|centers?|facilities?)\b",
+        r"\b(?:deportation|detention|reception|migration)\s+(?:centres?|centers?|facilities?)\b.{0,100}\b(?:increas\w*|expand\w*|grow\w*)\b",
+        r"\b(?:депортационн\w*|миграционн\w*)\s+(?:центр\w*|лагер\w*)\b.{0,100}\b(?:увелич\w*|расшир\w*|вырос\w*)\b",
+        r"\b(?:депортация|миграция)\s+марказ\w*\b.{0,100}\b(?:сон\w*|фойдаланиш\w*)\b.{0,100}\b(?:ош\w*|кенгайтир\w*)\b",
+        r"\b(?:марказ\w*|центр\w*)\b.{0,100}\b(?:оширил\w*|увелич\w*|кенгайтир\w*|расшир\w*)\b",
+        r"(?:مراكز الترحيل|مراكز الاحتجاز|مراكز الاستقبال).{0,100}(?:زيادة|توسيع)",
+    )
+
+    SYSTEMIC_ENFORCEMENT_PATTERNS = (
+        r"\b(?:raid|sweep|operation|checkpoint|mass\s+deportation|deportation\s+flight)\b",
+        r"\b(?:dozens?|hundreds?|thousands?)\b.{0,100}\b(?:migrants?|immigrants?|foreigners?)\b",
+        r"\b(?:рейд\w*|облав\w*|операци\w*|массов\w*.{0,40}(?:выдвор\w*|депорт\w*))\b",
+        r"\b(?:миграция\s+рейд\w*|текширув\w*)\b",
+        r"\b(?:ўнлаб|юзлаб|минглаб)\b.{0,100}\b(?:мигрант\w*|хорижлик\w*|фуқаро\w*)\b",
+        r"(?:حملة|مداهمة|عملية|ترحيل جماعي|عشرات|مئات|آلاف)",
+    )
+
+    INDIVIDUAL_CASE_PATTERNS = (
+        r"\b(?:a|one|single)\s+(?:migrant|immigrant|foreigner)\b",
+        r"\b\d{1,2}[-\s]year[-\s]old\s+(?:migrant|immigrant|foreigner)\b",
+        r"\b\d{1,2}\s+ёшли\s+мигрант\b",
+        r"\b(?:бир|1)\s+нафар\s+(?:мигрант|хорижлик|фуқаро)\b",
+        r"\b(?:один|одного|одному)\s+(?:мигрант\w*|иностранц\w*)\b",
+    )
+
     SPECULATIVE_PATTERNS = (
         r"\b(?:could|would|should|might|may)\b",
         r"\b(?:believe|believes|believed)\b.{0,80}\b(?:would|could|might|migrants?\s+crossing)\b",
@@ -378,7 +424,8 @@ class EarlyWarningReviewDetector:
     GENERIC_CRIME_PATTERNS = (
         r"\b(?:assault|murder|rape|robbery|arson|fight|stabbing|stabbed|shooting|drug\s+trafficking|drug\s+smuggling|pills?|narcotics?|terror\s+attack)\b",
         r"\b(?:напал|убил|изнасил|ограб|драк|поджог|теракт|наркотик|украл|украли|краж\w*|воров\w*)\w*",
-        r"\b(?:жиноят\w*|фирибгар\w*|ўғир\w*|зўравон\w*)\b",
+        r"\b(?:жиноят\w*|фирибгар\w*|ўғир\w*|зўравон\w*|пора\w*|взятк\w*)\b",
+        r"\b(?:bribe|bribery|corruption)\b",
         r"\b(?:agresi[oó]n|asesin|violaci[oó]n|robo|pelea|apuñal|drogas?)\w*",
     )
 
@@ -782,6 +829,31 @@ class EarlyWarningReviewDetector:
             window,
             self.COMMENTARY_PATTERNS,
         )
+
+        policy_context_matches = self._matches(
+            window,
+            self.POLICY_CONTEXT_PATTERNS,
+        )
+
+        policy_intent_pressure_matches = self._matches(
+            window,
+            self.POLICY_INTENT_PRESSURE_PATTERNS,
+        )
+
+        non_flow_pressure_matches = self._matches(
+            window,
+            self.NON_FLOW_PRESSURE_PATTERNS,
+        )
+
+        systemic_enforcement_matches = self._matches(
+            window,
+            self.SYSTEMIC_ENFORCEMENT_PATTERNS,
+        )
+
+        individual_case_matches = self._matches(
+            window,
+            self.INDIVIDUAL_CASE_PATTERNS,
+        )
         speculative_matches = self._matches(
             window,
             self.SPECULATIVE_PATTERNS,
@@ -828,6 +900,36 @@ class EarlyWarningReviewDetector:
         recent_date_cues = self._recent_date_cues(
             window
         )
+
+        # Policy intent is not migration pressure.
+        # Keep enforcement/policy-access context, but remove PRESSURE unless
+        # the text reports an actual measured/explicit migration-flow trend.
+        if (
+            "PRESSURE"
+            in matched_groups
+            and (
+                policy_context_matches
+                or policy_intent_pressure_matches
+                or non_flow_pressure_matches
+            )
+            and not (
+                quantitative_matches
+                and trend_comparison_matches
+            )
+            and not self._matches(
+                window,
+                (
+                    r"\b(?:migrant|migration|refugee)\w*\b.{0,90}\b(?:increasing|rising|decreasing|declining|growing|falling)\b",
+                    r"\b(?:мигрант\w*|муҳожир\w*)\b.{0,90}\b(?:оқим\w*|поток\w*)\b.{0,60}\b(?:ош\w*|камай\w*|вырос\w*|увелич\w*|сниз\w*)\b",
+                ),
+            )
+        ):
+            matched_groups = [
+                group
+                for group in matched_groups
+                if group != "PRESSURE"
+            ]
+            groups["PRESSURE"] = []
 
         actuality_gate_passed = False
         actuality_reason = "NO_CURRENT_EVENT_EVIDENCE"
@@ -972,6 +1074,24 @@ class EarlyWarningReviewDetector:
         ):
             actuality_gate_passed = False
             actuality_reason = "ORDINARY_CRIME_NOT_MIGRATION_ENFORCEMENT"
+
+        if (
+            "ENFORCEMENT"
+            in matched_groups
+            and individual_case_matches
+            and not systemic_enforcement_matches
+            and not any(
+                group in matched_groups
+                for group in (
+                    "MOVEMENT",
+                    "ROUTE",
+                    "FACILITATION",
+                    "PRESSURE",
+                )
+            )
+        ):
+            actuality_gate_passed = False
+            actuality_reason = "INDIVIDUAL_CASE_NOT_SYSTEMIC_ENFORCEMENT"
 
         # Crime-rate statistics involving migrants are not migration-flow
         # pressure.
