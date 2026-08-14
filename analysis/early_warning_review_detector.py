@@ -50,7 +50,7 @@ from typing import Any, Dict, List, Sequence, Tuple
 
 
 class EarlyWarningReviewDetector:
-    RULES_VERSION = "EARLY_WARNING_REVIEW_V1_3_5_FINAL"
+    RULES_VERSION = "EARLY_WARNING_REVIEW_V1_3_6_FINAL"
 
     MIN_SCORE = 5.0
     WINDOW_MAX_CHARS = 460
@@ -376,6 +376,43 @@ class EarlyWarningReviewDetector:
         r"\b(?:один|одного|одному)\s+(?:мигрант\w*|иностранц\w*)\b",
     )
 
+    NEGATED_ENFORCEMENT_PATTERNS = (
+        r"\b(?:no|without|neither)\s+(?:deportation|removal|expulsion)\b",
+        r"\b(?:was|were|is|are)\s+not\s+(?:deported|removed|expelled)\b",
+
+        r"\bни\s+(?:депортаци\w*|выдворени\w*)\b",
+        r"\bбез\s+(?:депортаци\w*|выдворени\w*)\b",
+        r"\b(?:депортаци\w*|выдворени\w*)\s+не\s+(?:было|будет|произошло)\b",
+
+        r"\b(?:депортация|чиқариб\s+юбориш)\s+(?:бўлмади|қилинмади|йўқ)\b",
+
+        r"\b(?:sin|ninguna)\s+(?:deportaci[oó]n|expulsi[oó]n)\b",
+        r"\bsans\s+(?:expulsion|déportation)\b",
+
+        r"(?:لم يتم ترحيل|دون ترحيل|لا يوجد ترحيل)",
+    )
+
+    CRIMINAL_SENTENCE_DEPORTATION_PATTERNS = (
+        r"\b(?:faces?|could\s+face|may\s+face|risks?|could\s+receive)\b.{0,120}\b(?:prison|jail|sentence)\b.{0,120}\b(?:deportation|removal|expulsion)\b",
+        r"\b(?:prison|jail|sentence)\b.{0,120}\b(?:with|and)\s+(?:deportation|removal|expulsion)\b",
+
+        r"\b(?:грозит|светит|может\s+получить|приговорен\w*)\b.{0,160}\b(?:тюрьм\w*|срок\w*|лишени\w+\s+свобод\w*)\b.{0,140}\b(?:депортаци\w*|выдворени\w*)\b",
+        r"\b(?:тюрьм\w*|срок\w*|лишени\w+\s+свобод\w*)\b.{0,120}\b(?:с\s+депортаци\w*|и\s+депортаци\w*)\b",
+
+        r"\b(?:prisi[oó]n|condena)\b.{0,120}\b(?:con|y)\s+(?:deportaci[oó]n|expulsi[oó]n)\b",
+
+        r"(?:السجن|عقوبة بالسجن).{0,120}(?:والترحيل|مع الترحيل)",
+    )
+
+    AMBIGUOUS_AUTHORITY_ACTION_PATTERNS = (
+        # Concrete authority action in a migration-related text, but without
+        # enough evidence to label it an operational immigration raid.
+        r"\b(?:police|officers?|authorities)\b.{0,160}\b(?:took|removed|escorted|led|brought)\b.{0,100}\b(?:two|three|several|\d+)\b",
+
+        r"\b(?:полици\w*|полицейск\w*)\b.{0,180}\b(?:вывел\w*|увез\w*|забрал\w*|сопровод\w*|достав\w*)\b.{0,100}\b(?:двоих|троих|нескольк\w*|\d+)\b",
+        r"\b(?:двоих|троих|нескольк\w*|\d+)\b.{0,120}\b(?:вывел\w*|увез\w*|забрал\w*|достав\w*)\b.{0,120}\b(?:полици\w*|полицейск\w*)\b",
+    )
+
     SPECULATIVE_PATTERNS = (
         r"\b(?:could|would|should|might|may)\b",
         r"\b(?:believe|believes|believed)\b.{0,80}\b(?:would|could|might|migrants?\s+crossing)\b",
@@ -423,7 +460,7 @@ class EarlyWarningReviewDetector:
 
     GENERIC_CRIME_PATTERNS = (
         r"\b(?:assault|murder|rape|robbery|arson|fight|stabbing|stabbed|shooting|drug\s+trafficking|drug\s+smuggling|pills?|narcotics?|terror\s+attack)\b",
-        r"\b(?:напал|убил|изнасил|ограб|драк|поджог|теракт|наркотик|украл|украли|краж\w*|воров\w*)\w*",
+        r"\b(?:напал|убил|изнасил|ограб|драк|поджог|теракт|наркотик|украл|украли|краж\w*|воров\w*|мошеннич\w*|осудил\w*)\w*",
         r"\b(?:жиноят\w*|фирибгар\w*|ўғир\w*|зўравон\w*|пора\w*|взятк\w*)\b",
         r"\b(?:bribe|bribery|corruption)\b",
         r"\b(?:agresi[oó]n|asesin|violaci[oó]n|robo|pelea|apuñal|drogas?)\w*",
@@ -460,6 +497,112 @@ class EarlyWarningReviewDetector:
             return self._empty(
                 rejection_reason="NO_HUMAN_MIGRATION_CONTEXT"
             )
+
+        # --------------------------------------------------
+        # V1.3.6 DOCUMENT-LEVEL ENFORCEMENT PRECISION
+        # --------------------------------------------------
+
+        document_negated_enforcement = self._matches(
+            value,
+            self.NEGATED_ENFORCEMENT_PATTERNS,
+        )
+
+        document_criminal_sentence = self._matches(
+            value,
+            self.CRIMINAL_SENTENCE_DEPORTATION_PATTERNS,
+        )
+
+        document_generic_crime = self._matches(
+            value,
+            self.GENERIC_CRIME_PATTERNS,
+        )
+
+        document_strong_migration_enforcement = self._matches(
+            value,
+            self.STRONG_MIGRATION_ENFORCEMENT_PATTERNS,
+        )
+
+        # Explicitly negated removal is not an enforcement warning.
+        if (
+            document_negated_enforcement
+            and not document_strong_migration_enforcement
+        ):
+            return self._empty(
+                migration_context=True,
+                context_matches=all_migration_matches,
+                rejection_reason="NEGATED_ENFORCEMENT_NOT_EARLY_WARNING",
+            )
+
+        # A deportation mentioned only as an additional/possible criminal
+        # sentence is ordinary criminal justice, not migration enforcement.
+        if (
+            document_criminal_sentence
+            and document_generic_crime
+            and not document_strong_migration_enforcement
+        ):
+            return self._empty(
+                migration_context=True,
+                context_matches=all_migration_matches,
+                rejection_reason="CRIMINAL_SENTENCE_NOT_MIGRATION_ENFORCEMENT",
+            )
+
+        # A concrete police intervention can still be analytically useful even
+        # when the text does not prove that it was an immigration raid.
+        # Surface it only for analyst review, never as an operational event.
+        document_ambiguous_authority_action = self._matches(
+            value,
+            self.AMBIGUOUS_AUTHORITY_ACTION_PATTERNS,
+        )
+
+        if (
+            document_ambiguous_authority_action
+            and not document_generic_crime
+            and not document_negated_enforcement
+        ):
+            return {
+                "detected": True,
+                "primary_signal": "ENFORCEMENT_EARLY_WARNING",
+                "signal_mode": "ANALYST_REVIEW",
+                "signal_intent": "ENFORCEMENT_EARLY_WARNING",
+                "confidence": 0.62,
+                "score": 5.25,
+                "matched_signals": [
+                    "ENFORCEMENT_EARLY_WARNING",
+                ],
+                "matched_phrases": [
+                    [
+                        "enforcement",
+                        value,
+                    ],
+                ],
+                "matched_groups": [
+                    "ENFORCEMENT",
+                ],
+                "context_matches":
+                    all_migration_matches,
+                "high_value_matches":
+                    document_ambiguous_authority_action,
+                "signal_context_rejections": [],
+                "migration_context": True,
+                "human_migration_context": True,
+                "historical_reference": False,
+                "historical_reason": None,
+                "historical_reference_text": None,
+                "rules_version":
+                    self.RULES_VERSION,
+                "current_cues": [],
+                "quantitative_cues": [],
+                "event_assertion_cues":
+                    document_ambiguous_authority_action,
+                "trend_comparison_cues": [],
+                "actuality_gate_passed": True,
+                "actuality_reason":
+                    "CONCRETE_AUTHORITY_ACTION_REQUIRES_REVIEW",
+                "evidence_window":
+                    value,
+                "review_reason":
+                    "STRUCTURED_MIGRATION_EARLY_WARNING",
+            }
 
         # Document-level credibility check for very narrow, compound
         # implausibility patterns. This is intentionally evaluated before
