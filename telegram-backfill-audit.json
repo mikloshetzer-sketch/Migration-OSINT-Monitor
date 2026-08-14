@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-13T05:47:59.592800+00:00",
+  "generated_at": "2026-08-14T05:12:01.971586+00:00",
   "audit_scope": {
     "source": "TELEGRAM",
     "start_date": "2026-07-01",
     "end_date": "2026-08-05",
     "backfill_run_ids": [
-      42
+      44
     ],
     "reprocess_existing": true,
-    "returned_post_count": 179,
-    "unique_returned_post_ids": 171,
-    "audited_database_rows": 171,
+    "returned_post_count": 116,
+    "unique_returned_post_ids": 108,
+    "audited_database_rows": 108,
     "collector_speed_metrics": {
       "persistent_client_connects": 1,
       "channel_cache_builds": 5,
@@ -21,22 +21,20 @@
   },
   "summary": {
     "status_counts": {
-      "EARLY_WARNING": 9,
+      "EARLY_WARNING": 3,
       "HISTORICAL": 1,
       "NOISE": 1,
-      "NON_OPERATIONAL": 154,
-      "OPERATIONAL": 6
+      "NON_OPERATIONAL": 103
     },
     "signal_counts": {
-      "ENFORCEMENT_EARLY_WARNING": 6,
-      "PRESSURE_EARLY_WARNING": 3
+      "ENFORCEMENT_EARLY_WARNING": 3
     },
     "rejection_reason_counts": {
       "EXPLICIT_PREVIOUS_YEAR": 1,
       "NOISE_FILTER": 1,
-      "OPERATIONAL_FILTER_REJECTED": 149,
-      "SMUGGLING_NOUN_WITHOUT_CONCRETE_ACTION": 2,
-      "WEAK_COORDINATION_WITHOUT_MIGRATION_OPERATIONAL_CONTEXT": 3
+      "OPERATIONAL_FILTER_REJECTED": 100,
+      "SMUGGLING_NOUN_WITHOUT_CONCRETE_ACTION": 1,
+      "WEAK_COORDINATION_WITHOUT_MIGRATION_OPERATIONAL_CONTEXT": 2
     }
   },
   "posts": [
@@ -54,7 +52,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -75,85 +73,6 @@
       }
     },
     {
-      "collected_post_id": 2785,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10141",
-      "author": "migrantlar24",
-      "published_at": "2026-07-01T12:27:13",
-      "url": "https://t.me/migrantlar24/10141",
-      "language": null,
-      "text": "Невскийда рейд\n\nСанкт-Петербургнинг Невский туманида ўтказилган миграция рейдидан сўнг 9 нафар чет эл фуқароси Россиядан чиқариб юборилади.\n\nТекширув Тельман кўчасидаги турар-жой мажмуаси қурилиш майдончасида ўтказилди. Жами 68 нафар чет эл фуқаросининг ҳужжатлари текширилди. Уларнинг 9 нафарида зарур ҳужжатлар мавжуд эмаслиги аниқланди.\n\nҚоидабузарларга маъмурий жарима тайинланиб, кейинчалик Россиядан депортация қилиш чораси қўлланилади. Шунингдек, полиция ҳужжатсиз ишчиларни қайси компания ишга олганини ҳам текширмоқда.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": true,
-        "operational_confidence": 0.85,
-        "influence_detected": false,
-        "collection_count": 4
-      },
-      "final_status": "OPERATIONAL",
-      "rejection_reason": null,
-      "primary_signal": null,
-      "event_type": "GENERAL_DISCUSSION",
-      "confidence": null,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "matched_signals": [],
-        "operational_categories": [
-          "ARREST_DETENTION",
-          "DEPORTATION_RETURN"
-        ],
-        "matched_operational_phrases": [
-          "рейдидан сўнг 9 нафар чет эл фуқароси",
-          "миграция рейдидан",
-          "чет эл фуқароси Россиядан чиқариб юборилади"
-        ],
-        "primary_region": "GLOBAL",
-        "matched_regions": [
-          "GLOBAL"
-        ],
-        "primary_location": null,
-        "country": null,
-        "latitude": null,
-        "longitude": null
-      }
-    },
-    {
-      "collected_post_id": 2784,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10142",
-      "author": "migrantlar24",
-      "published_at": "2026-07-01T13:08:11",
-      "url": "https://t.me/migrantlar24/10142",
-      "language": null,
-      "text": "Афғонистон ва Покистон келаётган мигрантлар ҳақида рус аёли салбий фикрларни билдириб ўтди.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 4
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
       "collected_post_id": 2791,
       "source": "TELEGRAM",
       "source_post_id": "1688600455:1043",
@@ -167,7 +86,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -201,7 +120,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -219,74 +138,6 @@
         "influence_review_reason": null,
         "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
         "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
-      "collected_post_id": 2789,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10179",
-      "author": "migrantlar24",
-      "published_at": "2026-07-02T16:40:22",
-      "url": "https://t.me/migrantlar24/10179",
-      "language": null,
-      "text": "Мигрантларни азоблаш хизмати)",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 4
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
-      "collected_post_id": 2788,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10182",
-      "author": "migrantlar24",
-      "published_at": "2026-07-02T18:40:05",
-      "url": "https://t.me/migrantlar24/10182",
-      "language": null,
-      "text": "Москва. Июль ойида миграция хизмати раҳбариятининг фуқароларни қабул қилиш жадвали\n\nҚабул давомида РВП, ВНЖ, фуқаролик, миграция ҳисобига қўйиш, давлат божини қайтариш ҳамда бошқа миграция масалалари бўйича мурожаат қилиш мумкин.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 4
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_HUMAN_MIGRATION_CONTEXT",
-        "early_warning_actuality_reason": "NO_HUMAN_MIGRATION_CONTEXT"
       }
     },
     {
@@ -303,7 +154,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -337,75 +188,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
-      "collected_post_id": 2795,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10209",
-      "author": "migrantlar24",
-      "published_at": "2026-07-03T12:30:24",
-      "url": "https://t.me/migrantlar24/10209",
-      "language": null,
-      "text": "Россияда содир этилаётган жиноятларда мигрантларнинг улуши жуда кам фоизни ташкил этади.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 4
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
-      "collected_post_id": 2794,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10210",
-      "author": "migrantlar24",
-      "published_at": "2026-07-03T13:10:23",
-      "url": "https://t.me/migrantlar24/10210",
-      "language": null,
-      "text": "Россияда мигрантлар топаётган пулга кўз олайтириш давом этмоқда. Бу масала Россия Думасида кўриб чиқилибди.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -439,7 +222,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -473,75 +256,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
-      "collected_post_id": 2799,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10237",
-      "author": "migrantlar24",
-      "published_at": "2026-07-04T12:00:01",
-      "url": "https://t.me/migrantlar24/10237",
-      "language": null,
-      "text": "🇷🇺 Юграда мигрантларга ноқонуний ҳужжат тайёрлаб берган жиноий гуруҳ судга тортилади\n\nТергов маълумотларига кўра, Ханти-Мансийскдаги эр-хотин бошчилигидаги 8 кишилик гуруҳ 2022–2024 йиллар давомида пул эвазига мигрантлар учун сохта ҳужжатлар расмийлаштирган.\n\nУлар ишга жойлашгани ва яшаш жойи ҳақида ёлғон маълумотлар киритилган ҳужжатларни тайёрлаган, шунингдек, тил маркази орқали рус тили, Россия тарихи ва қонунчилиги бўйича имтиҳонларни сохталаштириб, сертификатлар берган.\n\nТергов якунланган. Жиноят иши судга юборилди, берилган барча сохта рўйхатлар, патентлар ва сертификатлар бекор қилинди.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 4
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
-      "collected_post_id": 2798,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10238",
-      "author": "migrantlar24",
-      "published_at": "2026-07-04T13:00:09",
-      "url": "https://t.me/migrantlar24/10238",
-      "language": null,
-      "text": "🚨 Москвада никотинли маҳсулотлар ишлаб чиқарган яширин цех фош этилди\n\nМосква шаҳрининг Дубнинская кўчасида никотин сақловчи маҳсулотлар ишлаб чиқарган ноқонуний цехга чек қўйилди.\n\nТезкор тадбир давомида 12 нафар шахс қўлга олинди. Улар орасида яқин хориж давлатларидан келган мигрантлар ҳам бор.\n\nҲолат юзасидан бир нечта жиноят иши қўзғатилди.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -575,7 +290,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -596,40 +311,6 @@
       }
     },
     {
-      "collected_post_id": 2804,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10247",
-      "author": "migrantlar24",
-      "published_at": "2026-07-05T09:54:09",
-      "url": "https://t.me/migrantlar24/10247",
-      "language": null,
-      "text": "Мигрантларга яхши муносабатда бўладиган руслар ҳам кўп.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 4
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
       "collected_post_id": 2803,
       "source": "TELEGRAM",
       "source_post_id": "1173707041:9045",
@@ -643,7 +324,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -677,7 +358,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -711,7 +392,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NOISE",
       "rejection_reason": "NOISE_FILTER",
@@ -743,7 +424,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -777,7 +458,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -811,7 +492,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -845,7 +526,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -879,7 +560,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -913,7 +594,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -931,108 +612,6 @@
         "influence_review_reason": null,
         "early_warning_review_reason": "NO_HUMAN_MIGRATION_CONTEXT",
         "early_warning_actuality_reason": "NO_HUMAN_MIGRATION_CONTEXT"
-      }
-    },
-    {
-      "collected_post_id": 2811,
-      "source": "TELEGRAM",
-      "source_post_id": "3998049317:26",
-      "author": "EUEV8",
-      "published_at": "2026-07-07T15:37:04",
-      "url": "https://t.me/EUEV8/26",
-      "language": null,
-      "text": "رابط مجموعتنا \n🔗 t.me/+52K7PCwGGXI5NjUy\nقناة الكيسات \n🔗 t.me/asylum_case\nقناة المعلومات الهجرة \n🔗 t.me/ite_iraq\nقناة التهـ ـريب \n🔗 t.me/AbuKararITE\n❗️ملاحظة: يُمنع دخول من هم دون سن 18 عامًا. يرجى احترام جميع أعضاء المجموعة، ومن يخالف ذلك سيواجه الحظر.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 4
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
-      "collected_post_id": 2810,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10298",
-      "author": "migrantlar24",
-      "published_at": "2026-07-07T15:48:28",
-      "url": "https://t.me/migrantlar24/10298",
-      "language": null,
-      "text": "\"MАХ\" иловасидаги энг сара ўзбек тилидаги каналлар рўйхати. \n\n👉 Geosiyosat\n\n👉 Migrantlar24\n\n👉 PATRUL.UZ\n\n👉 Tezkor Yangiliklar\n\n👉 O'zbekiston 24\n\n👉 QORAXABAR\n\n👉 Shifo.uz\n\n👉 SHOHONA KULGU\n\n👉 Valyuta Kurslari\n\n👉 Sara Xabarlar\n\n👉 O'tmishga Sayohat\n\n👉 Trend Videolar\n\n👉 Futbol.uz\n\n👉 Rus tlini o'rganamiz\n\n👉 Huquqiy Axborot",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 4
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_HUMAN_MIGRATION_CONTEXT",
-        "early_warning_actuality_reason": "NO_HUMAN_MIGRATION_CONTEXT"
-      }
-    },
-    {
-      "collected_post_id": 2809,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10301",
-      "author": "migrantlar24",
-      "published_at": "2026-07-07T16:40:25",
-      "url": "https://t.me/migrantlar24/10301",
-      "language": null,
-      "text": "23 йилдан бери мигрантликда умри ўтаётган юртдошимизнинг иқрори...",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 4
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
       }
     },
     {
@@ -1049,41 +628,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_CURRENT_EVENT_EVIDENCE",
-        "early_warning_actuality_reason": "NO_CURRENT_EVENT_EVIDENCE"
-      }
-    },
-    {
-      "collected_post_id": 2818,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10308",
-      "author": "migrantlar24",
-      "published_at": "2026-07-08T05:40:10",
-      "url": "https://t.me/migrantlar24/10308",
-      "language": null,
-      "text": "Қозонда ўзбекистонлик мигрант ўсмирга ҳужум қилди\n\nРоссиянинг Қозон шаҳрида Ўзбекистон фуқароси маҳаллий ўсмирга ҳужум қилиб, уни бўғишга урингани хабар қилинмоқда.\n\nҲодиса мигрант автомобилда тротуар бўйлаб ҳаракатланаётган вақтда содир бўлган. Маълумотларга кўра, ўсмир унга йўл беришдан бош тортган. Шундан сўнг мигрант машинадан тушиб, ўсмирнинг бўйнидан ушлаб бўға бошлаган ва кейин уни ерга улоқтирган.\n\nВоқеага гувоҳ бўлган фуқаролар ҳужумчини ушлаб қолиб, полицияни чақирган. Ҳозирда унга нисбатан жиноят иши қўзғатиш масаласи кўриб чиқилмоқда.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1117,7 +662,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1151,7 +696,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1185,7 +730,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1206,40 +751,6 @@
       }
     },
     {
-      "collected_post_id": 2814,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10319",
-      "author": "migrantlar24",
-      "published_at": "2026-07-08T17:30:22",
-      "url": "https://t.me/migrantlar24/10319",
-      "language": null,
-      "text": "Москвада мигрантларга қарши рейдлар бўлмоқдв, огоҳ бўлинг.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 4
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_CURRENT_EVENT_EVIDENCE",
-        "early_warning_actuality_reason": "NO_CURRENT_EVENT_EVIDENCE"
-      }
-    },
-    {
       "collected_post_id": 2821,
       "source": "TELEGRAM",
       "source_post_id": "1688600455:1051",
@@ -1253,7 +764,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1274,75 +785,20 @@
       }
     },
     {
-      "collected_post_id": 2820,
+      "collected_post_id": 3007,
       "source": "TELEGRAM",
-      "source_post_id": "1604168769:10342",
-      "author": "migrantlar24",
-      "published_at": "2026-07-09T11:30:02",
-      "url": "https://t.me/migrantlar24/10342",
+      "source_post_id": "1172585182:6690",
+      "author": "epskorea1",
+      "published_at": "2026-07-09T11:14:11",
+      "url": "https://t.me/epskorea1/6690",
       "language": null,
-      "text": "Европада миграция қоидалари янада қаттиқлашмоқда\n\nЕвропа Иттифоқида янги миграция ва бошпана пакти кучга кириши ортидан қатор давлатлар ўз миллий қонунларини ҳам янада кескинлаштирмоқда.\n\nАсосий мақсад — ноқонуний миграцияни камайтириш, депортацияни осонлаштириш ва Европа мамлакатларини мигрантлар учун камроқ жозибадор қилиш.\nҚисқача асосий ўзгаришлар:\n\n🇸🇪 Швеция — энди айрим ҳолатларда «ёмон хулқ-атвор» учун ҳам яшаш рухсатномаси (ВНЖ) бекор қилиниши мумкин.\n\n🇩🇪 Германия — ҳужжатсиз келган муҳожирларга нисбатан чегара назорати кучайтирилди, оилани бирлаштириш ҳуқуқига чекловлар киритилди.\n\n🇫🇷🇬🇧 Франция ва Буюк Британия — Ла-Манш орқали келувчиларга қарши қўшма чоралар кучайтирилмоқда.\n\n🇮🇹 Италия — депортация марказлари сони оширилмоқда ва Албаниядаги мигрантлар марказларидан фойдаланиш кенгайтирилмоқда.\n\n🇳🇱 Нидерландия — бошпана бериш тартиби ўзгариб, айрим тоифадаги мигрантлар учун оила аъзоларини олиб келиш имконияти чекланмоқда.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": true,
-        "collection_count": 4
-      },
-      "final_status": "EARLY_WARNING",
-      "rejection_reason": null,
-      "primary_signal": "PRESSURE_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "PRESSURE_EARLY_WARNING",
-      "event_type": null,
-      "confidence": 0.9,
-      "score": 10.0,
-      "matched_groups": [
-        "ENFORCEMENT",
-        "PRESSURE"
-      ],
-      "matched_phrases": [
-        [
-          "enforcement",
-          "депортацияни"
-        ],
-        [
-          "pressure",
-          "миграцияни камайтириш"
-        ],
-        [
-          "pressure",
-          "камайтириш, депортацияни осонлаштириш ва Европа мамлакатларини мигрантлар"
-        ]
-      ],
-      "details": {
-        "rules_version": "EARLY_WARNING_REVIEW_V1_3_4_FINAL",
-        "review_reason": "STRUCTURED_MIGRATION_EARLY_WARNING",
-        "actuality_reason": "CONCRETE_EVENT_ASSERTION",
-        "context_matches": [
-          "мигрантлар"
-        ],
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": []
-      }
-    },
-    {
-      "collected_post_id": 2819,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10343",
-      "author": "migrantlar24",
-      "published_at": "2026-07-09T15:20:03",
-      "url": "https://t.me/migrantlar24/10343",
-      "language": null,
-      "text": "#Алдов_Ваъдалари\n\n❓Миграцияни режалаштираётганлар учун қайси ваъда хавф белгиси эканини биласизми?\n\n🎯 Ҳар қандай гапга ишонишдан олдин шу карточкани бир марта ўқиб чиқинг.\n\n📢 Хабарни хорижда ишламоқчи бўлган дўстингизга юборинг!",
+      "text": "🇰🇷EPS-TOPIK: MALAKALI NOMZODLARGA QO‘SHIMCHA BALL IMKONIYATI YARATILMOQDA\n\n🤝 Joriy yil aprel oyida o‘tkazilgan EPS-TOPIK 1-bosqich imtihonlaridan muvaffaqiyatli o‘tgan 1878 nafar nomzod (ishlab chiqarish — 1653 nafar, xizmat ko‘rsatish-1 — 225 nafar) uchun EPS-TOPIK 2-bosqich Malaka imtihoni 2026-yil 28–31-iyul kunlari o‘tkazilishi rejalashtirilmoqda.\n\n💬 Mazkur bosqichda nomzodlarning koreys tilini bilish darajasidan tashqari, ularning kasbiy mahorati, ish tajribasi va tayyorgarlik darajasi ham baholanadi.\n\n🎁 HRDKning rasmiy ma’lumotiga ko‘ra, joriy yilgi Skill Testda kasbiy mahorat va ta’limga ega nomzodlarga qo‘shimcha rag‘batlantiruvchi ballar berilishi rejalashtirilgan.\n\nTalab qilinadigan hujjatlar:\n\n1. Kasbiy malakani baholash uchun ariza.\n (Ariza shaklini yuklab oling)\n2. Xorijga chiqish pasport nusxasi.\n\n3. https://mygov.uz orqali olingan mehnat faoliyatini tasdiqlovchi ma’lumotnoma uchun — 2 ball;\n\n4. EPS-TOPIKda tanlangan soha bo‘yicha (ishlab chiqarish yoki xizmat ko‘rsatish-1) 120 soatdan kam bo‘lmagan kasbiy o‘quv kursini tamomlaganlik sertifikati yoki diplom uchun — 1 ball; \n\n5. o‘rta maxsus (kasb-hunar kolleji/akademik litsey) yoki oliy ta’lim diplomi uchun — 1 ball; \n\n6. Milliy malaka tizimi (kasbiy sertifikat) bo‘yicha olingan hujjatlar uchun — 1 ball.\n\n📌 Qo‘shimcha ball olish uchun nomzodlar 10–12-iyul kunlari 👉 eps@migration.uz 👈 elektron pochta manzili orqali taqdim etishi zarur.\n\nEslatma: Ish tajribasi va malaka bo'yicha hujjatlaringiz tanlagan soha bilan mos bo'lsagina yuqoridagi tartib amal qiladi!\n⚠️ Muhim! Barcha hujjatlar asl nusxadan skaner qilingan holda PDF formatda, aniq va o‘qish mumkin bo‘lgan ko‘rinishda yuborilishi shart. Imtihon kuni barcha hujjatlarning asl nusxalarini taqdim etish talab qilinadi. Aks holda, nomzodning natijalari avtomatik ravishda bekor qilinadi.\n\n❗️Belgilangan muddatda (10–12-iyul) elektron pochta orqali yuborilmagan hujjatlar imtihon kuni qabul qilinmaydi.\n\n🚫 Hujjatlarni qalbakilashtirish qat’iyan taqiqlanadi. Soxta hujjatlar aniqlangan taqdirda, nomzodning natijalari bekor qilinadi va u 4 yil muddatga barcha EPS-TOPIK imtihonlaridan chetlashtiriladi.\n\nSKILL TESTLAR BO'LIB O'TADIGAN MANZILLAR QO'SHIMCHA E'LON QILINADI\n®uzmigration\n\n2026 ishlab chiqarish imtixondan o‘tganlar \n\nTanlov va shartnoma guruhi \n2026Koreyaga ketuvchilar\n2026 Servis1 guruh\n \n \n \nKoreyaga borib kelganlar\nKoreyaga borib kelganlar 2025\nIshlab chiqarish 2024",
       "database_state": {
         "is_noise": false,
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 1
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1376,7 +832,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1410,7 +866,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1444,7 +900,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1462,146 +918,6 @@
         "influence_review_reason": null,
         "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
         "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
-      "collected_post_id": 2823,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10380",
-      "author": "migrantlar24",
-      "published_at": "2026-07-10T18:00:03",
-      "url": "https://t.me/migrantlar24/10380",
-      "language": null,
-      "text": "Европа Иттифоқи мигрантлар контрабандасига қарши янги санкциялар жорий этишни таклиф қилди\n\nЕвропа комиссияси мигрантлар контрабандаси, одам савдоси ва бошқа уюшган жиноятларга қарши янги санкциялар режимини таклиф қилди.\n\nУнга кўра, ушбу жиноятларга алоқадор шахс ва ташкилотларнинг активлари музлатилади, уларга молиявий ёрдам кўрсатиш тақиқланади ҳамда Европа Иттифоқига кириши ёки транзит ўтиши чекланади.\n\nТаклиф энди Европа Иттифоқи Кенгашида кўриб чиқилади ва барча аъзо давлатлар бир овоздан маъқулласа, кучга киради.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.6,
-        "influence_detected": false,
-        "collection_count": 4
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "SMUGGLING_NOUN_WITHOUT_CONCRETE_ACTION",
-      "primary_signal": null,
-      "event_type": "GENERAL_DISCUSSION",
-      "confidence": null,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [
-          "SMUGGLING"
-        ],
-        "matched_operational_phrases": [
-          "мигрантлар контрабандасига"
-        ],
-        "analytical_cues": [],
-        "current_cues": [],
-        "non_assertive_cues": [],
-        "primary_region": "GLOBAL",
-        "primary_location": null
-      }
-    },
-    {
-      "collected_post_id": 2822,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10381",
-      "author": "migrantlar24",
-      "published_at": "2026-07-10T18:40:03",
-      "url": "https://t.me/migrantlar24/10381",
-      "language": null,
-      "text": "Россияда меҳнат мигрантлари учун НДФЛ бўйича янги қонун қабул қилинди\n\nРоссия Давлат думаси чет эллик меҳнат мигрантларига оид янги қонунни қабул қилди. Унга кўра, жисмоний шахсларда ишлайдиган хорижликлар НДФЛ бўйича ойига 1700 рубль миқдорида аванс тўловини амалга оширади. \n\nАйрим ҳолларда фарзандлари учун ҳам қўшимча тўлов белгиланади.\n\nШунингдек, мигрантларнинг даромадлари автоматик равишда назорат қилинади. Даромад тўғрисида маълумот бўлмаса ёки белгиланган меъёрдан паст бўлса, патентни бериш, узайтириш ёки амал қилишини бекор қилиш мумкин. Қонун ҳужжати энди Федерация Кенгаши ва президент томонидан тасдиқланиши кутилмоқда.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 4
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
-      "collected_post_id": 2828,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10394",
-      "author": "migrantlar24",
-      "published_at": "2026-07-11T12:10:02",
-      "url": "https://t.me/migrantlar24/10394",
-      "language": null,
-      "text": "Камчаткада меҳнат мигрантлари устидан назорат кучайтирилади\n\nРоссиянинг Камчатка ўлкасида меҳнат мигрантлари фаолияти устидан назорат кучайтирилади. Бу ҳақда вилоят губернатори маълум қилди.\n\nУнинг сўзларига кўра, мигрантларни ишга жалб қилиш, уларнинг ҳужжатлари ва қонунчилик талабларига риоя этилиши устидан текширувлар кучайтирилади. Асосий мақсад — ноқонуний меҳнат ва миграция қоидалари бузилишининг олдини олиш.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 4
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
-      "collected_post_id": 2827,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10395",
-      "author": "migrantlar24",
-      "published_at": "2026-07-11T13:00:03",
-      "url": "https://t.me/migrantlar24/10395",
-      "language": null,
-      "text": "Россияга ВСУ рамзлари туширилган футболкада келган ўзбекистонлик депортация қилинди\n\nРоссияда миграция марказига Украина Қуролли кучлари (ВСУ) рамзлари туширилган футболкада келган Ўзбекистон фуқароси мамлакатдан депортация қилиниши ҳақида суд қарори чиқарилди.\n\nАввалига унга 30 минг рубль жарима тайинланган эди. Кейинроқ суд уни Россиядан депортация қилишга қарор қилди.\n\nМаълум қилинишича, суд жараёнида у бу ҳаракати Россия Қуролли кучларини дискредитация қилиш ҳисобланишини яхши тушунганини тан олган.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 4
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_HUMAN_MIGRATION_CONTEXT",
-        "early_warning_actuality_reason": "NO_HUMAN_MIGRATION_CONTEXT"
       }
     },
     {
@@ -1618,7 +934,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1652,117 +968,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
-      "collected_post_id": 2830,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10416",
-      "author": "migrantlar24",
-      "published_at": "2026-07-12T13:00:13",
-      "url": "https://t.me/migrantlar24/10416",
-      "language": null,
-      "text": "Митищидаги бозорда ўтказилган рейд вақтида айрим мигрантлар ҳуқуқни муҳофаза қилувчи ходимларни кўриб қочишга уринди.\n\nМаълумотларга кўра, рейд давомида бир неча хорижлик ушланиб, уларнинг ҳужжатлари текширилди. Айримлардан Россияда тақиқланган насвай аниқланган. Текширувлар якунланганидан сўнг, миграция қонунчилигини бузган деб гумон қилинган шахслар ички ишлар бўлимига олиб кетилди.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": true,
-        "operational_confidence": 0.6,
-        "influence_detected": false,
-        "collection_count": 4
-      },
-      "final_status": "OPERATIONAL",
-      "rejection_reason": null,
-      "primary_signal": null,
-      "event_type": "GENERAL_DISCUSSION",
-      "confidence": null,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "matched_signals": [],
-        "operational_categories": [
-          "ARREST_DETENTION"
-        ],
-        "matched_operational_phrases": [
-          "рейд вақтида айрим мигрантлар"
-        ],
-        "primary_region": "GLOBAL",
-        "matched_regions": [
-          "GLOBAL"
-        ],
-        "primary_location": null,
-        "country": null,
-        "latitude": null,
-        "longitude": null
-      }
-    },
-    {
-      "collected_post_id": 2829,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10421",
-      "author": "migrantlar24",
-      "published_at": "2026-07-12T17:01:27",
-      "url": "https://t.me/migrantlar24/10421",
-      "language": null,
-      "text": "\"MАХ\" иловасидаги энг сара ўзбек тилидаги каналлар рўйхати. \n\n👉 Geosiyosat\n\n👉 Migrantlar24\n\n👉 PATRUL.UZ\n\n👉 Tezkor Yangiliklar\n\n👉 O'zbekiston 24\n\n👉 QORAXABAR\n\n👉 Shifo.uz\n\n👉 SHOHONA KULGU\n\n👉 Valyuta Kurslari\n\n👉 Sara Xabarlar\n\n👉 O'tmishga Sayohat\n\n👉 Trend Videolar\n\n👉 Futbol.uz\n\n👉 Rus tlini o'rganamiz\n\n👉 Huquqiy Axborot",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 4
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_HUMAN_MIGRATION_CONTEXT",
-        "early_warning_actuality_reason": "NO_HUMAN_MIGRATION_CONTEXT"
-      }
-    },
-    {
-      "collected_post_id": 2837,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10431",
-      "author": "migrantlar24",
-      "published_at": "2026-07-13T11:15:04",
-      "url": "https://t.me/migrantlar24/10431",
-      "language": null,
-      "text": "Воронеж ва Владимир шаҳарларида янги замонавий миграция марказлари иш бошлади\n\nЭндиликда ушбу марказларда хорижликлар қуйидаги хизматлардан бир жойнинг ўзида фойдаланишлари мумкин:\n\n✔️ тиббий кўрикдан ўтиш;\n✔️ зарур сертификатларни расмийлаштириш;\n✔️ бармоқ изларини топшириш (дактилоскопия);\n✔️ ихтиёрий тиббий суғурта полисини (ДМС) расмийлаштириш;\n✔️ ҳужжатларни тайёрлаш бўйича мутахассислардан маслаҳат ва амалий ёрдам олиш.\n\nҚисқача айтганда, Россияда ишлаш учун талаб этиладиган асосий ҳужжатларни бир жойнинг ўзида расмийлаштириш имконияти яратилди.\n\n📍 Воронеж: 9 Января кўчаси, 68-уй, «И» литери\n\n📍 Владимир: Вокзальная кўчаси, 6-уй, 4–6-корпуслар",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1796,7 +1002,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1830,7 +1036,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1851,52 +1057,6 @@
       }
     },
     {
-      "collected_post_id": 2834,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10438",
-      "author": "migrantlar24",
-      "published_at": "2026-07-13T15:46:15",
-      "url": "https://t.me/migrantlar24/10438",
-      "language": null,
-      "text": "Белоруссияда мигрантлар оқими ошиб бормоқда.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": true,
-        "collection_count": 4
-      },
-      "final_status": "EARLY_WARNING",
-      "rejection_reason": null,
-      "primary_signal": "PRESSURE_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "PRESSURE_EARLY_WARNING",
-      "event_type": null,
-      "confidence": 0.62,
-      "score": 5.0,
-      "matched_groups": [
-        "PRESSURE"
-      ],
-      "matched_phrases": [
-        [
-          "pressure",
-          "мигрантлар оқими ошиб"
-        ]
-      ],
-      "details": {
-        "rules_version": "EARLY_WARNING_REVIEW_V1_3_4_FINAL",
-        "review_reason": "STRUCTURED_MIGRATION_EARLY_WARNING",
-        "actuality_reason": "ASSERTED_MIGRATION_FLOW_TREND",
-        "context_matches": [
-          "мигрантлар"
-        ],
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": []
-      }
-    },
-    {
       "collected_post_id": 2833,
       "source": "TELEGRAM",
       "source_post_id": "1173707041:9078",
@@ -1910,7 +1070,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1944,7 +1104,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -1978,7 +1138,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2012,7 +1172,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2046,7 +1206,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": true,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "EARLY_WARNING",
       "rejection_reason": null,
@@ -2066,91 +1226,11 @@
         ]
       ],
       "details": {
-        "rules_version": "EARLY_WARNING_REVIEW_V1_3_4_FINAL",
+        "rules_version": "EARLY_WARNING_REVIEW_V1_3_5_FINAL",
         "review_reason": "STRUCTURED_MIGRATION_EARLY_WARNING",
         "actuality_reason": "CONCRETE_EVENT_ASSERTION",
         "context_matches": [
           "мигрантёныша"
-        ],
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": []
-      }
-    },
-    {
-      "collected_post_id": 2840,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10457",
-      "author": "migrantlar24",
-      "published_at": "2026-07-14T15:00:02",
-      "url": "https://t.me/migrantlar24/10457",
-      "language": null,
-      "text": "Россияда меҳнат стажи йўқ мигрантлар ҳомиладорлик нафақасидан маҳрум бўлиши мумкин\n\nРоссияда ҳомиладорлик ва туғруқ бўйича нафақа олиш тартибини ўзгартириш таклиф қилинди. Янги қонун лойиҳасига кўра, мажбурий ижтимоий суғурта тизимига камида бир йил давомида бадал тўлаган шахсларгина ушбу нафақани олиш ҳуқуқига эга бўлади.\n\nТашаббус муаллифларининг таъкидлашича, бу ўзгаришлар Россия фуқароларига ҳам, чет элликларга ҳам бир хил татбиқ этилади. Агар қонун қабул қилинса, меҳнат стажи етарли бўлмаган мигрантлар ҳомиладорлик ва туғруқ нафақасини ола олмайди.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 4
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
-      "collected_post_id": 2839,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10460",
-      "author": "migrantlar24",
-      "published_at": "2026-07-14T16:40:02",
-      "url": "https://t.me/migrantlar24/10460",
-      "language": null,
-      "text": "Ханти-Манси автоном округида мигрантларга қарши йирик рейд ўтказилди\n\nРоссиянинг Ханти-Манси автоном округида ҳуқуқни муҳофаза қилувчи органлар мигрантларга қарши кенг кўламли рейд ўтказди. Текширувлар давомида юзлаб хориж фуқароларининг ҳужжатлари кўздан кечирилди.\n\nРейд натижасида миграция қонунчилигини бузган бир қатор шахслар аниқланган. Уларга нисбатан маъмурий чоралар кўрилмоқда, айримлари эса Россиядан чиқариб юборилиши мумкин.\n\nШунингдек, текширувлар давомида ноқонуний меҳнатдан фойдаланган иш берувчилар ҳам назоратга олиниб, уларга нисбатан тегишли чоралар кўрилиши билдирилган.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": true,
-        "collection_count": 4
-      },
-      "final_status": "EARLY_WARNING",
-      "rejection_reason": null,
-      "primary_signal": "ENFORCEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ENFORCEMENT_EARLY_WARNING",
-      "event_type": null,
-      "confidence": 0.62,
-      "score": 6.0,
-      "matched_groups": [
-        "ENFORCEMENT"
-      ],
-      "matched_phrases": [
-        [
-          "enforcement",
-          "рейд"
-        ]
-      ],
-      "details": {
-        "rules_version": "EARLY_WARNING_REVIEW_V1_3_4_FINAL",
-        "review_reason": "STRUCTURED_MIGRATION_EARLY_WARNING",
-        "actuality_reason": "CONCRETE_EVENT_ASSERTION",
-        "context_matches": [
-          "мигрантларга"
         ],
         "operational_categories": [],
         "matched_operational_phrases": [],
@@ -2172,7 +1252,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 4
+        "collection_count": 5
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2206,41 +1286,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
-      "collected_post_id": 2255,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10474",
-      "author": "migrantlar24",
-      "published_at": "2026-07-15T11:35:24",
-      "url": "https://t.me/migrantlar24/10474",
-      "language": null,
-      "text": "Белоруссияда ўзбек мигрантлар билан вазият бошқача экан. Видео тарқатган бола мурожаат билан чиқди.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2274,7 +1320,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2308,7 +1354,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2329,46 +1375,37 @@
       }
     },
     {
-      "collected_post_id": 2253,
+      "collected_post_id": 2266,
       "source": "TELEGRAM",
-      "source_post_id": "1604168769:10484",
-      "author": "migrantlar24",
-      "published_at": "2026-07-15T13:30:03",
-      "url": "https://t.me/migrantlar24/10484",
+      "source_post_id": "1172585182:6705",
+      "author": "epskorea1",
+      "published_at": "2026-07-16T06:03:35",
+      "url": "https://t.me/epskorea1/6705",
       "language": null,
-      "text": "Сургутдаги масжидда миграция рейди: 180 дан ортиқ хорижлик текширилди\n\nРоссиянинг Сургут шаҳрида ҳуқуқ-тартибот идоралари миграция қонунчилигига риоя этилишини текшириш мақсадида маҳаллий масжидда рейд ўтказди.\n\nТекширув давомида 182 нафар хорижлик фуқаро полиция бўлимига олиб борилиб, уларнинг шахси аниқланди, ҳужжатлари текширилди, бармоқ излари олинди ва суратга туширилди.\n\nНатижада уч нафар хорижлик Россия ҳудудида қонуний яшаш ҳуқуқини тасдиқлай олмаган. Уларга нисбатан Россиядан мажбурий чиқариб юбориш чораси кўрилади. Қолган текширилган шахсларнинг ҳужжатларида қоидабузарлик аниқланмаган.",
+      "text": "🌟🤝🌟 Яна 114 нафар юртдошимиз Жанубий Кореяда меҳнат фаолиятини бошлади\n\n Жўнаб кетганларнинг 100 нафари ишлаб чиқариш (Manufacturing) соҳасида меҳнат фаолиятини олиб боради. Уларнинг 49 нафари Улсан шаҳри учун малакали кадрлар тайёрлаш лойиҳаси битирувчилари ҳисобланади.\n\n🏨 Шунингдек, ҳамюртларимизнинг 12 нафари хизмат кўрсатиш соҳасида, 2 нафари эса қишлоқ хўжалиги йўналишида фаолият олиб боради.\n®uzmigration\n\n2026 ishlab chiqarish imtixondan o‘tganlar\n\nTanlov va shartnoma guruhi \n2026Koreyaga ketuvchilar\n2026 Servis1 guruh\n \n \n \nKoreyaga borib kelganlar\nKoreyaga borib kelganlar 2025\nIshlab chiqarish 2024",
       "database_state": {
         "is_noise": false,
-        "is_operational": true,
-        "operational_confidence": 0.7,
+        "is_operational": false,
+        "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 3
       },
-      "final_status": "OPERATIONAL",
-      "rejection_reason": null,
+      "final_status": "NON_OPERATIONAL",
+      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
       "primary_signal": null,
-      "event_type": "GENERAL_DISCUSSION",
-      "confidence": null,
+      "event_type": null,
+      "confidence": 0.1,
       "score": null,
       "matched_groups": [],
       "matched_phrases": [],
       "details": {
-        "matched_signals": [],
-        "operational_categories": [
-          "ARREST_DETENTION"
-        ],
-        "matched_operational_phrases": [
-          "рейди: 180 дан ортиқ хорижлик",
-          "миграция рейди"
-        ],
-        "primary_region": "GLOBAL",
-        "matched_regions": [
-          "GLOBAL"
-        ],
-        "primary_location": null,
-        "country": null,
-        "latitude": null,
-        "longitude": null
+        "operational_categories": [],
+        "matched_operational_phrases": [],
+        "non_operational_categories": [],
+        "matched_non_operational_phrases": [],
+        "influence_review_reason": null,
+        "early_warning_review_reason": "NO_HUMAN_MIGRATION_CONTEXT",
+        "early_warning_actuality_reason": "NO_HUMAN_MIGRATION_CONTEXT"
       }
     },
     {
@@ -2385,7 +1422,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2419,7 +1456,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2453,109 +1490,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_HUMAN_MIGRATION_CONTEXT",
-        "early_warning_actuality_reason": "NO_HUMAN_MIGRATION_CONTEXT"
-      }
-    },
-    {
-      "collected_post_id": 2262,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10506",
-      "author": "migrantlar24",
-      "published_at": "2026-07-16T13:00:02",
-      "url": "https://t.me/migrantlar24/10506",
-      "language": null,
-      "text": "Курган университетидаги миграция иши бўйича айбланувчиларга 12 йилгача қамоқ сўралди\n\nРоссиянинг Курган вилоятида прокуратура ноқонуний миграцияни ташкил этиш иши бўйича айбланаётганларга 10 йилдан 12 йилгача озодликдан маҳрум қилиш жазосини сўради.\n\nШунингдек, университет ходимларини таълим соҳасида ишлаш ҳуқуқидан маҳрум қилиш, хорижлик айбланувчиларга эса 500 минг рублгача жарима тайинлаш таклиф қилинган.\n\nТергов маълумотларига кўра, хорижликлар ўз ватандошларини ўқиш баҳонасида университет филиалига жалб қилган, айрим ўқитувчилар эса қабул жараёнида уларга ёрдам берган.\n\nАйтилишича, талабалар асосан ишлаган, аммо зарур меҳнат рухсатномаларига эга бўлмаган. Айбланувчилар ўз айбини тан олмаган.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
-      "collected_post_id": 2261,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10510",
-      "author": "migrantlar24",
-      "published_at": "2026-07-16T16:29:08",
-      "url": "https://t.me/migrantlar24/10510",
-      "language": null,
-      "text": "Агар тақиқ запрет, депортация, патент ёки регистрация ҳолатини кафолатли ва тез текширтиришни истасангиз, @migrantlar24_servis га мурожаат қилинг. \n\nХизматлар пуллик, нархлар хизмат турига қараб фарқланади.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_HUMAN_MIGRATION_CONTEXT",
-        "early_warning_actuality_reason": "NO_HUMAN_MIGRATION_CONTEXT"
-      }
-    },
-    {
-      "collected_post_id": 2273,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10538",
-      "author": "migrantlar24",
-      "published_at": "2026-07-17T12:30:09",
-      "url": "https://t.me/migrantlar24/10538",
-      "language": null,
-      "text": "📍Владивостокда оғир жароҳат олган ўзбекистонлик Ватанга қайтарилди\n\n15 июль куни Миграция агентлигининг Россиядаги Ваколатхонаси ва Владивостокдаги Бош консулхона ҳамкорлигида меҳнат фаолияти вақтида бахтсиз ҳодисага учраб оғир тан жароҳати олган ҳамюртимиз шифокорлар назорати остида Ўзбекистонга қайтарилди.\n\n❗️Миграция агентлиги хорижда меҳнат қилаётган фуқароларни хавфсизлик қоидаларига қатъий риоя қилишга чақирди.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2589,7 +1524,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2607,83 +1542,6 @@
         "influence_review_reason": null,
         "early_warning_review_reason": "NO_HUMAN_MIGRATION_CONTEXT",
         "early_warning_actuality_reason": "NO_HUMAN_MIGRATION_CONTEXT"
-      }
-    },
-    {
-      "collected_post_id": 2270,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10542",
-      "author": "migrantlar24",
-      "published_at": "2026-07-17T16:56:11",
-      "url": "https://t.me/migrantlar24/10542",
-      "language": null,
-      "text": "АҚШ: трак ҳайдовчилар тақдири\n\n🇺🇸 Трамп: Иммигрант трак ҳайдовчиларни чеклаб, америкалик фахрийларга алмаштирамиз\n\nТрамп Пенсилванияга сафари чоғида унинг администрацияси муҳим чекловлар устида ишлаётганини маълум қилди. Президентга кўра, бундан буёғига иммигрант трак ҳайдовчиларининг АҚШга кириб келиши ва борларининг ҳам ишлаши чекланади. Уларнинг ўрнини америкалик фахрий ҳарбийлар эгаллайди.\n“Менинг маъмуриятим тарихий чораларни кўради, чунки баъзи ҳайдовчилар йўл белгиларини ҳам ўқий олмайди. Уларнинг кўпчилиги гиёҳванд моддалар ёки алкоголь таъсирида юради. Биз уларни олиб ташлаймиз, кейин эса фахрийлар ўқитилиб, юк ташиш ишларига ўтказилади”, дейди АҚШ президент",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
-      "collected_post_id": 2281,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10550",
-      "author": "migrantlar24",
-      "published_at": "2026-07-18T13:02:01",
-      "url": "https://t.me/migrantlar24/10550",
-      "language": null,
-      "text": "🇷🇺 Омскда мигрантларни сохта меҳнат шартномаси орқали расмийлаштирган шахс қўлга олинди\n\nФХХ маълумотига кўра, у Telegram орқали сохта меҳнат шартномаларини 15–23 минг рубль эвазига расмийлаштириб, мигрантларга Россияда ноқонуний қолишга ёрдам берган.\n\nУнга нисбатан жиноят иши қўзғатилди, тергов давом этмоқда.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.6,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "WEAK_COORDINATION_WITHOUT_MIGRATION_OPERATIONAL_CONTEXT",
-      "primary_signal": null,
-      "event_type": "COORDINATION",
-      "confidence": null,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [
-        [
-          "COORDINATION",
-          "Telegram"
-        ]
-      ],
-      "details": {
-        "operational_categories": [
-          "COORDINATION_ADVICE"
-        ],
-        "matched_operational_phrases": [
-          "Telegram"
-        ],
-        "analytical_cues": [],
-        "current_cues": [],
-        "non_assertive_cues": [],
-        "primary_region": "GLOBAL",
-        "primary_location": null
       }
     },
     {
@@ -2700,7 +1558,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2721,40 +1579,6 @@
       }
     },
     {
-      "collected_post_id": 2279,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10551",
-      "author": "migrantlar24",
-      "published_at": "2026-07-18T15:00:04",
-      "url": "https://t.me/migrantlar24/10551",
-      "language": null,
-      "text": "🇷🇺 Россияда меҳнат мигрантлари учун талаблар кучайтирилди\n\nФедерация Кенгаши маъқуллаган қонунга кўра, мигрантнинг расмий даромади ўзи ва қарамоғидаги оила аъзоларини таъминлаш учун етарли бўлиши шарт. Акс ҳолда, патенти бекор қилиниши ёки узайтирилмаслиги мумкин.\n\nШунингдек, ФНС мигрантларнинг даромади ҳақидаги маълумотларни ИИВга автоматик узатади. Янги тартибнинг асосий қисми 2027 йилдан кучга киради.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
       "collected_post_id": 2504,
       "source": "TELEGRAM",
       "source_post_id": "1980940690:15432",
@@ -2768,7 +1592,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": true,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "EARLY_WARNING",
       "rejection_reason": null,
@@ -2788,7 +1612,7 @@
         ]
       ],
       "details": {
-        "rules_version": "EARLY_WARNING_REVIEW_V1_3_4_FINAL",
+        "rules_version": "EARLY_WARNING_REVIEW_V1_3_5_FINAL",
         "review_reason": "STRUCTURED_MIGRATION_EARLY_WARNING",
         "actuality_reason": "CONCRETE_EVENT_ASSERTION",
         "context_matches": [
@@ -2814,7 +1638,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2848,7 +1672,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2882,7 +1706,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2916,7 +1740,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -2937,40 +1761,6 @@
       }
     },
     {
-      "collected_post_id": 2286,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10574",
-      "author": "migrantlar24",
-      "published_at": "2026-07-19T15:30:03",
-      "url": "https://t.me/migrantlar24/10574",
-      "language": null,
-      "text": "🇷🇺 Владимир вилоятида мигрантларга нисбатан салбий муносабат икки баравар ошган\n\nСўнгги бир йил ичида Владимир вилояти аҳолиси орасида мигрантларга нисбатан салбий муносабат билдирганлар улуши қарийб икки бараварга ошган. Бу ижтимоий сўров натижаларида қайд этилган.\n\nСўровда иштирок этганларнинг аксарияти миграция устидан назоратни янада кучайтириш тарафдори эканини билдирган.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_CURRENT_EVENT_EVIDENCE",
-        "early_warning_actuality_reason": "NO_CURRENT_EVENT_EVIDENCE"
-      }
-    },
-    {
       "collected_post_id": 2284,
       "source": "TELEGRAM",
       "source_post_id": "1173707041:9122",
@@ -2984,7 +1774,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3005,40 +1795,6 @@
       }
     },
     {
-      "collected_post_id": 2299,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10581",
-      "author": "migrantlar24",
-      "published_at": "2026-07-20T07:00:02",
-      "url": "https://t.me/migrantlar24/10581",
-      "language": null,
-      "text": "Санкт-Петербургда мигрант барни ёқиб юбормоқчи бўлди\n\nСанкт-Петербургда 42 ёшли Марказий Осиёлик эркак бар ходимлари билан жанжаллашганидан сўнг қасос олиш мақсадида бензин қуйилган канистр билан қайтиб келиб, бинога ўт қўйишга уринган.\n\nҲодиса жойига етиб келган полиция уни қўлга олди. Унга нисбатан Россия Жиноят кодексининг безорилик моддаси бўйича жиноят иши қўзғатилди.\n\nҲозирда эҳтиёт чораси масаласи кўриб чиқилмоқда.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "CONCRETE_ACTION_WITH_QUANTITY",
-        "early_warning_actuality_reason": "CONCRETE_ACTION_WITH_QUANTITY"
-      }
-    },
-    {
       "collected_post_id": 2298,
       "source": "TELEGRAM",
       "source_post_id": "1173707041:9123",
@@ -3052,7 +1808,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3086,7 +1842,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3120,41 +1876,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_HUMAN_MIGRATION_CONTEXT",
-        "early_warning_actuality_reason": "NO_HUMAN_MIGRATION_CONTEXT"
-      }
-    },
-    {
-      "collected_post_id": 2295,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10585",
-      "author": "migrantlar24",
-      "published_at": "2026-07-20T12:12:47",
-      "url": "https://t.me/migrantlar24/10585",
-      "language": null,
-      "text": "🇺🇿 Ўзбекистонлик шифокорлар Чехияда ишлаш имкониятига эга бўлади\n\nЎзбекистон Миграция агентлиги ва Чехия томони ўртасида эришилган келишувга кўра, ўзбекистонлик шифокорлар Чехиянинг давлат ва хусусий клиникаларида ишлаш учун тайёрланади.\n\nНомзодларга чех тили ўргатилади, дуал таълим дастурлари йўлга қўйилади ҳамда диплом ва малакани тан олиш жараёнлари соддалаштирилади. Шунингдек, юқори малакали лавозимларга ишга жойлашиш имконияти яратилади.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3188,7 +1910,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3222,7 +1944,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 6
+        "collection_count": 7
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3256,7 +1978,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 6
+        "collection_count": 7
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3277,6 +1999,40 @@
       }
     },
     {
+      "collected_post_id": 2308,
+      "source": "TELEGRAM",
+      "source_post_id": "1172585182:6716",
+      "author": "epskorea1",
+      "published_at": "2026-07-21T04:50:30",
+      "url": "https://t.me/epskorea1/6716",
+      "language": null,
+      "text": "Ushbu xabar bo‘yicha Skill test imtihoni bo‘ladigan manzil va imtihonga kirish qoidalari haqida batafsil\n\n🇰🇷 2026-yil 6–23-aprel kunlari o‘tkazilgan EPS-TOPIK imtihonidan (ishlab chiqarish va xizmat ko‘rsatish-1 yo‘nalishlari) muvaffaqiyatli o‘tgan nomzodlar uchun 28–31-iyul kunlari Malaka imtihoni (Skill Test) o‘tkaziladi.\n\n📌 Har bir nomzod o‘zining imtihon sanasi va aniq vaqtini quyidagi havolalar orqali bilib olishi mumkin.\n\n👥 Imtihonda ishtirok etadigan nomzodlar:\n🔹 Ishlab chiqarish — 1 653 nafar\n🔹 Xizmat ko‘rsatish-1 — 225 nafar\n\n📍Manzil: Toshkent shahri, Yashnobod tumani, Parkent ko‘chasi, 331-uy.\n\n❗️Imtihonga kelayotganda quyidagi hujjatlarni albatta olib keling:\n• Xorijga chiqish pasporti(original)\n\n❗️10–12-iyul kunlari kasbiy malakani baholash uchun talab etilgan hujjatlarni to‘g‘ri yuborgan nomzodlar imtihon kuni barcha hujjatlarning asl nusxalarini taqdim etishlari shart. Aks holda, imtihon natijalari avtomatik ravishda bekor qilinadi.\n\n⚠️ Imtihon ishtirokchilari uchun muhim ma’lumotlar:\n\n1️⃣ Belgilangan vaqtdan kamida 1 soat oldin manzilga yetib kelish va ro‘yxatdan o‘tish shart.\n\n2️⃣ HRD Korea talablariga muvofiq, Skill Test bo‘yicha qayta imtihon yoki apellyatsiya o‘tkazilmaydi.\n\n3️⃣ Imtihon vaqtida mobil telefon, elektron soat, shpargalka va boshqa elektron qurilmalardan foydalanish qat’iyan taqiqlanadi.\n\n4️⃣ Imtihon qoidalarini buzgan nomzodlarning natijalari bekor qilinadi hamda ular keyingi testlarda ishtirok etish huquqidan 4-yil muddatga mahrum qilinadi.\n⚠️ Muhim eslatma: Migratsiya agentligi imtihondan muvaffaqiyatli o‘tgan fuqarolarning Koreya Respublikasida mehnat faoliyatini amalga oshirishini kafolatlamaydi.\n®uzmigration\n\n2026 ishlab chiqarish imtixondan o‘tganlar\n\nTanlov va shartnoma guruhi \n2026Koreyaga ketuvchilar\n2026 Servis1 guruh\n \n \n \nKoreyaga borib kelganlar\nKoreyaga borib kelganlar 2025\nIshlab chiqarish 2024",
+      "database_state": {
+        "is_noise": false,
+        "is_operational": false,
+        "operational_confidence": 0.1,
+        "influence_detected": false,
+        "collection_count": 3
+      },
+      "final_status": "NON_OPERATIONAL",
+      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
+      "primary_signal": null,
+      "event_type": null,
+      "confidence": 0.1,
+      "score": null,
+      "matched_groups": [],
+      "matched_phrases": [],
+      "details": {
+        "operational_categories": [],
+        "matched_operational_phrases": [],
+        "non_operational_categories": [],
+        "matched_non_operational_phrases": [],
+        "influence_review_reason": null,
+        "early_warning_review_reason": "NO_HUMAN_MIGRATION_CONTEXT",
+        "early_warning_actuality_reason": "NO_HUMAN_MIGRATION_CONTEXT"
+      }
+    },
+    {
       "collected_post_id": 2307,
       "source": "TELEGRAM",
       "source_post_id": "1173707041:9133",
@@ -3290,7 +2046,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3324,7 +2080,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3342,74 +2098,6 @@
         "influence_review_reason": null,
         "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
         "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
-      "collected_post_id": 2305,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10598",
-      "author": "migrantlar24",
-      "published_at": "2026-07-21T11:00:03",
-      "url": "https://t.me/migrantlar24/10598",
-      "language": null,
-      "text": "Илғор мигрантларимиз ҳақида қисқача.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
-      "collected_post_id": 2304,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10599",
-      "author": "migrantlar24",
-      "published_at": "2026-07-21T11:30:08",
-      "url": "https://t.me/migrantlar24/10599",
-      "language": null,
-      "text": "Йўл ҳақини тўлашни унутманг!\n\nАйниқса, Москвадаги Сахарово миграция марказига боришда ва қайтишда жамоат транспортидан фойдалансангиз, йўл ҳақини албатта тўланг. Чунки автобусдан тушишда йўловчилар текширилиши ва йўл ҳақини тўламаганлар 5 минг рубль жаримага тортилиши мумкин.\n\n⚠️ Автобусда одам кўп бўлса ҳам, «Тройка» картаси ёки банк картаси орқали қилган тўловингиз муваффақиятли амалга ошганини текшириб олинг.\n\nАкс ҳолда, бир неча дақиқалик эътиборсизлик сизга 5 минг рублга тушиши мумкин! 😬",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_HUMAN_MIGRATION_CONTEXT",
-        "early_warning_actuality_reason": "NO_HUMAN_MIGRATION_CONTEXT"
       }
     },
     {
@@ -3426,7 +2114,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3462,7 +2150,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 6
+        "collection_count": 7
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3496,7 +2184,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3530,7 +2218,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3548,40 +2236,6 @@
         "influence_review_reason": null,
         "early_warning_review_reason": "NO_HUMAN_MIGRATION_CONTEXT",
         "early_warning_actuality_reason": "NO_HUMAN_MIGRATION_CONTEXT"
-      }
-    },
-    {
-      "collected_post_id": 2314,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10625",
-      "author": "migrantlar24",
-      "published_at": "2026-07-22T15:00:18",
-      "url": "https://t.me/migrantlar24/10625",
-      "language": null,
-      "text": "Россияда баъзи ҳолатларда мигрантларга нисбатан ёмон муносабатда бўлишади. Буни ҳамма билиб, кўриб турибди, лекин...",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
       }
     },
     {
@@ -3593,40 +2247,6 @@
       "url": "https://t.me/migranty_RUS/15481",
       "language": null,
       "text": "Замечательное из Сургута - там целый жилой комплекс назвали «Джихадом». \n\nВсе дома в кадре населены исключительно кишлачниками и замоташками, русских там нет от слова совсем. Рядом с ЖК огромный ТЦ Аура - тот ещё ваххабитник. Типа Садовода, только ещё хуже. Причём на одном ЖК понаехавшие не остановились - из-за того, что в районе осело огромное число чужаков, местные распродают квартиры и уезжают в далёкие дали ото всей это дружбанародной компании. Замещающая миграция даёт свои плоды и Сургут - это лишь первая ласточка.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 6
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_HUMAN_MIGRATION_CONTEXT",
-        "early_warning_actuality_reason": "NO_HUMAN_MIGRATION_CONTEXT"
-      }
-    },
-    {
-      "collected_post_id": 2312,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10628",
-      "author": "migrantlar24",
-      "published_at": "2026-07-22T18:48:43",
-      "url": "https://t.me/migrantlar24/10628",
-      "language": null,
-      "text": "\"MАХ\" иловасидаги энг сара ўзбек тилидаги каналлар рўйхати. \n\n👉 Geosiyosat\n\n👉 Migrantlar24\n\n👉 PATRUL.UZ\n\n👉 Tezkor Yangiliklar\n\n👉 O'zbekiston 24\n\n👉 QORAXABAR\n\n👉 Shifo.uz\n\n👉 SHOHONA KULGU\n\n👉 Valyuta Kurslari\n\n👉 Sara Xabarlar\n\n👉 O'tmishga Sayohat\n\n👉 Trend Videolar\n\n👉 Futbol.uz\n\n👉 Rus tlini o'rganamiz\n\n👉 Huquqiy Axborot",
       "database_state": {
         "is_noise": false,
         "is_operational": false,
@@ -3666,7 +2286,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3700,7 +2320,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": true,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "EARLY_WARNING",
       "rejection_reason": null,
@@ -3724,7 +2344,7 @@
         ]
       ],
       "details": {
-        "rules_version": "EARLY_WARNING_REVIEW_V1_3_4_FINAL",
+        "rules_version": "EARLY_WARNING_REVIEW_V1_3_5_FINAL",
         "review_reason": "STRUCTURED_MIGRATION_EARLY_WARNING",
         "actuality_reason": "CONCRETE_EVENT_ASSERTION",
         "context_matches": [
@@ -3734,74 +2354,6 @@
         "matched_operational_phrases": [],
         "non_operational_categories": [],
         "matched_non_operational_phrases": []
-      }
-    },
-    {
-      "collected_post_id": 2322,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10648",
-      "author": "migrantlar24",
-      "published_at": "2026-07-23T14:30:30",
-      "url": "https://t.me/migrantlar24/10648",
-      "language": null,
-      "text": "⚡️ EPS-TOPIKдан ўтганлар диққатига! Skill Test санасини билиб олинг!\n\n🇰🇷 2026 йил 6–23 апрель кунлари EPS-TOPIK имтиҳонидан муваффақиятли ўтган номзодлар учун Skill Test 28–31 июль кунлари ўтказилади.\n\n👥 Иштирокчилар:\n🔹 Ишлаб чиқариш — 1 653 нафар\n\n🔹 Хизмат кўрсатиш-1 — 225 нафар\n\n📍 Манзил: Тошкент шаҳри, Яшнобод тумани, Паркент кўчаси, 331-уй.\n\n❗️Имтиҳонга хорижга чиқиш паспортининг асл нусхасини олиб келиш шарт.\n\n⏰ Белгиланган вақтдан камида 1 соат олдин етиб келиш керак.\n\n⚠️ Телефон, электрон соат ва шпаргалкадан фойдаланиш тақиқланади. Қоидаларни бузганлар 4 йилга кейинги тестларда иштирок этиш ҳуқуқидан маҳрум қилинади.\n\n❗️Миграция агентлиги имтиҳондан ўтган фуқароларнинг Кореяда ишлашини кафолатламайди.\n\n🍀 Барча номзодларга омад!",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_HUMAN_MIGRATION_CONTEXT",
-        "early_warning_actuality_reason": "NO_HUMAN_MIGRATION_CONTEXT"
-      }
-    },
-    {
-      "collected_post_id": 2321,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10651",
-      "author": "migrantlar24",
-      "published_at": "2026-07-23T16:30:07",
-      "url": "https://t.me/migrantlar24/10651",
-      "language": null,
-      "text": "🇷🇺 Россияда мигрантларга 80 ёшдан ошган фуқароларга уйланиш тақиқланди\n\nДавлат думаси 80 ёшдан ошган россиялик аёллар билан сохта никоҳ орқали Россия фуқаролигини олиш имкониятини бекор қилувчи қонунни қабул қилди.\n\nДавлат думаси раиси Вячеслав Володиннинг айтишича, янги қоидаларга кўра, судланганлиги бекор қилинмаган ёки олиб ташланмаган чет эл фуқароларига ҳам ВНЖ ва РВП бериш тақиқланади.\n\nБундан ташқари, мигрантлар яшаб турган мамлакатида судланганлиги йўқлиги ҳақидаги янги маълумотномани тақдим этиши шарт бўлади.\n\nМанба: Давлат думаси раиси Вячеслав Володиннинг баёноти",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_CURRENT_EVENT_EVIDENCE",
-        "early_warning_actuality_reason": "NO_CURRENT_EVENT_EVIDENCE"
       }
     },
     {
@@ -3818,7 +2370,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3852,7 +2404,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -3873,108 +2425,6 @@
       }
     },
     {
-      "collected_post_id": 2328,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10677",
-      "author": "migrantlar24",
-      "published_at": "2026-07-24T12:45:26",
-      "url": "https://t.me/migrantlar24/10677",
-      "language": null,
-      "text": "🇪🇺 Европа Иттифоқида ишлаётган мигрантлар сони рекорд даражага етди\n\n2025 йилда Европа Иттифоқи давлатларида мигрантларнинг бандлик даражаси 68,2 фоизга етган. Бу кузатувлар тарихидаги энг юқори кўрсаткич ҳисобланади.\n\n🇲🇹 Мальта — 83,7%\n🇨🇿 Чехия — 77,3%\n🇮🇪 Ирландия — 76,1%\n🇩🇪 Германия — 66,1%\n\nЕвропа Иттифоқига кирмайдиган давлатлардан келган мигрантлар орасида иш билан таъминланганлар улуши 2017 йилдаги 59,4 фоиздан 2025 йилда 66 фоизга ошган.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
-      "collected_post_id": 2326,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10682",
-      "author": "migrantlar24",
-      "published_at": "2026-07-24T17:30:05",
-      "url": "https://t.me/migrantlar24/10682",
-      "language": null,
-      "text": "🇷🇺 Россияда мигрантлардан бюджетга тушум 40 фоизга ошган\n\nРоссия Давлат думаси раиси Вячеслав Володиннинг айтишича, миграция соҳасида қабул қилинган янги қонунлар натижасида ишлаш учун Россияга келаётган мигрантлардан давлат бюджетига тушум 40 фоизга ошган.\n\nУнинг таъкидлашича, миграция соҳасида тартиб ўрнатилиб, ноқонуний миграцияга қарши чоралар кучайтирилган ва қонунбузарликлар учун жавобгарлик оширилган.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_CURRENT_EVENT_EVIDENCE",
-        "early_warning_actuality_reason": "NO_CURRENT_EVENT_EVIDENCE"
-      }
-    },
-    {
-      "collected_post_id": 2336,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10688",
-      "author": "migrantlar24",
-      "published_at": "2026-07-25T07:00:10",
-      "url": "https://t.me/migrantlar24/10688",
-      "language": null,
-      "text": "🇷🇺 Мария Воропаева: Мигрантларга берилаётган барча ижтимоий ёрдамни зудлик билан тўхтатиш керак\n\nЛДПРдан Москва шаҳар думаси депутати Мария Воропаева Давлат думасида бўлиб ўтган «Россияда аёлларни қўллаб-қувватлаш» очиқ мулоқотида ҳукуматни ЛДПР таклифларини қўллаб-қувватлашга ва мигрантларни ижтимоий ёрдам чораларидан тўлиқ чиқариб ташлашга чақирди.\n\nУнинг таъкидлашича, Россия оилаларига туғилиш кўрсаткичини ошириш мақсадида берилаётган айрим ижтимоий имтиёзлардан мигрант оилалари ҳам фойдаланмоқда. Бу эса давлат бюджетига қўшимча молиявий юк бўлаётганини айтди.\n\n«Хорижликларни қўллаб-қувватлашни тўхтатиш керак. Айримлар Россияда фарзанд кўришни гўё бизнесга айлантириб олган. Россия мигрант аёлларнинг бепул туғруғига катта маблағ сарфлайди, кейин уларга нафақа тўлайди, бепул тиббий хизмат ва таълимдан фойдаланиш имконини беради. Ўз муаммоларимизни ҳал қилгунимизча, буни тўхтатиш адолатли деб ҳисоблаймиз», — деди Мария Воропаева.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_CURRENT_EVENT_EVIDENCE",
-        "early_warning_actuality_reason": "NO_CURRENT_EVENT_EVIDENCE"
-      }
-    },
-    {
       "collected_post_id": 2334,
       "source": "TELEGRAM",
       "source_post_id": "3931921387:4",
@@ -3988,7 +2438,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4022,7 +2472,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4056,7 +2506,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4074,74 +2524,6 @@
         "influence_review_reason": null,
         "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
         "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
-      "collected_post_id": 2342,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10703",
-      "author": "migrantlar24",
-      "published_at": "2026-07-26T11:43:13",
-      "url": "https://t.me/migrantlar24/10703",
-      "language": null,
-      "text": "Ўзбек мигранти экан.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
-      "collected_post_id": 2341,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10713",
-      "author": "migrantlar24",
-      "published_at": "2026-07-26T12:21:03",
-      "url": "https://t.me/migrantlar24/10713",
-      "language": null,
-      "text": "📑⚡️Агарда сизга шундай хабар келган бўлса демак сиз патент олганиздан кегин 2 ойни ичида мехнат фаолиятингиз хақида МВДга уведомления юбормагансиз ва шу сабаб котта эҳтимол патентингиз аннулирован булган.\n\n❗️115 ФЗ бу ерда миграция сохаси буйича назарда тутилган, банк сохаси буйича эмас (банк сохаси буйича хам 115 ФЗ бор “Жиноятчиликдан олинган даромадларни легаллаштиришга ва терроризмни молиялаштиришга қарши курашиш тўғрисида”).\n\n👉Батафсил маълумот олиш учун\n\nМингазов ©",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_HUMAN_MIGRATION_CONTEXT",
-        "early_warning_actuality_reason": "NO_HUMAN_MIGRATION_CONTEXT"
       }
     },
     {
@@ -4158,7 +2540,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 6
+        "collection_count": 7
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4192,7 +2574,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4226,7 +2608,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4260,7 +2642,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4281,40 +2663,6 @@
       }
     },
     {
-      "collected_post_id": 2353,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10730",
-      "author": "migrantlar24",
-      "published_at": "2026-07-27T12:30:05",
-      "url": "https://t.me/migrantlar24/10730",
-      "language": null,
-      "text": "🇷🇺🇮🇳 The Telegraph: Россия ишчи кучи етишмаслигини қоплаш учун Ҳиндистондан меҳнат мигрантларини оммавий жалб қилмоқда.\n\nНашр маълумотларига кўра, Россия иқтисодиётида ҳозир 2,6 миллионга яқин ходим танқислиги мавжуд. Шу сабабли 2025 йилда россиялик иш берувчилар томонидан ҳинд фуқароларига берилган ишлаш рухсатномалари сони 56,5 мингтага етган. Бу кўрсаткич 2021 йилга нисбатан ўн баравардан ҳам кўпроқ ўсган.\n\nЭкспертлар фикрича, амалда Россияга келган ҳиндистонликлар сони расмий рақамлардан анча юқори бўлиши мумкин. 2025 йил охирида Москва ва Нью-Деҳли меҳнат миграцияси бўйича келишув имзолаган бўлиб, унга кўра 2026 йилда ҳинд ишчилари учун қарийб 72 мингта виза ажратилиши режалаштирилган. Таҳлилчилар бу жараённи Россиядаги демографик муаммолар ва меҳнат бозоридаги кадрлар танқислигини юмшатишга қаратилган чора сифатида баҳоламоқда.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
       "collected_post_id": 2352,
       "source": "TELEGRAM",
       "source_post_id": "2769077622:182",
@@ -4328,7 +2676,7 @@
         "is_operational": false,
         "operational_confidence": 0.6,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "WEAK_COORDINATION_WITHOUT_MIGRATION_OPERATIONAL_CONTEXT",
@@ -4373,41 +2721,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_HUMAN_MIGRATION_CONTEXT",
-        "early_warning_actuality_reason": "NO_HUMAN_MIGRATION_CONTEXT"
-      }
-    },
-    {
-      "collected_post_id": 2348,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10733",
-      "author": "migrantlar24",
-      "published_at": "2026-07-27T16:39:55",
-      "url": "https://t.me/migrantlar24/10733",
-      "language": null,
-      "text": "Миграция иши устидан суд бошланмоқда\n\n90 миллион АҚШ доллари миқдорида зарар кўрилгани айтилаётган Корея иши бўйича суд бошланмоқда. Иш 29 июль куни ЖИБ Бектемир тумани судида судья Дадахонова раислигида кўрила бошлайди. \n\nИш тергови Бош прокуратура томонидан олиб борилган. \n\nСудланувчилар: \n\nУЗАҚОВ ГАНЧАР УММАТ ЎҒЛИ\n(210-модда 3-қисми а-банди, б-банди (Пора олиш), 243-модда (Жиноий фаолиятдан олинган даромадларни легаллаштириш), 301-модда 1-қисми (Ҳокимиятни суиистеъмол қилиш, ҳокимият ваколатидан ташқарига чиқиш ёки ҳокимият ҳаракатсизлиги));\n\nШАРИКСИЕВ ТИМУР БАДРИДИНОВИЧ\n(210-модда 3-қисми а-банди, б-банди (Пора олиш), 243-модда (Жиноий фаолиятдан олинган даромадларни легаллаштириш), 301-модда 1-қисми (Ҳокимиятни суиистеъмол қилиш, ҳокимият ваколатидан ташқарига чиқиш ёки ҳокимият ҳаракатсизлиги));\n\nАШУРОВ АЛИЖОН ГАНИЕВИЧ\n(210-модда 3-қисми а-банди, б-банди (Пора олиш), 243-модда (Жиноий фаолиятдан олинган даромадларни легаллаштириш), 301-модда 1-қисми (Ҳокимиятни суиистеъмол қилиш, ҳокимият ваколатидан ташқарига чиқиш ёки ҳокимият ҳаракатсизлиги));\n\nСАЙФУТДИНОВ СУХРОБ САНЖАРОВИЧ\n(210-модда 3-қисми а-банди, б-банди (Пора олиш), 243-модда (Жиноий фаолиятдан олинган даромадларни легаллаштириш), 301-модда 1-қисми (Ҳокимиятни суиистеъмол қилиш, ҳокимият ваколатидан ташқарига чиқиш ёки ҳокимият ҳаракатсизлиги))",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4441,41 +2755,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
-      "collected_post_id": 2365,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10753",
-      "author": "migrantlar24",
-      "published_at": "2026-07-28T11:00:22",
-      "url": "https://t.me/migrantlar24/10753",
-      "language": null,
-      "text": "Отасига тоғдай ваъдалар бериб, Россияга ишлаш учун кетган ўғил бир ой ўтар-ўтмас қайтиб келибди. Ота ҳам...\nРоссияга кетиш осон, аммо у ерда ишлаш, яшаш ва пул топиш ҳар доим ҳам кутилганидек бўлавермайди. Бу вайн эса мигрантлар ҳаётидаги аччиқ ҳақиқатни ҳазил орқали кўрсатиб берган.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4509,41 +2789,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_HUMAN_MIGRATION_CONTEXT",
-        "early_warning_actuality_reason": "NO_HUMAN_MIGRATION_CONTEXT"
-      }
-    },
-    {
-      "collected_post_id": 2363,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10755",
-      "author": "migrantlar24",
-      "published_at": "2026-07-28T13:30:02",
-      "url": "https://t.me/migrantlar24/10755",
-      "language": null,
-      "text": "🇷🇺🇺🇿 Ўзбекистонлик дипломатлар Владивостокда молиявий қийинчиликларга дуч келган оилага уйга қайтишда ёрдам беришди\n\nЭр-хотин ва уларнинг уч нафар вояга етмаган фарзанди 25-июл куни Владивосток-Екатеринбург-Тошкент рейси билан Тошкентга жўнатилди.\n\nУларнинг қайтиш харажатлари Ташқи меҳнат миграцияси агентлиги маблағлари ҳисобидан қопланди, деб хабар беради \"Дунё\" АА.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4577,7 +2823,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4611,7 +2857,7 @@
         "is_operational": true,
         "operational_confidence": 0.6,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "HISTORICAL",
       "rejection_reason": "EXPLICIT_PREVIOUS_YEAR",
@@ -4649,7 +2895,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4683,7 +2929,7 @@
         "is_operational": false,
         "operational_confidence": 0.6,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "SMUGGLING_NOUN_WITHOUT_CONCRETE_ACTION",
@@ -4721,7 +2967,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4739,84 +2985,6 @@
         "influence_review_reason": null,
         "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
         "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
-      "collected_post_id": 2373,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10775",
-      "author": "migrantlar24",
-      "published_at": "2026-07-29T14:20:01",
-      "url": "https://t.me/migrantlar24/10775",
-      "language": null,
-      "text": "“Золотая Корона” орқали мигрантлар юборган пуллар фуқароларга одатдаги тартибда берилмоқда — Марказий банк\n\nХалқаро пул ўтказмалари операторининг воситачи банки Европа Иттифоқи санкцияларига тушди. Мазкур чекловлар сабаб Ўзбекистонга маблағ юборишда муаммо кузатилмаётгани маълум қилинди.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
-      "collected_post_id": 2372,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10776",
-      "author": "migrantlar24",
-      "published_at": "2026-07-29T15:20:03",
-      "url": "https://t.me/migrantlar24/10776",
-      "language": null,
-      "text": "🇷🇺 Россияда 11 нафар ноқонуний мигрант ушланди\n\nТатаристоннинг Лениногорск шаҳрида полиция рейсов автобусида ҳужжатлар текширувини ўтказиб, миграция қоидаларини бузган 11 нафар хорижлик фуқарони аниқлади.\n\nУларнинг барчасига нисбатан маъмурий баённомалар расмийлаштирилган. Суд қарорiga кўра, мигрантлар Россия ҳудудидан мажбуран чиқариб юборилади.\n\nДепортацияга қадар улар Татаристон Ички ишлар вазирлигининг вақтинча сақлаш марказида бўлади.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": true,
-        "operational_confidence": 0.8,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "OPERATIONAL",
-      "rejection_reason": null,
-      "primary_signal": null,
-      "event_type": "GENERAL_DISCUSSION",
-      "confidence": null,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "matched_signals": [],
-        "operational_categories": [
-          "ARREST_DETENTION",
-          "DEPORTATION_RETURN"
-        ],
-        "matched_operational_phrases": [
-          "текширувини ўтказиб, миграция қоидаларини бузган 11 нафар хорижлик",
-          "мигрантлар Россия ҳудудидан мажбуран чиқариб юборилади"
-        ],
-        "primary_region": "GLOBAL",
-        "matched_regions": [
-          "GLOBAL"
-        ],
-        "primary_location": null,
-        "country": null,
-        "latitude": null,
-        "longitude": null
       }
     },
     {
@@ -4833,7 +3001,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4854,84 +3022,6 @@
       }
     },
     {
-      "collected_post_id": 2382,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10782",
-      "author": "migrantlar24",
-      "published_at": "2026-07-30T06:10:01",
-      "url": "https://t.me/migrantlar24/10782",
-      "language": null,
-      "text": "🇷🇺 Россиядан чиқариб юборилган мигрантлар сони 65,5% га ошди\n\nДавлат Думаси раиси Вячеслав Володин маълум қилишича, 2026 йилнинг биринчи ярмида Россиядан 43 700 нафар мигрант чиқариб юборилган. Бу ўтган йилнинг шу даврига нисбатан 65,5% кўп.\n\nШунингдек, депортацияга сабаб бўладиган ҳуқуқбузарликлар рўйхати 22 тадан 45 тага кенгайтирилди.\n\nЭнди мигрантлар полиция талабига бўйсунмаслик, жамоат тартибини бузиш, интернетда инсон қадр-қиммати ва жамоат ахлоқига тажовуз қилиш каби ҳолатлар учун ҳам Россиядан чиқариб юборилиши мумкин.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": true,
-        "operational_confidence": 0.75,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "OPERATIONAL",
-      "rejection_reason": null,
-      "primary_signal": null,
-      "event_type": "GENERAL_DISCUSSION",
-      "confidence": null,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "matched_signals": [],
-        "operational_categories": [
-          "DEPORTATION_RETURN"
-        ],
-        "matched_operational_phrases": [
-          "мигрант чиқариб юборилган",
-          "чиқариб юборилган мигрантлар",
-          "чиқариб юборилган мигрантлар"
-        ],
-        "primary_region": "GLOBAL",
-        "matched_regions": [
-          "GLOBAL"
-        ],
-        "primary_location": null,
-        "country": null,
-        "latitude": null,
-        "longitude": null
-      }
-    },
-    {
-      "collected_post_id": 2381,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10783",
-      "author": "migrantlar24",
-      "published_at": "2026-07-30T07:00:01",
-      "url": "https://t.me/migrantlar24/10783",
-      "language": null,
-      "text": "🇷🇺 Иш ўрнига — уруш: мигрантлар фронтга юборилмоқда\n\nРоссияда чет эллик меҳнат мигрантларини Украинага қарши урушга жалб қилиш учун алдаш ва босим ўтказиш схемалари қўлланилаётгани ҳақида хабар берилди.\n\nМаълум қилинишича, мигрантларга Москва вилоятидаги сохта пудрат компаниялари орқали Мариуполь ва Донецкда қурилиш ишлари таклиф қилинади. Иш тугагач эса ваъда қилинган пул ўрнига уларга босим ўтказилиб, ҳужжатлари олиб қўйилаётгани ва Россия армияси билан шартнома тузишга мажбурланаётгани айтилмоқда.\n\nБундай ҳолатларга асосан Марказий Осиё, жумладан Ўзбекистон, Тожикистон ва Туркманистон фуқаролари тушаётгани қайд этилган.\n\n⚠️ Мигрантлар Россияда иш таклифларини қабул қилишда эҳтиёткор бўлиши ва ҳужжатларини ҳеч кимга бермаслиги тавсия этилади.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
       "collected_post_id": 2380,
       "source": "TELEGRAM",
       "source_post_id": "1688600455:1070",
@@ -4945,7 +3035,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -4979,7 +3069,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5013,7 +3103,41 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
+      },
+      "final_status": "NON_OPERATIONAL",
+      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
+      "primary_signal": null,
+      "event_type": null,
+      "confidence": 0.1,
+      "score": null,
+      "matched_groups": [],
+      "matched_phrases": [],
+      "details": {
+        "operational_categories": [],
+        "matched_operational_phrases": [],
+        "non_operational_categories": [],
+        "matched_non_operational_phrases": [],
+        "influence_review_reason": null,
+        "early_warning_review_reason": "NO_HUMAN_MIGRATION_CONTEXT",
+        "early_warning_actuality_reason": "NO_HUMAN_MIGRATION_CONTEXT"
+      }
+    },
+    {
+      "collected_post_id": 2391,
+      "source": "TELEGRAM",
+      "source_post_id": "1172585182:6732",
+      "author": "epskorea1",
+      "published_at": "2026-07-31T05:46:39",
+      "url": "https://t.me/epskorea1/6732",
+      "language": null,
+      "text": "⚠️ МИГРАЦИЯ АГЕНТЛИГИ ОГОҲЛАНТИРАДИ! \n\n🇰🇷 Корея Республикасида E-9 визаси асосида вақтинча ишлаётган юртдошларимизга мурожаат!\n\n▪️Нима сабабдан аксарият фуқаролар Кореяда ишсиз қолмоқда?\n▪️Нолегал мақомга ўтишнинг оқибатлари қандай?\n▪️Кореядан \"депортация\" бўлишга нималар асос бўлади?\n▪️Уч томонлама шартнома (Фуқаро – Кафил – Агентлик) талабларига амал қилиш шартми? \n🎬 Видеода юқоридаги саволларнинг барчасига Миграция агентлиги масъулидан жавоб оламиз\n\n📌Қўшимча савол ва маслаҳатлар учун - Миграция агентлигининг Кореядаги ваколатхонаси манзили: Сеул шаҳри, Жунг-гу, Жангчунгдан-ро, 213. 10-қават, 1003.\n📞02-2285-1341, 02-2285-1342\n📍Локация\n®uzmigration\n\nTanlov va shartnoma guruhi\n2026Koreyaga ketuvchilar\n2026 Servis1 guruh\n\n@epskorea1 🌟\n@ishborkoreya1🌟\n@e8vizasi 🌟\n\nKoreyaga borib kelganlar\nKoreyaga borib kelganlar 2025\nIshlab chiqarish 2024",
+      "database_state": {
+        "is_noise": false,
+        "is_operational": false,
+        "operational_confidence": 0.1,
+        "influence_detected": false,
+        "collection_count": 3
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5047,7 +3171,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5081,7 +3205,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5102,53 +3226,6 @@
       }
     },
     {
-      "collected_post_id": 2389,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10815",
-      "author": "migrantlar24",
-      "published_at": "2026-07-31T12:21:04",
-      "url": "https://t.me/migrantlar24/10815",
-      "language": null,
-      "text": "📊 Россияда меҳнат мигрантлари сони камаймоқда\n\n1 июль ҳолатига Россияда 1,7 млн нафар хорижлик патент асосида ишлаган. Бу ўтган йилнинг шу даврига нисбатан 14,4 фоизга кам.\n\n2026 йилнинг биринчи ярмида Россияга 4,8 млн нафар хорижлик кириб келган. Бу ҳам ўтган йилга қараганда 8 фоизга кам.\nКелганларнинг 72,8 фоизини, яъни 3,6 млн нафарини МДҲ давлатлари фуқаролари ташкил этган.\n\nАйни пайтда Россияда 6,4 млн нафар хорижлик бўлиб турибди. Ўтган йили бу кўрсаткич 7 млн атрофида эди.\n\n📌 Маълумотлар Россия Хавфсизлик кенгаши томонидан келтирилган.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": true,
-        "collection_count": 7
-      },
-      "final_status": "EARLY_WARNING",
-      "rejection_reason": null,
-      "primary_signal": "PRESSURE_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "PRESSURE_EARLY_WARNING",
-      "event_type": null,
-      "confidence": 0.72,
-      "score": 6.75,
-      "matched_groups": [
-        "PRESSURE"
-      ],
-      "matched_phrases": [
-        [
-          "pressure",
-          "мигрантлари сони камаймоқда"
-        ]
-      ],
-      "details": {
-        "rules_version": "EARLY_WARNING_REVIEW_V1_3_4_FINAL",
-        "review_reason": "STRUCTURED_MIGRATION_EARLY_WARNING",
-        "actuality_reason": "QUANTIFIED_MIGRATION_TREND",
-        "context_matches": [
-          "мигрантлари",
-          "хорижлик"
-        ],
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": []
-      }
-    },
-    {
       "collected_post_id": 2388,
       "source": "TELEGRAM",
       "source_post_id": "1688600455:1073",
@@ -5162,41 +3239,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_HUMAN_MIGRATION_CONTEXT",
-        "early_warning_actuality_reason": "NO_HUMAN_MIGRATION_CONTEXT"
-      }
-    },
-    {
-      "collected_post_id": 2386,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10819",
-      "author": "migrantlar24",
-      "published_at": "2026-07-31T16:38:44",
-      "url": "https://t.me/migrantlar24/10819",
-      "language": null,
-      "text": "\"MАХ\" иловасидаги энг сара ўзбек тилидаги каналлар рўйхати. \n\n👉 Geosiyosat\n\n👉 Migrantlar24\n\n👉 PATRUL.UZ\n\n👉 Tezkor Yangiliklar\n\n👉 O'zbekiston 24\n\n👉 QORAXABAR\n\n👉 Shifo.uz\n\n👉 SHOHONA KULGU\n\n👉 Valyuta Kurslari\n\n👉 Sara Xabarlar\n\n👉 O'tmishga Sayohat\n\n👉 Trend Videolar\n\n👉 Futbol.uz\n\n👉 Rus tlini o'rganamiz\n\n👉 Huquqiy Axborot",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5230,7 +3273,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5251,40 +3294,6 @@
       }
     },
     {
-      "collected_post_id": 2400,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10838",
-      "author": "migrantlar24",
-      "published_at": "2026-08-01T11:09:20",
-      "url": "https://t.me/migrantlar24/10838",
-      "language": null,
-      "text": "📊 Россияда мигрантлар ўртасидаги жиноятлар сони кескин камайди\n\nРоссияда хорижликлар ва фуқаролиги бўлмаган шахслар томонидан содир этилган жиноятлар 2026 йилнинг дастлабки олти ойида қарийб 40 фоизга камайди. Бу ҳақда Россия Хавфсизлик кенгаши маълум қилди.\n\nШу билан бирга, ўта оғир жиноятлар улуши ошиб, умумий жиноятларнинг 11 фоизини ташкил этган.\nЖиноятлар сони бўйича Украина фуқаролари биринчи, Тожикистон иккинчи, Ўзбекистон фуқаролари эса учинчи ўринда қайд этилган.\n\nМанба: ТУТ НОВОСТИ",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "CRIME_STATISTICS_NOT_MIGRATION_PRESSURE",
-        "early_warning_actuality_reason": "CRIME_STATISTICS_NOT_MIGRATION_PRESSURE"
-      }
-    },
-    {
       "collected_post_id": 2399,
       "source": "TELEGRAM",
       "source_post_id": "1210507736:2494",
@@ -5298,7 +3307,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5332,7 +3341,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 6
+        "collection_count": 7
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5353,54 +3362,6 @@
       }
     },
     {
-      "collected_post_id": 2397,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10846",
-      "author": "migrantlar24",
-      "published_at": "2026-08-01T16:48:40",
-      "url": "https://t.me/migrantlar24/10846",
-      "language": null,
-      "text": "Владислав Даванков ва «Янги одамлар» партияси мигрантларнинг хорижга пул ўтказмаларини расмий маоши миқдори билан чеклаш, мигрантнинг рақамли профилини жорий этиш ҳамда ноқонуний даромадга шубҳа қилинганда ҳисоб рақамларини блоклашни таклиф қилди. \n\nҚоида такроран бузилса, мигрантни депортация қилиш таклиф этилмоқда.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": true,
-        "collection_count": 7
-      },
-      "final_status": "EARLY_WARNING",
-      "rejection_reason": null,
-      "primary_signal": "ENFORCEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ENFORCEMENT_EARLY_WARNING",
-      "event_type": null,
-      "confidence": 0.62,
-      "score": 6.0,
-      "matched_groups": [
-        "ENFORCEMENT"
-      ],
-      "matched_phrases": [
-        [
-          "enforcement",
-          "депортация"
-        ]
-      ],
-      "details": {
-        "rules_version": "EARLY_WARNING_REVIEW_V1_3_4_FINAL",
-        "review_reason": "STRUCTURED_MIGRATION_EARLY_WARNING",
-        "actuality_reason": "CONCRETE_EVENT_ASSERTION",
-        "context_matches": [
-          "мигрантларнинг",
-          "мигрантнинг",
-          "мигрантни"
-        ],
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": []
-      }
-    },
-    {
       "collected_post_id": 2396,
       "source": "TELEGRAM",
       "source_post_id": "1173707041:9175",
@@ -5414,7 +3375,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5448,40 +3409,6 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 6
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
-      "collected_post_id": 2407,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10856",
-      "author": "migrantlar24",
-      "published_at": "2026-08-02T12:27:01",
-      "url": "https://t.me/migrantlar24/10856",
-      "language": null,
-      "text": "🇷🇺 Россияда уйдан чиқиш олдидан мигрантнинг одатий текшируви:\n\n📕 Паспорт — бор. \n📄 Миграция картаси — бор. \n📑 Регистрация — бор. \n💳 Патент — бор. \n🧾 Патент тўлови чеклари — бор. \n🟢🔴 Қизил ва яшил карталар — бор.\n\n😅 Ҳаммаси жойидами?\n\nСизнингча яна қайси ҳужжат доим ёнингизда бўлиши керак?",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
         "collection_count": 7
       },
       "final_status": "NON_OPERATIONAL",
@@ -5500,40 +3427,6 @@
         "influence_review_reason": null,
         "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
         "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
-      "collected_post_id": 2406,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10857",
-      "author": "migrantlar24",
-      "published_at": "2026-08-02T13:28:10",
-      "url": "https://t.me/migrantlar24/10857",
-      "language": null,
-      "text": "🇷🇺 Россиядаги ҳолат юзасидан Миграция агентлиги расмий муносабат билдирди.\n\nМаълум бўлишича, ватандошимиз 6 август куни Ватанга қайтиб келадиган бўлибди.\n\nБугунги куннинг энг яхши хабарларидан бири бўлди! 🇺🇿❤️",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_HUMAN_MIGRATION_CONTEXT",
-        "early_warning_actuality_reason": "NO_HUMAN_MIGRATION_CONTEXT"
       }
     },
     {
@@ -5550,7 +3443,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 6
+        "collection_count": 7
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5571,49 +3464,6 @@
       }
     },
     {
-      "collected_post_id": 2413,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10861",
-      "author": "migrantlar24",
-      "published_at": "2026-08-03T02:46:00",
-      "url": "https://t.me/migrantlar24/10861",
-      "language": null,
-      "text": "🇺🇿🇺🇸 Ўзбекистон: АҚШ миграция қонунчилигини бузгани учун депортация қилинган 18 нафар Ўзбекистон фуқароси чартер рейси орқали Тошкентга олиб келинди.\n\nФуқаролар АҚШдан махсус чартер рейси билан Ўзбекистонга қайтарилган.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": true,
-        "operational_confidence": 0.7,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "OPERATIONAL",
-      "rejection_reason": null,
-      "primary_signal": null,
-      "event_type": "GENERAL_DISCUSSION",
-      "confidence": null,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "matched_signals": [],
-        "operational_categories": [
-          "DEPORTATION_RETURN"
-        ],
-        "matched_operational_phrases": [
-          "чартер рейси орқали Тошкентга олиб келинди",
-          "депортация қилинган 18 нафар Ўзбекистон фуқароси"
-        ],
-        "primary_region": "GLOBAL",
-        "matched_regions": [
-          "GLOBAL"
-        ],
-        "primary_location": null,
-        "country": null,
-        "latitude": null,
-        "longitude": null
-      }
-    },
-    {
       "collected_post_id": 2433,
       "source": "TELEGRAM",
       "source_post_id": "1980940690:15635",
@@ -5627,7 +3477,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 6
+        "collection_count": 7
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5661,7 +3511,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5695,7 +3545,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5716,40 +3566,6 @@
       }
     },
     {
-      "collected_post_id": 2421,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10887",
-      "author": "migrantlar24",
-      "published_at": "2026-08-04T06:20:13",
-      "url": "https://t.me/migrantlar24/10887",
-      "language": null,
-      "text": "🇷🇺 Россия мигрантларнинг болаларини ўз фуқаролари ҳисобидан таъминламоқда\n\nМосква шаҳар думаси депутати Мария Воропаева давлат мигрантлар оилаларига берилаётган молиявий ёрдамни тўхтатиши кераклигини айтди.\n\nУнинг таъкидлашича, россиялик ота-оналар фарзандларини таъминлаш учун қўшимча ишлашга мажбур бўлаётган бир пайтда, давлат маблағлари аввало Россия фуқаролари ва уларнинг оилаларига йўналтирилиши керак.\n\nДепутат ЛДПР миграция сиёсатини янада кучайтиришни талаб қилишини билдирди.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
       "collected_post_id": 2531,
       "source": "TELEGRAM",
       "source_post_id": "1980940690:15642",
@@ -5763,7 +3579,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 5
+        "collection_count": 6
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5797,7 +3613,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5831,7 +3647,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5852,40 +3668,6 @@
       }
     },
     {
-      "collected_post_id": 2418,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10894",
-      "author": "migrantlar24",
-      "published_at": "2026-08-04T15:25:03",
-      "url": "https://t.me/migrantlar24/10894",
-      "language": null,
-      "text": "🇷🇺 Россияда меҳнат қилаётган мигрант патентни мамлакатдан чиқиб кетмасдан, қонунчилик талабларига риоя қилган ҳолда чексиз марта қайта расмийлаштириши мумкин.\n\nПатентни қайта расмийлаштириш учун қуйидаги ҳужжатлар керак бўлади:\n\n🔵 Паспорт;\n🔵 Амалдаги патент;\n🔵 Миграция картаси;\n🔵 Сўнгги 12 ой учун аванс НДФЛ тўловлари чеклари;\n🔵 Иш берувчининг илтимосномаси;\n🔵 Меҳнат шартномаси ёки фуқаролик-ҳуқуқий шартнома.\n\n❗️Ҳужжатларни патентнинг амал қилиш муддати тугашидан камида 20 иш куни олдин топшириш керак.",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
       "collected_post_id": 2430,
       "source": "TELEGRAM",
       "source_post_id": "1688600455:1077",
@@ -5899,7 +3681,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5933,7 +3715,7 @@
         "is_operational": false,
         "operational_confidence": 0.6,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "WEAK_COORDINATION_WITHOUT_MIGRATION_OPERATIONAL_CONTEXT",
@@ -5980,7 +3762,7 @@
         "is_operational": false,
         "operational_confidence": 0.1,
         "influence_detected": false,
-        "collection_count": 7
+        "collection_count": 8
       },
       "final_status": "NON_OPERATIONAL",
       "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
@@ -5998,86 +3780,6 @@
         "influence_review_reason": null,
         "early_warning_review_reason": "NO_HUMAN_MIGRATION_CONTEXT",
         "early_warning_actuality_reason": "NO_HUMAN_MIGRATION_CONTEXT"
-      }
-    },
-    {
-      "collected_post_id": 2426,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10929",
-      "author": "migrantlar24",
-      "published_at": "2026-08-05T18:00:04",
-      "url": "https://t.me/migrantlar24/10929",
-      "language": null,
-      "text": "🇷🇺 Краснодарда 650 дан ортиқ мигрантни ноқонуний қонунийлаштирган жиноий гуруҳга ҳукм ўқилди.\n\nТергов маълумотларига кўра, гуруҳ аъзолари мигрантлар учун сохта меҳнат шартномалари ва бошқа ҳужжатларни расмийлаштириб, уларнинг Россияда бўлиш муддатини сунъий равишда узайтирган. Бунинг учун ҳар бир шахсдан 15–30 минг рублдан ҳақ олинган.\n\nАсосий ташкилотчи 10 йил 8 ойга озодликдан маҳрум этилди, шунингдек, жиноий фаолиятдан орттирилган 1,6 млн рубл давлат фойдасига мусодара қилинди.\n\n🔗 Манба",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": false,
-        "collection_count": 7
-      },
-      "final_status": "NON_OPERATIONAL",
-      "rejection_reason": "OPERATIONAL_FILTER_REJECTED",
-      "primary_signal": null,
-      "event_type": null,
-      "confidence": 0.1,
-      "score": null,
-      "matched_groups": [],
-      "matched_phrases": [],
-      "details": {
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": [],
-        "influence_review_reason": null,
-        "early_warning_review_reason": "NO_LOCAL_EVENT_STRUCTURE",
-        "early_warning_actuality_reason": "NO_LOCAL_EVENT_STRUCTURE"
-      }
-    },
-    {
-      "collected_post_id": 2424,
-      "source": "TELEGRAM",
-      "source_post_id": "1604168769:10930",
-      "author": "migrantlar24",
-      "published_at": "2026-08-05T18:30:02",
-      "url": "https://t.me/migrantlar24/10930",
-      "language": null,
-      "text": "🇷🇺 Тольяттида Тожикистон фуқароси Россиядан чиқариб юборилмаслик учун полиция ходимларига пора бермоқчи бўлди.\n\nМаълумотларга кўра, муддати тугаганига қарамай Россияда ноқонуний яшаб келган 45 ёшли мигрант ушланган. Полиция бўлимига олиб кетилаётганда у икки нафар ходимга 20 минг рубль пора таклиф қилган.\n\nПолиция рад жавобини берганидан кейин ҳам у пулни хизмат дафтарчаси ичига солиб қўйган. Натижада маъмурий жавобгарлик ўрнига унга нисбатан жиноят иши қўзғатилди.\n\nЭнди унга 8 йилгача озодликдан маҳрум қилиш ва пора миқдорининг 30 бараваригача жарима жазоси таҳдид қилмоқда.\n\nМанба: https://volga.news/article/799515.html",
-      "database_state": {
-        "is_noise": false,
-        "is_operational": false,
-        "operational_confidence": 0.1,
-        "influence_detected": true,
-        "collection_count": 7
-      },
-      "final_status": "EARLY_WARNING",
-      "rejection_reason": null,
-      "primary_signal": "ENFORCEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ENFORCEMENT_EARLY_WARNING",
-      "event_type": null,
-      "confidence": 0.72,
-      "score": 6.75,
-      "matched_groups": [
-        "ENFORCEMENT"
-      ],
-      "matched_phrases": [
-        [
-          "enforcement",
-          "полиция"
-        ]
-      ],
-      "details": {
-        "rules_version": "EARLY_WARNING_REVIEW_V1_3_4_FINAL",
-        "review_reason": "STRUCTURED_MIGRATION_EARLY_WARNING",
-        "actuality_reason": "CONCRETE_EVENT_ASSERTION",
-        "context_matches": [
-          "мигрант"
-        ],
-        "operational_categories": [],
-        "matched_operational_phrases": [],
-        "non_operational_categories": [],
-        "matched_non_operational_phrases": []
       }
     }
   ]

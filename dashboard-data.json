@@ -1,7 +1,7 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-08-14T04:39:30Z",
-  "generated_at": "2026-08-14T04:39:30Z",
+  "updated_at": "2026-08-14T05:12:03Z",
+  "generated_at": "2026-08-14T05:12:03Z",
   "current_run": {
     "available": true,
     "id": 43,
@@ -52,20 +52,20 @@
     "error_message": null
   },
   "kpis": {
-    "operational_events": 4,
+    "operational_events": 3,
     "new_events": 3,
-    "correlated_events": 1,
-    "active_event_groups": 105,
+    "correlated_events": 0,
+    "active_event_groups": 99,
     "sources": 4,
-    "regions": 3,
-    "collected_posts_24h": 128,
-    "influence_signals": 8,
+    "regions": 2,
+    "collected_posts_24h": 99,
+    "influence_signals": 5,
     "access_signals": 0,
     "high_priority": 0,
     "current_run_operational_events": 3,
     "current_run_unique_posts": 96,
     "access_signals_raw": 0,
-    "influence_signals_raw": 8,
+    "influence_signals_raw": 5,
     "influence_narratives": 3
   },
   "live_events": [
@@ -810,51 +810,44 @@
       "region": "GLOBAL",
       "count": 2,
       "events": 2,
-      "percentage": 50.0
-    },
-    {
-      "name": "WESTERN_MEDITERRANEAN",
-      "region": "WESTERN_MEDITERRANEAN",
-      "count": 1,
-      "events": 1,
-      "percentage": 25.0
+      "percentage": 66.67
     },
     {
       "name": "EASTERN_MEDITERRANEAN",
       "region": "EASTERN_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 25.0
+      "percentage": 33.33
     }
   ],
   "sources": [
     {
       "source": "X",
       "name": "X",
-      "count": 86,
-      "posts": 86,
-      "percentage": 67.19
+      "count": 64,
+      "posts": 64,
+      "percentage": 64.65
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 22,
-      "posts": 22,
-      "percentage": 17.19
+      "count": 18,
+      "posts": 18,
+      "percentage": 18.18
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 16,
-      "posts": 16,
-      "percentage": 12.5
+      "count": 13,
+      "posts": 13,
+      "percentage": 13.13
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
       "count": 4,
       "posts": 4,
-      "percentage": 3.12
+      "percentage": 4.04
     }
   ],
   "region_activity": [
@@ -863,62 +856,55 @@
       "region": "GLOBAL",
       "count": 2,
       "events": 2,
-      "percentage": 50.0
-    },
-    {
-      "name": "WESTERN_MEDITERRANEAN",
-      "region": "WESTERN_MEDITERRANEAN",
-      "count": 1,
-      "events": 1,
-      "percentage": 25.0
+      "percentage": 66.67
     },
     {
       "name": "EASTERN_MEDITERRANEAN",
       "region": "EASTERN_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 25.0
+      "percentage": 33.33
     }
   ],
   "source_activity": [
     {
       "source": "X",
       "name": "X",
-      "count": 86,
-      "posts": 86,
-      "percentage": 67.19
+      "count": 64,
+      "posts": 64,
+      "percentage": 64.65
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 22,
-      "posts": 22,
-      "percentage": 17.19
+      "count": 18,
+      "posts": 18,
+      "percentage": 18.18
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 16,
-      "posts": 16,
-      "percentage": 12.5
+      "count": 13,
+      "posts": 13,
+      "percentage": 13.13
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
       "count": 4,
       "posts": 4,
-      "percentage": 3.12
+      "percentage": 4.04
     }
   ],
   "correlation": {
-    "correlated_events": 1,
-    "correlated_sources": 1,
-    "grouped_sources": 4,
-    "event_groups": 105,
-    "active_groups": 105,
+    "correlated_events": 0,
+    "correlated_sources": 0,
+    "grouped_sources": 3,
+    "event_groups": 99,
+    "active_groups": 99,
     "multi_source_groups": 10,
     "strongest_match": 0.9,
-    "correlation_rate": 25.0
+    "correlation_rate": 0.0
   },
   "technical_health": "HEALTHY",
   "collector_health": "HEALTHY",
@@ -935,38 +921,38 @@
     "last_completed_at": "2026-08-14T04:39:28Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 4,
-    "influence_signals_24h": 8,
+    "operational_events_24h": 3,
+    "influence_signals_24h": 5,
     "access_signals_24h": 0,
-    "correlated_events_24h": 1,
-    "active_event_groups": 105,
-    "dominant_region": "WESTERN_MEDITERRANEAN",
-    "hotspot": "WESTERN_MEDITERRANEAN",
-    "dominant_event_type": "DETENTION",
+    "correlated_events_24h": 0,
+    "active_event_groups": 99,
+    "dominant_region": "EASTERN_MEDITERRANEAN",
+    "hotspot": "EASTERN_MEDITERRANEAN",
+    "dominant_event_type": "MIGRANT_CAMP",
     "dominant_source": "X",
-    "average_confidence": 0.476,
+    "average_confidence": 0.492,
     "confidence_level": "LOW",
-    "correlation_rate": 25.0,
+    "correlation_rate": 0.0,
     "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 4 operatív migrációs eseményt, 8 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 1 friss eseményforrás korrelált más forrással. Jelenleg 105 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Detention. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.48. A jelenlegi aktivitási szint: MODERATE."
+    "summary": "Az elmúlt 24 órában a rendszer 3 operatív migrációs eseményt, 5 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 99 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Eastern Mediterranean. A domináns operatív eseménytípus: Migrant Camp. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.49. A jelenlegi aktivitási szint: MODERATE."
   },
   "analytical_assessment": {
-    "operational_events_24h": 4,
-    "influence_signals_24h": 8,
+    "operational_events_24h": 3,
+    "influence_signals_24h": 5,
     "access_signals_24h": 0,
-    "correlated_events_24h": 1,
-    "active_event_groups": 105,
-    "dominant_region": "WESTERN_MEDITERRANEAN",
-    "hotspot": "WESTERN_MEDITERRANEAN",
-    "dominant_event_type": "DETENTION",
+    "correlated_events_24h": 0,
+    "active_event_groups": 99,
+    "dominant_region": "EASTERN_MEDITERRANEAN",
+    "hotspot": "EASTERN_MEDITERRANEAN",
+    "dominant_event_type": "MIGRANT_CAMP",
     "dominant_source": "X",
-    "average_confidence": 0.476,
+    "average_confidence": 0.492,
     "confidence_level": "LOW",
-    "correlation_rate": 25.0,
+    "correlation_rate": 0.0,
     "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 4 operatív migrációs eseményt, 8 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 1 friss eseményforrás korrelált más forrással. Jelenleg 105 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Detention. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.48. A jelenlegi aktivitási szint: MODERATE."
+    "summary": "Az elmúlt 24 órában a rendszer 3 operatív migrációs eseményt, 5 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 99 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Eastern Mediterranean. A domináns operatív eseménytípus: Migrant Camp. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.49. A jelenlegi aktivitási szint: MODERATE."
   },
   "high_confidence_events": [
     {
@@ -1531,62 +1517,6 @@
       "analyst_priority": "LOW"
     },
     {
-      "id": 92,
-      "source": "X",
-      "source_post_id": "2087768336927019150",
-      "author": "TonyCalder17",
-      "language": "en",
-      "published_at": "2026-08-13T05:08:55Z",
-      "first_detected_at": "2026-08-13T05:19:43Z",
-      "last_detected_at": "2026-08-13T05:19:43Z",
-      "detection_count": 1,
-      "text": "Looks like another few hundred illegal migrants will be crossing the channel today\n#gmb https://t.co/t4OZ4srFU1",
-      "text_excerpt": "Looks like another few hundred illegal migrants will be crossing the channel today\n#gmb https://t.co/t4OZ4srFU1",
-      "url": "https://x.com/TonyCalder17/status/2087768336927019150",
-      "source_url": "https://x.com/TonyCalder17/status/2087768336927019150",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.72,
-      "score": 6.5,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrants will be crossing"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT"
-      ],
-      "context_matches": [
-        "migrants"
-      ],
-      "high_value_matches": [
-        "migrants will be crossing"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_4_FINAL",
-      "priority_score": 25.2,
-      "analyst_priority": "LOW"
-    },
-    {
       "id": 106,
       "source": "X",
       "source_post_id": "2088103732802187548",
@@ -1681,119 +1611,6 @@
       ],
       "high_value_matches": [
         "human traffickers"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_4_FINAL",
-      "priority_score": 21.7,
-      "analyst_priority": "LOW"
-    },
-    {
-      "id": 94,
-      "source": "X",
-      "source_post_id": "2087768987916702146",
-      "author": "__free_news__",
-      "language": "en",
-      "published_at": "2026-08-13T05:11:30Z",
-      "first_detected_at": "2026-08-13T05:20:42Z",
-      "last_detected_at": "2026-08-13T05:20:42Z",
-      "detection_count": 1,
-      "text": "On 25 July, more than 150 people gathered for an anti-racism rally in Broadmeadows, in Melbourne’s outer-north. While the group marched along a main street chanting ‘Migrants are welcome, racists are not’, a driver of a vehicle allegedly struck a protest…",
-      "text_excerpt": "On 25 July, more than 150 people gathered for an anti-racism rally in Broadmeadows, in Melbourne’s outer-north. While the group marched along a main street chanting ‘Migrants are welcome, racists are not’, a driver of a vehicle allegedly struck a protest…",
-      "url": "https://x.com/__free_news__/status/2087768987916702146",
-      "source_url": "https://x.com/__free_news__/status/2087768987916702146",
-      "primary_signal": "FACILITATION_EARLY_WARNING",
-      "signal_type": "FACILITATION_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "FACILITATION_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.62,
-      "score": 5.75,
-      "matched_signals": [
-        "FACILITATION_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "facilitation",
-          "Migrants are welcome, racists are not’, a driver"
-        ]
-      ],
-      "matched_groups": [
-        "FACILITATION"
-      ],
-      "context_matches": [
-        "Migrants"
-      ],
-      "high_value_matches": [
-        "Migrants are welcome, racists are not’, a driver"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_4_FINAL",
-      "priority_score": 21.7,
-      "analyst_priority": "LOW"
-    },
-    {
-      "id": 95,
-      "source": "X",
-      "source_post_id": "2087766480456663248",
-      "author": "AllanVukov50265",
-      "language": "en",
-      "published_at": "2026-08-13T05:01:32Z",
-      "first_detected_at": "2026-08-13T05:21:14Z",
-      "last_detected_at": "2026-08-13T05:21:14Z",
-      "detection_count": 1,
-      "text": "@bahebal19925 @FromKulak I'm just saying that UK is perfect example that leaving  EU doesn't save you from immigration . EU didn't force us to accept excessive amount of \" asylum seekers\" but currently we are experiencing sudden influx of Asian \" legal \" migrants bcs of disastrous domestic politics",
-      "text_excerpt": "@bahebal19925 @FromKulak I'm just saying that UK is perfect example that leaving  EU doesn't save you from immigration . EU didn't force us to accept excessive amount of \" asylum seekers\" but currently we are experiencing sudden influx of Asian \" legal \" migrants bcs of disastrous domestic politics",
-      "url": "https://x.com/AllanVukov50265/status/2087766480456663248",
-      "source_url": "https://x.com/AllanVukov50265/status/2087766480456663248",
-      "primary_signal": "PRESSURE_EARLY_WARNING",
-      "signal_type": "PRESSURE_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "PRESSURE_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.62,
-      "score": 5.75,
-      "matched_signals": [
-        "PRESSURE_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "pressure",
-          "influx"
-        ]
-      ],
-      "matched_groups": [
-        "PRESSURE"
-      ],
-      "context_matches": [
-        "migrants",
-        "asylum seekers"
-      ],
-      "high_value_matches": [
-        "influx"
       ],
       "signal_context_rejections": [],
       "migration_context": true,
@@ -2003,62 +1820,6 @@
       "analyst_priority": "LOW"
     },
     {
-      "id": 92,
-      "source": "X",
-      "source_post_id": "2087768336927019150",
-      "author": "TonyCalder17",
-      "language": "en",
-      "published_at": "2026-08-13T05:08:55Z",
-      "first_detected_at": "2026-08-13T05:19:43Z",
-      "last_detected_at": "2026-08-13T05:19:43Z",
-      "detection_count": 1,
-      "text": "Looks like another few hundred illegal migrants will be crossing the channel today\n#gmb https://t.co/t4OZ4srFU1",
-      "text_excerpt": "Looks like another few hundred illegal migrants will be crossing the channel today\n#gmb https://t.co/t4OZ4srFU1",
-      "url": "https://x.com/TonyCalder17/status/2087768336927019150",
-      "source_url": "https://x.com/TonyCalder17/status/2087768336927019150",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.72,
-      "score": 6.5,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrants will be crossing"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT"
-      ],
-      "context_matches": [
-        "migrants"
-      ],
-      "high_value_matches": [
-        "migrants will be crossing"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_4_FINAL",
-      "priority_score": 25.2,
-      "analyst_priority": "LOW"
-    },
-    {
       "id": 106,
       "source": "X",
       "source_post_id": "2088103732802187548",
@@ -2153,119 +1914,6 @@
       ],
       "high_value_matches": [
         "human traffickers"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_4_FINAL",
-      "priority_score": 21.7,
-      "analyst_priority": "LOW"
-    },
-    {
-      "id": 94,
-      "source": "X",
-      "source_post_id": "2087768987916702146",
-      "author": "__free_news__",
-      "language": "en",
-      "published_at": "2026-08-13T05:11:30Z",
-      "first_detected_at": "2026-08-13T05:20:42Z",
-      "last_detected_at": "2026-08-13T05:20:42Z",
-      "detection_count": 1,
-      "text": "On 25 July, more than 150 people gathered for an anti-racism rally in Broadmeadows, in Melbourne’s outer-north. While the group marched along a main street chanting ‘Migrants are welcome, racists are not’, a driver of a vehicle allegedly struck a protest…",
-      "text_excerpt": "On 25 July, more than 150 people gathered for an anti-racism rally in Broadmeadows, in Melbourne’s outer-north. While the group marched along a main street chanting ‘Migrants are welcome, racists are not’, a driver of a vehicle allegedly struck a protest…",
-      "url": "https://x.com/__free_news__/status/2087768987916702146",
-      "source_url": "https://x.com/__free_news__/status/2087768987916702146",
-      "primary_signal": "FACILITATION_EARLY_WARNING",
-      "signal_type": "FACILITATION_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "FACILITATION_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.62,
-      "score": 5.75,
-      "matched_signals": [
-        "FACILITATION_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "facilitation",
-          "Migrants are welcome, racists are not’, a driver"
-        ]
-      ],
-      "matched_groups": [
-        "FACILITATION"
-      ],
-      "context_matches": [
-        "Migrants"
-      ],
-      "high_value_matches": [
-        "Migrants are welcome, racists are not’, a driver"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_4_FINAL",
-      "priority_score": 21.7,
-      "analyst_priority": "LOW"
-    },
-    {
-      "id": 95,
-      "source": "X",
-      "source_post_id": "2087766480456663248",
-      "author": "AllanVukov50265",
-      "language": "en",
-      "published_at": "2026-08-13T05:01:32Z",
-      "first_detected_at": "2026-08-13T05:21:14Z",
-      "last_detected_at": "2026-08-13T05:21:14Z",
-      "detection_count": 1,
-      "text": "@bahebal19925 @FromKulak I'm just saying that UK is perfect example that leaving  EU doesn't save you from immigration . EU didn't force us to accept excessive amount of \" asylum seekers\" but currently we are experiencing sudden influx of Asian \" legal \" migrants bcs of disastrous domestic politics",
-      "text_excerpt": "@bahebal19925 @FromKulak I'm just saying that UK is perfect example that leaving  EU doesn't save you from immigration . EU didn't force us to accept excessive amount of \" asylum seekers\" but currently we are experiencing sudden influx of Asian \" legal \" migrants bcs of disastrous domestic politics",
-      "url": "https://x.com/AllanVukov50265/status/2087766480456663248",
-      "source_url": "https://x.com/AllanVukov50265/status/2087766480456663248",
-      "primary_signal": "PRESSURE_EARLY_WARNING",
-      "signal_type": "PRESSURE_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "PRESSURE_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.62,
-      "score": 5.75,
-      "matched_signals": [
-        "PRESSURE_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "pressure",
-          "influx"
-        ]
-      ],
-      "matched_groups": [
-        "PRESSURE"
-      ],
-      "context_matches": [
-        "migrants",
-        "asylum seekers"
-      ],
-      "high_value_matches": [
-        "influx"
       ],
       "signal_context_rejections": [],
       "migration_context": true,
@@ -2547,7 +2195,7 @@
       "week_start": "2026-06-29T00:00:00Z",
       "posts": 121,
       "post_count": 121,
-      "operational_posts": 4,
+      "operational_posts": 3,
       "influence_signals": 3,
       "source_counts": {
         "X": 100,
@@ -2560,13 +2208,13 @@
       "label": "W28",
       "week_label": "W28",
       "week_start": "2026-07-06T00:00:00Z",
-      "posts": 168,
-      "post_count": 168,
-      "operational_posts": 3,
-      "influence_signals": 3,
+      "posts": 169,
+      "post_count": 169,
+      "operational_posts": 2,
+      "influence_signals": 2,
       "source_counts": {
         "X": 140,
-        "TELEGRAM": 28
+        "TELEGRAM": 29
       }
     },
     {
@@ -2577,8 +2225,8 @@
       "week_start": "2026-07-13T00:00:00Z",
       "posts": 204,
       "post_count": 204,
-      "operational_posts": 7,
-      "influence_signals": 4,
+      "operational_posts": 6,
+      "influence_signals": 2,
       "source_counts": {
         "X": 140,
         "TELEGRAM": 64
@@ -2607,8 +2255,8 @@
       "week_start": "2026-07-27T00:00:00Z",
       "posts": 75,
       "post_count": 75,
-      "operational_posts": 3,
-      "influence_signals": 2,
+      "operational_posts": 1,
+      "influence_signals": 0,
       "source_counts": {
         "TELEGRAM": 75
       }
@@ -2621,8 +2269,8 @@
       "week_start": "2026-08-03T00:00:00Z",
       "posts": 479,
       "post_count": 479,
-      "operational_posts": 22,
-      "influence_signals": 35,
+      "operational_posts": 21,
+      "influence_signals": 34,
       "source_counts": {
         "X": 327,
         "REDDIT": 89,
@@ -2671,7 +2319,7 @@
       "week_start": "2026-06-29T00:00:00Z",
       "posts": 121,
       "post_count": 121,
-      "operational_posts": 4,
+      "operational_posts": 3,
       "influence_signals": 3,
       "source_counts": {
         "X": 100,
@@ -2684,13 +2332,13 @@
       "label": "W28",
       "week_label": "W28",
       "week_start": "2026-07-06T00:00:00Z",
-      "posts": 168,
-      "post_count": 168,
-      "operational_posts": 3,
-      "influence_signals": 3,
+      "posts": 169,
+      "post_count": 169,
+      "operational_posts": 2,
+      "influence_signals": 2,
       "source_counts": {
         "X": 140,
-        "TELEGRAM": 28
+        "TELEGRAM": 29
       }
     },
     {
@@ -2701,8 +2349,8 @@
       "week_start": "2026-07-13T00:00:00Z",
       "posts": 204,
       "post_count": 204,
-      "operational_posts": 7,
-      "influence_signals": 4,
+      "operational_posts": 6,
+      "influence_signals": 2,
       "source_counts": {
         "X": 140,
         "TELEGRAM": 64
@@ -2731,8 +2379,8 @@
       "week_start": "2026-07-27T00:00:00Z",
       "posts": 75,
       "post_count": 75,
-      "operational_posts": 3,
-      "influence_signals": 2,
+      "operational_posts": 1,
+      "influence_signals": 0,
       "source_counts": {
         "TELEGRAM": 75
       }
@@ -2745,8 +2393,8 @@
       "week_start": "2026-08-03T00:00:00Z",
       "posts": 479,
       "post_count": 479,
-      "operational_posts": 22,
-      "influence_signals": 35,
+      "operational_posts": 21,
+      "influence_signals": 34,
       "source_counts": {
         "X": 327,
         "REDDIT": 89,
@@ -2783,10 +2431,10 @@
     "change_label": "+1813.1%",
     "direction": "UP",
     "comparable": true,
-    "elapsed_hours": 100.7,
+    "elapsed_hours": 101.2,
     "current_period_start": "2026-08-10T00:00:00Z",
     "previous_period_start": "2026-08-03T00:00:00Z",
-    "previous_period_end": "2026-08-07T04:39:29Z"
+    "previous_period_end": "2026-08-07T05:12:02Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -2798,36 +2446,36 @@
       72,
       168
     ],
-    "generated_at": "2026-08-14T04:39:30Z",
-    "total_items": 575,
-    "information_count": 312,
-    "early_warning_count": 101,
-    "operational_count": 135,
+    "generated_at": "2026-08-14T05:12:03Z",
+    "total_items": 561,
+    "information_count": 310,
+    "early_warning_count": 95,
+    "operational_count": 129,
     "correlated_count": 27,
     "layer_counts": {
-      "OPERATIONAL": 135,
-      "INFORMATION": 312,
-      "EARLY_WARNING": 101,
+      "OPERATIONAL": 129,
+      "INFORMATION": 310,
+      "EARLY_WARNING": 95,
       "CORRELATED": 27
     },
     "source_counts": {
-      "X": 416,
+      "X": 414,
       "REDDIT": 116,
       "MASTODON": 24,
-      "TELEGRAM": 19
+      "TELEGRAM": 7
     },
     "type_counts": {
       "BORDER_CROSSING": 16,
-      "INFORMATION_SIGNAL": 312,
+      "INFORMATION_SIGNAL": 310,
       "FACILITATION_EARLY_WARNING": 12,
       "MIGRANT_CAMP": 32,
       "DETENTION": 2,
       "MOVEMENT_EARLY_WARNING": 18,
-      "PRESSURE_EARLY_WARNING": 5,
-      "GENERAL_DISCUSSION": 19,
+      "PRESSURE_EARLY_WARNING": 2,
+      "GENERAL_DISCUSSION": 13,
       "MOBILIZATION_COORDINATION": 4,
       "LEGAL_MIGRATION_SIGNAL": 18,
-      "ENFORCEMENT_EARLY_WARNING": 12,
+      "ENFORCEMENT_EARLY_WARNING": 9,
       "ARRIVAL": 27,
       "POLICY_SIGNAL": 3,
       "ROUTE_EARLY_WARNING": 3,
@@ -19988,38 +19636,6 @@
         "last_detected_at": "2026-08-08T17:50:24Z"
       },
       {
-        "timeline_id": "early_warning:105",
-        "timestamp": "2026-08-05T18:30:02Z",
-        "layer": "EARLY_WARNING",
-        "type": "ENFORCEMENT_EARLY_WARNING",
-        "signal_type": "ENFORCEMENT_EARLY_WARNING",
-        "event_type": null,
-        "source": "TELEGRAM",
-        "source_post_id": "1604168769:10930",
-        "author": "migrantlar24",
-        "url": "https://t.me/migrantlar24/10930",
-        "source_url": "https://t.me/migrantlar24/10930",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.72,
-        "priority": "MEDIUM",
-        "priority_score": 25.2,
-        "analyst_priority": "LOW",
-        "text": "🇷🇺 Тольяттида Тожикистон фуқароси Россиядан чиқариб юборилмаслик учун полиция ходимларига пора бермоқчи бўлди.\n\nМаълумотларга кўра, муддати тугаганига қарамай Россияда ноқонуний яшаб келган 45 ёшли мигрант ушланган. Полиция бўлимига олиб кетилаётганда у икки нафар ходимга 20 минг рубль пора таклиф қилган.\n\nПолиция рад жавобини берганидан кейин ҳам у пулни хизмат дафтарчаси ичига солиб қўйган. Натижада маъмурий жавобгарлик ўрнига унга нисбатан жиноят иши қўзғатилди.\n\nЭнди унга 8 йилгача озодликдан маҳрум қилиш ва пора миқдорининг 30 бараваригача жарима жазоси таҳдид қилмоқда.\n\nМанба: https://volga.news/article/799515.html",
-        "text_excerpt": "🇷🇺 Тольяттида Тожикистон фуқароси Россиядан чиқариб юборилмаслик учун полиция ходимларига пора бермоқчи бўлди.\n\nМаълумотларга кўра, муддати тугаганига қарамай Россияда ноқонуний яшаб келган 45 ёшли мигрант ушланган. Полиция бўлимига олиб кетилаётганда у икки нафар ходимга 20 минг рубль пора таклиф қилган.\n\nПолиция рад жавобини берганидан кейин ҳам у пулни хизмат дафтарчаси ичига солиб қўйган. Натижада маъмурий жавобг…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "signal_mode": "ANALYST_REVIEW",
-        "signal_intent": "ENFORCEMENT_REVIEW",
-        "detection_count": 1,
-        "first_detected_at": "2026-08-13T05:27:58Z",
-        "last_detected_at": "2026-08-13T05:27:58Z"
-      },
-      {
         "timeline_id": "operational:52",
         "timestamp": "2026-08-05T01:54:26Z",
         "layer": "OPERATIONAL",
@@ -20322,163 +19938,6 @@
         "collection_count": 1
       },
       {
-        "timeline_id": "operational:146",
-        "timestamp": "2026-08-03T02:46:00Z",
-        "layer": "OPERATIONAL",
-        "type": "GENERAL_DISCUSSION",
-        "signal_type": "GENERAL_DISCUSSION",
-        "event_type": "GENERAL_DISCUSSION",
-        "source": "TELEGRAM",
-        "source_post_id": "1604168769:10861",
-        "author": "migrantlar24",
-        "url": "https://t.me/migrantlar24/10861",
-        "source_url": "https://t.me/migrantlar24/10861",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "latitude": null,
-        "longitude": null,
-        "confidence": 0.2,
-        "priority": "LOW",
-        "priority_score": 20.0,
-        "text": "🇺🇿🇺🇸 Ўзбекистон: АҚШ миграция қонунчилигини бузгани учун депортация қилинган 18 нафар Ўзбекистон фуқароси чартер рейси орқали Тошкентга олиб келинди.\n\nФуқаролар АҚШдан махсус чартер рейси билан Ўзбекистонга қайтарилган.",
-        "text_excerpt": "🇺🇿🇺🇸 Ўзбекистон: АҚШ миграция қонунчилигини бузгани учун депортация қилинган 18 нафар Ўзбекистон фуқароси чартер рейси орқали Тошкентга олиб келинди.\n\nФуқаролар АҚШдан махсус чартер рейси билан Ўзбекистонга қайтарилган.",
-        "event_group_id": 115,
-        "correlation_score": null,
-        "related_source_count": null,
-        "event_time_text": null,
-        "event_time_normalized": null,
-        "event_time_confidence": null
-      },
-      {
-        "timeline_id": "early_warning:104",
-        "timestamp": "2026-08-01T16:48:40Z",
-        "layer": "EARLY_WARNING",
-        "type": "ENFORCEMENT_EARLY_WARNING",
-        "signal_type": "ENFORCEMENT_EARLY_WARNING",
-        "event_type": null,
-        "source": "TELEGRAM",
-        "source_post_id": "1604168769:10846",
-        "author": "migrantlar24",
-        "url": "https://t.me/migrantlar24/10846",
-        "source_url": "https://t.me/migrantlar24/10846",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.62,
-        "priority": "MEDIUM",
-        "priority_score": 21.7,
-        "analyst_priority": "LOW",
-        "text": "Владислав Даванков ва «Янги одамлар» партияси мигрантларнинг хорижга пул ўтказмаларини расмий маоши миқдори билан чеклаш, мигрантнинг рақамли профилини жорий этиш ҳамда ноқонуний даромадга шубҳа қилинганда ҳисоб рақамларини блоклашни таклиф қилди. \n\nҚоида такроран бузилса, мигрантни депортация қилиш таклиф этилмоқда.",
-        "text_excerpt": "Владислав Даванков ва «Янги одамлар» партияси мигрантларнинг хорижга пул ўтказмаларини расмий маоши миқдори билан чеклаш, мигрантнинг рақамли профилини жорий этиш ҳамда ноқонуний даромадга шубҳа қилинганда ҳисоб рақамларини блоклашни таклиф қилди. \n\nҚоида такроран бузилса, мигрантни депортация қилиш таклиф этилмоқда.",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "signal_mode": "ANALYST_REVIEW",
-        "signal_intent": "ENFORCEMENT_REVIEW",
-        "detection_count": 1,
-        "first_detected_at": "2026-08-13T05:27:56Z",
-        "last_detected_at": "2026-08-13T05:27:56Z"
-      },
-      {
-        "timeline_id": "early_warning:103",
-        "timestamp": "2026-07-31T12:21:04Z",
-        "layer": "EARLY_WARNING",
-        "type": "PRESSURE_EARLY_WARNING",
-        "signal_type": "PRESSURE_EARLY_WARNING",
-        "event_type": null,
-        "source": "TELEGRAM",
-        "source_post_id": "1604168769:10815",
-        "author": "migrantlar24",
-        "url": "https://t.me/migrantlar24/10815",
-        "source_url": "https://t.me/migrantlar24/10815",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.72,
-        "priority": "MEDIUM",
-        "priority_score": 25.2,
-        "analyst_priority": "LOW",
-        "text": "📊 Россияда меҳнат мигрантлари сони камаймоқда\n\n1 июль ҳолатига Россияда 1,7 млн нафар хорижлик патент асосида ишлаган. Бу ўтган йилнинг шу даврига нисбатан 14,4 фоизга кам.\n\n2026 йилнинг биринчи ярмида Россияга 4,8 млн нафар хорижлик кириб келган. Бу ҳам ўтган йилга қараганда 8 фоизга кам.\nКелганларнинг 72,8 фоизини, яъни 3,6 млн нафарини МДҲ давлатлари фуқаролари ташкил этган.\n\nАйни пайтда Россияда 6,4 млн нафар хорижлик бўлиб турибди. Ўтган йили бу кўрсаткич 7 млн атрофида эди.\n\n📌 Маълумотлар Россия Хавфсизлик кенгаши томонидан келтирилган.",
-        "text_excerpt": "📊 Россияда меҳнат мигрантлари сони камаймоқда\n\n1 июль ҳолатига Россияда 1,7 млн нафар хорижлик патент асосида ишлаган. Бу ўтган йилнинг шу даврига нисбатан 14,4 фоизга кам.\n\n2026 йилнинг биринчи ярмида Россияга 4,8 млн нафар хорижлик кириб келган. Бу ҳам ўтган йилга қараганда 8 фоизга кам.\nКелганларнинг 72,8 фоизини, яъни 3,6 млн нафарини МДҲ давлатлари фуқаролари ташкил этган.\n\nАйни пайтда Россияда 6,4 млн нафар хор…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "signal_mode": "ANALYST_REVIEW",
-        "signal_intent": "PRESSURE_REVIEW",
-        "detection_count": 1,
-        "first_detected_at": "2026-08-13T05:27:56Z",
-        "last_detected_at": "2026-08-13T05:27:56Z"
-      },
-      {
-        "timeline_id": "operational:145",
-        "timestamp": "2026-07-30T06:10:01Z",
-        "layer": "OPERATIONAL",
-        "type": "GENERAL_DISCUSSION",
-        "signal_type": "GENERAL_DISCUSSION",
-        "event_type": "GENERAL_DISCUSSION",
-        "source": "TELEGRAM",
-        "source_post_id": "1604168769:10782",
-        "author": "migrantlar24",
-        "url": "https://t.me/migrantlar24/10782",
-        "source_url": "https://t.me/migrantlar24/10782",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "latitude": null,
-        "longitude": null,
-        "confidence": 0.2,
-        "priority": "LOW",
-        "priority_score": 20.0,
-        "text": "🇷🇺 Россиядан чиқариб юборилган мигрантлар сони 65,5% га ошди\n\nДавлат Думаси раиси Вячеслав Володин маълум қилишича, 2026 йилнинг биринчи ярмида Россиядан 43 700 нафар мигрант чиқариб юборилган. Бу ўтган йилнинг шу даврига нисбатан 65,5% кўп.\n\nШунингдек, депортацияга сабаб бўладиган ҳуқуқбузарликлар рўйхати 22 тадан 45 тага кенгайтирилди.\n\nЭнди мигрантлар полиция талабига бўйсунмаслик, жамоат тартибини бузиш, интернетда инсон қадр-қиммати ва жамоат ахлоқига тажовуз қилиш каби ҳолатлар учун ҳам Россиядан чиқариб юборилиши мумкин.",
-        "text_excerpt": "🇷🇺 Россиядан чиқариб юборилган мигрантлар сони 65,5% га ошди\n\nДавлат Думаси раиси Вячеслав Володин маълум қилишича, 2026 йилнинг биринчи ярмида Россиядан 43 700 нафар мигрант чиқариб юборилган. Бу ўтган йилнинг шу даврига нисбатан 65,5% кўп.\n\nШунингдек, депортацияга сабаб бўладиган ҳуқуқбузарликлар рўйхати 22 тадан 45 тага кенгайтирилди.\n\nЭнди мигрантлар полиция талабига бўйсунмаслик, жамоат тартибини бузиш, интернет…",
-        "event_group_id": 114,
-        "correlation_score": null,
-        "related_source_count": null,
-        "event_time_text": null,
-        "event_time_normalized": null,
-        "event_time_confidence": null
-      },
-      {
-        "timeline_id": "operational:144",
-        "timestamp": "2026-07-29T15:20:03Z",
-        "layer": "OPERATIONAL",
-        "type": "GENERAL_DISCUSSION",
-        "signal_type": "GENERAL_DISCUSSION",
-        "event_type": "GENERAL_DISCUSSION",
-        "source": "TELEGRAM",
-        "source_post_id": "1604168769:10776",
-        "author": "migrantlar24",
-        "url": "https://t.me/migrantlar24/10776",
-        "source_url": "https://t.me/migrantlar24/10776",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "latitude": null,
-        "longitude": null,
-        "confidence": 0.2,
-        "priority": "LOW",
-        "priority_score": 20.0,
-        "text": "🇷🇺 Россияда 11 нафар ноқонуний мигрант ушланди\n\nТатаристоннинг Лениногорск шаҳрида полиция рейсов автобусида ҳужжатлар текширувини ўтказиб, миграция қоидаларини бузган 11 нафар хорижлик фуқарони аниқлади.\n\nУларнинг барчасига нисбатан маъмурий баённомалар расмийлаштирилган. Суд қарорiga кўра, мигрантлар Россия ҳудудидан мажбуран чиқариб юборилади.\n\nДепортацияга қадар улар Татаристон Ички ишлар вазирлигининг вақтинча сақлаш марказида бўлади.",
-        "text_excerpt": "🇷🇺 Россияда 11 нафар ноқонуний мигрант ушланди\n\nТатаристоннинг Лениногорск шаҳрида полиция рейсов автобусида ҳужжатлар текширувини ўтказиб, миграция қоидаларини бузган 11 нафар хорижлик фуқарони аниқлади.\n\nУларнинг барчасига нисбатан маъмурий баённомалар расмийлаштирилган. Суд қарорiga кўра, мигрантлар Россия ҳудудидан мажбуран чиқариб юборилади.\n\nДепортацияга қадар улар Татаристон Ички ишлар вазирлигининг вақтинча с…",
-        "event_group_id": 113,
-        "correlation_score": null,
-        "related_source_count": null,
-        "event_time_text": null,
-        "event_time_normalized": null,
-        "event_time_confidence": null
-      },
-      {
         "timeline_id": "information:2017",
         "timestamp": "2026-07-25T22:49:54Z",
         "layer": "INFORMATION",
@@ -20669,7 +20128,7 @@
         "collection_count": 1
       },
       {
-        "timeline_id": "early_warning:102",
+        "timeline_id": "early_warning:111",
         "timestamp": "2026-07-23T14:22:06Z",
         "layer": "EARLY_WARNING",
         "type": "ENFORCEMENT_EARLY_WARNING",
@@ -20697,8 +20156,8 @@
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "ENFORCEMENT_REVIEW",
         "detection_count": 1,
-        "first_detected_at": "2026-08-13T05:27:52Z",
-        "last_detected_at": "2026-08-13T05:27:52Z"
+        "first_detected_at": "2026-08-14T04:52:05Z",
+        "last_detected_at": "2026-08-14T04:52:05Z"
       },
       {
         "timeline_id": "operational:109",
@@ -20899,7 +20358,7 @@
         "event_time_confidence": null
       },
       {
-        "timeline_id": "early_warning:101",
+        "timeline_id": "early_warning:110",
         "timestamp": "2026-07-18T15:05:45Z",
         "layer": "EARLY_WARNING",
         "type": "ENFORCEMENT_EARLY_WARNING",
@@ -20927,8 +20386,8 @@
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "ENFORCEMENT_REVIEW",
         "detection_count": 1,
-        "first_detected_at": "2026-08-13T05:27:48Z",
-        "last_detected_at": "2026-08-13T05:27:48Z"
+        "first_detected_at": "2026-08-14T04:52:03Z",
+        "last_detected_at": "2026-08-14T04:52:03Z"
       },
       {
         "timeline_id": "operational:106",
@@ -21061,70 +20520,7 @@
         "collection_count": 1
       },
       {
-        "timeline_id": "operational:143",
-        "timestamp": "2026-07-15T13:30:03Z",
-        "layer": "OPERATIONAL",
-        "type": "GENERAL_DISCUSSION",
-        "signal_type": "GENERAL_DISCUSSION",
-        "event_type": "GENERAL_DISCUSSION",
-        "source": "TELEGRAM",
-        "source_post_id": "1604168769:10484",
-        "author": "migrantlar24",
-        "url": "https://t.me/migrantlar24/10484",
-        "source_url": "https://t.me/migrantlar24/10484",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "latitude": null,
-        "longitude": null,
-        "confidence": 0.2,
-        "priority": "LOW",
-        "priority_score": 20.0,
-        "text": "Сургутдаги масжидда миграция рейди: 180 дан ортиқ хорижлик текширилди\n\nРоссиянинг Сургут шаҳрида ҳуқуқ-тартибот идоралари миграция қонунчилигига риоя этилишини текшириш мақсадида маҳаллий масжидда рейд ўтказди.\n\nТекширув давомида 182 нафар хорижлик фуқаро полиция бўлимига олиб борилиб, уларнинг шахси аниқланди, ҳужжатлари текширилди, бармоқ излари олинди ва суратга туширилди.\n\nНатижада уч нафар хорижлик Россия ҳудудида қонуний яшаш ҳуқуқини тасдиқлай олмаган. Уларга нисбатан Россиядан мажбурий чиқариб юбориш чораси кўрилади. Қолган текширилган шахсларнинг ҳужжатларида қоидабузарлик аниқланмаган.",
-        "text_excerpt": "Сургутдаги масжидда миграция рейди: 180 дан ортиқ хорижлик текширилди\n\nРоссиянинг Сургут шаҳрида ҳуқуқ-тартибот идоралари миграция қонунчилигига риоя этилишини текшириш мақсадида маҳаллий масжидда рейд ўтказди.\n\nТекширув давомида 182 нафар хорижлик фуқаро полиция бўлимига олиб борилиб, уларнинг шахси аниқланди, ҳужжатлари текширилди, бармоқ излари олинди ва суратга туширилди.\n\nНатижада уч нафар хорижлик Россия ҳудуди…",
-        "event_group_id": 112,
-        "correlation_score": null,
-        "related_source_count": null,
-        "event_time_text": null,
-        "event_time_normalized": null,
-        "event_time_confidence": null
-      },
-      {
-        "timeline_id": "early_warning:99",
-        "timestamp": "2026-07-14T16:40:02Z",
-        "layer": "EARLY_WARNING",
-        "type": "ENFORCEMENT_EARLY_WARNING",
-        "signal_type": "ENFORCEMENT_EARLY_WARNING",
-        "event_type": null,
-        "source": "TELEGRAM",
-        "source_post_id": "1604168769:10460",
-        "author": "migrantlar24",
-        "url": "https://t.me/migrantlar24/10460",
-        "source_url": "https://t.me/migrantlar24/10460",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.62,
-        "priority": "MEDIUM",
-        "priority_score": 21.7,
-        "analyst_priority": "LOW",
-        "text": "Ханти-Манси автоном округида мигрантларга қарши йирик рейд ўтказилди\n\nРоссиянинг Ханти-Манси автоном округида ҳуқуқни муҳофаза қилувчи органлар мигрантларга қарши кенг кўламли рейд ўтказди. Текширувлар давомида юзлаб хориж фуқароларининг ҳужжатлари кўздан кечирилди.\n\nРейд натижасида миграция қонунчилигини бузган бир қатор шахслар аниқланган. Уларга нисбатан маъмурий чоралар кўрилмоқда, айримлари эса Россиядан чиқариб юборилиши мумкин.\n\nШунингдек, текширувлар давомида ноқонуний меҳнатдан фойдаланган иш берувчилар ҳам назоратга олиниб, уларга нисбатан тегишли чоралар кўрилиши билдирилган.",
-        "text_excerpt": "Ханти-Манси автоном округида мигрантларга қарши йирик рейд ўтказилди\n\nРоссиянинг Ханти-Манси автоном округида ҳуқуқни муҳофаза қилувчи органлар мигрантларга қарши кенг кўламли рейд ўтказди. Текширувлар давомида юзлаб хориж фуқароларининг ҳужжатлари кўздан кечирилди.\n\nРейд натижасида миграция қонунчилигини бузган бир қатор шахслар аниқланган. Уларга нисбатан маъмурий чоралар кўрилмоқда, айримлари эса Россиядан чиқариб…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "signal_mode": "ANALYST_REVIEW",
-        "signal_intent": "ENFORCEMENT_REVIEW",
-        "detection_count": 1,
-        "first_detected_at": "2026-08-13T05:27:46Z",
-        "last_detected_at": "2026-08-13T05:27:46Z"
-      },
-      {
-        "timeline_id": "early_warning:100",
+        "timeline_id": "early_warning:109",
         "timestamp": "2026-07-14T14:10:35Z",
         "layer": "EARLY_WARNING",
         "type": "ENFORCEMENT_EARLY_WARNING",
@@ -21152,40 +20548,8 @@
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "ENFORCEMENT_REVIEW",
         "detection_count": 1,
-        "first_detected_at": "2026-08-13T05:27:46Z",
-        "last_detected_at": "2026-08-13T05:27:46Z"
-      },
-      {
-        "timeline_id": "early_warning:98",
-        "timestamp": "2026-07-13T15:46:15Z",
-        "layer": "EARLY_WARNING",
-        "type": "PRESSURE_EARLY_WARNING",
-        "signal_type": "PRESSURE_EARLY_WARNING",
-        "event_type": null,
-        "source": "TELEGRAM",
-        "source_post_id": "1604168769:10438",
-        "author": "migrantlar24",
-        "url": "https://t.me/migrantlar24/10438",
-        "source_url": "https://t.me/migrantlar24/10438",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.62,
-        "priority": "MEDIUM",
-        "priority_score": 21.7,
-        "analyst_priority": "LOW",
-        "text": "Белоруссияда мигрантлар оқими ошиб бормоқда.",
-        "text_excerpt": "Белоруссияда мигрантлар оқими ошиб бормоқда.",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "signal_mode": "ANALYST_REVIEW",
-        "signal_intent": "PRESSURE_REVIEW",
-        "detection_count": 1,
-        "first_detected_at": "2026-08-13T05:27:46Z",
-        "last_detected_at": "2026-08-13T05:27:46Z"
+        "first_detected_at": "2026-08-14T04:52:01Z",
+        "last_detected_at": "2026-08-14T04:52:01Z"
       },
       {
         "timeline_id": "information:1772",
@@ -21249,37 +20613,6 @@
         "text": "Over the past four years, 335 Pakistanis have died at sea while attempting to reach Europe, highlighting the deadly risks of irregular migration. \n\nDespite these tragedies, human smuggling agents continue to operate in Pakistan, sending people to Europe through illegal routes.",
         "text_excerpt": "Over the past four years, 335 Pakistanis have died at sea while attempting to reach Europe, highlighting the deadly risks of irregular migration. \n\nDespite these tragedies, human smuggling agents continue to operate in Pakistan, sending people to Europe through illegal routes.",
         "event_group_id": 77,
-        "correlation_score": null,
-        "related_source_count": null,
-        "event_time_text": null,
-        "event_time_normalized": null,
-        "event_time_confidence": null
-      },
-      {
-        "timeline_id": "operational:142",
-        "timestamp": "2026-07-12T13:00:13Z",
-        "layer": "OPERATIONAL",
-        "type": "GENERAL_DISCUSSION",
-        "signal_type": "GENERAL_DISCUSSION",
-        "event_type": "GENERAL_DISCUSSION",
-        "source": "TELEGRAM",
-        "source_post_id": "1604168769:10416",
-        "author": "migrantlar24",
-        "url": "https://t.me/migrantlar24/10416",
-        "source_url": "https://t.me/migrantlar24/10416",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "latitude": null,
-        "longitude": null,
-        "confidence": 0.2,
-        "priority": "LOW",
-        "priority_score": 20.0,
-        "text": "Митищидаги бозорда ўтказилган рейд вақтида айрим мигрантлар ҳуқуқни муҳофаза қилувчи ходимларни кўриб қочишга уринди.\n\nМаълумотларга кўра, рейд давомида бир неча хорижлик ушланиб, уларнинг ҳужжатлари текширилди. Айримлардан Россияда тақиқланган насвай аниқланган. Текширувлар якунланганидан сўнг, миграция қонунчилигини бузган деб гумон қилинган шахслар ички ишлар бўлимига олиб кетилди.",
-        "text_excerpt": "Митищидаги бозорда ўтказилган рейд вақтида айрим мигрантлар ҳуқуқни муҳофаза қилувчи ходимларни кўриб қочишга уринди.\n\nМаълумотларга кўра, рейд давомида бир неча хорижлик ушланиб, уларнинг ҳужжатлари текширилди. Айримлардан Россияда тақиқланган насвай аниқланган. Текширувлар якунланганидан сўнг, миграция қонунчилигини бузган деб гумон қилинган шахслар ички ишлар бўлимига олиб кетилди.",
-        "event_group_id": 111,
         "correlation_score": null,
         "related_source_count": null,
         "event_time_text": null,
@@ -21425,38 +20758,6 @@
         "detection_count": 1,
         "first_detected_at": "2026-08-11T11:58:18Z",
         "last_detected_at": "2026-08-11T11:58:18Z"
-      },
-      {
-        "timeline_id": "early_warning:97",
-        "timestamp": "2026-07-09T11:30:02Z",
-        "layer": "EARLY_WARNING",
-        "type": "PRESSURE_EARLY_WARNING",
-        "signal_type": "PRESSURE_EARLY_WARNING",
-        "event_type": null,
-        "source": "TELEGRAM",
-        "source_post_id": "1604168769:10342",
-        "author": "migrantlar24",
-        "url": "https://t.me/migrantlar24/10342",
-        "source_url": "https://t.me/migrantlar24/10342",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.9,
-        "priority": "MEDIUM",
-        "priority_score": 31.5,
-        "analyst_priority": "LOW",
-        "text": "Европада миграция қоидалари янада қаттиқлашмоқда\n\nЕвропа Иттифоқида янги миграция ва бошпана пакти кучга кириши ортидан қатор давлатлар ўз миллий қонунларини ҳам янада кескинлаштирмоқда.\n\nАсосий мақсад — ноқонуний миграцияни камайтириш, депортацияни осонлаштириш ва Европа мамлакатларини мигрантлар учун камроқ жозибадор қилиш.\nҚисқача асосий ўзгаришлар:\n\n🇸🇪 Швеция — энди айрим ҳолатларда «ёмон хулқ-атвор» учун ҳам яшаш рухсатномаси (ВНЖ) бекор қилиниши мумкин.\n\n🇩🇪 Германия — ҳужжатсиз келган муҳожирларга нисбатан чегара назорати кучайтирилди, оилани бирлаштириш ҳуқуқига чекловлар киритилди.\n\n🇫🇷🇬🇧 Франция ва Буюк Британия — Ла-Манш орқали келувчиларга қарши қўшма чоралар кучайтирилмоқда.\n\n🇮🇹 Италия — депортация марказлари сони оширилмоқда ва Албаниядаги мигрантлар марказларидан фойдаланиш кенгайтирилмоқда.\n\n🇳🇱 Нидерландия — бошпана бериш тартиби ўзгариб, айрим тоифадаги мигрантлар учун оила аъзоларини олиб келиш имконияти чекланмоқда.",
-        "text_excerpt": "Европада миграция қоидалари янада қаттиқлашмоқда\n\nЕвропа Иттифоқида янги миграция ва бошпана пакти кучга кириши ортидан қатор давлатлар ўз миллий қонунларини ҳам янада кескинлаштирмоқда.\n\nАсосий мақсад — ноқонуний миграцияни камайтириш, депортацияни осонлаштириш ва Европа мамлакатларини мигрантлар учун камроқ жозибадор қилиш.\nҚисқача асосий ўзгаришлар:\n\n🇸🇪 Швеция — энди айрим ҳолатларда «ёмон хулқ-атвор» учун ҳам яша…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "signal_mode": "ANALYST_REVIEW",
-        "signal_intent": "PRESSURE_REVIEW",
-        "detection_count": 1,
-        "first_detected_at": "2026-08-13T05:27:44Z",
-        "last_detected_at": "2026-08-13T05:27:44Z"
       },
       {
         "timeline_id": "operational:102",
@@ -21827,37 +21128,6 @@
         "detection_count": 1,
         "first_detected_at": "2026-08-11T11:58:08Z",
         "last_detected_at": "2026-08-11T11:58:08Z"
-      },
-      {
-        "timeline_id": "operational:141",
-        "timestamp": "2026-07-01T12:27:13Z",
-        "layer": "OPERATIONAL",
-        "type": "GENERAL_DISCUSSION",
-        "signal_type": "GENERAL_DISCUSSION",
-        "event_type": "GENERAL_DISCUSSION",
-        "source": "TELEGRAM",
-        "source_post_id": "1604168769:10141",
-        "author": "migrantlar24",
-        "url": "https://t.me/migrantlar24/10141",
-        "source_url": "https://t.me/migrantlar24/10141",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "latitude": null,
-        "longitude": null,
-        "confidence": 0.2,
-        "priority": "LOW",
-        "priority_score": 20.0,
-        "text": "Невскийда рейд\n\nСанкт-Петербургнинг Невский туманида ўтказилган миграция рейдидан сўнг 9 нафар чет эл фуқароси Россиядан чиқариб юборилади.\n\nТекширув Тельман кўчасидаги турар-жой мажмуаси қурилиш майдончасида ўтказилди. Жами 68 нафар чет эл фуқаросининг ҳужжатлари текширилди. Уларнинг 9 нафарида зарур ҳужжатлар мавжуд эмаслиги аниқланди.\n\nҚоидабузарларга маъмурий жарима тайинланиб, кейинчалик Россиядан депортация қилиш чораси қўлланилади. Шунингдек, полиция ҳужжатсиз ишчиларни қайси компания ишга олганини ҳам текширмоқда.",
-        "text_excerpt": "Невскийда рейд\n\nСанкт-Петербургнинг Невский туманида ўтказилган миграция рейдидан сўнг 9 нафар чет эл фуқароси Россиядан чиқариб юборилади.\n\nТекширув Тельман кўчасидаги турар-жой мажмуаси қурилиш майдончасида ўтказилди. Жами 68 нафар чет эл фуқаросининг ҳужжатлари текширилди. Уларнинг 9 нафарида зарур ҳужжатлар мавжуд эмаслиги аниқланди.\n\nҚоидабузарларга маъмурий жарима тайинланиб, кейинчалик Россиядан депортация қил…",
-        "event_group_id": 110,
-        "correlation_score": null,
-        "related_source_count": null,
-        "event_time_text": null,
-        "event_time_normalized": null,
-        "event_time_confidence": null
       },
       {
         "timeline_id": "early_warning:39",
@@ -22597,80 +21867,6 @@
         "influence_detected": false,
         "first_collected_at": "2026-08-11T11:44:02Z",
         "last_collected_at": "2026-08-11T11:44:02Z",
-        "collection_count": 1
-      },
-      {
-        "timeline_id": "information:1040",
-        "timestamp": "2026-06-15T20:56:39Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2066625960946909637",
-        "author": "KeiriamG38948",
-        "url": "https://x.com/KeiriamG38948/status/2066625960946909637",
-        "source_url": "https://x.com/KeiriamG38948/status/2066625960946909637",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "deportation",
-          "arrival"
-        ],
-        "freshness_cues": [],
-        "text": "@AyoosubK @mezcalsquid @hayasaka_aryan They don't do that in Minnesota or anywhere in the U.S. You are racist for ever thinking that. They can't deport all of them as many of them came in the country legally anyway. The Somali community in Minnesota have been there are at least 30 years when they arrived as refugees.",
-        "text_excerpt": "@AyoosubK @mezcalsquid @hayasaka_aryan They don't do that in Minnesota or anywhere in the U.S. You are racist for ever thinking that. They can't deport all of them as many of them came in the country legally anyway. The Somali community in Minnesota have been there are at least 30 years when they arrived as refugees.",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-08-11T11:44:13Z",
-        "last_collected_at": "2026-08-11T11:44:13Z",
-        "collection_count": 1
-      },
-      {
-        "timeline_id": "information:1041",
-        "timestamp": "2026-06-15T20:36:37Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2066620919070568931",
-        "author": "PotatoWaffen_",
-        "url": "https://x.com/PotatoWaffen_/status/2066620919070568931",
-        "source_url": "https://x.com/PotatoWaffen_/status/2066620919070568931",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "boat",
-          "arrival"
-        ],
-        "freshness_cues": [],
-        "text": "@Kneejerkraw @bigpoppapump666 I bet you think African migrants who just arrived on a dingy boat last week are just as Irish as the Irish themselves.",
-        "text_excerpt": "@Kneejerkraw @bigpoppapump666 I bet you think African migrants who just arrived on a dingy boat last week are just as Irish as the Irish themselves.",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-08-11T11:44:13Z",
-        "last_collected_at": "2026-08-11T11:44:13Z",
         "collection_count": 1
       },
       {
