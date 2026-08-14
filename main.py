@@ -182,6 +182,67 @@ def apply_region_resolution(
     return event
 
 
+def resolve_operational_event_type(
+    event,
+    operational_result,
+):
+    """
+    Maps strict operational categories to the persistent event taxonomy.
+    """
+
+    categories = {
+        str(value).upper()
+        for value in (
+            operational_result.get(
+                "operational_categories",
+                []
+            )
+            or []
+        )
+        if value
+    }
+
+    priority = (
+        ("MIGRATION_FACILITATION", "SMUGGLING_ACTIVITY"),
+        ("SMUGGLING", "SMUGGLING_ACTIVITY"),
+        ("CASUALTY", "CASUALTY"),
+        ("RESCUE", "RESCUE_OPERATION"),
+        ("INTERCEPTION", "INTERCEPTION"),
+        ("ARREST_DETENTION", "DETENTION"),
+        ("DEPORTATION_RETURN", "DEPORTATION"),
+        ("MOVEMENT", "BORDER_CROSSING"),
+        ("BORDER_ACTION", "BORDER_MEASURE"),
+        ("HUMANITARIAN", "MIGRANT_CAMP"),
+        ("COORDINATION_ADVICE", "COORDINATION"),
+    )
+
+    for category, event_type in priority:
+        if category in categories:
+            event["event_type"] = event_type
+            event["signal_type"] = event_type
+
+            matched_signals = list(
+                event.get(
+                    "matched_signals",
+                    []
+                )
+                or []
+            )
+
+            if event_type not in matched_signals:
+                matched_signals.append(
+                    event_type
+                )
+
+            event["matched_signals"] = (
+                matched_signals
+            )
+
+            return event
+
+    return event
+
+
 def analyze_post(
     post,
     keyword_filter,
@@ -2492,6 +2553,11 @@ def main():
                     scorer=scorer,
                     event_extractor=event_extractor,
                     region_resolver=region_resolver,
+                )
+
+                event = resolve_operational_event_type(
+                    event=event,
+                    operational_result=operational_result,
                 )
 
                 if event.get("historical_reference"):
