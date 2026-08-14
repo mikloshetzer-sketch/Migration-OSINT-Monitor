@@ -1,0 +1,122 @@
+name: Telegram Source Discovery Diagnostic
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_queries:
+        description: "Maximum number of discovery queries"
+        required: true
+        default: "8"
+        type: string
+
+      results_per_query:
+        description: "Maximum Telegram results per discovery query"
+        required: true
+        default: "25"
+        type: string
+
+      sample_posts_per_channel:
+        description: "Sample posts kept per discovered channel"
+        required: true
+        default: "3"
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  telegram-source-discovery:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install "telethon>=1.44,<2"
+
+      - name: Validate discovery script syntax
+        run: |
+          python -m py_compile analysis/telegram_source_discovery.py
+
+      - name: Show discovery configuration
+        run: |
+          echo "==================================="
+          echo "TELEGRAM SOURCE DISCOVERY"
+          echo "==================================="
+          echo "Max queries: ${{ inputs.max_queries }}"
+          echo "Results/query: ${{ inputs.results_per_query }}"
+          echo "Samples/channel: ${{ inputs.sample_posts_per_channel }}"
+          echo "Database writes: DISABLED"
+          echo "Production collector changes: NONE"
+          echo "Paid Telegram Stars: DISABLED"
+
+      - name: Run independent Telegram source discovery
+        env:
+          TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
+          TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
+          TELEGRAM_SESSION: ${{ secrets.TELEGRAM_SESSION }}
+
+          TELEGRAM_DISCOVERY_MAX_QUERIES: ${{ inputs.max_queries }}
+          TELEGRAM_DISCOVERY_RESULTS_PER_QUERY: ${{ inputs.results_per_query }}
+          TELEGRAM_DISCOVERY_SAMPLE_POSTS_PER_CHANNEL: ${{ inputs.sample_posts_per_channel }}
+
+        run: |
+          python analysis/telegram_source_discovery.py
+
+      - name: Verify discovery JSON
+        run: |
+          if [ -f telegram-source-discovery.json ]; then
+            echo "telegram-source-discovery.json generated successfully."
+            ls -lh telegram-source-discovery.json
+
+            python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("telegram-source-discovery.json")
+          data = json.loads(path.read_text(encoding="utf-8"))
+
+          summary = data.get("summary", {})
+
+          print("Run type:", data.get("run_type"))
+          print("Queries completed:", summary.get("queries_completed"))
+          print("Queries skipped quota:", summary.get("queries_skipped_no_free_quota"))
+          print("Unique public posts:", summary.get("unique_public_channel_posts"))
+          print("Unique channels:", summary.get("unique_channels"))
+          print("High-value channels:", summary.get("high_value_channels"))
+          print("Review channels:", summary.get("review_channels"))
+          print("Candidate channels:", summary.get("candidate_channels"))
+          print("Paid search used:", summary.get("paid_search_used"))
+
+          if data.get("safety", {}).get("paid_search_used") is not False:
+              raise SystemExit("ERROR: paid_search_used safety flag is not False")
+          PY
+          else
+            echo "ERROR: telegram-source-discovery.json was not generated."
+            exit 1
+          fi
+
+      - name: Publish discovery JSON
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add telegram-source-discovery.json
+
+          if git diff --cached --quiet; then
+            echo "No discovery JSON changes to commit."
+          else
+            git commit -m "Update Telegram source discovery diagnostic"
+            git push origin HEAD:main
+          fi
