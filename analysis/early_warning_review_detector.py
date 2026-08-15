@@ -50,7 +50,7 @@ from typing import Any, Dict, List, Sequence, Tuple
 
 
 class EarlyWarningReviewDetector:
-    RULES_VERSION = "EARLY_WARNING_REVIEW_V1_3_6_FINAL"
+    RULES_VERSION = "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN"
 
     MIN_SCORE = 5.0
     WINDOW_MAX_CHARS = 460
@@ -84,6 +84,15 @@ class EarlyWarningReviewDetector:
         r"\brifugiati\b",
         r"\bimmigrati\b",
 
+        # Norwegian / Bokmål
+        # Added as a language-level capability only; no route/location bonus.
+        r"\bmigrant(?:er)?\b",
+        r"\bflyktning(?:er)?\b",
+        r"\basyls[øo]ker(?:e)?\b",
+        r"\binnvandrer(?:e)?\b",
+        r"\bulovlig\s+migrasjon\b",
+        r"\birregul[æa]r\s+migrasjon\b",
+
         # Russian / CIS Cyrillic
         r"\bмигрант\w*\b",
         r"\bбежен\w*\b",
@@ -114,6 +123,10 @@ class EarlyWarningReviewDetector:
         # French / Italian
         r"\b(?:migrants?|r[ée]fugi[ée]s?|migranti|rifugiati)\b.{0,90}\b(?:arriv|d[ée]part|travers|part|sbarc|radun|rassembl)\w*",
 
+        # Norwegian / Bokmål
+        r"\b(?:migrant(?:er)?|flyktning(?:er)?|asyls[øo]ker(?:e)?)\b.{0,110}\b(?:samle(?:s|r|t)?|bevege(?:r|t)?|dra(?:r|tt)?|reise(?:r|t)?|ankomme(?:r|t)?|krysse(?:r|t)?|ta\s+seg\s+inn|gå\s+inn|går\s+inn|forsøke(?:r|t)?\s+å\s+ta\s+seg\s+inn)\b",
+        r"\b(?:samle(?:s|r|t)?|bevege(?:r|t)?|dra(?:r|tt)?|reise(?:r|t)?|ankomme(?:r|t)?|krysse(?:r|t)?|ta\s+seg\s+inn|gå\s+inn|går\s+inn)\b.{0,110}\b(?:migrant(?:er)?|flyktning(?:er)?|asyls[øo]ker(?:e)?)\b",
+
         # Russian / CIS
         r"\b(?:мигрант\w*|бежен\w*|муҳожир\w*)\b.{0,120}\b(?:прибы\w*|прибыл\w*|едут|движ\w*|направ\w*|собира\w*|скоп\w*|пересек\w*|переш\w*|въех\w*|выех\w*|наплыв\w*|нашеств\w*)\b",
         r"\b(?:наплыв\w*|нашеств\w*|прибыл\w*|пересек\w*|въех\w*|собира\w*)\b.{0,120}\b(?:мигрант\w*|бежен\w*|муҳожир\w*)\b",
@@ -127,6 +140,8 @@ class EarlyWarningReviewDetector:
         r"\b(?:frontera|puesto\s+fronterizo|ruta|costa|mar|patera|cayuco|embarcaci[oó]n)\b",
         r"\b(?:fronti[èe]re|route|c[oô]te|mer|bateau|navire)\b",
         r"\b(?:confine|rotta|costa|mare|barca|nave)\b",
+        # Norwegian / Bokmål
+        r"\b(?:grense|grensen|grenser|grenseby|grensebyen|grenseovergang|grenseovergangen|rute|ruten|kyst|kysten|sjø|sjøen|båt|båter)\b",
         r"\b(?:границ\w*|погран\w*|маршрут\w*|переход\w*|берег\w*|мор\w*|лодк\w*|судн\w*)\b",
         r"(?:الحدود|معبر|طريق|مسار|ساحل|البحر|قارب|سفينة|السلك)",
         r"(?:دخلت|دخل|يعبر|عبور).{0,80}(?:طريق|الحدود|السلك)",
@@ -170,6 +185,8 @@ class EarlyWarningReviewDetector:
         r"\b(?:interceptad\w*|detenid\w*|arrestad\w*|rescatad\w*|deportad\w*|expulsad\w*|redada|guardia\s+civil|guardia\s+costera)\b",
         r"\b(?:intercept[ée]\w*|arr[êe]t[ée]\w*|expuls[ée]\w*|secour\w*|garde-c[oô]tes|police)\b",
         r"\b(?:intercettat\w*|arrestat\w*|espuls\w*|soccors\w*|guardia\s+costiera)\b",
+        # Norwegian / Bokmål
+        r"\b(?:pågrepet|arrestert|stanset|avskåret|reddet|deportert|utvist|returnert|grensevakter?|kystvakt|politiaksjon)\b",
         r"\b(?:задерж\w*|выдвор\w*|депорт\w*|перехват\w*|рейд\w*|пограничн\w*|полици\w*|қайтар\w*)\b",
         r"(?:اعتراض|اعتقال|احتجاز|ترحيل|إبعاد|إنقاذ|حرس الحدود|خفر السواحل|كبسة)",
     )
@@ -188,6 +205,11 @@ class EarlyWarningReviewDetector:
         r"\b(?:afluencia|oleada|llegada\s+masiva|aumento\s+brusco|descenso|disminuci[oó]n|presi[oó]n\s+migratoria)\b",
         r"\b(?:afflux|vague\s+de\s+migrants|hausse|baisse|diminution|pression\s+migratoire)\b",
         r"\b(?:ondata|afflusso|aumento|calo|diminuzione|pressione\s+migratoria)\b",
+
+        # Norwegian / Bokmål
+        r"\b(?:bølge\s+av\s+migranter|masseankomst|kraftig\s+økning|migrasjonspress|grensepress)\b",
+        r"\b(?:økning|økte|øker|stigning)\b.{0,70}\b(?:migrant(?:er)?|migrasjon|flyktning(?:er)?|ankomst(?:er)?|grensepassering(?:er)?)\b",
+        r"\b(?:migrant(?:er)?|migrasjon|flyktning(?:er)?|ankomst(?:er)?|grensepassering(?:er)?)\b.{0,70}\b(?:økning|økte|øker|stigning)\b",
 
         # Russian / CIS Cyrillic
         r"\b(?:наплыв\w*|массов\w*.{0,30}(?:прибыт|миграц)|резк\w*.{0,30}(?:рост|увелич)|миграционн\w*.{0,30}давлен)\b",
@@ -229,6 +251,14 @@ class EarlyWarningReviewDetector:
         r"\baujourd['’]hui\b",
         r"\bhier\b",
         r"\boggi\b",
+        # Norwegian / Bokmål
+        r"\bi\s+dag\b",
+        r"\bi\s+kveld\b",
+        r"\bnå\b",
+        r"\bfor\s+tiden\b",
+        r"\bpågår\b",
+        r"\bdenne\s+(?:morgenen|ettermiddagen|kvelden|uken)\b",
+        r"\bi\s+går\b",
         r"\bсегодня\b",
         r"\bсейчас\b",
         r"\bвчера\b",
@@ -253,6 +283,11 @@ class EarlyWarningReviewDetector:
         r"\b(?:ont\s+[ée]t[ée]|a\s+[ée]t[ée])\s+(?:arr[êe]t[ée]\w*|intercept[ée]\w*|expuls[ée]\w*|secour\w*)\b",
         r"\b(?:migranti|rifugiati)\b.{0,80}\b(?:sono\s+arrivati|hanno\s+attraversato|sono\s+entrati|sono\s+partiti)\b",
 
+        # Norwegian / Bokmål
+        r"\b(?:migrant(?:er)?|flyktning(?:er)?|asyls[øo]ker(?:e)?)\b.{0,100}\b(?:ankom|ankommet|krysset|kom\s+inn|nådd|samlet\s+seg|dro|forlot|tok\s+seg\s+inn)\b",
+        r"\b(?:ankom|ankommet|krysset|samlet\s+seg|tok\s+seg\s+inn|ble\s+stanset|ble\s+pågrepet)\b.{0,100}\b(?:migrant(?:er)?|flyktning(?:er)?|asyls[øo]ker(?:e)?)\b",
+        r"\b(?:politiet|politi|grensevakter?|kystvakt|myndighetene)\b.{0,120}\b(?:stanset|pågrep|pågrepet|arrestert|avskåret|reddet|deportert|utvist|returnert)\b",
+
         # Russian / CIS
         r"\b(?:мигрант\w*|бежен\w*|муҳожир\w*)\b.{0,110}\b(?:прибыли|прибыв\w*|пересек\w*|въех\w*|выех\w*|задерж\w*|выдвор\w*|депорт\w*)\b",
         r"\b(?:задерж\w*|выдвор\w*|депорт\w*|перехват\w*|рейд\w*)\b.{0,110}\b(?:мигрант\w*|бежен\w*|муҳожир\w*)\b",
@@ -272,6 +307,8 @@ class EarlyWarningReviewDetector:
         r"\b\d+(?:[.,]\d+)?\s*(?:%|percent|per\s+cent)\b",
         r"\b(?:dozens?|hundreds?|thousands?)\b",
         r"\b(?:decenas|cientos|miles)\b",
+        # Norwegian / Bokmål
+        r"\b(?:titalls|hundrevis|tusenvis)\b",
         r"\b(?:десятки|сотни|тысячи)\b",
         r"(?:عشرات|مئات|آلاف)",
     )
@@ -1862,3 +1899,4 @@ class EarlyWarningReviewDetector:
             "review_reason":
                 rejection_reason,
         }
+
