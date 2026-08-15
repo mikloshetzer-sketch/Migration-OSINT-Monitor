@@ -1,24 +1,24 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-08-15T19:06:39Z",
-  "generated_at": "2026-08-15T19:06:39Z",
+  "updated_at": "2026-08-15T19:16:26Z",
+  "generated_at": "2026-08-15T19:16:26Z",
   "current_run": {
     "available": true,
-    "id": 51,
-    "run_uuid": "14459c13-9853-40d0-b69e-2baf26f7a22a",
-    "started_at": "2026-08-15T19:03:16Z",
-    "completed_at": "2026-08-15T19:06:38Z",
+    "id": 52,
+    "run_uuid": "a60079b8-995e-4cd1-955d-3dc3ee10bf2d",
+    "started_at": "2026-08-15T19:13:46Z",
+    "completed_at": "2026-08-15T19:16:24Z",
     "status": "SUCCESS",
     "posts_returned": 128,
-    "unique_posts_collected": 93,
+    "unique_posts_collected": 91,
     "x_posts_returned": 50,
     "reddit_posts_returned": 24,
     "mastodon_posts_returned": 50,
-    "unique_x_posts": 46,
+    "unique_x_posts": 44,
     "unique_reddit_posts": 22,
     "unique_mastodon_posts": 21,
     "noise_filtered": 1,
-    "non_operational_filtered": 87,
+    "non_operational_filtered": 85,
     "historical_references_filtered": 0,
     "influence_signals": 1,
     "influence_signals_detected": 1,
@@ -32,20 +32,20 @@
     "online_influence_report_signals": 0,
     "operational_events": 5,
     "operational_events_analyzed": 5,
-    "historical_events_available": 85,
+    "historical_events_available": 89,
     "new_correlations": 0,
     "correlated_events": 0,
     "new_correlation_groups": 5,
     "database_correlations": 0,
     "current_run_correlations": 0,
-    "new_events": 4,
-    "new_events_saved": 4,
-    "events_already_existing": 1,
-    "new_event_groups": 4,
+    "new_events": 0,
+    "new_events_saved": 0,
+    "events_already_existing": 5,
+    "new_event_groups": 0,
     "updated_event_groups": 0,
     "bootstrapped_event_groups": 0,
-    "existing_event_groups_reused": 1,
-    "event_group_sources_linked": 4,
+    "existing_event_groups_reused": 5,
+    "event_group_sources_linked": 0,
     "x_collector_errors": 0,
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
@@ -53,19 +53,19 @@
   },
   "kpis": {
     "operational_events": 7,
-    "new_events": 4,
+    "new_events": 0,
     "correlated_events": 1,
     "active_event_groups": 109,
     "sources": 4,
     "regions": 4,
-    "collected_posts_24h": 197,
-    "influence_signals": 10,
+    "collected_posts_24h": 210,
+    "influence_signals": 12,
     "access_signals": 1,
     "high_priority": 1,
     "current_run_operational_events": 5,
-    "current_run_unique_posts": 93,
+    "current_run_unique_posts": 91,
     "access_signals_raw": 1,
-    "influence_signals_raw": 10,
+    "influence_signals_raw": 12,
     "influence_narratives": 3
   },
   "live_events": [
@@ -838,30 +838,30 @@
     {
       "source": "X",
       "name": "X",
-      "count": 140,
-      "posts": 140,
-      "percentage": 71.07
+      "count": 153,
+      "posts": 153,
+      "percentage": 72.86
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
       "count": 32,
       "posts": 32,
-      "percentage": 16.24
+      "percentage": 15.24
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
       "count": 24,
       "posts": 24,
-      "percentage": 12.18
+      "percentage": 11.43
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
       "count": 1,
       "posts": 1,
-      "percentage": 0.51
+      "percentage": 0.48
     }
   ],
   "region_activity": [
@@ -898,30 +898,30 @@
     {
       "source": "X",
       "name": "X",
-      "count": 140,
-      "posts": 140,
-      "percentage": 71.07
+      "count": 153,
+      "posts": 153,
+      "percentage": 72.86
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
       "count": 32,
       "posts": 32,
-      "percentage": 16.24
+      "percentage": 15.24
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
       "count": 24,
       "posts": 24,
-      "percentage": 12.18
+      "percentage": 11.43
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
       "count": 1,
       "posts": 1,
-      "percentage": 0.51
+      "percentage": 0.48
     }
   ],
   "correlation": {
@@ -945,12 +945,12 @@
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "database": "AVAILABLE",
-    "last_run_id": 51,
-    "last_completed_at": "2026-08-15T19:06:38Z"
+    "last_run_id": 52,
+    "last_completed_at": "2026-08-15T19:16:24Z"
   },
   "operational_assessment": {
     "operational_events_24h": 7,
-    "influence_signals_24h": 10,
+    "influence_signals_24h": 12,
     "access_signals_24h": 1,
     "correlated_events_24h": 1,
     "active_event_groups": 109,
@@ -963,11 +963,11 @@
     "correlation_rate": 14.29,
     "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 7 operatív migrációs eseményt, 10 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 1 friss eseményforrás korrelált más forrással. Jelenleg 109 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Migrant Camp. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.49. A jelenlegi aktivitási szint: MODERATE."
+    "summary": "Az elmúlt 24 órában a rendszer 7 operatív migrációs eseményt, 12 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 1 friss eseményforrás korrelált más forrással. Jelenleg 109 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Migrant Camp. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.49. A jelenlegi aktivitási szint: MODERATE."
   },
   "analytical_assessment": {
     "operational_events_24h": 7,
-    "influence_signals_24h": 10,
+    "influence_signals_24h": 12,
     "access_signals_24h": 1,
     "correlated_events_24h": 1,
     "active_event_groups": 109,
@@ -980,7 +980,7 @@
     "correlation_rate": 14.29,
     "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 7 operatív migrációs eseményt, 10 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 1 friss eseményforrás korrelált más forrással. Jelenleg 109 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Migrant Camp. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.49. A jelenlegi aktivitási szint: MODERATE."
+    "summary": "Az elmúlt 24 órában a rendszer 7 operatív migrációs eseményt, 12 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 1 friss eseményforrás korrelált más forrással. Jelenleg 109 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Migrant Camp. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.49. A jelenlegi aktivitási szint: MODERATE."
   },
   "high_confidence_events": [
     {
@@ -1057,8 +1057,8 @@
       "language": null,
       "published_at": "2026-08-15T15:02:31Z",
       "first_detected_at": "2026-08-15T19:04:43Z",
-      "last_detected_at": "2026-08-15T19:04:43Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-08-15T19:14:53Z",
+      "detection_count": 2,
       "text": "Hundreds of troops deployed to Ceuta's border with Morocco over fears tens of thousands of migrants could attempt 'invasion' TODAY\n\"Hundreds of troops have been deployed to Spanish enclave Ceuta's border with Morocco, amid fears of another surge of people attempting to cross as early as today. Spain has beefed up police and military presence in the North African enclave while Morocco also deployed troops amid social media messages encouraging migrants to attempt another mass border breach on Saturday. Groups of migrants have been pictured roaming the hills outside Ceuta as security forces stand watch.\"",
       "text_excerpt": "Hundreds of troops deployed to Ceuta's border with Morocco over fears tens of thousands of migrants could attempt 'invasion' TODAY\n\"Hundreds of troops have been deployed to Spanish enclave Ceuta's border with Morocco, amid fears of another surge of people attempting to cross as early as today. Spain has beefed up police and military presence in the North African enclave while Morocco also deployed troops amid social media messages encouraging migrants to attempt another mass border breach on Saturday. Groups of migrants have been pictured roaming the hills outside Ceuta as security forces stand watch.\"",
       "url": "https://www.reddit.com/r/NoFilterNews/comments/1vp53ld/hundreds_of_troops_deployed_to_ceutas_border_with/",
@@ -1121,6 +1121,87 @@
       "platform_count": 1
     },
     {
+      "id": 141,
+      "source": "X",
+      "source_post_id": "2088705562733088787",
+      "author": "bulletinindy",
+      "language": "en",
+      "published_at": "2026-08-15T19:13:07Z",
+      "first_detected_at": "2026-08-15T19:14:21Z",
+      "last_detected_at": "2026-08-15T19:14:21Z",
+      "detection_count": 1,
+      "text": "Police arrest 111 migrants in latest Ceuta border surge after calls for mass breach https://t.co/2diHxIoDVL https://t.co/qEvNJlRF6w",
+      "text_excerpt": "Police arrest 111 migrants in latest Ceuta border surge after calls for mass breach https://t.co/2diHxIoDVL https://t.co/qEvNJlRF6w",
+      "url": "https://x.com/bulletinindy/status/2088705562733088787",
+      "source_url": "https://x.com/bulletinindy/status/2088705562733088787",
+      "primary_signal": "PRESSURE_EARLY_WARNING",
+      "signal_type": "PRESSURE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "PRESSURE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.9,
+      "score": 11.0,
+      "matched_signals": [
+        "PRESSURE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "border"
+        ],
+        [
+          "enforcement",
+          "Police"
+        ],
+        [
+          "pressure",
+          "surge"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT",
+        "PRESSURE"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "surge"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
+      "priority_score": 42.5,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2088705562733088787"
+      ],
+      "related_authors": [
+        "bulletinindy"
+      ],
+      "related_urls": [
+        "https://x.com/bulletinindy/status/2088705562733088787"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
+    {
       "id": 138,
       "source": "X",
       "source_post_id": "2088698865495028118",
@@ -1128,8 +1209,8 @@
       "language": "en",
       "published_at": "2026-08-15T18:46:30Z",
       "first_detected_at": "2026-08-15T19:04:42Z",
-      "last_detected_at": "2026-08-15T19:04:42Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-08-15T19:15:23Z",
+      "detection_count": 2,
       "text": "Moroccan authorities have intercepted hundreds of sub-Saharan and Moroccan migrants near the Ceuta border after a recent influx.\n\nhttps://t.co/kOE8D3Q1sc",
       "text_excerpt": "Moroccan authorities have intercepted hundreds of sub-Saharan and Moroccan migrants near the Ceuta border after a recent influx.\n\nhttps://t.co/kOE8D3Q1sc",
       "url": "https://x.com/NewsCentralTV/status/2088698865495028118",
@@ -1194,80 +1275,6 @@
       ],
       "related_urls": [
         "https://x.com/NewsCentralTV/status/2088698865495028118"
-      ],
-      "related_sources": [
-        "X"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
-    },
-    {
-      "id": 140,
-      "source": "X",
-      "source_post_id": "2088702395123401032",
-      "author": "viralvideonews3",
-      "language": "en",
-      "published_at": "2026-08-15T19:00:31Z",
-      "first_detected_at": "2026-08-15T19:05:16Z",
-      "last_detected_at": "2026-08-15T19:05:16Z",
-      "detection_count": 1,
-      "text": "Thousands of African migrants are attempting to once again break into Ceuta, Spain. While most police are concentrated near the sea, huge columns of migrants have begun breaking through the mountains, where there is less control https://t.co/ZX01vF9Osj",
-      "text_excerpt": "Thousands of African migrants are attempting to once again break into Ceuta, Spain. While most police are concentrated near the sea, huge columns of migrants have begun breaking through the mountains, where there is less control https://t.co/ZX01vF9Osj",
-      "url": "https://x.com/viralvideonews3/status/2088702395123401032",
-      "source_url": "https://x.com/viralvideonews3/status/2088702395123401032",
-      "primary_signal": "ROUTE_EARLY_WARNING",
-      "signal_type": "ROUTE_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ROUTE_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 8.0,
-      "matched_signals": [
-        "ROUTE_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "route",
-          "sea"
-        ],
-        [
-          "enforcement",
-          "police"
-        ]
-      ],
-      "matched_groups": [
-        "ROUTE",
-        "ENFORCEMENT"
-      ],
-      "context_matches": [
-        "migrants"
-      ],
-      "high_value_matches": [],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "Ceuta",
-      "primary_location": "Ceuta",
-      "country": "Spain",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": 35.8894,
-      "longitude": -5.3213,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
-      "priority_score": 39.0,
-      "analyst_priority": "LOW",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "2088702395123401032"
-      ],
-      "related_authors": [
-        "viralvideonews3"
-      ],
-      "related_urls": [
-        "https://x.com/viralvideonews3/status/2088702395123401032"
       ],
       "related_sources": [
         "X"
@@ -1357,8 +1364,8 @@
       "language": null,
       "published_at": "2026-08-15T15:02:31Z",
       "first_detected_at": "2026-08-15T19:04:43Z",
-      "last_detected_at": "2026-08-15T19:04:43Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-08-15T19:14:53Z",
+      "detection_count": 2,
       "text": "Hundreds of troops deployed to Ceuta's border with Morocco over fears tens of thousands of migrants could attempt 'invasion' TODAY\n\"Hundreds of troops have been deployed to Spanish enclave Ceuta's border with Morocco, amid fears of another surge of people attempting to cross as early as today. Spain has beefed up police and military presence in the North African enclave while Morocco also deployed troops amid social media messages encouraging migrants to attempt another mass border breach on Saturday. Groups of migrants have been pictured roaming the hills outside Ceuta as security forces stand watch.\"",
       "text_excerpt": "Hundreds of troops deployed to Ceuta's border with Morocco over fears tens of thousands of migrants could attempt 'invasion' TODAY\n\"Hundreds of troops have been deployed to Spanish enclave Ceuta's border with Morocco, amid fears of another surge of people attempting to cross as early as today. Spain has beefed up police and military presence in the North African enclave while Morocco also deployed troops amid social media messages encouraging migrants to attempt another mass border breach on Saturday. Groups of migrants have been pictured roaming the hills outside Ceuta as security forces stand watch.\"",
       "url": "https://www.reddit.com/r/NoFilterNews/comments/1vp53ld/hundreds_of_troops_deployed_to_ceutas_border_with/",
@@ -1406,6 +1413,139 @@
       "analyst_priority": "HIGH"
     },
     {
+      "id": 141,
+      "source": "X",
+      "source_post_id": "2088705562733088787",
+      "author": "bulletinindy",
+      "language": "en",
+      "published_at": "2026-08-15T19:13:07Z",
+      "first_detected_at": "2026-08-15T19:14:21Z",
+      "last_detected_at": "2026-08-15T19:14:21Z",
+      "detection_count": 1,
+      "text": "Police arrest 111 migrants in latest Ceuta border surge after calls for mass breach https://t.co/2diHxIoDVL https://t.co/qEvNJlRF6w",
+      "text_excerpt": "Police arrest 111 migrants in latest Ceuta border surge after calls for mass breach https://t.co/2diHxIoDVL https://t.co/qEvNJlRF6w",
+      "url": "https://x.com/bulletinindy/status/2088705562733088787",
+      "source_url": "https://x.com/bulletinindy/status/2088705562733088787",
+      "primary_signal": "PRESSURE_EARLY_WARNING",
+      "signal_type": "PRESSURE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "PRESSURE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.9,
+      "score": 11.0,
+      "matched_signals": [
+        "PRESSURE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "border"
+        ],
+        [
+          "enforcement",
+          "Police"
+        ],
+        [
+          "pressure",
+          "surge"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT",
+        "PRESSURE"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "surge"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
+      "priority_score": 42.5,
+      "analyst_priority": "MEDIUM"
+    },
+    {
+      "id": 142,
+      "source": "X",
+      "source_post_id": "2088704842516553983",
+      "author": "SprinterPress",
+      "language": "en",
+      "published_at": "2026-08-15T19:10:15Z",
+      "first_detected_at": "2026-08-15T19:14:52Z",
+      "last_detected_at": "2026-08-15T19:14:52Z",
+      "detection_count": 1,
+      "text": "Moroccan media outlets are publishing videos to support the country's authorities' statement about preventing an attempt by a large group of migrants to cross the border with Spain.\n\nDuring the dispersal of the migrant groups, 130 people were arrested, according to authorities in https://t.co/drm9ux47DC",
+      "text_excerpt": "Moroccan media outlets are publishing videos to support the country's authorities' statement about preventing an attempt by a large group of migrants to cross the border with Spain.\n\nDuring the dispersal of the migrant groups, 130 people were arrested, according to authorities in https://t.co/drm9ux47DC",
+      "url": "https://x.com/SprinterPress/status/2088704842516553983",
+      "source_url": "https://x.com/SprinterPress/status/2088704842516553983",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.9,
+      "score": 12.25,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "migrants to cross"
+        ],
+        [
+          "route",
+          "border"
+        ],
+        [
+          "enforcement",
+          "arrested"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT",
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants",
+        "migrant"
+      ],
+      "high_value_matches": [
+        "migrants to cross"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
+      "priority_score": 35.5,
+      "analyst_priority": "LOW"
+    },
+    {
       "id": 138,
       "source": "X",
       "source_post_id": "2088698865495028118",
@@ -1413,8 +1553,8 @@
       "language": "en",
       "published_at": "2026-08-15T18:46:30Z",
       "first_detected_at": "2026-08-15T19:04:42Z",
-      "last_detected_at": "2026-08-15T19:04:42Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-08-15T19:15:23Z",
+      "detection_count": 2,
       "text": "Moroccan authorities have intercepted hundreds of sub-Saharan and Moroccan migrants near the Ceuta border after a recent influx.\n\nhttps://t.co/kOE8D3Q1sc",
       "text_excerpt": "Moroccan authorities have intercepted hundreds of sub-Saharan and Moroccan migrants near the Ceuta border after a recent influx.\n\nhttps://t.co/kOE8D3Q1sc",
       "url": "https://x.com/NewsCentralTV/status/2088698865495028118",
@@ -1551,8 +1691,8 @@
       "language": "en",
       "published_at": "2026-08-15T19:00:31Z",
       "first_detected_at": "2026-08-15T19:05:16Z",
-      "last_detected_at": "2026-08-15T19:05:16Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-08-15T19:15:22Z",
+      "detection_count": 2,
       "text": "Thousands of African migrants are attempting to once again break into Ceuta, Spain. While most police are concentrated near the sea, huge columns of migrants have begun breaking through the mountains, where there is less control https://t.co/ZX01vF9Osj",
       "text_excerpt": "Thousands of African migrants are attempting to once again break into Ceuta, Spain. While most police are concentrated near the sea, huge columns of migrants have begun breaking through the mountains, where there is less control https://t.co/ZX01vF9Osj",
       "url": "https://x.com/viralvideonews3/status/2088702395123401032",
@@ -1610,8 +1750,8 @@
       "language": "en",
       "published_at": "2026-08-15T18:55:23Z",
       "first_detected_at": "2026-08-15T19:04:42Z",
-      "last_detected_at": "2026-08-15T19:04:42Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-08-15T19:14:53Z",
+      "detection_count": 2,
       "text": "Moroccan police used tear gas to disperse groups of migrants gathered on hills about 3km from the border.\nhttps://t.co/8ukPqYvsqv",
       "text_excerpt": "Moroccan police used tear gas to disperse groups of migrants gathered on hills about 3km from the border.\nhttps://t.co/8ukPqYvsqv",
       "url": "https://x.com/dawn_com/status/2088701100425953574",
@@ -1786,8 +1926,8 @@
       "language": null,
       "published_at": "2026-08-15T18:20:04Z",
       "first_detected_at": "2026-08-15T19:04:02Z",
-      "last_detected_at": "2026-08-15T19:04:02Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-08-15T19:14:22Z",
+      "detection_count": 2,
       "text": "Moroccan police arrest more than 100 people as they attempt to enter Ceuta By Reuters Border security tightened after social media posts call for another mass crossing into Spain’s north African territory https://www. theguardian.com/world/2026/aug /15/moroccan-police-arrest-more-than-100-people-as-they-attempt-to-enter-ceuta # Morocco # Worldnews # Spain # Africa # Migration # Refugees # Europe # MiddleEastandnorthAfrica # TheGuardian # Reuters",
       "text_excerpt": "Moroccan police arrest more than 100 people as they attempt to enter Ceuta By Reuters Border security tightened after social media posts call for another mass crossing into Spain’s north African territory https://www. theguardian.com/world/2026/aug /15/moroccan-police-arrest-more-than-100-people-as-they-attempt-to-enter-ceuta # Morocco # Worldnews # Spain # Africa # Migration # Refugees # Europe # MiddleEastandnorthAfrica # TheGuardian # Reuters",
       "url": "https://rssfeed.media/@guardianfeeds/117100904728586567",
@@ -1962,8 +2102,8 @@
       "language": null,
       "published_at": "2026-08-15T15:02:31Z",
       "first_detected_at": "2026-08-15T19:04:43Z",
-      "last_detected_at": "2026-08-15T19:04:43Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-08-15T19:14:53Z",
+      "detection_count": 2,
       "text": "Hundreds of troops deployed to Ceuta's border with Morocco over fears tens of thousands of migrants could attempt 'invasion' TODAY\n\"Hundreds of troops have been deployed to Spanish enclave Ceuta's border with Morocco, amid fears of another surge of people attempting to cross as early as today. Spain has beefed up police and military presence in the North African enclave while Morocco also deployed troops amid social media messages encouraging migrants to attempt another mass border breach on Saturday. Groups of migrants have been pictured roaming the hills outside Ceuta as security forces stand watch.\"",
       "text_excerpt": "Hundreds of troops deployed to Ceuta's border with Morocco over fears tens of thousands of migrants could attempt 'invasion' TODAY\n\"Hundreds of troops have been deployed to Spanish enclave Ceuta's border with Morocco, amid fears of another surge of people attempting to cross as early as today. Spain has beefed up police and military presence in the North African enclave while Morocco also deployed troops amid social media messages encouraging migrants to attempt another mass border breach on Saturday. Groups of migrants have been pictured roaming the hills outside Ceuta as security forces stand watch.\"",
       "url": "https://www.reddit.com/r/NoFilterNews/comments/1vp53ld/hundreds_of_troops_deployed_to_ceutas_border_with/",
@@ -2011,6 +2151,139 @@
       "analyst_priority": "HIGH"
     },
     {
+      "id": 141,
+      "source": "X",
+      "source_post_id": "2088705562733088787",
+      "author": "bulletinindy",
+      "language": "en",
+      "published_at": "2026-08-15T19:13:07Z",
+      "first_detected_at": "2026-08-15T19:14:21Z",
+      "last_detected_at": "2026-08-15T19:14:21Z",
+      "detection_count": 1,
+      "text": "Police arrest 111 migrants in latest Ceuta border surge after calls for mass breach https://t.co/2diHxIoDVL https://t.co/qEvNJlRF6w",
+      "text_excerpt": "Police arrest 111 migrants in latest Ceuta border surge after calls for mass breach https://t.co/2diHxIoDVL https://t.co/qEvNJlRF6w",
+      "url": "https://x.com/bulletinindy/status/2088705562733088787",
+      "source_url": "https://x.com/bulletinindy/status/2088705562733088787",
+      "primary_signal": "PRESSURE_EARLY_WARNING",
+      "signal_type": "PRESSURE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "PRESSURE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.9,
+      "score": 11.0,
+      "matched_signals": [
+        "PRESSURE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "border"
+        ],
+        [
+          "enforcement",
+          "Police"
+        ],
+        [
+          "pressure",
+          "surge"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT",
+        "PRESSURE"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "surge"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
+      "priority_score": 42.5,
+      "analyst_priority": "MEDIUM"
+    },
+    {
+      "id": 142,
+      "source": "X",
+      "source_post_id": "2088704842516553983",
+      "author": "SprinterPress",
+      "language": "en",
+      "published_at": "2026-08-15T19:10:15Z",
+      "first_detected_at": "2026-08-15T19:14:52Z",
+      "last_detected_at": "2026-08-15T19:14:52Z",
+      "detection_count": 1,
+      "text": "Moroccan media outlets are publishing videos to support the country's authorities' statement about preventing an attempt by a large group of migrants to cross the border with Spain.\n\nDuring the dispersal of the migrant groups, 130 people were arrested, according to authorities in https://t.co/drm9ux47DC",
+      "text_excerpt": "Moroccan media outlets are publishing videos to support the country's authorities' statement about preventing an attempt by a large group of migrants to cross the border with Spain.\n\nDuring the dispersal of the migrant groups, 130 people were arrested, according to authorities in https://t.co/drm9ux47DC",
+      "url": "https://x.com/SprinterPress/status/2088704842516553983",
+      "source_url": "https://x.com/SprinterPress/status/2088704842516553983",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.9,
+      "score": 12.25,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "migrants to cross"
+        ],
+        [
+          "route",
+          "border"
+        ],
+        [
+          "enforcement",
+          "arrested"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT",
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants",
+        "migrant"
+      ],
+      "high_value_matches": [
+        "migrants to cross"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
+      "priority_score": 35.5,
+      "analyst_priority": "LOW"
+    },
+    {
       "id": 138,
       "source": "X",
       "source_post_id": "2088698865495028118",
@@ -2018,8 +2291,8 @@
       "language": "en",
       "published_at": "2026-08-15T18:46:30Z",
       "first_detected_at": "2026-08-15T19:04:42Z",
-      "last_detected_at": "2026-08-15T19:04:42Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-08-15T19:15:23Z",
+      "detection_count": 2,
       "text": "Moroccan authorities have intercepted hundreds of sub-Saharan and Moroccan migrants near the Ceuta border after a recent influx.\n\nhttps://t.co/kOE8D3Q1sc",
       "text_excerpt": "Moroccan authorities have intercepted hundreds of sub-Saharan and Moroccan migrants near the Ceuta border after a recent influx.\n\nhttps://t.co/kOE8D3Q1sc",
       "url": "https://x.com/NewsCentralTV/status/2088698865495028118",
@@ -2156,8 +2429,8 @@
       "language": "en",
       "published_at": "2026-08-15T19:00:31Z",
       "first_detected_at": "2026-08-15T19:05:16Z",
-      "last_detected_at": "2026-08-15T19:05:16Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-08-15T19:15:22Z",
+      "detection_count": 2,
       "text": "Thousands of African migrants are attempting to once again break into Ceuta, Spain. While most police are concentrated near the sea, huge columns of migrants have begun breaking through the mountains, where there is less control https://t.co/ZX01vF9Osj",
       "text_excerpt": "Thousands of African migrants are attempting to once again break into Ceuta, Spain. While most police are concentrated near the sea, huge columns of migrants have begun breaking through the mountains, where there is less control https://t.co/ZX01vF9Osj",
       "url": "https://x.com/viralvideonews3/status/2088702395123401032",
@@ -2215,8 +2488,8 @@
       "language": "en",
       "published_at": "2026-08-15T18:55:23Z",
       "first_detected_at": "2026-08-15T19:04:42Z",
-      "last_detected_at": "2026-08-15T19:04:42Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-08-15T19:14:53Z",
+      "detection_count": 2,
       "text": "Moroccan police used tear gas to disperse groups of migrants gathered on hills about 3km from the border.\nhttps://t.co/8ukPqYvsqv",
       "text_excerpt": "Moroccan police used tear gas to disperse groups of migrants gathered on hills about 3km from the border.\nhttps://t.co/8ukPqYvsqv",
       "url": "https://x.com/dawn_com/status/2088701100425953574",
@@ -2391,8 +2664,8 @@
       "language": null,
       "published_at": "2026-08-15T18:20:04Z",
       "first_detected_at": "2026-08-15T19:04:02Z",
-      "last_detected_at": "2026-08-15T19:04:02Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-08-15T19:14:22Z",
+      "detection_count": 2,
       "text": "Moroccan police arrest more than 100 people as they attempt to enter Ceuta By Reuters Border security tightened after social media posts call for another mass crossing into Spain’s north African territory https://www. theguardian.com/world/2026/aug /15/moroccan-police-arrest-more-than-100-people-as-they-attempt-to-enter-ceuta # Morocco # Worldnews # Spain # Africa # Migration # Refugees # Europe # MiddleEastandnorthAfrica # TheGuardian # Reuters",
       "text_excerpt": "Moroccan police arrest more than 100 people as they attempt to enter Ceuta By Reuters Border security tightened after social media posts call for another mass crossing into Spain’s north African territory https://www. theguardian.com/world/2026/aug /15/moroccan-police-arrest-more-than-100-people-as-they-attempt-to-enter-ceuta # Morocco # Worldnews # Spain # Africa # Migration # Refugees # Europe # MiddleEastandnorthAfrica # TheGuardian # Reuters",
       "url": "https://rssfeed.media/@guardianfeeds/117100904728586567",
@@ -2567,8 +2840,8 @@
       "language": null,
       "published_at": "2026-08-15T15:02:31Z",
       "first_detected_at": "2026-08-15T19:04:43Z",
-      "last_detected_at": "2026-08-15T19:04:43Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-08-15T19:14:53Z",
+      "detection_count": 2,
       "text": "Hundreds of troops deployed to Ceuta's border with Morocco over fears tens of thousands of migrants could attempt 'invasion' TODAY\n\"Hundreds of troops have been deployed to Spanish enclave Ceuta's border with Morocco, amid fears of another surge of people attempting to cross as early as today. Spain has beefed up police and military presence in the North African enclave while Morocco also deployed troops amid social media messages encouraging migrants to attempt another mass border breach on Saturday. Groups of migrants have been pictured roaming the hills outside Ceuta as security forces stand watch.\"",
       "text_excerpt": "Hundreds of troops deployed to Ceuta's border with Morocco over fears tens of thousands of migrants could attempt 'invasion' TODAY\n\"Hundreds of troops have been deployed to Spanish enclave Ceuta's border with Morocco, amid fears of another surge of people attempting to cross as early as today. Spain has beefed up police and military presence in the North African enclave while Morocco also deployed troops amid social media messages encouraging migrants to attempt another mass border breach on Saturday. Groups of migrants have been pictured roaming the hills outside Ceuta as security forces stand watch.\"",
       "url": "https://www.reddit.com/r/NoFilterNews/comments/1vp53ld/hundreds_of_troops_deployed_to_ceutas_border_with/",
@@ -2631,6 +2904,87 @@
       "platform_count": 1
     },
     {
+      "id": 141,
+      "source": "X",
+      "source_post_id": "2088705562733088787",
+      "author": "bulletinindy",
+      "language": "en",
+      "published_at": "2026-08-15T19:13:07Z",
+      "first_detected_at": "2026-08-15T19:14:21Z",
+      "last_detected_at": "2026-08-15T19:14:21Z",
+      "detection_count": 1,
+      "text": "Police arrest 111 migrants in latest Ceuta border surge after calls for mass breach https://t.co/2diHxIoDVL https://t.co/qEvNJlRF6w",
+      "text_excerpt": "Police arrest 111 migrants in latest Ceuta border surge after calls for mass breach https://t.co/2diHxIoDVL https://t.co/qEvNJlRF6w",
+      "url": "https://x.com/bulletinindy/status/2088705562733088787",
+      "source_url": "https://x.com/bulletinindy/status/2088705562733088787",
+      "primary_signal": "PRESSURE_EARLY_WARNING",
+      "signal_type": "PRESSURE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "PRESSURE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.9,
+      "score": 11.0,
+      "matched_signals": [
+        "PRESSURE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "border"
+        ],
+        [
+          "enforcement",
+          "Police"
+        ],
+        [
+          "pressure",
+          "surge"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT",
+        "PRESSURE"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "surge"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
+      "priority_score": 42.5,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2088705562733088787"
+      ],
+      "related_authors": [
+        "bulletinindy"
+      ],
+      "related_urls": [
+        "https://x.com/bulletinindy/status/2088705562733088787"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
+    {
       "id": 138,
       "source": "X",
       "source_post_id": "2088698865495028118",
@@ -2638,8 +2992,8 @@
       "language": "en",
       "published_at": "2026-08-15T18:46:30Z",
       "first_detected_at": "2026-08-15T19:04:42Z",
-      "last_detected_at": "2026-08-15T19:04:42Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-08-15T19:15:23Z",
+      "detection_count": 2,
       "text": "Moroccan authorities have intercepted hundreds of sub-Saharan and Moroccan migrants near the Ceuta border after a recent influx.\n\nhttps://t.co/kOE8D3Q1sc",
       "text_excerpt": "Moroccan authorities have intercepted hundreds of sub-Saharan and Moroccan migrants near the Ceuta border after a recent influx.\n\nhttps://t.co/kOE8D3Q1sc",
       "url": "https://x.com/NewsCentralTV/status/2088698865495028118",
@@ -2710,80 +3064,6 @@
       ],
       "independent_author_count": 1,
       "platform_count": 1
-    },
-    {
-      "id": 140,
-      "source": "X",
-      "source_post_id": "2088702395123401032",
-      "author": "viralvideonews3",
-      "language": "en",
-      "published_at": "2026-08-15T19:00:31Z",
-      "first_detected_at": "2026-08-15T19:05:16Z",
-      "last_detected_at": "2026-08-15T19:05:16Z",
-      "detection_count": 1,
-      "text": "Thousands of African migrants are attempting to once again break into Ceuta, Spain. While most police are concentrated near the sea, huge columns of migrants have begun breaking through the mountains, where there is less control https://t.co/ZX01vF9Osj",
-      "text_excerpt": "Thousands of African migrants are attempting to once again break into Ceuta, Spain. While most police are concentrated near the sea, huge columns of migrants have begun breaking through the mountains, where there is less control https://t.co/ZX01vF9Osj",
-      "url": "https://x.com/viralvideonews3/status/2088702395123401032",
-      "source_url": "https://x.com/viralvideonews3/status/2088702395123401032",
-      "primary_signal": "ROUTE_EARLY_WARNING",
-      "signal_type": "ROUTE_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ROUTE_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 8.0,
-      "matched_signals": [
-        "ROUTE_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "route",
-          "sea"
-        ],
-        [
-          "enforcement",
-          "police"
-        ]
-      ],
-      "matched_groups": [
-        "ROUTE",
-        "ENFORCEMENT"
-      ],
-      "context_matches": [
-        "migrants"
-      ],
-      "high_value_matches": [],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "Ceuta",
-      "primary_location": "Ceuta",
-      "country": "Spain",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": 35.8894,
-      "longitude": -5.3213,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
-      "priority_score": 39.0,
-      "analyst_priority": "LOW",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "2088702395123401032"
-      ],
-      "related_authors": [
-        "viralvideonews3"
-      ],
-      "related_urls": [
-        "https://x.com/viralvideonews3/status/2088702395123401032"
-      ],
-      "related_sources": [
-        "X"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
     }
   ],
   "crossing_access_signals": [
@@ -2795,8 +3075,8 @@
       "language": null,
       "published_at": "2026-08-15T15:02:31Z",
       "first_detected_at": "2026-08-15T19:04:43Z",
-      "last_detected_at": "2026-08-15T19:04:43Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-08-15T19:14:53Z",
+      "detection_count": 2,
       "text": "Hundreds of troops deployed to Ceuta's border with Morocco over fears tens of thousands of migrants could attempt 'invasion' TODAY\n\"Hundreds of troops have been deployed to Spanish enclave Ceuta's border with Morocco, amid fears of another surge of people attempting to cross as early as today. Spain has beefed up police and military presence in the North African enclave while Morocco also deployed troops amid social media messages encouraging migrants to attempt another mass border breach on Saturday. Groups of migrants have been pictured roaming the hills outside Ceuta as security forces stand watch.\"",
       "text_excerpt": "Hundreds of troops deployed to Ceuta's border with Morocco over fears tens of thousands of migrants could attempt 'invasion' TODAY\n\"Hundreds of troops have been deployed to Spanish enclave Ceuta's border with Morocco, amid fears of another surge of people attempting to cross as early as today. Spain has beefed up police and military presence in the North African enclave while Morocco also deployed troops amid social media messages encouraging migrants to attempt another mass border breach on Saturday. Groups of migrants have been pictured roaming the hills outside Ceuta as security forces stand watch.\"",
       "url": "https://www.reddit.com/r/NoFilterNews/comments/1vp53ld/hundreds_of_troops_deployed_to_ceutas_border_with/",
@@ -2853,8 +3133,8 @@
       "language": null,
       "published_at": "2026-08-15T15:02:31Z",
       "first_detected_at": "2026-08-15T19:04:43Z",
-      "last_detected_at": "2026-08-15T19:04:43Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-08-15T19:14:53Z",
+      "detection_count": 2,
       "text": "Hundreds of troops deployed to Ceuta's border with Morocco over fears tens of thousands of migrants could attempt 'invasion' TODAY\n\"Hundreds of troops have been deployed to Spanish enclave Ceuta's border with Morocco, amid fears of another surge of people attempting to cross as early as today. Spain has beefed up police and military presence in the North African enclave while Morocco also deployed troops amid social media messages encouraging migrants to attempt another mass border breach on Saturday. Groups of migrants have been pictured roaming the hills outside Ceuta as security forces stand watch.\"",
       "text_excerpt": "Hundreds of troops deployed to Ceuta's border with Morocco over fears tens of thousands of migrants could attempt 'invasion' TODAY\n\"Hundreds of troops have been deployed to Spanish enclave Ceuta's border with Morocco, amid fears of another surge of people attempting to cross as early as today. Spain has beefed up police and military presence in the North African enclave while Morocco also deployed troops amid social media messages encouraging migrants to attempt another mass border breach on Saturday. Groups of migrants have been pictured roaming the hills outside Ceuta as security forces stand watch.\"",
       "url": "https://www.reddit.com/r/NoFilterNews/comments/1vp53ld/hundreds_of_troops_deployed_to_ceutas_border_with/",
@@ -2911,8 +3191,8 @@
       "language": null,
       "published_at": "2026-08-15T15:02:31Z",
       "first_detected_at": "2026-08-15T19:04:43Z",
-      "last_detected_at": "2026-08-15T19:04:43Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-08-15T19:14:53Z",
+      "detection_count": 2,
       "text": "Hundreds of troops deployed to Ceuta's border with Morocco over fears tens of thousands of migrants could attempt 'invasion' TODAY\n\"Hundreds of troops have been deployed to Spanish enclave Ceuta's border with Morocco, amid fears of another surge of people attempting to cross as early as today. Spain has beefed up police and military presence in the North African enclave while Morocco also deployed troops amid social media messages encouraging migrants to attempt another mass border breach on Saturday. Groups of migrants have been pictured roaming the hills outside Ceuta as security forces stand watch.\"",
       "text_excerpt": "Hundreds of troops deployed to Ceuta's border with Morocco over fears tens of thousands of migrants could attempt 'invasion' TODAY\n\"Hundreds of troops have been deployed to Spanish enclave Ceuta's border with Morocco, amid fears of another surge of people attempting to cross as early as today. Spain has beefed up police and military presence in the North African enclave while Morocco also deployed troops amid social media messages encouraging migrants to attempt another mass border breach on Saturday. Groups of migrants have been pictured roaming the hills outside Ceuta as security forces stand watch.\"",
       "url": "https://www.reddit.com/r/NoFilterNews/comments/1vp53ld/hundreds_of_troops_deployed_to_ceutas_border_with/",
@@ -2984,8 +3264,8 @@
       "language": null,
       "published_at": "2026-08-15T15:02:31Z",
       "first_detected_at": "2026-08-15T19:04:43Z",
-      "last_detected_at": "2026-08-15T19:04:43Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-08-15T19:14:53Z",
+      "detection_count": 2,
       "text": "Hundreds of troops deployed to Ceuta's border with Morocco over fears tens of thousands of migrants could attempt 'invasion' TODAY\n\"Hundreds of troops have been deployed to Spanish enclave Ceuta's border with Morocco, amid fears of another surge of people attempting to cross as early as today. Spain has beefed up police and military presence in the North African enclave while Morocco also deployed troops amid social media messages encouraging migrants to attempt another mass border breach on Saturday. Groups of migrants have been pictured roaming the hills outside Ceuta as security forces stand watch.\"",
       "text_excerpt": "Hundreds of troops deployed to Ceuta's border with Morocco over fears tens of thousands of migrants could attempt 'invasion' TODAY\n\"Hundreds of troops have been deployed to Spanish enclave Ceuta's border with Morocco, amid fears of another surge of people attempting to cross as early as today. Spain has beefed up police and military presence in the North African enclave while Morocco also deployed troops amid social media messages encouraging migrants to attempt another mass border breach on Saturday. Groups of migrants have been pictured roaming the hills outside Ceuta as security forces stand watch.\"",
       "url": "https://www.reddit.com/r/NoFilterNews/comments/1vp53ld/hundreds_of_troops_deployed_to_ceutas_border_with/",
@@ -3160,12 +3440,12 @@
       "label": "W33",
       "week_label": "W33",
       "week_start": "2026-08-10T00:00:00Z",
-      "posts": 1511,
-      "post_count": 1511,
+      "posts": 1524,
+      "post_count": 1524,
       "operational_posts": 59,
-      "influence_signals": 71,
+      "influence_signals": 73,
       "source_counts": {
-        "X": 1076,
+        "X": 1089,
         "REDDIT": 180,
         "MASTODON": 231,
         "TELEGRAM": 24
@@ -3284,12 +3564,12 @@
       "label": "W33",
       "week_label": "W33",
       "week_start": "2026-08-10T00:00:00Z",
-      "posts": 1511,
-      "post_count": 1511,
+      "posts": 1524,
+      "post_count": 1524,
       "operational_posts": 59,
-      "influence_signals": 71,
+      "influence_signals": 73,
       "source_counts": {
-        "X": 1076,
+        "X": 1089,
         "REDDIT": 180,
         "MASTODON": 231,
         "TELEGRAM": 24
@@ -3297,20 +3577,20 @@
     }
   ],
   "information_activity_summary": {
-    "current_week": 1511,
-    "previous_week": 448,
-    "current_week_to_date": 1511,
-    "previous_week_same_period": 448,
+    "current_week": 1524,
+    "previous_week": 468,
+    "current_week_to_date": 1524,
+    "previous_week_same_period": 468,
     "previous_week_full": 479,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": 237.28,
-    "change_label": "+237.3%",
+    "change_percent": 225.64,
+    "change_label": "+225.6%",
     "direction": "UP",
     "comparable": true,
-    "elapsed_hours": 139.1,
+    "elapsed_hours": 139.3,
     "current_period_start": "2026-08-10T00:00:00Z",
     "previous_period_start": "2026-08-03T00:00:00Z",
-    "previous_period_end": "2026-08-08T19:06:38Z"
+    "previous_period_end": "2026-08-08T19:16:25Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -3322,33 +3602,33 @@
       72,
       168
     ],
-    "generated_at": "2026-08-15T19:06:39Z",
-    "total_items": 638,
-    "information_count": 342,
-    "early_warning_count": 124,
+    "generated_at": "2026-08-15T19:16:26Z",
+    "total_items": 641,
+    "information_count": 343,
+    "early_warning_count": 126,
     "operational_count": 142,
     "correlated_count": 30,
     "layer_counts": {
+      "EARLY_WARNING": 126,
+      "INFORMATION": 343,
       "OPERATIONAL": 142,
-      "EARLY_WARNING": 124,
-      "INFORMATION": 342,
       "CORRELATED": 30
     },
     "source_counts": {
-      "X": 468,
+      "X": 471,
       "MASTODON": 28,
       "REDDIT": 135,
       "TELEGRAM": 7
     },
     "type_counts": {
+      "PRESSURE_EARLY_WARNING": 5,
+      "MOVEMENT_EARLY_WARNING": 33,
+      "INFORMATION_SIGNAL": 343,
       "RESCUE_OPERATION": 4,
       "ROUTE_EARLY_WARNING": 8,
       "MIGRANT_CAMP": 35,
-      "INFORMATION_SIGNAL": 342,
-      "PRESSURE_EARLY_WARNING": 4,
       "BORDER_CROSSING": 22,
       "CROSSING_FACILITATION": 18,
-      "MOVEMENT_EARLY_WARNING": 32,
       "FACILITATION_EARLY_WARNING": 15,
       "POLICY_SIGNAL": 4,
       "INTERCEPTION": 8,
@@ -3368,6 +3648,110 @@
       "DEPORTATION": 2
     },
     "items": [
+      {
+        "timeline_id": "early_warning:141",
+        "timestamp": "2026-08-15T19:13:07Z",
+        "layer": "EARLY_WARNING",
+        "type": "PRESSURE_EARLY_WARNING",
+        "signal_type": "PRESSURE_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2088705562733088787",
+        "author": "bulletinindy",
+        "url": "https://x.com/bulletinindy/status/2088705562733088787",
+        "source_url": "https://x.com/bulletinindy/status/2088705562733088787",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "Ceuta",
+        "primary_location": "Ceuta",
+        "country": "Spain",
+        "confidence": 0.9,
+        "priority": "MEDIUM",
+        "priority_score": 42.5,
+        "analyst_priority": "MEDIUM",
+        "text": "Police arrest 111 migrants in latest Ceuta border surge after calls for mass breach https://t.co/2diHxIoDVL https://t.co/qEvNJlRF6w",
+        "text_excerpt": "Police arrest 111 migrants in latest Ceuta border surge after calls for mass breach https://t.co/2diHxIoDVL https://t.co/qEvNJlRF6w",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "PRESSURE_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-08-15T19:14:21Z",
+        "last_detected_at": "2026-08-15T19:14:21Z"
+      },
+      {
+        "timeline_id": "early_warning:142",
+        "timestamp": "2026-08-15T19:10:15Z",
+        "layer": "EARLY_WARNING",
+        "type": "MOVEMENT_EARLY_WARNING",
+        "signal_type": "MOVEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2088704842516553983",
+        "author": "SprinterPress",
+        "url": "https://x.com/SprinterPress/status/2088704842516553983",
+        "source_url": "https://x.com/SprinterPress/status/2088704842516553983",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.9,
+        "priority": "MEDIUM",
+        "priority_score": 35.5,
+        "analyst_priority": "LOW",
+        "text": "Moroccan media outlets are publishing videos to support the country's authorities' statement about preventing an attempt by a large group of migrants to cross the border with Spain.\n\nDuring the dispersal of the migrant groups, 130 people were arrested, according to authorities in https://t.co/drm9ux47DC",
+        "text_excerpt": "Moroccan media outlets are publishing videos to support the country's authorities' statement about preventing an attempt by a large group of migrants to cross the border with Spain.\n\nDuring the dispersal of the migrant groups, 130 people were arrested, according to authorities in https://t.co/drm9ux47DC",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "MOVEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-08-15T19:14:52Z",
+        "last_detected_at": "2026-08-15T19:14:52Z"
+      },
+      {
+        "timeline_id": "information:3364",
+        "timestamp": "2026-08-15T19:07:36Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2088704174712066332",
+        "author": "ReformUKSam",
+        "url": "https://x.com/ReformUKSam/status/2088704174712066332",
+        "source_url": "https://x.com/ReformUKSam/status/2088704174712066332",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 40,
+        "information_score": 4,
+        "matched_information_cues": [
+          "border",
+          "boat",
+          "deportation"
+        ],
+        "freshness_cues": [
+          "now"
+        ],
+        "text": "We’re now seriously discussing providing BROTHELS for illegal migrants.\n\nHow about this for a radical idea…\n\n- STOP THE BOATS.\n- SECURE THE BORDER.\n- DEPORT THOSE WITH NO RIGHT TO BE HERE.\n\nBritain has completely lost the plot. https://t.co/2YzKuYgFqw",
+        "text_excerpt": "We’re now seriously discussing providing BROTHELS for illegal migrants.\n\nHow about this for a radical idea…\n\n- STOP THE BOATS.\n- SECURE THE BORDER.\n- DEPORT THOSE WITH NO RIGHT TO BE HERE.\n\nBritain has completely lost the plot. https://t.co/2YzKuYgFqw",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-08-15T19:14:52Z",
+        "last_collected_at": "2026-08-15T19:14:52Z",
+        "collection_count": 1
+      },
       {
         "timeline_id": "operational:161",
         "timestamp": "2026-08-15T19:04:09Z",
@@ -3427,9 +3811,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "ROUTE_REVIEW",
-        "detection_count": 1,
+        "detection_count": 2,
         "first_detected_at": "2026-08-15T19:05:16Z",
-        "last_detected_at": "2026-08-15T19:05:16Z"
+        "last_detected_at": "2026-08-15T19:15:22Z"
       },
       {
         "timeline_id": "operational:159",
@@ -3481,8 +3865,8 @@
         "country": "-",
         "confidence": 0.1,
         "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
+        "priority_score": 30,
+        "information_score": 3,
         "matched_information_cues": [
           "border",
           "channel"
@@ -3496,8 +3880,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-08-15T19:04:42Z",
-        "last_collected_at": "2026-08-15T19:04:42Z",
-        "collection_count": 1
+        "last_collected_at": "2026-08-15T19:14:53Z",
+        "collection_count": 2
       },
       {
         "timeline_id": "information:3324",
@@ -3518,8 +3902,8 @@
         "country": "-",
         "confidence": 0.1,
         "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
+        "priority_score": 30,
+        "information_score": 3,
         "matched_information_cues": [
           "crossing",
           "boat"
@@ -3533,8 +3917,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-08-15T19:05:16Z",
-        "last_collected_at": "2026-08-15T19:05:16Z",
-        "collection_count": 1
+        "last_collected_at": "2026-08-15T19:15:22Z",
+        "collection_count": 2
       },
       {
         "timeline_id": "early_warning:137",
@@ -3564,9 +3948,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "ROUTE_REVIEW",
-        "detection_count": 1,
+        "detection_count": 2,
         "first_detected_at": "2026-08-15T19:04:42Z",
-        "last_detected_at": "2026-08-15T19:04:42Z"
+        "last_detected_at": "2026-08-15T19:14:53Z"
       },
       {
         "timeline_id": "information:3312",
@@ -3633,9 +4017,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "PRESSURE_REVIEW",
-        "detection_count": 1,
+        "detection_count": 2,
         "first_detected_at": "2026-08-15T19:04:42Z",
-        "last_detected_at": "2026-08-15T19:04:42Z"
+        "last_detected_at": "2026-08-15T19:15:23Z"
       },
       {
         "timeline_id": "information:3328",
@@ -3724,8 +4108,8 @@
         "country": "-",
         "confidence": 0.1,
         "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
+        "priority_score": 30,
+        "information_score": 3,
         "matched_information_cues": [
           "border",
           "trafficking"
@@ -3739,8 +4123,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-08-15T19:05:55Z",
-        "last_collected_at": "2026-08-15T19:05:55Z",
-        "collection_count": 1
+        "last_collected_at": "2026-08-15T19:15:53Z",
+        "collection_count": 2
       },
       {
         "timeline_id": "early_warning:136",
@@ -3770,9 +4154,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "ROUTE_REVIEW",
-        "detection_count": 1,
+        "detection_count": 2,
         "first_detected_at": "2026-08-15T19:04:02Z",
-        "last_detected_at": "2026-08-15T19:04:02Z"
+        "last_detected_at": "2026-08-15T19:14:22Z"
       },
       {
         "timeline_id": "information:3315",
@@ -3793,8 +4177,8 @@
         "country": "-",
         "confidence": 0.1,
         "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
+        "priority_score": 30,
+        "information_score": 3,
         "matched_information_cues": [
           "crossing",
           "boat"
@@ -3808,8 +4192,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-08-15T19:04:43Z",
-        "last_collected_at": "2026-08-15T19:04:43Z",
-        "collection_count": 1
+        "last_collected_at": "2026-08-15T19:14:53Z",
+        "collection_count": 2
       },
       {
         "timeline_id": "early_warning:139",
@@ -3839,9 +4223,9 @@
         "related_source_count": null,
         "signal_mode": "DIRECT",
         "signal_intent": "EASIER_CROSSING",
-        "detection_count": 1,
+        "detection_count": 2,
         "first_detected_at": "2026-08-15T19:04:43Z",
-        "last_detected_at": "2026-08-15T19:04:43Z"
+        "last_detected_at": "2026-08-15T19:14:53Z"
       },
       {
         "timeline_id": "information:3317",
@@ -3862,8 +4246,8 @@
         "country": "-",
         "confidence": 0.1,
         "priority": "INFO",
-        "priority_score": 50,
-        "information_score": 5,
+        "priority_score": 60,
+        "information_score": 6,
         "matched_information_cues": [
           "crossing",
           "interception",
@@ -3882,8 +4266,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-08-15T19:04:43Z",
-        "last_collected_at": "2026-08-15T19:04:43Z",
-        "collection_count": 1
+        "last_collected_at": "2026-08-15T19:14:53Z",
+        "collection_count": 2
       },
       {
         "timeline_id": "information:3318",
@@ -3904,8 +4288,8 @@
         "country": "-",
         "confidence": 0.1,
         "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
+        "priority_score": 30,
+        "information_score": 3,
         "matched_information_cues": [
           "border",
           "crossing"
@@ -3919,8 +4303,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-08-15T19:04:44Z",
-        "last_collected_at": "2026-08-15T19:04:44Z",
-        "collection_count": 1
+        "last_collected_at": "2026-08-15T19:14:54Z",
+        "collection_count": 2
       },
       {
         "timeline_id": "operational:160",
@@ -5163,9 +5547,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "FACILITATION_REVIEW",
-        "detection_count": 4,
+        "detection_count": 5,
         "first_detected_at": "2026-08-14T18:54:37Z",
-        "last_detected_at": "2026-08-15T19:05:56Z"
+        "last_detected_at": "2026-08-15T19:15:53Z"
       },
       {
         "timeline_id": "information:3116",
@@ -6462,8 +6846,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-08-14T04:38:53Z",
-        "last_collected_at": "2026-08-15T19:05:57Z",
-        "collection_count": 6
+        "last_collected_at": "2026-08-15T19:15:55Z",
+        "collection_count": 7
       },
       {
         "timeline_id": "information:2973",
@@ -6550,8 +6934,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-08-14T04:38:13Z",
-        "last_collected_at": "2026-08-15T19:05:56Z",
-        "collection_count": 6
+        "last_collected_at": "2026-08-15T19:15:53Z",
+        "collection_count": 7
       },
       {
         "timeline_id": "information:2975",
@@ -6595,8 +6979,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-08-14T04:38:14Z",
-        "last_collected_at": "2026-08-15T19:05:56Z",
-        "collection_count": 6
+        "last_collected_at": "2026-08-15T19:15:54Z",
+        "collection_count": 7
       },
       {
         "timeline_id": "operational:147",
@@ -6700,8 +7084,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-08-14T04:38:15Z",
-        "last_collected_at": "2026-08-15T19:05:17Z",
-        "collection_count": 6
+        "last_collected_at": "2026-08-15T19:15:23Z",
+        "collection_count": 7
       },
       {
         "timeline_id": "early_warning:107",
@@ -6731,9 +7115,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "FACILITATION_REVIEW",
-        "detection_count": 6,
+        "detection_count": 7,
         "first_detected_at": "2026-08-14T04:38:53Z",
-        "last_detected_at": "2026-08-15T19:05:57Z"
+        "last_detected_at": "2026-08-15T19:15:55Z"
       },
       {
         "timeline_id": "operational:148",
@@ -7484,9 +7868,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "FACILITATION_REVIEW",
-        "detection_count": 7,
+        "detection_count": 8,
         "first_detected_at": "2026-08-13T05:19:16Z",
-        "last_detected_at": "2026-08-15T19:04:03Z"
+        "last_detected_at": "2026-08-15T19:14:22Z"
       },
       {
         "timeline_id": "information:2883",
