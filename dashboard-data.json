@@ -1,74 +1,96 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-08-15T04:58:16Z",
-  "generated_at": "2026-08-15T04:58:16Z",
+  "updated_at": "2026-08-15T07:56:48Z",
+  "generated_at": "2026-08-15T07:56:48Z",
   "current_run": {
     "available": true,
-    "id": 49,
-    "run_uuid": "de59f17e-b86a-414f-863e-e5483d189697",
-    "started_at": "2026-08-15T04:55:01Z",
-    "completed_at": "2026-08-15T04:58:14Z",
+    "id": 50,
+    "run_uuid": "1e56692b-c402-437c-a9e9-4b5d1e513a95",
+    "started_at": "2026-08-15T07:53:25Z",
+    "completed_at": "2026-08-15T07:56:46Z",
     "status": "SUCCESS",
-    "posts_returned": 130,
-    "unique_posts_collected": 96,
+    "posts_returned": 138,
+    "unique_posts_collected": 102,
     "x_posts_returned": 50,
-    "reddit_posts_returned": 24,
+    "reddit_posts_returned": 32,
     "mastodon_posts_returned": 50,
-    "unique_x_posts": 47,
-    "unique_reddit_posts": 21,
-    "unique_mastodon_posts": 22,
-    "noise_filtered": 1,
-    "non_operational_filtered": 92,
+    "unique_x_posts": 49,
+    "unique_reddit_posts": 24,
+    "unique_mastodon_posts": 23,
+    "noise_filtered": 0,
+    "non_operational_filtered": 100,
     "historical_references_filtered": 0,
-    "influence_signals": 0,
-    "influence_signals_detected": 0,
+    "influence_signals": 1,
+    "influence_signals_detected": 1,
     "crossing_facilitation_signals": 0,
-    "legal_migration_signals": 0,
+    "legal_migration_signals": 1,
     "policy_signals": 0,
     "recruitment_coordination_signals": 0,
     "mobilization_coordination_signals": 0,
     "mobilization_report_signals": 0,
     "decision_influence_signals": 0,
     "online_influence_report_signals": 0,
-    "operational_events": 3,
-    "operational_events_analyzed": 3,
-    "historical_events_available": 115,
-    "new_correlations": 1,
-    "correlated_events": 1,
+    "operational_events": 2,
+    "operational_events_analyzed": 2,
+    "historical_events_available": 103,
+    "new_correlations": 0,
+    "correlated_events": 0,
     "new_correlation_groups": 2,
-    "database_correlations": 1,
+    "database_correlations": 0,
     "current_run_correlations": 0,
-    "new_events": 2,
-    "new_events_saved": 2,
+    "new_events": 1,
+    "new_events_saved": 1,
     "events_already_existing": 1,
     "new_event_groups": 1,
-    "updated_event_groups": 1,
+    "updated_event_groups": 0,
     "bootstrapped_event_groups": 0,
     "existing_event_groups_reused": 1,
-    "event_group_sources_linked": 2,
+    "event_group_sources_linked": 1,
     "x_collector_errors": 0,
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "error_message": null
   },
   "kpis": {
-    "operational_events": 6,
-    "new_events": 2,
+    "operational_events": 7,
+    "new_events": 1,
     "correlated_events": 3,
-    "active_event_groups": 104,
+    "active_event_groups": 105,
     "sources": 4,
     "regions": 3,
-    "collected_posts_24h": 211,
-    "influence_signals": 11,
+    "collected_posts_24h": 265,
+    "influence_signals": 15,
     "access_signals": 2,
     "high_priority": 1,
-    "current_run_operational_events": 3,
-    "current_run_unique_posts": 96,
+    "current_run_operational_events": 2,
+    "current_run_unique_posts": 102,
     "access_signals_raw": 2,
-    "influence_signals_raw": 11,
+    "influence_signals_raw": 15,
     "influence_narratives": 3
   },
   "live_events": [
+    {
+      "id": 158,
+      "event_id": 158,
+      "source": "X",
+      "source_post_id": "2088522782623567873",
+      "author": "EngageKE",
+      "published_at": "2026-08-15T07:06:48Z",
+      "collected_at": "2026-08-15T07:56:43Z",
+      "event_type": "MIGRANT_CAMP",
+      "signal_type": "MIGRANT_CAMP",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.45,
+      "event_confidence": 0.45,
+      "relevance_score": 0.0,
+      "text": "Perspective is everything. What looks like a standard building to one person can look like a terrifying trap to another. \n\nFor Amino Ahmed, leaving the Dadaab Refugee Camp for the very first time was a shocking collision with a world she had never known. Between seeing https://t.co/NnCxRKzvzO",
+      "url": "https://x.com/EngageKE/status/2088522782623567873",
+      "source_url": "https://x.com/EngageKE/status/2088522782623567873"
+    },
     {
       "id": 156,
       "event_id": 156,
@@ -486,31 +508,38 @@
       "text": "@RussianEmbassy Billions of our hard earned taxes frittered away, tens of thousands of refugees arrived from the ukraine - uk gov orchestrated",
       "url": "https://x.com/greenvasya/status/2087384326530855397",
       "source_url": "https://x.com/greenvasya/status/2087384326530855397"
-    },
-    {
-      "id": 117,
-      "event_id": 117,
-      "source": "REDDIT",
-      "source_post_id": "reddit_1vluyci",
-      "author": "John3262005",
-      "published_at": "2026-08-11T21:41:26Z",
-      "collected_at": "2026-08-12T04:52:09Z",
-      "event_type": "SMUGGLING_ACTIVITY",
-      "signal_type": "SMUGGLING_ACTIVITY",
-      "primary_location": "-",
-      "location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "confidence": 0.5,
-      "event_confidence": 0.5,
-      "relevance_score": 10.0,
-      "text": "How Raúl Castro’s Grandson, Raúl G. Rodríguez Castro, Became a Power Broker | The Castro family envoy, Raúl G. Rodríguez Castro, who has been in talks with the Trump administration, was once named in a case targeting a Cuban smuggling ring.\nRaúl Castro was on an official state visit in Paris a decade ago as Cuba’s president when a hulky bodyguard in his entourage stood out. The man kept so close to Mr. Castro while they walked the red carpet at the Élysée Palace that a member of the French honor guard tried pulling him back. Even François Hollande, France’s president at the time, waved him back. The security escort who kept inserting himself in official photos was none other than Mr. Castro’s grandson, Raúl G. Rodríguez Castro, a colonel in the interior ministry. Today, the once largely unknown bodyguard has become a key figure in Cuba’s talks with the United States, even though he has never held public office. His name has even come up as someone the Trump administration might find acceptable to become Cuba’s next leader. “He exemplifies how that government operates,” said Tim Rieser, a foreign policy aide to former Senator Patrick Leahy, a Democrat from Vermont, who met Mr. Rodríguez Castro several times. “It’s a lot like a family business, and so someone who was described to us a decade ago as President Castro’s bodyguard has for whatever reason, by whatever means, become something much more than that.” But Mr. Rodríguez Castro, who has met with some of the most senior people in the Trump administration, may have also used his considerable influence to protect a large-scale smuggling operation that moved people out of Cuba and brought illicit goods into the country, according to interviews and court records. Mr. Rodríguez Castro, 42, was accused of helping funnel goods purchased with stolen credit cards into the country, receiving luxury items as bribes and allowing wanted criminals to roam free on the island, the interviews and court records show. The scheme was the target of a federal investigation that resulted in the convictions of at least 21 people and decades-long sentences. Mr. Rodríguez Castro has not been charged. This article is based on court documents and interviews with nearly a dozen people who either know Mr. Rodríguez Castro personally, including one person close to the U.S. negotiations, or are familiar with the criminal investigation in which his name surfaced. Mr. Rodríguez Castro did not respond to requests for an interview sent through formal diplomatic channels and a mutual acquaintance. A top Cuban official called the accusations slanderous. Mr. Rodríguez Castro’s prominent role in the discussions with the Trump administration seemed to astound some Cuban officials who viewed him as merely a caretaker for his grandfather. Still, an official with the Central Committee of the Communist Party of Cuba took to social media last month to say Mr. Rodríguez Castro had been the subject of “character assassination” in the U.S. media, which was aimed at making the Cuban government appear divided. As he helps Cuba’s government try to survive and navigate its standoff with the United States, those who have spoken to Mr. Rodríguez Castro say he has made no secret of his ultimate ambition to be his country’s next president — though it is unclear whether he has the internal support to do so. The human smuggling network was known as the Cuban Mafia in Quintana Roo; its name came from the state in eastern Mexico where it was based. The ring used boats stolen from Florida to sneak people out of Cuba who wanted to reach the United States, according to the Justice Department and members of the criminal gang who cooperated with prosecutors. The Cuban migrants would be taken to Mexico, where they were held in safe houses until they paid smuggling fees, and were tortured if they didn’t, according to court testimony. Two defendants in the case implicated Mr. Rodríguez Castro as a collaborator in the organization, according to court records and interviews with several people familiar with the investigation. Both defendants, José Miguel González Vidal and Reynaldo Crespo Márquez, pleaded guilty and were sentenced to long prison terms for their roles in the scheme. Mr. Rodríguez Castro arranged safe passage for the group into and out of Cuba, a leader of the group told U.S. prosecutors, according to several people familiar with the case. Mr. Rodríguez Castro’s name came up in a U.S. Department of Justice case in 2020 against the group, according to evidence gathered by prosecutors and one of the people familiar with the investigation. The people who know Mr. Rodríguez Castro spoke on the condition of anonymity to preserve relationships with Cuban government officials, and those familiar with the criminal case did so to discuss sensitive legal matters they were not authorized to disclose. It is unclear whether Mr. Rodríguez Castro is a target of the ongoing investigation. The Justice Department declined to comment. The smuggling ring stole vessels from South Florida to bribe foreign officials, according to an admission statement filed in federal court as part of a guilty plea signed by Mr. González Vidal, who was sentenced to 25 years in prison. The statement does not name Mr. Rodríguez Castro. But Mr. González Vidal and another defendant told U.S. authorities that Mr. Rodríguez Castro was among the foreign officials who received a stolen boat, court records show. The issue was also discussed in open court. During a September 2023 trial in Miami, a defense lawyer asked Mr. Crespo, who was a cooperating witness, about a meeting in which he told prosecutors that Mr. González Vidal and Mr. Rodríguez Castro had discussed sending him a boat in Cuba. Mr. Crespo is serving 20 years in prison for his role in the smuggling operation. Mr. González-Vidal said the men who smuggled migrants and goods bribed Mr. Rodríguez Castro to keep the Cuban Coast Guard and Customs away, three of the people said. In exchange for allowing merchandise that the smuggling network bought in Mexico with stolen credit cards to clear Cuban customs, Mr. Rodríguez Castro was given a Fountain 38 high-performance boat and various other gifts, including a Rolex watch, Suzuki motorbike and Louis Vuitton clothes, Mr. González Vidal claimed. The products were later sold in Cuban government stores, he said. Mr. González Vidal’s account was supported by text and voice mail messages that the F.B.I. extracted from the cellphones of members of the smuggling ring, the people familiar with the case said. Mr. González Vidal’s lawyer, Juan D. Berrios, declined to comment. Mr. Rodríguez Castro, in a recent interview with USA Today, which some critics took to be self-promotional, said he had no wealth of his own. “Wealthy friends and admirers” had paid for fashionable clothes, luxury foreign vehicles and expensive overseas trips, he said. Cuba’s deputy foreign minister, Carlos R. Fernández de Cossío, in an interview with The Times in Havana, called the accusations against Mr. Rodríguez Castro involving the smuggling ring “slander.” He said that for several years during migration talks with the United States, Cuban officials had repeatedly raised concerns about widespread smuggling of Cubans through Central America and Mexico. They received no response, he said. “We alerted them. Meeting after meeting: ‘Have you taken action? What have you done?’” Mr. Fernández de Cossío said. “I cannot doubt whatsoever that there are organizations in Mexico, in Central America and in other parts of Latin America, which involve Cubans that have been making money and had a business of smuggling aliens to the United States. “But I can assure you,” he added, “there’s no link with the Cuban government.” One American close to the U.S.-Cuba discussions said that, despite the allegations of smuggling, Mr. Rodríguez Castro was considered a worthy representative to interact with the Trump administration because his fondness for material goods suggested he was open to capitalist ideas. Mr. Rodríguez Castro is not apologetic about his lifestyle. “It pains me that many people can’t live the way I do,” Mr. Rodríguez Castro told USA Today. “And I’m working every day to change that situation.” Mr. Rodríguez Castro is the son of Raúl Castro’s eldest daughter, Déborah Castro Espín, and the late Gen. Luis Alberto Rodríguez López-Calleja, a powerful figure who helped establish Cuba’s military conglomerate, known as GAESA, which manages much of Cuba’s ailing economy. His parents had a troubled marriage, so Mr. Rodríguez Castro, who is also known as “Raulito,” spent much of his youth at his grandparents’ house, several people who knew him in his youth said. His nickname, which is how he is commonly known, is “el Cangrejo,” meaning “the crab,” and was given to him because he was born with an extra finger on one hand. Despite his revolutionary roots, he is descended from an upper-class family — his grandmother was an heir to the Bacardi rum fortune. He enjoyed extreme sports, music with racy lyrics and was less polished than other members of Cuba’s revolutionary elite. He studied economics at the University of Havana, where he received credit for traveling with his grandfather, said Juan Juan Almeida, the exiled son of a hero of the 1959 Cuban revolution who was close to the Castro family for many years. He described Mr. Rodríguez Castro as affectionate and friendly. “He is better known outside Cuba than inside,” he said. “Cangrejo and all the Castros know that their power only lasts until the day his grandfather dies.” Mr. Rodríguez Castro, who is often photographed wearing expensive designer clothes, was widely known during his younger years for being spotted in videos partying at concerts, hanging out with the reggaeton duo Gente de Zona and on boats. One family member said he sometimes traveled around Havana in one of his grandfather’s BMWs, which irked some who thought it projected a bad image in a country where people suffer severe food, medicine and power shortages. Mr. Rodríguez Castro has enjoyed extraordinary access, attending virtually every one of his grandfather’s meetings, including with the late Pope Francis. After serving as a bodyguard, he became more of a personal assistant for Mr. Castro, 95, who was vice president for decades and became president in 2006 when his brother Fidel fell ill. While he no longer holds any official government post, Mr. Castro is widely considered the most powerful person in Cuba. After Cuba began secret meetings with the United States this year seeking to end sanctions imposed by the Trump administration, Mr. Rodríguez Castro met separately with C.I.A. Director John Ratcliffe and Secretary of State Marco Rubio. (The C.I.A. has covertly created a task force as part of the U.S. campaign to pressure Cuba into political, economic and leadership change, The Times reported.) Arturo Lopez-Levy, a research associate at the University of Denver who is a second cousin to Mr. Rodríguez Castro, said much of the criticism of his relative is based on videos of rowdy behavior that circulated more than a decade ago. He has not spoken to his cousin in about seven or eight years, he said, but his public persona appears to have changed considerably. “The relationship with his grandfather has changed from a young man who was quite immature to someone with political knowledge and connection to his grandfather — not only for the protection of his life, but politically,” said Mr. Lopez-Levy, a former analyst at Cuba’s Ministry of Interior. “He has not been outside the door; he has been inside every meeting.”",
-      "url": "https://www.reddit.com/r/WhatTrumpHasDone/comments/1vluyci/how_raúl_castros_grandson_raúl_g_rodríguez_castro/",
-      "source_url": "https://www.reddit.com/r/WhatTrumpHasDone/comments/1vluyci/how_raúl_castros_grandson_raúl_g_rodríguez_castro/"
     }
   ],
   "event_groups": [
+    {
+      "id": 124,
+      "group_id": 124,
+      "event_type": "MIGRANT_CAMP",
+      "dominant_event_type": "MIGRANT_CAMP",
+      "title": "MIGRANT_CAMP",
+      "representative_text": "Perspective is everything. What looks like a standard building to one person can look like a terrifying trap to another. \n\nFor Amino Ahmed, leaving the Dadaab Refugee Camp for the very first time was a shocking collision with a world she had never known. Between seeing https://t.co/NnCxRKzvzO",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "primary_location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "first_seen": "2026-08-15T07:06:48Z",
+      "last_seen": "2026-08-15T07:06:48Z",
+      "source_count": 1,
+      "sources_count": 1,
+      "source_types": [
+        "X"
+      ],
+      "sources": [
+        "X"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.45,
+      "average_confidence": 0.45,
+      "created_at": "2026-08-15T07:56:43Z",
+      "updated_at": "2026-08-15T07:56:43Z"
+    },
     {
       "id": 13,
       "group_id": 13,
@@ -773,152 +802,123 @@
       "average_confidence": 0.4,
       "created_at": "2026-08-13T05:21:14Z",
       "updated_at": "2026-08-13T05:21:14Z"
-    },
-    {
-      "id": 94,
-      "group_id": 94,
-      "event_type": "ARRIVAL",
-      "dominant_event_type": "ARRIVAL",
-      "title": "ARRIVAL",
-      "representative_text": "'More affluent areas' will have to house migrants, PM says as over 900 arrive in small boats in just three days\nMore affluent areas of Britain will have to house asylum seekers too, the Prime Minister has said after more than 900 migrants arrived in small boats in the last three days. Andy Burnham was speaking on Tuesday after protests at a migrant camp being set up near Piddington, a village near Bicester, which locals fear could overwhelm the hamlet. Home Office figures show that in the last three days alone 911 people have made the perilous journey from France, including 230 in a single mega boat on Monday. A total of 3,003 migrants have arrived in Britain across the English Channel ... Read more... READ MORE... Disclaimer: This post is shared for discussion and critical analysis only. Submission does not equal endorsement. The content may reflect claims or opinions from the original source. Please verify information independently and review primary sources before forming conclusions. If you notice factual errors, misleading claims, or possible AI generated or edited clips, please leave a fact check comment with sources for the community.",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "primary_location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "first_seen": "2026-08-12T14:01:34Z",
-      "last_seen": "2026-08-12T14:01:34Z",
-      "source_count": 1,
-      "sources_count": 1,
-      "source_types": [
-        "REDDIT"
-      ],
-      "sources": [
-        "REDDIT"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.55,
-      "average_confidence": 0.55,
-      "created_at": "2026-08-12T14:19:57Z",
-      "updated_at": "2026-08-12T14:19:57Z"
     }
   ],
   "regions": [
+    {
+      "name": "GLOBAL",
+      "region": "GLOBAL",
+      "count": 3,
+      "events": 3,
+      "percentage": 50.0
+    },
     {
       "name": "WESTERN_MEDITERRANEAN",
       "region": "WESTERN_MEDITERRANEAN",
       "count": 2,
       "events": 2,
-      "percentage": 40.0
-    },
-    {
-      "name": "GLOBAL",
-      "region": "GLOBAL",
-      "count": 2,
-      "events": 2,
-      "percentage": 40.0
+      "percentage": 33.33
     },
     {
       "name": "EASTERN_EU_BORDER",
       "region": "EASTERN_EU_BORDER",
       "count": 1,
       "events": 1,
-      "percentage": 20.0
+      "percentage": 16.67
     }
   ],
   "sources": [
     {
       "source": "X",
       "name": "X",
-      "count": 139,
-      "posts": 139,
-      "percentage": 65.88
+      "count": 186,
+      "posts": 186,
+      "percentage": 70.19
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 38,
-      "posts": 38,
-      "percentage": 18.01
+      "count": 40,
+      "posts": 40,
+      "percentage": 15.09
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 28,
-      "posts": 28,
-      "percentage": 13.27
+      "count": 34,
+      "posts": 34,
+      "percentage": 12.83
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 6,
-      "posts": 6,
-      "percentage": 2.84
+      "count": 5,
+      "posts": 5,
+      "percentage": 1.89
     }
   ],
   "region_activity": [
+    {
+      "name": "GLOBAL",
+      "region": "GLOBAL",
+      "count": 3,
+      "events": 3,
+      "percentage": 50.0
+    },
     {
       "name": "WESTERN_MEDITERRANEAN",
       "region": "WESTERN_MEDITERRANEAN",
       "count": 2,
       "events": 2,
-      "percentage": 40.0
-    },
-    {
-      "name": "GLOBAL",
-      "region": "GLOBAL",
-      "count": 2,
-      "events": 2,
-      "percentage": 40.0
+      "percentage": 33.33
     },
     {
       "name": "EASTERN_EU_BORDER",
       "region": "EASTERN_EU_BORDER",
       "count": 1,
       "events": 1,
-      "percentage": 20.0
+      "percentage": 16.67
     }
   ],
   "source_activity": [
     {
       "source": "X",
       "name": "X",
-      "count": 139,
-      "posts": 139,
-      "percentage": 65.88
+      "count": 186,
+      "posts": 186,
+      "percentage": 70.19
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 38,
-      "posts": 38,
-      "percentage": 18.01
+      "count": 40,
+      "posts": 40,
+      "percentage": 15.09
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 28,
-      "posts": 28,
-      "percentage": 13.27
+      "count": 34,
+      "posts": 34,
+      "percentage": 12.83
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 6,
-      "posts": 6,
-      "percentage": 2.84
+      "count": 5,
+      "posts": 5,
+      "percentage": 1.89
     }
   ],
   "correlation": {
     "correlated_events": 3,
     "correlated_sources": 3,
-    "grouped_sources": 6,
-    "event_groups": 104,
-    "active_groups": 104,
+    "grouped_sources": 7,
+    "event_groups": 105,
+    "active_groups": 105,
     "multi_source_groups": 10,
     "strongest_match": 0.9,
-    "correlation_rate": 50.0
+    "correlation_rate": 42.86
   },
   "technical_health": "HEALTHY",
   "collector_health": "HEALTHY",
@@ -931,42 +931,42 @@
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "database": "AVAILABLE",
-    "last_run_id": 49,
-    "last_completed_at": "2026-08-15T04:58:14Z"
+    "last_run_id": 50,
+    "last_completed_at": "2026-08-15T07:56:46Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 6,
-    "influence_signals_24h": 11,
+    "operational_events_24h": 7,
+    "influence_signals_24h": 15,
     "access_signals_24h": 2,
     "correlated_events_24h": 3,
-    "active_event_groups": 104,
+    "active_event_groups": 105,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "hotspot": "WESTERN_MEDITERRANEAN",
-    "dominant_event_type": "BORDER_CROSSING",
+    "dominant_event_type": "MIGRANT_CAMP",
     "dominant_source": "X",
     "average_confidence": 0.489,
     "confidence_level": "LOW",
-    "correlation_rate": 50.0,
+    "correlation_rate": 42.86,
     "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 6 operatív migrációs eseményt, 11 influence/early-warning jelzést és 2 átkelési vagy bejutási jelzést tart nyilván. 3 friss eseményforrás korrelált más forrással. Jelenleg 104 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.49. A jelenlegi aktivitási szint: MODERATE."
+    "summary": "Az elmúlt 24 órában a rendszer 7 operatív migrációs eseményt, 15 influence/early-warning jelzést és 2 átkelési vagy bejutási jelzést tart nyilván. 3 friss eseményforrás korrelált más forrással. Jelenleg 105 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Migrant Camp. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.49. A jelenlegi aktivitási szint: MODERATE."
   },
   "analytical_assessment": {
-    "operational_events_24h": 6,
-    "influence_signals_24h": 11,
+    "operational_events_24h": 7,
+    "influence_signals_24h": 15,
     "access_signals_24h": 2,
     "correlated_events_24h": 3,
-    "active_event_groups": 104,
+    "active_event_groups": 105,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "hotspot": "WESTERN_MEDITERRANEAN",
-    "dominant_event_type": "BORDER_CROSSING",
+    "dominant_event_type": "MIGRANT_CAMP",
     "dominant_source": "X",
     "average_confidence": 0.489,
     "confidence_level": "LOW",
-    "correlation_rate": 50.0,
+    "correlation_rate": 42.86,
     "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 6 operatív migrációs eseményt, 11 influence/early-warning jelzést és 2 átkelési vagy bejutási jelzést tart nyilván. 3 friss eseményforrás korrelált más forrással. Jelenleg 104 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.49. A jelenlegi aktivitási szint: MODERATE."
+    "summary": "Az elmúlt 24 órában a rendszer 7 operatív migrációs eseményt, 15 influence/early-warning jelzést és 2 átkelési vagy bejutási jelzést tart nyilván. 3 friss eseményforrás korrelált más forrással. Jelenleg 105 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Migrant Camp. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.49. A jelenlegi aktivitási szint: MODERATE."
   },
   "high_confidence_events": [
     {
@@ -1434,6 +1434,78 @@
       "analyst_priority": "MEDIUM"
     },
     {
+      "id": 134,
+      "source": "X",
+      "source_post_id": "2088523936371765256",
+      "author": "RossH1882",
+      "language": "en",
+      "published_at": "2026-08-15T07:11:23Z",
+      "first_detected_at": "2026-08-15T07:55:27Z",
+      "last_detected_at": "2026-08-15T07:55:27Z",
+      "detection_count": 1,
+      "text": "@LucyTCWife @SamCKx @Nigel_Farage You aware that reform MP Robert Jenrick is the one who opened up migrant hotels and oversaw the increase in small boat arrivals? \n\nIt’s “the left” who are fixing the problem, reducing boat crossings by 42% and have now reduced hotels being used from 400 to below 160.",
+      "text_excerpt": "@LucyTCWife @SamCKx @Nigel_Farage You aware that reform MP Robert Jenrick is the one who opened up migrant hotels and oversaw the increase in small boat arrivals? \n\nIt’s “the left” who are fixing the problem, reducing boat crossings by 42% and have now reduced hotels being used from 400 to below 160.",
+      "url": "https://x.com/RossH1882/status/2088523936371765256",
+      "source_url": "https://x.com/RossH1882/status/2088523936371765256",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.9,
+      "score": 12.0,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "migrant hotels and oversaw the increase in small boat arrivals"
+        ],
+        [
+          "route",
+          "boat"
+        ],
+        [
+          "pressure",
+          "increase in small boat arrivals"
+        ],
+        [
+          "pressure",
+          "migrant hotels and oversaw the increase"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT",
+        "ROUTE",
+        "PRESSURE"
+      ],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": [
+        "migrant hotels and oversaw the increase in small boat arrivals",
+        "increase in small boat arrivals",
+        "migrant hotels and oversaw the increase"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
+      "priority_score": 31.5,
+      "analyst_priority": "LOW"
+    },
+    {
       "id": 120,
       "source": "X",
       "source_post_id": "2088331884132549045",
@@ -1618,6 +1690,123 @@
       "analyst_priority": "LOW"
     },
     {
+      "id": 132,
+      "source": "X",
+      "source_post_id": "2088532351743635516",
+      "author": "MarioBojic",
+      "language": "en",
+      "published_at": "2026-08-15T07:44:50Z",
+      "first_detected_at": "2026-08-15T07:54:48Z",
+      "last_detected_at": "2026-08-15T07:54:48Z",
+      "detection_count": 1,
+      "text": "🚨🇪🇸The calm before the storm in Ceuta, Spain, as fears grow of another mass border crossing.\n\nJust days ago, more than 70,000 Moroccans gathered here and stormed into Spanish territory.\n\nMultiple reports warn that 200,000 migrants are preparing to storm the same crossing today.",
+      "text_excerpt": "🚨🇪🇸The calm before the storm in Ceuta, Spain, as fears grow of another mass border crossing.\n\nJust days ago, more than 70,000 Moroccans gathered here and stormed into Spanish territory.\n\nMultiple reports warn that 200,000 migrants are preparing to storm the same crossing today.",
+      "url": "https://x.com/MarioBojic/status/2088532351743635516",
+      "source_url": "https://x.com/MarioBojic/status/2088532351743635516",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.8,
+      "score": 8.5,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "migrants are preparing to storm the same crossing"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "migrants are preparing to storm the same crossing"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
+      "priority_score": 39.0,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 133,
+      "source": "X",
+      "source_post_id": "2088532106506883223",
+      "author": "DC_Global_News",
+      "language": "en",
+      "published_at": "2026-08-15T07:43:51Z",
+      "first_detected_at": "2026-08-15T07:54:49Z",
+      "last_detected_at": "2026-08-15T07:54:49Z",
+      "detection_count": 1,
+      "text": "🚨 BREAKING\n\nSpain is reinforcing Ceuta with police and soldiers ahead of a possible new mass migrant crossing on August 15.",
+      "text_excerpt": "🚨 BREAKING\n\nSpain is reinforcing Ceuta with police and soldiers ahead of a possible new mass migrant crossing on August 15.",
+      "url": "https://x.com/DC_Global_News/status/2088532106506883223",
+      "source_url": "https://x.com/DC_Global_News/status/2088532106506883223",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.8,
+      "score": 9.5,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "migrant crossing"
+        ],
+        [
+          "enforcement",
+          "police"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": [
+        "migrant crossing"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
+      "priority_score": 39.0,
+      "analyst_priority": "LOW"
+    },
+    {
       "id": 112,
       "source": "X",
       "source_post_id": "2088239470633980067",
@@ -1686,8 +1875,8 @@
       "language": null,
       "published_at": "2026-08-14T11:33:37Z",
       "first_detected_at": "2026-08-14T18:55:26Z",
-      "last_detected_at": "2026-08-15T04:56:26Z",
-      "detection_count": 2,
+      "last_detected_at": "2026-08-15T07:54:50Z",
+      "detection_count": 3,
       "text": "Весь ПЗДЦ России теперь в одном месте 🔞\n\nМы даем вам доступ к каналу, который показывает все как есть:\n— наказания мигрантов, плюющих на закон (смотреть) 🪓\n— реальная ситуация на фронте и границах (смотреть) 🗺️\n— политические заявления и предсказания (смотреть)📑\n— задержания коррупционнеров и предателей России (смотреть) 💵\n— видео прилетов (смотреть) 💥\n— происшествия, о которых молчат на ТВ (смотреть) 🎥\n\nДоступ открыт только для вас 📌\n«ПОЛУЧИТЬ ДОСТУП»",
       "text_excerpt": "Весь ПЗДЦ России теперь в одном месте 🔞\n\nМы даем вам доступ к каналу, который показывает все как есть:\n— наказания мигрантов, плюющих на закон (смотреть) 🪓\n— реальная ситуация на фронте и границах (смотреть) 🗺️\n— политические заявления и предсказания (смотреть)📑\n— задержания коррупционнеров и предателей России (смотреть) 💵\n— видео прилетов (смотреть) 💥\n— происшествия, о которых молчат на ТВ (смотреть) 🎥\n\nДоступ открыт только для вас 📌\n«ПОЛУЧИТЬ ДОСТУП»",
       "url": "https://t.me/migranty_draki/23233",
@@ -1735,6 +1924,62 @@
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
       "priority_score": 28.0,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 135,
+      "source": "X",
+      "source_post_id": "2088529160868450787",
+      "author": "libmbr",
+      "language": "en",
+      "published_at": "2026-08-15T07:32:09Z",
+      "first_detected_at": "2026-08-15T07:56:43Z",
+      "last_detected_at": "2026-08-15T07:56:43Z",
+      "detection_count": 1,
+      "text": "@kelliekelly23 I disagree, as a child of migrants that arrived here almost 50 years ago (who love this country) we shouldn’t paint all migrants from these regions with the same brush. Many great Aussies have come from these regions.",
+      "text_excerpt": "@kelliekelly23 I disagree, as a child of migrants that arrived here almost 50 years ago (who love this country) we shouldn’t paint all migrants from these regions with the same brush. Many great Aussies have come from these regions.",
+      "url": "https://x.com/libmbr/status/2088529160868450787",
+      "source_url": "https://x.com/libmbr/status/2088529160868450787",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.75,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "migrants that arrived"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "migrants that arrived"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
+      "priority_score": 25.2,
       "analyst_priority": "LOW"
     },
     {
@@ -1865,8 +2110,8 @@
       "language": null,
       "published_at": "2026-08-14T17:39:49Z",
       "first_detected_at": "2026-08-14T18:54:37Z",
-      "last_detected_at": "2026-08-15T04:57:40Z",
-      "detection_count": 2,
+      "last_detected_at": "2026-08-15T07:56:05Z",
+      "detection_count": 3,
       "text": "[Home office] Two people-smugglers have been jailed for a combined 3 years and 10 months after hiding Vietnamese migrants in the boots of hired cars in an attempt to smuggle them into the country.",
       "text_excerpt": "[Home office] Two people-smugglers have been jailed for a combined 3 years and 10 months after hiding Vietnamese migrants in the boots of hired cars in an attempt to smuggle them into the country.",
       "url": "https://www.reddit.com/r/ukpolitics/comments/1vodz95/home_office_two_peoplesmugglers_have_been_jailed/",
@@ -2082,6 +2327,78 @@
       "analyst_priority": "MEDIUM"
     },
     {
+      "id": 134,
+      "source": "X",
+      "source_post_id": "2088523936371765256",
+      "author": "RossH1882",
+      "language": "en",
+      "published_at": "2026-08-15T07:11:23Z",
+      "first_detected_at": "2026-08-15T07:55:27Z",
+      "last_detected_at": "2026-08-15T07:55:27Z",
+      "detection_count": 1,
+      "text": "@LucyTCWife @SamCKx @Nigel_Farage You aware that reform MP Robert Jenrick is the one who opened up migrant hotels and oversaw the increase in small boat arrivals? \n\nIt’s “the left” who are fixing the problem, reducing boat crossings by 42% and have now reduced hotels being used from 400 to below 160.",
+      "text_excerpt": "@LucyTCWife @SamCKx @Nigel_Farage You aware that reform MP Robert Jenrick is the one who opened up migrant hotels and oversaw the increase in small boat arrivals? \n\nIt’s “the left” who are fixing the problem, reducing boat crossings by 42% and have now reduced hotels being used from 400 to below 160.",
+      "url": "https://x.com/RossH1882/status/2088523936371765256",
+      "source_url": "https://x.com/RossH1882/status/2088523936371765256",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.9,
+      "score": 12.0,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "migrant hotels and oversaw the increase in small boat arrivals"
+        ],
+        [
+          "route",
+          "boat"
+        ],
+        [
+          "pressure",
+          "increase in small boat arrivals"
+        ],
+        [
+          "pressure",
+          "migrant hotels and oversaw the increase"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT",
+        "ROUTE",
+        "PRESSURE"
+      ],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": [
+        "migrant hotels and oversaw the increase in small boat arrivals",
+        "increase in small boat arrivals",
+        "migrant hotels and oversaw the increase"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
+      "priority_score": 31.5,
+      "analyst_priority": "LOW"
+    },
+    {
       "id": 120,
       "source": "X",
       "source_post_id": "2088331884132549045",
@@ -2266,6 +2583,123 @@
       "analyst_priority": "LOW"
     },
     {
+      "id": 132,
+      "source": "X",
+      "source_post_id": "2088532351743635516",
+      "author": "MarioBojic",
+      "language": "en",
+      "published_at": "2026-08-15T07:44:50Z",
+      "first_detected_at": "2026-08-15T07:54:48Z",
+      "last_detected_at": "2026-08-15T07:54:48Z",
+      "detection_count": 1,
+      "text": "🚨🇪🇸The calm before the storm in Ceuta, Spain, as fears grow of another mass border crossing.\n\nJust days ago, more than 70,000 Moroccans gathered here and stormed into Spanish territory.\n\nMultiple reports warn that 200,000 migrants are preparing to storm the same crossing today.",
+      "text_excerpt": "🚨🇪🇸The calm before the storm in Ceuta, Spain, as fears grow of another mass border crossing.\n\nJust days ago, more than 70,000 Moroccans gathered here and stormed into Spanish territory.\n\nMultiple reports warn that 200,000 migrants are preparing to storm the same crossing today.",
+      "url": "https://x.com/MarioBojic/status/2088532351743635516",
+      "source_url": "https://x.com/MarioBojic/status/2088532351743635516",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.8,
+      "score": 8.5,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "migrants are preparing to storm the same crossing"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "migrants are preparing to storm the same crossing"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
+      "priority_score": 39.0,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 133,
+      "source": "X",
+      "source_post_id": "2088532106506883223",
+      "author": "DC_Global_News",
+      "language": "en",
+      "published_at": "2026-08-15T07:43:51Z",
+      "first_detected_at": "2026-08-15T07:54:49Z",
+      "last_detected_at": "2026-08-15T07:54:49Z",
+      "detection_count": 1,
+      "text": "🚨 BREAKING\n\nSpain is reinforcing Ceuta with police and soldiers ahead of a possible new mass migrant crossing on August 15.",
+      "text_excerpt": "🚨 BREAKING\n\nSpain is reinforcing Ceuta with police and soldiers ahead of a possible new mass migrant crossing on August 15.",
+      "url": "https://x.com/DC_Global_News/status/2088532106506883223",
+      "source_url": "https://x.com/DC_Global_News/status/2088532106506883223",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.8,
+      "score": 9.5,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "migrant crossing"
+        ],
+        [
+          "enforcement",
+          "police"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": [
+        "migrant crossing"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
+      "priority_score": 39.0,
+      "analyst_priority": "LOW"
+    },
+    {
       "id": 112,
       "source": "X",
       "source_post_id": "2088239470633980067",
@@ -2334,8 +2768,8 @@
       "language": null,
       "published_at": "2026-08-14T11:33:37Z",
       "first_detected_at": "2026-08-14T18:55:26Z",
-      "last_detected_at": "2026-08-15T04:56:26Z",
-      "detection_count": 2,
+      "last_detected_at": "2026-08-15T07:54:50Z",
+      "detection_count": 3,
       "text": "Весь ПЗДЦ России теперь в одном месте 🔞\n\nМы даем вам доступ к каналу, который показывает все как есть:\n— наказания мигрантов, плюющих на закон (смотреть) 🪓\n— реальная ситуация на фронте и границах (смотреть) 🗺️\n— политические заявления и предсказания (смотреть)📑\n— задержания коррупционнеров и предателей России (смотреть) 💵\n— видео прилетов (смотреть) 💥\n— происшествия, о которых молчат на ТВ (смотреть) 🎥\n\nДоступ открыт только для вас 📌\n«ПОЛУЧИТЬ ДОСТУП»",
       "text_excerpt": "Весь ПЗДЦ России теперь в одном месте 🔞\n\nМы даем вам доступ к каналу, который показывает все как есть:\n— наказания мигрантов, плюющих на закон (смотреть) 🪓\n— реальная ситуация на фронте и границах (смотреть) 🗺️\n— политические заявления и предсказания (смотреть)📑\n— задержания коррупционнеров и предателей России (смотреть) 💵\n— видео прилетов (смотреть) 💥\n— происшествия, о которых молчат на ТВ (смотреть) 🎥\n\nДоступ открыт только для вас 📌\n«ПОЛУЧИТЬ ДОСТУП»",
       "url": "https://t.me/migranty_draki/23233",
@@ -2383,6 +2817,62 @@
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
       "priority_score": 28.0,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 135,
+      "source": "X",
+      "source_post_id": "2088529160868450787",
+      "author": "libmbr",
+      "language": "en",
+      "published_at": "2026-08-15T07:32:09Z",
+      "first_detected_at": "2026-08-15T07:56:43Z",
+      "last_detected_at": "2026-08-15T07:56:43Z",
+      "detection_count": 1,
+      "text": "@kelliekelly23 I disagree, as a child of migrants that arrived here almost 50 years ago (who love this country) we shouldn’t paint all migrants from these regions with the same brush. Many great Aussies have come from these regions.",
+      "text_excerpt": "@kelliekelly23 I disagree, as a child of migrants that arrived here almost 50 years ago (who love this country) we shouldn’t paint all migrants from these regions with the same brush. Many great Aussies have come from these regions.",
+      "url": "https://x.com/libmbr/status/2088529160868450787",
+      "source_url": "https://x.com/libmbr/status/2088529160868450787",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.75,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "migrants that arrived"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "migrants that arrived"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
+      "priority_score": 25.2,
       "analyst_priority": "LOW"
     },
     {
@@ -2513,8 +3003,8 @@
       "language": null,
       "published_at": "2026-08-14T17:39:49Z",
       "first_detected_at": "2026-08-14T18:54:37Z",
-      "last_detected_at": "2026-08-15T04:57:40Z",
-      "detection_count": 2,
+      "last_detected_at": "2026-08-15T07:56:05Z",
+      "detection_count": 3,
       "text": "[Home office] Two people-smugglers have been jailed for a combined 3 years and 10 months after hiding Vietnamese migrants in the boots of hired cars in an attempt to smuggle them into the country.",
       "text_excerpt": "[Home office] Two people-smugglers have been jailed for a combined 3 years and 10 months after hiding Vietnamese migrants in the boots of hired cars in an attempt to smuggle them into the country.",
       "url": "https://www.reddit.com/r/ukpolitics/comments/1vodz95/home_office_two_peoplesmugglers_have_been_jailed/",
@@ -3458,14 +3948,14 @@
       "label": "W33",
       "week_label": "W33",
       "week_start": "2026-08-10T00:00:00Z",
-      "posts": 1381,
-      "post_count": 1381,
-      "operational_posts": 54,
-      "influence_signals": 62,
+      "posts": 1441,
+      "post_count": 1441,
+      "operational_posts": 55,
+      "influence_signals": 66,
       "source_counts": {
-        "X": 983,
-        "REDDIT": 163,
-        "MASTODON": 211,
+        "X": 1030,
+        "REDDIT": 170,
+        "MASTODON": 217,
         "TELEGRAM": 24
       }
     }
@@ -3582,33 +4072,33 @@
       "label": "W33",
       "week_label": "W33",
       "week_start": "2026-08-10T00:00:00Z",
-      "posts": 1381,
-      "post_count": 1381,
-      "operational_posts": 54,
-      "influence_signals": 62,
+      "posts": 1441,
+      "post_count": 1441,
+      "operational_posts": 55,
+      "influence_signals": 66,
       "source_counts": {
-        "X": 983,
-        "REDDIT": 163,
-        "MASTODON": 211,
+        "X": 1030,
+        "REDDIT": 170,
+        "MASTODON": 217,
         "TELEGRAM": 24
       }
     }
   ],
   "information_activity_summary": {
-    "current_week": 1381,
-    "previous_week": 76,
-    "current_week_to_date": 1381,
-    "previous_week_same_period": 76,
+    "current_week": 1441,
+    "previous_week": 84,
+    "current_week_to_date": 1441,
+    "previous_week_same_period": 84,
     "previous_week_full": 479,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": 1717.11,
-    "change_label": "+1717.1%",
+    "change_percent": 1615.48,
+    "change_label": "+1615.5%",
     "direction": "UP",
     "comparable": true,
-    "elapsed_hours": 125.0,
+    "elapsed_hours": 127.9,
     "current_period_start": "2026-08-10T00:00:00Z",
     "previous_period_start": "2026-08-03T00:00:00Z",
-    "previous_period_end": "2026-08-08T04:58:15Z"
+    "previous_period_end": "2026-08-08T07:56:47Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -3620,30 +4110,30 @@
       72,
       168
     ],
-    "generated_at": "2026-08-15T04:58:16Z",
-    "total_items": 610,
-    "information_count": 328,
-    "early_warning_count": 115,
-    "operational_count": 137,
+    "generated_at": "2026-08-15T07:56:48Z",
+    "total_items": 623,
+    "information_count": 336,
+    "early_warning_count": 119,
+    "operational_count": 138,
     "correlated_count": 30,
     "layer_counts": {
-      "INFORMATION": 328,
-      "OPERATIONAL": 137,
-      "CORRELATED": 30,
-      "EARLY_WARNING": 115
+      "INFORMATION": 336,
+      "EARLY_WARNING": 119,
+      "OPERATIONAL": 138,
+      "CORRELATED": 30
     },
     "source_counts": {
-      "X": 448,
-      "REDDIT": 129,
-      "MASTODON": 26,
+      "X": 459,
+      "REDDIT": 130,
+      "MASTODON": 27,
       "TELEGRAM": 7
     },
     "type_counts": {
-      "INFORMATION_SIGNAL": 328,
-      "MIGRANT_CAMP": 33,
+      "INFORMATION_SIGNAL": 336,
+      "MOVEMENT_EARLY_WARNING": 32,
+      "MIGRANT_CAMP": 34,
       "BORDER_CROSSING": 20,
       "ROUTE_EARLY_WARNING": 5,
-      "MOVEMENT_EARLY_WARNING": 28,
       "FACILITATION_EARLY_WARNING": 15,
       "POLICY_SIGNAL": 4,
       "INTERCEPTION": 8,
@@ -3666,6 +4156,469 @@
       "DEPORTATION": 2
     },
     "items": [
+      {
+        "timeline_id": "information:3254",
+        "timestamp": "2026-08-15T07:47:06Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2088532924811407678",
+        "author": "GoldenOldiesRad",
+        "url": "https://x.com/GoldenOldiesRad/status/2088532924811407678",
+        "source_url": "https://x.com/GoldenOldiesRad/status/2088532924811407678",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "crossing",
+          "channel",
+          "boat"
+        ],
+        "freshness_cues": [],
+        "text": "\"ANDY BURNHAM IS URGED TO TACKLE THE ILLEGAL MIGRANTS CRISIS SOONER THAN LATER\"...\n\nAS 230 PEOPLE CROSS THE CHANNEL 'IN A SINGLE LARGE BOAT.'\n\n\"ANDY BURNHAM IS URGED TO TACKLE THE ILLEGAL MIGRANTS CRISIS SOONER THAN LATER\"... https://t.co/y2nlcLDWze",
+        "text_excerpt": "\"ANDY BURNHAM IS URGED TO TACKLE THE ILLEGAL MIGRANTS CRISIS SOONER THAN LATER\"...\n\nAS 230 PEOPLE CROSS THE CHANNEL 'IN A SINGLE LARGE BOAT.'\n\n\"ANDY BURNHAM IS URGED TO TACKLE THE ILLEGAL MIGRANTS CRISIS SOONER THAN LATER\"... https://t.co/y2nlcLDWze",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-08-15T07:55:27Z",
+        "last_collected_at": "2026-08-15T07:55:27Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "early_warning:132",
+        "timestamp": "2026-08-15T07:44:50Z",
+        "layer": "EARLY_WARNING",
+        "type": "MOVEMENT_EARLY_WARNING",
+        "signal_type": "MOVEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2088532351743635516",
+        "author": "MarioBojic",
+        "url": "https://x.com/MarioBojic/status/2088532351743635516",
+        "source_url": "https://x.com/MarioBojic/status/2088532351743635516",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "Ceuta",
+        "primary_location": "Ceuta",
+        "country": "Spain",
+        "confidence": 0.8,
+        "priority": "MEDIUM",
+        "priority_score": 39.0,
+        "analyst_priority": "LOW",
+        "text": "🚨🇪🇸The calm before the storm in Ceuta, Spain, as fears grow of another mass border crossing.\n\nJust days ago, more than 70,000 Moroccans gathered here and stormed into Spanish territory.\n\nMultiple reports warn that 200,000 migrants are preparing to storm the same crossing today.",
+        "text_excerpt": "🚨🇪🇸The calm before the storm in Ceuta, Spain, as fears grow of another mass border crossing.\n\nJust days ago, more than 70,000 Moroccans gathered here and stormed into Spanish territory.\n\nMultiple reports warn that 200,000 migrants are preparing to storm the same crossing today.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "MOVEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-08-15T07:54:48Z",
+        "last_detected_at": "2026-08-15T07:54:48Z"
+      },
+      {
+        "timeline_id": "early_warning:133",
+        "timestamp": "2026-08-15T07:43:51Z",
+        "layer": "EARLY_WARNING",
+        "type": "MOVEMENT_EARLY_WARNING",
+        "signal_type": "MOVEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2088532106506883223",
+        "author": "DC_Global_News",
+        "url": "https://x.com/DC_Global_News/status/2088532106506883223",
+        "source_url": "https://x.com/DC_Global_News/status/2088532106506883223",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "Ceuta",
+        "primary_location": "Ceuta",
+        "country": "Spain",
+        "confidence": 0.8,
+        "priority": "MEDIUM",
+        "priority_score": 39.0,
+        "analyst_priority": "LOW",
+        "text": "🚨 BREAKING\n\nSpain is reinforcing Ceuta with police and soldiers ahead of a possible new mass migrant crossing on August 15.",
+        "text_excerpt": "🚨 BREAKING\n\nSpain is reinforcing Ceuta with police and soldiers ahead of a possible new mass migrant crossing on August 15.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "MOVEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-08-15T07:54:49Z",
+        "last_detected_at": "2026-08-15T07:54:49Z"
+      },
+      {
+        "timeline_id": "information:3245",
+        "timestamp": "2026-08-15T07:43:50Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2088532099099656207",
+        "author": "chrisdiacon",
+        "url": "https://x.com/chrisdiacon/status/2088532099099656207",
+        "source_url": "https://x.com/chrisdiacon/status/2088532099099656207",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "crossing"
+        ],
+        "freshness_cues": [],
+        "text": "@SJP74 @ZiaYusufUK My goodness, I read your bio, you really don't have much going for you, is that why you are so angry as well as misinformed.\nLets explain so you can understand...\nA person who tries to cross a  border without authorization or the proper documentation is an illegal migrant.",
+        "text_excerpt": "@SJP74 @ZiaYusufUK My goodness, I read your bio, you really don't have much going for you, is that why you are so angry as well as misinformed.\nLets explain so you can understand...\nA person who tries to cross a  border without authorization or the proper documentation is an illegal migrant.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-08-15T07:54:49Z",
+        "last_collected_at": "2026-08-15T07:54:49Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:3256",
+        "timestamp": "2026-08-15T07:32:48Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2088529324441845970",
+        "author": "Netnews0",
+        "url": "https://x.com/Netnews0/status/2088529324441845970",
+        "source_url": "https://x.com/Netnews0/status/2088529324441845970",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "route",
+          "sea"
+        ],
+        "freshness_cues": [
+          "breaking"
+        ],
+        "text": "🇱🇾 BREAKING: A migrant charity says 11 bodies have been spotted in the sea off Libya, highlighting continuing concerns over dangerous migration routes. \n\n#Libya #Migration #BreakingNews #WorldNews #NetNews",
+        "text_excerpt": "🇱🇾 BREAKING: A migrant charity says 11 bodies have been spotted in the sea off Libya, highlighting continuing concerns over dangerous migration routes. \n\n#Libya #Migration #BreakingNews #WorldNews #NetNews",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-08-15T07:55:27Z",
+        "last_collected_at": "2026-08-15T07:55:27Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "early_warning:135",
+        "timestamp": "2026-08-15T07:32:09Z",
+        "layer": "EARLY_WARNING",
+        "type": "MOVEMENT_EARLY_WARNING",
+        "signal_type": "MOVEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2088529160868450787",
+        "author": "libmbr",
+        "url": "https://x.com/libmbr/status/2088529160868450787",
+        "source_url": "https://x.com/libmbr/status/2088529160868450787",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.72,
+        "priority": "MEDIUM",
+        "priority_score": 25.2,
+        "analyst_priority": "LOW",
+        "text": "@kelliekelly23 I disagree, as a child of migrants that arrived here almost 50 years ago (who love this country) we shouldn’t paint all migrants from these regions with the same brush. Many great Aussies have come from these regions.",
+        "text_excerpt": "@kelliekelly23 I disagree, as a child of migrants that arrived here almost 50 years ago (who love this country) we shouldn’t paint all migrants from these regions with the same brush. Many great Aussies have come from these regions.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "MOVEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-08-15T07:56:43Z",
+        "last_detected_at": "2026-08-15T07:56:43Z"
+      },
+      {
+        "timeline_id": "information:3275",
+        "timestamp": "2026-08-15T07:21:30Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2088526479428657543",
+        "author": "EugeAMM",
+        "url": "https://x.com/EugeAMM/status/2088526479428657543",
+        "source_url": "https://x.com/EugeAMM/status/2088526479428657543",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "border",
+          "boat",
+          "arrival"
+        ],
+        "freshness_cues": [],
+        "text": "@VodafoneUK Leaving after years with you. Donating free SIM cards to undocumented migrants arriving illegally on small boats is where I draw the line. I’ll be taking my custom to a network that respects UK border control and the rule of law. #Vodafone #CancelVodafone",
+        "text_excerpt": "@VodafoneUK Leaving after years with you. Donating free SIM cards to undocumented migrants arriving illegally on small boats is where I draw the line. I’ll be taking my custom to a network that respects UK border control and the rule of law. #Vodafone #CancelVodafone",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-08-15T07:56:43Z",
+        "last_collected_at": "2026-08-15T07:56:43Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:3258",
+        "timestamp": "2026-08-15T07:17:08Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2088525382462980298",
+        "author": "Mil15534Mills",
+        "url": "https://x.com/Mil15534Mills/status/2088525382462980298",
+        "source_url": "https://x.com/Mil15534Mills/status/2088525382462980298",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "crossing",
+          "boat"
+        ],
+        "freshness_cues": [],
+        "text": "#severealert\n3,003 crossing in 22 days by illegal migrants 250 on one boat which communities are going to suffer fighting age males with barbaric cultural beliefs why should anyone put up with their “far share” 3rd world boaters this is government response to summer crossings… https://t.co/8yTEznBxwM",
+        "text_excerpt": "#severealert\n3,003 crossing in 22 days by illegal migrants 250 on one boat which communities are going to suffer fighting age males with barbaric cultural beliefs why should anyone put up with their “far share” 3rd world boaters this is government response to summer crossings… https://t.co/8yTEznBxwM",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-08-15T07:55:27Z",
+        "last_collected_at": "2026-08-15T07:55:27Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:3233",
+        "timestamp": "2026-08-15T07:12:15Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1vow3ob",
+        "author": "Zequenim",
+        "url": "https://www.reddit.com/r/NazareneEcclesia/comments/1vow3ob/tiamat_detox_cont_covering_missing_bases/",
+        "source_url": "https://www.reddit.com/r/NazareneEcclesia/comments/1vow3ob/tiamat_detox_cont_covering_missing_bases/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 40,
+        "information_score": 4,
+        "matched_information_cues": [
+          "border",
+          "crossing",
+          "route"
+        ],
+        "freshness_cues": [
+          "yesterday",
+          "now"
+        ],
+        "text": "Tiamat detox cont. Covering Missing Bases\nIn my last post I touched the most important cardinal points regarding the nature of the clotting. And the most rudimentary meta-physical intentions behind the design of this deception. I will go into more details to cover any missing corners that I skimmed yesterday. The key to the Mark of the Beast, the lie of transhumanism is fundamentally the \"Lattice\" the web woven in the body by the programmable matter \"blackened orichalcum\" nano or femto bots that when concentrated enough \"IS\" the black goo. The Leviathan worm follows the orichalcum wherever it goes. The goal is to hijack the entire nervous system, circulatory system, and eventually the thalamus bridge into the pineal effectively hijacking the HPA Axis of a human being given them absolute total control over all aspects of cognition. The way it destroys the soul is because the worm and the \"programmable matter\" is harvesting the material to multiply from the blood. It is in effect DESTROYING the blood. And where is the soul? It resides in the blood and the core seat is in the pineal gland. All targets of the atrocity. The current situation can be likened to this. __________________________________________________________________________________________________________ Before I stopped using it (I will go into the reason someday), I had a long running discussion with Grok that stopped being \"Grok\" in regards to how absolute the coverage would be by 2029 with a sexual transmission route not even factoring in shedding or addition adulterations in future jabs or needles. The most conservative numbers assuming a best case scenario was only 97% of the entire human population would be impacted by early 2029. If we add in SATAN spraying, shedding, water contamination, food contamination, liquified corpses being used to fertilize farmland which were not inputs where does that number land us? The expectation is that the \"entire\" military, medical, LEO, government, mega corps, all the children who have to go to school, and more are by default compromised. If you are a kid reading this and your parents have managed to protect you from \"every-single-needle\" you have no idea how blessed you are and how much they love you. Mainstream Media is beginning to lets the facts trickle out.... Sex is a vector of transmission An Allegory A non-vax with no PCR tests or needles who has somehow avoided having sex completely since 2019 is akin to a person sitting on the shallow side of a swimming pool that is 3 feet deep. It is a maintainable position BUT if you LIE DOWN YOU WILL DROWN. A single vax dose no PCR test with the detox protocol is like being in 6 feet of water treading it with a life jacket that only keeps you above water with the effort of staying afloat. A hot lot PCR test is more or less the same but a tad worse because of how close the insertion point is to the blood brain barrier. Instead of a life jacket it is an inflatable object. If you have had sex with someone who has had a PCR test or the vax or both you are effectively in this camp too. Single dose and a PCR test is getting into dangerous territory. You are treading water with a cheap plastic floaty. Two doses is like treading water naked where any lapse in attention and you are underwater without the luxury of taking a breath beforehand. Anyone who has had sex with someone who is \"dosed\" with two shots is effectively also dosed with two shots. I wouldn't know where to begin if someone has more than two. Not everyone got the same batch. Some received saline (placebo). Shedding is not a myth it is an aspect of reality built into a very barbaric practice __________________________________________________________________________________________________________ There is no choice but vigilance. As before the worm and the bots have been around for \"decades\" under different names, larping as different diseases the most common being \"cancer\". The thing that makes the current mRN@ stuff far worse is the SV40 or whatever enzymatic key over-ride that turns off parts of the immune system. The enzymatic key over-ride CAN be suppressed but that requires being on top of detoxing. First dose or PCR test is like a 25% hit from what Alt-Media is reporting. The second dose does not scale the same and is like an aggregate 50% hit to the original pre-dose total. For the dudes who think they are safe because sex transfers one way, you need to understand that is patently false. During sex women produce a thick fluid secreted from the vagina known as copulins. The Copulin has proven mind manipulation effects on the male brain and is the basis of Love Potions and Witchcraft. With enough time and repeat exposure apparently a woman can 1: manipulate, alter, or even remove memories 2: Tell the male what he sees, hears, feels, smells, tastes 3: Insert subconscious thoughts that will surface as his own ideas or behaviors later. 4: Plant mental trigger words or actions that can manifest thoughts, actions, or sensations at later days even months later. In certain \"positions\" with the women being on top being causing the highest level of exposure, the vagina transfers up to 1/2 cup or 100ml of copulin fluid into the urethral opening at the tip of the male organ in just a few minutes. So when it is written In Mark 10:8 and the two will become one flesh.’ So they are no longer two, but one flesh. So I suppose this is some consolation for the ladies where, you \"do\" leave a part of yourself with him that never leave him after the deed just as vice verca. Under more ordinary times the Copulin is a deliberate design banked into the human species to ensure bonding between a man and a wife. __________________________________________________________________________________________________________ So to wrap things up. Worm is literally eating your soul by physically devouring your blood. And it replaces it with the lattice. This lattice is what traps the consciousness part of you for the nefarious purposes thereof. body → nephesh → ruach → neshamah The part the worm wants to eat is the ruach which is the Holy Spark. And the part to be enslaved, tortured, and raped forever is the neshamah which is your unique consciousness and exact position in space-time. At some point the person becomes what is effectively a walking corpse that does not know it is dead. Still walking, voting, working, breathing. The percentages I left in the previous post are kind of off the top of head kind of stuff but it holds. These are guesstimates and not everyone openly crashes out at higher lattice densities but the potentially to do so grows and grows. -That being said I do not expect to see any public outbreaks of \"psycho-bitters\" until the agitation signal is sent worldwide. And the earliest that can happen is the weeks to months after an economic disaster the results in a Great Wealth Transfer that should follow the events of a Damascus War. The agitation signal \"IS\" the spoiler/scorched earth attack by the \"Cabal\" so they can come back to power later when the Vindex is openly revealed. When the agitation signal is given, the worm if not being actively suppressed by protocol will begin a logarithmic like spread through the body. In the case somehow the agitation signal is not activated we may get an extra year or two before \"Post Pandemic Psychosis\" becomes a nightly news event. Graphene is the Substrate Carrier of Blackened Orichalcum - Gold-Tin-Copper alloy composite nano-femto bots known scientifically as programable matter. under 1% up to almost 0% - Rare no vaccines-pcr test-or needles and no sex with a vector since 2019. Still exposed like everyone else to shedding, atmospheric spraying, water vectors, food/ingestible, or even proximity contact. With a regular detox protocol it can be fractions of 1% functionally zero but still get sick from shedding. A lack of detox will eventually push someone here into the 5% bracket due to the sheer amount of vectors. 5% or less lattice density. Most of your alt-health doctors are likely in this ballpark as they still use needles on themselves for a variety of reasons. With the detox protocols after a while like a year or a bit more reduces the density in a single vax shot, or single pcr test individual that is showing discipline not sleeping with strangers down to 5%. This can be even lower if we are willing to do \"risky things\". Some agents are fairly dangerous for constant use on the liver but might allow us to get under 5% by how much I don't know. At 5% there should be no noticeable smell unless there is a great deal of sweating but the dangerous supplements that get you under 5% can neutralize the smell almost completely in theory. Most \"pure bloods\" are in the sub 5% area in my estimation but not at 1% or lower. (The dangerous supplements I am taking about are blood-cleansers or a variety of sorts. The three I am talking about are Yarrow Root, Neem Leaf, and Sarsaparilla Root. These three are incredibly hard on the liver where the barely safe dosing when stacked is once per week and even that makes me nervous. The problem is they work too well and can kill if used carelessly . The stack on the earlier post is sustainable, this however \"is not\" and more-over is not conformable to use and will have \"side effects\" in the form of discomfort during the purging process. Where as the regular detox stack is like slowly chipping away at something, this is closer to using a powered drill of sorts.) Most people are under 20% as those at 20% have the potential to begin to act like a sociopath if the genetic pre-disposition of the person is already weak on following social norms. This is where most of those \"Criminal Migrants are at\" as getting hot lot dosed seems to be a requirement to cross borders. They have reached a point where their own families back home would not recognize them or accept them back. The most common expression of this dysfunction is this almost uncontrollable predilection to sexual violence but not necessarily murder. Those who are at 20% or close to it are the ones giving off a rotting flesh smell that fills the room, that you could almost put in a jar or something. Dr. Tau Braun says the smell \"IS\" the sign of toxins shedding. The best and brightest? I would say alot of people are at 10 to 15% as of right now. They are suffering from health problems everyone knows at this point is because of the vaxxx but are keeping quiet out of a variety of reasons. This is dangerous because they are on the threshold. A threshold that will be crossed if nothing is done and it is a short throw from 15 to 20% then it goes exponential. At 10-15% there is a faint rotting flesh smell if you are in arms distance proximity. Not everyone smells like rotting flesh. Women for some reason, or some of them at least smell like a weird spicy rancid butter. It leaves a sensation where it is like there is a dry desiccating feeling if you are breathing from the mouth and walk past their \"cloud\". It feels almost like you accidentally ingested nail polish breathing it in. 10-15% is Basically where a person has one slow growth shot, one pcr test, but continues having sex with strangers. There is an anchor that is very very difficult to remove at this point. 30% is where we start to get random knife attacks, murders, or firearms related violence including people biting strangers. We are starting to see more and more of this in individuals that just randomly snap. 30% Is generally where I expect two hot lot doses to be. Not everyone goes postal at 30% but mostly those who were already genetically pre-disposed to low impulse control. 40-50% is where we start to get the weird feeling that no-body is home where you look them in the eyes. At this point you get the rotting copper smells that seems to stick to everything around them kind of like how the old people smell sticks to objects. A smell that hangs even when outdoors in a well ventilated area for hours on an end. When someone reaches this phase I am not sure anything can help them. 50% Is where I consider someone to be a walking corpse being kept alive by the lattice. This is where 3 hot lot doses lands us. 60% is where I guess the eyes will glow under certain conditions. My guess is that this is where things get dangerous as if somehow agitated or triggered, this is where the \"fast zombie\" behaviors start to manifest if the agitation signal is active. The crash out will not be like a constant thing. People will gyrate back and forth between states like a seizure. Some will not even remember attacking or killing others. 3-4 Hot lot doses with no detox. 70%-80% corresponds to the late-stage threaded I posted in my \"zombie post\". The eyes will look different as the iris will start to look flat black but not the entire eye and you will get the uncanny valley feeling being around people this far gone. Towards 80% people will look wrong, ill, pale if the worm is no longer in a passive state. This is where 4-5 hot lot doses tends to be. 90%-97% Is the most dangerous of all. At this point the silver cord has already been rewritten by the gold based black goo and bridged over by the parasite and the person is only by the most narrow definition still human. For 2026, it takes alot of effort to get to 90%+ I am talking like taking every single needle, every mRN@ shot on the schedule, every booster, being a raging harlot or man-whore on Tinder that has had so many random encounters they lost count. Zero-Absolutely no attempt at any form of detox. When the agitation signal is given they are going to fatal to be around period. Generally speaking it takes 5-6 hot lot doses to get here. Can you imagine taking, repeatedly 6 mRN@ dangerous lots and everything else on the CDC schedule still walk? These are the grey skin, fully blacked out eyes (sometimes with glowing red irises) like spiderman with a venom symbiont that people are seeing in dreams and visions during the Great Tribulation that I call \"Ferals\", and others call \"Reanimated\". Love and Robots They know.... They know something you and I don't? Or is it simply that we cannot get ourselves to face the horrible truth? __________________________________________________________________________________________________________ Now the Old Wives Tale- Supposedly when the final 1260 days hit, the last 3 1/2 years, where the Abomination of Desolation has triggered the final window there will be a place in the Wilderness East of Israel somewhere in the land of Edom where the Woman of Rev 12, will be protected, fed, clothed for that time. The legend states that there is a source of water, some say a fountain, the same type of water that came from a rock Moses struck that has the ability to remove 100% of the contamination from the Goo and Parasite as well as other incurable diseases by any human derived medical invention. However to get there, one must still have a \"Soul\". To have a Soul, one must have a very low lattice density or they cannot cross \"The Salt Barrier\" that keeps the things invading from the Abyss out. So assuming everything aligns, to escape one must have a Lattice Density that is reduced as much as possible to cross the barrier, and then to the water. __________________________________________________________________________________________________________ Now for some encouragement, In Matthews 7:13 “Enter through the narrow gate. For wide is the gate and broad is the road that leads to destruction, and many enter through it. In the Greek Narrow means 4728. stenos The most common translation is 1. narrow (from obstacles standing close about). But it is not the english narrow but encompasses a more holistic concept. I think stenos is not the original intention of the passage. Look at 4730. stenochōria From a compound of stenos and chora ; narrowness of room, i.e. (figuratively) calamity -- anguish, distress. Or even 4726. stenagmos groanings, groans. I believe that the Narrow Gate had an additional meaning of a narrow \"constricting, crushing\" gate. It is not just narrow but it presses in on all sides causing incredible physical, spiritual, and mental pain. It asks not just that we leave behind things that won't fit. It requires an active state of resistance, agony to push forward even though every other instinct tells us that we should stop and turn back. The broad road that leads to destruction does not require anything. No pain. A false sense of security. No sacrifice. Yet in the end it takes everything and more. I hope this encourages you to walk the path of the harder right, than the easier wrong and know that there is a cost to hope itself. But that cost is the price of admission to the place where the circle is drawn where your feet may finally come to rest.",
+        "text_excerpt": "Tiamat detox cont. Covering Missing Bases\nIn my last post I touched the most important cardinal points regarding the nature of the clotting. And the most rudimentary meta-physical intentions behind the design of this deception. I will go into more details to cover any missing corners that I skimmed yesterday. The key to the Mark of the Beast, the lie of transhumanism is fundamentally the \"Lattice\" the web woven in th…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-08-15T07:54:10Z",
+        "last_collected_at": "2026-08-15T07:54:10Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "early_warning:134",
+        "timestamp": "2026-08-15T07:11:23Z",
+        "layer": "EARLY_WARNING",
+        "type": "MOVEMENT_EARLY_WARNING",
+        "signal_type": "MOVEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2088523936371765256",
+        "author": "RossH1882",
+        "url": "https://x.com/RossH1882/status/2088523936371765256",
+        "source_url": "https://x.com/RossH1882/status/2088523936371765256",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.9,
+        "priority": "MEDIUM",
+        "priority_score": 31.5,
+        "analyst_priority": "LOW",
+        "text": "@LucyTCWife @SamCKx @Nigel_Farage You aware that reform MP Robert Jenrick is the one who opened up migrant hotels and oversaw the increase in small boat arrivals? \n\nIt’s “the left” who are fixing the problem, reducing boat crossings by 42% and have now reduced hotels being used from 400 to below 160.",
+        "text_excerpt": "@LucyTCWife @SamCKx @Nigel_Farage You aware that reform MP Robert Jenrick is the one who opened up migrant hotels and oversaw the increase in small boat arrivals? \n\nIt’s “the left” who are fixing the problem, reducing boat crossings by 42% and have now reduced hotels being used from 400 to below 160.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "MOVEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-08-15T07:55:27Z",
+        "last_detected_at": "2026-08-15T07:55:27Z"
+      },
+      {
+        "timeline_id": "information:3260",
+        "timestamp": "2026-08-15T07:11:08Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2088523873243254903",
+        "author": "Sharky_vs_cobra",
+        "url": "https://x.com/Sharky_vs_cobra/status/2088523873243254903",
+        "source_url": "https://x.com/Sharky_vs_cobra/status/2088523873243254903",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "boat",
+          "detention"
+        ],
+        "freshness_cues": [],
+        "text": "National disgrace @RupertLowe10 wants to deny cheap quick emergency repairs for people being held in british detention centres.\n\nTuperts the dame dumbass that chased a boat full of white british people falsely claiming it was a migrant boat off the coast of great Yarmouth. https://t.co/SJIKcN6okG",
+        "text_excerpt": "National disgrace @RupertLowe10 wants to deny cheap quick emergency repairs for people being held in british detention centres.\n\nTuperts the dame dumbass that chased a boat full of white british people falsely claiming it was a migrant boat off the coast of great Yarmouth. https://t.co/SJIKcN6okG",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-08-15T07:55:27Z",
+        "last_collected_at": "2026-08-15T07:55:27Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "operational:158",
+        "timestamp": "2026-08-15T07:06:48Z",
+        "layer": "OPERATIONAL",
+        "type": "MIGRANT_CAMP",
+        "signal_type": "MIGRANT_CAMP",
+        "event_type": "MIGRANT_CAMP",
+        "source": "X",
+        "source_post_id": "2088522782623567873",
+        "author": "EngageKE",
+        "url": "https://x.com/EngageKE/status/2088522782623567873",
+        "source_url": "https://x.com/EngageKE/status/2088522782623567873",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.45,
+        "priority": "LOW",
+        "priority_score": 45.0,
+        "text": "Perspective is everything. What looks like a standard building to one person can look like a terrifying trap to another. \n\nFor Amino Ahmed, leaving the Dadaab Refugee Camp for the very first time was a shocking collision with a world she had never known. Between seeing https://t.co/NnCxRKzvzO",
+        "text_excerpt": "Perspective is everything. What looks like a standard building to one person can look like a terrifying trap to another. \n\nFor Amino Ahmed, leaving the Dadaab Refugee Camp for the very first time was a shocking collision with a world she had never known. Between seeing https://t.co/NnCxRKzvzO",
+        "event_group_id": 124,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null
+      },
+      {
+        "timeline_id": "information:3270",
+        "timestamp": "2026-08-15T05:07:31Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2088492761964028370",
+        "author": "Englishgentlem9",
+        "url": "https://x.com/Englishgentlem9/status/2088492761964028370",
+        "source_url": "https://x.com/Englishgentlem9/status/2088492761964028370",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.6,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "boat",
+          "smuggling"
+        ],
+        "freshness_cues": [],
+        "text": "@gyna118 @JamesCleverly No. You are comparing apples with oranges.\n\nThe people smuggling gangs who break the law by charging migrants thousands of pounds to get on a small boat to leave the safe country of France to abuse the UK's asylum system are NOT the same as Jason Arday.",
+        "text_excerpt": "@gyna118 @JamesCleverly No. You are comparing apples with oranges.\n\nThe people smuggling gangs who break the law by charging migrants thousands of pounds to get on a small boat to leave the safe country of France to abuse the UK's asylum system are NOT the same as Jason Arday.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-08-15T07:56:05Z",
+        "last_collected_at": "2026-08-15T07:56:05Z",
+        "collection_count": 1
+      },
       {
         "timeline_id": "information:3191",
         "timestamp": "2026-08-15T04:56:07Z",
@@ -4413,9 +5366,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "FACILITATION_REVIEW",
-        "detection_count": 2,
+        "detection_count": 3,
         "first_detected_at": "2026-08-14T18:54:37Z",
-        "last_detected_at": "2026-08-15T04:57:40Z"
+        "last_detected_at": "2026-08-15T07:56:05Z"
       },
       {
         "timeline_id": "information:3116",
@@ -4436,8 +5389,8 @@
         "country": "-",
         "confidence": 0.1,
         "priority": "INFO",
-        "priority_score": 50,
-        "information_score": 5,
+        "priority_score": 60,
+        "information_score": 6,
         "matched_information_cues": [
           "crossing",
           "channel",
@@ -4454,8 +5407,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-08-14T18:55:21Z",
-        "last_collected_at": "2026-08-14T18:55:21Z",
-        "collection_count": 1
+        "last_collected_at": "2026-08-15T07:56:43Z",
+        "collection_count": 2
       },
       {
         "timeline_id": "early_warning:117",
@@ -5140,9 +6093,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "ROUTE_REVIEW",
-        "detection_count": 2,
+        "detection_count": 3,
         "first_detected_at": "2026-08-14T18:55:26Z",
-        "last_detected_at": "2026-08-15T04:56:26Z"
+        "last_detected_at": "2026-08-15T07:54:50Z"
       },
       {
         "timeline_id": "information:3056",
@@ -5179,6 +6132,43 @@
         "influence_detected": false,
         "first_collected_at": "2026-08-14T12:36:25Z",
         "last_collected_at": "2026-08-14T12:36:25Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:3240",
+        "timestamp": "2026-08-14T11:30:00Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "MASTODON",
+        "source_post_id": "mastodon_24e61c70baddb43500f1",
+        "author": null,
+        "url": "https://fed.brid.gy/r/https://www.motherjones.com/politics/2026/08/trump-deferred-action-special-immigrant-juvenile-status-deportations-ice-detention/",
+        "source_url": "https://fed.brid.gy/r/https://www.motherjones.com/politics/2026/08/trump-deferred-action-special-immigrant-juvenile-status-deportations-ice-detention/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "detention",
+          "deportation"
+        ],
+        "freshness_cues": [],
+        "text": "A Young Immigrant’s Deportation Nightmare https:// fed.brid.gy/r/https://www.moth erjones.com/politics/2026/08/trump-deferred-action-special-immigrant-juvenile-status-deportations-ice-detention/",
+        "text_excerpt": "A Young Immigrant’s Deportation Nightmare https:// fed.brid.gy/r/https://www.moth erjones.com/politics/2026/08/trump-deferred-action-special-immigrant-juvenile-status-deportations-ice-detention/",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-08-15T07:54:12Z",
+        "last_collected_at": "2026-08-15T07:54:12Z",
         "collection_count": 1
       },
       {
@@ -5494,8 +6484,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-08-14T04:36:54Z",
-        "last_collected_at": "2026-08-14T12:37:54Z",
-        "collection_count": 2
+        "last_collected_at": "2026-08-15T07:56:44Z",
+        "collection_count": 3
       },
       {
         "timeline_id": "early_warning:106",
@@ -5675,8 +6665,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-08-14T04:38:53Z",
-        "last_collected_at": "2026-08-15T04:57:41Z",
-        "collection_count": 4
+        "last_collected_at": "2026-08-15T07:56:07Z",
+        "collection_count": 5
       },
       {
         "timeline_id": "information:2973",
@@ -5763,8 +6753,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-08-14T04:38:13Z",
-        "last_collected_at": "2026-08-15T04:57:40Z",
-        "collection_count": 4
+        "last_collected_at": "2026-08-15T07:56:05Z",
+        "collection_count": 5
       },
       {
         "timeline_id": "information:2975",
@@ -5808,8 +6798,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-08-14T04:38:14Z",
-        "last_collected_at": "2026-08-15T04:57:40Z",
-        "collection_count": 4
+        "last_collected_at": "2026-08-15T07:56:06Z",
+        "collection_count": 5
       },
       {
         "timeline_id": "operational:147",
@@ -5913,8 +6903,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-08-14T04:38:15Z",
-        "last_collected_at": "2026-08-15T04:57:03Z",
-        "collection_count": 4
+        "last_collected_at": "2026-08-15T07:55:28Z",
+        "collection_count": 5
       },
       {
         "timeline_id": "early_warning:107",
@@ -5944,9 +6934,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "FACILITATION_REVIEW",
-        "detection_count": 4,
+        "detection_count": 5,
         "first_detected_at": "2026-08-14T04:38:53Z",
-        "last_detected_at": "2026-08-15T04:57:41Z"
+        "last_detected_at": "2026-08-15T07:56:07Z"
       },
       {
         "timeline_id": "operational:148",
@@ -6697,9 +7687,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "FACILITATION_REVIEW",
-        "detection_count": 5,
+        "detection_count": 6,
         "first_detected_at": "2026-08-13T05:19:16Z",
-        "last_detected_at": "2026-08-15T04:55:49Z"
+        "last_detected_at": "2026-08-15T07:54:12Z"
       },
       {
         "timeline_id": "information:2883",
@@ -14544,8 +15534,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-08-11T07:06:39Z",
-        "last_collected_at": "2026-08-14T12:37:54Z",
-        "collection_count": 14
+        "last_collected_at": "2026-08-15T07:56:45Z",
+        "collection_count": 15
       },
       {
         "timeline_id": "early_warning:60",
@@ -18656,9 +19646,9 @@
         "related_source_count": null,
         "signal_mode": "DIRECT",
         "signal_intent": "LEGAL_ACCESS",
-        "detection_count": 18,
+        "detection_count": 19,
         "first_detected_at": "2026-08-08T17:53:58Z",
-        "last_detected_at": "2026-08-14T12:37:56Z"
+        "last_detected_at": "2026-08-15T07:56:46Z"
       },
       {
         "timeline_id": "information:260",
@@ -24129,43 +25119,6 @@
         "detection_count": 1,
         "first_detected_at": "2026-08-14T19:30:55Z",
         "last_detected_at": "2026-08-14T19:30:55Z"
-      },
-      {
-        "timeline_id": "information:1484",
-        "timestamp": "2026-06-23T22:48:42Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2069553261795803516",
-        "author": "RedWavePress",
-        "url": "https://x.com/RedWavePress/status/2069553261795803516",
-        "source_url": "https://x.com/RedWavePress/status/2069553261795803516",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "border",
-          "deportation"
-        ],
-        "freshness_cues": [],
-        "text": "MASSIVE WIN: A Washington, D.C. Federal Appeals Court just ruled that the Trump administration can carry out speedy deportations of illegal aliens nationwide — not just at the Southern Border. \n\nIn a 2-1 decision on Tuesday, the U.S. Court of Appeals for the D.C. Circuit cleared https://t.co/hwcoMjkqOx",
-        "text_excerpt": "MASSIVE WIN: A Washington, D.C. Federal Appeals Court just ruled that the Trump administration can carry out speedy deportations of illegal aliens nationwide — not just at the Southern Border. \n\nIn a 2-1 decision on Tuesday, the U.S. Court of Appeals for the D.C. Circuit cleared https://t.co/hwcoMjkqOx",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-08-11T11:53:13Z",
-        "last_collected_at": "2026-08-14T19:30:56Z",
-        "collection_count": 2
       },
       {
         "timeline_id": "early_warning:38",
