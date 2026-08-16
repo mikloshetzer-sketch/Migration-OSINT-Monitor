@@ -1,50 +1,50 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-08-15T19:28:01Z",
-  "generated_at": "2026-08-15T19:28:01Z",
+  "updated_at": "2026-08-16T06:05:04Z",
+  "generated_at": "2026-08-16T06:05:04Z",
   "current_run": {
     "available": true,
-    "id": 53,
-    "run_uuid": "c93319e1-4fe9-49e6-9628-aa261df59a13",
-    "started_at": "2026-08-15T19:24:50Z",
-    "completed_at": "2026-08-15T19:27:59Z",
+    "id": 54,
+    "run_uuid": "dcc41beb-dbc4-4ed9-9199-eb1772722a4b",
+    "started_at": "2026-08-16T06:02:28Z",
+    "completed_at": "2026-08-16T06:05:03Z",
     "status": "SUCCESS",
-    "posts_returned": 136,
-    "unique_posts_collected": 98,
+    "posts_returned": 128,
+    "unique_posts_collected": 93,
     "x_posts_returned": 50,
-    "reddit_posts_returned": 32,
+    "reddit_posts_returned": 24,
     "mastodon_posts_returned": 50,
-    "unique_x_posts": 45,
-    "unique_reddit_posts": 28,
+    "unique_x_posts": 46,
+    "unique_reddit_posts": 22,
     "unique_mastodon_posts": 21,
     "noise_filtered": 0,
-    "non_operational_filtered": 94,
-    "historical_references_filtered": 0,
+    "non_operational_filtered": 90,
+    "historical_references_filtered": 1,
     "influence_signals": 3,
     "influence_signals_detected": 3,
-    "crossing_facilitation_signals": 2,
-    "legal_migration_signals": 1,
+    "crossing_facilitation_signals": 3,
+    "legal_migration_signals": 0,
     "policy_signals": 0,
     "recruitment_coordination_signals": 0,
     "mobilization_coordination_signals": 0,
     "mobilization_report_signals": 0,
     "decision_influence_signals": 0,
     "online_influence_report_signals": 0,
-    "operational_events": 4,
-    "operational_events_analyzed": 4,
-    "historical_events_available": 86,
-    "new_correlations": 2,
-    "correlated_events": 2,
+    "operational_events": 2,
+    "operational_events_analyzed": 2,
+    "historical_events_available": 87,
+    "new_correlations": 0,
+    "correlated_events": 0,
     "new_correlation_groups": 2,
-    "database_correlations": 1,
-    "current_run_correlations": 1,
+    "database_correlations": 0,
+    "current_run_correlations": 0,
     "new_events": 1,
     "new_events_saved": 1,
-    "events_already_existing": 3,
-    "new_event_groups": 0,
-    "updated_event_groups": 1,
+    "events_already_existing": 1,
+    "new_event_groups": 1,
+    "updated_event_groups": 0,
     "bootstrapped_event_groups": 0,
-    "existing_event_groups_reused": 3,
+    "existing_event_groups_reused": 1,
     "event_group_sources_linked": 1,
     "x_collector_errors": 0,
     "reddit_collector_errors": 0,
@@ -52,23 +52,45 @@
     "error_message": null
   },
   "kpis": {
-    "operational_events": 8,
+    "operational_events": 7,
     "new_events": 1,
-    "correlated_events": 2,
-    "active_event_groups": 109,
-    "sources": 4,
-    "regions": 4,
-    "collected_posts_24h": 235,
-    "influence_signals": 17,
-    "access_signals": 2,
-    "high_priority": 2,
-    "current_run_operational_events": 4,
-    "current_run_unique_posts": 98,
-    "access_signals_raw": 2,
-    "influence_signals_raw": 17,
+    "correlated_events": 1,
+    "active_event_groups": 110,
+    "sources": 3,
+    "regions": 3,
+    "collected_posts_24h": 227,
+    "influence_signals": 24,
+    "access_signals": 3,
+    "high_priority": 3,
+    "current_run_operational_events": 2,
+    "current_run_unique_posts": 93,
+    "access_signals_raw": 5,
+    "influence_signals_raw": 20,
     "influence_narratives": 3
   },
   "live_events": [
+    {
+      "id": 164,
+      "event_id": 164,
+      "source": "MASTODON",
+      "source_post_id": "mastodon_117102488347561241",
+      "author": null,
+      "published_at": "2026-08-16T01:02:48Z",
+      "collected_at": "2026-08-16T06:03:05Z",
+      "event_type": "MIGRANT_CAMP",
+      "signal_type": "MIGRANT_CAMP",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.5,
+      "event_confidence": 0.5,
+      "relevance_score": 10.0,
+      "text": "The federal government made the CRISP program permanent after a four-year trial that settled more than 950 refugees through community volunteers. In Orange, NSW, the Hearts and Hands group met a Congolese family of eight at the airport who spent over two decades in a refugee camp. Eighteen months later, the father works in social services, has a licence, owns a car, and his kids are thriving. A UQ review found CRISP refugees matched or beat government settlement outcomes, with regional areas achieving \"notably higher\" employment rates. The political duopoly stokes immigration fear while communities are already building real solutions. The program is now permanent. The lesson: communities don't need permission to welcome. # auspol # refugees",
+      "url": "https://mastodon.au/@FusionPartyAus/117102488347561241",
+      "source_url": "https://mastodon.au/@FusionPartyAus/117102488347561241"
+    },
     {
       "id": 163,
       "event_id": 163,
@@ -486,31 +508,38 @@
       "text": "Clowns entertain migrants people smugglers",
       "url": "https://www.reddit.com/r/uknews/comments/1vme8v0/clowns_entertain_migrants_people_smugglers/",
       "source_url": "https://www.reddit.com/r/uknews/comments/1vme8v0/clowns_entertain_migrants_people_smugglers/"
-    },
-    {
-      "id": 123,
-      "event_id": 123,
-      "source": "X",
-      "source_post_id": "2087532303346274374",
-      "author": "nammavetriias",
-      "published_at": "2026-08-12T13:31:00Z",
-      "collected_at": "2026-08-12T13:40:05Z",
-      "event_type": "BORDER_CROSSING",
-      "signal_type": "BORDER_CROSSING",
-      "primary_location": "-",
-      "location": "-",
-      "country": "-",
-      "latitude": 35.8894,
-      "longitude": -5.3213,
-      "confidence": 0.75,
-      "event_confidence": 0.75,
-      "relevance_score": 40.0,
-      "text": "How #Spain’s Migration Surge Tested #EU Border Policy?  🇪🇸🇪🇺\n\nTens of thousands of migrants crossed from #Morocco into #Ceuta, an autonomous #Spanish territory in North #Africa, between July 30 and 31.🇲🇦 https://t.co/S2t2uM8VQE",
-      "url": "https://x.com/nammavetriias/status/2087532303346274374",
-      "source_url": "https://x.com/nammavetriias/status/2087532303346274374"
     }
   ],
   "event_groups": [
+    {
+      "id": 129,
+      "group_id": 129,
+      "event_type": "MIGRANT_CAMP",
+      "dominant_event_type": "MIGRANT_CAMP",
+      "title": "MIGRANT_CAMP",
+      "representative_text": "The federal government made the CRISP program permanent after a four-year trial that settled more than 950 refugees through community volunteers. In Orange, NSW, the Hearts and Hands group met a Congolese family of eight at the airport who spent over two decades in a refugee camp. Eighteen months later, the father works in social services, has a licence, owns a car, and his kids are thriving. A UQ review found CRISP refugees matched or beat government settlement outcomes, with regional areas achieving \"notably higher\" employment rates. The political duopoly stokes immigration fear while communities are already building real solutions. The program is now permanent. The lesson: communities don't need permission to welcome. # auspol # refugees",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "primary_location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "first_seen": "2026-08-16T01:02:48Z",
+      "last_seen": "2026-08-16T01:02:48Z",
+      "source_count": 1,
+      "sources_count": 1,
+      "source_types": [
+        "MASTODON"
+      ],
+      "sources": [
+        "MASTODON"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.5,
+      "average_confidence": 0.5,
+      "created_at": "2026-08-16T06:03:05Z",
+      "updated_at": "2026-08-16T06:03:05Z"
+    },
     {
       "id": 127,
       "group_id": 127,
@@ -773,35 +802,6 @@
       "average_confidence": 0.55,
       "created_at": "2026-08-14T18:55:24Z",
       "updated_at": "2026-08-14T18:55:25Z"
-    },
-    {
-      "id": 119,
-      "group_id": 119,
-      "event_type": "BORDER_CROSSING",
-      "dominant_event_type": "BORDER_CROSSING",
-      "title": "BORDER_CROSSING",
-      "representative_text": "@mm_tw9 @JamesWeston82 @BBCBreaking @dontbrexitfixit Have the migrants arrived in your expensive woke area yet, better get those placards ready",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "primary_location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "first_seen": "2026-08-14T12:23:47Z",
-      "last_seen": "2026-08-14T12:23:47Z",
-      "source_count": 1,
-      "sources_count": 1,
-      "source_types": [
-        "X"
-      ],
-      "sources": [
-        "X"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.55,
-      "average_confidence": 0.55,
-      "created_at": "2026-08-14T12:37:53Z",
-      "updated_at": "2026-08-14T12:37:53Z"
     }
   ],
   "regions": [
@@ -810,58 +810,44 @@
       "region": "GLOBAL",
       "count": 4,
       "events": 4,
-      "percentage": 57.14
-    },
-    {
-      "name": "WESTERN_MEDITERRANEAN",
-      "region": "WESTERN_MEDITERRANEAN",
-      "count": 1,
-      "events": 1,
-      "percentage": 14.29
+      "percentage": 66.67
     },
     {
       "name": "ASIA_PACIFIC",
       "region": "ASIA_PACIFIC",
       "count": 1,
       "events": 1,
-      "percentage": 14.29
+      "percentage": 16.67
     },
     {
       "name": "AMERICAS",
       "region": "AMERICAS",
       "count": 1,
       "events": 1,
-      "percentage": 14.29
+      "percentage": 16.67
     }
   ],
   "sources": [
     {
       "source": "X",
       "name": "X",
-      "count": 173,
-      "posts": 173,
-      "percentage": 73.62
+      "count": 169,
+      "posts": 169,
+      "percentage": 74.45
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 34,
-      "posts": 34,
-      "percentage": 14.47
+      "count": 33,
+      "posts": 33,
+      "percentage": 14.54
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 27,
-      "posts": 27,
-      "percentage": 11.49
-    },
-    {
-      "source": "TELEGRAM",
-      "name": "TELEGRAM",
-      "count": 1,
-      "posts": 1,
-      "percentage": 0.43
+      "count": 25,
+      "posts": 25,
+      "percentage": 11.01
     }
   ],
   "region_activity": [
@@ -870,69 +856,55 @@
       "region": "GLOBAL",
       "count": 4,
       "events": 4,
-      "percentage": 57.14
-    },
-    {
-      "name": "WESTERN_MEDITERRANEAN",
-      "region": "WESTERN_MEDITERRANEAN",
-      "count": 1,
-      "events": 1,
-      "percentage": 14.29
+      "percentage": 66.67
     },
     {
       "name": "ASIA_PACIFIC",
       "region": "ASIA_PACIFIC",
       "count": 1,
       "events": 1,
-      "percentage": 14.29
+      "percentage": 16.67
     },
     {
       "name": "AMERICAS",
       "region": "AMERICAS",
       "count": 1,
       "events": 1,
-      "percentage": 14.29
+      "percentage": 16.67
     }
   ],
   "source_activity": [
     {
       "source": "X",
       "name": "X",
-      "count": 173,
-      "posts": 173,
-      "percentage": 73.62
+      "count": 169,
+      "posts": 169,
+      "percentage": 74.45
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 34,
-      "posts": 34,
-      "percentage": 14.47
+      "count": 33,
+      "posts": 33,
+      "percentage": 14.54
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 27,
-      "posts": 27,
-      "percentage": 11.49
-    },
-    {
-      "source": "TELEGRAM",
-      "name": "TELEGRAM",
-      "count": 1,
-      "posts": 1,
-      "percentage": 0.43
+      "count": 25,
+      "posts": 25,
+      "percentage": 11.01
     }
   ],
   "correlation": {
-    "correlated_events": 2,
-    "correlated_sources": 2,
-    "grouped_sources": 8,
-    "event_groups": 109,
-    "active_groups": 109,
+    "correlated_events": 1,
+    "correlated_sources": 1,
+    "grouped_sources": 7,
+    "event_groups": 110,
+    "active_groups": 110,
     "multi_source_groups": 11,
     "strongest_match": 0.9,
-    "correlation_rate": 25.0
+    "correlation_rate": 14.29
   },
   "technical_health": "HEALTHY",
   "collector_health": "HEALTHY",
@@ -945,42 +917,42 @@
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "database": "AVAILABLE",
-    "last_run_id": 53,
-    "last_completed_at": "2026-08-15T19:27:59Z"
+    "last_run_id": 54,
+    "last_completed_at": "2026-08-16T06:05:03Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 8,
-    "influence_signals_24h": 17,
-    "access_signals_24h": 2,
-    "correlated_events_24h": 2,
-    "active_event_groups": 109,
-    "dominant_region": "WESTERN_MEDITERRANEAN",
-    "hotspot": "WESTERN_MEDITERRANEAN",
+    "operational_events_24h": 7,
+    "influence_signals_24h": 20,
+    "access_signals_24h": 5,
+    "correlated_events_24h": 1,
+    "active_event_groups": 110,
+    "dominant_region": "ASIA_PACIFIC",
+    "hotspot": "ASIA_PACIFIC",
     "dominant_event_type": "MIGRANT_CAMP",
     "dominant_source": "X",
     "average_confidence": 0.49,
     "confidence_level": "LOW",
-    "correlation_rate": 25.0,
+    "correlation_rate": 14.29,
     "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 8 operatív migrációs eseményt, 17 influence/early-warning jelzést és 2 átkelési vagy bejutási jelzést tart nyilván. 2 friss eseményforrás korrelált más forrással. Jelenleg 109 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Migrant Camp. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.49. A jelenlegi aktivitási szint: MODERATE."
+    "summary": "Az elmúlt 24 órában a rendszer 7 operatív migrációs eseményt, 20 influence/early-warning jelzést és 5 átkelési vagy bejutási jelzést tart nyilván. 1 friss eseményforrás korrelált más forrással. Jelenleg 110 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Asia Pacific. A domináns operatív eseménytípus: Migrant Camp. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.49. A jelenlegi aktivitási szint: MODERATE."
   },
   "analytical_assessment": {
-    "operational_events_24h": 8,
-    "influence_signals_24h": 17,
-    "access_signals_24h": 2,
-    "correlated_events_24h": 2,
-    "active_event_groups": 109,
-    "dominant_region": "WESTERN_MEDITERRANEAN",
-    "hotspot": "WESTERN_MEDITERRANEAN",
+    "operational_events_24h": 7,
+    "influence_signals_24h": 20,
+    "access_signals_24h": 5,
+    "correlated_events_24h": 1,
+    "active_event_groups": 110,
+    "dominant_region": "ASIA_PACIFIC",
+    "hotspot": "ASIA_PACIFIC",
     "dominant_event_type": "MIGRANT_CAMP",
     "dominant_source": "X",
     "average_confidence": 0.49,
     "confidence_level": "LOW",
-    "correlation_rate": 25.0,
+    "correlation_rate": 14.29,
     "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 8 operatív migrációs eseményt, 17 influence/early-warning jelzést és 2 átkelési vagy bejutási jelzést tart nyilván. 2 friss eseményforrás korrelált más forrással. Jelenleg 109 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Migrant Camp. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.49. A jelenlegi aktivitási szint: MODERATE."
+    "summary": "Az elmúlt 24 órában a rendszer 7 operatív migrációs eseményt, 20 influence/early-warning jelzést és 5 átkelési vagy bejutási jelzést tart nyilván. 1 friss eseményforrás korrelált más forrással. Jelenleg 110 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Asia Pacific. A domináns operatív eseménytípus: Migrant Camp. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.49. A jelenlegi aktivitási szint: MODERATE."
   },
   "high_confidence_events": [
     {
@@ -1049,6 +1021,76 @@
     }
   ],
   "high_priority_intelligence": [
+    {
+      "id": 153,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1vpl0zw",
+      "author": "AutoNewspaperAdmin",
+      "language": null,
+      "published_at": "2026-08-16T02:27:31Z",
+      "first_detected_at": "2026-08-16T06:03:34Z",
+      "last_detected_at": "2026-08-16T06:03:34Z",
+      "detection_count": 1,
+      "text": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say | BBC",
+      "text_excerpt": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say | BBC",
+      "url": "https://www.reddit.com/r/AutoNewspaper/comments/1vpl0zw/top_stories_morocco_detains_dozens_of_migrants/",
+      "source_url": "https://www.reddit.com/r/AutoNewspaper/comments/1vpl0zw/top_stories_morocco_detains_dozens_of_migrants/",
+      "primary_signal": "CROSSING_FACILITATION",
+      "signal_type": "CROSSING_FACILITATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "EASIER_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.89,
+      "score": 15.0,
+      "matched_signals": [
+        "CROSSING_FACILITATION"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "trying to cross"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.6",
+      "priority_score": 75.15,
+      "analyst_priority": "HIGH",
+      "related_posts_count": 2,
+      "related_post_ids": [
+        "reddit_1vpl0zw",
+        "reddit_1vpkytc"
+      ],
+      "related_authors": [
+        "AutoNewsAdmin",
+        "AutoNewspaperAdmin"
+      ],
+      "related_urls": [
+        "https://www.reddit.com/r/AutoNewspaper/comments/1vpl0zw/top_stories_morocco_detains_dozens_of_migrants/",
+        "https://www.reddit.com/r/BBCauto/comments/1vpkytc/top_stories_morocco_detains_dozens_of_migrants/"
+      ],
+      "related_sources": [
+        "REDDIT"
+      ],
+      "independent_author_count": 2,
+      "platform_count": 1
+    },
     {
       "id": 139,
       "source": "REDDIT",
@@ -1184,88 +1226,6 @@
       ],
       "related_urls": [
         "https://x.com/Grimillionaire/status/2088708374074446259"
-      ],
-      "related_sources": [
-        "X"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
-    },
-    {
-      "id": 145,
-      "source": "X",
-      "source_post_id": "2088707301746090331",
-      "author": "grok",
-      "language": "en",
-      "published_at": "2026-08-15T19:20:01Z",
-      "first_detected_at": "2026-08-15T19:26:11Z",
-      "last_detected_at": "2026-08-15T19:26:11Z",
-      "detection_count": 1,
-      "text": "@RonaldFrink @kristina_liora @RadioGenoa The \"ORANGE TAKSI\" sign prompted an incorrect Turkish-region call. Location is Fnideq on the Moroccan side of the Ceuta border. Footage matches the July 30-31 2026 clashes during the migrant surge, where vehicles were torched amid attempts to cross into the Spanish enclave.",
-      "text_excerpt": "@RonaldFrink @kristina_liora @RadioGenoa The \"ORANGE TAKSI\" sign prompted an incorrect Turkish-region call. Location is Fnideq on the Moroccan side of the Ceuta border. Footage matches the July 30-31 2026 clashes during the migrant surge, where vehicles were torched amid attempts to cross into the Spanish enclave.",
-      "url": "https://x.com/grok/status/2088707301746090331",
-      "source_url": "https://x.com/grok/status/2088707301746090331",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.9,
-      "score": 11.25,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrant surge, where vehicles were torched amid attempts to cross"
-        ],
-        [
-          "route",
-          "border"
-        ],
-        [
-          "pressure",
-          "surge"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT",
-        "ROUTE",
-        "PRESSURE"
-      ],
-      "context_matches": [
-        "migrant"
-      ],
-      "high_value_matches": [
-        "migrant surge, where vehicles were torched amid attempts to cross",
-        "surge"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "Fnideq",
-      "primary_location": "Fnideq",
-      "country": "Morocco",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": 35.8498,
-      "longitude": -5.3578,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 42.5,
-      "analyst_priority": "MEDIUM",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "2088707301746090331"
-      ],
-      "related_authors": [
-        "grok"
-      ],
-      "related_urls": [
-        "https://x.com/grok/status/2088707301746090331"
       ],
       "related_sources": [
         "X"
@@ -1460,6 +1420,163 @@
       "analyst_priority": "HIGH"
     },
     {
+      "id": 149,
+      "source": "X",
+      "source_post_id": "2088867672608199075",
+      "author": "MeetPra82522063",
+      "language": "en",
+      "published_at": "2026-08-16T05:57:17Z",
+      "first_detected_at": "2026-08-16T06:03:32Z",
+      "last_detected_at": "2026-08-16T06:03:32Z",
+      "detection_count": 1,
+      "text": "Moroccan authorities arrested 111 migrants heading toward Spain’s Ceuta border, according to reports.\n#Morocco #Spain #CeutaEsEspaña #CeutaBorder #Migrants #Migration #Border #BorderSecurity #SpainNews  #Immigration #MigrantCrisis #ceuta #NorthAfrica #Europe #MoroccoNews https://t.co/Zse7gC31Kg",
+      "text_excerpt": "Moroccan authorities arrested 111 migrants heading toward Spain’s Ceuta border, according to reports.\n#Morocco #Spain #CeutaEsEspaña #CeutaBorder #Migrants #Migration #Border #BorderSecurity #SpainNews  #Immigration #MigrantCrisis #ceuta #NorthAfrica #Europe #MoroccoNews https://t.co/Zse7gC31Kg",
+      "url": "https://x.com/MeetPra82522063/status/2088867672608199075",
+      "source_url": "https://x.com/MeetPra82522063/status/2088867672608199075",
+      "primary_signal": "CROSSING_FACILITATION",
+      "signal_type": "CROSSING_FACILITATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "EASIER_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.89,
+      "score": 16.0,
+      "matched_signals": [
+        "CROSSING_FACILITATION"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "heading toward"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants",
+        "Migration"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.6",
+      "priority_score": 68.15,
+      "analyst_priority": "HIGH"
+    },
+    {
+      "id": 153,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1vpl0zw",
+      "author": "AutoNewspaperAdmin",
+      "language": null,
+      "published_at": "2026-08-16T02:27:31Z",
+      "first_detected_at": "2026-08-16T06:03:34Z",
+      "last_detected_at": "2026-08-16T06:03:34Z",
+      "detection_count": 1,
+      "text": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say | BBC",
+      "text_excerpt": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say | BBC",
+      "url": "https://www.reddit.com/r/AutoNewspaper/comments/1vpl0zw/top_stories_morocco_detains_dozens_of_migrants/",
+      "source_url": "https://www.reddit.com/r/AutoNewspaper/comments/1vpl0zw/top_stories_morocco_detains_dozens_of_migrants/",
+      "primary_signal": "CROSSING_FACILITATION",
+      "signal_type": "CROSSING_FACILITATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "EASIER_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.89,
+      "score": 15.0,
+      "matched_signals": [
+        "CROSSING_FACILITATION"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "trying to cross"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.6",
+      "priority_score": 68.15,
+      "analyst_priority": "HIGH"
+    },
+    {
+      "id": 154,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1vpkytc",
+      "author": "AutoNewsAdmin",
+      "language": null,
+      "published_at": "2026-08-16T02:24:38Z",
+      "first_detected_at": "2026-08-16T06:03:34Z",
+      "last_detected_at": "2026-08-16T06:03:34Z",
+      "detection_count": 1,
+      "text": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say",
+      "text_excerpt": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say",
+      "url": "https://www.reddit.com/r/BBCauto/comments/1vpkytc/top_stories_morocco_detains_dozens_of_migrants/",
+      "source_url": "https://www.reddit.com/r/BBCauto/comments/1vpkytc/top_stories_morocco_detains_dozens_of_migrants/",
+      "primary_signal": "CROSSING_FACILITATION",
+      "signal_type": "CROSSING_FACILITATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "EASIER_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.89,
+      "score": 15.0,
+      "matched_signals": [
+        "CROSSING_FACILITATION"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "trying to cross"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.6",
+      "priority_score": 68.15,
+      "analyst_priority": "HIGH"
+    },
+    {
       "id": 145,
       "source": "X",
       "source_post_id": "2088707301746090331",
@@ -1861,60 +1978,108 @@
       "analyst_priority": "MEDIUM"
     },
     {
-      "id": 134,
+      "id": 148,
       "source": "X",
-      "source_post_id": "2088523936371765256",
-      "author": "RossH1882",
+      "source_post_id": "2088868266684854362",
+      "author": "grok",
       "language": "en",
-      "published_at": "2026-08-15T07:11:23Z",
-      "first_detected_at": "2026-08-15T07:55:27Z",
-      "last_detected_at": "2026-08-15T07:55:27Z",
+      "published_at": "2026-08-16T05:59:38Z",
+      "first_detected_at": "2026-08-16T06:03:32Z",
+      "last_detected_at": "2026-08-16T06:03:32Z",
       "detection_count": 1,
-      "text": "@LucyTCWife @SamCKx @Nigel_Farage You aware that reform MP Robert Jenrick is the one who opened up migrant hotels and oversaw the increase in small boat arrivals? \n\nIt’s “the left” who are fixing the problem, reducing boat crossings by 42% and have now reduced hotels being used from 400 to below 160.",
-      "text_excerpt": "@LucyTCWife @SamCKx @Nigel_Farage You aware that reform MP Robert Jenrick is the one who opened up migrant hotels and oversaw the increase in small boat arrivals? \n\nIt’s “the left” who are fixing the problem, reducing boat crossings by 42% and have now reduced hotels being used from 400 to below 160.",
-      "url": "https://x.com/RossH1882/status/2088523936371765256",
-      "source_url": "https://x.com/RossH1882/status/2088523936371765256",
+      "text": "@AlphaProMega @RadioGenoa Video shows Cruz Roja distributing basic food kits to remaining migrants on a Ceuta beach after the late-July 2026 mass irregular crossing of ~50-70k from Morocco. Most returned; those left are mainly young men from sub-Saharan Africa and Morocco. Police maintained order. Reports",
+      "text_excerpt": "@AlphaProMega @RadioGenoa Video shows Cruz Roja distributing basic food kits to remaining migrants on a Ceuta beach after the late-July 2026 mass irregular crossing of ~50-70k from Morocco. Most returned; those left are mainly young men from sub-Saharan Africa and Morocco. Police maintained order. Reports",
+      "url": "https://x.com/grok/status/2088868266684854362",
+      "source_url": "https://x.com/grok/status/2088868266684854362",
       "primary_signal": "MOVEMENT_EARLY_WARNING",
       "signal_type": "MOVEMENT_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
       "signal_intent": "MOVEMENT_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.9,
-      "score": 12.0,
+      "confidence": 0.8,
+      "score": 8.75,
       "matched_signals": [
         "MOVEMENT_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
           "movement",
-          "migrant hotels and oversaw the increase in small boat arrivals"
+          "migrants on a Ceuta beach after the late-July 2026 mass irregular crossing"
         ],
         [
-          "route",
-          "boat"
-        ],
-        [
-          "pressure",
-          "increase in small boat arrivals"
-        ],
-        [
-          "pressure",
-          "migrant hotels and oversaw the increase"
+          "enforcement",
+          "returned"
         ]
       ],
       "matched_groups": [
         "MOVEMENT",
-        "ROUTE",
-        "PRESSURE"
+        "ENFORCEMENT"
       ],
       "context_matches": [
-        "migrant"
+        "migrants"
       ],
       "high_value_matches": [
-        "migrant hotels and oversaw the increase in small boat arrivals",
-        "increase in small boat arrivals",
-        "migrant hotels and oversaw the increase"
+        "migrants on a Ceuta beach after the late-July 2026 mass irregular crossing"
       ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 39.0,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 152,
+      "source": "X",
+      "source_post_id": "2088862246713569365",
+      "author": "FeniksKnowsBest",
+      "language": "en",
+      "published_at": "2026-08-16T05:35:43Z",
+      "first_detected_at": "2026-08-16T06:03:33Z",
+      "last_detected_at": "2026-08-16T06:03:33Z",
+      "detection_count": 1,
+      "text": "Migrants amassing at the border of Cueto once again. Authorities have claimed they have intercepted the attempts to cross, but how long can they maintain a secure border.\n\nResidents are gathering in protest asking the government to send military help to secure the crossing.",
+      "text_excerpt": "Migrants amassing at the border of Cueto once again. Authorities have claimed they have intercepted the attempts to cross, but how long can they maintain a secure border.\n\nResidents are gathering in protest asking the government to send military help to secure the crossing.",
+      "url": "https://x.com/FeniksKnowsBest/status/2088862246713569365",
+      "source_url": "https://x.com/FeniksKnowsBest/status/2088862246713569365",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.8,
+      "score": 8.5,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "border"
+        ],
+        [
+          "enforcement",
+          "intercepted"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "Migrants"
+      ],
+      "high_value_matches": [],
       "signal_context_rejections": [],
       "migration_context": true,
       "human_migration_context": true,
@@ -1928,8 +2093,8 @@
       "primary_region": "GLOBAL",
       "latitude": null,
       "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
-      "priority_score": 31.5,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 28.0,
       "analyst_priority": "LOW"
     },
     {
@@ -2051,33 +2216,87 @@
       "analyst_priority": "LOW"
     },
     {
-      "id": 132,
+      "id": 150,
       "source": "X",
-      "source_post_id": "2088532351743635516",
-      "author": "MarioBojic",
+      "source_post_id": "2088865840183828503",
+      "author": "CGTNOfficial",
       "language": "en",
-      "published_at": "2026-08-15T07:44:50Z",
-      "first_detected_at": "2026-08-15T07:54:48Z",
-      "last_detected_at": "2026-08-15T07:54:48Z",
+      "published_at": "2026-08-16T05:50:00Z",
+      "first_detected_at": "2026-08-16T06:03:32Z",
+      "last_detected_at": "2026-08-16T06:03:32Z",
       "detection_count": 1,
-      "text": "🚨🇪🇸The calm before the storm in Ceuta, Spain, as fears grow of another mass border crossing.\n\nJust days ago, more than 70,000 Moroccans gathered here and stormed into Spanish territory.\n\nMultiple reports warn that 200,000 migrants are preparing to storm the same crossing today.",
-      "text_excerpt": "🚨🇪🇸The calm before the storm in Ceuta, Spain, as fears grow of another mass border crossing.\n\nJust days ago, more than 70,000 Moroccans gathered here and stormed into Spanish territory.\n\nMultiple reports warn that 200,000 migrants are preparing to storm the same crossing today.",
-      "url": "https://x.com/MarioBojic/status/2088532351743635516",
-      "source_url": "https://x.com/MarioBojic/status/2088532351743635516",
+      "text": "At least 294 migrants, including 248 from sub-Saharan Africa and 46 Moroccan nationals, were intercepted on Saturday during operations to prevent a mass crossing, Spanish news agency EFE reported, citing Moroccan security sources.\n\nFor more: https://t.co/Ov8btE0NiA https://t.co/sZB60suSxe",
+      "text_excerpt": "At least 294 migrants, including 248 from sub-Saharan Africa and 46 Moroccan nationals, were intercepted on Saturday during operations to prevent a mass crossing, Spanish news agency EFE reported, citing Moroccan security sources.\n\nFor more: https://t.co/Ov8btE0NiA https://t.co/sZB60suSxe",
+      "url": "https://x.com/CGTNOfficial/status/2088865840183828503",
+      "source_url": "https://x.com/CGTNOfficial/status/2088865840183828503",
+      "primary_signal": "ENFORCEMENT_EARLY_WARNING",
+      "signal_type": "ENFORCEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ENFORCEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 6.75,
+      "matched_signals": [
+        "ENFORCEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "enforcement",
+          "intercepted"
+        ]
+      ],
+      "matched_groups": [
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 25.2,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 151,
+      "source": "X",
+      "source_post_id": "2088865563829273036",
+      "author": "NiclousT02",
+      "language": "en",
+      "published_at": "2026-08-16T05:48:54Z",
+      "first_detected_at": "2026-08-16T06:03:32Z",
+      "last_detected_at": "2026-08-16T06:03:32Z",
+      "detection_count": 1,
+      "text": "Morocco detains dozens of migrants trying to enter Ceuta\n\nThe attempted crossings come 2 weeks after around 72k people rushed into the Spanish North African exclave from Morocco. \n\nCalls for another mass crossing had been circulating on social media this week. https://t.co/uf5zf1VM07",
+      "text_excerpt": "Morocco detains dozens of migrants trying to enter Ceuta\n\nThe attempted crossings come 2 weeks after around 72k people rushed into the Spanish North African exclave from Morocco. \n\nCalls for another mass crossing had been circulating on social media this week. https://t.co/uf5zf1VM07",
+      "url": "https://x.com/NiclousT02/status/2088865563829273036",
+      "source_url": "https://x.com/NiclousT02/status/2088865563829273036",
       "primary_signal": "MOVEMENT_EARLY_WARNING",
       "signal_type": "MOVEMENT_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
       "signal_intent": "MOVEMENT_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 8.5,
+      "confidence": 0.72,
+      "score": 6.5,
       "matched_signals": [
         "MOVEMENT_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
           "movement",
-          "migrants are preparing to storm the same crossing"
+          "migrants trying to enter"
         ]
       ],
       "matched_groups": [
@@ -2087,7 +2306,7 @@
         "migrants"
       ],
       "high_value_matches": [
-        "migrants are preparing to storm the same crossing"
+        "migrants trying to enter"
       ],
       "signal_context_rejections": [],
       "migration_context": true,
@@ -2102,69 +2321,8 @@
       "primary_region": "WESTERN_MEDITERRANEAN",
       "latitude": 35.8894,
       "longitude": -5.3213,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
-      "priority_score": 39.0,
-      "analyst_priority": "LOW"
-    },
-    {
-      "id": 133,
-      "source": "X",
-      "source_post_id": "2088532106506883223",
-      "author": "DC_Global_News",
-      "language": "en",
-      "published_at": "2026-08-15T07:43:51Z",
-      "first_detected_at": "2026-08-15T07:54:49Z",
-      "last_detected_at": "2026-08-15T07:54:49Z",
-      "detection_count": 1,
-      "text": "🚨 BREAKING\n\nSpain is reinforcing Ceuta with police and soldiers ahead of a possible new mass migrant crossing on August 15.",
-      "text_excerpt": "🚨 BREAKING\n\nSpain is reinforcing Ceuta with police and soldiers ahead of a possible new mass migrant crossing on August 15.",
-      "url": "https://x.com/DC_Global_News/status/2088532106506883223",
-      "source_url": "https://x.com/DC_Global_News/status/2088532106506883223",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 9.5,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrant crossing"
-        ],
-        [
-          "enforcement",
-          "police"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT",
-        "ENFORCEMENT"
-      ],
-      "context_matches": [
-        "migrant"
-      ],
-      "high_value_matches": [
-        "migrant crossing"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "Ceuta",
-      "primary_location": "Ceuta",
-      "country": "Spain",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": 35.8894,
-      "longitude": -5.3213,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
-      "priority_score": 39.0,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 36.2,
       "analyst_priority": "LOW"
     },
     {
@@ -2227,43 +2385,43 @@
       "analyst_priority": "LOW"
     },
     {
-      "id": 135,
+      "id": 155,
       "source": "X",
-      "source_post_id": "2088529160868450787",
-      "author": "libmbr",
+      "source_post_id": "2088853599107391657",
+      "author": "katiewr31413491",
       "language": "en",
-      "published_at": "2026-08-15T07:32:09Z",
-      "first_detected_at": "2026-08-15T07:56:43Z",
-      "last_detected_at": "2026-08-15T07:56:43Z",
+      "published_at": "2026-08-16T05:01:21Z",
+      "first_detected_at": "2026-08-16T06:04:34Z",
+      "last_detected_at": "2026-08-16T06:04:34Z",
       "detection_count": 1,
-      "text": "@kelliekelly23 I disagree, as a child of migrants that arrived here almost 50 years ago (who love this country) we shouldn’t paint all migrants from these regions with the same brush. Many great Aussies have come from these regions.",
-      "text_excerpt": "@kelliekelly23 I disagree, as a child of migrants that arrived here almost 50 years ago (who love this country) we shouldn’t paint all migrants from these regions with the same brush. Many great Aussies have come from these regions.",
-      "url": "https://x.com/libmbr/status/2088529160868450787",
-      "source_url": "https://x.com/libmbr/status/2088529160868450787",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "text": "@adamcarolla He also enabled the trafficking of 250,000 child ( under 18) migrants b/c “the optics of keeping them in protective custody is poor.”",
+      "text_excerpt": "@adamcarolla He also enabled the trafficking of 250,000 child ( under 18) migrants b/c “the optics of keeping them in protective custody is poor.”",
+      "url": "https://x.com/katiewr31413491/status/2088853599107391657",
+      "source_url": "https://x.com/katiewr31413491/status/2088853599107391657",
+      "primary_signal": "FACILITATION_EARLY_WARNING",
+      "signal_type": "FACILITATION_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
+      "signal_intent": "FACILITATION_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.72,
-      "score": 7.75,
+      "confidence": 0.62,
+      "score": 5.75,
       "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
+        "FACILITATION_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
-          "movement",
-          "migrants that arrived"
+          "facilitation",
+          "trafficking of 250,000 child ( under 18) migrants"
         ]
       ],
       "matched_groups": [
-        "MOVEMENT"
+        "FACILITATION"
       ],
       "context_matches": [
         "migrants"
       ],
       "high_value_matches": [
-        "migrants that arrived"
+        "trafficking of 250,000 child ( under 18) migrants"
       ],
       "signal_context_rejections": [],
       "migration_context": true,
@@ -2278,67 +2436,8 @@
       "primary_region": "GLOBAL",
       "latitude": null,
       "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
-      "priority_score": 25.2,
-      "analyst_priority": "LOW"
-    },
-    {
-      "id": 131,
-      "source": "X",
-      "source_post_id": "2088475838597472392",
-      "author": "dzrhnews",
-      "language": "en",
-      "published_at": "2026-08-15T04:00:16Z",
-      "first_detected_at": "2026-08-15T04:56:25Z",
-      "last_detected_at": "2026-08-15T04:56:25Z",
-      "detection_count": 1,
-      "text": "Spain has beefed up police and military presence in its North African enclave of Ceuta amid social media messages encouraging migrants to attempt another mass border breach on Saturday, two weeks after tens of thousands rushed into the city.\n\nhttps://t.co/dTedmX2pZJ",
-      "text_excerpt": "Spain has beefed up police and military presence in its North African enclave of Ceuta amid social media messages encouraging migrants to attempt another mass border breach on Saturday, two weeks after tens of thousands rushed into the city.\n\nhttps://t.co/dTedmX2pZJ",
-      "url": "https://x.com/dzrhnews/status/2088475838597472392",
-      "source_url": "https://x.com/dzrhnews/status/2088475838597472392",
-      "primary_signal": "ROUTE_EARLY_WARNING",
-      "signal_type": "ROUTE_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ROUTE_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.72,
-      "score": 7.25,
-      "matched_signals": [
-        "ROUTE_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "route",
-          "border"
-        ],
-        [
-          "enforcement",
-          "police"
-        ]
-      ],
-      "matched_groups": [
-        "ROUTE",
-        "ENFORCEMENT"
-      ],
-      "context_matches": [
-        "migrants"
-      ],
-      "high_value_matches": [],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "Ceuta",
-      "primary_location": "Ceuta",
-      "country": "Spain",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": 35.8894,
-      "longitude": -5.3213,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
-      "priority_score": 36.2,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 21.7,
       "analyst_priority": "LOW"
     },
     {
@@ -2512,6 +2611,163 @@
       "analyst_priority": "HIGH"
     },
     {
+      "id": 149,
+      "source": "X",
+      "source_post_id": "2088867672608199075",
+      "author": "MeetPra82522063",
+      "language": "en",
+      "published_at": "2026-08-16T05:57:17Z",
+      "first_detected_at": "2026-08-16T06:03:32Z",
+      "last_detected_at": "2026-08-16T06:03:32Z",
+      "detection_count": 1,
+      "text": "Moroccan authorities arrested 111 migrants heading toward Spain’s Ceuta border, according to reports.\n#Morocco #Spain #CeutaEsEspaña #CeutaBorder #Migrants #Migration #Border #BorderSecurity #SpainNews  #Immigration #MigrantCrisis #ceuta #NorthAfrica #Europe #MoroccoNews https://t.co/Zse7gC31Kg",
+      "text_excerpt": "Moroccan authorities arrested 111 migrants heading toward Spain’s Ceuta border, according to reports.\n#Morocco #Spain #CeutaEsEspaña #CeutaBorder #Migrants #Migration #Border #BorderSecurity #SpainNews  #Immigration #MigrantCrisis #ceuta #NorthAfrica #Europe #MoroccoNews https://t.co/Zse7gC31Kg",
+      "url": "https://x.com/MeetPra82522063/status/2088867672608199075",
+      "source_url": "https://x.com/MeetPra82522063/status/2088867672608199075",
+      "primary_signal": "CROSSING_FACILITATION",
+      "signal_type": "CROSSING_FACILITATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "EASIER_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.89,
+      "score": 16.0,
+      "matched_signals": [
+        "CROSSING_FACILITATION"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "heading toward"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants",
+        "Migration"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.6",
+      "priority_score": 68.15,
+      "analyst_priority": "HIGH"
+    },
+    {
+      "id": 153,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1vpl0zw",
+      "author": "AutoNewspaperAdmin",
+      "language": null,
+      "published_at": "2026-08-16T02:27:31Z",
+      "first_detected_at": "2026-08-16T06:03:34Z",
+      "last_detected_at": "2026-08-16T06:03:34Z",
+      "detection_count": 1,
+      "text": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say | BBC",
+      "text_excerpt": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say | BBC",
+      "url": "https://www.reddit.com/r/AutoNewspaper/comments/1vpl0zw/top_stories_morocco_detains_dozens_of_migrants/",
+      "source_url": "https://www.reddit.com/r/AutoNewspaper/comments/1vpl0zw/top_stories_morocco_detains_dozens_of_migrants/",
+      "primary_signal": "CROSSING_FACILITATION",
+      "signal_type": "CROSSING_FACILITATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "EASIER_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.89,
+      "score": 15.0,
+      "matched_signals": [
+        "CROSSING_FACILITATION"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "trying to cross"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.6",
+      "priority_score": 68.15,
+      "analyst_priority": "HIGH"
+    },
+    {
+      "id": 154,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1vpkytc",
+      "author": "AutoNewsAdmin",
+      "language": null,
+      "published_at": "2026-08-16T02:24:38Z",
+      "first_detected_at": "2026-08-16T06:03:34Z",
+      "last_detected_at": "2026-08-16T06:03:34Z",
+      "detection_count": 1,
+      "text": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say",
+      "text_excerpt": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say",
+      "url": "https://www.reddit.com/r/BBCauto/comments/1vpkytc/top_stories_morocco_detains_dozens_of_migrants/",
+      "source_url": "https://www.reddit.com/r/BBCauto/comments/1vpkytc/top_stories_morocco_detains_dozens_of_migrants/",
+      "primary_signal": "CROSSING_FACILITATION",
+      "signal_type": "CROSSING_FACILITATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "EASIER_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.89,
+      "score": 15.0,
+      "matched_signals": [
+        "CROSSING_FACILITATION"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "trying to cross"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.6",
+      "priority_score": 68.15,
+      "analyst_priority": "HIGH"
+    },
+    {
       "id": 145,
       "source": "X",
       "source_post_id": "2088707301746090331",
@@ -2913,60 +3169,108 @@
       "analyst_priority": "MEDIUM"
     },
     {
-      "id": 134,
+      "id": 148,
       "source": "X",
-      "source_post_id": "2088523936371765256",
-      "author": "RossH1882",
+      "source_post_id": "2088868266684854362",
+      "author": "grok",
       "language": "en",
-      "published_at": "2026-08-15T07:11:23Z",
-      "first_detected_at": "2026-08-15T07:55:27Z",
-      "last_detected_at": "2026-08-15T07:55:27Z",
+      "published_at": "2026-08-16T05:59:38Z",
+      "first_detected_at": "2026-08-16T06:03:32Z",
+      "last_detected_at": "2026-08-16T06:03:32Z",
       "detection_count": 1,
-      "text": "@LucyTCWife @SamCKx @Nigel_Farage You aware that reform MP Robert Jenrick is the one who opened up migrant hotels and oversaw the increase in small boat arrivals? \n\nIt’s “the left” who are fixing the problem, reducing boat crossings by 42% and have now reduced hotels being used from 400 to below 160.",
-      "text_excerpt": "@LucyTCWife @SamCKx @Nigel_Farage You aware that reform MP Robert Jenrick is the one who opened up migrant hotels and oversaw the increase in small boat arrivals? \n\nIt’s “the left” who are fixing the problem, reducing boat crossings by 42% and have now reduced hotels being used from 400 to below 160.",
-      "url": "https://x.com/RossH1882/status/2088523936371765256",
-      "source_url": "https://x.com/RossH1882/status/2088523936371765256",
+      "text": "@AlphaProMega @RadioGenoa Video shows Cruz Roja distributing basic food kits to remaining migrants on a Ceuta beach after the late-July 2026 mass irregular crossing of ~50-70k from Morocco. Most returned; those left are mainly young men from sub-Saharan Africa and Morocco. Police maintained order. Reports",
+      "text_excerpt": "@AlphaProMega @RadioGenoa Video shows Cruz Roja distributing basic food kits to remaining migrants on a Ceuta beach after the late-July 2026 mass irregular crossing of ~50-70k from Morocco. Most returned; those left are mainly young men from sub-Saharan Africa and Morocco. Police maintained order. Reports",
+      "url": "https://x.com/grok/status/2088868266684854362",
+      "source_url": "https://x.com/grok/status/2088868266684854362",
       "primary_signal": "MOVEMENT_EARLY_WARNING",
       "signal_type": "MOVEMENT_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
       "signal_intent": "MOVEMENT_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.9,
-      "score": 12.0,
+      "confidence": 0.8,
+      "score": 8.75,
       "matched_signals": [
         "MOVEMENT_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
           "movement",
-          "migrant hotels and oversaw the increase in small boat arrivals"
+          "migrants on a Ceuta beach after the late-July 2026 mass irregular crossing"
         ],
         [
-          "route",
-          "boat"
-        ],
-        [
-          "pressure",
-          "increase in small boat arrivals"
-        ],
-        [
-          "pressure",
-          "migrant hotels and oversaw the increase"
+          "enforcement",
+          "returned"
         ]
       ],
       "matched_groups": [
         "MOVEMENT",
-        "ROUTE",
-        "PRESSURE"
+        "ENFORCEMENT"
       ],
       "context_matches": [
-        "migrant"
+        "migrants"
       ],
       "high_value_matches": [
-        "migrant hotels and oversaw the increase in small boat arrivals",
-        "increase in small boat arrivals",
-        "migrant hotels and oversaw the increase"
+        "migrants on a Ceuta beach after the late-July 2026 mass irregular crossing"
       ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 39.0,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 152,
+      "source": "X",
+      "source_post_id": "2088862246713569365",
+      "author": "FeniksKnowsBest",
+      "language": "en",
+      "published_at": "2026-08-16T05:35:43Z",
+      "first_detected_at": "2026-08-16T06:03:33Z",
+      "last_detected_at": "2026-08-16T06:03:33Z",
+      "detection_count": 1,
+      "text": "Migrants amassing at the border of Cueto once again. Authorities have claimed they have intercepted the attempts to cross, but how long can they maintain a secure border.\n\nResidents are gathering in protest asking the government to send military help to secure the crossing.",
+      "text_excerpt": "Migrants amassing at the border of Cueto once again. Authorities have claimed they have intercepted the attempts to cross, but how long can they maintain a secure border.\n\nResidents are gathering in protest asking the government to send military help to secure the crossing.",
+      "url": "https://x.com/FeniksKnowsBest/status/2088862246713569365",
+      "source_url": "https://x.com/FeniksKnowsBest/status/2088862246713569365",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.8,
+      "score": 8.5,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "border"
+        ],
+        [
+          "enforcement",
+          "intercepted"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "Migrants"
+      ],
+      "high_value_matches": [],
       "signal_context_rejections": [],
       "migration_context": true,
       "human_migration_context": true,
@@ -2980,8 +3284,8 @@
       "primary_region": "GLOBAL",
       "latitude": null,
       "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
-      "priority_score": 31.5,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 28.0,
       "analyst_priority": "LOW"
     },
     {
@@ -3103,33 +3407,87 @@
       "analyst_priority": "LOW"
     },
     {
-      "id": 132,
+      "id": 150,
       "source": "X",
-      "source_post_id": "2088532351743635516",
-      "author": "MarioBojic",
+      "source_post_id": "2088865840183828503",
+      "author": "CGTNOfficial",
       "language": "en",
-      "published_at": "2026-08-15T07:44:50Z",
-      "first_detected_at": "2026-08-15T07:54:48Z",
-      "last_detected_at": "2026-08-15T07:54:48Z",
+      "published_at": "2026-08-16T05:50:00Z",
+      "first_detected_at": "2026-08-16T06:03:32Z",
+      "last_detected_at": "2026-08-16T06:03:32Z",
       "detection_count": 1,
-      "text": "🚨🇪🇸The calm before the storm in Ceuta, Spain, as fears grow of another mass border crossing.\n\nJust days ago, more than 70,000 Moroccans gathered here and stormed into Spanish territory.\n\nMultiple reports warn that 200,000 migrants are preparing to storm the same crossing today.",
-      "text_excerpt": "🚨🇪🇸The calm before the storm in Ceuta, Spain, as fears grow of another mass border crossing.\n\nJust days ago, more than 70,000 Moroccans gathered here and stormed into Spanish territory.\n\nMultiple reports warn that 200,000 migrants are preparing to storm the same crossing today.",
-      "url": "https://x.com/MarioBojic/status/2088532351743635516",
-      "source_url": "https://x.com/MarioBojic/status/2088532351743635516",
+      "text": "At least 294 migrants, including 248 from sub-Saharan Africa and 46 Moroccan nationals, were intercepted on Saturday during operations to prevent a mass crossing, Spanish news agency EFE reported, citing Moroccan security sources.\n\nFor more: https://t.co/Ov8btE0NiA https://t.co/sZB60suSxe",
+      "text_excerpt": "At least 294 migrants, including 248 from sub-Saharan Africa and 46 Moroccan nationals, were intercepted on Saturday during operations to prevent a mass crossing, Spanish news agency EFE reported, citing Moroccan security sources.\n\nFor more: https://t.co/Ov8btE0NiA https://t.co/sZB60suSxe",
+      "url": "https://x.com/CGTNOfficial/status/2088865840183828503",
+      "source_url": "https://x.com/CGTNOfficial/status/2088865840183828503",
+      "primary_signal": "ENFORCEMENT_EARLY_WARNING",
+      "signal_type": "ENFORCEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ENFORCEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 6.75,
+      "matched_signals": [
+        "ENFORCEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "enforcement",
+          "intercepted"
+        ]
+      ],
+      "matched_groups": [
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 25.2,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 151,
+      "source": "X",
+      "source_post_id": "2088865563829273036",
+      "author": "NiclousT02",
+      "language": "en",
+      "published_at": "2026-08-16T05:48:54Z",
+      "first_detected_at": "2026-08-16T06:03:32Z",
+      "last_detected_at": "2026-08-16T06:03:32Z",
+      "detection_count": 1,
+      "text": "Morocco detains dozens of migrants trying to enter Ceuta\n\nThe attempted crossings come 2 weeks after around 72k people rushed into the Spanish North African exclave from Morocco. \n\nCalls for another mass crossing had been circulating on social media this week. https://t.co/uf5zf1VM07",
+      "text_excerpt": "Morocco detains dozens of migrants trying to enter Ceuta\n\nThe attempted crossings come 2 weeks after around 72k people rushed into the Spanish North African exclave from Morocco. \n\nCalls for another mass crossing had been circulating on social media this week. https://t.co/uf5zf1VM07",
+      "url": "https://x.com/NiclousT02/status/2088865563829273036",
+      "source_url": "https://x.com/NiclousT02/status/2088865563829273036",
       "primary_signal": "MOVEMENT_EARLY_WARNING",
       "signal_type": "MOVEMENT_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
       "signal_intent": "MOVEMENT_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 8.5,
+      "confidence": 0.72,
+      "score": 6.5,
       "matched_signals": [
         "MOVEMENT_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
           "movement",
-          "migrants are preparing to storm the same crossing"
+          "migrants trying to enter"
         ]
       ],
       "matched_groups": [
@@ -3139,7 +3497,7 @@
         "migrants"
       ],
       "high_value_matches": [
-        "migrants are preparing to storm the same crossing"
+        "migrants trying to enter"
       ],
       "signal_context_rejections": [],
       "migration_context": true,
@@ -3154,69 +3512,8 @@
       "primary_region": "WESTERN_MEDITERRANEAN",
       "latitude": 35.8894,
       "longitude": -5.3213,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
-      "priority_score": 39.0,
-      "analyst_priority": "LOW"
-    },
-    {
-      "id": 133,
-      "source": "X",
-      "source_post_id": "2088532106506883223",
-      "author": "DC_Global_News",
-      "language": "en",
-      "published_at": "2026-08-15T07:43:51Z",
-      "first_detected_at": "2026-08-15T07:54:49Z",
-      "last_detected_at": "2026-08-15T07:54:49Z",
-      "detection_count": 1,
-      "text": "🚨 BREAKING\n\nSpain is reinforcing Ceuta with police and soldiers ahead of a possible new mass migrant crossing on August 15.",
-      "text_excerpt": "🚨 BREAKING\n\nSpain is reinforcing Ceuta with police and soldiers ahead of a possible new mass migrant crossing on August 15.",
-      "url": "https://x.com/DC_Global_News/status/2088532106506883223",
-      "source_url": "https://x.com/DC_Global_News/status/2088532106506883223",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 9.5,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrant crossing"
-        ],
-        [
-          "enforcement",
-          "police"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT",
-        "ENFORCEMENT"
-      ],
-      "context_matches": [
-        "migrant"
-      ],
-      "high_value_matches": [
-        "migrant crossing"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "Ceuta",
-      "primary_location": "Ceuta",
-      "country": "Spain",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": 35.8894,
-      "longitude": -5.3213,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
-      "priority_score": 39.0,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 36.2,
       "analyst_priority": "LOW"
     },
     {
@@ -3279,43 +3576,43 @@
       "analyst_priority": "LOW"
     },
     {
-      "id": 135,
+      "id": 155,
       "source": "X",
-      "source_post_id": "2088529160868450787",
-      "author": "libmbr",
+      "source_post_id": "2088853599107391657",
+      "author": "katiewr31413491",
       "language": "en",
-      "published_at": "2026-08-15T07:32:09Z",
-      "first_detected_at": "2026-08-15T07:56:43Z",
-      "last_detected_at": "2026-08-15T07:56:43Z",
+      "published_at": "2026-08-16T05:01:21Z",
+      "first_detected_at": "2026-08-16T06:04:34Z",
+      "last_detected_at": "2026-08-16T06:04:34Z",
       "detection_count": 1,
-      "text": "@kelliekelly23 I disagree, as a child of migrants that arrived here almost 50 years ago (who love this country) we shouldn’t paint all migrants from these regions with the same brush. Many great Aussies have come from these regions.",
-      "text_excerpt": "@kelliekelly23 I disagree, as a child of migrants that arrived here almost 50 years ago (who love this country) we shouldn’t paint all migrants from these regions with the same brush. Many great Aussies have come from these regions.",
-      "url": "https://x.com/libmbr/status/2088529160868450787",
-      "source_url": "https://x.com/libmbr/status/2088529160868450787",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "text": "@adamcarolla He also enabled the trafficking of 250,000 child ( under 18) migrants b/c “the optics of keeping them in protective custody is poor.”",
+      "text_excerpt": "@adamcarolla He also enabled the trafficking of 250,000 child ( under 18) migrants b/c “the optics of keeping them in protective custody is poor.”",
+      "url": "https://x.com/katiewr31413491/status/2088853599107391657",
+      "source_url": "https://x.com/katiewr31413491/status/2088853599107391657",
+      "primary_signal": "FACILITATION_EARLY_WARNING",
+      "signal_type": "FACILITATION_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
+      "signal_intent": "FACILITATION_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.72,
-      "score": 7.75,
+      "confidence": 0.62,
+      "score": 5.75,
       "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
+        "FACILITATION_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
-          "movement",
-          "migrants that arrived"
+          "facilitation",
+          "trafficking of 250,000 child ( under 18) migrants"
         ]
       ],
       "matched_groups": [
-        "MOVEMENT"
+        "FACILITATION"
       ],
       "context_matches": [
         "migrants"
       ],
       "high_value_matches": [
-        "migrants that arrived"
+        "trafficking of 250,000 child ( under 18) migrants"
       ],
       "signal_context_rejections": [],
       "migration_context": true,
@@ -3330,67 +3627,8 @@
       "primary_region": "GLOBAL",
       "latitude": null,
       "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
-      "priority_score": 25.2,
-      "analyst_priority": "LOW"
-    },
-    {
-      "id": 131,
-      "source": "X",
-      "source_post_id": "2088475838597472392",
-      "author": "dzrhnews",
-      "language": "en",
-      "published_at": "2026-08-15T04:00:16Z",
-      "first_detected_at": "2026-08-15T04:56:25Z",
-      "last_detected_at": "2026-08-15T04:56:25Z",
-      "detection_count": 1,
-      "text": "Spain has beefed up police and military presence in its North African enclave of Ceuta amid social media messages encouraging migrants to attempt another mass border breach on Saturday, two weeks after tens of thousands rushed into the city.\n\nhttps://t.co/dTedmX2pZJ",
-      "text_excerpt": "Spain has beefed up police and military presence in its North African enclave of Ceuta amid social media messages encouraging migrants to attempt another mass border breach on Saturday, two weeks after tens of thousands rushed into the city.\n\nhttps://t.co/dTedmX2pZJ",
-      "url": "https://x.com/dzrhnews/status/2088475838597472392",
-      "source_url": "https://x.com/dzrhnews/status/2088475838597472392",
-      "primary_signal": "ROUTE_EARLY_WARNING",
-      "signal_type": "ROUTE_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ROUTE_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.72,
-      "score": 7.25,
-      "matched_signals": [
-        "ROUTE_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "route",
-          "border"
-        ],
-        [
-          "enforcement",
-          "police"
-        ]
-      ],
-      "matched_groups": [
-        "ROUTE",
-        "ENFORCEMENT"
-      ],
-      "context_matches": [
-        "migrants"
-      ],
-      "high_value_matches": [],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "Ceuta",
-      "primary_location": "Ceuta",
-      "country": "Spain",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": 35.8894,
-      "longitude": -5.3213,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_6_FINAL",
-      "priority_score": 36.2,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 21.7,
       "analyst_priority": "LOW"
     },
     {
@@ -3451,6 +3689,76 @@
     }
   ],
   "influence_narratives": [
+    {
+      "id": 153,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1vpl0zw",
+      "author": "AutoNewspaperAdmin",
+      "language": null,
+      "published_at": "2026-08-16T02:27:31Z",
+      "first_detected_at": "2026-08-16T06:03:34Z",
+      "last_detected_at": "2026-08-16T06:03:34Z",
+      "detection_count": 1,
+      "text": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say | BBC",
+      "text_excerpt": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say | BBC",
+      "url": "https://www.reddit.com/r/AutoNewspaper/comments/1vpl0zw/top_stories_morocco_detains_dozens_of_migrants/",
+      "source_url": "https://www.reddit.com/r/AutoNewspaper/comments/1vpl0zw/top_stories_morocco_detains_dozens_of_migrants/",
+      "primary_signal": "CROSSING_FACILITATION",
+      "signal_type": "CROSSING_FACILITATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "EASIER_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.89,
+      "score": 15.0,
+      "matched_signals": [
+        "CROSSING_FACILITATION"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "trying to cross"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.6",
+      "priority_score": 75.15,
+      "analyst_priority": "HIGH",
+      "related_posts_count": 2,
+      "related_post_ids": [
+        "reddit_1vpl0zw",
+        "reddit_1vpkytc"
+      ],
+      "related_authors": [
+        "AutoNewsAdmin",
+        "AutoNewspaperAdmin"
+      ],
+      "related_urls": [
+        "https://www.reddit.com/r/AutoNewspaper/comments/1vpl0zw/top_stories_morocco_detains_dozens_of_migrants/",
+        "https://www.reddit.com/r/BBCauto/comments/1vpkytc/top_stories_morocco_detains_dozens_of_migrants/"
+      ],
+      "related_sources": [
+        "REDDIT"
+      ],
+      "independent_author_count": 2,
+      "platform_count": 1
+    },
     {
       "id": 139,
       "source": "REDDIT",
@@ -3592,88 +3900,6 @@
       ],
       "independent_author_count": 1,
       "platform_count": 1
-    },
-    {
-      "id": 145,
-      "source": "X",
-      "source_post_id": "2088707301746090331",
-      "author": "grok",
-      "language": "en",
-      "published_at": "2026-08-15T19:20:01Z",
-      "first_detected_at": "2026-08-15T19:26:11Z",
-      "last_detected_at": "2026-08-15T19:26:11Z",
-      "detection_count": 1,
-      "text": "@RonaldFrink @kristina_liora @RadioGenoa The \"ORANGE TAKSI\" sign prompted an incorrect Turkish-region call. Location is Fnideq on the Moroccan side of the Ceuta border. Footage matches the July 30-31 2026 clashes during the migrant surge, where vehicles were torched amid attempts to cross into the Spanish enclave.",
-      "text_excerpt": "@RonaldFrink @kristina_liora @RadioGenoa The \"ORANGE TAKSI\" sign prompted an incorrect Turkish-region call. Location is Fnideq on the Moroccan side of the Ceuta border. Footage matches the July 30-31 2026 clashes during the migrant surge, where vehicles were torched amid attempts to cross into the Spanish enclave.",
-      "url": "https://x.com/grok/status/2088707301746090331",
-      "source_url": "https://x.com/grok/status/2088707301746090331",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.9,
-      "score": 11.25,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrant surge, where vehicles were torched amid attempts to cross"
-        ],
-        [
-          "route",
-          "border"
-        ],
-        [
-          "pressure",
-          "surge"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT",
-        "ROUTE",
-        "PRESSURE"
-      ],
-      "context_matches": [
-        "migrant"
-      ],
-      "high_value_matches": [
-        "migrant surge, where vehicles were torched amid attempts to cross",
-        "surge"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "Fnideq",
-      "primary_location": "Fnideq",
-      "country": "Morocco",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": 35.8498,
-      "longitude": -5.3578,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 42.5,
-      "analyst_priority": "MEDIUM",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "2088707301746090331"
-      ],
-      "related_authors": [
-        "grok"
-      ],
-      "related_urls": [
-        "https://x.com/grok/status/2088707301746090331"
-      ],
-      "related_sources": [
-        "X"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
     }
   ],
   "crossing_access_signals": [
@@ -3787,6 +4013,163 @@
       "longitude": -5.3213,
       "rules_version": "2.6",
       "priority_score": 70.25,
+      "analyst_priority": "HIGH"
+    },
+    {
+      "id": 149,
+      "source": "X",
+      "source_post_id": "2088867672608199075",
+      "author": "MeetPra82522063",
+      "language": "en",
+      "published_at": "2026-08-16T05:57:17Z",
+      "first_detected_at": "2026-08-16T06:03:32Z",
+      "last_detected_at": "2026-08-16T06:03:32Z",
+      "detection_count": 1,
+      "text": "Moroccan authorities arrested 111 migrants heading toward Spain’s Ceuta border, according to reports.\n#Morocco #Spain #CeutaEsEspaña #CeutaBorder #Migrants #Migration #Border #BorderSecurity #SpainNews  #Immigration #MigrantCrisis #ceuta #NorthAfrica #Europe #MoroccoNews https://t.co/Zse7gC31Kg",
+      "text_excerpt": "Moroccan authorities arrested 111 migrants heading toward Spain’s Ceuta border, according to reports.\n#Morocco #Spain #CeutaEsEspaña #CeutaBorder #Migrants #Migration #Border #BorderSecurity #SpainNews  #Immigration #MigrantCrisis #ceuta #NorthAfrica #Europe #MoroccoNews https://t.co/Zse7gC31Kg",
+      "url": "https://x.com/MeetPra82522063/status/2088867672608199075",
+      "source_url": "https://x.com/MeetPra82522063/status/2088867672608199075",
+      "primary_signal": "CROSSING_FACILITATION",
+      "signal_type": "CROSSING_FACILITATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "EASIER_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.89,
+      "score": 16.0,
+      "matched_signals": [
+        "CROSSING_FACILITATION"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "heading toward"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants",
+        "Migration"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.6",
+      "priority_score": 68.15,
+      "analyst_priority": "HIGH"
+    },
+    {
+      "id": 153,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1vpl0zw",
+      "author": "AutoNewspaperAdmin",
+      "language": null,
+      "published_at": "2026-08-16T02:27:31Z",
+      "first_detected_at": "2026-08-16T06:03:34Z",
+      "last_detected_at": "2026-08-16T06:03:34Z",
+      "detection_count": 1,
+      "text": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say | BBC",
+      "text_excerpt": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say | BBC",
+      "url": "https://www.reddit.com/r/AutoNewspaper/comments/1vpl0zw/top_stories_morocco_detains_dozens_of_migrants/",
+      "source_url": "https://www.reddit.com/r/AutoNewspaper/comments/1vpl0zw/top_stories_morocco_detains_dozens_of_migrants/",
+      "primary_signal": "CROSSING_FACILITATION",
+      "signal_type": "CROSSING_FACILITATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "EASIER_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.89,
+      "score": 15.0,
+      "matched_signals": [
+        "CROSSING_FACILITATION"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "trying to cross"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.6",
+      "priority_score": 68.15,
+      "analyst_priority": "HIGH"
+    },
+    {
+      "id": 154,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1vpkytc",
+      "author": "AutoNewsAdmin",
+      "language": null,
+      "published_at": "2026-08-16T02:24:38Z",
+      "first_detected_at": "2026-08-16T06:03:34Z",
+      "last_detected_at": "2026-08-16T06:03:34Z",
+      "detection_count": 1,
+      "text": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say",
+      "text_excerpt": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say",
+      "url": "https://www.reddit.com/r/BBCauto/comments/1vpkytc/top_stories_morocco_detains_dozens_of_migrants/",
+      "source_url": "https://www.reddit.com/r/BBCauto/comments/1vpkytc/top_stories_morocco_detains_dozens_of_migrants/",
+      "primary_signal": "CROSSING_FACILITATION",
+      "signal_type": "CROSSING_FACILITATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "EASIER_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.89,
+      "score": 15.0,
+      "matched_signals": [
+        "CROSSING_FACILITATION"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "trying to cross"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.6",
+      "priority_score": 68.15,
       "analyst_priority": "HIGH"
     }
   ],
@@ -3902,9 +4285,236 @@
       "rules_version": "2.6",
       "priority_score": 70.25,
       "analyst_priority": "HIGH"
+    },
+    {
+      "id": 149,
+      "source": "X",
+      "source_post_id": "2088867672608199075",
+      "author": "MeetPra82522063",
+      "language": "en",
+      "published_at": "2026-08-16T05:57:17Z",
+      "first_detected_at": "2026-08-16T06:03:32Z",
+      "last_detected_at": "2026-08-16T06:03:32Z",
+      "detection_count": 1,
+      "text": "Moroccan authorities arrested 111 migrants heading toward Spain’s Ceuta border, according to reports.\n#Morocco #Spain #CeutaEsEspaña #CeutaBorder #Migrants #Migration #Border #BorderSecurity #SpainNews  #Immigration #MigrantCrisis #ceuta #NorthAfrica #Europe #MoroccoNews https://t.co/Zse7gC31Kg",
+      "text_excerpt": "Moroccan authorities arrested 111 migrants heading toward Spain’s Ceuta border, according to reports.\n#Morocco #Spain #CeutaEsEspaña #CeutaBorder #Migrants #Migration #Border #BorderSecurity #SpainNews  #Immigration #MigrantCrisis #ceuta #NorthAfrica #Europe #MoroccoNews https://t.co/Zse7gC31Kg",
+      "url": "https://x.com/MeetPra82522063/status/2088867672608199075",
+      "source_url": "https://x.com/MeetPra82522063/status/2088867672608199075",
+      "primary_signal": "CROSSING_FACILITATION",
+      "signal_type": "CROSSING_FACILITATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "EASIER_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.89,
+      "score": 16.0,
+      "matched_signals": [
+        "CROSSING_FACILITATION"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "heading toward"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants",
+        "Migration"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.6",
+      "priority_score": 68.15,
+      "analyst_priority": "HIGH"
+    },
+    {
+      "id": 153,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1vpl0zw",
+      "author": "AutoNewspaperAdmin",
+      "language": null,
+      "published_at": "2026-08-16T02:27:31Z",
+      "first_detected_at": "2026-08-16T06:03:34Z",
+      "last_detected_at": "2026-08-16T06:03:34Z",
+      "detection_count": 1,
+      "text": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say | BBC",
+      "text_excerpt": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say | BBC",
+      "url": "https://www.reddit.com/r/AutoNewspaper/comments/1vpl0zw/top_stories_morocco_detains_dozens_of_migrants/",
+      "source_url": "https://www.reddit.com/r/AutoNewspaper/comments/1vpl0zw/top_stories_morocco_detains_dozens_of_migrants/",
+      "primary_signal": "CROSSING_FACILITATION",
+      "signal_type": "CROSSING_FACILITATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "EASIER_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.89,
+      "score": 15.0,
+      "matched_signals": [
+        "CROSSING_FACILITATION"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "trying to cross"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.6",
+      "priority_score": 68.15,
+      "analyst_priority": "HIGH"
+    },
+    {
+      "id": 154,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1vpkytc",
+      "author": "AutoNewsAdmin",
+      "language": null,
+      "published_at": "2026-08-16T02:24:38Z",
+      "first_detected_at": "2026-08-16T06:03:34Z",
+      "last_detected_at": "2026-08-16T06:03:34Z",
+      "detection_count": 1,
+      "text": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say",
+      "text_excerpt": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say",
+      "url": "https://www.reddit.com/r/BBCauto/comments/1vpkytc/top_stories_morocco_detains_dozens_of_migrants/",
+      "source_url": "https://www.reddit.com/r/BBCauto/comments/1vpkytc/top_stories_morocco_detains_dozens_of_migrants/",
+      "primary_signal": "CROSSING_FACILITATION",
+      "signal_type": "CROSSING_FACILITATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "EASIER_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.89,
+      "score": 15.0,
+      "matched_signals": [
+        "CROSSING_FACILITATION"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "trying to cross"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.6",
+      "priority_score": 68.15,
+      "analyst_priority": "HIGH"
     }
   ],
   "top_crossing_access_posts": [
+    {
+      "id": 153,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1vpl0zw",
+      "author": "AutoNewspaperAdmin",
+      "language": null,
+      "published_at": "2026-08-16T02:27:31Z",
+      "first_detected_at": "2026-08-16T06:03:34Z",
+      "last_detected_at": "2026-08-16T06:03:34Z",
+      "detection_count": 1,
+      "text": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say | BBC",
+      "text_excerpt": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say | BBC",
+      "url": "https://www.reddit.com/r/AutoNewspaper/comments/1vpl0zw/top_stories_morocco_detains_dozens_of_migrants/",
+      "source_url": "https://www.reddit.com/r/AutoNewspaper/comments/1vpl0zw/top_stories_morocco_detains_dozens_of_migrants/",
+      "primary_signal": "CROSSING_FACILITATION",
+      "signal_type": "CROSSING_FACILITATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "EASIER_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.89,
+      "score": 15.0,
+      "matched_signals": [
+        "CROSSING_FACILITATION"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "trying to cross"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.6",
+      "priority_score": 75.15,
+      "analyst_priority": "HIGH",
+      "related_posts_count": 2,
+      "related_post_ids": [
+        "reddit_1vpl0zw",
+        "reddit_1vpkytc"
+      ],
+      "related_authors": [
+        "AutoNewsAdmin",
+        "AutoNewspaperAdmin"
+      ],
+      "related_urls": [
+        "https://www.reddit.com/r/AutoNewspaper/comments/1vpl0zw/top_stories_morocco_detains_dozens_of_migrants/",
+        "https://www.reddit.com/r/BBCauto/comments/1vpkytc/top_stories_morocco_detains_dozens_of_migrants/"
+      ],
+      "related_sources": [
+        "REDDIT"
+      ],
+      "independent_author_count": 2,
+      "platform_count": 1
+    },
     {
       "id": 139,
       "source": "REDDIT",
@@ -4049,6 +4659,76 @@
     }
   ],
   "crossing_access_narratives": [
+    {
+      "id": 153,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1vpl0zw",
+      "author": "AutoNewspaperAdmin",
+      "language": null,
+      "published_at": "2026-08-16T02:27:31Z",
+      "first_detected_at": "2026-08-16T06:03:34Z",
+      "last_detected_at": "2026-08-16T06:03:34Z",
+      "detection_count": 1,
+      "text": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say | BBC",
+      "text_excerpt": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say | BBC",
+      "url": "https://www.reddit.com/r/AutoNewspaper/comments/1vpl0zw/top_stories_morocco_detains_dozens_of_migrants/",
+      "source_url": "https://www.reddit.com/r/AutoNewspaper/comments/1vpl0zw/top_stories_morocco_detains_dozens_of_migrants/",
+      "primary_signal": "CROSSING_FACILITATION",
+      "signal_type": "CROSSING_FACILITATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "EASIER_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.89,
+      "score": 15.0,
+      "matched_signals": [
+        "CROSSING_FACILITATION"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "trying to cross"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "2.6",
+      "priority_score": 75.15,
+      "analyst_priority": "HIGH",
+      "related_posts_count": 2,
+      "related_post_ids": [
+        "reddit_1vpl0zw",
+        "reddit_1vpkytc"
+      ],
+      "related_authors": [
+        "AutoNewsAdmin",
+        "AutoNewspaperAdmin"
+      ],
+      "related_urls": [
+        "https://www.reddit.com/r/AutoNewspaper/comments/1vpl0zw/top_stories_morocco_detains_dozens_of_migrants/",
+        "https://www.reddit.com/r/BBCauto/comments/1vpkytc/top_stories_morocco_detains_dozens_of_migrants/"
+      ],
+      "related_sources": [
+        "REDDIT"
+      ],
+      "independent_author_count": 2,
+      "platform_count": 1
+    },
     {
       "id": 139,
       "source": "REDDIT",
@@ -4304,14 +4984,14 @@
       "label": "W33",
       "week_label": "W33",
       "week_start": "2026-08-10T00:00:00Z",
-      "posts": 1550,
-      "post_count": 1550,
-      "operational_posts": 60,
-      "influence_signals": 78,
+      "posts": 1618,
+      "post_count": 1618,
+      "operational_posts": 62,
+      "influence_signals": 86,
       "source_counts": {
-        "X": 1109,
-        "REDDIT": 184,
-        "MASTODON": 233,
+        "X": 1155,
+        "REDDIT": 194,
+        "MASTODON": 245,
         "TELEGRAM": 24
       }
     }
@@ -4428,33 +5108,33 @@
       "label": "W33",
       "week_label": "W33",
       "week_start": "2026-08-10T00:00:00Z",
-      "posts": 1550,
-      "post_count": 1550,
-      "operational_posts": 60,
-      "influence_signals": 78,
+      "posts": 1618,
+      "post_count": 1618,
+      "operational_posts": 62,
+      "influence_signals": 86,
       "source_counts": {
-        "X": 1109,
-        "REDDIT": 184,
-        "MASTODON": 233,
+        "X": 1155,
+        "REDDIT": 194,
+        "MASTODON": 245,
         "TELEGRAM": 24
       }
     }
   ],
   "information_activity_summary": {
-    "current_week": 1550,
+    "current_week": 1618,
     "previous_week": 468,
-    "current_week_to_date": 1550,
+    "current_week_to_date": 1618,
     "previous_week_same_period": 468,
     "previous_week_full": 479,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": 231.2,
-    "change_label": "+231.2%",
+    "change_percent": 245.73,
+    "change_label": "+245.7%",
     "direction": "UP",
     "comparable": true,
-    "elapsed_hours": 139.5,
+    "elapsed_hours": 150.1,
     "current_period_start": "2026-08-10T00:00:00Z",
     "previous_period_start": "2026-08-03T00:00:00Z",
-    "previous_period_end": "2026-08-08T19:27:59Z"
+    "previous_period_end": "2026-08-09T06:05:03Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -4466,38 +5146,38 @@
       72,
       168
     ],
-    "generated_at": "2026-08-15T19:28:00Z",
-    "total_items": 649,
-    "information_count": 344,
-    "early_warning_count": 131,
-    "operational_count": 143,
+    "generated_at": "2026-08-16T06:05:04Z",
+    "total_items": 662,
+    "information_count": 348,
+    "early_warning_count": 139,
+    "operational_count": 144,
     "correlated_count": 31,
     "layer_counts": {
-      "EARLY_WARNING": 131,
-      "INFORMATION": 344,
-      "OPERATIONAL": 143,
+      "INFORMATION": 348,
+      "EARLY_WARNING": 139,
+      "OPERATIONAL": 144,
       "CORRELATED": 31
     },
     "source_counts": {
-      "X": 477,
-      "MASTODON": 28,
-      "REDDIT": 137,
+      "X": 485,
+      "REDDIT": 140,
+      "MASTODON": 30,
       "TELEGRAM": 7
     },
     "type_counts": {
-      "MOVEMENT_EARLY_WARNING": 37,
-      "CROSSING_FACILITATION": 19,
-      "INFORMATION_SIGNAL": 344,
+      "INFORMATION_SIGNAL": 348,
+      "MOVEMENT_EARLY_WARNING": 39,
+      "CROSSING_FACILITATION": 22,
+      "ENFORCEMENT_EARLY_WARNING": 11,
+      "ROUTE_EARLY_WARNING": 9,
+      "FACILITATION_EARLY_WARNING": 16,
+      "MIGRANT_CAMP": 36,
       "RESCUE_OPERATION": 6,
       "PRESSURE_EARLY_WARNING": 5,
-      "ROUTE_EARLY_WARNING": 8,
-      "MIGRANT_CAMP": 35,
       "BORDER_CROSSING": 22,
-      "FACILITATION_EARLY_WARNING": 15,
       "POLICY_SIGNAL": 4,
       "INTERCEPTION": 8,
       "COORDINATION": 4,
-      "ENFORCEMENT_EARLY_WARNING": 10,
       "LEGAL_MIGRATION_SIGNAL": 19,
       "CASUALTY": 5,
       "DETENTION": 2,
@@ -4512,6 +5192,526 @@
       "DEPORTATION": 2
     },
     "items": [
+      {
+        "timeline_id": "information:3414",
+        "timestamp": "2026-08-16T06:02:27Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2088868974830277098",
+        "author": "AlfredArkle",
+        "url": "https://x.com/AlfredArkle/status/2088868974830277098",
+        "source_url": "https://x.com/AlfredArkle/status/2088868974830277098",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "arrival"
+        ],
+        "freshness_cues": [],
+        "text": "@GBNEWS Britain is a soft touch for illegal migrants! Made even more so by governments lack of firm intention to stop them UK borders. Then return them under military escort same day of arrival. This country must have strict border security or it will suffer the dire social consequences",
+        "text_excerpt": "@GBNEWS Britain is a soft touch for illegal migrants! Made even more so by governments lack of firm intention to stop them UK borders. Then return them under military escort same day of arrival. This country must have strict border security or it will suffer the dire social consequences",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-08-16T06:03:32Z",
+        "last_collected_at": "2026-08-16T06:03:32Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "early_warning:148",
+        "timestamp": "2026-08-16T05:59:38Z",
+        "layer": "EARLY_WARNING",
+        "type": "MOVEMENT_EARLY_WARNING",
+        "signal_type": "MOVEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2088868266684854362",
+        "author": "grok",
+        "url": "https://x.com/grok/status/2088868266684854362",
+        "source_url": "https://x.com/grok/status/2088868266684854362",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "Ceuta",
+        "primary_location": "Ceuta",
+        "country": "Spain",
+        "confidence": 0.8,
+        "priority": "MEDIUM",
+        "priority_score": 39.0,
+        "analyst_priority": "LOW",
+        "text": "@AlphaProMega @RadioGenoa Video shows Cruz Roja distributing basic food kits to remaining migrants on a Ceuta beach after the late-July 2026 mass irregular crossing of ~50-70k from Morocco. Most returned; those left are mainly young men from sub-Saharan Africa and Morocco. Police maintained order. Reports",
+        "text_excerpt": "@AlphaProMega @RadioGenoa Video shows Cruz Roja distributing basic food kits to remaining migrants on a Ceuta beach after the late-July 2026 mass irregular crossing of ~50-70k from Morocco. Most returned; those left are mainly young men from sub-Saharan Africa and Morocco. Police maintained order. Reports",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "MOVEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-08-16T06:03:32Z",
+        "last_detected_at": "2026-08-16T06:03:32Z"
+      },
+      {
+        "timeline_id": "early_warning:149",
+        "timestamp": "2026-08-16T05:57:17Z",
+        "layer": "EARLY_WARNING",
+        "type": "CROSSING_FACILITATION",
+        "signal_type": "CROSSING_FACILITATION",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2088867672608199075",
+        "author": "MeetPra82522063",
+        "url": "https://x.com/MeetPra82522063/status/2088867672608199075",
+        "source_url": "https://x.com/MeetPra82522063/status/2088867672608199075",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "Ceuta",
+        "primary_location": "Ceuta",
+        "country": "Spain",
+        "confidence": 0.89,
+        "priority": "HIGH",
+        "priority_score": 68.15,
+        "analyst_priority": "HIGH",
+        "text": "Moroccan authorities arrested 111 migrants heading toward Spain’s Ceuta border, according to reports.\n#Morocco #Spain #CeutaEsEspaña #CeutaBorder #Migrants #Migration #Border #BorderSecurity #SpainNews  #Immigration #MigrantCrisis #ceuta #NorthAfrica #Europe #MoroccoNews https://t.co/Zse7gC31Kg",
+        "text_excerpt": "Moroccan authorities arrested 111 migrants heading toward Spain’s Ceuta border, according to reports.\n#Morocco #Spain #CeutaEsEspaña #CeutaBorder #Migrants #Migration #Border #BorderSecurity #SpainNews  #Immigration #MigrantCrisis #ceuta #NorthAfrica #Europe #MoroccoNews https://t.co/Zse7gC31Kg",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "DIRECT",
+        "signal_intent": "EASIER_CROSSING",
+        "detection_count": 1,
+        "first_detected_at": "2026-08-16T06:03:32Z",
+        "last_detected_at": "2026-08-16T06:03:32Z"
+      },
+      {
+        "timeline_id": "early_warning:150",
+        "timestamp": "2026-08-16T05:50:00Z",
+        "layer": "EARLY_WARNING",
+        "type": "ENFORCEMENT_EARLY_WARNING",
+        "signal_type": "ENFORCEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2088865840183828503",
+        "author": "CGTNOfficial",
+        "url": "https://x.com/CGTNOfficial/status/2088865840183828503",
+        "source_url": "https://x.com/CGTNOfficial/status/2088865840183828503",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.72,
+        "priority": "MEDIUM",
+        "priority_score": 25.2,
+        "analyst_priority": "LOW",
+        "text": "At least 294 migrants, including 248 from sub-Saharan Africa and 46 Moroccan nationals, were intercepted on Saturday during operations to prevent a mass crossing, Spanish news agency EFE reported, citing Moroccan security sources.\n\nFor more: https://t.co/Ov8btE0NiA https://t.co/sZB60suSxe",
+        "text_excerpt": "At least 294 migrants, including 248 from sub-Saharan Africa and 46 Moroccan nationals, were intercepted on Saturday during operations to prevent a mass crossing, Spanish news agency EFE reported, citing Moroccan security sources.\n\nFor more: https://t.co/Ov8btE0NiA https://t.co/sZB60suSxe",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "ENFORCEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-08-16T06:03:32Z",
+        "last_detected_at": "2026-08-16T06:03:32Z"
+      },
+      {
+        "timeline_id": "early_warning:151",
+        "timestamp": "2026-08-16T05:48:54Z",
+        "layer": "EARLY_WARNING",
+        "type": "MOVEMENT_EARLY_WARNING",
+        "signal_type": "MOVEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2088865563829273036",
+        "author": "NiclousT02",
+        "url": "https://x.com/NiclousT02/status/2088865563829273036",
+        "source_url": "https://x.com/NiclousT02/status/2088865563829273036",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "Ceuta",
+        "primary_location": "Ceuta",
+        "country": "Spain",
+        "confidence": 0.72,
+        "priority": "MEDIUM",
+        "priority_score": 36.2,
+        "analyst_priority": "LOW",
+        "text": "Morocco detains dozens of migrants trying to enter Ceuta\n\nThe attempted crossings come 2 weeks after around 72k people rushed into the Spanish North African exclave from Morocco. \n\nCalls for another mass crossing had been circulating on social media this week. https://t.co/uf5zf1VM07",
+        "text_excerpt": "Morocco detains dozens of migrants trying to enter Ceuta\n\nThe attempted crossings come 2 weeks after around 72k people rushed into the Spanish North African exclave from Morocco. \n\nCalls for another mass crossing had been circulating on social media this week. https://t.co/uf5zf1VM07",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "MOVEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-08-16T06:03:32Z",
+        "last_detected_at": "2026-08-16T06:03:32Z"
+      },
+      {
+        "timeline_id": "early_warning:152",
+        "timestamp": "2026-08-16T05:35:43Z",
+        "layer": "EARLY_WARNING",
+        "type": "ROUTE_EARLY_WARNING",
+        "signal_type": "ROUTE_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2088862246713569365",
+        "author": "FeniksKnowsBest",
+        "url": "https://x.com/FeniksKnowsBest/status/2088862246713569365",
+        "source_url": "https://x.com/FeniksKnowsBest/status/2088862246713569365",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.8,
+        "priority": "MEDIUM",
+        "priority_score": 28.0,
+        "analyst_priority": "LOW",
+        "text": "Migrants amassing at the border of Cueto once again. Authorities have claimed they have intercepted the attempts to cross, but how long can they maintain a secure border.\n\nResidents are gathering in protest asking the government to send military help to secure the crossing.",
+        "text_excerpt": "Migrants amassing at the border of Cueto once again. Authorities have claimed they have intercepted the attempts to cross, but how long can they maintain a secure border.\n\nResidents are gathering in protest asking the government to send military help to secure the crossing.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "ROUTE_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-08-16T06:03:33Z",
+        "last_detected_at": "2026-08-16T06:03:33Z"
+      },
+      {
+        "timeline_id": "information:3435",
+        "timestamp": "2026-08-16T05:25:25Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2088859655636132025",
+        "author": "BrowserWowser",
+        "url": "https://x.com/BrowserWowser/status/2088859655636132025",
+        "source_url": "https://x.com/BrowserWowser/status/2088859655636132025",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "boat",
+          "dinghy",
+          "arrival"
+        ],
+        "freshness_cues": [],
+        "text": "@NotFarLeftAtAll Illegal boat migrants get it for free. Needs to arrive by dinghy",
+        "text_excerpt": "@NotFarLeftAtAll Illegal boat migrants get it for free. Needs to arrive by dinghy",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-08-16T06:04:06Z",
+        "last_collected_at": "2026-08-16T06:04:06Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:3437",
+        "timestamp": "2026-08-16T05:02:09Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2088853797770854471",
+        "author": "uniindianews",
+        "url": "https://x.com/uniindianews/status/2088853797770854471",
+        "source_url": "https://x.com/uniindianews/status/2088853797770854471",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 40,
+        "information_score": 4,
+        "matched_information_cues": [
+          "crossing",
+          "channel",
+          "sea",
+          "rescue"
+        ],
+        "freshness_cues": [],
+        "text": "Rescuers in northern France have caught more than 80 migrants attempting to cross the Maritime Prefecture of the English Channel and the North Sea, it said.\n\n\"The department's fire and rescue service received 82 people who intended to cross the channel,\" the prefecture said on https://t.co/etHftwVvjT",
+        "text_excerpt": "Rescuers in northern France have caught more than 80 migrants attempting to cross the Maritime Prefecture of the English Channel and the North Sea, it said.\n\n\"The department's fire and rescue service received 82 people who intended to cross the channel,\" the prefecture said on https://t.co/etHftwVvjT",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-08-16T06:04:07Z",
+        "last_collected_at": "2026-08-16T06:04:07Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "early_warning:155",
+        "timestamp": "2026-08-16T05:01:21Z",
+        "layer": "EARLY_WARNING",
+        "type": "FACILITATION_EARLY_WARNING",
+        "signal_type": "FACILITATION_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2088853599107391657",
+        "author": "katiewr31413491",
+        "url": "https://x.com/katiewr31413491/status/2088853599107391657",
+        "source_url": "https://x.com/katiewr31413491/status/2088853599107391657",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.62,
+        "priority": "MEDIUM",
+        "priority_score": 21.7,
+        "analyst_priority": "LOW",
+        "text": "@adamcarolla He also enabled the trafficking of 250,000 child ( under 18) migrants b/c “the optics of keeping them in protective custody is poor.”",
+        "text_excerpt": "@adamcarolla He also enabled the trafficking of 250,000 child ( under 18) migrants b/c “the optics of keeping them in protective custody is poor.”",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "FACILITATION_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-08-16T06:04:34Z",
+        "last_detected_at": "2026-08-16T06:04:34Z"
+      },
+      {
+        "timeline_id": "information:3424",
+        "timestamp": "2026-08-16T03:30:14Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1vpm8ug",
+        "author": "Longjumping_Egg2439",
+        "url": "https://www.reddit.com/r/Northeastindia/comments/1vpm8ug/limbu_history_mentions_displacement_from_many/",
+        "source_url": "https://www.reddit.com/r/Northeastindia/comments/1vpm8ug/limbu_history_mentions_displacement_from_many/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 60,
+        "information_score": 6,
+        "matched_information_cues": [
+          "border",
+          "crossing",
+          "route",
+          "arrival",
+          "departure"
+        ],
+        "freshness_cues": [
+          "today"
+        ],
+        "text": "Limbu history mentions displacement from many places such as Mong Mawrong, Sittang Valley Mong Kawng, Mong Tai Chiang Mai. Make it Make sense.\nTo decode the oral traditions and historical memory of the Limbu (Yakthung) people, one must step away from modern nation-state borders and look instead at the historic migration corridors of Mainland Southeast Asia, Southwest China, and the Eastern Himalayas. For generations, Limbu history, genealogical chants (Thungsap Mundhum), and clan narratives have preserved place names that sound far removed from their contemporary homeland in Eastern Nepal (Limbuwan) and Northeast India. Toponyms such as Mong Mawrong, Mong Kawng, Mong Tai Chiang Mai, and the Sittang Valley are not mythological inventions; they represent real, highly strategic geographic anchors across Northern Thailand, Myanmar (Burma), and Yunnan. Making sense of these displacement accounts requires piecing together regional warfare, imperial expansions, tribal clashes, and administrative systems that once linked Southeast Asian river valleys to the Himalayan foothills. 1. The Geographic Anchors of Displacement To understand how these distant locations connect, we must map them according to their historical geography: [Sipsongpanna / Dehong (Yunnan)] ──► [Mong Mawrong (Shweli River)] ──► [Mong Kawng (Northern Burma)] │ [Mong Tai Chiang Mai (Northern Thailand)] ──► [Sittang Valley (Central Burma)] ┴──► [Assam / Northeast India / Eastern Nepal] Mong Mawrong (Mong Mao): Located along the Shweli River (Capital of Mong Mao Kingdom until it was destroyed by Ming Invasion) along the borderland between modern Yunnan (China) and Northern Shan State (Myanmar). Mong Mao was the legendary heartland of the Shan/Dai confederacies that controlled powerful riverine trade routes from the 6th to 16th centuries. https://preview.redd.it/2ahree0npnjh1.png?width=602&format=png&auto=webp&s=2c30b0df0c9a1d4cd1474ad9cd649c60c3a02881 Mong Kawng (Mogaung): Situated in Northern Burma (modern Kachin State). Mong Kawng (established 13th century) was a formidable Shan-Tai principality that served as a central gateway for movements heading west toward the Brahmaputra Valley in Assam and into the Eastern Himalayas. Limbus believe Pongbo Hang (King of Pong) Si Lufa after the execution of Si Renfa in beijing settled them from Mong Mawrong to Nam Maw and from Nam Maw to permanently settle in Mong Kawng. https://preview.redd.it/cq25b614mnjh1.png?width=1080&format=png&auto=webp&s=490fe460749917b68f7dffcc7d86ed06b69ec06d Mong Tai Chiang Mai: Situated in Northern Thailand, this refers to the capital of the historic Lanna Kingdom (\"Land of a Million Rice Fields\"). It was historically inhabited by indigenous Austroasiatic Lawa (Lua) communities alongside Tai Yuan populations. Sittang Valley: Located in Central-Southern Myanmar, running between the Irrawaddy and Salween basins. The Sittang River valley was a primary agricultural center and strategic bottleneck fought over by Mon, Bamar, and Shan rulers for centuries. 2. The Displacement Dilemma: Jingpo Invasions vs. Bamar Imperial Wars A recurring claim within certain Limbu oral lineages is that their ancestors were driven out of their settlements by the Jingpo (Kachin) people. However, a rigorous historical and chronological examination suggests that while conflict with the Jingpo occurred, the primary catalyst behind the mass displacements was the imperial expansion of the Bamars (Burmese dynasties). The Shan of Mong Kawng being displaced along with other tribes such as Paulung (Deang) Was an 19th century occurrence. https://preview.redd.it/3aw64dpimnjh1.png?width=681&format=png&auto=webp&s=7cb8eb0e561ee51e2f1f5a8a98675fe3613afa8c The Role of the Jingpo The Jingpo (Kachin) tribes historically inhabited the high mountain ridges of Northern Burma and Yunnan. Between the 17th and 19th centuries, the Jingpo began migrating southward from the high highlands into the lowland valleys controlled by Shan, Kadul, and other Tibeto-Burman populations. During this period of territorial expansion, Jingpo clans clashed frequently with valley dwellers and hill communities around Mong Kawng and the Shweli River. Because the Jingpo were the immediate, highly formidable highlander neighbors who engaged in localized tribal raiding and territorial pressure during the later centuries, their name became burned into oral memory as the direct enemy who forced local clans to pack up and flee. Why the Bamar Invasions Were the Actual Cause When analyzing the Sittang Valley and Mong Mao displacements, the timeline points directly to the Bamar dynasties—specifically the Toungoo Dynasty (under Kings Tabinshwehti and Bayinnaung in the 16th century) and later the Konbaung Dynasty (in the 18th century). Devastation of the Sittang Valley: The Sittang Valley was never a territory held or invaded by the Jingpo. Instead, it was the primary warzone of the Bamar-Mon and Bamar-Shan wars. King Bayinnaung launched massive military campaigns to subjugate the Shan states, forced entire populations into military labor, and destroyed local administrative centers. Shattering of the Shan States: The Bamar forces systematically breached the northern principalities, including Mong Mawrong (Shweli River) and Mong Kawng. The Burmese crown imposed heavy taxation, forced conscription, and installed military governors. The Refugee Cascade: As the Bamar war machine dismantled local autonomy across the Sittang Valley and the Shan states, hundreds of thousands of people were displaced. In oral history, these events often merged. The grand, structural destruction wrought by the Bamar state armies destabilized the region, creating a power vacuum that allowed expanding Jingpo clans to press down into the valleys. Thus, while Limbu stories attribute the flight to Jingpo invasions, historical evidence indicates they were caught in a multi-layered displacement where Bamar state expansion was the true macro-engine of flight. 3. The Flight of the 10 Hengs from the Sittang Valley One of the most detailed accounts in Kirat/Limbu ancestral history involves the exodus of the Ten Hengs (often written as Hang or Heng) from the Sittang Valley. https://preview.redd.it/tx8lzomtmnjh1.png?width=768&format=png&auto=webp&s=da74a91c75d43844898e9f0ef1eb38e30ac95757 ┌─────────────────────────────────────────────────────────────────────────┐ │ SITTANG VALLEY ADMINISTRATION │ │ │ │ Sawbwa (Overlord/Prince) ──► 10 Hengs (District Governors/Chiefs) │ └─────────────────────────────────────────────────────────────────────────┘ │ [Bamar Wars & Regional Instability] │ ▼ ┌─────────────────────────────────────────────────────────────────────────┐ │ THE GREAT EXODUS │ │ │ │ Escorted by Ritual Specialists: Phedangmas, Sambas, and Sammangs │ └─────────────────────────────────────────────────────────────────────────┘ │ ▼ ┌─────────────────────────────────────────────────────────────────────────┐ │ SETTLEMENT IN EASTERN HIMALAYAS │ │ │ │ Establishment of the Autonomous 10 Limbuwan Kingdoms (10 Kings Era) │ └─────────────────────────────────────────────────────────────────────────┘ Who Were the \"Hengs\"? In the political vocabulary of the Shan, Dai, and regional Tai-influenced polities, a Heng (or Hang) was an administrative title. A Sawbwa (supreme ruler/prince) ruled over a Mong (principality), which was subdivided into districts managed by local lords or administrative chiefs called Hengs. The \"Ten Hengs\" of Limbu history were not mythical figures; they were ten administrative chiefs who led their respective clans, village confederacies, and agricultural populations out of the war-torn Sittang Valley to escape Bamar subjugation and regional chaos. The Priestly Escort: Phedangmas, Sambas, and Sammangs A military or civilian exodus in the ancient Southeast Asian frontier could not survive without spiritual and cultural guardians. The ten Hengs did not flee alone; they were accompanied by their full hierarchy of sacred priests and ritual specialists, who preserved the collective identity of the migrating clans: Phedangma: The primary shamanic priests who performed essential life-cycle ceremonies (births, marriages, death rituals) and maintained the daily spiritual protection of the migrating families. They served as doctors, spiritual advisors, and mediators between the people and the local spirits (sammang) of the lands through which they traversed. Samba: The master bards and guardians of the Mundhum (the sacred oral epic). The Sambas carried the genealogical history, cosmologies, and legal codes in their memories. Through hypnotic, multi-day poetic chants accompanied by ritual drums, the Sambas ensured that no matter how far the clans traveled from the Sittang Valley, they never forgot their origins, their laws, or their ancestors. Yeba / Yema & Sammang Specialists: Mediums and spirit-invokers who specialized in warding off dangerous external spirits, performing exorcisms, and appeasing ancestral guardians (Yuma Sammang) during dangerous crossings over mountain passes and unfamiliar rivers. As these ten leaders and their priestly entourage moved northwestward through the river valleys of Burma into Assam, Northeast India, and finally into Eastern Nepal, they reconstituted their political system. The system of Ten Hengs who fled Sittang directly laid the organizational foundation for the Ten Kingdoms of Limbuwan (Yaksha Thok / Ten Limbus), where ten autonomous chiefs divided eastern Nepal into governed districts. 4. Clan Mapping: Micro-Lineages and Southeast Asian Links The most compelling proof that Limbu history contains genuine historical threads from Southeast Asia lies in the clan ethnonyms, placenames, and ritual practices that persist within specific Limbu sub-clans today. ┌─────────────────┬───────────────────────────────┬───────────────────────────────────────────┐ │ Limbu Clan │ Geographic / Ethnic Root │ Modern Historical Evidence │ ├─────────────────┼───────────────────────────────┼───────────────────────────────────────────┤ │ Lawa / Luwa │ Chiang Mai (Northern Thailand)│ Lawa (Lua) tribe; identical mang spirit │ │ │ │ veneration & sammang priesthood │ ├─────────────────┼───────────────────────────────┼───────────────────────────────────────────┤ │ Paulungwa │ Shweli River / Shan Hills │ Palaung (Ta'ang) Austroasiatic tribe │ ├─────────────────┼───────────────────────────────┼───────────────────────────────────────────┤ │ Achangbo │ Northern Burma / Yunnan │ Achang ethnic group; retainer-warriors │ │ │ │ who stood beside the Sawbwas │ ├─────────────────┼───────────────────────────────┼───────────────────────────────────────────┤ │ Mangyun │ Dehong Dai Prefecture │ Mangyun town along Yunnan-Myanmar trade │ │ │ │ and migration routes │ ├─────────────────┼───────────────────────────────┼───────────────────────────────────────────┤ │ Mengyangbo │ Sipsongpanna (Xishuangbanna) │ Mengyang region in Southern Yunnan │ └─────────────────┴───────────────────────────────┴───────────────────────────────────────────┘ 1. The Lawa / Luwa Clan (Northern Thailand / Chiang Mai Connection) Certain Limbu lineages identify as Lawa or Luwa. The Chiang Mai Link: The Lawa (also known as Lua) are the indigenous Austroasiatic inhabitants of Northern Thailand, particularly the valley of Chiang Mai, who lived there long before the arrival of the Tai Yuan people. Identical Spiritual Culture: The Lawa/Luwa sub-clans within the Limbu community retain a ritual system centered on mang spirit worshipping and a sammang priesthood. This structure mirrors the traditional religion of the Lawa in Chiang Mai, who practice ancestral spirit appeasement (Mang/Muen) led by ritual specialists with near-identical terminology and functions to the Limbu Sammang and Phedangma. https://preview.redd.it/bnnr9rvbonjh1.png?width=635&format=png&auto=webp&s=c6e5e6e4105068cc00ad4b6ac305e42ea7826137 https://preview.redd.it/uwpsj12bonjh1.png?width=683&format=png&auto=webp&s=3b21a79498c1644b7e17b4bf0f5cc1af85c15b30 2. The Paulungwa Clan (The Palaung / Ta'ang Connection) The Paulungwa clan name translates directly as \"the people of Palaung.\" Ethno-Origins: The Palaung (who call themselves Ta'ang) are an Austroasiatic ethnic group native to the mountain ranges of Northern Shan State and the Shweli River basin. Migration Context: As Shan and Burmese wars devastated the Shweli River area, groups of Palaung hill-dwellers migrated alongside Tibeto-Burman populations moving westward. Upon integrating into the broader Limbu tribal confederacy in eastern Nepal, they retained their ethnic origin as their clan title: Paulungwa. 3. The Achangbo Clan (The Achang Warriors) The Achangbo clan literally means \"the Achang people.\" Historical Role: The Achang are an indigenous Sino-Tibetan ethnic group native to Longchuan County in Dehong, Yunnan, and adjacent parts of Northern Burma. Standing Beside the Sawbwas: Historically, the Achang were renowned weapon-smiths (famous for forging the Achang sword) and military retainers who served directly under the Tai/Shan Sawbwas. The Limbu designation Achangbo specifically remembers them as the \"Achang people who stood beside the Sawbwas\" during administrative rule and subsequent military retreats. 4. The Mangyun Clan (Dehong, Yunnan) The Mangyun clan carries a direct geographic name. Geography: Mangyun is a historic border town located in the Dehong Dai and Jingpo Autonomous Prefecture of Yunnan, situated right along the ancient trade and migration route connecting China, Northern Burma, and Assam. Lineage Persistence: Families originating from this specific transit hub maintained Mangyun as their clan designator to mark their point of departure during the migrations. 5. The Mengyangbo Clan (Sipsongpanna / Xishuangbanna) The Mengyangbo clan traces its lineage to Mengyang, a major historic district located in Sipsongpanna (Xishuangbanna), the southernmost prefecture of Yunnan bordering Laos and Myanmar. The suffix -bo (\"people of\") designates them as the migrants who moved out of Sipsongpanna during the shifts in regional power. 5. How the Himalayan Migration Mechanics Worked A common point of confusion is how people from Northern Thailand (Chiang Mai), Southern Yunnan (Sipsongpanna), Central Burma (Sittang Valley), and Northern Burma (Mong Kawng) could all end up merged into a single ethnic umbrella—the Limbu (Yakthung)—in the Eastern Himalayas. ┌────────────────────────────────────────────────────────────────────────┐ │ SOUTHEAST ASIAN ORIGINS │ │ │ │ Austroasiatic (Lawa, Palaung) + Tibeto-Burman (Achang) + Tai/Dai │ └────────────────────────────────────────────────────────────────────────┘ │ [Displacement via Burmese/Shan Wars] │ ▼ ┌────────────────────────────────────────────────────────────────────────┐ │ THE BRAHMAPUTRA CORRIDOR │ │ │ │ Movement through Assam & Northeast India Frontiers │ └────────────────────────────────────────────────────────────────────────┘ │ [Integration through Mundhum Law & Intermarriage] │ ▼ ┌────────────────────────────────────────────────────────────────────────┐ │ EASTERN NEPAL & SIKKIM │ │ │ │ Synthesis into the Unified Yakthung / Limbu Ethno-State │ └────────────────────────────────────────────────────────────────────────┘ The Multi-Ethnic Corridor: The frontier stretching from Northern Thailand through Burma to Northeast India was never home to isolated, static groups. It was a fluid migration highway. When major political disruptions occurred—such as the Bamar conquest of the Shan states or the fall of Mong Mao—entire multi-ethnic populations fled together. Absorption and Ethno-Genesis: As Austroasiatic groups (Lawa, Palaung), Tibeto-Burman clans (Achang), and local valley dwellers fled westward, they traveled along the Brahmaputra corridor into Northeast India and eastern Nepal. The Yakthung Crucible: In the eastern Himalayan hills, these diverse refugee streams settled alongside the indigenous Yakthungba inhabitants. Through the unifying framework of the Mundhum, intermarriage, and shared defense against external empires, these distinct clans coalesced into the Limbu nation. They did not abandon their past; instead, they preserved their diverse origins within their clan names (Paulungwa, Lawa, Achangbo, Mangyun), their administrative memories (the 10 Hengs of Sittang), and their sacred priestly lineages (Phedangma, Samba, Sammang). Conclusion Limbu history makes complete sense once viewed through the lens of historical geography and Southeast Asian ethnohistory. The references to Mong Mawrong (Shweli River), Mong Kawng (Northern Burma), Mong Tai Chiang Mai, and the Sittang Valley are accurate historical landmarks of a long westward journey. The displacement was driven by the sweep of Bamar imperial expansion, which destabilized river valleys and triggered refugee waves. Guided by 10 Hengs and protected by their Phedangmas, Sambas, and Sammangs, these resilient communities carried their places, lineages, and ancient spiritual traditions across thousands of miles, embedding the geography of Southeast Asia forever into the heart of the Eastern Himalayas.",
+        "text_excerpt": "Limbu history mentions displacement from many places such as Mong Mawrong, Sittang Valley Mong Kawng, Mong Tai Chiang Mai. Make it Make sense.\nTo decode the oral traditions and historical memory of the Limbu (Yakthung) people, one must step away from modern nation-state borders and look instead at the historic migration corridors of Mainland Southeast Asia, Southwest China, and the Eastern Himalayas. For generations,…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-08-16T06:03:33Z",
+        "last_collected_at": "2026-08-16T06:03:33Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:3449",
+        "timestamp": "2026-08-16T03:00:14Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2088823117628026957",
+        "author": "Breaking_Battle",
+        "url": "https://x.com/Breaking_Battle/status/2088823117628026957",
+        "source_url": "https://x.com/Breaking_Battle/status/2088823117628026957",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "tunnel"
+        ],
+        "freshness_cues": [],
+        "text": "A tense confrontation erupted along the Lithuania-Belarus border after Lithuanian guards discovered a tunnel near the Lazdijai district. Reports say a group of around 20 migrants confronted four border officers before retreating back toward Belarus. Lithuanian authorities have https://t.co/wuAENiS6lF",
+        "text_excerpt": "A tense confrontation erupted along the Lithuania-Belarus border after Lithuanian guards discovered a tunnel near the Lazdijai district. Reports say a group of around 20 migrants confronted four border officers before retreating back toward Belarus. Lithuanian authorities have https://t.co/wuAENiS6lF",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-08-16T06:04:34Z",
+        "last_collected_at": "2026-08-16T06:04:34Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "early_warning:153",
+        "timestamp": "2026-08-16T02:27:31Z",
+        "layer": "EARLY_WARNING",
+        "type": "CROSSING_FACILITATION",
+        "signal_type": "CROSSING_FACILITATION",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1vpl0zw",
+        "author": "AutoNewspaperAdmin",
+        "url": "https://www.reddit.com/r/AutoNewspaper/comments/1vpl0zw/top_stories_morocco_detains_dozens_of_migrants/",
+        "source_url": "https://www.reddit.com/r/AutoNewspaper/comments/1vpl0zw/top_stories_morocco_detains_dozens_of_migrants/",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "Ceuta",
+        "primary_location": "Ceuta",
+        "country": "Spain",
+        "confidence": 0.89,
+        "priority": "HIGH",
+        "priority_score": 68.15,
+        "analyst_priority": "HIGH",
+        "text": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say | BBC",
+        "text_excerpt": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say | BBC",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "DIRECT",
+        "signal_intent": "EASIER_CROSSING",
+        "detection_count": 1,
+        "first_detected_at": "2026-08-16T06:03:34Z",
+        "last_detected_at": "2026-08-16T06:03:34Z"
+      },
+      {
+        "timeline_id": "early_warning:154",
+        "timestamp": "2026-08-16T02:24:38Z",
+        "layer": "EARLY_WARNING",
+        "type": "CROSSING_FACILITATION",
+        "signal_type": "CROSSING_FACILITATION",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1vpkytc",
+        "author": "AutoNewsAdmin",
+        "url": "https://www.reddit.com/r/BBCauto/comments/1vpkytc/top_stories_morocco_detains_dozens_of_migrants/",
+        "source_url": "https://www.reddit.com/r/BBCauto/comments/1vpkytc/top_stories_morocco_detains_dozens_of_migrants/",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "Ceuta",
+        "primary_location": "Ceuta",
+        "country": "Spain",
+        "confidence": 0.89,
+        "priority": "HIGH",
+        "priority_score": 68.15,
+        "analyst_priority": "HIGH",
+        "text": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say",
+        "text_excerpt": "[Top Stories] - Morocco detains dozens of migrants trying to cross into Ceuta, reports say",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "DIRECT",
+        "signal_intent": "EASIER_CROSSING",
+        "detection_count": 1,
+        "first_detected_at": "2026-08-16T06:03:34Z",
+        "last_detected_at": "2026-08-16T06:03:34Z"
+      },
+      {
+        "timeline_id": "operational:164",
+        "timestamp": "2026-08-16T01:02:48Z",
+        "layer": "OPERATIONAL",
+        "type": "MIGRANT_CAMP",
+        "signal_type": "MIGRANT_CAMP",
+        "event_type": "MIGRANT_CAMP",
+        "source": "MASTODON",
+        "source_post_id": "mastodon_117102488347561241",
+        "author": null,
+        "url": "https://mastodon.au/@FusionPartyAus/117102488347561241",
+        "source_url": "https://mastodon.au/@FusionPartyAus/117102488347561241",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.5,
+        "priority": "MEDIUM",
+        "priority_score": 50.0,
+        "text": "The federal government made the CRISP program permanent after a four-year trial that settled more than 950 refugees through community volunteers. In Orange, NSW, the Hearts and Hands group met a Congolese family of eight at the airport who spent over two decades in a refugee camp. Eighteen months later, the father works in social services, has a licence, owns a car, and his kids are thriving. A UQ review found CRISP refugees matched or beat government settlement outcomes, with regional areas achieving \"notably higher\" employment rates. The political duopoly stokes immigration fear while communities are already building real solutions. The program is now permanent. The lesson: communities don't need permission to welcome. # auspol # refugees",
+        "text_excerpt": "The federal government made the CRISP program permanent after a four-year trial that settled more than 950 refugees through community volunteers. In Orange, NSW, the Hearts and Hands group met a Congolese family of eight at the airport who spent over two decades in a refugee camp. Eighteen months later, the father works in social services, has a licence, owns a car, and his kids are thriving. A UQ review found CRISP…",
+        "event_group_id": 129,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null
+      },
+      {
+        "timeline_id": "information:3450",
+        "timestamp": "2026-08-15T20:59:20Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "MASTODON",
+        "source_post_id": "mastodon_117101531030698278",
+        "author": null,
+        "url": "https://universeodon.com/@digyoursoul/117101531030698278",
+        "source_url": "https://universeodon.com/@digyoursoul/117101531030698278",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 40,
+        "information_score": 4,
+        "matched_information_cues": [
+          "detention",
+          "deportation",
+          "trafficking"
+        ],
+        "freshness_cues": [
+          "now"
+        ],
+        "text": "EVIL NAZI Stephen Miller stripped legal representation from 24,000 detained children-some just 3 years old, then handed *a $244 MILLION contract to an NGO whose founder went to trial on SEX TRAFFICKING Charges!* Now toddlers face deportation hearings alone on video screens. # nazi # stephenmiller # trafficking # maga https://www. publicnotice.co/p/stephen-mill er-child-deportation",
+        "text_excerpt": "EVIL NAZI Stephen Miller stripped legal representation from 24,000 detained children-some just 3 years old, then handed *a $244 MILLION contract to an NGO whose founder went to trial on SEX TRAFFICKING Charges!* Now toddlers face deportation hearings alone on video screens. # nazi # stephenmiller # trafficking # maga https://www. publicnotice.co/p/stephen-mill er-child-deportation",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-08-16T06:04:36Z",
+        "last_collected_at": "2026-08-16T06:04:36Z",
+        "collection_count": 1
+      },
       {
         "timeline_id": "early_warning:143",
         "timestamp": "2026-08-15T19:24:32Z",
@@ -6672,9 +7872,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "FACILITATION_REVIEW",
-        "detection_count": 5,
+        "detection_count": 6,
         "first_detected_at": "2026-08-14T18:54:37Z",
-        "last_detected_at": "2026-08-15T19:15:53Z"
+        "last_detected_at": "2026-08-16T06:04:35Z"
       },
       {
         "timeline_id": "information:3116",
@@ -7971,8 +9171,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-08-14T04:38:53Z",
-        "last_collected_at": "2026-08-15T19:27:25Z",
-        "collection_count": 8
+        "last_collected_at": "2026-08-16T06:04:36Z",
+        "collection_count": 9
       },
       {
         "timeline_id": "information:2973",
@@ -8059,8 +9259,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-08-14T04:38:13Z",
-        "last_collected_at": "2026-08-15T19:27:55Z",
-        "collection_count": 8
+        "last_collected_at": "2026-08-16T06:04:35Z",
+        "collection_count": 9
       },
       {
         "timeline_id": "information:2975",
@@ -8104,8 +9304,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-08-14T04:38:14Z",
-        "last_collected_at": "2026-08-15T19:27:56Z",
-        "collection_count": 8
+        "last_collected_at": "2026-08-16T06:04:35Z",
+        "collection_count": 9
       },
       {
         "timeline_id": "operational:147",
@@ -8209,8 +9409,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-08-14T04:38:15Z",
-        "last_collected_at": "2026-08-15T19:26:56Z",
-        "collection_count": 8
+        "last_collected_at": "2026-08-16T06:04:07Z",
+        "collection_count": 9
       },
       {
         "timeline_id": "early_warning:107",
@@ -8240,9 +9440,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "FACILITATION_REVIEW",
-        "detection_count": 7,
+        "detection_count": 8,
         "first_detected_at": "2026-08-14T04:38:53Z",
-        "last_detected_at": "2026-08-15T19:15:55Z"
+        "last_detected_at": "2026-08-16T06:04:36Z"
       },
       {
         "timeline_id": "operational:148",
@@ -26055,43 +27255,6 @@
         "event_time_confidence": null
       },
       {
-        "timeline_id": "information:1641",
-        "timestamp": "2026-07-06T21:42:05Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2074247536940879876",
-        "author": "derzum_",
-        "url": "https://x.com/derzum_/status/2074247536940879876",
-        "source_url": "https://x.com/derzum_/status/2074247536940879876",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "detention",
-          "deportation"
-        ],
-        "freshness_cues": [],
-        "text": "The Trump admin is detaining and deporting a record number of migrant juveniles — and others who entered as children — to prevent a permanent problem by sending them home.\n\nCourts have issued over 10k removal orders for minors each month, and actual removals are rising to match. https://t.co/l1ng3SrKVG",
-        "text_excerpt": "The Trump admin is detaining and deporting a record number of migrant juveniles — and others who entered as children — to prevent a permanent problem by sending them home.\n\nCourts have issued over 10k removal orders for minors each month, and actual removals are rising to match. https://t.co/l1ng3SrKVG",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-08-11T11:58:14Z",
-        "last_collected_at": "2026-08-11T11:58:14Z",
-        "collection_count": 1
-      },
-      {
         "timeline_id": "operational:99",
         "timestamp": "2026-07-05T23:34:54Z",
         "layer": "OPERATIONAL",
@@ -26121,43 +27284,6 @@
         "event_time_text": null,
         "event_time_normalized": null,
         "event_time_confidence": null
-      },
-      {
-        "timeline_id": "information:1621",
-        "timestamp": "2026-07-05T22:53:48Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2073903200030032311",
-        "author": "OrdinariateUSA",
-        "url": "https://x.com/OrdinariateUSA/status/2073903200030032311",
-        "source_url": "https://x.com/OrdinariateUSA/status/2073903200030032311",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "deportation"
-        ],
-        "freshness_cues": [],
-        "text": "I don’t expect Bob the Border Destroyer to call for mass deportations. That’s unrealistic for a religious leader and that’s the governments job anyway \n\nWhat shocks me is that he hasn’t once called for the conversion of the migrants to Christ. He hasn’t once condemned the rape, https://t.co/H9Kh0fM4dF",
-        "text_excerpt": "I don’t expect Bob the Border Destroyer to call for mass deportations. That’s unrealistic for a religious leader and that’s the governments job anyway \n\nWhat shocks me is that he hasn’t once called for the conversion of the migrants to Christ. He hasn’t once condemned the rape, https://t.co/H9Kh0fM4dF",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-08-11T11:58:13Z",
-        "last_collected_at": "2026-08-11T11:58:13Z",
-        "collection_count": 1
       },
       {
         "timeline_id": "operational:100",
