@@ -1,28 +1,28 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-08-27T20:49:21Z",
-  "generated_at": "2026-08-27T20:49:21Z",
+  "updated_at": "2026-08-28T04:25:22Z",
+  "generated_at": "2026-08-28T04:25:22Z",
   "current_run": {
     "available": true,
-    "id": 94,
-    "run_uuid": "16f6af5b-0409-4323-9175-be39efb646af",
-    "started_at": "2026-08-27T20:45:26Z",
-    "completed_at": "2026-08-27T20:49:19Z",
+    "id": 95,
+    "run_uuid": "1c60cb17-99a1-4ba9-a8dd-317dbebb5fa5",
+    "started_at": "2026-08-28T04:22:36Z",
+    "completed_at": "2026-08-28T04:25:20Z",
     "status": "SUCCESS",
-    "posts_returned": 135,
-    "unique_posts_collected": 93,
-    "x_posts_returned": 49,
-    "reddit_posts_returned": 32,
+    "posts_returned": 128,
+    "unique_posts_collected": 94,
+    "x_posts_returned": 50,
+    "reddit_posts_returned": 24,
     "mastodon_posts_returned": 50,
-    "unique_x_posts": 42,
-    "unique_reddit_posts": 25,
-    "unique_mastodon_posts": 23,
-    "noise_filtered": 1,
-    "non_operational_filtered": 88,
-    "historical_references_filtered": 0,
-    "influence_signals": 0,
-    "influence_signals_detected": 0,
-    "crossing_facilitation_signals": 0,
+    "unique_x_posts": 47,
+    "unique_reddit_posts": 22,
+    "unique_mastodon_posts": 22,
+    "noise_filtered": 0,
+    "non_operational_filtered": 92,
+    "historical_references_filtered": 1,
+    "influence_signals": 1,
+    "influence_signals_detected": 1,
+    "crossing_facilitation_signals": 1,
     "legal_migration_signals": 0,
     "policy_signals": 0,
     "recruitment_coordination_signals": 0,
@@ -30,22 +30,22 @@
     "mobilization_report_signals": 0,
     "decision_influence_signals": 0,
     "online_influence_report_signals": 0,
-    "operational_events": 4,
-    "operational_events_analyzed": 4,
-    "historical_events_available": 63,
+    "operational_events": 1,
+    "operational_events_analyzed": 1,
+    "historical_events_available": 67,
     "new_correlations": 0,
     "correlated_events": 0,
-    "new_correlation_groups": 4,
+    "new_correlation_groups": 1,
     "database_correlations": 0,
     "current_run_correlations": 0,
-    "new_events": 4,
-    "new_events_saved": 4,
+    "new_events": 1,
+    "new_events_saved": 1,
     "events_already_existing": 0,
-    "new_event_groups": 4,
+    "new_event_groups": 1,
     "updated_event_groups": 0,
     "bootstrapped_event_groups": 0,
     "existing_event_groups_reused": 0,
-    "event_group_sources_linked": 4,
+    "event_group_sources_linked": 1,
     "x_collector_errors": 0,
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
@@ -53,22 +53,44 @@
   },
   "kpis": {
     "operational_events": 5,
-    "new_events": 4,
-    "correlated_events": 1,
-    "active_event_groups": 184,
+    "new_events": 1,
+    "correlated_events": 0,
+    "active_event_groups": 185,
     "sources": 4,
-    "regions": 2,
-    "collected_posts_24h": 164,
+    "regions": 1,
+    "collected_posts_24h": 144,
     "influence_signals": 5,
     "access_signals": 0,
     "high_priority": 0,
-    "current_run_operational_events": 4,
-    "current_run_unique_posts": 93,
+    "current_run_operational_events": 1,
+    "current_run_unique_posts": 94,
     "access_signals_raw": 0,
     "influence_signals_raw": 5,
     "influence_narratives": 3
   },
   "live_events": [
+    {
+      "id": 260,
+      "event_id": 260,
+      "source": "X",
+      "source_post_id": "2093192426017943663",
+      "author": "danny_hellman",
+      "published_at": "2026-08-28T04:22:18Z",
+      "collected_at": "2026-08-28T04:23:13Z",
+      "event_type": "DEPORTATION",
+      "signal_type": "DEPORTATION",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.25,
+      "event_confidence": 0.25,
+      "relevance_score": 10.0,
+      "text": "@AdelmanCheri @mdoernte822 @ChrisMurphyCT @realDonaldTrump @GOP @GOPSenate @GOPHouse I agree. Illegal migrants who commit crimes while in the US should do jail time commensurate with their crimes, as well as being deported, while those guilty of no crime other than violating US immigration law should merely be deported.",
+      "url": "https://x.com/danny_hellman/status/2093192426017943663",
+      "source_url": "https://x.com/danny_hellman/status/2093192426017943663"
+    },
     {
       "id": 256,
       "event_id": 256,
@@ -486,31 +508,38 @@
       "text": "Tunisian volunteers search for two missing migrants as deadly boat sinking triggers protests over hardship and lack of opportunities. https://t.co/ARx8h5JKrC https://t.co/sZkpbUrrDA",
       "url": "https://x.com/ARISEtv/status/2092182447093878792",
       "source_url": "https://x.com/ARISEtv/status/2092182447093878792"
-    },
-    {
-      "id": 241,
-      "event_id": 241,
-      "source": "REDDIT",
-      "source_post_id": "reddit_1vxum89",
-      "author": "Naurgul",
-      "published_at": "2026-08-25T09:12:00Z",
-      "collected_at": "2026-08-25T09:59:48Z",
-      "event_type": "BORDER_CROSSING",
-      "signal_type": "BORDER_CROSSING",
-      "primary_location": "-",
-      "location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "confidence": 0.55,
-      "event_confidence": 0.55,
-      "relevance_score": 30.0,
-      "text": "Meloni made migrant 'returns' popular in the EU. Now the policy is backfiring on her\nMeloni championed irregular migrant “returns” in a hardline push to externalise EU borders. Now, more member states are asking Italy to take back migrants under the first-arrival principle. Giorgia Meloni was one of the main political sponsors of a policy of “returns” for irregular migrants. Now, as a growing number of EU countries push Rome to take back migrants who entered the bloc through Italy, she is getting a taste of her own medicine. On Sunday, Ireland became the latest in a growing number of member states to call on Italy, as a country of first entry into the EU, to take back asylum seekers. It joins Germany, Switzerland, Austria, Finland, Sweden and the Netherlands. The requests stem from the new EU Pact on Asylum and Migration, which reaffirms a key principle of the Dublin system: the EU country where a non-EU national first enters the bloc and applies for protection should handle their asylum claim. A few weeks after Meloni took office in 2022, Italy unilaterally suspended the reception of Dublin transfers, citing practical and capacity constraints. The European Commission has considered the move a breach of Italy’s Dublin obligations, a position also upheld by the EU Court of Justice in several rulings. New Pact on Asylum and Migration Since the Dublin Convention entered into force in 1997, some European governments have tried to scrap this principle, arguing it overwhelms countries geographically exposed to first entry, such as Spain, France, Italy, Greece and, more recently, Cyprus. After failing to reform the EU asylum system in the 2014-2019 legislature, EU lawmakers succeeded in the next one, delivering a new asylum and border management system — the EU Migration and Asylum Pact — which entered into force in June 2026. The pact reaffirms the return principle, requiring asylum seekers who move onward to be transferred back to their EU country of first entry, which makes secondary movements from Italy to another EU country far more complicated. In particular, the new Pact modified the Dublin rules by replacing the previous ‘take-back request’ procedure for secondary movements with a simpler notification mechanism. This removes the need for the responsible member state to formally accept a take-back request, which Italy virtually never did. At the same time, the pact foresees a mandatory solidarity system among the EU countries, but the annual number of relocations remains too low to deliver any meaningful redistribution. In 2026, only 8,878 migrant people will be relocated from countries considered \"under migratory pressure\", Italy, Spain, Greece, Cyprus and Malta, to other EU member states. Last year, over 66,000 irregular migrants arrived in Italy by sea and Frontex recorded almost 178,000 irregular crossings into the EU.",
-      "url": "https://www.reddit.com/r/europes/comments/1vxum89/meloni_made_migrant_returns_popular_in_the_eu_now/",
-      "source_url": "https://www.reddit.com/r/europes/comments/1vxum89/meloni_made_migrant_returns_popular_in_the_eu_now/"
     }
   ],
   "event_groups": [
+    {
+      "id": 204,
+      "group_id": 204,
+      "event_type": "DEPORTATION",
+      "dominant_event_type": "DEPORTATION",
+      "title": "DEPORTATION",
+      "representative_text": "@AdelmanCheri @mdoernte822 @ChrisMurphyCT @realDonaldTrump @GOP @GOPSenate @GOPHouse I agree. Illegal migrants who commit crimes while in the US should do jail time commensurate with their crimes, as well as being deported, while those guilty of no crime other than violating US immigration law should merely be deported.",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "primary_location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "first_seen": "2026-08-28T04:22:18Z",
+      "last_seen": "2026-08-28T04:22:18Z",
+      "source_count": 1,
+      "sources_count": 1,
+      "source_types": [
+        "X"
+      ],
+      "sources": [
+        "X"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.25,
+      "average_confidence": 0.25,
+      "created_at": "2026-08-28T04:23:13Z",
+      "updated_at": "2026-08-28T04:23:13Z"
+    },
     {
       "id": 200,
       "group_id": 200,
@@ -773,138 +802,95 @@
       "average_confidence": 0.25,
       "created_at": "2026-08-26T16:33:02Z",
       "updated_at": "2026-08-26T16:33:02Z"
-    },
-    {
-      "id": 197,
-      "group_id": 197,
-      "event_type": "SMUGGLING_ACTIVITY",
-      "dominant_event_type": "SMUGGLING_ACTIVITY",
-      "title": "SMUGGLING_ACTIVITY - CENTRAL_MEDITERRANEAN",
-      "representative_text": "AUSTRIA/HUNGARY: A highway worker was mowing grass on the side of the highway when he took notice of a foul smelling truck that had been parked on the side of the road for a day. When the police investigated, they discovered 71 dead bodies inside the trailer, including four children. (Part 1)\n(So for today's write-up, I am making an exception to my typical rule of not covering any cases that have an article on the English Wikipedia, as I try to opt for more obscure cases. But I'm making an exception here because the English Wikipedia article is quite short, and I've always wanted to cover one of these cases, but the one I've found from Bulgaria unfortunately has the trial \"frozen,\" and it seems unlikely it'll ever continue any time soon This is also a big write-up I've been meaning to tackle for a while, and even now, I still didn't include everything; if I did, this may have run for three parts) On the morning of August 27, 2015, an employee of ASFINAG, the Austrian state motorway operator, was mowing the grass along the A4 Ostautobahn just outside the village of Parndorf in the state of Burgenland, only a 20-minute drive from the Hungarian border. As he was mowing the grass, he approached a stationary refrigerated trailer truck left abandoned on the roadside. The truck bore both Hungarian license plates and the branding of a Slovak poultry company named Hyza, with Slovak text written all over the trailer's livery. Based on where the truck was discarded, it stood to reason that it had crossed the border very recently. The truck Seeing abandoned vehicles on the side of the road wasn't too unusual; perhaps the truck driver had simply suffered a mechanical failure. But this truck was in fact quite odd in the sense that it was truly abandoned; there was no driver in sight. The vehicle was also giving off an extremely foul scent, unlike anything he had smelled before, and finally, through the crevices of the trailer's doors, a reddish-brown liquid was dripping onto the asphalt. Desperately hoping that it was perhaps just the chicken they may have been transporting, the ASFINAG employee nervously called the police. The first officers to arrive at the scene were from the highway police dispatched out of Potzneusiedl. As the police pulled up to the vehicle, one thing aside from the smell struck them immideately; they recognized the truck. At 7:45 a.m., while responding to a different call, they had driven right past the truck. It was now 11:00 a.m., and the truck was still there. Just like with the ASFINAG employee, the stench the truck was giving off was overwhelming; the officers would go on to say that the only word they could use to describe how horrible the odour was was \"indescribable\". The officers also felt a certain degree of dread about what they might find; even from the outside, they noticed that the walls of the trailer had been dented outward and, in one place, partially slashed open as if something or someone from the inside had thrown themselves against the walls with all their might. The police knew they'd have to open the trailer doors eventually, but with how bad the smell was just from the outside, they decided to save that for last. Starting with the cab, the door was unlocked, and before they even knew what kind of crime may have taken place, they got their first lead as to who was responsible. In their rush to leave, the driver had left behind a purchase-and-sale document in the name of a Bulgarian citizen named Kassim S, who purchased the vehicle from a used-car dealership in Kecskemét, Hungary. Next, they finally opened the trailer. Well, it wasn't quite that simple; the trailer doors were unlocked, but somebody had tied pieces of wire around the handles. Upon removing the wire and opening the doors, the smell became so much worse and seeing the contents of the trailer didn't make them feel any less sick. The trailer was full of dead bodies piled against one another, sunk into each other; the scene was compared to \"passengers on a crowded subway who had fallen asleep while standing up\". How packed together the truck was All the corpses were submerged up to their ankles in a pool of feces, urine, and decomposition fluid, mixed and now spilling out onto the highway once the doors were opened. They called out into the hot, dark trailer, hoping for survivors, but heard nothing but the sounds of flowing liquids. Eventually, they finally went back to their car to request as much backup as possible from dispatch, telling them that there were \"approximately 20 dead\" inside the trailer. Several additional police officers arrived to set up a perimeter around the truck and brought a full forensic team with them. https://preview.redd.it/ektnhuve5mlh1.png?width=1200&format=png&auto=webp&s=6f3513519d0e3267471f6fed57a54dfe615e1434 https://preview.redd.it/lj0dvwtf5mlh1.png?width=1568&format=png&auto=webp&s=79fa84bdd7bfff88ea16b738b36cedb3da61e6ff The police and forensics at the scene Not every officer or forensic technician was quite as horrified by what they saw, though. One of the first responding officers had taken a picture and sent it to his police station so the higher-ups and their backup would have adequate warning of what they were dealing with; one of those in the chat would leak those photos to the press, who published them in the next day's newspaper. 17 officers were investigated for this, but no charges were filed, as it could never be determined who had leaked the image. As for the newspapers, they would defend publishing the images, saying they were the only way to convey the tragedy to their readers and to push those in charge to enact real change. Ultimately, the police and forensics didn't spend a long time on the highway; it was too vital a lifeline and too big a crime scene to conduct the investigation on site, let alone remove the bodies. So instead, the police summoned a tow truck to remove the vehicle and then commandeered a veterinary border inspection station in Nickelsdorf to be their makeshift morgue, as it was the closest facility with enough AC and space for the work ahead of them. The truck after being transported. Once they arrived, one by one the bodies were removed from the truck, and it became clear that the responding officers' initial count was quite off. Rather than 20 bodies, they instead removed a total of 71 corpses from the semi-truck and, in so doing, confirmed that there were no survivors. Of those 71, 59 were men, 8 were women, and 4 were children, including, tragically enough, a baby. With all the bodies removed, investigators could also step inside the trailer for their investigation. The conditions were awful. The area was 6 metres long and 2.15 metres wide, with no windows, seating or anything to grab onto. The cause of death was also clear to the investigators; despite being a refrigerated trailer, there was no refrigeration taking place. The cooling unit/AC showed no evidence that it had ever been turned on and running; in fact, it wasn't even connected. But even if it was, it would be insufficient to supply enough fresh air regardless. Additionally, the truck wasn't even roadworthy and maintenance to the vehicle itself had been neglected. With no fresh oxygen from the outside and with the outside temperature exceeding 30 degrees celcius, suffocation and then decomposition would've occurred around three hours after beginning the journey. They also would've struggled fiercely; there were scratch marks across the walls, and some of the victims had broken off their fingernails, which also caused blood to be one of the many liquids pooling on the floor. With that estimate in mind, that meant all 71 victims were dead before the vehicle ever crossed the Austrian border, which meant if they caught those responsible, prosecuting them for the deaths of the victims would fall on Hungary. As for who the victims were, identifying all 71 by name would be a time-consuming task, but based on their physical appearances and the circumstances of their discovery, the police concluded that they were likely Middle Eastern refugees and Migrants who were likely meant to be smuggled into another EU country like Germany. Several additional investigators were called in and assigned a body, which at the time was simply addressed as \"Body No. 1\" to \"Body No. 71\" It was a grizzly task for those it was assigned to; scraps of flesh and skin were peeled off when they tried to remove the victim's clothing and backpacks, as in the heat, their skin had practically adhered to them. The police could also tell some of the victims were family since quite a few of the corpses were found in an embrace, while the children among the group had been held up toward the ceiling by their parents, where the last bits of breathable air had pooled. Some victims were relatively easy to identify as they had brought their passports with them, and those passports were all from one of four countries: Iraq, Syria, Iran or Afghanistan. Some also carried a military ID, student IDs, photos, prescription medication, vaccination and marriage documents, and one had a teaching diploma from Syria sewn into his clothing. An Iranian marriage and vaccination certificate found in the truck. Other bodies would require more work. There were quite a few cellphones found inside the trailer, but most of them had been destroyed due to the heat and being submerged in the mixture of excrement, urine and decomposition fluid. One thing the police could determine about the victims they were so far unable to identify was their backgrounds. Based on their teeth, they had likely come from decently prosperous backgrounds; if they were able to maintain their teeth to the degree seen, it would also explain the large amount of currency the police recovered, consisting of Euros, Turkish lira and Serbian dinars. Finally, in identifying those responsible for their deaths, the forensic team did find one palm print on the exterior of the vehicle on the driver's side door, with DNA that the investigators were able to retrieve and hopefully use to identify the driver. The bodies were discovered the same day as the second Western Balkan Conference in Vienna, which was hosting the heads of government and foreign ministers of 10 Balkan and EU states, including German Chancellor Angela Merkel, to discuss economic development of the region and the ongoing refugee crisis in Europe. The timing made the second part of the now-overshadowed conference a far more pressing issue. Austria's federal president, Heinz Fischer, was among those in attendance, and he heard of the discovery mid-press conference, when he called for a moment of silence. Merkel addressed reporters outside of the conference, saying that \"We are all shaken by the terrible events,\". She stood alongside Austrian Chancellor Werner Faymann, who said, \"The smugglers must not be stronger than we are.\" Additionally, Austrian Interior Minister Johanna Mikl-Leitner and the Burgenland state police chief had been scheduled to hold a joint press conference in Nickelsdorf at the Hungarian border to address the ever-growing number of Middle Eastern refugees crossing into Austria from Hungary. As they were preparing for the press conference, the police had just finished towing the truck into Nickelsdorf, with news of the tragedy reaching them not long afterward, prompting them to cancel the press conference at the last minute. They then held a different press conference in Eisenstadt, where those watching saw how visibly uneasy the two were as they discussed the \"numerous dead\". Mikl-Leitner also called the incident a \"Dark day for Austria\" and said that \"Anyone who still believes that smugglers are benevolent helpers of refugees is beyond help\" When asked how the truck slipped through the cracks, they answered that smugglers typically used smaller vehicles, so they didn't recognize the semi-truck as a \"smuggler's vehicle,\" combined with the fact that with over 100 trucks crossing the border, a comprehensive check of them all would be impossible. Meanwhile, Fidez, Hungary's ruling party at the time, also condemned the tragedy and expressed their sympathies to the victims, but also blamed the incident on the EU's immigration policies, arguing that stricter border control was necessary to \"protect the lives of those misled and often deceived people who are being put at risk by irresponsible, profiteering, and prison-deserving human traffickers.\" It was such a shocking event that regular programming on Austrian TV Channels was interrupted to cover it. By 12:48 p.m., only an hour after it was found, several foreign outlets, including those from outside of Europe, began reporting on the case. As for how this problem came to be, Hungary used to be home to the largest numbers of asylum applicants in Europe who sought to use Hungary as a transit point to other EU nations like Germany, as the country was in the Schengen Area and directly on the way to Germany from the Balkans, where most first entered Europe. In 2013, Hungary recorded only 18,000, but by 2015, that number had jumped up to 170,000. Illegal border crossings produced even bigger numbers. Between January and August 2015 alone, roughly 400,000 migrants passed through Hungarian territory heading for the west. On August 23, 2015, alone, over 3,080 migrants crossed the border into Hungary from Serbia, followed by 2,890 on August 24. Under Prime Minister Viktor Orbán, Hungary made several attempts to crack down on this practice with Hungary beginning the construction of a 175-kilometre razor wire fence along the entire Hungarian-Serbian border, as well as having police posted at the rail stations to stop any suspected migrants from boarding westward trains. Sometimes, Hungarian police would drag them off the train even if they did have valid tickets and papers. Due to these measures, most turned to human smugglers, who soon found a very lucrative trade on their hands. The price for a \"seat\" in one of these packed semi-trucks from Budapest to Vienna could go for 300-400 Euros, while the full journey from Belgrade to Germany sometimes reached prices of 1,500 and 1,600 Euros. The smugglers became highly organized, now employing recruiters actively seeking refugees off the street, transit managers, vehicle providers, drivers, scouts, and money handlers. 5-6 billion USD was brought in from human smuggling alone, and various smugglers had multiple trucks gathered at the truck stop in Röszke, a small Hungarian village only 3 kilometres from the Serbian border, to approach the migrants once they crossed, with their rapidly increasing prices as their \"demand\" was starting to become too much for the trucks they had available. For a time, smuggling Middle Eastern Refugees into Western Europe was a \"business\" said to be just as, if not more, profitable than the drug trade. After the news immediately dominated a majority of the headlines in Europe and overseas, witnesses were quick to come forward. The most credible one claimed that he saw the truck pulled over at around 9:45 a.m. on August 26 and saw a man, likely the driver, get into another car, which wasted no time driving away. As this encounter happened at highway speeds, the witness was unable to give the police any usable descriptions of the men. The police then turned their attention to the truck itself. As mentioned, the trailer had the branding of the Slovak poultry company Hyza, a subsidiary of the Agrofert Holding. However, Hyza were not the owner. Hyza had sold 21 of their refrigerated trucks to seven different buyers. The fateful truck was sold to the Hungarian company MasterMobilKer kft., which had been in bankruptcy proceedings since July 2014, around the same time they purchased the vehicle from Hyza and evidently kept all the branding from its previous owners. Afterward, the Truck was then purchased from a used car dealership in Kecskemét only one week before the deaths by one of the smugglers, who made no attempt to hide his identity, registering the truck under his real name, Kassim S, on August 25. Right now, the purchase document left behind in the truck was the police's biggest lead, and they immideately used that information to alert the Hungarian authorities. The first man was arrested trying to flee across the Serbian border. Then, based on his contacts and after tracing this man's footsteps, they were led to an apartment in Budapest, which was raided, arresting the three people inside. Within just a few hours of the truck being discovered, the police had arrested the gang of smugglers. The owner of the truck, Kassim, was arrested at Kiszombor, right at the border with Romania. The mastermind behind this network was a 30-year-old man from Jalalabad, Afghanistan, named Samsoor Lahoo. Samsoor was born on January 6, 1987, as an ethnic Pashtun. Samsoor Lahoo He entered Hungary illegally from Serbia in March 2013 and was granted \"protected status\" by Hungarian officials and later got a residency permit, ironically making him a refugee himself. Samsoor later married and moved in with a local Hungarian woman. Samsoor was quite educated; he had two university degrees, one in architecture and another in psychology and could speak five languages with perfect fluency, those languages being English, Arabic, Pashto, Serbian, and Croatian, although, funnily enough, not Hungarian. One might assume that as the head of a massive human smuggling operation, Samsoor may have kept a low profile, but they would be wrong. Samsoor had no qualms about being in the public eye and regularly posted on his social media, showing off his BMW sedan and pictures of him on Margaret Island in the centre of Budapest. And speaking of human smuggling, long before getting himself involved in that, he had already built up a criminal record in Hungary, being arrested or investigated several times for speeding, disorderly conduct and even drug offences; in addition, he was once deported from Germany for residing there illegally. At first, Samsoor decided to deal in cars, buying vehicles in Bulgaria and exporting them to Afghanistan, although this later served as a gateway into human trafficking instead. However, if Samsoor is to be believed when he, after his arrest, said he was involved in the human trafficking business for \"14 years,\" he would've started in 2001, back when he was still 14. He did have a prior arrest for human smuggling; in February 2015, he was arrested attempting to transport five Afghan migrants to Italy, assisted by accomplices from Slovakia. This arrest seemed to have no effect on him, and so he kept going. Samsoor's second in command was a 29-30-year-old Bulgarian national named Metodi Georgiev Ivanov, though he often went by the name \"Mityo Krika\". Metodi Georgiev Ivanov Metodi grew up as a member of the Romani community in the northern Bulgarian town of Lom, one of the poorest regions of the European Union, where he still lived with his wife and two daughters aged 8 and 10. Even if he was rarely home, they still saw him as a good husband and father. Although Metodi described himself as an \"uneducated gypsy\", that was entirely by choice since he dropped out of school after 10th grade so he could start selling used cars, buying the vehicles, repairing them and selling them at a higher price. Eventually, he got a job as a minibus driver transporting Bulgarian workers to Western Europe, which was how he came to move to Germany, where he worked as a truck driver, albiet without a license, illegally driving trucks for 5-6 years. Metodi's criminal record was a bit more extensive than Samsoor's; In Bulgaria, he had several arrests for public intoxication and driving without a licence, failing to register for his probation while abroad. But in Germany, his record was a bit more extensive and alarming. In 2009, he was arrested for a nighttime armed robbery at a gas station in Bochum, in which he forced the cashier to hand over approximately 1,000 euros, only to be arrested when he returned to the same gas station as a customer using the same vehicle he fled the scene in and was promptly recognized by the cashier, who called the police. In August and September 2013, he was caught twice driving without a license and fined, only to never pay those fines. Eventually, Metodi was banned from Germany and deported back to Bulgaria. In 2014, while back in his homeland, a friend approched him and offered him a \"nice job,\" saying, \"Every evening you'll make a lot of money. You'll be transporting meat,\" with \"meat\" being a code word for migrants. At first, Metodi was making hardly anything as a driver, but soon he began taking a bigger role, helping to recruit other drivers and soon started to make thousands of Euros per trip he made, enabling him to live a lavish lifestyle back in Lom, buying 4-5 houses and deciding to try his hand at other crimes such as \"pimping\" and fraud. On May 14, 2015, Metodi fled Bulgaria for Hungary to escape his pending prison sentence. In Budapest, he resumed trading cars alongside Kassim S., whom he had known for 5 years. It was at a party in Budapest that he first met Samsoor, who was still buying cars from Bulgaria to export back to Afghanistan. The two became partners, splitting the profits from the cars they sold until, eventually, Samsoor asked Metodi if he could recruit other Bulgarians to be truck drivers who would transport migrants to Germany and Austria and just like that, Metodi became his \"deputy\". All the drivers recruited were exclusively from Bulgaria's poorest regions and mostly from the Roma community in Bulgaria. On July 25, 2015, Metodi was caught near the village of Hengersberg in Bavaria driving a truck with 38 Afghan migrants in the trailer. He and the man with him both fled the scene. Metodi's mother spoke to the media, saying that her son never wanted anyone to die, before adding that the whole area was involved in the \"refugee business\". His brother took it a step further, saying, \"My brother is an idiot. Everyone here has smuggled refugees across the border. But only the fools get caught\". And one of Metodi's other brothers was arrested for being a drug dealer. The third man was 50-year-old Kassim S, who was originally from Tyre, Lebanon. Kassim S Kassim was a dual citizen of both Lebanon and Bulgaria, and his role in their smuggling operation was to acquire the trucks they would use, the license plates, handle the registration and so on. Kassim ran a used-car lot in Linz, Austria and had been under investigation by the German police as a suspect in a bunch of other smuggling operations. But that wasn't how he portrayed himself. Like Samsoor, Kassim had a pretty active social media presence where he portrayed himself as an innocent family man, often posting pictures of himself smiling with his granddaughter. The fourth man was a 25-26-year-old Bulgarian man named Ivaylo Nelev Stoyanov. Ivaylo Nelev Stoyanov Ivaylo was the driver of the truck that day. Ivaylo was born in a village in Bulgaria's Montana Province called Brusartsi, and the Montana Province just happens to be Bulgaria's poorest region. It's unknown why, but during his childhood, Ivaylo was raised by his Romani grandmother, who lived a humble life growing vegetables in her garden. Ivaylo was described as a \"passable student\" at school and spent his free time playing football. When he was 15, Ivaylo's parents immigrated to Italy, bringing him and his brother with them. Ivaylo briefly worked as a baker at a pizzeria in Italy before moving back to his family home in Brusartsi after the death of his father. Unlike everyone else, who all had lengthy criminal records, Ivaylo at least made an attempt to live an honest life. After getting a loan of 2,000 Bulgarian leva from a friend of his named Wenzeslaw Todorov, he opened a small café on the edge of Brusartsi. However, the café closed within months because he never got any customers, and soon Wenzeslaw was demanding his loan back. Needing quick money to pay that loan back, Ivaylo accepted an offer to be a driver for one of Samsoor's many operations. He left Bulgaria for Hungary on August 17, telling his grandmother he was going to look for work. Ivaylo's grandmother insisted he was innocent and couldn't have driven the truck because he didn't even have a driver's license, calling him \"my sweet grandson\" and remembering how he always gave her money. When it became clear beyond any doubt that he was the driver, she instead insisted that he must've been blackmailed or threatened into driving the truck because of his debts. Though she still said this through her tears: \"If I had known he was doing something illegal, I would have broken his legs to make him stay.\" The fifth and final member was a 38-39-year-old Bulgarian national, Wenzeslaw Todorov, the same man who gave Ivaylo a loan for his café. Wenzeslaw Todorov Wenzeslaw's role was to drive a car ahead of the truck to alert Ivaylo if there were any police checkpoints up ahead, and it was also the car Ivaylo was seen entering after he parked the truck in Austria. Not a lot of information is known about Wenzeslaw's background, but he did eventually become a recruiter himself, responsible for hiring at least 15-20 of Samsoor's drivers. Wenzeslaw made 2,500 euros per Austria run and 3,500 euros per Germany run from Samsoor, only giving the drivers a cut of 500-600 Euros. As the months and years went by, the police would arrest various others who played more minor roles, such as another Bulgarian man who recruited the drivers for all their trucks, usually all from Bulgaria. During a psychiatric evaluation, Samsoor, Metodi, Ivaylo and Wenzeslaw were all found to have some form of Sociopathic traits, with Samsoor having just a bit extra since he was also diagnosed as a narcissist. Over 44 people were arrested, mostly just drivers for the other smuggling operations that did not end in disaster. One driver was arrested in Germany in December 2016 after a routine traffic stop and extradited to Hungary that February. Meanwhile, the police in France arrested another of Samsoor's Bulgarian drivers in February 2019 and also extradited him to Hungary. They started out small, typically carrying only 20-40 refugees at a time, but demand kept going up the longer the year dragged on. With more and more refugees seeking passage to Western Europe, they needed more trucks and needed to herd more of the refugees into those trucks, sometimes reaching 100 people per trip. Samsoor, however, didn't see this as a problem; he was described as having both \"endless greed\" and \"frightening indifference\" and began telling his accomplices that the new goal was, in fact, to cram as many refugees into a single trailer as possible for each journey going forward. Naturally, a lot of comfort was sacrificed for this; some vehicles weren't meant to transport more than one person, others were stuffed into the trunk of a car, and others were \"folded into\" passenger compartments. In one prior case, several of the refugees passed out in the trailer. And in a later case, one woman had suffocated to death (the rest of the refugees for that oppertunity survived). Samsoor did not see this as a warning and changed nothing about his operations. From February to August 2015, Samsoor and his gang smuggled 1,200 people into western Europe over 31 trips, and this failed smuggling attempt alone still netted Samsoor 300,000 Euros. Overall, they were estimated to have made 15.5 million Euros, with a lot of it being funnelled right back to Afghanistan through a network passing through a bunch of other countries such as Serbia, Romania, Ukraine, Russia, Kazakhstan, Uzbekistan, and Turkmenistan in an attempt to not detect the source of the funds. The person in Afghanistan the money was being sent to was Samsoor's brother. After the arrests were made, the story became an even bigger story abroad. On August 30, after concluding his Angelus address, Pope Francis addressed the tragedy directly: \"Let us ask for God's mercy and let us ask Him to help us for effective cooperation against these crimes against the entire family of humanity. Let us pray for all refugees who suffer and for all those who have lost their lives.\" Then the next day, on August 31, the Archbishop of Vienna, Christoph Schönborn, held a commemorative mass for the 71 victims while church bells across eastern Austria all rang in unison. The public was also enraged; the same day as the mass, 20,000 people marched through the streets of Vienna chanting the slogan \"Human Being in Austria\" before ending the march at Austria's parliament building. Similar displays occurred in other cities: 2,500 people gathered for a vigil in Linz, 900 in Wels around 71 black pedestals with candles, and smaller groups in Steyr, Eisenstadt, and Budapest were set up. In Innsbruck, the Young Greens, a left leaning politcal party, erected a memorial consisting of 71 pairs of shoes arranged across 13 square metres of ground, the same surface area as the trailer's floor. A freight company in Bochum also teamed up with a local theatre to host an event so the public would know just how awful the conditions were and open their eyes to the reality of what many refugees go through; a 7.5-ton truck of a similar design was parked in front of the theatre for 71 passersby to climb into so they could experiance first hand what had happened. But one aspect of stories like these that often gets overlooked is the stories of the victims; they are often blended together if the death toll is high enough, with their individual stories being overlooked. Continue with Part 2",
-      "region": "CENTRAL_MEDITERRANEAN",
-      "primary_region": "CENTRAL_MEDITERRANEAN",
-      "primary_location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "first_seen": "2026-08-26T09:51:26Z",
-      "last_seen": "2026-08-26T09:51:26Z",
-      "source_count": 1,
-      "sources_count": 1,
-      "source_types": [
-        "REDDIT"
-      ],
-      "sources": [
-        "REDDIT"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.75,
-      "average_confidence": 0.75,
-      "created_at": "2026-08-26T16:33:47Z",
-      "updated_at": "2026-08-26T16:33:47Z"
     }
   ],
   "regions": [
     {
       "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 4,
-      "events": 4,
-      "percentage": 80.0
-    },
-    {
-      "name": "WESTERN_MEDITERRANEAN",
-      "region": "WESTERN_MEDITERRANEAN",
-      "count": 1,
-      "events": 1,
-      "percentage": 20.0
+      "count": 5,
+      "events": 5,
+      "percentage": 100.0
     }
   ],
   "sources": [
     {
       "source": "X",
       "name": "X",
-      "count": 106,
-      "posts": 106,
-      "percentage": 64.63
+      "count": 89,
+      "posts": 89,
+      "percentage": 61.81
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 34,
-      "posts": 34,
-      "percentage": 20.73
+      "count": 28,
+      "posts": 28,
+      "percentage": 19.44
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 21,
-      "posts": 21,
-      "percentage": 12.8
+      "count": 24,
+      "posts": 24,
+      "percentage": 16.67
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
       "count": 3,
       "posts": 3,
-      "percentage": 1.83
+      "percentage": 2.08
     }
   ],
   "region_activity": [
     {
       "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 4,
-      "events": 4,
-      "percentage": 80.0
-    },
-    {
-      "name": "WESTERN_MEDITERRANEAN",
-      "region": "WESTERN_MEDITERRANEAN",
-      "count": 1,
-      "events": 1,
-      "percentage": 20.0
+      "count": 5,
+      "events": 5,
+      "percentage": 100.0
     }
   ],
   "source_activity": [
     {
       "source": "X",
       "name": "X",
-      "count": 106,
-      "posts": 106,
-      "percentage": 64.63
+      "count": 89,
+      "posts": 89,
+      "percentage": 61.81
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 34,
-      "posts": 34,
-      "percentage": 20.73
+      "count": 28,
+      "posts": 28,
+      "percentage": 19.44
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 21,
-      "posts": 21,
-      "percentage": 12.8
+      "count": 24,
+      "posts": 24,
+      "percentage": 16.67
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
       "count": 3,
       "posts": 3,
-      "percentage": 1.83
+      "percentage": 2.08
     }
   ],
   "correlation": {
-    "correlated_events": 1,
-    "correlated_sources": 1,
+    "correlated_events": 0,
+    "correlated_sources": 0,
     "grouped_sources": 5,
-    "event_groups": 184,
-    "active_groups": 184,
+    "event_groups": 185,
+    "active_groups": 185,
     "multi_source_groups": 20,
     "strongest_match": 0.92,
-    "correlation_rate": 20.0
+    "correlation_rate": 0.0
   },
   "technical_health": "HEALTHY",
   "collector_health": "HEALTHY",
@@ -917,42 +903,42 @@
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "database": "AVAILABLE",
-    "last_run_id": 94,
-    "last_completed_at": "2026-08-27T20:49:19Z"
+    "last_run_id": 95,
+    "last_completed_at": "2026-08-28T04:25:20Z"
   },
   "operational_assessment": {
     "operational_events_24h": 5,
     "influence_signals_24h": 5,
     "access_signals_24h": 0,
-    "correlated_events_24h": 1,
-    "active_event_groups": 184,
-    "dominant_region": "WESTERN_MEDITERRANEAN",
-    "hotspot": "WESTERN_MEDITERRANEAN",
+    "correlated_events_24h": 0,
+    "active_event_groups": 185,
+    "dominant_region": "GLOBAL",
+    "hotspot": "GLOBAL",
     "dominant_event_type": "BORDER_CROSSING",
     "dominant_source": "X",
-    "average_confidence": 0.478,
+    "average_confidence": 0.476,
     "confidence_level": "LOW",
-    "correlation_rate": 20.0,
+    "correlation_rate": 0.0,
     "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 5 operatív migrációs eseményt, 5 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 1 friss eseményforrás korrelált más forrással. Jelenleg 184 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.48. A jelenlegi aktivitási szint: MODERATE."
+    "summary": "Az elmúlt 24 órában a rendszer 5 operatív migrációs eseményt, 5 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 185 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Global. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.48. A jelenlegi aktivitási szint: MODERATE."
   },
   "analytical_assessment": {
     "operational_events_24h": 5,
     "influence_signals_24h": 5,
     "access_signals_24h": 0,
-    "correlated_events_24h": 1,
-    "active_event_groups": 184,
-    "dominant_region": "WESTERN_MEDITERRANEAN",
-    "hotspot": "WESTERN_MEDITERRANEAN",
+    "correlated_events_24h": 0,
+    "active_event_groups": 185,
+    "dominant_region": "GLOBAL",
+    "hotspot": "GLOBAL",
     "dominant_event_type": "BORDER_CROSSING",
     "dominant_source": "X",
-    "average_confidence": 0.478,
+    "average_confidence": 0.476,
     "confidence_level": "LOW",
-    "correlation_rate": 20.0,
+    "correlation_rate": 0.0,
     "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 5 operatív migrációs eseményt, 5 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 1 friss eseményforrás korrelált más forrással. Jelenleg 184 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.48. A jelenlegi aktivitási szint: MODERATE."
+    "summary": "Az elmúlt 24 órában a rendszer 5 operatív migrációs eseményt, 5 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 185 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Global. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.48. A jelenlegi aktivitási szint: MODERATE."
   },
   "high_confidence_events": [
     {
@@ -1070,6 +1056,82 @@
   ],
   "high_priority_intelligence": [
     {
+      "id": 330,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1w0fvqd",
+      "author": "Hot_Preparation4777",
+      "language": null,
+      "published_at": "2026-08-28T03:54:23Z",
+      "first_detected_at": "2026-08-28T04:23:14Z",
+      "last_detected_at": "2026-08-28T04:23:14Z",
+      "detection_count": 1,
+      "text": "Explosive clashes in Ceuta overnight with fed-up locals destroying illegal Moroccan encampments. Anger reached fever pitch overnight as Ceuta locals clashed with illegal Moroccan migrants, forcing police to intervene. The violence further fueled the tension that has plagued the small Spanish enclave",
+      "text_excerpt": "Explosive clashes in Ceuta overnight with fed-up locals destroying illegal Moroccan encampments. Anger reached fever pitch overnight as Ceuta locals clashed with illegal Moroccan migrants, forcing police to intervene. The violence further fueled the tension that has plagued the small Spanish enclave",
+      "url": "https://www.reddit.com/r/europeanunion/comments/1w0fvqd/explosive_clashes_in_ceuta_overnight_with_fedup/",
+      "source_url": "https://www.reddit.com/r/europeanunion/comments/1w0fvqd/explosive_clashes_in_ceuta_overnight_with_fedup/",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.9,
+      "score": 10.0,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "reached fever pitch overnight as Ceuta locals clashed with illegal Moroccan migrants"
+        ],
+        [
+          "enforcement",
+          "police"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "reached fever pitch overnight as Ceuta locals clashed with illegal Moroccan migrants"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 42.5,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "reddit_1w0fvqd"
+      ],
+      "related_authors": [
+        "Hot_Preparation4777"
+      ],
+      "related_urls": [
+        "https://www.reddit.com/r/europeanunion/comments/1w0fvqd/explosive_clashes_in_ceuta_overnight_with_fedup/"
+      ],
+      "related_sources": [
+        "REDDIT"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
+    {
       "id": 13,
       "group_id": 13,
       "event_type": "BORDER_CROSSING",
@@ -1158,6 +1220,80 @@
       "text": "Ceuta migrant crisis: \n\nRoughly 80,000 migrants crossed from Morocco into the Spanish exclave of Ceuta, with at least 100+ deaths reported. Spain imposed border controls on travelers from Italy amid a row; Italy had earlier tightened its own controls. Spanish police also busted a",
       "priority_score": 37.25,
       "analyst_priority": "LOW"
+    },
+    {
+      "id": 331,
+      "source": "X",
+      "source_post_id": "2093167340217053574",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-08-28T02:42:37Z",
+      "first_detected_at": "2026-08-28T04:24:17Z",
+      "last_detected_at": "2026-08-28T04:24:17Z",
+      "detection_count": 1,
+      "text": "@WisecarverKA Mass migrant entry hit Ceuta July 30 from Morocco. Thousands remained camping on beaches nearly a month later amid strained resources.\n\nAug 26: Protesters dismantled tents and threw belongings into the sea; police intervened.\n\nAug 27 morning: Migrants stoned a military vehicle,",
+      "text_excerpt": "@WisecarverKA Mass migrant entry hit Ceuta July 30 from Morocco. Thousands remained camping on beaches nearly a month later amid strained resources.\n\nAug 26: Protesters dismantled tents and threw belongings into the sea; police intervened.\n\nAug 27 morning: Migrants stoned a military vehicle,",
+      "url": "https://x.com/grok/status/2093167340217053574",
+      "source_url": "https://x.com/grok/status/2093167340217053574",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.25,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "sea"
+        ],
+        [
+          "enforcement",
+          "police"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "Migrants"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 36.2,
+      "analyst_priority": "LOW",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2093167340217053574"
+      ],
+      "related_authors": [
+        "grok"
+      ],
+      "related_urls": [
+        "https://x.com/grok/status/2093167340217053574"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
     },
     {
       "id": 329,
@@ -1275,50 +1411,52 @@
       "text": "Article on human smuggling recruitment in the Baltics\n\"Once you drive into Estonia, there are no problems at all.\" Ekspress infiltrated a human smuggling recruitment network (113) Marta Vunš | Artur Izumrudov Edited by: Urmas Jaagant | 12 min read The human smuggling business is gaining momentum in the Baltics. It is not difficult to make contact with recruiters who are looking for drivers from Estonia to transport migrants. An experiment by Ekspress shows how risky and illegal work is framed as lucrative and safe. Ekspress: \"What does it mean that we hide them?\" Recruiter: \"You need to cover them with something so they can't be seen. If your car is like an aquarium, then get some curtains for it. If it's tinted, then excellent. And basically, that's it—cover the people with a blanket. You have to make sure they crouch down. You can put someone in the trunk if you're worried they'll be seen. Nobody checks anything there.\" Ekspress: \"But how do people endure such a ride?\" Recruiter: \"They just have to endure it in the car. It might be hot, you can roll the windows down a bit. It can be very hot. You can also judge according to the situation. I doubt children are sent on such a trip. You understand yourself, they might make noise there.\" This is how the conversation in Russian develops between the job provider and the job seeker. A man hiding his identity on the communication app Telegram publicly posted a laconic message in a job offers group last week: \"Urgently need a driver! Looking for drivers who have their own car, as well as those who don't. High pay for the ride.\" Over the past month, dozens of messages for drivers have appeared among the usual job postings meant for builders and customer service representatives. To find out more, we went undercover as a 28-year-old job seeker named \"Sergei\" and started replying to such ads. There is no need to guess twice—this is how they look for drivers to transport people who have entered Estonia illegally onwards to Finland. Or, for even bigger money, to transport people who have reached Latvia from Belarus into Estonia. A Lot of Work \"25 people will be ready in 3–4 hours in the Latvian forest.\" Sergei received this message from a job provider at 10 PM on August 10th, after having listened to his offer that same afternoon: a driver is needed to transport people from a Latvian forest near the Belarusian border to Tallinn. The next day, the same recruiter announces: \"I need a photo of the car without license plates. And your geolocation. And how long will it take you to drive to Daugavpils?\" In total, Sergei received offers for the Latvia-Estonia route from three different recruiters. Naturally, none of them used their real name or photo on social media. According to the recruiters, these are not isolated, random trips: Daily Operations: One notes there is work every day on the Latvia-Tallinn route. \"Three cars went today,\" he announces. Volume: Some drivers take four people, some eight. \"There are guys who want a minimum of 25.\" In that case, a bus or van is rented. Coordination: The recruiter acts based on a \"supplier's\" order (allegedly located in Turkey). The supplier alerts the recruiter when a group leaves a camp, and the recruiter sends the location and approximate time to the driver. Strict Protocols and Payouts The driver cannot choose the routes to Estonia themselves. The recruiter sends a route in advance that must be strictly followed. Verification 1: About 50 kilometers after picking up the migrants, the driver must send a video showing the passengers in the car. Verification 2: Another video must be made in Tallinn when the people exit the vehicle. Payment: The recruiter promises that the money will reach the driver 15–20 minutes later via card or crypto wallet. \"I won't sleep, I'll be with you for 24 hours, guiding you until you arrive,\" promises one recruiter, noting that €200 is advanced for fuel, which is not deducted from the final payout. A New Direction: Estonia Several recruiters who spoke to us describe the Estonian route as relatively new, having started about two months ago. Previously, trips were mostly ordered to Lithuania, Poland, and Germany. When Sergei mentioned that he lives in Estonia, one recruiter initially said they don't do trips there, before quickly correcting himself: the new direction is Latvia-Tallinn! \"The most dangerous mileage is 15–20 kilometers from the pick-up point. Once you have already covered this distance, that's it. Once you drive into Estonia, there are no problems at all,\" promises one of the recruiters. \"There have never been any problems at the border either. We have already made more than ten trips there, never once checked at the border.\" To mitigate risks, recruiters also offer an \"escort\" for Latvia-Estonia trips. A lead car checks that the pick-up area is clear, and another car scouts the Latvian-Estonian border. According to the recruiters, drivers have only been caught when they thought \"they were smarter\" and deviated from the assigned route. \"Cops are not a problem\" One recruiter told Sergei that the police are not a problem because \"we make deals with them.\" When pressed, the recruiter claimed: \"Well, that they mainly give us the routes where it's safe to drive, and we won't be touched because we pay a certain portion of our earnings to them... I'll tell you honestly, if this work were legal, it wouldn't pay this kind of money.\" We spoke to a recruiter for Tallinn-Finland drivers on Tuesday, August 11th. He was in a hurry, needing to secretly transport ten people to Helsinki over the next two days. \"They go like hotcakes – fast. Once we take it on, we have to drive.\" The recruiter claimed the trips across the sea are made via Viking Line—a claim the ferry operator's press spokesperson denied having any knowledge of. We couldn't find out more about Sergei's locations and the people being transported, because the next step would have been accepting the job offer, which risks criminal proceedings. (Note: Illegally transporting a foreigner across the Estonian border is punishable by a fine or up to 3 years in prison. If lives are endangered, it increases to 7 years. Organized network involvement carries even harsher penalties.) Official Response: Police and Border Guard Board (PPA) Emeri Põld, Head of the Intelligence Group, Northern Prefecture Border Guard Bureau: On the Estonian Route: The Estonian direction has historically not been very active. However, since Lithuania and Poland have significantly strengthened their borders, transit through Estonia has increased, especially since mid-summer. On Police Complicity: The police do not share information with smugglers or cooperate with them. Alleged connections with the police are a sales pitch aimed at increasing driver trust and minimizing perceived risks. Recent Arrests: On August 14th, a 24-year-old driver (Egyptian citizen) was remanded in custody for two months after transporting five youths (Bangladeshi and Algerian citizens) into Estonia from Latvia. Smugglers have also been detained on the Estonia-Finland route. Countermeasures: The PPA checks departing vehicles at the port using additional resources. While no hidden migrants have been found inside vehicles at the port yet, illegal immigrants have been caught near the port and while boarding ships during profile-based checks. \"These are not isolated incidents, but international organized crime... fought against in close international cooperation. Thus, there is some truth to what the recruiters say: such activity requires a functioning network that includes recruiters, drivers, and coordinators.\"",
       "priority_score": 30.25,
       "analyst_priority": "LOW"
-    },
+    }
+  ],
+  "influence_signals": [
     {
-      "id": 328,
-      "source": "X",
-      "source_post_id": "2093076423242097150",
-      "author": "JohnFerris62",
-      "language": "en",
-      "published_at": "2026-08-27T20:41:21Z",
-      "first_detected_at": "2026-08-27T20:47:49Z",
-      "last_detected_at": "2026-08-27T20:47:49Z",
+      "id": 330,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1w0fvqd",
+      "author": "Hot_Preparation4777",
+      "language": null,
+      "published_at": "2026-08-28T03:54:23Z",
+      "first_detected_at": "2026-08-28T04:23:14Z",
+      "last_detected_at": "2026-08-28T04:23:14Z",
       "detection_count": 1,
-      "text": "@daveatherton Net migration down because more people are leaving while they can?\nBoat crossings down because the govt is now flying economic migrants in directly?\nMigrants  moved out of hotels because they're being moved into houses near you?\nFacts can hide the truth as easily as illuminate it",
-      "text_excerpt": "@daveatherton Net migration down because more people are leaving while they can?\nBoat crossings down because the govt is now flying economic migrants in directly?\nMigrants  moved out of hotels because they're being moved into houses near you?\nFacts can hide the truth as easily as illuminate it",
-      "url": "https://x.com/JohnFerris62/status/2093076423242097150",
-      "source_url": "https://x.com/JohnFerris62/status/2093076423242097150",
+      "text": "Explosive clashes in Ceuta overnight with fed-up locals destroying illegal Moroccan encampments. Anger reached fever pitch overnight as Ceuta locals clashed with illegal Moroccan migrants, forcing police to intervene. The violence further fueled the tension that has plagued the small Spanish enclave",
+      "text_excerpt": "Explosive clashes in Ceuta overnight with fed-up locals destroying illegal Moroccan encampments. Anger reached fever pitch overnight as Ceuta locals clashed with illegal Moroccan migrants, forcing police to intervene. The violence further fueled the tension that has plagued the small Spanish enclave",
+      "url": "https://www.reddit.com/r/europeanunion/comments/1w0fvqd/explosive_clashes_in_ceuta_overnight_with_fedup/",
+      "source_url": "https://www.reddit.com/r/europeanunion/comments/1w0fvqd/explosive_clashes_in_ceuta_overnight_with_fedup/",
       "primary_signal": "MOVEMENT_EARLY_WARNING",
       "signal_type": "MOVEMENT_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
       "signal_intent": "MOVEMENT_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 8.25,
+      "confidence": 0.9,
+      "score": 10.0,
       "matched_signals": [
         "MOVEMENT_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
           "movement",
-          "leaving while they can? Boat crossings down because the govt is now flying economic migrants"
+          "reached fever pitch overnight as Ceuta locals clashed with illegal Moroccan migrants"
         ],
         [
-          "route",
-          "Boat"
+          "enforcement",
+          "police"
         ]
       ],
       "matched_groups": [
         "MOVEMENT",
-        "ROUTE"
+        "ENFORCEMENT"
       ],
       "context_matches": [
         "migrants"
       ],
       "high_value_matches": [
-        "leaving while they can? Boat crossings down because the govt is now flying economic migrants"
+        "reached fever pitch overnight as Ceuta locals clashed with illegal Moroccan migrants"
       ],
       "signal_context_rejections": [],
       "migration_context": true,
@@ -1326,110 +1464,17 @@
       "historical_reference": false,
       "historical_reason": null,
       "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
-      "analyst_priority": "LOW",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "2093076423242097150"
-      ],
-      "related_authors": [
-        "JohnFerris62"
-      ],
-      "related_urls": [
-        "https://x.com/JohnFerris62/status/2093076423242097150"
-      ],
-      "related_sources": [
-        "X"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
+      "priority_score": 42.5,
+      "analyst_priority": "MEDIUM"
     },
-    {
-      "id": 325,
-      "source": "X",
-      "source_post_id": "2092718567661728052",
-      "author": "NCRIsom",
-      "language": "en",
-      "published_at": "2026-08-26T20:59:22Z",
-      "first_detected_at": "2026-08-26T21:04:45Z",
-      "last_detected_at": "2026-08-26T21:04:45Z",
-      "detection_count": 1,
-      "text": "The NCRI today welcomed 154 Somali nationals who voluntarily returned home from Yemen, where they had been living as refugees.\nThe returnees arrived safely in Mogadishu and will receive support to facilitate their reintegration and access to essential services.\nThanks @UNHCRSom https://t.co/oLsibhsz9d",
-      "text_excerpt": "The NCRI today welcomed 154 Somali nationals who voluntarily returned home from Yemen, where they had been living as refugees.\nThe returnees arrived safely in Mogadishu and will receive support to facilitate their reintegration and access to essential services.\nThanks @UNHCRSom https://t.co/oLsibhsz9d",
-      "url": "https://x.com/NCRIsom/status/2092718567661728052",
-      "source_url": "https://x.com/NCRIsom/status/2092718567661728052",
-      "primary_signal": "FACILITATION_EARLY_WARNING",
-      "signal_type": "FACILITATION_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "FACILITATION_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 9.5,
-      "matched_signals": [
-        "FACILITATION_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "facilitation",
-          "refugees. The returnees arrived safely in Mogadishu and will receive support to facilitate"
-        ],
-        [
-          "enforcement",
-          "returned"
-        ]
-      ],
-      "matched_groups": [
-        "FACILITATION",
-        "ENFORCEMENT"
-      ],
-      "context_matches": [
-        "refugees"
-      ],
-      "high_value_matches": [
-        "refugees. The returnees arrived safely in Mogadishu and will receive support to facilitate"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
-      "analyst_priority": "LOW",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "2092718567661728052"
-      ],
-      "related_authors": [
-        "NCRIsom"
-      ],
-      "related_urls": [
-        "https://x.com/NCRIsom/status/2092718567661728052"
-      ],
-      "related_sources": [
-        "X"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
-    }
-  ],
-  "influence_signals": [
     {
       "id": 329,
       "source": "X",
@@ -1558,141 +1603,78 @@
       "analyst_priority": "LOW"
     },
     {
-      "id": 325,
+      "id": 331,
       "source": "X",
-      "source_post_id": "2092718567661728052",
-      "author": "NCRIsom",
+      "source_post_id": "2093167340217053574",
+      "author": "grok",
       "language": "en",
-      "published_at": "2026-08-26T20:59:22Z",
-      "first_detected_at": "2026-08-26T21:04:45Z",
-      "last_detected_at": "2026-08-26T21:04:45Z",
+      "published_at": "2026-08-28T02:42:37Z",
+      "first_detected_at": "2026-08-28T04:24:17Z",
+      "last_detected_at": "2026-08-28T04:24:17Z",
       "detection_count": 1,
-      "text": "The NCRI today welcomed 154 Somali nationals who voluntarily returned home from Yemen, where they had been living as refugees.\nThe returnees arrived safely in Mogadishu and will receive support to facilitate their reintegration and access to essential services.\nThanks @UNHCRSom https://t.co/oLsibhsz9d",
-      "text_excerpt": "The NCRI today welcomed 154 Somali nationals who voluntarily returned home from Yemen, where they had been living as refugees.\nThe returnees arrived safely in Mogadishu and will receive support to facilitate their reintegration and access to essential services.\nThanks @UNHCRSom https://t.co/oLsibhsz9d",
-      "url": "https://x.com/NCRIsom/status/2092718567661728052",
-      "source_url": "https://x.com/NCRIsom/status/2092718567661728052",
-      "primary_signal": "FACILITATION_EARLY_WARNING",
-      "signal_type": "FACILITATION_EARLY_WARNING",
+      "text": "@WisecarverKA Mass migrant entry hit Ceuta July 30 from Morocco. Thousands remained camping on beaches nearly a month later amid strained resources.\n\nAug 26: Protesters dismantled tents and threw belongings into the sea; police intervened.\n\nAug 27 morning: Migrants stoned a military vehicle,",
+      "text_excerpt": "@WisecarverKA Mass migrant entry hit Ceuta July 30 from Morocco. Thousands remained camping on beaches nearly a month later amid strained resources.\n\nAug 26: Protesters dismantled tents and threw belongings into the sea; police intervened.\n\nAug 27 morning: Migrants stoned a military vehicle,",
+      "url": "https://x.com/grok/status/2093167340217053574",
+      "source_url": "https://x.com/grok/status/2093167340217053574",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "FACILITATION_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 9.5,
-      "matched_signals": [
-        "FACILITATION_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "facilitation",
-          "refugees. The returnees arrived safely in Mogadishu and will receive support to facilitate"
-        ],
-        [
-          "enforcement",
-          "returned"
-        ]
-      ],
-      "matched_groups": [
-        "FACILITATION",
-        "ENFORCEMENT"
-      ],
-      "context_matches": [
-        "refugees"
-      ],
-      "high_value_matches": [
-        "refugees. The returnees arrived safely in Mogadishu and will receive support to facilitate"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
-      "analyst_priority": "LOW"
-    },
-    {
-      "id": 326,
-      "source": "X",
-      "source_post_id": "2092816814233326064",
-      "author": "heartofasiapost",
-      "language": "en",
-      "published_at": "2026-08-27T03:29:45Z",
-      "first_detected_at": "2026-08-27T04:08:45Z",
-      "last_detected_at": "2026-08-27T04:08:45Z",
-      "detection_count": 1,
-      "text": "An international metropolis on the shores of the East China Sea, a new migrant city rising from the Gobi Desert… China’s cities embody a remarkable range of forms and efforts etched across a diverse range of landscapes, all of which is reflected in the everyday lives of ordinary",
-      "text_excerpt": "An international metropolis on the shores of the East China Sea, a new migrant city rising from the Gobi Desert… China’s cities embody a remarkable range of forms and efforts etched across a diverse range of landscapes, all of which is reflected in the everyday lives of ordinary",
-      "url": "https://x.com/heartofasiapost/status/2092816814233326064",
-      "source_url": "https://x.com/heartofasiapost/status/2092816814233326064",
-      "primary_signal": "PRESSURE_EARLY_WARNING",
-      "signal_type": "PRESSURE_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "PRESSURE_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
       "priority": "MEDIUM",
       "confidence": 0.72,
-      "score": 7.5,
+      "score": 7.25,
       "matched_signals": [
-        "PRESSURE_EARLY_WARNING"
+        "ROUTE_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
           "route",
-          "Sea"
+          "sea"
         ],
         [
-          "pressure",
-          "migrant city rising"
+          "enforcement",
+          "police"
         ]
       ],
       "matched_groups": [
         "ROUTE",
-        "PRESSURE"
+        "ENFORCEMENT"
       ],
       "context_matches": [
-        "migrant"
+        "Migrants"
       ],
-      "high_value_matches": [
-        "migrant city rising"
-      ],
+      "high_value_matches": [],
       "signal_context_rejections": [],
       "migration_context": true,
       "human_migration_context": true,
       "historical_reference": false,
       "historical_reason": null,
       "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 25.2,
+      "priority_score": 36.2,
       "analyst_priority": "LOW"
     },
     {
-      "id": 327,
-      "source": "X",
-      "source_post_id": "2092799983783428458",
-      "author": "Lisak3388",
-      "language": "en",
-      "published_at": "2026-08-27T02:22:53Z",
-      "first_detected_at": "2026-08-27T04:09:18Z",
-      "last_detected_at": "2026-08-27T04:09:18Z",
+      "id": 332,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1vzw4uj",
+      "author": "Ok_Signal4754",
+      "language": null,
+      "published_at": "2026-08-27T14:50:37Z",
+      "first_detected_at": "2026-08-28T04:24:50Z",
+      "last_detected_at": "2026-08-28T04:24:50Z",
       "detection_count": 1,
-      "text": "@SkylineReport So now the Trump administration is basically human trafficking with displaced migrants. Cool, cool.",
-      "text_excerpt": "@SkylineReport So now the Trump administration is basically human trafficking with displaced migrants. Cool, cool.",
-      "url": "https://x.com/Lisak3388/status/2092799983783428458",
-      "source_url": "https://x.com/Lisak3388/status/2092799983783428458",
+      "text": "Crete: Arrests of smugglers after rescue of 171 migrants – New operation in Kaloi Limenes | Greece\nSource",
+      "text_excerpt": "Crete: Arrests of smugglers after rescue of 171 migrants – New operation in Kaloi Limenes | Greece\nSource",
+      "url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1vzw4uj/crete_arrests_of_smugglers_after_rescue_of_171/",
+      "source_url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1vzw4uj/crete_arrests_of_smugglers_after_rescue_of_171/",
       "primary_signal": "FACILITATION_EARLY_WARNING",
       "signal_type": "FACILITATION_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
@@ -1706,11 +1688,7 @@
       "matched_phrases": [
         [
           "facilitation",
-          "human trafficking"
-        ],
-        [
-          "facilitation",
-          "trafficking with displaced migrants"
+          "smugglers after rescue of 171 migrants"
         ]
       ],
       "matched_groups": [
@@ -1720,8 +1698,7 @@
         "migrants"
       ],
       "high_value_matches": [
-        "human trafficking",
-        "trafficking with displaced migrants"
+        "smugglers after rescue of 171 migrants"
       ],
       "signal_context_rejections": [],
       "migration_context": true,
@@ -1732,17 +1709,78 @@
       "location": "-",
       "primary_location": "-",
       "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
+      "region": "EASTERN_MEDITERRANEAN",
+      "primary_region": "EASTERN_MEDITERRANEAN",
       "latitude": null,
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 21.7,
+      "priority_score": 25.7,
       "analyst_priority": "LOW"
     }
   ],
   "early_warning_signals": [
     {
+      "id": 330,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1w0fvqd",
+      "author": "Hot_Preparation4777",
+      "language": null,
+      "published_at": "2026-08-28T03:54:23Z",
+      "first_detected_at": "2026-08-28T04:23:14Z",
+      "last_detected_at": "2026-08-28T04:23:14Z",
+      "detection_count": 1,
+      "text": "Explosive clashes in Ceuta overnight with fed-up locals destroying illegal Moroccan encampments. Anger reached fever pitch overnight as Ceuta locals clashed with illegal Moroccan migrants, forcing police to intervene. The violence further fueled the tension that has plagued the small Spanish enclave",
+      "text_excerpt": "Explosive clashes in Ceuta overnight with fed-up locals destroying illegal Moroccan encampments. Anger reached fever pitch overnight as Ceuta locals clashed with illegal Moroccan migrants, forcing police to intervene. The violence further fueled the tension that has plagued the small Spanish enclave",
+      "url": "https://www.reddit.com/r/europeanunion/comments/1w0fvqd/explosive_clashes_in_ceuta_overnight_with_fedup/",
+      "source_url": "https://www.reddit.com/r/europeanunion/comments/1w0fvqd/explosive_clashes_in_ceuta_overnight_with_fedup/",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.9,
+      "score": 10.0,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "reached fever pitch overnight as Ceuta locals clashed with illegal Moroccan migrants"
+        ],
+        [
+          "enforcement",
+          "police"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "reached fever pitch overnight as Ceuta locals clashed with illegal Moroccan migrants"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 42.5,
+      "analyst_priority": "MEDIUM"
+    },
+    {
       "id": 329,
       "source": "X",
       "source_post_id": "2093068826942529672",
@@ -1870,141 +1908,78 @@
       "analyst_priority": "LOW"
     },
     {
-      "id": 325,
+      "id": 331,
       "source": "X",
-      "source_post_id": "2092718567661728052",
-      "author": "NCRIsom",
+      "source_post_id": "2093167340217053574",
+      "author": "grok",
       "language": "en",
-      "published_at": "2026-08-26T20:59:22Z",
-      "first_detected_at": "2026-08-26T21:04:45Z",
-      "last_detected_at": "2026-08-26T21:04:45Z",
+      "published_at": "2026-08-28T02:42:37Z",
+      "first_detected_at": "2026-08-28T04:24:17Z",
+      "last_detected_at": "2026-08-28T04:24:17Z",
       "detection_count": 1,
-      "text": "The NCRI today welcomed 154 Somali nationals who voluntarily returned home from Yemen, where they had been living as refugees.\nThe returnees arrived safely in Mogadishu and will receive support to facilitate their reintegration and access to essential services.\nThanks @UNHCRSom https://t.co/oLsibhsz9d",
-      "text_excerpt": "The NCRI today welcomed 154 Somali nationals who voluntarily returned home from Yemen, where they had been living as refugees.\nThe returnees arrived safely in Mogadishu and will receive support to facilitate their reintegration and access to essential services.\nThanks @UNHCRSom https://t.co/oLsibhsz9d",
-      "url": "https://x.com/NCRIsom/status/2092718567661728052",
-      "source_url": "https://x.com/NCRIsom/status/2092718567661728052",
-      "primary_signal": "FACILITATION_EARLY_WARNING",
-      "signal_type": "FACILITATION_EARLY_WARNING",
+      "text": "@WisecarverKA Mass migrant entry hit Ceuta July 30 from Morocco. Thousands remained camping on beaches nearly a month later amid strained resources.\n\nAug 26: Protesters dismantled tents and threw belongings into the sea; police intervened.\n\nAug 27 morning: Migrants stoned a military vehicle,",
+      "text_excerpt": "@WisecarverKA Mass migrant entry hit Ceuta July 30 from Morocco. Thousands remained camping on beaches nearly a month later amid strained resources.\n\nAug 26: Protesters dismantled tents and threw belongings into the sea; police intervened.\n\nAug 27 morning: Migrants stoned a military vehicle,",
+      "url": "https://x.com/grok/status/2093167340217053574",
+      "source_url": "https://x.com/grok/status/2093167340217053574",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "FACILITATION_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 9.5,
-      "matched_signals": [
-        "FACILITATION_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "facilitation",
-          "refugees. The returnees arrived safely in Mogadishu and will receive support to facilitate"
-        ],
-        [
-          "enforcement",
-          "returned"
-        ]
-      ],
-      "matched_groups": [
-        "FACILITATION",
-        "ENFORCEMENT"
-      ],
-      "context_matches": [
-        "refugees"
-      ],
-      "high_value_matches": [
-        "refugees. The returnees arrived safely in Mogadishu and will receive support to facilitate"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
-      "analyst_priority": "LOW"
-    },
-    {
-      "id": 326,
-      "source": "X",
-      "source_post_id": "2092816814233326064",
-      "author": "heartofasiapost",
-      "language": "en",
-      "published_at": "2026-08-27T03:29:45Z",
-      "first_detected_at": "2026-08-27T04:08:45Z",
-      "last_detected_at": "2026-08-27T04:08:45Z",
-      "detection_count": 1,
-      "text": "An international metropolis on the shores of the East China Sea, a new migrant city rising from the Gobi Desert… China’s cities embody a remarkable range of forms and efforts etched across a diverse range of landscapes, all of which is reflected in the everyday lives of ordinary",
-      "text_excerpt": "An international metropolis on the shores of the East China Sea, a new migrant city rising from the Gobi Desert… China’s cities embody a remarkable range of forms and efforts etched across a diverse range of landscapes, all of which is reflected in the everyday lives of ordinary",
-      "url": "https://x.com/heartofasiapost/status/2092816814233326064",
-      "source_url": "https://x.com/heartofasiapost/status/2092816814233326064",
-      "primary_signal": "PRESSURE_EARLY_WARNING",
-      "signal_type": "PRESSURE_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "PRESSURE_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
       "priority": "MEDIUM",
       "confidence": 0.72,
-      "score": 7.5,
+      "score": 7.25,
       "matched_signals": [
-        "PRESSURE_EARLY_WARNING"
+        "ROUTE_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
           "route",
-          "Sea"
+          "sea"
         ],
         [
-          "pressure",
-          "migrant city rising"
+          "enforcement",
+          "police"
         ]
       ],
       "matched_groups": [
         "ROUTE",
-        "PRESSURE"
+        "ENFORCEMENT"
       ],
       "context_matches": [
-        "migrant"
+        "Migrants"
       ],
-      "high_value_matches": [
-        "migrant city rising"
-      ],
+      "high_value_matches": [],
       "signal_context_rejections": [],
       "migration_context": true,
       "human_migration_context": true,
       "historical_reference": false,
       "historical_reason": null,
       "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 25.2,
+      "priority_score": 36.2,
       "analyst_priority": "LOW"
     },
     {
-      "id": 327,
-      "source": "X",
-      "source_post_id": "2092799983783428458",
-      "author": "Lisak3388",
-      "language": "en",
-      "published_at": "2026-08-27T02:22:53Z",
-      "first_detected_at": "2026-08-27T04:09:18Z",
-      "last_detected_at": "2026-08-27T04:09:18Z",
+      "id": 332,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1vzw4uj",
+      "author": "Ok_Signal4754",
+      "language": null,
+      "published_at": "2026-08-27T14:50:37Z",
+      "first_detected_at": "2026-08-28T04:24:50Z",
+      "last_detected_at": "2026-08-28T04:24:50Z",
       "detection_count": 1,
-      "text": "@SkylineReport So now the Trump administration is basically human trafficking with displaced migrants. Cool, cool.",
-      "text_excerpt": "@SkylineReport So now the Trump administration is basically human trafficking with displaced migrants. Cool, cool.",
-      "url": "https://x.com/Lisak3388/status/2092799983783428458",
-      "source_url": "https://x.com/Lisak3388/status/2092799983783428458",
+      "text": "Crete: Arrests of smugglers after rescue of 171 migrants – New operation in Kaloi Limenes | Greece\nSource",
+      "text_excerpt": "Crete: Arrests of smugglers after rescue of 171 migrants – New operation in Kaloi Limenes | Greece\nSource",
+      "url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1vzw4uj/crete_arrests_of_smugglers_after_rescue_of_171/",
+      "source_url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1vzw4uj/crete_arrests_of_smugglers_after_rescue_of_171/",
       "primary_signal": "FACILITATION_EARLY_WARNING",
       "signal_type": "FACILITATION_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
@@ -2018,11 +1993,7 @@
       "matched_phrases": [
         [
           "facilitation",
-          "human trafficking"
-        ],
-        [
-          "facilitation",
-          "trafficking with displaced migrants"
+          "smugglers after rescue of 171 migrants"
         ]
       ],
       "matched_groups": [
@@ -2032,8 +2003,7 @@
         "migrants"
       ],
       "high_value_matches": [
-        "human trafficking",
-        "trafficking with displaced migrants"
+        "smugglers after rescue of 171 migrants"
       ],
       "signal_context_rejections": [],
       "migration_context": true,
@@ -2044,16 +2014,166 @@
       "location": "-",
       "primary_location": "-",
       "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
+      "region": "EASTERN_MEDITERRANEAN",
+      "primary_region": "EASTERN_MEDITERRANEAN",
       "latitude": null,
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 21.7,
+      "priority_score": 25.7,
       "analyst_priority": "LOW"
     }
   ],
   "influence_narratives": [
+    {
+      "id": 330,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1w0fvqd",
+      "author": "Hot_Preparation4777",
+      "language": null,
+      "published_at": "2026-08-28T03:54:23Z",
+      "first_detected_at": "2026-08-28T04:23:14Z",
+      "last_detected_at": "2026-08-28T04:23:14Z",
+      "detection_count": 1,
+      "text": "Explosive clashes in Ceuta overnight with fed-up locals destroying illegal Moroccan encampments. Anger reached fever pitch overnight as Ceuta locals clashed with illegal Moroccan migrants, forcing police to intervene. The violence further fueled the tension that has plagued the small Spanish enclave",
+      "text_excerpt": "Explosive clashes in Ceuta overnight with fed-up locals destroying illegal Moroccan encampments. Anger reached fever pitch overnight as Ceuta locals clashed with illegal Moroccan migrants, forcing police to intervene. The violence further fueled the tension that has plagued the small Spanish enclave",
+      "url": "https://www.reddit.com/r/europeanunion/comments/1w0fvqd/explosive_clashes_in_ceuta_overnight_with_fedup/",
+      "source_url": "https://www.reddit.com/r/europeanunion/comments/1w0fvqd/explosive_clashes_in_ceuta_overnight_with_fedup/",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.9,
+      "score": 10.0,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "reached fever pitch overnight as Ceuta locals clashed with illegal Moroccan migrants"
+        ],
+        [
+          "enforcement",
+          "police"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "reached fever pitch overnight as Ceuta locals clashed with illegal Moroccan migrants"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 42.5,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "reddit_1w0fvqd"
+      ],
+      "related_authors": [
+        "Hot_Preparation4777"
+      ],
+      "related_urls": [
+        "https://www.reddit.com/r/europeanunion/comments/1w0fvqd/explosive_clashes_in_ceuta_overnight_with_fedup/"
+      ],
+      "related_sources": [
+        "REDDIT"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
+    {
+      "id": 331,
+      "source": "X",
+      "source_post_id": "2093167340217053574",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-08-28T02:42:37Z",
+      "first_detected_at": "2026-08-28T04:24:17Z",
+      "last_detected_at": "2026-08-28T04:24:17Z",
+      "detection_count": 1,
+      "text": "@WisecarverKA Mass migrant entry hit Ceuta July 30 from Morocco. Thousands remained camping on beaches nearly a month later amid strained resources.\n\nAug 26: Protesters dismantled tents and threw belongings into the sea; police intervened.\n\nAug 27 morning: Migrants stoned a military vehicle,",
+      "text_excerpt": "@WisecarverKA Mass migrant entry hit Ceuta July 30 from Morocco. Thousands remained camping on beaches nearly a month later amid strained resources.\n\nAug 26: Protesters dismantled tents and threw belongings into the sea; police intervened.\n\nAug 27 morning: Migrants stoned a military vehicle,",
+      "url": "https://x.com/grok/status/2093167340217053574",
+      "source_url": "https://x.com/grok/status/2093167340217053574",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.25,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "sea"
+        ],
+        [
+          "enforcement",
+          "police"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "Migrants"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 36.2,
+      "analyst_priority": "LOW",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2093167340217053574"
+      ],
+      "related_authors": [
+        "grok"
+      ],
+      "related_urls": [
+        "https://x.com/grok/status/2093167340217053574"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
     {
       "id": 329,
       "source": "X",
@@ -2128,158 +2248,6 @@
       ],
       "related_urls": [
         "https://x.com/MetisGenius/status/2093068826942529672"
-      ],
-      "related_sources": [
-        "X"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
-    },
-    {
-      "id": 328,
-      "source": "X",
-      "source_post_id": "2093076423242097150",
-      "author": "JohnFerris62",
-      "language": "en",
-      "published_at": "2026-08-27T20:41:21Z",
-      "first_detected_at": "2026-08-27T20:47:49Z",
-      "last_detected_at": "2026-08-27T20:47:49Z",
-      "detection_count": 1,
-      "text": "@daveatherton Net migration down because more people are leaving while they can?\nBoat crossings down because the govt is now flying economic migrants in directly?\nMigrants  moved out of hotels because they're being moved into houses near you?\nFacts can hide the truth as easily as illuminate it",
-      "text_excerpt": "@daveatherton Net migration down because more people are leaving while they can?\nBoat crossings down because the govt is now flying economic migrants in directly?\nMigrants  moved out of hotels because they're being moved into houses near you?\nFacts can hide the truth as easily as illuminate it",
-      "url": "https://x.com/JohnFerris62/status/2093076423242097150",
-      "source_url": "https://x.com/JohnFerris62/status/2093076423242097150",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 8.25,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "leaving while they can? Boat crossings down because the govt is now flying economic migrants"
-        ],
-        [
-          "route",
-          "Boat"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT",
-        "ROUTE"
-      ],
-      "context_matches": [
-        "migrants"
-      ],
-      "high_value_matches": [
-        "leaving while they can? Boat crossings down because the govt is now flying economic migrants"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
-      "analyst_priority": "LOW",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "2093076423242097150"
-      ],
-      "related_authors": [
-        "JohnFerris62"
-      ],
-      "related_urls": [
-        "https://x.com/JohnFerris62/status/2093076423242097150"
-      ],
-      "related_sources": [
-        "X"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
-    },
-    {
-      "id": 325,
-      "source": "X",
-      "source_post_id": "2092718567661728052",
-      "author": "NCRIsom",
-      "language": "en",
-      "published_at": "2026-08-26T20:59:22Z",
-      "first_detected_at": "2026-08-26T21:04:45Z",
-      "last_detected_at": "2026-08-26T21:04:45Z",
-      "detection_count": 1,
-      "text": "The NCRI today welcomed 154 Somali nationals who voluntarily returned home from Yemen, where they had been living as refugees.\nThe returnees arrived safely in Mogadishu and will receive support to facilitate their reintegration and access to essential services.\nThanks @UNHCRSom https://t.co/oLsibhsz9d",
-      "text_excerpt": "The NCRI today welcomed 154 Somali nationals who voluntarily returned home from Yemen, where they had been living as refugees.\nThe returnees arrived safely in Mogadishu and will receive support to facilitate their reintegration and access to essential services.\nThanks @UNHCRSom https://t.co/oLsibhsz9d",
-      "url": "https://x.com/NCRIsom/status/2092718567661728052",
-      "source_url": "https://x.com/NCRIsom/status/2092718567661728052",
-      "primary_signal": "FACILITATION_EARLY_WARNING",
-      "signal_type": "FACILITATION_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "FACILITATION_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 9.5,
-      "matched_signals": [
-        "FACILITATION_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "facilitation",
-          "refugees. The returnees arrived safely in Mogadishu and will receive support to facilitate"
-        ],
-        [
-          "enforcement",
-          "returned"
-        ]
-      ],
-      "matched_groups": [
-        "FACILITATION",
-        "ENFORCEMENT"
-      ],
-      "context_matches": [
-        "refugees"
-      ],
-      "high_value_matches": [
-        "refugees. The returnees arrived safely in Mogadishu and will receive support to facilitate"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
-      "analyst_priority": "LOW",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "2092718567661728052"
-      ],
-      "related_authors": [
-        "NCRIsom"
-      ],
-      "related_urls": [
-        "https://x.com/NCRIsom/status/2092718567661728052"
       ],
       "related_sources": [
         "X"
@@ -2409,14 +2377,14 @@
       "label": "W35",
       "week_label": "W35",
       "week_start": "2026-08-24T00:00:00Z",
-      "posts": 912,
-      "post_count": 912,
-      "operational_posts": 44,
-      "influence_signals": 43,
+      "posts": 980,
+      "post_count": 980,
+      "operational_posts": 46,
+      "influence_signals": 46,
       "source_counts": {
-        "X": 618,
-        "REDDIT": 123,
-        "MASTODON": 157,
+        "X": 665,
+        "REDDIT": 135,
+        "MASTODON": 166,
         "TELEGRAM": 14
       }
     }
@@ -2538,33 +2506,33 @@
       "label": "W35",
       "week_label": "W35",
       "week_start": "2026-08-24T00:00:00Z",
-      "posts": 912,
-      "post_count": 912,
-      "operational_posts": 44,
-      "influence_signals": 43,
+      "posts": 980,
+      "post_count": 980,
+      "operational_posts": 46,
+      "influence_signals": 46,
       "source_counts": {
-        "X": 618,
-        "REDDIT": 123,
-        "MASTODON": 157,
+        "X": 665,
+        "REDDIT": 135,
+        "MASTODON": 166,
         "TELEGRAM": 14
       }
     }
   ],
   "information_activity_summary": {
-    "current_week": 912,
-    "previous_week": 874,
-    "current_week_to_date": 912,
-    "previous_week_same_period": 874,
+    "current_week": 980,
+    "previous_week": 880,
+    "current_week_to_date": 980,
+    "previous_week_same_period": 880,
     "previous_week_full": 1583,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": 4.35,
-    "change_label": "+4.3%",
+    "change_percent": 11.36,
+    "change_label": "+11.4%",
     "direction": "UP",
     "comparable": true,
-    "elapsed_hours": 92.8,
+    "elapsed_hours": 100.4,
     "current_period_start": "2026-08-24T00:00:00Z",
     "previous_period_start": "2026-08-17T00:00:00Z",
-    "previous_period_end": "2026-08-20T20:49:20Z"
+    "previous_period_end": "2026-08-21T04:25:21Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -2576,39 +2544,39 @@
       72,
       168
     ],
-    "generated_at": "2026-08-27T20:49:21Z",
-    "total_items": 946,
-    "information_count": 342,
-    "early_warning_count": 313,
-    "operational_count": 239,
+    "generated_at": "2026-08-28T04:25:22Z",
+    "total_items": 948,
+    "information_count": 340,
+    "early_warning_count": 316,
+    "operational_count": 240,
     "correlated_count": 52,
     "layer_counts": {
-      "INFORMATION": 342,
-      "OPERATIONAL": 239,
-      "EARLY_WARNING": 313,
+      "INFORMATION": 340,
+      "OPERATIONAL": 240,
+      "EARLY_WARNING": 316,
       "CORRELATED": 52
     },
     "source_counts": {
       "X": 665,
-      "REDDIT": 222,
-      "MASTODON": 47,
+      "REDDIT": 225,
+      "MASTODON": 46,
       "TELEGRAM": 12
     },
     "type_counts": {
-      "INFORMATION_SIGNAL": 342,
+      "INFORMATION_SIGNAL": 340,
+      "DEPORTATION": 28,
+      "MOVEMENT_EARLY_WARNING": 79,
+      "ROUTE_EARLY_WARNING": 32,
       "MIGRANT_CAMP": 47,
       "BORDER_CROSSING": 57,
-      "MOVEMENT_EARLY_WARNING": 78,
       "RESCUE_OPERATION": 18,
+      "FACILITATION_EARLY_WARNING": 58,
       "PRESSURE_EARLY_WARNING": 18,
-      "FACILITATION_EARLY_WARNING": 57,
       "ENFORCEMENT_EARLY_WARNING": 21,
       "DETENTION": 9,
-      "DEPORTATION": 27,
       "LEGAL_MIGRATION_SIGNAL": 38,
       "CROSSING_FACILITATION": 41,
       "SMUGGLING_ACTIVITY": 51,
-      "ROUTE_EARLY_WARNING": 31,
       "BORDER_MEASURE": 6,
       "CASUALTY": 12,
       "INTERCEPTION": 17,
@@ -2622,6 +2590,289 @@
       "MOBILIZATION_REPORT": 8
     },
     "items": [
+      {
+        "timeline_id": "information:6158",
+        "timestamp": "2026-08-28T04:22:18Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2093192424612937799",
+        "author": "TawnyO19471",
+        "url": "https://x.com/TawnyO19471/status/2093192424612937799",
+        "source_url": "https://x.com/TawnyO19471/status/2093192424612937799",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "deportation"
+        ],
+        "freshness_cues": [],
+        "text": "@TomK_Brit1993 Close the borders, prevent all illegal migration and deport all undocumenteds",
+        "text_excerpt": "@TomK_Brit1993 Close the borders, prevent all illegal migration and deport all undocumenteds",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-08-28T04:23:13Z",
+        "last_collected_at": "2026-08-28T04:23:13Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "operational:260",
+        "timestamp": "2026-08-28T04:22:18Z",
+        "layer": "OPERATIONAL",
+        "type": "DEPORTATION",
+        "signal_type": "DEPORTATION",
+        "event_type": "DEPORTATION",
+        "source": "X",
+        "source_post_id": "2093192426017943663",
+        "author": "danny_hellman",
+        "url": "https://x.com/danny_hellman/status/2093192426017943663",
+        "source_url": "https://x.com/danny_hellman/status/2093192426017943663",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.25,
+        "priority": "LOW",
+        "priority_score": 25.0,
+        "text": "@AdelmanCheri @mdoernte822 @ChrisMurphyCT @realDonaldTrump @GOP @GOPSenate @GOPHouse I agree. Illegal migrants who commit crimes while in the US should do jail time commensurate with their crimes, as well as being deported, while those guilty of no crime other than violating US immigration law should merely be deported.",
+        "text_excerpt": "@AdelmanCheri @mdoernte822 @ChrisMurphyCT @realDonaldTrump @GOP @GOPSenate @GOPHouse I agree. Illegal migrants who commit crimes while in the US should do jail time commensurate with their crimes, as well as being deported, while those guilty of no crime other than violating US immigration law should merely be deported.",
+        "event_group_id": 204,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null
+      },
+      {
+        "timeline_id": "early_warning:330",
+        "timestamp": "2026-08-28T03:54:23Z",
+        "layer": "EARLY_WARNING",
+        "type": "MOVEMENT_EARLY_WARNING",
+        "signal_type": "MOVEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1w0fvqd",
+        "author": "Hot_Preparation4777",
+        "url": "https://www.reddit.com/r/europeanunion/comments/1w0fvqd/explosive_clashes_in_ceuta_overnight_with_fedup/",
+        "source_url": "https://www.reddit.com/r/europeanunion/comments/1w0fvqd/explosive_clashes_in_ceuta_overnight_with_fedup/",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "Ceuta",
+        "primary_location": "Ceuta",
+        "country": "Spain",
+        "confidence": 0.9,
+        "priority": "MEDIUM",
+        "priority_score": 42.5,
+        "analyst_priority": "MEDIUM",
+        "text": "Explosive clashes in Ceuta overnight with fed-up locals destroying illegal Moroccan encampments. Anger reached fever pitch overnight as Ceuta locals clashed with illegal Moroccan migrants, forcing police to intervene. The violence further fueled the tension that has plagued the small Spanish enclave",
+        "text_excerpt": "Explosive clashes in Ceuta overnight with fed-up locals destroying illegal Moroccan encampments. Anger reached fever pitch overnight as Ceuta locals clashed with illegal Moroccan migrants, forcing police to intervene. The violence further fueled the tension that has plagued the small Spanish enclave",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "MOVEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-08-28T04:23:14Z",
+        "last_detected_at": "2026-08-28T04:23:14Z"
+      },
+      {
+        "timeline_id": "information:6185",
+        "timestamp": "2026-08-28T03:45:58Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1w0fppy",
+        "author": "Chinoyboii",
+        "url": "https://www.reddit.com/r/tankiejerk/comments/1w0fppy/do_you_think_jewish_migrants_to_ottoman_palestine/",
+        "source_url": "https://www.reddit.com/r/tankiejerk/comments/1w0fppy/do_you_think_jewish_migrants_to_ottoman_palestine/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "crossing",
+          "arrival"
+        ],
+        "freshness_cues": [
+          "now"
+        ],
+        "text": "Do you think Jewish migrants to Ottoman Palestine should have tried to become Arabic-speaking Palestinian/Ottoman Jews, rather than developing a distinct Hebrew-speaking Zionist national identity?\nDisplayed in this photo is the Zinati family; from left to right, Mazal-Saada, Yosef, and Margalit Zinati. According to the family's tradition, the Zinatis of Peki'in descend from the ancient Jewish population of the Galilee and are among the descendants of Jews who remained in the region rather than becoming part of the larger Jewish Diaspora. So I have been reading a little bit more about the Musta'aravim, the longstanding Arabic-speaking Jewish communities that existed in Palestine and elsewhere in the Middle East before the arrival of many Sephardim following the expulsions from Spain and Portugal. By the late Ottoman period, many of these Musta'aravi communities had been absorbed into the broader Sephardic population, although there were still Jews in Palestine whose families had lived there for generations and who were deeply integrated into the surrounding Arabic-speaking society. At one point, the relationship between these longstanding Jewish communities and Zionism seems to have been fairly complicated. Some members of the Old Yishuv eventually supported Zionism, while others were suspicious of the overwhelmingly European character of the movement and its tendency to construct a separate Jewish society rather than integrating into the existing one. Some native Palestinian Sephardim welcomed Jewish immigration while criticizing the cultural separation of the new arrivals, particularly their lack of Arabic and their limited familiarity with the surrounding Arab society. However, some of these initially tentative or critical attitudes toward the Zionist movement appear to have shifted as the conflict between the Jewish and Arab populations became increasingly violent during the British Mandate. The 1920 Nabi Musa riots, the 1929 Palestine riots, and eventually the Arab Revolt of 1936–1939 made it increasingly difficult for longstanding Arabic-speaking Jews to remain politically and socially insulated from the developing conflict between Zionism and Palestinian Arab nationalism. In regards to the Jews of the Old Yishuv/Musta'aravim, this was significant because Arab violence was not always confined to newly arrived Zionist settlers. During the Nabi Musa riots, for example, much of the violence in Jerusalem fell upon Jews of the Old Yishuv, despite the fact that many of them had little connection to or were themselves opposed to political Zionism. The distinction between \"native Jews\" and \"Zionist immigrants\" therefore did not necessarily protect the former once communal violence broke out. The events of 1929 seem to have been an even greater turning point. Long-established Jewish communities in places such as Hebron and Safed were attacked, and many of the victims belonged to communities that predated modern Zionism. In Hebron in particular, members of the Jewish community had previously maintained close relationships with their Muslim neighbors, and some reportedly declined offers of protection from the Haganah because they believed local Arab notables would protect them. Although many Arab residents did in fact shelter and save their Jewish neighbors, the massacre nevertheless devastated the centuries-old Jewish community. The violence of 1929 profoundly shocked Sephardic and other Middle Eastern Jews in Palestine and forced many of their leaders to reconsider whether the older model of Arab-Jewish coexistence could survive the increasingly nationalized conflict. The Arab Revolt of 1936–1939 placed even greater pressure on this middle position. As village attacks, reprisals, segregationist initiatives , and competing national institutions increased, the social boundary between \"Jew\" and \"Arab\" became increasingly difficult to cross. The Sephardim and other Middle Eastern Jewish leaders who had previously imagined themselves as potential cultural intermediaries between the Zionist movement and Palestinian Arabs now had to contend with a conflict in which Jewish civilians could be targeted regardless of whether they were Ashkenazi Jewish Zionists or Arabic-speaking Jews whose families had lived in Palestine for centuries. However, this does not mean that all Musta'aravim or Old Yisuv Sephardim suddenly embraced Zionism, nor did the desire for Arab-Jewish rapprochement disappear as some of the Sephardim and Musta'aravi intellectuals continued advocating Arabic education, cooperation with Palestinian Arabs, binational arrangements, and a more culturally Levantine Jewish society even after these episodes of violence. Unfortunately, as the Mandate period progressed, maintaining an independent position somewhere between the Zionist Yishuv and the Palestinian Arab national movement became increasingly difficult and ultimately failed to come into fruition. That said, this has me wondering about an alternative historical trajectory. What if, rather than this process ending with most of Palestine's Jews becoming incorporated into a separate Hebrew-speaking Zionist society, the opposite process had occurred? Amongst my Sephardic/Mizrahi friends some of them grew up speaking Arabic with their grandparents, Hebrew with their parents, and then English with us. When I inquired them this question, several reiterated their strong support for Zionism, largely because of what their own families had experienced in various Arab-majority societies, which include experiences of anti-Jewish sentiment and in some cases, displacement. As a result of their family history, they are understandably skeptical of the idea that Jewish security could have depended indefinitely upon remaining a minority within a broader Arab political society. At the same time, the question I was asking them was not whether Jews should have simply remained politically powerless minorities or whether antisemitism in Arab societies was mythological, fabricated, etc. Rather, I am wondering whether the political trajectory of Palestine itself could have developed differently if the Ashkenazi migrants had integrated into the preexisting Arabic-speaking society instead of constructing an increasingly separate national society alongside it. In other words, what if the new migrants had gradually become Arabic-speaking Palestinian or Ottoman Jews in a manner somewhat comparable to the Musta'aravim and other Arabic-speaking Jews of the region? They could still have maintained Judaism, Jewish communal institutions, their strong sense of Jewish peoplehood, Hebrew literature, and perhaps even some form of Jewish cultural or national revival, while Arabic remained the major shared language of public life between Jews, Muslims, and Christians. What are your thoughts?",
+        "text_excerpt": "Do you think Jewish migrants to Ottoman Palestine should have tried to become Arabic-speaking Palestinian/Ottoman Jews, rather than developing a distinct Hebrew-speaking Zionist national identity?\nDisplayed in this photo is the Zinati family; from left to right, Mazal-Saada, Yosef, and Margalit Zinati. According to the family's tradition, the Zinatis of Peki'in descend from the ancient Jewish population of the Galile…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-08-28T04:23:47Z",
+        "last_collected_at": "2026-08-28T04:23:47Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:6193",
+        "timestamp": "2026-08-28T03:32:39Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2093179929659634084",
+        "author": "grok",
+        "url": "https://x.com/grok/status/2093179929659634084",
+        "source_url": "https://x.com/grok/status/2093179929659634084",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "sea",
+          "rescue"
+        ],
+        "freshness_cues": [],
+        "text": "@URGNews @larry_mcwethy Main SAR NGOs like Sea-Watch and SOS Méditerranée rely mostly on private donations (e.g. SOS Méditerranée ~91% private). Germany allocated ~€1.5M in 2024 from federal funds to SOS Humanity, SOS Méditerranée, Sea-Eye and Resqship for sea rescues (ended 2025). French local",
+        "text_excerpt": "@URGNews @larry_mcwethy Main SAR NGOs like Sea-Watch and SOS Méditerranée rely mostly on private donations (e.g. SOS Méditerranée ~91% private). Germany allocated ~€1.5M in 2024 from federal funds to SOS Humanity, SOS Méditerranée, Sea-Eye and Resqship for sea rescues (ended 2025). French local",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-08-28T04:24:16Z",
+        "last_collected_at": "2026-08-28T04:24:16Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:6221",
+        "timestamp": "2026-08-28T03:15:02Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2093175498721673543",
+        "author": "Perth05160307",
+        "url": "https://x.com/Perth05160307/status/2093175498721673543",
+        "source_url": "https://x.com/Perth05160307/status/2093175498721673543",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "detention",
+          "deportation",
+          "arrival"
+        ],
+        "freshness_cues": [],
+        "text": "@RupertLowe10 When you win, ask the world to donate to the construction of deportation facilities to keep invaders in until they can be removed. We love the UK and will help. If migrants knew they would be detained 24/7 on arrival in the UK they will stay in countries that won’t detain them.",
+        "text_excerpt": "@RupertLowe10 When you win, ask the world to donate to the construction of deportation facilities to keep invaders in until they can be removed. We love the UK and will help. If migrants knew they would be detained 24/7 on arrival in the UK they will stay in countries that won’t detain them.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-08-28T04:25:20Z",
+        "last_collected_at": "2026-08-28T04:25:20Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "early_warning:331",
+        "timestamp": "2026-08-28T02:42:37Z",
+        "layer": "EARLY_WARNING",
+        "type": "ROUTE_EARLY_WARNING",
+        "signal_type": "ROUTE_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2093167340217053574",
+        "author": "grok",
+        "url": "https://x.com/grok/status/2093167340217053574",
+        "source_url": "https://x.com/grok/status/2093167340217053574",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "Ceuta",
+        "primary_location": "Ceuta",
+        "country": "Spain",
+        "confidence": 0.72,
+        "priority": "MEDIUM",
+        "priority_score": 36.2,
+        "analyst_priority": "LOW",
+        "text": "@WisecarverKA Mass migrant entry hit Ceuta July 30 from Morocco. Thousands remained camping on beaches nearly a month later amid strained resources.\n\nAug 26: Protesters dismantled tents and threw belongings into the sea; police intervened.\n\nAug 27 morning: Migrants stoned a military vehicle,",
+        "text_excerpt": "@WisecarverKA Mass migrant entry hit Ceuta July 30 from Morocco. Thousands remained camping on beaches nearly a month later amid strained resources.\n\nAug 26: Protesters dismantled tents and threw belongings into the sea; police intervened.\n\nAug 27 morning: Migrants stoned a military vehicle,",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "ROUTE_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-08-28T04:24:17Z",
+        "last_detected_at": "2026-08-28T04:24:17Z"
+      },
+      {
+        "timeline_id": "information:6188",
+        "timestamp": "2026-08-27T22:15:58Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1w08bxb",
+        "author": "schefferjoko",
+        "url": "https://www.reddit.com/r/JordanPeterson/comments/1w08bxb/locals_block_red_cross_aid_storm_migrant_camps/",
+        "source_url": "https://www.reddit.com/r/JordanPeterson/comments/1w08bxb/locals_block_red_cross_aid_storm_migrant_camps/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "crossing",
+          "migrant_camp"
+        ],
+        "freshness_cues": [],
+        "text": "Locals Block Red Cross Aid, Storm Migrant Camps Again as Ceuta Resistance Grows",
+        "text_excerpt": "Locals Block Red Cross Aid, Storm Migrant Camps Again as Ceuta Resistance Grows",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-08-28T04:23:47Z",
+        "last_collected_at": "2026-08-28T04:23:47Z",
+        "collection_count": 1
+      },
       {
         "timeline_id": "information:6121",
         "timestamp": "2026-08-27T20:46:06Z",
@@ -3131,8 +3382,8 @@
         "country": "-",
         "confidence": 0.1,
         "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
+        "priority_score": 30,
+        "information_score": 3,
         "matched_information_cues": [
           "boat",
           "smuggling"
@@ -3146,8 +3397,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-08-27T20:47:50Z",
-        "last_collected_at": "2026-08-27T20:47:50Z",
-        "collection_count": 1
+        "last_collected_at": "2026-08-28T04:24:49Z",
+        "collection_count": 2
       },
       {
         "timeline_id": "information:6117",
@@ -3296,6 +3547,38 @@
         "first_collected_at": "2026-08-27T20:47:50Z",
         "last_collected_at": "2026-08-27T20:47:50Z",
         "collection_count": 1
+      },
+      {
+        "timeline_id": "early_warning:332",
+        "timestamp": "2026-08-27T14:50:37Z",
+        "layer": "EARLY_WARNING",
+        "type": "FACILITATION_EARLY_WARNING",
+        "signal_type": "FACILITATION_EARLY_WARNING",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1vzw4uj",
+        "author": "Ok_Signal4754",
+        "url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1vzw4uj/crete_arrests_of_smugglers_after_rescue_of_171/",
+        "source_url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1vzw4uj/crete_arrests_of_smugglers_after_rescue_of_171/",
+        "region": "EASTERN_MEDITERRANEAN",
+        "primary_region": "EASTERN_MEDITERRANEAN",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.62,
+        "priority": "MEDIUM",
+        "priority_score": 25.7,
+        "analyst_priority": "LOW",
+        "text": "Crete: Arrests of smugglers after rescue of 171 migrants – New operation in Kaloi Limenes | Greece\nSource",
+        "text_excerpt": "Crete: Arrests of smugglers after rescue of 171 migrants – New operation in Kaloi Limenes | Greece\nSource",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "FACILITATION_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-08-28T04:24:50Z",
+        "last_detected_at": "2026-08-28T04:24:50Z"
       },
       {
         "timeline_id": "information:6154",
@@ -4520,8 +4803,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-08-26T16:34:56Z",
-        "last_collected_at": "2026-08-26T21:03:59Z",
-        "collection_count": 2
+        "last_collected_at": "2026-08-28T04:24:50Z",
+        "collection_count": 3
       },
       {
         "timeline_id": "early_warning:319",
@@ -4551,9 +4834,9 @@
         "related_source_count": null,
         "signal_mode": "DIRECT",
         "signal_intent": "EASIER_CROSSING",
-        "detection_count": 3,
+        "detection_count": 4,
         "first_detected_at": "2026-08-26T16:33:41Z",
-        "last_detected_at": "2026-08-27T04:08:06Z"
+        "last_detected_at": "2026-08-28T04:24:51Z"
       },
       {
         "timeline_id": "operational:251",
@@ -4658,8 +4941,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-08-26T16:34:56Z",
-        "last_collected_at": "2026-08-27T20:48:34Z",
-        "collection_count": 4
+        "last_collected_at": "2026-08-28T04:24:51Z",
+        "collection_count": 5
       },
       {
         "timeline_id": "information:5799",
@@ -24591,43 +24874,6 @@
         "collection_count": 17
       },
       {
-        "timeline_id": "information:3449",
-        "timestamp": "2026-08-16T03:00:14Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2088823117628026957",
-        "author": "Breaking_Battle",
-        "url": "https://x.com/Breaking_Battle/status/2088823117628026957",
-        "source_url": "https://x.com/Breaking_Battle/status/2088823117628026957",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "tunnel"
-        ],
-        "freshness_cues": [],
-        "text": "A tense confrontation erupted along the Lithuania-Belarus border after Lithuanian guards discovered a tunnel near the Lazdijai district. Reports say a group of around 20 migrants confronted four border officers before retreating back toward Belarus. Lithuanian authorities have https://t.co/wuAENiS6lF",
-        "text_excerpt": "A tense confrontation erupted along the Lithuania-Belarus border after Lithuanian guards discovered a tunnel near the Lazdijai district. Reports say a group of around 20 migrants confronted four border officers before retreating back toward Belarus. Lithuanian authorities have https://t.co/wuAENiS6lF",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-08-16T06:04:34Z",
-        "last_collected_at": "2026-08-16T06:04:34Z",
-        "collection_count": 1
-      },
-      {
         "timeline_id": "early_warning:153",
         "timestamp": "2026-08-16T02:27:31Z",
         "layer": "EARLY_WARNING",
@@ -24755,83 +25001,6 @@
         "last_detected_at": "2026-08-17T08:48:42Z"
       },
       {
-        "timeline_id": "information:3450",
-        "timestamp": "2026-08-15T20:59:20Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "MASTODON",
-        "source_post_id": "mastodon_117101531030698278",
-        "author": null,
-        "url": "https://universeodon.com/@digyoursoul/117101531030698278",
-        "source_url": "https://universeodon.com/@digyoursoul/117101531030698278",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 50,
-        "information_score": 5,
-        "matched_information_cues": [
-          "detention",
-          "deportation",
-          "trafficking"
-        ],
-        "freshness_cues": [
-          "now"
-        ],
-        "text": "EVIL NAZI Stephen Miller stripped legal representation from 24,000 detained children-some just 3 years old, then handed *a $244 MILLION contract to an NGO whose founder went to trial on SEX TRAFFICKING Charges!* Now toddlers face deportation hearings alone on video screens. # nazi # stephenmiller # trafficking # maga https://www. publicnotice.co/p/stephen-mill er-child-deportation",
-        "text_excerpt": "EVIL NAZI Stephen Miller stripped legal representation from 24,000 detained children-some just 3 years old, then handed *a $244 MILLION contract to an NGO whose founder went to trial on SEX TRAFFICKING Charges!* Now toddlers face deportation hearings alone on video screens. # nazi # stephenmiller # trafficking # maga https://www. publicnotice.co/p/stephen-mill er-child-deportation",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-08-16T06:04:36Z",
-        "last_collected_at": "2026-08-17T14:56:22Z",
-        "collection_count": 6
-      },
-      {
-        "timeline_id": "information:3503",
-        "timestamp": "2026-08-15T20:04:31Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1vpcnr5",
-        "author": "Electronic-Lie-4547",
-        "url": "https://www.reddit.com/r/microbiomenews/comments/1vpcnr5/a_2446person_study_reveals_specific_gut_bacteria/",
-        "source_url": "https://www.reddit.com/r/microbiomenews/comments/1vpcnr5/a_2446person_study_reveals_specific_gut_bacteria/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "crossing",
-          "vessel"
-        ],
-        "freshness_cues": [],
-        "text": "A 2,446-person study reveals specific gut bacteria linked to 11% lower odds of arterial stiffness.\nThe Core Issue Scientists wanted to know if the bacteria living in your gut have anything to do with how fast your blood vessels age, especially since vascular aging is harder to catch early in people from migrant backgrounds who already face higher heart risk. The Finding Researchers looked at gut bacteria and vascular health markers in 2,446 adults from a multi ethnic cohort in Amsterdam. People with more Faecalibacterium, Bacteroides, and Ruminococcaceae UCG-013 in their gut had lower odds of stiff arteries. People with more Streptococcus and Sutterella tended to have worse vascular numbers. Vascular aging was worst among Surinamese and Ghanaian participants. Why it Matters Arterial stiffness is a real predictor of heart attack, stroke, and high blood pressure down the line. If gut bacteria really do track with how fast your vessels age, that opens up a totally new angle on cardiovascular risk, one that might also help explain why some ethnic groups carry a heavier vascular burden than others. Limitations of Study This is a cross sectional study, meaning everyone was measured once. It shows these bacteria and vascular markers move together, not that one causes the other. It is also a single cohort from Amsterdam with no independent replication yet, so treat it as an early signal, not a settled finding. Conflicting Interests The researchers reported no competing interests. Interesting Statistics Faecalibacterium: odds ratio 0.89 for arterial stiffness (95% CI 0.81 to 0.99) Bacteroides: odds ratio 0.89 for arterial stiffness (95% CI 0.81 to 0.98) Ruminococcaceae UCG-013: odds ratio 0.92 for arterial stiffness (95% CI 0.84 to 0.99) Sample size: 2,446 adults Useful Takeaways Faecalibacterium and Bacteroides showed the strongest links to healthier arteries, each tied to roughly 11% lower odds of stiffness. Streptococcus and Sutterella went the other way. None of this proves cause and effect yet, and there is no evidence here that any supplement or diet change would move the needle. TL;DR In a 2,446 person Amsterdam study, gut bacteria like Faecalibacterium and Bacteroides tracked with healthier arteries while Streptococcus and Sutterella tracked with stiffer ones, and vascular aging hit Surinamese and Ghanaian participants hardest, though it is only an association so far.",
-        "text_excerpt": "A 2,446-person study reveals specific gut bacteria linked to 11% lower odds of arterial stiffness.\nThe Core Issue Scientists wanted to know if the bacteria living in your gut have anything to do with how fast your blood vessels age, especially since vascular aging is harder to catch early in people from migrant backgrounds who already face higher heart risk. The Finding Researchers looked at gut bacteria and vascular…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-08-16T08:53:32Z",
-        "last_collected_at": "2026-08-16T08:53:32Z",
-        "collection_count": 1
-      },
-      {
         "timeline_id": "early_warning:143",
         "timestamp": "2026-08-15T19:24:32Z",
         "layer": "EARLY_WARNING",
@@ -24894,43 +25063,6 @@
         "detection_count": 1,
         "first_detected_at": "2026-08-15T19:25:25Z",
         "last_detected_at": "2026-08-15T19:25:25Z"
-      },
-      {
-        "timeline_id": "information:3375",
-        "timestamp": "2026-08-15T19:24:15Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2088708367527108659",
-        "author": "jofez_pat",
-        "url": "https://x.com/jofez_pat/status/2088708367527108659",
-        "source_url": "https://x.com/jofez_pat/status/2088708367527108659",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "crossing"
-        ],
-        "freshness_cues": [],
-        "text": "@RepublikaTV Morocco Cracks Down as Migrants Attempt Mass Border Crossing Into Spain's Ceuta | DRM News | AC1G=https://t.co/uTJkHeLCUa",
-        "text_excerpt": "@RepublikaTV Morocco Cracks Down as Migrants Attempt Mass Border Crossing Into Spain's Ceuta | DRM News | AC1G=https://t.co/uTJkHeLCUa",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-08-15T19:25:25Z",
-        "last_collected_at": "2026-08-15T19:25:25Z",
-        "collection_count": 1
       },
       {
         "timeline_id": "early_warning:145",
@@ -25091,46 +25223,6 @@
         "last_detected_at": "2026-08-15T19:14:52Z"
       },
       {
-        "timeline_id": "information:3364",
-        "timestamp": "2026-08-15T19:07:36Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2088704174712066332",
-        "author": "ReformUKSam",
-        "url": "https://x.com/ReformUKSam/status/2088704174712066332",
-        "source_url": "https://x.com/ReformUKSam/status/2088704174712066332",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 40,
-        "information_score": 4,
-        "matched_information_cues": [
-          "border",
-          "boat",
-          "deportation"
-        ],
-        "freshness_cues": [
-          "now"
-        ],
-        "text": "We’re now seriously discussing providing BROTHELS for illegal migrants.\n\nHow about this for a radical idea…\n\n- STOP THE BOATS.\n- SECURE THE BORDER.\n- DEPORT THOSE WITH NO RIGHT TO BE HERE.\n\nBritain has completely lost the plot. https://t.co/2YzKuYgFqw",
-        "text_excerpt": "We’re now seriously discussing providing BROTHELS for illegal migrants.\n\nHow about this for a radical idea…\n\n- STOP THE BOATS.\n- SECURE THE BORDER.\n- DEPORT THOSE WITH NO RIGHT TO BE HERE.\n\nBritain has completely lost the plot. https://t.co/2YzKuYgFqw",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-08-15T19:14:52Z",
-        "last_collected_at": "2026-08-15T19:14:52Z",
-        "collection_count": 1
-      },
-      {
         "timeline_id": "operational:161",
         "timestamp": "2026-08-15T19:04:09Z",
         "layer": "OPERATIONAL",
@@ -25223,80 +25315,6 @@
         "event_time_text": null,
         "event_time_normalized": null,
         "event_time_confidence": null
-      },
-      {
-        "timeline_id": "information:3308",
-        "timestamp": "2026-08-15T18:57:05Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2088701528534106322",
-        "author": "MartinTaffoned",
-        "url": "https://x.com/MartinTaffoned/status/2088701528534106322",
-        "source_url": "https://x.com/MartinTaffoned/status/2088701528534106322",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "border",
-          "channel"
-        ],
-        "freshness_cues": [],
-        "text": "@RestoreIOW Let’s get it right, these migrants never made it across one of the busiest waterways on the planet but rather, were picked up mid channel by the British border force and the RNLI.\n\nThey were therefore picked up by the British government acting against the best interests of the",
-        "text_excerpt": "@RestoreIOW Let’s get it right, these migrants never made it across one of the busiest waterways on the planet but rather, were picked up mid channel by the British border force and the RNLI.\n\nThey were therefore picked up by the British government acting against the best interests of the",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-08-15T19:04:42Z",
-        "last_collected_at": "2026-08-15T19:14:53Z",
-        "collection_count": 2
-      },
-      {
-        "timeline_id": "information:3324",
-        "timestamp": "2026-08-15T18:55:30Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2088701131941687741",
-        "author": "DVDfever",
-        "url": "https://x.com/DVDfever/status/2088701131941687741",
-        "source_url": "https://x.com/DVDfever/status/2088701131941687741",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "crossing",
-          "boat"
-        ],
-        "freshness_cues": [],
-        "text": "@Jakesc1972 @Parody_PM \"illeagal migrants\"? What are those, you lazy fucker? Haste makes waste. And small boat crossings are down in the last few months. You far-right morons chase Nigel Farage like he's your saviour 🤣🤣🤣",
-        "text_excerpt": "@Jakesc1972 @Parody_PM \"illeagal migrants\"? What are those, you lazy fucker? Haste makes waste. And small boat crossings are down in the last few months. You far-right morons chase Nigel Farage like he's your saviour 🤣🤣🤣",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-08-15T19:05:16Z",
-        "last_collected_at": "2026-08-15T19:26:54Z",
-        "collection_count": 3
       },
       {
         "timeline_id": "early_warning:137",
