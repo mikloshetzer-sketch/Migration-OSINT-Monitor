@@ -1618,6 +1618,241 @@
 
     @media(max-width:800px){.matrix-grid{grid-template-columns:135px repeat(7,minmax(145px,1fr));min-width:1150px}.matrix-cell{padding:10px}.matrix-range{width:100%}}
 
+
+    /* =====================================================
+       HISTORICAL EVIDENCE EXPLORER
+       ===================================================== */
+
+    .evidence-panel{margin-top:16px}
+
+    .evidence-toolbar{
+      display:grid;
+      grid-template-columns:160px 180px 180px 220px minmax(220px,1fr) auto auto;
+      gap:10px;
+      align-items:end;
+      padding:16px;
+      margin:18px 0;
+      background:var(--card-soft);
+      border:1px solid var(--line);
+      border-radius:14px;
+    }
+
+    .evidence-field{display:flex;flex-direction:column;gap:6px;min-width:0}
+    .evidence-field label{
+      color:var(--muted);
+      font-size:9px;
+      line-height:1.2;
+      letter-spacing:.11em;
+      text-transform:uppercase;
+      font-weight:950;
+    }
+
+    .evidence-input,
+    .evidence-select{
+      width:100%;
+      height:40px;
+      border:1px solid var(--line-2);
+      border-radius:10px;
+      background:#fff;
+      color:var(--navy);
+      padding:0 11px;
+      outline:none;
+      font-size:12px;
+      font-weight:750;
+    }
+
+    .evidence-input:focus,
+    .evidence-select:focus{
+      border-color:var(--blue);
+      box-shadow:0 0 0 3px rgba(17,153,211,.10);
+    }
+
+    .evidence-btn{
+      height:40px;
+      border-radius:10px;
+      border:1px solid var(--navy);
+      padding:0 15px;
+      cursor:pointer;
+      font-size:11px;
+      font-weight:900;
+      white-space:nowrap;
+    }
+
+    .evidence-btn.primary{background:var(--navy);color:#fff}
+    .evidence-btn.secondary{background:#fff;color:var(--navy);border-color:var(--line-2)}
+    .evidence-btn:hover{transform:translateY(-1px)}
+
+    .evidence-meta{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:12px;
+      color:var(--muted);
+      font-size:11px;
+      font-weight:750;
+    }
+
+    .evidence-results{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+    }
+
+    .evidence-card{
+      position:relative;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:15px;
+      padding:18px 18px 16px;
+      box-shadow:0 4px 14px rgba(24,70,95,.06);
+      overflow:hidden;
+    }
+
+    .evidence-card::before{
+      content:"";
+      position:absolute;
+      left:0;top:0;bottom:0;
+      width:4px;
+      background:var(--blue);
+    }
+    .evidence-card.layer-early_warning::before{background:var(--red)}
+    .evidence-card.layer-operational::before{background:var(--green)}
+    .evidence-card.layer-correlated::before{background:var(--purple)}
+    .evidence-card.layer-information::before{background:var(--blue)}
+
+    .evidence-card-top{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      align-items:flex-start;
+      margin-bottom:12px;
+    }
+
+    .evidence-badges{display:flex;gap:6px;flex-wrap:wrap}
+    .evidence-badge{
+      display:inline-flex;
+      align-items:center;
+      min-height:24px;
+      border-radius:999px;
+      padding:4px 9px;
+      background:#eef5f8;
+      color:var(--navy);
+      border:1px solid #d9e6ec;
+      font-size:9px;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      font-weight:950;
+    }
+    .evidence-badge.priority-high,
+    .evidence-badge.priority-critical{background:var(--critical-bg);color:var(--critical);border-color:#efc0bd}
+    .evidence-badge.priority-medium{background:var(--med-bg);color:var(--med);border-color:#efd7ad}
+
+    .evidence-confidence{text-align:right;white-space:nowrap}
+    .evidence-confidence .value{font-size:24px;line-height:1;font-weight:950;color:var(--navy)}
+    .evidence-confidence .label{margin-top:4px;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:900}
+
+    .evidence-title{
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:23px;
+      line-height:1.15;
+      color:var(--navy);
+      font-weight:700;
+      margin:0 0 8px;
+    }
+
+    .evidence-source-line{
+      display:flex;
+      gap:8px 14px;
+      flex-wrap:wrap;
+      color:#496878;
+      font-size:11px;
+      font-weight:800;
+      margin-bottom:12px;
+    }
+
+    .evidence-text{
+      background:#f7fafc;
+      border-left:3px solid #cbdde6;
+      border-radius:8px;
+      padding:12px 14px;
+      color:#274f64;
+      font-size:12px;
+      line-height:1.55;
+      white-space:pre-wrap;
+      overflow-wrap:anywhere;
+    }
+
+    .evidence-keyword{background:#fff0a8;color:#6b5100;padding:1px 2px;border-radius:2px}
+
+    .evidence-details{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:8px;
+      margin-top:12px;
+    }
+
+    .evidence-detail{
+      border:1px solid var(--line);
+      border-radius:9px;
+      padding:8px 9px;
+      background:#fff;
+      min-width:0;
+    }
+    .evidence-detail .k{color:var(--muted);font-size:8px;letter-spacing:.08em;text-transform:uppercase;font-weight:900}
+    .evidence-detail .v{margin-top:3px;color:var(--navy);font-size:10px;font-weight:850;overflow-wrap:anywhere}
+
+    .evidence-actions{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:13px}
+    .evidence-link{color:#087eb4;font-size:10px;font-weight:900;text-decoration:none}
+    .evidence-link:hover{text-decoration:underline}
+    .evidence-post-id{color:var(--muted-2);font-size:9px;font-weight:750;overflow-wrap:anywhere;text-align:right}
+
+    .evidence-empty{
+      grid-column:1/-1;
+      padding:30px;
+      text-align:center;
+      border:1px dashed var(--line-2);
+      border-radius:14px;
+      color:var(--muted);
+      background:#fbfdfe;
+      font-size:12px;
+      font-weight:750;
+    }
+
+    .evidence-note{
+      margin-top:14px;
+      padding:11px 13px;
+      border-radius:10px;
+      background:#fff8e9;
+      border:1px solid #efdaad;
+      color:#745514;
+      font-size:10px;
+      line-height:1.45;
+    }
+
+    .evidence-panel.blog-view .section-head > div,
+    .evidence-panel.blog-view .evidence-toolbar,
+    .evidence-panel.blog-view .evidence-meta,
+    .evidence-panel.blog-view .evidence-note{display:none}
+    .evidence-panel.blog-view .section-head{justify-content:flex-end;margin-bottom:10px}
+    .evidence-panel.blog-view{padding:18px;background:#eef5f8}
+    .evidence-panel.blog-view .evidence-results{grid-template-columns:1fr;max-width:1050px;margin:0 auto}
+    .evidence-panel.blog-view .evidence-card{padding:26px 28px;border-radius:18px;box-shadow:0 10px 30px rgba(24,70,95,.10)}
+    .evidence-panel.blog-view .evidence-title{font-size:30px}
+    .evidence-panel.blog-view .evidence-text{font-size:14px;line-height:1.65;padding:17px 18px}
+
+    @media(max-width:1250px){
+      .evidence-toolbar{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .evidence-results{grid-template-columns:1fr}
+    }
+    @media(max-width:700px){
+      .evidence-toolbar{grid-template-columns:1fr}
+      .evidence-details{grid-template-columns:1fr 1fr}
+      .evidence-card-top{flex-direction:column}
+      .evidence-confidence{text-align:left}
+    }
+
   </style>
 </head>
 
@@ -1792,6 +2027,68 @@
           <div class="matrix-legend-status">
             <span id="matrixUpdated">—</span> · Időzóna: helyi böngészőidő
           </div>
+        </div>
+      </section>
+
+
+
+      <section class="panel accent-blue evidence-panel section-pad" id="evidenceExplorerPanel">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Historical Evidence Explorer</div>
+            <h3>Történeti bizonyíték-visszakereső</h3>
+            <div class="section-sub">
+              A signal timeline történeti rekordjainak visszakeresése dátum, réteg, forrás, régió és kulcsszó alapján.
+              A találati kártyák közvetlenül a dashboard-data.json rekordjaiból készülnek.
+            </div>
+          </div>
+          <button class="section-action" id="evidenceBlogView" type="button">Blog view</button>
+        </div>
+
+        <div class="evidence-toolbar">
+          <div class="evidence-field">
+            <label for="evidenceDate">Dátum</label>
+            <input class="evidence-input" id="evidenceDate" type="date" />
+          </div>
+          <div class="evidence-field">
+            <label for="evidenceLayer">Layer</label>
+            <select class="evidence-select" id="evidenceLayer">
+              <option value="ALL">Minden réteg</option>
+              <option value="EARLY_WARNING">Early Warning</option>
+              <option value="INFORMATION">Information</option>
+              <option value="OPERATIONAL">Operational</option>
+              <option value="CORRELATED">Correlation</option>
+            </select>
+          </div>
+          <div class="evidence-field">
+            <label for="evidenceSource">Forrás</label>
+            <select class="evidence-select" id="evidenceSource"><option value="ALL">Minden forrás</option></select>
+          </div>
+          <div class="evidence-field">
+            <label for="evidenceRegion">Régió</label>
+            <select class="evidence-select" id="evidenceRegion"><option value="ALL">Minden régió</option></select>
+          </div>
+          <div class="evidence-field">
+            <label for="evidenceKeyword">Kulcsszó / account / post ID</label>
+            <input class="evidence-input" id="evidenceKeyword" type="search" placeholder="pl. Kriyaj, Sebta, Dependent_Hope9447…" />
+          </div>
+          <button class="evidence-btn primary" id="evidenceSearch" type="button">Keresés</button>
+          <button class="evidence-btn secondary" id="evidenceReset" type="button">Törlés</button>
+        </div>
+
+        <div class="evidence-meta">
+          <div id="evidenceResultCount">—</div>
+          <div id="evidenceSearchSummary">A történeti adatok betöltése…</div>
+        </div>
+
+        <div class="evidence-results" id="evidenceResults">
+          <div class="evidence-empty">A történeti adatok betöltése…</div>
+        </div>
+
+        <div class="evidence-note">
+          <strong>Módszertani megjegyzés:</strong> a confidence a monitor algoritmikus besorolásának bizonyosságát jelzi.
+          Nem igazolja automatikusan a forrásbejegyzés valamennyi állításának valóságtartalmát. A Historical Evidence Explorer
+          a monitor által ténylegesen eltárolt rekordokat jeleníti meg; nem biztosít hozzáférést zárt vagy nem gyűjtött platformokhoz.
         </div>
       </section>
 
@@ -2079,6 +2376,14 @@
       items:[],
       generatedAt:null,
       weekOffset:0
+    };
+
+
+
+    const evidenceState = {
+      items:[],
+      blogView:false,
+      maxResults:24
     };
 
     const $ = (id) => document.getElementById(id);
@@ -3492,6 +3797,230 @@
       return escapeHtml(value);
     }
 
+
+
+    function evidenceDateKey(value){
+      if(!value) return "";
+      const d=new Date(value);
+      if(Number.isNaN(d.getTime())) return String(value).slice(0,10);
+      return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+    }
+
+    function evidenceText(item){
+      return String(first(item,["text","content","representative_text","summary","description","title"],"")||"");
+    }
+
+    function evidenceType(item){
+      return String(first(item,["type","event_type","signal_type","category"],"UNKNOWN")||"UNKNOWN");
+    }
+
+    function evidenceLayer(item){
+      return String(first(item,["layer"],"INFORMATION")||"INFORMATION").toUpperCase();
+    }
+
+    function evidenceRegion(item){
+      const raw=first(item,["region","resolved_region","primary_region"],"—");
+      if(raw&&typeof raw==="object") return String(first(raw,["name","region"],"—"));
+      return String(raw||"—");
+    }
+
+    function evidenceSource(item){
+      return String(first(item,["source","platform"],"—")||"—");
+    }
+
+    function evidenceAuthor(item){
+      return String(first(item,["author","username","account","source_author"],"—")||"—");
+    }
+
+    function evidencePostId(item){
+      return String(first(item,["source_post_id","post_id","id","event_id"],"—")||"—");
+    }
+
+    function evidenceUrl(item){
+      return String(first(item,["url","source_url","post_url","link"],"")||"");
+    }
+
+    function evidencePriority(item){
+      return String(first(item,["priority","analyst_priority"],"—")||"—").toUpperCase();
+    }
+
+    function evidenceConfidence(item){
+      const raw=first(item,["confidence","confidence_score"],null);
+      const n=Number(raw);
+      return Number.isFinite(n)?n:null;
+    }
+
+    function evidenceTimestampLabel(item){
+      const raw=first(item,["timestamp","published_at","created_at","date"],null);
+      if(!raw) return "—";
+      const d=new Date(raw);
+      if(Number.isNaN(d.getTime())) return String(raw);
+      return d.toLocaleString("hu-HU",{year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"});
+    }
+
+    function evidenceSearchBlob(item){
+      return [
+        evidenceText(item),evidenceType(item),evidenceLayer(item),evidenceRegion(item),
+        evidenceSource(item),evidenceAuthor(item),evidencePostId(item),locationLabel(item),
+        first(item,["signal_mode"],""),first(item,["signal_intent"],""),evidencePriority(item)
+      ].join(" ").toLowerCase();
+    }
+
+    function evidenceHighlight(text,keyword){
+      const safe=escapeHtml(text||"");
+      const q=String(keyword||"").trim();
+      if(!q) return safe;
+      const tokens=q.split(/\s+/).filter(Boolean).sort((a,b)=>b.length-a.length);
+      if(!tokens.length) return safe;
+      const escapedTokens=tokens.map(t=>t.replace(/[.*+?^${}()|[\]\\]/g,"\\$&"));
+      const re=new RegExp(`(${escapedTokens.join("|")})`,`gi`);
+      return safe.replace(re,'<mark class="evidence-keyword">$1</mark>');
+    }
+
+    function evidencePopulateFilters(items){
+      const sources=uniqueNonEmpty(items.map(evidenceSource)).filter(v=>v!=="—").sort((a,b)=>a.localeCompare(b));
+      const regions=uniqueNonEmpty(items.map(evidenceRegion)).filter(v=>v!=="—").sort((a,b)=>a.localeCompare(b));
+
+      $("evidenceSource").innerHTML='<option value="ALL">Minden forrás</option>'+sources.map(v=>`<option value="${escapeAttr(v)}">${escapeHtml(v)}</option>`).join("");
+      $("evidenceRegion").innerHTML='<option value="ALL">Minden régió</option>'+regions.map(v=>`<option value="${escapeAttr(v)}">${escapeHtml(humanize(v))}</option>`).join("");
+    }
+
+    function evidenceCurrentFilters(){
+      return {
+        date:$("evidenceDate").value||"",
+        layer:$("evidenceLayer").value||"ALL",
+        source:$("evidenceSource").value||"ALL",
+        region:$("evidenceRegion").value||"ALL",
+        keyword:$("evidenceKeyword").value.trim()
+      };
+    }
+
+    function evidenceFilteredItems(){
+      const f=evidenceCurrentFilters();
+      const q=f.keyword.toLowerCase();
+      return evidenceState.items.filter(item=>{
+        const ts=first(item,["timestamp","published_at","created_at","date"],"");
+        if(f.date&&evidenceDateKey(ts)!==f.date) return false;
+        if(f.layer!=="ALL"&&evidenceLayer(item)!==f.layer) return false;
+        if(f.source!=="ALL"&&evidenceSource(item)!==f.source) return false;
+        if(f.region!=="ALL"&&evidenceRegion(item)!==f.region) return false;
+        if(q&&!evidenceSearchBlob(item).includes(q)) return false;
+        return true;
+      });
+    }
+
+    function evidenceCardHtml(item,keyword){
+      const layer=evidenceLayer(item);
+      const type=evidenceType(item);
+      const priority=evidencePriority(item);
+      const confidence=evidenceConfidence(item);
+      const source=evidenceSource(item);
+      const author=evidenceAuthor(item);
+      const postId=evidencePostId(item);
+      const url=evidenceUrl(item);
+      const location=locationLabel(item);
+      const region=evidenceRegion(item);
+      const mode=String(first(item,["signal_mode"],"—")||"—");
+      const intent=String(first(item,["signal_intent"],"—")||"—");
+      const rawText=evidenceText(item)||"A rekordhoz nem áll rendelkezésre megjeleníthető szöveg.";
+      const priorityClass=`priority-${priority.toLowerCase()}`;
+      const layerClass=`layer-${layer.toLowerCase()}`;
+
+      return `
+        <article class="evidence-card ${escapeAttr(layerClass)}">
+          <div class="evidence-card-top">
+            <div class="evidence-badges">
+              <span class="evidence-badge ${escapeAttr(priorityClass)}">${escapeHtml(priority)}</span>
+              <span class="evidence-badge">${escapeHtml(humanize(layer))}</span>
+              <span class="evidence-badge">${escapeHtml(humanize(source))}</span>
+            </div>
+            <div class="evidence-confidence">
+              <div class="value">${confidence===null?"—":confidence.toFixed(2)}</div>
+              <div class="label">confidence</div>
+            </div>
+          </div>
+
+          <h4 class="evidence-title">${escapeHtml(humanize(type))}</h4>
+          <div class="evidence-source-line">
+            <span>◷ ${escapeHtml(evidenceTimestampLabel(item))}</span>
+            <span>⌖ ${escapeHtml(location)}</span>
+            <span>◎ ${escapeHtml(humanize(region))}</span>
+            <span>＠ ${escapeHtml(author)}</span>
+          </div>
+
+          <div class="evidence-text">${evidenceHighlight(rawText,keyword)}</div>
+
+          <div class="evidence-details">
+            <div class="evidence-detail"><div class="k">Signal mode</div><div class="v">${escapeHtml(humanize(mode))}</div></div>
+            <div class="evidence-detail"><div class="k">Signal intent</div><div class="v">${escapeHtml(humanize(intent))}</div></div>
+            <div class="evidence-detail"><div class="k">Layer</div><div class="v">${escapeHtml(humanize(layer))}</div></div>
+          </div>
+
+          <div class="evidence-actions">
+            ${url?`<a class="evidence-link" href="${escapeAttr(url)}" target="_blank" rel="noopener noreferrer">Eredeti forrás megnyitása ↗</a>`:'<span class="evidence-link" style="color:var(--muted-2)">Forrás URL nincs eltárolva</span>'}
+            <span class="evidence-post-id">ID: ${escapeHtml(postId)}</span>
+          </div>
+        </article>
+      `;
+    }
+
+    function renderEvidenceExplorer(){
+      const all=evidenceFilteredItems();
+      const visible=all.slice(0,evidenceState.maxResults);
+      const f=evidenceCurrentFilters();
+      const results=$("evidenceResults");
+
+      $("evidenceResultCount").textContent=`${all.length} találat${all.length>evidenceState.maxResults?` · első ${evidenceState.maxResults} megjelenítve`:""}`;
+
+      const filterParts=[];
+      if(f.date) filterParts.push(f.date);
+      if(f.layer!=="ALL") filterParts.push(humanize(f.layer));
+      if(f.source!=="ALL") filterParts.push(f.source);
+      if(f.region!=="ALL") filterParts.push(humanize(f.region));
+      if(f.keyword) filterParts.push(`„${f.keyword}”`);
+      $("evidenceSearchSummary").textContent=filterParts.length?`Aktív szűrés: ${filterParts.join(" · ")}`:"Nincs aktív szűrés";
+
+      if(!visible.length){
+        results.innerHTML='<div class="evidence-empty">A megadott feltételekkel nem található történeti rekord. Próbálj más dátumot, réteget vagy kulcsszót.</div>';
+        return;
+      }
+
+      results.innerHTML=visible.map(item=>evidenceCardHtml(item,f.keyword)).join("");
+    }
+
+    function renderHistoricalEvidence(data){
+      const timeline=data&&data.signal_timeline;
+      evidenceState.items=timeline&&Array.isArray(timeline.items)
+        ? [...timeline.items].sort((a,b)=>new Date(first(b,["timestamp","published_at","created_at","date"],0))-new Date(first(a,["timestamp","published_at","created_at","date"],0)))
+        : [];
+
+      evidencePopulateFilters(evidenceState.items);
+      renderEvidenceExplorer();
+    }
+
+    function setupEvidenceControls(){
+      $("evidenceSearch").addEventListener("click",renderEvidenceExplorer);
+      $("evidenceKeyword").addEventListener("keydown",e=>{
+        if(e.key==="Enter") renderEvidenceExplorer();
+      });
+      ["evidenceDate","evidenceLayer","evidenceSource","evidenceRegion"].forEach(id=>{
+        $(id).addEventListener("change",renderEvidenceExplorer);
+      });
+      $("evidenceReset").addEventListener("click",()=>{
+        $("evidenceDate").value="";
+        $("evidenceLayer").value="ALL";
+        $("evidenceSource").value="ALL";
+        $("evidenceRegion").value="ALL";
+        $("evidenceKeyword").value="";
+        renderEvidenceExplorer();
+      });
+      $("evidenceBlogView").addEventListener("click",()=>{
+        evidenceState.blogView=!evidenceState.blogView;
+        $("evidenceExplorerPanel").classList.toggle("blog-view",evidenceState.blogView);
+        $("evidenceBlogView").textContent=evidenceState.blogView?"Normál nézet":"Blog view";
+      });
+    }
+
     function renderAll(data){
       dashboardData = data;
 
@@ -3505,6 +4034,7 @@
       renderPriority(data);
       renderInformationHistory(data);
       renderSignalTimeline(data);
+      renderHistoricalEvidence(data);
       renderRegions(data);
       renderDistribution(data);
       renderSources(data);
@@ -3530,6 +4060,7 @@
     }
 
     setupTimelineControls();
+    setupEvidenceControls();
 
     $("refreshBtn").addEventListener("click", loadDashboard);
 
