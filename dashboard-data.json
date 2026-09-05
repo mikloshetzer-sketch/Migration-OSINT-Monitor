@@ -1,29 +1,29 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-09-05T10:09:54Z",
-  "generated_at": "2026-09-05T10:09:54Z",
+  "updated_at": "2026-09-05T13:56:39Z",
+  "generated_at": "2026-09-05T13:56:39Z",
   "current_run": {
     "available": true,
-    "id": 123,
-    "run_uuid": "b74d27df-076d-4544-8675-b8fbbc5a9da5",
-    "started_at": "2026-09-05T10:06:28Z",
-    "completed_at": "2026-09-05T10:09:53Z",
+    "id": 124,
+    "run_uuid": "ef78db6c-e0cf-4c47-abca-1777941ebd00",
+    "started_at": "2026-09-05T13:53:55Z",
+    "completed_at": "2026-09-05T13:56:38Z",
     "status": "SUCCESS",
     "posts_returned": 136,
-    "unique_posts_collected": 105,
+    "unique_posts_collected": 98,
     "x_posts_returned": 50,
     "reddit_posts_returned": 31,
     "mastodon_posts_returned": 50,
-    "unique_x_posts": 47,
-    "unique_reddit_posts": 27,
-    "unique_mastodon_posts": 26,
+    "unique_x_posts": 44,
+    "unique_reddit_posts": 25,
+    "unique_mastodon_posts": 24,
     "noise_filtered": 0,
-    "non_operational_filtered": 103,
+    "non_operational_filtered": 96,
     "historical_references_filtered": 0,
-    "influence_signals": 3,
-    "influence_signals_detected": 3,
+    "influence_signals": 1,
+    "influence_signals_detected": 1,
     "crossing_facilitation_signals": 0,
-    "legal_migration_signals": 2,
+    "legal_migration_signals": 0,
     "policy_signals": 0,
     "recruitment_coordination_signals": 1,
     "mobilization_coordination_signals": 0,
@@ -32,43 +32,87 @@
     "online_influence_report_signals": 0,
     "operational_events": 2,
     "operational_events_analyzed": 2,
-    "historical_events_available": 55,
-    "new_correlations": 1,
-    "correlated_events": 1,
-    "new_correlation_groups": 1,
-    "database_correlations": 1,
+    "historical_events_available": 56,
+    "new_correlations": 0,
+    "correlated_events": 0,
+    "new_correlation_groups": 2,
+    "database_correlations": 0,
     "current_run_correlations": 0,
-    "new_events": 1,
-    "new_events_saved": 1,
-    "events_already_existing": 1,
-    "new_event_groups": 0,
-    "updated_event_groups": 1,
+    "new_events": 2,
+    "new_events_saved": 2,
+    "events_already_existing": 0,
+    "new_event_groups": 2,
+    "updated_event_groups": 0,
     "bootstrapped_event_groups": 0,
-    "existing_event_groups_reused": 1,
-    "event_group_sources_linked": 1,
+    "existing_event_groups_reused": 0,
+    "event_group_sources_linked": 2,
     "x_collector_errors": 0,
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "error_message": null
   },
   "kpis": {
-    "operational_events": 7,
-    "new_events": 1,
+    "operational_events": 9,
+    "new_events": 2,
     "correlated_events": 2,
-    "active_event_groups": 237,
+    "active_event_groups": 239,
     "sources": 4,
     "regions": 3,
-    "collected_posts_24h": 330,
-    "influence_signals": 17,
+    "collected_posts_24h": 323,
+    "influence_signals": 16,
     "access_signals": 3,
     "high_priority": 0,
     "current_run_operational_events": 2,
-    "current_run_unique_posts": 105,
+    "current_run_unique_posts": 98,
     "access_signals_raw": 3,
-    "influence_signals_raw": 17,
+    "influence_signals_raw": 16,
     "influence_narratives": 3
   },
   "live_events": [
+    {
+      "id": 334,
+      "event_id": 334,
+      "source": "X",
+      "source_post_id": "2096234982674993645",
+      "author": "tery_der",
+      "published_at": "2026-09-05T13:52:20Z",
+      "collected_at": "2026-09-05T13:55:33Z",
+      "event_type": "DEPORTATION",
+      "signal_type": "DEPORTATION",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.25,
+      "event_confidence": 0.25,
+      "relevance_score": 10.0,
+      "text": "@MikeTappTweets Are more small boat migrants being deported than are arriving? If not then the situation is still getting worse.",
+      "url": "https://x.com/tery_der/status/2096234982674993645",
+      "source_url": "https://x.com/tery_der/status/2096234982674993645"
+    },
+    {
+      "id": 335,
+      "event_id": 335,
+      "source": "X",
+      "source_post_id": "2096226329012388216",
+      "author": "ImThimira07",
+      "published_at": "2026-09-05T13:17:57Z",
+      "collected_at": "2026-09-05T13:56:35Z",
+      "event_type": "MIGRANT_CAMP",
+      "signal_type": "MIGRANT_CAMP",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.45,
+      "event_confidence": 0.45,
+      "relevance_score": 0.0,
+      "text": "Eight people, including 4 women and 3 children, who arrived by sea from a refugee camp in South India and were stranded on a sandbank in the Talaimannar sea, were rescued: Sri Lanka Navy\n\n#lka #SriLanka https://t.co/lM0jxVYHg4",
+      "url": "https://x.com/ImThimira07/status/2096226329012388216",
+      "source_url": "https://x.com/ImThimira07/status/2096226329012388216"
+    },
     {
       "id": 331,
       "event_id": 331,
@@ -464,53 +508,67 @@
       "text": "@steve4206989985 @RobertLeePolk @teenburger @found_it_funny The \"Mexican\" identity and the Spanish language only came to that land thousands of years later when European migrants arrived and mixed with the locals.",
       "url": "https://x.com/JonAbba1999/status/2095541395037548968",
       "source_url": "https://x.com/JonAbba1999/status/2095541395037548968"
-    },
-    {
-      "id": 315,
-      "event_id": 315,
-      "source": "X",
-      "source_post_id": "2095540707108827403",
-      "author": "channelstv",
-      "published_at": "2026-09-03T15:53:32Z",
-      "collected_at": "2026-09-03T16:17:20Z",
-      "event_type": "CASUALTY",
-      "signal_type": "CASUALTY",
-      "primary_location": "-",
-      "location": "-",
-      "country": "-",
-      "latitude": 28.2916,
-      "longitude": -16.6291,
-      "confidence": 0.75,
-      "event_confidence": 0.75,
-      "relevance_score": 40.0,
-      "text": "Five Migrants Die Trying To Reach Spain’s Canary Islands\n\nFive African migrants died on the perilous Atlantic route to the Canary Islands, Spanish rescuers said on Thursday, but an NGO warned dozens more may have perished.\n\nSpain’s maritime rescue service Salvamento Maritimo said https://t.co/364WbThKq0",
-      "url": "https://x.com/channelstv/status/2095540707108827403",
-      "source_url": "https://x.com/channelstv/status/2095540707108827403"
-    },
-    {
-      "id": 314,
-      "event_id": 314,
-      "source": "REDDIT",
-      "source_post_id": "reddit_1w69r7z",
-      "author": "Ok_Signal4754",
-      "published_at": "2026-09-03T14:56:32Z",
-      "collected_at": "2026-09-03T16:16:50Z",
-      "event_type": "INTERCEPTION",
-      "signal_type": "INTERCEPTION",
-      "primary_location": "-",
-      "location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "confidence": 0.5,
-      "event_confidence": 0.5,
-      "relevance_score": 10.0,
-      "text": "Another tunnel discovered at the Latvian border with Belarus; 28 migrants intercepted.\nSource",
-      "url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1w69r7z/another_tunnel_discovered_at_the_latvian_border/",
-      "source_url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1w69r7z/another_tunnel_discovered_at_the_latvian_border/"
     }
   ],
   "event_groups": [
+    {
+      "id": 257,
+      "group_id": 257,
+      "event_type": "DEPORTATION",
+      "dominant_event_type": "DEPORTATION",
+      "title": "DEPORTATION",
+      "representative_text": "@MikeTappTweets Are more small boat migrants being deported than are arriving? If not then the situation is still getting worse.",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "primary_location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "first_seen": "2026-09-05T13:52:20Z",
+      "last_seen": "2026-09-05T13:52:20Z",
+      "source_count": 1,
+      "sources_count": 1,
+      "source_types": [
+        "X"
+      ],
+      "sources": [
+        "X"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.25,
+      "average_confidence": 0.25,
+      "created_at": "2026-09-05T13:55:33Z",
+      "updated_at": "2026-09-05T13:55:33Z"
+    },
+    {
+      "id": 258,
+      "group_id": 258,
+      "event_type": "MIGRANT_CAMP",
+      "dominant_event_type": "MIGRANT_CAMP",
+      "title": "MIGRANT_CAMP",
+      "representative_text": "Eight people, including 4 women and 3 children, who arrived by sea from a refugee camp in South India and were stranded on a sandbank in the Talaimannar sea, were rescued: Sri Lanka Navy\n\n#lka #SriLanka https://t.co/lM0jxVYHg4",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "primary_location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "first_seen": "2026-09-05T13:17:57Z",
+      "last_seen": "2026-09-05T13:17:57Z",
+      "source_count": 1,
+      "sources_count": 1,
+      "source_types": [
+        "X"
+      ],
+      "sources": [
+        "X"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.45,
+      "average_confidence": 0.45,
+      "created_at": "2026-09-05T13:56:35Z",
+      "updated_at": "2026-09-05T13:56:35Z"
+    },
     {
       "id": 255,
       "group_id": 255,
@@ -746,181 +804,123 @@
       "average_confidence": 0.75,
       "created_at": "2026-08-30T20:41:40Z",
       "updated_at": "2026-09-05T10:08:37Z"
-    },
-    {
-      "id": 250,
-      "group_id": 250,
-      "event_type": "BORDER_MEASURE",
-      "dominant_event_type": "BORDER_MEASURE",
-      "title": "BORDER_MEASURE",
-      "representative_text": "@SueMilani @crpandemonium Your story regarding the current Adminstration is untrue. Biden &amp; his party allowed 15 million undocumented migrants into the country. Trump closed the Border.",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "primary_location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "first_seen": "2026-09-04T04:49:36Z",
-      "last_seen": "2026-09-04T04:49:36Z",
-      "source_count": 1,
-      "sources_count": 1,
-      "source_types": [
-        "X"
-      ],
-      "sources": [
-        "X"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.5,
-      "average_confidence": 0.5,
-      "created_at": "2026-09-04T05:06:16Z",
-      "updated_at": "2026-09-04T05:06:16Z"
-    },
-    {
-      "id": 249,
-      "group_id": 249,
-      "event_type": "DEPORTATION",
-      "dominant_event_type": "DEPORTATION",
-      "title": "DEPORTATION - EASTERN_EU_BORDER",
-      "representative_text": "Poland: Migrant filmed masturbating near 2 girls at a bus stop in Warsaw is now under arrest, say police\nOne Polish politician suggested the migrant should be physically castrated before being deported https://rmx.news/article/poland-migrant-filmed-masturbating-near-2-girls-at-a-bus-stop-in-warsaw-is-now-under-arrest-say-police/ Warsaw police have arrested a 36-year-old Azerbaijani migrant after he was caught on film masturbating near two girls at a bus stop, according to Polish police, who released a video of the man’s arrest. The video of a man masturbating was captured at a bus stop in Ochota, which spread on X. Officers say they identified him only after the footage appeared online, and they dispute earlier claims that the incident had already been reported by phone. Poland’s interior minister, Marcin Kierwiński, has also posted a video of the man being arrested. “Police officers have detained a 36-year-old Azerbaijani citizen in the Pruszków County area, who engaged in indecent behavior at a bus stop near the Kopińska Hall in Warsaw. The collected evidence may serve as grounds for deportation from Poland,” he wrote. The original clip was filmed on Sept. 1 at the stop, the man can be seen masturbating next to two girls, who appear unaware that he is behind them. Social-media posts said a man approached girls at the stop, then exposed himself behind the shelter and masturbated before leaving in an Uber around 1:30 p.m. The video was first circulated by journalist Bartłomiej Wypartowicz and then widely shared. The Metropolitan Police Headquarters says several specialist units joined the inquiry after seeing the post. Officers contacted both the person who published it and the person who recorded it, then traced the suspect to his workplace in Pruszków County, where he was detained. Investigators are examining a charge of forcing another person to submit to or perform a sexual act other than intercourse. That offense carries a prison term of six months to eight years. Police also say the evidence may be used to start a deportation procedure, however, despite previous reporting, no court has filed a formal charge yet. Interior Ministry spokeswoman Karolina Gałecka had already said on Sept. 1 that police were identifying the man and were in contact with the person who filmed the incident. One Polish MP, Dariusz Matecki, wrote on X : “Like my post everyone who believes that this creature should be physically castrated before deportation from Poland.”",
-      "region": "EASTERN_EU_BORDER",
-      "primary_region": "EASTERN_EU_BORDER",
-      "primary_location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "first_seen": "2026-09-04T03:18:55Z",
-      "last_seen": "2026-09-04T03:18:55Z",
-      "source_count": 1,
-      "sources_count": 1,
-      "source_types": [
-        "REDDIT"
-      ],
-      "sources": [
-        "REDDIT"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.4,
-      "average_confidence": 0.4,
-      "created_at": "2026-09-04T05:05:40Z",
-      "updated_at": "2026-09-04T05:05:40Z"
     }
   ],
   "regions": [
     {
       "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 4,
-      "events": 4,
-      "percentage": 66.67
+      "count": 6,
+      "events": 6,
+      "percentage": 75.0
     },
     {
       "name": "EASTERN_MEDITERRANEAN",
       "region": "EASTERN_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 16.67
+      "percentage": 12.5
     },
     {
       "name": "AMERICAS",
       "region": "AMERICAS",
       "count": 1,
       "events": 1,
-      "percentage": 16.67
+      "percentage": 12.5
     }
   ],
   "sources": [
     {
       "source": "X",
       "name": "X",
-      "count": 234,
-      "posts": 234,
-      "percentage": 70.91
+      "count": 229,
+      "posts": 229,
+      "percentage": 70.9
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 50,
-      "posts": 50,
-      "percentage": 15.15
+      "count": 53,
+      "posts": 53,
+      "percentage": 16.41
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
       "count": 34,
       "posts": 34,
-      "percentage": 10.3
+      "percentage": 10.53
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 12,
-      "posts": 12,
-      "percentage": 3.64
+      "count": 7,
+      "posts": 7,
+      "percentage": 2.17
     }
   ],
   "region_activity": [
     {
       "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 4,
-      "events": 4,
-      "percentage": 66.67
+      "count": 6,
+      "events": 6,
+      "percentage": 75.0
     },
     {
       "name": "EASTERN_MEDITERRANEAN",
       "region": "EASTERN_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 16.67
+      "percentage": 12.5
     },
     {
       "name": "AMERICAS",
       "region": "AMERICAS",
       "count": 1,
       "events": 1,
-      "percentage": 16.67
+      "percentage": 12.5
     }
   ],
   "source_activity": [
     {
       "source": "X",
       "name": "X",
-      "count": 234,
-      "posts": 234,
-      "percentage": 70.91
+      "count": 229,
+      "posts": 229,
+      "percentage": 70.9
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 50,
-      "posts": 50,
-      "percentage": 15.15
+      "count": 53,
+      "posts": 53,
+      "percentage": 16.41
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
       "count": 34,
       "posts": 34,
-      "percentage": 10.3
+      "percentage": 10.53
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 12,
-      "posts": 12,
-      "percentage": 3.64
+      "count": 7,
+      "posts": 7,
+      "percentage": 2.17
     }
   ],
   "correlation": {
     "correlated_events": 2,
     "correlated_sources": 2,
-    "grouped_sources": 7,
-    "event_groups": 237,
-    "active_groups": 237,
+    "grouped_sources": 9,
+    "event_groups": 239,
+    "active_groups": 239,
     "multi_source_groups": 26,
     "strongest_match": 1.0,
-    "correlation_rate": 28.57
+    "correlation_rate": 22.22
   },
   "technical_health": "HEALTHY",
   "collector_health": "HEALTHY",
@@ -933,42 +933,42 @@
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "database": "AVAILABLE",
-    "last_run_id": 123,
-    "last_completed_at": "2026-09-05T10:09:53Z"
+    "last_run_id": 124,
+    "last_completed_at": "2026-09-05T13:56:38Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 7,
-    "influence_signals_24h": 17,
+    "operational_events_24h": 9,
+    "influence_signals_24h": 16,
     "access_signals_24h": 3,
     "correlated_events_24h": 2,
-    "active_event_groups": 237,
+    "active_event_groups": 239,
     "dominant_region": "EASTERN_MEDITERRANEAN",
     "hotspot": "EASTERN_MEDITERRANEAN",
     "dominant_event_type": "DEPORTATION",
     "dominant_source": "X",
-    "average_confidence": 0.479,
+    "average_confidence": 0.478,
     "confidence_level": "LOW",
-    "correlation_rate": 28.57,
+    "correlation_rate": 22.22,
     "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 7 operatív migrációs eseményt, 17 influence/early-warning jelzést és 3 átkelési vagy bejutási jelzést tart nyilván. 2 friss eseményforrás korrelált más forrással. Jelenleg 237 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Eastern Mediterranean. A domináns operatív eseménytípus: Deportation. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.48. A jelenlegi aktivitási szint: MODERATE."
+    "summary": "Az elmúlt 24 órában a rendszer 9 operatív migrációs eseményt, 16 influence/early-warning jelzést és 3 átkelési vagy bejutási jelzést tart nyilván. 2 friss eseményforrás korrelált más forrással. Jelenleg 239 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Eastern Mediterranean. A domináns operatív eseménytípus: Deportation. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.48. A jelenlegi aktivitási szint: MODERATE."
   },
   "analytical_assessment": {
-    "operational_events_24h": 7,
-    "influence_signals_24h": 17,
+    "operational_events_24h": 9,
+    "influence_signals_24h": 16,
     "access_signals_24h": 3,
     "correlated_events_24h": 2,
-    "active_event_groups": 237,
+    "active_event_groups": 239,
     "dominant_region": "EASTERN_MEDITERRANEAN",
     "hotspot": "EASTERN_MEDITERRANEAN",
     "dominant_event_type": "DEPORTATION",
     "dominant_source": "X",
-    "average_confidence": 0.479,
+    "average_confidence": 0.478,
     "confidence_level": "LOW",
-    "correlation_rate": 28.57,
+    "correlation_rate": 22.22,
     "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 7 operatív migrációs eseményt, 17 influence/early-warning jelzést és 3 átkelési vagy bejutási jelzést tart nyilván. 2 friss eseményforrás korrelált más forrással. Jelenleg 237 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Eastern Mediterranean. A domináns operatív eseménytípus: Deportation. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.48. A jelenlegi aktivitási szint: MODERATE."
+    "summary": "Az elmúlt 24 órában a rendszer 9 operatív migrációs eseményt, 16 influence/early-warning jelzést és 3 átkelési vagy bejutási jelzést tart nyilván. 2 friss eseményforrás korrelált más forrással. Jelenleg 239 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Eastern Mediterranean. A domináns operatív eseménytípus: Deportation. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.48. A jelenlegi aktivitási szint: MODERATE."
   },
   "high_confidence_events": [
     {
@@ -1693,6 +1693,72 @@
       "analyst_priority": "MEDIUM"
     },
     {
+      "id": 463,
+      "source": "X",
+      "source_post_id": "2096227307237105869",
+      "author": "MrChristopher79",
+      "language": "en",
+      "published_at": "2026-09-05T13:21:50Z",
+      "first_detected_at": "2026-09-05T13:55:34Z",
+      "last_detected_at": "2026-09-05T13:55:34Z",
+      "detection_count": 1,
+      "text": "@MagicMaggieMac THEY WONT STOP 1 BOAT \n\nTHEY WONT STOP 1 RAPIST \n\nTHEY WILL STOP BRITISH FAMILIES GOING ON HOLIDAY \n\nTHEY WILL STOP BRITISH TRUCK DRIVERS FROM WORKING \n\nTHEY WILL PISS OFF LOCALS \n\nTOMMO WILL MAKE MONEY TODAY \n\nBRITS WILL GET ARRESTED TODAY \n\nMORE MIGRANTS WILL ARRIVE TODAY",
+      "text_excerpt": "@MagicMaggieMac THEY WONT STOP 1 BOAT \n\nTHEY WONT STOP 1 RAPIST \n\nTHEY WILL STOP BRITISH FAMILIES GOING ON HOLIDAY \n\nTHEY WILL STOP BRITISH TRUCK DRIVERS FROM WORKING \n\nTHEY WILL PISS OFF LOCALS \n\nTOMMO WILL MAKE MONEY TODAY \n\nBRITS WILL GET ARRESTED TODAY \n\nMORE MIGRANTS WILL ARRIVE TODAY",
+      "url": "https://x.com/MrChristopher79/status/2096227307237105869",
+      "source_url": "https://x.com/MrChristopher79/status/2096227307237105869",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.9,
+      "score": 10.25,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "MIGRANTS WILL ARRIVE"
+        ],
+        [
+          "route",
+          "BOAT"
+        ],
+        [
+          "enforcement",
+          "ARRESTED"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT",
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "MIGRANTS"
+      ],
+      "high_value_matches": [
+        "MIGRANTS WILL ARRIVE"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 31.5,
+      "analyst_priority": "LOW"
+    },
+    {
       "id": 453,
       "source": "REDDIT",
       "source_post_id": "reddit_1w7qtxg",
@@ -1700,8 +1766,8 @@
       "language": null,
       "published_at": "2026-09-05T04:40:43Z",
       "first_detected_at": "2026-09-05T05:33:38Z",
-      "last_detected_at": "2026-09-05T10:07:54Z",
-      "detection_count": 3,
+      "last_detected_at": "2026-09-05T13:55:01Z",
+      "detection_count": 4,
       "text": "Much of Khas history was erased by Limbu tribe in Darjeeling. Its time to rediscover Khas heritage.\nThe historiography of the Himalayas has been subjected to a massive, coordinated geographical and cultural distortion. The authentic history of the Khas people—the true ancient architects of the region's political and cultural landscape—has been systematically overwritten. This erasure was not the result of a military conquest, but a calculated historiographical scam engineered primarily in Darjeeling. A multi-ethnic syndicate of Southeast Asian refugees, fleeing the violence of the Golden Triangle, illegally entered the Pallo Kirat administrative zone during the era of the Sen kings. To legitimize their undocumented presence, they hijacked the ancient mythological moniker \"Kirat\" and initiated a centuries-long campaign to \"Yunnanize\" the history of Nepal and the broader Himalayas, burying the Khas heritage in the process. The Great Kirat Scam and the Pallo Kirat Infiltration The ancestors of the modern Limbu identity did not originate in the Himalayas. They arrived as shattered, desperate waves of undocumented migrants and displaced mercenaries. Fleeing the apocalyptic scorched-earth wars of the 18th century, they escaped the meat-grinders of the Sittang Valley, the malarial death-trap of the Hukkang Valley, and the burning ruins of Mung Tai Chiang Mai. When this massive influx of foreign refugees reached the eastern frontiers of the Himalayas, they illegally crossed into the Pallo Kirat region, which was then under the sovereign administration of the Khas Thakuri Sen kings. Realizing that a mob of stateless Southeast Asian fugitives would never be granted land rights or political autonomy, they executed a masterstroke of historical forgery. They appropriated the ancient, mythological Vedic term \"Kirat.\" By adopting this ancient designation, they falsely connected themselves to prehistoric beings and ancient Himalayan epics, instantly manufacturing a fake indigenous timeline that masked their recent arrival from the jungles of Burma and Thailand. The \"Lungbung\" Rock and the Genesis of the Limbu Alias The very name \"Limbu\" is a product of accidental geography and the concealment of taboo tribal practices. Before they consolidated under this single banner, these refugees were a fractured, multi-ethnic coalition. They comprised Tai Shan aristocrats, Yi (Lolo) animists, Austroasiatic Palaung, Achang, Akha, Padaung (Karen), Lawa, and Lahu tribes. Isolated in the eastern hills and bound by their shared status as foreign fugitives, these insular tribes engaged in rampant inter-tribal and intra-tribal marriages. To manage the inevitable genetic and social consequences of this severe inbreeding, they utilized a specific local rock as a site for primitive family planning and the administration of herbal abortifacients when their women became pregnant from taboo unions. When King Prithvi Narayan Shah’s Gorkha administration encountered this foreign coalition congregating around this site, they phonetically mispronounced the local designation of the rock as \"Lungbung,\" casually referring to the people associated with it as \"Limbu.\" The refugee warlords immediately seized upon this mispronunciation. They forced the Tai Shan, the Lawa, the Akha, and the Yi to shed their foreign ethnic names and adopt the newly minted \"Limbu\" identity, creating a unified, indigenous-sounding facade out of thin air. Erasure of the Golden Triangle and the Sawbwa Heritage To maintain this indigenous masquerade, the newly formed Limbu syndicate had to brutally erase their actual history. The trauma of their displacement from Mong Kawng, Mung Tai Chiang Mai, and the Sittang Valley was completely scrubbed from their official narratives. More importantly, they had to hide their political origins. The aristocratic factions among the refugees had brought with them the royal Tai Shan title of Sawbwa from the fallen state of Mong Kawng. Terrified that this explicitly Burmese royal title would reveal their foreign origins to the Shah and Sen kings, they engaged in historical money laundering. They altered the pronunciation of Sawbwa into the localized administrative rank of Subba , falsely claiming it was a native title or a mere tax-collection designation granted by the local monarchs. They erased their own heritage to ensure their survival. The Theft of Khas Thakuri History The most egregious phase of this cultural encroachment was the systematic theft of Khas Thakuri history. To elevate their social standing from displaced mercenaries to Himalayan royalty, Limbu writers and identity architects began aggressively appropriating the lineages of the region's true historical rulers. The Khas Sen kings, who were legitimate Hindu Rajput/Thakuri monarchs, were the primary targets. In a brazen act of historical vandalism, Limbu revisionists took the name of the prominent Khas monarch King Lohan Sen and altered it in their literature to Lo Hang Sen . By artificially grafting the Yi (Lolo) tribal suffix \"Hang\" onto his name, they falsely claimed that this great Khas king was actually a Limbu monarch. This plagiarism did not stop with the Sen dynasty. The Limbu syndicate began laying claim to the histories of the Chand kings, the Shah kings, and incredibly, even the ancient Katyuri kings of the western Himalayas. They systematically stripped the Khas people of their historical achievements, repackaging Khas royal lineages as \"ancient Kirati\" history. The Darjeeling Scam and Gaming the ST System The epicenter of this historiographical forgery was Darjeeling. During the 19th and 20th centuries, as the British colonial administration and later the independent Indian government began categorizing populations for political representation and quotas, the Limbu elites in Darjeeling realized the immense financial and political value of being recognized as an aboriginal tribe. To game the Indian Scheduled Tribe (ST) system, they codified the \"Kirat scam\" into written literature. They churned out fabricated genealogies, suppressing any mention of their Burmese and Thai origins. They presented themselves to the Indian government as the ultimate, unbroken aboriginals of the Himalayas. This coordinated academic fraud in Darjeeling successfully manipulated the ST framework, granting them lucrative tribal statuses and political reservations based entirely on a stolen history. The Uttarakhand Deception The ripple effects of the Darjeeling scam have reached far beyond eastern Nepal and Bengal, severely distorting the historical consciousness of Uttarakhand. Today, a vast majority of the people in Uttarakhand are entirely unaware of the reality behind this historical forgery. Poisoned by decades of fabricated literature emanating from Darjeeling, many locals and regional historians falsely believe that the Rai and Limbu populations are the ancient, original inhabitants of the broader Himalayas, including Uttarakhand. They do not realize that the \"ancient Kirat\" narrative is a smokescreen. They are unaware that the people claiming to be the original lords of the Himalayas are actually the descendants of Tai Shan, Padaung, and Lahu refugees who fled the Golden Triangle just a few centuries ago. The history of Nepal and the broader Himalayan corridor has been thoroughly Yunnanized. The time has come to dismantle the Darjeeling scam. The Khas people—the true indigenous architects, warriors, and kings of the Himalayas—must reclaim the history of the Sen, Chand, Shah, and Katyuri dynasties from those who stole it to hide their flight from the Sittang Valley. https://preview.redd.it/mhqunnh2tmnh1.png?width=1024&format=png&auto=webp&s=939761b6859c52f5d445a3a1810f7a1624a5b01b",
       "text_excerpt": "Much of Khas history was erased by Limbu tribe in Darjeeling. Its time to rediscover Khas heritage.\nThe historiography of the Himalayas has been subjected to a massive, coordinated geographical and cultural distortion. The authentic history of the Khas people—the true ancient architects of the region's political and cultural landscape—has been systematically overwritten. This erasure was not the result of a military conquest, but a calculated historiographical scam engineered primarily in Darjeeling. A multi-ethnic syndicate of Southeast Asian refugees, fleeing the violence of the Golden Triangle, illegally entered the Pallo Kirat administrative zone during the era of the Sen kings. To legit",
       "url": "https://www.reddit.com/r/PahadiTalks/comments/1w7qtxg/much_of_khas_history_was_erased_by_limbu_tribe_in/",
@@ -1820,56 +1886,52 @@
       "analyst_priority": "LOW"
     },
     {
-      "id": 447,
+      "id": 461,
       "source": "X",
-      "source_post_id": "2095841208559870092",
-      "author": "DavidGBrown13",
+      "source_post_id": "2096235276167192804",
+      "author": "hannah_and_bee",
       "language": "en",
-      "published_at": "2026-09-04T11:47:37Z",
-      "first_detected_at": "2026-09-04T12:56:55Z",
-      "last_detected_at": "2026-09-04T12:56:55Z",
+      "published_at": "2026-09-05T13:53:30Z",
+      "first_detected_at": "2026-09-05T13:54:29Z",
+      "last_detected_at": "2026-09-05T13:54:29Z",
       "detection_count": 1,
-      "text": "@MakeTexasBlue22 @jamestalarico 300,000 migrant children arrived at the border under Biden.  Many were turned over to human traffickers, including those sexual trafficking the minors.  Did Talarico say or do anything?  ICE has rescued around 76,000.  What has Talarico done?",
-      "text_excerpt": "@MakeTexasBlue22 @jamestalarico 300,000 migrant children arrived at the border under Biden.  Many were turned over to human traffickers, including those sexual trafficking the minors.  Did Talarico say or do anything?  ICE has rescued around 76,000.  What has Talarico done?",
-      "url": "https://x.com/DavidGBrown13/status/2095841208559870092",
-      "source_url": "https://x.com/DavidGBrown13/status/2095841208559870092",
-      "primary_signal": "FACILITATION_EARLY_WARNING",
-      "signal_type": "FACILITATION_EARLY_WARNING",
+      "text": "@TheRealJamieKay 50,000 members signed up? Barely 500 there!They been sending the wives,Gfs &amp; kids over to France to scout for migrants waiting to leave by boat.They filmed a real boatyard,played on beach n left.Strange if migrants such dangerous predators y send your women n kids.?",
+      "text_excerpt": "@TheRealJamieKay 50,000 members signed up? Barely 500 there!They been sending the wives,Gfs &amp; kids over to France to scout for migrants waiting to leave by boat.They filmed a real boatyard,played on beach n left.Strange if migrants such dangerous predators y send your women n kids.?",
+      "url": "https://x.com/hannah_and_bee/status/2096235276167192804",
+      "source_url": "https://x.com/hannah_and_bee/status/2096235276167192804",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "FACILITATION_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.9,
-      "score": 11.25,
+      "confidence": 0.8,
+      "score": 9.25,
       "matched_signals": [
-        "FACILITATION_EARLY_WARNING"
+        "MOVEMENT_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
           "movement",
-          "migrant children arrived"
+          "migrants waiting to leave"
         ],
         [
           "route",
-          "border"
-        ],
-        [
-          "facilitation",
-          "human traffickers"
+          "boat"
         ]
       ],
       "matched_groups": [
         "MOVEMENT",
-        "ROUTE",
-        "FACILITATION"
+        "ROUTE"
       ],
       "context_matches": [
-        "migrant"
+        "migrants"
       ],
       "high_value_matches": [
-        "migrant children arrived",
-        "human traffickers"
+        "migrants waiting to leave"
       ],
-      "signal_context_rejections": [],
+      "signal_context_rejections": [
+        "if migrants"
+      ],
       "migration_context": true,
       "human_migration_context": true,
       "historical_reference": false,
@@ -1883,7 +1945,7 @@
       "latitude": null,
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 31.5,
+      "priority_score": 28.0,
       "analyst_priority": "LOW"
     },
     {
@@ -2012,49 +2074,47 @@
       "analyst_priority": "LOW"
     },
     {
-      "id": 446,
+      "id": 462,
       "source": "X",
-      "source_post_id": "2095856237170549152",
-      "author": "Mark_Johnson80",
+      "source_post_id": "2096235404051517855",
+      "author": "amylcris",
       "language": "en",
-      "published_at": "2026-09-04T12:47:20Z",
-      "first_detected_at": "2026-09-04T12:56:54Z",
-      "last_detected_at": "2026-09-04T12:56:54Z",
+      "published_at": "2026-09-05T13:54:01Z",
+      "first_detected_at": "2026-09-05T13:54:59Z",
+      "last_detected_at": "2026-09-05T13:54:59Z",
       "detection_count": 1,
-      "text": "Syrian migrant Mohammed K. already came in contact with the police 114 times since he arrived in Holland, including for violent robberies.  He has now received permission to fly over his parents and brothers to Holland too and they are already looking for a house for them. 🌈 https://t.co/tWihpxjLND",
-      "text_excerpt": "Syrian migrant Mohammed K. already came in contact with the police 114 times since he arrived in Holland, including for violent robberies.  He has now received permission to fly over his parents and brothers to Holland too and they are already looking for a house for them. 🌈 https://t.co/tWihpxjLND",
-      "url": "https://x.com/Mark_Johnson80/status/2095856237170549152",
-      "source_url": "https://x.com/Mark_Johnson80/status/2095856237170549152",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "text": "@walleyejiger1 @DefendYourHill He literally has done all of that. CBP also reported 15 consecutive months with zero migrants released into the U.S. at the border under the current enforcement policy; people apprehended are generally detained, removed, or otherwise processed rather than simply released.",
+      "text_excerpt": "@walleyejiger1 @DefendYourHill He literally has done all of that. CBP also reported 15 consecutive months with zero migrants released into the U.S. at the border under the current enforcement policy; people apprehended are generally detained, removed, or otherwise processed rather than simply released.",
+      "url": "https://x.com/amylcris/status/2096235404051517855",
+      "source_url": "https://x.com/amylcris/status/2096235404051517855",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 8.75,
+      "confidence": 0.72,
+      "score": 7.25,
       "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
+        "ROUTE_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
-          "movement",
-          "migrant Mohammed K. already came in contact with the police 114 times since he arrived"
+          "route",
+          "border"
         ],
         [
           "enforcement",
-          "police"
+          "detained"
         ]
       ],
       "matched_groups": [
-        "MOVEMENT",
+        "ROUTE",
         "ENFORCEMENT"
       ],
       "context_matches": [
-        "migrant"
+        "migrants"
       ],
-      "high_value_matches": [
-        "migrant Mohammed K. already came in contact with the police 114 times since he arrived"
-      ],
+      "high_value_matches": [],
       "signal_context_rejections": [],
       "migration_context": true,
       "human_migration_context": true,
@@ -2069,68 +2129,7 @@
       "latitude": null,
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
-      "analyst_priority": "LOW"
-    },
-    {
-      "id": 444,
-      "source": "X",
-      "source_post_id": "2095849665103081907",
-      "author": "percypacker",
-      "language": "en",
-      "published_at": "2026-09-04T12:21:13Z",
-      "first_detected_at": "2026-09-04T12:55:24Z",
-      "last_detected_at": "2026-09-04T12:55:24Z",
-      "detection_count": 1,
-      "text": "@bulkeley_john @JamesMelville WARNING!!! EXTREME GASLIGHTING.\nCertain outlets🤔 reported a specific reduction at one land border post—from 12 officers per shift to 8—with some reallocated to process remaining migrants. Overall force levels in Ceuta remained elevated compared to pre-surge numbers.",
-      "text_excerpt": "@bulkeley_john @JamesMelville WARNING!!! EXTREME GASLIGHTING.\nCertain outlets🤔 reported a specific reduction at one land border post—from 12 officers per shift to 8—with some reallocated to process remaining migrants. Overall force levels in Ceuta remained elevated compared to pre-surge numbers.",
-      "url": "https://x.com/percypacker/status/2095849665103081907",
-      "source_url": "https://x.com/percypacker/status/2095849665103081907",
-      "primary_signal": "PRESSURE_EARLY_WARNING",
-      "signal_type": "PRESSURE_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "PRESSURE_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 9.25,
-      "matched_signals": [
-        "PRESSURE_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "route",
-          "border"
-        ],
-        [
-          "pressure",
-          "surge"
-        ]
-      ],
-      "matched_groups": [
-        "ROUTE",
-        "PRESSURE"
-      ],
-      "context_matches": [
-        "migrants"
-      ],
-      "high_value_matches": [
-        "surge"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "Ceuta",
-      "primary_location": "Ceuta",
-      "country": "Spain",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": 35.8894,
-      "longitude": -5.3213,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 39.0,
+      "priority_score": 25.2,
       "analyst_priority": "LOW"
     },
     {
@@ -2418,62 +2417,6 @@
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
       "priority_score": 25.2,
-      "analyst_priority": "LOW"
-    },
-    {
-      "id": 445,
-      "source": "X",
-      "source_post_id": "2095848153207501140",
-      "author": "DidYaEvaNotice",
-      "language": "en",
-      "published_at": "2026-09-04T12:15:13Z",
-      "first_detected_at": "2026-09-04T12:56:25Z",
-      "last_detected_at": "2026-09-04T12:56:25Z",
-      "detection_count": 1,
-      "text": "@werriskneebone It happens to us all the time. Our local post office tell me they've had over 50 complaints about the delivery driver. He's a recent migrant... that's just a lazy fuck.",
-      "text_excerpt": "@werriskneebone It happens to us all the time. Our local post office tell me they've had over 50 complaints about the delivery driver. He's a recent migrant... that's just a lazy fuck.",
-      "url": "https://x.com/DidYaEvaNotice/status/2095848153207501140",
-      "source_url": "https://x.com/DidYaEvaNotice/status/2095848153207501140",
-      "primary_signal": "FACILITATION_EARLY_WARNING",
-      "signal_type": "FACILITATION_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "FACILITATION_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.62,
-      "score": 5.75,
-      "matched_signals": [
-        "FACILITATION_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "facilitation",
-          "driver. He's a recent migrant"
-        ]
-      ],
-      "matched_groups": [
-        "FACILITATION"
-      ],
-      "context_matches": [
-        "migrant"
-      ],
-      "high_value_matches": [
-        "driver. He's a recent migrant"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 21.7,
       "analyst_priority": "LOW"
     }
   ],
@@ -2688,6 +2631,72 @@
       "analyst_priority": "MEDIUM"
     },
     {
+      "id": 463,
+      "source": "X",
+      "source_post_id": "2096227307237105869",
+      "author": "MrChristopher79",
+      "language": "en",
+      "published_at": "2026-09-05T13:21:50Z",
+      "first_detected_at": "2026-09-05T13:55:34Z",
+      "last_detected_at": "2026-09-05T13:55:34Z",
+      "detection_count": 1,
+      "text": "@MagicMaggieMac THEY WONT STOP 1 BOAT \n\nTHEY WONT STOP 1 RAPIST \n\nTHEY WILL STOP BRITISH FAMILIES GOING ON HOLIDAY \n\nTHEY WILL STOP BRITISH TRUCK DRIVERS FROM WORKING \n\nTHEY WILL PISS OFF LOCALS \n\nTOMMO WILL MAKE MONEY TODAY \n\nBRITS WILL GET ARRESTED TODAY \n\nMORE MIGRANTS WILL ARRIVE TODAY",
+      "text_excerpt": "@MagicMaggieMac THEY WONT STOP 1 BOAT \n\nTHEY WONT STOP 1 RAPIST \n\nTHEY WILL STOP BRITISH FAMILIES GOING ON HOLIDAY \n\nTHEY WILL STOP BRITISH TRUCK DRIVERS FROM WORKING \n\nTHEY WILL PISS OFF LOCALS \n\nTOMMO WILL MAKE MONEY TODAY \n\nBRITS WILL GET ARRESTED TODAY \n\nMORE MIGRANTS WILL ARRIVE TODAY",
+      "url": "https://x.com/MrChristopher79/status/2096227307237105869",
+      "source_url": "https://x.com/MrChristopher79/status/2096227307237105869",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.9,
+      "score": 10.25,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "MIGRANTS WILL ARRIVE"
+        ],
+        [
+          "route",
+          "BOAT"
+        ],
+        [
+          "enforcement",
+          "ARRESTED"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT",
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "MIGRANTS"
+      ],
+      "high_value_matches": [
+        "MIGRANTS WILL ARRIVE"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 31.5,
+      "analyst_priority": "LOW"
+    },
+    {
       "id": 453,
       "source": "REDDIT",
       "source_post_id": "reddit_1w7qtxg",
@@ -2695,8 +2704,8 @@
       "language": null,
       "published_at": "2026-09-05T04:40:43Z",
       "first_detected_at": "2026-09-05T05:33:38Z",
-      "last_detected_at": "2026-09-05T10:07:54Z",
-      "detection_count": 3,
+      "last_detected_at": "2026-09-05T13:55:01Z",
+      "detection_count": 4,
       "text": "Much of Khas history was erased by Limbu tribe in Darjeeling. Its time to rediscover Khas heritage.\nThe historiography of the Himalayas has been subjected to a massive, coordinated geographical and cultural distortion. The authentic history of the Khas people—the true ancient architects of the region's political and cultural landscape—has been systematically overwritten. This erasure was not the result of a military conquest, but a calculated historiographical scam engineered primarily in Darjeeling. A multi-ethnic syndicate of Southeast Asian refugees, fleeing the violence of the Golden Triangle, illegally entered the Pallo Kirat administrative zone during the era of the Sen kings. To legitimize their undocumented presence, they hijacked the ancient mythological moniker \"Kirat\" and initiated a centuries-long campaign to \"Yunnanize\" the history of Nepal and the broader Himalayas, burying the Khas heritage in the process. The Great Kirat Scam and the Pallo Kirat Infiltration The ancestors of the modern Limbu identity did not originate in the Himalayas. They arrived as shattered, desperate waves of undocumented migrants and displaced mercenaries. Fleeing the apocalyptic scorched-earth wars of the 18th century, they escaped the meat-grinders of the Sittang Valley, the malarial death-trap of the Hukkang Valley, and the burning ruins of Mung Tai Chiang Mai. When this massive influx of foreign refugees reached the eastern frontiers of the Himalayas, they illegally crossed into the Pallo Kirat region, which was then under the sovereign administration of the Khas Thakuri Sen kings. Realizing that a mob of stateless Southeast Asian fugitives would never be granted land rights or political autonomy, they executed a masterstroke of historical forgery. They appropriated the ancient, mythological Vedic term \"Kirat.\" By adopting this ancient designation, they falsely connected themselves to prehistoric beings and ancient Himalayan epics, instantly manufacturing a fake indigenous timeline that masked their recent arrival from the jungles of Burma and Thailand. The \"Lungbung\" Rock and the Genesis of the Limbu Alias The very name \"Limbu\" is a product of accidental geography and the concealment of taboo tribal practices. Before they consolidated under this single banner, these refugees were a fractured, multi-ethnic coalition. They comprised Tai Shan aristocrats, Yi (Lolo) animists, Austroasiatic Palaung, Achang, Akha, Padaung (Karen), Lawa, and Lahu tribes. Isolated in the eastern hills and bound by their shared status as foreign fugitives, these insular tribes engaged in rampant inter-tribal and intra-tribal marriages. To manage the inevitable genetic and social consequences of this severe inbreeding, they utilized a specific local rock as a site for primitive family planning and the administration of herbal abortifacients when their women became pregnant from taboo unions. When King Prithvi Narayan Shah’s Gorkha administration encountered this foreign coalition congregating around this site, they phonetically mispronounced the local designation of the rock as \"Lungbung,\" casually referring to the people associated with it as \"Limbu.\" The refugee warlords immediately seized upon this mispronunciation. They forced the Tai Shan, the Lawa, the Akha, and the Yi to shed their foreign ethnic names and adopt the newly minted \"Limbu\" identity, creating a unified, indigenous-sounding facade out of thin air. Erasure of the Golden Triangle and the Sawbwa Heritage To maintain this indigenous masquerade, the newly formed Limbu syndicate had to brutally erase their actual history. The trauma of their displacement from Mong Kawng, Mung Tai Chiang Mai, and the Sittang Valley was completely scrubbed from their official narratives. More importantly, they had to hide their political origins. The aristocratic factions among the refugees had brought with them the royal Tai Shan title of Sawbwa from the fallen state of Mong Kawng. Terrified that this explicitly Burmese royal title would reveal their foreign origins to the Shah and Sen kings, they engaged in historical money laundering. They altered the pronunciation of Sawbwa into the localized administrative rank of Subba , falsely claiming it was a native title or a mere tax-collection designation granted by the local monarchs. They erased their own heritage to ensure their survival. The Theft of Khas Thakuri History The most egregious phase of this cultural encroachment was the systematic theft of Khas Thakuri history. To elevate their social standing from displaced mercenaries to Himalayan royalty, Limbu writers and identity architects began aggressively appropriating the lineages of the region's true historical rulers. The Khas Sen kings, who were legitimate Hindu Rajput/Thakuri monarchs, were the primary targets. In a brazen act of historical vandalism, Limbu revisionists took the name of the prominent Khas monarch King Lohan Sen and altered it in their literature to Lo Hang Sen . By artificially grafting the Yi (Lolo) tribal suffix \"Hang\" onto his name, they falsely claimed that this great Khas king was actually a Limbu monarch. This plagiarism did not stop with the Sen dynasty. The Limbu syndicate began laying claim to the histories of the Chand kings, the Shah kings, and incredibly, even the ancient Katyuri kings of the western Himalayas. They systematically stripped the Khas people of their historical achievements, repackaging Khas royal lineages as \"ancient Kirati\" history. The Darjeeling Scam and Gaming the ST System The epicenter of this historiographical forgery was Darjeeling. During the 19th and 20th centuries, as the British colonial administration and later the independent Indian government began categorizing populations for political representation and quotas, the Limbu elites in Darjeeling realized the immense financial and political value of being recognized as an aboriginal tribe. To game the Indian Scheduled Tribe (ST) system, they codified the \"Kirat scam\" into written literature. They churned out fabricated genealogies, suppressing any mention of their Burmese and Thai origins. They presented themselves to the Indian government as the ultimate, unbroken aboriginals of the Himalayas. This coordinated academic fraud in Darjeeling successfully manipulated the ST framework, granting them lucrative tribal statuses and political reservations based entirely on a stolen history. The Uttarakhand Deception The ripple effects of the Darjeeling scam have reached far beyond eastern Nepal and Bengal, severely distorting the historical consciousness of Uttarakhand. Today, a vast majority of the people in Uttarakhand are entirely unaware of the reality behind this historical forgery. Poisoned by decades of fabricated literature emanating from Darjeeling, many locals and regional historians falsely believe that the Rai and Limbu populations are the ancient, original inhabitants of the broader Himalayas, including Uttarakhand. They do not realize that the \"ancient Kirat\" narrative is a smokescreen. They are unaware that the people claiming to be the original lords of the Himalayas are actually the descendants of Tai Shan, Padaung, and Lahu refugees who fled the Golden Triangle just a few centuries ago. The history of Nepal and the broader Himalayan corridor has been thoroughly Yunnanized. The time has come to dismantle the Darjeeling scam. The Khas people—the true indigenous architects, warriors, and kings of the Himalayas—must reclaim the history of the Sen, Chand, Shah, and Katyuri dynasties from those who stole it to hide their flight from the Sittang Valley. https://preview.redd.it/mhqunnh2tmnh1.png?width=1024&format=png&auto=webp&s=939761b6859c52f5d445a3a1810f7a1624a5b01b",
       "text_excerpt": "Much of Khas history was erased by Limbu tribe in Darjeeling. Its time to rediscover Khas heritage.\nThe historiography of the Himalayas has been subjected to a massive, coordinated geographical and cultural distortion. The authentic history of the Khas people—the true ancient architects of the region's political and cultural landscape—has been systematically overwritten. This erasure was not the result of a military conquest, but a calculated historiographical scam engineered primarily in Darjeeling. A multi-ethnic syndicate of Southeast Asian refugees, fleeing the violence of the Golden Triangle, illegally entered the Pallo Kirat administrative zone during the era of the Sen kings. To legit",
       "url": "https://www.reddit.com/r/PahadiTalks/comments/1w7qtxg/much_of_khas_history_was_erased_by_limbu_tribe_in/",
@@ -2815,56 +2824,52 @@
       "analyst_priority": "LOW"
     },
     {
-      "id": 447,
+      "id": 461,
       "source": "X",
-      "source_post_id": "2095841208559870092",
-      "author": "DavidGBrown13",
+      "source_post_id": "2096235276167192804",
+      "author": "hannah_and_bee",
       "language": "en",
-      "published_at": "2026-09-04T11:47:37Z",
-      "first_detected_at": "2026-09-04T12:56:55Z",
-      "last_detected_at": "2026-09-04T12:56:55Z",
+      "published_at": "2026-09-05T13:53:30Z",
+      "first_detected_at": "2026-09-05T13:54:29Z",
+      "last_detected_at": "2026-09-05T13:54:29Z",
       "detection_count": 1,
-      "text": "@MakeTexasBlue22 @jamestalarico 300,000 migrant children arrived at the border under Biden.  Many were turned over to human traffickers, including those sexual trafficking the minors.  Did Talarico say or do anything?  ICE has rescued around 76,000.  What has Talarico done?",
-      "text_excerpt": "@MakeTexasBlue22 @jamestalarico 300,000 migrant children arrived at the border under Biden.  Many were turned over to human traffickers, including those sexual trafficking the minors.  Did Talarico say or do anything?  ICE has rescued around 76,000.  What has Talarico done?",
-      "url": "https://x.com/DavidGBrown13/status/2095841208559870092",
-      "source_url": "https://x.com/DavidGBrown13/status/2095841208559870092",
-      "primary_signal": "FACILITATION_EARLY_WARNING",
-      "signal_type": "FACILITATION_EARLY_WARNING",
+      "text": "@TheRealJamieKay 50,000 members signed up? Barely 500 there!They been sending the wives,Gfs &amp; kids over to France to scout for migrants waiting to leave by boat.They filmed a real boatyard,played on beach n left.Strange if migrants such dangerous predators y send your women n kids.?",
+      "text_excerpt": "@TheRealJamieKay 50,000 members signed up? Barely 500 there!They been sending the wives,Gfs &amp; kids over to France to scout for migrants waiting to leave by boat.They filmed a real boatyard,played on beach n left.Strange if migrants such dangerous predators y send your women n kids.?",
+      "url": "https://x.com/hannah_and_bee/status/2096235276167192804",
+      "source_url": "https://x.com/hannah_and_bee/status/2096235276167192804",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "FACILITATION_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.9,
-      "score": 11.25,
+      "confidence": 0.8,
+      "score": 9.25,
       "matched_signals": [
-        "FACILITATION_EARLY_WARNING"
+        "MOVEMENT_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
           "movement",
-          "migrant children arrived"
+          "migrants waiting to leave"
         ],
         [
           "route",
-          "border"
-        ],
-        [
-          "facilitation",
-          "human traffickers"
+          "boat"
         ]
       ],
       "matched_groups": [
         "MOVEMENT",
-        "ROUTE",
-        "FACILITATION"
+        "ROUTE"
       ],
       "context_matches": [
-        "migrant"
+        "migrants"
       ],
       "high_value_matches": [
-        "migrant children arrived",
-        "human traffickers"
+        "migrants waiting to leave"
       ],
-      "signal_context_rejections": [],
+      "signal_context_rejections": [
+        "if migrants"
+      ],
       "migration_context": true,
       "human_migration_context": true,
       "historical_reference": false,
@@ -2878,7 +2883,7 @@
       "latitude": null,
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 31.5,
+      "priority_score": 28.0,
       "analyst_priority": "LOW"
     },
     {
@@ -3007,49 +3012,47 @@
       "analyst_priority": "LOW"
     },
     {
-      "id": 446,
+      "id": 462,
       "source": "X",
-      "source_post_id": "2095856237170549152",
-      "author": "Mark_Johnson80",
+      "source_post_id": "2096235404051517855",
+      "author": "amylcris",
       "language": "en",
-      "published_at": "2026-09-04T12:47:20Z",
-      "first_detected_at": "2026-09-04T12:56:54Z",
-      "last_detected_at": "2026-09-04T12:56:54Z",
+      "published_at": "2026-09-05T13:54:01Z",
+      "first_detected_at": "2026-09-05T13:54:59Z",
+      "last_detected_at": "2026-09-05T13:54:59Z",
       "detection_count": 1,
-      "text": "Syrian migrant Mohammed K. already came in contact with the police 114 times since he arrived in Holland, including for violent robberies.  He has now received permission to fly over his parents and brothers to Holland too and they are already looking for a house for them. 🌈 https://t.co/tWihpxjLND",
-      "text_excerpt": "Syrian migrant Mohammed K. already came in contact with the police 114 times since he arrived in Holland, including for violent robberies.  He has now received permission to fly over his parents and brothers to Holland too and they are already looking for a house for them. 🌈 https://t.co/tWihpxjLND",
-      "url": "https://x.com/Mark_Johnson80/status/2095856237170549152",
-      "source_url": "https://x.com/Mark_Johnson80/status/2095856237170549152",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "text": "@walleyejiger1 @DefendYourHill He literally has done all of that. CBP also reported 15 consecutive months with zero migrants released into the U.S. at the border under the current enforcement policy; people apprehended are generally detained, removed, or otherwise processed rather than simply released.",
+      "text_excerpt": "@walleyejiger1 @DefendYourHill He literally has done all of that. CBP also reported 15 consecutive months with zero migrants released into the U.S. at the border under the current enforcement policy; people apprehended are generally detained, removed, or otherwise processed rather than simply released.",
+      "url": "https://x.com/amylcris/status/2096235404051517855",
+      "source_url": "https://x.com/amylcris/status/2096235404051517855",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 8.75,
+      "confidence": 0.72,
+      "score": 7.25,
       "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
+        "ROUTE_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
-          "movement",
-          "migrant Mohammed K. already came in contact with the police 114 times since he arrived"
+          "route",
+          "border"
         ],
         [
           "enforcement",
-          "police"
+          "detained"
         ]
       ],
       "matched_groups": [
-        "MOVEMENT",
+        "ROUTE",
         "ENFORCEMENT"
       ],
       "context_matches": [
-        "migrant"
+        "migrants"
       ],
-      "high_value_matches": [
-        "migrant Mohammed K. already came in contact with the police 114 times since he arrived"
-      ],
+      "high_value_matches": [],
       "signal_context_rejections": [],
       "migration_context": true,
       "human_migration_context": true,
@@ -3064,68 +3067,7 @@
       "latitude": null,
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
-      "analyst_priority": "LOW"
-    },
-    {
-      "id": 444,
-      "source": "X",
-      "source_post_id": "2095849665103081907",
-      "author": "percypacker",
-      "language": "en",
-      "published_at": "2026-09-04T12:21:13Z",
-      "first_detected_at": "2026-09-04T12:55:24Z",
-      "last_detected_at": "2026-09-04T12:55:24Z",
-      "detection_count": 1,
-      "text": "@bulkeley_john @JamesMelville WARNING!!! EXTREME GASLIGHTING.\nCertain outlets🤔 reported a specific reduction at one land border post—from 12 officers per shift to 8—with some reallocated to process remaining migrants. Overall force levels in Ceuta remained elevated compared to pre-surge numbers.",
-      "text_excerpt": "@bulkeley_john @JamesMelville WARNING!!! EXTREME GASLIGHTING.\nCertain outlets🤔 reported a specific reduction at one land border post—from 12 officers per shift to 8—with some reallocated to process remaining migrants. Overall force levels in Ceuta remained elevated compared to pre-surge numbers.",
-      "url": "https://x.com/percypacker/status/2095849665103081907",
-      "source_url": "https://x.com/percypacker/status/2095849665103081907",
-      "primary_signal": "PRESSURE_EARLY_WARNING",
-      "signal_type": "PRESSURE_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "PRESSURE_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 9.25,
-      "matched_signals": [
-        "PRESSURE_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "route",
-          "border"
-        ],
-        [
-          "pressure",
-          "surge"
-        ]
-      ],
-      "matched_groups": [
-        "ROUTE",
-        "PRESSURE"
-      ],
-      "context_matches": [
-        "migrants"
-      ],
-      "high_value_matches": [
-        "surge"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "Ceuta",
-      "primary_location": "Ceuta",
-      "country": "Spain",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": 35.8894,
-      "longitude": -5.3213,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 39.0,
+      "priority_score": 25.2,
       "analyst_priority": "LOW"
     },
     {
@@ -3413,62 +3355,6 @@
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
       "priority_score": 25.2,
-      "analyst_priority": "LOW"
-    },
-    {
-      "id": 445,
-      "source": "X",
-      "source_post_id": "2095848153207501140",
-      "author": "DidYaEvaNotice",
-      "language": "en",
-      "published_at": "2026-09-04T12:15:13Z",
-      "first_detected_at": "2026-09-04T12:56:25Z",
-      "last_detected_at": "2026-09-04T12:56:25Z",
-      "detection_count": 1,
-      "text": "@werriskneebone It happens to us all the time. Our local post office tell me they've had over 50 complaints about the delivery driver. He's a recent migrant... that's just a lazy fuck.",
-      "text_excerpt": "@werriskneebone It happens to us all the time. Our local post office tell me they've had over 50 complaints about the delivery driver. He's a recent migrant... that's just a lazy fuck.",
-      "url": "https://x.com/DidYaEvaNotice/status/2095848153207501140",
-      "source_url": "https://x.com/DidYaEvaNotice/status/2095848153207501140",
-      "primary_signal": "FACILITATION_EARLY_WARNING",
-      "signal_type": "FACILITATION_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "FACILITATION_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.62,
-      "score": 5.75,
-      "matched_signals": [
-        "FACILITATION_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "facilitation",
-          "driver. He's a recent migrant"
-        ]
-      ],
-      "matched_groups": [
-        "FACILITATION"
-      ],
-      "context_matches": [
-        "migrant"
-      ],
-      "high_value_matches": [
-        "driver. He's a recent migrant"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 21.7,
       "analyst_priority": "LOW"
     }
   ],
@@ -4517,15 +4403,15 @@
       "label": "W36",
       "week_label": "W36",
       "week_start": "2026-08-31T00:00:00Z",
-      "posts": 1361,
-      "post_count": 1361,
-      "operational_posts": 50,
-      "influence_signals": 84,
+      "posts": 1424,
+      "post_count": 1424,
+      "operational_posts": 52,
+      "influence_signals": 87,
       "source_counts": {
-        "X": 915,
-        "REDDIT": 172,
-        "MASTODON": 238,
-        "TELEGRAM": 36
+        "X": 959,
+        "REDDIT": 177,
+        "MASTODON": 251,
+        "TELEGRAM": 37
       }
     }
   ],
@@ -4648,33 +4534,33 @@
       "label": "W36",
       "week_label": "W36",
       "week_start": "2026-08-31T00:00:00Z",
-      "posts": 1361,
-      "post_count": 1361,
-      "operational_posts": 50,
-      "influence_signals": 84,
+      "posts": 1424,
+      "post_count": 1424,
+      "operational_posts": 52,
+      "influence_signals": 87,
       "source_counts": {
-        "X": 915,
-        "REDDIT": 172,
-        "MASTODON": 238,
-        "TELEGRAM": 36
+        "X": 959,
+        "REDDIT": 177,
+        "MASTODON": 251,
+        "TELEGRAM": 37
       }
     }
   ],
   "information_activity_summary": {
-    "current_week": 1361,
-    "previous_week": 1194,
-    "current_week_to_date": 1361,
-    "previous_week_same_period": 1194,
+    "current_week": 1424,
+    "previous_week": 1201,
+    "current_week_to_date": 1424,
+    "previous_week_same_period": 1201,
     "previous_week_full": 1475,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": 13.99,
-    "change_label": "+14.0%",
+    "change_percent": 18.57,
+    "change_label": "+18.6%",
     "direction": "UP",
     "comparable": true,
-    "elapsed_hours": 130.2,
+    "elapsed_hours": 133.9,
     "current_period_start": "2026-08-31T00:00:00Z",
     "previous_period_start": "2026-08-24T00:00:00Z",
-    "previous_period_end": "2026-08-29T10:09:53Z"
+    "previous_period_end": "2026-08-29T13:56:38Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -4686,33 +4572,34 @@
       72,
       168
     ],
-    "generated_at": "2026-09-05T10:09:54Z",
-    "total_items": 1163,
-    "information_count": 342,
-    "early_warning_count": 442,
-    "operational_count": 306,
+    "generated_at": "2026-09-05T13:56:39Z",
+    "total_items": 1170,
+    "information_count": 344,
+    "early_warning_count": 445,
+    "operational_count": 308,
     "correlated_count": 73,
     "layer_counts": {
-      "INFORMATION": 342,
-      "EARLY_WARNING": 442,
-      "OPERATIONAL": 306,
+      "EARLY_WARNING": 445,
+      "OPERATIONAL": 308,
+      "INFORMATION": 344,
       "CORRELATED": 73
     },
     "source_counts": {
-      "X": 820,
-      "REDDIT": 272,
-      "TELEGRAM": 16,
-      "MASTODON": 55
+      "X": 829,
+      "MASTODON": 55,
+      "REDDIT": 270,
+      "TELEGRAM": 16
     },
     "type_counts": {
-      "INFORMATION_SIGNAL": 342,
-      "MOVEMENT_EARLY_WARNING": 128,
+      "ROUTE_EARLY_WARNING": 54,
+      "MOVEMENT_EARLY_WARNING": 130,
+      "DEPORTATION": 42,
+      "INFORMATION_SIGNAL": 344,
+      "MIGRANT_CAMP": 67,
       "LEGAL_MIGRATION_SIGNAL": 48,
       "BORDER_CROSSING": 92,
       "ENFORCEMENT_EARLY_WARNING": 30,
-      "DEPORTATION": 41,
       "DETENTION": 15,
-      "ROUTE_EARLY_WARNING": 53,
       "RECRUITMENT_COORDINATION": 10,
       "PRESSURE_EARLY_WARNING": 28,
       "FACILITATION_EARLY_WARNING": 77,
@@ -4720,7 +4607,6 @@
       "MOBILIZATION_COORDINATION": 12,
       "DECISION_INFLUENCE": 1,
       "CASUALTY": 15,
-      "MIGRANT_CAMP": 66,
       "INTERCEPTION": 20,
       "RESCUE_OPERATION": 21,
       "COORDINATION": 8,
@@ -4734,6 +4620,540 @@
       "MOBILIZATION_REPORT": 8
     },
     "items": [
+      {
+        "timeline_id": "early_warning:462",
+        "timestamp": "2026-09-05T13:54:01Z",
+        "layer": "EARLY_WARNING",
+        "type": "ROUTE_EARLY_WARNING",
+        "signal_type": "ROUTE_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2096235404051517855",
+        "author": "amylcris",
+        "url": "https://x.com/amylcris/status/2096235404051517855",
+        "source_url": "https://x.com/amylcris/status/2096235404051517855",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.72,
+        "priority": "MEDIUM",
+        "priority_score": 25.2,
+        "analyst_priority": "LOW",
+        "text": "@walleyejiger1 @DefendYourHill He literally has done all of that. CBP also reported 15 consecutive months with zero migrants released into the U.S. at the border under the current enforcement policy; people apprehended are generally detained, removed, or otherwise processed rather than simply released.",
+        "text_excerpt": "@walleyejiger1 @DefendYourHill He literally has done all of that. CBP also reported 15 consecutive months with zero migrants released into the U.S. at the border under the current enforcement policy; people apprehended are generally detained, removed, or otherwise processed rather than simply released.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "ROUTE_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-09-05T13:54:59Z",
+        "last_detected_at": "2026-09-05T13:54:59Z"
+      },
+      {
+        "timeline_id": "early_warning:461",
+        "timestamp": "2026-09-05T13:53:30Z",
+        "layer": "EARLY_WARNING",
+        "type": "MOVEMENT_EARLY_WARNING",
+        "signal_type": "MOVEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2096235276167192804",
+        "author": "hannah_and_bee",
+        "url": "https://x.com/hannah_and_bee/status/2096235276167192804",
+        "source_url": "https://x.com/hannah_and_bee/status/2096235276167192804",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.8,
+        "priority": "MEDIUM",
+        "priority_score": 28.0,
+        "analyst_priority": "LOW",
+        "text": "@TheRealJamieKay 50,000 members signed up? Barely 500 there!They been sending the wives,Gfs &amp; kids over to France to scout for migrants waiting to leave by boat.They filmed a real boatyard,played on beach n left.Strange if migrants such dangerous predators y send your women n kids.?",
+        "text_excerpt": "@TheRealJamieKay 50,000 members signed up? Barely 500 there!They been sending the wives,Gfs &amp; kids over to France to scout for migrants waiting to leave by boat.They filmed a real boatyard,played on beach n left.Strange if migrants such dangerous predators y send your women n kids.?",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "MOVEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-09-05T13:54:29Z",
+        "last_detected_at": "2026-09-05T13:54:29Z"
+      },
+      {
+        "timeline_id": "operational:334",
+        "timestamp": "2026-09-05T13:52:20Z",
+        "layer": "OPERATIONAL",
+        "type": "DEPORTATION",
+        "signal_type": "DEPORTATION",
+        "event_type": "DEPORTATION",
+        "source": "X",
+        "source_post_id": "2096234982674993645",
+        "author": "tery_der",
+        "url": "https://x.com/tery_der/status/2096234982674993645",
+        "source_url": "https://x.com/tery_der/status/2096234982674993645",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.25,
+        "priority": "LOW",
+        "priority_score": 25.0,
+        "text": "@MikeTappTweets Are more small boat migrants being deported than are arriving? If not then the situation is still getting worse.",
+        "text_excerpt": "@MikeTappTweets Are more small boat migrants being deported than are arriving? If not then the situation is still getting worse.",
+        "event_group_id": 257,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null
+      },
+      {
+        "timeline_id": "information:8114",
+        "timestamp": "2026-09-05T13:48:21Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2096233980701929571",
+        "author": "keepingflight",
+        "url": "https://x.com/keepingflight/status/2096233980701929571",
+        "source_url": "https://x.com/keepingflight/status/2096233980701929571",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "crossing",
+          "boat"
+        ],
+        "freshness_cues": [],
+        "text": "@carolecadwalla @Verbatim_Media @Channel4News Have you seen the one illegal migrant boat crossings &amp; how Labour are just letting it happen &amp; allowing tbr French police to assist!!  Unbelievable.",
+        "text_excerpt": "@carolecadwalla @Verbatim_Media @Channel4News Have you seen the one illegal migrant boat crossings &amp; how Labour are just letting it happen &amp; allowing tbr French police to assist!!  Unbelievable.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-09-05T13:55:33Z",
+        "last_collected_at": "2026-09-05T13:55:33Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:8138",
+        "timestamp": "2026-09-05T13:47:56Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2096233875269636478",
+        "author": "radarafricacom",
+        "url": "https://x.com/radarafricacom/status/2096233875269636478",
+        "source_url": "https://x.com/radarafricacom/status/2096233875269636478",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "crossing",
+          "channel",
+          "boat"
+        ],
+        "freshness_cues": [],
+        "text": "Hundreds of masked protesters blocked vehicles entering and leaving Port of Dover in southern England during a demonstration against migrant crossings in small boats across the English Channel. https://t.co/uEgHU97tZZ",
+        "text_excerpt": "Hundreds of masked protesters blocked vehicles entering and leaving Port of Dover in southern England during a demonstration against migrant crossings in small boats across the English Channel. https://t.co/uEgHU97tZZ",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-09-05T13:56:34Z",
+        "last_collected_at": "2026-09-05T13:56:34Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:8139",
+        "timestamp": "2026-09-05T13:43:40Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2096232800433078598",
+        "author": "Ericdun19416783",
+        "url": "https://x.com/Ericdun19416783/status/2096232800433078598",
+        "source_url": "https://x.com/Ericdun19416783/status/2096232800433078598",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 40,
+        "information_score": 4,
+        "matched_information_cues": [
+          "channel",
+          "boat",
+          "vessel",
+          "rescue"
+        ],
+        "freshness_cues": [],
+        "text": "If migrants are 'rescued'  in the channel by marines etc after leaving France\n\nThey must be returned to the country who's flag they are flying on the ships/boats\n\nWill nigel have the union jack removed from these vessels?",
+        "text_excerpt": "If migrants are 'rescued'  in the channel by marines etc after leaving France\n\nThey must be returned to the country who's flag they are flying on the ships/boats\n\nWill nigel have the union jack removed from these vessels?",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-09-05T13:56:34Z",
+        "last_collected_at": "2026-09-05T13:56:34Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:8104",
+        "timestamp": "2026-09-05T13:35:46Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2096230813058621925",
+        "author": "Bot_iam2322",
+        "url": "https://x.com/Bot_iam2322/status/2096230813058621925",
+        "source_url": "https://x.com/Bot_iam2322/status/2096230813058621925",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "border",
+          "tunnel",
+          "smuggling"
+        ],
+        "freshness_cues": [],
+        "text": "\"Smuggler who brought migrants through tunnel under U.S.-Mexico border pleads guilty - CBS News\" https://t.co/fr7L15O5Th",
+        "text_excerpt": "\"Smuggler who brought migrants through tunnel under U.S.-Mexico border pleads guilty - CBS News\" https://t.co/fr7L15O5Th",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-09-05T13:54:59Z",
+        "last_collected_at": "2026-09-05T13:54:59Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:8105",
+        "timestamp": "2026-09-05T13:34:05Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2096230391094915095",
+        "author": "Codie_Sanchez",
+        "url": "https://x.com/Codie_Sanchez/status/2096230391094915095",
+        "source_url": "https://x.com/Codie_Sanchez/status/2096230391094915095",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "trafficking"
+        ],
+        "freshness_cues": [],
+        "text": "I don’t talk about this a ton, but I used to be a journalist covering human trafficking on the US Mexico border.\n\nI spent years covering migrants and cartels moving across the border illegally. I saw young women working in factories for wages below the poverty line. Others in the",
+        "text_excerpt": "I don’t talk about this a ton, but I used to be a journalist covering human trafficking on the US Mexico border.\n\nI spent years covering migrants and cartels moving across the border illegally. I saw young women working in factories for wages below the poverty line. Others in the",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-09-05T13:55:00Z",
+        "last_collected_at": "2026-09-05T13:55:00Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:8107",
+        "timestamp": "2026-09-05T13:33:47Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2096230315261825077",
+        "author": "AliceWrites92zz",
+        "url": "https://x.com/AliceWrites92zz/status/2096230315261825077",
+        "source_url": "https://x.com/AliceWrites92zz/status/2096230315261825077",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "arrival"
+        ],
+        "freshness_cues": [],
+        "text": "@bennyjohnson When the government ignores boatloads of migrants arriving, people eventually block roads in places like Dover. This direct action reflects repeated border-control failures and a broader breakdown that leaves ordinary citizens feeling they have no other choice",
+        "text_excerpt": "@bennyjohnson When the government ignores boatloads of migrants arriving, people eventually block roads in places like Dover. This direct action reflects repeated border-control failures and a broader breakdown that leaves ordinary citizens feeling they have no other choice",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-09-05T13:55:00Z",
+        "last_collected_at": "2026-09-05T13:55:00Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:8116",
+        "timestamp": "2026-09-05T13:33:13Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2096230169275195445",
+        "author": "thespanisheye",
+        "url": "https://x.com/thespanisheye/status/2096230169275195445",
+        "source_url": "https://x.com/thespanisheye/status/2096230169275195445",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "boat",
+          "smuggling"
+        ],
+        "freshness_cues": [],
+        "text": "WATCH: Gibraltar teen is arrested for ‘smuggling migrants to the Rock on boat from Ceuta’ https://t.co/GMWEs5IhCh @thespanisheye https://t.co/4vOAMDvYVs",
+        "text_excerpt": "WATCH: Gibraltar teen is arrested for ‘smuggling migrants to the Rock on boat from Ceuta’ https://t.co/GMWEs5IhCh @thespanisheye https://t.co/4vOAMDvYVs",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-09-05T13:55:33Z",
+        "last_collected_at": "2026-09-05T13:55:33Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:8110",
+        "timestamp": "2026-09-05T13:29:55Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2096229338836341087",
+        "author": "ThePreRaphf",
+        "url": "https://x.com/ThePreRaphf/status/2096229338836341087",
+        "source_url": "https://x.com/ThePreRaphf/status/2096229338836341087",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "crossing",
+          "boat"
+        ],
+        "freshness_cues": [],
+        "text": "@MikeTappTweets And your migrant savages are raping their way through communities. \n\nLarge boats crossing plus unknown migrant savages hiding in lorry’s via ferries. \n\nThe people of Britain have had enough. \n\nSend the migrants home https://t.co/YwwJyjZSiR",
+        "text_excerpt": "@MikeTappTweets And your migrant savages are raping their way through communities. \n\nLarge boats crossing plus unknown migrant savages hiding in lorry’s via ferries. \n\nThe people of Britain have had enough. \n\nSend the migrants home https://t.co/YwwJyjZSiR",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-09-05T13:55:00Z",
+        "last_collected_at": "2026-09-05T13:55:00Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "early_warning:463",
+        "timestamp": "2026-09-05T13:21:50Z",
+        "layer": "EARLY_WARNING",
+        "type": "MOVEMENT_EARLY_WARNING",
+        "signal_type": "MOVEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2096227307237105869",
+        "author": "MrChristopher79",
+        "url": "https://x.com/MrChristopher79/status/2096227307237105869",
+        "source_url": "https://x.com/MrChristopher79/status/2096227307237105869",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.9,
+        "priority": "MEDIUM",
+        "priority_score": 31.5,
+        "analyst_priority": "LOW",
+        "text": "@MagicMaggieMac THEY WONT STOP 1 BOAT \n\nTHEY WONT STOP 1 RAPIST \n\nTHEY WILL STOP BRITISH FAMILIES GOING ON HOLIDAY \n\nTHEY WILL STOP BRITISH TRUCK DRIVERS FROM WORKING \n\nTHEY WILL PISS OFF LOCALS \n\nTOMMO WILL MAKE MONEY TODAY \n\nBRITS WILL GET ARRESTED TODAY \n\nMORE MIGRANTS WILL ARRIVE TODAY",
+        "text_excerpt": "@MagicMaggieMac THEY WONT STOP 1 BOAT \n\nTHEY WONT STOP 1 RAPIST \n\nTHEY WILL STOP BRITISH FAMILIES GOING ON HOLIDAY \n\nTHEY WILL STOP BRITISH TRUCK DRIVERS FROM WORKING \n\nTHEY WILL PISS OFF LOCALS \n\nTOMMO WILL MAKE MONEY TODAY \n\nBRITS WILL GET ARRESTED TODAY \n\nMORE MIGRANTS WILL ARRIVE TODAY",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "MOVEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-09-05T13:55:34Z",
+        "last_detected_at": "2026-09-05T13:55:34Z"
+      },
+      {
+        "timeline_id": "information:8120",
+        "timestamp": "2026-09-05T13:20:05Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2096226865425842310",
+        "author": "BadgerBitesUK",
+        "url": "https://x.com/BadgerBitesUK/status/2096226865425842310",
+        "source_url": "https://x.com/BadgerBitesUK/status/2096226865425842310",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "boat",
+          "arrival"
+        ],
+        "freshness_cues": [],
+        "text": "@andyburnham Some #Labour Achievements So Far (List Updated Daily):\n- Over 76,000 ILLEGAL boat arrivals since Labour took over in July 2024\n- Over 2,600 ILLEGAL boat arrivals since Andy Burnham took over in July 2026\n- Andy Burnham has defended the Home Office handing out a leaflet to asylum https://t.co/8ahtSgZDMN",
+        "text_excerpt": "@andyburnham Some #Labour Achievements So Far (List Updated Daily):\n- Over 76,000 ILLEGAL boat arrivals since Labour took over in July 2024\n- Over 2,600 ILLEGAL boat arrivals since Andy Burnham took over in July 2026\n- Andy Burnham has defended the Home Office handing out a leaflet to asylum https://t.co/8ahtSgZDMN",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-09-05T13:55:34Z",
+        "last_collected_at": "2026-09-05T13:55:34Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "operational:335",
+        "timestamp": "2026-09-05T13:17:57Z",
+        "layer": "OPERATIONAL",
+        "type": "MIGRANT_CAMP",
+        "signal_type": "MIGRANT_CAMP",
+        "event_type": "MIGRANT_CAMP",
+        "source": "X",
+        "source_post_id": "2096226329012388216",
+        "author": "ImThimira07",
+        "url": "https://x.com/ImThimira07/status/2096226329012388216",
+        "source_url": "https://x.com/ImThimira07/status/2096226329012388216",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.45,
+        "priority": "LOW",
+        "priority_score": 45.0,
+        "text": "Eight people, including 4 women and 3 children, who arrived by sea from a refugee camp in South India and were stranded on a sandbank in the Talaimannar sea, were rescued: Sri Lanka Navy\n\n#lka #SriLanka https://t.co/lM0jxVYHg4",
+        "text_excerpt": "Eight people, including 4 women and 3 children, who arrived by sea from a refugee camp in South India and were stranded on a sandbank in the Talaimannar sea, were rescued: Sri Lanka Navy\n\n#lka #SriLanka https://t.co/lM0jxVYHg4",
+        "event_group_id": 258,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null
+      },
+      {
+        "timeline_id": "information:8111",
+        "timestamp": "2026-09-05T12:32:34Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "MASTODON",
+        "source_post_id": "mastodon_117218446826496334",
+        "author": null,
+        "url": "https://mastodon.social/@WINGS_radio/117218446826496334",
+        "source_url": "https://mastodon.social/@WINGS_radio/117218446826496334",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "route",
+          "sea"
+        ],
+        "freshness_cues": [
+          "today"
+        ],
+        "text": "Fascinating # analysis of the # control and # use of The # RedSea : From # ancient # trade # route to 20th century # global # shipping # corridor . Today the Red Sea’s crucial choke-point at the Bab el-Mandeb is becoming as infamous as the Strait of Hormuz. https://www. abc.net.au/listen/programs/rea rvision/rear-vision/107044596",
+        "text_excerpt": "Fascinating # analysis of the # control and # use of The # RedSea : From # ancient # trade # route to 20th century # global # shipping # corridor . Today the Red Sea’s crucial choke-point at the Bab el-Mandeb is becoming as infamous as the Strait of Hormuz. https://www. abc.net.au/listen/programs/rea rvision/rear-vision/107044596",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-09-05T13:55:04Z",
+        "last_collected_at": "2026-09-05T13:55:04Z",
+        "collection_count": 1
+      },
       {
         "timeline_id": "information:8046",
         "timestamp": "2026-09-05T10:05:10Z",
@@ -5762,9 +6182,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "MOVEMENT_REVIEW",
-        "detection_count": 3,
+        "detection_count": 4,
         "first_detected_at": "2026-09-05T05:33:38Z",
-        "last_detected_at": "2026-09-05T10:07:54Z"
+        "last_detected_at": "2026-09-05T13:55:01Z"
       },
       {
         "timeline_id": "operational:330",
@@ -5906,8 +6326,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-09-05T05:34:11Z",
-        "last_collected_at": "2026-09-05T10:07:54Z",
-        "collection_count": 3
+        "last_collected_at": "2026-09-05T13:55:01Z",
+        "collection_count": 4
       },
       {
         "timeline_id": "information:7930",
@@ -6049,8 +6469,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-09-05T05:33:39Z",
-        "last_collected_at": "2026-09-05T10:07:16Z",
-        "collection_count": 3
+        "last_collected_at": "2026-09-05T13:54:31Z",
+        "collection_count": 4
       },
       {
         "timeline_id": "information:7918",
@@ -6091,8 +6511,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-09-05T05:34:12Z",
-        "last_collected_at": "2026-09-05T10:07:55Z",
-        "collection_count": 3
+        "last_collected_at": "2026-09-05T13:55:02Z",
+        "collection_count": 4
       },
       {
         "timeline_id": "information:7919",
@@ -6131,8 +6551,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-09-05T05:34:12Z",
-        "last_collected_at": "2026-09-05T10:07:55Z",
-        "collection_count": 3
+        "last_collected_at": "2026-09-05T13:55:02Z",
+        "collection_count": 4
       },
       {
         "timeline_id": "information:7920",
@@ -6173,8 +6593,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-09-05T05:34:13Z",
-        "last_collected_at": "2026-09-05T10:07:56Z",
-        "collection_count": 3
+        "last_collected_at": "2026-09-05T13:55:03Z",
+        "collection_count": 4
       },
       {
         "timeline_id": "information:7956",
@@ -6215,8 +6635,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-09-05T05:35:44Z",
-        "last_collected_at": "2026-09-05T10:09:50Z",
-        "collection_count": 3
+        "last_collected_at": "2026-09-05T13:56:35Z",
+        "collection_count": 4
       },
       {
         "timeline_id": "information:7813",
@@ -7570,9 +7990,9 @@
         "related_source_count": null,
         "signal_mode": "DIRECT",
         "signal_intent": "RECRUITMENT_COORDINATION",
-        "detection_count": 6,
+        "detection_count": 7,
         "first_detected_at": "2026-09-04T09:12:55Z",
-        "last_detected_at": "2026-09-05T10:09:52Z"
+        "last_detected_at": "2026-09-05T13:56:37Z"
       },
       {
         "timeline_id": "information:7742",
@@ -8211,9 +8631,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "PRESSURE_REVIEW",
-        "detection_count": 7,
+        "detection_count": 8,
         "first_detected_at": "2026-09-04T05:05:40Z",
-        "last_detected_at": "2026-09-05T10:07:16Z"
+        "last_detected_at": "2026-09-05T13:54:31Z"
       },
       {
         "timeline_id": "early_warning:436",
@@ -11779,8 +12199,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-09-02T17:48:37Z",
-        "last_collected_at": "2026-09-05T10:09:52Z",
-        "collection_count": 10
+        "last_collected_at": "2026-09-05T13:56:37Z",
+        "collection_count": 11
       },
       {
         "timeline_id": "operational:306",
@@ -27176,230 +27596,6 @@
         "event_time_confidence": null
       },
       {
-        "timeline_id": "information:5302",
-        "timestamp": "2026-08-24T04:10:55Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1vwsd4v",
-        "author": "OldSchoolBubba",
-        "url": "https://www.reddit.com/r/USMC/comments/1vwsd4v/devils_and_docs_be_ready_world_war_iii_may_be/",
-        "source_url": "https://www.reddit.com/r/USMC/comments/1vwsd4v/devils_and_docs_be_ready_world_war_iii_may_be/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "detention"
-        ],
-        "freshness_cues": [],
-        "text": "Devils and Docs be ready. World War III may be upon us very soon. Interesting story coming out of Europe.\nThis story has a link to another report \"Belarus Training Migrants to Fight Europe's Border Guards.\" Put the two together and it looks like a pattern may be revealing itself. Russia sabotages weapons factories across Europe https://preview.redd.it/rtomm5nuz8lh1.png?width=954&format=png&auto=webp&s=aaae032b6b36e8d652a62fa8ddd6194aa11c326f Russia has launched a fresh wave of attacks on European armaments factories under the guise of plausible deniability, according to Western intelligence sources. The Kremlin is recruiting local gang members to sabotage defence manufacturers to test Nato ’s resolve. The attacks appear carefully calculated to fall just short of triggering Article 5, Nato’s mutual defence clause , intelligence officials believe. This week, Latvia detained three of its own nationals on suspicion of an arson attack against a drone manufacturer in neighbouring Estonia. A building belonging to Milrem Robotics, a Tallinn-based firm that supplies weapons to Ukraine, was set ablaze on Aug 15. The firm is one of two foreign suppliers of unmanned ground vehicles to Kyiv’s armed forces. Kristen Michal , Estonia’s prime minister, said investigators were looking into whether it was an act of sabotage and if Russia had been involved. The Milrem arson attack fits into a broader pattern of suspected or confirmed sabotage against Ukraine’s military supply chains across Nato territory. A Nato official added: “In recent years, Russia has accelerated its destabilisation campaigns against Allies through cyber attacks, assassination attempts and acts of sabotage.” What has become known as the Kremlin’s “hybrid war”, other officials argue, is aimed at escalating tensions between Nato’s allies and deterring support for Ukraine. Since Vladimir Putin’s invasion of Ukraine in February 2022 there has been a steady stream of unexplained attacks across Europe. As well as the Estonian arson incident, there have been explosions at major arms manufacturers in Italy and Bulgaria this month alone.",
-        "text_excerpt": "Devils and Docs be ready. World War III may be upon us very soon. Interesting story coming out of Europe.\nThis story has a link to another report \"Belarus Training Migrants to Fight Europe's Border Guards.\" Put the two together and it looks like a pattern may be revealing itself. Russia sabotages weapons factories across Europe https://preview.redd.it/rtomm5nuz8lh1.png?width=954&format=png&auto=webp&s=aaae032b6b36e8d…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-08-24T04:40:56Z",
-        "last_collected_at": "2026-08-24T04:40:56Z",
-        "collection_count": 1
-      },
-      {
-        "timeline_id": "information:5332",
-        "timestamp": "2026-08-24T04:05:23Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "MASTODON",
-        "source_post_id": "mastodon_117148504773784764",
-        "author": null,
-        "url": "https://mastodon.social/@ebauche/117148504773784764",
-        "source_url": "https://mastodon.social/@ebauche/117148504773784764",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "crossing",
-          "sea"
-        ],
-        "freshness_cues": [],
-        "text": "A small cross-section of yachts moored in one of the harbours in Mallorca. The clustered busyness of the scene exaggerated by the foreshortening effect of a 600mm equivalent zoom. # photography # Spain # Mallorca # harbour # port # sea # shipping # yachts https:// leonard.earth/2026/08/24/masts -ahoy/",
-        "text_excerpt": "A small cross-section of yachts moored in one of the harbours in Mallorca. The clustered busyness of the scene exaggerated by the foreshortening effect of a 600mm equivalent zoom. # photography # Spain # Mallorca # harbour # port # sea # shipping # yachts https:// leonard.earth/2026/08/24/masts -ahoy/",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-08-24T04:41:53Z",
-        "last_collected_at": "2026-08-24T04:41:53Z",
-        "collection_count": 1
-      },
-      {
-        "timeline_id": "information:5312",
-        "timestamp": "2026-08-24T03:52:46Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2091735443369034057",
-        "author": "lizisamused",
-        "url": "https://x.com/lizisamused/status/2091735443369034057",
-        "source_url": "https://x.com/lizisamused/status/2091735443369034057",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "deportation"
-        ],
-        "freshness_cues": [],
-        "text": "A majority of Democrats agree we should increase security along the U.S.-Mexico border. 39% agree we should deport more illegal immigrants.\n\nA majority of Republicans agree we should take in civilian refugees of war, make it easier to sponsor family members to move to the US, &amp; https://t.co/0x86jpEGgl",
-        "text_excerpt": "A majority of Democrats agree we should increase security along the U.S.-Mexico border. 39% agree we should deport more illegal immigrants.\n\nA majority of Republicans agree we should take in civilian refugees of war, make it easier to sponsor family members to move to the US, &amp; https://t.co/0x86jpEGgl",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-08-24T04:41:24Z",
-        "last_collected_at": "2026-08-24T04:41:24Z",
-        "collection_count": 1
-      },
-      {
-        "timeline_id": "information:5313",
-        "timestamp": "2026-08-24T03:49:47Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2091734689728127084",
-        "author": "lizisamused",
-        "url": "https://x.com/lizisamused/status/2091734689728127084",
-        "source_url": "https://x.com/lizisamused/status/2091734689728127084",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "deportation"
-        ],
-        "freshness_cues": [],
-        "text": "@Noblock88155216 @mcapel4 Obama deported more people than Trump in their first terms. A vote for Obama was very often not a vote about immigration.\n\nBiden put pressure on Mexico about the border wall which led to a drop in migrant encounters at the border in late 2024. And he also imposed more https://t.co/BhlTgDZzVc",
-        "text_excerpt": "@Noblock88155216 @mcapel4 Obama deported more people than Trump in their first terms. A vote for Obama was very often not a vote about immigration.\n\nBiden put pressure on Mexico about the border wall which led to a drop in migrant encounters at the border in late 2024. And he also imposed more https://t.co/BhlTgDZzVc",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-08-24T04:41:24Z",
-        "last_collected_at": "2026-08-24T04:41:24Z",
-        "collection_count": 1
-      },
-      {
-        "timeline_id": "information:5316",
-        "timestamp": "2026-08-24T03:39:14Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2091732034976649286",
-        "author": "SwifNick37",
-        "url": "https://x.com/SwifNick37/status/2091732034976649286",
-        "source_url": "https://x.com/SwifNick37/status/2091732034976649286",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "border",
-          "deportation"
-        ],
-        "freshness_cues": [
-          "today"
-        ],
-        "text": "https://t.co/cZb3qxmKEi - close the border with France today &amp; deport all illegal migrants @uklabour @andyburnham !",
-        "text_excerpt": "https://t.co/cZb3qxmKEi - close the border with France today &amp; deport all illegal migrants @uklabour @andyburnham !",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-08-24T04:41:24Z",
-        "last_collected_at": "2026-08-24T04:41:24Z",
-        "collection_count": 1
-      },
-      {
-        "timeline_id": "information:5242",
-        "timestamp": "2026-08-24T03:27:19Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2091729037135692181",
-        "author": "automatedidiocy",
-        "url": "https://x.com/automatedidiocy/status/2091729037135692181",
-        "source_url": "https://x.com/automatedidiocy/status/2091729037135692181",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "border",
-          "trafficking"
-        ],
-        "freshness_cues": [],
-        "text": "@jackieohughes @PGolfgambler @Norma81321397 @CBSNews Lol, I like this selective empathy. You don't care about cruelty. Exceptions for children illegally smuggled across the border incentivized child trafficking on an unprecedented scale. Roughly 470,000–480,000 unaccompanied children were encountered during Biden’s presidency. Only",
-        "text_excerpt": "@jackieohughes @PGolfgambler @Norma81321397 @CBSNews Lol, I like this selective empathy. You don't care about cruelty. Exceptions for children illegally smuggled across the border incentivized child trafficking on an unprecedented scale. Roughly 470,000–480,000 unaccompanied children were encountered during Biden’s presidency. Only",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-08-24T03:30:54Z",
-        "last_collected_at": "2026-08-24T04:42:19Z",
-        "collection_count": 2
-      },
-      {
         "timeline_id": "early_warning:285",
         "timestamp": "2026-08-24T03:25:36Z",
         "layer": "EARLY_WARNING",
@@ -27493,80 +27689,6 @@
         "detection_count": 1,
         "first_detected_at": "2026-08-24T03:31:22Z",
         "last_detected_at": "2026-08-24T03:31:22Z"
-      },
-      {
-        "timeline_id": "information:5231",
-        "timestamp": "2026-08-24T02:54:07Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1vwqtn5",
-        "author": "Hot_Preparation4777",
-        "url": "https://www.reddit.com/r/europeanunion/comments/1vwqtn5/migrant_row_ireland_seeks_returns_to_italy_sea/",
-        "source_url": "https://www.reddit.com/r/europeanunion/comments/1vwqtn5/migrant_row_ireland_seeks_returns_to_italy_sea/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "sea",
-          "detention"
-        ],
-        "freshness_cues": [],
-        "text": "Migrant row: Ireland seeks returns to Italy, Sea Watch 5 detained in Naples",
-        "text_excerpt": "Migrant row: Ireland seeks returns to Italy, Sea Watch 5 detained in Naples",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-08-24T03:30:24Z",
-        "last_collected_at": "2026-08-24T03:30:24Z",
-        "collection_count": 1
-      },
-      {
-        "timeline_id": "information:5271",
-        "timestamp": "2026-08-24T02:51:43Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2091720078228156449",
-        "author": "GolfingHoosier",
-        "url": "https://x.com/GolfingHoosier/status/2091720078228156449",
-        "source_url": "https://x.com/GolfingHoosier/status/2091720078228156449",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "border",
-          "trafficking"
-        ],
-        "freshness_cues": [],
-        "text": "@LeadingReport We didn't build the border wall in the south. \nCanada is trafficking migrants into America. \nHe will be back and he will be more violent trying not to get caught.",
-        "text_excerpt": "@LeadingReport We didn't build the border wall in the south. \nCanada is trafficking migrants into America. \nHe will be back and he will be more violent trying not to get caught.",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-08-24T03:31:51Z",
-        "last_collected_at": "2026-08-24T04:42:20Z",
-        "collection_count": 2
       },
       {
         "timeline_id": "operational:221",
