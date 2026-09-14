@@ -1,25 +1,25 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-09-14T04:06:11Z",
-  "generated_at": "2026-09-14T04:06:11Z",
+  "updated_at": "2026-09-14T09:20:17Z",
+  "generated_at": "2026-09-14T09:20:17Z",
   "current_run": {
     "available": true,
-    "id": 147,
-    "run_uuid": "fd2ec8ce-0e1d-42ba-a5bb-5d11c2a73903",
-    "started_at": "2026-09-14T04:03:36Z",
-    "completed_at": "2026-09-14T04:06:09Z",
+    "id": 148,
+    "run_uuid": "b9805a43-c7e9-4e9b-bbf2-ff9874bd3285",
+    "started_at": "2026-09-14T09:17:45Z",
+    "completed_at": "2026-09-14T09:20:15Z",
     "status": "SUCCESS",
     "posts_returned": 130,
-    "unique_posts_collected": 90,
+    "unique_posts_collected": 93,
     "x_posts_returned": 50,
     "reddit_posts_returned": 24,
     "mastodon_posts_returned": 50,
-    "unique_x_posts": 42,
+    "unique_x_posts": 46,
     "unique_reddit_posts": 20,
-    "unique_mastodon_posts": 23,
+    "unique_mastodon_posts": 22,
     "noise_filtered": 0,
-    "non_operational_filtered": 89,
-    "historical_references_filtered": 0,
+    "non_operational_filtered": 88,
+    "historical_references_filtered": 1,
     "influence_signals": 1,
     "influence_signals_detected": 1,
     "crossing_facilitation_signals": 0,
@@ -30,45 +30,111 @@
     "mobilization_report_signals": 0,
     "decision_influence_signals": 0,
     "online_influence_report_signals": 0,
-    "operational_events": 1,
-    "operational_events_analyzed": 1,
-    "historical_events_available": 41,
+    "operational_events": 4,
+    "operational_events_analyzed": 4,
+    "historical_events_available": 36,
     "new_correlations": 1,
     "correlated_events": 1,
-    "new_correlation_groups": 0,
+    "new_correlation_groups": 3,
     "database_correlations": 1,
     "current_run_correlations": 0,
-    "new_events": 0,
-    "new_events_saved": 0,
+    "new_events": 3,
+    "new_events_saved": 3,
     "events_already_existing": 1,
-    "new_event_groups": 0,
+    "new_event_groups": 3,
     "updated_event_groups": 0,
     "bootstrapped_event_groups": 0,
     "existing_event_groups_reused": 1,
-    "event_group_sources_linked": 0,
+    "event_group_sources_linked": 3,
     "x_collector_errors": 0,
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "error_message": null
   },
   "kpis": {
-    "operational_events": 3,
-    "new_events": 0,
+    "operational_events": 6,
+    "new_events": 3,
     "correlated_events": 0,
-    "active_event_groups": 279,
+    "active_event_groups": 282,
     "sources": 4,
-    "regions": 2,
-    "collected_posts_24h": 201,
-    "influence_signals": 11,
+    "regions": 3,
+    "collected_posts_24h": 266,
+    "influence_signals": 17,
     "access_signals": 0,
     "high_priority": 1,
-    "current_run_operational_events": 1,
-    "current_run_unique_posts": 90,
+    "current_run_operational_events": 4,
+    "current_run_unique_posts": 93,
     "access_signals_raw": 0,
-    "influence_signals_raw": 11,
+    "influence_signals_raw": 17,
     "influence_narratives": 3
   },
   "live_events": [
+    {
+      "id": 385,
+      "event_id": 385,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1wfycen",
+      "author": "Ok_Signal4754",
+      "published_at": "2026-09-14T09:12:08Z",
+      "collected_at": "2026-09-14T09:18:52Z",
+      "event_type": "BORDER_CROSSING",
+      "signal_type": "BORDER_CROSSING",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.55,
+      "event_confidence": 0.55,
+      "relevance_score": 30.0,
+      "text": "Hundreds of migrants cross Channel after hiatus. Some 494 migrants arrived in the UK on Thursday, the first to successfully cross the Channel in 10 days. | United Kingdom\nSource",
+      "url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1wfycen/hundreds_of_migrants_cross_channel_after_hiatus/",
+      "source_url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1wfycen/hundreds_of_migrants_cross_channel_after_hiatus/"
+    },
+    {
+      "id": 386,
+      "event_id": 386,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1wfy6wy",
+      "author": "Ok_Signal4754",
+      "published_at": "2026-09-14T09:02:52Z",
+      "collected_at": "2026-09-14T09:18:53Z",
+      "event_type": "RESCUE_OPERATION",
+      "signal_type": "RESCUE_OPERATION",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.5,
+      "event_confidence": 0.5,
+      "relevance_score": 10.0,
+      "text": "Over 300 migrants rescued off southern Crete | Greece\nSource",
+      "url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1wfy6wy/over_300_migrants_rescued_off_southern_crete/",
+      "source_url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1wfy6wy/over_300_migrants_rescued_off_southern_crete/"
+    },
+    {
+      "id": 384,
+      "event_id": 384,
+      "source": "TELEGRAM",
+      "source_post_id": "1604168769:11769",
+      "author": "migrantlar24",
+      "published_at": "2026-09-14T08:16:23Z",
+      "collected_at": "2026-09-14T09:18:25Z",
+      "event_type": "DETENTION",
+      "signal_type": "DETENTION",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.25,
+      "event_confidence": 0.25,
+      "relevance_score": 10.0,
+      "text": "📹Видео. Иркутскда миграция қонунчилигига риоя этилиши бўйича рейдлар ўтказилди\n\nИркутскдаги сабзавот омборлари ва умумий овқатланиш шохобчаларида ўтказилган миграция рейди давомида сохта ҳужжатлар билан рўйхатдан ўтган уч нафар шахс аниқланди. Ушбу қоидабузарларга нисбатан Россия Федерацияси Маъмурий жавобгарлик тўғрисидаги кодексининг 19.27-моддаси бўйича тегишли чоралар кўрилди.\n\n👉https://migrantlar24.com/vg97hm",
+      "url": "https://t.me/migrantlar24/11769",
+      "source_url": "https://t.me/migrantlar24/11769"
+    },
     {
       "id": 380,
       "event_id": 380,
@@ -442,75 +508,96 @@
       "text": "🇬🇧🇫🇷 Anti-migrant protesters block roads and clash with police in Portsmouth after \"mega dinghy\" carrying about 120 migrants arrived from France https://t.co/bpZh09qced",
       "url": "https://x.com/wavenewsnet/status/2097756996325835014",
       "source_url": "https://x.com/wavenewsnet/status/2097756996325835014"
-    },
-    {
-      "id": 368,
-      "event_id": 368,
-      "source": "X",
-      "source_post_id": "2097749861156126976",
-      "author": "BoatCrossings",
-      "published_at": "2026-09-09T18:11:55Z",
-      "collected_at": "2026-09-09T18:57:55Z",
-      "event_type": "BORDER_CROSSING",
-      "signal_type": "BORDER_CROSSING",
-      "primary_location": "-",
-      "location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "confidence": 0.55,
-      "event_confidence": 0.55,
-      "relevance_score": 30.0,
-      "text": "🚢 8 September 2026\nMigrants arrived: 0\nBoats: 0\n📊 2026 total: 17,251\n\nNo small boat crossings today, but the English Channel remains insecure as the gangs continue to instead smash Labour and Keir Starmer.",
-      "url": "https://x.com/BoatCrossings/status/2097749861156126976",
-      "source_url": "https://x.com/BoatCrossings/status/2097749861156126976"
-    },
-    {
-      "id": 364,
-      "event_id": 364,
-      "source": "X",
-      "source_post_id": "2097740461024637026",
-      "author": "IrAmimAlerts",
-      "published_at": "2026-09-09T17:34:34Z",
-      "collected_at": "2026-09-09T17:37:41Z",
-      "event_type": "MIGRANT_CAMP",
-      "signal_type": "MIGRANT_CAMP",
-      "primary_location": "-",
-      "location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "confidence": 0.45,
-      "event_confidence": 0.45,
-      "relevance_score": 0.0,
-      "text": "At dawn yesterday, Israeli forces launched a large-scale military raid on Anata and the adjacent Shufat Refugee Camp—two Palestinian communities northeast of Jerusalem that are cut off from the city by the separation barrier. Military vehicles and bulldozers entered the area https://t.co/iMF5ZNknu2",
-      "url": "https://x.com/IrAmimAlerts/status/2097740461024637026",
-      "source_url": "https://x.com/IrAmimAlerts/status/2097740461024637026"
-    },
-    {
-      "id": 359,
-      "event_id": 359,
-      "source": "X",
-      "source_post_id": "2097740325687370222",
-      "author": "TPVjohn_fanpage",
-      "published_at": "2026-09-09T17:34:02Z",
-      "collected_at": "2026-09-09T17:35:02Z",
-      "event_type": "MIGRANT_CAMP",
-      "signal_type": "MIGRANT_CAMP",
-      "primary_location": "-",
-      "location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "confidence": 0.45,
-      "event_confidence": 0.45,
-      "relevance_score": 0.0,
-      "text": "WATCH: Smoke and flames erupt from a house in Gaza City's Al-Shati refugee camp after an Israeli strike hits the building.\n\nResidents say the strike came after the Israeli military warned people to evacuate the area. https://t.co/BfqHZeJIuq",
-      "url": "https://x.com/TPVjohn_fanpage/status/2097740325687370222",
-      "source_url": "https://x.com/TPVjohn_fanpage/status/2097740325687370222"
     }
   ],
   "event_groups": [
+    {
+      "id": 300,
+      "group_id": 300,
+      "event_type": "BORDER_CROSSING",
+      "dominant_event_type": "BORDER_CROSSING",
+      "title": "BORDER_CROSSING",
+      "representative_text": "Hundreds of migrants cross Channel after hiatus. Some 494 migrants arrived in the UK on Thursday, the first to successfully cross the Channel in 10 days. | United Kingdom\nSource",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "primary_location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "first_seen": "2026-09-14T09:12:08Z",
+      "last_seen": "2026-09-14T09:12:08Z",
+      "source_count": 1,
+      "sources_count": 1,
+      "source_types": [
+        "REDDIT"
+      ],
+      "sources": [
+        "REDDIT"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.55,
+      "average_confidence": 0.55,
+      "created_at": "2026-09-14T09:18:52Z",
+      "updated_at": "2026-09-14T09:18:52Z"
+    },
+    {
+      "id": 301,
+      "group_id": 301,
+      "event_type": "RESCUE_OPERATION",
+      "dominant_event_type": "RESCUE_OPERATION",
+      "title": "RESCUE_OPERATION - EASTERN_MEDITERRANEAN",
+      "representative_text": "Over 300 migrants rescued off southern Crete | Greece\nSource",
+      "region": "EASTERN_MEDITERRANEAN",
+      "primary_region": "EASTERN_MEDITERRANEAN",
+      "primary_location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "first_seen": "2026-09-14T09:02:52Z",
+      "last_seen": "2026-09-14T09:02:52Z",
+      "source_count": 1,
+      "sources_count": 1,
+      "source_types": [
+        "REDDIT"
+      ],
+      "sources": [
+        "REDDIT"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.5,
+      "average_confidence": 0.5,
+      "created_at": "2026-09-14T09:18:53Z",
+      "updated_at": "2026-09-14T09:18:53Z"
+    },
+    {
+      "id": 299,
+      "group_id": 299,
+      "event_type": "DETENTION",
+      "dominant_event_type": "DETENTION",
+      "title": "DETENTION",
+      "representative_text": "📹Видео. Иркутскда миграция қонунчилигига риоя этилиши бўйича рейдлар ўтказилди\n\nИркутскдаги сабзавот омборлари ва умумий овқатланиш шохобчаларида ўтказилган миграция рейди давомида сохта ҳужжатлар билан рўйхатдан ўтган уч нафар шахс аниқланди. Ушбу қоидабузарларга нисбатан Россия Федерацияси Маъмурий жавобгарлик тўғрисидаги кодексининг 19.27-моддаси бўйича тегишли чоралар кўрилди.\n\n👉https://migrantlar24.com/vg97hm",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "primary_location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "first_seen": "2026-09-14T08:16:23Z",
+      "last_seen": "2026-09-14T08:16:23Z",
+      "source_count": 1,
+      "sources_count": 1,
+      "source_types": [
+        "TELEGRAM"
+      ],
+      "sources": [
+        "TELEGRAM"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.25,
+      "average_confidence": 0.25,
+      "created_at": "2026-09-14T09:18:25Z",
+      "updated_at": "2026-09-14T09:18:25Z"
+    },
     {
       "id": 295,
       "group_id": 295,
@@ -715,193 +802,120 @@
       "average_confidence": 0.95,
       "created_at": "2026-08-30T20:41:40Z",
       "updated_at": "2026-09-12T04:59:36Z"
-    },
-    {
-      "id": 292,
-      "group_id": 292,
-      "event_type": "DEPORTATION",
-      "dominant_event_type": "DEPORTATION",
-      "title": "DEPORTATION - MIDDLE_EAST",
-      "representative_text": "@shadowcanman On the governments website, Afghanistan, Sudan, Iran and Eritrea are on the list of countries this government currently refuses to deport to. That is why no small boat migrants are being deported.",
-      "region": "MIDDLE_EAST",
-      "primary_region": "MIDDLE_EAST",
-      "primary_location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "first_seen": "2026-09-11T16:25:50Z",
-      "last_seen": "2026-09-11T16:25:50Z",
-      "source_count": 1,
-      "sources_count": 1,
-      "source_types": [
-        "X"
-      ],
-      "sources": [
-        "X"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.25,
-      "average_confidence": 0.25,
-      "created_at": "2026-09-11T16:31:22Z",
-      "updated_at": "2026-09-11T16:31:22Z"
-    },
-    {
-      "id": 291,
-      "group_id": 291,
-      "event_type": "DETENTION",
-      "dominant_event_type": "DETENTION",
-      "title": "DETENTION",
-      "representative_text": "📹Видео. Миграция қонунчилигига риоя этилиши бўйича рейд ўтказилди\n\nТюмендаги ётоқхоналардан бирида ўтказилган миграция текшируви давомида етти нафар хориж фуқароси томонидан қонунбузарлик содир этилгани аниқланди. Улардан беш нафари Россияда бўлиш қоидаларини бузгани, бир нафари тиббий кўрикдан бўйин товлагани учун жавобгарликка тортилган бўлса, яна бир чет эл фуқаросини мамлакатдан маъмурий чиқариб юбориш масаласи судда кўрилмоқда.\n\n👉https://migrantlar24.com/s3t85c",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "primary_location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "first_seen": "2026-09-11T12:55:59Z",
-      "last_seen": "2026-09-11T12:55:59Z",
-      "source_count": 1,
-      "sources_count": 1,
-      "source_types": [
-        "TELEGRAM"
-      ],
-      "sources": [
-        "TELEGRAM"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.25,
-      "average_confidence": 0.25,
-      "created_at": "2026-09-11T16:30:03Z",
-      "updated_at": "2026-09-11T16:30:03Z"
-    },
-    {
-      "id": 289,
-      "group_id": 289,
-      "event_type": "BORDER_CROSSING",
-      "dominant_event_type": "BORDER_CROSSING",
-      "title": "BORDER_CROSSING",
-      "representative_text": "@storm1news I love it .  All migrants come to chicago . My uncle crossing the border  this week with 3 his  teenagers .",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "primary_location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "first_seen": "2026-09-11T12:02:38Z",
-      "last_seen": "2026-09-11T12:02:38Z",
-      "source_count": 1,
-      "sources_count": 1,
-      "source_types": [
-        "X"
-      ],
-      "sources": [
-        "X"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.55,
-      "average_confidence": 0.55,
-      "created_at": "2026-09-11T12:16:42Z",
-      "updated_at": "2026-09-11T12:16:42Z"
     }
   ],
   "regions": [
     {
       "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 2,
-      "events": 2,
+      "count": 4,
+      "events": 4,
       "percentage": 66.67
+    },
+    {
+      "name": "EASTERN_MEDITERRANEAN",
+      "region": "EASTERN_MEDITERRANEAN",
+      "count": 1,
+      "events": 1,
+      "percentage": 16.67
     },
     {
       "name": "AMERICAS",
       "region": "AMERICAS",
       "count": 1,
       "events": 1,
-      "percentage": 33.33
+      "percentage": 16.67
     }
   ],
   "sources": [
     {
       "source": "X",
       "name": "X",
-      "count": 134,
-      "posts": 134,
-      "percentage": 66.67
+      "count": 180,
+      "posts": 180,
+      "percentage": 67.67
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 31,
-      "posts": 31,
-      "percentage": 15.42
+      "count": 41,
+      "posts": 41,
+      "percentage": 15.41
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 30,
-      "posts": 30,
-      "percentage": 14.93
+      "count": 36,
+      "posts": 36,
+      "percentage": 13.53
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 6,
-      "posts": 6,
-      "percentage": 2.99
+      "count": 9,
+      "posts": 9,
+      "percentage": 3.38
     }
   ],
   "region_activity": [
     {
       "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 2,
-      "events": 2,
+      "count": 4,
+      "events": 4,
       "percentage": 66.67
+    },
+    {
+      "name": "EASTERN_MEDITERRANEAN",
+      "region": "EASTERN_MEDITERRANEAN",
+      "count": 1,
+      "events": 1,
+      "percentage": 16.67
     },
     {
       "name": "AMERICAS",
       "region": "AMERICAS",
       "count": 1,
       "events": 1,
-      "percentage": 33.33
+      "percentage": 16.67
     }
   ],
   "source_activity": [
     {
       "source": "X",
       "name": "X",
-      "count": 134,
-      "posts": 134,
-      "percentage": 66.67
+      "count": 180,
+      "posts": 180,
+      "percentage": 67.67
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 31,
-      "posts": 31,
-      "percentage": 15.42
+      "count": 41,
+      "posts": 41,
+      "percentage": 15.41
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 30,
-      "posts": 30,
-      "percentage": 14.93
+      "count": 36,
+      "posts": 36,
+      "percentage": 13.53
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 6,
-      "posts": 6,
-      "percentage": 2.99
+      "count": 9,
+      "posts": 9,
+      "percentage": 3.38
     }
   ],
   "correlation": {
     "correlated_events": 0,
     "correlated_sources": 0,
-    "grouped_sources": 3,
-    "event_groups": 279,
-    "active_groups": 279,
+    "grouped_sources": 6,
+    "event_groups": 282,
+    "active_groups": 282,
     "multi_source_groups": 31,
     "strongest_match": 1.0,
     "correlation_rate": 0.0
@@ -917,42 +931,42 @@
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "database": "AVAILABLE",
-    "last_run_id": 147,
-    "last_completed_at": "2026-09-14T04:06:09Z"
+    "last_run_id": 148,
+    "last_completed_at": "2026-09-14T09:20:15Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 3,
-    "influence_signals_24h": 11,
+    "operational_events_24h": 6,
+    "influence_signals_24h": 17,
     "access_signals_24h": 0,
     "correlated_events_24h": 0,
-    "active_event_groups": 279,
-    "dominant_region": "AMERICAS",
-    "hotspot": "AMERICAS",
-    "dominant_event_type": "SMUGGLING_ACTIVITY",
+    "active_event_groups": 282,
+    "dominant_region": "EASTERN_MEDITERRANEAN",
+    "hotspot": "EASTERN_MEDITERRANEAN",
+    "dominant_event_type": "BORDER_CROSSING",
     "dominant_source": "X",
-    "average_confidence": 0.479,
+    "average_confidence": 0.478,
     "confidence_level": "LOW",
     "correlation_rate": 0.0,
     "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 3 operatív migrációs eseményt, 11 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 279 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Americas. A domináns operatív eseménytípus: Smuggling Activity. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.48. A jelenlegi aktivitási szint: MODERATE."
+    "summary": "Az elmúlt 24 órában a rendszer 6 operatív migrációs eseményt, 17 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 282 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Eastern Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.48. A jelenlegi aktivitási szint: MODERATE."
   },
   "analytical_assessment": {
-    "operational_events_24h": 3,
-    "influence_signals_24h": 11,
+    "operational_events_24h": 6,
+    "influence_signals_24h": 17,
     "access_signals_24h": 0,
     "correlated_events_24h": 0,
-    "active_event_groups": 279,
-    "dominant_region": "AMERICAS",
-    "hotspot": "AMERICAS",
-    "dominant_event_type": "SMUGGLING_ACTIVITY",
+    "active_event_groups": 282,
+    "dominant_region": "EASTERN_MEDITERRANEAN",
+    "hotspot": "EASTERN_MEDITERRANEAN",
+    "dominant_event_type": "BORDER_CROSSING",
     "dominant_source": "X",
-    "average_confidence": 0.479,
+    "average_confidence": 0.478,
     "confidence_level": "LOW",
     "correlation_rate": 0.0,
     "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 3 operatív migrációs eseményt, 11 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 279 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Americas. A domináns operatív eseménytípus: Smuggling Activity. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.48. A jelenlegi aktivitási szint: MODERATE."
+    "summary": "Az elmúlt 24 órában a rendszer 6 operatív migrációs eseményt, 17 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 282 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Eastern Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.48. A jelenlegi aktivitási szint: MODERATE."
   },
   "high_confidence_events": [
     {
@@ -1125,8 +1139,8 @@
       "language": null,
       "published_at": "2026-09-13T11:38:10Z",
       "first_detected_at": "2026-09-13T16:19:08Z",
-      "last_detected_at": "2026-09-14T04:05:42Z",
-      "detection_count": 3,
+      "last_detected_at": "2026-09-14T09:19:48Z",
+      "detection_count": 4,
       "text": "We Can’t Stop The Boats Unless We Confront The Kurdish Allies Who Betray Us\nBritain helped build Iraqi Kurdistan and now it’s the capital of people smuggling. We must use our leverage to force a crackdown. Ben Judah Sep 13, 2026 The sight of the Portsmouth mega-dinghy carrying 120 migrants across the Channel, which has led to protests in recent weeks, is not just a picture of human misery. It is the sight of a successful new product by people smugglers hitting the market. One that will soon be being advertised all along the migrant route from Calais to Iraqi Kurdistan. We have this terrible habit in Britain of talking about the “small boats” like they are some kind of natural phenomenon spontaneously assembling out of the longing of migrants. In fact, they are a criminal phenomenon; the product of a massive smuggling operation that is largely controlled by organised crime gangs with deep connections and political ties back to the autonomous Kurdish region of Iraq. These Kurdish mafias, which operate and advertise in broad daylight in their homeland, have achieved nearly total control of the 2,500-mile smuggling route which runs over the mountains into Turkey, across the European Union and across the Channel into Britain. As the mega-dinghies arrive Britain may look helpless, but there is a lot more we could be doing. We have a history with Iraqi Kurdistan which gives us leverage — we just need to use it. Iraqi Kurds have built a successful corner of the Middle East since the Gulf war. They have Washington, London and Paris to thank for that. Ever since American, British and French jets imposed a no-fly zone in 1991 over northern Iraq they have been under a western security umbrella that has freed them from Arab rule. The Iraqi Kurds are loyal allies when it comes to counterterrorism. When it comes to organised immigration crime, however, they have been taking us for a ride. The Kurds are widely considered the world’s largest nation without a state. Occupying mostly the mountainous region encompassing eastern Turkey, northeast Syria, northern Iraq and northwest Iran, they have suffered a history of persecution at the hands of authoritarian regimes. Their brief hopes of a state of their own were dashed by the founder of modern Turkey, Mustafa Kemal Ataturk, in the aftermath of the First World War, but in the past 40 years they have seen their fortunes begin to turn. Western air cover imposed during the Gulf war in the 1990s allowed the Iraqi Kurds to break free from the grip of Saddam Hussein. Since US-led regime change in 2003 they have enjoyed vast levels of autonomy. They mostly rule themselves, unlike their brothers in Turkey and Iran. In this deeply clannish society, power in Iraqi Kurdistan is in the hands of the almost monarchic Barzani clan from the regional capital, Erbil, and the similarly dynastic Talabani clan from the city of Sulaimaniyah. The smuggling mafias in Kurdistan are deeply intertwined with the region’s corrupt political system. Smuggling is the region’s prime export. I’ve seen this in person. In 2025 I met the president of Iraqi Kurdistan, Nechirvan Barzani, with my then boss David Lammy, when he was foreign secretary, to firmly spell out that we wanted action. The Kurdish leader give the impression of nodding very politely to Britain’s demands to clamp down on people smuggling. At the time we had to give him the benefit of the doubt and a chance to act. Since then he’s done very little. This is part of a pattern. For years ruling Kurds have turned a blind eye to the gangs that have seized the Channel. This is despite two different prime ministers promising to stop the boats. Their failure to do so can, in this context, be seen as a failure of British diplomacy. I’ve seen for myself, travelling across Turkish and Iraqi Kurdistan over the past two decades, how smuggling is almost a way of life for a people divided by borders they never chose. “We have no friends but the mountains,” the Kurds like to say. Turkish, Arab or Iranian states may control the border but in the mountains above them are the secret paths of Kurdish smugglers. The old joke goes: “Where there’s a Kurd, there’s a way.” This began as a means of survival: smuggling helped their fathers resist and survive Saddam’s reign of terror. But this mastery of smuggling which began in resistance has now been applied to organised crime. In Erbil, Britain has done incredible work when it comes to state-building. British soldiers have long been helping the Kurdish authorities train their security forces. Iraqi Kurdistan is the only region of the country to have its own military. This would never have happened without western support. Look around anywhere in Erbil and signs of people smuggling are everywhere. Smugglers operate “travel agencies” offering illegal entry into Europe out in the open. Door-to-door journeys to Britain go for about £13,300. Trips using fake European Union documents can be obtained for £18,500. Every offer is also on TikTok. I was left with an inescapable conclusion: Iraqi Kurdistan is biting the hand that freed it. The Channel coast is now a Kurdish mafia map. In Calais in France the beaches are divided into patches according to Kurdish smugglers’ home patches such as Erbil, Sulaimaniyah and Sharazoor in Iraqi Kurdistan, or Sardasht in Iran. It is smugglers from Ranya in Iraqi Kurdistan who dominate the patch between Calais and Dunkirk. Iranian Kurdish gangs pioneered small-boat crossings in 2018, but Iraqi Kurds quickly seized control. Albanian mafiosi in the business today tend to report to the Kurds. Armed with AK47s, these gangs police the customers. This is big business. The French interior ministry estimated in 2022 that the value of smuggling migrants was worth at least €150 million (£128.9 million) that year. Nor do these gangs restrict themselves to people smuggling — they deal in drugs and weapons too. What has gone wrong? Rishi Sunak’s government deserves credit for working with the Albanian government to reduce crossings. But nothing was done to tackle the Kurdish aspect specifically until Sir Keir Starmer’s government, when I served as a special adviser to Lammy . Since their days in opposition, senior Labour politicians working on migration have been well aware that we have a big Kurdish gangs crisis as much as a small-boats crisis. Lammy’s team pushed the Foreign Office to make migration a priority, bringing in the first migration sanctions regime. This has provided a legal basis to sanction people complicit in people smuggling. To do this we had to overcome a culture of timidity in the Foreign Office and reticence in the security services to put migration ahead of other aspects of Britain’s relationships with other countries. I spent hours requesting and rejecting migration “country action plans” drawn up by our outposts that were all carrots — like visits to London for various leaders — and no sticks. Often working in secure rooms, given how sensitive this work is, I was charged with pushing the system as hard as I could. The truth is that before Starmer made “smash the gangs” a priority, neither the spooks nor suits manning our embassies truly viewed stopping the flow of illegal migration as a core part of their job. This work was cut short by reshuffling first Lammy then Yvette Cooper out of the Foreign Office. It’s now crucial that Ed Miliband , the new foreign secretary, not only keeps up the pressure on Iraqi Kurdistan but dials it up. The strategy our team was working towards was to try persuasive diplomacy towards the political clans in Erbil and Sulaimaniyah that rule Iraqi Kurdistan. Labour persistence has resulted in two significant sets of arrestsagainst people smugglers in 2025, one in a joint operation with the Kurds. Other than that, progress has been glacial and it is now time for Britain to throw its punches. Continued British military and intelligence support should be linked to a real clampdown. The Foreign Office should plan to use our new migration sanctions regime to target Kurdish officials aiding, abetting or ignoring this. Kurdish authorities need to believe that a withdrawal of military and intelligence support is a real possibility unless this assault on our borders ends. I agreed with Starmer when he said we need to treat people-smuggling gangs like terrorists; we should also have zero tolerance for those who shelter and tolerate them. Kurdish leaders in Erbil and Sulaimaniyah need to be feeling the heat. What’s happening on those beaches is a national security crisis — and we have leverage over Iraqi Kurdistan. Andy Burnham now needs to use it. This article was originally published in The Sunday Times .",
       "text_excerpt": "We Can’t Stop The Boats Unless We Confront The Kurdish Allies Who Betray Us\nBritain helped build Iraqi Kurdistan and now it’s the capital of people smuggling. We must use our leverage to force a crackdown. Ben Judah Sep 13, 2026 The sight of the Portsmouth mega-dinghy carrying 120 migrants across the Channel, which has led to protests in recent weeks, is not just a picture of human misery. It is the sight of a successful new product by people smugglers hitting the market. One that will soon be being advertised all along the migrant route from Calais to Iraqi Kurdistan. We have this terrible habit in Britain of talking about the “small boats” like they are some kind of natural phenomenon spon",
       "url": "https://www.reddit.com/r/KurdistanNews/comments/1wf5cbb/we_cant_stop_the_boats_unless_we_confront_the/",
@@ -1204,6 +1218,90 @@
       ],
       "independent_author_count": 1,
       "platform_count": 1
+    },
+    {
+      "id": 540,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1wfycnl",
+      "author": "AutoNewsAdmin",
+      "language": null,
+      "published_at": "2026-09-14T09:12:34Z",
+      "first_detected_at": "2026-09-14T09:18:23Z",
+      "last_detected_at": "2026-09-14T09:18:23Z",
+      "detection_count": 1,
+      "text": "[World] - One dead, 25 missing in migrant boat sinking off Greece: coast guard",
+      "text_excerpt": "[World] - One dead, 25 missing in migrant boat sinking off Greece: coast guard",
+      "url": "https://www.reddit.com/r/ANSAauto/comments/1wfycnl/world_one_dead_25_missing_in_migrant_boat_sinking/",
+      "source_url": "https://www.reddit.com/r/ANSAauto/comments/1wfycnl/world_one_dead_25_missing_in_migrant_boat_sinking/",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.25,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "boat"
+        ],
+        [
+          "route",
+          "coast"
+        ],
+        [
+          "enforcement",
+          "coast guard"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "EASTERN_MEDITERRANEAN",
+      "primary_region": "EASTERN_MEDITERRANEAN",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 45.2,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 3,
+      "related_post_ids": [
+        "reddit_1wfycnl",
+        "reddit_1wfycne",
+        "2099421277228601346"
+      ],
+      "related_authors": [
+        "AutoNewsAdmin",
+        "PakChinaToday"
+      ],
+      "related_urls": [
+        "https://www.reddit.com/r/ANSAauto/comments/1wfycnl/world_one_dead_25_missing_in_migrant_boat_sinking/",
+        "https://www.reddit.com/r/ANSAauto/comments/1wfycne/world_one_dead_25_missing_in_migrant_boat_sinking/",
+        "https://x.com/PakChinaToday/status/2099421277228601346"
+      ],
+      "related_sources": [
+        "REDDIT",
+        "X"
+      ],
+      "independent_author_count": 2,
+      "platform_count": 2
     },
     {
       "id": 535,
@@ -1426,89 +1524,6 @@
       "analyst_priority": "LOW"
     },
     {
-      "id": 531,
-      "source": "X",
-      "source_post_id": "2099168884704354784",
-      "author": "TheAlkambaTimes",
-      "language": "en",
-      "published_at": "2026-09-13T16:10:37Z",
-      "first_detected_at": "2026-09-13T16:20:34Z",
-      "last_detected_at": "2026-09-13T16:20:34Z",
-      "detection_count": 1,
-      "text": "Gambia Navy Intercepts Boat Carrying 207 Suspected Migrants\n\nBThe Gambia Navy, working with Spain’s Guardia Civil, intercepted a vessel carrying 207 suspected irregular migrants in Gambian waters on Saturday, 12 September 2026, authorities said.\n\nThe operation took place along https://t.co/Sa5yIGxG2J",
-      "text_excerpt": "Gambia Navy Intercepts Boat Carrying 207 Suspected Migrants\n\nBThe Gambia Navy, working with Spain’s Guardia Civil, intercepted a vessel carrying 207 suspected irregular migrants in Gambian waters on Saturday, 12 September 2026, authorities said.\n\nThe operation took place along https://t.co/Sa5yIGxG2J",
-      "url": "https://x.com/TheAlkambaTimes/status/2099168884704354784",
-      "source_url": "https://x.com/TheAlkambaTimes/status/2099168884704354784",
-      "primary_signal": "ROUTE_EARLY_WARNING",
-      "signal_type": "ROUTE_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ROUTE_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 9.25,
-      "matched_signals": [
-        "ROUTE_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "route",
-          "Boat"
-        ],
-        [
-          "route",
-          "vessel"
-        ],
-        [
-          "enforcement",
-          "intercepted"
-        ],
-        [
-          "enforcement",
-          "Guardia Civil"
-        ]
-      ],
-      "matched_groups": [
-        "ROUTE",
-        "ENFORCEMENT"
-      ],
-      "context_matches": [
-        "Migrants",
-        "migrants"
-      ],
-      "high_value_matches": [],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 32.0,
-      "analyst_priority": "LOW",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "2099168884704354784"
-      ],
-      "related_authors": [
-        "TheAlkambaTimes"
-      ],
-      "related_urls": [
-        "https://x.com/TheAlkambaTimes/status/2099168884704354784"
-      ],
-      "related_sources": [
-        "X"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
-    },
-    {
       "id": 197,
       "group_id": 197,
       "event_type": "SMUGGLING_ACTIVITY",
@@ -1536,8 +1551,8 @@
       "language": null,
       "published_at": "2026-09-13T11:38:10Z",
       "first_detected_at": "2026-09-13T16:19:08Z",
-      "last_detected_at": "2026-09-14T04:05:42Z",
-      "detection_count": 3,
+      "last_detected_at": "2026-09-14T09:19:48Z",
+      "detection_count": 4,
       "text": "We Can’t Stop The Boats Unless We Confront The Kurdish Allies Who Betray Us\nBritain helped build Iraqi Kurdistan and now it’s the capital of people smuggling. We must use our leverage to force a crackdown. Ben Judah Sep 13, 2026 The sight of the Portsmouth mega-dinghy carrying 120 migrants across the Channel, which has led to protests in recent weeks, is not just a picture of human misery. It is the sight of a successful new product by people smugglers hitting the market. One that will soon be being advertised all along the migrant route from Calais to Iraqi Kurdistan. We have this terrible habit in Britain of talking about the “small boats” like they are some kind of natural phenomenon spontaneously assembling out of the longing of migrants. In fact, they are a criminal phenomenon; the product of a massive smuggling operation that is largely controlled by organised crime gangs with deep connections and political ties back to the autonomous Kurdish region of Iraq. These Kurdish mafias, which operate and advertise in broad daylight in their homeland, have achieved nearly total control of the 2,500-mile smuggling route which runs over the mountains into Turkey, across the European Union and across the Channel into Britain. As the mega-dinghies arrive Britain may look helpless, but there is a lot more we could be doing. We have a history with Iraqi Kurdistan which gives us leverage — we just need to use it. Iraqi Kurds have built a successful corner of the Middle East since the Gulf war. They have Washington, London and Paris to thank for that. Ever since American, British and French jets imposed a no-fly zone in 1991 over northern Iraq they have been under a western security umbrella that has freed them from Arab rule. The Iraqi Kurds are loyal allies when it comes to counterterrorism. When it comes to organised immigration crime, however, they have been taking us for a ride. The Kurds are widely considered the world’s largest nation without a state. Occupying mostly the mountainous region encompassing eastern Turkey, northeast Syria, northern Iraq and northwest Iran, they have suffered a history of persecution at the hands of authoritarian regimes. Their brief hopes of a state of their own were dashed by the founder of modern Turkey, Mustafa Kemal Ataturk, in the aftermath of the First World War, but in the past 40 years they have seen their fortunes begin to turn. Western air cover imposed during the Gulf war in the 1990s allowed the Iraqi Kurds to break free from the grip of Saddam Hussein. Since US-led regime change in 2003 they have enjoyed vast levels of autonomy. They mostly rule themselves, unlike their brothers in Turkey and Iran. In this deeply clannish society, power in Iraqi Kurdistan is in the hands of the almost monarchic Barzani clan from the regional capital, Erbil, and the similarly dynastic Talabani clan from the city of Sulaimaniyah. The smuggling mafias in Kurdistan are deeply intertwined with the region’s corrupt political system. Smuggling is the region’s prime export. I’ve seen this in person. In 2025 I met the president of Iraqi Kurdistan, Nechirvan Barzani, with my then boss David Lammy, when he was foreign secretary, to firmly spell out that we wanted action. The Kurdish leader give the impression of nodding very politely to Britain’s demands to clamp down on people smuggling. At the time we had to give him the benefit of the doubt and a chance to act. Since then he’s done very little. This is part of a pattern. For years ruling Kurds have turned a blind eye to the gangs that have seized the Channel. This is despite two different prime ministers promising to stop the boats. Their failure to do so can, in this context, be seen as a failure of British diplomacy. I’ve seen for myself, travelling across Turkish and Iraqi Kurdistan over the past two decades, how smuggling is almost a way of life for a people divided by borders they never chose. “We have no friends but the mountains,” the Kurds like to say. Turkish, Arab or Iranian states may control the border but in the mountains above them are the secret paths of Kurdish smugglers. The old joke goes: “Where there’s a Kurd, there’s a way.” This began as a means of survival: smuggling helped their fathers resist and survive Saddam’s reign of terror. But this mastery of smuggling which began in resistance has now been applied to organised crime. In Erbil, Britain has done incredible work when it comes to state-building. British soldiers have long been helping the Kurdish authorities train their security forces. Iraqi Kurdistan is the only region of the country to have its own military. This would never have happened without western support. Look around anywhere in Erbil and signs of people smuggling are everywhere. Smugglers operate “travel agencies” offering illegal entry into Europe out in the open. Door-to-door journeys to Britain go for about £13,300. Trips using fake European Union documents can be obtained for £18,500. Every offer is also on TikTok. I was left with an inescapable conclusion: Iraqi Kurdistan is biting the hand that freed it. The Channel coast is now a Kurdish mafia map. In Calais in France the beaches are divided into patches according to Kurdish smugglers’ home patches such as Erbil, Sulaimaniyah and Sharazoor in Iraqi Kurdistan, or Sardasht in Iran. It is smugglers from Ranya in Iraqi Kurdistan who dominate the patch between Calais and Dunkirk. Iranian Kurdish gangs pioneered small-boat crossings in 2018, but Iraqi Kurds quickly seized control. Albanian mafiosi in the business today tend to report to the Kurds. Armed with AK47s, these gangs police the customers. This is big business. The French interior ministry estimated in 2022 that the value of smuggling migrants was worth at least €150 million (£128.9 million) that year. Nor do these gangs restrict themselves to people smuggling — they deal in drugs and weapons too. What has gone wrong? Rishi Sunak’s government deserves credit for working with the Albanian government to reduce crossings. But nothing was done to tackle the Kurdish aspect specifically until Sir Keir Starmer’s government, when I served as a special adviser to Lammy . Since their days in opposition, senior Labour politicians working on migration have been well aware that we have a big Kurdish gangs crisis as much as a small-boats crisis. Lammy’s team pushed the Foreign Office to make migration a priority, bringing in the first migration sanctions regime. This has provided a legal basis to sanction people complicit in people smuggling. To do this we had to overcome a culture of timidity in the Foreign Office and reticence in the security services to put migration ahead of other aspects of Britain’s relationships with other countries. I spent hours requesting and rejecting migration “country action plans” drawn up by our outposts that were all carrots — like visits to London for various leaders — and no sticks. Often working in secure rooms, given how sensitive this work is, I was charged with pushing the system as hard as I could. The truth is that before Starmer made “smash the gangs” a priority, neither the spooks nor suits manning our embassies truly viewed stopping the flow of illegal migration as a core part of their job. This work was cut short by reshuffling first Lammy then Yvette Cooper out of the Foreign Office. It’s now crucial that Ed Miliband , the new foreign secretary, not only keeps up the pressure on Iraqi Kurdistan but dials it up. The strategy our team was working towards was to try persuasive diplomacy towards the political clans in Erbil and Sulaimaniyah that rule Iraqi Kurdistan. Labour persistence has resulted in two significant sets of arrestsagainst people smugglers in 2025, one in a joint operation with the Kurds. Other than that, progress has been glacial and it is now time for Britain to throw its punches. Continued British military and intelligence support should be linked to a real clampdown. The Foreign Office should plan to use our new migration sanctions regime to target Kurdish officials aiding, abetting or ignoring this. Kurdish authorities need to believe that a withdrawal of military and intelligence support is a real possibility unless this assault on our borders ends. I agreed with Starmer when he said we need to treat people-smuggling gangs like terrorists; we should also have zero tolerance for those who shelter and tolerate them. Kurdish leaders in Erbil and Sulaimaniyah need to be feeling the heat. What’s happening on those beaches is a national security crisis — and we have leverage over Iraqi Kurdistan. Andy Burnham now needs to use it. This article was originally published in The Sunday Times .",
       "text_excerpt": "We Can’t Stop The Boats Unless We Confront The Kurdish Allies Who Betray Us\nBritain helped build Iraqi Kurdistan and now it’s the capital of people smuggling. We must use our leverage to force a crackdown. Ben Judah Sep 13, 2026 The sight of the Portsmouth mega-dinghy carrying 120 migrants across the Channel, which has led to protests in recent weeks, is not just a picture of human misery. It is the sight of a successful new product by people smugglers hitting the market. One that will soon be being advertised all along the migrant route from Calais to Iraqi Kurdistan. We have this terrible habit in Britain of talking about the “small boats” like they are some kind of natural phenomenon spon",
       "url": "https://www.reddit.com/r/KurdistanNews/comments/1wf5cbb/we_cant_stop_the_boats_unless_we_confront_the/",
@@ -1792,6 +1807,307 @@
       "analyst_priority": "LOW"
     },
     {
+      "id": 542,
+      "source": "X",
+      "source_post_id": "2099427074867875865",
+      "author": "Cruisescape",
+      "language": "en",
+      "published_at": "2026-09-14T09:16:34Z",
+      "first_detected_at": "2026-09-14T09:18:51Z",
+      "last_detected_at": "2026-09-14T09:18:51Z",
+      "detection_count": 1,
+      "text": "SO EMBARRASSING!! We now have predators arriving just miles from my home &amp; rocking up to our shores RIGHT NEXT TO THE HOME OF ROYAL NAVY #ukgovenment \n#UKlife #royalnavy new target after \"extraordinary\" migrant crossing https://t.co/pszxhgTNxO",
+      "text_excerpt": "SO EMBARRASSING!! We now have predators arriving just miles from my home &amp; rocking up to our shores RIGHT NEXT TO THE HOME OF ROYAL NAVY #ukgovenment \n#UKlife #royalnavy new target after \"extraordinary\" migrant crossing https://t.co/pszxhgTNxO",
+      "url": "https://x.com/Cruisescape/status/2099427074867875865",
+      "source_url": "https://x.com/Cruisescape/status/2099427074867875865",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 6.5,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "migrant crossing"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT"
+      ],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": [
+        "migrant crossing"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 25.2,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 540,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1wfycnl",
+      "author": "AutoNewsAdmin",
+      "language": null,
+      "published_at": "2026-09-14T09:12:34Z",
+      "first_detected_at": "2026-09-14T09:18:23Z",
+      "last_detected_at": "2026-09-14T09:18:23Z",
+      "detection_count": 1,
+      "text": "[World] - One dead, 25 missing in migrant boat sinking off Greece: coast guard",
+      "text_excerpt": "[World] - One dead, 25 missing in migrant boat sinking off Greece: coast guard",
+      "url": "https://www.reddit.com/r/ANSAauto/comments/1wfycnl/world_one_dead_25_missing_in_migrant_boat_sinking/",
+      "source_url": "https://www.reddit.com/r/ANSAauto/comments/1wfycnl/world_one_dead_25_missing_in_migrant_boat_sinking/",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.25,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "boat"
+        ],
+        [
+          "route",
+          "coast"
+        ],
+        [
+          "enforcement",
+          "coast guard"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "EASTERN_MEDITERRANEAN",
+      "primary_region": "EASTERN_MEDITERRANEAN",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 29.2,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 541,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1wfycne",
+      "author": "AutoNewsAdmin",
+      "language": null,
+      "published_at": "2026-09-14T09:12:33Z",
+      "first_detected_at": "2026-09-14T09:18:23Z",
+      "last_detected_at": "2026-09-14T09:18:23Z",
+      "detection_count": 1,
+      "text": "[World] - One dead, 25 missing in migrant boat sinking off Greece: coast guard",
+      "text_excerpt": "[World] - One dead, 25 missing in migrant boat sinking off Greece: coast guard",
+      "url": "https://www.reddit.com/r/ANSAauto/comments/1wfycne/world_one_dead_25_missing_in_migrant_boat_sinking/",
+      "source_url": "https://www.reddit.com/r/ANSAauto/comments/1wfycne/world_one_dead_25_missing_in_migrant_boat_sinking/",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.25,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "boat"
+        ],
+        [
+          "route",
+          "coast"
+        ],
+        [
+          "enforcement",
+          "coast guard"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "EASTERN_MEDITERRANEAN",
+      "primary_region": "EASTERN_MEDITERRANEAN",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 29.2,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 545,
+      "source": "X",
+      "source_post_id": "2099425429480161621",
+      "author": "Eddie_9180",
+      "language": "en",
+      "published_at": "2026-09-14T09:10:02Z",
+      "first_detected_at": "2026-09-14T09:20:14Z",
+      "last_detected_at": "2026-09-14T09:20:14Z",
+      "detection_count": 1,
+      "text": "@PolitlcsGlobal @FT Overseas born billionaires are leaving the country thanks to Labour, what we are left with is unskilled and unemployed migrants who make no contribution",
+      "text_excerpt": "@PolitlcsGlobal @FT Overseas born billionaires are leaving the country thanks to Labour, what we are left with is unskilled and unemployed migrants who make no contribution",
+      "url": "https://x.com/Eddie_9180/status/2099425429480161621",
+      "source_url": "https://x.com/Eddie_9180/status/2099425429480161621",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.0,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "leaving the country thanks to Labour, what we are left with is unskilled and unemployed migrants"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "leaving the country thanks to Labour, what we are left with is unskilled and unemployed migrants"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 25.2,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 543,
+      "source": "X",
+      "source_post_id": "2099421277228601346",
+      "author": "PakChinaToday",
+      "language": "en",
+      "published_at": "2026-09-14T08:53:32Z",
+      "first_detected_at": "2026-09-14T09:19:21Z",
+      "last_detected_at": "2026-09-14T09:19:21Z",
+      "detection_count": 1,
+      "text": "One dead, 25 missing in migrant boat sinking off Greece - coast guard https://t.co/GIbKWzTByS via @cgtnofficial",
+      "text_excerpt": "One dead, 25 missing in migrant boat sinking off Greece - coast guard https://t.co/GIbKWzTByS via @cgtnofficial",
+      "url": "https://x.com/PakChinaToday/status/2099421277228601346",
+      "source_url": "https://x.com/PakChinaToday/status/2099421277228601346",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.25,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "boat"
+        ],
+        [
+          "route",
+          "coast"
+        ],
+        [
+          "enforcement",
+          "coast guard"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "EASTERN_MEDITERRANEAN",
+      "primary_region": "EASTERN_MEDITERRANEAN",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 29.2,
+      "analyst_priority": "LOW"
+    },
+    {
       "id": 536,
       "source": "X",
       "source_post_id": "2099222991012077852",
@@ -1904,6 +2220,67 @@
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
       "priority_score": 25.2,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 544,
+      "source": "X",
+      "source_post_id": "2099424453956386862",
+      "author": "david55034076",
+      "language": "en",
+      "published_at": "2026-09-14T09:06:09Z",
+      "first_detected_at": "2026-09-14T09:19:47Z",
+      "last_detected_at": "2026-09-14T09:19:47Z",
+      "detection_count": 1,
+      "text": "people trafickers,,a lorry driver can be fined for smuggling  migrants,,1ok,,,the rnli do it by the hundred,,and want cheered as the do it,,course the rapist ,murderers are nor their responsibility https://t.co/Pu3u8rcf6b",
+      "text_excerpt": "people trafickers,,a lorry driver can be fined for smuggling  migrants,,1ok,,,the rnli do it by the hundred,,and want cheered as the do it,,course the rapist ,murderers are nor their responsibility https://t.co/Pu3u8rcf6b",
+      "url": "https://x.com/david55034076/status/2099424453956386862",
+      "source_url": "https://x.com/david55034076/status/2099424453956386862",
+      "primary_signal": "FACILITATION_EARLY_WARNING",
+      "signal_type": "FACILITATION_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "FACILITATION_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.62,
+      "score": 5.75,
+      "matched_signals": [
+        "FACILITATION_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "facilitation",
+          "smuggling migrants"
+        ],
+        [
+          "facilitation",
+          "driver can be fined for smuggling migrants"
+        ]
+      ],
+      "matched_groups": [
+        "FACILITATION"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "smuggling migrants",
+        "driver can be fined for smuggling migrants"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 21.7,
       "analyst_priority": "LOW"
     },
     {
@@ -2031,8 +2408,8 @@
       "language": null,
       "published_at": "2026-09-13T23:28:43Z",
       "first_detected_at": "2026-09-14T04:05:42Z",
-      "last_detected_at": "2026-09-14T04:05:42Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-09-14T09:19:48Z",
+      "detection_count": 2,
       "text": "EXCLUSIVE: Callous Cartel Human Smugglers Lock Migrants in 100-Degree-Plus Texas Rail Cars",
       "text_excerpt": "EXCLUSIVE: Callous Cartel Human Smugglers Lock Migrants in 100-Degree-Plus Texas Rail Cars",
       "url": "https://www.reddit.com/r/BidenBuzz/comments/1wfn3ro/exclusive_callous_cartel_human_smugglers_lock/",
@@ -2208,8 +2585,8 @@
       "language": null,
       "published_at": "2026-09-13T11:38:10Z",
       "first_detected_at": "2026-09-13T16:19:08Z",
-      "last_detected_at": "2026-09-14T04:05:42Z",
-      "detection_count": 3,
+      "last_detected_at": "2026-09-14T09:19:48Z",
+      "detection_count": 4,
       "text": "We Can’t Stop The Boats Unless We Confront The Kurdish Allies Who Betray Us\nBritain helped build Iraqi Kurdistan and now it’s the capital of people smuggling. We must use our leverage to force a crackdown. Ben Judah Sep 13, 2026 The sight of the Portsmouth mega-dinghy carrying 120 migrants across the Channel, which has led to protests in recent weeks, is not just a picture of human misery. It is the sight of a successful new product by people smugglers hitting the market. One that will soon be being advertised all along the migrant route from Calais to Iraqi Kurdistan. We have this terrible habit in Britain of talking about the “small boats” like they are some kind of natural phenomenon spontaneously assembling out of the longing of migrants. In fact, they are a criminal phenomenon; the product of a massive smuggling operation that is largely controlled by organised crime gangs with deep connections and political ties back to the autonomous Kurdish region of Iraq. These Kurdish mafias, which operate and advertise in broad daylight in their homeland, have achieved nearly total control of the 2,500-mile smuggling route which runs over the mountains into Turkey, across the European Union and across the Channel into Britain. As the mega-dinghies arrive Britain may look helpless, but there is a lot more we could be doing. We have a history with Iraqi Kurdistan which gives us leverage — we just need to use it. Iraqi Kurds have built a successful corner of the Middle East since the Gulf war. They have Washington, London and Paris to thank for that. Ever since American, British and French jets imposed a no-fly zone in 1991 over northern Iraq they have been under a western security umbrella that has freed them from Arab rule. The Iraqi Kurds are loyal allies when it comes to counterterrorism. When it comes to organised immigration crime, however, they have been taking us for a ride. The Kurds are widely considered the world’s largest nation without a state. Occupying mostly the mountainous region encompassing eastern Turkey, northeast Syria, northern Iraq and northwest Iran, they have suffered a history of persecution at the hands of authoritarian regimes. Their brief hopes of a state of their own were dashed by the founder of modern Turkey, Mustafa Kemal Ataturk, in the aftermath of the First World War, but in the past 40 years they have seen their fortunes begin to turn. Western air cover imposed during the Gulf war in the 1990s allowed the Iraqi Kurds to break free from the grip of Saddam Hussein. Since US-led regime change in 2003 they have enjoyed vast levels of autonomy. They mostly rule themselves, unlike their brothers in Turkey and Iran. In this deeply clannish society, power in Iraqi Kurdistan is in the hands of the almost monarchic Barzani clan from the regional capital, Erbil, and the similarly dynastic Talabani clan from the city of Sulaimaniyah. The smuggling mafias in Kurdistan are deeply intertwined with the region’s corrupt political system. Smuggling is the region’s prime export. I’ve seen this in person. In 2025 I met the president of Iraqi Kurdistan, Nechirvan Barzani, with my then boss David Lammy, when he was foreign secretary, to firmly spell out that we wanted action. The Kurdish leader give the impression of nodding very politely to Britain’s demands to clamp down on people smuggling. At the time we had to give him the benefit of the doubt and a chance to act. Since then he’s done very little. This is part of a pattern. For years ruling Kurds have turned a blind eye to the gangs that have seized the Channel. This is despite two different prime ministers promising to stop the boats. Their failure to do so can, in this context, be seen as a failure of British diplomacy. I’ve seen for myself, travelling across Turkish and Iraqi Kurdistan over the past two decades, how smuggling is almost a way of life for a people divided by borders they never chose. “We have no friends but the mountains,” the Kurds like to say. Turkish, Arab or Iranian states may control the border but in the mountains above them are the secret paths of Kurdish smugglers. The old joke goes: “Where there’s a Kurd, there’s a way.” This began as a means of survival: smuggling helped their fathers resist and survive Saddam’s reign of terror. But this mastery of smuggling which began in resistance has now been applied to organised crime. In Erbil, Britain has done incredible work when it comes to state-building. British soldiers have long been helping the Kurdish authorities train their security forces. Iraqi Kurdistan is the only region of the country to have its own military. This would never have happened without western support. Look around anywhere in Erbil and signs of people smuggling are everywhere. Smugglers operate “travel agencies” offering illegal entry into Europe out in the open. Door-to-door journeys to Britain go for about £13,300. Trips using fake European Union documents can be obtained for £18,500. Every offer is also on TikTok. I was left with an inescapable conclusion: Iraqi Kurdistan is biting the hand that freed it. The Channel coast is now a Kurdish mafia map. In Calais in France the beaches are divided into patches according to Kurdish smugglers’ home patches such as Erbil, Sulaimaniyah and Sharazoor in Iraqi Kurdistan, or Sardasht in Iran. It is smugglers from Ranya in Iraqi Kurdistan who dominate the patch between Calais and Dunkirk. Iranian Kurdish gangs pioneered small-boat crossings in 2018, but Iraqi Kurds quickly seized control. Albanian mafiosi in the business today tend to report to the Kurds. Armed with AK47s, these gangs police the customers. This is big business. The French interior ministry estimated in 2022 that the value of smuggling migrants was worth at least €150 million (£128.9 million) that year. Nor do these gangs restrict themselves to people smuggling — they deal in drugs and weapons too. What has gone wrong? Rishi Sunak’s government deserves credit for working with the Albanian government to reduce crossings. But nothing was done to tackle the Kurdish aspect specifically until Sir Keir Starmer’s government, when I served as a special adviser to Lammy . Since their days in opposition, senior Labour politicians working on migration have been well aware that we have a big Kurdish gangs crisis as much as a small-boats crisis. Lammy’s team pushed the Foreign Office to make migration a priority, bringing in the first migration sanctions regime. This has provided a legal basis to sanction people complicit in people smuggling. To do this we had to overcome a culture of timidity in the Foreign Office and reticence in the security services to put migration ahead of other aspects of Britain’s relationships with other countries. I spent hours requesting and rejecting migration “country action plans” drawn up by our outposts that were all carrots — like visits to London for various leaders — and no sticks. Often working in secure rooms, given how sensitive this work is, I was charged with pushing the system as hard as I could. The truth is that before Starmer made “smash the gangs” a priority, neither the spooks nor suits manning our embassies truly viewed stopping the flow of illegal migration as a core part of their job. This work was cut short by reshuffling first Lammy then Yvette Cooper out of the Foreign Office. It’s now crucial that Ed Miliband , the new foreign secretary, not only keeps up the pressure on Iraqi Kurdistan but dials it up. The strategy our team was working towards was to try persuasive diplomacy towards the political clans in Erbil and Sulaimaniyah that rule Iraqi Kurdistan. Labour persistence has resulted in two significant sets of arrestsagainst people smugglers in 2025, one in a joint operation with the Kurds. Other than that, progress has been glacial and it is now time for Britain to throw its punches. Continued British military and intelligence support should be linked to a real clampdown. The Foreign Office should plan to use our new migration sanctions regime to target Kurdish officials aiding, abetting or ignoring this. Kurdish authorities need to believe that a withdrawal of military and intelligence support is a real possibility unless this assault on our borders ends. I agreed with Starmer when he said we need to treat people-smuggling gangs like terrorists; we should also have zero tolerance for those who shelter and tolerate them. Kurdish leaders in Erbil and Sulaimaniyah need to be feeling the heat. What’s happening on those beaches is a national security crisis — and we have leverage over Iraqi Kurdistan. Andy Burnham now needs to use it. This article was originally published in The Sunday Times .",
       "text_excerpt": "We Can’t Stop The Boats Unless We Confront The Kurdish Allies Who Betray Us\nBritain helped build Iraqi Kurdistan and now it’s the capital of people smuggling. We must use our leverage to force a crackdown. Ben Judah Sep 13, 2026 The sight of the Portsmouth mega-dinghy carrying 120 migrants across the Channel, which has led to protests in recent weeks, is not just a picture of human misery. It is the sight of a successful new product by people smugglers hitting the market. One that will soon be being advertised all along the migrant route from Calais to Iraqi Kurdistan. We have this terrible habit in Britain of talking about the “small boats” like they are some kind of natural phenomenon spon",
       "url": "https://www.reddit.com/r/KurdistanNews/comments/1wf5cbb/we_cant_stop_the_boats_unless_we_confront_the/",
@@ -2464,6 +2841,307 @@
       "analyst_priority": "LOW"
     },
     {
+      "id": 542,
+      "source": "X",
+      "source_post_id": "2099427074867875865",
+      "author": "Cruisescape",
+      "language": "en",
+      "published_at": "2026-09-14T09:16:34Z",
+      "first_detected_at": "2026-09-14T09:18:51Z",
+      "last_detected_at": "2026-09-14T09:18:51Z",
+      "detection_count": 1,
+      "text": "SO EMBARRASSING!! We now have predators arriving just miles from my home &amp; rocking up to our shores RIGHT NEXT TO THE HOME OF ROYAL NAVY #ukgovenment \n#UKlife #royalnavy new target after \"extraordinary\" migrant crossing https://t.co/pszxhgTNxO",
+      "text_excerpt": "SO EMBARRASSING!! We now have predators arriving just miles from my home &amp; rocking up to our shores RIGHT NEXT TO THE HOME OF ROYAL NAVY #ukgovenment \n#UKlife #royalnavy new target after \"extraordinary\" migrant crossing https://t.co/pszxhgTNxO",
+      "url": "https://x.com/Cruisescape/status/2099427074867875865",
+      "source_url": "https://x.com/Cruisescape/status/2099427074867875865",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 6.5,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "migrant crossing"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT"
+      ],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": [
+        "migrant crossing"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 25.2,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 540,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1wfycnl",
+      "author": "AutoNewsAdmin",
+      "language": null,
+      "published_at": "2026-09-14T09:12:34Z",
+      "first_detected_at": "2026-09-14T09:18:23Z",
+      "last_detected_at": "2026-09-14T09:18:23Z",
+      "detection_count": 1,
+      "text": "[World] - One dead, 25 missing in migrant boat sinking off Greece: coast guard",
+      "text_excerpt": "[World] - One dead, 25 missing in migrant boat sinking off Greece: coast guard",
+      "url": "https://www.reddit.com/r/ANSAauto/comments/1wfycnl/world_one_dead_25_missing_in_migrant_boat_sinking/",
+      "source_url": "https://www.reddit.com/r/ANSAauto/comments/1wfycnl/world_one_dead_25_missing_in_migrant_boat_sinking/",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.25,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "boat"
+        ],
+        [
+          "route",
+          "coast"
+        ],
+        [
+          "enforcement",
+          "coast guard"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "EASTERN_MEDITERRANEAN",
+      "primary_region": "EASTERN_MEDITERRANEAN",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 29.2,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 541,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1wfycne",
+      "author": "AutoNewsAdmin",
+      "language": null,
+      "published_at": "2026-09-14T09:12:33Z",
+      "first_detected_at": "2026-09-14T09:18:23Z",
+      "last_detected_at": "2026-09-14T09:18:23Z",
+      "detection_count": 1,
+      "text": "[World] - One dead, 25 missing in migrant boat sinking off Greece: coast guard",
+      "text_excerpt": "[World] - One dead, 25 missing in migrant boat sinking off Greece: coast guard",
+      "url": "https://www.reddit.com/r/ANSAauto/comments/1wfycne/world_one_dead_25_missing_in_migrant_boat_sinking/",
+      "source_url": "https://www.reddit.com/r/ANSAauto/comments/1wfycne/world_one_dead_25_missing_in_migrant_boat_sinking/",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.25,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "boat"
+        ],
+        [
+          "route",
+          "coast"
+        ],
+        [
+          "enforcement",
+          "coast guard"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "EASTERN_MEDITERRANEAN",
+      "primary_region": "EASTERN_MEDITERRANEAN",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 29.2,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 545,
+      "source": "X",
+      "source_post_id": "2099425429480161621",
+      "author": "Eddie_9180",
+      "language": "en",
+      "published_at": "2026-09-14T09:10:02Z",
+      "first_detected_at": "2026-09-14T09:20:14Z",
+      "last_detected_at": "2026-09-14T09:20:14Z",
+      "detection_count": 1,
+      "text": "@PolitlcsGlobal @FT Overseas born billionaires are leaving the country thanks to Labour, what we are left with is unskilled and unemployed migrants who make no contribution",
+      "text_excerpt": "@PolitlcsGlobal @FT Overseas born billionaires are leaving the country thanks to Labour, what we are left with is unskilled and unemployed migrants who make no contribution",
+      "url": "https://x.com/Eddie_9180/status/2099425429480161621",
+      "source_url": "https://x.com/Eddie_9180/status/2099425429480161621",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.0,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "leaving the country thanks to Labour, what we are left with is unskilled and unemployed migrants"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "leaving the country thanks to Labour, what we are left with is unskilled and unemployed migrants"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 25.2,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 543,
+      "source": "X",
+      "source_post_id": "2099421277228601346",
+      "author": "PakChinaToday",
+      "language": "en",
+      "published_at": "2026-09-14T08:53:32Z",
+      "first_detected_at": "2026-09-14T09:19:21Z",
+      "last_detected_at": "2026-09-14T09:19:21Z",
+      "detection_count": 1,
+      "text": "One dead, 25 missing in migrant boat sinking off Greece - coast guard https://t.co/GIbKWzTByS via @cgtnofficial",
+      "text_excerpt": "One dead, 25 missing in migrant boat sinking off Greece - coast guard https://t.co/GIbKWzTByS via @cgtnofficial",
+      "url": "https://x.com/PakChinaToday/status/2099421277228601346",
+      "source_url": "https://x.com/PakChinaToday/status/2099421277228601346",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.25,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "boat"
+        ],
+        [
+          "route",
+          "coast"
+        ],
+        [
+          "enforcement",
+          "coast guard"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "EASTERN_MEDITERRANEAN",
+      "primary_region": "EASTERN_MEDITERRANEAN",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 29.2,
+      "analyst_priority": "LOW"
+    },
+    {
       "id": 536,
       "source": "X",
       "source_post_id": "2099222991012077852",
@@ -2576,6 +3254,67 @@
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
       "priority_score": 25.2,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 544,
+      "source": "X",
+      "source_post_id": "2099424453956386862",
+      "author": "david55034076",
+      "language": "en",
+      "published_at": "2026-09-14T09:06:09Z",
+      "first_detected_at": "2026-09-14T09:19:47Z",
+      "last_detected_at": "2026-09-14T09:19:47Z",
+      "detection_count": 1,
+      "text": "people trafickers,,a lorry driver can be fined for smuggling  migrants,,1ok,,,the rnli do it by the hundred,,and want cheered as the do it,,course the rapist ,murderers are nor their responsibility https://t.co/Pu3u8rcf6b",
+      "text_excerpt": "people trafickers,,a lorry driver can be fined for smuggling  migrants,,1ok,,,the rnli do it by the hundred,,and want cheered as the do it,,course the rapist ,murderers are nor their responsibility https://t.co/Pu3u8rcf6b",
+      "url": "https://x.com/david55034076/status/2099424453956386862",
+      "source_url": "https://x.com/david55034076/status/2099424453956386862",
+      "primary_signal": "FACILITATION_EARLY_WARNING",
+      "signal_type": "FACILITATION_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "FACILITATION_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.62,
+      "score": 5.75,
+      "matched_signals": [
+        "FACILITATION_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "facilitation",
+          "smuggling migrants"
+        ],
+        [
+          "facilitation",
+          "driver can be fined for smuggling migrants"
+        ]
+      ],
+      "matched_groups": [
+        "FACILITATION"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "smuggling migrants",
+        "driver can be fined for smuggling migrants"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 21.7,
       "analyst_priority": "LOW"
     },
     {
@@ -2703,8 +3442,8 @@
       "language": null,
       "published_at": "2026-09-13T23:28:43Z",
       "first_detected_at": "2026-09-14T04:05:42Z",
-      "last_detected_at": "2026-09-14T04:05:42Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-09-14T09:19:48Z",
+      "detection_count": 2,
       "text": "EXCLUSIVE: Callous Cartel Human Smugglers Lock Migrants in 100-Degree-Plus Texas Rail Cars",
       "text_excerpt": "EXCLUSIVE: Callous Cartel Human Smugglers Lock Migrants in 100-Degree-Plus Texas Rail Cars",
       "url": "https://www.reddit.com/r/BidenBuzz/comments/1wfn3ro/exclusive_callous_cartel_human_smugglers_lock/",
@@ -2880,8 +3619,8 @@
       "language": null,
       "published_at": "2026-09-13T11:38:10Z",
       "first_detected_at": "2026-09-13T16:19:08Z",
-      "last_detected_at": "2026-09-14T04:05:42Z",
-      "detection_count": 3,
+      "last_detected_at": "2026-09-14T09:19:48Z",
+      "detection_count": 4,
       "text": "We Can’t Stop The Boats Unless We Confront The Kurdish Allies Who Betray Us\nBritain helped build Iraqi Kurdistan and now it’s the capital of people smuggling. We must use our leverage to force a crackdown. Ben Judah Sep 13, 2026 The sight of the Portsmouth mega-dinghy carrying 120 migrants across the Channel, which has led to protests in recent weeks, is not just a picture of human misery. It is the sight of a successful new product by people smugglers hitting the market. One that will soon be being advertised all along the migrant route from Calais to Iraqi Kurdistan. We have this terrible habit in Britain of talking about the “small boats” like they are some kind of natural phenomenon spontaneously assembling out of the longing of migrants. In fact, they are a criminal phenomenon; the product of a massive smuggling operation that is largely controlled by organised crime gangs with deep connections and political ties back to the autonomous Kurdish region of Iraq. These Kurdish mafias, which operate and advertise in broad daylight in their homeland, have achieved nearly total control of the 2,500-mile smuggling route which runs over the mountains into Turkey, across the European Union and across the Channel into Britain. As the mega-dinghies arrive Britain may look helpless, but there is a lot more we could be doing. We have a history with Iraqi Kurdistan which gives us leverage — we just need to use it. Iraqi Kurds have built a successful corner of the Middle East since the Gulf war. They have Washington, London and Paris to thank for that. Ever since American, British and French jets imposed a no-fly zone in 1991 over northern Iraq they have been under a western security umbrella that has freed them from Arab rule. The Iraqi Kurds are loyal allies when it comes to counterterrorism. When it comes to organised immigration crime, however, they have been taking us for a ride. The Kurds are widely considered the world’s largest nation without a state. Occupying mostly the mountainous region encompassing eastern Turkey, northeast Syria, northern Iraq and northwest Iran, they have suffered a history of persecution at the hands of authoritarian regimes. Their brief hopes of a state of their own were dashed by the founder of modern Turkey, Mustafa Kemal Ataturk, in the aftermath of the First World War, but in the past 40 years they have seen their fortunes begin to turn. Western air cover imposed during the Gulf war in the 1990s allowed the Iraqi Kurds to break free from the grip of Saddam Hussein. Since US-led regime change in 2003 they have enjoyed vast levels of autonomy. They mostly rule themselves, unlike their brothers in Turkey and Iran. In this deeply clannish society, power in Iraqi Kurdistan is in the hands of the almost monarchic Barzani clan from the regional capital, Erbil, and the similarly dynastic Talabani clan from the city of Sulaimaniyah. The smuggling mafias in Kurdistan are deeply intertwined with the region’s corrupt political system. Smuggling is the region’s prime export. I’ve seen this in person. In 2025 I met the president of Iraqi Kurdistan, Nechirvan Barzani, with my then boss David Lammy, when he was foreign secretary, to firmly spell out that we wanted action. The Kurdish leader give the impression of nodding very politely to Britain’s demands to clamp down on people smuggling. At the time we had to give him the benefit of the doubt and a chance to act. Since then he’s done very little. This is part of a pattern. For years ruling Kurds have turned a blind eye to the gangs that have seized the Channel. This is despite two different prime ministers promising to stop the boats. Their failure to do so can, in this context, be seen as a failure of British diplomacy. I’ve seen for myself, travelling across Turkish and Iraqi Kurdistan over the past two decades, how smuggling is almost a way of life for a people divided by borders they never chose. “We have no friends but the mountains,” the Kurds like to say. Turkish, Arab or Iranian states may control the border but in the mountains above them are the secret paths of Kurdish smugglers. The old joke goes: “Where there’s a Kurd, there’s a way.” This began as a means of survival: smuggling helped their fathers resist and survive Saddam’s reign of terror. But this mastery of smuggling which began in resistance has now been applied to organised crime. In Erbil, Britain has done incredible work when it comes to state-building. British soldiers have long been helping the Kurdish authorities train their security forces. Iraqi Kurdistan is the only region of the country to have its own military. This would never have happened without western support. Look around anywhere in Erbil and signs of people smuggling are everywhere. Smugglers operate “travel agencies” offering illegal entry into Europe out in the open. Door-to-door journeys to Britain go for about £13,300. Trips using fake European Union documents can be obtained for £18,500. Every offer is also on TikTok. I was left with an inescapable conclusion: Iraqi Kurdistan is biting the hand that freed it. The Channel coast is now a Kurdish mafia map. In Calais in France the beaches are divided into patches according to Kurdish smugglers’ home patches such as Erbil, Sulaimaniyah and Sharazoor in Iraqi Kurdistan, or Sardasht in Iran. It is smugglers from Ranya in Iraqi Kurdistan who dominate the patch between Calais and Dunkirk. Iranian Kurdish gangs pioneered small-boat crossings in 2018, but Iraqi Kurds quickly seized control. Albanian mafiosi in the business today tend to report to the Kurds. Armed with AK47s, these gangs police the customers. This is big business. The French interior ministry estimated in 2022 that the value of smuggling migrants was worth at least €150 million (£128.9 million) that year. Nor do these gangs restrict themselves to people smuggling — they deal in drugs and weapons too. What has gone wrong? Rishi Sunak’s government deserves credit for working with the Albanian government to reduce crossings. But nothing was done to tackle the Kurdish aspect specifically until Sir Keir Starmer’s government, when I served as a special adviser to Lammy . Since their days in opposition, senior Labour politicians working on migration have been well aware that we have a big Kurdish gangs crisis as much as a small-boats crisis. Lammy’s team pushed the Foreign Office to make migration a priority, bringing in the first migration sanctions regime. This has provided a legal basis to sanction people complicit in people smuggling. To do this we had to overcome a culture of timidity in the Foreign Office and reticence in the security services to put migration ahead of other aspects of Britain’s relationships with other countries. I spent hours requesting and rejecting migration “country action plans” drawn up by our outposts that were all carrots — like visits to London for various leaders — and no sticks. Often working in secure rooms, given how sensitive this work is, I was charged with pushing the system as hard as I could. The truth is that before Starmer made “smash the gangs” a priority, neither the spooks nor suits manning our embassies truly viewed stopping the flow of illegal migration as a core part of their job. This work was cut short by reshuffling first Lammy then Yvette Cooper out of the Foreign Office. It’s now crucial that Ed Miliband , the new foreign secretary, not only keeps up the pressure on Iraqi Kurdistan but dials it up. The strategy our team was working towards was to try persuasive diplomacy towards the political clans in Erbil and Sulaimaniyah that rule Iraqi Kurdistan. Labour persistence has resulted in two significant sets of arrestsagainst people smugglers in 2025, one in a joint operation with the Kurds. Other than that, progress has been glacial and it is now time for Britain to throw its punches. Continued British military and intelligence support should be linked to a real clampdown. The Foreign Office should plan to use our new migration sanctions regime to target Kurdish officials aiding, abetting or ignoring this. Kurdish authorities need to believe that a withdrawal of military and intelligence support is a real possibility unless this assault on our borders ends. I agreed with Starmer when he said we need to treat people-smuggling gangs like terrorists; we should also have zero tolerance for those who shelter and tolerate them. Kurdish leaders in Erbil and Sulaimaniyah need to be feeling the heat. What’s happening on those beaches is a national security crisis — and we have leverage over Iraqi Kurdistan. Andy Burnham now needs to use it. This article was originally published in The Sunday Times .",
       "text_excerpt": "We Can’t Stop The Boats Unless We Confront The Kurdish Allies Who Betray Us\nBritain helped build Iraqi Kurdistan and now it’s the capital of people smuggling. We must use our leverage to force a crackdown. Ben Judah Sep 13, 2026 The sight of the Portsmouth mega-dinghy carrying 120 migrants across the Channel, which has led to protests in recent weeks, is not just a picture of human misery. It is the sight of a successful new product by people smugglers hitting the market. One that will soon be being advertised all along the migrant route from Calais to Iraqi Kurdistan. We have this terrible habit in Britain of talking about the “small boats” like they are some kind of natural phenomenon spon",
       "url": "https://www.reddit.com/r/KurdistanNews/comments/1wf5cbb/we_cant_stop_the_boats_unless_we_confront_the/",
@@ -2961,6 +3700,90 @@
       "platform_count": 1
     },
     {
+      "id": 540,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1wfycnl",
+      "author": "AutoNewsAdmin",
+      "language": null,
+      "published_at": "2026-09-14T09:12:34Z",
+      "first_detected_at": "2026-09-14T09:18:23Z",
+      "last_detected_at": "2026-09-14T09:18:23Z",
+      "detection_count": 1,
+      "text": "[World] - One dead, 25 missing in migrant boat sinking off Greece: coast guard",
+      "text_excerpt": "[World] - One dead, 25 missing in migrant boat sinking off Greece: coast guard",
+      "url": "https://www.reddit.com/r/ANSAauto/comments/1wfycnl/world_one_dead_25_missing_in_migrant_boat_sinking/",
+      "source_url": "https://www.reddit.com/r/ANSAauto/comments/1wfycnl/world_one_dead_25_missing_in_migrant_boat_sinking/",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.25,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "boat"
+        ],
+        [
+          "route",
+          "coast"
+        ],
+        [
+          "enforcement",
+          "coast guard"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "EASTERN_MEDITERRANEAN",
+      "primary_region": "EASTERN_MEDITERRANEAN",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 45.2,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 3,
+      "related_post_ids": [
+        "reddit_1wfycnl",
+        "reddit_1wfycne",
+        "2099421277228601346"
+      ],
+      "related_authors": [
+        "AutoNewsAdmin",
+        "PakChinaToday"
+      ],
+      "related_urls": [
+        "https://www.reddit.com/r/ANSAauto/comments/1wfycnl/world_one_dead_25_missing_in_migrant_boat_sinking/",
+        "https://www.reddit.com/r/ANSAauto/comments/1wfycne/world_one_dead_25_missing_in_migrant_boat_sinking/",
+        "https://x.com/PakChinaToday/status/2099421277228601346"
+      ],
+      "related_sources": [
+        "REDDIT",
+        "X"
+      ],
+      "independent_author_count": 2,
+      "platform_count": 2
+    },
+    {
       "id": 535,
       "source": "REDDIT",
       "source_post_id": "reddit_1wfejla",
@@ -3032,89 +3855,6 @@
       ],
       "related_sources": [
         "REDDIT"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
-    },
-    {
-      "id": 531,
-      "source": "X",
-      "source_post_id": "2099168884704354784",
-      "author": "TheAlkambaTimes",
-      "language": "en",
-      "published_at": "2026-09-13T16:10:37Z",
-      "first_detected_at": "2026-09-13T16:20:34Z",
-      "last_detected_at": "2026-09-13T16:20:34Z",
-      "detection_count": 1,
-      "text": "Gambia Navy Intercepts Boat Carrying 207 Suspected Migrants\n\nBThe Gambia Navy, working with Spain’s Guardia Civil, intercepted a vessel carrying 207 suspected irregular migrants in Gambian waters on Saturday, 12 September 2026, authorities said.\n\nThe operation took place along https://t.co/Sa5yIGxG2J",
-      "text_excerpt": "Gambia Navy Intercepts Boat Carrying 207 Suspected Migrants\n\nBThe Gambia Navy, working with Spain’s Guardia Civil, intercepted a vessel carrying 207 suspected irregular migrants in Gambian waters on Saturday, 12 September 2026, authorities said.\n\nThe operation took place along https://t.co/Sa5yIGxG2J",
-      "url": "https://x.com/TheAlkambaTimes/status/2099168884704354784",
-      "source_url": "https://x.com/TheAlkambaTimes/status/2099168884704354784",
-      "primary_signal": "ROUTE_EARLY_WARNING",
-      "signal_type": "ROUTE_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ROUTE_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 9.25,
-      "matched_signals": [
-        "ROUTE_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "route",
-          "Boat"
-        ],
-        [
-          "route",
-          "vessel"
-        ],
-        [
-          "enforcement",
-          "intercepted"
-        ],
-        [
-          "enforcement",
-          "Guardia Civil"
-        ]
-      ],
-      "matched_groups": [
-        "ROUTE",
-        "ENFORCEMENT"
-      ],
-      "context_matches": [
-        "Migrants",
-        "migrants"
-      ],
-      "high_value_matches": [],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 32.0,
-      "analyst_priority": "LOW",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "2099168884704354784"
-      ],
-      "related_authors": [
-        "TheAlkambaTimes"
-      ],
-      "related_urls": [
-        "https://x.com/TheAlkambaTimes/status/2099168884704354784"
-      ],
-      "related_sources": [
-        "X"
       ],
       "independent_author_count": 1,
       "platform_count": 1
@@ -3247,14 +3987,15 @@
       "label": "W38",
       "week_label": "W38",
       "week_start": "2026-09-14T00:00:00Z",
-      "posts": 55,
-      "post_count": 55,
-      "operational_posts": 0,
-      "influence_signals": 2,
+      "posts": 125,
+      "post_count": 125,
+      "operational_posts": 4,
+      "influence_signals": 8,
       "source_counts": {
-        "X": 42,
-        "REDDIT": 6,
-        "MASTODON": 7
+        "X": 88,
+        "REDDIT": 15,
+        "MASTODON": 18,
+        "TELEGRAM": 4
       }
     }
   ],
@@ -3381,32 +4122,33 @@
       "label": "W38",
       "week_label": "W38",
       "week_start": "2026-09-14T00:00:00Z",
-      "posts": 55,
-      "post_count": 55,
-      "operational_posts": 0,
-      "influence_signals": 2,
+      "posts": 125,
+      "post_count": 125,
+      "operational_posts": 4,
+      "influence_signals": 8,
       "source_counts": {
-        "X": 42,
-        "REDDIT": 6,
-        "MASTODON": 7
+        "X": 88,
+        "REDDIT": 15,
+        "MASTODON": 18,
+        "TELEGRAM": 4
       }
     }
   ],
   "information_activity_summary": {
-    "current_week": 55,
-    "previous_week": 10,
-    "current_week_to_date": 55,
-    "previous_week_same_period": 10,
+    "current_week": 125,
+    "previous_week": 108,
+    "current_week_to_date": 125,
+    "previous_week_same_period": 108,
     "previous_week_full": 1299,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": 450.0,
-    "change_label": "+450.0%",
+    "change_percent": 15.74,
+    "change_label": "+15.7%",
     "direction": "UP",
     "comparable": true,
-    "elapsed_hours": 4.1,
+    "elapsed_hours": 9.3,
     "current_period_start": "2026-09-14T00:00:00Z",
     "previous_period_start": "2026-09-07T00:00:00Z",
-    "previous_period_end": "2026-09-07T04:06:09Z"
+    "previous_period_end": "2026-09-07T09:20:16Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -3418,38 +4160,39 @@
       72,
       168
     ],
-    "generated_at": "2026-09-14T04:06:10Z",
-    "total_items": 1343,
-    "information_count": 398,
-    "early_warning_count": 517,
-    "operational_count": 347,
+    "generated_at": "2026-09-14T09:20:16Z",
+    "total_items": 1349,
+    "information_count": 395,
+    "early_warning_count": 523,
+    "operational_count": 350,
     "correlated_count": 81,
     "layer_counts": {
-      "INFORMATION": 398,
-      "EARLY_WARNING": 517,
-      "OPERATIONAL": 347,
+      "EARLY_WARNING": 523,
+      "OPERATIONAL": 350,
+      "INFORMATION": 395,
       "CORRELATED": 81
     },
     "source_counts": {
-      "X": 951,
-      "REDDIT": 305,
-      "MASTODON": 68,
-      "TELEGRAM": 19
+      "X": 953,
+      "REDDIT": 309,
+      "TELEGRAM": 20,
+      "MASTODON": 67
     },
     "type_counts": {
-      "INFORMATION_SIGNAL": 398,
-      "MOVEMENT_EARLY_WARNING": 151,
-      "FACILITATION_EARLY_WARNING": 90,
+      "MOVEMENT_EARLY_WARNING": 153,
+      "ROUTE_EARLY_WARNING": 71,
+      "BORDER_CROSSING": 118,
+      "FACILITATION_EARLY_WARNING": 91,
+      "RESCUE_OPERATION": 21,
+      "INFORMATION_SIGNAL": 395,
+      "DETENTION": 24,
       "PRESSURE_EARLY_WARNING": 33,
       "MIGRANT_CAMP": 72,
-      "BORDER_CROSSING": 117,
-      "ROUTE_EARLY_WARNING": 68,
       "SMUGGLING_ACTIVITY": 50,
       "RECRUITMENT_COORDINATION": 13,
       "MOBILIZATION_COORDINATION": 15,
       "DEPORTATION": 48,
       "ENFORCEMENT_EARLY_WARNING": 31,
-      "DETENTION": 23,
       "CROSSING_FACILITATION": 44,
       "POLICY_SIGNAL": 6,
       "LEGAL_MIGRATION_SIGNAL": 56,
@@ -3458,7 +4201,6 @@
       "BORDER_MEASURE": 9,
       "DECISION_INFLUENCE": 1,
       "CASUALTY": 15,
-      "RESCUE_OPERATION": 20,
       "ONLINE_INFLUENCE_REPORT": 1,
       "GENERAL_DISCUSSION": 12,
       "ARRIVAL": 27,
@@ -3466,6 +4208,328 @@
       "MOBILIZATION_REPORT": 8
     },
     "items": [
+      {
+        "timeline_id": "early_warning:542",
+        "timestamp": "2026-09-14T09:16:34Z",
+        "layer": "EARLY_WARNING",
+        "type": "MOVEMENT_EARLY_WARNING",
+        "signal_type": "MOVEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2099427074867875865",
+        "author": "Cruisescape",
+        "url": "https://x.com/Cruisescape/status/2099427074867875865",
+        "source_url": "https://x.com/Cruisescape/status/2099427074867875865",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.72,
+        "priority": "MEDIUM",
+        "priority_score": 25.2,
+        "analyst_priority": "LOW",
+        "text": "SO EMBARRASSING!! We now have predators arriving just miles from my home &amp; rocking up to our shores RIGHT NEXT TO THE HOME OF ROYAL NAVY #ukgovenment \n#UKlife #royalnavy new target after \"extraordinary\" migrant crossing https://t.co/pszxhgTNxO",
+        "text_excerpt": "SO EMBARRASSING!! We now have predators arriving just miles from my home &amp; rocking up to our shores RIGHT NEXT TO THE HOME OF ROYAL NAVY #ukgovenment \n#UKlife #royalnavy new target after \"extraordinary\" migrant crossing https://t.co/pszxhgTNxO",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "MOVEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-09-14T09:18:51Z",
+        "last_detected_at": "2026-09-14T09:18:51Z"
+      },
+      {
+        "timeline_id": "early_warning:540",
+        "timestamp": "2026-09-14T09:12:34Z",
+        "layer": "EARLY_WARNING",
+        "type": "ROUTE_EARLY_WARNING",
+        "signal_type": "ROUTE_EARLY_WARNING",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1wfycnl",
+        "author": "AutoNewsAdmin",
+        "url": "https://www.reddit.com/r/ANSAauto/comments/1wfycnl/world_one_dead_25_missing_in_migrant_boat_sinking/",
+        "source_url": "https://www.reddit.com/r/ANSAauto/comments/1wfycnl/world_one_dead_25_missing_in_migrant_boat_sinking/",
+        "region": "EASTERN_MEDITERRANEAN",
+        "primary_region": "EASTERN_MEDITERRANEAN",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.72,
+        "priority": "MEDIUM",
+        "priority_score": 29.2,
+        "analyst_priority": "LOW",
+        "text": "[World] - One dead, 25 missing in migrant boat sinking off Greece: coast guard",
+        "text_excerpt": "[World] - One dead, 25 missing in migrant boat sinking off Greece: coast guard",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "ROUTE_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-09-14T09:18:23Z",
+        "last_detected_at": "2026-09-14T09:18:23Z"
+      },
+      {
+        "timeline_id": "early_warning:541",
+        "timestamp": "2026-09-14T09:12:33Z",
+        "layer": "EARLY_WARNING",
+        "type": "ROUTE_EARLY_WARNING",
+        "signal_type": "ROUTE_EARLY_WARNING",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1wfycne",
+        "author": "AutoNewsAdmin",
+        "url": "https://www.reddit.com/r/ANSAauto/comments/1wfycne/world_one_dead_25_missing_in_migrant_boat_sinking/",
+        "source_url": "https://www.reddit.com/r/ANSAauto/comments/1wfycne/world_one_dead_25_missing_in_migrant_boat_sinking/",
+        "region": "EASTERN_MEDITERRANEAN",
+        "primary_region": "EASTERN_MEDITERRANEAN",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.72,
+        "priority": "MEDIUM",
+        "priority_score": 29.2,
+        "analyst_priority": "LOW",
+        "text": "[World] - One dead, 25 missing in migrant boat sinking off Greece: coast guard",
+        "text_excerpt": "[World] - One dead, 25 missing in migrant boat sinking off Greece: coast guard",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "ROUTE_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-09-14T09:18:23Z",
+        "last_detected_at": "2026-09-14T09:18:23Z"
+      },
+      {
+        "timeline_id": "operational:385",
+        "timestamp": "2026-09-14T09:12:08Z",
+        "layer": "OPERATIONAL",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "REDDIT",
+        "source_post_id": "reddit_1wfycen",
+        "author": "Ok_Signal4754",
+        "url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1wfycen/hundreds_of_migrants_cross_channel_after_hiatus/",
+        "source_url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1wfycen/hundreds_of_migrants_cross_channel_after_hiatus/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.55,
+        "priority": "MEDIUM",
+        "priority_score": 55.0,
+        "text": "Hundreds of migrants cross Channel after hiatus. Some 494 migrants arrived in the UK on Thursday, the first to successfully cross the Channel in 10 days. | United Kingdom\nSource",
+        "text_excerpt": "Hundreds of migrants cross Channel after hiatus. Some 494 migrants arrived in the UK on Thursday, the first to successfully cross the Channel in 10 days. | United Kingdom\nSource",
+        "event_group_id": 300,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null
+      },
+      {
+        "timeline_id": "early_warning:545",
+        "timestamp": "2026-09-14T09:10:02Z",
+        "layer": "EARLY_WARNING",
+        "type": "MOVEMENT_EARLY_WARNING",
+        "signal_type": "MOVEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2099425429480161621",
+        "author": "Eddie_9180",
+        "url": "https://x.com/Eddie_9180/status/2099425429480161621",
+        "source_url": "https://x.com/Eddie_9180/status/2099425429480161621",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.72,
+        "priority": "MEDIUM",
+        "priority_score": 25.2,
+        "analyst_priority": "LOW",
+        "text": "@PolitlcsGlobal @FT Overseas born billionaires are leaving the country thanks to Labour, what we are left with is unskilled and unemployed migrants who make no contribution",
+        "text_excerpt": "@PolitlcsGlobal @FT Overseas born billionaires are leaving the country thanks to Labour, what we are left with is unskilled and unemployed migrants who make no contribution",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "MOVEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-09-14T09:20:14Z",
+        "last_detected_at": "2026-09-14T09:20:14Z"
+      },
+      {
+        "timeline_id": "early_warning:544",
+        "timestamp": "2026-09-14T09:06:09Z",
+        "layer": "EARLY_WARNING",
+        "type": "FACILITATION_EARLY_WARNING",
+        "signal_type": "FACILITATION_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2099424453956386862",
+        "author": "david55034076",
+        "url": "https://x.com/david55034076/status/2099424453956386862",
+        "source_url": "https://x.com/david55034076/status/2099424453956386862",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.62,
+        "priority": "MEDIUM",
+        "priority_score": 21.7,
+        "analyst_priority": "LOW",
+        "text": "people trafickers,,a lorry driver can be fined for smuggling  migrants,,1ok,,,the rnli do it by the hundred,,and want cheered as the do it,,course the rapist ,murderers are nor their responsibility https://t.co/Pu3u8rcf6b",
+        "text_excerpt": "people trafickers,,a lorry driver can be fined for smuggling  migrants,,1ok,,,the rnli do it by the hundred,,and want cheered as the do it,,course the rapist ,murderers are nor their responsibility https://t.co/Pu3u8rcf6b",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "FACILITATION_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-09-14T09:19:47Z",
+        "last_detected_at": "2026-09-14T09:19:47Z"
+      },
+      {
+        "timeline_id": "operational:386",
+        "timestamp": "2026-09-14T09:02:52Z",
+        "layer": "OPERATIONAL",
+        "type": "RESCUE_OPERATION",
+        "signal_type": "RESCUE_OPERATION",
+        "event_type": "RESCUE_OPERATION",
+        "source": "REDDIT",
+        "source_post_id": "reddit_1wfy6wy",
+        "author": "Ok_Signal4754",
+        "url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1wfy6wy/over_300_migrants_rescued_off_southern_crete/",
+        "source_url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1wfy6wy/over_300_migrants_rescued_off_southern_crete/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.5,
+        "priority": "MEDIUM",
+        "priority_score": 50.0,
+        "text": "Over 300 migrants rescued off southern Crete | Greece\nSource",
+        "text_excerpt": "Over 300 migrants rescued off southern Crete | Greece\nSource",
+        "event_group_id": 301,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null
+      },
+      {
+        "timeline_id": "early_warning:543",
+        "timestamp": "2026-09-14T08:53:32Z",
+        "layer": "EARLY_WARNING",
+        "type": "ROUTE_EARLY_WARNING",
+        "signal_type": "ROUTE_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2099421277228601346",
+        "author": "PakChinaToday",
+        "url": "https://x.com/PakChinaToday/status/2099421277228601346",
+        "source_url": "https://x.com/PakChinaToday/status/2099421277228601346",
+        "region": "EASTERN_MEDITERRANEAN",
+        "primary_region": "EASTERN_MEDITERRANEAN",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.72,
+        "priority": "MEDIUM",
+        "priority_score": 29.2,
+        "analyst_priority": "LOW",
+        "text": "One dead, 25 missing in migrant boat sinking off Greece - coast guard https://t.co/GIbKWzTByS via @cgtnofficial",
+        "text_excerpt": "One dead, 25 missing in migrant boat sinking off Greece - coast guard https://t.co/GIbKWzTByS via @cgtnofficial",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "ROUTE_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-09-14T09:19:21Z",
+        "last_detected_at": "2026-09-14T09:19:21Z"
+      },
+      {
+        "timeline_id": "information:9760",
+        "timestamp": "2026-09-14T08:29:51Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2099415318250623342",
+        "author": "danreed198181",
+        "url": "https://x.com/danreed198181/status/2099415318250623342",
+        "source_url": "https://x.com/danreed198181/status/2099415318250623342",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "channel",
+          "boat"
+        ],
+        "freshness_cues": [],
+        "text": "Photograph the Invasion and They Come at You With Sticks\n\nThis is not on.\n\nOn Monday morning a packed small boat pushed off from the Gravelines stretch near Calais — one of the favourite launchpads for the Channel invasion. Eyewitnesses describe chaos on the sand: bottles, https://t.co/9DXwj0bPpC",
+        "text_excerpt": "Photograph the Invasion and They Come at You With Sticks\n\nThis is not on.\n\nOn Monday morning a packed small boat pushed off from the Gravelines stretch near Calais — one of the favourite launchpads for the Channel invasion. Eyewitnesses describe chaos on the sand: bottles, https://t.co/9DXwj0bPpC",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-09-14T09:19:21Z",
+        "last_collected_at": "2026-09-14T09:19:21Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "operational:384",
+        "timestamp": "2026-09-14T08:16:23Z",
+        "layer": "OPERATIONAL",
+        "type": "DETENTION",
+        "signal_type": "DETENTION",
+        "event_type": "DETENTION",
+        "source": "TELEGRAM",
+        "source_post_id": "1604168769:11769",
+        "author": "migrantlar24",
+        "url": "https://t.me/migrantlar24/11769",
+        "source_url": "https://t.me/migrantlar24/11769",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.25,
+        "priority": "LOW",
+        "priority_score": 25.0,
+        "text": "📹Видео. Иркутскда миграция қонунчилигига риоя этилиши бўйича рейдлар ўтказилди\n\nИркутскдаги сабзавот омборлари ва умумий овқатланиш шохобчаларида ўтказилган миграция рейди давомида сохта ҳужжатлар билан рўйхатдан ўтган уч нафар шахс аниқланди. Ушбу қоидабузарларга нисбатан Россия Федерацияси Маъмурий жавобгарлик тўғрисидаги кодексининг 19.27-моддаси бўйича тегишли чоралар кўрилди.\n\n👉https://migrantlar24.com/vg97hm",
+        "text_excerpt": "📹Видео. Иркутскда миграция қонунчилигига риоя этилиши бўйича рейдлар ўтказилди\n\nИркутскдаги сабзавот омборлари ва умумий овқатланиш шохобчаларида ўтказилган миграция рейди давомида сохта ҳужжатлар билан рўйхатдан ўтган уч нафар шахс аниқланди. Ушбу қоидабузарларга нисбатан Россия Федерацияси Маъмурий жавобгарлик тўғрисидаги кодексининг 19.27-моддаси бўйича тегишли чоралар кўрилди.\n\n👉https://migrantlar24.com/vg97hm",
+        "event_group_id": 299,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null
+      },
       {
         "timeline_id": "information:9672",
         "timestamp": "2026-09-14T03:59:44Z",
@@ -3824,9 +4888,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "FACILITATION_REVIEW",
-        "detection_count": 1,
+        "detection_count": 2,
         "first_detected_at": "2026-09-14T04:05:42Z",
-        "last_detected_at": "2026-09-14T04:05:42Z"
+        "last_detected_at": "2026-09-14T09:19:48Z"
       },
       {
         "timeline_id": "information:9593",
@@ -4263,8 +5327,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-09-13T19:51:25Z",
-        "last_collected_at": "2026-09-14T04:04:12Z",
-        "collection_count": 2
+        "last_collected_at": "2026-09-14T09:18:24Z",
+        "collection_count": 3
       },
       {
         "timeline_id": "early_warning:529",
@@ -4787,9 +5851,9 @@
         "related_source_count": null,
         "signal_mode": "DIRECT",
         "signal_intent": "RECRUITMENT_COORDINATION",
-        "detection_count": 3,
+        "detection_count": 4,
         "first_detected_at": "2026-09-13T16:19:08Z",
-        "last_detected_at": "2026-09-14T04:05:42Z"
+        "last_detected_at": "2026-09-14T09:19:48Z"
       },
       {
         "timeline_id": "information:9572",
@@ -5011,8 +6075,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-09-13T16:23:27Z",
-        "last_collected_at": "2026-09-14T04:05:43Z",
-        "collection_count": 3
+        "last_collected_at": "2026-09-14T09:19:49Z",
+        "collection_count": 4
       },
       {
         "timeline_id": "early_warning:525",
@@ -10785,8 +11849,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-09-09T14:41:10Z",
-        "last_collected_at": "2026-09-14T04:05:43Z",
-        "collection_count": 7
+        "last_collected_at": "2026-09-14T09:19:48Z",
+        "collection_count": 8
       },
       {
         "timeline_id": "information:8820",
@@ -26069,43 +27133,6 @@
         "last_detected_at": "2026-09-01T18:49:59Z"
       },
       {
-        "timeline_id": "information:6964",
-        "timestamp": "2026-09-01T18:40:00Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2094857824232743027",
-        "author": "Gawain90",
-        "url": "https://x.com/Gawain90/status/2094857824232743027",
-        "source_url": "https://x.com/Gawain90/status/2094857824232743027",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "trafficking"
-        ],
-        "freshness_cues": [],
-        "text": "@UncruciZoroark @ImperialAtrophy @HedProtag @VodkaAutista Other migrants, most of these kids aren't even related to the people who brought them over, often kidnapped for sex trafficking and then smuggled over the border.\n\nYou people don't understand a damn thing.",
-        "text_excerpt": "@UncruciZoroark @ImperialAtrophy @HedProtag @VodkaAutista Other migrants, most of these kids aren't even related to the people who brought them over, often kidnapped for sex trafficking and then smuggled over the border.\n\nYou people don't understand a damn thing.",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-09-01T18:50:31Z",
-        "last_collected_at": "2026-09-01T18:50:31Z",
-        "collection_count": 1
-      },
-      {
         "timeline_id": "early_warning:395",
         "timestamp": "2026-09-01T18:39:55Z",
         "layer": "EARLY_WARNING",
@@ -26170,43 +27197,6 @@
         "last_detected_at": "2026-09-01T18:50:00Z"
       },
       {
-        "timeline_id": "information:6999",
-        "timestamp": "2026-09-01T18:34:26Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2094856425130340498",
-        "author": "grok",
-        "url": "https://x.com/grok/status/2094856425130340498",
-        "source_url": "https://x.com/grok/status/2094856425130340498",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "detention",
-          "arrival"
-        ],
-        "freshness_cues": [],
-        "text": "@gianlucadiddio @VodkaAutista The video references pregnant unaccompanied migrant minors held in an ORR shelter in San Benito, Texas (not an ICE adult detention camp). They arrived already pregnant. Sources report about half of those pregnancies resulted from rape prior to US custody, typically during the",
-        "text_excerpt": "@gianlucadiddio @VodkaAutista The video references pregnant unaccompanied migrant minors held in an ORR shelter in San Benito, Texas (not an ICE adult detention camp). They arrived already pregnant. Sources report about half of those pregnancies resulted from rape prior to US custody, typically during the",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-09-01T18:52:02Z",
-        "last_collected_at": "2026-09-01T18:52:02Z",
-        "collection_count": 1
-      },
-      {
         "timeline_id": "operational:297",
         "timestamp": "2026-09-01T18:32:51Z",
         "layer": "OPERATIONAL",
@@ -26268,44 +27258,6 @@
         "detection_count": 1,
         "first_detected_at": "2026-09-01T18:51:03Z",
         "last_detected_at": "2026-09-01T18:51:03Z"
-      },
-      {
-        "timeline_id": "information:6978",
-        "timestamp": "2026-09-01T18:26:19Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2094854381418287364",
-        "author": "FoxUSNews",
-        "url": "https://x.com/FoxUSNews/status/2094854381418287364",
-        "source_url": "https://x.com/FoxUSNews/status/2094854381418287364",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "channel",
-          "boat",
-          "coast_guard"
-        ],
-        "freshness_cues": [],
-        "text": "The Coast Guard deployed the cutters Sockeye and Halibut, boats from stations in Los Angeles-Long Beach and Channel Islands, and an air crew. They located the boat by 8:30 p.m. and brought all 37 suspected migrants aboard the Sockeye. https://t.co/KjhJhMXd1P",
-        "text_excerpt": "The Coast Guard deployed the cutters Sockeye and Halibut, boats from stations in Los Angeles-Long Beach and Channel Islands, and an air crew. They located the boat by 8:30 p.m. and brought all 37 suspected migrants aboard the Sockeye. https://t.co/KjhJhMXd1P",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-09-01T18:51:03Z",
-        "last_collected_at": "2026-09-01T18:51:03Z",
-        "collection_count": 1
       },
       {
         "timeline_id": "early_warning:394",
@@ -26431,43 +27383,6 @@
         "event_time_text": null,
         "event_time_normalized": null,
         "event_time_confidence": null
-      },
-      {
-        "timeline_id": "information:7037",
-        "timestamp": "2026-09-01T17:19:46Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "MASTODON",
-        "source_post_id": "mastodon_117196926898704003",
-        "author": null,
-        "url": "https://texasobserver.social/@TexasObserver/117196926898704003",
-        "source_url": "https://texasobserver.social/@TexasObserver/117196926898704003",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "arrival"
-        ],
-        "freshness_cues": [],
-        "text": "Tapachula, a city of 400,000 has emerged as a bustling Ground Zero for thousands of migrants and refugees from around the world. The influx and containment of migrants strains infrastructure, refugee services and job markets, as new arrivals struggle to figure out their next steps in an unfamiliar place. https://www. texasobserver.org/mexico-depor tation-capital-tapachula/ # Mexico # immigration # Trump # border # news",
-        "text_excerpt": "Tapachula, a city of 400,000 has emerged as a bustling Ground Zero for thousands of migrants and refugees from around the world. The influx and containment of migrants strains infrastructure, refugee services and job markets, as new arrivals struggle to figure out their next steps in an unfamiliar place. https://www. texasobserver.org/mexico-depor tation-capital-tapachula/ # Mexico # immigration # Trump # border # ne…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-09-01T20:56:10Z",
-        "last_collected_at": "2026-09-01T20:56:10Z",
-        "collection_count": 1
       },
       {
         "timeline_id": "early_warning:384",
