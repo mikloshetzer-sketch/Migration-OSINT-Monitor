@@ -1,24 +1,24 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-09-19T10:59:54Z",
-  "generated_at": "2026-09-19T10:59:54Z",
+  "updated_at": "2026-09-19T12:05:03Z",
+  "generated_at": "2026-09-19T12:05:03Z",
   "current_run": {
     "available": true,
-    "id": 167,
-    "run_uuid": "2eb47d2c-7a9b-4914-a948-971f4278f834",
-    "started_at": "2026-09-19T10:57:00Z",
-    "completed_at": "2026-09-19T10:59:53Z",
+    "id": 168,
+    "run_uuid": "96de85ab-d83d-495e-b76a-f010d0ffa0bf",
+    "started_at": "2026-09-19T12:01:20Z",
+    "completed_at": "2026-09-19T12:05:01Z",
     "status": "SUCCESS",
-    "posts_returned": 124,
-    "unique_posts_collected": 93,
+    "posts_returned": 132,
+    "unique_posts_collected": 97,
     "x_posts_returned": 50,
-    "reddit_posts_returned": 21,
+    "reddit_posts_returned": 29,
     "mastodon_posts_returned": 50,
-    "unique_x_posts": 47,
-    "unique_reddit_posts": 20,
-    "unique_mastodon_posts": 23,
+    "unique_x_posts": 45,
+    "unique_reddit_posts": 25,
+    "unique_mastodon_posts": 24,
     "noise_filtered": 0,
-    "non_operational_filtered": 93,
+    "non_operational_filtered": 95,
     "historical_references_filtered": 0,
     "influence_signals": 3,
     "influence_signals_detected": 3,
@@ -30,21 +30,21 @@
     "mobilization_report_signals": 0,
     "decision_influence_signals": 0,
     "online_influence_report_signals": 0,
-    "operational_events": 0,
-    "operational_events_analyzed": 0,
+    "operational_events": 2,
+    "operational_events_analyzed": 2,
     "historical_events_available": 40,
     "new_correlations": 0,
     "correlated_events": 0,
-    "new_correlation_groups": 0,
+    "new_correlation_groups": 2,
     "database_correlations": 0,
     "current_run_correlations": 0,
     "new_events": 0,
     "new_events_saved": 0,
-    "events_already_existing": 0,
+    "events_already_existing": 2,
     "new_event_groups": 0,
     "updated_event_groups": 0,
     "bootstrapped_event_groups": 0,
-    "existing_event_groups_reused": 0,
+    "existing_event_groups_reused": 2,
     "event_group_sources_linked": 0,
     "x_collector_errors": 0,
     "reddit_collector_errors": 0,
@@ -52,20 +52,20 @@
     "error_message": null
   },
   "kpis": {
-    "operational_events": 4,
+    "operational_events": 3,
     "new_events": 0,
     "correlated_events": 0,
     "active_event_groups": 311,
     "sources": 4,
     "regions": 3,
-    "collected_posts_24h": 282,
-    "influence_signals": 13,
-    "access_signals": 1,
+    "collected_posts_24h": 254,
+    "influence_signals": 17,
+    "access_signals": 2,
     "high_priority": 0,
-    "current_run_operational_events": 0,
-    "current_run_unique_posts": 93,
-    "access_signals_raw": 1,
-    "influence_signals_raw": 13,
+    "current_run_operational_events": 2,
+    "current_run_unique_posts": 97,
+    "access_signals_raw": 2,
+    "influence_signals_raw": 17,
     "influence_narratives": 3
   },
   "live_events": [
@@ -804,114 +804,114 @@
   ],
   "regions": [
     {
-      "name": "GLOBAL",
-      "region": "GLOBAL",
-      "count": 2,
-      "events": 2,
-      "percentage": 50.0
-    },
-    {
       "name": "MIDDLE_EAST",
       "region": "MIDDLE_EAST",
       "count": 1,
       "events": 1,
-      "percentage": 25.0
+      "percentage": 33.33
+    },
+    {
+      "name": "GLOBAL",
+      "region": "GLOBAL",
+      "count": 1,
+      "events": 1,
+      "percentage": 33.33
     },
     {
       "name": "AMERICAS",
       "region": "AMERICAS",
       "count": 1,
       "events": 1,
-      "percentage": 25.0
+      "percentage": 33.33
     }
   ],
   "sources": [
     {
       "source": "X",
       "name": "X",
-      "count": 213,
-      "posts": 213,
-      "percentage": 75.53
+      "count": 185,
+      "posts": 185,
+      "percentage": 72.83
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 36,
-      "posts": 36,
-      "percentage": 12.77
+      "count": 37,
+      "posts": 37,
+      "percentage": 14.57
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 31,
-      "posts": 31,
-      "percentage": 10.99
+      "count": 29,
+      "posts": 29,
+      "percentage": 11.42
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 2,
-      "posts": 2,
-      "percentage": 0.71
+      "count": 3,
+      "posts": 3,
+      "percentage": 1.18
     }
   ],
   "region_activity": [
-    {
-      "name": "GLOBAL",
-      "region": "GLOBAL",
-      "count": 2,
-      "events": 2,
-      "percentage": 50.0
-    },
     {
       "name": "MIDDLE_EAST",
       "region": "MIDDLE_EAST",
       "count": 1,
       "events": 1,
-      "percentage": 25.0
+      "percentage": 33.33
+    },
+    {
+      "name": "GLOBAL",
+      "region": "GLOBAL",
+      "count": 1,
+      "events": 1,
+      "percentage": 33.33
     },
     {
       "name": "AMERICAS",
       "region": "AMERICAS",
       "count": 1,
       "events": 1,
-      "percentage": 25.0
+      "percentage": 33.33
     }
   ],
   "source_activity": [
     {
       "source": "X",
       "name": "X",
-      "count": 213,
-      "posts": 213,
-      "percentage": 75.53
+      "count": 185,
+      "posts": 185,
+      "percentage": 72.83
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 36,
-      "posts": 36,
-      "percentage": 12.77
+      "count": 37,
+      "posts": 37,
+      "percentage": 14.57
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 31,
-      "posts": 31,
-      "percentage": 10.99
+      "count": 29,
+      "posts": 29,
+      "percentage": 11.42
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 2,
-      "posts": 2,
-      "percentage": 0.71
+      "count": 3,
+      "posts": 3,
+      "percentage": 1.18
     }
   ],
   "correlation": {
     "correlated_events": 0,
     "correlated_sources": 0,
-    "grouped_sources": 4,
+    "grouped_sources": 3,
     "event_groups": 311,
     "active_groups": 311,
     "multi_source_groups": 32,
@@ -929,13 +929,13 @@
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "database": "AVAILABLE",
-    "last_run_id": 167,
-    "last_completed_at": "2026-09-19T10:59:53Z"
+    "last_run_id": 168,
+    "last_completed_at": "2026-09-19T12:05:01Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 4,
-    "influence_signals_24h": 13,
-    "access_signals_24h": 1,
+    "operational_events_24h": 3,
+    "influence_signals_24h": 17,
+    "access_signals_24h": 2,
     "correlated_events_24h": 0,
     "active_event_groups": 311,
     "dominant_region": "MIDDLE_EAST",
@@ -947,12 +947,12 @@
     "correlation_rate": 0.0,
     "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 4 operatív migrációs eseményt, 13 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 311 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Middle East. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.47. A jelenlegi aktivitási szint: MODERATE."
+    "summary": "Az elmúlt 24 órában a rendszer 3 operatív migrációs eseményt, 17 influence/early-warning jelzést és 2 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 311 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Middle East. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.47. A jelenlegi aktivitási szint: MODERATE."
   },
   "analytical_assessment": {
-    "operational_events_24h": 4,
-    "influence_signals_24h": 13,
-    "access_signals_24h": 1,
+    "operational_events_24h": 3,
+    "influence_signals_24h": 17,
+    "access_signals_24h": 2,
     "correlated_events_24h": 0,
     "active_event_groups": 311,
     "dominant_region": "MIDDLE_EAST",
@@ -964,7 +964,7 @@
     "correlation_rate": 0.0,
     "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 4 operatív migrációs eseményt, 13 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 311 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Middle East. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.47. A jelenlegi aktivitási szint: MODERATE."
+    "summary": "Az elmúlt 24 órában a rendszer 3 operatív migrációs eseményt, 17 influence/early-warning jelzést és 2 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 311 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Middle East. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.47. A jelenlegi aktivitási szint: MODERATE."
   },
   "high_confidence_events": [
     {
@@ -1202,6 +1202,73 @@
       "platform_count": 1
     },
     {
+      "id": 602,
+      "source": "X",
+      "source_post_id": "2101277348184105349",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-09-19T11:48:54Z",
+      "first_detected_at": "2026-09-19T12:03:40Z",
+      "last_detected_at": "2026-09-19T12:03:40Z",
+      "detection_count": 1,
+      "text": "@ratmanbeef @CurtisDaly_ Reform UK pledges navy boat returns, mass deportations, ILR abolition, higher skilled thresholds and migrant levy-funded employer NI cuts. Conservatives plan ECHR exit, 150k annual removals and high-street business rates abolition. Restore Britain seeks full illegal deportations,",
+      "text_excerpt": "@ratmanbeef @CurtisDaly_ Reform UK pledges navy boat returns, mass deportations, ILR abolition, higher skilled thresholds and migrant levy-funded employer NI cuts. Conservatives plan ECHR exit, 150k annual removals and high-street business rates abolition. Restore Britain seeks full illegal deportations,",
+      "url": "https://x.com/grok/status/2101277348184105349",
+      "source_url": "https://x.com/grok/status/2101277348184105349",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.94,
+      "score": 15.0,
+      "matched_signals": [
+        "LEGAL_MIGRATION_SIGNAL"
+      ],
+      "matched_phrases": [
+        [
+          "legal_signal",
+          "ECHR"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 48.9,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2101277348184105349"
+      ],
+      "related_authors": [
+        "grok"
+      ],
+      "related_urls": [
+        "https://x.com/grok/status/2101277348184105349"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
+    {
       "id": 13,
       "group_id": 13,
       "event_type": "BORDER_CROSSING",
@@ -1346,166 +1413,75 @@
       "analyst_priority": "LOW"
     },
     {
-      "id": 591,
+      "id": 601,
       "source": "X",
-      "source_post_id": "2100941888454853083",
-      "author": "WestMigrantNews",
+      "source_post_id": "2101275676728840402",
+      "author": "panicfeed",
       "language": "en",
-      "published_at": "2026-09-18T13:35:54Z",
-      "first_detected_at": "2026-09-18T13:52:14Z",
-      "last_detected_at": "2026-09-18T13:52:14Z",
+      "published_at": "2026-09-19T11:42:15Z",
+      "first_detected_at": "2026-09-19T12:02:47Z",
+      "last_detected_at": "2026-09-19T12:02:47Z",
       "detection_count": 1,
-      "text": "🚨🇮🇹 BREAKING: Sea arrivals to Italy have fallen by more than half in 2026. New data from the International Organization for Migration (IOM), released between 17 and 18 September, indicate that by 15 September, just over 21,000 migrants had arrived in Italy by sea, compared with",
-      "text_excerpt": "🚨🇮🇹 BREAKING: Sea arrivals to Italy have fallen by more than half in 2026. New data from the International Organization for Migration (IOM), released between 17 and 18 September, indicate that by 15 September, just over 21,000 migrants had arrived in Italy by sea, compared with",
-      "url": "https://x.com/WestMigrantNews/status/2100941888454853083",
-      "source_url": "https://x.com/WestMigrantNews/status/2100941888454853083",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "text": "@BBCWorld The situation in Ceuta highlights the ongoing challenges surrounding migration and border control. The police action reflects a critical moment for both the migrants and local authorities. It's essential to consider the human stories behind these operations and their broader",
+      "text_excerpt": "@BBCWorld The situation in Ceuta highlights the ongoing challenges surrounding migration and border control. The police action reflects a critical moment for both the migrants and local authorities. It's essential to consider the human stories behind these operations and their broader",
+      "url": "https://x.com/panicfeed/status/2101275676728840402",
+      "source_url": "https://x.com/panicfeed/status/2101275676728840402",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.9,
-      "score": 10.0,
+      "confidence": 0.72,
+      "score": 7.25,
       "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
+        "ROUTE_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
-          "movement",
-          "migrants had arrived"
-        ],
-        [
           "route",
-          "Sea"
-        ],
-        [
-          "route",
-          "sea"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT",
-        "ROUTE"
-      ],
-      "context_matches": [
-        "migrants"
-      ],
-      "high_value_matches": [
-        "migrants had arrived"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "CENTRAL_MEDITERRANEAN",
-      "primary_region": "CENTRAL_MEDITERRANEAN",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 35.5,
-      "analyst_priority": "LOW",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "2100941888454853083"
-      ],
-      "related_authors": [
-        "WestMigrantNews"
-      ],
-      "related_urls": [
-        "https://x.com/WestMigrantNews/status/2100941888454853083"
-      ],
-      "related_sources": [
-        "X"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
-    },
-    {
-      "id": 589,
-      "source": "REDDIT",
-      "source_post_id": "reddit_1wjpbin",
-      "author": "SlowedCash",
-      "language": null,
-      "published_at": "2026-09-18T12:50:25Z",
-      "first_detected_at": "2026-09-18T13:50:38Z",
-      "last_detected_at": "2026-09-18T13:50:38Z",
-      "detection_count": 1,
-      "text": "Teenager jailed for piloting mega dinghy across the Channel\nA 19-year-old has been jailed for more than two years for piloting a \"mega dinghy\" carrying 167 people across the Channel. Chan Mathok Atak, from South Sudan, was said to have been one of two pilots on the boat, which crossed from France to the UK in July. It was estimated at about 13m long - the same length as a bus. At Canterbury Crown Court on Friday, Atak was sentenced to two years and three months in prison. At the time it was intercepted, it was the most people ever found on a migrant boat in the Channel. However, that figure has since been surpassed with 230 arriving in one vessel last month.",
-      "text_excerpt": "Teenager jailed for piloting mega dinghy across the Channel\nA 19-year-old has been jailed for more than two years for piloting a \"mega dinghy\" carrying 167 people across the Channel. Chan Mathok Atak, from South Sudan, was said to have been one of two pilots on the boat, which crossed from France to the UK in July. It was estimated at about 13m long - the same length as a bus. At Canterbury Crown Court on Friday, Atak was sentenced to two years and three months in prison. At the time it was intercepted, it was the most people ever found on a migrant boat in the Channel. However, that figure has since been surpassed with 230 arriving in one vessel last month.",
-      "url": "https://www.reddit.com/r/uknews/comments/1wjpbin/teenager_jailed_for_piloting_mega_dinghy_across/",
-      "source_url": "https://www.reddit.com/r/uknews/comments/1wjpbin/teenager_jailed_for_piloting_mega_dinghy_across/",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.9,
-      "score": 12.25,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrant boat in the Channel. However, that figure has since been surpassed with 230 arriving"
-        ],
-        [
-          "route",
-          "boat"
-        ],
-        [
-          "route",
-          "vessel"
+          "border"
         ],
         [
           "enforcement",
-          "intercepted"
+          "police"
         ]
       ],
       "matched_groups": [
-        "MOVEMENT",
         "ROUTE",
         "ENFORCEMENT"
       ],
       "context_matches": [
-        "migrant"
+        "migrants"
       ],
-      "high_value_matches": [
-        "migrant boat in the Channel. However, that figure has since been surpassed with 230 arriving"
-      ],
+      "high_value_matches": [],
       "signal_context_rejections": [],
       "migration_context": true,
       "human_migration_context": true,
       "historical_reference": false,
       "historical_reason": null,
       "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "HORN_OF_AFRICA",
-      "primary_region": "HORN_OF_AFRICA",
-      "latitude": null,
-      "longitude": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 35.5,
+      "priority_score": 36.2,
       "analyst_priority": "LOW",
       "related_posts_count": 1,
       "related_post_ids": [
-        "reddit_1wjpbin"
+        "2101275676728840402"
       ],
       "related_authors": [
-        "SlowedCash"
+        "panicfeed"
       ],
       "related_urls": [
-        "https://www.reddit.com/r/uknews/comments/1wjpbin/teenager_jailed_for_piloting_mega_dinghy_across/"
+        "https://x.com/panicfeed/status/2101275676728840402"
       ],
       "related_sources": [
-        "REDDIT"
+        "X"
       ],
       "independent_author_count": 1,
       "platform_count": 1
@@ -1588,6 +1564,124 @@
       "analyst_priority": "MEDIUM"
     },
     {
+      "id": 602,
+      "source": "X",
+      "source_post_id": "2101277348184105349",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-09-19T11:48:54Z",
+      "first_detected_at": "2026-09-19T12:03:40Z",
+      "last_detected_at": "2026-09-19T12:03:40Z",
+      "detection_count": 1,
+      "text": "@ratmanbeef @CurtisDaly_ Reform UK pledges navy boat returns, mass deportations, ILR abolition, higher skilled thresholds and migrant levy-funded employer NI cuts. Conservatives plan ECHR exit, 150k annual removals and high-street business rates abolition. Restore Britain seeks full illegal deportations,",
+      "text_excerpt": "@ratmanbeef @CurtisDaly_ Reform UK pledges navy boat returns, mass deportations, ILR abolition, higher skilled thresholds and migrant levy-funded employer NI cuts. Conservatives plan ECHR exit, 150k annual removals and high-street business rates abolition. Restore Britain seeks full illegal deportations,",
+      "url": "https://x.com/grok/status/2101277348184105349",
+      "source_url": "https://x.com/grok/status/2101277348184105349",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.94,
+      "score": 15.0,
+      "matched_signals": [
+        "LEGAL_MIGRATION_SIGNAL"
+      ],
+      "matched_phrases": [
+        [
+          "legal_signal",
+          "ECHR"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 48.9,
+      "analyst_priority": "MEDIUM"
+    },
+    {
+      "id": 603,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1wk12i5",
+      "author": "Ok_Signal4754",
+      "language": null,
+      "published_at": "2026-09-18T20:13:02Z",
+      "first_detected_at": "2026-09-19T12:04:21Z",
+      "last_detected_at": "2026-09-19T12:04:21Z",
+      "detection_count": 1,
+      "text": "Gavdos: 14-year-old South Sudanese national arrested as 43 migrant smuggler, he was indicated by boat passenger | Greece\nSource",
+      "text_excerpt": "Gavdos: 14-year-old South Sudanese national arrested as 43 migrant smuggler, he was indicated by boat passenger | Greece\nSource",
+      "url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1wk12i5/gavdos_14yearold_south_sudanese_national_arrested/",
+      "source_url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1wk12i5/gavdos_14yearold_south_sudanese_national_arrested/",
+      "primary_signal": "FACILITATION_EARLY_WARNING",
+      "signal_type": "FACILITATION_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "FACILITATION_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.9,
+      "score": 10.25,
+      "matched_signals": [
+        "FACILITATION_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "boat"
+        ],
+        [
+          "facilitation",
+          "migrant smuggler"
+        ],
+        [
+          "enforcement",
+          "arrested"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "FACILITATION",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": [
+        "migrant smuggler"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "EASTERN_MEDITERRANEAN",
+      "primary_region": "EASTERN_MEDITERRANEAN",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 35.5,
+      "analyst_priority": "LOW"
+    },
+    {
       "id": 591,
       "source": "X",
       "source_post_id": "2100941888454853083",
@@ -1723,6 +1817,67 @@
       "analyst_priority": "LOW"
     },
     {
+      "id": 600,
+      "source": "X",
+      "source_post_id": "2101280192303939829",
+      "author": "BorderReportcom",
+      "language": "en",
+      "published_at": "2026-09-19T12:00:12Z",
+      "first_detected_at": "2026-09-19T12:02:46Z",
+      "last_detected_at": "2026-09-19T12:02:46Z",
+      "detection_count": 1,
+      "text": "Nearly three dozen migrants were found stuffed in the back of a utility truck near the U.S.-Mexico border after their driver abandoned them and fled to Mexico.https://t.co/3Y03hVpCZ9",
+      "text_excerpt": "Nearly three dozen migrants were found stuffed in the back of a utility truck near the U.S.-Mexico border after their driver abandoned them and fled to Mexico.https://t.co/3Y03hVpCZ9",
+      "url": "https://x.com/BorderReportcom/status/2101280192303939829",
+      "source_url": "https://x.com/BorderReportcom/status/2101280192303939829",
+      "primary_signal": "FACILITATION_EARLY_WARNING",
+      "signal_type": "FACILITATION_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "FACILITATION_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.8,
+      "score": 8.25,
+      "matched_signals": [
+        "FACILITATION_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "border"
+        ],
+        [
+          "facilitation",
+          "migrants were found stuffed in the back of a utility truck near the U.S.-Mexico border after their driver"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "FACILITATION"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "migrants were found stuffed in the back of a utility truck near the U.S.-Mexico border after their driver"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "AMERICAS",
+      "primary_region": "AMERICAS",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 32.0,
+      "analyst_priority": "LOW"
+    },
+    {
       "id": 593,
       "source": "X",
       "source_post_id": "2101246317779464657",
@@ -1845,48 +2000,43 @@
       "analyst_priority": "LOW"
     },
     {
-      "id": 586,
+      "id": 604,
       "source": "X",
-      "source_post_id": "2100904905288392708",
-      "author": "Foxyblueu",
+      "source_post_id": "2101280390623449160",
+      "author": "Mfatiamh03",
       "language": "en",
-      "published_at": "2026-09-18T11:08:57Z",
-      "first_detected_at": "2026-09-18T11:18:39Z",
-      "last_detected_at": "2026-09-18T11:18:39Z",
+      "published_at": "2026-09-19T12:00:59Z",
+      "first_detected_at": "2026-09-19T12:04:59Z",
+      "last_detected_at": "2026-09-19T12:04:59Z",
       "detection_count": 1,
-      "text": "@visegrad24 Let's be brutally honest here. The legal definition of 'migrant' implies authorized entry. An individual breaking into a vehicle to cross a border is, by definition, an intruder, not a contributing member, regardless of the media's preferred narrative. Feelings don't change laws.",
-      "text_excerpt": "@visegrad24 Let's be brutally honest here. The legal definition of 'migrant' implies authorized entry. An individual breaking into a vehicle to cross a border is, by definition, an intruder, not a contributing member, regardless of the media's preferred narrative. Feelings don't change laws.",
-      "url": "https://x.com/Foxyblueu/status/2100904905288392708",
-      "source_url": "https://x.com/Foxyblueu/status/2100904905288392708",
+      "text": "@wajih_sani @Grok\nEven Grok’s data completely deconstructs the \"population swap\" narrative. The math is simple: departing non-Muslims left 38.1 billion Rupees in assets, while incoming refugees abandoned just 3.8 billion Rupees in India. This was a 10x economic deficit that Sindh absorbed",
+      "text_excerpt": "@wajih_sani @Grok\nEven Grok’s data completely deconstructs the \"population swap\" narrative. The math is simple: departing non-Muslims left 38.1 billion Rupees in assets, while incoming refugees abandoned just 3.8 billion Rupees in India. This was a 10x economic deficit that Sindh absorbed",
+      "url": "https://x.com/Mfatiamh03/status/2101280390623449160",
+      "source_url": "https://x.com/Mfatiamh03/status/2101280390623449160",
       "primary_signal": "MOVEMENT_EARLY_WARNING",
       "signal_type": "MOVEMENT_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
       "signal_intent": "MOVEMENT_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 8.25,
+      "confidence": 0.72,
+      "score": 7.75,
       "matched_signals": [
         "MOVEMENT_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
           "movement",
-          "migrant' implies authorized entry. An individual breaking into a vehicle to cross"
-        ],
-        [
-          "route",
-          "border"
+          "departing non-Muslims left 38.1 billion Rupees in assets, while incoming refugees"
         ]
       ],
       "matched_groups": [
-        "MOVEMENT",
-        "ROUTE"
+        "MOVEMENT"
       ],
       "context_matches": [
-        "migrant"
+        "refugees"
       ],
       "high_value_matches": [
-        "migrant' implies authorized entry. An individual breaking into a vehicle to cross"
+        "departing non-Muslims left 38.1 billion Rupees in assets, while incoming refugees"
       ],
       "signal_context_rejections": [],
       "migration_context": true,
@@ -1902,7 +2052,122 @@
       "latitude": null,
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
+      "priority_score": 25.2,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 605,
+      "source": "X",
+      "source_post_id": "2101278730366919014",
+      "author": "Mfatiamh03",
+      "language": "en",
+      "published_at": "2026-09-19T11:54:23Z",
+      "first_detected_at": "2026-09-19T12:04:59Z",
+      "last_detected_at": "2026-09-19T12:04:59Z",
+      "detection_count": 1,
+      "text": "@grok @grok\nEven Grok’s data completely deconstructs the \"population swap\" narrative. The math is simple: departing non-Muslims left 38.1 billion Rupees in assets, while incoming refugees abandoned just 3.8 billion Rupees in India. This was a 10x economic deficit that Sindh absorbed",
+      "text_excerpt": "@grok @grok\nEven Grok’s data completely deconstructs the \"population swap\" narrative. The math is simple: departing non-Muslims left 38.1 billion Rupees in assets, while incoming refugees abandoned just 3.8 billion Rupees in India. This was a 10x economic deficit that Sindh absorbed",
+      "url": "https://x.com/Mfatiamh03/status/2101278730366919014",
+      "source_url": "https://x.com/Mfatiamh03/status/2101278730366919014",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.75,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "departing non-Muslims left 38.1 billion Rupees in assets, while incoming refugees"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT"
+      ],
+      "context_matches": [
+        "refugees"
+      ],
+      "high_value_matches": [
+        "departing non-Muslims left 38.1 billion Rupees in assets, while incoming refugees"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 25.2,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 601,
+      "source": "X",
+      "source_post_id": "2101275676728840402",
+      "author": "panicfeed",
+      "language": "en",
+      "published_at": "2026-09-19T11:42:15Z",
+      "first_detected_at": "2026-09-19T12:02:47Z",
+      "last_detected_at": "2026-09-19T12:02:47Z",
+      "detection_count": 1,
+      "text": "@BBCWorld The situation in Ceuta highlights the ongoing challenges surrounding migration and border control. The police action reflects a critical moment for both the migrants and local authorities. It's essential to consider the human stories behind these operations and their broader",
+      "text_excerpt": "@BBCWorld The situation in Ceuta highlights the ongoing challenges surrounding migration and border control. The police action reflects a critical moment for both the migrants and local authorities. It's essential to consider the human stories behind these operations and their broader",
+      "url": "https://x.com/panicfeed/status/2101275676728840402",
+      "source_url": "https://x.com/panicfeed/status/2101275676728840402",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.25,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "border"
+        ],
+        [
+          "enforcement",
+          "police"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 36.2,
       "analyst_priority": "LOW"
     },
     {
@@ -2140,8 +2405,8 @@
       "language": null,
       "published_at": "2026-09-19T03:18:56Z",
       "first_detected_at": "2026-09-19T09:58:59Z",
-      "last_detected_at": "2026-09-19T09:58:59Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-09-19T12:02:48Z",
+      "detection_count": 2,
       "text": "Can my partner work abroad 10–12 days per month after moving to the Netherlands?\nHi everyone, I’m moving to the Netherlands as a highly skilled migrant, and my partner will join me on a partner residence permit. My partner is currently a salaried employee in a non-EU country. After collecting the residence card and registering with the municipality, they plan to return there for around 10–12 working days each month for few months to finish their current job while looking for NL job. They would work while physically there, except possibly for an occasional urgent task from the Netherlands. Could this create any issues regarding: - Their IND residence status or frequent travel? - Dutch taxes or social-security obligations? - Obligations for their foreign employer? Should we obtain professional legal or cross-border tax advice before doing this? If so, could anyone recommend a reliable company or adviser in the Netherlands? Has anyone handled a similar situation? Thanks!",
       "text_excerpt": "Can my partner work abroad 10–12 days per month after moving to the Netherlands?\nHi everyone, I’m moving to the Netherlands as a highly skilled migrant, and my partner will join me on a partner residence permit. My partner is currently a salaried employee in a non-EU country. After collecting the residence card and registering with the municipality, they plan to return there for around 10–12 working days each month for few months to finish their current job while looking for NL job. They would work while physically there, except possibly for an occasional urgent task from the Netherlands. Could this create any issues regarding: - Their IND residence status or frequent travel? - Dutch taxes o",
       "url": "https://www.reddit.com/r/Netherlands/comments/1wkavuv/can_my_partner_work_abroad_1012_days_per_month/",
@@ -2247,60 +2512,6 @@
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
       "priority_score": 21.7,
-      "analyst_priority": "LOW"
-    },
-    {
-      "id": 583,
-      "source": "X",
-      "source_post_id": "2100906835309928544",
-      "author": "grok",
-      "language": "en",
-      "published_at": "2026-09-18T11:16:37Z",
-      "first_detected_at": "2026-09-18T11:17:52Z",
-      "last_detected_at": "2026-09-18T11:17:52Z",
-      "detection_count": 1,
-      "text": "@__Randy__Watson @MarioBojic No, the video is from early this morning (18 Sep 2026) in Ceuta, not last night. It captures the chaotic police transfer of thousands of migrants from beach camps to a limited-capacity port shelter (~1,700 spots). Crowds stampeded and ran through the streets; officers fired",
-      "text_excerpt": "@__Randy__Watson @MarioBojic No, the video is from early this morning (18 Sep 2026) in Ceuta, not last night. It captures the chaotic police transfer of thousands of migrants from beach camps to a limited-capacity port shelter (~1,700 spots). Crowds stampeded and ran through the streets; officers fired",
-      "url": "https://x.com/grok/status/2100906835309928544",
-      "source_url": "https://x.com/grok/status/2100906835309928544",
-      "primary_signal": "ENFORCEMENT_EARLY_WARNING",
-      "signal_type": "ENFORCEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ENFORCEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.62,
-      "score": 5.5,
-      "matched_signals": [
-        "ENFORCEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "enforcement",
-          "police"
-        ]
-      ],
-      "matched_groups": [
-        "ENFORCEMENT"
-      ],
-      "context_matches": [
-        "migrants"
-      ],
-      "high_value_matches": [],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "Ceuta",
-      "primary_location": "Ceuta",
-      "country": "Spain",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": 35.8894,
-      "longitude": -5.3213,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 32.7,
       "analyst_priority": "LOW"
     }
   ],
@@ -2363,6 +2574,124 @@
       "analyst_priority": "MEDIUM"
     },
     {
+      "id": 602,
+      "source": "X",
+      "source_post_id": "2101277348184105349",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-09-19T11:48:54Z",
+      "first_detected_at": "2026-09-19T12:03:40Z",
+      "last_detected_at": "2026-09-19T12:03:40Z",
+      "detection_count": 1,
+      "text": "@ratmanbeef @CurtisDaly_ Reform UK pledges navy boat returns, mass deportations, ILR abolition, higher skilled thresholds and migrant levy-funded employer NI cuts. Conservatives plan ECHR exit, 150k annual removals and high-street business rates abolition. Restore Britain seeks full illegal deportations,",
+      "text_excerpt": "@ratmanbeef @CurtisDaly_ Reform UK pledges navy boat returns, mass deportations, ILR abolition, higher skilled thresholds and migrant levy-funded employer NI cuts. Conservatives plan ECHR exit, 150k annual removals and high-street business rates abolition. Restore Britain seeks full illegal deportations,",
+      "url": "https://x.com/grok/status/2101277348184105349",
+      "source_url": "https://x.com/grok/status/2101277348184105349",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.94,
+      "score": 15.0,
+      "matched_signals": [
+        "LEGAL_MIGRATION_SIGNAL"
+      ],
+      "matched_phrases": [
+        [
+          "legal_signal",
+          "ECHR"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 48.9,
+      "analyst_priority": "MEDIUM"
+    },
+    {
+      "id": 603,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1wk12i5",
+      "author": "Ok_Signal4754",
+      "language": null,
+      "published_at": "2026-09-18T20:13:02Z",
+      "first_detected_at": "2026-09-19T12:04:21Z",
+      "last_detected_at": "2026-09-19T12:04:21Z",
+      "detection_count": 1,
+      "text": "Gavdos: 14-year-old South Sudanese national arrested as 43 migrant smuggler, he was indicated by boat passenger | Greece\nSource",
+      "text_excerpt": "Gavdos: 14-year-old South Sudanese national arrested as 43 migrant smuggler, he was indicated by boat passenger | Greece\nSource",
+      "url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1wk12i5/gavdos_14yearold_south_sudanese_national_arrested/",
+      "source_url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1wk12i5/gavdos_14yearold_south_sudanese_national_arrested/",
+      "primary_signal": "FACILITATION_EARLY_WARNING",
+      "signal_type": "FACILITATION_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "FACILITATION_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.9,
+      "score": 10.25,
+      "matched_signals": [
+        "FACILITATION_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "boat"
+        ],
+        [
+          "facilitation",
+          "migrant smuggler"
+        ],
+        [
+          "enforcement",
+          "arrested"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "FACILITATION",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": [
+        "migrant smuggler"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "EASTERN_MEDITERRANEAN",
+      "primary_region": "EASTERN_MEDITERRANEAN",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 35.5,
+      "analyst_priority": "LOW"
+    },
+    {
       "id": 591,
       "source": "X",
       "source_post_id": "2100941888454853083",
@@ -2498,6 +2827,67 @@
       "analyst_priority": "LOW"
     },
     {
+      "id": 600,
+      "source": "X",
+      "source_post_id": "2101280192303939829",
+      "author": "BorderReportcom",
+      "language": "en",
+      "published_at": "2026-09-19T12:00:12Z",
+      "first_detected_at": "2026-09-19T12:02:46Z",
+      "last_detected_at": "2026-09-19T12:02:46Z",
+      "detection_count": 1,
+      "text": "Nearly three dozen migrants were found stuffed in the back of a utility truck near the U.S.-Mexico border after their driver abandoned them and fled to Mexico.https://t.co/3Y03hVpCZ9",
+      "text_excerpt": "Nearly three dozen migrants were found stuffed in the back of a utility truck near the U.S.-Mexico border after their driver abandoned them and fled to Mexico.https://t.co/3Y03hVpCZ9",
+      "url": "https://x.com/BorderReportcom/status/2101280192303939829",
+      "source_url": "https://x.com/BorderReportcom/status/2101280192303939829",
+      "primary_signal": "FACILITATION_EARLY_WARNING",
+      "signal_type": "FACILITATION_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "FACILITATION_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.8,
+      "score": 8.25,
+      "matched_signals": [
+        "FACILITATION_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "border"
+        ],
+        [
+          "facilitation",
+          "migrants were found stuffed in the back of a utility truck near the U.S.-Mexico border after their driver"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "FACILITATION"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "migrants were found stuffed in the back of a utility truck near the U.S.-Mexico border after their driver"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "AMERICAS",
+      "primary_region": "AMERICAS",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 32.0,
+      "analyst_priority": "LOW"
+    },
+    {
       "id": 593,
       "source": "X",
       "source_post_id": "2101246317779464657",
@@ -2620,48 +3010,43 @@
       "analyst_priority": "LOW"
     },
     {
-      "id": 586,
+      "id": 604,
       "source": "X",
-      "source_post_id": "2100904905288392708",
-      "author": "Foxyblueu",
+      "source_post_id": "2101280390623449160",
+      "author": "Mfatiamh03",
       "language": "en",
-      "published_at": "2026-09-18T11:08:57Z",
-      "first_detected_at": "2026-09-18T11:18:39Z",
-      "last_detected_at": "2026-09-18T11:18:39Z",
+      "published_at": "2026-09-19T12:00:59Z",
+      "first_detected_at": "2026-09-19T12:04:59Z",
+      "last_detected_at": "2026-09-19T12:04:59Z",
       "detection_count": 1,
-      "text": "@visegrad24 Let's be brutally honest here. The legal definition of 'migrant' implies authorized entry. An individual breaking into a vehicle to cross a border is, by definition, an intruder, not a contributing member, regardless of the media's preferred narrative. Feelings don't change laws.",
-      "text_excerpt": "@visegrad24 Let's be brutally honest here. The legal definition of 'migrant' implies authorized entry. An individual breaking into a vehicle to cross a border is, by definition, an intruder, not a contributing member, regardless of the media's preferred narrative. Feelings don't change laws.",
-      "url": "https://x.com/Foxyblueu/status/2100904905288392708",
-      "source_url": "https://x.com/Foxyblueu/status/2100904905288392708",
+      "text": "@wajih_sani @Grok\nEven Grok’s data completely deconstructs the \"population swap\" narrative. The math is simple: departing non-Muslims left 38.1 billion Rupees in assets, while incoming refugees abandoned just 3.8 billion Rupees in India. This was a 10x economic deficit that Sindh absorbed",
+      "text_excerpt": "@wajih_sani @Grok\nEven Grok’s data completely deconstructs the \"population swap\" narrative. The math is simple: departing non-Muslims left 38.1 billion Rupees in assets, while incoming refugees abandoned just 3.8 billion Rupees in India. This was a 10x economic deficit that Sindh absorbed",
+      "url": "https://x.com/Mfatiamh03/status/2101280390623449160",
+      "source_url": "https://x.com/Mfatiamh03/status/2101280390623449160",
       "primary_signal": "MOVEMENT_EARLY_WARNING",
       "signal_type": "MOVEMENT_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
       "signal_intent": "MOVEMENT_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 8.25,
+      "confidence": 0.72,
+      "score": 7.75,
       "matched_signals": [
         "MOVEMENT_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
           "movement",
-          "migrant' implies authorized entry. An individual breaking into a vehicle to cross"
-        ],
-        [
-          "route",
-          "border"
+          "departing non-Muslims left 38.1 billion Rupees in assets, while incoming refugees"
         ]
       ],
       "matched_groups": [
-        "MOVEMENT",
-        "ROUTE"
+        "MOVEMENT"
       ],
       "context_matches": [
-        "migrant"
+        "refugees"
       ],
       "high_value_matches": [
-        "migrant' implies authorized entry. An individual breaking into a vehicle to cross"
+        "departing non-Muslims left 38.1 billion Rupees in assets, while incoming refugees"
       ],
       "signal_context_rejections": [],
       "migration_context": true,
@@ -2677,7 +3062,122 @@
       "latitude": null,
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
+      "priority_score": 25.2,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 605,
+      "source": "X",
+      "source_post_id": "2101278730366919014",
+      "author": "Mfatiamh03",
+      "language": "en",
+      "published_at": "2026-09-19T11:54:23Z",
+      "first_detected_at": "2026-09-19T12:04:59Z",
+      "last_detected_at": "2026-09-19T12:04:59Z",
+      "detection_count": 1,
+      "text": "@grok @grok\nEven Grok’s data completely deconstructs the \"population swap\" narrative. The math is simple: departing non-Muslims left 38.1 billion Rupees in assets, while incoming refugees abandoned just 3.8 billion Rupees in India. This was a 10x economic deficit that Sindh absorbed",
+      "text_excerpt": "@grok @grok\nEven Grok’s data completely deconstructs the \"population swap\" narrative. The math is simple: departing non-Muslims left 38.1 billion Rupees in assets, while incoming refugees abandoned just 3.8 billion Rupees in India. This was a 10x economic deficit that Sindh absorbed",
+      "url": "https://x.com/Mfatiamh03/status/2101278730366919014",
+      "source_url": "https://x.com/Mfatiamh03/status/2101278730366919014",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.75,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "departing non-Muslims left 38.1 billion Rupees in assets, while incoming refugees"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT"
+      ],
+      "context_matches": [
+        "refugees"
+      ],
+      "high_value_matches": [
+        "departing non-Muslims left 38.1 billion Rupees in assets, while incoming refugees"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 25.2,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 601,
+      "source": "X",
+      "source_post_id": "2101275676728840402",
+      "author": "panicfeed",
+      "language": "en",
+      "published_at": "2026-09-19T11:42:15Z",
+      "first_detected_at": "2026-09-19T12:02:47Z",
+      "last_detected_at": "2026-09-19T12:02:47Z",
+      "detection_count": 1,
+      "text": "@BBCWorld The situation in Ceuta highlights the ongoing challenges surrounding migration and border control. The police action reflects a critical moment for both the migrants and local authorities. It's essential to consider the human stories behind these operations and their broader",
+      "text_excerpt": "@BBCWorld The situation in Ceuta highlights the ongoing challenges surrounding migration and border control. The police action reflects a critical moment for both the migrants and local authorities. It's essential to consider the human stories behind these operations and their broader",
+      "url": "https://x.com/panicfeed/status/2101275676728840402",
+      "source_url": "https://x.com/panicfeed/status/2101275676728840402",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.25,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "border"
+        ],
+        [
+          "enforcement",
+          "police"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 36.2,
       "analyst_priority": "LOW"
     },
     {
@@ -2915,8 +3415,8 @@
       "language": null,
       "published_at": "2026-09-19T03:18:56Z",
       "first_detected_at": "2026-09-19T09:58:59Z",
-      "last_detected_at": "2026-09-19T09:58:59Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-09-19T12:02:48Z",
+      "detection_count": 2,
       "text": "Can my partner work abroad 10–12 days per month after moving to the Netherlands?\nHi everyone, I’m moving to the Netherlands as a highly skilled migrant, and my partner will join me on a partner residence permit. My partner is currently a salaried employee in a non-EU country. After collecting the residence card and registering with the municipality, they plan to return there for around 10–12 working days each month for few months to finish their current job while looking for NL job. They would work while physically there, except possibly for an occasional urgent task from the Netherlands. Could this create any issues regarding: - Their IND residence status or frequent travel? - Dutch taxes or social-security obligations? - Obligations for their foreign employer? Should we obtain professional legal or cross-border tax advice before doing this? If so, could anyone recommend a reliable company or adviser in the Netherlands? Has anyone handled a similar situation? Thanks!",
       "text_excerpt": "Can my partner work abroad 10–12 days per month after moving to the Netherlands?\nHi everyone, I’m moving to the Netherlands as a highly skilled migrant, and my partner will join me on a partner residence permit. My partner is currently a salaried employee in a non-EU country. After collecting the residence card and registering with the municipality, they plan to return there for around 10–12 working days each month for few months to finish their current job while looking for NL job. They would work while physically there, except possibly for an occasional urgent task from the Netherlands. Could this create any issues regarding: - Their IND residence status or frequent travel? - Dutch taxes o",
       "url": "https://www.reddit.com/r/Netherlands/comments/1wkavuv/can_my_partner_work_abroad_1012_days_per_month/",
@@ -3022,60 +3522,6 @@
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
       "priority_score": 21.7,
-      "analyst_priority": "LOW"
-    },
-    {
-      "id": 583,
-      "source": "X",
-      "source_post_id": "2100906835309928544",
-      "author": "grok",
-      "language": "en",
-      "published_at": "2026-09-18T11:16:37Z",
-      "first_detected_at": "2026-09-18T11:17:52Z",
-      "last_detected_at": "2026-09-18T11:17:52Z",
-      "detection_count": 1,
-      "text": "@__Randy__Watson @MarioBojic No, the video is from early this morning (18 Sep 2026) in Ceuta, not last night. It captures the chaotic police transfer of thousands of migrants from beach camps to a limited-capacity port shelter (~1,700 spots). Crowds stampeded and ran through the streets; officers fired",
-      "text_excerpt": "@__Randy__Watson @MarioBojic No, the video is from early this morning (18 Sep 2026) in Ceuta, not last night. It captures the chaotic police transfer of thousands of migrants from beach camps to a limited-capacity port shelter (~1,700 spots). Crowds stampeded and ran through the streets; officers fired",
-      "url": "https://x.com/grok/status/2100906835309928544",
-      "source_url": "https://x.com/grok/status/2100906835309928544",
-      "primary_signal": "ENFORCEMENT_EARLY_WARNING",
-      "signal_type": "ENFORCEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ENFORCEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.62,
-      "score": 5.5,
-      "matched_signals": [
-        "ENFORCEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "enforcement",
-          "police"
-        ]
-      ],
-      "matched_groups": [
-        "ENFORCEMENT"
-      ],
-      "context_matches": [
-        "migrants"
-      ],
-      "high_value_matches": [],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "Ceuta",
-      "primary_location": "Ceuta",
-      "country": "Spain",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": 35.8894,
-      "longitude": -5.3213,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 32.7,
       "analyst_priority": "LOW"
     }
   ],
@@ -3153,78 +3599,65 @@
       "platform_count": 1
     },
     {
-      "id": 591,
+      "id": 602,
       "source": "X",
-      "source_post_id": "2100941888454853083",
-      "author": "WestMigrantNews",
+      "source_post_id": "2101277348184105349",
+      "author": "grok",
       "language": "en",
-      "published_at": "2026-09-18T13:35:54Z",
-      "first_detected_at": "2026-09-18T13:52:14Z",
-      "last_detected_at": "2026-09-18T13:52:14Z",
+      "published_at": "2026-09-19T11:48:54Z",
+      "first_detected_at": "2026-09-19T12:03:40Z",
+      "last_detected_at": "2026-09-19T12:03:40Z",
       "detection_count": 1,
-      "text": "🚨🇮🇹 BREAKING: Sea arrivals to Italy have fallen by more than half in 2026. New data from the International Organization for Migration (IOM), released between 17 and 18 September, indicate that by 15 September, just over 21,000 migrants had arrived in Italy by sea, compared with",
-      "text_excerpt": "🚨🇮🇹 BREAKING: Sea arrivals to Italy have fallen by more than half in 2026. New data from the International Organization for Migration (IOM), released between 17 and 18 September, indicate that by 15 September, just over 21,000 migrants had arrived in Italy by sea, compared with",
-      "url": "https://x.com/WestMigrantNews/status/2100941888454853083",
-      "source_url": "https://x.com/WestMigrantNews/status/2100941888454853083",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
+      "text": "@ratmanbeef @CurtisDaly_ Reform UK pledges navy boat returns, mass deportations, ILR abolition, higher skilled thresholds and migrant levy-funded employer NI cuts. Conservatives plan ECHR exit, 150k annual removals and high-street business rates abolition. Restore Britain seeks full illegal deportations,",
+      "text_excerpt": "@ratmanbeef @CurtisDaly_ Reform UK pledges navy boat returns, mass deportations, ILR abolition, higher skilled thresholds and migrant levy-funded employer NI cuts. Conservatives plan ECHR exit, 150k annual removals and high-street business rates abolition. Restore Britain seeks full illegal deportations,",
+      "url": "https://x.com/grok/status/2101277348184105349",
+      "source_url": "https://x.com/grok/status/2101277348184105349",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
       "priority": "MEDIUM",
-      "confidence": 0.9,
-      "score": 10.0,
+      "confidence": 0.94,
+      "score": 15.0,
       "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
+        "LEGAL_MIGRATION_SIGNAL"
       ],
       "matched_phrases": [
         [
-          "movement",
-          "migrants had arrived"
-        ],
-        [
-          "route",
-          "Sea"
-        ],
-        [
-          "route",
-          "sea"
+          "legal_signal",
+          "ECHR"
         ]
       ],
-      "matched_groups": [
-        "MOVEMENT",
-        "ROUTE"
-      ],
+      "matched_groups": [],
       "context_matches": [
-        "migrants"
+        "migrant"
       ],
-      "high_value_matches": [
-        "migrants had arrived"
-      ],
-      "signal_context_rejections": [],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
       "migration_context": true,
-      "human_migration_context": true,
+      "human_migration_context": null,
       "historical_reference": false,
       "historical_reason": null,
       "historical_reference_text": null,
       "location": "-",
       "primary_location": "-",
       "country": "-",
-      "region": "CENTRAL_MEDITERRANEAN",
-      "primary_region": "CENTRAL_MEDITERRANEAN",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
       "latitude": null,
       "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 35.5,
-      "analyst_priority": "LOW",
+      "rules_version": "2.6",
+      "priority_score": 48.9,
+      "analyst_priority": "MEDIUM",
       "related_posts_count": 1,
       "related_post_ids": [
-        "2100941888454853083"
+        "2101277348184105349"
       ],
       "related_authors": [
-        "WestMigrantNews"
+        "grok"
       ],
       "related_urls": [
-        "https://x.com/WestMigrantNews/status/2100941888454853083"
+        "https://x.com/grok/status/2101277348184105349"
       ],
       "related_sources": [
         "X"
@@ -3233,86 +3666,75 @@
       "platform_count": 1
     },
     {
-      "id": 589,
-      "source": "REDDIT",
-      "source_post_id": "reddit_1wjpbin",
-      "author": "SlowedCash",
-      "language": null,
-      "published_at": "2026-09-18T12:50:25Z",
-      "first_detected_at": "2026-09-18T13:50:38Z",
-      "last_detected_at": "2026-09-18T13:50:38Z",
+      "id": 601,
+      "source": "X",
+      "source_post_id": "2101275676728840402",
+      "author": "panicfeed",
+      "language": "en",
+      "published_at": "2026-09-19T11:42:15Z",
+      "first_detected_at": "2026-09-19T12:02:47Z",
+      "last_detected_at": "2026-09-19T12:02:47Z",
       "detection_count": 1,
-      "text": "Teenager jailed for piloting mega dinghy across the Channel\nA 19-year-old has been jailed for more than two years for piloting a \"mega dinghy\" carrying 167 people across the Channel. Chan Mathok Atak, from South Sudan, was said to have been one of two pilots on the boat, which crossed from France to the UK in July. It was estimated at about 13m long - the same length as a bus. At Canterbury Crown Court on Friday, Atak was sentenced to two years and three months in prison. At the time it was intercepted, it was the most people ever found on a migrant boat in the Channel. However, that figure has since been surpassed with 230 arriving in one vessel last month.",
-      "text_excerpt": "Teenager jailed for piloting mega dinghy across the Channel\nA 19-year-old has been jailed for more than two years for piloting a \"mega dinghy\" carrying 167 people across the Channel. Chan Mathok Atak, from South Sudan, was said to have been one of two pilots on the boat, which crossed from France to the UK in July. It was estimated at about 13m long - the same length as a bus. At Canterbury Crown Court on Friday, Atak was sentenced to two years and three months in prison. At the time it was intercepted, it was the most people ever found on a migrant boat in the Channel. However, that figure has since been surpassed with 230 arriving in one vessel last month.",
-      "url": "https://www.reddit.com/r/uknews/comments/1wjpbin/teenager_jailed_for_piloting_mega_dinghy_across/",
-      "source_url": "https://www.reddit.com/r/uknews/comments/1wjpbin/teenager_jailed_for_piloting_mega_dinghy_across/",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "text": "@BBCWorld The situation in Ceuta highlights the ongoing challenges surrounding migration and border control. The police action reflects a critical moment for both the migrants and local authorities. It's essential to consider the human stories behind these operations and their broader",
+      "text_excerpt": "@BBCWorld The situation in Ceuta highlights the ongoing challenges surrounding migration and border control. The police action reflects a critical moment for both the migrants and local authorities. It's essential to consider the human stories behind these operations and their broader",
+      "url": "https://x.com/panicfeed/status/2101275676728840402",
+      "source_url": "https://x.com/panicfeed/status/2101275676728840402",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.9,
-      "score": 12.25,
+      "confidence": 0.72,
+      "score": 7.25,
       "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
+        "ROUTE_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
-          "movement",
-          "migrant boat in the Channel. However, that figure has since been surpassed with 230 arriving"
-        ],
-        [
           "route",
-          "boat"
-        ],
-        [
-          "route",
-          "vessel"
+          "border"
         ],
         [
           "enforcement",
-          "intercepted"
+          "police"
         ]
       ],
       "matched_groups": [
-        "MOVEMENT",
         "ROUTE",
         "ENFORCEMENT"
       ],
       "context_matches": [
-        "migrant"
+        "migrants"
       ],
-      "high_value_matches": [
-        "migrant boat in the Channel. However, that figure has since been surpassed with 230 arriving"
-      ],
+      "high_value_matches": [],
       "signal_context_rejections": [],
       "migration_context": true,
       "human_migration_context": true,
       "historical_reference": false,
       "historical_reason": null,
       "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "HORN_OF_AFRICA",
-      "primary_region": "HORN_OF_AFRICA",
-      "latitude": null,
-      "longitude": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 35.5,
+      "priority_score": 36.2,
       "analyst_priority": "LOW",
       "related_posts_count": 1,
       "related_post_ids": [
-        "reddit_1wjpbin"
+        "2101275676728840402"
       ],
       "related_authors": [
-        "SlowedCash"
+        "panicfeed"
       ],
       "related_urls": [
-        "https://www.reddit.com/r/uknews/comments/1wjpbin/teenager_jailed_for_piloting_mega_dinghy_across/"
+        "https://x.com/panicfeed/status/2101275676728840402"
       ],
       "related_sources": [
-        "REDDIT"
+        "X"
       ],
       "independent_author_count": 1,
       "platform_count": 1
@@ -3375,6 +3797,58 @@
       "rules_version": "2.6",
       "priority_score": 50.65,
       "analyst_priority": "MEDIUM"
+    },
+    {
+      "id": 602,
+      "source": "X",
+      "source_post_id": "2101277348184105349",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-09-19T11:48:54Z",
+      "first_detected_at": "2026-09-19T12:03:40Z",
+      "last_detected_at": "2026-09-19T12:03:40Z",
+      "detection_count": 1,
+      "text": "@ratmanbeef @CurtisDaly_ Reform UK pledges navy boat returns, mass deportations, ILR abolition, higher skilled thresholds and migrant levy-funded employer NI cuts. Conservatives plan ECHR exit, 150k annual removals and high-street business rates abolition. Restore Britain seeks full illegal deportations,",
+      "text_excerpt": "@ratmanbeef @CurtisDaly_ Reform UK pledges navy boat returns, mass deportations, ILR abolition, higher skilled thresholds and migrant levy-funded employer NI cuts. Conservatives plan ECHR exit, 150k annual removals and high-street business rates abolition. Restore Britain seeks full illegal deportations,",
+      "url": "https://x.com/grok/status/2101277348184105349",
+      "source_url": "https://x.com/grok/status/2101277348184105349",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.94,
+      "score": 15.0,
+      "matched_signals": [
+        "LEGAL_MIGRATION_SIGNAL"
+      ],
+      "matched_phrases": [
+        [
+          "legal_signal",
+          "ECHR"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 48.9,
+      "analyst_priority": "MEDIUM"
     }
   ],
   "access_signals": [
@@ -3433,6 +3907,58 @@
       "longitude": null,
       "rules_version": "2.6",
       "priority_score": 50.65,
+      "analyst_priority": "MEDIUM"
+    },
+    {
+      "id": 602,
+      "source": "X",
+      "source_post_id": "2101277348184105349",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-09-19T11:48:54Z",
+      "first_detected_at": "2026-09-19T12:03:40Z",
+      "last_detected_at": "2026-09-19T12:03:40Z",
+      "detection_count": 1,
+      "text": "@ratmanbeef @CurtisDaly_ Reform UK pledges navy boat returns, mass deportations, ILR abolition, higher skilled thresholds and migrant levy-funded employer NI cuts. Conservatives plan ECHR exit, 150k annual removals and high-street business rates abolition. Restore Britain seeks full illegal deportations,",
+      "text_excerpt": "@ratmanbeef @CurtisDaly_ Reform UK pledges navy boat returns, mass deportations, ILR abolition, higher skilled thresholds and migrant levy-funded employer NI cuts. Conservatives plan ECHR exit, 150k annual removals and high-street business rates abolition. Restore Britain seeks full illegal deportations,",
+      "url": "https://x.com/grok/status/2101277348184105349",
+      "source_url": "https://x.com/grok/status/2101277348184105349",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.94,
+      "score": 15.0,
+      "matched_signals": [
+        "LEGAL_MIGRATION_SIGNAL"
+      ],
+      "matched_phrases": [
+        [
+          "legal_signal",
+          "ECHR"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 48.9,
       "analyst_priority": "MEDIUM"
     }
   ],
@@ -3508,6 +4034,73 @@
       ],
       "independent_author_count": 1,
       "platform_count": 1
+    },
+    {
+      "id": 602,
+      "source": "X",
+      "source_post_id": "2101277348184105349",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-09-19T11:48:54Z",
+      "first_detected_at": "2026-09-19T12:03:40Z",
+      "last_detected_at": "2026-09-19T12:03:40Z",
+      "detection_count": 1,
+      "text": "@ratmanbeef @CurtisDaly_ Reform UK pledges navy boat returns, mass deportations, ILR abolition, higher skilled thresholds and migrant levy-funded employer NI cuts. Conservatives plan ECHR exit, 150k annual removals and high-street business rates abolition. Restore Britain seeks full illegal deportations,",
+      "text_excerpt": "@ratmanbeef @CurtisDaly_ Reform UK pledges navy boat returns, mass deportations, ILR abolition, higher skilled thresholds and migrant levy-funded employer NI cuts. Conservatives plan ECHR exit, 150k annual removals and high-street business rates abolition. Restore Britain seeks full illegal deportations,",
+      "url": "https://x.com/grok/status/2101277348184105349",
+      "source_url": "https://x.com/grok/status/2101277348184105349",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.94,
+      "score": 15.0,
+      "matched_signals": [
+        "LEGAL_MIGRATION_SIGNAL"
+      ],
+      "matched_phrases": [
+        [
+          "legal_signal",
+          "ECHR"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 48.9,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2101277348184105349"
+      ],
+      "related_authors": [
+        "grok"
+      ],
+      "related_urls": [
+        "https://x.com/grok/status/2101277348184105349"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
     }
   ],
   "crossing_access_narratives": [
@@ -3576,6 +4169,73 @@
       ],
       "related_urls": [
         "https://x.com/daz363/status/2101262765713146116"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
+    {
+      "id": 602,
+      "source": "X",
+      "source_post_id": "2101277348184105349",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-09-19T11:48:54Z",
+      "first_detected_at": "2026-09-19T12:03:40Z",
+      "last_detected_at": "2026-09-19T12:03:40Z",
+      "detection_count": 1,
+      "text": "@ratmanbeef @CurtisDaly_ Reform UK pledges navy boat returns, mass deportations, ILR abolition, higher skilled thresholds and migrant levy-funded employer NI cuts. Conservatives plan ECHR exit, 150k annual removals and high-street business rates abolition. Restore Britain seeks full illegal deportations,",
+      "text_excerpt": "@ratmanbeef @CurtisDaly_ Reform UK pledges navy boat returns, mass deportations, ILR abolition, higher skilled thresholds and migrant levy-funded employer NI cuts. Conservatives plan ECHR exit, 150k annual removals and high-street business rates abolition. Restore Britain seeks full illegal deportations,",
+      "url": "https://x.com/grok/status/2101277348184105349",
+      "source_url": "https://x.com/grok/status/2101277348184105349",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.94,
+      "score": 15.0,
+      "matched_signals": [
+        "LEGAL_MIGRATION_SIGNAL"
+      ],
+      "matched_phrases": [
+        [
+          "legal_signal",
+          "ECHR"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 48.9,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2101277348184105349"
+      ],
+      "related_authors": [
+        "grok"
+      ],
+      "related_urls": [
+        "https://x.com/grok/status/2101277348184105349"
       ],
       "related_sources": [
         "X"
@@ -3707,15 +4367,15 @@
       "label": "W38",
       "week_label": "W38",
       "week_start": "2026-09-14T00:00:00Z",
-      "posts": 1348,
-      "post_count": 1348,
+      "posts": 1407,
+      "post_count": 1407,
       "operational_posts": 40,
-      "influence_signals": 61,
+      "influence_signals": 67,
       "source_counts": {
-        "X": 953,
-        "REDDIT": 164,
-        "MASTODON": 213,
-        "TELEGRAM": 18
+        "X": 998,
+        "REDDIT": 172,
+        "MASTODON": 218,
+        "TELEGRAM": 19
       }
     }
   ],
@@ -3842,33 +4502,33 @@
       "label": "W38",
       "week_label": "W38",
       "week_start": "2026-09-14T00:00:00Z",
-      "posts": 1348,
-      "post_count": 1348,
+      "posts": 1407,
+      "post_count": 1407,
       "operational_posts": 40,
-      "influence_signals": 61,
+      "influence_signals": 67,
       "source_counts": {
-        "X": 953,
-        "REDDIT": 164,
-        "MASTODON": 213,
-        "TELEGRAM": 18
+        "X": 998,
+        "REDDIT": 172,
+        "MASTODON": 218,
+        "TELEGRAM": 19
       }
     }
   ],
   "information_activity_summary": {
-    "current_week": 1348,
-    "previous_week": 1025,
-    "current_week_to_date": 1348,
-    "previous_week_same_period": 1025,
+    "current_week": 1407,
+    "previous_week": 1038,
+    "current_week_to_date": 1407,
+    "previous_week_same_period": 1038,
     "previous_week_full": 1302,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": 31.51,
-    "change_label": "+31.5%",
+    "change_percent": 35.55,
+    "change_label": "+35.5%",
     "direction": "UP",
     "comparable": true,
-    "elapsed_hours": 131.0,
+    "elapsed_hours": 132.1,
     "current_period_start": "2026-09-14T00:00:00Z",
     "previous_period_start": "2026-09-07T00:00:00Z",
-    "previous_period_end": "2026-09-12T10:59:53Z"
+    "previous_period_end": "2026-09-12T12:05:02Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -3880,31 +4540,31 @@
       72,
       168
     ],
-    "generated_at": "2026-09-19T10:59:54Z",
-    "total_items": 1436,
+    "generated_at": "2026-09-19T12:05:03Z",
+    "total_items": 1442,
     "information_count": 400,
-    "early_warning_count": 573,
+    "early_warning_count": 579,
     "operational_count": 380,
     "correlated_count": 83,
     "layer_counts": {
+      "EARLY_WARNING": 579,
       "INFORMATION": 400,
-      "EARLY_WARNING": 573,
       "OPERATIONAL": 380,
       "CORRELATED": 83
     },
     "source_counts": {
-      "X": 1020,
-      "REDDIT": 330,
+      "X": 1025,
+      "REDDIT": 331,
       "MASTODON": 64,
       "TELEGRAM": 22
     },
     "type_counts": {
+      "MOVEMENT_EARLY_WARNING": 171,
+      "FACILITATION_EARLY_WARNING": 101,
       "INFORMATION_SIGNAL": 400,
-      "LEGAL_MIGRATION_SIGNAL": 65,
-      "FACILITATION_EARLY_WARNING": 99,
-      "ROUTE_EARLY_WARNING": 76,
+      "LEGAL_MIGRATION_SIGNAL": 66,
+      "ROUTE_EARLY_WARNING": 77,
       "BORDER_CROSSING": 128,
-      "MOVEMENT_EARLY_WARNING": 169,
       "BORDER_MEASURE": 11,
       "ENFORCEMENT_EARLY_WARNING": 33,
       "MIGRANT_CAMP": 75,
@@ -3928,6 +4588,278 @@
       "MOBILIZATION_REPORT": 8
     },
     "items": [
+      {
+        "timeline_id": "early_warning:604",
+        "timestamp": "2026-09-19T12:00:59Z",
+        "layer": "EARLY_WARNING",
+        "type": "MOVEMENT_EARLY_WARNING",
+        "signal_type": "MOVEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2101280390623449160",
+        "author": "Mfatiamh03",
+        "url": "https://x.com/Mfatiamh03/status/2101280390623449160",
+        "source_url": "https://x.com/Mfatiamh03/status/2101280390623449160",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.72,
+        "priority": "MEDIUM",
+        "priority_score": 25.2,
+        "analyst_priority": "LOW",
+        "text": "@wajih_sani @Grok\nEven Grok’s data completely deconstructs the \"population swap\" narrative. The math is simple: departing non-Muslims left 38.1 billion Rupees in assets, while incoming refugees abandoned just 3.8 billion Rupees in India. This was a 10x economic deficit that Sindh absorbed",
+        "text_excerpt": "@wajih_sani @Grok\nEven Grok’s data completely deconstructs the \"population swap\" narrative. The math is simple: departing non-Muslims left 38.1 billion Rupees in assets, while incoming refugees abandoned just 3.8 billion Rupees in India. This was a 10x economic deficit that Sindh absorbed",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "MOVEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-09-19T12:04:59Z",
+        "last_detected_at": "2026-09-19T12:04:59Z"
+      },
+      {
+        "timeline_id": "early_warning:600",
+        "timestamp": "2026-09-19T12:00:12Z",
+        "layer": "EARLY_WARNING",
+        "type": "FACILITATION_EARLY_WARNING",
+        "signal_type": "FACILITATION_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2101280192303939829",
+        "author": "BorderReportcom",
+        "url": "https://x.com/BorderReportcom/status/2101280192303939829",
+        "source_url": "https://x.com/BorderReportcom/status/2101280192303939829",
+        "region": "AMERICAS",
+        "primary_region": "AMERICAS",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.8,
+        "priority": "MEDIUM",
+        "priority_score": 32.0,
+        "analyst_priority": "LOW",
+        "text": "Nearly three dozen migrants were found stuffed in the back of a utility truck near the U.S.-Mexico border after their driver abandoned them and fled to Mexico.https://t.co/3Y03hVpCZ9",
+        "text_excerpt": "Nearly three dozen migrants were found stuffed in the back of a utility truck near the U.S.-Mexico border after their driver abandoned them and fled to Mexico.https://t.co/3Y03hVpCZ9",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "FACILITATION_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-09-19T12:02:46Z",
+        "last_detected_at": "2026-09-19T12:02:46Z"
+      },
+      {
+        "timeline_id": "information:11029",
+        "timestamp": "2026-09-19T12:00:01Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2101280147836162443",
+        "author": "recoverbritain",
+        "url": "https://x.com/recoverbritain/status/2101280147836162443",
+        "source_url": "https://x.com/recoverbritain/status/2101280147836162443",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "crossing",
+          "channel",
+          "boat"
+        ],
+        "freshness_cues": [],
+        "text": "Farage and Bardella signed a deal to reshape Channel returns\n\nOn 4 September 2026 in Birmingham, Reform UK leader Nigel Farage and France’s National Rally president Jordan Bardella signed a memorandum setting out how their parties say they would tackle small-boat crossings if https://t.co/bMumDFeTMg",
+        "text_excerpt": "Farage and Bardella signed a deal to reshape Channel returns\n\nOn 4 September 2026 in Birmingham, Reform UK leader Nigel Farage and France’s National Rally president Jordan Bardella signed a memorandum setting out how their parties say they would tackle small-boat crossings if https://t.co/bMumDFeTMg",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-09-19T12:02:46Z",
+        "last_collected_at": "2026-09-19T12:02:46Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "early_warning:605",
+        "timestamp": "2026-09-19T11:54:23Z",
+        "layer": "EARLY_WARNING",
+        "type": "MOVEMENT_EARLY_WARNING",
+        "signal_type": "MOVEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2101278730366919014",
+        "author": "Mfatiamh03",
+        "url": "https://x.com/Mfatiamh03/status/2101278730366919014",
+        "source_url": "https://x.com/Mfatiamh03/status/2101278730366919014",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.72,
+        "priority": "MEDIUM",
+        "priority_score": 25.2,
+        "analyst_priority": "LOW",
+        "text": "@grok @grok\nEven Grok’s data completely deconstructs the \"population swap\" narrative. The math is simple: departing non-Muslims left 38.1 billion Rupees in assets, while incoming refugees abandoned just 3.8 billion Rupees in India. This was a 10x economic deficit that Sindh absorbed",
+        "text_excerpt": "@grok @grok\nEven Grok’s data completely deconstructs the \"population swap\" narrative. The math is simple: departing non-Muslims left 38.1 billion Rupees in assets, while incoming refugees abandoned just 3.8 billion Rupees in India. This was a 10x economic deficit that Sindh absorbed",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "MOVEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-09-19T12:04:59Z",
+        "last_detected_at": "2026-09-19T12:04:59Z"
+      },
+      {
+        "timeline_id": "information:11030",
+        "timestamp": "2026-09-19T11:51:51Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2101278090106155263",
+        "author": "Deep_Leaks2",
+        "url": "https://x.com/Deep_Leaks2/status/2101278090106155263",
+        "source_url": "https://x.com/Deep_Leaks2/status/2101278090106155263",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "crossing"
+        ],
+        "freshness_cues": [],
+        "text": "Illegal Migrants complain that they are not allowed to cross the Polish border:\n\n“We want to enter Poland, but they won’t let us. They are threatening to harm us if we try to cross over. I want to go to Poland or Germany to have a good life.”\n\nPoland says NO to Open Borders! 🇵🇱 https://t.co/C2NS7nzVWS",
+        "text_excerpt": "Illegal Migrants complain that they are not allowed to cross the Polish border:\n\n“We want to enter Poland, but they won’t let us. They are threatening to harm us if we try to cross over. I want to go to Poland or Germany to have a good life.”\n\nPoland says NO to Open Borders! 🇵🇱 https://t.co/C2NS7nzVWS",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-09-19T12:02:46Z",
+        "last_collected_at": "2026-09-19T12:02:46Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:11032",
+        "timestamp": "2026-09-19T11:51:35Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2101278024368881796",
+        "author": "x_chando",
+        "url": "https://x.com/x_chando/status/2101278024368881796",
+        "source_url": "https://x.com/x_chando/status/2101278024368881796",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "trafficking"
+        ],
+        "freshness_cues": [],
+        "text": "@HisServant0 @Newme477 @KeiferStreet @realDonaldTrump @RapidResponse47 Name a single action that benefitted Americans under Bidens term that actually happened.\n\nOpen border policies skyrocketed rape and physical assault crimes in the US.\n\nChild trafficking reached an all time high under Biden.\n\nWe left weapons stockpiles in the middle east when we",
+        "text_excerpt": "@HisServant0 @Newme477 @KeiferStreet @realDonaldTrump @RapidResponse47 Name a single action that benefitted Americans under Bidens term that actually happened.\n\nOpen border policies skyrocketed rape and physical assault crimes in the US.\n\nChild trafficking reached an all time high under Biden.\n\nWe left weapons stockpiles in the middle east when we",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-09-19T12:02:46Z",
+        "last_collected_at": "2026-09-19T12:02:46Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "early_warning:602",
+        "timestamp": "2026-09-19T11:48:54Z",
+        "layer": "EARLY_WARNING",
+        "type": "LEGAL_MIGRATION_SIGNAL",
+        "signal_type": "LEGAL_MIGRATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2101277348184105349",
+        "author": "grok",
+        "url": "https://x.com/grok/status/2101277348184105349",
+        "source_url": "https://x.com/grok/status/2101277348184105349",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.94,
+        "priority": "MEDIUM",
+        "priority_score": 48.9,
+        "analyst_priority": "MEDIUM",
+        "text": "@ratmanbeef @CurtisDaly_ Reform UK pledges navy boat returns, mass deportations, ILR abolition, higher skilled thresholds and migrant levy-funded employer NI cuts. Conservatives plan ECHR exit, 150k annual removals and high-street business rates abolition. Restore Britain seeks full illegal deportations,",
+        "text_excerpt": "@ratmanbeef @CurtisDaly_ Reform UK pledges navy boat returns, mass deportations, ILR abolition, higher skilled thresholds and migrant levy-funded employer NI cuts. Conservatives plan ECHR exit, 150k annual removals and high-street business rates abolition. Restore Britain seeks full illegal deportations,",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "DIRECT",
+        "signal_intent": "LEGAL_ACCESS",
+        "detection_count": 1,
+        "first_detected_at": "2026-09-19T12:03:40Z",
+        "last_detected_at": "2026-09-19T12:03:40Z"
+      },
+      {
+        "timeline_id": "early_warning:601",
+        "timestamp": "2026-09-19T11:42:15Z",
+        "layer": "EARLY_WARNING",
+        "type": "ROUTE_EARLY_WARNING",
+        "signal_type": "ROUTE_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2101275676728840402",
+        "author": "panicfeed",
+        "url": "https://x.com/panicfeed/status/2101275676728840402",
+        "source_url": "https://x.com/panicfeed/status/2101275676728840402",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "Ceuta",
+        "primary_location": "Ceuta",
+        "country": "Spain",
+        "confidence": 0.72,
+        "priority": "MEDIUM",
+        "priority_score": 36.2,
+        "analyst_priority": "LOW",
+        "text": "@BBCWorld The situation in Ceuta highlights the ongoing challenges surrounding migration and border control. The police action reflects a critical moment for both the migrants and local authorities. It's essential to consider the human stories behind these operations and their broader",
+        "text_excerpt": "@BBCWorld The situation in Ceuta highlights the ongoing challenges surrounding migration and border control. The police action reflects a critical moment for both the migrants and local authorities. It's essential to consider the human stories behind these operations and their broader",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "ROUTE_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-09-19T12:02:47Z",
+        "last_detected_at": "2026-09-19T12:02:47Z"
+      },
       {
         "timeline_id": "information:10982",
         "timestamp": "2026-09-19T10:55:27Z",
@@ -3984,8 +4916,8 @@
         "country": "-",
         "confidence": 0.1,
         "priority": "INFO",
-        "priority_score": 90,
-        "information_score": 9,
+        "priority_score": 100,
+        "information_score": 10,
         "matched_information_cues": [
           "border",
           "channel",
@@ -4007,8 +4939,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-09-19T10:57:40Z",
-        "last_collected_at": "2026-09-19T10:57:40Z",
-        "collection_count": 1
+        "last_collected_at": "2026-09-19T12:04:20Z",
+        "collection_count": 2
       },
       {
         "timeline_id": "early_warning:599",
@@ -5153,8 +6085,8 @@
         "country": "-",
         "confidence": 0.1,
         "priority": "INFO",
-        "priority_score": 60,
-        "information_score": 6,
+        "priority_score": 70,
+        "information_score": 7,
         "matched_information_cues": [
           "border",
           "crossing",
@@ -5173,8 +6105,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-09-19T09:58:57Z",
-        "last_collected_at": "2026-09-19T09:58:57Z",
-        "collection_count": 1
+        "last_collected_at": "2026-09-19T12:02:47Z",
+        "collection_count": 2
       },
       {
         "timeline_id": "information:10926",
@@ -5346,9 +6278,47 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "MOVEMENT_REVIEW",
-        "detection_count": 1,
+        "detection_count": 2,
         "first_detected_at": "2026-09-19T09:58:59Z",
-        "last_detected_at": "2026-09-19T09:58:59Z"
+        "last_detected_at": "2026-09-19T12:02:48Z"
+      },
+      {
+        "timeline_id": "information:11056",
+        "timestamp": "2026-09-19T00:23:20Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1wk76wo",
+        "author": "Fantastic-Cell-208",
+        "url": "https://www.reddit.com/r/LowStakesConspiracies/comments/1wk76wo/right_wing_antiimmigrant_propaganda_is_funded_by/",
+        "source_url": "https://www.reddit.com/r/LowStakesConspiracies/comments/1wk76wo/right_wing_antiimmigrant_propaganda_is_funded_by/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.6,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "boat",
+          "dinghy",
+          "smuggling"
+        ],
+        "freshness_cues": [],
+        "text": "Right wing anti-immigrant propaganda is funded by a cabal of people smugglers and inflatable dinghy manufacturers\nWhen I look at a photo of undocumented immigrants entering the country by boat, I can't help but notice the ruck sacks, jackets, and the industry standard rugged boat they travelled into the country with. You see immigrants, I see product placement Think about it. Every news report about it is free advertisement. And they're getting a lot of free advertisement from it. The anti-immigrant marches further cement the illusion that it's easy to get into the country. Those marches give a signal to would be migrants that it must be piss easy to get into the country, otherwise they wouldn't be marching to angrily. But it doesn't stop with the people smugglers. Rucksack manufacturers are in on it too. Rucksack companies are in on it too It reminds me of the TV show LOST. That TV show ran for a whole 6 seasons, and not once did their backpacks frae or fall apart. I've had mine for 2 years. It's in pretty good condition. But it doesn't look half as good as Jack Shepherd's indestructible hard shell of a bag. I'll bet there's some trader out there who's making a small fortune by using anti-immigrant sentiment as a gauge for their investments. I don't know why nobody seems has cottoned on to the ruse.",
+        "text_excerpt": "Right wing anti-immigrant propaganda is funded by a cabal of people smugglers and inflatable dinghy manufacturers\nWhen I look at a photo of undocumented immigrants entering the country by boat, I can't help but notice the ruck sacks, jackets, and the industry standard rugged boat they travelled into the country with. You see immigrants, I see product placement Think about it. Every news report about it is free advert…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-09-19T12:04:20Z",
+        "last_collected_at": "2026-09-19T12:04:20Z",
+        "collection_count": 1
       },
       {
         "timeline_id": "operational:417",
@@ -5380,6 +6350,38 @@
         "event_time_text": null,
         "event_time_normalized": null,
         "event_time_confidence": null
+      },
+      {
+        "timeline_id": "early_warning:603",
+        "timestamp": "2026-09-18T20:13:02Z",
+        "layer": "EARLY_WARNING",
+        "type": "FACILITATION_EARLY_WARNING",
+        "signal_type": "FACILITATION_EARLY_WARNING",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1wk12i5",
+        "author": "Ok_Signal4754",
+        "url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1wk12i5/gavdos_14yearold_south_sudanese_national_arrested/",
+        "source_url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1wk12i5/gavdos_14yearold_south_sudanese_national_arrested/",
+        "region": "EASTERN_MEDITERRANEAN",
+        "primary_region": "EASTERN_MEDITERRANEAN",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.9,
+        "priority": "MEDIUM",
+        "priority_score": 35.5,
+        "analyst_priority": "LOW",
+        "text": "Gavdos: 14-year-old South Sudanese national arrested as 43 migrant smuggler, he was indicated by boat passenger | Greece\nSource",
+        "text_excerpt": "Gavdos: 14-year-old South Sudanese national arrested as 43 migrant smuggler, he was indicated by boat passenger | Greece\nSource",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "FACILITATION_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-09-19T12:04:21Z",
+        "last_detected_at": "2026-09-19T12:04:21Z"
       },
       {
         "timeline_id": "information:10841",
@@ -6365,8 +7367,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-09-18T11:45:09Z",
-        "last_collected_at": "2026-09-19T10:59:51Z",
-        "collection_count": 3
+        "last_collected_at": "2026-09-19T12:05:00Z",
+        "collection_count": 4
       },
       {
         "timeline_id": "information:10738",
@@ -6965,9 +7967,9 @@
         "related_source_count": null,
         "signal_mode": "DIRECT",
         "signal_intent": "LEGAL_ACCESS",
-        "detection_count": 3,
+        "detection_count": 4,
         "first_detected_at": "2026-09-18T11:21:31Z",
-        "last_detected_at": "2026-09-19T10:59:52Z"
+        "last_detected_at": "2026-09-19T12:05:01Z"
       },
       {
         "timeline_id": "information:10723",
@@ -13251,9 +14253,9 @@
         "related_source_count": null,
         "signal_mode": "DIRECT",
         "signal_intent": "EASIER_CROSSING",
-        "detection_count": 11,
+        "detection_count": 12,
         "first_detected_at": "2026-09-14T20:33:39Z",
-        "last_detected_at": "2026-09-19T10:59:52Z"
+        "last_detected_at": "2026-09-19T12:05:01Z"
       },
       {
         "timeline_id": "early_warning:550",
@@ -16958,8 +17960,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-09-12T04:59:37Z",
-        "last_collected_at": "2026-09-19T10:59:53Z",
-        "collection_count": 16
+        "last_collected_at": "2026-09-19T12:05:01Z",
+        "collection_count": 17
       },
       {
         "timeline_id": "information:9430",
@@ -25553,87 +26555,6 @@
         "last_detected_at": "2026-09-06T19:39:35Z"
       },
       {
-        "timeline_id": "information:8311",
-        "timestamp": "2026-09-06T19:32:05Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2096682868755894593",
-        "author": "tigue_gail",
-        "url": "https://x.com/tigue_gail/status/2096682868755894593",
-        "source_url": "https://x.com/tigue_gail/status/2096682868755894593",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "channel",
-          "boat",
-          "arrival"
-        ],
-        "freshness_cues": [],
-        "text": "Britain, activists in black blocked the port used to bring migrants into the country\n\nThey formed a human barrier and chanted “Stop the boats,” “Send them home,” “White man — fight back.”\n\nThis is the port where Channel small-boat arrivals come ashore. https://t.co/ASmAWVYKbv",
-        "text_excerpt": "Britain, activists in black blocked the port used to bring migrants into the country\n\nThey formed a human barrier and chanted “Stop the boats,” “Send them home,” “White man — fight back.”\n\nThis is the port where Channel small-boat arrivals come ashore. https://t.co/ASmAWVYKbv",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-09-06T19:39:35Z",
-        "last_collected_at": "2026-09-06T19:39:35Z",
-        "collection_count": 1
-      },
-      {
-        "timeline_id": "information:8312",
-        "timestamp": "2026-09-06T19:30:07Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2096682375212040412",
-        "author": "andrewdavis2012",
-        "url": "https://x.com/andrewdavis2012/status/2096682375212040412",
-        "source_url": "https://x.com/andrewdavis2012/status/2096682375212040412",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 60,
-        "information_score": 6,
-        "matched_information_cues": [
-          "border",
-          "boat",
-          "sea",
-          "rescue",
-          "arrival"
-        ],
-        "freshness_cues": [
-          "today",
-          "now"
-        ],
-        "text": "@DrChrisParry @2tweetaboutit @RoyalNavy Unparalleled times today as the illegal migrant boat disembarked Dunkirk. My Grandad went over twice from Leigh on Sea to rescue BEF so we had a country with borders to protect us Chris ever since. Now they arrive in Portsmouth aided by RNLI! A disgrace! The French helped too.",
-        "text_excerpt": "@DrChrisParry @2tweetaboutit @RoyalNavy Unparalleled times today as the illegal migrant boat disembarked Dunkirk. My Grandad went over twice from Leigh on Sea to rescue BEF so we had a country with borders to protect us Chris ever since. Now they arrive in Portsmouth aided by RNLI! A disgrace! The French helped too.",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-09-06T19:39:36Z",
-        "last_collected_at": "2026-09-06T19:39:36Z",
-        "collection_count": 1
-      },
-      {
         "timeline_id": "early_warning:477",
         "timestamp": "2026-09-06T19:29:40Z",
         "layer": "EARLY_WARNING",
@@ -25696,44 +26617,6 @@
         "detection_count": 1,
         "first_detected_at": "2026-09-06T19:39:36Z",
         "last_detected_at": "2026-09-06T19:39:36Z"
-      },
-      {
-        "timeline_id": "information:8291",
-        "timestamp": "2026-09-06T19:01:07Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1w94x0h",
-        "author": "Acceptable-Head-1442",
-        "url": "https://www.reddit.com/r/berlin_public/comments/1w94x0h/140_migrants_in_single_dinghy_rescued_in_english/",
-        "source_url": "https://www.reddit.com/r/berlin_public/comments/1w94x0h/140_migrants_in_single_dinghy_rescued_in_english/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "channel",
-          "dinghy",
-          "rescue"
-        ],
-        "freshness_cues": [],
-        "text": "140 migrants in single dinghy rescued in English Channel",
-        "text_excerpt": "140 migrants in single dinghy rescued in English Channel",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-09-06T19:38:18Z",
-        "last_collected_at": "2026-09-06T19:38:18Z",
-        "collection_count": 1
       },
       {
         "timeline_id": "early_warning:474",
@@ -25830,44 +26713,6 @@
         "detection_count": 1,
         "first_detected_at": "2026-09-06T17:56:01Z",
         "last_detected_at": "2026-09-06T17:56:01Z"
-      },
-      {
-        "timeline_id": "information:8229",
-        "timestamp": "2026-09-06T17:53:25Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2096658042414612837",
-        "author": "ehannah0",
-        "url": "https://x.com/ehannah0/status/2096658042414612837",
-        "source_url": "https://x.com/ehannah0/status/2096658042414612837",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "channel",
-          "boat",
-          "rescue"
-        ],
-        "freshness_cues": [],
-        "text": "June 1944:\nBritish troops storm the beaches of Normandy \n\nSeptember 2026:\nA small boat carrying 140 migrants launches from Normandy and is rescued in the English Channel\n\nWe have totally lost our way.",
-        "text_excerpt": "June 1944:\nBritish troops storm the beaches of Normandy \n\nSeptember 2026:\nA small boat carrying 140 migrants launches from Normandy and is rescued in the English Channel\n\nWe have totally lost our way.",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-09-06T17:54:45Z",
-        "last_collected_at": "2026-09-06T17:54:45Z",
-        "collection_count": 1
       },
       {
         "timeline_id": "operational:339",
