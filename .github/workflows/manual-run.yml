@@ -1,7 +1,9 @@
-name: Manual Migration OSINT Monitor Run
+name: Migration OSINT Monitor
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 */2 * * *"
 
 permissions:
   contents: write
