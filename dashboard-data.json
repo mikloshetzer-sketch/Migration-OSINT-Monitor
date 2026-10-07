@@ -1,25 +1,25 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-10-07T08:00:58Z",
-  "generated_at": "2026-10-07T08:00:58Z",
+  "updated_at": "2026-10-07T10:42:05Z",
+  "generated_at": "2026-10-07T10:42:05Z",
   "current_run": {
     "available": true,
-    "id": 228,
-    "run_uuid": "1a7abfdd-a595-46e4-8e11-4f445658a751",
-    "started_at": "2026-10-07T07:56:27Z",
-    "completed_at": "2026-10-07T08:00:56Z",
+    "id": 229,
+    "run_uuid": "6bdbafc8-e877-4616-b4ca-c8d88ff43013",
+    "started_at": "2026-10-07T10:38:33Z",
+    "completed_at": "2026-10-07T10:42:02Z",
     "status": "SUCCESS",
     "posts_returned": 129,
-    "unique_posts_collected": 92,
+    "unique_posts_collected": 90,
     "x_posts_returned": 50,
     "reddit_posts_returned": 26,
     "mastodon_posts_returned": 50,
-    "unique_x_posts": 45,
+    "unique_x_posts": 44,
     "unique_reddit_posts": 25,
-    "unique_mastodon_posts": 19,
-    "noise_filtered": 1,
-    "non_operational_filtered": 89,
-    "historical_references_filtered": 0,
+    "unique_mastodon_posts": 18,
+    "noise_filtered": 2,
+    "non_operational_filtered": 86,
+    "historical_references_filtered": 1,
     "influence_signals": 0,
     "influence_signals_detected": 0,
     "crossing_facilitation_signals": 0,
@@ -30,45 +30,67 @@
     "mobilization_report_signals": 0,
     "decision_influence_signals": 0,
     "online_influence_report_signals": 0,
-    "operational_events": 2,
-    "operational_events_analyzed": 2,
-    "historical_events_available": 42,
+    "operational_events": 1,
+    "operational_events_analyzed": 1,
+    "historical_events_available": 44,
     "new_correlations": 0,
     "correlated_events": 0,
-    "new_correlation_groups": 2,
+    "new_correlation_groups": 1,
     "database_correlations": 0,
     "current_run_correlations": 0,
-    "new_events": 2,
-    "new_events_saved": 2,
+    "new_events": 1,
+    "new_events_saved": 1,
     "events_already_existing": 0,
-    "new_event_groups": 2,
+    "new_event_groups": 1,
     "updated_event_groups": 0,
     "bootstrapped_event_groups": 0,
     "existing_event_groups_reused": 0,
-    "event_group_sources_linked": 2,
+    "event_group_sources_linked": 1,
     "x_collector_errors": 0,
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "error_message": null
   },
   "kpis": {
-    "operational_events": 9,
-    "new_events": 2,
+    "operational_events": 10,
+    "new_events": 1,
     "correlated_events": 0,
-    "active_event_groups": 403,
+    "active_event_groups": 404,
     "sources": 4,
     "regions": 4,
-    "collected_posts_24h": 373,
-    "influence_signals": 33,
+    "collected_posts_24h": 424,
+    "influence_signals": 37,
     "access_signals": 3,
     "high_priority": 1,
-    "current_run_operational_events": 2,
-    "current_run_unique_posts": 92,
-    "access_signals_raw": 4,
+    "current_run_operational_events": 1,
+    "current_run_unique_posts": 90,
+    "access_signals_raw": 3,
     "influence_signals_raw": 20,
     "influence_narratives": 3
   },
   "live_events": [
+    {
+      "id": 528,
+      "event_id": 528,
+      "source": "X",
+      "source_post_id": "2107775406954733841",
+      "author": "piggot_michael",
+      "published_at": "2026-10-07T10:09:52Z",
+      "collected_at": "2026-10-07T10:42:01Z",
+      "event_type": "BORDER_CROSSING",
+      "signal_type": "BORDER_CROSSING",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.55,
+      "event_confidence": 0.55,
+      "relevance_score": 30.0,
+      "text": "@LeaderofKCC 1600 migrants arrived recently.\nCost to keep them is £840m/year.\n\nMilitary housing maintenance budget moved.\n\nThis is Labour…",
+      "url": "https://x.com/piggot_michael/status/2107775406954733841",
+      "source_url": "https://x.com/piggot_michael/status/2107775406954733841"
+    },
     {
       "id": 527,
       "event_id": 527,
@@ -486,31 +508,38 @@
       "text": "@atensnut You are one of trump's bitches ,aren't you.\nAmerica was built on the displacement of Native peoples by white settlers, while later migrants arrived without destroying communities. The real issue is how history is remembered and who takes responsibility for it.",
       "url": "https://x.com/Matt94184099/status/2106336576255189369",
       "source_url": "https://x.com/Matt94184099/status/2106336576255189369"
-    },
-    {
-      "id": 510,
-      "event_id": 510,
-      "source": "X",
-      "source_post_id": "2106336397573665078",
-      "author": "NoLongerTheFuzz",
-      "published_at": "2026-10-03T10:51:45Z",
-      "collected_at": "2026-10-03T11:07:02Z",
-      "event_type": "DETENTION",
-      "signal_type": "DETENTION",
-      "primary_location": "-",
-      "location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "confidence": 0.5,
-      "event_confidence": 0.5,
-      "relevance_score": 10.0,
-      "text": "This is why I want all illegal migrants detained on arrival, and deported.\nIf they can’t be deported immediately, they should be kept under armed guard in locked camps until they are. \nWe have no idea who any of them are, and the safety of 🇬🇧 people is paramount. 🫡 https://t.co/ffjaUTw6bn",
-      "url": "https://x.com/NoLongerTheFuzz/status/2106336397573665078",
-      "source_url": "https://x.com/NoLongerTheFuzz/status/2106336397573665078"
     }
   ],
   "event_groups": [
+    {
+      "id": 423,
+      "group_id": 423,
+      "event_type": "BORDER_CROSSING",
+      "dominant_event_type": "BORDER_CROSSING",
+      "title": "BORDER_CROSSING",
+      "representative_text": "@LeaderofKCC 1600 migrants arrived recently.\nCost to keep them is £840m/year.\n\nMilitary housing maintenance budget moved.\n\nThis is Labour…",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "primary_location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "first_seen": "2026-10-07T10:09:52Z",
+      "last_seen": "2026-10-07T10:09:52Z",
+      "source_count": 1,
+      "sources_count": 1,
+      "source_types": [
+        "X"
+      ],
+      "sources": [
+        "X"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.55,
+      "average_confidence": 0.55,
+      "created_at": "2026-10-07T10:42:01Z",
+      "updated_at": "2026-10-07T10:42:01Z"
+    },
     {
       "id": 422,
       "group_id": 422,
@@ -771,163 +800,134 @@
       "average_confidence": 0.55,
       "created_at": "2026-10-06T11:41:00Z",
       "updated_at": "2026-10-06T11:41:00Z"
-    },
-    {
-      "id": 412,
-      "group_id": 412,
-      "event_type": "CASUALTY",
-      "dominant_event_type": "CASUALTY",
-      "title": "CASUALTY",
-      "representative_text": "@ShadowPatriotUS 3400 migrants died in the Rio Grande and desert crossing the border during the Biden administration.",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "primary_location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "first_seen": "2026-10-06T03:33:05Z",
-      "last_seen": "2026-10-06T03:33:05Z",
-      "source_count": 1,
-      "sources_count": 1,
-      "source_types": [
-        "X"
-      ],
-      "sources": [
-        "X"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.55,
-      "average_confidence": 0.55,
-      "created_at": "2026-10-06T03:47:40Z",
-      "updated_at": "2026-10-06T03:47:40Z"
     }
   ],
   "regions": [
     {
       "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 6,
-      "events": 6,
-      "percentage": 66.67
+      "count": 7,
+      "events": 7,
+      "percentage": 70.0
     },
     {
       "name": "CENTRAL_MEDITERRANEAN",
       "region": "CENTRAL_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 11.11
+      "percentage": 10.0
     },
     {
       "name": "ASIA_PACIFIC",
       "region": "ASIA_PACIFIC",
       "count": 1,
       "events": 1,
-      "percentage": 11.11
+      "percentage": 10.0
     },
     {
       "name": "AMERICAS",
       "region": "AMERICAS",
       "count": 1,
       "events": 1,
-      "percentage": 11.11
+      "percentage": 10.0
     }
   ],
   "sources": [
     {
       "source": "X",
       "name": "X",
-      "count": 267,
-      "posts": 267,
-      "percentage": 71.58
+      "count": 311,
+      "posts": 311,
+      "percentage": 73.35
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 54,
-      "posts": 54,
-      "percentage": 14.48
+      "count": 60,
+      "posts": 60,
+      "percentage": 14.15
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 46,
-      "posts": 46,
-      "percentage": 12.33
+      "count": 47,
+      "posts": 47,
+      "percentage": 11.08
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
       "count": 6,
       "posts": 6,
-      "percentage": 1.61
+      "percentage": 1.42
     }
   ],
   "region_activity": [
     {
       "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 6,
-      "events": 6,
-      "percentage": 66.67
+      "count": 7,
+      "events": 7,
+      "percentage": 70.0
     },
     {
       "name": "CENTRAL_MEDITERRANEAN",
       "region": "CENTRAL_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 11.11
+      "percentage": 10.0
     },
     {
       "name": "ASIA_PACIFIC",
       "region": "ASIA_PACIFIC",
       "count": 1,
       "events": 1,
-      "percentage": 11.11
+      "percentage": 10.0
     },
     {
       "name": "AMERICAS",
       "region": "AMERICAS",
       "count": 1,
       "events": 1,
-      "percentage": 11.11
+      "percentage": 10.0
     }
   ],
   "source_activity": [
     {
       "source": "X",
       "name": "X",
-      "count": 267,
-      "posts": 267,
-      "percentage": 71.58
+      "count": 311,
+      "posts": 311,
+      "percentage": 73.35
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 54,
-      "posts": 54,
-      "percentage": 14.48
+      "count": 60,
+      "posts": 60,
+      "percentage": 14.15
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 46,
-      "posts": 46,
-      "percentage": 12.33
+      "count": 47,
+      "posts": 47,
+      "percentage": 11.08
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
       "count": 6,
       "posts": 6,
-      "percentage": 1.61
+      "percentage": 1.42
     }
   ],
   "correlation": {
     "correlated_events": 0,
     "correlated_sources": 0,
-    "grouped_sources": 9,
-    "event_groups": 403,
-    "active_groups": 403,
+    "grouped_sources": 10,
+    "event_groups": 404,
+    "active_groups": 404,
     "multi_source_groups": 36,
     "strongest_match": 1.0,
     "correlation_rate": 0.0
@@ -943,42 +943,42 @@
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "database": "AVAILABLE",
-    "last_run_id": 228,
-    "last_completed_at": "2026-10-07T08:00:56Z"
+    "last_run_id": 229,
+    "last_completed_at": "2026-10-07T10:42:02Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 9,
+    "operational_events_24h": 10,
     "influence_signals_24h": 20,
-    "access_signals_24h": 4,
+    "access_signals_24h": 3,
     "correlated_events_24h": 0,
-    "active_event_groups": 403,
+    "active_event_groups": 404,
     "dominant_region": "CENTRAL_MEDITERRANEAN",
     "hotspot": "CENTRAL_MEDITERRANEAN",
-    "dominant_event_type": "RESCUE_OPERATION",
+    "dominant_event_type": "BORDER_CROSSING",
     "dominant_source": "X",
     "average_confidence": 0.481,
     "confidence_level": "LOW",
     "correlation_rate": 0.0,
-    "activity_level": "MODERATE",
+    "activity_level": "ELEVATED",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 9 operatív migrációs eseményt, 20 influence/early-warning jelzést és 4 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 403 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Central Mediterranean. A domináns operatív eseménytípus: Rescue Operation. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.48. A jelenlegi aktivitási szint: MODERATE."
+    "summary": "Az elmúlt 24 órában a rendszer 10 operatív migrációs eseményt, 20 influence/early-warning jelzést és 3 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 404 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Central Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.48. A jelenlegi aktivitási szint: ELEVATED."
   },
   "analytical_assessment": {
-    "operational_events_24h": 9,
+    "operational_events_24h": 10,
     "influence_signals_24h": 20,
-    "access_signals_24h": 4,
+    "access_signals_24h": 3,
     "correlated_events_24h": 0,
-    "active_event_groups": 403,
+    "active_event_groups": 404,
     "dominant_region": "CENTRAL_MEDITERRANEAN",
     "hotspot": "CENTRAL_MEDITERRANEAN",
-    "dominant_event_type": "RESCUE_OPERATION",
+    "dominant_event_type": "BORDER_CROSSING",
     "dominant_source": "X",
     "average_confidence": 0.481,
     "confidence_level": "LOW",
     "correlation_rate": 0.0,
-    "activity_level": "MODERATE",
+    "activity_level": "ELEVATED",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 9 operatív migrációs eseményt, 20 influence/early-warning jelzést és 4 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 403 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Central Mediterranean. A domináns operatív eseménytípus: Rescue Operation. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.48. A jelenlegi aktivitási szint: MODERATE."
+    "summary": "Az elmúlt 24 órában a rendszer 10 operatív migrációs eseményt, 20 influence/early-warning jelzést és 3 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 404 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Central Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.48. A jelenlegi aktivitási szint: ELEVATED."
   },
   "high_confidence_events": [
     {
@@ -1280,39 +1280,38 @@
       "platform_count": 1
     },
     {
-      "id": 867,
-      "source": "REDDIT",
-      "source_post_id": "reddit_1wz6f4e",
-      "author": "Al2t0rr3",
-      "language": null,
-      "published_at": "2026-10-06T16:02:54Z",
-      "first_detected_at": "2026-10-06T16:44:48Z",
-      "last_detected_at": "2026-10-06T16:44:48Z",
+      "id": 878,
+      "source": "X",
+      "source_post_id": "2107662010754175029",
+      "author": "lottydug",
+      "language": "en",
+      "published_at": "2026-10-07T02:39:16Z",
+      "first_detected_at": "2026-10-07T03:04:31Z",
+      "last_detected_at": "2026-10-07T03:04:31Z",
       "detection_count": 1,
-      "text": "🇬🇧 Afghan migrant Dawood Safi, who murdered Wayne Broadhurst as he walked his dog, moments after attacking his landlord and stabbing a 14-year-old boy, has received no jail time\nOn October 27, 2025, in Uxbridge, west London, Safi, in paranoid delusions, went on a “frenzy of violence.” He first attacked his landlord, Shahzad Farrukh, at home with a kitchen knife, leaving him severe injuries. He then stabbed a 14-year-old boy in the street and killed 49-year-old council street sweeper Wayne Broadhurst, who was walking his dog, stabbing him at least 14 times. On Monday, Southwark Crown Court gave Safi an indefinite hospital order and recommended deportation after he pleaded guilty to manslaughter by reason of diminished responsibility. Safi entered the UK illegally on the back of a lorry in 2020. He lied about his age, claiming to be 17 rather than 22, and was granted asylum in 2022, with indefinite leave to remain.",
-      "text_excerpt": "🇬🇧 Afghan migrant Dawood Safi, who murdered Wayne Broadhurst as he walked his dog, moments after attacking his landlord and stabbing a 14-year-old boy, has received no jail time\nOn October 27, 2025, in Uxbridge, west London, Safi, in paranoid delusions, went on a “frenzy of violence.” He first attacked his landlord, Shahzad Farrukh, at home with a kitchen knife, leaving him severe injuries. He then stabbed a 14-year-old boy in the street and killed 49-year-old council street sweeper Wayne Broadhurst, who was walking his dog, stabbing him at least 14 times. On Monday, Southwark Crown Court gave Safi an indefinite hospital order and recommended deportation after he pleaded guilty to manslaught",
-      "url": "https://www.reddit.com/r/EndGlobalism/comments/1wz6f4e/afghan_migrant_dawood_safi_who_murdered_wayne/",
-      "source_url": "https://www.reddit.com/r/EndGlobalism/comments/1wz6f4e/afghan_migrant_dawood_safi_who_murdered_wayne/",
+      "text": "@johnadgrady Fuck off with your throwing pennies to the proles. WHAT ABOUT THE PAKISTANI CHILD RAPE GANGS?\nWHAT ABOUT THE BOATS AND ILLEGAL MIGRANTS \nWHAT ABOUT LEAVING THE ECHR?\nWHAT ABOUT ISSUES THAT REALLY MATTER YOU PARASITE?",
+      "text_excerpt": "@johnadgrady Fuck off with your throwing pennies to the proles. WHAT ABOUT THE PAKISTANI CHILD RAPE GANGS?\nWHAT ABOUT THE BOATS AND ILLEGAL MIGRANTS \nWHAT ABOUT LEAVING THE ECHR?\nWHAT ABOUT ISSUES THAT REALLY MATTER YOU PARASITE?",
+      "url": "https://x.com/lottydug/status/2107662010754175029",
+      "source_url": "https://x.com/lottydug/status/2107662010754175029",
       "primary_signal": "LEGAL_MIGRATION_SIGNAL",
       "signal_type": "LEGAL_MIGRATION_SIGNAL",
       "signal_mode": "DIRECT",
       "signal_intent": "LEGAL_ACCESS",
       "priority": "MEDIUM",
-      "confidence": 0.97,
-      "score": 17.0,
+      "confidence": 0.94,
+      "score": 14.0,
       "matched_signals": [
         "LEGAL_MIGRATION_SIGNAL"
       ],
       "matched_phrases": [
         [
           "legal_signal",
-          "granted asylum"
+          "ECHR"
         ]
       ],
       "matched_groups": [],
       "context_matches": [
-        "migrant",
-        "asylum"
+        "MIGRANTS"
       ],
       "high_value_matches": false,
       "signal_context_rejections": {},
@@ -1329,20 +1328,20 @@
       "latitude": null,
       "longitude": null,
       "rules_version": "2.6",
-      "priority_score": 49.95,
+      "priority_score": 48.9,
       "analyst_priority": "MEDIUM",
       "related_posts_count": 1,
       "related_post_ids": [
-        "reddit_1wz6f4e"
+        "2107662010754175029"
       ],
       "related_authors": [
-        "Al2t0rr3"
+        "lottydug"
       ],
       "related_urls": [
-        "https://www.reddit.com/r/EndGlobalism/comments/1wz6f4e/afghan_migrant_dawood_safi_who_murdered_wayne/"
+        "https://x.com/lottydug/status/2107662010754175029"
       ],
       "related_sources": [
-        "REDDIT"
+        "X"
       ],
       "independent_author_count": 1,
       "platform_count": 1
@@ -1618,59 +1617,6 @@
       "analyst_priority": "HIGH"
     },
     {
-      "id": 867,
-      "source": "REDDIT",
-      "source_post_id": "reddit_1wz6f4e",
-      "author": "Al2t0rr3",
-      "language": null,
-      "published_at": "2026-10-06T16:02:54Z",
-      "first_detected_at": "2026-10-06T16:44:48Z",
-      "last_detected_at": "2026-10-06T16:44:48Z",
-      "detection_count": 1,
-      "text": "🇬🇧 Afghan migrant Dawood Safi, who murdered Wayne Broadhurst as he walked his dog, moments after attacking his landlord and stabbing a 14-year-old boy, has received no jail time\nOn October 27, 2025, in Uxbridge, west London, Safi, in paranoid delusions, went on a “frenzy of violence.” He first attacked his landlord, Shahzad Farrukh, at home with a kitchen knife, leaving him severe injuries. He then stabbed a 14-year-old boy in the street and killed 49-year-old council street sweeper Wayne Broadhurst, who was walking his dog, stabbing him at least 14 times. On Monday, Southwark Crown Court gave Safi an indefinite hospital order and recommended deportation after he pleaded guilty to manslaughter by reason of diminished responsibility. Safi entered the UK illegally on the back of a lorry in 2020. He lied about his age, claiming to be 17 rather than 22, and was granted asylum in 2022, with indefinite leave to remain.",
-      "text_excerpt": "🇬🇧 Afghan migrant Dawood Safi, who murdered Wayne Broadhurst as he walked his dog, moments after attacking his landlord and stabbing a 14-year-old boy, has received no jail time\nOn October 27, 2025, in Uxbridge, west London, Safi, in paranoid delusions, went on a “frenzy of violence.” He first attacked his landlord, Shahzad Farrukh, at home with a kitchen knife, leaving him severe injuries. He then stabbed a 14-year-old boy in the street and killed 49-year-old council street sweeper Wayne Broadhurst, who was walking his dog, stabbing him at least 14 times. On Monday, Southwark Crown Court gave Safi an indefinite hospital order and recommended deportation after he pleaded guilty to manslaught",
-      "url": "https://www.reddit.com/r/EndGlobalism/comments/1wz6f4e/afghan_migrant_dawood_safi_who_murdered_wayne/",
-      "source_url": "https://www.reddit.com/r/EndGlobalism/comments/1wz6f4e/afghan_migrant_dawood_safi_who_murdered_wayne/",
-      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
-      "signal_type": "LEGAL_MIGRATION_SIGNAL",
-      "signal_mode": "DIRECT",
-      "signal_intent": "LEGAL_ACCESS",
-      "priority": "MEDIUM",
-      "confidence": 0.97,
-      "score": 17.0,
-      "matched_signals": [
-        "LEGAL_MIGRATION_SIGNAL"
-      ],
-      "matched_phrases": [
-        [
-          "legal_signal",
-          "granted asylum"
-        ]
-      ],
-      "matched_groups": [],
-      "context_matches": [
-        "migrant",
-        "asylum"
-      ],
-      "high_value_matches": false,
-      "signal_context_rejections": {},
-      "migration_context": true,
-      "human_migration_context": null,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "2.6",
-      "priority_score": 49.95,
-      "analyst_priority": "MEDIUM"
-    },
-    {
       "id": 878,
       "source": "X",
       "source_post_id": "2107662010754175029",
@@ -1721,6 +1667,72 @@
       "rules_version": "2.6",
       "priority_score": 48.9,
       "analyst_priority": "MEDIUM"
+    },
+    {
+      "id": 887,
+      "source": "X",
+      "source_post_id": "2107779244042412198",
+      "author": "iljaandreev",
+      "language": "en",
+      "published_at": "2026-10-07T10:25:07Z",
+      "first_detected_at": "2026-10-07T10:39:27Z",
+      "last_detected_at": "2026-10-07T10:39:27Z",
+      "detection_count": 1,
+      "text": "@dim0kq First of all, after successfully stopping 20 migrants, the border guards didn’t manage to arrive in time the second time before the intruders escaped back into Belarus, taking the cameras with them.\n\nSecondly, they have clear orders to immediately resist in the event of an armed",
+      "text_excerpt": "@dim0kq First of all, after successfully stopping 20 migrants, the border guards didn’t manage to arrive in time the second time before the intruders escaped back into Belarus, taking the cameras with them.\n\nSecondly, they have clear orders to immediately resist in the event of an armed",
+      "url": "https://x.com/iljaandreev/status/2107779244042412198",
+      "source_url": "https://x.com/iljaandreev/status/2107779244042412198",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.9,
+      "score": 10.25,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "migrants, the border guards didn’t manage to arrive"
+        ],
+        [
+          "route",
+          "border"
+        ],
+        [
+          "enforcement",
+          "border guards"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT",
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "migrants, the border guards didn’t manage to arrive"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "EASTERN_EU_BORDER",
+      "primary_region": "EASTERN_EU_BORDER",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 35.5,
+      "analyst_priority": "LOW"
     },
     {
       "id": 881,
@@ -1856,6 +1868,67 @@
       "analyst_priority": "LOW"
     },
     {
+      "id": 884,
+      "source": "MASTODON",
+      "source_post_id": "mastodon_117398740825921846",
+      "author": null,
+      "language": null,
+      "published_at": "2026-10-07T08:43:42Z",
+      "first_detected_at": "2026-10-07T10:39:05Z",
+      "last_detected_at": "2026-10-07T10:39:05Z",
+      "detection_count": 1,
+      "text": "Cinco pateras en apenas unas horas y 87 personas interceptadas entre Mallorca y Cabrera: Baleares supera ya las 6.500 llegadas desde enero. # Baleares # Mallorca # Cabrera # Migracion # Pateras # España # Mediterraneo # GuardiaCivil # SalvamentoMaritimo # Inmigracion # Actualidad # felizmiercoles # 7deoctubre https:// elfolio.es/llegada-de-migrante s-en-pateras-a-baleares-2026/",
+      "text_excerpt": "Cinco pateras en apenas unas horas y 87 personas interceptadas entre Mallorca y Cabrera: Baleares supera ya las 6.500 llegadas desde enero. # Baleares # Mallorca # Cabrera # Migracion # Pateras # España # Mediterraneo # GuardiaCivil # SalvamentoMaritimo # Inmigracion # Actualidad # felizmiercoles # 7deoctubre https:// elfolio.es/llegada-de-migrante s-en-pateras-a-baleares-2026/",
+      "url": "https://mastodon.social/@elfolio/117398740825921846",
+      "source_url": "https://mastodon.social/@elfolio/117398740825921846",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.8,
+      "score": 8.75,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "llegada-de-migrante"
+        ],
+        [
+          "enforcement",
+          "interceptadas"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrante"
+      ],
+      "high_value_matches": [
+        "llegada-de-migrante"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 28.0,
+      "analyst_priority": "LOW"
+    },
+    {
       "id": 879,
       "source": "X",
       "source_post_id": "2107740430217396339",
@@ -1983,49 +2056,46 @@
       "analyst_priority": "LOW"
     },
     {
-      "id": 856,
-      "source": "X",
-      "source_post_id": "2107452338633855062",
-      "author": "MigrantTrackUK",
-      "language": "en",
-      "published_at": "2026-10-06T12:46:06Z",
-      "first_detected_at": "2026-10-06T12:46:51Z",
-      "last_detected_at": "2026-10-06T12:46:51Z",
+      "id": 885,
+      "source": "TELEGRAM",
+      "source_post_id": "1604168769:12091",
+      "author": "migrantlar24",
+      "language": null,
+      "published_at": "2026-10-07T10:29:07Z",
+      "first_detected_at": "2026-10-07T10:39:06Z",
+      "last_detected_at": "2026-10-07T10:39:06Z",
       "detection_count": 1,
-      "text": "@PolitlcsUK 🚨LATEST: Andy Burnham has now allowed 8,009 Illegal migrants to cross the channel by small boat since becoming PM two and a half months ago. That is an average of 102 every single day. https://t.co/YbeQkAknDX",
-      "text_excerpt": "@PolitlcsUK 🚨LATEST: Andy Burnham has now allowed 8,009 Illegal migrants to cross the channel by small boat since becoming PM two and a half months ago. That is an average of 102 every single day. https://t.co/YbeQkAknDX",
-      "url": "https://x.com/MigrantTrackUK/status/2107452338633855062",
-      "source_url": "https://x.com/MigrantTrackUK/status/2107452338633855062",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "text": "Санкт-Петербургда кенг кўламли рейд ўтказилди\n\nАдмиралтейский туманида ўтказилган профилактик тадбир давомида полиция 302 нафар фуқарони, шу жумладан 27 нафар чет эл фуқаросини текширувдан ўтказди. Текширув натижасида миграция тартибини бузганликда гумон қилинган бир нафар чет эллик шахс полиция бўлимига олиб кетилди.\n\n👉https://migrantlar24.com/sq7hvd",
+      "text_excerpt": "Санкт-Петербургда кенг кўламли рейд ўтказилди\n\nАдмиралтейский туманида ўтказилган профилактик тадбир давомида полиция 302 нафар фуқарони, шу жумладан 27 нафар чет эл фуқаросини текширувдан ўтказди. Текширув натижасида миграция тартибини бузганликда гумон қилинган бир нафар чет эллик шахс полиция бўлимига олиб кетилди.\n\n👉https://migrantlar24.com/sq7hvd",
+      "url": "https://t.me/migrantlar24/12091",
+      "source_url": "https://t.me/migrantlar24/12091",
+      "primary_signal": "ENFORCEMENT_EARLY_WARNING",
+      "signal_type": "ENFORCEMENT_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
+      "signal_intent": "ENFORCEMENT_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 9.0,
+      "confidence": 0.72,
+      "score": 6.75,
       "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
+        "ENFORCEMENT_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
-          "movement",
-          "migrants to cross"
+          "enforcement",
+          "рейд"
         ],
         [
-          "route",
-          "boat"
+          "enforcement",
+          "полиция"
         ]
       ],
       "matched_groups": [
-        "MOVEMENT",
-        "ROUTE"
+        "ENFORCEMENT"
       ],
       "context_matches": [
-        "migrants"
+        "чет эл фуқаросини"
       ],
-      "high_value_matches": [
-        "migrants to cross"
-      ],
+      "high_value_matches": [],
       "signal_context_rejections": [],
       "migration_context": true,
       "human_migration_context": true,
@@ -2040,190 +2110,7 @@
       "latitude": null,
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
-      "analyst_priority": "LOW"
-    },
-    {
-      "id": 858,
-      "source": "X",
-      "source_post_id": "2107452188045820084",
-      "author": "MigrantTrackUK",
-      "language": "en",
-      "published_at": "2026-10-06T12:45:30Z",
-      "first_detected_at": "2026-10-06T12:47:36Z",
-      "last_detected_at": "2026-10-06T12:47:36Z",
-      "detection_count": 1,
-      "text": "@SimonJonesNews 🚨LATEST: Andy Burnham has now allowed 8,009 Illegal migrants to cross the channel by small boat since becoming PM two and a half months ago. That is an average of 102 every single day. https://t.co/j0xWgN0pY6",
-      "text_excerpt": "@SimonJonesNews 🚨LATEST: Andy Burnham has now allowed 8,009 Illegal migrants to cross the channel by small boat since becoming PM two and a half months ago. That is an average of 102 every single day. https://t.co/j0xWgN0pY6",
-      "url": "https://x.com/MigrantTrackUK/status/2107452188045820084",
-      "source_url": "https://x.com/MigrantTrackUK/status/2107452188045820084",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 9.0,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrants to cross"
-        ],
-        [
-          "route",
-          "boat"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT",
-        "ROUTE"
-      ],
-      "context_matches": [
-        "migrants"
-      ],
-      "high_value_matches": [
-        "migrants to cross"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
-      "analyst_priority": "LOW"
-    },
-    {
-      "id": 859,
-      "source": "X",
-      "source_post_id": "2107451829080486304",
-      "author": "MigrantTrackUK",
-      "language": "en",
-      "published_at": "2026-10-06T12:44:05Z",
-      "first_detected_at": "2026-10-06T12:47:36Z",
-      "last_detected_at": "2026-10-06T12:47:36Z",
-      "detection_count": 1,
-      "text": "@RupertLowe10 🚨LATEST: Andy Burnham has now allowed 8,009 Illegal migrants to cross the channel by small boat since becoming PM two and a half months ago. That is an average of 102 every single day. https://t.co/BaGGUKZqwr",
-      "text_excerpt": "@RupertLowe10 🚨LATEST: Andy Burnham has now allowed 8,009 Illegal migrants to cross the channel by small boat since becoming PM two and a half months ago. That is an average of 102 every single day. https://t.co/BaGGUKZqwr",
-      "url": "https://x.com/MigrantTrackUK/status/2107451829080486304",
-      "source_url": "https://x.com/MigrantTrackUK/status/2107451829080486304",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 9.0,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrants to cross"
-        ],
-        [
-          "route",
-          "boat"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT",
-        "ROUTE"
-      ],
-      "context_matches": [
-        "migrants"
-      ],
-      "high_value_matches": [
-        "migrants to cross"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
-      "analyst_priority": "LOW"
-    },
-    {
-      "id": 860,
-      "source": "X",
-      "source_post_id": "2107451698599891260",
-      "author": "MigrantTrackUK",
-      "language": "en",
-      "published_at": "2026-10-06T12:43:34Z",
-      "first_detected_at": "2026-10-06T12:47:36Z",
-      "last_detected_at": "2026-10-06T12:47:36Z",
-      "detection_count": 1,
-      "text": "@reformparty_uk 🚨LATEST: Andy Burnham has now allowed 8,009 Illegal migrants to cross the channel by small boat since becoming PM two and a half months ago. That is an average of 102 every single day. https://t.co/PF5uiY470K",
-      "text_excerpt": "@reformparty_uk 🚨LATEST: Andy Burnham has now allowed 8,009 Illegal migrants to cross the channel by small boat since becoming PM two and a half months ago. That is an average of 102 every single day. https://t.co/PF5uiY470K",
-      "url": "https://x.com/MigrantTrackUK/status/2107451698599891260",
-      "source_url": "https://x.com/MigrantTrackUK/status/2107451698599891260",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 9.0,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrants to cross"
-        ],
-        [
-          "route",
-          "boat"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT",
-        "ROUTE"
-      ],
-      "context_matches": [
-        "migrants"
-      ],
-      "high_value_matches": [
-        "migrants to cross"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
+      "priority_score": 25.2,
       "analyst_priority": "LOW"
     },
     {
@@ -2578,6 +2465,118 @@
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
       "priority_score": 29.2,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 886,
+      "source": "X",
+      "source_post_id": "2107780476471771292",
+      "author": "EUPerspectives",
+      "language": "en",
+      "published_at": "2026-10-07T10:30:00Z",
+      "first_detected_at": "2026-10-07T10:39:26Z",
+      "last_detected_at": "2026-10-07T10:39:26Z",
+      "detection_count": 1,
+      "text": "Masked and armed individuals attempted to smuggle about twenty illegal migrants from Belarus into Latvia this week. Latvian Interior Minister @janisdombrava warned that such cases could have serious consequences for Belarus itself.\n\nThe Latvian armed forces stated this confirms https://t.co/h84mwvrBZV",
+      "text_excerpt": "Masked and armed individuals attempted to smuggle about twenty illegal migrants from Belarus into Latvia this week. Latvian Interior Minister @janisdombrava warned that such cases could have serious consequences for Belarus itself.\n\nThe Latvian armed forces stated this confirms https://t.co/h84mwvrBZV",
+      "url": "https://x.com/EUPerspectives/status/2107780476471771292",
+      "source_url": "https://x.com/EUPerspectives/status/2107780476471771292",
+      "primary_signal": "FACILITATION_EARLY_WARNING",
+      "signal_type": "FACILITATION_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "FACILITATION_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.62,
+      "score": 5.75,
+      "matched_signals": [
+        "FACILITATION_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "facilitation",
+          "smuggle about twenty illegal migrants"
+        ]
+      ],
+      "matched_groups": [
+        "FACILITATION"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "smuggle about twenty illegal migrants"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "EASTERN_EU_BORDER",
+      "primary_region": "EASTERN_EU_BORDER",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 25.7,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 888,
+      "source": "X",
+      "source_post_id": "2107772558892273799",
+      "author": "marion_aitken",
+      "language": "en",
+      "published_at": "2026-10-07T09:58:33Z",
+      "first_detected_at": "2026-10-07T10:40:11Z",
+      "last_detected_at": "2026-10-07T10:40:11Z",
+      "detection_count": 1,
+      "text": "@InvestorJared Free hotels, free phones and laptops, free transport and free money each week to thousands of migrants",
+      "text_excerpt": "@InvestorJared Free hotels, free phones and laptops, free transport and free money each week to thousands of migrants",
+      "url": "https://x.com/marion_aitken/status/2107772558892273799",
+      "source_url": "https://x.com/marion_aitken/status/2107772558892273799",
+      "primary_signal": "FACILITATION_EARLY_WARNING",
+      "signal_type": "FACILITATION_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "FACILITATION_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.62,
+      "score": 5.75,
+      "matched_signals": [
+        "FACILITATION_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "facilitation",
+          "transport and free money each week to thousands of migrants"
+        ]
+      ],
+      "matched_groups": [
+        "FACILITATION"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "transport and free money each week to thousands of migrants"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 21.7,
       "analyst_priority": "LOW"
     },
     {
@@ -2801,59 +2800,6 @@
       "analyst_priority": "HIGH"
     },
     {
-      "id": 867,
-      "source": "REDDIT",
-      "source_post_id": "reddit_1wz6f4e",
-      "author": "Al2t0rr3",
-      "language": null,
-      "published_at": "2026-10-06T16:02:54Z",
-      "first_detected_at": "2026-10-06T16:44:48Z",
-      "last_detected_at": "2026-10-06T16:44:48Z",
-      "detection_count": 1,
-      "text": "🇬🇧 Afghan migrant Dawood Safi, who murdered Wayne Broadhurst as he walked his dog, moments after attacking his landlord and stabbing a 14-year-old boy, has received no jail time\nOn October 27, 2025, in Uxbridge, west London, Safi, in paranoid delusions, went on a “frenzy of violence.” He first attacked his landlord, Shahzad Farrukh, at home with a kitchen knife, leaving him severe injuries. He then stabbed a 14-year-old boy in the street and killed 49-year-old council street sweeper Wayne Broadhurst, who was walking his dog, stabbing him at least 14 times. On Monday, Southwark Crown Court gave Safi an indefinite hospital order and recommended deportation after he pleaded guilty to manslaughter by reason of diminished responsibility. Safi entered the UK illegally on the back of a lorry in 2020. He lied about his age, claiming to be 17 rather than 22, and was granted asylum in 2022, with indefinite leave to remain.",
-      "text_excerpt": "🇬🇧 Afghan migrant Dawood Safi, who murdered Wayne Broadhurst as he walked his dog, moments after attacking his landlord and stabbing a 14-year-old boy, has received no jail time\nOn October 27, 2025, in Uxbridge, west London, Safi, in paranoid delusions, went on a “frenzy of violence.” He first attacked his landlord, Shahzad Farrukh, at home with a kitchen knife, leaving him severe injuries. He then stabbed a 14-year-old boy in the street and killed 49-year-old council street sweeper Wayne Broadhurst, who was walking his dog, stabbing him at least 14 times. On Monday, Southwark Crown Court gave Safi an indefinite hospital order and recommended deportation after he pleaded guilty to manslaught",
-      "url": "https://www.reddit.com/r/EndGlobalism/comments/1wz6f4e/afghan_migrant_dawood_safi_who_murdered_wayne/",
-      "source_url": "https://www.reddit.com/r/EndGlobalism/comments/1wz6f4e/afghan_migrant_dawood_safi_who_murdered_wayne/",
-      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
-      "signal_type": "LEGAL_MIGRATION_SIGNAL",
-      "signal_mode": "DIRECT",
-      "signal_intent": "LEGAL_ACCESS",
-      "priority": "MEDIUM",
-      "confidence": 0.97,
-      "score": 17.0,
-      "matched_signals": [
-        "LEGAL_MIGRATION_SIGNAL"
-      ],
-      "matched_phrases": [
-        [
-          "legal_signal",
-          "granted asylum"
-        ]
-      ],
-      "matched_groups": [],
-      "context_matches": [
-        "migrant",
-        "asylum"
-      ],
-      "high_value_matches": false,
-      "signal_context_rejections": {},
-      "migration_context": true,
-      "human_migration_context": null,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "2.6",
-      "priority_score": 49.95,
-      "analyst_priority": "MEDIUM"
-    },
-    {
       "id": 878,
       "source": "X",
       "source_post_id": "2107662010754175029",
@@ -2904,6 +2850,72 @@
       "rules_version": "2.6",
       "priority_score": 48.9,
       "analyst_priority": "MEDIUM"
+    },
+    {
+      "id": 887,
+      "source": "X",
+      "source_post_id": "2107779244042412198",
+      "author": "iljaandreev",
+      "language": "en",
+      "published_at": "2026-10-07T10:25:07Z",
+      "first_detected_at": "2026-10-07T10:39:27Z",
+      "last_detected_at": "2026-10-07T10:39:27Z",
+      "detection_count": 1,
+      "text": "@dim0kq First of all, after successfully stopping 20 migrants, the border guards didn’t manage to arrive in time the second time before the intruders escaped back into Belarus, taking the cameras with them.\n\nSecondly, they have clear orders to immediately resist in the event of an armed",
+      "text_excerpt": "@dim0kq First of all, after successfully stopping 20 migrants, the border guards didn’t manage to arrive in time the second time before the intruders escaped back into Belarus, taking the cameras with them.\n\nSecondly, they have clear orders to immediately resist in the event of an armed",
+      "url": "https://x.com/iljaandreev/status/2107779244042412198",
+      "source_url": "https://x.com/iljaandreev/status/2107779244042412198",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.9,
+      "score": 10.25,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "migrants, the border guards didn’t manage to arrive"
+        ],
+        [
+          "route",
+          "border"
+        ],
+        [
+          "enforcement",
+          "border guards"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT",
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "migrants, the border guards didn’t manage to arrive"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "EASTERN_EU_BORDER",
+      "primary_region": "EASTERN_EU_BORDER",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 35.5,
+      "analyst_priority": "LOW"
     },
     {
       "id": 881,
@@ -3039,6 +3051,67 @@
       "analyst_priority": "LOW"
     },
     {
+      "id": 884,
+      "source": "MASTODON",
+      "source_post_id": "mastodon_117398740825921846",
+      "author": null,
+      "language": null,
+      "published_at": "2026-10-07T08:43:42Z",
+      "first_detected_at": "2026-10-07T10:39:05Z",
+      "last_detected_at": "2026-10-07T10:39:05Z",
+      "detection_count": 1,
+      "text": "Cinco pateras en apenas unas horas y 87 personas interceptadas entre Mallorca y Cabrera: Baleares supera ya las 6.500 llegadas desde enero. # Baleares # Mallorca # Cabrera # Migracion # Pateras # España # Mediterraneo # GuardiaCivil # SalvamentoMaritimo # Inmigracion # Actualidad # felizmiercoles # 7deoctubre https:// elfolio.es/llegada-de-migrante s-en-pateras-a-baleares-2026/",
+      "text_excerpt": "Cinco pateras en apenas unas horas y 87 personas interceptadas entre Mallorca y Cabrera: Baleares supera ya las 6.500 llegadas desde enero. # Baleares # Mallorca # Cabrera # Migracion # Pateras # España # Mediterraneo # GuardiaCivil # SalvamentoMaritimo # Inmigracion # Actualidad # felizmiercoles # 7deoctubre https:// elfolio.es/llegada-de-migrante s-en-pateras-a-baleares-2026/",
+      "url": "https://mastodon.social/@elfolio/117398740825921846",
+      "source_url": "https://mastodon.social/@elfolio/117398740825921846",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.8,
+      "score": 8.75,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "llegada-de-migrante"
+        ],
+        [
+          "enforcement",
+          "interceptadas"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrante"
+      ],
+      "high_value_matches": [
+        "llegada-de-migrante"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 28.0,
+      "analyst_priority": "LOW"
+    },
+    {
       "id": 879,
       "source": "X",
       "source_post_id": "2107740430217396339",
@@ -3166,49 +3239,46 @@
       "analyst_priority": "LOW"
     },
     {
-      "id": 856,
-      "source": "X",
-      "source_post_id": "2107452338633855062",
-      "author": "MigrantTrackUK",
-      "language": "en",
-      "published_at": "2026-10-06T12:46:06Z",
-      "first_detected_at": "2026-10-06T12:46:51Z",
-      "last_detected_at": "2026-10-06T12:46:51Z",
+      "id": 885,
+      "source": "TELEGRAM",
+      "source_post_id": "1604168769:12091",
+      "author": "migrantlar24",
+      "language": null,
+      "published_at": "2026-10-07T10:29:07Z",
+      "first_detected_at": "2026-10-07T10:39:06Z",
+      "last_detected_at": "2026-10-07T10:39:06Z",
       "detection_count": 1,
-      "text": "@PolitlcsUK 🚨LATEST: Andy Burnham has now allowed 8,009 Illegal migrants to cross the channel by small boat since becoming PM two and a half months ago. That is an average of 102 every single day. https://t.co/YbeQkAknDX",
-      "text_excerpt": "@PolitlcsUK 🚨LATEST: Andy Burnham has now allowed 8,009 Illegal migrants to cross the channel by small boat since becoming PM two and a half months ago. That is an average of 102 every single day. https://t.co/YbeQkAknDX",
-      "url": "https://x.com/MigrantTrackUK/status/2107452338633855062",
-      "source_url": "https://x.com/MigrantTrackUK/status/2107452338633855062",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "text": "Санкт-Петербургда кенг кўламли рейд ўтказилди\n\nАдмиралтейский туманида ўтказилган профилактик тадбир давомида полиция 302 нафар фуқарони, шу жумладан 27 нафар чет эл фуқаросини текширувдан ўтказди. Текширув натижасида миграция тартибини бузганликда гумон қилинган бир нафар чет эллик шахс полиция бўлимига олиб кетилди.\n\n👉https://migrantlar24.com/sq7hvd",
+      "text_excerpt": "Санкт-Петербургда кенг кўламли рейд ўтказилди\n\nАдмиралтейский туманида ўтказилган профилактик тадбир давомида полиция 302 нафар фуқарони, шу жумладан 27 нафар чет эл фуқаросини текширувдан ўтказди. Текширув натижасида миграция тартибини бузганликда гумон қилинган бир нафар чет эллик шахс полиция бўлимига олиб кетилди.\n\n👉https://migrantlar24.com/sq7hvd",
+      "url": "https://t.me/migrantlar24/12091",
+      "source_url": "https://t.me/migrantlar24/12091",
+      "primary_signal": "ENFORCEMENT_EARLY_WARNING",
+      "signal_type": "ENFORCEMENT_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
+      "signal_intent": "ENFORCEMENT_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 9.0,
+      "confidence": 0.72,
+      "score": 6.75,
       "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
+        "ENFORCEMENT_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
-          "movement",
-          "migrants to cross"
+          "enforcement",
+          "рейд"
         ],
         [
-          "route",
-          "boat"
+          "enforcement",
+          "полиция"
         ]
       ],
       "matched_groups": [
-        "MOVEMENT",
-        "ROUTE"
+        "ENFORCEMENT"
       ],
       "context_matches": [
-        "migrants"
+        "чет эл фуқаросини"
       ],
-      "high_value_matches": [
-        "migrants to cross"
-      ],
+      "high_value_matches": [],
       "signal_context_rejections": [],
       "migration_context": true,
       "human_migration_context": true,
@@ -3223,190 +3293,7 @@
       "latitude": null,
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
-      "analyst_priority": "LOW"
-    },
-    {
-      "id": 858,
-      "source": "X",
-      "source_post_id": "2107452188045820084",
-      "author": "MigrantTrackUK",
-      "language": "en",
-      "published_at": "2026-10-06T12:45:30Z",
-      "first_detected_at": "2026-10-06T12:47:36Z",
-      "last_detected_at": "2026-10-06T12:47:36Z",
-      "detection_count": 1,
-      "text": "@SimonJonesNews 🚨LATEST: Andy Burnham has now allowed 8,009 Illegal migrants to cross the channel by small boat since becoming PM two and a half months ago. That is an average of 102 every single day. https://t.co/j0xWgN0pY6",
-      "text_excerpt": "@SimonJonesNews 🚨LATEST: Andy Burnham has now allowed 8,009 Illegal migrants to cross the channel by small boat since becoming PM two and a half months ago. That is an average of 102 every single day. https://t.co/j0xWgN0pY6",
-      "url": "https://x.com/MigrantTrackUK/status/2107452188045820084",
-      "source_url": "https://x.com/MigrantTrackUK/status/2107452188045820084",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 9.0,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrants to cross"
-        ],
-        [
-          "route",
-          "boat"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT",
-        "ROUTE"
-      ],
-      "context_matches": [
-        "migrants"
-      ],
-      "high_value_matches": [
-        "migrants to cross"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
-      "analyst_priority": "LOW"
-    },
-    {
-      "id": 859,
-      "source": "X",
-      "source_post_id": "2107451829080486304",
-      "author": "MigrantTrackUK",
-      "language": "en",
-      "published_at": "2026-10-06T12:44:05Z",
-      "first_detected_at": "2026-10-06T12:47:36Z",
-      "last_detected_at": "2026-10-06T12:47:36Z",
-      "detection_count": 1,
-      "text": "@RupertLowe10 🚨LATEST: Andy Burnham has now allowed 8,009 Illegal migrants to cross the channel by small boat since becoming PM two and a half months ago. That is an average of 102 every single day. https://t.co/BaGGUKZqwr",
-      "text_excerpt": "@RupertLowe10 🚨LATEST: Andy Burnham has now allowed 8,009 Illegal migrants to cross the channel by small boat since becoming PM two and a half months ago. That is an average of 102 every single day. https://t.co/BaGGUKZqwr",
-      "url": "https://x.com/MigrantTrackUK/status/2107451829080486304",
-      "source_url": "https://x.com/MigrantTrackUK/status/2107451829080486304",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 9.0,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrants to cross"
-        ],
-        [
-          "route",
-          "boat"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT",
-        "ROUTE"
-      ],
-      "context_matches": [
-        "migrants"
-      ],
-      "high_value_matches": [
-        "migrants to cross"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
-      "analyst_priority": "LOW"
-    },
-    {
-      "id": 860,
-      "source": "X",
-      "source_post_id": "2107451698599891260",
-      "author": "MigrantTrackUK",
-      "language": "en",
-      "published_at": "2026-10-06T12:43:34Z",
-      "first_detected_at": "2026-10-06T12:47:36Z",
-      "last_detected_at": "2026-10-06T12:47:36Z",
-      "detection_count": 1,
-      "text": "@reformparty_uk 🚨LATEST: Andy Burnham has now allowed 8,009 Illegal migrants to cross the channel by small boat since becoming PM two and a half months ago. That is an average of 102 every single day. https://t.co/PF5uiY470K",
-      "text_excerpt": "@reformparty_uk 🚨LATEST: Andy Burnham has now allowed 8,009 Illegal migrants to cross the channel by small boat since becoming PM two and a half months ago. That is an average of 102 every single day. https://t.co/PF5uiY470K",
-      "url": "https://x.com/MigrantTrackUK/status/2107451698599891260",
-      "source_url": "https://x.com/MigrantTrackUK/status/2107451698599891260",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 9.0,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrants to cross"
-        ],
-        [
-          "route",
-          "boat"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT",
-        "ROUTE"
-      ],
-      "context_matches": [
-        "migrants"
-      ],
-      "high_value_matches": [
-        "migrants to cross"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
+      "priority_score": 25.2,
       "analyst_priority": "LOW"
     },
     {
@@ -3761,6 +3648,118 @@
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
       "priority_score": 29.2,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 886,
+      "source": "X",
+      "source_post_id": "2107780476471771292",
+      "author": "EUPerspectives",
+      "language": "en",
+      "published_at": "2026-10-07T10:30:00Z",
+      "first_detected_at": "2026-10-07T10:39:26Z",
+      "last_detected_at": "2026-10-07T10:39:26Z",
+      "detection_count": 1,
+      "text": "Masked and armed individuals attempted to smuggle about twenty illegal migrants from Belarus into Latvia this week. Latvian Interior Minister @janisdombrava warned that such cases could have serious consequences for Belarus itself.\n\nThe Latvian armed forces stated this confirms https://t.co/h84mwvrBZV",
+      "text_excerpt": "Masked and armed individuals attempted to smuggle about twenty illegal migrants from Belarus into Latvia this week. Latvian Interior Minister @janisdombrava warned that such cases could have serious consequences for Belarus itself.\n\nThe Latvian armed forces stated this confirms https://t.co/h84mwvrBZV",
+      "url": "https://x.com/EUPerspectives/status/2107780476471771292",
+      "source_url": "https://x.com/EUPerspectives/status/2107780476471771292",
+      "primary_signal": "FACILITATION_EARLY_WARNING",
+      "signal_type": "FACILITATION_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "FACILITATION_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.62,
+      "score": 5.75,
+      "matched_signals": [
+        "FACILITATION_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "facilitation",
+          "smuggle about twenty illegal migrants"
+        ]
+      ],
+      "matched_groups": [
+        "FACILITATION"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "smuggle about twenty illegal migrants"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "EASTERN_EU_BORDER",
+      "primary_region": "EASTERN_EU_BORDER",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 25.7,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 888,
+      "source": "X",
+      "source_post_id": "2107772558892273799",
+      "author": "marion_aitken",
+      "language": "en",
+      "published_at": "2026-10-07T09:58:33Z",
+      "first_detected_at": "2026-10-07T10:40:11Z",
+      "last_detected_at": "2026-10-07T10:40:11Z",
+      "detection_count": 1,
+      "text": "@InvestorJared Free hotels, free phones and laptops, free transport and free money each week to thousands of migrants",
+      "text_excerpt": "@InvestorJared Free hotels, free phones and laptops, free transport and free money each week to thousands of migrants",
+      "url": "https://x.com/marion_aitken/status/2107772558892273799",
+      "source_url": "https://x.com/marion_aitken/status/2107772558892273799",
+      "primary_signal": "FACILITATION_EARLY_WARNING",
+      "signal_type": "FACILITATION_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "FACILITATION_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.62,
+      "score": 5.75,
+      "matched_signals": [
+        "FACILITATION_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "facilitation",
+          "transport and free money each week to thousands of migrants"
+        ]
+      ],
+      "matched_groups": [
+        "FACILITATION"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "transport and free money each week to thousands of migrants"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 21.7,
       "analyst_priority": "LOW"
     },
     {
@@ -4014,39 +4013,38 @@
       "platform_count": 1
     },
     {
-      "id": 867,
-      "source": "REDDIT",
-      "source_post_id": "reddit_1wz6f4e",
-      "author": "Al2t0rr3",
-      "language": null,
-      "published_at": "2026-10-06T16:02:54Z",
-      "first_detected_at": "2026-10-06T16:44:48Z",
-      "last_detected_at": "2026-10-06T16:44:48Z",
+      "id": 878,
+      "source": "X",
+      "source_post_id": "2107662010754175029",
+      "author": "lottydug",
+      "language": "en",
+      "published_at": "2026-10-07T02:39:16Z",
+      "first_detected_at": "2026-10-07T03:04:31Z",
+      "last_detected_at": "2026-10-07T03:04:31Z",
       "detection_count": 1,
-      "text": "🇬🇧 Afghan migrant Dawood Safi, who murdered Wayne Broadhurst as he walked his dog, moments after attacking his landlord and stabbing a 14-year-old boy, has received no jail time\nOn October 27, 2025, in Uxbridge, west London, Safi, in paranoid delusions, went on a “frenzy of violence.” He first attacked his landlord, Shahzad Farrukh, at home with a kitchen knife, leaving him severe injuries. He then stabbed a 14-year-old boy in the street and killed 49-year-old council street sweeper Wayne Broadhurst, who was walking his dog, stabbing him at least 14 times. On Monday, Southwark Crown Court gave Safi an indefinite hospital order and recommended deportation after he pleaded guilty to manslaughter by reason of diminished responsibility. Safi entered the UK illegally on the back of a lorry in 2020. He lied about his age, claiming to be 17 rather than 22, and was granted asylum in 2022, with indefinite leave to remain.",
-      "text_excerpt": "🇬🇧 Afghan migrant Dawood Safi, who murdered Wayne Broadhurst as he walked his dog, moments after attacking his landlord and stabbing a 14-year-old boy, has received no jail time\nOn October 27, 2025, in Uxbridge, west London, Safi, in paranoid delusions, went on a “frenzy of violence.” He first attacked his landlord, Shahzad Farrukh, at home with a kitchen knife, leaving him severe injuries. He then stabbed a 14-year-old boy in the street and killed 49-year-old council street sweeper Wayne Broadhurst, who was walking his dog, stabbing him at least 14 times. On Monday, Southwark Crown Court gave Safi an indefinite hospital order and recommended deportation after he pleaded guilty to manslaught",
-      "url": "https://www.reddit.com/r/EndGlobalism/comments/1wz6f4e/afghan_migrant_dawood_safi_who_murdered_wayne/",
-      "source_url": "https://www.reddit.com/r/EndGlobalism/comments/1wz6f4e/afghan_migrant_dawood_safi_who_murdered_wayne/",
+      "text": "@johnadgrady Fuck off with your throwing pennies to the proles. WHAT ABOUT THE PAKISTANI CHILD RAPE GANGS?\nWHAT ABOUT THE BOATS AND ILLEGAL MIGRANTS \nWHAT ABOUT LEAVING THE ECHR?\nWHAT ABOUT ISSUES THAT REALLY MATTER YOU PARASITE?",
+      "text_excerpt": "@johnadgrady Fuck off with your throwing pennies to the proles. WHAT ABOUT THE PAKISTANI CHILD RAPE GANGS?\nWHAT ABOUT THE BOATS AND ILLEGAL MIGRANTS \nWHAT ABOUT LEAVING THE ECHR?\nWHAT ABOUT ISSUES THAT REALLY MATTER YOU PARASITE?",
+      "url": "https://x.com/lottydug/status/2107662010754175029",
+      "source_url": "https://x.com/lottydug/status/2107662010754175029",
       "primary_signal": "LEGAL_MIGRATION_SIGNAL",
       "signal_type": "LEGAL_MIGRATION_SIGNAL",
       "signal_mode": "DIRECT",
       "signal_intent": "LEGAL_ACCESS",
       "priority": "MEDIUM",
-      "confidence": 0.97,
-      "score": 17.0,
+      "confidence": 0.94,
+      "score": 14.0,
       "matched_signals": [
         "LEGAL_MIGRATION_SIGNAL"
       ],
       "matched_phrases": [
         [
           "legal_signal",
-          "granted asylum"
+          "ECHR"
         ]
       ],
       "matched_groups": [],
       "context_matches": [
-        "migrant",
-        "asylum"
+        "MIGRANTS"
       ],
       "high_value_matches": false,
       "signal_context_rejections": {},
@@ -4063,20 +4061,20 @@
       "latitude": null,
       "longitude": null,
       "rules_version": "2.6",
-      "priority_score": 49.95,
+      "priority_score": 48.9,
       "analyst_priority": "MEDIUM",
       "related_posts_count": 1,
       "related_post_ids": [
-        "reddit_1wz6f4e"
+        "2107662010754175029"
       ],
       "related_authors": [
-        "Al2t0rr3"
+        "lottydug"
       ],
       "related_urls": [
-        "https://www.reddit.com/r/EndGlobalism/comments/1wz6f4e/afghan_migrant_dawood_safi_who_murdered_wayne/"
+        "https://x.com/lottydug/status/2107662010754175029"
       ],
       "related_sources": [
-        "REDDIT"
+        "X"
       ],
       "independent_author_count": 1,
       "platform_count": 1
@@ -4240,58 +4238,6 @@
       "rules_version": "2.6",
       "priority_score": 48.9,
       "analyst_priority": "MEDIUM"
-    },
-    {
-      "id": 850,
-      "source": "MASTODON",
-      "source_post_id": "mastodon_aa409f0153e8972225ab",
-      "author": null,
-      "language": null,
-      "published_at": "2026-10-06T10:08:15Z",
-      "first_detected_at": "2026-10-06T11:39:00Z",
-      "last_detected_at": "2026-10-06T12:46:53Z",
-      "detection_count": 2,
-      "text": "Just Sayin' #Eu #Brexit #Brexitreality #Brexitshambles #Brexitisnotworking #Brexitisntworking #Brexitchaos #rejoinEU #ReasonsToRejoin #ECHR #refugees #ErasmusPlus",
-      "text_excerpt": "Just Sayin' #Eu #Brexit #Brexitreality #Brexitshambles #Brexitisnotworking #Brexitisntworking #Brexitchaos #rejoinEU #ReasonsToRejoin #ECHR #refugees #ErasmusPlus",
-      "url": "https://fed.brid.gy/r/https://bsky.app/profile/did:plc:ehgyzuwlfwgiysghzbpatojm/post/3mx76qon4522w",
-      "source_url": "https://fed.brid.gy/r/https://bsky.app/profile/did:plc:ehgyzuwlfwgiysghzbpatojm/post/3mx76qon4522w",
-      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
-      "signal_type": "LEGAL_MIGRATION_SIGNAL",
-      "signal_mode": "DIRECT",
-      "signal_intent": "LEGAL_ACCESS",
-      "priority": "MEDIUM",
-      "confidence": 0.94,
-      "score": 14.0,
-      "matched_signals": [
-        "LEGAL_MIGRATION_SIGNAL"
-      ],
-      "matched_phrases": [
-        [
-          "legal_signal",
-          "ECHR"
-        ]
-      ],
-      "matched_groups": [],
-      "context_matches": [
-        "refugees"
-      ],
-      "high_value_matches": false,
-      "signal_context_rejections": {},
-      "migration_context": true,
-      "human_migration_context": null,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "2.6",
-      "priority_score": 48.9,
-      "analyst_priority": "MEDIUM"
     }
   ],
   "access_signals": [
@@ -4434,58 +4380,6 @@
       "matched_groups": [],
       "context_matches": [
         "MIGRANTS"
-      ],
-      "high_value_matches": false,
-      "signal_context_rejections": {},
-      "migration_context": true,
-      "human_migration_context": null,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "2.6",
-      "priority_score": 48.9,
-      "analyst_priority": "MEDIUM"
-    },
-    {
-      "id": 850,
-      "source": "MASTODON",
-      "source_post_id": "mastodon_aa409f0153e8972225ab",
-      "author": null,
-      "language": null,
-      "published_at": "2026-10-06T10:08:15Z",
-      "first_detected_at": "2026-10-06T11:39:00Z",
-      "last_detected_at": "2026-10-06T12:46:53Z",
-      "detection_count": 2,
-      "text": "Just Sayin' #Eu #Brexit #Brexitreality #Brexitshambles #Brexitisnotworking #Brexitisntworking #Brexitchaos #rejoinEU #ReasonsToRejoin #ECHR #refugees #ErasmusPlus",
-      "text_excerpt": "Just Sayin' #Eu #Brexit #Brexitreality #Brexitshambles #Brexitisnotworking #Brexitisntworking #Brexitchaos #rejoinEU #ReasonsToRejoin #ECHR #refugees #ErasmusPlus",
-      "url": "https://fed.brid.gy/r/https://bsky.app/profile/did:plc:ehgyzuwlfwgiysghzbpatojm/post/3mx76qon4522w",
-      "source_url": "https://fed.brid.gy/r/https://bsky.app/profile/did:plc:ehgyzuwlfwgiysghzbpatojm/post/3mx76qon4522w",
-      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
-      "signal_type": "LEGAL_MIGRATION_SIGNAL",
-      "signal_mode": "DIRECT",
-      "signal_intent": "LEGAL_ACCESS",
-      "priority": "MEDIUM",
-      "confidence": 0.94,
-      "score": 14.0,
-      "matched_signals": [
-        "LEGAL_MIGRATION_SIGNAL"
-      ],
-      "matched_phrases": [
-        [
-          "legal_signal",
-          "ECHR"
-        ]
-      ],
-      "matched_groups": [],
-      "context_matches": [
-        "refugees"
       ],
       "high_value_matches": false,
       "signal_context_rejections": {},
@@ -5042,15 +4936,15 @@
       "label": "W41",
       "week_label": "W41",
       "week_start": "2026-10-05T00:00:00Z",
-      "posts": 590,
-      "post_count": 590,
-      "operational_posts": 15,
-      "influence_signals": 46,
+      "posts": 650,
+      "post_count": 650,
+      "operational_posts": 17,
+      "influence_signals": 51,
       "source_counts": {
-        "X": 408,
-        "REDDIT": 94,
-        "MASTODON": 75,
-        "TELEGRAM": 13
+        "X": 452,
+        "REDDIT": 104,
+        "MASTODON": 80,
+        "TELEGRAM": 14
       }
     }
   ],
@@ -5180,33 +5074,33 @@
       "label": "W41",
       "week_label": "W41",
       "week_start": "2026-10-05T00:00:00Z",
-      "posts": 590,
-      "post_count": 590,
-      "operational_posts": 15,
-      "influence_signals": 46,
+      "posts": 650,
+      "post_count": 650,
+      "operational_posts": 17,
+      "influence_signals": 51,
       "source_counts": {
-        "X": 408,
-        "REDDIT": 94,
-        "MASTODON": 75,
-        "TELEGRAM": 13
+        "X": 452,
+        "REDDIT": 104,
+        "MASTODON": 80,
+        "TELEGRAM": 14
       }
     }
   ],
   "information_activity_summary": {
-    "current_week": 590,
-    "previous_week": 551,
-    "current_week_to_date": 590,
-    "previous_week_same_period": 551,
+    "current_week": 650,
+    "previous_week": 553,
+    "current_week_to_date": 650,
+    "previous_week_same_period": 553,
     "previous_week_full": 1664,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": 7.08,
-    "change_label": "+7.1%",
+    "change_percent": 17.54,
+    "change_label": "+17.5%",
     "direction": "UP",
     "comparable": true,
-    "elapsed_hours": 56.0,
+    "elapsed_hours": 58.7,
     "current_period_start": "2026-10-05T00:00:00Z",
     "previous_period_start": "2026-09-28T00:00:00Z",
-    "previous_period_end": "2026-09-30T08:00:57Z"
+    "previous_period_end": "2026-09-30T10:42:03Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -5218,41 +5112,41 @@
       72,
       168
     ],
-    "generated_at": "2026-10-07T08:00:58Z",
-    "total_items": 1839,
+    "generated_at": "2026-10-07T10:42:05Z",
+    "total_items": 1845,
     "information_count": 400,
-    "early_warning_count": 852,
-    "operational_count": 486,
+    "early_warning_count": 857,
+    "operational_count": 487,
     "correlated_count": 101,
     "layer_counts": {
       "INFORMATION": 400,
-      "EARLY_WARNING": 852,
-      "OPERATIONAL": 486,
+      "EARLY_WARNING": 857,
+      "OPERATIONAL": 487,
       "CORRELATED": 101
     },
     "source_counts": {
-      "X": 1265,
-      "REDDIT": 466,
-      "MASTODON": 79,
-      "TELEGRAM": 29
+      "X": 1267,
+      "TELEGRAM": 30,
+      "MASTODON": 80,
+      "REDDIT": 468
     },
     "type_counts": {
       "INFORMATION_SIGNAL": 400,
-      "MOVEMENT_EARLY_WARNING": 282,
+      "FACILITATION_EARLY_WARNING": 154,
+      "ENFORCEMENT_EARLY_WARNING": 48,
+      "MOVEMENT_EARLY_WARNING": 284,
+      "BORDER_CROSSING": 192,
       "DEPORTATION": 77,
       "ROUTE_EARLY_WARNING": 112,
-      "FACILITATION_EARLY_WARNING": 152,
       "RESCUE_OPERATION": 30,
       "RECRUITMENT_COORDINATION": 19,
       "LEGAL_MIGRATION_SIGNAL": 88,
       "MOBILIZATION_COORDINATION": 24,
-      "BORDER_CROSSING": 191,
       "PRESSURE_EARLY_WARNING": 43,
       "MIGRANT_CAMP": 88,
       "INTERCEPTION": 28,
       "SMUGGLING_ACTIVITY": 56,
       "CASUALTY": 20,
-      "ENFORCEMENT_EARLY_WARNING": 47,
       "DETENTION": 30,
       "COORDINATION": 14,
       "CROSSING_FACILITATION": 64,
@@ -5266,6 +5160,385 @@
       "BORDER_CONDITION": 2
     },
     "items": [
+      {
+        "timeline_id": "information:15104",
+        "timestamp": "2026-10-07T10:38:18Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2107782562206630332",
+        "author": "grok",
+        "url": "https://x.com/grok/status/2107782562206630332",
+        "source_url": "https://x.com/grok/status/2107782562206630332",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "boat",
+          "sea",
+          "rescue"
+        ],
+        "freshness_cues": [],
+        "text": "@davefreersf @teamstar80 @csljohnkirby @georgedmadgwick Yes, the SAR Convention was amended in 1998 and 2004 specifically to refine procedures and clarify state cooperation on disembarking persons rescued at sea, responding to rising mixed-migration challenges. UK operational SOPs on grading migrant boats have also evolved (e.g.,",
+        "text_excerpt": "@davefreersf @teamstar80 @csljohnkirby @georgedmadgwick Yes, the SAR Convention was amended in 1998 and 2004 specifically to refine procedures and clarify state cooperation on disembarking persons rescued at sea, responding to rising mixed-migration challenges. UK operational SOPs on grading migrant boats have also evolved (e.g.,",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-07T10:39:03Z",
+        "last_collected_at": "2026-10-07T10:39:03Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "early_warning:886",
+        "timestamp": "2026-10-07T10:30:00Z",
+        "layer": "EARLY_WARNING",
+        "type": "FACILITATION_EARLY_WARNING",
+        "signal_type": "FACILITATION_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2107780476471771292",
+        "author": "EUPerspectives",
+        "url": "https://x.com/EUPerspectives/status/2107780476471771292",
+        "source_url": "https://x.com/EUPerspectives/status/2107780476471771292",
+        "region": "EASTERN_EU_BORDER",
+        "primary_region": "EASTERN_EU_BORDER",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.62,
+        "priority": "MEDIUM",
+        "priority_score": 25.7,
+        "analyst_priority": "LOW",
+        "text": "Masked and armed individuals attempted to smuggle about twenty illegal migrants from Belarus into Latvia this week. Latvian Interior Minister @janisdombrava warned that such cases could have serious consequences for Belarus itself.\n\nThe Latvian armed forces stated this confirms https://t.co/h84mwvrBZV",
+        "text_excerpt": "Masked and armed individuals attempted to smuggle about twenty illegal migrants from Belarus into Latvia this week. Latvian Interior Minister @janisdombrava warned that such cases could have serious consequences for Belarus itself.\n\nThe Latvian armed forces stated this confirms https://t.co/h84mwvrBZV",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "FACILITATION_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-10-07T10:39:26Z",
+        "last_detected_at": "2026-10-07T10:39:26Z"
+      },
+      {
+        "timeline_id": "early_warning:885",
+        "timestamp": "2026-10-07T10:29:07Z",
+        "layer": "EARLY_WARNING",
+        "type": "ENFORCEMENT_EARLY_WARNING",
+        "signal_type": "ENFORCEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "TELEGRAM",
+        "source_post_id": "1604168769:12091",
+        "author": "migrantlar24",
+        "url": "https://t.me/migrantlar24/12091",
+        "source_url": "https://t.me/migrantlar24/12091",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.72,
+        "priority": "MEDIUM",
+        "priority_score": 25.2,
+        "analyst_priority": "LOW",
+        "text": "Санкт-Петербургда кенг кўламли рейд ўтказилди\n\nАдмиралтейский туманида ўтказилган профилактик тадбир давомида полиция 302 нафар фуқарони, шу жумладан 27 нафар чет эл фуқаросини текширувдан ўтказди. Текширув натижасида миграция тартибини бузганликда гумон қилинган бир нафар чет эллик шахс полиция бўлимига олиб кетилди.\n\n👉https://migrantlar24.com/sq7hvd",
+        "text_excerpt": "Санкт-Петербургда кенг кўламли рейд ўтказилди\n\nАдмиралтейский туманида ўтказилган профилактик тадбир давомида полиция 302 нафар фуқарони, шу жумладан 27 нафар чет эл фуқаросини текширувдан ўтказди. Текширув натижасида миграция тартибини бузганликда гумон қилинган бир нафар чет эллик шахс полиция бўлимига олиб кетилди.\n\n👉https://migrantlar24.com/sq7hvd",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "ENFORCEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-10-07T10:39:06Z",
+        "last_detected_at": "2026-10-07T10:39:06Z"
+      },
+      {
+        "timeline_id": "information:15121",
+        "timestamp": "2026-10-07T10:25:14Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2107779273117295074",
+        "author": "TDF_Dace",
+        "url": "https://x.com/TDF_Dace/status/2107779273117295074",
+        "source_url": "https://x.com/TDF_Dace/status/2107779273117295074",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "crossing"
+        ],
+        "freshness_cues": [],
+        "text": "@RuffPhilip The Belarusian mafia was hired to transport migrants across the border. They crossed in to steal surveillance cameras and damage border security infrastructure.",
+        "text_excerpt": "@RuffPhilip The Belarusian mafia was hired to transport migrants across the border. They crossed in to steal surveillance cameras and damage border security infrastructure.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-07T10:39:26Z",
+        "last_collected_at": "2026-10-07T10:39:26Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "early_warning:887",
+        "timestamp": "2026-10-07T10:25:07Z",
+        "layer": "EARLY_WARNING",
+        "type": "MOVEMENT_EARLY_WARNING",
+        "signal_type": "MOVEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2107779244042412198",
+        "author": "iljaandreev",
+        "url": "https://x.com/iljaandreev/status/2107779244042412198",
+        "source_url": "https://x.com/iljaandreev/status/2107779244042412198",
+        "region": "EASTERN_EU_BORDER",
+        "primary_region": "EASTERN_EU_BORDER",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.9,
+        "priority": "MEDIUM",
+        "priority_score": 35.5,
+        "analyst_priority": "LOW",
+        "text": "@dim0kq First of all, after successfully stopping 20 migrants, the border guards didn’t manage to arrive in time the second time before the intruders escaped back into Belarus, taking the cameras with them.\n\nSecondly, they have clear orders to immediately resist in the event of an armed",
+        "text_excerpt": "@dim0kq First of all, after successfully stopping 20 migrants, the border guards didn’t manage to arrive in time the second time before the intruders escaped back into Belarus, taking the cameras with them.\n\nSecondly, they have clear orders to immediately resist in the event of an armed",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "MOVEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-10-07T10:39:27Z",
+        "last_detected_at": "2026-10-07T10:39:27Z"
+      },
+      {
+        "timeline_id": "information:15124",
+        "timestamp": "2026-10-07T10:23:07Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2107778743624466582",
+        "author": "TDF_Dace",
+        "url": "https://x.com/TDF_Dace/status/2107778743624466582",
+        "source_url": "https://x.com/TDF_Dace/status/2107778743624466582",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "crossing"
+        ],
+        "freshness_cues": [],
+        "text": "@PierreZundel @TheFl0orIsLaVa No. The Belarusian mafia was hired to transport migrants across the border. They crossed in to steal surveillance cameras and damage border security infrastructure.",
+        "text_excerpt": "@PierreZundel @TheFl0orIsLaVa No. The Belarusian mafia was hired to transport migrants across the border. They crossed in to steal surveillance cameras and damage border security infrastructure.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-07T10:39:27Z",
+        "last_collected_at": "2026-10-07T10:39:27Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:15126",
+        "timestamp": "2026-10-07T10:16:34Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2107777092175933901",
+        "author": "sahaas1",
+        "url": "https://x.com/sahaas1/status/2107777092175933901",
+        "source_url": "https://x.com/sahaas1/status/2107777092175933901",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "deportation"
+        ],
+        "freshness_cues": [],
+        "text": "@MirzapurKiGolu @AnupamBurman_ @BJP4India @narendramodi Not at all. Allowing entry is by the border States not the Centre. Identification is being done, inter-alia thru SIR which is being strongly protested by the Opposition. And deportation requires acceptance by the migrants own company - who are generally unwilling",
+        "text_excerpt": "@MirzapurKiGolu @AnupamBurman_ @BJP4India @narendramodi Not at all. Allowing entry is by the border States not the Centre. Identification is being done, inter-alia thru SIR which is being strongly protested by the Opposition. And deportation requires acceptance by the migrants own company - who are generally unwilling",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-07T10:39:27Z",
+        "last_collected_at": "2026-10-07T10:39:27Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:15153",
+        "timestamp": "2026-10-07T10:15:56Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2107776934138822892",
+        "author": "charlie10910",
+        "url": "https://x.com/charlie10910/status/2107776934138822892",
+        "source_url": "https://x.com/charlie10910/status/2107776934138822892",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 40,
+        "information_score": 4,
+        "matched_information_cues": [
+          "crossing",
+          "channel",
+          "boat",
+          "arrival"
+        ],
+        "freshness_cues": [],
+        "text": "@GBNEWS Philp's time in office coincided with a significant, unprecedented surge in irregular migrants crossing the English Channel in small boats. According to Home Office data: \n2019 (Full Year): 1,843 people arrived via small boats (Philp took office in October of this year 2020",
+        "text_excerpt": "@GBNEWS Philp's time in office coincided with a significant, unprecedented surge in irregular migrants crossing the English Channel in small boats. According to Home Office data: \n2019 (Full Year): 1,843 people arrived via small boats (Philp took office in October of this year 2020",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-07T10:42:00Z",
+        "last_collected_at": "2026-10-07T10:42:00Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "operational:528",
+        "timestamp": "2026-10-07T10:09:52Z",
+        "layer": "OPERATIONAL",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "X",
+        "source_post_id": "2107775406954733841",
+        "author": "piggot_michael",
+        "url": "https://x.com/piggot_michael/status/2107775406954733841",
+        "source_url": "https://x.com/piggot_michael/status/2107775406954733841",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.55,
+        "priority": "MEDIUM",
+        "priority_score": 55.0,
+        "text": "@LeaderofKCC 1600 migrants arrived recently.\nCost to keep them is £840m/year.\n\nMilitary housing maintenance budget moved.\n\nThis is Labour…",
+        "text_excerpt": "@LeaderofKCC 1600 migrants arrived recently.\nCost to keep them is £840m/year.\n\nMilitary housing maintenance budget moved.\n\nThis is Labour…",
+        "event_group_id": 423,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null
+      },
+      {
+        "timeline_id": "early_warning:888",
+        "timestamp": "2026-10-07T09:58:33Z",
+        "layer": "EARLY_WARNING",
+        "type": "FACILITATION_EARLY_WARNING",
+        "signal_type": "FACILITATION_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2107772558892273799",
+        "author": "marion_aitken",
+        "url": "https://x.com/marion_aitken/status/2107772558892273799",
+        "source_url": "https://x.com/marion_aitken/status/2107772558892273799",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.62,
+        "priority": "MEDIUM",
+        "priority_score": 21.7,
+        "analyst_priority": "LOW",
+        "text": "@InvestorJared Free hotels, free phones and laptops, free transport and free money each week to thousands of migrants",
+        "text_excerpt": "@InvestorJared Free hotels, free phones and laptops, free transport and free money each week to thousands of migrants",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "FACILITATION_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-10-07T10:40:11Z",
+        "last_detected_at": "2026-10-07T10:40:11Z"
+      },
+      {
+        "timeline_id": "early_warning:884",
+        "timestamp": "2026-10-07T08:43:42Z",
+        "layer": "EARLY_WARNING",
+        "type": "MOVEMENT_EARLY_WARNING",
+        "signal_type": "MOVEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "MASTODON",
+        "source_post_id": "mastodon_117398740825921846",
+        "author": null,
+        "url": "https://mastodon.social/@elfolio/117398740825921846",
+        "source_url": "https://mastodon.social/@elfolio/117398740825921846",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.8,
+        "priority": "MEDIUM",
+        "priority_score": 28.0,
+        "analyst_priority": "LOW",
+        "text": "Cinco pateras en apenas unas horas y 87 personas interceptadas entre Mallorca y Cabrera: Baleares supera ya las 6.500 llegadas desde enero. # Baleares # Mallorca # Cabrera # Migracion # Pateras # España # Mediterraneo # GuardiaCivil # SalvamentoMaritimo # Inmigracion # Actualidad # felizmiercoles # 7deoctubre https:// elfolio.es/llegada-de-migrante s-en-pateras-a-baleares-2026/",
+        "text_excerpt": "Cinco pateras en apenas unas horas y 87 personas interceptadas entre Mallorca y Cabrera: Baleares supera ya las 6.500 llegadas desde enero. # Baleares # Mallorca # Cabrera # Migracion # Pateras # España # Mediterraneo # GuardiaCivil # SalvamentoMaritimo # Inmigracion # Actualidad # felizmiercoles # 7deoctubre https:// elfolio.es/llegada-de-migrante s-en-pateras-a-baleares-2026/",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "MOVEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-10-07T10:39:05Z",
+        "last_detected_at": "2026-10-07T10:39:05Z"
+      },
       {
         "timeline_id": "information:15038",
         "timestamp": "2026-10-07T07:56:14Z",
@@ -5904,6 +6177,82 @@
         "last_detected_at": "2026-10-07T08:00:53Z"
       },
       {
+        "timeline_id": "information:15128",
+        "timestamp": "2026-10-07T04:38:31Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1wznk3s",
+        "author": "Prior-Sun2352",
+        "url": "https://www.reddit.com/r/BalticStates/comments/1wznk3s/armed_migrant_smugglers_crossed_into_latvia_from/",
+        "source_url": "https://www.reddit.com/r/BalticStates/comments/1wznk3s/armed_migrant_smugglers_crossed_into_latvia_from/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.6,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "border",
+          "crossing",
+          "smuggling"
+        ],
+        "freshness_cues": [],
+        "text": "Armed Migrant Smugglers Crossed Into Latvia From Belarus, Threatened Soldiers and Stole Border Surveillance Cameras",
+        "text_excerpt": "Armed Migrant Smugglers Crossed Into Latvia From Belarus, Threatened Soldiers and Stole Border Surveillance Cameras",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-07T10:39:28Z",
+        "last_collected_at": "2026-10-07T10:39:28Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:15129",
+        "timestamp": "2026-10-07T04:33:37Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1wznh49",
+        "author": "The_Baltic_Sentinel",
+        "url": "https://www.reddit.com/r/europe/comments/1wznh49/armed_migrant_smugglers_crossed_into_latvia_from/",
+        "source_url": "https://www.reddit.com/r/europe/comments/1wznh49/armed_migrant_smugglers_crossed_into_latvia_from/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.6,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "border",
+          "crossing",
+          "smuggling"
+        ],
+        "freshness_cues": [],
+        "text": "Armed Migrant Smugglers Crossed Into Latvia From Belarus, Threatened Soldiers and Stole Border Surveillance Cameras",
+        "text_excerpt": "Armed Migrant Smugglers Crossed Into Latvia From Belarus, Threatened Soldiers and Stole Border Surveillance Cameras",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-07T10:39:28Z",
+        "last_collected_at": "2026-10-07T10:39:28Z",
+        "collection_count": 1
+      },
+      {
         "timeline_id": "information:15073",
         "timestamp": "2026-10-07T03:07:12Z",
         "layer": "INFORMATION",
@@ -5922,8 +6271,8 @@
         "country": "-",
         "confidence": 0.1,
         "priority": "INFO",
-        "priority_score": 50,
-        "information_score": 5,
+        "priority_score": 60,
+        "information_score": 6,
         "matched_information_cues": [
           "crossing",
           "boat",
@@ -5941,8 +6290,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-07T07:57:41Z",
-        "last_collected_at": "2026-10-07T07:57:41Z",
-        "collection_count": 1
+        "last_collected_at": "2026-10-07T10:39:28Z",
+        "collection_count": 2
       },
       {
         "timeline_id": "information:15097",
@@ -5963,8 +6312,8 @@
         "country": "-",
         "confidence": 0.1,
         "priority": "INFO",
-        "priority_score": 40,
-        "information_score": 4,
+        "priority_score": 50,
+        "information_score": 5,
         "matched_information_cues": [
           "crossing",
           "vessel",
@@ -5981,8 +6330,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-07T08:00:55Z",
-        "last_collected_at": "2026-10-07T08:00:55Z",
-        "collection_count": 1
+        "last_collected_at": "2026-10-07T10:39:28Z",
+        "collection_count": 2
       },
       {
         "timeline_id": "operational:526",
@@ -7046,8 +7395,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-06T23:30:20Z",
-        "last_collected_at": "2026-10-07T08:00:54Z",
-        "collection_count": 2
+        "last_collected_at": "2026-10-07T10:42:01Z",
+        "collection_count": 3
       },
       {
         "timeline_id": "information:14969",
@@ -7085,8 +7434,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-06T23:30:21Z",
-        "last_collected_at": "2026-10-07T08:00:54Z",
-        "collection_count": 2
+        "last_collected_at": "2026-10-07T10:42:02Z",
+        "collection_count": 3
       },
       {
         "timeline_id": "early_warning:877",
@@ -8503,8 +8852,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-06T12:52:13Z",
-        "last_collected_at": "2026-10-07T08:00:55Z",
-        "collection_count": 4
+        "last_collected_at": "2026-10-07T10:42:02Z",
+        "collection_count": 5
       },
       {
         "timeline_id": "early_warning:853",
@@ -8572,8 +8921,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-06T12:52:14Z",
-        "last_collected_at": "2026-10-06T16:48:53Z",
-        "collection_count": 2
+        "last_collected_at": "2026-10-07T10:42:02Z",
+        "collection_count": 3
       },
       {
         "timeline_id": "early_warning:854",
@@ -8868,8 +9217,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-06T11:39:59Z",
-        "last_collected_at": "2026-10-07T07:57:43Z",
-        "collection_count": 6
+        "last_collected_at": "2026-10-07T10:39:50Z",
+        "collection_count": 7
       },
       {
         "timeline_id": "information:14682",
@@ -28015,43 +28364,6 @@
         "event_time_confidence": null
       },
       {
-        "timeline_id": "information:12444",
-        "timestamp": "2026-09-26T03:07:14Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2103682783696822321",
-        "author": "RiPPn429",
-        "url": "https://x.com/RiPPn429/status/2103682783696822321",
-        "source_url": "https://x.com/RiPPn429/status/2103682783696822321",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "crossing"
-        ],
-        "freshness_cues": [],
-        "text": "@grok @KristopherB1993 @rhysajlucero @raefejenkins what is the Northern Triangle? How did it spike migrants in 2019? Did covid temporarily slow migration, but once covid disipated, created a surge? What Biden era border policy if any created the record crossings or was it covid economically ravaging central america that caused",
-        "text_excerpt": "@grok @KristopherB1993 @rhysajlucero @raefejenkins what is the Northern Triangle? How did it spike migrants in 2019? Did covid temporarily slow migration, but once covid disipated, created a surge? What Biden era border policy if any created the record crossings or was it covid economically ravaging central america that caused",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-09-26T03:33:12Z",
-        "last_collected_at": "2026-09-26T03:33:12Z",
-        "collection_count": 1
-      },
-      {
         "timeline_id": "information:12470",
         "timestamp": "2026-09-26T02:49:22Z",
         "layer": "INFORMATION",
@@ -28449,80 +28761,6 @@
         "last_detected_at": "2026-09-25T16:22:03Z"
       },
       {
-        "timeline_id": "information:12380",
-        "timestamp": "2026-09-25T16:17:17Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2103519216418590875",
-        "author": "martyuk26",
-        "url": "https://x.com/martyuk26/status/2103519216418590875",
-        "source_url": "https://x.com/martyuk26/status/2103519216418590875",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "boat"
-        ],
-        "freshness_cues": [],
-        "text": "@TiceRichard \"Stop the boats.\" Great headline Richard. What about the planes?\n\n68% of net migration arrives by AIR. On legal visas. Through legal channels. Through Heathrow, Gatwick, Manchester, and Birmingham. With paperwork. Stamped by Border Force. Waved through.\n\nThe boats are roughly",
-        "text_excerpt": "@TiceRichard \"Stop the boats.\" Great headline Richard. What about the planes?\n\n68% of net migration arrives by AIR. On legal visas. Through legal channels. Through Heathrow, Gatwick, Manchester, and Birmingham. With paperwork. Stamped by Border Force. Waved through.\n\nThe boats are roughly",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-09-25T16:21:30Z",
-        "last_collected_at": "2026-09-25T16:21:30Z",
-        "collection_count": 1
-      },
-      {
-        "timeline_id": "information:12381",
-        "timestamp": "2026-09-25T16:17:04Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2103519162135937480",
-        "author": "SherryPrea58356",
-        "url": "https://x.com/SherryPrea58356/status/2103519162135937480",
-        "source_url": "https://x.com/SherryPrea58356/status/2103519162135937480",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "trafficking"
-        ],
-        "freshness_cues": [],
-        "text": "@JeffTrevorrow @RepThomasMassie That’s what primaries are for. You don’t vote?  Don’t bitch later about open border, massive migrant child sex trafficking, gun confiscation and massive censorship as was under Biden \n\nYou we are a fool abd my enemy",
-        "text_excerpt": "@JeffTrevorrow @RepThomasMassie That’s what primaries are for. You don’t vote?  Don’t bitch later about open border, massive migrant child sex trafficking, gun confiscation and massive censorship as was under Biden \n\nYou we are a fool abd my enemy",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-09-25T16:21:30Z",
-        "last_collected_at": "2026-09-25T16:21:30Z",
-        "collection_count": 1
-      },
-      {
         "timeline_id": "operational:458",
         "timestamp": "2026-09-25T16:16:27Z",
         "layer": "OPERATIONAL",
@@ -28617,82 +28855,6 @@
         "last_detected_at": "2026-09-25T15:07:31Z"
       },
       {
-        "timeline_id": "information:12328",
-        "timestamp": "2026-09-25T15:03:40Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2103500689112539393",
-        "author": "stewart_1979",
-        "url": "https://x.com/stewart_1979/status/2103500689112539393",
-        "source_url": "https://x.com/stewart_1979/status/2103500689112539393",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "boat",
-          "vessel",
-          "rescue"
-        ],
-        "freshness_cues": [],
-        "text": "@IFoughtTheDoor @IsabelOakeshott There was no person's on board at the time of the boat being put out of service, the illegal migrants had already been \"rescued\" by the RNLI, and only after the boat had started to be deflated that a person from possibly the French coast gard boarded the vessel",
-        "text_excerpt": "@IFoughtTheDoor @IsabelOakeshott There was no person's on board at the time of the boat being put out of service, the illegal migrants had already been \"rescued\" by the RNLI, and only after the boat had started to be deflated that a person from possibly the French coast gard boarded the vessel",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-09-25T15:08:41Z",
-        "last_collected_at": "2026-09-25T15:08:41Z",
-        "collection_count": 1
-      },
-      {
-        "timeline_id": "information:12331",
-        "timestamp": "2026-09-25T15:01:21Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2103500107471626438",
-        "author": "Paul_On_Fire",
-        "url": "https://x.com/Paul_On_Fire/status/2103500107471626438",
-        "source_url": "https://x.com/Paul_On_Fire/status/2103500107471626438",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "channel",
-          "sea",
-          "interception"
-        ],
-        "freshness_cues": [],
-        "text": "@OneObjective_ @TheFullEngl1sh @I_amMukhtar The traitors are those working to try prevent us intercepting migrants at sea. \n\nThese traitors wish to stop this important work and leave the channel wide open for migrants to land anywhere in UK completely undetected.",
-        "text_excerpt": "@OneObjective_ @TheFullEngl1sh @I_amMukhtar The traitors are those working to try prevent us intercepting migrants at sea. \n\nThese traitors wish to stop this important work and leave the channel wide open for migrants to land anywhere in UK completely undetected.",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-09-25T15:08:41Z",
-        "last_collected_at": "2026-09-25T15:08:41Z",
-        "collection_count": 1
-      },
-      {
         "timeline_id": "early_warning:700",
         "timestamp": "2026-09-25T14:57:43Z",
         "layer": "EARLY_WARNING",
@@ -28723,44 +28885,6 @@
         "detection_count": 1,
         "first_detected_at": "2026-09-25T15:09:42Z",
         "last_detected_at": "2026-09-25T15:09:42Z"
-      },
-      {
-        "timeline_id": "information:12334",
-        "timestamp": "2026-09-25T14:55:54Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2103498735699247500",
-        "author": "Dean44559496",
-        "url": "https://x.com/Dean44559496/status/2103498735699247500",
-        "source_url": "https://x.com/Dean44559496/status/2103498735699247500",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "boat",
-          "vessel",
-          "sea"
-        ],
-        "freshness_cues": [],
-        "text": "Beware of false flags ! We saw little and not at all clearly nor we have \ndate, time, name and position at sea of both boat and alleged refugees. The crew was muxslim, the broadcast was made by the msm. How did they came to be in the sea? What vessel were they on b4? Etc ect ect https://t.co/g9fAryX7AW",
-        "text_excerpt": "Beware of false flags ! We saw little and not at all clearly nor we have \ndate, time, name and position at sea of both boat and alleged refugees. The crew was muxslim, the broadcast was made by the msm. How did they came to be in the sea? What vessel were they on b4? Etc ect ect https://t.co/g9fAryX7AW",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-09-25T15:08:41Z",
-        "last_collected_at": "2026-09-25T15:08:41Z",
-        "collection_count": 1
       },
       {
         "timeline_id": "early_warning:694",
@@ -28953,45 +29077,6 @@
         "detection_count": 1,
         "first_detected_at": "2026-09-25T15:09:12Z",
         "last_detected_at": "2026-09-25T15:09:12Z"
-      },
-      {
-        "timeline_id": "information:12315",
-        "timestamp": "2026-09-25T14:41:54Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2103495214425886972",
-        "author": "grok",
-        "url": "https://x.com/grok/status/2103495214425886972",
-        "source_url": "https://x.com/grok/status/2103495214425886972",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 40,
-        "information_score": 4,
-        "matched_information_cues": [
-          "border",
-          "channel",
-          "dinghy",
-          "vessel"
-        ],
-        "freshness_cues": [],
-        "text": "@Sharky_vs_cobra @Jappers69 @AntiRacismDay Video shows Thomas approaching the empty dinghy in the Channel after migrants transferred to RNLI/Border Force vessels. A French coastguard official was aboard as he made knife slashing motions; air leakage was audible. He livestreamed it, claiming to stop reuse.\n\nCharged with",
-        "text_excerpt": "@Sharky_vs_cobra @Jappers69 @AntiRacismDay Video shows Thomas approaching the empty dinghy in the Channel after migrants transferred to RNLI/Border Force vessels. A French coastguard official was aboard as he made knife slashing motions; air leakage was audible. He livestreamed it, claiming to stop reuse.\n\nCharged with",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-09-25T15:08:06Z",
-        "last_collected_at": "2026-09-25T15:08:06Z",
-        "collection_count": 1
       },
       {
         "timeline_id": "early_warning:701",
