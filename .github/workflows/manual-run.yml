@@ -1,3 +1,4 @@
+
 name: Migration OSINT Monitor
 
 on:
@@ -171,6 +172,48 @@ jobs:
             exit 1
           fi
 
+      # ================================================
+      # SOURCE INTELLIGENCE - INDEPENDENT EXPORT
+      # ================================================
+
+      - name: Export Source Intelligence
+        id: source-intelligence
+        continue-on-error: true
+        run: |
+          python -m analysis.export_source_intelligence
+
+      - name: Verify Source Intelligence JSON
+        if: steps.source-intelligence.outcome == 'success'
+        continue-on-error: true
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("source-intelligence.json")
+
+          if not path.is_file():
+              raise SystemExit(
+                  "Source Intelligence output not found."
+              )
+
+          with path.open("r", encoding="utf-8") as f:
+              data = json.load(f)
+
+          assert isinstance(data.get("posts"), list)
+          assert isinstance(data.get("daily_history"), list)
+          assert isinstance(data.get("category_summary"), dict)
+
+          print("Source Intelligence JSON verified.")
+          print("Total posts:", data.get("total_posts"))
+          print("Categories:", data.get("category_summary"))
+          print("History days:", len(data["daily_history"]))
+          PY
+
+      # ================================================
+      # EXISTING DASHBOARD PUBLICATION
+      # ================================================
+
       - name: Publish dashboard data
         run: |
           git config user.name "github-actions[bot]"
@@ -184,6 +227,32 @@ jobs:
             git commit -m "Update Migration OSINT dashboard data"
             git push origin HEAD:main
           fi
+
+      # ================================================
+      # SOURCE INTELLIGENCE PUBLICATION
+      # ================================================
+
+      - name: Publish Source Intelligence data
+        if: steps.source-intelligence.outcome == 'success'
+        continue-on-error: true
+        run: |
+          if [ ! -f source-intelligence.json ]; then
+            echo "Source Intelligence file not available."
+            exit 0
+          fi
+
+          git add source-intelligence.json
+
+          if git diff --cached --quiet; then
+            echo "No Source Intelligence changes to commit."
+          else
+            git commit -m "Update Source Intelligence data"
+            git push origin HEAD:main
+          fi
+
+      # ================================================
+      # EXISTING DATABASE VERIFICATION AND CACHE
+      # ================================================
 
       - name: Verify database after run
         if: always()
@@ -201,3 +270,4 @@ jobs:
         with:
           path: database/migration_osint_monitor.db
           key: migration-osint-db-${{ github.run_id }}
+
