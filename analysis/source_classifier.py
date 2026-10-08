@@ -3,48 +3,55 @@
 Migration OSINT Monitor
 Source Intelligence - Publisher Classification
 
-Classifies the publisher of an already collected post.
-
-No network requests.
-No database writes.
-No modifications to existing event classification.
+Read-only classification of previously collected posts.
+No network requests, database writes or event classification changes.
 """
 
 from __future__ import annotations
 
 import re
 from typing import Any, Dict, Mapping, Optional
-from urllib.parse import urlparse
 
 
-PRIVATE_PERSON = "PRIVATE_PERSON"
-GOVERNMENT = "GOVERNMENT"
-ORGANIZATION = "ORGANIZATION"
 MEDIA = "MEDIA"
+GOVERNMENT = "GOVERNMENT"
+NGO = "NGO"
+POLITICAL = "POLITICAL"
+EXPERT = "EXPERT"
+COMMENTATOR = "COMMENTATOR"
+COMMUNITY = "COMMUNITY"
+INDIVIDUAL = "INDIVIDUAL"
 UNKNOWN = "UNKNOWN"
 
 VALID_CATEGORIES = {
-    PRIVATE_PERSON,
-    GOVERNMENT,
-    ORGANIZATION,
     MEDIA,
+    GOVERNMENT,
+    NGO,
+    POLITICAL,
+    EXPERT,
+    COMMENTATOR,
+    COMMUNITY,
+    INDIVIDUAL,
     UNKNOWN,
+}
+
+# Compatibility with older registry categories.
+LEGACY_CATEGORIES = {
+    "PRIVATE_PERSON": INDIVIDUAL,
+    "ORGANIZATION": COMMUNITY,
 }
 
 
 def normalize_author(value: Any) -> str:
-    """Normalize a publisher name for registry matching."""
     if value is None:
         return ""
 
     value = str(value).strip().casefold()
     value = re.sub(r"\s+", " ", value)
-
     return value.lstrip("@")
 
 
 def normalize_platform(value: Any) -> str:
-    """Normalize the source platform name."""
     platform = str(value or "").strip().upper()
 
     aliases = {
@@ -57,24 +64,23 @@ def normalize_platform(value: Any) -> str:
 
 
 def normalize_category(value: Any) -> str:
-    """Accept only supported publisher categories."""
     category = str(value or "").strip().upper()
 
-    return category if category in VALID_CATEGORIES else UNKNOWN
+    if category in VALID_CATEGORIES:
+        return category
+
+    return LEGACY_CATEGORIES.get(category, UNKNOWN)
 
 
 def get_post_author(post: Mapping[str, Any]) -> str:
-    """Read the existing author field without modifying it."""
     return str(post.get("author") or "").strip()
 
 
 def get_post_platform(post: Mapping[str, Any]) -> str:
-    """Read the existing source field."""
     return normalize_platform(post.get("source"))
 
 
 def get_post_url(post: Mapping[str, Any]) -> str:
-    """Read the existing post URL."""
     return str(
         post.get("url")
         or post.get("source_url")
@@ -83,7 +89,6 @@ def get_post_url(post: Mapping[str, Any]) -> str:
 
 
 def get_post_id(post: Mapping[str, Any]) -> str:
-    """Read the original platform post identifier."""
     return str(
         post.get("source_post_id")
         or post.get("post_id")
@@ -96,20 +101,6 @@ def _lookup_registry(
     platform: str,
     author: str,
 ) -> Optional[Dict[str, Any]]:
-    """
-    Registry structure:
-
-    {
-        "TELEGRAM": {
-            "example_channel": {
-                "category": "MEDIA",
-                "name": "Example Channel"
-            }
-        }
-    }
-
-    Registry matches are platform-specific.
-    """
 
     normalized_author = normalize_author(author)
 
@@ -130,12 +121,8 @@ def _lookup_registry(
             display_name = author
 
         elif isinstance(record, Mapping):
-            category = normalize_category(
-                record.get("category")
-            )
-            display_name = str(
-                record.get("name") or author
-            )
+            category = normalize_category(record.get("category"))
+            display_name = str(record.get("name") or author)
 
         else:
             continue
@@ -157,16 +144,6 @@ def classify_source(
     post: Mapping[str, Any],
     registry: Optional[Mapping[str, Any]] = None,
 ) -> Dict[str, Any]:
-    """
-    Classify the publisher of an existing collected post.
-
-    IMPORTANT:
-    - A platform is not a publisher category.
-    - A personal-looking username is not proof of identity.
-    - A .gov domain in a shared link does not prove that the
-      publisher is a government account.
-    - Unknown publishers remain UNKNOWN.
-    """
 
     platform = get_post_platform(post)
     author = get_post_author(post)
@@ -211,7 +188,7 @@ def classify_posts(
     posts: list[Mapping[str, Any]],
     registry: Optional[Mapping[str, Any]] = None,
 ) -> list[Dict[str, Any]]:
-    """Classify multiple existing posts."""
+
     return [
         classify_source(post, registry=registry)
         for post in posts
@@ -221,21 +198,27 @@ def classify_posts(
 def summarize_categories(
     classifications: list[Mapping[str, Any]],
 ) -> Dict[str, int]:
-    """Count posts by publisher category."""
 
     summary = {
-        PRIVATE_PERSON: 0,
-        GOVERNMENT: 0,
-        ORGANIZATION: 0,
-        MEDIA: 0,
-        UNKNOWN: 0,
+        category: 0
+        for category in (
+            MEDIA,
+            GOVERNMENT,
+            NGO,
+            POLITICAL,
+            EXPERT,
+            COMMENTATOR,
+            COMMUNITY,
+            INDIVIDUAL,
+            UNKNOWN,
+        )
     }
 
     for item in classifications:
         category = normalize_category(
             item.get("publisher_category")
         )
-
         summary[category] += 1
 
     return summary
+
