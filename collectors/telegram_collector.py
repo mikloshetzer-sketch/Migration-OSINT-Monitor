@@ -1397,196 +1397,159 @@ class TelegramCollector:
         max_results: int,
         end_at: Optional[datetime] = None,
     ) -> List[Dict[str, Any]]:
+        """Scan every validated public channel before selecting recent results.
+
+        Previous logic stopped as soon as the global result limit was reached
+        and limited each channel to approximately one result. That favored
+        early channels and could hide newer posts from later channels.
+
+        This implementation scans every accepted channel, applies the existing
+        migration/topic checks, deduplicates, and only then selects the newest
+        results. API work remains bounded by TELEGRAM_SCAN_LIMIT.
         """
-        Scan recent messages directly inside validated channels.
-
-        v3 still relied on Telegram's server-side search=term after channel
-        validation. That produced the observed pattern:
-
-            validated channels > 0
-            Telegram posts found = 0
-
-        v4 removes that dependency. We now:
-        1. iterate recent messages in each validated public channel;
-        2. stop at the normal-run cutoff / historical start boundary;
-        3. require genuine migration context;
-        4. apply the query's secondary topic terms locally in Python.
-
-        This is deliberately conservative: a generic migration query accepts
-        any migration-context post, while route/sea/arrival/coordination
-        queries require at least one matching secondary concept.
-        """
-
-        posts: List[Dict[str, Any]] = []
-        seen_ids = set()
-
         if not channels:
             return []
 
-        query_topic_terms = self._build_post_topic_terms(
-            search_terms
+        query_topic_terms = self._build_post_topic_terms(search_terms)
+        scan_limit = self._env_int(
+            "TELEGRAM_SCAN_LIMIT", 240, minimum=40, maximum=600
         )
-
+        print(f"Telegram local post topic terms: {query_topic_terms}")
         print(
-            "Telegram local post topic terms: "
-            f"{query_topic_terms}"
+            f"Telegram scan configuration: channels={len(channels)}, "
+            f"per_channel_limit={scan_limit}, result_limit={max_results}"
         )
 
-        # Scan enough recent channel messages to compensate for the fact that
-        # only a minority may match the current query. The hard cap prevents a
-        # very active channel from dominating API use.
-        scan_limit = max(
-            40,
-            min(
-                120,
-                max_results * 12,
-            ),
-        )
-
-        per_channel_budget = max(
-            1,
-            (
-                max_results
-                + len(channels)
-                - 1
-            )
-            // len(channels),
-        )
+        posts_by_id: Dict[str, Dict[str, Any]] = {}
+        total_scanned = 0
+        total_context = 0
+        total_topic = 0
+        channel_errors = 0
+        truncated_channels = 0
 
         for channel in channels:
-            if len(posts) >= max_results:
-                break
-
-            accepted_from_channel = 0
-
+            scanned = 0
+            context_matches = 0
+            topic_matches = 0
+            reached_cutoff = False
             try:
                 iterator = client.iter_messages(
-                    channel["entity"],
-                    limit=scan_limit,
-                    offset_date=end_at,
+                    channel["entity"], limit=scan_limit, offset_date=end_at
                 )
-
                 for message in iterator:
                     message_date = (
-                        self._ensure_utc(
-                            message.date
-                        )
-                        if getattr(
-                            message,
-                            "date",
-                            None,
-                        )
-                        else None
+                        self._ensure_utc(message.date)
+                        if getattr(message, "date", None) else None
                     )
-
-                    if (
-                        message_date is not None
-                        and message_date < cutoff
-                    ):
-                        # Messages are newest first.
+                    if message_date is not None and message_date < cutoff:
+                        reached_cutoff = True
                         break
-
-                    if (
-                        end_at is not None
-                        and message_date is not None
-                        and message_date >= end_at
-                    ):
+                    if end_at is not None and message_date is not None and message_date >= end_at:
                         continue
 
+                    scanned += 1
                     normalized = self._normalize_message(
                         message=message,
                         channel=channel,
-                        search_query=(
-                            "LOCAL_SCAN:"
-                            + ",".join(
-                                query_topic_terms[:8]
-                            )
-                        ),
+                        search_query="LOCAL_SCAN:" + ",".join(query_topic_terms[:8]),
                     )
-
                     if not normalized:
                         continue
-
-                    cleaned_post_text = self._clean_post_text(
-                        normalized[
-                            "text"
-                        ]
-                    )
-
+                    cleaned_post_text = self._clean_post_text(normalized["text"])
                     text_lower = cleaned_post_text.lower()
-
-                    if not text_lower:
-                        continue
-
-                    migration_hits = self._count_term_hits(
-                        text_lower,
-                        self.MIGRATION_TERMS,
-                    )
-
-                    if migration_hits == 0:
-                        continue
-
-                    if (
-                        query_topic_terms
-                        and not self._matches_any_topic_term(
-                            text_lower,
-                            query_topic_terms,
-                        )
+                    if not text_lower or not self._count_term_hits(
+                        text_lower, self.MIGRATION_TERMS
                     ):
                         continue
-
-                    normalized[
-                        "text"
-                    ] = cleaned_post_text
-
-                    post_id = normalized[
-                        "post_id"
-                    ]
-
-                    if post_id in seen_ids:
-                        continue
-
-                    seen_ids.add(
-                        post_id
-                    )
-
-                    posts.append(
-                        normalized
-                    )
-
-                    accepted_from_channel += 1
-
-                    if (
-                        len(posts) >= max_results
-                        or accepted_from_channel
-                        >= per_channel_budget
+                    context_matches += 1
+                    if query_topic_terms and not self._matches_any_topic_term(
+                        text_lower, query_topic_terms
                     ):
-                        break
+                        continue
+                    topic_matches += 1
+                    normalized["text"] = cleaned_post_text
+                    posts_by_id.setdefault(normalized["post_id"], normalized)
 
+                if scanned >= scan_limit and not reached_cutoff:
+                    truncated_channels += 1
+                    print(
+                        f"TELEGRAM SCAN LIMIT @{channel.get('username')}: "
+                        f"scanned={scanned}; older posts may remain unscanned"
+                    )
+                print(
+                    f"TELEGRAM CHANNEL SCAN @{channel.get('username')}: "
+                    f"scanned={scanned} migration={context_matches} "
+                    f"topic={topic_matches}"
+                )
             except FloodWaitError as error:
                 raise RuntimeError(
-                    "Telegram message-scan flood wait: "
-                    f"{error.seconds} seconds."
+                    f"Telegram message-scan flood wait: {error.seconds} seconds."
                 ) from error
-
             except Exception as error:
+                channel_errors += 1
                 print(
                     "TELEGRAM CHANNEL WARNING: "
                     f"@{channel.get('username')} | "
                     f"{type(error).__name__}: {error}"
                 )
+            finally:
+                total_scanned += scanned
+                total_context += context_matches
+                total_topic += topic_matches
 
-        posts.sort(
-            key=lambda item: (
-                item.get(
-                    "published_at"
-                )
-                or ""
-            ),
+        posts = sorted(
+            posts_by_id.values(),
+            key=lambda item: item.get("published_at") or "",
             reverse=True,
         )
+        # Reserve a minority of the available slots for Ceuta/Melilla only
+        # when relevant posts actually exist. All other migration routes
+        # remain eligible for the rest of the results.
+        priority_posts = [
+            post for post in posts
+            if self._is_ceuta_melilla_post(post.get("text", ""))
+        ]
+        priority_quota = min(len(priority_posts), max(1, max_results * 2 // 5))
+        selected = priority_posts[:priority_quota]
+        selected_ids = {post["post_id"] for post in selected}
+        for post in posts:
+            if len(selected) >= max_results:
+                break
+            if post["post_id"] not in selected_ids:
+                selected.append(post)
+                selected_ids.add(post["post_id"])
+        selected.sort(
+            key=lambda item: item.get("published_at") or "", reverse=True
+        )
+        print(
+            "TELEGRAM GEOGRAPHY: "
+            f"ceuta_melilla_candidates={len(priority_posts)} "
+            f"ceuta_melilla_selected={sum(self._is_ceuta_melilla_post(p.get('text', '')) for p in selected)} "
+            f"other_migration_selected={sum(not self._is_ceuta_melilla_post(p.get('text', '')) for p in selected)}"
+        )
+        print(
+            "TELEGRAM COVERAGE: "
+            f"channels={len(channels)} scanned={total_scanned} "
+            f"migration_context={total_context} topic_matches={total_topic} "
+            f"unique_matches={len(posts)} returned={len(selected)} "
+            f"channel_errors={channel_errors} scan_limit_channels={truncated_channels}"
+        )
+        return selected
 
-        return posts[:max_results]
+    @staticmethod
+    def _is_ceuta_melilla_post(text: str) -> bool:
+        """Detect primary-area mentions in actual post text, not channel names."""
+        normalized = str(text or "").casefold()
+        return any(
+            re.search(pattern, normalized, flags=re.UNICODE)
+            for pattern in (
+                r"(?<!\w)ceuta(?!\w)",
+                r"(?<!\w)melilla(?!\w)",
+                r"(?<!\w)sebta(?!\w)",
+                r"(?<!\w)سبتة(?!\w)",
+                r"(?<!\w)مليلية(?!\w)",
+            )
+        )
 
     def _build_post_topic_terms(
         self,
