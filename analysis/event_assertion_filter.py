@@ -431,6 +431,38 @@ class EventAssertionFilter:
             )
         )
 
+        # V1.3.2: prevent low-precision movement and criminal detention
+        # assertions from becoming persistent events when the first gate
+        # receives a broader event classification from the event extractor.
+        if event_type in {"BORDER_CROSSING", "MIGRATION_MOVEMENT", "ARRIVAL"}:
+            if re.search(
+                r"\b(?:increase in arrivals|rise in arrivals|government policy|"
+                r"migration statistics|last year alone)\b", text, re.I
+            ) and not re.search(
+                r"\b\d+[\d,]*\s+(?:migrants?|refugees?)\s+"
+                r"(?:were\s+|have\s+)?(?:arrived|crossed|landed)\b", text, re.I
+            ):
+                return self._reject(
+                    "AGGREGATE_OR_OPINION_NOT_DISCRETE_MOVEMENT",
+                    analytical_cues, current_cues, non_assertive_cues, direct_event_cues,
+                )
+
+        if event_type in {"DETENTION", "ARREST"}:
+            if re.search(
+                r"\b(?:hit[- ]and[- ]run|fatal crash|traffic accident|"
+                r"car crash|robbery|stabbing|murder|assault)\b", text, re.I
+            ) and not re.search(
+                r"\b(?:immigration|border|asylum)\s+(?:raid|enforcement|operation)\b|"
+                r"\b(?:illegal entry|irregular crossing|deportation)\b|"
+                r"\b(?:people[- ]smugglers?|smugglers?|traffickers?)\b.{0,100}\b(?:arrested|detained)\b|"
+                r"\b(?:arrested|detained)\b.{0,100}\b(?:people[- ]smugglers?|smugglers?|traffickers?)\b",
+                text, re.I
+            ):
+                return self._reject(
+                    "ORDINARY_CRIME_WITH_MIGRANT_DESCRIPTOR",
+                    analytical_cues, current_cues, non_assertive_cues, direct_event_cues,
+                )
+
         # --------------------------------------------------
         # V1.3 OPERATIONAL ACTUALITY / HUMAN-SMUGGLING GATES
         # --------------------------------------------------
@@ -511,6 +543,13 @@ class EventAssertionFilter:
             enforcement_sensitive
             and generic_crime_cues
             and not strong_migration_enforcement_cues
+            and not (
+                re.search(
+                    r"\b(?:arrested|detained)\b.{0,100}\b(?:people[- ]smugglers?|smugglers?|traffickers?)\b|"
+                    r"\b(?:people[- ]smugglers?|smugglers?|traffickers?)\b.{0,100}\b(?:arrested|detained)\b",
+                    text, re.I,
+                )
+            )
             and not (human_smuggling_cues and smuggling_action_cues)
         ):
             return self._reject(
@@ -731,4 +770,3 @@ class EventAssertionFilter:
             "non_assertive_cues": non_assertive_cues,
             "direct_event_cues": direct_event_cues,
         }
-
