@@ -142,22 +142,12 @@ class OperationalEventFilter:
             r"(?:الحدود|المعبر).{0,100}(?:إغلاق|أغلق|تشديد\s+(?:الرقابة|الحراسة)|تعزيز\s+(?:الحراسة|الانتشار)|فرض\s+رقابة)",
         ],
         "HUMANITARIAN": [
-            r"\bmigrant camp\b",
-            r"\brefugee camp\b",
-            r"\breception centre\b",
-            r"\breception center\b",
-            r"\bmigrant shelter\b",
-            r"\brefugee shelter\b",
             r"\bsleeping rough\b",
             r"\btemporary accommodation\b",
         ],
         "COORDINATION_ADVICE": [
             r"\bmeeting point\b",
-            r"\bcontact me\b",
-            r"\bdm me\b",
             r"\bjoin the group\b",
-            r"\bwhatsapp\b",
-            r"\btelegram\b",
             r"\bhow to cross\b",
             r"\bbest route\b",
             r"\bsafest route\b",
@@ -167,6 +157,29 @@ class OperationalEventFilter:
             r"\bleaving tomorrow\b",
         ],
     }
+
+    # Concrete reports with counts, auxiliaries or reversed word order.
+    OPERATIONAL_PATTERNS["RESCUE"].extend([
+        r"\b(?:\d+[\d,]*\s+)?(?:migrants?|refugees?|asylum seekers?)\s+(?:have\s+|has\s+|were\s+|was\s+|been\s+)*rescued\b",
+        r"\b(?:coast\s+guard|rescue\s+teams?|authorities|police)\b.{0,100}\brescued\b.{0,100}\b(?:migrants?|refugees?|people\s+aboard|people\s+on\s+board)\b",
+        r"\brescued\b.{0,80}\b(?:\d+[\d,]*\s+)?(?:migrants?|refugees?|asylum seekers?)\b",
+        r"\b(?:rescatad\w*|rescataron|rescató)\b.{0,90}\b(?:migrantes?|personas|refugiados?)\b",
+    ])
+    OPERATIONAL_PATTERNS["MOVEMENT"].extend([
+        r"\b(?:\d+[\d,]*\s+)?(?:migrants?|refugees?|asylum seekers?)\s+(?:have\s+|has\s+|were\s+|was\s+)*?(?:arrived|crossed|landed|departed)\b",
+        r"\b(?:arrived|landed)\b.{0,70}\b(?:\d+[\d,]*\s+)?(?:migrants?|refugees?|asylum seekers?)\b",
+    ])
+    OPERATIONAL_PATTERNS["INTERCEPTION"].extend([
+        r"\b(?:\d+[\d,]*\s+)?(?:migrants?|refugees?)\s+(?:were\s+|have\s+been\s+)?intercepted\b",
+        r"\bintercepted\b.{0,80}\b(?:\d+[\d,]*\s+)?(?:migrants?|refugees?|migrant\s+boats?)\b",
+    ])
+    OPERATIONAL_PATTERNS["ARREST_DETENTION"].extend([
+        r"\b(?:\d+[\d,]*\s+)?(?:migrants?|refugees?|smugglers?)\s+(?:were\s+|have\s+been\s+)?(?:arrested|detained)\b",
+        r"\b(?:arrested|detained)\b.{0,80}\b(?:\d+[\d,]*\s+)?(?:migrants?|refugees?|smugglers?)\b",
+    ])
+    OPERATIONAL_PATTERNS["DEPORTATION_RETURN"].extend([
+        r"\b(?:\d+[\d,]*\s+)?(?:migrants?|refugees?|immigrants?)\s+(?:were\s+|have\s+been\s+)?(?:deported|expelled|repatriated)\b",
+    ])
 
     NON_OPERATIONAL_PATTERNS = {
         "POLITICAL_OPINION": [
@@ -285,7 +298,9 @@ class OperationalEventFilter:
                     if category != "DEPORTATION_RETURN"
                 ]
 
-        if generic_crime and not strong_migration_enforcement:
+        if (generic_crime and not strong_migration_enforcement
+                and not re.search(r"\b(?:migrants?|refugees?|smugglers?)\b.{0,100}\b(?:deported|expelled|repatriated|detained|arrested)\b", text, re.I)
+                and not re.search(r"\b(?:deported|expelled|repatriated|detained|arrested)\b.{0,100}\b(?:migrants?|refugees?|smugglers?)\b", text, re.I)):
             operational_categories = [
                 category
                 for category in operational_categories
