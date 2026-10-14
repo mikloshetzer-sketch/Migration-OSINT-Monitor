@@ -108,6 +108,7 @@ class EventExtractor:
                 locations=locations,
                 time_result=time_result,
                 relevance_score=score_result.get("score", 0),
+                historical_reference=historical_result.get("is_historical", False),
             ),
         }
 
@@ -303,6 +304,7 @@ class EventExtractor:
         locations: List[Dict[str, Any]],
         time_result: Optional[Dict[str, Any]],
         relevance_score: int,
+        historical_reference: bool = False,
     ) -> float:
         """
         Calculates a simple event confidence score between 0 and 1.
@@ -326,8 +328,11 @@ class EventExtractor:
         elif relevance_score > 0:
             confidence += 0.05
 
+        if historical_reference:
+            confidence = min(confidence, 0.30)
         return round(
             min(confidence, 1.0),
             2,
         )
+
 
