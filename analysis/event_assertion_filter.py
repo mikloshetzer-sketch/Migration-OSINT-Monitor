@@ -94,6 +94,8 @@ class EventAssertionFilter:
     ]
 
     DIRECT_EVENT_PATTERNS = [
+        r"\b(?:\d+[\d,]*\s+)?(?:migrants?|refugees?)\s+(?:were\s+|have\s+been\s+)?(?:rescued|intercepted|detained|arrested|deported|expelled)\b",
+        r"\b(?:rescued|intercepted|detained|arrested|deported|expelled)\b.{0,80}\b(?:\d+[\d,]*\s+)?(?:migrants?|refugees?)\b",
         r"\b(?:migrants?|refugees?)\s+(?:arrived|crossed|landed|departed)\b",
         r"\b(?:migrants?|refugees?)\s+(?:were\s+)?(?:intercepted|detained|arrested|rescued)\b",
         r"\b(?:migrant|refugee)\s+(?:died|drowned)\b",
@@ -437,7 +439,7 @@ class EventAssertionFilter:
         # the same post also contains a strong current cue.
         if (
             historical_years
-            and not current_cues
+            and (not current_cues or analytical_cues)
             and (
                 smuggling_sensitive
                 or context_sensitive
@@ -509,6 +511,7 @@ class EventAssertionFilter:
             enforcement_sensitive
             and generic_crime_cues
             and not strong_migration_enforcement_cues
+            and not (human_smuggling_cues and smuggling_action_cues)
         ):
             return self._reject(
                 "ORDINARY_CRIME_NOT_MIGRATION_ENFORCEMENT",
@@ -728,3 +731,4 @@ class EventAssertionFilter:
             "non_assertive_cues": non_assertive_cues,
             "direct_event_cues": direct_event_cues,
         }
+
