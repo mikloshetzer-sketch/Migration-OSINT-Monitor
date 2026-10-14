@@ -374,6 +374,17 @@ class SignalClassifier:
                 "confidence": self.BASE_CONFIDENCE["GENERAL_DISCUSSION"],
             }
 
+        # Contextual exclusions: keywords alone are not an operational event.
+        # Return discussion for broad commentary/statistics without a specific incident.
+        if self._is_non_operational_context(text, matched_signals):
+            return {
+                "signal_type": "GENERAL_DISCUSSION",
+                "primary_signal": "GENERAL_DISCUSSION",
+                "matched_signals": [],
+                "matched_phrases": [],
+                "confidence": self.BASE_CONFIDENCE["GENERAL_DISCUSSION"],
+            }
+
         primary_signal = self._select_primary_signal(
             matched_signals
         )
@@ -391,6 +402,28 @@ class SignalClassifier:
             "matched_phrases": matched_phrases,
             "confidence": confidence,
         }
+
+    @staticmethod
+    def _is_non_operational_context(text: str, signals: List[str]) -> bool:
+        s = text.casefold()
+        # Clear non-event contexts. Avoid vetoing explicit rescue/arrest reports.
+        concrete = {"RESCUE_OPERATION", "SMUGGLING_ACTIVITY", "DETENTION", "INTERCEPTION", "CASUALTY"}
+        if any(x in signals for x in concrete):
+            return False
+        # A recent post about a visit is not a fresh crossing event.
+        if "BORDER_CROSSING" in signals and re.search(r"\bvisited\b.{0,150}\bafter\b.{0,100}\bcrossed\b", s, re.DOTALL):
+            return True
+        # Aggregated figures are not individual border crossing incidents.
+        if re.search(r"\b(?:this year|last year|over (?:those|the last|the past) \d+ days|per day|since .*took office|during .*days in office|annual|yearly|in total|total of .*over .*days)\b",s):
+            return True
+        if re.search(r"\b(?:\d{4}|\d{3})\s+years?\s+(?:later|ago)\b",s):
+            return True
+        if re.search(r"\b(?:arrived as a refugee in \d{4}|became a citizen in \d{4}|born in \d{4})\b",s):
+            return True
+        # Bare policy or opinion claims should not become operational crossing events.
+        if signals == ["BORDER_CROSSING"] and re.search(r"\b(?:should|would|could|taxpayers|welfare|government support)\b",s) and not re.search(r"\b(?:yesterday|today|on monday|on tuesday|on wednesday|on thursday|on friday|on saturday|on sunday)\b",s):
+            return True
+        return False
 
     def _select_primary_signal(
         self,
