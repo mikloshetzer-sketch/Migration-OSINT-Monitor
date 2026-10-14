@@ -1502,22 +1502,37 @@ class TelegramCollector:
             key=lambda item: item.get("published_at") or "",
             reverse=True,
         )
-        # Reserve a minority of the available slots for Ceuta/Melilla only
-        # when relevant posts actually exist. All other migration routes
-        # remain eligible for the rest of the results.
-        priority_posts = [
-            post for post in posts
-            if self._is_ceuta_melilla_post(post.get("text", ""))
-        ]
-        priority_quota = min(len(priority_posts), max(1, max_results * 2 // 5))
-        selected = priority_posts[:priority_quota]
-        selected_ids = {post["post_id"] for post in selected}
-        for post in posts:
-            if len(selected) >= max_results:
-                break
-            if post["post_id"] not in selected_ids:
-                selected.append(post)
-                selected_ids.add(post["post_id"])
+        # Give event-like Telegram reports a fair chance to reach the
+        # existing strict operational/assertion filters in main.py.
+        # This is a retrieval priority only, NOT an event classification.
+        # Reserve slots for Ceuta/Melilla and for other migration routes.
+        event_like = [p for p in posts if self._telegram_event_candidate(p.get("text", ""))]
+        ceuta_event = [p for p in event_like if self._is_ceuta_melilla_post(p.get("text", ""))]
+        other_event = [p for p in event_like if not self._is_ceuta_melilla_post(p.get("text", ""))]
+        ceuta_context = [p for p in posts if self._is_ceuta_melilla_post(p.get("text", ""))]
+        selected = []
+        selected_ids = set()
+
+        def add_from(items, quota):
+            for item in items:
+                if len(selected) >= max_results or quota <= 0:
+                    break
+                if item["post_id"] in selected_ids:
+                    continue
+                selected.append(item)
+                selected_ids.add(item["post_id"])
+                quota -= 1
+
+        # Do not let one geographic area monopolize all result slots.
+        ceuta_quota = max(1, max_results * 2 // 5)
+        other_quota = max(1, max_results * 2 // 5)
+        add_from(ceuta_event, ceuta_quota)
+        add_from(other_event, other_quota)
+        # Maintain primary-area visibility even if there are no event-like posts.
+        add_from(ceuta_context, ceuta_quota)
+        # Fill remaining slots with event-like posts, then contextual coverage.
+        add_from(event_like, max_results)
+        add_from(posts, max_results)
         selected.sort(
             key=lambda item: item.get("published_at") or "", reverse=True
         )
@@ -1531,10 +1546,49 @@ class TelegramCollector:
             "TELEGRAM COVERAGE: "
             f"channels={len(channels)} scanned={total_scanned} "
             f"migration_context={total_context} topic_matches={total_topic} "
-            f"unique_matches={len(posts)} returned={len(selected)} "
+            f"unique_matches={len(posts)} event_candidates={len(event_like)} "
+            f"event_candidates_selected={sum(self._telegram_event_candidate(p.get('text', '')) for p in selected)} "
+            f"returned={len(selected)} "
             f"channel_errors={channel_errors} scan_limit_channels={truncated_channels}"
         )
         return selected
+
+    @staticmethod
+    def _telegram_event_candidate(text: str) -> bool:
+        """Lightweight multilingual retrieval ranking, not event verification.
+
+        Reject obvious statistics/biographies and require migration context
+        plus an event verb. The main analytical filters remain authoritative.
+        """
+        t = str(text or "").casefold()
+        if not t:
+            return False
+        if re.search(r"\b(?:in 19\d{2}|in 20[01]\d|since 19\d{2}|since 20[01]\d)\b", t):
+            return False
+        if re.search(r"\b(?:this year|last year|annual report|year to date|ytd|en lo que va de año|este año)\b", t) and not re.search(r"\b(?:today|yesterday|hoy|ayer|last night|anoche)\b", t):
+            return False
+        migration = re.search(
+            r"\b(?:migrants?|refugees?|asylum seekers?|smugglers?|migration|"
+            r"migrantes?|refugiados?|pateras?|cayucos?|inmigrantes?|"
+            r"migranti|rifugiati|migranten|flüchtlinge|"
+            r"مهاجرين|مهاجرون|مهاجر|لاجئين|لاجئ)\b",
+            t, re.UNICODE
+        )
+        if not migration:
+            return False
+        action = re.search(
+            r"\b(?:rescued?|rescue operation|intercepted?|arrested?|detained?|"
+            r"deported?|capsized?|shipwreck(?:ed)?|drowned?|crossed?|"
+            r"arrived?|landed?|departed?|seized?|stopped?|"
+            r"rescatad[oa]s?|rescat(?:aron|ados?)|detenid[oa]s?|"
+            r"interceptad[oa]s?|llegaron|llegad[oa]s?|"
+            r"naufrag(?:io|aron)|ahogad[oa]s?|"
+            r"soccorsi|salvati|arrestati|sbarcati|"
+            r"gerettet|festgenommen|angekommen|"
+            r"إنقاذ|أنقذت|اعتراض|اعتقال|غرق|وصلوا)\b",
+            t, re.UNICODE
+        )
+        return bool(action)
 
     @staticmethod
     def _is_ceuta_melilla_post(text: str) -> bool:
