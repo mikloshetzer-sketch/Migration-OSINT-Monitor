@@ -1538,7 +1538,7 @@ class TelegramCollector:
         )
         print(
             "TELEGRAM GEOGRAPHY: "
-            f"ceuta_melilla_candidates={len(priority_posts)} "
+            f"ceuta_melilla_candidates={len(ceuta_context)} "
             f"ceuta_melilla_selected={sum(self._is_ceuta_melilla_post(p.get('text', '')) for p in selected)} "
             f"other_migration_selected={sum(not self._is_ceuta_melilla_post(p.get('text', '')) for p in selected)}"
         )
