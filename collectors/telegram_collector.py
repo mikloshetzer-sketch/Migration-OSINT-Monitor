@@ -55,6 +55,8 @@ from __future__ import annotations
 
 import os
 import re
+import json
+from pathlib import Path
 from datetime import datetime, timedelta, timezone
 from typing import Any, Dict, List, Optional
 
@@ -76,7 +78,7 @@ class TelegramCollector:
     DEFAULT_CHANNEL_SAMPLE_SIZE = 20
     DEFAULT_MIN_CHANNEL_SCORE = 3
     MAX_CHANNELS_PER_QUERY = 30
-    MAX_VALIDATED_CHANNELS_PER_QUERY = 16
+    MAX_VALIDATED_CHANNELS_PER_QUERY = 30
     MAX_MESSAGES_PER_CHANNEL_TERM = 12
 
     STOPWORDS = {
@@ -2242,35 +2244,33 @@ class TelegramCollector:
             self.api_hash,
         )
 
-    def _load_explicit_channels(
-        self,
-    ) -> List[str]:
-        raw = str(
-            os.getenv(
-                "TELEGRAM_PUBLIC_CHANNELS",
-                "",
-            )
-            or ""
+    def _load_explicit_channels(self) -> List[str]:
+        """Load registered Telegram public channels and explicit overrides.
+
+        The source registry's category assignments are not changed.
+        """
+        raw = str(os.getenv("TELEGRAM_PUBLIC_CHANNELS", "") or "")
+        registry_channels = []
+        registry_path = (
+            Path(__file__).resolve().parent.parent
+            / "config" / "source_registry.json"
         )
+        try:
+            with registry_path.open("r", encoding="utf-8") as handle:
+                registry = json.load(handle)
+            entries = registry.get("TELEGRAM", {})
+            if isinstance(entries, dict):
+                registry_channels = list(entries.keys())
+        except (OSError, ValueError, TypeError) as error:
+            print(f"TELEGRAM REGISTRY WARNING: {type(error).__name__}: {error}")
 
         result = []
-
-        for item in raw.split(
-            ","
-        ):
-            cleaned = (
-                item.strip()
-                .lstrip("@")
-            )
-
-            if (
-                cleaned
-                and cleaned not in result
-            ):
-                result.append(
-                    cleaned
-                )
-
+        for item in registry_channels + raw.split(","):
+            cleaned = str(item or "").strip().lstrip("@").strip("/")
+            if (re.fullmatch(r"[A-Za-z][A-Za-z0-9_]{3,}", cleaned)
+                    and cleaned.lower() not in {x.lower() for x in result}):
+                result.append(cleaned)
+        print(f"Telegram registered public channels: {len(result)}")
         return result
 
     @staticmethod
@@ -2371,4 +2371,3 @@ class TelegramCollector:
                 maximum,
             ),
         )
-
