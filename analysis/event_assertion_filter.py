@@ -431,6 +431,63 @@ class EventAssertionFilter:
             )
         )
 
+        # V1.3.3: a reported crossing must be a discrete movement event.
+        # A new social post is NOT proof that the described crossing is new.
+        if event_type in {"BORDER_CROSSING", "MIGRATION_MOVEMENT", "ARRIVAL"}:
+            aggregate = [
+                r"\b(?:this|last)\s+year\b", r"\byear\s+to\s+date\b",
+                r"\b(?:since|over|during|across)\s+(?:the\s+)?(?:last\s+)?\d+\s+(?:days?|weeks?|months?|years?)\b",
+                r"\b(?:per|a)\s+day\b", r"\b\d+\s*\+?\s*per\s+day\b",
+                r"\b(?:annual|yearly|cumulative|total of|in total|so far this year)\b",
+                r"\b(?:statistics|figures|compared with|increase in arrivals|rise in arrivals)\b",
+                r"\b(?:\d[\d,.]*\s+)?(?:small boats?|vessels?)\b.{0,65}\b(?:this year|so far)\b",
+                r"\b(?:since|during)\s+(?:labour|starmer|burnham|the government)\b",
+            ]
+            retrospective = [
+                r"\b\d+\s+years?\s+(?:ago|later)\b",
+                r"\b(?:in|back in|during)\s+(?:19|20)\d{2}\b",
+                r"\b(?:in|back in|during)\s+(?:january|february|march|april|may|june|july|august|september|october|november|december)\b",
+                r"\b(?:historically|years ago|in the past|previously)\b",
+            ]
+            current_specific = re.search(
+                r"\b(?:today|yesterday|overnight|this morning|this afternoon|"
+                r"this evening|last night|within (?:the last )?\d+ hours?|"
+                r"on october 1[234])\b", text, re.I,
+            )
+            # Do not allow generic 'arrived' or 'crossed' to override
+            # strong aggregate/retrospective context.
+            if (any(re.search(p, text, re.I) for p in aggregate)
+                    and not current_specific):
+                return self._reject(
+                    "AGGREGATE_MOVEMENT_NOT_DISCRETE_EVENT",
+                    analytical_cues, current_cues, non_assertive_cues, direct_event_cues,
+                )
+            if (any(re.search(p, text, re.I) for p in retrospective)
+                    and not current_specific):
+                return self._reject(
+                    "RETROSPECTIVE_MOVEMENT_NOT_CURRENT_EVENT",
+                    analytical_cues, current_cues, non_assertive_cues, direct_event_cues,
+                )
+            # Questions, political arguments and media teasers about
+            # general migration must not become operational crossings.
+            if re.search(
+                r"\b(?:hasn['’]?t|isn['’]?t|why (?:are|do)|should|would|"
+                r"here['’]?s where|here is where|so is elon|taxpayers funding|"
+                r"we are full|immigration policy|migrant integration|"
+                r"economic immigrants|family.class immigrants)\b", text, re.I,
+            ) and not current_specific:
+                return self._reject(
+                    "MOVEMENT_OPINION_OR_MEDIA_TEASER",
+                    analytical_cues, current_cues, non_assertive_cues, direct_event_cues,
+                )
+            # Conditional/present-tense descriptions of routine journeys
+            # do not establish a specific crossing.
+            if re.search(r"\b(?:when|whenever|if)\s+(?:these|the|a|migrant|migrants)\b", text, re.I) and not current_specific:
+                return self._reject(
+                    "HYPOTHETICAL_OR_GENERIC_CROSSING",
+                    analytical_cues, current_cues, non_assertive_cues, direct_event_cues,
+                )
+
         # V1.3.2: prevent low-precision movement and criminal detention
         # assertions from becoming persistent events when the first gate
         # receives a broader event classification from the event extractor.
