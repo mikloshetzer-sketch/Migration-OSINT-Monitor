@@ -310,6 +310,39 @@ class OperationalEventFilter:
                 }
             ]
 
+        # V2.1: exclude ordinary criminal arrests involving a person described as a
+        # migrant. Immigration enforcement or human-smuggling action is required.
+        ordinary_crime_arrest = bool(re.search(
+            r"\b(?:hit[- ]and[- ]run|fatal crash|car crash|traffic accident|"
+            r"robbery|stabbing|murder|assault)\b", text, re.I
+        ))
+        migration_enforcement_action = bool(re.search(
+            r"\b(?:immigration|border|asylum)\s+(?:enforcement|raid|operation|officers?)\b|"
+            r"\b(?:deportation|illegal entry|irregular crossing|border crossing)\b|"
+            r"\b(?:smugglers?|traffickers?)\b.{0,100}\b(?:arrested|detained)\b|"
+            r"\b(?:arrested|detained)\b.{0,100}\b(?:smugglers?|traffickers?)\b",
+            text, re.I
+        ))
+        if ordinary_crime_arrest and not migration_enforcement_action:
+            operational_categories = [c for c in operational_categories
+                                      if c != "ARREST_DETENTION"]
+
+        # Generic trends and political commentary are not discrete movements.
+        trend_only = bool(re.search(
+            r"\b(?:increase in arrivals|rise in arrivals|arrivals have increased|"
+            r"migration figures|migration statistics|government policy|"
+            r"last year alone|over the past (?:years?|decades?))\b", text, re.I
+        ))
+        concrete_movement = bool(re.search(
+            r"\b(?:\d+[\d,]*\s+(?:migrants?|refugees?|people)\s+"
+            r"(?:have\s+|were\s+)?(?:arrived|crossed|landed)|"
+            r"(?:migrants?|refugees?)\s+(?:have\s+|were\s+)?"
+            r"(?:arrived|crossed|landed)\s+(?:today|yesterday|on\s+\w+)|"
+            r"(?:boat|vessel)\s+(?:arrived|landed|departed))\b", text, re.I
+        ))
+        if trend_only and not concrete_movement:
+            operational_categories = [c for c in operational_categories if c != "MOVEMENT"]
+
         is_operational = bool(operational_categories)
         confidence = self._calculate_confidence(
             operational_categories=operational_categories,
