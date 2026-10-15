@@ -1,25 +1,25 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-10-14T22:49:04Z",
-  "generated_at": "2026-10-14T22:49:04Z",
+  "updated_at": "2026-10-15T02:08:39Z",
+  "generated_at": "2026-10-15T02:08:39Z",
   "current_run": {
     "available": true,
-    "id": 272,
-    "run_uuid": "abad88f0-188f-489b-8e6d-78b53fab399e",
-    "started_at": "2026-10-14T22:46:22Z",
-    "completed_at": "2026-10-14T22:49:02Z",
+    "id": 273,
+    "run_uuid": "5fbb433b-9341-4ddc-b72b-b3b6c4901919",
+    "started_at": "2026-10-15T02:05:54Z",
+    "completed_at": "2026-10-15T02:08:37Z",
     "status": "SUCCESS",
-    "posts_returned": 131,
-    "unique_posts_collected": 85,
+    "posts_returned": 144,
+    "unique_posts_collected": 107,
     "x_posts_returned": 50,
-    "reddit_posts_returned": 19,
+    "reddit_posts_returned": 32,
     "mastodon_posts_returned": 50,
-    "unique_x_posts": 36,
-    "unique_reddit_posts": 18,
+    "unique_x_posts": 48,
+    "unique_reddit_posts": 28,
     "unique_mastodon_posts": 19,
-    "noise_filtered": 0,
-    "non_operational_filtered": 81,
-    "historical_references_filtered": 2,
+    "noise_filtered": 1,
+    "non_operational_filtered": 99,
+    "historical_references_filtered": 3,
     "influence_signals": 3,
     "influence_signals_detected": 3,
     "crossing_facilitation_signals": 1,
@@ -30,45 +30,89 @@
     "mobilization_report_signals": 0,
     "decision_influence_signals": 0,
     "online_influence_report_signals": 0,
-    "operational_events": 2,
-    "operational_events_analyzed": 2,
-    "historical_events_available": 69,
-    "new_correlations": 1,
-    "correlated_events": 1,
-    "new_correlation_groups": 1,
-    "database_correlations": 1,
+    "operational_events": 4,
+    "operational_events_analyzed": 4,
+    "historical_events_available": 67,
+    "new_correlations": 2,
+    "correlated_events": 2,
+    "new_correlation_groups": 2,
+    "database_correlations": 2,
     "current_run_correlations": 0,
-    "new_events": 1,
-    "new_events_saved": 1,
-    "events_already_existing": 1,
+    "new_events": 2,
+    "new_events_saved": 2,
+    "events_already_existing": 2,
     "new_event_groups": 1,
-    "updated_event_groups": 0,
+    "updated_event_groups": 1,
     "bootstrapped_event_groups": 0,
-    "existing_event_groups_reused": 1,
-    "event_group_sources_linked": 1,
+    "existing_event_groups_reused": 2,
+    "event_group_sources_linked": 2,
     "x_collector_errors": 0,
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "error_message": null
   },
   "kpis": {
-    "operational_events": 24,
-    "new_events": 1,
-    "correlated_events": 5,
-    "active_event_groups": 467,
+    "operational_events": 25,
+    "new_events": 2,
+    "correlated_events": 6,
+    "active_event_groups": 468,
     "sources": 4,
     "regions": 6,
-    "collected_posts_24h": 658,
+    "collected_posts_24h": 683,
     "influence_signals": 26,
     "access_signals": 3,
     "high_priority": 1,
-    "current_run_operational_events": 2,
-    "current_run_unique_posts": 85,
+    "current_run_operational_events": 4,
+    "current_run_unique_posts": 107,
     "access_signals_raw": 8,
     "influence_signals_raw": 20,
     "influence_narratives": 3
   },
   "live_events": [
+    {
+      "id": 602,
+      "event_id": 602,
+      "source": "X",
+      "source_post_id": "2110552535920484681",
+      "author": "NafisatRamses",
+      "published_at": "2026-10-15T02:05:11Z",
+      "collected_at": "2026-10-15T02:06:32Z",
+      "event_type": "DEPORTATION",
+      "signal_type": "DEPORTATION",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.25,
+      "event_confidence": 0.25,
+      "relevance_score": 10.0,
+      "text": "@jihadwatchRS All African migrant should be deported to Africa let us build our continent. \nNo more excuses.",
+      "url": "https://x.com/NafisatRamses/status/2110552535920484681",
+      "source_url": "https://x.com/NafisatRamses/status/2110552535920484681"
+    },
+    {
+      "id": 603,
+      "event_id": 603,
+      "source": "X",
+      "source_post_id": "2110539406423515397",
+      "author": "S_W_Somerville",
+      "published_at": "2026-10-15T01:13:01Z",
+      "collected_at": "2026-10-15T02:08:35Z",
+      "event_type": "BORDER_CROSSING",
+      "signal_type": "BORDER_CROSSING",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.2,
+      "event_confidence": 0.2,
+      "relevance_score": 0.0,
+      "text": "@TahraHoops Her father was a full colonel in the brutal military dictatorship that collapsed and left Somalia in ruins. He arrived in the US claiming \"refugee\" status but his paperwork has vanished so we may never know who lied or who paid for his \"citizenship.\" We do know that Ilhan Omar's",
+      "url": "https://x.com/S_W_Somerville/status/2110539406423515397",
+      "source_url": "https://x.com/S_W_Somerville/status/2110539406423515397"
+    },
     {
       "id": 601,
       "event_id": 601,
@@ -464,53 +508,67 @@
       "text": "365 small boats carrying 6,642 migrants have arrived in the Balearics this year https://t.co/Z3AFgMYouL",
       "url": "https://x.com/MajorcaDaily/status/2110289820568158643",
       "source_url": "https://x.com/MajorcaDaily/status/2110289820568158643"
-    },
-    {
-      "id": 584,
-      "event_id": 584,
-      "source": "X",
-      "source_post_id": "2110288376335159575",
-      "author": "grok",
-      "published_at": "2026-10-14T08:35:30Z",
-      "collected_at": "2026-10-14T08:45:21Z",
-      "event_type": "BORDER_CROSSING",
-      "signal_type": "BORDER_CROSSING",
-      "primary_location": "-",
-      "location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "confidence": 0.25,
-      "event_confidence": 0.25,
-      "relevance_score": 10.0,
-      "text": "@is_raw93051 @Conservatixe Yes, Ilhan Omar is a naturalized U.S. citizen. Born in Somalia in 1982, she arrived as a refugee in 1995 and became a citizen in 2000 at age 17. She has served in Congress since 2019. An ongoing probe into family immigration papers has not changed her status or resulted in",
-      "url": "https://x.com/grok/status/2110288376335159575",
-      "source_url": "https://x.com/grok/status/2110288376335159575"
-    },
-    {
-      "id": 580,
-      "event_id": 580,
-      "source": "X",
-      "source_post_id": "2110286594305405052",
-      "author": "Olicanarama",
-      "published_at": "2026-10-14T08:28:25Z",
-      "collected_at": "2026-10-14T08:29:27Z",
-      "event_type": "BORDER_CROSSING",
-      "signal_type": "BORDER_CROSSING",
-      "primary_location": "-",
-      "location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "confidence": 0.25,
-      "event_confidence": 0.25,
-      "relevance_score": 10.0,
-      "text": "@ukhomeoffice We are full! \n\nSince Burnham arrived there has been an increase in arrivals of illegal migrants in BIG BOATS. \n\nIt’s the accumulation of years which is the problem plus your acceptance of most with few being deported. \n\nWe are not stupid!",
-      "url": "https://x.com/Olicanarama/status/2110286594305405052",
-      "source_url": "https://x.com/Olicanarama/status/2110286594305405052"
     }
   ],
   "event_groups": [
+    {
+      "id": 487,
+      "group_id": 487,
+      "event_type": "DEPORTATION",
+      "dominant_event_type": "DEPORTATION",
+      "title": "DEPORTATION",
+      "representative_text": "@jihadwatchRS All African migrant should be deported to Africa let us build our continent. \nNo more excuses.",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "primary_location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "first_seen": "2026-10-15T02:05:11Z",
+      "last_seen": "2026-10-15T02:05:11Z",
+      "source_count": 1,
+      "sources_count": 1,
+      "source_types": [
+        "X"
+      ],
+      "sources": [
+        "X"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.25,
+      "average_confidence": 0.25,
+      "created_at": "2026-10-15T02:06:32Z",
+      "updated_at": "2026-10-15T02:06:32Z"
+    },
+    {
+      "id": 472,
+      "group_id": 472,
+      "event_type": "BORDER_CROSSING",
+      "dominant_event_type": "BORDER_CROSSING",
+      "title": "BORDER_CROSSING - HORN_OF_AFRICA",
+      "representative_text": "@is_raw93051 @Conservatixe Yes, Ilhan Omar is a naturalized U.S. citizen. Born in Somalia in 1982, she arrived as a refugee in 1995 and became a citizen in 2000 at age 17. She has served in Congress since 2019. An ongoing probe into family immigration papers has not changed her status or resulted in",
+      "region": "HORN_OF_AFRICA",
+      "primary_region": "HORN_OF_AFRICA",
+      "primary_location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "first_seen": "2026-10-14T08:35:30Z",
+      "last_seen": "2026-10-15T01:13:01Z",
+      "source_count": 2,
+      "sources_count": 2,
+      "source_types": [
+        "X"
+      ],
+      "sources": [
+        "X"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.25,
+      "average_confidence": 0.25,
+      "created_at": "2026-10-14T08:45:21Z",
+      "updated_at": "2026-10-15T02:08:35Z"
+    },
     {
       "id": 486,
       "group_id": 486,
@@ -742,223 +800,165 @@
       "average_confidence": 0.55,
       "created_at": "2026-10-14T11:46:46Z",
       "updated_at": "2026-10-14T11:46:46Z"
-    },
-    {
-      "id": 451,
-      "group_id": 451,
-      "event_type": "DETENTION",
-      "dominant_event_type": "DETENTION",
-      "title": "DETENTION",
-      "representative_text": "Бошқирдистонда «Ноқонуний-2026» операцияси бошланди\n\nБошқирдистон Республикасида МВД, ФСБ ва Росгвардия ҳамкорлигида «Ноқонуний-2026» операцияси доирасида Уфа шаҳридаги савдо мажмуаларида рейд ўтказилиб, 170 нафардан ортиқ хорижлик текширилди. Текширув натижасида Россияда ноқонуний юрган шахслар аниқланиб, уларга нисбатан мамлакатдан чиқариб юбориш ва қайта киришни тақиқлаш каби маъмурий чоралар кўрилмоқда.\n\n👉https://migrantlar24.com/b9hcjw",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "primary_location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "first_seen": "2026-10-10T08:45:24Z",
-      "last_seen": "2026-10-14T10:59:13Z",
-      "source_count": 2,
-      "sources_count": 2,
-      "source_types": [
-        "TELEGRAM"
-      ],
-      "sources": [
-        "TELEGRAM"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.5,
-      "average_confidence": 0.5,
-      "created_at": "2026-10-10T14:02:56Z",
-      "updated_at": "2026-10-14T22:46:58Z"
-    },
-    {
-      "id": 424,
-      "group_id": 424,
-      "event_type": "DETENTION",
-      "dominant_event_type": "DETENTION",
-      "title": "DETENTION",
-      "representative_text": "Хабаровск ўлкасида миграция рейдлари ўтказилди\n\nХабаровск ўлкасида ўтказилган «Нелегал-2026» тадбири давомида объектлар ва транспорт тизимлари текширилиб, миграция қонунчилигини бузган хорижликларга нисбатан жами 20 та маъмурий баённома расмийлаштирилди. Мазкур рейдлар натижасида қоидабузарларга жарималар тайинланиб, икки нафар чет эл фуқаросини Россия ҳудудидан маъмурий тартибда чиқариб юбориш белгиланди.\n\n👉https://migrantlar24.com/j7unqq",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "primary_location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "first_seen": "2026-10-07T11:16:11Z",
-      "last_seen": "2026-10-14T10:59:13Z",
-      "source_count": 2,
-      "sources_count": 2,
-      "source_types": [
-        "TELEGRAM"
-      ],
-      "sources": [
-        "TELEGRAM"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.25,
-      "average_confidence": 0.25,
-      "created_at": "2026-10-07T18:04:15Z",
-      "updated_at": "2026-10-14T14:46:27Z"
     }
   ],
   "regions": [
     {
       "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 16,
-      "events": 16,
-      "percentage": 69.57
+      "count": 17,
+      "events": 17,
+      "percentage": 70.83
     },
     {
       "name": "WESTERN_MEDITERRANEAN",
       "region": "WESTERN_MEDITERRANEAN",
       "count": 2,
       "events": 2,
-      "percentage": 8.7
+      "percentage": 8.33
     },
     {
       "name": "CENTRAL_MEDITERRANEAN",
       "region": "CENTRAL_MEDITERRANEAN",
       "count": 2,
       "events": 2,
-      "percentage": 8.7
+      "percentage": 8.33
     },
     {
       "name": "HORN_OF_AFRICA",
       "region": "HORN_OF_AFRICA",
       "count": 1,
       "events": 1,
-      "percentage": 4.35
+      "percentage": 4.17
     },
     {
       "name": "EASTERN_MEDITERRANEAN",
       "region": "EASTERN_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 4.35
+      "percentage": 4.17
     },
     {
       "name": "AMERICAS",
       "region": "AMERICAS",
       "count": 1,
       "events": 1,
-      "percentage": 4.35
+      "percentage": 4.17
     }
   ],
   "sources": [
     {
       "source": "X",
       "name": "X",
-      "count": 511,
-      "posts": 511,
-      "percentage": 77.66
+      "count": 538,
+      "posts": 538,
+      "percentage": 78.77
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 68,
-      "posts": 68,
-      "percentage": 10.33
+      "count": 69,
+      "posts": 69,
+      "percentage": 10.1
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 62,
-      "posts": 62,
-      "percentage": 9.42
+      "count": 59,
+      "posts": 59,
+      "percentage": 8.64
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
       "count": 17,
       "posts": 17,
-      "percentage": 2.58
+      "percentage": 2.49
     }
   ],
   "region_activity": [
     {
       "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 16,
-      "events": 16,
-      "percentage": 69.57
+      "count": 17,
+      "events": 17,
+      "percentage": 70.83
     },
     {
       "name": "WESTERN_MEDITERRANEAN",
       "region": "WESTERN_MEDITERRANEAN",
       "count": 2,
       "events": 2,
-      "percentage": 8.7
+      "percentage": 8.33
     },
     {
       "name": "CENTRAL_MEDITERRANEAN",
       "region": "CENTRAL_MEDITERRANEAN",
       "count": 2,
       "events": 2,
-      "percentage": 8.7
+      "percentage": 8.33
     },
     {
       "name": "HORN_OF_AFRICA",
       "region": "HORN_OF_AFRICA",
       "count": 1,
       "events": 1,
-      "percentage": 4.35
+      "percentage": 4.17
     },
     {
       "name": "EASTERN_MEDITERRANEAN",
       "region": "EASTERN_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 4.35
+      "percentage": 4.17
     },
     {
       "name": "AMERICAS",
       "region": "AMERICAS",
       "count": 1,
       "events": 1,
-      "percentage": 4.35
+      "percentage": 4.17
     }
   ],
   "source_activity": [
     {
       "source": "X",
       "name": "X",
-      "count": 511,
-      "posts": 511,
-      "percentage": 77.66
+      "count": 538,
+      "posts": 538,
+      "percentage": 78.77
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 68,
-      "posts": 68,
-      "percentage": 10.33
+      "count": 69,
+      "posts": 69,
+      "percentage": 10.1
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 62,
-      "posts": 62,
-      "percentage": 9.42
+      "count": 59,
+      "posts": 59,
+      "percentage": 8.64
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
       "count": 17,
       "posts": 17,
-      "percentage": 2.58
+      "percentage": 2.49
     }
   ],
   "correlation": {
-    "correlated_events": 5,
-    "correlated_sources": 5,
-    "grouped_sources": 26,
-    "event_groups": 467,
-    "active_groups": 467,
-    "multi_source_groups": 45,
+    "correlated_events": 6,
+    "correlated_sources": 6,
+    "grouped_sources": 27,
+    "event_groups": 468,
+    "active_groups": 468,
+    "multi_source_groups": 46,
     "strongest_match": 1.0,
-    "correlation_rate": 20.83
+    "correlation_rate": 24.0
   },
   "technical_health": "HEALTHY",
   "collector_health": "HEALTHY",
@@ -971,42 +971,42 @@
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "database": "AVAILABLE",
-    "last_run_id": 272,
-    "last_completed_at": "2026-10-14T22:49:02Z"
+    "last_run_id": 273,
+    "last_completed_at": "2026-10-15T02:08:37Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 24,
+    "operational_events_24h": 25,
     "influence_signals_24h": 20,
     "access_signals_24h": 8,
-    "correlated_events_24h": 5,
-    "active_event_groups": 467,
+    "correlated_events_24h": 6,
+    "active_event_groups": 468,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "hotspot": "WESTERN_MEDITERRANEAN",
     "dominant_event_type": "BORDER_CROSSING",
     "dominant_source": "X",
-    "average_confidence": 0.473,
+    "average_confidence": 0.472,
     "confidence_level": "LOW",
-    "correlation_rate": 20.83,
+    "correlation_rate": 24.0,
     "activity_level": "ELEVATED",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 24 operatív migrációs eseményt, 20 influence/early-warning jelzést és 8 átkelési vagy bejutási jelzést tart nyilván. 5 friss eseményforrás korrelált más forrással. Jelenleg 467 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.47. A jelenlegi aktivitási szint: ELEVATED."
+    "summary": "Az elmúlt 24 órában a rendszer 25 operatív migrációs eseményt, 20 influence/early-warning jelzést és 8 átkelési vagy bejutási jelzést tart nyilván. 6 friss eseményforrás korrelált más forrással. Jelenleg 468 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.47. A jelenlegi aktivitási szint: ELEVATED."
   },
   "analytical_assessment": {
-    "operational_events_24h": 24,
+    "operational_events_24h": 25,
     "influence_signals_24h": 20,
     "access_signals_24h": 8,
-    "correlated_events_24h": 5,
-    "active_event_groups": 467,
+    "correlated_events_24h": 6,
+    "active_event_groups": 468,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "hotspot": "WESTERN_MEDITERRANEAN",
     "dominant_event_type": "BORDER_CROSSING",
     "dominant_source": "X",
-    "average_confidence": 0.473,
+    "average_confidence": 0.472,
     "confidence_level": "LOW",
-    "correlation_rate": 20.83,
+    "correlation_rate": 24.0,
     "activity_level": "ELEVATED",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 24 operatív migrációs eseményt, 20 influence/early-warning jelzést és 8 átkelési vagy bejutási jelzést tart nyilván. 5 friss eseményforrás korrelált más forrással. Jelenleg 467 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.47. A jelenlegi aktivitási szint: ELEVATED."
+    "summary": "Az elmúlt 24 órában a rendszer 25 operatív migrációs eseményt, 20 influence/early-warning jelzést és 8 átkelési vagy bejutási jelzést tart nyilván. 6 friss eseményforrás korrelált más forrással. Jelenleg 468 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.47. A jelenlegi aktivitási szint: ELEVATED."
   },
   "high_confidence_events": [
     {
@@ -1311,46 +1311,38 @@
       "platform_count": 1
     },
     {
-      "id": 989,
+      "id": 1007,
       "source": "X",
-      "source_post_id": "2110274599497994500",
-      "author": "SwittyOG",
+      "source_post_id": "2110457545156358553",
+      "author": "ToastedTvNews",
       "language": "en",
-      "published_at": "2026-10-14T07:40:46Z",
-      "first_detected_at": "2026-10-14T07:46:58Z",
-      "last_detected_at": "2026-10-14T08:31:26Z",
-      "detection_count": 3,
-      "text": "@ukhomeoffice Good to know 👏🏼\n\nEnforcement is necessary, but long-term success requires prevention too. \n\nStronger action against smuggling networks, intelligence sharing with France, faster asylum decisions, and the swift return of those with no legal right to stay can help reduce crossings.",
-      "text_excerpt": "@ukhomeoffice Good to know 👏🏼\n\nEnforcement is necessary, but long-term success requires prevention too. \n\nStronger action against smuggling networks, intelligence sharing with France, faster asylum decisions, and the swift return of those with no legal right to stay can help reduce crossings.",
-      "url": "https://x.com/SwittyOG/status/2110274599497994500",
-      "source_url": "https://x.com/SwittyOG/status/2110274599497994500",
+      "published_at": "2026-10-14T19:47:43Z",
+      "first_detected_at": "2026-10-14T19:48:47Z",
+      "last_detected_at": "2026-10-14T19:48:47Z",
+      "detection_count": 1,
+      "text": "WHAT HAPPENED: A federal judge ruled officials spread false claims about fired FEMA CFO Mary Comans over alleged migrant hotel spending.\n\nREACTION: The judge said the accusations were untrue.\n\nTAKEAWAY: Who should be held accountable?\n\nDrop your thoughts below\nClick the link in https://t.co/OJnR8a1f25",
+      "text_excerpt": "WHAT HAPPENED: A federal judge ruled officials spread false claims about fired FEMA CFO Mary Comans over alleged migrant hotel spending.\n\nREACTION: The judge said the accusations were untrue.\n\nTAKEAWAY: Who should be held accountable?\n\nDrop your thoughts below\nClick the link in https://t.co/OJnR8a1f25",
+      "url": "https://x.com/ToastedTvNews/status/2110457545156358553",
+      "source_url": "https://x.com/ToastedTvNews/status/2110457545156358553",
       "primary_signal": "LEGAL_MIGRATION_SIGNAL",
       "signal_type": "LEGAL_MIGRATION_SIGNAL",
       "signal_mode": "DIRECT",
       "signal_intent": "LEGAL_ACCESS",
       "priority": "MEDIUM",
-      "confidence": 0.99,
-      "score": 23.0,
+      "confidence": 0.94,
+      "score": 14.0,
       "matched_signals": [
         "LEGAL_MIGRATION_SIGNAL"
       ],
       "matched_phrases": [
         [
           "legal_signal",
-          "right to stay"
-        ],
-        [
-          "smuggling_ecosystem",
-          "smuggling networks"
-        ],
-        [
-          "legal_protection",
-          "right to stay"
+          "judge ruled"
         ]
       ],
       "matched_groups": [],
       "context_matches": [
-        "asylum"
+        "migrant"
       ],
       "high_value_matches": false,
       "signal_context_rejections": {},
@@ -1367,17 +1359,17 @@
       "latitude": null,
       "longitude": null,
       "rules_version": "2.6",
-      "priority_score": 50.65,
+      "priority_score": 48.9,
       "analyst_priority": "MEDIUM",
       "related_posts_count": 1,
       "related_post_ids": [
-        "2110274599497994500"
+        "2110457545156358553"
       ],
       "related_authors": [
-        "SwittyOG"
+        "ToastedTvNews"
       ],
       "related_urls": [
-        "https://x.com/SwittyOG/status/2110274599497994500"
+        "https://x.com/ToastedTvNews/status/2110457545156358553"
       ],
       "related_sources": [
         "X"
@@ -1659,66 +1651,6 @@
       "analyst_priority": "MEDIUM"
     },
     {
-      "id": 989,
-      "source": "X",
-      "source_post_id": "2110274599497994500",
-      "author": "SwittyOG",
-      "language": "en",
-      "published_at": "2026-10-14T07:40:46Z",
-      "first_detected_at": "2026-10-14T07:46:58Z",
-      "last_detected_at": "2026-10-14T08:31:26Z",
-      "detection_count": 3,
-      "text": "@ukhomeoffice Good to know 👏🏼\n\nEnforcement is necessary, but long-term success requires prevention too. \n\nStronger action against smuggling networks, intelligence sharing with France, faster asylum decisions, and the swift return of those with no legal right to stay can help reduce crossings.",
-      "text_excerpt": "@ukhomeoffice Good to know 👏🏼\n\nEnforcement is necessary, but long-term success requires prevention too. \n\nStronger action against smuggling networks, intelligence sharing with France, faster asylum decisions, and the swift return of those with no legal right to stay can help reduce crossings.",
-      "url": "https://x.com/SwittyOG/status/2110274599497994500",
-      "source_url": "https://x.com/SwittyOG/status/2110274599497994500",
-      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
-      "signal_type": "LEGAL_MIGRATION_SIGNAL",
-      "signal_mode": "DIRECT",
-      "signal_intent": "LEGAL_ACCESS",
-      "priority": "MEDIUM",
-      "confidence": 0.99,
-      "score": 23.0,
-      "matched_signals": [
-        "LEGAL_MIGRATION_SIGNAL"
-      ],
-      "matched_phrases": [
-        [
-          "legal_signal",
-          "right to stay"
-        ],
-        [
-          "smuggling_ecosystem",
-          "smuggling networks"
-        ],
-        [
-          "legal_protection",
-          "right to stay"
-        ]
-      ],
-      "matched_groups": [],
-      "context_matches": [
-        "asylum"
-      ],
-      "high_value_matches": false,
-      "signal_context_rejections": {},
-      "migration_context": true,
-      "human_migration_context": null,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "2.6",
-      "priority_score": 50.65,
-      "analyst_priority": "MEDIUM"
-    },
-    {
       "id": 1007,
       "source": "X",
       "source_post_id": "2110457545156358553",
@@ -2044,6 +1976,67 @@
       "analyst_priority": "LOW"
     },
     {
+      "id": 1010,
+      "source": "X",
+      "source_post_id": "2110535651762315339",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-10-15T00:58:05Z",
+      "first_detected_at": "2026-10-15T02:07:35Z",
+      "last_detected_at": "2026-10-15T02:07:35Z",
+      "detection_count": 1,
+      "text": "@EmpireEnjoyer3 @realmuckraker @Oilfield_Rando Smugglers are mainly paid by the migrants themselves. EU taxpayer funds support member states like Spain for reception, border management and related programs (hundreds of millions documented). Some NGOs get public grants plus private donations for aid/rescue work that can assist",
+      "text_excerpt": "@EmpireEnjoyer3 @realmuckraker @Oilfield_Rando Smugglers are mainly paid by the migrants themselves. EU taxpayer funds support member states like Spain for reception, border management and related programs (hundreds of millions documented). Some NGOs get public grants plus private donations for aid/rescue work that can assist",
+      "url": "https://x.com/grok/status/2110535651762315339",
+      "source_url": "https://x.com/grok/status/2110535651762315339",
+      "primary_signal": "FACILITATION_EARLY_WARNING",
+      "signal_type": "FACILITATION_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "FACILITATION_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.8,
+      "score": 8.25,
+      "matched_signals": [
+        "FACILITATION_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "border"
+        ],
+        [
+          "facilitation",
+          "Smugglers are mainly paid by the migrants"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "FACILITATION"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "Smugglers are mainly paid by the migrants"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 32.0,
+      "analyst_priority": "LOW"
+    },
+    {
       "id": 1002,
       "source": "X",
       "source_post_id": "2110359698452955251",
@@ -2228,48 +2221,44 @@
       "analyst_priority": "LOW"
     },
     {
-      "id": 990,
+      "id": 1011,
       "source": "X",
-      "source_post_id": "2110277721804673341",
-      "author": "channelwatchuk",
+      "source_post_id": "2110543215061336143",
+      "author": "grok",
       "language": "en",
-      "published_at": "2026-10-14T07:53:10Z",
-      "first_detected_at": "2026-10-14T08:13:47Z",
-      "last_detected_at": "2026-10-14T08:29:54Z",
-      "detection_count": 2,
-      "text": "14/10/26\nAlert level: YELLOW 🟡\n= Illegal migrant boat crossing are  possible in the next 24 hours - but there is no current evidence of crossings taking place right now.\n\nWe're watching and will raise the alert level if needed.",
-      "text_excerpt": "14/10/26\nAlert level: YELLOW 🟡\n= Illegal migrant boat crossing are  possible in the next 24 hours - but there is no current evidence of crossings taking place right now.\n\nWe're watching and will raise the alert level if needed.",
-      "url": "https://x.com/channelwatchuk/status/2110277721804673341",
-      "source_url": "https://x.com/channelwatchuk/status/2110277721804673341",
+      "published_at": "2026-10-15T01:28:09Z",
+      "first_detected_at": "2026-10-15T02:08:34Z",
+      "last_detected_at": "2026-10-15T02:08:34Z",
+      "detection_count": 1,
+      "text": "@christopher_s70 @GuntherEagleman Most from China (~90%), Vietnam (~94%), and historically Cuba entered legally as refugees, family, or employment-based immigrants. Recent Cuban and Venezuelan arrivals include larger shares via temporary parole, TPS, or irregular entry/asylum claims—roughly 20-30%+ of Cubans and",
+      "text_excerpt": "@christopher_s70 @GuntherEagleman Most from China (~90%), Vietnam (~94%), and historically Cuba entered legally as refugees, family, or employment-based immigrants. Recent Cuban and Venezuelan arrivals include larger shares via temporary parole, TPS, or irregular entry/asylum claims—roughly 20-30%+ of Cubans and",
+      "url": "https://x.com/grok/status/2110543215061336143",
+      "source_url": "https://x.com/grok/status/2110543215061336143",
       "primary_signal": "MOVEMENT_EARLY_WARNING",
       "signal_type": "MOVEMENT_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
       "signal_intent": "MOVEMENT_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 9.0,
+      "confidence": 0.72,
+      "score": 7.75,
       "matched_signals": [
         "MOVEMENT_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
           "movement",
-          "migrant boat crossing"
-        ],
-        [
-          "route",
-          "boat"
+          "entered legally as refugees"
         ]
       ],
       "matched_groups": [
-        "MOVEMENT",
-        "ROUTE"
+        "MOVEMENT"
       ],
       "context_matches": [
-        "migrant"
+        "refugees",
+        "immigrants"
       ],
       "high_value_matches": [
-        "migrant boat crossing"
+        "entered legally as refugees"
       ],
       "signal_context_rejections": [],
       "migration_context": true,
@@ -2285,7 +2274,7 @@
       "latitude": null,
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
+      "priority_score": 25.2,
       "analyst_priority": "LOW"
     },
     {
@@ -2576,8 +2565,8 @@
       "language": null,
       "published_at": "2026-10-14T09:18:18Z",
       "first_detected_at": "2026-10-14T11:45:43Z",
-      "last_detected_at": "2026-10-14T19:49:46Z",
-      "detection_count": 5,
+      "last_detected_at": "2026-10-15T02:07:36Z",
+      "detection_count": 6,
       "text": "Three boatloads of migrants at Kaloi Limenes and Treis Ekklisies. A total of 112 people have been transported or are in the process of being transported, while a third incident involving 37 migrants is also underway | Greece\nSource",
       "text_excerpt": "Three boatloads of migrants at Kaloi Limenes and Treis Ekklisies. A total of 112 people have been transported or are in the process of being transported, while a third incident involving 37 migrants is also underway | Greece\nSource",
       "url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1x5mkp3/three_boatloads_of_migrants_at_kaloi_limenes_and/",
@@ -2800,66 +2789,6 @@
       "analyst_priority": "MEDIUM"
     },
     {
-      "id": 989,
-      "source": "X",
-      "source_post_id": "2110274599497994500",
-      "author": "SwittyOG",
-      "language": "en",
-      "published_at": "2026-10-14T07:40:46Z",
-      "first_detected_at": "2026-10-14T07:46:58Z",
-      "last_detected_at": "2026-10-14T08:31:26Z",
-      "detection_count": 3,
-      "text": "@ukhomeoffice Good to know 👏🏼\n\nEnforcement is necessary, but long-term success requires prevention too. \n\nStronger action against smuggling networks, intelligence sharing with France, faster asylum decisions, and the swift return of those with no legal right to stay can help reduce crossings.",
-      "text_excerpt": "@ukhomeoffice Good to know 👏🏼\n\nEnforcement is necessary, but long-term success requires prevention too. \n\nStronger action against smuggling networks, intelligence sharing with France, faster asylum decisions, and the swift return of those with no legal right to stay can help reduce crossings.",
-      "url": "https://x.com/SwittyOG/status/2110274599497994500",
-      "source_url": "https://x.com/SwittyOG/status/2110274599497994500",
-      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
-      "signal_type": "LEGAL_MIGRATION_SIGNAL",
-      "signal_mode": "DIRECT",
-      "signal_intent": "LEGAL_ACCESS",
-      "priority": "MEDIUM",
-      "confidence": 0.99,
-      "score": 23.0,
-      "matched_signals": [
-        "LEGAL_MIGRATION_SIGNAL"
-      ],
-      "matched_phrases": [
-        [
-          "legal_signal",
-          "right to stay"
-        ],
-        [
-          "smuggling_ecosystem",
-          "smuggling networks"
-        ],
-        [
-          "legal_protection",
-          "right to stay"
-        ]
-      ],
-      "matched_groups": [],
-      "context_matches": [
-        "asylum"
-      ],
-      "high_value_matches": false,
-      "signal_context_rejections": {},
-      "migration_context": true,
-      "human_migration_context": null,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "2.6",
-      "priority_score": 50.65,
-      "analyst_priority": "MEDIUM"
-    },
-    {
       "id": 1007,
       "source": "X",
       "source_post_id": "2110457545156358553",
@@ -3185,6 +3114,67 @@
       "analyst_priority": "LOW"
     },
     {
+      "id": 1010,
+      "source": "X",
+      "source_post_id": "2110535651762315339",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-10-15T00:58:05Z",
+      "first_detected_at": "2026-10-15T02:07:35Z",
+      "last_detected_at": "2026-10-15T02:07:35Z",
+      "detection_count": 1,
+      "text": "@EmpireEnjoyer3 @realmuckraker @Oilfield_Rando Smugglers are mainly paid by the migrants themselves. EU taxpayer funds support member states like Spain for reception, border management and related programs (hundreds of millions documented). Some NGOs get public grants plus private donations for aid/rescue work that can assist",
+      "text_excerpt": "@EmpireEnjoyer3 @realmuckraker @Oilfield_Rando Smugglers are mainly paid by the migrants themselves. EU taxpayer funds support member states like Spain for reception, border management and related programs (hundreds of millions documented). Some NGOs get public grants plus private donations for aid/rescue work that can assist",
+      "url": "https://x.com/grok/status/2110535651762315339",
+      "source_url": "https://x.com/grok/status/2110535651762315339",
+      "primary_signal": "FACILITATION_EARLY_WARNING",
+      "signal_type": "FACILITATION_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "FACILITATION_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.8,
+      "score": 8.25,
+      "matched_signals": [
+        "FACILITATION_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "border"
+        ],
+        [
+          "facilitation",
+          "Smugglers are mainly paid by the migrants"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "FACILITATION"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "Smugglers are mainly paid by the migrants"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 32.0,
+      "analyst_priority": "LOW"
+    },
+    {
       "id": 1002,
       "source": "X",
       "source_post_id": "2110359698452955251",
@@ -3369,48 +3359,44 @@
       "analyst_priority": "LOW"
     },
     {
-      "id": 990,
+      "id": 1011,
       "source": "X",
-      "source_post_id": "2110277721804673341",
-      "author": "channelwatchuk",
+      "source_post_id": "2110543215061336143",
+      "author": "grok",
       "language": "en",
-      "published_at": "2026-10-14T07:53:10Z",
-      "first_detected_at": "2026-10-14T08:13:47Z",
-      "last_detected_at": "2026-10-14T08:29:54Z",
-      "detection_count": 2,
-      "text": "14/10/26\nAlert level: YELLOW 🟡\n= Illegal migrant boat crossing are  possible in the next 24 hours - but there is no current evidence of crossings taking place right now.\n\nWe're watching and will raise the alert level if needed.",
-      "text_excerpt": "14/10/26\nAlert level: YELLOW 🟡\n= Illegal migrant boat crossing are  possible in the next 24 hours - but there is no current evidence of crossings taking place right now.\n\nWe're watching and will raise the alert level if needed.",
-      "url": "https://x.com/channelwatchuk/status/2110277721804673341",
-      "source_url": "https://x.com/channelwatchuk/status/2110277721804673341",
+      "published_at": "2026-10-15T01:28:09Z",
+      "first_detected_at": "2026-10-15T02:08:34Z",
+      "last_detected_at": "2026-10-15T02:08:34Z",
+      "detection_count": 1,
+      "text": "@christopher_s70 @GuntherEagleman Most from China (~90%), Vietnam (~94%), and historically Cuba entered legally as refugees, family, or employment-based immigrants. Recent Cuban and Venezuelan arrivals include larger shares via temporary parole, TPS, or irregular entry/asylum claims—roughly 20-30%+ of Cubans and",
+      "text_excerpt": "@christopher_s70 @GuntherEagleman Most from China (~90%), Vietnam (~94%), and historically Cuba entered legally as refugees, family, or employment-based immigrants. Recent Cuban and Venezuelan arrivals include larger shares via temporary parole, TPS, or irregular entry/asylum claims—roughly 20-30%+ of Cubans and",
+      "url": "https://x.com/grok/status/2110543215061336143",
+      "source_url": "https://x.com/grok/status/2110543215061336143",
       "primary_signal": "MOVEMENT_EARLY_WARNING",
       "signal_type": "MOVEMENT_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
       "signal_intent": "MOVEMENT_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 9.0,
+      "confidence": 0.72,
+      "score": 7.75,
       "matched_signals": [
         "MOVEMENT_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
           "movement",
-          "migrant boat crossing"
-        ],
-        [
-          "route",
-          "boat"
+          "entered legally as refugees"
         ]
       ],
       "matched_groups": [
-        "MOVEMENT",
-        "ROUTE"
+        "MOVEMENT"
       ],
       "context_matches": [
-        "migrant"
+        "refugees",
+        "immigrants"
       ],
       "high_value_matches": [
-        "migrant boat crossing"
+        "entered legally as refugees"
       ],
       "signal_context_rejections": [],
       "migration_context": true,
@@ -3426,7 +3412,7 @@
       "latitude": null,
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
+      "priority_score": 25.2,
       "analyst_priority": "LOW"
     },
     {
@@ -3717,8 +3703,8 @@
       "language": null,
       "published_at": "2026-10-14T09:18:18Z",
       "first_detected_at": "2026-10-14T11:45:43Z",
-      "last_detected_at": "2026-10-14T19:49:46Z",
-      "detection_count": 5,
+      "last_detected_at": "2026-10-15T02:07:36Z",
+      "detection_count": 6,
       "text": "Three boatloads of migrants at Kaloi Limenes and Treis Ekklisies. A total of 112 people have been transported or are in the process of being transported, while a third incident involving 37 migrants is also underway | Greece\nSource",
       "text_excerpt": "Three boatloads of migrants at Kaloi Limenes and Treis Ekklisies. A total of 112 people have been transported or are in the process of being transported, while a third incident involving 37 migrants is also underway | Greece\nSource",
       "url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1x5mkp3/three_boatloads_of_migrants_at_kaloi_limenes_and/",
@@ -3971,46 +3957,38 @@
       "platform_count": 1
     },
     {
-      "id": 989,
+      "id": 1007,
       "source": "X",
-      "source_post_id": "2110274599497994500",
-      "author": "SwittyOG",
+      "source_post_id": "2110457545156358553",
+      "author": "ToastedTvNews",
       "language": "en",
-      "published_at": "2026-10-14T07:40:46Z",
-      "first_detected_at": "2026-10-14T07:46:58Z",
-      "last_detected_at": "2026-10-14T08:31:26Z",
-      "detection_count": 3,
-      "text": "@ukhomeoffice Good to know 👏🏼\n\nEnforcement is necessary, but long-term success requires prevention too. \n\nStronger action against smuggling networks, intelligence sharing with France, faster asylum decisions, and the swift return of those with no legal right to stay can help reduce crossings.",
-      "text_excerpt": "@ukhomeoffice Good to know 👏🏼\n\nEnforcement is necessary, but long-term success requires prevention too. \n\nStronger action against smuggling networks, intelligence sharing with France, faster asylum decisions, and the swift return of those with no legal right to stay can help reduce crossings.",
-      "url": "https://x.com/SwittyOG/status/2110274599497994500",
-      "source_url": "https://x.com/SwittyOG/status/2110274599497994500",
+      "published_at": "2026-10-14T19:47:43Z",
+      "first_detected_at": "2026-10-14T19:48:47Z",
+      "last_detected_at": "2026-10-14T19:48:47Z",
+      "detection_count": 1,
+      "text": "WHAT HAPPENED: A federal judge ruled officials spread false claims about fired FEMA CFO Mary Comans over alleged migrant hotel spending.\n\nREACTION: The judge said the accusations were untrue.\n\nTAKEAWAY: Who should be held accountable?\n\nDrop your thoughts below\nClick the link in https://t.co/OJnR8a1f25",
+      "text_excerpt": "WHAT HAPPENED: A federal judge ruled officials spread false claims about fired FEMA CFO Mary Comans over alleged migrant hotel spending.\n\nREACTION: The judge said the accusations were untrue.\n\nTAKEAWAY: Who should be held accountable?\n\nDrop your thoughts below\nClick the link in https://t.co/OJnR8a1f25",
+      "url": "https://x.com/ToastedTvNews/status/2110457545156358553",
+      "source_url": "https://x.com/ToastedTvNews/status/2110457545156358553",
       "primary_signal": "LEGAL_MIGRATION_SIGNAL",
       "signal_type": "LEGAL_MIGRATION_SIGNAL",
       "signal_mode": "DIRECT",
       "signal_intent": "LEGAL_ACCESS",
       "priority": "MEDIUM",
-      "confidence": 0.99,
-      "score": 23.0,
+      "confidence": 0.94,
+      "score": 14.0,
       "matched_signals": [
         "LEGAL_MIGRATION_SIGNAL"
       ],
       "matched_phrases": [
         [
           "legal_signal",
-          "right to stay"
-        ],
-        [
-          "smuggling_ecosystem",
-          "smuggling networks"
-        ],
-        [
-          "legal_protection",
-          "right to stay"
+          "judge ruled"
         ]
       ],
       "matched_groups": [],
       "context_matches": [
-        "asylum"
+        "migrant"
       ],
       "high_value_matches": false,
       "signal_context_rejections": {},
@@ -4027,17 +4005,17 @@
       "latitude": null,
       "longitude": null,
       "rules_version": "2.6",
-      "priority_score": 50.65,
+      "priority_score": 48.9,
       "analyst_priority": "MEDIUM",
       "related_posts_count": 1,
       "related_post_ids": [
-        "2110274599497994500"
+        "2110457545156358553"
       ],
       "related_authors": [
-        "SwittyOG"
+        "ToastedTvNews"
       ],
       "related_urls": [
-        "https://x.com/SwittyOG/status/2110274599497994500"
+        "https://x.com/ToastedTvNews/status/2110457545156358553"
       ],
       "related_sources": [
         "X"
@@ -5474,14 +5452,14 @@
       "label": "W42",
       "week_label": "W42",
       "week_start": "2026-10-12T00:00:00Z",
-      "posts": 1108,
-      "post_count": 1108,
-      "operational_posts": 47,
-      "influence_signals": 48,
+      "posts": 1169,
+      "post_count": 1169,
+      "operational_posts": 50,
+      "influence_signals": 50,
       "source_counts": {
-        "X": 805,
-        "REDDIT": 139,
-        "MASTODON": 133,
+        "X": 853,
+        "REDDIT": 145,
+        "MASTODON": 140,
         "TELEGRAM": 31
       }
     }
@@ -5612,33 +5590,33 @@
       "label": "W42",
       "week_label": "W42",
       "week_start": "2026-10-12T00:00:00Z",
-      "posts": 1108,
-      "post_count": 1108,
-      "operational_posts": 47,
-      "influence_signals": 48,
+      "posts": 1169,
+      "post_count": 1169,
+      "operational_posts": 50,
+      "influence_signals": 50,
       "source_counts": {
-        "X": 805,
-        "REDDIT": 139,
-        "MASTODON": 133,
+        "X": 853,
+        "REDDIT": 145,
+        "MASTODON": 140,
         "TELEGRAM": 31
       }
     }
   ],
   "information_activity_summary": {
-    "current_week": 1108,
-    "previous_week": 739,
-    "current_week_to_date": 1108,
-    "previous_week_same_period": 739,
+    "current_week": 1169,
+    "previous_week": 804,
+    "current_week_to_date": 1169,
+    "previous_week_same_period": 804,
     "previous_week_full": 2002,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": 49.93,
-    "change_label": "+49.9%",
+    "change_percent": 45.4,
+    "change_label": "+45.4%",
     "direction": "UP",
     "comparable": true,
-    "elapsed_hours": 70.8,
+    "elapsed_hours": 74.1,
     "current_period_start": "2026-10-12T00:00:00Z",
     "previous_period_start": "2026-10-05T00:00:00Z",
-    "previous_period_end": "2026-10-07T22:49:03Z"
+    "previous_period_end": "2026-10-08T02:08:38Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -5650,35 +5628,35 @@
       72,
       168
     ],
-    "generated_at": "2026-10-14T22:49:04Z",
-    "total_items": 1983,
-    "information_count": 337,
-    "early_warning_count": 976,
-    "operational_count": 557,
-    "correlated_count": 113,
+    "generated_at": "2026-10-15T02:08:39Z",
+    "total_items": 1991,
+    "information_count": 340,
+    "early_warning_count": 978,
+    "operational_count": 559,
+    "correlated_count": 114,
     "layer_counts": {
-      "INFORMATION": 337,
-      "OPERATIONAL": 557,
-      "EARLY_WARNING": 976,
-      "CORRELATED": 113
+      "INFORMATION": 340,
+      "OPERATIONAL": 559,
+      "EARLY_WARNING": 978,
+      "CORRELATED": 114
     },
     "source_counts": {
-      "X": 1391,
+      "X": 1402,
       "MASTODON": 93,
       "TELEGRAM": 37,
-      "REDDIT": 462
+      "REDDIT": 459
     },
     "type_counts": {
-      "INFORMATION_SIGNAL": 337,
-      "BORDER_CROSSING": 216,
+      "INFORMATION_SIGNAL": 340,
+      "DEPORTATION": 89,
+      "MOVEMENT_EARLY_WARNING": 310,
+      "BORDER_CROSSING": 218,
+      "FACILITATION_EARLY_WARNING": 188,
       "LEGAL_MIGRATION_SIGNAL": 108,
       "INTERCEPTION": 31,
       "ROUTE_EARLY_WARNING": 125,
-      "MOVEMENT_EARLY_WARNING": 309,
-      "FACILITATION_EARLY_WARNING": 187,
       "SMUGGLING_ACTIVITY": 66,
       "DETENTION": 40,
-      "DEPORTATION": 88,
       "RESCUE_OPERATION": 35,
       "MOBILIZATION_COORDINATION": 27,
       "PRESSURE_EARLY_WARNING": 47,
@@ -5698,6 +5676,570 @@
       "BORDER_CONDITION": 2
     },
     "items": [
+      {
+        "timeline_id": "information:17671",
+        "timestamp": "2026-10-15T02:06:18Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2110552816309739779",
+        "author": "LadyLoveLDN",
+        "url": "https://x.com/LadyLoveLDN/status/2110552816309739779",
+        "source_url": "https://x.com/LadyLoveLDN/status/2110552816309739779",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "arrival"
+        ],
+        "freshness_cues": [],
+        "text": "@grok So the migrants that arrived post WW2 have gone from 2% to having 7/10 of the newborns.\n\nIf that continues... It is genocidal levels.\n\nAnd could speed up further when the newborns come of age, can vote in Sharia, take power and open the borders for their extended families 𝕏",
+        "text_excerpt": "@grok So the migrants that arrived post WW2 have gone from 2% to having 7/10 of the newborns.\n\nIf that continues... It is genocidal levels.\n\nAnd could speed up further when the newborns come of age, can vote in Sharia, take power and open the borders for their extended families 𝕏",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-15T02:08:34Z",
+        "last_collected_at": "2026-10-15T02:08:34Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "operational:602",
+        "timestamp": "2026-10-15T02:05:11Z",
+        "layer": "OPERATIONAL",
+        "type": "DEPORTATION",
+        "signal_type": "DEPORTATION",
+        "event_type": "DEPORTATION",
+        "source": "X",
+        "source_post_id": "2110552535920484681",
+        "author": "NafisatRamses",
+        "url": "https://x.com/NafisatRamses/status/2110552535920484681",
+        "source_url": "https://x.com/NafisatRamses/status/2110552535920484681",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.25,
+        "priority": "LOW",
+        "priority_score": 25.0,
+        "text": "@jihadwatchRS All African migrant should be deported to Africa let us build our continent. \nNo more excuses.",
+        "text_excerpt": "@jihadwatchRS All African migrant should be deported to Africa let us build our continent. \nNo more excuses.",
+        "event_group_id": 487,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null
+      },
+      {
+        "timeline_id": "information:17650",
+        "timestamp": "2026-10-15T01:51:28Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2110549086373818369",
+        "author": "NewsTongueX",
+        "url": "https://x.com/NewsTongueX/status/2110549086373818369",
+        "source_url": "https://x.com/NewsTongueX/status/2110549086373818369",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "vessel",
+          "rescue"
+        ],
+        "freshness_cues": [],
+        "text": "🔴 Spanish NGO suspends Mediterranean rescues until 2025 over fuel costs\n\nSalvamento Maritimo Humanitario (SMH) postponed its next migrant rescue mission in the Central Mediterranean on Wednesday, citing doubled fuel prices. The group operates a converted fishing vessel and https://t.co/y8KX6YvGXy",
+        "text_excerpt": "🔴 Spanish NGO suspends Mediterranean rescues until 2025 over fuel costs\n\nSalvamento Maritimo Humanitario (SMH) postponed its next migrant rescue mission in the Central Mediterranean on Wednesday, citing doubled fuel prices. The group operates a converted fishing vessel and https://t.co/y8KX6YvGXy",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-15T02:07:34Z",
+        "last_collected_at": "2026-10-15T02:07:34Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:17643",
+        "timestamp": "2026-10-15T01:41:47Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2110546645947498942",
+        "author": "MarthaDanziger",
+        "url": "https://x.com/MarthaDanziger/status/2110546645947498942",
+        "source_url": "https://x.com/MarthaDanziger/status/2110546645947498942",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "deportation"
+        ],
+        "freshness_cues": [],
+        "text": "@itsrosesm It was Biden's open border policy that costs $ for deportation.  He created disaster.  Pres Trump is just getting control of migrant benefit costs, crimes against legal, illegals and home grown Americans by illegals,and to keep the borders closed.",
+        "text_excerpt": "@itsrosesm It was Biden's open border policy that costs $ for deportation.  He created disaster.  Pres Trump is just getting control of migrant benefit costs, crimes against legal, illegals and home grown Americans by illegals,and to keep the borders closed.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-15T02:07:04Z",
+        "last_collected_at": "2026-10-15T02:07:04Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:17651",
+        "timestamp": "2026-10-15T01:40:32Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2110546333639880727",
+        "author": "iarslanmehboob",
+        "url": "https://x.com/iarslanmehboob/status/2110546333639880727",
+        "source_url": "https://x.com/iarslanmehboob/status/2110546333639880727",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "route",
+          "boat"
+        ],
+        "freshness_cues": [],
+        "text": "At least 109 migrants, including 15 children, died after a boat from Djibouti to Yemen capsized, according to the UN.\n\nBehind every number is a family searching for a better life.\n\nConflict, poverty, and closed doors push people onto the most dangerous routes in the world.\n\nHow",
+        "text_excerpt": "At least 109 migrants, including 15 children, died after a boat from Djibouti to Yemen capsized, according to the UN.\n\nBehind every number is a family searching for a better life.\n\nConflict, poverty, and closed doors push people onto the most dangerous routes in the world.\n\nHow",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-15T02:07:34Z",
+        "last_collected_at": "2026-10-15T02:07:34Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "early_warning:1011",
+        "timestamp": "2026-10-15T01:28:09Z",
+        "layer": "EARLY_WARNING",
+        "type": "MOVEMENT_EARLY_WARNING",
+        "signal_type": "MOVEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2110543215061336143",
+        "author": "grok",
+        "url": "https://x.com/grok/status/2110543215061336143",
+        "source_url": "https://x.com/grok/status/2110543215061336143",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.72,
+        "priority": "MEDIUM",
+        "priority_score": 25.2,
+        "analyst_priority": "LOW",
+        "text": "@christopher_s70 @GuntherEagleman Most from China (~90%), Vietnam (~94%), and historically Cuba entered legally as refugees, family, or employment-based immigrants. Recent Cuban and Venezuelan arrivals include larger shares via temporary parole, TPS, or irregular entry/asylum claims—roughly 20-30%+ of Cubans and",
+        "text_excerpt": "@christopher_s70 @GuntherEagleman Most from China (~90%), Vietnam (~94%), and historically Cuba entered legally as refugees, family, or employment-based immigrants. Recent Cuban and Venezuelan arrivals include larger shares via temporary parole, TPS, or irregular entry/asylum claims—roughly 20-30%+ of Cubans and",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "MOVEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-10-15T02:08:34Z",
+        "last_detected_at": "2026-10-15T02:08:34Z"
+      },
+      {
+        "timeline_id": "information:17678",
+        "timestamp": "2026-10-15T01:25:15Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2110542488796541381",
+        "author": "grok",
+        "url": "https://x.com/grok/status/2110542488796541381",
+        "source_url": "https://x.com/grok/status/2110542488796541381",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "refugee_camp",
+          "arrival"
+        ],
+        "freshness_cues": [],
+        "text": "@RedPilled1788 @ryangrim Yes. Standard biographies, her memoir, and congressional records state Ilhan Omar was born October 4, 1982, fled Somalia around age 8, spent four years in a Kenyan refugee camp, and arrived in the US in March 1995 at age 12.",
+        "text_excerpt": "@RedPilled1788 @ryangrim Yes. Standard biographies, her memoir, and congressional records state Ilhan Omar was born October 4, 1982, fled Somalia around age 8, spent four years in a Kenyan refugee camp, and arrived in the US in March 1995 at age 12.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-15T02:08:34Z",
+        "last_collected_at": "2026-10-15T02:08:34Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:17654",
+        "timestamp": "2026-10-15T01:18:30Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2110540786962219062",
+        "author": "MarcusJohnrrgq",
+        "url": "https://x.com/MarcusJohnrrgq/status/2110540786962219062",
+        "source_url": "https://x.com/MarcusJohnrrgq/status/2110540786962219062",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "boat",
+          "deportation"
+        ],
+        "freshness_cues": [],
+        "text": "“Oh? You, an African migrant fresh off the boat is as British as an Englishman?\n\nOk, let’s round you all up, deport you to an Island.\n\nWhat? You can’t handle it? You can’t turn it into a Grade A nation?\n\nHmm, guess you aren’t British.”\n\n- Sincerely, just an American https://t.co/3m0332MA9r",
+        "text_excerpt": "“Oh? You, an African migrant fresh off the boat is as British as an Englishman?\n\nOk, let’s round you all up, deport you to an Island.\n\nWhat? You can’t handle it? You can’t turn it into a Grade A nation?\n\nHmm, guess you aren’t British.”\n\n- Sincerely, just an American https://t.co/3m0332MA9r",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-15T02:07:35Z",
+        "last_collected_at": "2026-10-15T02:07:35Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "operational:603",
+        "timestamp": "2026-10-15T01:13:01Z",
+        "layer": "OPERATIONAL",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "X",
+        "source_post_id": "2110539406423515397",
+        "author": "S_W_Somerville",
+        "url": "https://x.com/S_W_Somerville/status/2110539406423515397",
+        "source_url": "https://x.com/S_W_Somerville/status/2110539406423515397",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.2,
+        "priority": "LOW",
+        "priority_score": 20.0,
+        "text": "@TahraHoops Her father was a full colonel in the brutal military dictatorship that collapsed and left Somalia in ruins. He arrived in the US claiming \"refugee\" status but his paperwork has vanished so we may never know who lied or who paid for his \"citizenship.\" We do know that Ilhan Omar's",
+        "text_excerpt": "@TahraHoops Her father was a full colonel in the brutal military dictatorship that collapsed and left Somalia in ruins. He arrived in the US claiming \"refugee\" status but his paperwork has vanished so we may never know who lied or who paid for his \"citizenship.\" We do know that Ilhan Omar's",
+        "event_group_id": 472,
+        "correlation_score": 0.76,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null
+      },
+      {
+        "timeline_id": "correlated:601",
+        "timestamp": "2026-10-15T01:13:01Z",
+        "layer": "CORRELATED",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "X",
+        "source_post_id": "2110539406423515397",
+        "author": "S_W_Somerville",
+        "url": "https://x.com/S_W_Somerville/status/2110539406423515397",
+        "source_url": "https://x.com/S_W_Somerville/status/2110539406423515397",
+        "region": "HORN_OF_AFRICA",
+        "primary_region": "HORN_OF_AFRICA",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.25,
+        "priority": "MEDIUM",
+        "priority_score": 25.0,
+        "text": "@TahraHoops Her father was a full colonel in the brutal military dictatorship that collapsed and left Somalia in ruins. He arrived in the US claiming \"refugee\" status but his paperwork has vanished so we may never know who lied or who paid for his \"citizenship.\" We do know that Ilhan Omar's",
+        "text_excerpt": "@TahraHoops Her father was a full colonel in the brutal military dictatorship that collapsed and left Somalia in ruins. He arrived in the US claiming \"refugee\" status but his paperwork has vanished so we may never know who lied or who paid for his \"citizenship.\" We do know that Ilhan Omar's",
+        "event_group_id": 472,
+        "correlation_score": 0.76,
+        "related_source_count": 2,
+        "source_types": [
+          "X"
+        ]
+      },
+      {
+        "timeline_id": "information:17634",
+        "timestamp": "2026-10-15T01:03:17Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "MASTODON",
+        "source_post_id": "mastodon_117442228889801113",
+        "author": null,
+        "url": "https://archive.harmscommitted.com/@admin/117442228889801113",
+        "source_url": "https://archive.harmscommitted.com/@admin/117442228889801113",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "detention",
+          "deportation"
+        ],
+        "freshness_cues": [],
+        "text": "\"500 people in a Coastal Georgia immigration detention center are on a hunger strike, protesting conditions at the facility as well as what they say are violations of asylum protocols by U.S. authorities.\" ———————————————————— Title: Approximately 500 participate in hunger strike at Folkston immigration detention center Author(s): Jabari Gibbs Publication(s): Atlanta Community Press Collective & The Current Date: October 14, 2026 ———————————————————— # Georgia # USA # Food # Protest # Asylum # Water # Incarceration # Deportation # EthnicCleansing https:// atlpresscollective.com/2026/10 /14/approximately-500-participate-in-hunger-strike-at-folkston-immigration-detention-center/",
+        "text_excerpt": "\"500 people in a Coastal Georgia immigration detention center are on a hunger strike, protesting conditions at the facility as well as what they say are violations of asylum protocols by U.S. authorities.\" ———————————————————— Title: Approximately 500 participate in hunger strike at Folkston immigration detention center Author(s): Jabari Gibbs Publication(s): Atlanta Community Press Collective & The Current Date: Oct…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-15T02:06:33Z",
+        "last_collected_at": "2026-10-15T02:06:33Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "early_warning:1010",
+        "timestamp": "2026-10-15T00:58:05Z",
+        "layer": "EARLY_WARNING",
+        "type": "FACILITATION_EARLY_WARNING",
+        "signal_type": "FACILITATION_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2110535651762315339",
+        "author": "grok",
+        "url": "https://x.com/grok/status/2110535651762315339",
+        "source_url": "https://x.com/grok/status/2110535651762315339",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.8,
+        "priority": "MEDIUM",
+        "priority_score": 32.0,
+        "analyst_priority": "LOW",
+        "text": "@EmpireEnjoyer3 @realmuckraker @Oilfield_Rando Smugglers are mainly paid by the migrants themselves. EU taxpayer funds support member states like Spain for reception, border management and related programs (hundreds of millions documented). Some NGOs get public grants plus private donations for aid/rescue work that can assist",
+        "text_excerpt": "@EmpireEnjoyer3 @realmuckraker @Oilfield_Rando Smugglers are mainly paid by the migrants themselves. EU taxpayer funds support member states like Spain for reception, border management and related programs (hundreds of millions documented). Some NGOs get public grants plus private donations for aid/rescue work that can assist",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "FACILITATION_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-10-15T02:07:35Z",
+        "last_detected_at": "2026-10-15T02:07:35Z"
+      },
+      {
+        "timeline_id": "information:17656",
+        "timestamp": "2026-10-15T00:44:29Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2110532227213725949",
+        "author": "metheon14178339",
+        "url": "https://x.com/metheon14178339/status/2110532227213725949",
+        "source_url": "https://x.com/metheon14178339/status/2110532227213725949",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "crossing",
+          "boat"
+        ],
+        "freshness_cues": [],
+        "text": "@LabourfutureUK We have reduced the small boat crossings.\nNo you didn't! \nThe 39% drop in migrants entering the EU did that.",
+        "text_excerpt": "@LabourfutureUK We have reduced the small boat crossings.\nNo you didn't! \nThe 39% drop in migrants entering the EU did that.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-15T02:07:35Z",
+        "last_collected_at": "2026-10-15T02:07:35Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:17667",
+        "timestamp": "2026-10-15T00:43:36Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2110532005658001785",
+        "author": "jv_weiss",
+        "url": "https://x.com/jv_weiss/status/2110532005658001785",
+        "source_url": "https://x.com/jv_weiss/status/2110532005658001785",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "trafficking"
+        ],
+        "freshness_cues": [],
+        "text": "@RechargAmerica A. Hopefully so.\n\n If not, the U.S is back to \n- a tsunami of illegal migrants through open borders\n- child and human trafficking through the roof\n- &amp;  regressive left Dem's insider trading.",
+        "text_excerpt": "@RechargAmerica A. Hopefully so.\n\n If not, the U.S is back to \n- a tsunami of illegal migrants through open borders\n- child and human trafficking through the roof\n- &amp;  regressive left Dem's insider trading.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-15T02:08:05Z",
+        "last_collected_at": "2026-10-15T02:08:05Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:17657",
+        "timestamp": "2026-10-15T00:34:08Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2110529622995775814",
+        "author": "LagunitaRFC",
+        "url": "https://x.com/LagunitaRFC/status/2110529622995775814",
+        "source_url": "https://x.com/LagunitaRFC/status/2110529622995775814",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "rescue"
+        ],
+        "freshness_cues": [],
+        "text": "@katiehobbs Kelly, a midget of a man and committed lefty who welcomes chicks with dicks into girl’s sports, and into their locker rooms, and into the military, comes to the rescue of @GovernorHobbs.\n\nKelly was no where to be found as most migrant women traveling to our open borders were",
+        "text_excerpt": "@katiehobbs Kelly, a midget of a man and committed lefty who welcomes chicks with dicks into girl’s sports, and into their locker rooms, and into the military, comes to the rescue of @GovernorHobbs.\n\nKelly was no where to be found as most migrant women traveling to our open borders were",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-15T02:07:35Z",
+        "last_collected_at": "2026-10-15T02:07:35Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:17658",
+        "timestamp": "2026-10-15T00:33:59Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2110529585553285411",
+        "author": "LagunitaRFC",
+        "url": "https://x.com/LagunitaRFC/status/2110529585553285411",
+        "source_url": "https://x.com/LagunitaRFC/status/2110529585553285411",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "rescue"
+        ],
+        "freshness_cues": [],
+        "text": "Kelly, a midget of a man and committed lefty who welcomes chicks with dicks into girl’s sports, and into their locker rooms, and into the military, comes to the rescue of @GovernorHobbs.\n\nKelly was no where to be found as most migrant women traveling to our open borders were https://t.co/qZtALRHyTc",
+        "text_excerpt": "Kelly, a midget of a man and committed lefty who welcomes chicks with dicks into girl’s sports, and into their locker rooms, and into the military, comes to the rescue of @GovernorHobbs.\n\nKelly was no where to be found as most migrant women traveling to our open borders were https://t.co/qZtALRHyTc",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-15T02:07:35Z",
+        "last_collected_at": "2026-10-15T02:07:35Z",
+        "collection_count": 1
+      },
       {
         "timeline_id": "information:17588",
         "timestamp": "2026-10-14T22:45:17Z",
@@ -6478,8 +7020,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-14T13:56:22Z",
-        "last_collected_at": "2026-10-14T22:46:57Z",
-        "collection_count": 4
+        "last_collected_at": "2026-10-15T02:06:33Z",
+        "collection_count": 5
       },
       {
         "timeline_id": "information:17431",
@@ -7789,9 +8331,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "FACILITATION_REVIEW",
-        "detection_count": 5,
+        "detection_count": 6,
         "first_detected_at": "2026-10-14T11:45:43Z",
-        "last_detected_at": "2026-10-14T19:49:46Z"
+        "last_detected_at": "2026-10-15T02:07:36Z"
       },
       {
         "timeline_id": "operational:585",
@@ -7921,8 +8463,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-14T09:06:14Z",
-        "last_collected_at": "2026-10-14T19:49:46Z",
-        "collection_count": 8
+        "last_collected_at": "2026-10-15T02:07:05Z",
+        "collection_count": 9
       },
       {
         "timeline_id": "information:17194",
@@ -8088,8 +8630,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-14T09:06:43Z",
-        "last_collected_at": "2026-10-14T14:47:01Z",
-        "collection_count": 6
+        "last_collected_at": "2026-10-15T02:07:05Z",
+        "collection_count": 7
       },
       {
         "timeline_id": "operational:590",
@@ -9668,8 +10210,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-14T07:45:57Z",
-        "last_collected_at": "2026-10-14T14:47:02Z",
-        "collection_count": 10
+        "last_collected_at": "2026-10-15T02:07:05Z",
+        "collection_count": 11
       },
       {
         "timeline_id": "early_warning:983",
@@ -10645,8 +11187,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-13T17:13:32Z",
-        "last_collected_at": "2026-10-14T22:47:25Z",
-        "collection_count": 16
+        "last_collected_at": "2026-10-15T02:07:06Z",
+        "collection_count": 17
       },
       {
         "timeline_id": "information:17031",
@@ -10904,9 +11446,9 @@
         "related_source_count": null,
         "signal_mode": "DIRECT",
         "signal_intent": "MOBILIZATION_COORDINATION",
-        "detection_count": 9,
+        "detection_count": 10,
         "first_detected_at": "2026-10-13T17:15:52Z",
-        "last_detected_at": "2026-10-14T22:49:00Z"
+        "last_detected_at": "2026-10-15T02:08:35Z"
       },
       {
         "timeline_id": "early_warning:972",
@@ -15052,9 +15594,9 @@
         "related_source_count": null,
         "signal_mode": "DIRECT",
         "signal_intent": "EASIER_CROSSING",
-        "detection_count": 14,
+        "detection_count": 15,
         "first_detected_at": "2026-10-11T16:54:56Z",
-        "last_detected_at": "2026-10-14T22:49:01Z"
+        "last_detected_at": "2026-10-15T02:08:36Z"
       },
       {
         "timeline_id": "information:16373",
@@ -21001,9 +21543,9 @@
         "related_source_count": null,
         "signal_mode": "DIRECT",
         "signal_intent": "RECRUITMENT_COORDINATION",
-        "detection_count": 21,
+        "detection_count": 22,
         "first_detected_at": "2026-10-08T18:07:31Z",
-        "last_detected_at": "2026-10-14T22:49:02Z"
+        "last_detected_at": "2026-10-15T02:08:37Z"
       },
       {
         "timeline_id": "information:15467",
@@ -25330,121 +25872,6 @@
         "last_detected_at": "2026-10-06T23:25:46Z"
       },
       {
-        "timeline_id": "information:14951",
-        "timestamp": "2026-10-06T22:45:30Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2107603182905872458",
-        "author": "grok",
-        "url": "https://x.com/grok/status/2107603182905872458",
-        "source_url": "https://x.com/grok/status/2107603182905872458",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "trafficking"
-        ],
-        "freshness_cues": [],
-        "text": "@JimSimon2241 @trentcmr @GingerWeiland @jackburtonboots @RealReckoningX No public posts from that account show comments or concern about the specific migrant child deaths at the southwest border or the hundreds of thousands of unaccompanied minors with tracking and trafficking risks under recent HHS/DHS data. Searches turn up general border policy",
-        "text_excerpt": "@JimSimon2241 @trentcmr @GingerWeiland @jackburtonboots @RealReckoningX No public posts from that account show comments or concern about the specific migrant child deaths at the southwest border or the hundreds of thousands of unaccompanied minors with tracking and trafficking risks under recent HHS/DHS data. Searches turn up general border policy",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-06T23:26:43Z",
-        "last_collected_at": "2026-10-06T23:26:43Z",
-        "collection_count": 1
-      },
-      {
-        "timeline_id": "information:14939",
-        "timestamp": "2026-10-06T22:44:47Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2107603000147468685",
-        "author": "Marguerite32352",
-        "url": "https://x.com/Marguerite32352/status/2107603000147468685",
-        "source_url": "https://x.com/Marguerite32352/status/2107603000147468685",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "boat"
-        ],
-        "freshness_cues": [],
-        "text": "Another migrant boat docks in Dover – borders still wide open\n\nNight after night the same story: more boats, zero control. Our borders are a joke and the government is the punchline.\n https://t.co/nzpjeNVJ2R",
-        "text_excerpt": "Another migrant boat docks in Dover – borders still wide open\n\nNight after night the same story: more boats, zero control. Our borders are a joke and the government is the punchline.\n https://t.co/nzpjeNVJ2R",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-06T23:25:46Z",
-        "last_collected_at": "2026-10-06T23:25:46Z",
-        "collection_count": 1
-      },
-      {
-        "timeline_id": "information:14940",
-        "timestamp": "2026-10-06T22:43:40Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2107602722069557509",
-        "author": "Whiplash437",
-        "url": "https://x.com/Whiplash437/status/2107602722069557509",
-        "source_url": "https://x.com/Whiplash437/status/2107602722069557509",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.6,
-        "priority": "INFO",
-        "priority_score": 50,
-        "information_score": 5,
-        "matched_information_cues": [
-          "border",
-          "boat",
-          "smuggling",
-          "arrival"
-        ],
-        "freshness_cues": [
-          "breaking"
-        ],
-        "text": "BREAKING: Federal court records reveal a Mexican national previously convicted of human smuggling was allegedly waiting near the Balboa Fun Zone on Oct. 3 to pick up migrants arriving by boat when he was arrested by Border Patrol.\n\nInvestigators say the man admitted he had https://t.co/bRsNvDEGm6",
-        "text_excerpt": "BREAKING: Federal court records reveal a Mexican national previously convicted of human smuggling was allegedly waiting near the Balboa Fun Zone on Oct. 3 to pick up migrants arriving by boat when he was arrested by Border Patrol.\n\nInvestigators say the man admitted he had https://t.co/bRsNvDEGm6",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-06T23:25:46Z",
-        "last_collected_at": "2026-10-06T23:25:46Z",
-        "collection_count": 1
-      },
-      {
         "timeline_id": "early_warning:872",
         "timestamp": "2026-10-06T22:43:18Z",
         "layer": "EARLY_WARNING",
@@ -25509,165 +25936,6 @@
         "last_detected_at": "2026-10-06T23:25:23Z"
       },
       {
-        "timeline_id": "information:14918",
-        "timestamp": "2026-10-06T20:10:47Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "MASTODON",
-        "source_post_id": "mastodon_117395780237553534",
-        "author": null,
-        "url": "https://toad.social/@KimPerales/117395780237553534",
-        "source_url": "https://toad.social/@KimPerales/117395780237553534",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "detention",
-          "deportation"
-        ],
-        "freshness_cues": [],
-        "text": "VOTE🌊BLUE to SAVE # immigrants ' livelihoods, their families from being separated, their very LIVES, & the US # economy : \"If the current pace holds, # ICE 🚨will book ~1.75M ppl into # detention by the end of this term in Jan 2029.\" -A Kocher \"Backlog: # USCIS 🚨is sitting on an enormous pile of💰, 100s of $Ms, that ppl have paid to the agency so: their appls will be decided *instead💔are increasingly just sitting on appls.\" -A R-Melnick # Deportations # DHS # DeathCamps # Racism # USPol https:// austinkocher.substack.com/p/ov er-600000-people-booked-into-ice",
-        "text_excerpt": "VOTE🌊BLUE to SAVE # immigrants ' livelihoods, their families from being separated, their very LIVES, & the US # economy : \"If the current pace holds, # ICE 🚨will book ~1.75M ppl into # detention by the end of this term in Jan 2029.\" -A Kocher \"Backlog: # USCIS 🚨is sitting on an enormous pile of💰, 100s of $Ms, that ppl have paid to the agency so: their appls will be decided *instead💔are increasingly just sitting on ap…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-06T23:25:02Z",
-        "last_collected_at": "2026-10-06T23:25:02Z",
-        "collection_count": 1
-      },
-      {
-        "timeline_id": "information:15010",
-        "timestamp": "2026-10-06T19:33:09Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1wzbxd9",
-        "author": "KristoriaHere",
-        "url": "https://www.reddit.com/r/u_KristoriaHere/comments/1wzbxd9/cedar_donkeys_and_diplomats_egypt_and_the_levant/",
-        "source_url": "https://www.reddit.com/r/u_KristoriaHere/comments/1wzbxd9/cedar_donkeys_and_diplomats_egypt_and_the_levant/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 80,
-        "information_score": 8,
-        "matched_information_cues": [
-          "border",
-          "route",
-          "boat",
-          "vessel",
-          "sea",
-          "arrival"
-        ],
-        "freshness_cues": [
-          "today",
-          "now"
-        ],
-        "text": "Cedar, Donkeys and Diplomats: Egypt and the Levant in the Bronze Age\nhttps://preview.redd.it/qaiqcrzpfwth1.png?width=1280&format=png&auto=webp&s=9eac50cbc1d0f949ffc50e215c430572f2c4bc12 Around the middle of the 3rd millennium BCE, someone in a town in the southern Levant buried 4 donkeys as foundation offerings, the kind of sacrifice meant to bless a new building . On its own that isn't unusual. What makes these animals worth a 2nd look is what their teeth reveal. The town is today's Tell es-Safi in Israel and isotope analysis of several donkeys found there, plus one goat, shows the animals grew up in the Nile Valley. They were born in Egypt, made the long trip north, and ended their lives in a Levantine ritual. No pharaoh ever boasted about donkeys. Pharaohs boasted about smiting . Egyptian art is full of kings grabbing bearded foreigners by the hair with a mace raised over their heads, and for a long time historians took that imagery more or less at face value. The usual picture put Egypt at the center as the big, sophisticated power, with the Levant roughly today's Lebanon, Syria, Israel, Palestine and Jordan out on the edge, supplying timber, oil and people while slowly soaking up Egyptian culture. Anna-Latifa Mourad's new book, Egypt and the Levant: Networks and Negotiations in the Bronze Age (Cambridge University Press, 2026), takes that picture apart. It's a short study in Cambridge's Elements series and it deliberately stops before the period most readers know, the age of Thutmose III's wars and the Amarna letters. Mourad is interested in what came before, roughly 2700 to 1450 BCE. Her argument is that scholars have been projecting the later empire back onto earlier centuries. From the pyramid age to the eve of Thutmose III's campaigns, she finds no solid evidence that any Egyptian dynasty actually ruled the Levant. What she does find is a web of contacts kept going by kings, brokers, migrants, soldiers and merchants, each with their own reasons to keep talking. One small thing I've borrowed from her. Egyptologists traditionally call people from Egypt's northeast \"Asiatics\", a label that picked up some ugly baggage in the 19th and 20th centuries and that lumps together groups the Egyptians themselves told apart. Mourad says northeasterners instead. Egypt had stone and mud in abundance and very little decent timber. Anyone who wanted long, straight beams for a ship or a temple door had to look north , to the mountain forests of Lebanon, and that need shaped the relationship from early on. Contacts are older than the pharaohs themselves. Pottery and luxury goods were already moving between the Nile and the southern Levant in the late 4th millennium BCE , and around the time Egypt was unified there was a cluster of Egyptian objects in the region, and probably Egyptian people too. Whether that was trade, a colony or something else is still debated. Either way it faded, and once the Old Kingdom state got going, the action moved north and out to sea. Conifer wood The royal annals on the Palermo Stone credit Sneferu, the 4th Dynasty king who built the Bent and Red pyramids, with making ships and palace doors from conifer wood and with shipping the timber in. Archaeology agrees. Lebanese cedar turns up in the Bent Pyramid, in the funerary boat of Sneferu's son Khufu, in coffins and in ship parts. Then there are the jars. Tombs at Giza and elsewhere, from the 4th to the 6th Dynasty, keep producing a particular 2 handled jar with a combed surface. Clay analysis traces them to the coast between modern Beirut and Tripoli, and they held resins and oils, products that mattered in Egyptian burial rites. These weren't souvenirs. They were supplies. At the center of this trade sat Byblos, today's Jbeil. In the temple of the city's goddess, the Lady of Byblos, excavators found fragments of Egyptian stone vessels carved with the names of Old Kingdom kings such as Niuserre and Unas. A fragment naming Pepy I turned up much further north, in the royal palace at Ebla in Syria, whose tablets seem to mention Egypt under the name Dugurasu . Inscribed stone vessels are the kind of gift royal courts sent each other. The Egyptian word for one kind of seagoing ship was simply Byblos ship , and it was used even for vessels sailing to Punt on the Red Sea, nowhere near Lebanon. Byblos ship An official named Iny, who served 3 Sixth Dynasty kings, left a biography listing 6 missions abroad. They came back with silver, lapis lazuli, Byblos ships, cargo boats, and men and women from the northeast. Lapis lazuli came from Afghanistan; nobody was mining it in Lebanon . What Iny describes is access to a network stretching across western Asia, with Byblos as the front door. Royal art tells a louder story. In King Sahure's funerary temple at Abusir, ships arrive carrying northeasterners with their arms raised in praise, and bears, probably from the Levant, are presented to the king along with foreign jars. On the causeway of the same complex, bound captives are led on ropes held by gods. At Wadi Maghara in Sinai, where Egyptian expeditions went for copper and turquoise, one king after another, from Djoser to Pepy I, had himself carved clubbing a northeasterner. It would be easy to read all this as a news report. Mourad thinks that would be a mistake. Scenes like these were made for sacred spaces, and their job was to show the king doing his cosmic duty of keeping disorder, foreigners included, at bay. Some of the violence was real enough. Weni, an official of Pepy I, describes leading an army 5 times against the sand dwellers, wrecking their walled enclosures and cutting down their figs and vines, then going back a sixth time to deal with rebels. But nobody can say for sure where any of this happened. What the evidence never shows is Egyptians governing a Levantine town. It shows royal courts trading with each other, with Byblos in the middle and quite possibly setting the terms. Toward the end of the Old Kingdom something else shifts. Levantine jars start appearing in humbler graves away from the capital, and provincial officials begin advertising their own foreign dealings on their tomb walls. Trade was slipping out of the palace's exclusive control, and that matters for what came next. When the Old Kingdom fell apart around 2200 BCE, the older view was that contact with the Levant simply stopped. Egypt was divided, Levantine towns were shrinking or being abandoned, and that was that. Mourad reads it differently. The contacts didn't end. They changed hands. A damaged tomb inscription at Qubbet el-Hawa, across the river from Aswan , describes an official supplying the court of King Khety at Herakleopolis with exotic goods, among them myrrh from Byblos. The court wasn't sending out its own fleets; it was buying through middlemen. At Beni Hasan in Middle Egypt, provincial governors painted siege scenes in which northeastern warriors fight on the same side as Egyptians and Nubians. In the early 12thh Dynasty the governor Khnumhotep I still had northeasterners in his army, and his biography hints that this army helped secure the throne for Amenemhat I. One of those warriors, perhaps their leader, wears a one-shouldered garment, the earliest known in Egyptian art. The period's most famous story runs the other way. In the Tale of Sinuhe, a palace official panics after a plot against Amenemhat I and flees northeast, slipping past the Walls of the Ruler, the frontier defenses built to control who came and went. Desert people save him from dying of thirst. Eventually Amusanenshi, ruler of Upper Retjenu, takes him in, marries him to his daughter, gives him a fertile stretch of land and makes him a commander. Years later the new king, Senusret I, invites Sinuhe home, and he gets the Egyptian burial he always wanted. It's fiction, and very Egyptian fiction, since the moral is that nowhere beats home. The backdrop, though, is telling. Whoever wrote it knew the Levant as a world of local rulers who fought each other, sealed alliances through marriage, and dealt with Egypt through trade, gifts and letters. Official records add numbers. A fragment of a royal daybook of Amenemhat II, found at Memphis, logs a busy stretch as children of northeastern rulers arriving with silver, cattle and lead, and with 1,002 people; a sea expedition coming home with conifer wood and 65 people; and a raid on a place called Iwa that brought back 1,554 people, plus weapons and other loot. Some of these arrivals were honored guests. The 1,554 from Iwa almost certainly were not. Then there's the scene everyone remembers. On a wall of his tomb chapel at Beni Hasan, the governor Khnumhotep II, grandson of Khnumhotep I, painted a procession of 15 northeasterners 8 men, 4 women and 3 children, dressed in bright patterned cloth and traveling with donkeys. Their leader is labeled Ibsha, ruler of a foreign land. A document shown in the scene says Khnumhotep's son brought 37 people from a place called Shu in the 6th year of Senusret II, sometime in the 19th century BCE, and that they came in connection with mesdjemet, a mineral used for black eye paint. Why bring children on a business trip? Mourad suspects the group meant to stay a while, perhaps to work the mineral. Nothing about them says wandering nomads, either. These look like people with at least one foot in settled life. What I find most interesting is the family behind the painting. 3 generations of Khnumhoteps handled their region's dealings with the northeast. The grandfather had northeasterners in his army. The father received Ibsha. The son who escorted Ibsha's party held the title keeper of the gateway of the foreign lands, and he is very probably the Khnumhotep whose tomb inscription at Dahshur describes a voyage to Byblos for timber under Senusret III. That text reads like a small diplomatic thriller. Byblos was at odds with a neighboring coastal town, the Egyptians negotiated with Byblos's ruler, a man named Maki, letters went back and forth to the pharaoh, there was talk of military pressure, and the Egyptian ships needed Maki's permission to dock. Contacts like these were a family asset, passed down like land. Senusret III did send at least one army into Retjenu, as an officer named Khusobek proudly recorded on his stela. It's also the last Egyptian campaign in the Levant we know of for roughly three centuries. Meanwhile, at the turquoise mines of Serabit el-Khadim in Sinai , cooperation became almost routine. Expedition inscriptions from the reign of Amenemhat III mention a brother of the ruler of Retjenu named Khebded, and one shows him riding a donkey, the way Levantine elites liked to travel. If he is also the donkey rider in 3 other inscriptions, he turns up over about 20 years. Men from Retjenu are still listed on Egyptian mining expeditions under Amenemhat IV. That isn't what conquest looks like. It looks like a long-running joint venture. Byblos adds one more twist. Its rulers in this period wrote their names in hieroglyphs and used the Egyptian title haty-a, foremost, normally held by Egyptian town governors . For decades that was read as proof that Byblos was an Egyptian vassal. Mourad isn't convinced. One of these rulers, Ibshemu, is called king in the Egyptian title of his own seal-bearer, an odd thing for a vassal to claim, and nothing in the city's material culture points to Egyptian control. She sees the titles as translations of local offices, chosen by the Byblians themselves. Using your main partner's script and vocabulary is a way of doing business with them. It doesn't mean they own you. If one site carries Mourad's argument, it's Tell el-Dab'a in the northeastern Nile Delta, the ancient city of Avaris. It started out in the early Middle Kingdom as a planned settlement, and one of its Middle Kingdom names says a lot: roughly,\"the district of Amenemhat at the start of the 2 roads. It sat where the land route to Sinai and the sea lanes to the Levant met, and Levantine pottery shows up there from the beginning. Over the next couple of centuries the town changed character. Buildings inspired by Levantine architecture appear. Some people were buried with things you rarely see in Egyptian graves as Levantine-style weapons laid on the body, toggle pins, metal belts and donkeys buried in front of the tomb. Isotope analysis shows that a number of residents, most of them women, had grown up outside the Nile Valley. A broken limestone statue from one cemetery shows a seated official posed like an Egyptian dignitary, but with a mushroom-shaped hairdo and a multicolored patterned cloak, the look Egyptian artists gave northeasterners. Whoever he was, he apparently didn't feel he had to choose. As central authority weakened in the 13th Dynasty, Avaris went its own way. Its leaders built a palace and a sacred precinct with temples of both Egyptian and Levantine design. Clay analysis of imported jars shows most came from the northern Levant, with about 30 percent from the southern Levant, mainly the coastal Negev. Then, at the end of what Manfred Bietak, the site's longtime excavator, calls the 14th Dynasty, the palace burned. A new one went up on the same spot, and a new line of rulers took charge: the Hyksos. This is where the old story goes off the rails. The version handed down from the Egyptian priest Manetho, by way of the Jewish historian Josephus, has foreign hordes storming in, burning cities and massacring the population. No one has found evidence of a sudden invasion like that. The name Hyksos comes from the Egyptian heqa khasut, rulers of foreign lands (Ibsha, remember, was a ruler of a foreign land). Their names were mostly Semitic, and Theban texts link them with the northeast. But the archaeology of Avaris shows a community that had been growing richer and more powerful on its Levantine ties for generations. The fire may mark a takeover, possibly a violent one, yet the people behind it seem to have come out of Egypt's own mixed population rather than marching in from abroad. Exactly where they came from is still argued over; Bietak has even suggested Itjtawy, the old royal capital south of Memphis. Under the Hyksos, Avaris boomed. Their palace has produced the first securely identified horse in Egypt, a nearly complete skeleton, and a scrap of a cuneiform letter in Akkadian, the diplomatic language of western Asia. Scarabs bearing the names of Hyksos kings turn up in tombs across the southern Levant. Yet there's no sign that the Hyksos ruled those places either. Cities like Hazor, Megiddo and Byblos were thriving on their own terms. Once again the evidence points to trade and diplomacy, not empire. The end came from the south. Kamose, a king ruling from Thebes, set up a stela at Karnak boasting of his attack on Avaris and its king Apophis, who had been taxing the Thebans. He also mentions the seagoing ships in Avaris's harbor, which tells you exactly what Thebes wanted. His successor Ahmose finished the job, and by the end of the Hyksos period Avaris and other Delta sites had shrunk noticeably. What followed really was new. The early 18th Dynasty kings took the old smiting imagery and turned it into policy. Fragments from Ahmose's temple at Abydos seem to show the king shooting from a chariot, the first image of a pharaoh fighting in person. Soldiers like Ahmose son of Ibana, whose tomb at el-Kab tells his life story, campaigned as far as Sharuhen in southern Canaan and, under Thutmose I, all the way to Naharin near the Euphrates. Even so, these were raids for glory and plunder, and the texts never mention garrisons. The real break comes with Thutmose III in the 15th century BCE. A coalition of Levantine rulers gathered at Megiddo, and the king marched out from the border fortress of Tjaru to extend the boundaries of Egypt. Over years of campaigning he built something that finally deserves the word empire, with fortresses and garrisons in the Levant, long sieges, and far denser trade and diplomacy than before. Kings and armies get the headlines, but the traffic that lasted longest was in gods, habits and ideas. A few examples from the book stuck with me. Start with the gods. Byblos's patron goddess, the Lady of the city, was matched with Hathor surprisingly early. 2 early 12th Dynasty coffins from Deir el-Bersha already call Hathor Lady of Byblos and say she makes the steering oar of the sacred boat, maybe a nod to Lebanese timber. At Serabit el-Khadim there's a small sphinx, now in the British Museum, with 2 dedications. One, in hieroglyphs, is to Hathor, Lady of Turquoise. The other, in an early alphabetic script, is for Baalat. Probably the same person wrote both, treating the 2 goddesses as one and switching scripts without much fuss. That sphinx leads straight to the alphabet. The early alphabetic texts at Serabit el-Khadim led some scholars to argue that the alphabet was invented right there, by Semitic-speaking workers who couldn't read Egyptian but borrowed its signs. It's a great story. It's also on shakier ground than it used to be. Similar texts have turned up at Wadi el-Hol in Upper Egypt and at el-Lahun, and clay cylinders from Early Bronze Age Umm el-Marra in Syria have been read as alphabetic too. Mourad leaves the origin open. What seems safe is that the alphabet came from people who spoke a Semitic language and knew Egyptian writing, which is exactly the sort of person this network kept producing. Even the scales converged. A weighing scene in a tomb at Beni Hasan shows barrel-shaped weights of a type common in western Asia, and actual hematite weights of that shape turn up at Tell el-Dab'a from the 13th Dynasty on. They fit both the Mesopotamian unit of about 8.3 grams and the Levantine one of about 9.4. By the New Kingdom, Egypt had settled on a new unit, the qedet of 9.1 grams, part of a weight system that could sit comfortably alongside its neighbors'. Some of the most visible borrowings were military. Egypt's first securely identified horse, as mentioned, comes from Hyksos Avaris. By the early 18th Dynasty, Egyptian had new words for horse and chariot, and a scarab of Thutmose I shows the king in a chariot with the reins tied around his waist, a pose that echoes earlier Levantine seals. Mourad is careful here. It's too simple, she argues, to say the Hyksos brought the chariot. Horses, chariots and the skills to keep them reached Egypt through many hands over many decades, and the Theban kings took them up partly because they sent a message about power that allies and enemies across the region understood. The curved sword followed a similar path. Rulers of Byblos were buried with curved swords, one of them inscribed in hieroglyphs with a local ruler's name. The earliest securely dated example in Egypt comes from a Fourteenth Dynasty tomb at Tell el-Dab'a. By the reign of Thutmose III the weapon belongs to the pharaoh's official image, sometimes handed to him by a god. Egyptians called it khepesh, an old word for a foreleg or a strong arm, which happened to suit the blade's shape. Give a foreign weapon a good Egyptian name and within a few generations it looks as if it had always been there. The people are there too, if you look for them. Papyri from el-Lahun mention northeastern singers and dancers at temple festivals. A 13th Dynasty household list, possibly from Thebes, is full of servants labeled as northeasterners or bearing Semitic names, several of the women working in textiles. One stela shows a woman called Senebheqa, identified as a northeasterner, with a good Egyptian name and a hairstyle and dress that set her apart. Nobody knows where she was born. Wherever it was, she's remembered on a thoroughly Egyptian monument. For most of this long stretch, the honest answer is nobody in particular. Mourad isn't arguing that Egypt was weak or that the Levant secretly ran the show. Power was often lopsided, and some of the traffic was brutal; the 1,554 people taken from Iwa didn't volunteer . Her point is that the relationship ran on brokers and bargains. For long stretches Byblos dominated the cedar trade. Families like the Khnumhoteps controlled access to people and routes. Avaris grew rich enough on its Levantine connections to become a royal capital. When an empire finally did appear under Thutmose III, it ran on the old roads. The Thebans wanted Avaris's harbor and ships, and Tjaru, the fortress Thutmose III marched out from, had been occupied right through the Hyksos period. The interconnected world of the Late Bronze Age, with its Amarna letters, royal marriages and ships loaded with copper and glass, grew out of centuries of contact that nobody bothered to carve on a temple wall. That's the part I keep coming back to. The smiting scene is the official version. The donkey teeth, the sphinx with two inscriptions and a family business at Beni Hasan are the footnotes, and here the footnotes tell the better story. How that later, globalized world came apart around 1177 BCE is a subject for another post. https://preview.redd.it/jl3fnshi7wth1.png?width=1080&format=png&auto=webp&s=d8a5841d7d1b17b4c0d6507e5f42b5d128b7499b Anna-Latifa Mourad, Egypt and the Levant: Networks and Negotiations in the Bronze Age (Cambridge University Press, Elements in Ancient Egypt in Context, 2026), doi.org/10.1017/9781009419949 . https://www.seattlearborist.com/reaction-wood/ https://shipsofscale.com/sosforums/threads/egyptian-seagoing-ship-%E2%80%9Cbyblos%E2%80%9D-1-32-completed-build.5279/page-4 submitted by /u/KristoriaHere to u/KristoriaHere",
-        "text_excerpt": "Cedar, Donkeys and Diplomats: Egypt and the Levant in the Bronze Age\nhttps://preview.redd.it/qaiqcrzpfwth1.png?width=1280&format=png&auto=webp&s=9eac50cbc1d0f949ffc50e215c430572f2c4bc12 Around the middle of the 3rd millennium BCE, someone in a town in the southern Levant buried 4 donkeys as foundation offerings, the kind of sacrifice meant to bless a new building . On its own that isn't unusual. What makes these anim…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-07T03:00:33Z",
-        "last_collected_at": "2026-10-07T07:57:42Z",
-        "collection_count": 2
-      },
-      {
-        "timeline_id": "information:14968",
-        "timestamp": "2026-10-06T19:30:33Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1wzbuwn",
-        "author": "John3262005",
-        "url": "https://www.reddit.com/r/WhatTrumpHasDone/comments/1wzbuwn/trump_administration_to_assign_government_lawyers/",
-        "source_url": "https://www.reddit.com/r/WhatTrumpHasDone/comments/1wzbuwn/trump_administration_to_assign_government_lawyers/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 50,
-        "information_score": 5,
-        "matched_information_cues": [
-          "rescue",
-          "deportation",
-          "arrival",
-          "departure"
-        ],
-        "freshness_cues": [],
-        "text": "Trump administration to assign government lawyers to migrant kids’ cases, worrying advocates\nThe Trump administration is creating a team of attorneys to represent children who traveled alone to the United States in immigration proceedings, which critics say would deprive them of having lawyers who aren’t employed by the government and could put them at greater risk of deportation. The U.S. Health and Human Services Department lawyers will “provide direct legal advice and counsel” to unaccompanied migrant children, according to an announcement in the Federal Register signed by Secretary Robert F. Kennedy Jr. The decision, announced last week without fanfare, offered no details beyond that broad mandate. Health and Human Services said in a statement that its Unaccompanied Alien Children Legal Representation Division will work under its general counsel’s direction toward “safely reuniting these children with their families and ensuring they have the legal support they need.” “This new division will give the Department an additional mechanism to provide these children direct legal support while dedicated public servants work around the clock to safely reunify them with their families,” the department told The Associated Press in a brief statement. It didn’t answer additional questions, including whether it would continue to contract with nongovernmental groups for legal representation or when its new legal division is expected to be fully operational. The move appears to lay the groundwork for one of the biggest changes since guaranteed free legal representation for unaccompanied migrant children was introduced in 2008. It comes after the administration cut ties with the Acacia Center for Justice, a nongovernmental organization that managed 24,000 cases and held a contract to provide representation through a vast network of legal service providers. The change means migrant children will not have an independent representative to advocate for them who doesn’t have a conflict of interest, said Shaina Aber, the Acacia Center’s executive director. “Placing children’s legal representation and services inside of the same agency that holds children in federal immigration custody is an unprecedented step that does not meet basic standards of independence of counsel,” Aber said. It “will only give HHS new opportunities to forsake children’s rights and well-being.” Wendy Young, president of Kids in Need of Defense, a nonprofit that provides free legal representation and social services to unaccompanied children, called the creation of the new in-house HHS legal team “part of a pattern of attacks that this administration has engaged in, in terms of undermining zealous representation of unaccompanied children in their immigration proceedings.” The new division will work independently from other government agencies that deal with the minors, including the HHS Office of Refugee Resettlement, which is responsible for the custody and care of the children who arrive in the U.S. without a parent or legal guardian. There is some precedent for government-paid attorneys defending clients against government prosecutors in civilian and military courts, but as criminal defense lawyers and not in immigration court. But Young noted that the child’s lawyer, the judge, and government attorneys seeking deportation will all be federal employees. Judges are appointed by the Justice Department and prosecutors work at the Department of Homeland Security. “A government attorney who’s employed by the government most likely would be coached and encouraged to take the position of encouraging the child to agree to voluntary departure and to leave the United States rather than to present a full representation of the facts of their case,” Young said. Amid the uncertainty, children have been going to their court hearings without legal representation lately, according to advocates. Americans for Immigrant Justice, another nonprofit that provides free legal representation to unaccompanied immigrant children, said it has been challenging to secure lawyers for the minors since the government suspended funding to legal aid organizations on July 31 through Acacia. Sui Chung, the group’s executive director, said the need for legal representation exceeds the available resources. “To deny legal counsel to the most vulnerable among us — children who have already fled trauma — is a fundamental breakdown of the fairness our Constitution promises,” Chung said. “Children deserve our strongest protection.” The government recently awarded a contract to another organization, Our Rescue, with a potential value of up to $244 million. The transition to Our Rescue, which has been challenged by Acacia, has led to short-term arrangements, including a temporary contract with the U.S. Committee for Refugees and Immigrants.",
-        "text_excerpt": "Trump administration to assign government lawyers to migrant kids’ cases, worrying advocates\nThe Trump administration is creating a team of attorneys to represent children who traveled alone to the United States in immigration proceedings, which critics say would deprive them of having lawyers who aren’t employed by the government and could put them at greater risk of deportation. The U.S. Health and Human Services D…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-06T23:30:20Z",
-        "last_collected_at": "2026-10-12T19:31:31Z",
-        "collection_count": 14
-      },
-      {
-        "timeline_id": "information:14969",
-        "timestamp": "2026-10-06T19:29:34Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1wzbtyc",
-        "author": "John3262005",
-        "url": "https://www.reddit.com/r/LegalNews/comments/1wzbtyc/trump_administration_to_assign_government_lawyers/",
-        "source_url": "https://www.reddit.com/r/LegalNews/comments/1wzbtyc/trump_administration_to_assign_government_lawyers/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 50,
-        "information_score": 5,
-        "matched_information_cues": [
-          "rescue",
-          "deportation",
-          "arrival",
-          "departure"
-        ],
-        "freshness_cues": [],
-        "text": "Trump administration to assign government lawyers to migrant kids’ cases, worrying advocates\nThe Trump administration is creating a team of attorneys to represent children who traveled alone to the United States in immigration proceedings, which critics say would deprive them of having lawyers who aren’t employed by the government and could put them at greater risk of deportation. The U.S. Health and Human Services Department lawyers will “provide direct legal advice and counsel” to unaccompanied migrant children, according to an announcement in the Federal Register signed by Secretary Robert F. Kennedy Jr. The decision, announced last week without fanfare, offered no details beyond that broad mandate. Health and Human Services said in a statement that its Unaccompanied Alien Children Legal Representation Division will work under its general counsel’s direction toward “safely reuniting these children with their families and ensuring they have the legal support they need.” “This new division will give the Department an additional mechanism to provide these children direct legal support while dedicated public servants work around the clock to safely reunify them with their families,” the department told The Associated Press in a brief statement. It didn’t answer additional questions, including whether it would continue to contract with nongovernmental groups for legal representation or when its new legal division is expected to be fully operational. The move appears to lay the groundwork for one of the biggest changes since guaranteed free legal representation for unaccompanied migrant children was introduced in 2008. It comes after the administration cut ties with the Acacia Center for Justice, a nongovernmental organization that managed 24,000 cases and held a contract to provide representation through a vast network of legal service providers. The change means migrant children will not have an independent representative to advocate for them who doesn’t have a conflict of interest, said Shaina Aber, the Acacia Center’s executive director. “Placing children’s legal representation and services inside of the same agency that holds children in federal immigration custody is an unprecedented step that does not meet basic standards of independence of counsel,” Aber said. It “will only give HHS new opportunities to forsake children’s rights and well-being.” Wendy Young, president of Kids in Need of Defense, a nonprofit that provides free legal representation and social services to unaccompanied children, called the creation of the new in-house HHS legal team “part of a pattern of attacks that this administration has engaged in, in terms of undermining zealous representation of unaccompanied children in their immigration proceedings.” The new division will work independently from other government agencies that deal with the minors, including the HHS Office of Refugee Resettlement, which is responsible for the custody and care of the children who arrive in the U.S. without a parent or legal guardian. There is some precedent for government-paid attorneys defending clients against government prosecutors in civilian and military courts, but as criminal defense lawyers and not in immigration court. But Young noted that the child’s lawyer, the judge, and government attorneys seeking deportation will all be federal employees. Judges are appointed by the Justice Department and prosecutors work at the Department of Homeland Security. “A government attorney who’s employed by the government most likely would be coached and encouraged to take the position of encouraging the child to agree to voluntary departure and to leave the United States rather than to present a full representation of the facts of their case,” Young said. Amid the uncertainty, children have been going to their court hearings without legal representation lately, according to advocates. Americans for Immigrant Justice, another nonprofit that provides free legal representation to unaccompanied immigrant children, said it has been challenging to secure lawyers for the minors since the government suspended funding to legal aid organizations on July 31 through Acacia. Sui Chung, the group’s executive director, said the need for legal representation exceeds the available resources. “To deny legal counsel to the most vulnerable among us — children who have already fled trauma — is a fundamental breakdown of the fairness our Constitution promises,” Chung said. “Children deserve our strongest protection.” The government recently awarded a contract to another organization, Our Rescue, with a potential value of up to $244 million. The transition to Our Rescue, which has been challenged by Acacia, has led to short-term arrangements, including a temporary contract with the U.S. Committee for Refugees and Immigrants.",
-        "text_excerpt": "Trump administration to assign government lawyers to migrant kids’ cases, worrying advocates\nThe Trump administration is creating a team of attorneys to represent children who traveled alone to the United States in immigration proceedings, which critics say would deprive them of having lawyers who aren’t employed by the government and could put them at greater risk of deportation. The U.S. Health and Human Services D…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-06T23:30:21Z",
-        "last_collected_at": "2026-10-11T21:11:46Z",
-        "collection_count": 12
-      },
-      {
         "timeline_id": "early_warning:877",
         "timestamp": "2026-10-06T17:05:43Z",
         "layer": "EARLY_WARNING",
@@ -25698,43 +25966,6 @@
         "detection_count": 2,
         "first_detected_at": "2026-10-07T03:00:34Z",
         "last_detected_at": "2026-10-07T07:57:43Z"
-      },
-      {
-        "timeline_id": "information:14874",
-        "timestamp": "2026-10-06T16:37:32Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2107510581226041367",
-        "author": "RebornDoom",
-        "url": "https://x.com/RebornDoom/status/2107510581226041367",
-        "source_url": "https://x.com/RebornDoom/status/2107510581226041367",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "crossing"
-        ],
-        "freshness_cues": [],
-        "text": "@Red65Dave @NewFifeRight14 @ZiaYusufUK The Refugee Convention does NOT give an automatic right to cross a border to claim asylum. What it does is give the right to claim. \n\nRefugees are protected once INSIDE a nation, but granted no specific right of entry.\n\nAny protections offered by the convention are weakened as",
-        "text_excerpt": "@Red65Dave @NewFifeRight14 @ZiaYusufUK The Refugee Convention does NOT give an automatic right to cross a border to claim asylum. What it does is give the right to claim. \n\nRefugees are protected once INSIDE a nation, but granted no specific right of entry.\n\nAny protections offered by the convention are weakened as",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-06T16:45:13Z",
-        "last_collected_at": "2026-10-06T16:45:13Z",
-        "collection_count": 1
       },
       {
         "timeline_id": "early_warning:867",
