@@ -1,0 +1,36 @@
+name: Daily Migration AI Report
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 6 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: migration-ai-report
+  cancel-in-progress: false
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install 'requests>=2.32.0'
+      - name: Generate report
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_REPORT_MODEL: gpt-4.1-mini
+        run: python -m analysis.daily_ai_report
+      - name: Commit report and history
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add ai-report-latest.json ai-reports/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish daily migration AI report'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
