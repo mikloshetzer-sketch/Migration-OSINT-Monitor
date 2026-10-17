@@ -57,6 +57,7 @@ jobs:
           import json
           d=json.load(open('dashboard-data.json',encoding='utf-8'))
           assert d['ai_editorial_gate']['status']=='APPLIED_FAIL_CLOSED'
+          assert d['ai_editorial_gate']['version']=='2.0'
           assert d['historical_revalidation']['mode']=='REVIEWED_SUPPRESSION_OVERLAY'
           print('Gate:',d['ai_editorial_gate'])
           PY
