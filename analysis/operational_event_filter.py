@@ -400,3 +400,4 @@ class OperationalEventFilter:
 
     def is_operational(self, text: str) -> bool:
         return bool(self.analyze(text).get("is_operational"))
+
