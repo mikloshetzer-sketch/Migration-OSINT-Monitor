@@ -45,7 +45,7 @@ jobs:
         run: python -m dashboard.export_dashboard_data
       - name: Apply historical suppression
         run: python -m analysis.historical_dashboard_cleanup
-      - name: AI editorial gate BEFORE publication
+      - name: AI editorial gate (new records since 2026-10-17)
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_EDITORIAL_MODEL: gpt-4.1-mini
@@ -56,10 +56,12 @@ jobs:
           python - <<'PY'
           import json
           d=json.load(open('dashboard-data.json',encoding='utf-8'))
-          assert d['ai_editorial_gate']['status']=='APPLIED_FAIL_CLOSED'
-          assert d['ai_editorial_gate']['version']=='2.0'
+          g=d['ai_editorial_gate']
+          assert g['status']=='APPLIED_FAIL_CLOSED'
+          assert g['version']=='3.0'
+          assert g['review_start_date']=='2026-10-17'
           assert d['historical_revalidation']['mode']=='REVIEWED_SUPPRESSION_OVERLAY'
-          print('Gate:',d['ai_editorial_gate'])
+          print('Gate:',g)
           PY
       - name: Export Source Intelligence
         id: source-intelligence
@@ -81,7 +83,7 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add dashboard-data.json analysis/ai_editorial_cache.json ai-editorial-audit.json
           if ! git diff --cached --quiet; then
-            git commit -m 'Publish AI-gated migration dashboard'
+            git commit -m 'Publish daily AI-gated migration dashboard'
             git pull --rebase origin main
             git push origin HEAD:main
           fi
