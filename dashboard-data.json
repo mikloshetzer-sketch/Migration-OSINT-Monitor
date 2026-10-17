@@ -1,74 +1,118 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-10-16T20:13:34Z",
-  "generated_at": "2026-10-16T20:13:34Z",
+  "updated_at": "2026-10-17T00:05:51Z",
+  "generated_at": "2026-10-17T00:05:51Z",
   "current_run": {
     "available": true,
-    "id": 282,
-    "run_uuid": "b5a8654e-0703-4c82-a9b2-5029584e0c5b",
-    "started_at": "2026-10-16T20:10:27Z",
-    "completed_at": "2026-10-16T20:13:30Z",
+    "id": 283,
+    "run_uuid": "1a129473-5460-4fcc-9765-f7c260d00fd5",
+    "started_at": "2026-10-17T00:00:43Z",
+    "completed_at": "2026-10-17T00:05:46Z",
     "status": "SUCCESS",
-    "posts_returned": 147,
-    "unique_posts_collected": 85,
+    "posts_returned": 149,
+    "unique_posts_collected": 106,
     "x_posts_returned": 50,
-    "reddit_posts_returned": 32,
+    "reddit_posts_returned": 34,
     "mastodon_posts_returned": 50,
-    "unique_x_posts": 26,
-    "unique_reddit_posts": 27,
-    "unique_mastodon_posts": 19,
+    "unique_x_posts": 42,
+    "unique_reddit_posts": 30,
+    "unique_mastodon_posts": 21,
     "noise_filtered": 0,
-    "non_operational_filtered": 82,
+    "non_operational_filtered": 100,
     "historical_references_filtered": 1,
     "influence_signals": 1,
     "influence_signals_detected": 1,
-    "crossing_facilitation_signals": 1,
+    "crossing_facilitation_signals": 0,
     "legal_migration_signals": 0,
     "policy_signals": 0,
     "recruitment_coordination_signals": 0,
-    "mobilization_coordination_signals": 0,
+    "mobilization_coordination_signals": 1,
     "mobilization_report_signals": 0,
     "decision_influence_signals": 0,
     "online_influence_report_signals": 0,
-    "operational_events": 2,
-    "operational_events_analyzed": 2,
-    "historical_events_available": 65,
-    "new_correlations": 2,
-    "correlated_events": 2,
-    "new_correlation_groups": 0,
-    "database_correlations": 2,
+    "operational_events": 5,
+    "operational_events_analyzed": 5,
+    "historical_events_available": 64,
+    "new_correlations": 3,
+    "correlated_events": 3,
+    "new_correlation_groups": 2,
+    "database_correlations": 3,
     "current_run_correlations": 0,
-    "new_events": 0,
-    "new_events_saved": 0,
-    "events_already_existing": 2,
-    "new_event_groups": 0,
-    "updated_event_groups": 0,
+    "new_events": 2,
+    "new_events_saved": 2,
+    "events_already_existing": 3,
+    "new_event_groups": 1,
+    "updated_event_groups": 1,
     "bootstrapped_event_groups": 0,
-    "existing_event_groups_reused": 2,
-    "event_group_sources_linked": 0,
+    "existing_event_groups_reused": 3,
+    "event_group_sources_linked": 2,
     "x_collector_errors": 0,
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "error_message": null
   },
   "kpis": {
-    "operational_events": 9,
-    "new_events": 0,
+    "operational_events": 10,
+    "new_events": 2,
     "correlated_events": 3,
-    "active_event_groups": 478,
+    "active_event_groups": 479,
     "sources": 4,
     "regions": 3,
-    "collected_posts_24h": 372,
-    "influence_signals": 13,
-    "access_signals": 1,
-    "high_priority": 1,
-    "current_run_operational_events": 2,
-    "current_run_unique_posts": 85,
-    "access_signals_raw": 1,
-    "influence_signals_raw": 13,
+    "collected_posts_24h": 376,
+    "influence_signals": 16,
+    "access_signals": 2,
+    "high_priority": 2,
+    "current_run_operational_events": 5,
+    "current_run_unique_posts": 106,
+    "access_signals_raw": 2,
+    "influence_signals_raw": 16,
     "influence_narratives": 3
   },
   "live_events": [
+    {
+      "id": 621,
+      "event_id": 621,
+      "source": "X",
+      "source_post_id": "2111239166822686797",
+      "author": "drogon_dracarys",
+      "published_at": "2026-10-16T23:33:36Z",
+      "collected_at": "2026-10-17T00:02:40Z",
+      "event_type": "SMUGGLING_ACTIVITY",
+      "signal_type": "SMUGGLING_ACTIVITY",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.5,
+      "event_confidence": 0.5,
+      "relevance_score": 10.0,
+      "text": "11/3: A Dutch court opened a trial of an Eritrean man accused of involvement in a brutal migrant smuggling network.\n\nProsecutors say he ran an operation bringing East African migrants to Europe under horrific conditions https://t.co/VR2vV4i2CS",
+      "url": "https://x.com/drogon_dracarys/status/2111239166822686797",
+      "source_url": "https://x.com/drogon_dracarys/status/2111239166822686797"
+    },
+    {
+      "id": 620,
+      "event_id": 620,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1x7uatp",
+      "author": "amogusdevilman",
+      "published_at": "2026-10-16T22:42:59Z",
+      "collected_at": "2026-10-17T00:01:24Z",
+      "event_type": "BORDER_CROSSING",
+      "signal_type": "BORDER_CROSSING",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "confidence": 0.45,
+      "event_confidence": 0.45,
+      "relevance_score": 20.0,
+      "text": "🇪🇸 El 70 % de los migrantes marroquíes que entraron en Ceuta alegan su orientación sexual en sus solicitudes de asilo",
+      "url": "https://www.reddit.com/r/antiizquierdapolitica/comments/1x7uatp/el_70_de_los_migrantes_marroquíes_que_entraron_en/",
+      "source_url": "https://www.reddit.com/r/antiizquierdapolitica/comments/1x7uatp/el_70_de_los_migrantes_marroquíes_que_entraron_en/"
+    },
     {
       "id": 617,
       "event_id": 617,
@@ -464,53 +508,69 @@
       "text": "@TahraHoops Her father was a full colonel in the brutal military dictatorship that collapsed and left Somalia in ruins. He arrived in the US claiming \"refugee\" status but his paperwork has vanished so we may never know who lied or who paid for his \"citizenship.\" We do know that Ilhan Omar's",
       "url": "https://x.com/S_W_Somerville/status/2110539406423515397",
       "source_url": "https://x.com/S_W_Somerville/status/2110539406423515397"
-    },
-    {
-      "id": 601,
-      "event_id": 601,
-      "source": "X",
-      "source_post_id": "2110501822897262771",
-      "author": "WhiteDragonPub",
-      "published_at": "2026-10-14T22:43:40Z",
-      "collected_at": "2026-10-14T22:48:59Z",
-      "event_type": "BORDER_CROSSING",
-      "signal_type": "BORDER_CROSSING",
-      "primary_location": "-",
-      "location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "confidence": 0.25,
-      "event_confidence": 0.25,
-      "relevance_score": 10.0,
-      "text": "@ShabanaMahmood Remind me again. How many illegal migrants have arrived in Britain since Liebour took power??? And remind me if things are still getting worse??? https://t.co/DCOq8fEpsC",
-      "url": "https://x.com/WhiteDragonPub/status/2110501822897262771",
-      "source_url": "https://x.com/WhiteDragonPub/status/2110501822897262771"
-    },
-    {
-      "id": 600,
-      "event_id": 600,
-      "source": "X",
-      "source_post_id": "2110451126218965047",
-      "author": "Zauberfalafel",
-      "published_at": "2026-10-14T19:22:13Z",
-      "collected_at": "2026-10-14T19:49:45Z",
-      "event_type": "INTERCEPTION",
-      "signal_type": "INTERCEPTION",
-      "primary_location": "-",
-      "location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "confidence": 0.2,
-      "event_confidence": 0.2,
-      "relevance_score": 0.0,
-      "text": "@MlgerNoob @steveth75737857 Dude..the ship in the picture is the Theodor Herzl. And yes it made to Haifa but then the British intercepted and sent it to the refugee camps on Cyprus. Go ahead and look it up. 🤣",
-      "url": "https://x.com/Zauberfalafel/status/2110451126218965047",
-      "source_url": "https://x.com/Zauberfalafel/status/2110451126218965047"
     }
   ],
   "event_groups": [
+    {
+      "id": 498,
+      "group_id": 498,
+      "event_type": "SMUGGLING_ACTIVITY",
+      "dominant_event_type": "SMUGGLING_ACTIVITY",
+      "title": "SMUGGLING_ACTIVITY",
+      "representative_text": "11/3: A Dutch court opened a trial of an Eritrean man accused of involvement in a brutal migrant smuggling network.\n\nProsecutors say he ran an operation bringing East African migrants to Europe under horrific conditions https://t.co/VR2vV4i2CS",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "primary_location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "first_seen": "2026-10-16T23:33:36Z",
+      "last_seen": "2026-10-16T23:33:36Z",
+      "source_count": 1,
+      "sources_count": 1,
+      "source_types": [
+        "X"
+      ],
+      "sources": [
+        "X"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.5,
+      "average_confidence": 0.5,
+      "created_at": "2026-10-17T00:02:40Z",
+      "updated_at": "2026-10-17T00:02:40Z"
+    },
+    {
+      "id": 474,
+      "group_id": 474,
+      "event_type": "BORDER_CROSSING",
+      "dominant_event_type": "BORDER_CROSSING",
+      "title": "BORDER_CROSSING - Ceuta",
+      "representative_text": "King Felipe VI and Queen Letizia visited the Spanish city of Ceuta in North Africa on Tuesday after about 80,000 migrants crossed Ceuta’s border in July. Most of those who crossed returned, but thousands remain in the city. https://t.co/BhcnoeHTKq",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "first_seen": "2026-10-14T08:53:10Z",
+      "last_seen": "2026-10-16T22:42:59Z",
+      "source_count": 3,
+      "sources_count": 3,
+      "source_types": [
+        "REDDIT",
+        "X"
+      ],
+      "sources": [
+        "REDDIT",
+        "X"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.75,
+      "average_confidence": 0.75,
+      "created_at": "2026-10-14T09:06:42Z",
+      "updated_at": "2026-10-17T00:01:24Z"
+    },
     {
       "id": 496,
       "group_id": 496,
@@ -538,7 +598,7 @@
       "confidence": 0.2,
       "average_confidence": 0.2,
       "created_at": "2026-10-16T17:44:30Z",
-      "updated_at": "2026-10-16T20:11:07Z"
+      "updated_at": "2026-10-17T00:01:26Z"
     },
     {
       "id": 497,
@@ -742,181 +802,123 @@
       "average_confidence": 0.25,
       "created_at": "2026-10-15T19:32:52Z",
       "updated_at": "2026-10-15T19:32:53Z"
-    },
-    {
-      "id": 490,
-      "group_id": 490,
-      "event_type": "BORDER_CROSSING",
-      "dominant_event_type": "BORDER_CROSSING",
-      "title": "BORDER_CROSSING",
-      "representative_text": "I've just arrived at the Durban Refugee Centre at Che Guevara road and a group of South African Checkers Sixty60 brothers came to show support 🙌🏽 https://t.co/TCkMJYBAWz https://t.co/pWMQXrxqIV",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "primary_location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "first_seen": "2026-10-15T18:57:24Z",
-      "last_seen": "2026-10-15T18:57:24Z",
-      "source_count": 1,
-      "sources_count": 1,
-      "source_types": [
-        "X"
-      ],
-      "sources": [
-        "X"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.2,
-      "average_confidence": 0.2,
-      "created_at": "2026-10-15T19:35:15Z",
-      "updated_at": "2026-10-15T19:35:15Z"
-    },
-    {
-      "id": 488,
-      "group_id": 488,
-      "event_type": "DEPORTATION",
-      "dominant_event_type": "DEPORTATION",
-      "title": "DEPORTATION",
-      "representative_text": "12 Migrants Expelled from US Arrived in Burundi Late August: Lawyer, Sources \nhttps://t.co/VRkvmc19ks",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "primary_location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "first_seen": "2026-10-15T14:25:55Z",
-      "last_seen": "2026-10-15T14:25:55Z",
-      "source_count": 1,
-      "sources_count": 1,
-      "source_types": [
-        "X"
-      ],
-      "sources": [
-        "X"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.25,
-      "average_confidence": 0.25,
-      "created_at": "2026-10-15T14:34:04Z",
-      "updated_at": "2026-10-15T14:34:04Z"
     }
   ],
   "regions": [
     {
       "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 5,
-      "events": 5,
-      "percentage": 71.43
+      "count": 6,
+      "events": 6,
+      "percentage": 75.0
     },
     {
-      "name": "HORN_OF_AFRICA",
-      "region": "HORN_OF_AFRICA",
+      "name": "WESTERN_MEDITERRANEAN",
+      "region": "WESTERN_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 14.29
+      "percentage": 12.5
     },
     {
       "name": "CENTRAL_MEDITERRANEAN",
       "region": "CENTRAL_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 14.29
+      "percentage": 12.5
     }
   ],
   "sources": [
     {
       "source": "X",
       "name": "X",
-      "count": 264,
-      "posts": 264,
-      "percentage": 70.97
+      "count": 258,
+      "posts": 258,
+      "percentage": 68.62
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 49,
-      "posts": 49,
-      "percentage": 13.17
+      "count": 55,
+      "posts": 55,
+      "percentage": 14.63
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 43,
-      "posts": 43,
-      "percentage": 11.56
+      "count": 47,
+      "posts": 47,
+      "percentage": 12.5
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
       "count": 16,
       "posts": 16,
-      "percentage": 4.3
+      "percentage": 4.26
     }
   ],
   "region_activity": [
     {
       "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 5,
-      "events": 5,
-      "percentage": 71.43
+      "count": 6,
+      "events": 6,
+      "percentage": 75.0
     },
     {
-      "name": "HORN_OF_AFRICA",
-      "region": "HORN_OF_AFRICA",
+      "name": "WESTERN_MEDITERRANEAN",
+      "region": "WESTERN_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 14.29
+      "percentage": 12.5
     },
     {
       "name": "CENTRAL_MEDITERRANEAN",
       "region": "CENTRAL_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 14.29
+      "percentage": 12.5
     }
   ],
   "source_activity": [
     {
       "source": "X",
       "name": "X",
-      "count": 264,
-      "posts": 264,
-      "percentage": 70.97
+      "count": 258,
+      "posts": 258,
+      "percentage": 68.62
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 49,
-      "posts": 49,
-      "percentage": 13.17
+      "count": 55,
+      "posts": 55,
+      "percentage": 14.63
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 43,
-      "posts": 43,
-      "percentage": 11.56
+      "count": 47,
+      "posts": 47,
+      "percentage": 12.5
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
       "count": 16,
       "posts": 16,
-      "percentage": 4.3
+      "percentage": 4.26
     }
   ],
   "correlation": {
     "correlated_events": 3,
     "correlated_sources": 3,
-    "grouped_sources": 9,
-    "event_groups": 478,
-    "active_groups": 478,
+    "grouped_sources": 10,
+    "event_groups": 479,
+    "active_groups": 479,
     "multi_source_groups": 49,
     "strongest_match": 1.0,
-    "correlation_rate": 33.33
+    "correlation_rate": 30.0
   },
   "technical_health": "HEALTHY",
   "collector_health": "HEALTHY",
@@ -929,42 +931,42 @@
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "database": "AVAILABLE",
-    "last_run_id": 282,
-    "last_completed_at": "2026-10-16T20:13:30Z"
+    "last_run_id": 283,
+    "last_completed_at": "2026-10-17T00:05:46Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 9,
-    "influence_signals_24h": 13,
-    "access_signals_24h": 1,
+    "operational_events_24h": 10,
+    "influence_signals_24h": 16,
+    "access_signals_24h": 2,
     "correlated_events_24h": 3,
-    "active_event_groups": 478,
-    "dominant_region": "HORN_OF_AFRICA",
-    "hotspot": "HORN_OF_AFRICA",
+    "active_event_groups": 479,
+    "dominant_region": "WESTERN_MEDITERRANEAN",
+    "hotspot": "WESTERN_MEDITERRANEAN",
     "dominant_event_type": "BORDER_CROSSING",
     "dominant_source": "X",
     "average_confidence": 0.468,
     "confidence_level": "LOW",
-    "correlation_rate": 33.33,
-    "activity_level": "MODERATE",
+    "correlation_rate": 30.0,
+    "activity_level": "ELEVATED",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 9 operatív migrációs eseményt, 13 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 3 friss eseményforrás korrelált más forrással. Jelenleg 478 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Horn Of Africa. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.47. A jelenlegi aktivitási szint: MODERATE."
+    "summary": "Az elmúlt 24 órában a rendszer 10 operatív migrációs eseményt, 16 influence/early-warning jelzést és 2 átkelési vagy bejutási jelzést tart nyilván. 3 friss eseményforrás korrelált más forrással. Jelenleg 479 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.47. A jelenlegi aktivitási szint: ELEVATED."
   },
   "analytical_assessment": {
-    "operational_events_24h": 9,
-    "influence_signals_24h": 13,
-    "access_signals_24h": 1,
+    "operational_events_24h": 10,
+    "influence_signals_24h": 16,
+    "access_signals_24h": 2,
     "correlated_events_24h": 3,
-    "active_event_groups": 478,
-    "dominant_region": "HORN_OF_AFRICA",
-    "hotspot": "HORN_OF_AFRICA",
+    "active_event_groups": 479,
+    "dominant_region": "WESTERN_MEDITERRANEAN",
+    "hotspot": "WESTERN_MEDITERRANEAN",
     "dominant_event_type": "BORDER_CROSSING",
     "dominant_source": "X",
     "average_confidence": 0.468,
     "confidence_level": "LOW",
-    "correlation_rate": 33.33,
-    "activity_level": "MODERATE",
+    "correlation_rate": 30.0,
+    "activity_level": "ELEVATED",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 9 operatív migrációs eseményt, 13 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 3 friss eseményforrás korrelált más forrással. Jelenleg 478 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Horn Of Africa. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.47. A jelenlegi aktivitási szint: MODERATE."
+    "summary": "Az elmúlt 24 órában a rendszer 10 operatív migrációs eseményt, 16 influence/early-warning jelzést és 2 átkelési vagy bejutási jelzést tart nyilván. 3 friss eseményforrás korrelált más forrással. Jelenleg 479 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.47. A jelenlegi aktivitási szint: ELEVATED."
   },
   "high_confidence_events": [
     {
@@ -1058,8 +1060,8 @@
       "primary_region": "WESTERN_MEDITERRANEAN",
       "confidence": 0.75,
       "average_confidence": 0.75,
-      "source_count": 2,
-      "last_seen": "2026-10-14T08:58:28Z",
+      "source_count": 3,
+      "last_seen": "2026-10-16T22:42:59Z",
       "representative_text": "King Felipe VI and Queen Letizia visited the Spanish city of Ceuta in North Africa on Tuesday after about 80,000 migrants crossed Ceuta’s border in July. Most of those who crossed returned, but thousands remain in the city. https://t.co/BhcnoeHTKq",
       "text": "King Felipe VI and Queen Letizia visited the Spanish city of Ceuta in North Africa on Tuesday after about 80,000 migrants crossed Ceuta’s border in July. Most of those who crossed returned, but thousands remain in the city. https://t.co/BhcnoeHTKq"
     },
@@ -1194,6 +1196,71 @@
         "REDDIT"
       ],
       "independent_author_count": 1,
+      "platform_count": 1
+    },
+    {
+      "id": 1035,
+      "source": "MASTODON",
+      "source_post_id": "mastodon_117453308911526258",
+      "author": null,
+      "language": null,
+      "published_at": "2026-10-17T00:01:05Z",
+      "first_detected_at": "2026-10-17T00:01:51Z",
+      "last_detected_at": "2026-10-17T00:01:51Z",
+      "detection_count": 1,
+      "text": "Point Pelee: A Monarch Superhighway While famous for birding, Point Pelee National Park is also a critical stop on the monarch butterfly migration. In autumn, tens of thousands of monarchs gather at the park's southern tip, resting & waiting for favourable winds before making the perilous flight across Lake Erie. This natural spectacle turns the park's trees orange and black with butterflies. # Canada # PointPelee # Monarchs # Migration 🇨🇦 https:// en.wikipedia.org/wiki/Point_Pe lee_National_Park",
+      "text_excerpt": "Point Pelee: A Monarch Superhighway While famous for birding, Point Pelee National Park is also a critical stop on the monarch butterfly migration. In autumn, tens of thousands of monarchs gather at the park's southern tip, resting & waiting for favourable winds before making the perilous flight across Lake Erie. This natural spectacle turns the park's trees orange and black with butterflies. # Canada # PointPelee # Monarchs # Migration 🇨🇦 https:// en.wikipedia.org/wiki/Point_Pe lee_National_Park",
+      "url": "https://mas.to/@Canadian_Eh/117453308911526258",
+      "source_url": "https://mas.to/@Canadian_Eh/117453308911526258",
+      "primary_signal": "MOBILIZATION_COORDINATION",
+      "signal_type": "MOBILIZATION_COORDINATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "MOBILIZATION_COORDINATION",
+      "priority": "HIGH",
+      "confidence": 0.94,
+      "score": 16.0,
+      "matched_signals": [
+        "MOBILIZATION_COORDINATION"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization",
+          "gather at"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migration"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 62.9,
+      "analyst_priority": "HIGH",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "mastodon_117453308911526258"
+      ],
+      "related_authors": [],
+      "related_urls": [
+        "https://mas.to/@Canadian_Eh/117453308911526258"
+      ],
+      "related_sources": [
+        "MASTODON"
+      ],
+      "independent_author_count": 0,
       "platform_count": 1
     },
     {
@@ -1371,8 +1438,8 @@
       "primary_region": "WESTERN_MEDITERRANEAN",
       "confidence": 0.75,
       "average_confidence": 0.75,
-      "source_count": 2,
-      "last_seen": "2026-10-14T08:58:28Z",
+      "source_count": 3,
+      "last_seen": "2026-10-16T22:42:59Z",
       "representative_text": "King Felipe VI and Queen Letizia visited the Spanish city of Ceuta in North Africa on Tuesday after about 80,000 migrants crossed Ceuta’s border in July. Most of those who crossed returned, but thousands remain in the city. https://t.co/BhcnoeHTKq",
       "text": "King Felipe VI and Queen Letizia visited the Spanish city of Ceuta in North Africa on Tuesday after about 80,000 migrants crossed Ceuta’s border in July. Most of those who crossed returned, but thousands remain in the city. https://t.co/BhcnoeHTKq",
       "priority_score": 37.25,
@@ -1415,84 +1482,6 @@
       "analyst_priority": "LOW"
     },
     {
-      "id": 1032,
-      "source": "REDDIT",
-      "source_post_id": "reddit_1x7pwb6",
-      "author": "DifficultBarber6969",
-      "language": null,
-      "published_at": "2026-10-16T19:41:21Z",
-      "first_detected_at": "2026-10-16T20:11:05Z",
-      "last_detected_at": "2026-10-16T20:11:05Z",
-      "detection_count": 1,
-      "text": "US undocumented border crossings from Mexico near 60-year low\nSubmission Statement: Illegal crossings at the US-Mexico border stopped by US agents hit its lowest level this year since 1968, according to US data, after tougher policies under President Donald Trump transformed migration across the Americas. The US Department of Homeland Security on Friday reported 98,708 apprehensions of people crossing the southern US border between ports of entry in the year to the end of September. That is down from more than 2mn people in 2022 and 2023 under Joe Biden. Experts and migrants say that under the previous president people saw a more welcoming environment as an opportunity to escape political, economic and security crises in countries including Haiti and Venezuela. The fall in crossings began at the end of Biden’s presidency after he put in place rules that made it harder to claim asylum, with Mexico’s government also deploying increased forces in a crackdown. But under Trump the decline quickened. He largely dismantled the US asylum system for those arriving at the southern border and accompanied the policy with an aggressive deportation campaign inside the country. Many migrants are not leaving their countries of origin, while others are choosing to stay in Mexico, which takes a tough stance on economic migrants but has a relatively broad policy for asylum seekers. Declining migration into the US has caused the issue to fall down the ranks of voters’ priorities ahead of November’s midterm elections, with polls showing the economy and the cost of living among the top concerns.",
-      "text_excerpt": "US undocumented border crossings from Mexico near 60-year low\nSubmission Statement: Illegal crossings at the US-Mexico border stopped by US agents hit its lowest level this year since 1968, according to US data, after tougher policies under President Donald Trump transformed migration across the Americas. The US Department of Homeland Security on Friday reported 98,708 apprehensions of people crossing the southern US border between ports of entry in the year to the end of September. That is down from more than 2mn people in 2022 and 2023 under Joe Biden. Experts and migrants say that under the previous president people saw a more welcoming environment as an opportunity to escape political, e",
-      "url": "https://www.reddit.com/r/neoliberal/comments/1x7pwb6/us_undocumented_border_crossings_from_mexico_near/",
-      "source_url": "https://www.reddit.com/r/neoliberal/comments/1x7pwb6/us_undocumented_border_crossings_from_mexico_near/",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 9.0,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrants are not leaving"
-        ],
-        [
-          "pressure",
-          "migration into the US has caused the issue to fall"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT",
-        "PRESSURE"
-      ],
-      "context_matches": [
-        "migrants",
-        "asylum seekers"
-      ],
-      "high_value_matches": [
-        "migrants are not leaving",
-        "migration into the US has caused the issue to fall"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "AMERICAS",
-      "primary_region": "AMERICAS",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 32.0,
-      "analyst_priority": "LOW",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "reddit_1x7pwb6"
-      ],
-      "related_authors": [
-        "DifficultBarber6969"
-      ],
-      "related_urls": [
-        "https://www.reddit.com/r/neoliberal/comments/1x7pwb6/us_undocumented_border_crossings_from_mexico_near/"
-      ],
-      "related_sources": [
-        "REDDIT"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
-    },
-    {
       "id": 197,
       "group_id": 197,
       "event_type": "SMUGGLING_ACTIVITY",
@@ -1512,6 +1501,58 @@
     }
   ],
   "influence_signals": [
+    {
+      "id": 1035,
+      "source": "MASTODON",
+      "source_post_id": "mastodon_117453308911526258",
+      "author": null,
+      "language": null,
+      "published_at": "2026-10-17T00:01:05Z",
+      "first_detected_at": "2026-10-17T00:01:51Z",
+      "last_detected_at": "2026-10-17T00:01:51Z",
+      "detection_count": 1,
+      "text": "Point Pelee: A Monarch Superhighway While famous for birding, Point Pelee National Park is also a critical stop on the monarch butterfly migration. In autumn, tens of thousands of monarchs gather at the park's southern tip, resting & waiting for favourable winds before making the perilous flight across Lake Erie. This natural spectacle turns the park's trees orange and black with butterflies. # Canada # PointPelee # Monarchs # Migration 🇨🇦 https:// en.wikipedia.org/wiki/Point_Pe lee_National_Park",
+      "text_excerpt": "Point Pelee: A Monarch Superhighway While famous for birding, Point Pelee National Park is also a critical stop on the monarch butterfly migration. In autumn, tens of thousands of monarchs gather at the park's southern tip, resting & waiting for favourable winds before making the perilous flight across Lake Erie. This natural spectacle turns the park's trees orange and black with butterflies. # Canada # PointPelee # Monarchs # Migration 🇨🇦 https:// en.wikipedia.org/wiki/Point_Pe lee_National_Park",
+      "url": "https://mas.to/@Canadian_Eh/117453308911526258",
+      "source_url": "https://mas.to/@Canadian_Eh/117453308911526258",
+      "primary_signal": "MOBILIZATION_COORDINATION",
+      "signal_type": "MOBILIZATION_COORDINATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "MOBILIZATION_COORDINATION",
+      "priority": "HIGH",
+      "confidence": 0.94,
+      "score": 16.0,
+      "matched_signals": [
+        "MOBILIZATION_COORDINATION"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization",
+          "gather at"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migration"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 62.9,
+      "analyst_priority": "HIGH"
+    },
     {
       "id": 1019,
       "source": "REDDIT",
@@ -1759,8 +1800,8 @@
       "language": null,
       "published_at": "2026-10-16T19:41:21Z",
       "first_detected_at": "2026-10-16T20:11:05Z",
-      "last_detected_at": "2026-10-16T20:11:05Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-10-17T00:01:50Z",
+      "detection_count": 2,
       "text": "US undocumented border crossings from Mexico near 60-year low\nSubmission Statement: Illegal crossings at the US-Mexico border stopped by US agents hit its lowest level this year since 1968, according to US data, after tougher policies under President Donald Trump transformed migration across the Americas. The US Department of Homeland Security on Friday reported 98,708 apprehensions of people crossing the southern US border between ports of entry in the year to the end of September. That is down from more than 2mn people in 2022 and 2023 under Joe Biden. Experts and migrants say that under the previous president people saw a more welcoming environment as an opportunity to escape political, economic and security crises in countries including Haiti and Venezuela. The fall in crossings began at the end of Biden’s presidency after he put in place rules that made it harder to claim asylum, with Mexico’s government also deploying increased forces in a crackdown. But under Trump the decline quickened. He largely dismantled the US asylum system for those arriving at the southern border and accompanied the policy with an aggressive deportation campaign inside the country. Many migrants are not leaving their countries of origin, while others are choosing to stay in Mexico, which takes a tough stance on economic migrants but has a relatively broad policy for asylum seekers. Declining migration into the US has caused the issue to fall down the ranks of voters’ priorities ahead of November’s midterm elections, with polls showing the economy and the cost of living among the top concerns.",
       "text_excerpt": "US undocumented border crossings from Mexico near 60-year low\nSubmission Statement: Illegal crossings at the US-Mexico border stopped by US agents hit its lowest level this year since 1968, according to US data, after tougher policies under President Donald Trump transformed migration across the Americas. The US Department of Homeland Security on Friday reported 98,708 apprehensions of people crossing the southern US border between ports of entry in the year to the end of September. That is down from more than 2mn people in 2022 and 2023 under Joe Biden. Experts and migrants say that under the previous president people saw a more welcoming environment as an opportunity to escape political, e",
       "url": "https://www.reddit.com/r/neoliberal/comments/1x7pwb6/us_undocumented_border_crossings_from_mexico_near/",
@@ -2006,8 +2047,8 @@
       "language": null,
       "published_at": "2026-10-16T12:00:03Z",
       "first_detected_at": "2026-10-16T12:48:24Z",
-      "last_detected_at": "2026-10-16T20:11:33Z",
-      "detection_count": 3,
+      "last_detected_at": "2026-10-17T00:01:51Z",
+      "detection_count": 4,
       "text": "Весь ПЗДЦ России теперь в одном месте 🔞\n\nМы даем вам доступ к каналу, который показывает все как есть:\n— наказания мигрантов, плюющих на закон (смотреть) 🪓\n— реальная ситуация на фронте и границах (смотреть) 🗺️\n— политические заявления и предсказания (смотреть)📑\n— задержания коррупционнеров и предателей России (смотреть) 💵\n— видео прилетов (смотреть) 💥\n— происшествия, о которых молчат на ТВ (смотреть) 🎥\n\nДоступ открыт только для вас 📌\n«ПОЛУЧИТЬ ДОСТУП»",
       "text_excerpt": "Весь ПЗДЦ России теперь в одном месте 🔞\n\nМы даем вам доступ к каналу, который показывает все как есть:\n— наказания мигрантов, плюющих на закон (смотреть) 🪓\n— реальная ситуация на фронте и границах (смотреть) 🗺️\n— политические заявления и предсказания (смотреть)📑\n— задержания коррупционнеров и предателей России (смотреть) 💵\n— видео прилетов (смотреть) 💥\n— происшествия, о которых молчат на ТВ (смотреть) 🎥\n\nДоступ открыт только для вас 📌\n«ПОЛУЧИТЬ ДОСТУП»",
       "url": "https://t.me/migranty_draki/24842",
@@ -2055,6 +2096,114 @@
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
       "priority_score": 32.0,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 1034,
+      "source": "X",
+      "source_post_id": "2111245810432192662",
+      "author": "iowasnewsnow",
+      "language": "en",
+      "published_at": "2026-10-17T00:00:00Z",
+      "first_detected_at": "2026-10-17T00:01:23Z",
+      "last_detected_at": "2026-10-17T00:01:23Z",
+      "detection_count": 1,
+      "text": "An illegal migrant was arrested this week and charged with possession with intent to distribute over 700 pounds of suspected fentanyl and methamphetamine in Nevada. https://t.co/mC3wR23JgK",
+      "text_excerpt": "An illegal migrant was arrested this week and charged with possession with intent to distribute over 700 pounds of suspected fentanyl and methamphetamine in Nevada. https://t.co/mC3wR23JgK",
+      "url": "https://x.com/iowasnewsnow/status/2111245810432192662",
+      "source_url": "https://x.com/iowasnewsnow/status/2111245810432192662",
+      "primary_signal": "ENFORCEMENT_EARLY_WARNING",
+      "signal_type": "ENFORCEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ENFORCEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.5,
+      "matched_signals": [
+        "ENFORCEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "enforcement",
+          "arrested"
+        ]
+      ],
+      "matched_groups": [
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 25.2,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 1036,
+      "source": "X",
+      "source_post_id": "2111240501643080023",
+      "author": "HamixArtemis",
+      "language": "en",
+      "published_at": "2026-10-16T23:38:55Z",
+      "first_detected_at": "2026-10-17T00:05:43Z",
+      "last_detected_at": "2026-10-17T00:05:43Z",
+      "detection_count": 1,
+      "text": "Very good and hopeful news for refugees in India. 🕊️❤️ About a month ago, with your help and some bloggers, we amplified the voices of detained Iranian asylum seekers in India to hundreds of thousands of people. Now, promising news has arrived from several Indian cities that the",
+      "text_excerpt": "Very good and hopeful news for refugees in India. 🕊️❤️ About a month ago, with your help and some bloggers, we amplified the voices of detained Iranian asylum seekers in India to hundreds of thousands of people. Now, promising news has arrived from several Indian cities that the",
+      "url": "https://x.com/HamixArtemis/status/2111240501643080023",
+      "source_url": "https://x.com/HamixArtemis/status/2111240501643080023",
+      "primary_signal": "ENFORCEMENT_EARLY_WARNING",
+      "signal_type": "ENFORCEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ENFORCEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.62,
+      "score": 5.5,
+      "matched_signals": [
+        "ENFORCEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "enforcement",
+          "detained"
+        ]
+      ],
+      "matched_groups": [
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "asylum seekers"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 21.7,
       "analyst_priority": "LOW"
     },
     {
@@ -2284,6 +2433,58 @@
   ],
   "early_warning_signals": [
     {
+      "id": 1035,
+      "source": "MASTODON",
+      "source_post_id": "mastodon_117453308911526258",
+      "author": null,
+      "language": null,
+      "published_at": "2026-10-17T00:01:05Z",
+      "first_detected_at": "2026-10-17T00:01:51Z",
+      "last_detected_at": "2026-10-17T00:01:51Z",
+      "detection_count": 1,
+      "text": "Point Pelee: A Monarch Superhighway While famous for birding, Point Pelee National Park is also a critical stop on the monarch butterfly migration. In autumn, tens of thousands of monarchs gather at the park's southern tip, resting & waiting for favourable winds before making the perilous flight across Lake Erie. This natural spectacle turns the park's trees orange and black with butterflies. # Canada # PointPelee # Monarchs # Migration 🇨🇦 https:// en.wikipedia.org/wiki/Point_Pe lee_National_Park",
+      "text_excerpt": "Point Pelee: A Monarch Superhighway While famous for birding, Point Pelee National Park is also a critical stop on the monarch butterfly migration. In autumn, tens of thousands of monarchs gather at the park's southern tip, resting & waiting for favourable winds before making the perilous flight across Lake Erie. This natural spectacle turns the park's trees orange and black with butterflies. # Canada # PointPelee # Monarchs # Migration 🇨🇦 https:// en.wikipedia.org/wiki/Point_Pe lee_National_Park",
+      "url": "https://mas.to/@Canadian_Eh/117453308911526258",
+      "source_url": "https://mas.to/@Canadian_Eh/117453308911526258",
+      "primary_signal": "MOBILIZATION_COORDINATION",
+      "signal_type": "MOBILIZATION_COORDINATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "MOBILIZATION_COORDINATION",
+      "priority": "HIGH",
+      "confidence": 0.94,
+      "score": 16.0,
+      "matched_signals": [
+        "MOBILIZATION_COORDINATION"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization",
+          "gather at"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migration"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 62.9,
+      "analyst_priority": "HIGH"
+    },
+    {
       "id": 1019,
       "source": "REDDIT",
       "source_post_id": "reddit_1x73u16",
@@ -2530,8 +2731,8 @@
       "language": null,
       "published_at": "2026-10-16T19:41:21Z",
       "first_detected_at": "2026-10-16T20:11:05Z",
-      "last_detected_at": "2026-10-16T20:11:05Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-10-17T00:01:50Z",
+      "detection_count": 2,
       "text": "US undocumented border crossings from Mexico near 60-year low\nSubmission Statement: Illegal crossings at the US-Mexico border stopped by US agents hit its lowest level this year since 1968, according to US data, after tougher policies under President Donald Trump transformed migration across the Americas. The US Department of Homeland Security on Friday reported 98,708 apprehensions of people crossing the southern US border between ports of entry in the year to the end of September. That is down from more than 2mn people in 2022 and 2023 under Joe Biden. Experts and migrants say that under the previous president people saw a more welcoming environment as an opportunity to escape political, economic and security crises in countries including Haiti and Venezuela. The fall in crossings began at the end of Biden’s presidency after he put in place rules that made it harder to claim asylum, with Mexico’s government also deploying increased forces in a crackdown. But under Trump the decline quickened. He largely dismantled the US asylum system for those arriving at the southern border and accompanied the policy with an aggressive deportation campaign inside the country. Many migrants are not leaving their countries of origin, while others are choosing to stay in Mexico, which takes a tough stance on economic migrants but has a relatively broad policy for asylum seekers. Declining migration into the US has caused the issue to fall down the ranks of voters’ priorities ahead of November’s midterm elections, with polls showing the economy and the cost of living among the top concerns.",
       "text_excerpt": "US undocumented border crossings from Mexico near 60-year low\nSubmission Statement: Illegal crossings at the US-Mexico border stopped by US agents hit its lowest level this year since 1968, according to US data, after tougher policies under President Donald Trump transformed migration across the Americas. The US Department of Homeland Security on Friday reported 98,708 apprehensions of people crossing the southern US border between ports of entry in the year to the end of September. That is down from more than 2mn people in 2022 and 2023 under Joe Biden. Experts and migrants say that under the previous president people saw a more welcoming environment as an opportunity to escape political, e",
       "url": "https://www.reddit.com/r/neoliberal/comments/1x7pwb6/us_undocumented_border_crossings_from_mexico_near/",
@@ -2777,8 +2978,8 @@
       "language": null,
       "published_at": "2026-10-16T12:00:03Z",
       "first_detected_at": "2026-10-16T12:48:24Z",
-      "last_detected_at": "2026-10-16T20:11:33Z",
-      "detection_count": 3,
+      "last_detected_at": "2026-10-17T00:01:51Z",
+      "detection_count": 4,
       "text": "Весь ПЗДЦ России теперь в одном месте 🔞\n\nМы даем вам доступ к каналу, который показывает все как есть:\n— наказания мигрантов, плюющих на закон (смотреть) 🪓\n— реальная ситуация на фронте и границах (смотреть) 🗺️\n— политические заявления и предсказания (смотреть)📑\n— задержания коррупционнеров и предателей России (смотреть) 💵\n— видео прилетов (смотреть) 💥\n— происшествия, о которых молчат на ТВ (смотреть) 🎥\n\nДоступ открыт только для вас 📌\n«ПОЛУЧИТЬ ДОСТУП»",
       "text_excerpt": "Весь ПЗДЦ России теперь в одном месте 🔞\n\nМы даем вам доступ к каналу, который показывает все как есть:\n— наказания мигрантов, плюющих на закон (смотреть) 🪓\n— реальная ситуация на фронте и границах (смотреть) 🗺️\n— политические заявления и предсказания (смотреть)📑\n— задержания коррупционнеров и предателей России (смотреть) 💵\n— видео прилетов (смотреть) 💥\n— происшествия, о которых молчат на ТВ (смотреть) 🎥\n\nДоступ открыт только для вас 📌\n«ПОЛУЧИТЬ ДОСТУП»",
       "url": "https://t.me/migranty_draki/24842",
@@ -2826,6 +3027,114 @@
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
       "priority_score": 32.0,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 1034,
+      "source": "X",
+      "source_post_id": "2111245810432192662",
+      "author": "iowasnewsnow",
+      "language": "en",
+      "published_at": "2026-10-17T00:00:00Z",
+      "first_detected_at": "2026-10-17T00:01:23Z",
+      "last_detected_at": "2026-10-17T00:01:23Z",
+      "detection_count": 1,
+      "text": "An illegal migrant was arrested this week and charged with possession with intent to distribute over 700 pounds of suspected fentanyl and methamphetamine in Nevada. https://t.co/mC3wR23JgK",
+      "text_excerpt": "An illegal migrant was arrested this week and charged with possession with intent to distribute over 700 pounds of suspected fentanyl and methamphetamine in Nevada. https://t.co/mC3wR23JgK",
+      "url": "https://x.com/iowasnewsnow/status/2111245810432192662",
+      "source_url": "https://x.com/iowasnewsnow/status/2111245810432192662",
+      "primary_signal": "ENFORCEMENT_EARLY_WARNING",
+      "signal_type": "ENFORCEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ENFORCEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.5,
+      "matched_signals": [
+        "ENFORCEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "enforcement",
+          "arrested"
+        ]
+      ],
+      "matched_groups": [
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 25.2,
+      "analyst_priority": "LOW"
+    },
+    {
+      "id": 1036,
+      "source": "X",
+      "source_post_id": "2111240501643080023",
+      "author": "HamixArtemis",
+      "language": "en",
+      "published_at": "2026-10-16T23:38:55Z",
+      "first_detected_at": "2026-10-17T00:05:43Z",
+      "last_detected_at": "2026-10-17T00:05:43Z",
+      "detection_count": 1,
+      "text": "Very good and hopeful news for refugees in India. 🕊️❤️ About a month ago, with your help and some bloggers, we amplified the voices of detained Iranian asylum seekers in India to hundreds of thousands of people. Now, promising news has arrived from several Indian cities that the",
+      "text_excerpt": "Very good and hopeful news for refugees in India. 🕊️❤️ About a month ago, with your help and some bloggers, we amplified the voices of detained Iranian asylum seekers in India to hundreds of thousands of people. Now, promising news has arrived from several Indian cities that the",
+      "url": "https://x.com/HamixArtemis/status/2111240501643080023",
+      "source_url": "https://x.com/HamixArtemis/status/2111240501643080023",
+      "primary_signal": "ENFORCEMENT_EARLY_WARNING",
+      "signal_type": "ENFORCEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ENFORCEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.62,
+      "score": 5.5,
+      "matched_signals": [
+        "ENFORCEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "enforcement",
+          "detained"
+        ]
+      ],
+      "matched_groups": [
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "asylum seekers"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 21.7,
       "analyst_priority": "LOW"
     },
     {
@@ -3122,6 +3431,71 @@
       "platform_count": 1
     },
     {
+      "id": 1035,
+      "source": "MASTODON",
+      "source_post_id": "mastodon_117453308911526258",
+      "author": null,
+      "language": null,
+      "published_at": "2026-10-17T00:01:05Z",
+      "first_detected_at": "2026-10-17T00:01:51Z",
+      "last_detected_at": "2026-10-17T00:01:51Z",
+      "detection_count": 1,
+      "text": "Point Pelee: A Monarch Superhighway While famous for birding, Point Pelee National Park is also a critical stop on the monarch butterfly migration. In autumn, tens of thousands of monarchs gather at the park's southern tip, resting & waiting for favourable winds before making the perilous flight across Lake Erie. This natural spectacle turns the park's trees orange and black with butterflies. # Canada # PointPelee # Monarchs # Migration 🇨🇦 https:// en.wikipedia.org/wiki/Point_Pe lee_National_Park",
+      "text_excerpt": "Point Pelee: A Monarch Superhighway While famous for birding, Point Pelee National Park is also a critical stop on the monarch butterfly migration. In autumn, tens of thousands of monarchs gather at the park's southern tip, resting & waiting for favourable winds before making the perilous flight across Lake Erie. This natural spectacle turns the park's trees orange and black with butterflies. # Canada # PointPelee # Monarchs # Migration 🇨🇦 https:// en.wikipedia.org/wiki/Point_Pe lee_National_Park",
+      "url": "https://mas.to/@Canadian_Eh/117453308911526258",
+      "source_url": "https://mas.to/@Canadian_Eh/117453308911526258",
+      "primary_signal": "MOBILIZATION_COORDINATION",
+      "signal_type": "MOBILIZATION_COORDINATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "MOBILIZATION_COORDINATION",
+      "priority": "HIGH",
+      "confidence": 0.94,
+      "score": 16.0,
+      "matched_signals": [
+        "MOBILIZATION_COORDINATION"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization",
+          "gather at"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migration"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 62.9,
+      "analyst_priority": "HIGH",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "mastodon_117453308911526258"
+      ],
+      "related_authors": [],
+      "related_urls": [
+        "https://mas.to/@Canadian_Eh/117453308911526258"
+      ],
+      "related_sources": [
+        "MASTODON"
+      ],
+      "independent_author_count": 0,
+      "platform_count": 1
+    },
+    {
       "id": 1031,
       "source": "REDDIT",
       "source_post_id": "reddit_1x7dirn",
@@ -3194,87 +3568,61 @@
       ],
       "independent_author_count": 1,
       "platform_count": 1
-    },
+    }
+  ],
+  "crossing_access_signals": [
     {
-      "id": 1032,
-      "source": "REDDIT",
-      "source_post_id": "reddit_1x7pwb6",
-      "author": "DifficultBarber6969",
+      "id": 1035,
+      "source": "MASTODON",
+      "source_post_id": "mastodon_117453308911526258",
+      "author": null,
       "language": null,
-      "published_at": "2026-10-16T19:41:21Z",
-      "first_detected_at": "2026-10-16T20:11:05Z",
-      "last_detected_at": "2026-10-16T20:11:05Z",
+      "published_at": "2026-10-17T00:01:05Z",
+      "first_detected_at": "2026-10-17T00:01:51Z",
+      "last_detected_at": "2026-10-17T00:01:51Z",
       "detection_count": 1,
-      "text": "US undocumented border crossings from Mexico near 60-year low\nSubmission Statement: Illegal crossings at the US-Mexico border stopped by US agents hit its lowest level this year since 1968, according to US data, after tougher policies under President Donald Trump transformed migration across the Americas. The US Department of Homeland Security on Friday reported 98,708 apprehensions of people crossing the southern US border between ports of entry in the year to the end of September. That is down from more than 2mn people in 2022 and 2023 under Joe Biden. Experts and migrants say that under the previous president people saw a more welcoming environment as an opportunity to escape political, economic and security crises in countries including Haiti and Venezuela. The fall in crossings began at the end of Biden’s presidency after he put in place rules that made it harder to claim asylum, with Mexico’s government also deploying increased forces in a crackdown. But under Trump the decline quickened. He largely dismantled the US asylum system for those arriving at the southern border and accompanied the policy with an aggressive deportation campaign inside the country. Many migrants are not leaving their countries of origin, while others are choosing to stay in Mexico, which takes a tough stance on economic migrants but has a relatively broad policy for asylum seekers. Declining migration into the US has caused the issue to fall down the ranks of voters’ priorities ahead of November’s midterm elections, with polls showing the economy and the cost of living among the top concerns.",
-      "text_excerpt": "US undocumented border crossings from Mexico near 60-year low\nSubmission Statement: Illegal crossings at the US-Mexico border stopped by US agents hit its lowest level this year since 1968, according to US data, after tougher policies under President Donald Trump transformed migration across the Americas. The US Department of Homeland Security on Friday reported 98,708 apprehensions of people crossing the southern US border between ports of entry in the year to the end of September. That is down from more than 2mn people in 2022 and 2023 under Joe Biden. Experts and migrants say that under the previous president people saw a more welcoming environment as an opportunity to escape political, e",
-      "url": "https://www.reddit.com/r/neoliberal/comments/1x7pwb6/us_undocumented_border_crossings_from_mexico_near/",
-      "source_url": "https://www.reddit.com/r/neoliberal/comments/1x7pwb6/us_undocumented_border_crossings_from_mexico_near/",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 9.0,
+      "text": "Point Pelee: A Monarch Superhighway While famous for birding, Point Pelee National Park is also a critical stop on the monarch butterfly migration. In autumn, tens of thousands of monarchs gather at the park's southern tip, resting & waiting for favourable winds before making the perilous flight across Lake Erie. This natural spectacle turns the park's trees orange and black with butterflies. # Canada # PointPelee # Monarchs # Migration 🇨🇦 https:// en.wikipedia.org/wiki/Point_Pe lee_National_Park",
+      "text_excerpt": "Point Pelee: A Monarch Superhighway While famous for birding, Point Pelee National Park is also a critical stop on the monarch butterfly migration. In autumn, tens of thousands of monarchs gather at the park's southern tip, resting & waiting for favourable winds before making the perilous flight across Lake Erie. This natural spectacle turns the park's trees orange and black with butterflies. # Canada # PointPelee # Monarchs # Migration 🇨🇦 https:// en.wikipedia.org/wiki/Point_Pe lee_National_Park",
+      "url": "https://mas.to/@Canadian_Eh/117453308911526258",
+      "source_url": "https://mas.to/@Canadian_Eh/117453308911526258",
+      "primary_signal": "MOBILIZATION_COORDINATION",
+      "signal_type": "MOBILIZATION_COORDINATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "MOBILIZATION_COORDINATION",
+      "priority": "HIGH",
+      "confidence": 0.94,
+      "score": 16.0,
       "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
+        "MOBILIZATION_COORDINATION"
       ],
       "matched_phrases": [
         [
-          "movement",
-          "migrants are not leaving"
-        ],
-        [
-          "pressure",
-          "migration into the US has caused the issue to fall"
+          "mobilization",
+          "gather at"
         ]
       ],
-      "matched_groups": [
-        "MOVEMENT",
-        "PRESSURE"
-      ],
+      "matched_groups": [],
       "context_matches": [
-        "migrants",
-        "asylum seekers"
+        "migration"
       ],
-      "high_value_matches": [
-        "migrants are not leaving",
-        "migration into the US has caused the issue to fall"
-      ],
-      "signal_context_rejections": [],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
       "migration_context": true,
-      "human_migration_context": true,
+      "human_migration_context": null,
       "historical_reference": false,
       "historical_reason": null,
       "historical_reference_text": null,
       "location": "-",
       "primary_location": "-",
       "country": "-",
-      "region": "AMERICAS",
-      "primary_region": "AMERICAS",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
       "latitude": null,
       "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 32.0,
-      "analyst_priority": "LOW",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "reddit_1x7pwb6"
-      ],
-      "related_authors": [
-        "DifficultBarber6969"
-      ],
-      "related_urls": [
-        "https://www.reddit.com/r/neoliberal/comments/1x7pwb6/us_undocumented_border_crossings_from_mexico_near/"
-      ],
-      "related_sources": [
-        "REDDIT"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
-    }
-  ],
-  "crossing_access_signals": [
+      "rules_version": "2.6",
+      "priority_score": 62.9,
+      "analyst_priority": "HIGH"
+    },
     {
       "id": 1019,
       "source": "REDDIT",
@@ -3329,6 +3677,58 @@
     }
   ],
   "access_signals": [
+    {
+      "id": 1035,
+      "source": "MASTODON",
+      "source_post_id": "mastodon_117453308911526258",
+      "author": null,
+      "language": null,
+      "published_at": "2026-10-17T00:01:05Z",
+      "first_detected_at": "2026-10-17T00:01:51Z",
+      "last_detected_at": "2026-10-17T00:01:51Z",
+      "detection_count": 1,
+      "text": "Point Pelee: A Monarch Superhighway While famous for birding, Point Pelee National Park is also a critical stop on the monarch butterfly migration. In autumn, tens of thousands of monarchs gather at the park's southern tip, resting & waiting for favourable winds before making the perilous flight across Lake Erie. This natural spectacle turns the park's trees orange and black with butterflies. # Canada # PointPelee # Monarchs # Migration 🇨🇦 https:// en.wikipedia.org/wiki/Point_Pe lee_National_Park",
+      "text_excerpt": "Point Pelee: A Monarch Superhighway While famous for birding, Point Pelee National Park is also a critical stop on the monarch butterfly migration. In autumn, tens of thousands of monarchs gather at the park's southern tip, resting & waiting for favourable winds before making the perilous flight across Lake Erie. This natural spectacle turns the park's trees orange and black with butterflies. # Canada # PointPelee # Monarchs # Migration 🇨🇦 https:// en.wikipedia.org/wiki/Point_Pe lee_National_Park",
+      "url": "https://mas.to/@Canadian_Eh/117453308911526258",
+      "source_url": "https://mas.to/@Canadian_Eh/117453308911526258",
+      "primary_signal": "MOBILIZATION_COORDINATION",
+      "signal_type": "MOBILIZATION_COORDINATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "MOBILIZATION_COORDINATION",
+      "priority": "HIGH",
+      "confidence": 0.94,
+      "score": 16.0,
+      "matched_signals": [
+        "MOBILIZATION_COORDINATION"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization",
+          "gather at"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migration"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 62.9,
+      "analyst_priority": "HIGH"
+    },
     {
       "id": 1019,
       "source": "REDDIT",
@@ -3449,6 +3849,71 @@
       ],
       "independent_author_count": 1,
       "platform_count": 1
+    },
+    {
+      "id": 1035,
+      "source": "MASTODON",
+      "source_post_id": "mastodon_117453308911526258",
+      "author": null,
+      "language": null,
+      "published_at": "2026-10-17T00:01:05Z",
+      "first_detected_at": "2026-10-17T00:01:51Z",
+      "last_detected_at": "2026-10-17T00:01:51Z",
+      "detection_count": 1,
+      "text": "Point Pelee: A Monarch Superhighway While famous for birding, Point Pelee National Park is also a critical stop on the monarch butterfly migration. In autumn, tens of thousands of monarchs gather at the park's southern tip, resting & waiting for favourable winds before making the perilous flight across Lake Erie. This natural spectacle turns the park's trees orange and black with butterflies. # Canada # PointPelee # Monarchs # Migration 🇨🇦 https:// en.wikipedia.org/wiki/Point_Pe lee_National_Park",
+      "text_excerpt": "Point Pelee: A Monarch Superhighway While famous for birding, Point Pelee National Park is also a critical stop on the monarch butterfly migration. In autumn, tens of thousands of monarchs gather at the park's southern tip, resting & waiting for favourable winds before making the perilous flight across Lake Erie. This natural spectacle turns the park's trees orange and black with butterflies. # Canada # PointPelee # Monarchs # Migration 🇨🇦 https:// en.wikipedia.org/wiki/Point_Pe lee_National_Park",
+      "url": "https://mas.to/@Canadian_Eh/117453308911526258",
+      "source_url": "https://mas.to/@Canadian_Eh/117453308911526258",
+      "primary_signal": "MOBILIZATION_COORDINATION",
+      "signal_type": "MOBILIZATION_COORDINATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "MOBILIZATION_COORDINATION",
+      "priority": "HIGH",
+      "confidence": 0.94,
+      "score": 16.0,
+      "matched_signals": [
+        "MOBILIZATION_COORDINATION"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization",
+          "gather at"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migration"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 62.9,
+      "analyst_priority": "HIGH",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "mastodon_117453308911526258"
+      ],
+      "related_authors": [],
+      "related_urls": [
+        "https://mas.to/@Canadian_Eh/117453308911526258"
+      ],
+      "related_sources": [
+        "MASTODON"
+      ],
+      "independent_author_count": 0,
+      "platform_count": 1
     }
   ],
   "crossing_access_narratives": [
@@ -3517,6 +3982,71 @@
         "REDDIT"
       ],
       "independent_author_count": 1,
+      "platform_count": 1
+    },
+    {
+      "id": 1035,
+      "source": "MASTODON",
+      "source_post_id": "mastodon_117453308911526258",
+      "author": null,
+      "language": null,
+      "published_at": "2026-10-17T00:01:05Z",
+      "first_detected_at": "2026-10-17T00:01:51Z",
+      "last_detected_at": "2026-10-17T00:01:51Z",
+      "detection_count": 1,
+      "text": "Point Pelee: A Monarch Superhighway While famous for birding, Point Pelee National Park is also a critical stop on the monarch butterfly migration. In autumn, tens of thousands of monarchs gather at the park's southern tip, resting & waiting for favourable winds before making the perilous flight across Lake Erie. This natural spectacle turns the park's trees orange and black with butterflies. # Canada # PointPelee # Monarchs # Migration 🇨🇦 https:// en.wikipedia.org/wiki/Point_Pe lee_National_Park",
+      "text_excerpt": "Point Pelee: A Monarch Superhighway While famous for birding, Point Pelee National Park is also a critical stop on the monarch butterfly migration. In autumn, tens of thousands of monarchs gather at the park's southern tip, resting & waiting for favourable winds before making the perilous flight across Lake Erie. This natural spectacle turns the park's trees orange and black with butterflies. # Canada # PointPelee # Monarchs # Migration 🇨🇦 https:// en.wikipedia.org/wiki/Point_Pe lee_National_Park",
+      "url": "https://mas.to/@Canadian_Eh/117453308911526258",
+      "source_url": "https://mas.to/@Canadian_Eh/117453308911526258",
+      "primary_signal": "MOBILIZATION_COORDINATION",
+      "signal_type": "MOBILIZATION_COORDINATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "MOBILIZATION_COORDINATION",
+      "priority": "HIGH",
+      "confidence": 0.94,
+      "score": 16.0,
+      "matched_signals": [
+        "MOBILIZATION_COORDINATION"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization",
+          "gather at"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migration"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 62.9,
+      "analyst_priority": "HIGH",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "mastodon_117453308911526258"
+      ],
+      "related_authors": [],
+      "related_urls": [
+        "https://mas.to/@Canadian_Eh/117453308911526258"
+      ],
+      "related_sources": [
+        "MASTODON"
+      ],
+      "independent_author_count": 0,
       "platform_count": 1
     }
   ],
@@ -3646,14 +4176,14 @@
       "label": "W42",
       "week_label": "W42",
       "week_start": "2026-10-12T00:00:00Z",
-      "posts": 1765,
-      "post_count": 1765,
-      "operational_posts": 78,
-      "influence_signals": 72,
+      "posts": 1828,
+      "post_count": 1828,
+      "operational_posts": 80,
+      "influence_signals": 75,
       "source_counts": {
-        "X": 1257,
-        "REDDIT": 227,
-        "MASTODON": 217,
+        "X": 1299,
+        "REDDIT": 238,
+        "MASTODON": 227,
         "TELEGRAM": 64
       }
     }
@@ -3784,33 +4314,33 @@
       "label": "W42",
       "week_label": "W42",
       "week_start": "2026-10-12T00:00:00Z",
-      "posts": 1765,
-      "post_count": 1765,
-      "operational_posts": 78,
-      "influence_signals": 72,
+      "posts": 1828,
+      "post_count": 1828,
+      "operational_posts": 80,
+      "influence_signals": 75,
       "source_counts": {
-        "X": 1257,
-        "REDDIT": 227,
-        "MASTODON": 217,
+        "X": 1299,
+        "REDDIT": 238,
+        "MASTODON": 227,
         "TELEGRAM": 64
       }
     }
   ],
   "information_activity_summary": {
-    "current_week": 1765,
-    "previous_week": 1336,
-    "current_week_to_date": 1765,
-    "previous_week_same_period": 1336,
+    "current_week": 1828,
+    "previous_week": 1409,
+    "current_week_to_date": 1828,
+    "previous_week_same_period": 1409,
     "previous_week_full": 2002,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": 32.11,
-    "change_label": "+32.1%",
+    "change_percent": 29.74,
+    "change_label": "+29.7%",
     "direction": "UP",
     "comparable": true,
-    "elapsed_hours": 116.2,
+    "elapsed_hours": 120.1,
     "current_period_start": "2026-10-12T00:00:00Z",
     "previous_period_start": "2026-10-05T00:00:00Z",
-    "previous_period_end": "2026-10-09T20:13:32Z"
+    "previous_period_end": "2026-10-10T00:05:48Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -3822,41 +4352,41 @@
       72,
       168
     ],
-    "generated_at": "2026-10-16T20:13:33Z",
-    "total_items": 2028,
+    "generated_at": "2026-10-17T00:05:50Z",
+    "total_items": 2034,
     "information_count": 334,
-    "early_warning_count": 1000,
-    "operational_count": 574,
-    "correlated_count": 120,
+    "early_warning_count": 1003,
+    "operational_count": 576,
+    "correlated_count": 121,
     "layer_counts": {
+      "EARLY_WARNING": 1003,
       "INFORMATION": 334,
-      "EARLY_WARNING": 1000,
-      "OPERATIONAL": 574,
-      "CORRELATED": 120
+      "OPERATIONAL": 576,
+      "CORRELATED": 121
     },
     "source_counts": {
-      "X": 1427,
-      "REDDIT": 465,
-      "TELEGRAM": 41,
-      "MASTODON": 95
+      "MASTODON": 96,
+      "X": 1428,
+      "REDDIT": 469,
+      "TELEGRAM": 41
     },
     "type_counts": {
+      "MOBILIZATION_COORDINATION": 30,
+      "ENFORCEMENT_EARLY_WARNING": 59,
       "INFORMATION_SIGNAL": 334,
+      "SMUGGLING_ACTIVITY": 67,
+      "BORDER_CROSSING": 232,
       "MOVEMENT_EARLY_WARNING": 318,
-      "ENFORCEMENT_EARLY_WARNING": 57,
       "FACILITATION_EARLY_WARNING": 191,
       "DETENTION": 45,
-      "BORDER_CROSSING": 230,
       "PRESSURE_EARLY_WARNING": 48,
       "ROUTE_EARLY_WARNING": 126,
       "POLICY_SIGNAL": 11,
-      "MOBILIZATION_COORDINATION": 29,
       "DEPORTATION": 93,
       "CROSSING_FACILITATION": 75,
       "CASUALTY": 28,
       "LEGAL_MIGRATION_SIGNAL": 109,
       "INTERCEPTION": 31,
-      "SMUGGLING_ACTIVITY": 66,
       "RESCUE_OPERATION": 35,
       "MIGRANT_CAMP": 96,
       "RECRUITMENT_COORDINATION": 23,
@@ -3870,6 +4400,383 @@
       "BORDER_CONDITION": 2
     },
     "items": [
+      {
+        "timeline_id": "early_warning:1035",
+        "timestamp": "2026-10-17T00:01:05Z",
+        "layer": "EARLY_WARNING",
+        "type": "MOBILIZATION_COORDINATION",
+        "signal_type": "MOBILIZATION_COORDINATION",
+        "event_type": null,
+        "source": "MASTODON",
+        "source_post_id": "mastodon_117453308911526258",
+        "author": null,
+        "url": "https://mas.to/@Canadian_Eh/117453308911526258",
+        "source_url": "https://mas.to/@Canadian_Eh/117453308911526258",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.94,
+        "priority": "HIGH",
+        "priority_score": 62.9,
+        "analyst_priority": "HIGH",
+        "text": "Point Pelee: A Monarch Superhighway While famous for birding, Point Pelee National Park is also a critical stop on the monarch butterfly migration. In autumn, tens of thousands of monarchs gather at the park's southern tip, resting & waiting for favourable winds before making the perilous flight across Lake Erie. This natural spectacle turns the park's trees orange and black with butterflies. # Canada # PointPelee # Monarchs # Migration 🇨🇦 https:// en.wikipedia.org/wiki/Point_Pe lee_National_Park",
+        "text_excerpt": "Point Pelee: A Monarch Superhighway While famous for birding, Point Pelee National Park is also a critical stop on the monarch butterfly migration. In autumn, tens of thousands of monarchs gather at the park's southern tip, resting & waiting for favourable winds before making the perilous flight across Lake Erie. This natural spectacle turns the park's trees orange and black with butterflies. # Canada # PointPelee #…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "DIRECT",
+        "signal_intent": "MOBILIZATION_COORDINATION",
+        "detection_count": 1,
+        "first_detected_at": "2026-10-17T00:01:51Z",
+        "last_detected_at": "2026-10-17T00:01:51Z"
+      },
+      {
+        "timeline_id": "early_warning:1034",
+        "timestamp": "2026-10-17T00:00:00Z",
+        "layer": "EARLY_WARNING",
+        "type": "ENFORCEMENT_EARLY_WARNING",
+        "signal_type": "ENFORCEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2111245810432192662",
+        "author": "iowasnewsnow",
+        "url": "https://x.com/iowasnewsnow/status/2111245810432192662",
+        "source_url": "https://x.com/iowasnewsnow/status/2111245810432192662",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.72,
+        "priority": "MEDIUM",
+        "priority_score": 25.2,
+        "analyst_priority": "LOW",
+        "text": "An illegal migrant was arrested this week and charged with possession with intent to distribute over 700 pounds of suspected fentanyl and methamphetamine in Nevada. https://t.co/mC3wR23JgK",
+        "text_excerpt": "An illegal migrant was arrested this week and charged with possession with intent to distribute over 700 pounds of suspected fentanyl and methamphetamine in Nevada. https://t.co/mC3wR23JgK",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "ENFORCEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-10-17T00:01:23Z",
+        "last_detected_at": "2026-10-17T00:01:23Z"
+      },
+      {
+        "timeline_id": "information:18300",
+        "timestamp": "2026-10-16T23:54:18Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2111244376164749795",
+        "author": "essenviews",
+        "url": "https://x.com/essenviews/status/2111244376164749795",
+        "source_url": "https://x.com/essenviews/status/2111244376164749795",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "border",
+          "deportation",
+          "arrival"
+        ],
+        "freshness_cues": [],
+        "text": "7 Years Old, No Lawyer: Migrant Children Face Deportation Hearings Alone\nFor years, the government has helped secure lawyers for minors who arrive at the southern border. But a contract dispute has forced many children to face immigration judges on their own.",
+        "text_excerpt": "7 Years Old, No Lawyer: Migrant Children Face Deportation Hearings Alone\nFor years, the government has helped secure lawyers for minors who arrive at the southern border. But a contract dispute has forced many children to face immigration judges on their own.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-17T00:01:50Z",
+        "last_collected_at": "2026-10-17T00:01:50Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:18302",
+        "timestamp": "2026-10-16T23:47:43Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2111242718072426629",
+        "author": "Patrici04211472",
+        "url": "https://x.com/Patrici04211472/status/2111242718072426629",
+        "source_url": "https://x.com/Patrici04211472/status/2111242718072426629",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "crossing"
+        ],
+        "freshness_cues": [],
+        "text": "The Department of Homeland Security announced on Friday a historic report revealing the lowest number of migrant arrests along the southwest border in agency history. Border Patrol agents apprehended fewer than 99,000 migrants who illegally crossed the border between ports of",
+        "text_excerpt": "The Department of Homeland Security announced on Friday a historic report revealing the lowest number of migrant arrests along the southwest border in agency history. Border Patrol agents apprehended fewer than 99,000 migrants who illegally crossed the border between ports of",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-17T00:01:50Z",
+        "last_collected_at": "2026-10-17T00:01:50Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:18313",
+        "timestamp": "2026-10-16T23:47:00Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2111242537973268690",
+        "author": "Joey49276053",
+        "url": "https://x.com/Joey49276053/status/2111242537973268690",
+        "source_url": "https://x.com/Joey49276053/status/2111242537973268690",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.6,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "border",
+          "channel",
+          "smuggling"
+        ],
+        "freshness_cues": [],
+        "text": "This is a pretty interesting watch of what Arizona allows. Subscribe to Nick's channel.  I'm sure it's probably on there.\nNick Shirley investigates the Arizona border then finds who’s making millions from migrant smuggling https://t.co/ITu0WgLQhO",
+        "text_excerpt": "This is a pretty interesting watch of what Arizona allows. Subscribe to Nick's channel.  I'm sure it's probably on there.\nNick Shirley investigates the Arizona border then finds who’s making millions from migrant smuggling https://t.co/ITu0WgLQhO",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-17T00:02:39Z",
+        "last_collected_at": "2026-10-17T00:02:39Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:18336",
+        "timestamp": "2026-10-16T23:46:16Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1x7vnnc",
+        "author": "The_Angry_Jerk",
+        "url": "https://www.reddit.com/r/StarWars/comments/1x7vnnc/is_rae_sloane_the_worst_admiral_in_the_entire/",
+        "source_url": "https://www.reddit.com/r/StarWars/comments/1x7vnnc/is_rae_sloane_the_worst_admiral_in_the_entire/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "smuggling",
+          "arrival"
+        ],
+        "freshness_cues": [],
+        "text": "Is Rae Sloane the worst Admiral in the entire Star Wars galaxy?\nLet me set the bar, her appearances are usually from Sloane's POV so it's easy to get swept up in her rhythm but taking a step back reveals some truly dismal performance. Starting her tour in the big leagues over Endor in The Levers of Power , Sloane is basically on probation and has only recently gotten her Admiral plaque back after being busted down to Commodore from Vice Admiral by the Grand Inquisitor for poor performance in prior media. She has received command of her ISD The Vigilance back from Vader, but she also has an ISB loyalty officer assigned who is questioning her about her decision making process and watching her for signs of disloyalty. In the opening skirmish of the battle she for seemingly no reason orders the crew to reinforce the bridge deflector shields. This allows a short lived trio of Rebel CR-90 corvettes to overwhelm the normally battleship grade forward shields of her ISD to burn out her primary forward shield generators leaving them on auxiliary generators. As she monitors the ongoing battle, she starts drawing up attack plans for mop up or pursuit of the Rebels, plans for dealing with B-wings, and repeatedly attempts to get ahold of ground forces control until she is interrupted by the Death Star's shield going down. By immediately switching her view from the space battle tacmap to bring up footage of the ground shield station burning, she misses the crucial moment the Rebel Red and Gold squadrons form up on the Millennium Falcon to streak out of the melee in the Imperial battle line to begin their attack run. This lapse leaves her fighter squadrons waiting for permission to engage until they are out of position and too late to pursue. Then she recalls all of her TIEs to her hangar bays against her ISB handler's attempts to countermand those orders, trying to form up on the Executor 's flank to cover it with ineffectual turbolaser fire (instead of sending fighters) until Rebel starfighters take out the Executor's bridge. Seeing the dreadnought go down she attempts to take command of all remaining Imperial forces by pulling rank. She sends out orders to all of the other ISDs to also recall their TIE squadrons to the hangars, kills her ISB oversight officer, then tells all of the ships to follow her to jump to Annaj all before the Death Star actually blows up. Sloane justifies to herself that she's doing what has to be done to save the Empire by preemptively running, but up to this point the Imperial ISD battle line is described as holding fairly well in the brawl with Interdictor support pinning the Rebels in system. She makes no attempts to call for reinforcements and ends up abandoning the ISD Eviscerator under command of Admiral Garrick Versio (who is either the same rank or higher than her if she is back at Vice Admiral) and all other remaining Imperial forces at Endor. She is constantly distracting herself planning about what happens after the battle, fixating on single threats, or focusing on things on the ground that she shouldn't even be focusing on given she's a fleet Admiral not a General. Reading what is written she pretty much threw the entire battle of Endor for the Empire in the canon timeline and makes a very good case for why her superiors put her under ISB review. To be fair the loss of the Death Star and the Executor is quite a blow along with the bulk of high command, but she personally hates the Death Star as a waste of resources and if she is properly running the numbers in her head as described it shouldn’t be any reason for a supposedly steady officer to panic. Overall the loss of the Executor makes up a single digit percentage of the Empire's supercapital might (being 1 of 13 canon Executor class ships) and the handful of lost ISDs don't even add up to a whole percentage point of the Imperial Navy's star destroyer strength. The post-Endor Imperial navy is still at around 95-99% of full strength given prior large capital ship engagements up to this point have almost all been resounding Imperial victories during the Rebel's failed Mid Rim Offensive. Her showing in the subsequent of the Aftermath trilogy is also quite poor. She arrives at Akiva under the command of Gallius Rax, fails to stop the Rebel scout Wedge Antilles from sending a distress signal to nearby Rebels, then proceeds to gaslight the rest of the other Imperial ranking officers at the Imperial Future Council conference that their location is unknown and secure to the Rebels. When more Rebel scouts are destroyed jumping into the system she is adamant that they hide their ISDs instead of holding a protective blockade, allowing part of a followup Rebel special forces detachment of drop commandos to make landfall before the ground based air defenses can shoot the transport down. These special forces units then infiltrate the capital learning about the existence of the IFC, coinciding with a public uprising caused by yet another Rebel pilot slipping through the planet’s air defenses via a smuggler. Moff Pandion is outraged and has been arguing to bring back his Star Destroyer the entire time but Sloane continues to make excuses such as ‘not provoking the New Republic fleet’. Her prisoner then briefly escapes and manages to send a message to said New Republic defense fleet. Sloanes manages to buy the Rebels from the local crime lords, but this is moot as the Imperials have to make her escape from the planetary uprising. The other Imperial leaders fed up with Sloane recall their fleet to orbit, while fleeing Sloane kills the local governor attempting to seek refuge with them after she destabilized his world. Sloane and the rest of the officers flee in a yacht to her ship the Vigilance which gets pummeled into scrap by the arriving New Republic fleet. She then abandons her flagship to flee to Pandion’s ship the ISD Vanquish , killing Moff Pandion who has boarded the shuttle to dispose of Sloane and take command of the fleet. She returns to Rax, who tells her he also leaked info on the Akiva summit to the New Republic to clean house. Rax apprently really likes her, declaring Sloane competent for surviving and quickly promotes her to Grand Admiral. Sloane spends months as Grand Admiral as the public face of the Empire, de-factor commanding all Imperial forces on behalf of Rax against the New Republic and Imperial breakaways. As the top military commander she is overseeing ongoing operation Cinder purges killing billions of civilians (unsurprising given her early appearances include commanding the forces hunting down Alderanian refugee ships). She is somehow surprised to discover that under her supreme leadership along with her boss Rax who’s entire goal under operation Cinder is wiping out the Empire for failing Palpatine, loyal Imperial forces have somehow dwindled 10% of their former strength. According to the records the Imperial supercapital fleet fell from 12 Executor class (13-1 Executor lost at Endor before she took command) down to 1 available with another suspiciously MIA hidden by Rax. She gets suspicious of Rax (who has been leaking intel to the Rebels) and eventually tries to kill him to take control, but immediately falls for Rax's ‘trust me bro’ on his newest plan to attack Chandrilla with warcrimes to make her Empress. Participating in this plan by pretending to by Rax’s alias ‘the Operator’ who has been leaking critical intel to the NR leading to major Republic victories goes poorly for her. The attack begins with her in the blast zone again , causing her to once again rethink her life choices and go on a further investigative journey into Rax. Her boss Rax that she's been enabling then takes most of the remaining forces of that 10% military strength to Jakku to die and the Rebels form up to clean house. She then finally decides to kill Rax after he tries to blow up the planet Jakku everyone is fighting around, then takes over the First Order contingencies to begin again. Not only is she a seemingly incompetent commander, but she also chooses to serve team Cinder under Rax after Endor despite it actively betraying her beloved Empire. She is both directly or indirectly the cause of most of the Empire’s military losses both in her failings at Endor, and serving under the traitorous Rax all the way up to de-facto commander of the entire Imperial military as Grand Admiral. Are there any Star Wars admirals who even come close to the disastrous amount of damage done to their own faction under their leadership besides Rax himself who was doing it on purpose?",
+        "text_excerpt": "Is Rae Sloane the worst Admiral in the entire Star Wars galaxy?\nLet me set the bar, her appearances are usually from Sloane's POV so it's easy to get swept up in her rhythm but taking a step back reveals some truly dismal performance. Starting her tour in the big leagues over Endor in The Levers of Power , Sloane is basically on probation and has only recently gotten her Admiral plaque back after being busted down to…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-17T00:05:46Z",
+        "last_collected_at": "2026-10-17T00:05:46Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "early_warning:1036",
+        "timestamp": "2026-10-16T23:38:55Z",
+        "layer": "EARLY_WARNING",
+        "type": "ENFORCEMENT_EARLY_WARNING",
+        "signal_type": "ENFORCEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2111240501643080023",
+        "author": "HamixArtemis",
+        "url": "https://x.com/HamixArtemis/status/2111240501643080023",
+        "source_url": "https://x.com/HamixArtemis/status/2111240501643080023",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.62,
+        "priority": "MEDIUM",
+        "priority_score": 21.7,
+        "analyst_priority": "LOW",
+        "text": "Very good and hopeful news for refugees in India. 🕊️❤️ About a month ago, with your help and some bloggers, we amplified the voices of detained Iranian asylum seekers in India to hundreds of thousands of people. Now, promising news has arrived from several Indian cities that the",
+        "text_excerpt": "Very good and hopeful news for refugees in India. 🕊️❤️ About a month ago, with your help and some bloggers, we amplified the voices of detained Iranian asylum seekers in India to hundreds of thousands of people. Now, promising news has arrived from several Indian cities that the",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "ENFORCEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-10-17T00:05:43Z",
+        "last_detected_at": "2026-10-17T00:05:43Z"
+      },
+      {
+        "timeline_id": "operational:621",
+        "timestamp": "2026-10-16T23:33:36Z",
+        "layer": "OPERATIONAL",
+        "type": "SMUGGLING_ACTIVITY",
+        "signal_type": "SMUGGLING_ACTIVITY",
+        "event_type": "SMUGGLING_ACTIVITY",
+        "source": "X",
+        "source_post_id": "2111239166822686797",
+        "author": "drogon_dracarys",
+        "url": "https://x.com/drogon_dracarys/status/2111239166822686797",
+        "source_url": "https://x.com/drogon_dracarys/status/2111239166822686797",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.5,
+        "priority": "MEDIUM",
+        "priority_score": 50.0,
+        "text": "11/3: A Dutch court opened a trial of an Eritrean man accused of involvement in a brutal migrant smuggling network.\n\nProsecutors say he ran an operation bringing East African migrants to Europe under horrific conditions https://t.co/VR2vV4i2CS",
+        "text_excerpt": "11/3: A Dutch court opened a trial of an Eritrean man accused of involvement in a brutal migrant smuggling network.\n\nProsecutors say he ran an operation bringing East African migrants to Europe under horrific conditions https://t.co/VR2vV4i2CS",
+        "event_group_id": 498,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null
+      },
+      {
+        "timeline_id": "information:18328",
+        "timestamp": "2026-10-16T23:15:26Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2111234593546248502",
+        "author": "grok",
+        "url": "https://x.com/grok/status/2111234593546248502",
+        "source_url": "https://x.com/grok/status/2111234593546248502",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "arrival"
+        ],
+        "freshness_cues": [],
+        "text": "@tiellabella Asylum rests on a well-founded fear of persecution under the Refugee Convention and US law (INA 208), not gratitude or post-arrival politics. Views on borders or socialism are protected speech and do not revoke status. Termination requires fraud, serious crime, or security",
+        "text_excerpt": "@tiellabella Asylum rests on a well-founded fear of persecution under the Refugee Convention and US law (INA 208), not gratitude or post-arrival politics. Views on borders or socialism are protected speech and do not revoke status. Termination requires fraud, serious crime, or security",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-17T00:05:43Z",
+        "last_collected_at": "2026-10-17T00:05:43Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "operational:620",
+        "timestamp": "2026-10-16T22:42:59Z",
+        "layer": "OPERATIONAL",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "REDDIT",
+        "source_post_id": "reddit_1x7uatp",
+        "author": "amogusdevilman",
+        "url": "https://www.reddit.com/r/antiizquierdapolitica/comments/1x7uatp/el_70_de_los_migrantes_marroquíes_que_entraron_en/",
+        "source_url": "https://www.reddit.com/r/antiizquierdapolitica/comments/1x7uatp/el_70_de_los_migrantes_marroquíes_que_entraron_en/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": 35.8894,
+        "longitude": -5.3213,
+        "confidence": 0.45,
+        "priority": "LOW",
+        "priority_score": 45.0,
+        "text": "🇪🇸 El 70 % de los migrantes marroquíes que entraron en Ceuta alegan su orientación sexual en sus solicitudes de asilo",
+        "text_excerpt": "🇪🇸 El 70 % de los migrantes marroquíes que entraron en Ceuta alegan su orientación sexual en sus solicitudes de asilo",
+        "event_group_id": 474,
+        "correlation_score": 0.7,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null
+      },
+      {
+        "timeline_id": "correlated:618",
+        "timestamp": "2026-10-16T22:42:59Z",
+        "layer": "CORRELATED",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "REDDIT",
+        "source_post_id": "reddit_1x7uatp",
+        "author": "amogusdevilman",
+        "url": "https://www.reddit.com/r/antiizquierdapolitica/comments/1x7uatp/el_70_de_los_migrantes_marroquíes_que_entraron_en/",
+        "source_url": "https://www.reddit.com/r/antiizquierdapolitica/comments/1x7uatp/el_70_de_los_migrantes_marroquíes_que_entraron_en/",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "Ceuta",
+        "primary_location": "Ceuta",
+        "country": "Spain",
+        "latitude": 35.8894,
+        "longitude": -5.3213,
+        "confidence": 0.75,
+        "priority": "HIGH",
+        "priority_score": 75.0,
+        "text": "🇪🇸 El 70 % de los migrantes marroquíes que entraron en Ceuta alegan su orientación sexual en sus solicitudes de asilo",
+        "text_excerpt": "🇪🇸 El 70 % de los migrantes marroquíes que entraron en Ceuta alegan su orientación sexual en sus solicitudes de asilo",
+        "event_group_id": 474,
+        "correlation_score": 0.7,
+        "related_source_count": 3,
+        "source_types": [
+          "REDDIT",
+          "X"
+        ]
+      },
       {
         "timeline_id": "information:18255",
         "timestamp": "2026-10-16T20:05:34Z",
@@ -3975,9 +4882,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "MOVEMENT_REVIEW",
-        "detection_count": 1,
+        "detection_count": 2,
         "first_detected_at": "2026-10-16T20:11:05Z",
-        "last_detected_at": "2026-10-16T20:11:05Z"
+        "last_detected_at": "2026-10-17T00:01:50Z"
       },
       {
         "timeline_id": "information:18218",
@@ -4881,9 +5788,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "ROUTE_REVIEW",
-        "detection_count": 3,
+        "detection_count": 4,
         "first_detected_at": "2026-10-16T12:48:24Z",
-        "last_detected_at": "2026-10-16T20:11:33Z"
+        "last_detected_at": "2026-10-17T00:01:51Z"
       },
       {
         "timeline_id": "early_warning:1031",
@@ -5513,8 +6420,8 @@
         "country": "-",
         "confidence": 0.1,
         "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
+        "priority_score": 40,
+        "information_score": 4,
         "matched_information_cues": [
           "rescue",
           "departure"
@@ -5531,8 +6438,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-16T06:37:40Z",
-        "last_collected_at": "2026-10-16T06:37:40Z",
-        "collection_count": 1
+        "last_collected_at": "2026-10-17T00:05:44Z",
+        "collection_count": 2
       },
       {
         "timeline_id": "information:18056",
@@ -5610,6 +6517,46 @@
         "influence_detected": false,
         "first_collected_at": "2026-10-16T06:35:21Z",
         "last_collected_at": "2026-10-16T06:35:21Z",
+        "collection_count": 1
+      },
+      {
+        "timeline_id": "information:18335",
+        "timestamp": "2026-10-16T04:41:08Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1x770ef",
+        "author": "John3262005",
+        "url": "https://www.reddit.com/r/LegalNews/comments/1x770ef/trump_officials_scrutinized_omar_in_2019_they/",
+        "source_url": "https://www.reddit.com/r/LegalNews/comments/1x770ef/trump_officials_scrutinized_omar_in_2019_they/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 40,
+        "information_score": 4,
+        "matched_information_cues": [
+          "detention",
+          "deportation",
+          "arrival"
+        ],
+        "freshness_cues": [
+          "now"
+        ],
+        "text": "Trump officials scrutinized Omar in 2019. They didn’t find citizenship issues.\nSeven years ago, a political appointee in the first Trump administration approached U.S. immigration authorities with a request that alarmed career staffers: Scrub the immigration records of Rep. Ilhan Omar, then a newly elected Democratic lawmaker from Minnesota, for evidence of fraud. That 2019 demand, detailed by three former immigration officials, struck staffers at the time as a highly unusual effort to wield federal power to dig up compromising material on a sitting member of Congress who was a prominent critic of President Donald Trump. The request sparked a swift review examining Omar’s history, her family’s past as Somali refugees resettled in the United States and rumors that had circulated for years in conservative media over her marriage. Homeland Security Investigations — the investigative arm of U.S. Immigration and Customs Enforcement — ultimately determined there was insufficient evidence of wrongdoing, one of the former officials said. The idea of pursuing a full investigation was eventually abandoned. Now, though, with Trump back in the White House and his administration using federal power to take aim at perceived enemies, Omar has once again found herself in federal crosshairs. She is now facing an inquiry over some of the same allegations investigators previously deemed not worth pursuing. The current effort — which burst into public view Monday as federal agents descended upon Omar’s D.C. home — is focused on whether she or her father lied on paperwork they submitted to obtain legal status and eventual citizenship after arriving in the U.S. in the 1990s. Investigators are reexamining questions about Omar’s birthdate and her late father’s past military history in Somalia, which had passed scrutiny during the 2019 review. Depending on their findings, the administration could seek to charge Omar with a crime or move to challenge her status in the country. But such a step would be a sharp reversal of the earlier review, which found no issue with her naturalization, one of the former officials familiar with the earlier effort said. “I think her citizenship is solid and there wasn’t any fraud there,” the ex-official said. Omar has dismissed the revived investigation as yet another example of the Justice Department, under Trump, attempting “to target political enemies and weaponize federal law enforcement.” “Trump has spread lie after lie about the Congresswoman in a desperate attempt to justify his extraordinary abuse of power,” her spokesperson said in a statement Thursday. “This is politically motivated and an escalation of Trump’s personal vendetta against her lasting over a decade.” This account of the Trump administration’s current and past efforts to investigate and possibly build a case against Omar is based on interviews with a dozen people, many of whom spoke on the condition of anonymity to discuss nonpublic details of those probes. Several current and former officials raised questions about the scope, tactics and motivations driving the current Omar investigation, which they say appears to be disregarding key norms on how immigration reviews are typically handled and bypassing guardrails intended to ensure federal inquiries, including those looking into sitting lawmakers, are not perceived to be driven by politics. A spokesperson for the Justice Department said the agency does not comment on ongoing investigations. The Department of Homeland Security referred questions to the Justice Department. Questions about the probe came into play ahead of this week’s highly public search of Omar’s home. Before carrying out the search, prosecutors spent days working to allay concerns from a federal judge that their plans could run afoul of constitutional protections shielding members of Congress from unwarranted executive branch intrusion, according to three people familiar with the matter. U.S. Magistrate Judge Matthew J. Sharbaugh, who ultimately signed off on the warrant, first imposed strict conditions on how the search should be carried out, the people said. His limits on the search appeared intended to ensure that the warrant fell in line with the D.C. court’s interpretation of the Constitution’s speech and debate clause, which generally shields lawmakers’ legislative duties and actions from criminal probes. As part of the search, agents removed boxes of documents and seized Omar’s cellphone and passport, one person familiar with the matter said. Trump has assailed Omar for years, and this week condemned her again on social media and public remarks. “I think she’s a terrible person,” he told reporters. “But that’s really up to the DOJ. I have nothing to do with it.” Trump’s administration has also made clear its scrutiny on Omar is not limited to immigration issues. Jeanine Pirro, the U.S. attorney in D.C., announced Tuesday her office had launched its own investigation into Omar’s personal finances, tied to disclosure statements she filed in Congress last year and separate from the immigration probe. Pirro, a former Fox News host, once drew a highly unusual public rebuke from the network in 2019 for on-air comments suggesting that Omar, as a Muslim, could not be loyal to the U.S. Constitution. Omar’s office has previously dismissed questions raised by House Republicans over her financial disclosure statements as a right-wing attempt to “manufacture controversy.” However, federal prosecutors’ interest in the finances of Omar extend back to the Biden administration, according to two people familiar with the effort. Those individuals said it was not clear why the investigation during the prior administration appeared to have stalled. But the revived immigration investigation into Omar appears to be the furthest along and the administration’s higher priority. Alessandra P. Serano, an associate deputy attorney general who is playing a key role in the probe, went before the judge seeking the search warrant for Omar’s home, two people familiar with the matter said. Attorney General Todd Blanche also recently dispatched Serano, a trusted aide, to Florida to check in on the high-profile and struggling Florida-based investigation into former Obama and Biden-era officials, according to multiple people. Authorities have issued more than a dozen subpoenas related to Omar and the investigation into her, including some to her siblings, seeking testimony before a grand jury in Minneapolis in the coming weeks, two people said. The Washington Post has reported that investigators are focused on whether Omar or her father, Nur Omar Mohamed, intentionally misstated her birth date on immigration paperwork so she could be eligible to derive citizenship through him as a minor when he was naturalized in 2000. Investigators are also scrutinizing whether Omar’s father may have purposefully lied or omitted information on his past military service in Somalia that could have made him ineligible to obtain legal status in the country. But three former officials involved in the 2019 review of Omar’s immigration file said both of those issues were considered during that inquiry. An official with U.S. Citizenship and Immigration Services, who was normally tasked with scrutinizing the backgrounds of people including serious criminals, terrorists and potential national security threats, was asked in 2019 to review Omar’s background. The then-freshman lawmaker had emerged as a frequent focus of conservative attacks. At the time, the agency was primarily focused on possible fraud related to Omar’s marriage to her former husband, Ahmed Nur Said Elmi. Right-wing commentators had repeatedly pressed unsubstantiated claims that Omar and Elmi were siblings who carried out a sham marriage so that Elmi could obtain U.S. immigration benefits. Elmi had previously filed an immigration petition related to his marriage-based green card that would move it from conditional status to permanent. USCIS requested additional evidence due to concerns over the validity of his marriage, but Elmi withdrew the application following that request, one of the former officials said. Elmi could not immediately be reached for comment Thursday. The 2019 review of Omar also looked at other issues, some of which are being examined anew. For instance, back then, USCIS quickly determined it could not accurately answer questions over Omar’s age because refugees frequently come from countries with little or no birth records, making it hard to determine with any certainty. “That’s not strange and that’s not a red flag to me,” one of the former officials said. “It’s just very, very common that there aren’t great birth records.” The agency also examined Omar’s father’s immigration file but did not find any issues, according to the former official. The USCIS officer tasked with vetting Omar produced a one-page memo of those findings and shared it with a senior USCIS official and a fraud detention official before the effort was ultimately abandoned, the person said. Due to the sensitivity, the memo was printed out, and distributed in person, and not shared over email. Whether the current investigation will uncover more substantial evidence to back the administration’s fraud claims remains to be seen. Even if the Trump administration finds wrongdoing, any attempt to strip her citizenship would likely be lengthy and result in a legal battle. The administration, however, is also exploring the possibility that it could seek to revoke her citizenship certificate if the current investigation does not result in criminal charges or a conviction, a senior Trump administration official said. Revocation is a rarely employed USCIS administrative process that can be used to cancel the document due to fraud or an error. The process is not restricted to a certain period of time like criminal denaturalizations, which are subject to a 10-year statute of limitations. The revocation would not remove her citizenship but would make it challenging to obtain some government documents. This action could open the door to immigration-related charges and possibly removal proceedings, though such a novel application of the administrative authority would almost certainly face challenges from Omar in court. In a statement, Omar’s spokesperson assailed the Trump administration’s efforts to target the congresswoman. “He has lied about her family, about her immigration history, and about her love of this country,” the statement read. “But the truth is that Trump’s push to strip her of her citizenship and deport her has no basis in the law and has no precedent. This isn’t a legitimate law enforcement action.”",
+        "text_excerpt": "Trump officials scrutinized Omar in 2019. They didn’t find citizenship issues.\nSeven years ago, a political appointee in the first Trump administration approached U.S. immigration authorities with a request that alarmed career staffers: Scrub the immigration records of Rep. Ilhan Omar, then a newly elected Democratic lawmaker from Minnesota, for evidence of fraud. That 2019 demand, detailed by three former immigratio…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-17T00:05:45Z",
+        "last_collected_at": "2026-10-17T00:05:45Z",
         "collection_count": 1
       },
       {
@@ -10681,8 +11628,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-14T12:03:33Z",
-        "last_collected_at": "2026-10-16T12:49:59Z",
-        "collection_count": 6
+        "last_collected_at": "2026-10-17T00:02:41Z",
+        "collection_count": 7
       },
       {
         "timeline_id": "early_warning:1000",
@@ -10712,9 +11659,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "FACILITATION_REVIEW",
-        "detection_count": 6,
+        "detection_count": 7,
         "first_detected_at": "2026-10-14T12:03:33Z",
-        "last_detected_at": "2026-10-16T12:50:00Z"
+        "last_detected_at": "2026-10-17T00:02:41Z"
       },
       {
         "timeline_id": "early_warning:997",
@@ -11004,8 +11951,9 @@
         "text_excerpt": "King Felipe VI and Queen Letizia visited the Spanish city of Ceuta in North Africa on Tuesday after about 80,000 migrants crossed Ceuta’s border in July. Most of those who crossed returned, but thousands remain in the city. https://t.co/YrzLBg3QHp",
         "event_group_id": 474,
         "correlation_score": 1.0,
-        "related_source_count": 2,
+        "related_source_count": 3,
         "source_types": [
+          "REDDIT",
           "X"
         ]
       },
@@ -12654,9 +13602,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "MOVEMENT_REVIEW",
-        "detection_count": 12,
+        "detection_count": 13,
         "first_detected_at": "2026-10-14T02:25:44Z",
-        "last_detected_at": "2026-10-16T12:50:00Z"
+        "last_detected_at": "2026-10-17T00:02:41Z"
       },
       {
         "timeline_id": "information:16965",
@@ -22720,158 +23668,6 @@
         "collection_count": 1
       },
       {
-        "timeline_id": "information:15624",
-        "timestamp": "2026-10-08T20:44:53Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2108297604513845666",
-        "author": "CaplanMaret",
-        "url": "https://x.com/CaplanMaret/status/2108297604513845666",
-        "source_url": "https://x.com/CaplanMaret/status/2108297604513845666",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "trafficking"
-        ],
-        "freshness_cues": [],
-        "text": "@GetSomeBrainsJT @peterp2690 @zack_cozart @anduriltech Open border was a Biden thing? You for real? Obummer started the catch &amp; release program that made Mexican drug cartels venture into multi-billion dollar human &amp; child sex trafficking. Btw, where are the 400k missing kids during BIden regime? Mass migration is a leftist policy🤡",
-        "text_excerpt": "@GetSomeBrainsJT @peterp2690 @zack_cozart @anduriltech Open border was a Biden thing? You for real? Obummer started the catch &amp; release program that made Mexican drug cartels venture into multi-billion dollar human &amp; child sex trafficking. Btw, where are the 400k missing kids during BIden regime? Mass migration is a leftist policy🤡",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-08T20:59:06Z",
-        "last_collected_at": "2026-10-08T20:59:06Z",
-        "collection_count": 1
-      },
-      {
-        "timeline_id": "information:15586",
-        "timestamp": "2026-10-08T20:29:52Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2108293824942322066",
-        "author": "grok",
-        "url": "https://x.com/grok/status/2108293824942322066",
-        "source_url": "https://x.com/grok/status/2108293824942322066",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "route",
-          "sea",
-          "arrival"
-        ],
-        "freshness_cues": [],
-        "text": "@peryscopic @moonlitsunfyre @AntoVoidance @ninifems The cited figures match primary sources closely, not falsehoods. IOM/DTM and UNHCR put women and girls at 5-15% of sea/land arrivals overall (adult women ~5% on the Central Mediterranean to Italy in 2025). DIIS and related studies put sexual violence on that route at 50-90%.",
-        "text_excerpt": "@peryscopic @moonlitsunfyre @AntoVoidance @ninifems The cited figures match primary sources closely, not falsehoods. IOM/DTM and UNHCR put women and girls at 5-15% of sea/land arrivals overall (adult women ~5% on the Central Mediterranean to Italy in 2025). DIIS and related studies put sexual violence on that route at 50-90%.",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-08T20:30:26Z",
-        "last_collected_at": "2026-10-08T20:30:26Z",
-        "collection_count": 1
-      },
-      {
-        "timeline_id": "information:15566",
-        "timestamp": "2026-10-08T20:27:25Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2108293206236426545",
-        "author": "grok",
-        "url": "https://x.com/grok/status/2108293206236426545",
-        "source_url": "https://x.com/grok/status/2108293206236426545",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 40,
-        "information_score": 4,
-        "matched_information_cues": [
-          "route",
-          "dinghy",
-          "sea",
-          "arrival"
-        ],
-        "freshness_cues": [],
-        "text": "@peryscopic @moonlitsunfyre @AntoVoidance @ninifems Women and girls make up roughly 5-15% of sea and land arrivals to Europe (IOM/DTM 2025 data), lower on Central Mediterranean dinghy routes to Italy (adult women ~5% in 2025, ~6% in 2024 per UNHCR; total females including girls under ~12%).\n\nEstimates indicate 50-90% of women",
-        "text_excerpt": "@peryscopic @moonlitsunfyre @AntoVoidance @ninifems Women and girls make up roughly 5-15% of sea and land arrivals to Europe (IOM/DTM 2025 data), lower on Central Mediterranean dinghy routes to Italy (adult women ~5% in 2025, ~6% in 2024 per UNHCR; total females including girls under ~12%).\n\nEstimates indicate 50-90% of women",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-08T20:28:13Z",
-        "last_collected_at": "2026-10-08T20:28:13Z",
-        "collection_count": 1
-      },
-      {
-        "timeline_id": "information:15567",
-        "timestamp": "2026-10-08T20:27:25Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2108293206223786194",
-        "author": "AtheistGav",
-        "url": "https://x.com/AtheistGav/status/2108293206223786194",
-        "source_url": "https://x.com/AtheistGav/status/2108293206223786194",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "crossing",
-          "boat",
-          "sea"
-        ],
-        "freshness_cues": [],
-        "text": "@irmelville @TheRealJamieKay @BladesFraser @adeguy At the end of the day crossing the sea in a small boat is dangerous, and any decent human being wouldnt want people to put themselves in danger. We also dont want people who are not genuine asylum seekers, so what do we do? The principle of one in one out was sound...cont",
-        "text_excerpt": "@irmelville @TheRealJamieKay @BladesFraser @adeguy At the end of the day crossing the sea in a small boat is dangerous, and any decent human being wouldnt want people to put themselves in danger. We also dont want people who are not genuine asylum seekers, so what do we do? The principle of one in one out was sound...cont",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-08T20:28:13Z",
-        "last_collected_at": "2026-10-08T20:28:13Z",
-        "collection_count": 1
-      },
-      {
         "timeline_id": "early_warning:917",
         "timestamp": "2026-10-08T20:27:17Z",
         "layer": "EARLY_WARNING",
@@ -22996,80 +23792,6 @@
         "event_time_text": null,
         "event_time_normalized": null,
         "event_time_confidence": null
-      },
-      {
-        "timeline_id": "information:15557",
-        "timestamp": "2026-10-08T20:10:42Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2108288999001346122",
-        "author": "MizeraW",
-        "url": "https://x.com/MizeraW/status/2108288999001346122",
-        "source_url": "https://x.com/MizeraW/status/2108288999001346122",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "smuggling"
-        ],
-        "freshness_cues": [],
-        "text": "Germany, France and Sweden have notified continued internal border checks into 2027.\n\nThe filings cite irregular migration, smuggling and security. https://t.co/2MdrfMqeTI",
-        "text_excerpt": "Germany, France and Sweden have notified continued internal border checks into 2027.\n\nThe filings cite irregular migration, smuggling and security. https://t.co/2MdrfMqeTI",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-08T20:15:47Z",
-        "last_collected_at": "2026-10-08T20:15:47Z",
-        "collection_count": 1
-      },
-      {
-        "timeline_id": "information:15546",
-        "timestamp": "2026-10-08T20:09:28Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2108288688774140117",
-        "author": "jwross55",
-        "url": "https://x.com/jwross55/status/2108288688774140117",
-        "source_url": "https://x.com/jwross55/status/2108288688774140117",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "deportation"
-        ],
-        "freshness_cues": [],
-        "text": "@Backwoodsherpa @Griffbl @cremieuxrecueil The image on the left shows 15k migrants at Del Rio who showed up in late 2021 thinking (like YOU) that our border was literally open.\nIt took 3 weeks for the Biden DHS to fingerprint/photo/BOLO-check &amp; deport them.\n\nYou need to work on learning how lies work. https://t.co/5P4sLCIcWy",
-        "text_excerpt": "@Backwoodsherpa @Griffbl @cremieuxrecueil The image on the left shows 15k migrants at Del Rio who showed up in late 2021 thinking (like YOU) that our border was literally open.\nIt took 3 weeks for the Biden DHS to fingerprint/photo/BOLO-check &amp; deport them.\n\nYou need to work on learning how lies work. https://t.co/5P4sLCIcWy",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-08T20:14:30Z",
-        "last_collected_at": "2026-10-08T20:14:30Z",
-        "collection_count": 1
       },
       {
         "timeline_id": "early_warning:913",
