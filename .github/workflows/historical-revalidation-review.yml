@@ -1,0 +1,30 @@
+name: Historical Migration Revalidation - Dry Run
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Restore migration database
+        uses: actions/cache/restore@v4
+        with:
+          path: database/migration_osint_monitor.db
+          key: migration-osint-db-historical-review-${{ github.run_id }}
+          restore-keys: |
+            migration-osint-db-
+      - name: Ensure database exists
+        run: test -s database/migration_osint_monitor.db || (echo 'Database cache not found; no audit performed' && exit 1)
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run read-only historical audit
+        run: python -m analysis.historical_revalidation --out historical-review
+      - name: Upload review reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: historical-revalidation-review
+          path: historical-review/
+          retention-days: 30
