@@ -18,6 +18,12 @@ import re
 from typing import Dict, List
 
 
+
+try:
+    from .migration_relevance_guard import relevance_rejection
+except ImportError:
+    from analysis.migration_relevance_guard import relevance_rejection
+
 class OperationalEventFilter:
 
     OPERATIONAL_PATTERNS = {
@@ -248,6 +254,17 @@ class OperationalEventFilter:
                 "operational_categories": [],
                 "matched_operational_phrases": [],
                 "non_operational_categories": ["EMPTY_TEXT"],
+                "matched_non_operational_phrases": [],
+                "confidence": 0.0,
+            }
+
+        relevance_reason = relevance_rejection(text)
+        if relevance_reason:
+            return {
+                "is_operational": False,
+                "operational_categories": [],
+                "matched_operational_phrases": [],
+                "non_operational_categories": [relevance_reason],
                 "matched_non_operational_phrases": [],
                 "confidence": 0.0,
             }
