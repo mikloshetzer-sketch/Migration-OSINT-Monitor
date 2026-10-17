@@ -73,6 +73,12 @@ DEFAULT_RULES_FILE = (
 # DETECTOR
 # ==========================================================
 
+
+try:
+    from .migration_relevance_guard import relevance_rejection
+except ImportError:
+    from analysis.migration_relevance_guard import relevance_rejection
+
 class InfluenceSignalDetector:
     """
     JSON-driven migration influence and early-warning detector.
@@ -206,6 +212,12 @@ class InfluenceSignalDetector:
         if not text:
 
             return self._empty_result()
+
+        relevance_reason = relevance_rejection(text)
+        if relevance_reason:
+            result = self._empty_result()
+            result["relevance_rejection_reason"] = relevance_reason
+            return result
 
         normalized_text = (
             self._normalize_text(
