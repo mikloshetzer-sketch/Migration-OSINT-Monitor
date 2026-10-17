@@ -13,13 +13,13 @@ from pathlib import Path
 import requests
 
 ROOT=Path(__file__).resolve().parents[1]
-VERSION="2.0"
+VERSION="3.0"
 MODEL=os.getenv("OPENAI_EDITORIAL_MODEL","gpt-4.1-mini")
 LISTS={
  "live_events":"post","high_confidence_events":"group","event_groups":"group",
  "influence_signals":"signal","early_warning_signals":"signal",
  "crossing_access_signals":"signal","top_crossing_access_posts":"signal",
- "high_priority_intelligence":"group","access_signals":"signal",
+ "high_priority_intelligence":"signal","access_signals":"signal",
 }
 # These lists are editorial context, not certified operational signals.
 UNREVIEWED_LISTS=("influence_narratives","crossing_access_narratives")
@@ -239,6 +239,100 @@ def run(source,target,cache_path,audit_path,offline=False,review_fn=decide_model
     write_json(audit_path,audit)
     write_json(target,data)
     return audit
+
+
+# Daily-only AI gate: the cutoff is the first ingestion/detection time, never post publication.
+CUTOFF = datetime(2026, 10, 17, tzinfo=timezone.utc)
+HISTORICAL = "HISTORICAL_NOT_AI_REVIEWED"
+PENDING = "PENDING_AI_REVIEW"
+REVIEWED = "AI_REVIEWED"
+
+def first_recorded(entry):
+    for key in ("collected_at", "first_collected_at", "first_detected_at", "created_at"):
+        value = entry.get(key)
+        if isinstance(value,str) and value:
+            try:
+                dt=datetime.fromisoformat(value.replace("Z","+00:00"))
+                if dt.tzinfo is not None:return dt.astimezone(timezone.utc)
+            except ValueError:pass
+    return None
+
+def collect(data):
+    # Historical items are NOT candidates, even if displayed in a current run.
+    all_views=defaultdict(list)
+    for field,kind in LISTS.items():
+        for entry in data.get(field,[]) if isinstance(data.get(field),list) else []:
+            if not isinstance(entry,dict):continue
+            ident=identity(kind,entry)
+            if ident:all_views[ident].append((field,kind,entry))
+    timeline=data.get("signal_timeline",{})
+    if isinstance(timeline,dict):
+        for entry in timeline.get("items",[]):
+            if not isinstance(entry,dict):continue
+            ident=timeline_identity(entry)
+            if ident:all_views[ident].append(("timeline",ident.split(":")[0],entry))
+    # A dated source view determines cohort. Undated views do not turn old items new.
+    new={}
+    for ident,views in all_views.items():
+        dates=[first_recorded(e) for _,_,e in views]
+        dated=[dt for dt in dates if dt is not None]
+        if dated and min(dated)>=CUTOFF:
+            new[ident]=views
+    return new
+
+def apply(data,decisions):
+    removed={}
+    def state(ident):
+        if ident not in decisions:return HISTORICAL
+        if decisions[ident].get("decision") in ("PUBLISH","EXCLUDE"):
+            return REVIEWED
+        return PENDING if decisions[ident].get("reason")=="Pending AI evaluation" else REVIEWED
+    for field,kind in LISTS.items():
+        original=data.get(field)
+        if not isinstance(original,list):continue
+        kept=[]
+        for item in original:
+            if not isinstance(item,dict):continue
+            ident=identity(kind,item)
+            decision=decisions.get(ident,{}).get("decision")
+            # Preserve history verbatim except additive editorial metadata.
+            if ident in decisions and decision!="PUBLISH":continue
+            item["ai_review_status"]=state(ident)
+            if ident in decisions:item["ai_editorial_decision"]=decision
+            kept.append(item)
+        data[field]=kept
+        removed[field]=len(original)-len(kept)
+    timeline=data.get("signal_timeline")
+    if isinstance(timeline,dict) and isinstance(timeline.get("items"),list):
+        original=timeline["items"];kept=[]
+        for item in original:
+            if not isinstance(item,dict):continue
+            ident=timeline_identity(item)
+            if ident in decisions and decisions[ident].get("decision")!="PUBLISH":continue
+            item["ai_review_status"]=state(ident)
+            if ident in decisions:item["ai_editorial_decision"]=decisions[ident]["decision"]
+            kept.append(item)
+        timeline["items"]=kept;removed["timeline"]=len(original)-len(kept)
+        layers=Counter(str(i.get("layer") or "") for i in kept)
+        timeline["total_items"]=len(kept);timeline["layer_counts"]=dict(layers)
+        timeline["source_counts"]=dict(Counter(str(i.get("source")) for i in kept if i.get("source")))
+        timeline["type_counts"]=dict(Counter(str(i.get("type")) for i in kept if i.get("type")))
+        for key,layer in (("information_count","INFORMATION"),("early_warning_count","EARLY_WARNING"),("operational_count","OPERATIONAL"),("correlated_count","CORRELATED")):
+            timeline[key]=layers[layer]
+    data["ai_editorial_gate"]={
+        "status":"APPLIED_FAIL_CLOSED", "version":VERSION,"model":MODEL,
+        "review_start_date":"2026-10-17", "review_cohort":"FIRST_RECORDED_ON_OR_AFTER_CUTOFF",
+        "decisions":dict(Counter(d.get("decision","REVIEW") for d in decisions.values())),
+        "removed_display_items":removed,
+        "historical_review_status":HISTORICAL,
+        "narrative_layers_not_reviewed":list(UNREVIEWED_LISTS),
+        "risk_metrics_recalculated":False,
+        "warning":"Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."}
+    for key in ("operational_assessment","analytical_assessment"):
+        if isinstance(data.get(key),dict):
+            data[key]["historical_review_status"]="PROVISIONAL_UNRECALCULATED"
+            data[key]["historical_review_warning"]=data["ai_editorial_gate"]["warning"]
+    return data
 
 def main():
     parser=argparse.ArgumentParser()
