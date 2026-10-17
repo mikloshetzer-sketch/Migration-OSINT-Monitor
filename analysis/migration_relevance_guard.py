@@ -24,10 +24,37 @@ _CURRENT_MIGRATION = re.compile(
     re.I | re.S,
 )
 
+
+_NATURE = re.compile(r"\b(?:monarch butterflies?|butterflies?|butterfly migration|bird migration|migratory birds?|wildlife migration|animal migration|whales?|salmon migration|seasonal bird migration)\b", re.I)
+_NATURE_CONTEXT = re.compile(r"\b(?:national park|birding|lake erie|wings?|species|habitat|favourable winds|autumn|trees|wildlife|insects?|butterflies?|monarchs)\b", re.I)
+_FICTION = re.compile(r"\b(?:speculative fiction novel|fiction novel|fantasy novel|query crit|qcrit|first 300 words|chapter excerpt|fictional world|fictional kingdom|headcanon|fanfiction|fan fiction|worldbuilding|novel with series potential|kingdom rush|game lore|tower lore)\b", re.I)
+_REAL_WORLD = re.compile(r"\b(?:police reported|border police|coast guard|frontex|iom reported|unhcr reported|according to authorities|rescue vessel|border crossing at|arrested by ice)\b", re.I)
+_EDUCATION_CONTEXT = re.compile(r"\b(?:student protests?|school protests?|school education|teacher shortages?|university admissions?|underfunded schools?|education funding|school buildings|high schoolers?|protesteerders|leerlingen|docenten|school protesten)\b", re.I)
+_MIGRATION_FOCUSED_PROTEST = re.compile(
+    r"\b(?:anti[- ]immigration|anti[- ]migrant|pro[- ]migrant|migrant[- ]rights|refugee[- ]rights|asylum[- ]seekers?[- ]rights)\s+(?:protests?|rall(?:y|ies)|march(?:es)?|demonstrations?)\b"
+    r"|\b(?:protests?|rall(?:y|ies)|march(?:es)?|demonstrations?)\s+(?:against|for|over)\s+(?:immigration|migration|migrants?|refugees?|asylum)\b", re.I
+)
+
 def relevance_rejection(text):
     """Return narrow reason code or None; preserve uncertain cases for review."""
     if not isinstance(text, str) or not text.strip():
         return None
+    # Topic exclusions are applied before keyword-based operational matching.
+    # A long unrelated story may mention refugees and deportation without
+    # reporting a real-world migration event.
+    if _NATURE.search(text) and _NATURE_CONTEXT.search(text) and not re.search(
+        r"\b(?:human migrants?|refugees?|asylum seekers?|immigration enforcement|border police)\b", text, re.I
+    ):
+        return "NON_HUMAN_MIGRATION"
+    if _FICTION.search(text) and not _REAL_WORLD.search(text):
+        return "FICTIONAL_OR_CREATIVE_CONTENT"
+    if _EDUCATION_CONTEXT.search(text) and not _MIGRATION_FOCUSED_PROTEST.search(text):
+        # Explicit education framing + migration as a political aside is not
+        # migration mobilisation. Preserve posts reporting an actual crossing.
+        if len(_EDUCATION_CONTEXT.findall(text)) >= 2 and not re.search(
+            r"\b(?:migrants?|refugees?|asylum seekers?)\b.{0,85}\b(?:crossed|rescued|intercepted|deported|detained|arrived at the border)\b", text, re.I | re.S
+        ):
+            return "EDUCATION_PROTEST_NOT_MIGRATION_MOBILIZATION"
     if not _MIGRATION.search(text):
         return None
     if _ACTUAL_MIGRATION.search(text):
