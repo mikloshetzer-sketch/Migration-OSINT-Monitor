@@ -1,4 +1,4 @@
-"""Migration OSINT daily report v4: deterministic evidence, metric provenance and guarded publication."""
+"""Migration OSINT daily report v5: deterministic evidence, metric provenance and guarded publication."""
 import json
 import os
 import re
@@ -125,6 +125,32 @@ def validate(report, source_ids, have_sources):
         issues.append("Hungarian report has no source citations")
     return issues
 
+def ensure_source_section(report, claims):
+    """Guarantee traceable excerpts, not model-invented references.
+
+    This is intentionally an explicit source excerpt appendix, not an assertion
+    that the reported event actually happened.
+    """
+    if not claims:
+        return report
+    # Cite concrete input excerpts even when the language model omits them.
+    used = set(re.findall(r"\[S(\d+)\]", " ".join(str(report.get(k, "")) for k in FIELDS)))
+    if used:
+        return report
+    entries = []
+    for claim in claims[:3]:
+        source_id = claim["source_ids"][0]
+        excerpt = " ".join(claim["statement"].split())[:220]
+        entries.append(f"{source_id} forráskivonat: „{excerpt}” [{source_id}].")
+    report["online_narratives"] = (
+        "A monitorban rögzített, függetlenül nem ellenőrzött online bejegyzések "
+        "közül az alábbi eredeti szövegrészletek azonosíthatók. "
+        "Ezek a posztok tartalmát dokumentálják, nem a leírt események megtörténtét: "
+        + " ".join(entries)
+    )
+    return report
+
+
 def main():
     dashboard = read_json(ROOT / "dashboard-data.json")
     intel_file = ROOT / "source-intelligence.json"
@@ -143,6 +169,8 @@ def main():
     # No 24h assertion when the feed lacks verified event times.
     coverage = ("A források posztolási dátuma nem bizonyítja az esemény dátumát. "
                 "A monitor mintavétele nem reprezentatív a teljes migrációs helyzetre.")
+    if not claims:
+        coverage += " Nincs kinyerhető hivatkozható poszt; konkrét online eseményállítás nem tehető."
     if age_hours is None or age_hours > 30:
         coverage += " A dashboard frissítési ideje hiányzik vagy 30 óránál régebbi."
 
@@ -168,7 +196,8 @@ A lead kb. öt rövid mondat, english_summary angol. Kizárólag a JSON sémát 
                "dashboard_updated_at": dashboard.get("updated_at"),
                "monitor_metrics": metrics, "source_claims": claims,
                "coverage_note": coverage}
-    report = call_model(instructions, payload, report_schema, "migration_report_v4")
+    report = call_model(instructions, payload, report_schema, "migration_report_v5")
+    report = ensure_source_section(report, claims)
 
     audit_schema = schema({"pass": {"type": "boolean"},
                            "issues": {"type": "array", "items": {"type": "string"}}})
@@ -184,7 +213,7 @@ Kizárólag JSON: pass boolean és issues string lista."""
         issues = validate(current, ids, bool(evidence))
         check = call_model(audit_instruction, {"report": current,
             "monitor_metrics": metrics, "source_claims": claims,
-            "coverage_note": coverage}, audit_schema, "migration_audit_v4", 1800)
+            "coverage_note": coverage}, audit_schema, "migration_audit_v5", 1800)
         if not isinstance(check.get("pass"), bool) or not isinstance(check.get("issues"), list):
             raise RuntimeError("Invalid audit response")
         issues += [str(item) for item in check["issues"]]
@@ -198,7 +227,8 @@ Kizárólag JSON: pass boolean és issues string lista."""
             instructions + "\nJAVÍTÁS: az audit által kifogásolt konkrét részeket "
             "töröld vagy írd át, új tényt ne találj ki.",
             {**payload, "previous_draft": report, "audit_issues": issues},
-            report_schema, "migration_revision_v4")
+            report_schema, "migration_revision_v5")
+        report = ensure_source_section(report, claims)
         passed, issues = audit(report)
 
     used = set(re.findall(r"\[S(\d+)\]", " ".join(str(report.get(k, "")) for k in FIELDS)))
@@ -224,4 +254,3 @@ Kizárólag JSON: pass boolean és issues string lista."""
 
 if __name__ == "__main__":
     main()
-
