@@ -837,3 +837,4 @@ class EventAssertionFilter:
             "non_assertive_cues": non_assertive_cues,
             "direct_event_cues": direct_event_cues,
         }
+
