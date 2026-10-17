@@ -1,53 +1,35 @@
 name: Migration OSINT Monitor
-
 on:
   workflow_dispatch:
   schedule:
     - cron: "0 */2 * * *"
-
 permissions:
   contents: write
-
+concurrency:
+  group: migration-osint-monitor
+  cancel-in-progress: false
 jobs:
   run-monitor:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: Restore Migration OSINT database
-        id: restore-database
+      - name: Restore database
         uses: actions/cache/restore@v4
         with:
           path: database/migration_osint_monitor.db
           key: migration-osint-db-${{ github.run_id }}
-          restore-keys: |
-            migration-osint-db-
-
-      - name: Show database restore status
-        run: |
-          if [ -f database/migration_osint_monitor.db ]; then
-            echo "Existing migration_osint_monitor.db restored successfully."
-            ls -lh database/migration_osint_monitor.db
-          else
-            echo "No previous migration_osint_monitor.db found."
-            echo "A new database will be created during this run."
-          fi
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+          restore-keys: migration-osint-db-
+      - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
-
+          python-version: '3.12'
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install "telethon>=1.44,<2"
-
-      - name: Run Migration OSINT Monitor
+          pip install 'telethon>=1.44,<2'
+      - name: Run monitor
         env:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
           REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
@@ -58,101 +40,61 @@ jobs:
           TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
           TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
           TELEGRAM_SESSION: ${{ secrets.TELEGRAM_SESSION }}
-        run: |
-          python main.py
-
-      - name: Export dashboard data
-        run: |
-          python -m dashboard.export_dashboard_data
-
-      - name: Apply reviewed historical suppression to published dashboard
-        run: |
-          python -m analysis.historical_dashboard_cleanup
-
-      - name: Verify dashboard JSON
+        run: python main.py
+      - name: Export dashboard
+        run: python -m dashboard.export_dashboard_data
+      - name: Apply historical suppression
+        run: python -m analysis.historical_dashboard_cleanup
+      - name: AI editorial gate BEFORE publication
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_EDITORIAL_MODEL: gpt-4.1-mini
+          AI_GATE_MAX_CALLS: '80'
+        run: python -m analysis.ai_editorial_gate
+      - name: Verify gated dashboard
         run: |
           python - <<'PY'
           import json
-          from pathlib import Path
-          p=Path('dashboard-data.json')
-          assert p.is_file(), 'dashboard-data.json was not generated'
-          data=json.loads(p.read_text(encoding='utf-8'))
-          review=data.get('historical_revalidation')
-          assert review and review.get('mode')=='REVIEWED_SUPPRESSION_OVERLAY'
-          print('Updated:',data.get('updated_at'))
-          print('KPIs (legacy, provisional):',data.get('kpis'))
-          print('Live events:',len(data.get('live_events',[])))
-          print('Event groups:',len(data.get('event_groups',[])))
-          print('Sources:',len(data.get('source_activity',[])))
-          print('Telegram source activity:',[s for s in data.get('source_activity',[]) if str(s.get('source','')).upper()=='TELEGRAM'])
-          print('Historical suppression:',review)
+          d=json.load(open('dashboard-data.json',encoding='utf-8'))
+          assert d['ai_editorial_gate']['status']=='APPLIED_FAIL_CLOSED'
+          assert d['historical_revalidation']['mode']=='REVIEWED_SUPPRESSION_OVERLAY'
+          print('Gate:',d['ai_editorial_gate'])
           PY
-
       - name: Export Source Intelligence
         id: source-intelligence
         continue-on-error: true
-        run: |
-          python -m analysis.export_source_intelligence
-
-      - name: Verify Source Intelligence JSON
+        run: python -m analysis.export_source_intelligence
+      - name: Verify Source Intelligence
         if: steps.source-intelligence.outcome == 'success'
         continue-on-error: true
         run: |
           python - <<'PY'
           import json
-          from pathlib import Path
-          path=Path('source-intelligence.json')
-          if not path.is_file():
-              raise SystemExit('Source Intelligence output not found.')
-          data=json.loads(path.read_text(encoding='utf-8'))
-          assert isinstance(data.get('posts'),list)
-          assert isinstance(data.get('daily_history'),list)
-          assert isinstance(data.get('category_summary'),dict)
-          print('Source Intelligence JSON verified.')
-          print('Total posts:',data.get('total_posts'))
-          print('Categories:',data.get('category_summary'))
-          print('History days:',len(data['daily_history']))
+          d=json.load(open('source-intelligence.json',encoding='utf-8'))
+          assert isinstance(d.get('posts'),list)
+          assert isinstance(d.get('daily_history'),list)
           PY
-
-      - name: Publish dashboard data
+      - name: Publish gated dashboard and review cache
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add dashboard-data.json
-          if git diff --cached --quiet; then
-            echo "No dashboard data changes to commit."
-          else
-            git commit -m "Update Migration OSINT dashboard data"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add dashboard-data.json analysis/ai_editorial_cache.json ai-editorial-audit.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish AI-gated migration dashboard'
+            git pull --rebase origin main
             git push origin HEAD:main
           fi
-
-      - name: Publish Source Intelligence data
+      - name: Publish Source Intelligence
         if: steps.source-intelligence.outcome == 'success'
         continue-on-error: true
         run: |
-          if [ ! -f source-intelligence.json ]; then
-            echo "Source Intelligence file not available."
-            exit 0
-          fi
           git add source-intelligence.json
-          if git diff --cached --quiet; then
-            echo "No Source Intelligence changes to commit."
-          else
-            git commit -m "Update Source Intelligence data"
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update Source Intelligence data'
+            git pull --rebase origin main
             git push origin HEAD:main
           fi
-
-      - name: Verify database after run
-        if: always()
-        run: |
-          if [ -f database/migration_osint_monitor.db ]; then
-            echo "migration_osint_monitor.db exists after monitor run."
-            ls -lh database/migration_osint_monitor.db
-          else
-            echo "WARNING: migration_osint_monitor.db was not found."
-          fi
-
-      - name: Save Migration OSINT database
+      - name: Save database
         if: always()
         uses: actions/cache/save@v4
         with:
