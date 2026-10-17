@@ -14,6 +14,12 @@ import re
 from typing import Dict, List, Tuple
 
 
+
+try:
+    from .migration_relevance_guard import relevance_rejection
+except ImportError:
+    from analysis.migration_relevance_guard import relevance_rejection
+
 class SignalClassifier:
     """
     Classifies migration-related text into one or more operational signals.
@@ -341,6 +347,17 @@ class SignalClassifier:
                 "matched_signals": [],
                 "matched_phrases": [],
                 "confidence": self.BASE_CONFIDENCE["GENERAL_DISCUSSION"],
+            }
+
+        relevance_reason = relevance_rejection(text)
+        if relevance_reason:
+            return {
+                "signal_type": "GENERAL_DISCUSSION",
+                "primary_signal": "GENERAL_DISCUSSION",
+                "matched_signals": [],
+                "matched_phrases": [],
+                "confidence": self.BASE_CONFIDENCE["GENERAL_DISCUSSION"],
+                "relevance_rejection_reason": relevance_reason,
             }
 
         matched_signals: List[str] = []
