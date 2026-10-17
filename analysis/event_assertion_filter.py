@@ -17,6 +17,12 @@ from datetime import datetime, timezone
 from typing import Any, Dict, List
 
 
+
+try:
+    from .migration_relevance_guard import relevance_rejection
+except ImportError:
+    from analysis.migration_relevance_guard import relevance_rejection
+
 class EventAssertionFilter:
 
     CONTEXT_SENSITIVE_TYPES = {
@@ -268,6 +274,10 @@ class EventAssertionFilter:
             or event.get("text")
             or ""
         )
+
+        relevance_reason = relevance_rejection(text)
+        if relevance_reason:
+            return self._reject(relevance_reason, [], [], [], [])
 
         event_type = str(
             event.get("event_type")
