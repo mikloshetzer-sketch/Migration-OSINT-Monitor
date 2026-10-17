@@ -49,6 +49,12 @@ from datetime import datetime, timezone
 from typing import Any, Dict, List, Sequence, Tuple
 
 
+
+try:
+    from .migration_relevance_guard import relevance_rejection
+except ImportError:
+    from analysis.migration_relevance_guard import relevance_rejection
+
 class EarlyWarningReviewDetector:
     RULES_VERSION = "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN"
 
@@ -518,6 +524,10 @@ class EarlyWarningReviewDetector:
         self,
         text: str,
     ) -> Dict[str, Any]:
+        relevance_reason = relevance_rejection(text)
+        if relevance_reason:
+            return self._empty(rejection_reason=relevance_reason)
+
         value = self._normalize_text(
             text
         )
