@@ -1,27 +1,15 @@
 {
-  "generated_at": "2026-10-18T06:46:41.502120+00:00",
+  "generated_at": "2026-10-18T12:17:06.111992+00:00",
   "version": "3.0",
-  "candidates": 49,
-  "new_ai_calls": 3,
+  "candidates": 50,
+  "new_ai_calls": 6,
   "conflicting_identity_ids": [
     "group:513"
   ],
   "decisions": {
-    "post:621": {
-      "decision": "REVIEW",
-      "reason": "The post reports a trial involving alleged migrant smuggling but does not indicate a contemporary operational migration event or early warning; the event date is also given as 11/3, the month and day are unclear without a year context, and the report is more about a judicial process than active migration activity."
-    },
     "post:622": {
       "decision": "EXCLUDE",
       "reason": "The post provides a historical claim about Palestinian origins without reporting a concrete, contemporary migration event such as a border crossing or migration-specific early warning. The assigned event type BORDER_CROSSING is not supported by the content."
-    },
-    "post:623": {
-      "decision": "EXCLUDE",
-      "reason": "The post contains a derogatory opinion on Bradford and references migration history without reporting a specific, concrete, or contemporary migration event or border crossing."
-    },
-    "post:624": {
-      "decision": "EXCLUDE",
-      "reason": "The post provides a historical overview of the arrival and spread of Islam in Africa, with a focus on early Muslim refugees and trade routes, rather than reporting a concrete, contemporary migration-related event such as a specific border crossing."
     },
     "post:625": {
       "decision": "EXCLUDE",
@@ -79,13 +67,17 @@
       "decision": "EXCLUDE",
       "reason": "The post is a political opinion with unsubstantiated claims and does not report a concrete, contemporary migration-related event or policy measure. The event_type 'BORDER_MEASURE' is not supported by a specific event description."
     },
-    "signal:1037": {
-      "decision": "EXCLUDE",
-      "reason": "The event described is a general political and social protest related to education and economic issues in France, not a specific migration-related event or early warning signal. Although there are mentions of migrants in political rhetoric, the core subject is student protests and political exploitation unrelated to migration movements or migratory"
+    "post:641": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete and recent migration-related event involving boats capsizing and resulting in casualties among migrants on routes between Turkey and Greece, corroborating a migration-specific casualty event type."
     },
-    "signal:1039": {
-      "decision": "REVIEW",
-      "reason": "The message claims specific migration movement numbers but disputes the narrative as fake news. It is a contemporary migration-specific early warning type regarding Ceuta, but there is no external verification to confirm the figures or event. More corroboration is needed before publishing as a verified signal."
+    "post:642": {
+      "decision": "EXCLUDE",
+      "reason": "The post refers to a historical migration event from 1806, which is not contemporary or operationally relevant. It does not report a current or recent migration event, early warning, or policy action, nor a migration-specific signal."
+    },
+    "post:643": {
+      "decision": "EXCLUDE",
+      "reason": "The post discusses definitions of refugees and comparisons of numbers but does not report a specific migration-related event such as a deportation action or an operational migration event. The content is more of a commentary or general discussion, lacking a concrete, contemporary migration event."
     },
     "signal:1040": {
       "decision": "EXCLUDE",
@@ -151,14 +143,6 @@
       "decision": "REVIEW",
       "reason": "The post claims a struggle involving illegal immigrants and police in France, suggesting an unvetted migrant influx, but lacks concrete, specific evidence of an ongoing migration event or policy action. It also contains general political commentary and analogy to South Africa without clear operational details. Verification of the incident's specifi"
     },
-    "group:507": {
-      "decision": "EXCLUDE",
-      "reason": "The post is a politicized historical commentary without reporting a contemporary, concrete migration event such as border crossing or other operational migration activity."
-    },
-    "group:508": {
-      "decision": "EXCLUDE",
-      "reason": "The post discusses cross-border shopping behavior and economic reasons but does not report a specific, concrete migration or border crossing event involving population movement. It is a general commentary without an event focus."
-    },
     "group:509": {
       "decision": "REVIEW",
       "reason": "The post references refugee arrivals in the EU but lacks specific details about timing, location, or concrete event data. The event_type 'BORDER_CROSSING' is plausible but unverified given lack of source and timeframe, and the date reference is not clear. Needs more corroboration."
@@ -187,6 +171,18 @@
       "decision": "EXCLUDE",
       "reason": "The post does not report a concrete or specific migration-related event or measure; instead, it contains vague assertions and political commentary without verifiable details."
     },
+    "group:516": {
+      "decision": "REVIEW",
+      "reason": "The post reports multiple maritime incidents involving migrant casualties, which is migration-related and seems contemporary. However, key details like exact date, source credibility, and full event confirmation are missing or incomplete. Verification is needed before publishing."
+    },
+    "group:517": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a historical reference to migration from 1806 and does not report a contemporary migration event."
+    },
+    "group:518": {
+      "decision": "EXCLUDE",
+      "reason": "The post discusses definitions of refugees and comparisons of refugee expulsions but does not report a specific, concrete, or contemporary migration-related event such as an actual deportation or expulsion operation. The event type 'DEPORTATION' is not supported by the content."
+    },
     "signal:1034": {
       "decision": "REVIEW",
       "reason": "The record describes an arrest involving an illegal migrant and drug charges but does not provide clear evidence that it is a migration-specific early warning or policy enforcement related directly to migration routes or dynamics. The event type is enforcement-related but lacks migration context details. The publication date is in the future, which"
@@ -195,9 +191,17 @@
       "decision": "REVIEW",
       "reason": "The post hints at a positive development for detained Iranian asylum seekers in India following a prior amplification effort but does not describe a concrete, specific enforcement action or early warning event related to migration. The information is incomplete and lacks details about the event or measure that would constitute a specific migration "
     },
+    "signal:1037": {
+      "decision": "EXCLUDE",
+      "reason": "The event described is a general political and social protest related to education and economic issues in France, not a specific migration-related event or early warning signal. Although there are mentions of migrants in political rhetoric, the core subject is student protests and political exploitation unrelated to migration movements or migratory"
+    },
     "signal:1038": {
       "decision": "EXCLUDE",
       "reason": "The text does not report a specific, concrete, or contemporary migration-related event or credible early warning about migration routes or policy. Instead, it promotes access to a channel with various content, some unrelated to migration early warnings. The event type 'ROUTE_EARLY_WARNING' is not supported by the content."
+    },
+    "signal:1039": {
+      "decision": "REVIEW",
+      "reason": "The message claims specific migration movement numbers but disputes the narrative as fake news. It is a contemporary migration-specific early warning type regarding Ceuta, but there is no external verification to confirm the figures or event. More corroboration is needed before publishing as a verified signal."
     },
     "signal:1042": {
       "decision": "EXCLUDE",
