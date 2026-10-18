@@ -1,34 +1,47 @@
+
 name: Migration OSINT Monitor
+
 on:
   workflow_dispatch:
   schedule:
     - cron: "0 */2 * * *"
+
 permissions:
   contents: write
+
 concurrency:
   group: migration-osint-monitor
   cancel-in-progress: false
+
 jobs:
   run-monitor:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - name: Restore database
         uses: actions/cache/restore@v4
         with:
           path: database/migration_osint_monitor.db
           key: migration-osint-db-${{ github.run_id }}
-          restore-keys: migration-osint-db-
-      - uses: actions/setup-python@v5
+          restore-keys: |
+            migration-osint-db-
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: "3.12"
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install 'telethon>=1.44,<2'
+
       - name: Run monitor
         env:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
@@ -41,67 +54,97 @@ jobs:
           TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
           TELEGRAM_SESSION: ${{ secrets.TELEGRAM_SESSION }}
         run: python main.py
+
       - name: Export dashboard
         run: python -m dashboard.export_dashboard_data
+
       - name: Apply historical suppression
         run: python -m analysis.historical_dashboard_cleanup
+
       - name: Archive pre-AI-gate records to PRIVATE repository
+        id: private-archive
+        continue-on-error: true
         env:
           EDITORIAL_PRIVATE_REPO: mikloshetzer-sketch/Migration-OSINT-Editorial-Private
           EDITORIAL_GITHUB_TOKEN: ${{ secrets.EDITORIAL_GITHUB_TOKEN }}
         run: python -m analysis.publish_private_editorial_archive
+
+      - name: Report private archive failure
+        if: steps.private-archive.outcome == 'failure'
+        run: |
+          echo "::warning::Private editorial archive failed. Public monitor will continue."
+          echo "## Private editorial archive" >> "$GITHUB_STEP_SUMMARY"
+          echo "WARNING: Private archive failed. Check the archive step logs." >> "$GITHUB_STEP_SUMMARY"
+
       - name: AI editorial gate (new records since 2026-10-17)
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_EDITORIAL_MODEL: gpt-4.1-mini
-          AI_GATE_MAX_CALLS: '80'
+          AI_GATE_MAX_CALLS: "80"
         run: python -m analysis.ai_editorial_gate
+
       - name: Verify gated dashboard
         run: |
           python - <<'PY'
           import json
-          d=json.load(open('dashboard-data.json',encoding='utf-8'))
-          g=d['ai_editorial_gate']
-          assert g['status']=='APPLIED_FAIL_CLOSED'
-          assert g['version']=='3.0'
-          assert g['review_start_date']=='2026-10-17'
-          assert d['historical_revalidation']['mode']=='REVIEWED_SUPPRESSION_OVERLAY'
-          print('Gate:',g)
+
+          with open('dashboard-data.json', encoding='utf-8') as f:
+              d = json.load(f)
+
+          g = d['ai_editorial_gate']
+
+          assert g['status'] == 'APPLIED_FAIL_CLOSED'
+          assert g['version'] == '3.0'
+          assert g['review_start_date'] == '2026-10-17'
+          assert d['historical_revalidation']['mode'] == 'REVIEWED_SUPPRESSION_OVERLAY'
+
+          print('Gate:', g)
           PY
+
       - name: Export Source Intelligence
         id: source-intelligence
         continue-on-error: true
         run: python -m analysis.export_source_intelligence
+
       - name: Verify Source Intelligence
         if: steps.source-intelligence.outcome == 'success'
         continue-on-error: true
         run: |
           python - <<'PY'
           import json
-          d=json.load(open('source-intelligence.json',encoding='utf-8'))
-          assert isinstance(d.get('posts'),list)
-          assert isinstance(d.get('daily_history'),list)
+
+          with open('source-intelligence.json', encoding='utf-8') as f:
+              d = json.load(f)
+
+          assert isinstance(d.get('posts'), list)
+          assert isinstance(d.get('daily_history'), list)
           PY
+
       - name: Publish gated dashboard and review cache
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
           git add dashboard-data.json analysis/ai_editorial_cache.json ai-editorial-audit.json
+
           if ! git diff --cached --quiet; then
             git commit -m 'Publish daily AI-gated migration dashboard'
             git pull --rebase origin main
             git push origin HEAD:main
           fi
+
       - name: Publish Source Intelligence
         if: steps.source-intelligence.outcome == 'success'
         continue-on-error: true
         run: |
           git add source-intelligence.json
+
           if ! git diff --cached --quiet; then
             git commit -m 'Update Source Intelligence data'
             git pull --rebase origin main
             git push origin HEAD:main
           fi
+
       - name: Save database
         if: always()
         uses: actions/cache/save@v4
