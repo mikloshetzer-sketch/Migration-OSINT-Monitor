@@ -1,16 +1,12 @@
 {
-  "generated_at": "2026-10-19T09:28:16.196294+00:00",
+  "generated_at": "2026-10-19T10:06:46.852835+00:00",
   "version": "3.0",
-  "candidates": 78,
-  "new_ai_calls": 6,
+  "candidates": 80,
+  "new_ai_calls": 3,
   "conflicting_identity_ids": [
     "group:529"
   ],
   "decisions": {
-    "post:640": {
-      "decision": "EXCLUDE",
-      "reason": "The post is a political opinion with unsubstantiated claims and does not report a concrete, contemporary migration-related event or policy measure. The event_type 'BORDER_MEASURE' is not supported by a specific event description."
-    },
     "post:641": {
       "decision": "PUBLISH",
       "reason": "The post reports a concrete and recent migration-related event involving boats capsizing and resulting in casualties among migrants on routes between Turkey and Greece, corroborating a migration-specific casualty event type."
@@ -87,17 +83,13 @@
       "decision": "EXCLUDE",
       "reason": "The post expresses an opinion about local council housing policies and alleged voting manipulation but does not report a concrete, contemporary migration-related event such as a border crossing or housing of migrants."
     },
-    "signal:1064": {
-      "decision": "EXCLUDE",
-      "reason": "This record contains general political commentary and opinions on immigration policies and social effects in France without reporting a specific migration-related event or concrete early warning involving operational migration activity or policy action. The event type PRESSURE_EARLY_WARNING is not supported by the content provided. There is no cont"
+    "post:660": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete and contemporary migration-related event: high numbers of migrants crossing into Ceuta, which is a known migration hotspot. The type 'BORDER_CROSSING' is appropriate given the mention of over 70,000 migrants crossing the border. The involvement of Spain's King and Queen visiting the area to show solidarity confirms the e"
     },
     "signal:1066": {
       "decision": "REVIEW",
       "reason": "The report indicates a policy action by Poland deploying the army to borders to prevent illegal migration, which aligns with a migration-specific early warning. However, the event date and source reliability cannot be independently verified; location details are vague. Review for confirmation and context is advised before publishing."
-    },
-    "signal:1067": {
-      "decision": "REVIEW",
-      "reason": "The claim alleges a large-scale, intentional facilitation of migrant crossings via the CBP One app by the Biden administration, with specific numbers given. This is a serious allegation involving migration policy and facilitation, but it lacks supporting details or credible corroboration beyond the platform's own assertion. The event type 'CROSSING"
     },
     "signal:1070": {
       "decision": "EXCLUDE",
@@ -166,6 +158,14 @@
     "signal:1086": {
       "decision": "EXCLUDE",
       "reason": "The text is a general online narrative expressing ethnic tensions and opinions about migration, without reporting a concrete, contemporary migration-specific event or policy action. There is no clear migration movement, early warning, or operational event described."
+    },
+    "signal:1087": {
+      "decision": "REVIEW",
+      "reason": "Inconsistent approval: The report describes a recent, concrete event involving migrant fatalities due to a capsized speedboat near Samos, specifically related to migration. Although labeled as an 'ENFORCEMENT_EARLY_WARNING', the content details a current operational migration event — a maritime accident affecting migrants. This is a verified migrat"
+    },
+    "signal:1088": {
+      "decision": "PUBLISH",
+      "reason": "The record presents a current migration-related early warning about Iranian nationals' irregular arrivals to Europe and alleged IRGC involvement in smuggling routes, which is a specific migration-facilitation-related signal supported by IOM data and intelligence assessments."
     },
     "group:523": {
       "decision": "EXCLUDE",
@@ -307,9 +307,17 @@
       "decision": "PUBLISH",
       "reason": "The report details a new, specific arrival of approximately 30 migrants adding to the total arrivals in specific locations within Greece, constituting a concrete contemporary migration movement event and suitable for movement early warning classification."
     },
+    "signal:1064": {
+      "decision": "EXCLUDE",
+      "reason": "This record contains general political commentary and opinions on immigration policies and social effects in France without reporting a specific migration-related event or concrete early warning involving operational migration activity or policy action. The event type PRESSURE_EARLY_WARNING is not supported by the content provided. There is no cont"
+    },
     "signal:1065": {
       "decision": "EXCLUDE",
       "reason": "The content describes a game simulation expressing a political opinion but does not report a concrete, contemporary migration-specific policy change or event. It is a narrative rather than an operational migration event or policy action."
+    },
+    "signal:1067": {
+      "decision": "REVIEW",
+      "reason": "The claim alleges a large-scale, intentional facilitation of migrant crossings via the CBP One app by the Biden administration, with specific numbers given. This is a serious allegation involving migration policy and facilitation, but it lacks supporting details or credible corroboration beyond the platform's own assertion. The event type 'CROSSING"
     },
     "signal:1068": {
       "decision": "EXCLUDE",

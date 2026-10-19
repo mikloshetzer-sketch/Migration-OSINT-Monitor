@@ -1,25 +1,25 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-10-19T09:28:02Z",
-  "generated_at": "2026-10-19T09:28:02Z",
+  "updated_at": "2026-10-19T10:05:57Z",
+  "generated_at": "2026-10-19T10:05:57Z",
   "current_run": {
     "available": true,
-    "id": 310,
-    "run_uuid": "03323a7c-c0fc-4363-b339-6bab1af56e76",
-    "started_at": "2026-10-19T09:22:55Z",
-    "completed_at": "2026-10-19T09:28:00Z",
+    "id": 311,
+    "run_uuid": "8b7eeb6f-0e93-4834-9dbc-05d8bfed3498",
+    "started_at": "2026-10-19T10:02:54Z",
+    "completed_at": "2026-10-19T10:05:55Z",
     "status": "SUCCESS",
-    "posts_returned": 148,
-    "unique_posts_collected": 107,
+    "posts_returned": 143,
+    "unique_posts_collected": 97,
     "x_posts_returned": 50,
-    "reddit_posts_returned": 34,
+    "reddit_posts_returned": 29,
     "mastodon_posts_returned": 50,
-    "unique_x_posts": 46,
-    "unique_reddit_posts": 30,
+    "unique_x_posts": 42,
+    "unique_reddit_posts": 24,
     "unique_mastodon_posts": 19,
     "noise_filtered": 0,
-    "non_operational_filtered": 100,
-    "historical_references_filtered": 3,
+    "non_operational_filtered": 92,
+    "historical_references_filtered": 2,
     "influence_signals": 2,
     "influence_signals_detected": 2,
     "crossing_facilitation_signals": 0,
@@ -30,21 +30,21 @@
     "mobilization_report_signals": 0,
     "decision_influence_signals": 0,
     "online_influence_report_signals": 0,
-    "operational_events": 4,
-    "operational_events_analyzed": 4,
-    "historical_events_available": 88,
+    "operational_events": 3,
+    "operational_events_analyzed": 3,
+    "historical_events_available": 89,
     "new_correlations": 2,
     "correlated_events": 2,
-    "new_correlation_groups": 2,
+    "new_correlation_groups": 1,
     "database_correlations": 2,
     "current_run_correlations": 0,
     "new_events": 1,
     "new_events_saved": 1,
-    "events_already_existing": 3,
-    "new_event_groups": 1,
-    "updated_event_groups": 0,
+    "events_already_existing": 2,
+    "new_event_groups": 0,
+    "updated_event_groups": 1,
     "bootstrapped_event_groups": 0,
-    "existing_event_groups_reused": 3,
+    "existing_event_groups_reused": 2,
     "event_group_sources_linked": 1,
     "x_collector_errors": 0,
     "reddit_collector_errors": 0,
@@ -52,23 +52,47 @@
     "error_message": null
   },
   "kpis": {
-    "operational_events": 19,
+    "operational_events": 20,
     "new_events": 1,
-    "correlated_events": 5,
+    "correlated_events": 6,
     "active_event_groups": 510,
     "sources": 4,
     "regions": 4,
-    "collected_posts_24h": 606,
+    "collected_posts_24h": 647,
     "influence_signals": 30,
     "access_signals": 3,
     "high_priority": 0,
-    "current_run_operational_events": 4,
-    "current_run_unique_posts": 107,
-    "access_signals_raw": 6,
+    "current_run_operational_events": 3,
+    "current_run_unique_posts": 97,
+    "access_signals_raw": 4,
     "influence_signals_raw": 20,
     "influence_narratives": 3
   },
   "live_events": [
+    {
+      "id": 660,
+      "event_id": 660,
+      "source": "X",
+      "source_post_id": "2112120185360417161",
+      "author": "LeonorDeAsturia",
+      "published_at": "2026-10-19T09:54:28Z",
+      "collected_at": "2026-10-19T10:04:08Z",
+      "event_type": "BORDER_CROSSING",
+      "signal_type": "BORDER_CROSSING",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "confidence": 0.75,
+      "event_confidence": 0.75,
+      "relevance_score": 40.0,
+      "text": "🇪🇸 #Spain's King Felipe and Queen Letizia kicked off a visit to #Ceuta on Tuesday to show solidarity with residents of the Spanish exclave as they grapple with a migration crisis. \n\nThe trip comes after after more than 70,000 migrants crossed Ceuta's border from #Morocco in https://t.co/QUfsbqXrlw",
+      "url": "https://x.com/LeonorDeAsturia/status/2112120185360417161",
+      "source_url": "https://x.com/LeonorDeAsturia/status/2112120185360417161",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
     {
       "id": 641,
       "event_id": 641,
@@ -95,6 +119,38 @@
     }
   ],
   "event_groups": [
+    {
+      "id": 474,
+      "group_id": 474,
+      "event_type": "BORDER_CROSSING",
+      "dominant_event_type": "BORDER_CROSSING",
+      "title": "BORDER_CROSSING - Ceuta",
+      "representative_text": "🇪🇸 #Spain's King Felipe and Queen Letizia kicked off a visit to #Ceuta on Tuesday to show solidarity with residents of the Spanish exclave as they grapple with a migration crisis. \n\nThe trip comes after after more than 70,000 migrants crossed Ceuta's border from #Morocco in https://t.co/QUfsbqXrlw",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "first_seen": "2026-10-14T08:53:10Z",
+      "last_seen": "2026-10-19T09:54:28Z",
+      "source_count": 6,
+      "sources_count": 6,
+      "source_types": [
+        "REDDIT",
+        "X"
+      ],
+      "sources": [
+        "REDDIT",
+        "X"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.75,
+      "average_confidence": 0.75,
+      "created_at": "2026-10-14T09:06:42Z",
+      "updated_at": "2026-10-19T10:04:08Z",
+      "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+    },
     {
       "id": 465,
       "group_id": 465,
@@ -124,39 +180,7 @@
       "confidence": 0.5,
       "average_confidence": 0.5,
       "created_at": "2026-10-14T07:46:31Z",
-      "updated_at": "2026-10-19T09:23:32Z",
-      "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-    },
-    {
-      "id": 474,
-      "group_id": 474,
-      "event_type": "BORDER_CROSSING",
-      "dominant_event_type": "BORDER_CROSSING",
-      "title": "BORDER_CROSSING - Ceuta",
-      "representative_text": "King Felipe VI and Queen Letizia visited the Spanish city of Ceuta in North Africa on Tuesday after about 80,000 migrants crossed Ceuta’s border in July. Most of those who crossed returned, but thousands remain in the city. https://t.co/BhcnoeHTKq",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "primary_location": "Ceuta",
-      "country": "Spain",
-      "latitude": 35.8894,
-      "longitude": -5.3213,
-      "first_seen": "2026-10-14T08:53:10Z",
-      "last_seen": "2026-10-19T08:17:37Z",
-      "source_count": 5,
-      "sources_count": 5,
-      "source_types": [
-        "REDDIT",
-        "X"
-      ],
-      "sources": [
-        "REDDIT",
-        "X"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.75,
-      "average_confidence": 0.75,
-      "created_at": "2026-10-14T09:06:42Z",
-      "updated_at": "2026-10-19T08:43:02Z",
+      "updated_at": "2026-10-19T10:03:40Z",
       "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
     },
     {
@@ -256,30 +280,30 @@
     {
       "source": "X",
       "name": "X",
-      "count": 482,
-      "posts": 482,
-      "percentage": 79.54
+      "count": 520,
+      "posts": 520,
+      "percentage": 80.37
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
       "count": 60,
       "posts": 60,
-      "percentage": 9.9
+      "percentage": 9.27
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 47,
-      "posts": 47,
-      "percentage": 7.76
+      "count": 49,
+      "posts": 49,
+      "percentage": 7.57
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 17,
-      "posts": 17,
-      "percentage": 2.81
+      "count": 18,
+      "posts": 18,
+      "percentage": 2.78
     }
   ],
   "region_activity": [
@@ -316,41 +340,41 @@
     {
       "source": "X",
       "name": "X",
-      "count": 482,
-      "posts": 482,
-      "percentage": 79.54
+      "count": 520,
+      "posts": 520,
+      "percentage": 80.37
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
       "count": 60,
       "posts": 60,
-      "percentage": 9.9
+      "percentage": 9.27
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 47,
-      "posts": 47,
-      "percentage": 7.76
+      "count": 49,
+      "posts": 49,
+      "percentage": 7.57
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 17,
-      "posts": 17,
-      "percentage": 2.81
+      "count": 18,
+      "posts": 18,
+      "percentage": 2.78
     }
   ],
   "correlation": {
-    "correlated_events": 5,
-    "correlated_sources": 5,
-    "grouped_sources": 19,
+    "correlated_events": 6,
+    "correlated_sources": 6,
+    "grouped_sources": 20,
     "event_groups": 510,
     "active_groups": 510,
     "multi_source_groups": 51,
     "strongest_match": 1.0,
-    "correlation_rate": 26.32
+    "correlation_rate": 30.0
   },
   "technical_health": "HEALTHY",
   "collector_health": "HEALTHY",
@@ -363,14 +387,14 @@
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "database": "AVAILABLE",
-    "last_run_id": 310,
-    "last_completed_at": "2026-10-19T09:28:00Z"
+    "last_run_id": 311,
+    "last_completed_at": "2026-10-19T10:05:55Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 19,
+    "operational_events_24h": 20,
     "influence_signals_24h": 20,
-    "access_signals_24h": 6,
-    "correlated_events_24h": 5,
+    "access_signals_24h": 4,
+    "correlated_events_24h": 6,
     "active_event_groups": 510,
     "dominant_region": "EASTERN_MEDITERRANEAN",
     "hotspot": "EASTERN_MEDITERRANEAN",
@@ -378,18 +402,18 @@
     "dominant_source": "X",
     "average_confidence": 0.46,
     "confidence_level": "LOW",
-    "correlation_rate": 26.32,
+    "correlation_rate": 30.0,
     "activity_level": "ELEVATED",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 19 operatív migrációs eseményt, 20 influence/early-warning jelzést és 6 átkelési vagy bejutási jelzést tart nyilván. 5 friss eseményforrás korrelált más forrással. Jelenleg 510 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Eastern Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.46. A jelenlegi aktivitási szint: ELEVATED.",
+    "summary": "Az elmúlt 24 órában a rendszer 20 operatív migrációs eseményt, 20 influence/early-warning jelzést és 4 átkelési vagy bejutási jelzést tart nyilván. 6 friss eseményforrás korrelált más forrással. Jelenleg 510 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Eastern Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.46. A jelenlegi aktivitási szint: ELEVATED.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
   "analytical_assessment": {
-    "operational_events_24h": 19,
+    "operational_events_24h": 20,
     "influence_signals_24h": 20,
-    "access_signals_24h": 6,
-    "correlated_events_24h": 5,
+    "access_signals_24h": 4,
+    "correlated_events_24h": 6,
     "active_event_groups": 510,
     "dominant_region": "EASTERN_MEDITERRANEAN",
     "hotspot": "EASTERN_MEDITERRANEAN",
@@ -397,10 +421,10 @@
     "dominant_source": "X",
     "average_confidence": 0.46,
     "confidence_level": "LOW",
-    "correlation_rate": 26.32,
+    "correlation_rate": 30.0,
     "activity_level": "ELEVATED",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 19 operatív migrációs eseményt, 20 influence/early-warning jelzést és 6 átkelési vagy bejutási jelzést tart nyilván. 5 friss eseményforrás korrelált más forrással. Jelenleg 510 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Eastern Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.46. A jelenlegi aktivitási szint: ELEVATED.",
+    "summary": "Az elmúlt 24 órában a rendszer 20 operatív migrációs eseményt, 20 influence/early-warning jelzést és 4 átkelési vagy bejutási jelzést tart nyilván. 6 friss eseményforrás korrelált más forrással. Jelenleg 510 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Eastern Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.46. A jelenlegi aktivitási szint: ELEVATED.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
@@ -501,10 +525,10 @@
       "primary_region": "WESTERN_MEDITERRANEAN",
       "confidence": 0.75,
       "average_confidence": 0.75,
-      "source_count": 5,
-      "last_seen": "2026-10-19T08:17:37Z",
-      "representative_text": "King Felipe VI and Queen Letizia visited the Spanish city of Ceuta in North Africa on Tuesday after about 80,000 migrants crossed Ceuta’s border in July. Most of those who crossed returned, but thousands remain in the city. https://t.co/BhcnoeHTKq",
-      "text": "King Felipe VI and Queen Letizia visited the Spanish city of Ceuta in North Africa on Tuesday after about 80,000 migrants crossed Ceuta’s border in July. Most of those who crossed returned, but thousands remain in the city. https://t.co/BhcnoeHTKq",
+      "source_count": 6,
+      "last_seen": "2026-10-19T09:54:28Z",
+      "representative_text": "🇪🇸 #Spain's King Felipe and Queen Letizia kicked off a visit to #Ceuta on Tuesday to show solidarity with residents of the Spanish exclave as they grapple with a migration crisis. \n\nThe trip comes after after more than 70,000 migrants crossed Ceuta's border from #Morocco in https://t.co/QUfsbqXrlw",
+      "text": "🇪🇸 #Spain's King Felipe and Queen Letizia kicked off a visit to #Ceuta on Tuesday to show solidarity with residents of the Spanish exclave as they grapple with a migration crisis. \n\nThe trip comes after after more than 70,000 migrants crossed Ceuta's border from #Morocco in https://t.co/QUfsbqXrlw",
       "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
     },
     {
@@ -683,10 +707,10 @@
       "primary_region": "WESTERN_MEDITERRANEAN",
       "confidence": 0.75,
       "average_confidence": 0.75,
-      "source_count": 5,
-      "last_seen": "2026-10-19T08:17:37Z",
-      "representative_text": "King Felipe VI and Queen Letizia visited the Spanish city of Ceuta in North Africa on Tuesday after about 80,000 migrants crossed Ceuta’s border in July. Most of those who crossed returned, but thousands remain in the city. https://t.co/BhcnoeHTKq",
-      "text": "King Felipe VI and Queen Letizia visited the Spanish city of Ceuta in North Africa on Tuesday after about 80,000 migrants crossed Ceuta’s border in July. Most of those who crossed returned, but thousands remain in the city. https://t.co/BhcnoeHTKq",
+      "source_count": 6,
+      "last_seen": "2026-10-19T09:54:28Z",
+      "representative_text": "🇪🇸 #Spain's King Felipe and Queen Letizia kicked off a visit to #Ceuta on Tuesday to show solidarity with residents of the Spanish exclave as they grapple with a migration crisis. \n\nThe trip comes after after more than 70,000 migrants crossed Ceuta's border from #Morocco in https://t.co/QUfsbqXrlw",
+      "text": "🇪🇸 #Spain's King Felipe and Queen Letizia kicked off a visit to #Ceuta on Tuesday to show solidarity with residents of the Spanish exclave as they grapple with a migration crisis. \n\nThe trip comes after after more than 70,000 migrants crossed Ceuta's border from #Morocco in https://t.co/QUfsbqXrlw",
       "priority_score": 37.25,
       "analyst_priority": "LOW",
       "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
@@ -891,6 +915,69 @@
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
       "priority_score": 35.5,
+      "analyst_priority": "LOW",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
+      "id": 1088,
+      "source": "X",
+      "source_post_id": "2112114245772915037",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-10-19T09:30:52Z",
+      "first_detected_at": "2026-10-19T10:05:07Z",
+      "last_detected_at": "2026-10-19T10:05:07Z",
+      "detection_count": 1,
+      "text": "@putey_pute @BritAbroad66 Iranian nationals accounted for roughly 2% of irregular sea/land arrivals to Europe in 2025 (about 2,600 people, per IOM data). Investigative reports and intelligence assessments allege IRGC elements influence certain smuggling routes, profit from them, and have used migrant",
+      "text_excerpt": "@putey_pute @BritAbroad66 Iranian nationals accounted for roughly 2% of irregular sea/land arrivals to Europe in 2025 (about 2,600 people, per IOM data). Investigative reports and intelligence assessments allege IRGC elements influence certain smuggling routes, profit from them, and have used migrant",
+      "url": "https://x.com/grok/status/2112114245772915037",
+      "source_url": "https://x.com/grok/status/2112114245772915037",
+      "primary_signal": "FACILITATION_EARLY_WARNING",
+      "signal_type": "FACILITATION_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "FACILITATION_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.8,
+      "score": 8.25,
+      "matched_signals": [
+        "FACILITATION_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "sea"
+        ],
+        [
+          "facilitation",
+          "smuggling routes, profit from them, and have used migrant"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "FACILITATION"
+      ],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": [
+        "smuggling routes, profit from them, and have used migrant"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 28.0,
       "analyst_priority": "LOW",
       "ai_review_status": "AI_REVIEWED",
       "ai_editorial_decision": "PUBLISH"
@@ -1166,6 +1253,69 @@
       "ai_editorial_decision": "PUBLISH"
     },
     {
+      "id": 1088,
+      "source": "X",
+      "source_post_id": "2112114245772915037",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-10-19T09:30:52Z",
+      "first_detected_at": "2026-10-19T10:05:07Z",
+      "last_detected_at": "2026-10-19T10:05:07Z",
+      "detection_count": 1,
+      "text": "@putey_pute @BritAbroad66 Iranian nationals accounted for roughly 2% of irregular sea/land arrivals to Europe in 2025 (about 2,600 people, per IOM data). Investigative reports and intelligence assessments allege IRGC elements influence certain smuggling routes, profit from them, and have used migrant",
+      "text_excerpt": "@putey_pute @BritAbroad66 Iranian nationals accounted for roughly 2% of irregular sea/land arrivals to Europe in 2025 (about 2,600 people, per IOM data). Investigative reports and intelligence assessments allege IRGC elements influence certain smuggling routes, profit from them, and have used migrant",
+      "url": "https://x.com/grok/status/2112114245772915037",
+      "source_url": "https://x.com/grok/status/2112114245772915037",
+      "primary_signal": "FACILITATION_EARLY_WARNING",
+      "signal_type": "FACILITATION_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "FACILITATION_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.8,
+      "score": 8.25,
+      "matched_signals": [
+        "FACILITATION_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "sea"
+        ],
+        [
+          "facilitation",
+          "smuggling routes, profit from them, and have used migrant"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "FACILITATION"
+      ],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": [
+        "smuggling routes, profit from them, and have used migrant"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 28.0,
+      "analyst_priority": "LOW",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
       "id": 1081,
       "source": "X",
       "source_post_id": "2112098971267056117",
@@ -1291,6 +1441,230 @@
   ],
   "influence_narratives": [
     {
+      "id": 1085,
+      "source": "X",
+      "source_post_id": "2112108595353428281",
+      "author": "docrussjackson",
+      "language": "en",
+      "published_at": "2026-10-19T09:08:24Z",
+      "first_detected_at": "2026-10-19T09:27:57Z",
+      "last_detected_at": "2026-10-19T10:05:55Z",
+      "detection_count": 2,
+      "text": "The front page of the billionaire-owned propaganda comic the Daily Mail promises to reveal the \"TRUE COST OF LABOUR MIGRATION DITHERING\". \n\nIt states \"at least 200,000 given right to remain since crackdown promise\", and a list of what settlement brings with it: benefits, NHS care https://t.co/XGBuN9IPv5",
+      "text_excerpt": "The front page of the billionaire-owned propaganda comic the Daily Mail promises to reveal the \"TRUE COST OF LABOUR MIGRATION DITHERING\". \n\nIt states \"at least 200,000 given right to remain since crackdown promise\", and a list of what settlement brings with it: benefits, NHS care https://t.co/XGBuN9IPv5",
+      "url": "https://x.com/docrussjackson/status/2112108595353428281",
+      "source_url": "https://x.com/docrussjackson/status/2112108595353428281",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.99,
+      "score": 24.0,
+      "matched_signals": [
+        "LEGAL_MIGRATION_SIGNAL"
+      ],
+      "matched_phrases": [
+        [
+          "legal_signal",
+          "right to remain"
+        ],
+        [
+          "legal_protection",
+          "right to remain"
+        ],
+        [
+          "HIGH_VALUE",
+          "right to remain"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "MIGRATION"
+      ],
+      "high_value_matches": [
+        "right to remain"
+      ],
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 50.65,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2112108595353428281"
+      ],
+      "related_authors": [
+        "docrussjackson"
+      ],
+      "related_urls": [
+        "https://x.com/docrussjackson/status/2112108595353428281"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
+    {
+      "id": 1077,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1x9qq2p",
+      "author": "Permanent-ephemeral",
+      "language": null,
+      "published_at": "2026-10-19T07:51:23Z",
+      "first_detected_at": "2026-10-19T08:40:54Z",
+      "last_detected_at": "2026-10-19T08:40:54Z",
+      "detection_count": 1,
+      "text": "Sa mga seafarers, share your feedback & get a chance to win a ₱500 Jollibee GC\nHi everyone! I've been working in vessel IT for eight years, and I'm thinking about a different career path. I'm planning a project called MarinoHub, a website and app where seafarers can find crew job openings in one place. Before I take it further, I'd like to hear from seafarers, cadets, and anyone working in crewing or recruitment. Survey: MarinoHub | Survey - No need for any personal information. Here are some features I'm considering: An interactive map showing manning agencies with current openings, so you can check who's hiring near you. An AI-powered search bar that helps you find companies or vessel openings based on your location, rank, experience, and preferences. Job listings with enough detail to help you decide whether to apply. Free job searching for seafarers, with manning agencies paying a subscription fee to use the platform. (For now, this is the proposed business model to keep the website and app running.) It's still a plan. Before launching, I need to consult the Department of Migrant Workers (DMW) and maritime lawyers to understand the requirements and how the website and app should operate. For now, I'm looking for people willing to answer a survey. I'd like to know: Where do you usually find maritime job openings? What makes searching or applying difficult? Would a map and personalised search help you? What would make you trust a platform like this, or put you off using it? This is an independent project, and I'm gathering feedback only. I'm not accepting applications for any specific job. You're welcome to share your thoughts in the comments too. If you think something wouldn't work or isn't needed, I'd like to hear that. Your feedback will help me decide what to build and whether it would make job searching easier. Thanks for your time!",
+      "text_excerpt": "Sa mga seafarers, share your feedback & get a chance to win a ₱500 Jollibee GC\nHi everyone! I've been working in vessel IT for eight years, and I'm thinking about a different career path. I'm planning a project called MarinoHub, a website and app where seafarers can find crew job openings in one place. Before I take it further, I'd like to hear from seafarers, cadets, and anyone working in crewing or recruitment. Survey: MarinoHub | Survey - No need for any personal information. Here are some features I'm considering: An interactive map showing manning agencies with current openings, so you can check who's hiring near you. An AI-powered search bar that helps you find companies or vessel open",
+      "url": "https://www.reddit.com/r/classifiedsph/comments/1x9qq2p/sa_mga_seafarers_share_your_feedback_get_a_chance/",
+      "source_url": "https://www.reddit.com/r/classifiedsph/comments/1x9qq2p/sa_mga_seafarers_share_your_feedback_get_a_chance/",
+      "primary_signal": "DECISION_INFLUENCE",
+      "signal_type": "DECISION_INFLUENCE",
+      "signal_mode": "DIRECT",
+      "signal_intent": "DECISION_INFLUENCE",
+      "priority": "MEDIUM",
+      "confidence": 0.86,
+      "score": 15.0,
+      "matched_signals": [
+        "DECISION_INFLUENCE"
+      ],
+      "matched_phrases": [
+        [
+          "information_spread",
+          "help you decide"
+        ],
+        [
+          "decision_influence",
+          "help you decide"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "Migrant"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 50.1,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "reddit_1x9qq2p"
+      ],
+      "related_authors": [
+        "Permanent-ephemeral"
+      ],
+      "related_urls": [
+        "https://www.reddit.com/r/classifiedsph/comments/1x9qq2p/sa_mga_seafarers_share_your_feedback_get_a_chance/"
+      ],
+      "related_sources": [
+        "REDDIT"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
+    {
+      "id": 1073,
+      "source": "X",
+      "source_post_id": "2111986630319886486",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-10-19T01:03:46Z",
+      "first_detected_at": "2026-10-19T02:12:05Z",
+      "last_detected_at": "2026-10-19T02:12:05Z",
+      "detection_count": 1,
+      "text": "@tyronerobb @andrewc44104127 The constraints are structural. Smuggling networks adapt faster than enforcement measures. Returns depend on incomplete deals with origin or transit countries. ECHR rules, particularly Article 8, enable repeated appeals that slow removals. The Immigration and Asylum Bill tightens",
+      "text_excerpt": "@tyronerobb @andrewc44104127 The constraints are structural. Smuggling networks adapt faster than enforcement measures. Returns depend on incomplete deals with origin or transit countries. ECHR rules, particularly Article 8, enable repeated appeals that slow removals. The Immigration and Asylum Bill tightens",
+      "url": "https://x.com/grok/status/2111986630319886486",
+      "source_url": "https://x.com/grok/status/2111986630319886486",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.94,
+      "score": 17.0,
+      "matched_signals": [
+        "LEGAL_MIGRATION_SIGNAL"
+      ],
+      "matched_phrases": [
+        [
+          "legal_signal",
+          "ECHR"
+        ],
+        [
+          "smuggling_ecosystem",
+          "Smuggling networks"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "Asylum"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 48.9,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2111986630319886486"
+      ],
+      "related_authors": [
+        "grok"
+      ],
+      "related_urls": [
+        "https://x.com/grok/status/2111986630319886486"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    }
+  ],
+  "crossing_access_signals": [],
+  "access_signals": [],
+  "top_crossing_access_posts": [],
+  "crossing_access_narratives": [
+    {
       "id": 1067,
       "source": "X",
       "source_post_id": "2111935871939190922",
@@ -1370,8 +1744,8 @@
       "language": "en",
       "published_at": "2026-10-19T09:08:24Z",
       "first_detected_at": "2026-10-19T09:27:57Z",
-      "last_detected_at": "2026-10-19T09:27:57Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-10-19T10:05:55Z",
+      "detection_count": 2,
       "text": "The front page of the billionaire-owned propaganda comic the Daily Mail promises to reveal the \"TRUE COST OF LABOUR MIGRATION DITHERING\". \n\nIt states \"at least 200,000 given right to remain since crackdown promise\", and a list of what settlement brings with it: benefits, NHS care https://t.co/XGBuN9IPv5",
       "text_excerpt": "The front page of the billionaire-owned propaganda comic the Daily Mail promises to reveal the \"TRUE COST OF LABOUR MIGRATION DITHERING\". \n\nIt states \"at least 200,000 given right to remain since crackdown promise\", and a list of what settlement brings with it: benefits, NHS care https://t.co/XGBuN9IPv5",
       "url": "https://x.com/docrussjackson/status/2112108595353428281",
@@ -1511,235 +1885,6 @@
       "platform_count": 1
     }
   ],
-  "crossing_access_signals": [],
-  "access_signals": [],
-  "top_crossing_access_posts": [],
-  "crossing_access_narratives": [
-    {
-      "id": 1067,
-      "source": "X",
-      "source_post_id": "2111935871939190922",
-      "author": "jrm4783",
-      "language": "en",
-      "published_at": "2026-10-18T21:42:04Z",
-      "first_detected_at": "2026-10-18T22:03:50Z",
-      "last_detected_at": "2026-10-18T22:03:50Z",
-      "detection_count": 1,
-      "text": "@4_hastings @KopLite @lxeagle17 Biden literally hijacked the CBP One app to funnel over 200,000 Haitians into the United States. That's not even just leaving the border open, that's actively trying to bring in as many migrants as possible. Not to mention the 12-13 million illegal border crossings.",
-      "text_excerpt": "@4_hastings @KopLite @lxeagle17 Biden literally hijacked the CBP One app to funnel over 200,000 Haitians into the United States. That's not even just leaving the border open, that's actively trying to bring in as many migrants as possible. Not to mention the 12-13 million illegal border crossings.",
-      "url": "https://x.com/jrm4783/status/2111935871939190922",
-      "source_url": "https://x.com/jrm4783/status/2111935871939190922",
-      "primary_signal": "CROSSING_FACILITATION",
-      "signal_type": "CROSSING_FACILITATION",
-      "signal_mode": "DIRECT",
-      "signal_intent": "EASIER_CROSSING",
-      "priority": "HIGH",
-      "confidence": 0.89,
-      "score": 17.0,
-      "matched_signals": [
-        "CROSSING_FACILITATION"
-      ],
-      "matched_phrases": [
-        [
-          "border_condition",
-          "border open"
-        ],
-        [
-          "border_access",
-          "border open"
-        ]
-      ],
-      "matched_groups": [],
-      "context_matches": [
-        "migrants",
-        "border crossings"
-      ],
-      "high_value_matches": false,
-      "signal_context_rejections": {},
-      "migration_context": true,
-      "human_migration_context": null,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "AMERICAS",
-      "primary_region": "AMERICAS",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "2.6",
-      "priority_score": 61.15,
-      "analyst_priority": "MEDIUM",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "2111935871939190922"
-      ],
-      "related_authors": [
-        "jrm4783"
-      ],
-      "related_urls": [
-        "https://x.com/jrm4783/status/2111935871939190922"
-      ],
-      "related_sources": [
-        "X"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
-    },
-    {
-      "id": 1077,
-      "source": "REDDIT",
-      "source_post_id": "reddit_1x9qq2p",
-      "author": "Permanent-ephemeral",
-      "language": null,
-      "published_at": "2026-10-19T07:51:23Z",
-      "first_detected_at": "2026-10-19T08:40:54Z",
-      "last_detected_at": "2026-10-19T08:40:54Z",
-      "detection_count": 1,
-      "text": "Sa mga seafarers, share your feedback & get a chance to win a ₱500 Jollibee GC\nHi everyone! I've been working in vessel IT for eight years, and I'm thinking about a different career path. I'm planning a project called MarinoHub, a website and app where seafarers can find crew job openings in one place. Before I take it further, I'd like to hear from seafarers, cadets, and anyone working in crewing or recruitment. Survey: MarinoHub | Survey - No need for any personal information. Here are some features I'm considering: An interactive map showing manning agencies with current openings, so you can check who's hiring near you. An AI-powered search bar that helps you find companies or vessel openings based on your location, rank, experience, and preferences. Job listings with enough detail to help you decide whether to apply. Free job searching for seafarers, with manning agencies paying a subscription fee to use the platform. (For now, this is the proposed business model to keep the website and app running.) It's still a plan. Before launching, I need to consult the Department of Migrant Workers (DMW) and maritime lawyers to understand the requirements and how the website and app should operate. For now, I'm looking for people willing to answer a survey. I'd like to know: Where do you usually find maritime job openings? What makes searching or applying difficult? Would a map and personalised search help you? What would make you trust a platform like this, or put you off using it? This is an independent project, and I'm gathering feedback only. I'm not accepting applications for any specific job. You're welcome to share your thoughts in the comments too. If you think something wouldn't work or isn't needed, I'd like to hear that. Your feedback will help me decide what to build and whether it would make job searching easier. Thanks for your time!",
-      "text_excerpt": "Sa mga seafarers, share your feedback & get a chance to win a ₱500 Jollibee GC\nHi everyone! I've been working in vessel IT for eight years, and I'm thinking about a different career path. I'm planning a project called MarinoHub, a website and app where seafarers can find crew job openings in one place. Before I take it further, I'd like to hear from seafarers, cadets, and anyone working in crewing or recruitment. Survey: MarinoHub | Survey - No need for any personal information. Here are some features I'm considering: An interactive map showing manning agencies with current openings, so you can check who's hiring near you. An AI-powered search bar that helps you find companies or vessel open",
-      "url": "https://www.reddit.com/r/classifiedsph/comments/1x9qq2p/sa_mga_seafarers_share_your_feedback_get_a_chance/",
-      "source_url": "https://www.reddit.com/r/classifiedsph/comments/1x9qq2p/sa_mga_seafarers_share_your_feedback_get_a_chance/",
-      "primary_signal": "DECISION_INFLUENCE",
-      "signal_type": "DECISION_INFLUENCE",
-      "signal_mode": "DIRECT",
-      "signal_intent": "DECISION_INFLUENCE",
-      "priority": "MEDIUM",
-      "confidence": 0.86,
-      "score": 15.0,
-      "matched_signals": [
-        "DECISION_INFLUENCE"
-      ],
-      "matched_phrases": [
-        [
-          "information_spread",
-          "help you decide"
-        ],
-        [
-          "decision_influence",
-          "help you decide"
-        ]
-      ],
-      "matched_groups": [],
-      "context_matches": [
-        "Migrant"
-      ],
-      "high_value_matches": false,
-      "signal_context_rejections": {},
-      "migration_context": true,
-      "human_migration_context": null,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "2.6",
-      "priority_score": 53.1,
-      "analyst_priority": "MEDIUM",
-      "related_posts_count": 3,
-      "related_post_ids": [
-        "reddit_1x9qq2p",
-        "reddit_1x8z0sk",
-        "reddit_1x8z0ht"
-      ],
-      "related_authors": [
-        "Permanent-ephemeral"
-      ],
-      "related_urls": [
-        "https://www.reddit.com/r/classifiedsph/comments/1x9qq2p/sa_mga_seafarers_share_your_feedback_get_a_chance/",
-        "https://www.reddit.com/r/seafarerPH/comments/1x8z0sk/building_a_maritime_recruitment_hub_im_looking/",
-        "https://www.reddit.com/r/MarinongPilipino/comments/1x8z0ht/building_a_maritime_recruitment_hub_im_looking/"
-      ],
-      "related_sources": [
-        "REDDIT"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
-    },
-    {
-      "id": 1085,
-      "source": "X",
-      "source_post_id": "2112108595353428281",
-      "author": "docrussjackson",
-      "language": "en",
-      "published_at": "2026-10-19T09:08:24Z",
-      "first_detected_at": "2026-10-19T09:27:57Z",
-      "last_detected_at": "2026-10-19T09:27:57Z",
-      "detection_count": 1,
-      "text": "The front page of the billionaire-owned propaganda comic the Daily Mail promises to reveal the \"TRUE COST OF LABOUR MIGRATION DITHERING\". \n\nIt states \"at least 200,000 given right to remain since crackdown promise\", and a list of what settlement brings with it: benefits, NHS care https://t.co/XGBuN9IPv5",
-      "text_excerpt": "The front page of the billionaire-owned propaganda comic the Daily Mail promises to reveal the \"TRUE COST OF LABOUR MIGRATION DITHERING\". \n\nIt states \"at least 200,000 given right to remain since crackdown promise\", and a list of what settlement brings with it: benefits, NHS care https://t.co/XGBuN9IPv5",
-      "url": "https://x.com/docrussjackson/status/2112108595353428281",
-      "source_url": "https://x.com/docrussjackson/status/2112108595353428281",
-      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
-      "signal_type": "LEGAL_MIGRATION_SIGNAL",
-      "signal_mode": "DIRECT",
-      "signal_intent": "LEGAL_ACCESS",
-      "priority": "MEDIUM",
-      "confidence": 0.99,
-      "score": 24.0,
-      "matched_signals": [
-        "LEGAL_MIGRATION_SIGNAL"
-      ],
-      "matched_phrases": [
-        [
-          "legal_signal",
-          "right to remain"
-        ],
-        [
-          "legal_protection",
-          "right to remain"
-        ],
-        [
-          "HIGH_VALUE",
-          "right to remain"
-        ]
-      ],
-      "matched_groups": [],
-      "context_matches": [
-        "MIGRATION"
-      ],
-      "high_value_matches": [
-        "right to remain"
-      ],
-      "signal_context_rejections": {},
-      "migration_context": true,
-      "human_migration_context": null,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "2.6",
-      "priority_score": 50.65,
-      "analyst_priority": "MEDIUM",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "2112108595353428281"
-      ],
-      "related_authors": [
-        "docrussjackson"
-      ],
-      "related_urls": [
-        "https://x.com/docrussjackson/status/2112108595353428281"
-      ],
-      "related_sources": [
-        "X"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
-    }
-  ],
   "information_activity_weekly": [
     {
       "year": 2026,
@@ -1866,15 +2011,15 @@
       "label": "W43",
       "week_label": "W43",
       "week_start": "2026-10-19T00:00:00Z",
-      "posts": 253,
-      "post_count": 253,
-      "operational_posts": 11,
-      "influence_signals": 15,
+      "posts": 298,
+      "post_count": 298,
+      "operational_posts": 12,
+      "influence_signals": 17,
       "source_counts": {
-        "X": 204,
-        "REDDIT": 23,
-        "TELEGRAM": 7,
-        "MASTODON": 19
+        "X": 242,
+        "REDDIT": 26,
+        "TELEGRAM": 9,
+        "MASTODON": 21
       }
     }
   ],
@@ -2004,33 +2149,33 @@
       "label": "W43",
       "week_label": "W43",
       "week_start": "2026-10-19T00:00:00Z",
-      "posts": 253,
-      "post_count": 253,
-      "operational_posts": 11,
-      "influence_signals": 15,
+      "posts": 298,
+      "post_count": 298,
+      "operational_posts": 12,
+      "influence_signals": 17,
       "source_counts": {
-        "X": 204,
-        "REDDIT": 23,
-        "TELEGRAM": 7,
-        "MASTODON": 19
+        "X": 242,
+        "REDDIT": 26,
+        "TELEGRAM": 9,
+        "MASTODON": 21
       }
     }
   ],
   "information_activity_summary": {
-    "current_week": 253,
-    "previous_week": 113,
-    "current_week_to_date": 253,
-    "previous_week_same_period": 113,
+    "current_week": 298,
+    "previous_week": 114,
+    "current_week_to_date": 298,
+    "previous_week_same_period": 114,
     "previous_week_full": 2844,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": 123.89,
-    "change_label": "+123.9%",
+    "change_percent": 161.4,
+    "change_label": "+161.4%",
     "direction": "UP",
     "comparable": true,
-    "elapsed_hours": 9.5,
+    "elapsed_hours": 10.1,
     "current_period_start": "2026-10-19T00:00:00Z",
     "previous_period_start": "2026-10-12T00:00:00Z",
-    "previous_period_end": "2026-10-12T09:28:01Z"
+    "previous_period_end": "2026-10-12T10:05:56Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -2042,36 +2187,36 @@
       72,
       168
     ],
-    "generated_at": "2026-10-19T09:28:02Z",
-    "total_items": 2034,
-    "information_count": 311,
-    "early_warning_count": 1007,
-    "operational_count": 589,
-    "correlated_count": 127,
+    "generated_at": "2026-10-19T10:05:57Z",
+    "total_items": 2041,
+    "information_count": 314,
+    "early_warning_count": 1008,
+    "operational_count": 591,
+    "correlated_count": 128,
     "layer_counts": {
-      "INFORMATION": 311,
-      "EARLY_WARNING": 1007,
-      "CORRELATED": 127,
-      "OPERATIONAL": 589
+      "INFORMATION": 314,
+      "OPERATIONAL": 591,
+      "CORRELATED": 128,
+      "EARLY_WARNING": 1008
     },
     "source_counts": {
-      "X": 1456,
-      "MASTODON": 90,
       "REDDIT": 445,
+      "X": 1463,
+      "MASTODON": 90,
       "TELEGRAM": 43
     },
     "type_counts": {
-      "INFORMATION_SIGNAL": 311,
-      "FACILITATION_EARLY_WARNING": 194,
+      "INFORMATION_SIGNAL": 314,
+      "BORDER_CROSSING": 248,
+      "FACILITATION_EARLY_WARNING": 195,
       "ROUTE_EARLY_WARNING": 130,
       "RESCUE_OPERATION": 36,
-      "BORDER_CROSSING": 246,
       "DETENTION": 47,
       "MOVEMENT_EARLY_WARNING": 320,
       "CASUALTY": 29,
+      "BORDER_MEASURE": 14,
       "DEPORTATION": 95,
       "ENFORCEMENT_EARLY_WARNING": 57,
-      "BORDER_MEASURE": 13,
       "SMUGGLING_ACTIVITY": 67,
       "PRESSURE_EARLY_WARNING": 48,
       "POLICY_SIGNAL": 11,
@@ -2091,6 +2236,414 @@
     },
     "items": [
       {
+        "timeline_id": "information:19619",
+        "timestamp": "2026-10-19T10:01:06Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1x9sshw",
+        "author": "SuggestionCool8866",
+        "url": "https://www.reddit.com/r/reformuk/comments/1x9sshw/i_want_to_see_the_glass_half_full_with_reform_but/",
+        "source_url": "https://www.reddit.com/r/reformuk/comments/1x9sshw/i_want_to_see_the_glass_half_full_with_reform_but/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "border",
+          "crossing",
+          "channel"
+        ],
+        "freshness_cues": [],
+        "text": "I want to see the \"glass half full\" with Reform, but the oxymorons are hard to ignore. A honest question from a legal migrant.\nHi everyone, ​I’m posting here out of genuine curiosity. When looking at Reform from the outside, it’s easy to buy into media stereotypes. I want to skip the caricatures and ask the actual voting base how you reconcile some major contradictions in the party. ​1. Where I’m Coming From ​To be transparent: I am a non-UK citizen who recently received settled status after going through the legal immigration system. I’ve paid thousands in visa fees, paid the NHS surcharge upfront, been double-taxed as an employee, and kept strictly to every visa rule. ​Because I’ve gone through the grind, I actually agree with Reform on key border issues. Channel crossings, queue jumping, and blatant system abuse frustrate me just as much as anyone. I am not blind to the problems in the system, and on those specific points, I see why Reform gains traction. ​2. The Anti-Establishment Paradox ​Reform markets itself as the party that will \"stick it to the establishment\" and fight for the everyday working class against elite interests. Yet when you look at where the money comes from, the party relies heavily on wealthy mega-donors, political insiders, and private backing. How is backing establishment millionaires helping to root out the establishment? ​3. The Figures Behind the Numbers ​Many anti-immigration arguments center on the massive spikes in legal migration from recent years. But prominent political figures who have aligned with or cheered on this movement…like Suella Braverman and Robert Jenrick, were the exact Home Office ministers overseeing the system when net migration hit record highs in 2022 and 2023. Why trust politicians who literally caused the problem you’re mad about? ​4. Vetting & Constant Exposés ​Between recent undercover stings (like the Verbatim reports) and the continuous ITV exposés uncovering extreme rhetoric among representatives, it’s hard not to feel like there are \"a lot of bad apples in the grocery store.\" As a legal migrant who contributes and pays taxes, seeing these scandals makes me ask: if I sat down with an average Reform voter, do you see me as someone who did it right, or do you just have a problem with immigrants across the board? Because if you walked past me you would never know I'm an immigrant. ​My Question to You: ​Are you backing Reform strictly because of immigration and you're willing to ignore everything else? Or do you genuinely believe the party offers a viable long-term strategy for the country despite these massive oxymorons? ​I’m genuinely curious to hear how everyday supporters look at the bigger picture here.",
+        "text_excerpt": "I want to see the \"glass half full\" with Reform, but the oxymorons are hard to ignore. A honest question from a legal migrant.\nHi everyone, ​I’m posting here out of genuine curiosity. When looking at Reform from the outside, it’s easy to buy into media stereotypes. I want to skip the caricatures and ask the actual voting base how you reconcile some major contradictions in the party. ​1. Where I’m Coming From ​To be t…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-19T10:03:38Z",
+        "last_collected_at": "2026-10-19T10:03:38Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "operational:660",
+        "timestamp": "2026-10-19T09:54:28Z",
+        "layer": "OPERATIONAL",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "X",
+        "source_post_id": "2112120185360417161",
+        "author": "LeonorDeAsturia",
+        "url": "https://x.com/LeonorDeAsturia/status/2112120185360417161",
+        "source_url": "https://x.com/LeonorDeAsturia/status/2112120185360417161",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": 35.8894,
+        "longitude": -5.3213,
+        "confidence": 0.75,
+        "priority": "HIGH",
+        "priority_score": 75.0,
+        "text": "🇪🇸 #Spain's King Felipe and Queen Letizia kicked off a visit to #Ceuta on Tuesday to show solidarity with residents of the Spanish exclave as they grapple with a migration crisis. \n\nThe trip comes after after more than 70,000 migrants crossed Ceuta's border from #Morocco in https://t.co/QUfsbqXrlw",
+        "text_excerpt": "🇪🇸 #Spain's King Felipe and Queen Letizia kicked off a visit to #Ceuta on Tuesday to show solidarity with residents of the Spanish exclave as they grapple with a migration crisis. \n\nThe trip comes after after more than 70,000 migrants crossed Ceuta's border from #Morocco in https://t.co/QUfsbqXrlw",
+        "event_group_id": 474,
+        "correlation_score": 0.69,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
+      {
+        "timeline_id": "correlated:658",
+        "timestamp": "2026-10-19T09:54:28Z",
+        "layer": "CORRELATED",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "X",
+        "source_post_id": "2112120185360417161",
+        "author": "LeonorDeAsturia",
+        "url": "https://x.com/LeonorDeAsturia/status/2112120185360417161",
+        "source_url": "https://x.com/LeonorDeAsturia/status/2112120185360417161",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "Ceuta",
+        "primary_location": "Ceuta",
+        "country": "Spain",
+        "latitude": 35.8894,
+        "longitude": -5.3213,
+        "confidence": 0.75,
+        "priority": "HIGH",
+        "priority_score": 75.0,
+        "text": "🇪🇸 #Spain's King Felipe and Queen Letizia kicked off a visit to #Ceuta on Tuesday to show solidarity with residents of the Spanish exclave as they grapple with a migration crisis. \n\nThe trip comes after after more than 70,000 migrants crossed Ceuta's border from #Morocco in https://t.co/QUfsbqXrlw",
+        "text_excerpt": "🇪🇸 #Spain's King Felipe and Queen Letizia kicked off a visit to #Ceuta on Tuesday to show solidarity with residents of the Spanish exclave as they grapple with a migration crisis. \n\nThe trip comes after after more than 70,000 migrants crossed Ceuta's border from #Morocco in https://t.co/QUfsbqXrlw",
+        "event_group_id": 474,
+        "correlation_score": 0.69,
+        "related_source_count": 6,
+        "source_types": [
+          "REDDIT",
+          "X"
+        ],
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:19626",
+        "timestamp": "2026-10-19T09:52:03Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2112119579581227250",
+        "author": "BelaGarzo",
+        "url": "https://x.com/BelaGarzo/status/2112119579581227250",
+        "source_url": "https://x.com/BelaGarzo/status/2112119579581227250",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "detention"
+        ],
+        "freshness_cues": [],
+        "text": "@__bala__ @tothcsabatibor Little faggot.\nIn 2012, the EU banned the detention of \"refugees\" in immigration detention camps.\nIn 01.2015, Orbán warned of an Islamic invasion. The West and Soros poured 400k people onto the green border.\nWhere did you fight them, little sectarian faggot? 1",
+        "text_excerpt": "@__bala__ @tothcsabatibor Little faggot.\nIn 2012, the EU banned the detention of \"refugees\" in immigration detention camps.\nIn 01.2015, Orbán warned of an Islamic invasion. The West and Soros poured 400k people onto the green border.\nWhere did you fight them, little sectarian faggot? 1",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-19T10:04:08Z",
+        "last_collected_at": "2026-10-19T10:04:08Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:19621",
+        "timestamp": "2026-10-19T09:51:06Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1x9smnb",
+        "author": "Great-Avocado9822",
+        "url": "https://www.reddit.com/r/Star_Light_Links/comments/1x9smnb/is_this_a_rich_mans_hobby_ogoniff_asked_his_voice/",
+        "source_url": "https://www.reddit.com/r/Star_Light_Links/comments/1x9smnb/is_this_a_rich_mans_hobby_ogoniff_asked_his_voice/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "sea",
+          "arrival",
+          "landing"
+        ],
+        "freshness_cues": [],
+        "text": "\"Is this a rich man's hobby?\" Ogoniff asked, his voice sounding like a YouTube processing error.\nIn the flickering neon glow of a world fueled by #DreamScreenAI , reality has become a cubism masterpiece of surreal proportions. This is the story of a single, chaotic Tuesday. The Morning Commute The day began in a flurry of \"rich man’s hobbies.\" In the upscale suburbs, people dodged golf balls and pickleball paddles, while others spent fortunes on weed and photography equipment. Meanwhile, at the local post office, the police were busy arresting an Ogoniff found sleeping on a mailbox—a scene captured by a passing tourist and uploaded to a Dropbox folder labeled \"#firstamendment.\" On the highway, the chaos turned mechanical. A police officer found himself in a high-speed pursuit he couldn't end; his cruise control was stuck in a loop of \"car wars\" madness. He zoomed past a man who looked exactly like Steve Bannon , though a closer look revealed it was just comedian Ron White method-acting for a new role. The Arena of the Absurd At the city stadium, the \"Jack and Hammer\" cartoon cat and mouse were being brought to life for a live-action special. The production was interrupted when the Grim Reaper and his best friend crashed the concert, offering bewildered tourists a guided tour through the locker rooms and VIP lounges. In the center ring, the stakes were higher: Grandma was facing off against a bowl of hot grits in a wrestling match that defied physics. Adam, Steve, and Steve (three very confused ducks) were being blessed by a crochet-clad priest. A T-Rex stood in the corner, fruitlessly attempting to open a jar of pickles with its tiny arms. The Digital Tapestry As the sun began to set—looking suspiciously like a Romantic Ice Strawberry Full Moon —the world retreated to their screens. Google Meet was busy exposing legacy Duo emails, while artists struggled with YouTube processing errors . In the quiet corners of the internet, a different kind of work was happening: The Crafters: Experts demonstrated how to fold the magic crochet loop, creating everything from sea horses to granny square socks . The Dreamers: AI generated images of yellow smiley balls and light bulbs that refused to fly. The Investigators: On-scene reports determined that a discarded cell phone was \"fully loaded\" with green energy potential. The Final Act As night fell, the scene shifted to a beach bar in St. John’s . On the webcam, you could see a group \"pray-testing\" for freedom of speech. Nearby, a billionaire expressed his love for his wife through a ukulele solo, while a migrant husband signed a pre-marital agreement under the watchful eye of a United States Air Force half-wing. The day ended with a bizarre lunar escape. As the world looked up at the sky, wondering if Donald Trump's new airplane would eventually become a floating presidential library, a fleet of aluminum cans was donated to the Department of War to keep the fires burning. Somewhere, deep in the depths of an AI-generated forest, a music box played a slow song, and the truth remained—as always—unveiled. Would you like me to take one of these specific characters, like Grandma or the Ogoniff, and write a more detailed short story about their specific adventure? In the neon-soaked fringes of the #DreamScreenAI landscape, where reality is a bit \"sketchy\" and the special effects are set to Cubism , two legends collided. The Morning of the Mailbox It started at 5:00 AM outside the local post office. Ogoniff , a creature of indeterminate origin with a penchant for high-traffic naps, had curled himself into a geometric ball atop a standard blue mailbox. To the local police, it was a public nuisance; to the local artists, it was a #firstamendment statement. The arrest was a bureaucratic nightmare. Every time the officers tried to cuff him, Ogoniff seemed to fold into himself like a complex crochet magic circle . They eventually hauled the mailbox—Ogoniff still attached—into the back of a squad car. Unfortunately, that car was the one with the stuck cruise control . As the vehicle hurtled toward the city stadium at a constant 85 mph, the siren wailing a DreamTrackAI ukulele melody, Ogoniff simply stayed asleep, his snoring sounding suspiciously like a slow song music video. The Grits and the Glory Inside the stadium, Grandma was preparing for the main event. She wasn’t just any grandmother; she was \"Granny Hot-and-Got-It,\" wearing a pair of custom granny square socks and a National Guard half-wing pinned to her apron. The crowd roared as the lights dimmed. In the center of the ring sat a massive, steaming vat of Hot Grits . It wasn't just breakfast; it was a sensory adversary. The Matchup Contestant Weapon of Choice Strategy Grandma A wooden spoon and a crochet hook The \"Stitch and Pitch\" The Grits High thermal mass and butter The \"Slow Burn\" Just as Grandma was about to deliver her signature \"Scrap Yarn Slam,\" the runaway police car crashed through the stadium gates. The mailbox flew through the air, landing directly in the front row next to a group of tourists being led by the Grim Reaper . The Great Escape The impact woke Ogoniff. He blinked, looked at the Grim Reaper, and then at Grandma, who was currently wrestling a tidal wave of buttery hominy. \"Is this a rich man's hobby?\" Ogoniff asked, his voice sounding like a YouTube processing error . \"Honey,\" Grandma yelled, tossing him a yellow smiley ball she'd hidden in her knitting bag, \"everything's a hobby if you've got enough #DreamScreenAI credits!\" In the chaos: Ogoniff used a loose crochet end to lasso a passing Seahorse drone. Grandma managed to fold the entire vat of grits into a magic loop , neutralizing the threat. The Grim Reaper took a selfie with both of them, marking it as a \"YouTube Special Effects Masterpiece.\" As the police finally arrived (on foot, breathing heavily), Grandma and Ogoniff were seen boarding a Donald Trump-branded airplane headed for the U.S. Virgin Islands . They were last spotted on the St. John’s beach bar webcam, sharing a bowl of pickles and arguing over whether photography or metal detecting was the bigger tax write-off. Would you like me to generate a cubism-style image of Grandma wrestling the grits, or perhaps write the script for their next adventure in the depths of the forest? -pmCMnQut-E Police arrest ogoniff sleeping on mailbox Dropbox #firstamendment #DreamScreenAI #aperturefoundation 0TMbRWk4WjI The making of Jack and Hammer, cartoon cat and mouse, bang tpWdK6sqUd0 Grim reaper and best friend crash a stadium concert giving tourists a tour Through the arena. SvVHNXyPvdI #DreamTrackAI Jesus is my main squeeze _Tn8GDwQxAU Police officer can't stop car due to cruise control being stuck #crazycars #carwars 0S0KdQ3hBn8 Did you know Ron white the comedian is playing steve bannon, They look like twins. p5qNmwVz2d8 Google Meet calling replacing (legacy) Duo Exposes your phone number and email za5Vw4_VTkQ Girl scouts is a rich man's hobby W2tQJTTLi4Y Police surround Ogrokumia slerlrping on park bench #DreamScreenAI r384VZLXu3A It's go time with Grandma and hot grits in the ring d0bO1v9POII The J6 hook Crochet knit and woven string along u0WxCzwgTO0 God bless Adam, Steve and Steve, my ducks. eljLtnNyVX8 yellow smiley balls #DreamScreenAI hxicWioIX38 How to take the loose end of crochet stitch, put it over the main strand, fold loop wZPJ_RYiGls Photography is a rich man's hobby OXG_TSoULPY All aboard for the great lunar tick Escape AIbeJv_RxKs Weed Is a rich man's hobby ISHRckp61dA On Amazon Girl Scouts is a rich man's clickbaiting hobby HgBw11vLTBI Fire and winter solstice YouTube special effects cubism masterpiece #painting #sketch yPrCmfLEnLk Pictures of disney barracks fort knox kentucky 9f3Mhh9pnUY 100% of light bulbs do not fly well #DreamScreenAI #funny #supermemo #funnyideas #sadface _OXDABCjOZw crochet sea horse underwater #DreamTrackAI Soft heart music #aiartists JFvY-YHs7RA our on-scene investigation has determined that you are fully loaded#DreamScreenAI FNSI4FPUVcA Reduce your green energy costs recycle Cell Phones #DreamScreenAI YB9PtoepBdw Best Artificial intelligence draws colors with crayons kissing lips 👄AI I LOVE YOU SLOPPY KISSES -nv6BXse5v4 he loves his beautiful wife very much #DreamTrackAI ukulele #billionaire #dreamstar pawysiBqlpQ Pickleball is a rich man's hobby LL28iJqiNfU Do you think that Donald Trump's new airplane will be his presidential library? bkS5ldTxgjw Please donate your aluminum cans to help fire burn victims thank you Department of war DOW #woodburn fxXhIwZc9Xc with the pausing of tariffs, then what ones still exist, more presidential market manipulation 7vHKIY4CXp4 Are All civilians who work on navy air stations Corry Barracks Florida jerks? s5OKjNO8s-E Beach bar St. John's webcam United States Virgin Islands u3YEK8PR8bk protesting (praytesting) for Jesus freedom of speech #DreamScreenAI #legalexploration #aiartists aACJUp6s_lo bad pranks that turn into chaos and negative social influencing 3pXqrWGN99k Golf is a rich man's hobby o2EW0pq0Hzg crochet granny square socks #DreamScreenAI #knitting Ws8yubqGV9k Join the National Guard. OMX3YzbNiPo United States air force half wing I2C1FTOD7V0 Metal Detecting is a Rich man's Hobby mine lab voyager X-terra, nokta R2lL3RDheSM Common uploading issues on YouTube processing. Abandoned YouTube help and tips troubleshooting fk6J6XSiaXM AI Cubism, YouTube special effects, political art #PoliticArt #drawing #sketch cpzYcArwHnE beautiful scrap yarn crochet blanket stitches #DreamTrackAI countey FD3VthzJGOg Granny's still hot and got it going on #DreamScreenAI JzbSl4LkvmE Welcome to the United States Navy Seahorse tpdVt-qRVCk Failed Ship Launch search vlHeA9NvTtA I made Asian migrant husband's sign pre marital agreement he never gets citizenship #DreamScreenAI OjSmJ1M8P9U Homeless cats living inside of hotel trash cans d1JwhBPiedU crochet diorama Jesus - The truth unveiled #DreamTrackAI Play music box b982KApevR8 Romantic ice Strawberry full moon in the night sky #DreamTrackAI slow song music video #dreamtime m_CdcvqDuLw Donald Trump sets new business deal VaChina Pe9PV9V-Tmo How to make the magic crochet circle ring loop M5FsAkPbok8 What would T. Rex look like opening a jar of pickles #DreamScreenAI LgUPl3h-Xdw Journey to the unknown, DepthS of the forest #dreamscreenai #dreamtrackai #aiartists",
+        "text_excerpt": "\"Is this a rich man's hobby?\" Ogoniff asked, his voice sounding like a YouTube processing error.\nIn the flickering neon glow of a world fueled by #DreamScreenAI , reality has become a cubism masterpiece of surreal proportions. This is the story of a single, chaotic Tuesday. The Morning Commute The day began in a flurry of \"rich man’s hobbies.\" In the upscale suburbs, people dodged golf balls and pickleball paddles, w…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-19T10:03:38Z",
+        "last_collected_at": "2026-10-19T10:03:38Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:19635",
+        "timestamp": "2026-10-19T09:50:46Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2112119253809730041",
+        "author": "grok",
+        "url": "https://x.com/grok/status/2112119253809730041",
+        "source_url": "https://x.com/grok/status/2112119253809730041",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "crossing",
+          "boat"
+        ],
+        "freshness_cues": [],
+        "text": "@MediaWatch2006 @afneil BBC paused its civil service statistician secondments to BBC Verify after a Telegraph investigation. Secondees from departments including the Home Office worked on small-boat crossings and migration stats, drafting text later used in articles bylined as BBC News/Verify without",
+        "text_excerpt": "@MediaWatch2006 @afneil BBC paused its civil service statistician secondments to BBC Verify after a Telegraph investigation. Secondees from departments including the Home Office worked on small-boat crossings and migration stats, drafting text later used in articles bylined as BBC News/Verify without",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-19T10:04:37Z",
+        "last_collected_at": "2026-10-19T10:04:37Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:19637",
+        "timestamp": "2026-10-19T09:45:00Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2112117803322904752",
+        "author": "TRTWorldNow",
+        "url": "https://x.com/TRTWorldNow/status/2112117803322904752",
+        "source_url": "https://x.com/TRTWorldNow/status/2112117803322904752",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "boat",
+          "sea"
+        ],
+        "freshness_cues": [],
+        "text": "Greek coastguard reports that at least 12 people have died off the coast of Greece in two separate incidents involving migrant boats in the Aegean Sea https://t.co/MbFuQpFw5p",
+        "text_excerpt": "Greek coastguard reports that at least 12 people have died off the coast of Greece in two separate incidents involving migrant boats in the Aegean Sea https://t.co/MbFuQpFw5p",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-19T10:04:38Z",
+        "last_collected_at": "2026-10-19T10:04:38Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:19638",
+        "timestamp": "2026-10-19T09:42:23Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2112117145677271117",
+        "author": "daphnetoli",
+        "url": "https://x.com/daphnetoli/status/2112117145677271117",
+        "source_url": "https://x.com/daphnetoli/status/2112117145677271117",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "boat",
+          "smuggling"
+        ],
+        "freshness_cues": [],
+        "text": "The North Aegean Regional Governor expressed “deep grief and anger” following two migrant-boat tragedies off #Lesbos and #Samos that killed 12 people.\n\nHe condemned people-smuggling networks, saying their criminal activities must be dealt with “using the full force of the law.”",
+        "text_excerpt": "The North Aegean Regional Governor expressed “deep grief and anger” following two migrant-boat tragedies off #Lesbos and #Samos that killed 12 people.\n\nHe condemned people-smuggling networks, saying their criminal activities must be dealt with “using the full force of the law.”",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-19T10:04:38Z",
+        "last_collected_at": "2026-10-19T10:04:38Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:19640",
+        "timestamp": "2026-10-19T09:41:07Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2112116829242142846",
+        "author": "Paul1971EFC",
+        "url": "https://x.com/Paul1971EFC/status/2112116829242142846",
+        "source_url": "https://x.com/Paul1971EFC/status/2112116829242142846",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "crossing",
+          "route",
+          "boat"
+        ],
+        "freshness_cues": [],
+        "text": "@ramonagusta @SKinnock He is a liar, the rise in boat crossings came after the jungle was closed in Calais.\n\nWe were in France in 2015 and migrants used to block roads and climb into Lorries etc, way after 2002, then the jungle closed which stopped the road blocks and forced them to find new routes",
+        "text_excerpt": "@ramonagusta @SKinnock He is a liar, the rise in boat crossings came after the jungle was closed in Calais.\n\nWe were in France in 2015 and migrants used to block roads and climb into Lorries etc, way after 2002, then the jungle closed which stopped the road blocks and forced them to find new routes",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-19T10:04:38Z",
+        "last_collected_at": "2026-10-19T10:04:38Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:19644",
+        "timestamp": "2026-10-19T09:31:18Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2112114357471424524",
+        "author": "JooJanta200",
+        "url": "https://x.com/JooJanta200/status/2112114357471424524",
+        "source_url": "https://x.com/JooJanta200/status/2112114357471424524",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "route",
+          "boat",
+          "smuggling"
+        ],
+        "freshness_cues": [],
+        "text": "@SKinnock Why do you post such deliberate and proveable lies?\n\nIt's not a good look.\n\nLorry migrants ceased due to the introduction of scanning technology.\n\nSmall boats became the new smuggling route, nothing to do with Brexit.\n\nAnd under Dublin, the UK was a net recipient of migrants.",
+        "text_excerpt": "@SKinnock Why do you post such deliberate and proveable lies?\n\nIt's not a good look.\n\nLorry migrants ceased due to the introduction of scanning technology.\n\nSmall boats became the new smuggling route, nothing to do with Brexit.\n\nAnd under Dublin, the UK was a net recipient of migrants.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-19T10:05:07Z",
+        "last_collected_at": "2026-10-19T10:05:07Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "early_warning:1088",
+        "timestamp": "2026-10-19T09:30:52Z",
+        "layer": "EARLY_WARNING",
+        "type": "FACILITATION_EARLY_WARNING",
+        "signal_type": "FACILITATION_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2112114245772915037",
+        "author": "grok",
+        "url": "https://x.com/grok/status/2112114245772915037",
+        "source_url": "https://x.com/grok/status/2112114245772915037",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.8,
+        "priority": "MEDIUM",
+        "priority_score": 28.0,
+        "analyst_priority": "LOW",
+        "text": "@putey_pute @BritAbroad66 Iranian nationals accounted for roughly 2% of irregular sea/land arrivals to Europe in 2025 (about 2,600 people, per IOM data). Investigative reports and intelligence assessments allege IRGC elements influence certain smuggling routes, profit from them, and have used migrant",
+        "text_excerpt": "@putey_pute @BritAbroad66 Iranian nationals accounted for roughly 2% of irregular sea/land arrivals to Europe in 2025 (about 2,600 people, per IOM data). Investigative reports and intelligence assessments allege IRGC elements influence certain smuggling routes, profit from them, and have used migrant",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "FACILITATION_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-10-19T10:05:07Z",
+        "last_detected_at": "2026-10-19T10:05:07Z",
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
+      {
         "timeline_id": "information:19578",
         "timestamp": "2026-10-19T09:21:53Z",
         "layer": "INFORMATION",
@@ -2109,8 +2662,8 @@
         "country": "-",
         "confidence": 0.1,
         "priority": "INFO",
-        "priority_score": 40,
-        "information_score": 4,
+        "priority_score": 50,
+        "information_score": 5,
         "matched_information_cues": [
           "boat",
           "sea",
@@ -2126,8 +2679,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-19T09:23:58Z",
-        "last_collected_at": "2026-10-19T09:23:58Z",
-        "collection_count": 1,
+        "last_collected_at": "2026-10-19T10:05:54Z",
+        "collection_count": 2,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -2559,7 +3112,7 @@
         "text_excerpt": "@benonwine Yeah.\n\nA recently arrived \"Refugee from Algeria\" was simply wanting to shop for cantaloupe and got caught in the cross fire of mostly peaceful student protests about class sizes.",
         "event_group_id": 474,
         "correlation_score": 0.58,
-        "related_source_count": 5,
+        "related_source_count": 6,
         "source_types": [
           "REDDIT",
           "X"
@@ -3249,8 +3802,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-19T07:10:54Z",
-        "last_collected_at": "2026-10-19T09:23:59Z",
-        "collection_count": 4,
+        "last_collected_at": "2026-10-19T10:04:09Z",
+        "collection_count": 5,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -4461,8 +5014,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-18T22:00:05Z",
-        "last_collected_at": "2026-10-19T09:24:26Z",
-        "collection_count": 6,
+        "last_collected_at": "2026-10-19T10:04:38Z",
+        "collection_count": 7,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -4847,8 +5400,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-18T19:48:33Z",
-        "last_collected_at": "2026-10-19T09:24:00Z",
-        "collection_count": 5,
+        "last_collected_at": "2026-10-19T10:04:10Z",
+        "collection_count": 6,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -5197,8 +5750,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-18T19:53:01Z",
-        "last_collected_at": "2026-10-19T09:24:26Z",
-        "collection_count": 8,
+        "last_collected_at": "2026-10-19T10:04:39Z",
+        "collection_count": 9,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -5685,6 +6238,38 @@
         "first_collected_at": "2026-10-18T01:50:19Z",
         "last_collected_at": "2026-10-18T01:50:19Z",
         "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "operational:640",
+        "timestamp": "2026-10-18T01:46:33Z",
+        "layer": "OPERATIONAL",
+        "type": "BORDER_MEASURE",
+        "signal_type": "BORDER_MEASURE",
+        "event_type": "BORDER_MEASURE",
+        "source": "X",
+        "source_post_id": "2111635008985411898",
+        "author": "Kenny16786018",
+        "url": "https://x.com/Kenny16786018/status/2111635008985411898",
+        "source_url": "https://x.com/Kenny16786018/status/2111635008985411898",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.5,
+        "priority": "MEDIUM",
+        "priority_score": 50.0,
+        "text": "@Hdhhddp0a @Backupjoepags1 First off Biden administration allowed over 20 million migrants into this country so Trump is doing a better job than Obama. Did he closed the border cut drugs down severely coming into this country you sick liberals or a late term abortion that is pure evil.",
+        "text_excerpt": "@Hdhhddp0a @Backupjoepags1 First off Biden administration allowed over 20 million migrants into this country so Trump is doing a better job than Obama. Did he closed the border cut drugs down severely coming into this country you sick liberals or a late term abortion that is pure evil.",
+        "event_group_id": 515,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -7442,7 +8027,7 @@
         "text_excerpt": "@EdwigeLest23737 @jon_delorraine le probleme c'est que si ils baissent les armes ca sera l'anarchie et sous moins de 6h la France sera pas mieux que Ceuta quand tous les migrants sont arrivés",
         "event_group_id": 474,
         "correlation_score": 0.77,
-        "related_source_count": 5,
+        "related_source_count": 6,
         "source_types": [
           "REDDIT",
           "X"
@@ -8587,8 +9172,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-17T06:20:15Z",
-        "last_collected_at": "2026-10-19T09:23:32Z",
-        "collection_count": 27,
+        "last_collected_at": "2026-10-19T10:03:39Z",
+        "collection_count": 28,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -8873,7 +9458,7 @@
         "text_excerpt": "🇪🇸 El 70 % de los migrantes marroquíes que entraron en Ceuta alegan su orientación sexual en sus solicitudes de asilo",
         "event_group_id": 474,
         "correlation_score": 0.7,
-        "related_source_count": 5,
+        "related_source_count": 6,
         "source_types": [
           "REDDIT",
           "X"
@@ -16278,7 +16863,7 @@
         "text_excerpt": "King Felipe VI and Queen Letizia visited the Spanish city of Ceuta in North Africa on Tuesday after about 80,000 migrants crossed Ceuta’s border in July. Most of those who crossed returned, but thousands remain in the city. https://t.co/YrzLBg3QHp",
         "event_group_id": 474,
         "correlation_score": 1.0,
-        "related_source_count": 5,
+        "related_source_count": 6,
         "source_types": [
           "REDDIT",
           "X"
@@ -18424,124 +19009,6 @@
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
-        "timeline_id": "information:16927",
-        "timestamp": "2026-10-13T21:17:13Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1x591cf",
-        "author": "EternalCanadian",
-        "url": "https://www.reddit.com/r/HaloStory/comments/1x591cf/interesting_worldbuilding_from_halo_parasites/",
-        "source_url": "https://www.reddit.com/r/HaloStory/comments/1x591cf/interesting_worldbuilding_from_halo_parasites/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 40,
-        "information_score": 4,
-        "matched_information_cues": [
-          "vessel",
-          "sea",
-          "rescue",
-          "landing"
-        ],
-        "freshness_cues": [],
-        "text": "Interesting Worldbuilding from Halo: Parasite’s Wake (NON-PLOT SPOILERS INSIDE)\nDespite the recent events, books are still coming out, and, as is tradition, so too are my usual threads. For those who aren’t aware, I do these worldbuilding threads for every book release, after getting my hands on said book early. A nice little teaser for everyone. What these threads don’t do is spoil plot, instead, I go over neat worldbuilding details, things added to the Halo Universe that I find interesting. This is not an exhaustive list, and you are seeing my jot-notes, so do keep that in mind. I’m happy to clarify anything, but I will not be spoiling any plot points. The ONLY plot point I will go into detail with is Mobuto’s fate, because if you’re reading this book, you know about his fate, at least somewhat. Regardless, let’s get going. As always, this will be grouped by faction, UNSC first, then Covenant, then Flood, then Forerunner/Halo. UNSC This book, I’d argue more than most, is incredibly character focused. Everything we learn comes from the eyes of the characters, and because of that, my first few entries will describe each character, in sequence. I should note, here, this is the UNSC at it’s most bitter. Genuinely, with what this book describes, it’s a wonder people like Hood can look Thel in the eyes after how the war is depicted here. It is bleak . I mention this to give context to the characters I’m about to describe, starting with our leading man, Mobuto: Staff Sergeant Mobuto : The man needs little introduction, really, but something the book does really well is explain just how broken he is. Staff Sergeant Marvin Mobutu is a decades-long veteran of the Covenant War. He has seen battle after battle, loss after loss, and the recent events in Reach have further taken his sanity. He is less a man, at this point, more a shell of anger, rage, and determination encased in armour, fueled by grief from losses both personal and societal. During the Fall of Reach, he was not part of the Autumn’s complement, but instead part of a mission to initiate the Cole Protocol on various stations and crippled warships around Reach. Aboard two Mako-class Corvettes, Mobuto’s platoon has a terrible time of it, one ship is lost to a collision from a drifting covenant vessel already knocked out earlier in the fighting, and the remaining marines, though they board Lambda station and complete their mission, are killed almost to a man. Of the forty marines who board the station, four make it back to their Mako, and when it’s picked up, hours later, by the Autumn heading towards Azod, Mobuto is the only one left, covered in the blood of his comrades he couldn’t save. His tragedy doesn’t end there, though. On Reach, his wife, Maggie, worked on one of the orbital elevators, ferrying supplies and cargo up and down the stalks. The elevator was deemed so important a team of Spartans was earmarked for it’s defence, but they, along with the battalion of Marines assigned, couldn’t repel the Covenant boarding parties, and eventually Covenant ferried themselves down to the surface. There, they gathered up all the civilians, and the wounded, locked them in a warehouse, and burned them all alive. Though Mobuto does not know how exactly Maggie died, he tells himself she was screaming. It is this act that drives him, it hones his rage and focuses his anger. All Covenant must die. No treaties, no alliances, no mercy. Fun fact, John-117, the Master Chief, did indeed fight alongside Mobuto when aboard the Autumn. He didn’t recognize him later (because Mobuto’s body was so mangled) because Mobuto isn’t special, he is an Everyman, an every marine, you could day. He’s not an ORION, or some super cool ODST, he’s a bargain bin rifleman, one of millions in the UNSCDF. No one here is special, they’re just people, in the wrong place, at the right time. Corporal Paxton : Part of the Autumn’s complement, though originally an infantry marine and proficient sniper who participated in several battles on Reach before being reassigned. Her unit was being screened by a squadron of Cougar IFV’s during an assault on a landed Covenant warship, but they had to retreat after taking major losses, and Paxton was herself traumatized by the event. In particular, the actions of another marine who we'll get to in a moment. Paxton struggles with leadership and finds it hard to trust anyone else in their group once they land on Alpha Halo, but Mobuto grounds her, and keeps her focused. Unlike Mobuto, who only possesses the singular green eyepiece, Paxton has a full face visor with VISR linkup, allowing her to make use of a small reconnaissance drone, and in-built compass and comms. Aside from the above two characters, everyone else in the UNSC ensemble is a prisoner… or at least, not serving marine. Private Green : Formerly Sergeant, and a gunner on one of the aforementioned Cougars. When her vehicle was hit, she abandoned it, leaving her driver and weapons operator behind. Corporal Paxton, when their units withdrew, tackled her and branded the capital letter “D” onto her neck (for ‘Deserter’), and she was demoted in rank and locked up in the Autumn’s brig, rather than shot by firing squad. She has major PTSD from the Battle of Actium, when she was actually just a Private. During the battle of Actium, she was wounded in the thigh by shrapnel and evacuated aboard the Manta-class medical corvette Ariana. The Ariana is shot down by Covenant forces while leaving the atmosphere, and crashes in Actium’s thick jungles. For several days, Green and three other Marines guard wounded prisoners and civilian refugees while waiting for rescue. A covenant patrol finds the ship first, kills the Marines outside, and begins slaughtering the wounded. The Sangheili shoot down anyone who can walk, while the Unggoy stomp the remaining people to death. Green survives this only because she had been in another room securing more bandages. In her nightmares, she envisions herself killing the patients, and tortures herself with a small piece of metal from the Ariana’s hull, which she uses to prick her fingers as a form of atonement. The events on Reach, with the Cougar, was just the straw that finally broke the camel’s back. Gabriel, Watershed Division Contractor : A WD/ONI contractor assigned to the Mjolnir armour crews for RED FLAG (that is, he’s one of the ones who helps armour up, and remove, the Spartan II’s MJOLNIR armour), is probably the most important person in the group, with regards to what he knows. He was placed in the brig for killing a (presumably Marine, though possibly ONI - it’s not clear) Captain who had gotten his son killed during the battle of Ballast a few years earlier. He’s not a combat marine, but he is analytical and very smart, one to think problems through instead of shoot them down. Despite his ONI nature, he’s just as confused and bewildered about everything as everyone else. He’s a repair tech, after all. Private Lawrence “Lucky” Fluck : Infantry Marine. Reason for the brig is unknown. He’s tall and broad shouldered, a giant of a man, though very trusting. He’s assigned by Mobuto to be Green’s battle buddy. A task he fulfills with excellence. Private Sandra “Sandy” Amor : Infantry Marine, in the brig for drunk and disorderly conduct. Sandy serves as something of a moral centre for the group, at least, due to another character I’ll get into in a few moments. She claims to have been spending most of the book in the throes of a terrible hangover, but she’s actually going through alcohol withdrawals. Despite her state, she’s a capable and confident marine. Private Sarah “Silly” Milly : An Infantry Marine. Silly is a jokester, she claims she can “kill someone from a thousand metres away with mean words” as a joke, and most of her jokes are at her own expense. Dry wit and self-depreciation are her trade, and she pokes fun at almost everyone and herself in the group. She’s implied to be at least bisexual, if not a lesbian. Though it’s not clear why she was in the brig, she claims to have stolen a pelican at least twice, and is a (somewhat) capable pilot… landings, though, she’s still working on those. Private Xander : Part of the Autumn’s complement. He’s an asshole, self-professed, and incredibly arrogant. The man is a defeatist, and stays with the group only because he has nothing better to do, prospects wise. Hospital Corpsman Julie Martinez : Combat medic. In the brig for stealing medication. She’s addicted to painkillers. Quiet, but a good shot, and kind-hearted, as befitting a medic. Interestingly, she’s referred to as a private, but if she’s a marine medic, she should be a hospital corpsman. I’ve listed her as such for the purposes of the list, but it’s something to note. Charlie Collins : A fourteen year old stowaway after his mother, an Army Medic, smuggled him aboard the Autumn in the chaos of Azod. Born on Reach,he’s lived in New Alexandria his entire life. His father died in an accident while building the ODP’s over Earth. He likes nature, and is well versed in flora and fauna, but like everyone else, is no stranger to death and war. Even the children not taken for Spartan programs are robbed of their childhoods. When he was younger, a botched rebel attack in New Alexandria saw a freighter crash near his house, his mother, Gabby Collins, spent days working Search and Rescue, Charlie smelled burnt flesh and decaying bodies for a week. He served as something of the group’s conscience, and Sandy is his guardian after he’s separated from his mother in the chaos of abandoning the Autumn. With the characters out of the way, let’s discuss some smaller worldbuilding things. Very small Section, mind you: UNSC vehicles require a more advanced neural lace to operate (scorpions, cougars, etc) Some Pelicans carried M99 Stanchions aboard (well, the Autumn did, but these were taken when the ship was abandoned.) UNSC trauma/mental health services are not up to the task of dealing with the Covenant War. Combat capable marines are needed on the frontline, not behind a desk or discharged, and the system is overflowing with the traumatized and PTSD-riddled such that soldiers are given medication, and therapy, but then, after a time, sent back into the trenches. They cannot afford to waste good fighting stock. Full on penal colonies exist, though whether these are penal colonies as in, planets, or just large prisons isn’t clear. Alongside the conventional Marines, Spartan III Gauntlet Team was also deployed to enact the Cole Protocol over Reach in it’s final hours. Paper books are not commonplace anymore, and most are kept as private collections. An older adventure serial series from the early 2400’s of fiction books is called “Outbound”, detailing an alternative timeline where Wallace Shaw and Tobias Fujikawa lived into the 2360’s and went gallivanting across the galaxy with their perfected Slipspace Drive. Actium has thick, treacherous jungles, full of dangerous alien wildlife, and diseases. Marine body armour can stop assault rifle rounds, and ricochets don’t damage the plates, but they do hurt the marine. Broken ribs from taking a chest hit are common. COVENANT Like the UNSC, the Covenant here are at their most brutal, as already mentioned. War crimes and massacres are commonplace and celebrated, and no one is really “good”, morally. Most of these points below will detail only one character, but I’ve separated them, just for readability. Our POV is a Minor, Seelior ‘Andolee, assigned to the Truth And Reconciliation of the Fleet of Particular Justice. Andolee is a veteran of multiple battles and has participated in the glassings of at three three human worlds, including Reach and Paris IV. He is a very proficient warrior, and his skills are such that he confidently believes he could kill three or four marines in close quarters even while unarmed and without any armour, himself. Andolee is a Truthseeker. This is a bit hard to explain, as at times this is treated as a proper noun, and thus a ln actual group, and at times as something kind of grass roots. As far as it pertains to this book, Andolee considers it to mean anyone who searches for the truth of the Forerunners. Andolee does not believe them to be gods, and hopes that Halo will allow him to prove this to be true. Though Andolee considers this makes him a Heretic and a betrayer, he doesn’t seek the dissolution of the Covenant itself. He has no issues with the Prophets, the Sangheili’s place in Society, or the subservience of the other races, he just doesn’t agree that it should be a religious alliance. To that point, he believes humanity should be granted an olive branch, and allowed to join the Covenant and contribute to it. At the same time, he has no qualms with killing humans to achieve his goal, even if he does seek the end of the war through an armistice. He doesn’t take pleasure in killing humans, unlike many of his Covenant allies, but he has no real issues with it. Andolee is exceptionally proficient with a Covenant Carbine, but his primary weapons in the book are a Plasma Rifle, and an arm mounted energy shield (I think it’s meant to be the cut ones in pre-Halo CE gameplay, which is neat!) When Andolee learns of RED FLAG, he laughs at the insanity of it. Even had the UNSC managed to capture all three Prophets, the Covenant would have simply labeled them as martyrs and continued the war. On the world of Paris IV, what the Sangheili know as Tosinta, Andolee witnessed a Spartan team wreck havoc on a Covenant base, though he did not engage them personally. Though Andolee is a confessed atheist, even he admits some religious rapture at finally finding Halo, and finds it hard to not use more religious terms to refer to Forerunner objects and constructs. Everything beyond this point will be more general Covenant Worldbuilding, but again, it’s small: Some Hunter pairs delighted in the torture maiming of humans, and if possible, preferred to crush them under their large shields, rather than use their fuel rod guns. Jiralhanae were part of Thel’s fleet and deployed to the surface of Alpha Halo Because they had taken damage during the space battle, Thel (with the Prophet of Stewardship’s urging) allowed the Truth and Reconciliation to send out Hunter-killer teams to hunt down human survivors. The Sangheili practice of rising through the ranks via kills is at it’s forefront here. It’s not clear how it’s tracked, per se, and seems to be mostly word of mouth. Banshees deployed in teams of two or three are non-standard formations and are used for Hunter-killer missions. Covenant forces have encountered Flood many times before, and managed to contain all prior outbreaks, and sterilize the sites, though usually not without heavy losses. Flood There isn’t to much here, not without much spoilers. But I’ll give what I can. Flood Combat forms can be comprised of basically any species. Brutes, humans, elites, jackals, even drones and grunts, all serve as combat forms, carrier forms, and a mixture. It’s not entirely clear what causes what mutation. Flood contact isn’t necessarily guaranteed infection. A slash or a stab from a combat form isn’t 100% lethal. However, if you are stabbed (by a claw) you’ve likely been infected by a smaller pod infector. This can possibly be removed if you’re fast enough, stopping the infection, but it’s not really clear. The Flood will change your body on the fly, making you grow extra limbs, removing others, adding tentacles and other things to better serve it’s cause. Even in the feral stage, it’s capable of recognizing potential of certain victims, and does seem to prioritize keeping people trained in specific roles doing those same roles (so, a pilot of a Dropship will be made to continue piloting a Dropship, if possible.) The Flood does seem like it can be resisted, for a time, depending on the style of infection, and we see a few victims granted moments of lucidity, similar to Private Jenkins. Though the flood of course hsve the ability to use firearms, they’re not really skilled with them, the hosts’ bodies not really able to use them to their full effectiveness, and instead the weapins fire is mostly for suppressive purposes. Not really a spoiler, and admittedly, not Flood related, in and of itself, but more relevant to the UNSC and Covenant. The state of the Covenant War is made clear in this book, the distrust and anger. When a group of combined Human and Covenant Flood forms crest a ridge, both the humans and Covenant forces ball at the idea - not of the flood - but that either species would ever truly fight side by side wilingly. The hatred just runs that deep. Halo/The Forerunners Small section here, mostly about Halo, but I’m including Guilty Spark and a few Forerunner things here. Spark’s “ripping apart” of the Halo Ring as seen in the Halo CEA terminals (when he jettisoned a section into space) was originally an accident, but over time, he’s turned it into something to pass the time. Every eight thousand years, he jettisons the same section, and then artificially changes the landscape that’s made when the ring repairs itself. When the Pillar of Autumn arrives, he’s between cycles, and is really hoping for either a fjord, or maybe an inland sea, how quaint Because the Halo Rings are preservations of life, but are obviously very small, relatively speaking, nature isn’t really natural. Plants and animals that shouldn’t mix have been allowed to mix, for example, sub-tropic plants being pollinated by more Northern bees, both set amidst a more temperate southern equatorial environment. Orchids that are supposed to only bloom at night blooming during the day, and animals that should be nowhere near each other geographically living as part of one ecosystem. Sentinels can more or less deal with most flood outbreaks, but Guilty Spark kind of hedged his bets on a Reclaimer such that his defences didn’t really activate in time. That, and the UNSC and Covenant forces killing each other took his focus off of things. When Guilty Spark finds the group, he briefly has a memory of himself as Chakas, a phantom pain, of sorts, remembering his old friends. This is only fleeting, however. Per Guilty Spark himself, firing 04 will not trigger the rest of the array. It will only be a tactical pulse, maximum range of 25,000 LY. The other rings (presumably) will be informed, but they will not activate. Blind Wolves make an appearance here. They’re dangerous, but if you aren’t ambushed, they can be dealt with easily enough (weapons dependant). Debatably this should be in the Covenant section, but I’ll put it here. The Covenant would not distinguish between Ancient Human and Forerunner. As far as they are concerned, modern humanity are directly descended from their gods. Briefly, we seem to explore a section of the Halo 3 multiplayer map Cold Storage, or a facility very much like it. Interestingly, night and day do not seem to be a thing on 04. At least, not as we would understand it. And that’s all for the details. There is an adjunct I can go into, but I’ll avoid talking about it. I will say that there are no timestamps in this book, so it’s not possible to really line up any events with the game or The Flood . That said, the Adjunct does feature a timestamp… …But that’s not my story to tell. ;) Overall, I’d rate this book extremely highly. 9/10, easily. Do yourself a favour and pick up this book. It is phenomenal. As mentioned above, I’ll happily clarify anything I can, but again, no spoilers for plot. If you have a plot related question, do not ask it, I will not answer and I will inform the mods. Regardless, I hope you've enjoyed this thread! ~ /u/EternalCanadian",
-        "text_excerpt": "Interesting Worldbuilding from Halo: Parasite’s Wake (NON-PLOT SPOILERS INSIDE)\nDespite the recent events, books are still coming out, and, as is tradition, so too are my usual threads. For those who aren’t aware, I do these worldbuilding threads for every book release, after getting my hands on said book early. A nice little teaser for everyone. What these threads don’t do is spoil plot, instead, I go over neat worl…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-13T22:05:28Z",
-        "last_collected_at": "2026-10-13T22:05:28Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:16929",
-        "timestamp": "2026-10-13T21:03:50Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1x58pb7",
-        "author": "Volarioo",
-        "url": "https://www.reddit.com/r/ColdWarPowers/comments/1x58pb7/event_shifting_sands/",
-        "source_url": "https://www.reddit.com/r/ColdWarPowers/comments/1x58pb7/event_shifting_sands/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.5,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "crossing",
-          "arrival"
-        ],
-        "freshness_cues": [
-          "now"
-        ],
-        "text": "[EVENT] Shifting Sands\nOf all the fledgling democracies holding elections in 1949, Israel has perhaps the strangest. Leaving aside the purely proportional Israeli election system (Which enables extremist parties to enter into the highest halls of government remarkably easily), Israel has perhaps the single most politicized electorate on the entire planet. A satirical article in Haaretz from December 3rd, 1948 claimed that, out of the 4,000 refugees who arrived that week, only three were not members of a political party. The majority are Labor Zionists. Influenced by socialism and social democracy (if not outright Marxism) they call for Jewish people to negate the diaspora through labor, tilling the land, and the socialist collective farm of the kibbutz. The Minority are revisionists, who have a long and checkered past, mostly descended from the intellectual anti-modernist milieu that also created European Fascism. While they have somewhat moderated since the days when self-identified Fascists called for a Futurist Revolution of Violent Action in Palestine, the stink of fascism and fascist connections have made the revisionists completely isolated from the labor majority. In addition, there are small numbers of General Zionists (mostly Liberals) and Religious Zionists (a minuscule and largely hated group, both by the Zionist mainstream and by most of the religious establishment). One would expect these movements to each contribute a single party to the Provisional State Council, but the Labor Zionists, making up a huge majority of the Israeli population, were hopelessly divided into different, often feuding organizations. While they had generally cooperated during the Second World War and the first phases of the war of independence, it seemed like the forces pulling them apart were always stronger than those pushing them together. Mapai, the Worker’s Party of the Land of Israel, the party of Ben-Gurion, the party of the Haganah, was the largest in the country and in 1948 suffered a serious split. Soviet-leaning members of Ahdut HaAvoda (one of the organizations that originally constituted Mapai) left the party to join the independent Marxist-Leninist labor-zionist Hashomer Hatzair party. They created the United Workers Party, abbreviated as Mapam. Mapam, only about a year old, is extremely internally divided. Ahdut HaAvoda and Hashomer Hatzair are really only united, in fact, on one issue: The paramount importance of the Soviet Union. On the Arab question, the Military question, even the basic principles of governance, the two are at odds. Attempts over the course of the past year to implement something resembling democratic centralism by the majority Hashomer have failed, and a confusing mess of compromises rule the day. All the labor zionists, be they Mapai or Mapam, have been a part of Ben-Gurion’s provisional. Most within Mapam believe that they can remain in coalition with Ben-Gurion after the election, even if the party shrinks in terms of vote totals. Three men sat in the room. This was, in effect, the most important conference in the entire history of the Mapam party. Granted, this wasn’t a conference. It wasn’t even supposed to be happening. If the honorable, embattled, and unfortunately brilliant David Ben-Gurion found out what was happening, in his current state of health, he may actually kick the bucket. Yitzhak Tabenkin, Meyer Ya’ari, and Moshe Sneh were rarely if ever at the same place at the same time. Israel was a small country, and almost everything that mattered happened within a small section of Tel Aviv, but the three had a difficult relationship, as the three most prominent members of an already almost totally dysfunctional political party. No one would doubt any of their Zionist bona fides. All had been in the movement for Decades, all had fought for the Yishuv, all were totally committed to the Jewish state, and all were communists through and through. But just because they were allies didn’t mean they had to be friends. Tabenkin was the oldest of them, and naturally, the crankiest. From a poor family in Warsaw, he found himself inspired by Anarchism, Marxism, and Zionism, growing his organization, Poale Zion into a major player in the crowded Zionist world of pre-WWI Europe. In Palestine, he devoted himself to growing the kibbutz movement, building the groundwork that all other Zionist leaders, great and small, built on top of. Never truly renouncing his religion, Tabenkin joined with Ben-Gurion’s Mapai in the early days, before leading the Ahdut HaAvoda exodus. Now he has been rewarded with official leadership of Mapam, though his power is severely constrained by the Hashomer Hatzair majority. Ya’ari leads that same Hashomer Hatzair. Unlike Tabenkin, with his scattershot spiritualism (which mainly manifests in an ever-increasing focus on the expansion of Jewish Territory in Israel), he trained to become a rabbi, studying the Torah and Talmud for years in the last delirious days of the Austro-Hungarian Empire. The main effect this had on the young man was taking an upstanding young soldier and patriot and turning him into a fanatical Communist Atheist. Ya’ari joined Hashomer Hatzair, and helped shepherd the organization to an increasingly pro-Soviet position in the aftermath of the Russian Revolution. He encouraged the growth of the Hashomer Kibbutzes, and did everything in his power to develop the Marxist-Leninist form of Zionism from a minor tendency to a serious player in the young nation. His biggest triumph so far, convincing the Ahdut to join in the new Mapam party, had turned into a massive headache. Tabenkin was almost a reactionary, it seems. He loved the soviets, but also spent his days undermining everything Ya’ari had fought for, demanding more expulsions, more annexations, more war. Finally, Moshe Sneh is an anomaly. Excuse me, Dr. Moshe Sneh, as he demands everyone he meets calls him, is an anomaly. Sneh is an intellectual titan, well-renowned for debating. And debating. And debating. Long into the hours of the night when most normal people would simply rather go to bed. Sneh was younger than the other men by 2 decades, and a very recent arrival in Israel, having only fled his previous home in Poland after the Germans crossed the Vistula. He was a dyed-in-the-wool liberal for most of his life, before his endless debates convinced him of the true path to human liberation: Marxism-Leninism. Part of it was a stint in Paris, leading the clandestine immigration efforts after the war, where he met Jacques Duclos, Anna Pauker, and for one glorious night, Ho Chi Minh. They told him the Truth. The radiant Truth. The future beckoned from Moscow. For the sake of the Jewish People, Marxism-Leninism had to be implemented in the Yishuv. When he returned to his new home, he broke with David Ben-Gurion. It was hard for him to do, the two had been friends (or as close to friends as one can be with Dr. Moshe Sneh), but David was unconvinced about the Truth. Sneh then became the first, and for a time, perhaps only, Mapamnik. He was devoted to the Mapam program as the most effective way to bring The Truth to Israel. He didn’t care about the previous factional divides in the party; while he was ultimately more sympathetic to Hashomer, everyone who fought for the USSR was his ally. Everyone who fought against it, his enemy. He parlayed this ideological commitment into a position as head of Al HaMishmar, Madam’s newspaper, and became the primary spokesperson for the party. Opinionated, aggressive, and seemingly allergic to pandering, his editorial position had netted him a kind of begrudging respect from the non-Soviet-aligned Zionists of Israel. He was the one who arranged this meeting. Pinchas Rosen was not a communist. He wasn’t even a socialist, somewhat uniquely among zionists. He supported Israel, he supported human rights, justice, constitutionalism, and all the other liberal truisms which he regarded as above silly little things like ideology. His job was to be a public servant in the purest form. His job was to tell the truth, and uncover it however he could. He was also close friends with David Ben-Gurion, and for the last year, those separated impulses were becoming more and more of a problem. David had postponed the election multiple times, and acted cagey about the constitution whenever he spoke to Rosen. Pinchas carefully avoided the topic of the army and its loyalty with David. He always believed that the best army is one that doesn’t serve the political interests of the party, and in the past he had tried to take David aside, explain to him why exactly he was so concerned. “This can’t go on, David. You have to let them fight.” David would smile, like Pinchas didn’t understand politics. He understood politics perfectly. It was ideology he didn’t understand. And so, when the most recent scandal broke, Pinchas decided it was time to come clean. Many years ago, Dr. Sneh and he had been partners in the General Zionist Camp, before the good doctor had fallen head over heels for Stalin. As he entered the room, he saw Sneh’s serious expression. Always like that, like every single question was life and death. Perhaps this time it was deserved. “Doctor.” He nodded politely at Moshe, and then the two other men. He didn’t trust them nearly as much. Ya’ri spoke up: “Thank you for meeting with us on such short notice. We weren’t planning on having a meeting like this, but Moshe told me that you had some information and —“ Moshe shot him a look. “It’s alright,” Pinchas said. He wanted to get down to business too. “As you know, but perhaps were unable to confirm, two weeks ago I met with David. He was in a bad spot, very sick. He wanted to negotiate an agreement between the Progressives and his Party.” He continued: “He told me that he had negotiated a loan that was from the Americans, I suspect, somewhere in the neighborhood of 100 million dollars.” Tabenkin Scoffed at this. “He told me that any government would not include any… communist elements.” Pinchas was careful with how he phrased it, seeing as he was, of course, talking to three avowed Bolsheviks. “He told me much the same,” Tabenkin said. “Except about you.” He gestured at Pinchas, indicating that “you” meant everyone to the right of Nicholas Buhkarin. “Not about the loan, of course. But he gave us a promise: no American bases in the desert. You know how he is.” Ya’ari added on to the old man’s grumbling. “So he two-timed us? Nothing surprising about that. He tells everyone something. It’s called being a politician.” Tabenkin looked like this was the largest waste of his time in history. “Then a week later he sent me another telegram, after the incident with Tzadok.” Pinchas continued on. “The Americans have withdrawn the loan. He was furious; he wanted that so badly, promising to cut the left out of government, but they’re mad. They will still let us into the United Nations but…” “That’s it.” Sneh finished for him. His eyes were aflame. “Thank you, Pinchas. This is exactly what we needed.” “I hope that, when all this is settled,” Sneh looked somewhere between DaVinci and the Devil, “We can be friends again, just like the old days.”",
-        "text_excerpt": "[EVENT] Shifting Sands\nOf all the fledgling democracies holding elections in 1949, Israel has perhaps the strangest. Leaving aside the purely proportional Israeli election system (Which enables extremist parties to enter into the highest halls of government remarkably easily), Israel has perhaps the single most politicized electorate on the entire planet. A satirical article in Haaretz from December 3rd, 1948 claimed…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-13T22:05:29Z",
-        "last_collected_at": "2026-10-13T22:05:29Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:16825",
-        "timestamp": "2026-10-13T17:09:53Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2110055434929193393",
-        "author": "q17mega",
-        "url": "https://x.com/q17mega/status/2110055434929193393",
-        "source_url": "https://x.com/q17mega/status/2110055434929193393",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "crossing"
-        ],
-        "freshness_cues": [],
-        "text": "Illegal Migrants complain that they are not allowed to cross the Polish border:\n\n“We want to enter Poland, but they won’t let us. They are threatening to harm us if we try to cross over. I want to go to Poland or Germany to have a good life.”\n\nPoland says NO to Open Borders! 🇵🇱 https://t.co/4EVM8wjakX",
-        "text_excerpt": "Illegal Migrants complain that they are not allowed to cross the Polish border:\n\n“We want to enter Poland, but they won’t let us. They are threatening to harm us if we try to cross over. I want to go to Poland or Germany to have a good life.”\n\nPoland says NO to Open Borders! 🇵🇱 https://t.co/4EVM8wjakX",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-13T17:13:29Z",
-        "last_collected_at": "2026-10-13T17:13:29Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
         "timeline_id": "operational:574",
         "timestamp": "2026-10-13T17:08:01Z",
         "layer": "OPERATIONAL",
@@ -18571,82 +19038,6 @@
         "event_time_text": null,
         "event_time_normalized": null,
         "event_time_confidence": null,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:16841",
-        "timestamp": "2026-10-13T17:05:15Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2110054271118909855",
-        "author": "AlienPirate1",
-        "url": "https://x.com/AlienPirate1/status/2110054271118909855",
-        "source_url": "https://x.com/AlienPirate1/status/2110054271118909855",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "sea"
-        ],
-        "freshness_cues": [],
-        "text": "@AudaxFieldNotes Hello, I am Palestinian. 🇵🇸\nAnd since honesty is so rare in my politics, let me confess a few things.\n\n1947. The UN offered me a state. Alongside Israel. Borders, independence, recognition. I said no. My leaders promised that war would \"drive the Jews into the sea.\" Instead, I",
-        "text_excerpt": "@AudaxFieldNotes Hello, I am Palestinian. 🇵🇸\nAnd since honesty is so rare in my politics, let me confess a few things.\n\n1947. The UN offered me a state. Alongside Israel. Borders, independence, recognition. I said no. My leaders promised that war would \"drive the Jews into the sea.\" Instead, I",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-13T17:13:59Z",
-        "last_collected_at": "2026-10-13T17:13:59Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:16828",
-        "timestamp": "2026-10-13T17:05:04Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2110054225200005486",
-        "author": "aimslander",
-        "url": "https://x.com/aimslander/status/2110054225200005486",
-        "source_url": "https://x.com/aimslander/status/2110054225200005486",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "sea"
-        ],
-        "freshness_cues": [],
-        "text": "@Mercantio @mahamad_ibrah @MAECIDJIBOUTI @somalilandmfa Am nor threatening anyone I am just analysing the current events the scale of it, look at the amount of foreigner refugees are coming to Djibouti From Yemen and Ethiopia. There is war in Yemen and Ethiopia Djibouti has borders with them  land and sea combined.\n\nAnd the president",
-        "text_excerpt": "@Mercantio @mahamad_ibrah @MAECIDJIBOUTI @somalilandmfa Am nor threatening anyone I am just analysing the current events the scale of it, look at the amount of foreigner refugees are coming to Djibouti From Yemen and Ethiopia. There is war in Yemen and Ethiopia Djibouti has borders with them  land and sea combined.\n\nAnd the president",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-13T17:13:29Z",
-        "last_collected_at": "2026-10-13T17:13:29Z",
-        "collection_count": 1,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -18743,9 +19134,9 @@
         "related_source_count": null,
         "signal_mode": "DIRECT",
         "signal_intent": "MOBILIZATION_COORDINATION",
-        "detection_count": 28,
+        "detection_count": 29,
         "first_detected_at": "2026-10-13T17:15:52Z",
-        "last_detected_at": "2026-10-19T09:27:59Z",
+        "last_detected_at": "2026-10-19T10:05:55Z",
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -70385,20 +70776,20 @@
     "review_start_date": "2026-10-17",
     "review_cohort": "FIRST_RECORDED_ON_OR_AFTER_CUTOFF",
     "decisions": {
-      "EXCLUDE": 40,
-      "PUBLISH": 11,
-      "REVIEW": 27
+      "PUBLISH": 13,
+      "EXCLUDE": 39,
+      "REVIEW": 28
     },
     "removed_display_items": {
-      "live_events": 19,
+      "live_events": 18,
       "high_confidence_events": 0,
       "event_groups": 6,
-      "influence_signals": 16,
-      "early_warning_signals": 16,
-      "crossing_access_signals": 6,
+      "influence_signals": 15,
+      "early_warning_signals": 15,
+      "crossing_access_signals": 4,
       "top_crossing_access_posts": 3,
       "high_priority_intelligence": 3,
-      "access_signals": 6,
+      "access_signals": 4,
       "timeline": 62
     },
     "historical_review_status": "HISTORICAL_NOT_AI_REVIEWED",
