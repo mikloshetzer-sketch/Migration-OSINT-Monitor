@@ -1,0 +1,35 @@
+name: Migration Editorial AI Hungarian Review
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Migration OSINT Monitor"]
+    types: [completed]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: migration-editorial-ai-hu
+  cancel-in-progress: false
+
+jobs:
+  editorial-ai-hu:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout source repository
+        uses: actions/checkout@v4
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate Hungarian summaries and AI editorial suggestions
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          EDITORIAL_GITHUB_TOKEN: ${{ secrets.EDITORIAL_GITHUB_TOKEN }}
+          EDITORIAL_PRIVATE_REPO: mikloshetzer-sketch/Migration-OSINT-Editorial-Private
+          OPENAI_EDITORIAL_MODEL: gpt-4.1-mini
+          EDITORIAL_AI_MAX_RECORDS: '80'
+        run: python -m analysis.enrich_editorial_ai_hu
