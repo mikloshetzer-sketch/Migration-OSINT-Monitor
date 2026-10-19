@@ -2078,5 +2078,21 @@
     "current_event": true,
     "completed_event": false,
     "corroboration": "UNVERIFIED"
+  },
+  "f1ba90f99a0c769f942cc96e783c3a6a09c5e1d5feb9428eac930e1dad2a3414": {
+    "decision": "REVIEW",
+    "reason": "The report details a boat collision leading to migrant deaths and a suspected smuggler arrest, which relates primarily to a maritime accident and detention. However, the event_type 'DETENTION' is only partially accurate since the key event is a fatal boat collision involving migrants. Verification of the event as migration-specific and current is needed, and the event classification should potentially include 'FATALITY' or 'ACCIDENT'.",
+    "event_type_correct": false,
+    "current_event": false,
+    "completed_event": true,
+    "corroboration": "UNVERIFIED"
+  },
+  "8ed7d3556ad3e26759751aa1d60feb31244e6b417c47f3b1487dfaee5a1a5736": {
+    "decision": "REVIEW",
+    "reason": "Inconsistent approval: The signal reports a concrete, specific early warning event related to migration: crowds attempting to block coaches carrying migrants who arrived by small boat on the night of 6 September 2026. The event is contemporary and early-warning in nature, aligning with the MOVEMENT_EARLY_WARNING type.",
+    "event_type_correct": true,
+    "current_event": false,
+    "completed_event": true,
+    "corroboration": "UNVERIFIED"
   }
 }
