@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-19T00:00:14.965587+00:00",
+  "generated_at": "2026-10-19T02:12:43.811725+00:00",
   "version": "3.0",
-  "candidates": 66,
-  "new_ai_calls": 8,
+  "candidates": 69,
+  "new_ai_calls": 4,
   "conflicting_identity_ids": [],
   "decisions": {
     "post:632": {
@@ -81,9 +81,9 @@
       "decision": "EXCLUDE",
       "reason": "The post contains a sarcastic comment about conscripting newly arrived 'migrants' but does not report a concrete, contemporary migration-related event such as an actual border crossing or migration policy change."
     },
-    "signal:1053": {
-      "decision": "REVIEW",
-      "reason": "The post claims a mass fleeing of Ukrainians as refugees due to political and economic reasons but does not provide concrete evidence of a specific migration event such as border crossing data or official refugee movement. The event type is labeled as early warning but lacks supporting details to confirm the validity of the migration signal at this"
+    "post:651": {
+      "decision": "EXCLUDE",
+      "reason": "The content refers to historical migration over a century prior and does not describe a contemporary migration event or early warning. The event type 'BORDER_CROSSING' is not supported by the text."
     },
     "signal:1054": {
       "decision": "REVIEW",
@@ -157,6 +157,14 @@
       "decision": "EXCLUDE",
       "reason": "The post expresses an opinion about Japan's political state and its relation to migrants but does not report a concrete, contemporary migration-specific event or early warning. It is general commentary without specific migration operational or signal content."
     },
+    "signal:1072": {
+      "decision": "EXCLUDE",
+      "reason": "The text is a general alert or commentary about a potential future influx of refugees without reporting a concrete, contemporary migration-specific event or verifiable early warning. There is no specific location or evidence of current pressure at a border. The 'PRESSURE_EARLY_WARNING' event type is not supported by the content."
+    },
+    "signal:1073": {
+      "decision": "REVIEW",
+      "reason": "The post discusses general challenges related to migration enforcement and legal constraints but does not report a specific, concrete migration-related event or a clear migration-specific early warning. It contains general commentary on legal and structural issues without describing an immediate or ongoing migration event or policy action explicitl"
+    },
     "group:516": {
       "decision": "REVIEW",
       "reason": "The post reports multiple maritime incidents involving migrant casualties, which is migration-related and seems contemporary. However, key details like exact date, source credibility, and full event confirmation are missing or incomplete. Verification is needed before publishing."
@@ -164,10 +172,6 @@
     "group:517": {
       "decision": "EXCLUDE",
       "reason": "The post is a historical reference to migration from 1806 and does not report a contemporary migration event."
-    },
-    "group:518": {
-      "decision": "EXCLUDE",
-      "reason": "The post discusses definitions of refugees and comparisons of refugee expulsions but does not report a specific, concrete, or contemporary migration-related event such as an actual deportation or expulsion operation. The event type 'DEPORTATION' is not supported by the content."
     },
     "group:519": {
       "decision": "PUBLISH",
@@ -196,6 +200,10 @@
     "group:525": {
       "decision": "EXCLUDE",
       "reason": "The post contains a speculative commentary about conscripting migrants without reporting a specific, concrete migration event."
+    },
+    "group:526": {
+      "decision": "EXCLUDE",
+      "reason": "The post discusses refugee arrivals and departures historically over a century ago, not a concrete, contemporary migration-related event. The event_type 'BORDER_CROSSING' is not supported by the content, which refers to historical migration rather than a current border crossing event."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -268,6 +276,10 @@
     "signal:1052": {
       "decision": "REVIEW",
       "reason": "The post raises a concern about illegal migrant numbers relative to security forces, labeling it a national security issue, but it lacks concrete, specific, or verifiable migration-related event details or evidence. It is more general commentary or speculation than a confirmed early warning event."
+    },
+    "signal:1053": {
+      "decision": "REVIEW",
+      "reason": "The post claims a mass fleeing of Ukrainians as refugees due to political and economic reasons but does not provide concrete evidence of a specific migration event such as border crossing data or official refugee movement. The event type is labeled as early warning but lacks supporting details to confirm the validity of the migration signal at this"
     }
   }
 }
