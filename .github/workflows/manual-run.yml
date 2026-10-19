@@ -74,21 +74,30 @@ jobs:
           echo "## Private editorial archive" >> "$GITHUB_STEP_SUMMARY"
           echo "WARNING: Private archive failed. Check the archive step logs." >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Archive and AI-review Telegram posts for editorial use
+      - name: Archive Telegram posts for editorial use
         id: telegram-editorial
+        continue-on-error: true
+        env:
+          EDITORIAL_PRIVATE_REPO: mikloshetzer-sketch/Migration-OSINT-Editorial-Private
+          EDITORIAL_GITHUB_TOKEN: ${{ secrets.EDITORIAL_GITHUB_TOKEN }}
+          TELEGRAM_EDITORIAL_MAX_POSTS: "150"
+        run: python -m analysis.telegram_editorial_bridge
+
+      - name: Unified Hungarian editorial AI (all sources)
+        id: editorial-ai
         continue-on-error: true
         env:
           EDITORIAL_PRIVATE_REPO: mikloshetzer-sketch/Migration-OSINT-Editorial-Private
           EDITORIAL_GITHUB_TOKEN: ${{ secrets.EDITORIAL_GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_EDITORIAL_MODEL: gpt-4.1-mini
-          TELEGRAM_EDITORIAL_MAX_POSTS: "150"
-          TELEGRAM_EDITORIAL_MAX_AI: "12"
-        run: python -m analysis.telegram_editorial_bridge
+          EDITORIAL_AI_MAX_RECORDS: "40"
+          EDITORIAL_AI_LOOKBACK_DAYS: "7"
+        run: python -m analysis.enrich_editorial_ai_hu
 
-      - name: Report Telegram editorial failure
-        if: steps.telegram-editorial.outcome == 'failure'
-        run: echo "::warning::Telegram editorial bridge failed; see its logs."
+      - name: Report editorial processing failure
+        if: steps.telegram-editorial.outcome == 'failure' || steps.editorial-ai.outcome == 'failure'
+        run: echo "::warning::Editorial archiving or AI failed; inspect corresponding step logs."
 
       - name: AI editorial gate (new records since 2026-10-17)
         env:
