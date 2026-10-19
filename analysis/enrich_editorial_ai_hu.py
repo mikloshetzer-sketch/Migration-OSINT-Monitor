@@ -172,14 +172,13 @@ def main():
         raise RuntimeError('EDITORIAL_GITHUB_TOKEN and OPENAI_API_KEY are required')
     if not 1 <= MAX_RECORDS <= 500 or not 1 <= LOOKBACK_DAYS <= 30:
         raise ValueError('EDITORIAL_AI_MAX_RECORDS must be 1..500 and LOOKBACK_DAYS 1..30')
+
     today = datetime.now(TZ).date()
-    processed = 0
-    # Oldest first to prevent older untranslated Telegram records from starving.
-    days = [today - timedelta(days=i) for i in range(LOOKBACK_DAYS - 1, -1, -1)]
-    for date in days:
-        if processed >= MAX_RECORDS:
-            break
-        day = date.isoformat()
+    days = [(today - timedelta(days=i)).isoformat()
+            for i in range(LOOKBACK_DAYS - 1, -1, -1)]
+    day_states = {}
+    # Load archives once; the entire lookback period shares one processing queue.
+    for day in days:
         archive, _ = read_json(f'archive/{day}.json')
         if not archive:
             continue
@@ -193,12 +192,31 @@ def main():
         pending = [r for r in candidates(archive)
                    if not isinstance(result['reviews'].get(r['id']), dict)
                    or result['reviews'][r['id']].get('schema_version') != SCHEMA_VERSION
-                   or not result['reviews'][r['id']].get('hu_text')]
-        # Telegram first within each day: repair missing translations without a separate AI path.
-        pending.sort(key=lambda r: (not r['id'].startswith('telegram:'), r['id']))
-        pending = pending[:MAX_RECORDS - processed]
-        for start in range(0, len(pending), BATCH_SIZE):
-            batch = pending[start:start + BATCH_SIZE]
+                   or not str(result['reviews'][r['id']].get('hu_text') or '').strip()]
+        day_states[day] = {'path': path, 'result': result, 'sha': sha, 'pending': pending}
+
+    # Backfill untranslated Telegram from the oldest day before processing other sources.
+    # This prevents large X/Information Signal queues from starving historic Telegram posts.
+    queue = []
+    for telegram_only in (True, False):
+        for day in days:
+            state = day_states.get(day)
+            if not state:
+                continue
+            for record in state['pending']:
+                if record['id'].startswith('telegram:') == telegram_only:
+                    queue.append((day, record))
+    queue = queue[:MAX_RECORDS]
+    processed = 0
+    telegram_processed = 0
+    # Batch by day to write to the matching daily review JSON without changing its schema.
+    for day in days:
+        items = [record for d, record in queue if d == day]
+        if not items:
+            continue
+        state = day_states[day]
+        for start in range(0, len(items), BATCH_SIZE):
+            batch = items[start:start + BATCH_SIZE]
             for attempt in range(3):
                 try:
                     additions = analyze_batch(batch)
@@ -210,13 +228,14 @@ def main():
                         raise
                     print(f'AI retry {attempt + 1}: {exc}', file=sys.stderr)
                     time.sleep(3 * (2 ** attempt))
-            result['reviews'].update(additions)
-            save_json(path, result, sha)
-            _, sha = read_json(path)
+            state['result']['reviews'].update(additions)
+            save_json(state['path'], state['result'], state['sha'])
+            _, state['sha'] = read_json(state['path'])
             processed += len(additions)
-            print(f'{day}: {len(additions)} unified AI reviews saved, including '
-                  f'{sum(r["id"].startswith("telegram:") for r in batch)} Telegram')
-    print(f'Unified editorial AI complete: {processed} new reviews')
+            telegram_processed += sum(x['id'].startswith('telegram:') for x in batch)
+            print(f'{day}: saved {len(additions)} shared editorial AI reviews')
+    print(f'Unified editorial AI complete: {processed} new reviews; '
+          f'Telegram: {telegram_processed}; lookback: {LOOKBACK_DAYS} days')
 
 
 if __name__ == '__main__':
