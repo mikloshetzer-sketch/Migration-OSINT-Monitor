@@ -45,11 +45,34 @@ def read_json(path):
 
 
 def save_json(path, obj, sha):
-    content = base64.b64encode((json.dumps(obj, ensure_ascii=False, indent=2) + '\n').encode()).decode()
-    data = {'message': f'Update Hungarian AI editorial suggestions: {path}', 'content': content}
-    if sha:
-        data['sha'] = sha
-    github('PUT', path, data)
+    """Save with optimistic-concurrency retry, preserving other runs' reviews."""
+    for attempt in range(7):
+        latest, current_sha = read_json(path)
+        if isinstance(latest, dict) and isinstance(latest.get('reviews'), dict):
+            # Existing reviews take precedence; do not overwrite completed work.
+            merged = dict(obj)
+            merged['reviews'] = {**obj.get('reviews', {}), **latest['reviews']}
+            obj.clear()
+            obj.update(merged)
+        content = base64.b64encode(
+            (json.dumps(obj, ensure_ascii=False, indent=2) + '\n').encode()
+        ).decode()
+        data = {
+            'message': f'Update Hungarian AI editorial suggestions: {path}',
+            'content': content,
+        }
+        if current_sha:
+            data['sha'] = current_sha
+        try:
+            github('PUT', path, data)
+            return
+        except RuntimeError as exc:
+            message = str(exc)
+            if ('HTTP 409' not in message and 'HTTP 422' not in message) or attempt == 6:
+                raise
+            print(f'GitHub write conflict on {path}; refreshing SHA and retrying ({attempt + 1}/7)', file=sys.stderr)
+            time.sleep(min(2 ** attempt, 12))
+    raise RuntimeError(f'Unable to save {path} after repeated conflicts')
 
 
 def record_id(section, item):
