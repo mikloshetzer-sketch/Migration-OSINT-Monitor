@@ -1,14 +1,12 @@
 {
-  "generated_at": "2026-10-19T08:43:20.208487+00:00",
+  "generated_at": "2026-10-19T09:28:16.196294+00:00",
   "version": "3.0",
-  "candidates": 73,
-  "new_ai_calls": 7,
-  "conflicting_identity_ids": [],
+  "candidates": 78,
+  "new_ai_calls": 6,
+  "conflicting_identity_ids": [
+    "group:529"
+  ],
   "decisions": {
-    "post:636": {
-      "decision": "EXCLUDE",
-      "reason": "The content discusses economic hardship of migrants generally and mentions street vending but does not describe a concrete, contemporary migration-related event such as an actual border crossing or specific border crossing event. The event type BORDER_CROSSING is not supported."
-    },
     "post:640": {
       "decision": "EXCLUDE",
       "reason": "The post is a political opinion with unsubstantiated claims and does not report a concrete, contemporary migration-related event or policy measure. The event_type 'BORDER_MEASURE' is not supported by a specific event description."
@@ -85,29 +83,13 @@
       "decision": "EXCLUDE",
       "reason": "The report does not describe a concrete, contemporary migration-related event of border crossing but an incidental mention of a 'Refugee from Algeria' caught in unrelated protests. No actual migration event is detailed."
     },
-    "signal:1057": {
+    "post:659": {
       "decision": "EXCLUDE",
-      "reason": "The post is a generalized political commentary about migration issues in Western countries and does not report a specific, concrete migration-related operational event or early warning."
-    },
-    "signal:1060": {
-      "decision": "REVIEW",
-      "reason": "The report claims Poland is deploying the army to its borders to stop irregular migrants, which is a migration-specific early warning signal. However, there is no external or multiple independent corroboration provided to verify this claim. The location is unspecified ('-'), and the source is a single social media post without verification. Additio"
-    },
-    "signal:1061": {
-      "decision": "EXCLUDE",
-      "reason": "The post contains inflammatory and unsupported political commentary without reporting a concrete, contemporary migration-specific event or policy action. It does not provide a verifiable migration-related early warning or signal."
-    },
-    "signal:1062": {
-      "decision": "EXCLUDE",
-      "reason": "The post is a general narrative or commentary on migration-related issues and allegations, without reporting a concrete, contemporary migration event or a specific facilitation early warning. It contains broad claims and rhetoric rather than verified or specific signals of migration-related events."
+      "reason": "The post expresses an opinion about local council housing policies and alleged voting manipulation but does not report a concrete, contemporary migration-related event such as a border crossing or housing of migrants."
     },
     "signal:1064": {
       "decision": "EXCLUDE",
       "reason": "This record contains general political commentary and opinions on immigration policies and social effects in France without reporting a specific migration-related event or concrete early warning involving operational migration activity or policy action. The event type PRESSURE_EARLY_WARNING is not supported by the content provided. There is no cont"
-    },
-    "signal:1065": {
-      "decision": "EXCLUDE",
-      "reason": "The content describes a game simulation expressing a political opinion but does not report a concrete, contemporary migration-specific policy change or event. It is a narrative rather than an operational migration event or policy action."
     },
     "signal:1066": {
       "decision": "REVIEW",
@@ -165,6 +147,26 @@
       "decision": "PUBLISH",
       "reason": "The report details a concrete and contemporary migration-related event involving the death of 12 migrants in Aegean Sea crossings, which constitutes a migration-specific route early warning about dangerous crossing conditions."
     },
+    "signal:1082": {
+      "decision": "REVIEW",
+      "reason": "The post reports ongoing and past protests against migration in multiple European countries up to 2025-2026, mentioning specific cities and events. While it indicates migration-related social pressure and protest activity, it summarizes multiple events without detailing a specific new or concrete early warning event at the location Ceuta. The event"
+    },
+    "signal:1083": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete and contemporary migration-related event involving a fatal collision at sea during an attempted migrant crossing, with casualties and arrests. This is consistent with a migration-specific facilitation incident and an early warning signal of the dangers on this route."
+    },
+    "signal:1084": {
+      "decision": "PUBLISH",
+      "reason": "The report details a concrete and recent migration-related event involving migrant fatalities and rescue operations in the Aegean Sea, fitting the ROUTE_EARLY_WARNING category due to incidents on common migrant sea routes."
+    },
+    "signal:1085": {
+      "decision": "REVIEW",
+      "reason": "The post discusses a claimed count of legal settlements and critiques policy but does not report a specific, new, concrete migration-related event or policy action. It reads more as commentary on migration management and political framing, lacking clear, verifiable early warning or a defined operational event."
+    },
+    "signal:1086": {
+      "decision": "EXCLUDE",
+      "reason": "The text is a general online narrative expressing ethnic tensions and opinions about migration, without reporting a concrete, contemporary migration-specific event or policy action. There is no clear migration movement, early warning, or operational event described."
+    },
     "group:523": {
       "decision": "EXCLUDE",
       "reason": "The post is a general narrative without reporting a specific, concrete migration event or verified operational details. The event_type 'BORDER_CROSSING' is not supported by the content, which refers vaguely to migrant presence and unverified claims about crime."
@@ -172,10 +174,6 @@
     "group:524": {
       "decision": "EXCLUDE",
       "reason": "The post is a personal narrative about past immigration experience without reporting a concrete, contemporary migration-related event. It is historical and incomplete, lacking specific migration event details or current relevance."
-    },
-    "group:525": {
-      "decision": "EXCLUDE",
-      "reason": "The post contains a speculative commentary about conscripting migrants without reporting a specific, concrete migration event."
     },
     "group:526": {
       "decision": "EXCLUDE",
@@ -188,6 +186,10 @@
     "group:528": {
       "decision": "REVIEW",
       "reason": "The text discusses deportation figures and migration trends but lacks clear, concrete, and verifiable details about a specific, contemporary migration event. There is no date for when these numbers were reported, the source is unspecified, and the claim that '1.9M additional people have self deported' and '17 consecutive months with zero migrant re"
+    },
+    "group:529": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -277,6 +279,10 @@
       "decision": "REVIEW",
       "reason": "The post claims a struggle involving illegal immigrants and police in France, suggesting an unvetted migrant influx, but lacks concrete, specific evidence of an ongoing migration event or policy action. It also contains general political commentary and analogy to South Africa without clear operational details. Verification of the incident's specifi"
     },
+    "signal:1057": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a generalized political commentary about migration issues in Western countries and does not report a specific, concrete migration-related operational event or early warning."
+    },
     "signal:1058": {
       "decision": "EXCLUDE",
       "reason": "The report discusses a possible bird migration observation for Pine Siskin but lacks a concrete, contemporary migration event or verified early warning specific to human migration. The content is about bird migration, not human migration, which falls outside the editorial scope."
@@ -285,9 +291,25 @@
       "decision": "EXCLUDE",
       "reason": "The content is a political/social commentary without reporting a concrete, contemporary migration-specific event or early warning. It does not describe a verifiable migration movement, policy action, or route signal."
     },
+    "signal:1060": {
+      "decision": "REVIEW",
+      "reason": "The report claims Poland is deploying the army to its borders to stop irregular migrants, which is a migration-specific early warning signal. However, there is no external or multiple independent corroboration provided to verify this claim. The location is unspecified ('-'), and the source is a single social media post without verification. Additio"
+    },
+    "signal:1061": {
+      "decision": "EXCLUDE",
+      "reason": "The post contains inflammatory and unsupported political commentary without reporting a concrete, contemporary migration-specific event or policy action. It does not provide a verifiable migration-related early warning or signal."
+    },
+    "signal:1062": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a general narrative or commentary on migration-related issues and allegations, without reporting a concrete, contemporary migration event or a specific facilitation early warning. It contains broad claims and rhetoric rather than verified or specific signals of migration-related events."
+    },
     "signal:1063": {
       "decision": "PUBLISH",
       "reason": "The report details a new, specific arrival of approximately 30 migrants adding to the total arrivals in specific locations within Greece, constituting a concrete contemporary migration movement event and suitable for movement early warning classification."
+    },
+    "signal:1065": {
+      "decision": "EXCLUDE",
+      "reason": "The content describes a game simulation expressing a political opinion but does not report a concrete, contemporary migration-specific policy change or event. It is a narrative rather than an operational migration event or policy action."
     },
     "signal:1068": {
       "decision": "EXCLUDE",
