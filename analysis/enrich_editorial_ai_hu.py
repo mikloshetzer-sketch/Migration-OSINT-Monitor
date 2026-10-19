@@ -20,6 +20,7 @@ OPENAI_KEY = os.environ.get('OPENAI_API_KEY', '')
 MODEL = os.environ.get('OPENAI_EDITORIAL_MODEL', 'gpt-4.1-mini')
 MAX_RECORDS = int(os.environ.get('EDITORIAL_AI_MAX_RECORDS', '80'))
 BATCH_SIZE = 6
+SCHEMA_VERSION = 2
 SECTIONS = ('information_signals', 'live_events', 'event_groups', 'influence_signals', 'early_warning_signals', 'crossing_access_signals', 'access_signals', 'top_crossing_access_posts', 'high_priority_intelligence')
 
 
@@ -51,7 +52,13 @@ def save_json(path, obj, sha):
         if isinstance(latest, dict) and isinstance(latest.get('reviews'), dict):
             # Existing reviews take precedence; do not overwrite completed work.
             merged = dict(obj)
-            merged['reviews'] = {**obj.get('reviews', {}), **latest['reviews']}
+            merged['reviews'] = {**latest['reviews'], **obj.get('reviews', {})}
+            # Keep an already-saved v2 review over an incoming older or duplicate version.
+            for key, review in latest['reviews'].items():
+                if isinstance(review, dict) and review.get('schema_version') == SCHEMA_VERSION:
+                    merged['reviews'][key] = review
+            merged['legacy_reviews'] = {**obj.get('legacy_reviews', {}), **latest.get('legacy_reviews', {})} if isinstance(latest.get('legacy_reviews'), dict) else obj.get('legacy_reviews', {})
+            merged['schema_version'] = SCHEMA_VERSION
             obj.clear()
             obj.update(merged)
         content = base64.b64encode(
@@ -102,18 +109,31 @@ def candidates(archive):
     return list(seen.values())
 
 
-CATEGORIES = {'EVENT', 'EARLY_WARNING', 'POLITICAL_DISCOURSE', 'MISINFORMATION_SUSPECTED', 'IRRELEVANT'}
+CATEGORIES = {
+    'MIGRATION_EVENT', 'MOVEMENT_INTENT', 'FACILITATION', 'BORDER_SECURITY',
+    'POLICY_LEGAL', 'SOCIAL_DISCOURSE', 'HUMANITARIAN',
+    'BACKGROUND_HISTORICAL', 'IRRELEVANT'
+}
+VERIFICATION = {'UNVERIFIED', 'PARTIALLY_VERIFIED', 'VERIFIED', 'CONTRADICTED', 'MANIPULATION_SUSPECTED'}
+PRIORITIES = {'HIGH', 'MEDIUM', 'LOW'}
 
 
 def analyze_batch(batch):
-    system = ("Migrációs OSINT szerkesztői előértékelő vagy. Csak a kapott posztok alapján dolgozz. "
-              "Minden rekordhoz készíts pontos, közérthető magyar fordítást vagy hosszú szövegnél hű, 2-4 mondatos magyar összefoglalót. "
-              "Ne találj ki tényeket. Kategóriák: EVENT (konkrét esemény), EARLY_WARNING (ellenőrzendő korai jelzés), "
-              "POLITICAL_DISCOURSE (vélemény, politikai/társadalmi vita), MISINFORMATION_SUSPECTED (konkrétan megindokolt ellenőrzési gyanú), "
-              "IRRELEVANT (nem a jelenkori migrációs monitor tárgya). "
-              "A dezinformációgyanú nem tényellenőrzés és nem cáfolat. Egy állítás puszta politikai jellege nem dezinformáció. "
-              "Soha ne javasolj automatikus publikálást. "
-              "JSON objektumot adj vissza, 'results' tömbbel. Minden elem: id, hu_text, category, reason_hu, verification_needed (boolean). "
+    system = ("Migrációs OSINT szerkesztői előértékelő vagy. A bemenet közösségi média és más források állításait tartalmazza, "
+              "nem ellenőrzött tényeket. Minden rekordhoz adj pontos magyar fordítást vagy hosszú szövegnél hű 2–4 mondatos összefoglalót. "
+              "A tartalmi kategóriák (egyet válassz): MIGRATION_EVENT=konkrét migrációs esemény; "
+              "MOVEMENT_INTENT=migrációs szándék/mozgásjelzés; FACILITATION=szervezés/embercsempészet; "
+              "BORDER_SECURITY=határbiztonság/intézkedés; POLICY_LEGAL=politikai/jogi fejlemény; "
+              "SOCIAL_DISCOURSE=társadalmi diskurzus; HUMANITARIAN=humanitárius helyzet; "
+              "BACKGROUND_HISTORICAL=háttérinformáció/történeti; IRRELEVANT=irreleváns. "
+              "Az ellenőrzöttség külön dimenzió: UNVERIFIED=nem ellenőrzött; PARTIALLY_VERIFIED=részben megerősített; "
+              "VERIFIED=megerősített; CONTRADICTED=ellentmondásos/cáfolt; MANIPULATION_SUSPECTED=manipulációgyanús. "
+              "Kizárólag a kapott poszt alapján rendszerint UNVERIFIED a helyes, VERIFIED csak bizonyító forrásadat esetén adható. "
+              "A politikai vélemény nem önmagában manipuláció. A manipulációgyanút indokold konkrétan, ne állítsd tényként. "
+              "Prioritás: HIGH/MEDIUM/LOW, migrációs jelentőség és ellenőrzési sürgősség szerint. "
+              "Ne találj ki tényeket, ne hozz publikálási döntést. Magyar indoklás mindhárom dimenzióhoz. "
+              "JSON objektumot adj vissza results tömbbel. Minden elem kötelező mezői: "
+              "id, hu_text, content_category, verification_status, priority, reason_hu, verification_needed (boolean). "
               "Az id mezőt pontosan másold át. Minden bemeneti rekord szerepeljen a válaszban.")
     body = {'model': MODEL, 'temperature': 0, 'response_format': {'type': 'json_object'}, 'messages': [
         {'role': 'system', 'content': system},
@@ -131,14 +151,20 @@ def analyze_batch(batch):
     for item in items:
         if not isinstance(item, dict) or item.get('id') not in valid_ids:
             continue
-        category = str(item.get('category', '')).upper()
+        category = str(item.get('content_category', '')).upper()
+        verification = str(item.get('verification_status', '')).upper()
+        priority = str(item.get('priority', '')).upper()
         hu = str(item.get('hu_text') or '').strip()
         reason = str(item.get('reason_hu') or '').strip()
-        if category not in CATEGORIES or not hu or not reason:
+        if category not in CATEGORIES or verification not in VERIFICATION or priority not in PRIORITIES or not hu or not reason:
             continue
-        output[item['id']] = {'hu_text': hu, 'category': category, 'reason_hu': reason,
-                              'verification_needed': bool(item.get('verification_needed', True)),
-                              'model': MODEL, 'analyzed_at': datetime.now(timezone.utc).isoformat()}
+        output[item['id']] = {
+            'hu_text': hu, 'content_category': category, 'verification_status': verification,
+            'priority': priority, 'reason_hu': reason,
+            'verification_needed': bool(item.get('verification_needed', verification != 'VERIFIED')),
+            'schema_version': SCHEMA_VERSION, 'model': MODEL,
+            'analyzed_at': datetime.now(timezone.utc).isoformat()
+        }
     return output
 
 
@@ -158,8 +184,12 @@ def main():
             continue
         path = f'ai_reviews/{day}.json'
         previous, sha = read_json(path)
-        result = previous if isinstance(previous, dict) and isinstance(previous.get('reviews'), dict) else {'schema_version': 1, 'date': day, 'reviews': {}}
-        pending = [r for r in candidates(archive) if r['id'] not in result['reviews']]
+        result = previous if isinstance(previous, dict) and isinstance(previous.get('reviews'), dict) else {'schema_version': SCHEMA_VERSION, 'date': day, 'reviews': {}}
+        # Preserve v1 results before upgrading them; never silently discard prior assessments.
+        if result.get('schema_version', 1) < SCHEMA_VERSION:
+            result['legacy_reviews'] = {**result.get('reviews', {}), **result.get('legacy_reviews', {})}
+            result['schema_version'] = SCHEMA_VERSION
+        pending = [r for r in candidates(archive) if result['reviews'].get(r['id'], {}).get('schema_version') != SCHEMA_VERSION]
         pending = pending[:max(0, MAX_RECORDS - processed)]
         for start in range(0, len(pending), BATCH_SIZE):
             batch = pending[start:start+BATCH_SIZE]
