@@ -1,4 +1,3 @@
-
 name: Migration OSINT Monitor
 
 on:
@@ -16,7 +15,6 @@ concurrency:
 jobs:
   run-monitor:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -76,6 +74,22 @@ jobs:
           echo "## Private editorial archive" >> "$GITHUB_STEP_SUMMARY"
           echo "WARNING: Private archive failed. Check the archive step logs." >> "$GITHUB_STEP_SUMMARY"
 
+      - name: Archive and AI-review Telegram posts for editorial use
+        id: telegram-editorial
+        continue-on-error: true
+        env:
+          EDITORIAL_PRIVATE_REPO: mikloshetzer-sketch/Migration-OSINT-Editorial-Private
+          EDITORIAL_GITHUB_TOKEN: ${{ secrets.EDITORIAL_GITHUB_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_EDITORIAL_MODEL: gpt-4.1-mini
+          TELEGRAM_EDITORIAL_MAX_POSTS: "150"
+          TELEGRAM_EDITORIAL_MAX_AI: "12"
+        run: python -m analysis.telegram_editorial_bridge
+
+      - name: Report Telegram editorial failure
+        if: steps.telegram-editorial.outcome == 'failure'
+        run: echo "::warning::Telegram editorial bridge failed; see its logs."
+
       - name: AI editorial gate (new records since 2026-10-17)
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -87,17 +101,13 @@ jobs:
         run: |
           python - <<'PY'
           import json
-
           with open('dashboard-data.json', encoding='utf-8') as f:
               d = json.load(f)
-
           g = d['ai_editorial_gate']
-
           assert g['status'] == 'APPLIED_FAIL_CLOSED'
           assert g['version'] == '3.0'
           assert g['review_start_date'] == '2026-10-17'
           assert d['historical_revalidation']['mode'] == 'REVIEWED_SUPPRESSION_OVERLAY'
-
           print('Gate:', g)
           PY
 
@@ -112,10 +122,8 @@ jobs:
         run: |
           python - <<'PY'
           import json
-
           with open('source-intelligence.json', encoding='utf-8') as f:
               d = json.load(f)
-
           assert isinstance(d.get('posts'), list)
           assert isinstance(d.get('daily_history'), list)
           PY
@@ -124,9 +132,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-
           git add dashboard-data.json analysis/ai_editorial_cache.json ai-editorial-audit.json
-
           if ! git diff --cached --quiet; then
             git commit -m 'Publish daily AI-gated migration dashboard'
             git pull --rebase origin main
@@ -138,7 +144,6 @@ jobs:
         continue-on-error: true
         run: |
           git add source-intelligence.json
-
           if ! git diff --cached --quiet; then
             git commit -m 'Update Source Intelligence data'
             git pull --rebase origin main
