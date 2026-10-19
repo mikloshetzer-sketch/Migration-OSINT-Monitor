@@ -1,21 +1,13 @@
 {
-  "generated_at": "2026-10-19T07:32:03.619755+00:00",
+  "generated_at": "2026-10-19T08:43:20.208487+00:00",
   "version": "3.0",
-  "candidates": 70,
-  "new_ai_calls": 2,
+  "candidates": 73,
+  "new_ai_calls": 7,
   "conflicting_identity_ids": [],
   "decisions": {
-    "post:635": {
-      "decision": "REVIEW",
-      "reason": "Inconsistent approval: The post reports a specific and recent figure of unauthorized small boat crossings across the English Channel in 2026, indicating a concrete and contemporary migration-related event consistent with the BORDER_CROSSING type."
-    },
     "post:636": {
       "decision": "EXCLUDE",
       "reason": "The content discusses economic hardship of migrants generally and mentions street vending but does not describe a concrete, contemporary migration-related event such as an actual border crossing or specific border crossing event. The event type BORDER_CROSSING is not supported."
-    },
-    "post:637": {
-      "decision": "EXCLUDE",
-      "reason": "The post relates to domestic housing policy prioritization claims and political criticism, not a specific or concrete migration-related event such as a border crossing or arrival event. The event type 'BORDER_CROSSING' is incorrect as the text discusses housing allocation and political statements, not migration movement or border activity."
     },
     "post:640": {
       "decision": "EXCLUDE",
@@ -85,17 +77,17 @@
       "decision": "REVIEW",
       "reason": "The report details a boat collision leading to migrant deaths and a suspected smuggler arrest, which relates primarily to a maritime accident and detention. However, the event_type 'DETENTION' is only partially accurate since the key event is a fatal boat collision involving migrants. Verification of the event as migration-specific and current is n"
     },
+    "post:657": {
+      "decision": "REVIEW",
+      "reason": "The post reports a maritime migration-related event involving deaths and rescues but does not provide fully verifiable details such as precise location or official confirmation. The event_type 'RESCUE_OPERATION' partially fits but the information lacks corroboration and completeness."
+    },
+    "post:658": {
+      "decision": "EXCLUDE",
+      "reason": "The report does not describe a concrete, contemporary migration-related event of border crossing but an incidental mention of a 'Refugee from Algeria' caught in unrelated protests. No actual migration event is detailed."
+    },
     "signal:1057": {
       "decision": "EXCLUDE",
       "reason": "The post is a generalized political commentary about migration issues in Western countries and does not report a specific, concrete migration-related operational event or early warning."
-    },
-    "signal:1058": {
-      "decision": "EXCLUDE",
-      "reason": "The report discusses a possible bird migration observation for Pine Siskin but lacks a concrete, contemporary migration event or verified early warning specific to human migration. The content is about bird migration, not human migration, which falls outside the editorial scope."
-    },
-    "signal:1059": {
-      "decision": "EXCLUDE",
-      "reason": "The content is a political/social commentary without reporting a concrete, contemporary migration-specific event or early warning. It does not describe a verifiable migration movement, policy action, or route signal."
     },
     "signal:1060": {
       "decision": "REVIEW",
@@ -108,10 +100,6 @@
     "signal:1062": {
       "decision": "EXCLUDE",
       "reason": "The post is a general narrative or commentary on migration-related issues and allegations, without reporting a concrete, contemporary migration event or a specific facilitation early warning. It contains broad claims and rhetoric rather than verified or specific signals of migration-related events."
-    },
-    "signal:1063": {
-      "decision": "PUBLISH",
-      "reason": "The report details a new, specific arrival of approximately 30 migrants adding to the total arrivals in specific locations within Greece, constituting a concrete contemporary migration movement event and suitable for movement early warning classification."
     },
     "signal:1064": {
       "decision": "EXCLUDE",
@@ -128,14 +116,6 @@
     "signal:1067": {
       "decision": "REVIEW",
       "reason": "The claim alleges a large-scale, intentional facilitation of migrant crossings via the CBP One app by the Biden administration, with specific numbers given. This is a serious allegation involving migration policy and facilitation, but it lacks supporting details or credible corroboration beyond the platform's own assertion. The event type 'CROSSING"
-    },
-    "signal:1068": {
-      "decision": "EXCLUDE",
-      "reason": "This post describes a planned project and a survey solicitation for feedback on a maritime recruitment platform; no actual migration event or migration-specific early warning is reported. It is a future proposal without concrete ongoing operational migration relevance or immediate impact."
-    },
-    "signal:1069": {
-      "decision": "EXCLUDE",
-      "reason": "This is a proposal and consultation request for a planned maritime recruitment platform, not a concrete or ongoing migration event, early warning, or policy action. It does not report a current migration-specific operational event."
     },
     "signal:1070": {
       "decision": "EXCLUDE",
@@ -165,13 +145,25 @@
       "decision": "REVIEW",
       "reason": "Inconsistent approval: The signal reports a concrete, specific early warning event related to migration: crowds attempting to block coaches carrying migrants who arrived by small boat on the night of 6 September 2026. The event is contemporary and early-warning in nature, aligning with the MOVEMENT_EARLY_WARNING type."
     },
-    "group:521": {
+    "signal:1077": {
       "decision": "EXCLUDE",
-      "reason": "The post contains a general commentary about migrants and urban neighborhoods without reporting a concrete, contemporary migration-related event or border crossing. No specific migration event or action is described."
+      "reason": "The record describes a planned project and survey seeking feedback about a potential seafarer job search platform, with no concrete or current migration event or policy action reported. It is an early-stage proposal without an actual migration event or early warning."
     },
-    "group:522": {
+    "signal:1078": {
       "decision": "EXCLUDE",
-      "reason": "The post is a vague, inflammatory statement lacking any concrete details or evidence of a specific rescue operation related to migration. It does not describe a contemporary migration event or provide verifiable information about a rescue operation."
+      "reason": "The event refers to a historical report from August 1998 and does not describe a current or contemporary migration-specific event or early warning. The event date is not current, and the content is anecdotal without a concrete current migration-related action or early warning."
+    },
+    "signal:1079": {
+      "decision": "REVIEW",
+      "reason": "The post references a tragic event involving migrant fatalities reported by the Greek Coast Guard, which is relevant to migration. However, details such as the timing and context of the event are not clearly established from the text, and the event date is not specified. The event type assigned is ROUTE_EARLY_WARNING, but this seems to be a report "
+    },
+    "signal:1080": {
+      "decision": "REVIEW",
+      "reason": "The signal reports a tragic event of migrant fatalities at sea but lacks specific details such as date, exact location, or confirmed sources. It is labeled as ROUTE_EARLY_WARNING but describes an incident that seems to be a reported migrant fatality event, which would correspond to an operational migration event rather than an early warning. The lo"
+    },
+    "signal:1081": {
+      "decision": "PUBLISH",
+      "reason": "The report details a concrete and contemporary migration-related event involving the death of 12 migrants in Aegean Sea crossings, which constitutes a migration-specific route early warning about dangerous crossing conditions."
     },
     "group:523": {
       "decision": "EXCLUDE",
@@ -284,6 +276,26 @@
     "signal:1056": {
       "decision": "REVIEW",
       "reason": "The post claims a struggle involving illegal immigrants and police in France, suggesting an unvetted migrant influx, but lacks concrete, specific evidence of an ongoing migration event or policy action. It also contains general political commentary and analogy to South Africa without clear operational details. Verification of the incident's specifi"
+    },
+    "signal:1058": {
+      "decision": "EXCLUDE",
+      "reason": "The report discusses a possible bird migration observation for Pine Siskin but lacks a concrete, contemporary migration event or verified early warning specific to human migration. The content is about bird migration, not human migration, which falls outside the editorial scope."
+    },
+    "signal:1059": {
+      "decision": "EXCLUDE",
+      "reason": "The content is a political/social commentary without reporting a concrete, contemporary migration-specific event or early warning. It does not describe a verifiable migration movement, policy action, or route signal."
+    },
+    "signal:1063": {
+      "decision": "PUBLISH",
+      "reason": "The report details a new, specific arrival of approximately 30 migrants adding to the total arrivals in specific locations within Greece, constituting a concrete contemporary migration movement event and suitable for movement early warning classification."
+    },
+    "signal:1068": {
+      "decision": "EXCLUDE",
+      "reason": "This post describes a planned project and a survey solicitation for feedback on a maritime recruitment platform; no actual migration event or migration-specific early warning is reported. It is a future proposal without concrete ongoing operational migration relevance or immediate impact."
+    },
+    "signal:1069": {
+      "decision": "EXCLUDE",
+      "reason": "This is a proposal and consultation request for a planned maritime recruitment platform, not a concrete or ongoing migration event, early warning, or policy action. It does not report a current migration-specific operational event."
     }
   }
 }
