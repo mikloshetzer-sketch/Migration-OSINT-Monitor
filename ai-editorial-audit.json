@@ -1,22 +1,10 @@
 {
-  "generated_at": "2026-10-19T02:12:43.811725+00:00",
+  "generated_at": "2026-10-19T07:12:26.717427+00:00",
   "version": "3.0",
-  "candidates": 69,
-  "new_ai_calls": 4,
+  "candidates": 70,
+  "new_ai_calls": 8,
   "conflicting_identity_ids": [],
   "decisions": {
-    "post:632": {
-      "decision": "EXCLUDE",
-      "reason": "The post contains a historical claim unrelated to a concrete, contemporary migration-related event. It does not describe an actual, current border crossing or migration event."
-    },
-    "post:633": {
-      "decision": "EXCLUDE",
-      "reason": "The text describes general shopping behavior across the border rather than a specific, contemporary migration-related border crossing event. It lacks indication of a migration event such as relocation, asylum seeking, or mass movement; it appears to discuss routine cross-border shopping."
-    },
-    "post:634": {
-      "decision": "REVIEW",
-      "reason": "The post references a refugee arrival figure claimed by the European Commission, which relates to migration. However, it does not report a specific new or concrete migration event such as a current border crossing or new refugee influx. The timing and context are uncertain, and the claim about 4 million refugees lacks direct event evidence or corro"
-    },
     "post:635": {
       "decision": "REVIEW",
       "reason": "Inconsistent approval: The post reports a specific and recent figure of unauthorized small boat crossings across the English Channel in 2026, indicating a concrete and contemporary migration-related event consistent with the BORDER_CROSSING type."
@@ -32,10 +20,6 @@
     "post:638": {
       "decision": "EXCLUDE",
       "reason": "The content is a general commentary on deportations without reporting any specific, concrete, or contemporary migration-related event. It includes opinions and speculation rather than verified operational details of deportations."
-    },
-    "post:639": {
-      "decision": "EXCLUDE",
-      "reason": "The post is a political commentary about government policies and public services in relation to migrants, without reporting a concrete, contemporary migration-related event such as a border crossing or policy action."
     },
     "post:640": {
       "decision": "EXCLUDE",
@@ -85,17 +69,21 @@
       "decision": "EXCLUDE",
       "reason": "The content refers to historical migration over a century prior and does not describe a contemporary migration event or early warning. The event type 'BORDER_CROSSING' is not supported by the text."
     },
-    "signal:1054": {
-      "decision": "REVIEW",
-      "reason": "The post describes legal actions and protests against an ICE operation that occurred earlier in 2026, referencing an indictment dated June 16, 2026. It focuses on activism and protest support actions occurring after the fact rather than a concrete ongoing or upcoming migration event or early warning about migration. The event type 'PRESSURE_EARLY_W"
+    "post:652": {
+      "decision": "EXCLUDE",
+      "reason": "The post describes a claimed detention related to national pride and alleged Islamophobia but does not present a concrete, contemporary migration-related event. It is a vague, anecdotal claim without migration-specific context or verification, and the event type 'DETENTION' is unsupported as a migration event."
     },
-    "signal:1055": {
-      "decision": "PUBLISH",
-      "reason": "The post reports concrete, contemporary information about extraordinarily long border queues primarily involving trucks and some cars/buses at Polish crossings due to air-raid suspensions, affecting daily crossings of thousands of people in both directions. This constitutes a migration-specific early warning about transit delays and conditions at a"
-    },
-    "signal:1056": {
+    "post:653": {
       "decision": "REVIEW",
-      "reason": "The post claims a struggle involving illegal immigrants and police in France, suggesting an unvetted migrant influx, but lacks concrete, specific evidence of an ongoing migration event or policy action. It also contains general political commentary and analogy to South Africa without clear operational details. Verification of the incident's specifi"
+      "reason": "The reported event is a migration-related administrative action involving foreign nationals in Moscow's Northern District, but details on timing and source credibility are limited. The publication date is in the future (2026), which suggests the timing information may be unreliable or incorrect."
+    },
+    "post:654": {
+      "decision": "REVIEW",
+      "reason": "The post reports that 514 foreign nationals with illegal documents were ordered to be deported from Rostov region following the 'Illegal-2026' inspections. The text indicates a deportation decision, but the event_type is labeled as 'DETENTION' which is inaccurate. The actual event is deportation, not detention. There is no external verification or "
+    },
+    "post:655": {
+      "decision": "REVIEW",
+      "reason": "The post claims specific deportation and migration statistics but provides no verifiable source or contextual details. The event-type 'DEPORTATION' matches the content, but without corroboration, the claim cannot be reliably published."
     },
     "signal:1057": {
       "decision": "EXCLUDE",
@@ -165,17 +153,13 @@
       "decision": "REVIEW",
       "reason": "The post discusses general challenges related to migration enforcement and legal constraints but does not report a specific, concrete migration-related event or a clear migration-specific early warning. It contains general commentary on legal and structural issues without describing an immediate or ongoing migration event or policy action explicitl"
     },
-    "group:516": {
-      "decision": "REVIEW",
-      "reason": "The post reports multiple maritime incidents involving migrant casualties, which is migration-related and seems contemporary. However, key details like exact date, source credibility, and full event confirmation are missing or incomplete. Verification is needed before publishing."
-    },
-    "group:517": {
-      "decision": "EXCLUDE",
-      "reason": "The post is a historical reference to migration from 1806 and does not report a contemporary migration event."
-    },
-    "group:519": {
+    "signal:1074": {
       "decision": "PUBLISH",
-      "reason": "The post reports a concrete, contemporary migration-related event involving the interception of 59 migrants arriving by four boats in different points of the Balearic Islands, which is consistent with the claimed event type 'INTERCEPTION'. Although source and exact date are not detailed, the last_seen date is recent and the event is migration-speci"
+      "reason": "The post reports a concrete, contemporary migration-specific early warning involving Poland deploying its army to border areas to stop illegal crossings, consistent with the assigned event_type MOVEMENT_EARLY_WARNING."
+    },
+    "signal:1075": {
+      "decision": "REVIEW",
+      "reason": "The date of deployment is in the future (July 2025 reported from a 2026 date), and the event timing and factual details are unclear. The message includes unclear references ('Better mute the African Guy') that do not relate to migration events, and the location is unspecified. Verification needed on timing and details to confirm this as a concrete,"
     },
     "group:520": {
       "decision": "EXCLUDE",
@@ -204,6 +188,14 @@
     "group:526": {
       "decision": "EXCLUDE",
       "reason": "The post discusses refugee arrivals and departures historically over a century ago, not a concrete, contemporary migration-related event. The event_type 'BORDER_CROSSING' is not supported by the content, which refers to historical migration rather than a current border crossing event."
+    },
+    "group:527": {
+      "decision": "EXCLUDE",
+      "reason": "The post describes an arrest related to national pride and alleged Islamophobia but does not report a concrete, migration-related event or specific migration operational context. The event is unclear and lacks credible details on migration relevance."
+    },
+    "group:528": {
+      "decision": "REVIEW",
+      "reason": "The text discusses deportation figures and migration trends but lacks clear, concrete, and verifiable details about a specific, contemporary migration event. There is no date for when these numbers were reported, the source is unspecified, and the claim that '1.9M additional people have self deported' and '17 consecutive months with zero migrant re"
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -280,6 +272,18 @@
     "signal:1053": {
       "decision": "REVIEW",
       "reason": "The post claims a mass fleeing of Ukrainians as refugees due to political and economic reasons but does not provide concrete evidence of a specific migration event such as border crossing data or official refugee movement. The event type is labeled as early warning but lacks supporting details to confirm the validity of the migration signal at this"
+    },
+    "signal:1054": {
+      "decision": "REVIEW",
+      "reason": "The post describes legal actions and protests against an ICE operation that occurred earlier in 2026, referencing an indictment dated June 16, 2026. It focuses on activism and protest support actions occurring after the fact rather than a concrete ongoing or upcoming migration event or early warning about migration. The event type 'PRESSURE_EARLY_W"
+    },
+    "signal:1055": {
+      "decision": "PUBLISH",
+      "reason": "The post reports concrete, contemporary information about extraordinarily long border queues primarily involving trucks and some cars/buses at Polish crossings due to air-raid suspensions, affecting daily crossings of thousands of people in both directions. This constitutes a migration-specific early warning about transit delays and conditions at a"
+    },
+    "signal:1056": {
+      "decision": "REVIEW",
+      "reason": "The post claims a struggle involving illegal immigrants and police in France, suggesting an unvetted migrant influx, but lacks concrete, specific evidence of an ongoing migration event or policy action. It also contains general political commentary and analogy to South Africa without clear operational details. Verification of the incident's specifi"
     }
   }
 }
