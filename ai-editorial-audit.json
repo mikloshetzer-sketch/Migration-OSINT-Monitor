@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-19T10:55:35.870907+00:00",
+  "generated_at": "2026-10-19T14:10:32.273970+00:00",
   "version": "3.0",
-  "candidates": 84,
-  "new_ai_calls": 5,
+  "candidates": 86,
+  "new_ai_calls": 2,
   "conflicting_identity_ids": [
     "group:529"
   ],
@@ -87,17 +87,9 @@
       "decision": "REVIEW",
       "reason": "The post describes two boat capsizing incidents off Greek islands resulting in migrant deaths and arrests of suspected smugglers. While the event is migration-related and contemporary, the event_type 'DETENTION' is not fully supported since the core event is the fatalities from capsizing boats; arrests are mentioned but not detailed. Clarification "
     },
-    "signal:1072": {
-      "decision": "EXCLUDE",
-      "reason": "The text is a general alert or commentary about a potential future influx of refugees without reporting a concrete, contemporary migration-specific event or verifiable early warning. There is no specific location or evidence of current pressure at a border. The 'PRESSURE_EARLY_WARNING' event type is not supported by the content."
-    },
     "signal:1074": {
       "decision": "PUBLISH",
       "reason": "The post reports a concrete, contemporary migration-specific early warning involving Poland deploying its army to border areas to stop illegal crossings, consistent with the assigned event_type MOVEMENT_EARLY_WARNING."
-    },
-    "signal:1075": {
-      "decision": "REVIEW",
-      "reason": "The date of deployment is in the future (July 2025 reported from a 2026 date), and the event timing and factual details are unclear. The message includes unclear references ('Better mute the African Guy') that do not relate to migration events, and the location is unspecified. Verification needed on timing and details to confirm this as a concrete,"
     },
     "signal:1076": {
       "decision": "REVIEW",
@@ -166,6 +158,14 @@
     "signal:1092": {
       "decision": "REVIEW",
       "reason": "The record references a 'Deadly Migrant Boat Incident Off Greece' which could be a migration event, but the details are vague and mixed with unrelated events (Albania protests, China drone controls). The text is truncated and does not provide a clear, concrete, current migration event or early warning specifically focused on migration. The event_ty"
+    },
+    "signal:1093": {
+      "decision": "PUBLISH",
+      "reason": "The post contains a contemporary migration-specific early warning about false promises regarding migrant caravans issued by the US Embassy, which is migration relevant and properly classified as an early warning. The information about deportations also adds relevant migration context. The event is appropriate for publication as a migration-specific"
+    },
+    "signal:1094": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete and contemporary migration-related event involving a deadly migrant boat accident near Greece's Samos island, which fits the ROUTE_EARLY_WARNING category as a migration route hazard signal. The incident is recent and specific, indicating an operational early warning about the dangers on migration routes."
     },
     "group:523": {
       "decision": "EXCLUDE",
@@ -339,9 +339,17 @@
       "decision": "EXCLUDE",
       "reason": "The post expresses an opinion about Japan's political state and its relation to migrants but does not report a concrete, contemporary migration-specific event or early warning. It is general commentary without specific migration operational or signal content."
     },
+    "signal:1072": {
+      "decision": "EXCLUDE",
+      "reason": "The text is a general alert or commentary about a potential future influx of refugees without reporting a concrete, contemporary migration-specific event or verifiable early warning. There is no specific location or evidence of current pressure at a border. The 'PRESSURE_EARLY_WARNING' event type is not supported by the content."
+    },
     "signal:1073": {
       "decision": "REVIEW",
       "reason": "The post discusses general challenges related to migration enforcement and legal constraints but does not report a specific, concrete migration-related event or a clear migration-specific early warning. It contains general commentary on legal and structural issues without describing an immediate or ongoing migration event or policy action explicitl"
+    },
+    "signal:1075": {
+      "decision": "REVIEW",
+      "reason": "The date of deployment is in the future (July 2025 reported from a 2026 date), and the event timing and factual details are unclear. The message includes unclear references ('Better mute the African Guy') that do not relate to migration events, and the location is unspecified. Verification needed on timing and details to confirm this as a concrete,"
     }
   }
 }
