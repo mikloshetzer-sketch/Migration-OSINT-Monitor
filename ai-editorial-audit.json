@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-20T13:25:48.137649+00:00",
+  "generated_at": "2026-10-20T13:39:15.895754+00:00",
   "version": "3.0",
-  "candidates": 108,
-  "new_ai_calls": 2,
+  "candidates": 112,
+  "new_ai_calls": 4,
   "conflicting_identity_ids": [],
   "decisions": {
     "post:652": {
@@ -85,18 +85,6 @@
       "decision": "REVIEW",
       "reason": "The event is about migrants expelled from the US arriving in Burundi in late August, but the publication date is in the future (2026), and the event date is not precisely given. No corroboration from external sources is provided. It refers to a deportation-related event, which fits the event type. However, the date mismatch and lack of verification"
     },
-    "signal:1094": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete and contemporary migration-related event involving a deadly migrant boat accident near Greece's Samos island, which fits the ROUTE_EARLY_WARNING category as a migration route hazard signal. The incident is recent and specific, indicating an operational early warning about the dangers on migration routes."
-    },
-    "signal:1095": {
-      "decision": "EXCLUDE",
-      "reason": "The post describes general political and economic unrest mentioning 'migrant riots' but does not report a concrete, specific migration-related operational event, nor does it provide a clear migration-specific early warning with actionable detail. The language is vague and the source is Reddit, with no verifiable external corroboration. Event type '"
-    },
-    "signal:1096": {
-      "decision": "REVIEW",
-      "reason": "The post discusses a political opinion regarding migrant integration policy, but does not describe a specific, concrete migration-related event or a direct early warning signal regarding migration routes or legal status changes. The event type 'LEGAL_MIGRATION_SIGNAL' is not clearly supported by the content provided as it lacks details on an actual"
-    },
     "signal:1097": {
       "decision": "EXCLUDE",
       "reason": "The text is a general commentary on border enforcement and immigration policy, not reporting a concrete, contemporary migration-specific event or early warning. It does not provide specific details about a migration route, access change, or policy action."
@@ -104,10 +92,6 @@
     "signal:1098": {
       "decision": "PUBLISH",
       "reason": "The report describes a concrete and recent migration-related event involving fatalities of migrants during sea crossings in the Aegean Sea, which aligns with the 'ROUTE_EARLY_WARNING' event type."
-    },
-    "signal:1099": {
-      "decision": "REVIEW",
-      "reason": "The post claims an assertion by a Polish politician about border guard rules of engagement against illegal migrants, appearing as an early warning related to migration routes. However, it lacks clear indication that this is an official or verified policy or current practice, and the event_type as ROUTE_EARLY_WARNING is plausible but uncertain witho"
     },
     "signal:1100": {
       "decision": "EXCLUDE",
@@ -164,6 +148,22 @@
     "signal:1113": {
       "decision": "EXCLUDE",
       "reason": "The post contains political commentary and opinion about immigration enforcement and electoral outcomes but does not report a concrete, contemporary migration-specific event, early warning, policy action, or route/access signal."
+    },
+    "signal:1114": {
+      "decision": "EXCLUDE",
+      "reason": "The described event is a protest with vandalism and looting, not a migration-specific mobilization or coordination. The novel reference and nationwide riots do not constitute a contemporary migration-related event or signal."
+    },
+    "signal:1115": {
+      "decision": "PUBLISH",
+      "reason": "The report describes two recent migrant boat incidents near Greek islands resulting in deaths, qualifying as a concrete, contemporary migration-related event involving route/access hazards, consistent with a ROUTE_EARLY_WARNING type."
+    },
+    "signal:1116": {
+      "decision": "PUBLISH",
+      "reason": "The report concerns a concrete and contemporary migration-specific early warning about 194 migrants missing at sea after departing from The Gambia, fitting the MOVEMENT_EARLY_WARNING event type."
+    },
+    "signal:1117": {
+      "decision": "REVIEW",
+      "reason": "The post claims a migration-related issue at Ceuta involving waste and migrants, tagged as a ROUTE_EARLY_WARNING signal. However, it does not clearly describe a concrete migration-specific early warning such as movements or route changes, just conditions after an arrival. The event type is plausible but lacks clarity and confirmation as a migration"
     },
     "group:530": {
       "decision": "EXCLUDE",
@@ -436,6 +436,22 @@
     "signal:1093": {
       "decision": "PUBLISH",
       "reason": "The post contains a contemporary migration-specific early warning about false promises regarding migrant caravans issued by the US Embassy, which is migration relevant and properly classified as an early warning. The information about deportations also adds relevant migration context. The event is appropriate for publication as a migration-specific"
+    },
+    "signal:1094": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete and contemporary migration-related event involving a deadly migrant boat accident near Greece's Samos island, which fits the ROUTE_EARLY_WARNING category as a migration route hazard signal. The incident is recent and specific, indicating an operational early warning about the dangers on migration routes."
+    },
+    "signal:1095": {
+      "decision": "EXCLUDE",
+      "reason": "The post describes general political and economic unrest mentioning 'migrant riots' but does not report a concrete, specific migration-related operational event, nor does it provide a clear migration-specific early warning with actionable detail. The language is vague and the source is Reddit, with no verifiable external corroboration. Event type '"
+    },
+    "signal:1096": {
+      "decision": "REVIEW",
+      "reason": "The post discusses a political opinion regarding migrant integration policy, but does not describe a specific, concrete migration-related event or a direct early warning signal regarding migration routes or legal status changes. The event type 'LEGAL_MIGRATION_SIGNAL' is not clearly supported by the content provided as it lacks details on an actual"
+    },
+    "signal:1099": {
+      "decision": "REVIEW",
+      "reason": "The post claims an assertion by a Polish politician about border guard rules of engagement against illegal migrants, appearing as an early warning related to migration routes. However, it lacks clear indication that this is an official or verified policy or current practice, and the event_type as ROUTE_EARLY_WARNING is plausible but uncertain witho"
     }
   }
 }
