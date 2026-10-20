@@ -89,7 +89,10 @@ def record_id(section, item):
         return f'telegram:{value}' if value else None
     if section == 'information_signals':
         value = item.get('timeline_id') or item.get('source_post_id') or item.get('id')
-        return f'information:{value}' if value else None
+        if not value:
+            return None
+        value = str(value)
+        return value if value.startswith('information:') else f'information:{value}'
     if section == 'event_groups':
         value = item.get('group_id') or item.get('id')
         return f'group:{value}' if value else None
@@ -189,24 +192,47 @@ def main():
         if result.get('schema_version', 1) < SCHEMA_VERSION:
             result['legacy_reviews'] = {**result.get('reviews', {}), **result.get('legacy_reviews', {})}
             result['schema_version'] = SCHEMA_VERSION
+        # Reuse previously paid AI results under legacy double-prefixed keys.
+        # Never call AI again solely because the identifier format changed.
+        migrated = 0
+        for record in candidates(archive):
+            rid = record['id']
+            existing = result['reviews'].get(rid)
+            if isinstance(existing, dict) and str(existing.get('hu_text') or '').strip():
+                continue
+            legacy = result['reviews'].get(rid.split(':', 1)[0] + ':' + rid)
+            if isinstance(legacy, dict) and str(legacy.get('hu_text') or '').strip():
+                result['reviews'][rid] = dict(legacy)
+                migrated += 1
+        if migrated:
+            save_json(path, result, sha)
+            _, sha = read_json(path)
+            print(f'{day}: recovered {migrated} legacy AI reviews without API calls')
         pending = [r for r in candidates(archive)
                    if not isinstance(result['reviews'].get(r['id']), dict)
                    or result['reviews'][r['id']].get('schema_version') != SCHEMA_VERSION
                    or not str(result['reviews'][r['id']].get('hu_text') or '').strip()]
         day_states[day] = {'path': path, 'result': result, 'sha': sha, 'pending': pending}
 
-    # Backfill untranslated Telegram from the oldest day before processing other sources.
-    # This prevents large X/Information Signal queues from starving historic Telegram posts.
-    queue = []
-    for telegram_only in (True, False):
-        for day in days:
-            state = day_states.get(day)
-            if not state:
-                continue
-            for record in state['pending']:
-                if record['id'].startswith('telegram:') == telegram_only:
-                    queue.append((day, record))
-    queue = queue[:MAX_RECORDS]
+    # Reserve capacity for fresh posts of ALL sources, while gradually backfilling
+    # older Telegram and other historical records. No source can monopolize the run.
+    current_day = today.isoformat()
+    fresh = [(current_day, r) for r in day_states.get(current_day, {}).get('pending', [])]
+    fresh.sort(key=lambda pair: (pair[1]['id'].startswith('telegram:'), pair[1]['id']))
+    backlog = []
+    for day in days:
+        if day == current_day or day not in day_states:
+            continue
+        backlog.extend((day, r) for r in day_states[day]['pending'])
+    backlog.sort(key=lambda pair: (not pair[1]['id'].startswith('telegram:'), pair[0], pair[1]['id']))
+    # At least half of the budget is available for today's posts; unused slots
+    # are reallocated to the other queue.
+    fresh_budget = (MAX_RECORDS + 1) // 2
+    queue = fresh[:fresh_budget] + backlog[:MAX_RECORDS - min(fresh_budget, len(fresh))]
+    if len(queue) < MAX_RECORDS:
+        queue += fresh[fresh_budget:][:MAX_RECORDS - len(queue)]
+    if len(queue) < MAX_RECORDS:
+        queue += backlog[MAX_RECORDS - min(fresh_budget, len(fresh)):][:MAX_RECORDS - len(queue)]
     processed = 0
     telegram_processed = 0
     # Batch by day to write to the matching daily review JSON without changing its schema.
