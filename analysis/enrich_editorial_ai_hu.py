@@ -170,6 +170,49 @@ def analyze_batch(batch):
     return output
 
 
+
+def analyze_resilient(batch):
+    """Preserve valid results and retry only missing IDs, splitting stubborn batches.
+
+    A single malformed AI result must not discard the other successfully reviewed
+    posts. This function never invents an AI assessment for a missing record.
+    """
+    pending = {record['id']: record for record in batch}
+    accepted = {}
+    for attempt in range(3):
+        if not pending:
+            break
+        try:
+            additions = analyze_batch(list(pending.values()))
+            for rid, value in additions.items():
+                if rid in pending:
+                    accepted[rid] = value
+                    del pending[rid]
+        except Exception as exc:
+            print(f'AI request attempt {attempt + 1} failed: {exc}', file=sys.stderr)
+        if pending and attempt < 2:
+            print(f'AI retry {attempt + 1}: {len(pending)} missing of {len(batch)}', file=sys.stderr)
+            time.sleep(3 * (2 ** attempt))
+
+    # Smaller batches reduce truncation and isolate persistently problematic posts.
+    for rid, record in list(pending.items()):
+        for attempt in range(2):
+            try:
+                additions = analyze_batch([record])
+                if rid in additions:
+                    accepted[rid] = additions[rid]
+                    del pending[rid]
+                    break
+            except Exception as exc:
+                print(f'AI single-record retry {rid} ({attempt + 1}): {exc}', file=sys.stderr)
+            if attempt == 0:
+                time.sleep(2)
+    if pending:
+        print(f'EDITORIAL AI WARNING: {len(pending)} records still unreviewed: '
+              f'{list(pending)[:10]}', file=sys.stderr)
+    return accepted
+
+
 def main():
     if not GITHUB_TOKEN or not OPENAI_KEY:
         raise RuntimeError('EDITORIAL_GITHUB_TOKEN and OPENAI_API_KEY are required')
@@ -243,23 +286,17 @@ def main():
         state = day_states[day]
         for start in range(0, len(items), BATCH_SIZE):
             batch = items[start:start + BATCH_SIZE]
-            for attempt in range(3):
-                try:
-                    additions = analyze_batch(batch)
-                    if len(additions) != len(batch):
-                        raise RuntimeError(f'Incomplete AI batch {len(additions)}/{len(batch)}')
-                    break
-                except Exception as exc:
-                    if attempt == 2:
-                        raise
-                    print(f'AI retry {attempt + 1}: {exc}', file=sys.stderr)
-                    time.sleep(3 * (2 ** attempt))
+            additions = analyze_resilient(batch)
+            if not additions:
+                print(f'{day}: no valid AI results for this batch; will retry next run',
+                      file=sys.stderr)
+                continue
             state['result']['reviews'].update(additions)
             save_json(state['path'], state['result'], state['sha'])
             _, state['sha'] = read_json(state['path'])
             processed += len(additions)
-            telegram_processed += sum(x['id'].startswith('telegram:') for x in batch)
-            print(f'{day}: saved {len(additions)} shared editorial AI reviews')
+            telegram_processed += sum(rid.startswith('telegram:') for rid in additions)
+            print(f'{day}: saved {len(additions)}/{len(batch)} shared editorial AI reviews')
     print(f'Unified editorial AI complete: {processed} new reviews; '
           f'Telegram: {telegram_processed}; lookback: {LOOKBACK_DAYS} days')
 
