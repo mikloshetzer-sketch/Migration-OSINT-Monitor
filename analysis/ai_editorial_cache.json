@@ -2414,5 +2414,93 @@
     "current_event": true,
     "completed_event": true,
     "corroboration": "UNVERIFIED"
+  },
+  "73ed20896b15c3a083c09464571447f7c49fe6a53b9d2a402ccda671ccd4acc5": {
+    "decision": "REVIEW",
+    "reason": "Event describes fines, deportations, and entry bans related to migration law violations in Karelia, but the event date appears to be in the future (2026-10-20), which is inconsistent with current date and typical data. Location is only broadly indicated, and source is Telegram with no independent verification. The event type is given as DETENTION, but the content primarily mentions fines, deportations, and entry bans, not detentions specifically.",
+    "event_type_correct": false,
+    "current_event": false,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
+  },
+  "a2978243db58ce9997013225c7574a8063202db47367f8096ad86ddda53b3a05": {
+    "decision": "PUBLISH",
+    "reason": "The report details concrete, recent incidents involving migrant boats capsizing near Lesbos and Samos, resulting in deaths and arrests related to smuggling. This constitutes a current, specific migration event relevant to smuggling activity, matching the event_type assigned.",
+    "event_type_correct": true,
+    "current_event": true,
+    "completed_event": true,
+    "corroboration": "UNVERIFIED"
+  },
+  "095e3ad22eacbaec572e0121f2d3c158c0cab27369b3dcdfd39e99a7328b8077": {
+    "decision": "REVIEW",
+    "reason": "The post describes local protests and claimed social impacts related to the arrival of young male migrants at a camp in Crowborough. While it references the presence of migrants, it does not report a clear, specific migrant-related event such as a new border crossing or arrival date. The event type BORDER_CROSSING does not align with the content, which focuses on protest and local reaction rather than a concrete migration event. The timing appears future relative to knowledge cutoff but this is not definitive enough for exclusion. Verification of the claim and event type correction are needed.",
+    "event_type_correct": false,
+    "current_event": true,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
+  },
+  "bd4d285dcb4320e02fcf80800a3b410e12643f8dd53b72045088ff38777ba17c": {
+    "decision": "PUBLISH",
+    "reason": "The report describes a migration-specific event involving the Coast Guard repatriating 63 migrants following an unsafe sea voyage via the Mona Passage. This is a concrete contemporary migration-related event involving a known migration route, matching the ROUTE_EARLY_WARNING event type assigned.",
+    "event_type_correct": true,
+    "current_event": true,
+    "completed_event": true,
+    "corroboration": "UNVERIFIED"
+  },
+  "dac91c5d01bcf98a5444aee43479e7e97a5250f8105658463a45ff31a4ca64c6": {
+    "decision": "REVIEW",
+    "reason": "The reported event describes multiple migrant drownings during coast guard pursuits, indicating a serious and contemporary migration-related incident. However, the event_type assigned is 'ROUTE_EARLY_WARNING', which is more typically used for alerts or signals prior to incidents rather than actual completed events. The text describes completed migrant deaths, suggesting the event_type might be more accurately classified as an operational migration event (e.g., 'MIGRATION_DEATH'). The provided source is only one social media post (X/Twitter), lacking independent or external verification. Location is vague ('-'). Verification and classification clarification needed before publication.",
+    "event_type_correct": false,
+    "current_event": true,
+    "completed_event": true,
+    "corroboration": "UNVERIFIED"
+  },
+  "43501edc27eb929caaa6b722b9946933457cb3306236b7dc91d5bd6b157e4e4d": {
+    "decision": "REVIEW",
+    "reason": "The post alleges serious claims regarding migrant children being handed to traffickers, involving political actors and whistleblower testimony. However, it lacks independent verification and actionable details confirming a current or concrete facilitation event or early warning. The claim centers on political accusations and alleged evidence cited but not substantiated. The event type 'FACILITATION_EARLY_WARNING' is plausible but requires further corroboration before publishing.",
+    "event_type_correct": true,
+    "current_event": false,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
+  },
+  "6677703afddd185c45f7ebd05804dcaa7dacc78c00a672d42ce0629a82817416": {
+    "decision": "PUBLISH",
+    "reason": "The text reports a concrete, migration-specific early warning event regarding potential policy changes affecting aged care workforce migration. It includes specific visa and migration targets and an identified sector workforce shortfall, with direct testimony from affected individuals and providers. This meets criteria for publishing an early warning signal about migration policy impact on labor supply.",
+    "event_type_correct": true,
+    "current_event": true,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
+  },
+  "dfb887791b30de3534c844c81ae85b65e05f4872ac692955e631e0a4e858ca64": {
+    "decision": "EXCLUDE",
+    "reason": "The record discusses general Supreme Court emergency docket decisions and comparisons between Trump and Biden administrations, focusing on executive power and legal issues broadly. While it mentions immigration emergency applications within broader executive actions, it is primarily a legal analysis with no specific, contemporary migration event or migration-specific early warning reported. The event_type 'LEGAL_MIGRATION_SIGNAL' is not supported as a migration-specific early warning or concrete migration event.",
+    "event_type_correct": false,
+    "current_event": false,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
+  },
+  "a1f82f110c48997dc42292d06a80c5ca9186154e7ec6925506ea179648298945": {
+    "decision": "PUBLISH",
+    "reason": "The post reports on a completed enforcement action in Karelia involving the identification and fining of unlawful migrants, deportation of 18 foreign nationals, and banning entry for 51 individuals. This is a concrete and contemporary migration-related event involving detention and deportation, matching the 'DETENTION' event type.",
+    "event_type_correct": true,
+    "current_event": true,
+    "completed_event": true,
+    "corroboration": "UNVERIFIED"
+  },
+  "5a27005337e127c8dd0fb8461cb7d05dbbcdf6c05abc47392c589eca4ad8c613": {
+    "decision": "PUBLISH",
+    "reason": "The record reports concrete, contemporary migration-related incidents involving migrant boats capsizing near Greek islands resulting in deaths, which directly relates to migration events. Although labeled as 'SMUGGLING_ACTIVITY', the event type is relevant as it involves migrant smuggling operations leading to fatalities. The report is thus a valid migration event.",
+    "event_type_correct": true,
+    "current_event": true,
+    "completed_event": true,
+    "corroboration": "UNVERIFIED"
+  },
+  "dc6e484c4811726a383a45bb50ea5731c696e265154e09b2ed685a861b650d7c": {
+    "decision": "EXCLUDE",
+    "reason": "The post describes ongoing peaceful protests and community concerns about young male migrants already residing at a camp, but it does not report a concrete migration-specific event such as an arrival, border crossing, or policy action. The event_type 'BORDER_CROSSING' is not supported by the content.",
+    "event_type_correct": false,
+    "current_event": true,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
   }
 }
