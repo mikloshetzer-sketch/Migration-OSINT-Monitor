@@ -1,71 +1,71 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-10-20T06:50:35Z",
-  "generated_at": "2026-10-20T06:50:35Z",
+  "updated_at": "2026-10-20T13:11:15Z",
+  "generated_at": "2026-10-20T13:11:15Z",
   "current_run": {
     "available": true,
-    "id": 317,
-    "run_uuid": "394fc44e-278a-48b1-8339-4c693b7f6728",
-    "started_at": "2026-10-20T06:47:44Z",
-    "completed_at": "2026-10-20T06:50:33Z",
+    "id": 318,
+    "run_uuid": "ad634403-b7cb-45a5-a66a-08de0282f659",
+    "started_at": "2026-10-20T13:06:18Z",
+    "completed_at": "2026-10-20T13:11:13Z",
     "status": "SUCCESS",
-    "posts_returned": 147,
-    "unique_posts_collected": 103,
-    "x_posts_returned": 49,
-    "reddit_posts_returned": 32,
+    "posts_returned": 152,
+    "unique_posts_collected": 104,
+    "x_posts_returned": 50,
+    "reddit_posts_returned": 36,
     "mastodon_posts_returned": 50,
-    "unique_x_posts": 45,
-    "unique_reddit_posts": 25,
+    "unique_x_posts": 44,
+    "unique_reddit_posts": 28,
     "unique_mastodon_posts": 18,
     "noise_filtered": 0,
-    "non_operational_filtered": 98,
-    "historical_references_filtered": 1,
-    "influence_signals": 1,
-    "influence_signals_detected": 1,
-    "crossing_facilitation_signals": 0,
-    "legal_migration_signals": 1,
+    "non_operational_filtered": 99,
+    "historical_references_filtered": 2,
+    "influence_signals": 3,
+    "influence_signals_detected": 3,
+    "crossing_facilitation_signals": 1,
+    "legal_migration_signals": 0,
     "policy_signals": 0,
     "recruitment_coordination_signals": 0,
-    "mobilization_coordination_signals": 0,
+    "mobilization_coordination_signals": 2,
     "mobilization_report_signals": 0,
     "decision_influence_signals": 0,
     "online_influence_report_signals": 0,
-    "operational_events": 4,
-    "operational_events_analyzed": 4,
-    "historical_events_available": 95,
+    "operational_events": 3,
+    "operational_events_analyzed": 3,
+    "historical_events_available": 96,
     "new_correlations": 0,
     "correlated_events": 0,
-    "new_correlation_groups": 4,
+    "new_correlation_groups": 3,
     "database_correlations": 0,
     "current_run_correlations": 0,
-    "new_events": 3,
-    "new_events_saved": 3,
+    "new_events": 2,
+    "new_events_saved": 2,
     "events_already_existing": 1,
-    "new_event_groups": 3,
+    "new_event_groups": 2,
     "updated_event_groups": 0,
     "bootstrapped_event_groups": 0,
     "existing_event_groups_reused": 1,
-    "event_group_sources_linked": 3,
+    "event_group_sources_linked": 2,
     "x_collector_errors": 0,
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "error_message": null
   },
   "kpis": {
-    "operational_events": 16,
-    "new_events": 3,
-    "correlated_events": 6,
-    "active_event_groups": 517,
+    "operational_events": 10,
+    "new_events": 2,
+    "correlated_events": 1,
+    "active_event_groups": 519,
     "sources": 4,
-    "regions": 4,
-    "collected_posts_24h": 583,
-    "influence_signals": 32,
+    "regions": 3,
+    "collected_posts_24h": 374,
+    "influence_signals": 19,
     "access_signals": 3,
-    "high_priority": 0,
-    "current_run_operational_events": 4,
-    "current_run_unique_posts": 103,
+    "high_priority": 1,
+    "current_run_operational_events": 3,
+    "current_run_unique_posts": 104,
     "access_signals_raw": 5,
-    "influence_signals_raw": 20,
+    "influence_signals_raw": 19,
     "influence_narratives": 3
   },
   "live_events": [
@@ -168,6 +168,37 @@
   ],
   "event_groups": [
     {
+      "id": 537,
+      "group_id": 537,
+      "event_type": "DETENTION",
+      "dominant_event_type": "DETENTION",
+      "title": "DETENTION",
+      "representative_text": "Ульяновск вилоятида «Ноқонуний мигрант» операцияси якунланди\n\nУльяновск вилоятида ўтказилган рейдлар давомида миграция қонунчилигини бузганлик учун 468 та маъмурий баённома тузилиб, 55 нафар чет эл фуқароси мамлакатдан чиқариб юборилди. Шунингдек, 62 нафар шахсга нисбатан Россияга кириш тақиқланди, улардан беш нафарига эса 10 йил муддатга кириш чеклови белгиланди.",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "primary_location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "first_seen": "2026-10-20T12:48:39Z",
+      "last_seen": "2026-10-20T12:48:39Z",
+      "source_count": 1,
+      "sources_count": 1,
+      "source_types": [
+        "TELEGRAM"
+      ],
+      "sources": [
+        "TELEGRAM"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.2,
+      "average_confidence": 0.2,
+      "created_at": "2026-10-20T13:07:09Z",
+      "updated_at": "2026-10-20T13:07:09Z",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
       "id": 535,
       "group_id": 535,
       "event_type": "SMUGGLING_ACTIVITY",
@@ -262,201 +293,123 @@
       "created_at": "2026-10-14T07:46:31Z",
       "updated_at": "2026-10-20T00:48:24Z",
       "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-    },
-    {
-      "id": 470,
-      "group_id": 470,
-      "event_type": "DETENTION",
-      "dominant_event_type": "DETENTION",
-      "title": "DETENTION - EASTERN_MEDITERRANEAN",
-      "representative_text": "Twelve Migrants Die in Two Boat Capsizings Off Greek Islands https://t.co/xntr4ZVwl3 Twelve migrants drown in two boat capsizing incidents near Greek islands. Suspected smugglers arrested. Zero tolerance for smugglers vows Greece. #MigrantCrisis #Lesbos #Samos",
-      "region": "EASTERN_MEDITERRANEAN",
-      "primary_region": "EASTERN_MEDITERRANEAN",
-      "primary_location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "first_seen": "2026-10-12T08:28:32Z",
-      "last_seen": "2026-10-19T10:42:27Z",
-      "source_count": 3,
-      "sources_count": 3,
-      "source_types": [
-        "REDDIT",
-        "X"
-      ],
-      "sources": [
-        "REDDIT",
-        "X"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.5,
-      "average_confidence": 0.5,
-      "created_at": "2026-10-14T08:31:27Z",
-      "updated_at": "2026-10-19T10:52:19Z",
-      "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-    },
-    {
-      "id": 474,
-      "group_id": 474,
-      "event_type": "BORDER_CROSSING",
-      "dominant_event_type": "BORDER_CROSSING",
-      "title": "BORDER_CROSSING - Ceuta",
-      "representative_text": "🇪🇸 #Spain's King Felipe and Queen Letizia kicked off a visit to #Ceuta on Tuesday to show solidarity with residents of the Spanish exclave as they grapple with a migration crisis. \n\nThe trip comes after after more than 70,000 migrants crossed Ceuta's border from #Morocco in https://t.co/QUfsbqXrlw",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "primary_location": "Ceuta",
-      "country": "Spain",
-      "latitude": 35.8894,
-      "longitude": -5.3213,
-      "first_seen": "2026-10-14T08:53:10Z",
-      "last_seen": "2026-10-19T09:54:28Z",
-      "source_count": 6,
-      "sources_count": 6,
-      "source_types": [
-        "REDDIT",
-        "X"
-      ],
-      "sources": [
-        "REDDIT",
-        "X"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.75,
-      "average_confidence": 0.75,
-      "created_at": "2026-10-14T09:06:42Z",
-      "updated_at": "2026-10-19T10:04:08Z",
-      "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
     }
   ],
   "regions": [
     {
       "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 9,
-      "events": 9,
-      "percentage": 69.23
+      "count": 8,
+      "events": 8,
+      "percentage": 80.0
     },
     {
       "name": "EASTERN_MEDITERRANEAN",
       "region": "EASTERN_MEDITERRANEAN",
-      "count": 2,
-      "events": 2,
-      "percentage": 15.38
-    },
-    {
-      "name": "WESTERN_MEDITERRANEAN",
-      "region": "WESTERN_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 7.69
+      "percentage": 10.0
     },
     {
       "name": "BLACK_SEA",
       "region": "BLACK_SEA",
       "count": 1,
       "events": 1,
-      "percentage": 7.69
+      "percentage": 10.0
     }
   ],
   "sources": [
     {
       "source": "X",
       "name": "X",
-      "count": 453,
-      "posts": 453,
-      "percentage": 77.7
+      "count": 277,
+      "posts": 277,
+      "percentage": 74.06
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 56,
-      "posts": 56,
-      "percentage": 9.61
+      "count": 43,
+      "posts": 43,
+      "percentage": 11.5
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 52,
-      "posts": 52,
-      "percentage": 8.92
+      "count": 37,
+      "posts": 37,
+      "percentage": 9.89
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 22,
-      "posts": 22,
-      "percentage": 3.77
+      "count": 17,
+      "posts": 17,
+      "percentage": 4.55
     }
   ],
   "region_activity": [
     {
       "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 9,
-      "events": 9,
-      "percentage": 69.23
+      "count": 8,
+      "events": 8,
+      "percentage": 80.0
     },
     {
       "name": "EASTERN_MEDITERRANEAN",
       "region": "EASTERN_MEDITERRANEAN",
-      "count": 2,
-      "events": 2,
-      "percentage": 15.38
-    },
-    {
-      "name": "WESTERN_MEDITERRANEAN",
-      "region": "WESTERN_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 7.69
+      "percentage": 10.0
     },
     {
       "name": "BLACK_SEA",
       "region": "BLACK_SEA",
       "count": 1,
       "events": 1,
-      "percentage": 7.69
+      "percentage": 10.0
     }
   ],
   "source_activity": [
     {
       "source": "X",
       "name": "X",
-      "count": 453,
-      "posts": 453,
-      "percentage": 77.7
+      "count": 277,
+      "posts": 277,
+      "percentage": 74.06
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 56,
-      "posts": 56,
-      "percentage": 9.61
+      "count": 43,
+      "posts": 43,
+      "percentage": 11.5
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 52,
-      "posts": 52,
-      "percentage": 8.92
+      "count": 37,
+      "posts": 37,
+      "percentage": 9.89
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 22,
-      "posts": 22,
-      "percentage": 3.77
+      "count": 17,
+      "posts": 17,
+      "percentage": 4.55
     }
   ],
   "correlation": {
-    "correlated_events": 6,
-    "correlated_sources": 6,
-    "grouped_sources": 16,
-    "event_groups": 517,
-    "active_groups": 517,
+    "correlated_events": 1,
+    "correlated_sources": 1,
+    "grouped_sources": 10,
+    "event_groups": 519,
+    "active_groups": 519,
     "multi_source_groups": 51,
     "strongest_match": 1.0,
-    "correlation_rate": 37.5
+    "correlation_rate": 10.0
   },
   "technical_health": "HEALTHY",
   "collector_health": "HEALTHY",
@@ -469,44 +422,44 @@
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "database": "AVAILABLE",
-    "last_run_id": 317,
-    "last_completed_at": "2026-10-20T06:50:33Z"
+    "last_run_id": 318,
+    "last_completed_at": "2026-10-20T13:11:13Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 16,
-    "influence_signals_24h": 20,
+    "operational_events_24h": 10,
+    "influence_signals_24h": 19,
     "access_signals_24h": 5,
-    "correlated_events_24h": 6,
-    "active_event_groups": 517,
+    "correlated_events_24h": 1,
+    "active_event_groups": 519,
     "dominant_region": "EASTERN_MEDITERRANEAN",
     "hotspot": "EASTERN_MEDITERRANEAN",
-    "dominant_event_type": "BORDER_CROSSING",
+    "dominant_event_type": "DETENTION",
     "dominant_source": "X",
-    "average_confidence": 0.459,
+    "average_confidence": 0.458,
     "confidence_level": "LOW",
-    "correlation_rate": 37.5,
+    "correlation_rate": 10.0,
     "activity_level": "ELEVATED",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 16 operatív migrációs eseményt, 20 influence/early-warning jelzést és 5 átkelési vagy bejutási jelzést tart nyilván. 6 friss eseményforrás korrelált más forrással. Jelenleg 517 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Eastern Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.46. A jelenlegi aktivitási szint: ELEVATED.",
+    "summary": "Az elmúlt 24 órában a rendszer 10 operatív migrációs eseményt, 19 influence/early-warning jelzést és 5 átkelési vagy bejutási jelzést tart nyilván. 1 friss eseményforrás korrelált más forrással. Jelenleg 519 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Eastern Mediterranean. A domináns operatív eseménytípus: Detention. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.46. A jelenlegi aktivitási szint: ELEVATED.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
   "analytical_assessment": {
-    "operational_events_24h": 16,
-    "influence_signals_24h": 20,
+    "operational_events_24h": 10,
+    "influence_signals_24h": 19,
     "access_signals_24h": 5,
-    "correlated_events_24h": 6,
-    "active_event_groups": 517,
+    "correlated_events_24h": 1,
+    "active_event_groups": 519,
     "dominant_region": "EASTERN_MEDITERRANEAN",
     "hotspot": "EASTERN_MEDITERRANEAN",
-    "dominant_event_type": "BORDER_CROSSING",
+    "dominant_event_type": "DETENTION",
     "dominant_source": "X",
-    "average_confidence": 0.459,
+    "average_confidence": 0.458,
     "confidence_level": "LOW",
-    "correlation_rate": 37.5,
+    "correlation_rate": 10.0,
     "activity_level": "ELEVATED",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 16 operatív migrációs eseményt, 20 influence/early-warning jelzést és 5 átkelési vagy bejutási jelzést tart nyilván. 6 friss eseményforrás korrelált más forrással. Jelenleg 517 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Eastern Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.46. A jelenlegi aktivitási szint: ELEVATED.",
+    "summary": "Az elmúlt 24 órában a rendszer 10 operatív migrációs eseményt, 19 influence/early-warning jelzést és 5 átkelési vagy bejutási jelzést tart nyilván. 1 friss eseményforrás korrelált más forrással. Jelenleg 519 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Eastern Mediterranean. A domináns operatív eseménytípus: Detention. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.46. A jelenlegi aktivitási szint: ELEVATED.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
@@ -918,125 +871,44 @@
       "ai_editorial_decision": "PUBLISH"
     },
     {
-      "id": 1091,
+      "id": 1111,
       "source": "X",
-      "source_post_id": "2112133222708769216",
-      "author": "inspiring_tosh",
-      "language": "en",
-      "published_at": "2026-10-19T10:46:16Z",
-      "first_detected_at": "2026-10-19T10:52:19Z",
-      "last_detected_at": "2026-10-19T10:52:19Z",
+      "source_post_id": "2112523637878370433",
+      "author": "NMO_ORG",
+      "language": "ar",
+      "published_at": "2026-10-20T12:37:38Z",
+      "first_detected_at": "2026-10-20T13:11:13Z",
+      "last_detected_at": "2026-10-20T13:11:13Z",
       "detection_count": 1,
-      "text": "🚨🇬🇷 AEGEAN MIGRANT DISASTER\n12 dead off Greece today. A migrant speedboat collided with a coast guard vessel off Lesvos — 6 killed, including an infant.\nA second boat capsized off Samos. 6 more drowned.\nDying at Europe's door.\nSource: Reuters, AFP",
-      "text_excerpt": "🚨🇬🇷 AEGEAN MIGRANT DISASTER\n12 dead off Greece today. A migrant speedboat collided with a coast guard vessel off Lesvos — 6 killed, including an infant.\nA second boat capsized off Samos. 6 more drowned.\nDying at Europe's door.\nSource: Reuters, AFP",
-      "url": "https://x.com/inspiring_tosh/status/2112133222708769216",
-      "source_url": "https://x.com/inspiring_tosh/status/2112133222708769216",
-      "primary_signal": "ROUTE_EARLY_WARNING",
-      "signal_type": "ROUTE_EARLY_WARNING",
+      "text": "✈️خطوة نحو الوطن.. 138 لاجئًا صوماليًا يعودون إلى ديارهم\n\nغادر 138 لاجئًا صوماليًا مطار عدن الدولي عائدين إلى وطنهم، ضمن برنامج العودة الطوعية المدعومة #ASR التابع للمفوضية السامية للأمم المتحدة لشؤون اللاجئين @UNHCRYemen  \nتُمثّل هذه الرحلة رابع رحلة عودة طوعية يتم تنفيذها https://t.co/74fB23SMxH",
+      "text_excerpt": "✈️خطوة نحو الوطن.. 138 لاجئًا صوماليًا يعودون إلى ديارهم\n\nغادر 138 لاجئًا صوماليًا مطار عدن الدولي عائدين إلى وطنهم، ضمن برنامج العودة الطوعية المدعومة #ASR التابع للمفوضية السامية للأمم المتحدة لشؤون اللاجئين @UNHCRYemen  \nتُمثّل هذه الرحلة رابع رحلة عودة طوعية يتم تنفيذها https://t.co/74fB23SMxH",
+      "url": "https://x.com/NMO_ORG/status/2112523637878370433",
+      "source_url": "https://x.com/NMO_ORG/status/2112523637878370433",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ROUTE_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 8.0,
+      "confidence": 0.72,
+      "score": 7.75,
       "matched_signals": [
-        "ROUTE_EARLY_WARNING"
+        "MOVEMENT_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
-          "route",
-          "coast"
-        ],
-        [
-          "route",
-          "vessel"
-        ],
-        [
-          "enforcement",
-          "coast guard"
+          "movement",
+          "لاجئًا صوماليًا يعودون إلى ديارهم غادر"
         ]
       ],
       "matched_groups": [
-        "ROUTE",
-        "ENFORCEMENT"
+        "MOVEMENT"
       ],
       "context_matches": [
-        "MIGRANT",
-        "migrant"
+        "لاجئ"
       ],
-      "high_value_matches": [],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "EASTERN_MEDITERRANEAN",
-      "primary_region": "EASTERN_MEDITERRANEAN",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 32.0,
-      "analyst_priority": "LOW",
-      "ai_review_status": "AI_REVIEWED",
-      "ai_editorial_decision": "PUBLISH"
-    },
-    {
-      "id": 1089,
-      "source": "X",
-      "source_post_id": "2112132634541195679",
-      "author": "ABoatReport",
-      "language": "en",
-      "published_at": "2026-10-19T10:43:56Z",
-      "first_detected_at": "2026-10-19T10:51:51Z",
-      "last_detected_at": "2026-10-19T10:51:51Z",
-      "detection_count": 1,
-      "text": "SIX DEAD AFTER BOAT CAPSIZES OFF SAMOS — WHAT HAPPENED DURING THE COAST GUARD ENCOUNTER?\n\nAegean Boat Report | 19 October 2026\n\nSix refugees have died and fourteen others have been rescued after a speedboat capsized approximately 3.7 nautical miles (6.85 kilometres) north of https://t.co/wIf34QdVqB",
-      "text_excerpt": "SIX DEAD AFTER BOAT CAPSIZES OFF SAMOS — WHAT HAPPENED DURING THE COAST GUARD ENCOUNTER?\n\nAegean Boat Report | 19 October 2026\n\nSix refugees have died and fourteen others have been rescued after a speedboat capsized approximately 3.7 nautical miles (6.85 kilometres) north of https://t.co/wIf34QdVqB",
-      "url": "https://x.com/ABoatReport/status/2112132634541195679",
-      "source_url": "https://x.com/ABoatReport/status/2112132634541195679",
-      "primary_signal": "ROUTE_EARLY_WARNING",
-      "signal_type": "ROUTE_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ROUTE_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 9.25,
-      "matched_signals": [
-        "ROUTE_EARLY_WARNING"
+      "high_value_matches": [
+        "لاجئًا صوماليًا يعودون إلى ديارهم غادر"
       ],
-      "matched_phrases": [
-        [
-          "route",
-          "BOAT"
-        ],
-        [
-          "route",
-          "COAST"
-        ],
-        [
-          "route",
-          "Boat"
-        ],
-        [
-          "enforcement",
-          "COAST GUARD"
-        ],
-        [
-          "enforcement",
-          "rescued"
-        ]
-      ],
-      "matched_groups": [
-        "ROUTE",
-        "ENFORCEMENT"
-      ],
-      "context_matches": [
-        "refugees"
-      ],
-      "high_value_matches": [],
       "signal_context_rejections": [],
       "migration_context": true,
       "human_migration_context": true,
@@ -1051,7 +923,7 @@
       "latitude": null,
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
+      "priority_score": 25.2,
       "analyst_priority": "LOW",
       "ai_review_status": "AI_REVIEWED",
       "ai_editorial_decision": "PUBLISH"
@@ -1428,125 +1300,44 @@
       "ai_editorial_decision": "PUBLISH"
     },
     {
-      "id": 1091,
+      "id": 1111,
       "source": "X",
-      "source_post_id": "2112133222708769216",
-      "author": "inspiring_tosh",
-      "language": "en",
-      "published_at": "2026-10-19T10:46:16Z",
-      "first_detected_at": "2026-10-19T10:52:19Z",
-      "last_detected_at": "2026-10-19T10:52:19Z",
+      "source_post_id": "2112523637878370433",
+      "author": "NMO_ORG",
+      "language": "ar",
+      "published_at": "2026-10-20T12:37:38Z",
+      "first_detected_at": "2026-10-20T13:11:13Z",
+      "last_detected_at": "2026-10-20T13:11:13Z",
       "detection_count": 1,
-      "text": "🚨🇬🇷 AEGEAN MIGRANT DISASTER\n12 dead off Greece today. A migrant speedboat collided with a coast guard vessel off Lesvos — 6 killed, including an infant.\nA second boat capsized off Samos. 6 more drowned.\nDying at Europe's door.\nSource: Reuters, AFP",
-      "text_excerpt": "🚨🇬🇷 AEGEAN MIGRANT DISASTER\n12 dead off Greece today. A migrant speedboat collided with a coast guard vessel off Lesvos — 6 killed, including an infant.\nA second boat capsized off Samos. 6 more drowned.\nDying at Europe's door.\nSource: Reuters, AFP",
-      "url": "https://x.com/inspiring_tosh/status/2112133222708769216",
-      "source_url": "https://x.com/inspiring_tosh/status/2112133222708769216",
-      "primary_signal": "ROUTE_EARLY_WARNING",
-      "signal_type": "ROUTE_EARLY_WARNING",
+      "text": "✈️خطوة نحو الوطن.. 138 لاجئًا صوماليًا يعودون إلى ديارهم\n\nغادر 138 لاجئًا صوماليًا مطار عدن الدولي عائدين إلى وطنهم، ضمن برنامج العودة الطوعية المدعومة #ASR التابع للمفوضية السامية للأمم المتحدة لشؤون اللاجئين @UNHCRYemen  \nتُمثّل هذه الرحلة رابع رحلة عودة طوعية يتم تنفيذها https://t.co/74fB23SMxH",
+      "text_excerpt": "✈️خطوة نحو الوطن.. 138 لاجئًا صوماليًا يعودون إلى ديارهم\n\nغادر 138 لاجئًا صوماليًا مطار عدن الدولي عائدين إلى وطنهم، ضمن برنامج العودة الطوعية المدعومة #ASR التابع للمفوضية السامية للأمم المتحدة لشؤون اللاجئين @UNHCRYemen  \nتُمثّل هذه الرحلة رابع رحلة عودة طوعية يتم تنفيذها https://t.co/74fB23SMxH",
+      "url": "https://x.com/NMO_ORG/status/2112523637878370433",
+      "source_url": "https://x.com/NMO_ORG/status/2112523637878370433",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ROUTE_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 8.0,
+      "confidence": 0.72,
+      "score": 7.75,
       "matched_signals": [
-        "ROUTE_EARLY_WARNING"
+        "MOVEMENT_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
-          "route",
-          "coast"
-        ],
-        [
-          "route",
-          "vessel"
-        ],
-        [
-          "enforcement",
-          "coast guard"
+          "movement",
+          "لاجئًا صوماليًا يعودون إلى ديارهم غادر"
         ]
       ],
       "matched_groups": [
-        "ROUTE",
-        "ENFORCEMENT"
+        "MOVEMENT"
       ],
       "context_matches": [
-        "MIGRANT",
-        "migrant"
+        "لاجئ"
       ],
-      "high_value_matches": [],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "EASTERN_MEDITERRANEAN",
-      "primary_region": "EASTERN_MEDITERRANEAN",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 32.0,
-      "analyst_priority": "LOW",
-      "ai_review_status": "AI_REVIEWED",
-      "ai_editorial_decision": "PUBLISH"
-    },
-    {
-      "id": 1089,
-      "source": "X",
-      "source_post_id": "2112132634541195679",
-      "author": "ABoatReport",
-      "language": "en",
-      "published_at": "2026-10-19T10:43:56Z",
-      "first_detected_at": "2026-10-19T10:51:51Z",
-      "last_detected_at": "2026-10-19T10:51:51Z",
-      "detection_count": 1,
-      "text": "SIX DEAD AFTER BOAT CAPSIZES OFF SAMOS — WHAT HAPPENED DURING THE COAST GUARD ENCOUNTER?\n\nAegean Boat Report | 19 October 2026\n\nSix refugees have died and fourteen others have been rescued after a speedboat capsized approximately 3.7 nautical miles (6.85 kilometres) north of https://t.co/wIf34QdVqB",
-      "text_excerpt": "SIX DEAD AFTER BOAT CAPSIZES OFF SAMOS — WHAT HAPPENED DURING THE COAST GUARD ENCOUNTER?\n\nAegean Boat Report | 19 October 2026\n\nSix refugees have died and fourteen others have been rescued after a speedboat capsized approximately 3.7 nautical miles (6.85 kilometres) north of https://t.co/wIf34QdVqB",
-      "url": "https://x.com/ABoatReport/status/2112132634541195679",
-      "source_url": "https://x.com/ABoatReport/status/2112132634541195679",
-      "primary_signal": "ROUTE_EARLY_WARNING",
-      "signal_type": "ROUTE_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ROUTE_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 9.25,
-      "matched_signals": [
-        "ROUTE_EARLY_WARNING"
+      "high_value_matches": [
+        "لاجئًا صوماليًا يعودون إلى ديارهم غادر"
       ],
-      "matched_phrases": [
-        [
-          "route",
-          "BOAT"
-        ],
-        [
-          "route",
-          "COAST"
-        ],
-        [
-          "route",
-          "Boat"
-        ],
-        [
-          "enforcement",
-          "COAST GUARD"
-        ],
-        [
-          "enforcement",
-          "rescued"
-        ]
-      ],
-      "matched_groups": [
-        "ROUTE",
-        "ENFORCEMENT"
-      ],
-      "context_matches": [
-        "refugees"
-      ],
-      "high_value_matches": [],
       "signal_context_rejections": [],
       "migration_context": true,
       "human_migration_context": true,
@@ -1561,7 +1352,7 @@
       "latitude": null,
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
+      "priority_score": 25.2,
       "analyst_priority": "LOW",
       "ai_review_status": "AI_REVIEWED",
       "ai_editorial_decision": "PUBLISH"
@@ -1877,6 +1668,149 @@
   ],
   "influence_narratives": [
     {
+      "id": 1109,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1xaq96k",
+      "author": "ShineRivulet",
+      "language": null,
+      "published_at": "2026-10-20T12:01:08Z",
+      "first_detected_at": "2026-10-20T13:08:08Z",
+      "last_detected_at": "2026-10-20T13:08:08Z",
+      "detection_count": 1,
+      "text": "Eclipse of the Light Development Diary I: God Bless America\nhttps://preview.redd.it/fb3spqlm36wh1.png?width=4096&format=png&auto=webp&s=2de1062af404443d9436618c141366ad0a1a98f7 We are pleased to present the first development diary for \"Eclipse of the Light\" (EOL)! EOL is a submod dedicated to depicting the state of the world in the TNO universe as it progresses into the 1980s. While remaining faithful to the core of TNO, we have made certain adjustments and extrapolations to the existing lore; consequently, some content may differ from the base TNO mod. We believe this will result in a narrative that is both more realistic and darker than the original. In this development diary, I am thrilled to present the key developments in the United States of America from the post-war period through the early 1980s. (Due to limited development resources and time, the content presented here is not yet in its final, polished form; we appreciate your understanding.) https://preview.redd.it/llkqw3abp5wh1.jpg?width=668&format=pjpg&auto=webp&s=62a2d6a0f34b6a39f45c05d27ad70e18a96a510c One of the foremost questions he had to confront was by no means as simple as it appeared: What is poverty? He defined poverty as a developmental and relative concept. In his view, the predicament of poverty in an affluent nation like the United States was undeniably distinct from that observed in impoverished lands such as Bangladesh. During the 1960s, the U.S. Bureau of Labor Statistics estimated that an annual income of $4,000 for a family of four and $2,000 for a single individual constituted the threshold of a comfortable livelihood; anything below this was deemed poverty. Michael estimated that, according to the Bureau's criteria, between forty and fifty million Americans lived in poverty, accounting for roughly one-quarter of the population. This revelation stunned many. They steadfastly refused to believe its veracity, dismissing it as hyperbolic exaggeration. Nevertheless, these were official statistics, and subsequent events in America demonstrated that his assessments were largely accurate. One need only recall President Franklin D. Roosevelt’s famous dictum: one-third of the American citizenry ill-housed, ill-clad, and ill-nourished. In the 1930s, at the height of the Great Depression, such troubling truths were acknowledged; yet by the 1960s, amidst collective intoxication with illusion, society proved unwilling to reckon with the ledger. The Truman Era: An Abandoned Realm Presidency of Harry Truman, Jan. 1945-Jan. 1953 The failure of the war exacerbated the fractures within American society. Yielding neither wealth nor glory, the United States under the Truman administration plunged into an exceptionally turbulent quadrennium. Vast numbers of returning veterans emerged as a destabilizing force within society. Upon returning from the battlefields to their hometowns, they were greeted not with embraces and blossoms, but frequently with shattered families. Despite the government's utmost endeavors to propagate patriotic fervor, veterans were met with disdain and cynical mockery. The postwar surge in American crime rates transcended mere economic dimensions. During the 1940s, a revolutionary mindset began to gain ascendancy—a sentiment destined to resurface in the 1980s. Many Americans came to perceive that the cyclical economic crises of the capitalist system had fully materialized within the United States, or were at least on the brink of doing so. The economic crises and social injustices that had loomed large before World War II remained unresolved by the New Deal. Consequently, an unreasoning, blind revolutionary fervor saturated the nation. This inclination manifested itself most vividly among intellectuals; some former conservatives underwent swift metamorphoses into \"revolutionaries.\" Well into the presidency of Dwight D. Eisenhower, remnants of leftist zeal persisted among certain factions, even ensnaring several progressives. In retrospect, it appears somewhat ludicrous that leading figures among the leftist intelligentsia once penned grandiloquent essays, blithely assuming that America had reached the zenith for revolution and ought to pivot toward \"higher,\" more intellectually elevated themes. In short, intellectuals, true to form, allowed themselves to be beguiled by the deceptive spirit of the age. Mary McCarthy, for instance, once recorded these absurd words: \"Class barriers are disappearing, or at least becoming permeable; compared with the middle-class secretary, the factory worker has become an economic aristocrat... That gravely unjust America of sharp contrasts is rapidly passing away.\" Yet, the revolution faltered; the nationwide strikes organized by the Communist Party USA and allied coalitions drifted inevitably toward failure. This outcome intensified the White House’s preoccupation with the threat of extremism. The Taft-Hartley Act of 1947 marked the inception of a structural persecution directed against labor unions and the left wing, utterly shattering communist influence within American organized labor and serving as the genesis of state-sponsored suppression of extremism. In February 1950, Republican Senator Joseph McCarthy of Wisconsin delivered an address to a Republican women's club in Wheeling, West Virginia, precipitating an ideological crusade that convulsed the entirety of American society. The reach of McCarthyism proved astonishingly sweeping, encompassing virtually every shade of extremism from Asian communities and Nazism to fascism and communism. Between 1944 and 1952, the United States traversed eight profoundly turbulent years, paving the way for the next occupant of the White House: the Supreme Commander of the Allied Expeditionary Force in Europe, Dwight David Eisenhower. The Eisenhower Era: Old Slums and New Slums Presidency of Dwight Eisenhower, Jan. 1953-Jan. 1961 Poverty is not merely a social attribute; it is an all-encompassing condition. Those who have endured poverty invariably perceive themselves as passive, helpless, and prone to violence: the poor exist in desolate isolation, yet are frequently obstinate and adversarial. Poverty transcends the mere deprivation of the world’s material wealth; it represents an immersion into an alternative, fatalistic, and hopeless universe—into The Other America , where the human spirit is deformed. Within this Other America , the ranks of the desolate and unfriended steadily swelled. Severed from the traditional cultures of their forebears, they grew increasingly estranged from religious observance, holding affiliation with neither trade unions nor social clubs. Invisible to the outer world, they consequently became blind to it. Their horizons narrowed inexorably; staring solely at one another, they found themselves utterly bereft of hope. Such were the denizens of the Eisenhower era, wherein the impoverished were gradually consigned to oblivion. If the middle class had never professed a fondness for squalor and destitution, they had at least previously acknowledged their existence. \"Crossing the boundary of wealth and poverty\" had once seemed a discernible journey... Now, however, American cities had undergone profound transformations. The destitute still inhabited the dilapidated quarters of the inner city, yet their bonds with the wider populace grew ever more attenuated. President Eisenhower effectively brought McCarthyism to a close. While the Democrats commanded the global stage, they remained inert. Democratic blueprints continued to heavily curb the excesses of capitalism, forging a more technocratic and corporatized American economic apparatus. The mobilization measures of the wartime economy were largely preserved, albeit redirected toward civilian ends; nevertheless, economic stagnation persisted unabated. The Lodge Era: Forsaken by the Affluent Society? Presidency of Henry Cabot Lodge Jr., Jan. 1961-Jan. 1969 Every major American municipality harbors an underground economy—a term requiring no exaggeration. It designates those subterranean grease-shops and clandestine sweatshops tucked beneath the city pavements, bearing witness to the whereabouts of countless souls who labor within the shadows for wages plumbing the lowest depths. Akin to the underworld, the underground economy operates stealthily, shrouded from public gaze. Puerto Ricans, African Americans, alcoholics, vagrants, and the mentally infirm—when seeking a day’s labor, they were compelled to pay a brokerage fee amounting to roughly one-tenth of their daily earnings. For a task yielding five dollars, they surrendered fifty cents; upon payment, the employment agency directed them to the threshold of a modest diner. Should fortune favor them, they secured the five dollars. If the proprietor rejected them, they theoretically possessed the right to reclaim their fifty cents. Yet many remained ignorant of this recourse, wholly unversed in the law. These were the outcasts forsaken by the affluent society. Devoid of specialized trades, or possessing skills rendered obsolete by economic progress, they constituted the mainstream of urban poverty in America, numbering in the millions. While the Lodge administration could trumpet its restoration of American economic vigor, its revival of national prestige upon the international stage, and its reclamation of all things American, it simultaneously forfeited the soul of the nation. Rather than rescuing the other America, the administration exacerbated its devastation. Economic recovery and expansion marched hand in hand with widening disparities in wealth. Once the scourge of economic depression descended upon a region, vitality drained away. Tax bases shriveled, public services deteriorated, and civic morale dissolved. Low-wage industries might occasionally infiltrate such hollowed-out zones, yet their motive remained opportunism—to reap illicit gains rather than resolve systemic maladies. Alternatively, nothing transpired at all. Thereupon commenced the vicious cycle. Because a district was impoverished and moribund, manufacturers refused to invest or establish plants there; lacking factories, the region descended yet deeper into penury. To borrow the phrasing of the Bureau of Labor Statistics: \"Yet a region's economic distress and high unemployment rate inversely dictate the caliber of enterprise it is capable of attracting.\" Stated more plainly: no corporation of consequence, least of all major conglomerates, would ever invest in such a godforsaken locale. In 1961, the United States Congress deliberated upon this very malady. True to its historical pattern of formulating half-measures for those lingering at society's economic base, Congress devised remedies for the downwardly mobile that proved wholly inadequate to the task. As a token of solicitude, lawmakers appropriated a meager sum designated for individual retraining programs. The core of congressional policy relied upon extending loans to stimulate industrial development within depressed zones. According to analyses compiled by the executive departments sponsoring the legislation, the fiscal resources allocated were woefully deficient. More critically fatal still was the absence of regional developmental planning, alongside the utter failure to formulate effective antidotes to the pervasive despondency suffocating economically blighted regions. How did the Lodge administration navigate the Civil Rights Movement? By adopting the posture of an ostrich. The movement achieved zero substantive progress across those eight years; patriotism, external expansion, and the suppression of anti-American forces reigned supreme as governmental priorities. They successfully sculpted America into a colossal, hegemonic monster—one whose body politic, however, was riven by mortal decay. The Era of the Moderates: The Triumph of Conscience Presidency of Philip Hart, Jan. 1969-Jan. 1973; Presidency of Arthur Goldberg, Jan. 1973-Jan. 1977 For certain urban dwellers, progress was far from a blessing, heralding threat rather than hope. This sentiment rang doubly true for the rural impoverished. In the wake of World War II, American agriculture pursued its relentless trajectory toward mechanization. The fruit of this mechanization was the exodus of vast rural populations toward the cities. Yet even this seismic agrarian revolution failed to ameliorate the plight of the rural poor, whose numbers remained stubbornly, almost unbelievably, stagnant. Although the Hart administration dedicated itself to forging a high-welfare liberal society, as America celebrated its Bicentennial in the 1970s, tens of millions of its citizens remained mired in destitution. President Hart exhorted every American to declare war upon poverty and social injustice, summoning the populace to wage an \"unconditional war\" for its eradication. Congress endorsed the presidential mandate. Throughout the ensuing quadrennium, the White House tirelessly recited daunting statistics, proclaiming billions of dollars funneled into social amelioration. The 1960s had been an era of militant protests—a decade consecrated to the selfless dedication of students and church organizations striving to banish poverty, accompanied by the unvarnished documentary exposes of mass media laying bare America's domestic shames. Indeed, governmental activism appeared so frenetic to many that Richard Nixon, during his 1972 presidential campaign, pledged to decelerate the frantic pace of innovation. How, then, could poverty persist into the 1970s, casting the poor once more beyond the social conscience and erasing them from public consciousness? As customary, the government exercised meticulous care in compiling data to demonstrate that the preceding administration had wallowed in blind optimism while the incumbent displayed cool-headed sobriety. Across every vital domain—nutrition, housing, education—the state doled out mere fractions of the assistance desperately required by the poor. Given that half of the impoverished demographic consisted of the young, and modern society increasingly demanded advanced technical proficiencies, the prevailing conditions spelled profound peril for these youths on the threshold of adulthood. Unless decisive counter-measures were enacted, this generation of impoverished children was destined to father and mother the next generation of the destitute. This is not to suggest that progress was wholly absent. The prosperity kindled by the public policies of the 1960s did indeed depress unemployment rates, affording genuine, albeit precarious, gains to segments of the population. Medical care initiatives designed for the elderly represented something akin to a quantum leap in social investment, notwithstanding the erosion of their efficacy by inflation. The Wallace Era: Keep Away From My Doorstep Presidency of George Wallace Every African American neighborhood possesses a distinct character of its own. In Atlanta, during a tranquil evening, residents linger beneath eaves, engaged in animated discourse and resonant laughter. In Los Angeles, the morphologies of the Black ghetto assume myriad forms. Only a single feature remains uniform: pockmarked streets differing scarcely at all from those of any other slum. Outwardly, the dwellings maintain an acceptable façade; without diligent observation, one remains blind to the squalor rotting within. The South Side of Chicago unmistakably mirrors the archetype of the metropolitan ghetto, juxtaposing towering housing blocks against a motley array of low-grade taverns. At the peripheries of downtown Chicago, the palpable tension of race relations hangs heavy, pregnant with explosive potential. In every conceivable aspect, Black poverty possesses a uniqueness all its own. Deeply rooted in history, it manifests as a distinct subculture underpinned by a vicious cycle of economic injustice and racial discrimination—one systematically imposed upon Black Americans by the white majority. The public impression left by Black poverty is likewise singular. A solitary stroll through the slum avenues illuminates this truth, laying bare the individual visages and diverse psychological postures hidden behind sterile statistics: terror, hunger, faith, and the politics of racial destitution. To witness Black existence is to apprehend, through a lens of profound humanism, the bleak economic ciphers and industrial metrics lurking in their shadow. Should the legal statutes enforcing racial segregation be instantly abrogated, race would nevertheless endure as one of America’s most pressing moral and political dilemmas. The burdens crushing Black citizens and other minority groups extend far beyond unjust laws; American economic structures, American society, and the subconscious psyche of the populace remain thoroughly infected by racial prejudice. Even if statutory mandates guaranteed absolute equality of opportunity, the majority of Black Americans would remain incapable of fully leveraging such policy shifts. A vast, automated apparatus would continue to silently discriminate against people of color. Well-meaning souls frequently fail to comprehend the profound depths to which racism has anchored its roots in America. They harbor the comforting illusion that, given sufficient time, Black citizens will rise through their own bootstraps much like the Irish, Jews, and Italians before them. Yet this rhetoric overlooks two decisive verities: Black Americans are a people of color—a reality confronting no other immigrant cohort in America's past—and contemporary Black populations constitute internal migrants within their native soil, subjected to relentless discrimination regardless of destination, perpetually denied the option of fleeing oppression as one might escape tsarist tyranny or famine. To achieve genuine equality, Black Americans require something far more radical than mere social \"assimilation\": they demand the structural reconstruction of foundational American institutions. Why did George Wallace ascend to power? The answer lies glaringly exposed: America’s civil rights and antipoverty crusades had collapsed in failure. The reformist policies and compromises of the moderates had served only to exacerbate societal contradictions. Stricken by failing health, Hart retreated from the political arena, while his successors lacked the fortitude to consummate the moderate civil rights agenda. Their constituents watched in dismay as leaders hoarding immense electoral capital behaved like misers, culminating in a thunderous political collapse. The Wallace administration proceeded to dismantle big government further, curtailing federal authority while expanding states' rights, inciting ordinary laborers against federal regulation, resisting federal intervention in union affairs to preserve blue-collar autonomy, constructing segregated Black schools, and refining educational stratification in a deliberate bid to consummate racial apartheid in both economy and institution. These machinations spawned catastrophic public safety crises; notwithstanding the Wallace administration’s iron-fisted suppression, racial turbulence and separatist fervor continued their relentless upward climb... 1982, United States of America https://preview.redd.it/8gpixxz506wh1.png?width=2073&format=png&auto=webp&s=fa96fc4a85b754f03528eb445c4dae0ffa2c9b24 It's a mighty hard row that my poor hands have hoed My poor feet have traveled a hot dusty road Out of your Dust Bowl and westward we rolled And your deserts were hot and your mountain was cold I worked in your orchards of peaches and prunes Slept on the ground in the light of your moon On the edge of the city you'll see us and then We come with the dust and we go with the wind -Pastures of Plenty, Woody Guthrie",
+      "text_excerpt": "Eclipse of the Light Development Diary I: God Bless America\nhttps://preview.redd.it/fb3spqlm36wh1.png?width=4096&format=png&auto=webp&s=2de1062af404443d9436618c141366ad0a1a98f7 We are pleased to present the first development diary for \"Eclipse of the Light\" (EOL)! EOL is a submod dedicated to depicting the state of the world in the TNO universe as it progresses into the 1980s. While remaining faithful to the core of TNO, we have made certain adjustments and extrapolations to the existing lore; consequently, some content may differ from the base TNO mod. We believe this will result in a narrative that is both more realistic and darker than the original. In this development diary, I am thrille",
+      "url": "https://www.reddit.com/r/hoi4modding/comments/1xaq96k/eclipse_of_the_light_development_diary_i_god/",
+      "source_url": "https://www.reddit.com/r/hoi4modding/comments/1xaq96k/eclipse_of_the_light_development_diary_i_god/",
+      "primary_signal": "MOBILIZATION_COORDINATION",
+      "signal_type": "MOBILIZATION_COORDINATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "MOBILIZATION_COORDINATION",
+      "priority": "HIGH",
+      "confidence": 0.97,
+      "score": 17.0,
+      "matched_signals": [
+        "MOBILIZATION_COORDINATION"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization",
+          "organized by"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "AMERICAS",
+      "primary_region": "AMERICAS",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 67.95,
+      "analyst_priority": "HIGH",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "reddit_1xaq96k"
+      ],
+      "related_authors": [
+        "ShineRivulet"
+      ],
+      "related_urls": [
+        "https://www.reddit.com/r/hoi4modding/comments/1xaq96k/eclipse_of_the_light_development_diary_i_god/"
+      ],
+      "related_sources": [
+        "REDDIT"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
+    {
+      "id": 1110,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1xanklm",
+      "author": "Particular-Peace1069",
+      "language": null,
+      "published_at": "2026-10-20T09:30:48Z",
+      "first_detected_at": "2026-10-20T13:08:09Z",
+      "last_detected_at": "2026-10-20T13:08:09Z",
+      "detection_count": 1,
+      "text": "Rayne’s Second Term and the Birth of the Third Sordish Republic, a Suzerain story. Part Four – First Half.\nStory written and imagined by: The Unthinkable. Rayne’s Second Term and the Birth of the Third Sordish Republic, a Suzerain story. Part one : Prologue: Victory Day Chapter 1: President Anton Rayne Part two : Chapter 2: A New Sordland Part three : Chapter 3: A Fire Rises Part four : Chapter 4: From humble beginning (You are here) Chapter 5: By any means necessary Chapter IV: From Humble Beginnings Following the attack, you were rushed to Emerald Hospital in Holsord. You felt weightless. Lost. You couldn’t remember what had happened. Every memory seemed to slip away the moment you tried to grasp it, leaving only scattered fragments behind. You remembered the frantic footsteps, the blaring alarms, and the voices echoing around you. Someone was shouting orders. Someone else was calling your name. Everything blended together into a distant, incomprehensible noise as you were pushed through what felt like an endless maze of corridors. Bright lights passed overhead one after another until they merged into a single, blinding glow. A man dressed in green leaned over you. You wanted to speak, but no words came. You tried to move, but your body refused to obey. The man gently placed a breathing mask over your face. “Count backwards from ten,” he said. You never made it past the first number. Darkness swallowed you whole. For the first time in what felt like an eternity, you found peace. https://preview.redd.it/6ixxtzc47lwh1.jpeg?width=2880&format=pjpg&auto=webp&s=9969e8374c9265f44b00cec4d5e48e6cca9f0a38 Margret Wolfcher’s Prologue P1: A New Beginning Margret Wolfcher’s Prologue P2: Rising Political Career Margret Wolfcher’s Prologue P3: Let it Rayne Chapter V: By any means necessary October 28, 1960 — Heljiland Coast, Agnolian Fortifications — Early Morning Two soldiers stood outside Bunker C11, smoking in the cold, their words nearly drowned out by the waves crashing against the rocks below. Beyond the seawall, a thick fog had swallowed the horizon. From a civilian radio sitting on a shelf inside the bunker came the morning news. “…Last night, another demonstration took place in the predominantly Valgish working-class neighbourhoods of Heljiport, denouncing the growing discrimination faced by…” Beneath the endless stream of reports, the voices of the two soldiers cut through the morning broadcast. “Did you hear what happened in Sordland?” “To Rayne? Yeah.” “Think he’s dead?” The other soldier flicked ash over the railing. “Hope not… I met him at Estord, when they signed the peace treaty. I was on the honour guard.” “No shit?” “Shook my hand. Asked where I was from…” He took another drag. “…Nice guy.” “Well, we sure kicked the Queen’s arse together.” The soldier grinned. “Should’ve seen the Rummish delegation. Looked like they’d swallowed—” A sharp burst of static from the military set interrupted him. “Sector C, this is Command. Status report. Over.” One of them dropped his cigarette, crushed it beneath his boot, and stepped inside. “Command, this is Sector C. Visibility poor. Heavy fog offshore. No movement observed. All quiet. Over.” “Copy. Maintain observation. Out.” The soldier set down the receiver. Beside it, the civilian broadcast had continued uninterrupted. “…reports are coming in of a possible exchange of fire between warships in the Markian Sea. For now, we have no further informa—” He was halfway back to the door when the military set erupted into static once again. “Sector C—” The floor jolted beneath his boots. Dust fell from the ceiling. “What the hell was—” A second explosion shook the bunker. The military set erupted. “Command, Observation Post Two! Flashes offshore, bearing zero-eight-five!” “Battery One is hit! We need medics!” “All stations, clear the frequency! Observation Post Two, identify contacts.” “Warships! Multiple warships firing through the fog!” “All coastal batteries, action stations!” The soldier grabbed the receiver. “Command, Sector C! Lines are down. We’ve lost contact with the eastern positions!” Another voice broke in. “Command, Inland Post Four. Aircraft overhead. Nothing visible.” “Post Four, report heading.” A pause. “Parachutes!” “Repeat?” “Parachutes north of the garrison. They’re coming down behind us!” Gunfire crackled through the transmission. “They’re Valgs! They’re—” The transmission died. https://preview.redd.it/mt4ffbr18lwh1.png?width=1260&format=png&auto=webp&s=41f45ca3b586eff33451fc16b715bbd2c2f7ef7f Section 1: Mr Acting President Thirty-five hours earlier, Vice President Petr Vectern had been attending the victory commemorations in Lachaven when his security detail abruptly escorted him away, leaving a bewildered crowd behind. Within the hour, he was on his way to Holsord. At Emerald Hospital, surgeons fought to save Anton Rayne’s life. By nightfall, his condition had stabilised, but he remained unconscious. Nobody could say when, or whether, he would wake. Meanwhile, staff and civil servants at the Maroon Palace hurried to arrange an emergency swearing-in ceremony. With the Chief Justice unavailable, officials contacted the first Supreme Court justice they could reach: Isabel Edmonds. In the palace’s grand hall, Edmonds administered the oath as Petr Vectern formally assumed presidential duties under Article 9 of the Constitution. He understood that he was exercising authority during the President’s incapacity, not beginning a new elected term. Yet, standing before the assembled officials, the responsibility was unmistakably his. Before dawn, the Council of Ministers assembled at the Maroon Palace. Rayne’s chair remained empty for several minutes before Petr finally took his place. His first instructions were straightforward: maintain essential government operations, secure public buildings, and establish what had happened. Interior Minister Lucian Galade coordinated the domestic security response, while Justice Minister Nia Morgna requested regular reports from the NBI. Rumours of a conspiracy were already circulating, but investigators had yet to establish who had ordered the attack. As the nation anxiously awaited news from Emerald Hospital, Vectern sought to restore a sense of stability and national unity. In the morning following the attack, a visibly shaken Vectern addressed the nation, paying tribute to those who had lost their lives and calling for unity in the face of tragedy. “My fellow Sords, our nation has suffered a terrible tragedy. President Rayne remains alive, but his condition is critical. Our thoughts are with him, his family, and all those affected by this attack. Let me assure you that our Republic stands firm. Until President Rayne can resume his duties, I shall uphold the responsibilities entrusted to me by our Constitution. We will bring those responsible to justice. But in these difficult times, we must stand united. Sordland has endured darker days, and together, we shall overcome this tragedy.” He also proclaimed a week of national mourning in honour of Serge Wolkner, the presidential driver killed in the attack, who would later be posthumously awarded the title of Hero of Sordland. The former Vice-President, now Acting President, offered reassurance in his first public statement without promising a recovery that doctors could not guarantee. Behind the scenes, however, those who had known Petr primarily as Rayne’s close friend and political ally now wondered how he would govern in the President’s absence. They did not have long to wait. An urgent report had just arrived from Agnolia: Valgsland had launched an assault on Heljiland. Vectern had been Acting President for only a few hours. Today, it is widely believed that Valgsland took advantage of Agnolia’s reduced attention to Heljiland, as the country remained focused on integrating the war-torn region of Dome, acquired during the Second Rummo-Sordish War. The outbreak of the Rummish Civil War further complicated matters, placing additional pressure on the Agnolian government and stretching its resources even thinner. For Valgsland, this was perhaps its last opportunity to retake the strategically vital island before its long-standing rival grew stronger, bolstered by the vast resources of its newly acquired territories. Whether Valgsland would succeed, however, remained to be seen. — Geopolitico — Latest edition, October 28, 1960 — https://preview.redd.it/ycbi4u288lwh1.png?width=2700&format=png&auto=webp&s=9807650cb87d5c6b0fc38e88bf48da7876fd45fc — Troubled Waters — The invasion of Heljiland confronted Vectern with a crisis that could not wait for Rayne’s recovery. Within hours of the first reports, Prime Minister Maartin Van Hoorten contacted Holsord to request assistance. Agnolia remained a valued ally of Sordland; the two countries had fought side by side in the Second Rummo–Sordish War. The Prime Minister naturally expected Holsord to come to his country’s defence. Vectern swiftly condemned the invasion and convened an emergency meeting with Foreign Minister Frens Ricter, Defence Minister Erik V. Martain, and Chief of the Armed Forces Iosef Lancea. All three agreed that the growing confrontation between the ATO and the CSP made direct intervention dangerous. Unlike Rumburg, which had faced the war diplomatically isolated, Valgsland enjoyed the backing of United Contana. Even a limited Sordish deployment could therefore draw the country into a much larger conflict. In this context, the Acting President officially authorised deliveries of military supplies and medical assistance to Agnolia, while ruling out the deployment of Sordish combat forces. Naval patrols were reinforced to protect national waters and monitor shipping. Unofficially, however, several elite volunteer brigades were dispatched to fight under the Agnolian flag and help repel the invasion. Ricter also pressed for closer cooperation with the ATO. Intelligence sharing and coordination with the alliance’s military operations expanded considerably, while consultations with ATO representatives sought to keep Holsord informed of developments and secure assurances that commercial shipping would be protected. Vectern’s policy drew criticism from both sides. Supporters welcomed aid to Agnolia, but others argued that supplies alone were insufficient for an ally that had fought alongside Sordland three years ago. Meanwhile, his growing cooperation with Arcasia raised fears that Sordland would be drawn into a wider conflict without a meaningful say in the decisions leading to it. Valgish propaganda posters by NiJo_C But the military theatre wasn’t the only concern. The closure of the Rika Strait delayed cargoes, disrupted export contracts, and drove up shipping and insurance costs. At Morna and Lachaven, companies began postponing departures while searching for alternative routes. Symon Holl warned the Cabinet that a prolonged disruption could undermine the recovery on which much of Rayne’s popularity rested. Vectern approved temporary credit guarantees for affected businesses and instructed the relevant ministries to prioritise essential imports. Holl resisted demands for broad subsidies, arguing that the government could not indefinitely compensate every company exposed to the crisis. Labour Minister Manoly Suheil, meanwhile, insisted that assistance should carry conditions protecting workers from immediate dismissal. These measures bought time, but they could not reopen the strait. It was during these discussions that the Qinal Canal became a serious consideration for the Sordish government. Several international partners, including ATO members, had already pledged support for renewed construction, while Intermerkopum countries had expressed interest in financing part of the project. Minister Holl remained cautious. Previous construction efforts had collapsed under mounting costs and difficult terrain, and completion was expected to take another two to five years. The canal would therefore offer no immediate relief from the crisis. Any decision to invest would have to await an official visit to Qinal to assess the project and discuss the terms of Sordland’s participation. — The Wolf Returns — After surviving an assassination attempt and enduring weeks of medical treatment and rehabilitation, Margret Wolfcher disregarded her doctors’ advice and decided to return to work. She returned to a profoundly changed Sordland. In her hospital room, flowers and cards of support filled every corner. Her husband, Willam, had rarely left her side throughout her recovery, while their son, Adrian, visited whenever his duties allowed. The television constantly blasted news of the unfolding crises across the country and abroad. With each passing day, watching events unfold from the sidelines only made her more eager to return to her duties. And eventually, she did just that. Still walking on crutches and visibly recovering from her injuries, Wolfcher left Emerald Hospital. Her husband remained close, instinctively ready to support her whenever she struggled to walk, while Adrian stayed only a few steps behind his mother. Outside the hospital, a crowd of journalists, supporters, government officials, and ordinary citizens had gathered to witness her departure. Standing before the hospital gates, Wolfcher delivered an impassioned speech to the waiting crowd. “I have spent too much time in a hospital bed. I’ve had enough of lying down.” Her speech ended with a defiant declaration that would soon echo across Sordland: “I will not stand idly by when my country needs me most. My duty is to Sordland, and I shall answer its call!” Margret Wolfcher had finally returned. Yet her comeback represented far more than the return of a government official. In the eyes of many Sords, she had become a symbol of resilience, determination, and courage. — Across the Qinal — By the end of November, Qinal hosted a major diplomatic conference, bringing together representatives from numerous ATO and Intermerkopum countries, alongside private investors eager to finance the completion of the long-delayed Qinal Canal. Unsurprisingly, no CSP country had sent a delegation. With the Rika Strait closed for nearly thirty days, the unfinished canal had suddenly become an urgent geopolitical necessity. For Sordland, increasingly affected by the disruption of international trade, the stakes were particularly high. Vectern quickly won over the delegates with his jokes and natural charisma. Yet behind the diplomatic small talk, disagreements emerged. Qinal demanded majority control over the canal’s future revenues, Arcasia sought greater private involvement and an ATO role in protecting the waterway from piracy, while Intermerkopum demanded guaranteed international access. After days of negotiations, a compromise was reached. Qinal would retain 51 percent of future revenues, of which five percentage points would be allocated to a new Canal Security Agency supported by Arcasian naval forces, leaving Qinal with an effective share of 46 percent. ATO investors would receive 30 percent, with Arcasia holding the largest share, while the remaining 19 percent would be divided between Intermerkopum, Sordland, other investors, and private interests. Commercial access would remain guaranteed regardless of geopolitical alignment. It is believed that President Dwight Walker accepted Qinal’s majority share in an effort to repair the increasingly strained relationship between the two ATO countries. However, this agreement concerned the distribution of future revenues, not the financing of the canal itself. Although Qinal would retain control over 51 percent of the canal’s revenues, including the five percent reserved for security, it would not be required to cover an equivalent share of construction costs. Instead, much of the funding would come from foreign governments and private investors, who would contribute capital in exchange for a portion of the canal’s future earnings. Engineers estimated that completing the canal would require another 2.4 billion Arcasian Lira, or roughly 6 billion SR. An accelerated construction programme aimed for experimental crossings by 1963 and full commercial opening by the summer of 1964. The Sordish State committed around 120 million SR, securing two percent of the canal’s future revenues. Sordish private companies, including Bergia Steel and the Nedam Mining Group, invested heavily as well, collectively securing another three percent. With five percent of the canal’s future revenues now in Sordish hands, Vectern and the delegation returned to Holsord with the agreement signed and Sordland’s interests secured. Yet it wasn’t the only thing the Sordish delegation managed to secure. In a private agreement with President Walker, Vectern granted ATO naval forces docking rights in Sordish ports in exchange for increased Arcasian investment in Sordland, a concession that remained outside the official negotiations. Photo of the Qinali Diplomatic Summit, showcasing numerous diplomats and world leaders, including the Qinali Prime Minister Reza Ngoda reading his notes and, to his left, Lespian Prime Minister Juan Parezzi. — The NBI’s Revelation — By December, Karl Greiser, Director of the National Bureau of Investigation, delivered the NBI’s conclusions on the assassination attempt against Rayne. In a confidential report leaked to the press, the Bureau revealed that the assailant killed during the attack was a former Rumburgian migrant who had served with syndicalist forces during the Rummish Civil War before entering Sordland among the refugees. Yet the investigation remained far from complete. The NBI failed to locate his remaining accomplices, though investigators discovered what appeared to have been their hideout in an abandoned warehouse. Inside, detectives found burned documents and the remains of books and pamphlets closely associated with Malenyevist propaganda. They also discovered what appeared to be a partially destroyed Valgish passport. While the NBI stopped short of establishing a direct connection between Valgsland and the attackers, the discoveries immediately raised suspicions of foreign involvement. The leak caused outrage across the country. The headquarters of the Communist Party of Sordland in Holsord was burned down the following day. Outside the Valgish Embassy, under the watchful eyes of law enforcement, protesters gathered in anger, burning books and other works by Valgish and Contanan authors and artists. The outrage soon reached the Grand National Assembly. During a particularly heated session, NFP MPs began shouting across the chamber at their CPS counterparts, accusing them of defending those responsible for the attack. What followed quickly descended into chaos, as insults and accusations echoed throughout the Assembly. In an interview, Kesaro Kibener, leader of the NFP, urged Vectern to declare a state of siege, warning: “The enemies of Sordland are poisoning our society from within. I urge Acting President Vectern to invoke Article 36 of the Constitution and declare a state of siege before they have another chance to strike.” Rummo-Sords were also being targeted as the unrest spread. In Neuebourgh, several shops belonging to members of the minority community were vandalised, their windows smashed and storefronts defaced. Tensions escalated further when an armed gunman attempted to carry out an attack at a rural market. Although the attack was prevented before it could turn into a massacre, the incident further fuelled the atmosphere of fear gripping the region. The Governor of Rumland urged the central government to deploy additional security forces, warning that local authorities were struggling to contain the growing unrest. Across the country, paranoia was beginning to take hold. Interior Minister Lucian Galade led the government’s response, announcing a nationwide security operation aimed at restoring order and preventing further violence. With Vectern’s approval, additional police units were deployed across Rumland and other sensitive regions, while security was reinforced around Rummo-Sord communities, foreign embassies, political offices and major government buildings. Karl Greiser’s NBI was granted additional personnel and resources to assist local authorities. Within days, coordinated operations were conducted across the country against individuals suspected of involvement in the recent violence. The operation was initially well received. After days of burning buildings, vandalised shops and political chaos, images of police officers guarding threatened neighbourhoods and separating rival demonstrations gave the impression that the government was finally regaining control. Yet within the cabinet, the scale of the operation was already creating tensions. Justice Minister Nia Morgna warned that some arrests were being conducted on increasingly broad grounds. She insisted that the urgency of the crisis could not be allowed to weaken basic judicial protections. However, the strategy appeared to work. Street violence gradually subsided, demonstrations became more contained, and the government’s handling of the crisis received growing public approval. As the face of the government’s response, Galade appeared almost daily in newspapers and on television, presenting the latest measures and reassuring the public that order was being restored. His visibility and popularity grew considerably. On the opposite side, Morgna watched the developments with considerably less enthusiasm. — Bloodshed in Heljiland — While Holsord remained consumed by its internal politics, events in the Markian Sea were unfolding at a considerably faster pace. In Agnolia, Van Hoorten urged his allies to provide greater military support as Valgish forces continued their advance across Heljiland at an alarming rate. He called upon the “democracies” of Merkopa to take decisive action to deter further Valgish aggression. Fortunately for Agnolia, Acting President Vectern answered the call, as the Sordish military high command had become increasingly convinced that Valgsland might have been behind the assassination attempt on Rayne, making it more willing to support direct intervention in the conflict. Following Vectern’s orders, elements of the Sordish Navy departed their bases to join Lespian naval forces already en route to the island. Officially, their mission remained limited: escorting commercial vessels, patrolling international waters, and deterring further Valgish aggression. Naval commanders were strictly prohibited from initiating hostilities unless their forces came under attack. For the first time since the beginning of the Heljiland crisis, Sordish, Lespian, and Valgish warships would be operating within striking distance of one another near an active combat zone, raising fears that a single miscalculation could escalate into a much wider conflict. Meanwhile, private military companies, including Cerberus International, had begun deploying personnel to Heljiland to support Agnolian forces. Although officially operating independently of the Arcasian government, their involvement marked a significant development in the conflict. These companies would prove remarkably effective in guerrilla warfare, particularly in the mountainous terrain of southern Heljiland. Their expertise in unconventional warfare, reconnaissance, and small-unit operations allowed Agnolian defenders to exploit the island’s difficult geography, disrupting Valgish supply lines, launching ambushes, and gradually slowing the enemy’s advance. After three weeks of seemingly unstoppable territorial gains, the Valgish offensive finally began to lose momentum. The turning point came at Heljiport. Despite relentless coastal artillery bombardments and repeated air raids, Valgish forces failed to capture the strategically vital city. Attempts by elements of the city’s Valgish minority to provoke unrest and undermine Agnolian defenses had further complicated the situation, but ultimately failed to pave the way for the advancing Valgish military. Street fighting, artillery strikes, and aerial bombardments had reduced entire neighbourhoods to rubble. Thousands of civilians had fled the city, while those who remained struggled to survive under increasingly desperate conditions. Yet, despite the widespread destruction, Heljiport continued to resist. What Valgsland had initially envisioned as a swift military campaign was rapidly transforming into a prolonged and costly war of attrition. The Agnolian defenders, reinforced by foreign military contractors and encouraged by the growing presence of allied warships offshore, had succeeded in stabilizing the front. For the first time since the invasion began, the Valgish advance had been brought to a halt. Map of the Valgish invasion of Heljiland — November 1960 — Diplomatic Fallout — Troubled news came from Lespia when a bomb detonated inside Perla Central Station, killing seven people and wounding nearly a hundred others. Initial reports quickly raised suspicions of Valgish involvement after investigators discovered the suspected terrorist’s apartment filled with Malenyevist propaganda, revolutionary literature, and material sympathetic to the Valgish government. Investigators also uncovered links between the suspect and Malenyeva dez Lespia , the Lespian Communist Party. As in Sordland, however, investigators had yet to establish any direct connection between the attacker and the Valgish authorities. The similarities between the assassination attempt on Rayne and the bombing in Lespia were nevertheless difficult to ignore. Chancellor Hegel, while deeply engaged in his so-called “Liberation Campaign” in Heljiland, formally denied any involvement in either incident. He also condemned the numerous violent demonstrations outside Valgish embassies across Eastern Merkopa, particularly the public burning of Valgish literature, denouncing these acts as part of an “organised campaign of anti-Valgish hysteria”. Furthermore, he warned against foreign intervention in the Heljiland conflict, declaring that the Valgish military and navy would make no distinction between Agnolian forces and any foreign troops intervening on their behalf. Weeks later, the freshly elected centre-left Prime Minister of Lespia, Juan Parezzi, made an unprecedented announcement, formally banning Malenyeva dez Lespia and ordering the dissolution of the party. Parezzi declared that the party had “ strayed beyond the republican line ” and now posed a serious threat to national security. The decision marked one of the most significant crackdowns on the Lespian communist movement in decades and further intensified concerns among ATO member states that Valgish influence was being used to destabilise their governments from within. A special edition of Geopolitico magazine covering the recent political and military developments across Merkopa. Section 2: A Change in Course Due to Reddit's 40,000-character limit, I had to split Part Four into two halves. You can continue reading Part Four here.",
+      "text_excerpt": "Rayne’s Second Term and the Birth of the Third Sordish Republic, a Suzerain story. Part Four – First Half.\nStory written and imagined by: The Unthinkable. Rayne’s Second Term and the Birth of the Third Sordish Republic, a Suzerain story. Part one : Prologue: Victory Day Chapter 1: President Anton Rayne Part two : Chapter 2: A New Sordland Part three : Chapter 3: A Fire Rises Part four : Chapter 4: From humble beginning (You are here) Chapter 5: By any means necessary Chapter IV: From Humble Beginnings Following the attack, you were rushed to Emerald Hospital in Holsord. You felt weightless. Lost. You couldn’t remember what had happened. Every memory seemed to slip away the moment you tried t",
+      "url": "https://www.reddit.com/r/suzerain/comments/1xanklm/raynes_second_term_and_the_birth_of_the_third/",
+      "source_url": "https://www.reddit.com/r/suzerain/comments/1xanklm/raynes_second_term_and_the_birth_of_the_third/",
+      "primary_signal": "CROSSING_FACILITATION",
+      "signal_type": "CROSSING_FACILITATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "EASIER_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.97,
+      "score": 19.0,
+      "matched_signals": [
+        "CROSSING_FACILITATION"
+      ],
+      "matched_phrases": [
+        [
+          "route_information",
+          "route to"
+        ],
+        [
+          "information_spread",
+          "instructions"
+        ],
+        [
+          "border_condition",
+          "additional police"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrant",
+        "refugees"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 59.95,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "reddit_1xanklm"
+      ],
+      "related_authors": [
+        "Particular-Peace1069"
+      ],
+      "related_urls": [
+        "https://www.reddit.com/r/suzerain/comments/1xanklm/raynes_second_term_and_the_birth_of_the_third/"
+      ],
+      "related_sources": [
+        "REDDIT"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
+    {
       "id": 1107,
       "source": "REDDIT",
       "source_post_id": "reddit_1xa23kg",
@@ -1940,150 +1874,6 @@
       ],
       "related_sources": [
         "REDDIT"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
-    },
-    {
-      "id": 1096,
-      "source": "REDDIT",
-      "source_post_id": "reddit_1xa0gwg",
-      "author": "emorgoral",
-      "language": null,
-      "published_at": "2026-10-19T15:47:32Z",
-      "first_detected_at": "2026-10-19T16:41:30Z",
-      "last_detected_at": "2026-10-19T16:41:30Z",
-      "detection_count": 1,
-      "text": "Energy Secretary attacks Mahmood’s migrant crackdown: Miatta Fahnbulleh warns extending wait for right to remain would threaten integration",
-      "text_excerpt": "Energy Secretary attacks Mahmood’s migrant crackdown: Miatta Fahnbulleh warns extending wait for right to remain would threaten integration",
-      "url": "https://www.reddit.com/r/UKEarnedSettlement/comments/1xa0gwg/energy_secretary_attacks_mahmoods_migrant/",
-      "source_url": "https://www.reddit.com/r/UKEarnedSettlement/comments/1xa0gwg/energy_secretary_attacks_mahmoods_migrant/",
-      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
-      "signal_type": "LEGAL_MIGRATION_SIGNAL",
-      "signal_mode": "DIRECT",
-      "signal_intent": "LEGAL_ACCESS",
-      "priority": "MEDIUM",
-      "confidence": 0.99,
-      "score": 24.0,
-      "matched_signals": [
-        "LEGAL_MIGRATION_SIGNAL"
-      ],
-      "matched_phrases": [
-        [
-          "legal_signal",
-          "right to remain"
-        ],
-        [
-          "legal_protection",
-          "right to remain"
-        ],
-        [
-          "HIGH_VALUE",
-          "right to remain"
-        ]
-      ],
-      "matched_groups": [],
-      "context_matches": [
-        "migrant"
-      ],
-      "high_value_matches": [
-        "right to remain"
-      ],
-      "signal_context_rejections": {},
-      "migration_context": true,
-      "human_migration_context": null,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "2.6",
-      "priority_score": 50.65,
-      "analyst_priority": "MEDIUM",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "reddit_1xa0gwg"
-      ],
-      "related_authors": [
-        "emorgoral"
-      ],
-      "related_urls": [
-        "https://www.reddit.com/r/UKEarnedSettlement/comments/1xa0gwg/energy_secretary_attacks_mahmoods_migrant/"
-      ],
-      "related_sources": [
-        "REDDIT"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
-    },
-    {
-      "id": 1100,
-      "source": "X",
-      "source_post_id": "2112299706579636354",
-      "author": "ms_plath",
-      "language": "en",
-      "published_at": "2026-10-19T21:47:49Z",
-      "first_detected_at": "2026-10-19T21:48:35Z",
-      "last_detected_at": "2026-10-19T21:48:35Z",
-      "detection_count": 1,
-      "text": "@johnadgrady Why have you not kicked out the jihadi beheading vile excuse claiming fucking asylum because of echr shite",
-      "text_excerpt": "@johnadgrady Why have you not kicked out the jihadi beheading vile excuse claiming fucking asylum because of echr shite",
-      "url": "https://x.com/ms_plath/status/2112299706579636354",
-      "source_url": "https://x.com/ms_plath/status/2112299706579636354",
-      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
-      "signal_type": "LEGAL_MIGRATION_SIGNAL",
-      "signal_mode": "DIRECT",
-      "signal_intent": "LEGAL_ACCESS",
-      "priority": "MEDIUM",
-      "confidence": 0.94,
-      "score": 14.0,
-      "matched_signals": [
-        "LEGAL_MIGRATION_SIGNAL"
-      ],
-      "matched_phrases": [
-        [
-          "legal_signal",
-          "echr"
-        ]
-      ],
-      "matched_groups": [],
-      "context_matches": [
-        "asylum"
-      ],
-      "high_value_matches": false,
-      "signal_context_rejections": {},
-      "migration_context": true,
-      "human_migration_context": null,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "2.6",
-      "priority_score": 48.9,
-      "analyst_priority": "MEDIUM",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "2112299706579636354"
-      ],
-      "related_authors": [
-        "ms_plath"
-      ],
-      "related_urls": [
-        "https://x.com/ms_plath/status/2112299706579636354"
-      ],
-      "related_sources": [
-        "X"
       ],
       "independent_author_count": 1,
       "platform_count": 1
@@ -2094,6 +1884,149 @@
   "top_crossing_access_posts": [],
   "crossing_access_narratives": [
     {
+      "id": 1109,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1xaq96k",
+      "author": "ShineRivulet",
+      "language": null,
+      "published_at": "2026-10-20T12:01:08Z",
+      "first_detected_at": "2026-10-20T13:08:08Z",
+      "last_detected_at": "2026-10-20T13:08:08Z",
+      "detection_count": 1,
+      "text": "Eclipse of the Light Development Diary I: God Bless America\nhttps://preview.redd.it/fb3spqlm36wh1.png?width=4096&format=png&auto=webp&s=2de1062af404443d9436618c141366ad0a1a98f7 We are pleased to present the first development diary for \"Eclipse of the Light\" (EOL)! EOL is a submod dedicated to depicting the state of the world in the TNO universe as it progresses into the 1980s. While remaining faithful to the core of TNO, we have made certain adjustments and extrapolations to the existing lore; consequently, some content may differ from the base TNO mod. We believe this will result in a narrative that is both more realistic and darker than the original. In this development diary, I am thrilled to present the key developments in the United States of America from the post-war period through the early 1980s. (Due to limited development resources and time, the content presented here is not yet in its final, polished form; we appreciate your understanding.) https://preview.redd.it/llkqw3abp5wh1.jpg?width=668&format=pjpg&auto=webp&s=62a2d6a0f34b6a39f45c05d27ad70e18a96a510c One of the foremost questions he had to confront was by no means as simple as it appeared: What is poverty? He defined poverty as a developmental and relative concept. In his view, the predicament of poverty in an affluent nation like the United States was undeniably distinct from that observed in impoverished lands such as Bangladesh. During the 1960s, the U.S. Bureau of Labor Statistics estimated that an annual income of $4,000 for a family of four and $2,000 for a single individual constituted the threshold of a comfortable livelihood; anything below this was deemed poverty. Michael estimated that, according to the Bureau's criteria, between forty and fifty million Americans lived in poverty, accounting for roughly one-quarter of the population. This revelation stunned many. They steadfastly refused to believe its veracity, dismissing it as hyperbolic exaggeration. Nevertheless, these were official statistics, and subsequent events in America demonstrated that his assessments were largely accurate. One need only recall President Franklin D. Roosevelt’s famous dictum: one-third of the American citizenry ill-housed, ill-clad, and ill-nourished. In the 1930s, at the height of the Great Depression, such troubling truths were acknowledged; yet by the 1960s, amidst collective intoxication with illusion, society proved unwilling to reckon with the ledger. The Truman Era: An Abandoned Realm Presidency of Harry Truman, Jan. 1945-Jan. 1953 The failure of the war exacerbated the fractures within American society. Yielding neither wealth nor glory, the United States under the Truman administration plunged into an exceptionally turbulent quadrennium. Vast numbers of returning veterans emerged as a destabilizing force within society. Upon returning from the battlefields to their hometowns, they were greeted not with embraces and blossoms, but frequently with shattered families. Despite the government's utmost endeavors to propagate patriotic fervor, veterans were met with disdain and cynical mockery. The postwar surge in American crime rates transcended mere economic dimensions. During the 1940s, a revolutionary mindset began to gain ascendancy—a sentiment destined to resurface in the 1980s. Many Americans came to perceive that the cyclical economic crises of the capitalist system had fully materialized within the United States, or were at least on the brink of doing so. The economic crises and social injustices that had loomed large before World War II remained unresolved by the New Deal. Consequently, an unreasoning, blind revolutionary fervor saturated the nation. This inclination manifested itself most vividly among intellectuals; some former conservatives underwent swift metamorphoses into \"revolutionaries.\" Well into the presidency of Dwight D. Eisenhower, remnants of leftist zeal persisted among certain factions, even ensnaring several progressives. In retrospect, it appears somewhat ludicrous that leading figures among the leftist intelligentsia once penned grandiloquent essays, blithely assuming that America had reached the zenith for revolution and ought to pivot toward \"higher,\" more intellectually elevated themes. In short, intellectuals, true to form, allowed themselves to be beguiled by the deceptive spirit of the age. Mary McCarthy, for instance, once recorded these absurd words: \"Class barriers are disappearing, or at least becoming permeable; compared with the middle-class secretary, the factory worker has become an economic aristocrat... That gravely unjust America of sharp contrasts is rapidly passing away.\" Yet, the revolution faltered; the nationwide strikes organized by the Communist Party USA and allied coalitions drifted inevitably toward failure. This outcome intensified the White House’s preoccupation with the threat of extremism. The Taft-Hartley Act of 1947 marked the inception of a structural persecution directed against labor unions and the left wing, utterly shattering communist influence within American organized labor and serving as the genesis of state-sponsored suppression of extremism. In February 1950, Republican Senator Joseph McCarthy of Wisconsin delivered an address to a Republican women's club in Wheeling, West Virginia, precipitating an ideological crusade that convulsed the entirety of American society. The reach of McCarthyism proved astonishingly sweeping, encompassing virtually every shade of extremism from Asian communities and Nazism to fascism and communism. Between 1944 and 1952, the United States traversed eight profoundly turbulent years, paving the way for the next occupant of the White House: the Supreme Commander of the Allied Expeditionary Force in Europe, Dwight David Eisenhower. The Eisenhower Era: Old Slums and New Slums Presidency of Dwight Eisenhower, Jan. 1953-Jan. 1961 Poverty is not merely a social attribute; it is an all-encompassing condition. Those who have endured poverty invariably perceive themselves as passive, helpless, and prone to violence: the poor exist in desolate isolation, yet are frequently obstinate and adversarial. Poverty transcends the mere deprivation of the world’s material wealth; it represents an immersion into an alternative, fatalistic, and hopeless universe—into The Other America , where the human spirit is deformed. Within this Other America , the ranks of the desolate and unfriended steadily swelled. Severed from the traditional cultures of their forebears, they grew increasingly estranged from religious observance, holding affiliation with neither trade unions nor social clubs. Invisible to the outer world, they consequently became blind to it. Their horizons narrowed inexorably; staring solely at one another, they found themselves utterly bereft of hope. Such were the denizens of the Eisenhower era, wherein the impoverished were gradually consigned to oblivion. If the middle class had never professed a fondness for squalor and destitution, they had at least previously acknowledged their existence. \"Crossing the boundary of wealth and poverty\" had once seemed a discernible journey... Now, however, American cities had undergone profound transformations. The destitute still inhabited the dilapidated quarters of the inner city, yet their bonds with the wider populace grew ever more attenuated. President Eisenhower effectively brought McCarthyism to a close. While the Democrats commanded the global stage, they remained inert. Democratic blueprints continued to heavily curb the excesses of capitalism, forging a more technocratic and corporatized American economic apparatus. The mobilization measures of the wartime economy were largely preserved, albeit redirected toward civilian ends; nevertheless, economic stagnation persisted unabated. The Lodge Era: Forsaken by the Affluent Society? Presidency of Henry Cabot Lodge Jr., Jan. 1961-Jan. 1969 Every major American municipality harbors an underground economy—a term requiring no exaggeration. It designates those subterranean grease-shops and clandestine sweatshops tucked beneath the city pavements, bearing witness to the whereabouts of countless souls who labor within the shadows for wages plumbing the lowest depths. Akin to the underworld, the underground economy operates stealthily, shrouded from public gaze. Puerto Ricans, African Americans, alcoholics, vagrants, and the mentally infirm—when seeking a day’s labor, they were compelled to pay a brokerage fee amounting to roughly one-tenth of their daily earnings. For a task yielding five dollars, they surrendered fifty cents; upon payment, the employment agency directed them to the threshold of a modest diner. Should fortune favor them, they secured the five dollars. If the proprietor rejected them, they theoretically possessed the right to reclaim their fifty cents. Yet many remained ignorant of this recourse, wholly unversed in the law. These were the outcasts forsaken by the affluent society. Devoid of specialized trades, or possessing skills rendered obsolete by economic progress, they constituted the mainstream of urban poverty in America, numbering in the millions. While the Lodge administration could trumpet its restoration of American economic vigor, its revival of national prestige upon the international stage, and its reclamation of all things American, it simultaneously forfeited the soul of the nation. Rather than rescuing the other America, the administration exacerbated its devastation. Economic recovery and expansion marched hand in hand with widening disparities in wealth. Once the scourge of economic depression descended upon a region, vitality drained away. Tax bases shriveled, public services deteriorated, and civic morale dissolved. Low-wage industries might occasionally infiltrate such hollowed-out zones, yet their motive remained opportunism—to reap illicit gains rather than resolve systemic maladies. Alternatively, nothing transpired at all. Thereupon commenced the vicious cycle. Because a district was impoverished and moribund, manufacturers refused to invest or establish plants there; lacking factories, the region descended yet deeper into penury. To borrow the phrasing of the Bureau of Labor Statistics: \"Yet a region's economic distress and high unemployment rate inversely dictate the caliber of enterprise it is capable of attracting.\" Stated more plainly: no corporation of consequence, least of all major conglomerates, would ever invest in such a godforsaken locale. In 1961, the United States Congress deliberated upon this very malady. True to its historical pattern of formulating half-measures for those lingering at society's economic base, Congress devised remedies for the downwardly mobile that proved wholly inadequate to the task. As a token of solicitude, lawmakers appropriated a meager sum designated for individual retraining programs. The core of congressional policy relied upon extending loans to stimulate industrial development within depressed zones. According to analyses compiled by the executive departments sponsoring the legislation, the fiscal resources allocated were woefully deficient. More critically fatal still was the absence of regional developmental planning, alongside the utter failure to formulate effective antidotes to the pervasive despondency suffocating economically blighted regions. How did the Lodge administration navigate the Civil Rights Movement? By adopting the posture of an ostrich. The movement achieved zero substantive progress across those eight years; patriotism, external expansion, and the suppression of anti-American forces reigned supreme as governmental priorities. They successfully sculpted America into a colossal, hegemonic monster—one whose body politic, however, was riven by mortal decay. The Era of the Moderates: The Triumph of Conscience Presidency of Philip Hart, Jan. 1969-Jan. 1973; Presidency of Arthur Goldberg, Jan. 1973-Jan. 1977 For certain urban dwellers, progress was far from a blessing, heralding threat rather than hope. This sentiment rang doubly true for the rural impoverished. In the wake of World War II, American agriculture pursued its relentless trajectory toward mechanization. The fruit of this mechanization was the exodus of vast rural populations toward the cities. Yet even this seismic agrarian revolution failed to ameliorate the plight of the rural poor, whose numbers remained stubbornly, almost unbelievably, stagnant. Although the Hart administration dedicated itself to forging a high-welfare liberal society, as America celebrated its Bicentennial in the 1970s, tens of millions of its citizens remained mired in destitution. President Hart exhorted every American to declare war upon poverty and social injustice, summoning the populace to wage an \"unconditional war\" for its eradication. Congress endorsed the presidential mandate. Throughout the ensuing quadrennium, the White House tirelessly recited daunting statistics, proclaiming billions of dollars funneled into social amelioration. The 1960s had been an era of militant protests—a decade consecrated to the selfless dedication of students and church organizations striving to banish poverty, accompanied by the unvarnished documentary exposes of mass media laying bare America's domestic shames. Indeed, governmental activism appeared so frenetic to many that Richard Nixon, during his 1972 presidential campaign, pledged to decelerate the frantic pace of innovation. How, then, could poverty persist into the 1970s, casting the poor once more beyond the social conscience and erasing them from public consciousness? As customary, the government exercised meticulous care in compiling data to demonstrate that the preceding administration had wallowed in blind optimism while the incumbent displayed cool-headed sobriety. Across every vital domain—nutrition, housing, education—the state doled out mere fractions of the assistance desperately required by the poor. Given that half of the impoverished demographic consisted of the young, and modern society increasingly demanded advanced technical proficiencies, the prevailing conditions spelled profound peril for these youths on the threshold of adulthood. Unless decisive counter-measures were enacted, this generation of impoverished children was destined to father and mother the next generation of the destitute. This is not to suggest that progress was wholly absent. The prosperity kindled by the public policies of the 1960s did indeed depress unemployment rates, affording genuine, albeit precarious, gains to segments of the population. Medical care initiatives designed for the elderly represented something akin to a quantum leap in social investment, notwithstanding the erosion of their efficacy by inflation. The Wallace Era: Keep Away From My Doorstep Presidency of George Wallace Every African American neighborhood possesses a distinct character of its own. In Atlanta, during a tranquil evening, residents linger beneath eaves, engaged in animated discourse and resonant laughter. In Los Angeles, the morphologies of the Black ghetto assume myriad forms. Only a single feature remains uniform: pockmarked streets differing scarcely at all from those of any other slum. Outwardly, the dwellings maintain an acceptable façade; without diligent observation, one remains blind to the squalor rotting within. The South Side of Chicago unmistakably mirrors the archetype of the metropolitan ghetto, juxtaposing towering housing blocks against a motley array of low-grade taverns. At the peripheries of downtown Chicago, the palpable tension of race relations hangs heavy, pregnant with explosive potential. In every conceivable aspect, Black poverty possesses a uniqueness all its own. Deeply rooted in history, it manifests as a distinct subculture underpinned by a vicious cycle of economic injustice and racial discrimination—one systematically imposed upon Black Americans by the white majority. The public impression left by Black poverty is likewise singular. A solitary stroll through the slum avenues illuminates this truth, laying bare the individual visages and diverse psychological postures hidden behind sterile statistics: terror, hunger, faith, and the politics of racial destitution. To witness Black existence is to apprehend, through a lens of profound humanism, the bleak economic ciphers and industrial metrics lurking in their shadow. Should the legal statutes enforcing racial segregation be instantly abrogated, race would nevertheless endure as one of America’s most pressing moral and political dilemmas. The burdens crushing Black citizens and other minority groups extend far beyond unjust laws; American economic structures, American society, and the subconscious psyche of the populace remain thoroughly infected by racial prejudice. Even if statutory mandates guaranteed absolute equality of opportunity, the majority of Black Americans would remain incapable of fully leveraging such policy shifts. A vast, automated apparatus would continue to silently discriminate against people of color. Well-meaning souls frequently fail to comprehend the profound depths to which racism has anchored its roots in America. They harbor the comforting illusion that, given sufficient time, Black citizens will rise through their own bootstraps much like the Irish, Jews, and Italians before them. Yet this rhetoric overlooks two decisive verities: Black Americans are a people of color—a reality confronting no other immigrant cohort in America's past—and contemporary Black populations constitute internal migrants within their native soil, subjected to relentless discrimination regardless of destination, perpetually denied the option of fleeing oppression as one might escape tsarist tyranny or famine. To achieve genuine equality, Black Americans require something far more radical than mere social \"assimilation\": they demand the structural reconstruction of foundational American institutions. Why did George Wallace ascend to power? The answer lies glaringly exposed: America’s civil rights and antipoverty crusades had collapsed in failure. The reformist policies and compromises of the moderates had served only to exacerbate societal contradictions. Stricken by failing health, Hart retreated from the political arena, while his successors lacked the fortitude to consummate the moderate civil rights agenda. Their constituents watched in dismay as leaders hoarding immense electoral capital behaved like misers, culminating in a thunderous political collapse. The Wallace administration proceeded to dismantle big government further, curtailing federal authority while expanding states' rights, inciting ordinary laborers against federal regulation, resisting federal intervention in union affairs to preserve blue-collar autonomy, constructing segregated Black schools, and refining educational stratification in a deliberate bid to consummate racial apartheid in both economy and institution. These machinations spawned catastrophic public safety crises; notwithstanding the Wallace administration’s iron-fisted suppression, racial turbulence and separatist fervor continued their relentless upward climb... 1982, United States of America https://preview.redd.it/8gpixxz506wh1.png?width=2073&format=png&auto=webp&s=fa96fc4a85b754f03528eb445c4dae0ffa2c9b24 It's a mighty hard row that my poor hands have hoed My poor feet have traveled a hot dusty road Out of your Dust Bowl and westward we rolled And your deserts were hot and your mountain was cold I worked in your orchards of peaches and prunes Slept on the ground in the light of your moon On the edge of the city you'll see us and then We come with the dust and we go with the wind -Pastures of Plenty, Woody Guthrie",
+      "text_excerpt": "Eclipse of the Light Development Diary I: God Bless America\nhttps://preview.redd.it/fb3spqlm36wh1.png?width=4096&format=png&auto=webp&s=2de1062af404443d9436618c141366ad0a1a98f7 We are pleased to present the first development diary for \"Eclipse of the Light\" (EOL)! EOL is a submod dedicated to depicting the state of the world in the TNO universe as it progresses into the 1980s. While remaining faithful to the core of TNO, we have made certain adjustments and extrapolations to the existing lore; consequently, some content may differ from the base TNO mod. We believe this will result in a narrative that is both more realistic and darker than the original. In this development diary, I am thrille",
+      "url": "https://www.reddit.com/r/hoi4modding/comments/1xaq96k/eclipse_of_the_light_development_diary_i_god/",
+      "source_url": "https://www.reddit.com/r/hoi4modding/comments/1xaq96k/eclipse_of_the_light_development_diary_i_god/",
+      "primary_signal": "MOBILIZATION_COORDINATION",
+      "signal_type": "MOBILIZATION_COORDINATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "MOBILIZATION_COORDINATION",
+      "priority": "HIGH",
+      "confidence": 0.97,
+      "score": 17.0,
+      "matched_signals": [
+        "MOBILIZATION_COORDINATION"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization",
+          "organized by"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "AMERICAS",
+      "primary_region": "AMERICAS",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 67.95,
+      "analyst_priority": "HIGH",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "reddit_1xaq96k"
+      ],
+      "related_authors": [
+        "ShineRivulet"
+      ],
+      "related_urls": [
+        "https://www.reddit.com/r/hoi4modding/comments/1xaq96k/eclipse_of_the_light_development_diary_i_god/"
+      ],
+      "related_sources": [
+        "REDDIT"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
+    {
+      "id": 1110,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1xanklm",
+      "author": "Particular-Peace1069",
+      "language": null,
+      "published_at": "2026-10-20T09:30:48Z",
+      "first_detected_at": "2026-10-20T13:08:09Z",
+      "last_detected_at": "2026-10-20T13:08:09Z",
+      "detection_count": 1,
+      "text": "Rayne’s Second Term and the Birth of the Third Sordish Republic, a Suzerain story. Part Four – First Half.\nStory written and imagined by: The Unthinkable. Rayne’s Second Term and the Birth of the Third Sordish Republic, a Suzerain story. Part one : Prologue: Victory Day Chapter 1: President Anton Rayne Part two : Chapter 2: A New Sordland Part three : Chapter 3: A Fire Rises Part four : Chapter 4: From humble beginning (You are here) Chapter 5: By any means necessary Chapter IV: From Humble Beginnings Following the attack, you were rushed to Emerald Hospital in Holsord. You felt weightless. Lost. You couldn’t remember what had happened. Every memory seemed to slip away the moment you tried to grasp it, leaving only scattered fragments behind. You remembered the frantic footsteps, the blaring alarms, and the voices echoing around you. Someone was shouting orders. Someone else was calling your name. Everything blended together into a distant, incomprehensible noise as you were pushed through what felt like an endless maze of corridors. Bright lights passed overhead one after another until they merged into a single, blinding glow. A man dressed in green leaned over you. You wanted to speak, but no words came. You tried to move, but your body refused to obey. The man gently placed a breathing mask over your face. “Count backwards from ten,” he said. You never made it past the first number. Darkness swallowed you whole. For the first time in what felt like an eternity, you found peace. https://preview.redd.it/6ixxtzc47lwh1.jpeg?width=2880&format=pjpg&auto=webp&s=9969e8374c9265f44b00cec4d5e48e6cca9f0a38 Margret Wolfcher’s Prologue P1: A New Beginning Margret Wolfcher’s Prologue P2: Rising Political Career Margret Wolfcher’s Prologue P3: Let it Rayne Chapter V: By any means necessary October 28, 1960 — Heljiland Coast, Agnolian Fortifications — Early Morning Two soldiers stood outside Bunker C11, smoking in the cold, their words nearly drowned out by the waves crashing against the rocks below. Beyond the seawall, a thick fog had swallowed the horizon. From a civilian radio sitting on a shelf inside the bunker came the morning news. “…Last night, another demonstration took place in the predominantly Valgish working-class neighbourhoods of Heljiport, denouncing the growing discrimination faced by…” Beneath the endless stream of reports, the voices of the two soldiers cut through the morning broadcast. “Did you hear what happened in Sordland?” “To Rayne? Yeah.” “Think he’s dead?” The other soldier flicked ash over the railing. “Hope not… I met him at Estord, when they signed the peace treaty. I was on the honour guard.” “No shit?” “Shook my hand. Asked where I was from…” He took another drag. “…Nice guy.” “Well, we sure kicked the Queen’s arse together.” The soldier grinned. “Should’ve seen the Rummish delegation. Looked like they’d swallowed—” A sharp burst of static from the military set interrupted him. “Sector C, this is Command. Status report. Over.” One of them dropped his cigarette, crushed it beneath his boot, and stepped inside. “Command, this is Sector C. Visibility poor. Heavy fog offshore. No movement observed. All quiet. Over.” “Copy. Maintain observation. Out.” The soldier set down the receiver. Beside it, the civilian broadcast had continued uninterrupted. “…reports are coming in of a possible exchange of fire between warships in the Markian Sea. For now, we have no further informa—” He was halfway back to the door when the military set erupted into static once again. “Sector C—” The floor jolted beneath his boots. Dust fell from the ceiling. “What the hell was—” A second explosion shook the bunker. The military set erupted. “Command, Observation Post Two! Flashes offshore, bearing zero-eight-five!” “Battery One is hit! We need medics!” “All stations, clear the frequency! Observation Post Two, identify contacts.” “Warships! Multiple warships firing through the fog!” “All coastal batteries, action stations!” The soldier grabbed the receiver. “Command, Sector C! Lines are down. We’ve lost contact with the eastern positions!” Another voice broke in. “Command, Inland Post Four. Aircraft overhead. Nothing visible.” “Post Four, report heading.” A pause. “Parachutes!” “Repeat?” “Parachutes north of the garrison. They’re coming down behind us!” Gunfire crackled through the transmission. “They’re Valgs! They’re—” The transmission died. https://preview.redd.it/mt4ffbr18lwh1.png?width=1260&format=png&auto=webp&s=41f45ca3b586eff33451fc16b715bbd2c2f7ef7f Section 1: Mr Acting President Thirty-five hours earlier, Vice President Petr Vectern had been attending the victory commemorations in Lachaven when his security detail abruptly escorted him away, leaving a bewildered crowd behind. Within the hour, he was on his way to Holsord. At Emerald Hospital, surgeons fought to save Anton Rayne’s life. By nightfall, his condition had stabilised, but he remained unconscious. Nobody could say when, or whether, he would wake. Meanwhile, staff and civil servants at the Maroon Palace hurried to arrange an emergency swearing-in ceremony. With the Chief Justice unavailable, officials contacted the first Supreme Court justice they could reach: Isabel Edmonds. In the palace’s grand hall, Edmonds administered the oath as Petr Vectern formally assumed presidential duties under Article 9 of the Constitution. He understood that he was exercising authority during the President’s incapacity, not beginning a new elected term. Yet, standing before the assembled officials, the responsibility was unmistakably his. Before dawn, the Council of Ministers assembled at the Maroon Palace. Rayne’s chair remained empty for several minutes before Petr finally took his place. His first instructions were straightforward: maintain essential government operations, secure public buildings, and establish what had happened. Interior Minister Lucian Galade coordinated the domestic security response, while Justice Minister Nia Morgna requested regular reports from the NBI. Rumours of a conspiracy were already circulating, but investigators had yet to establish who had ordered the attack. As the nation anxiously awaited news from Emerald Hospital, Vectern sought to restore a sense of stability and national unity. In the morning following the attack, a visibly shaken Vectern addressed the nation, paying tribute to those who had lost their lives and calling for unity in the face of tragedy. “My fellow Sords, our nation has suffered a terrible tragedy. President Rayne remains alive, but his condition is critical. Our thoughts are with him, his family, and all those affected by this attack. Let me assure you that our Republic stands firm. Until President Rayne can resume his duties, I shall uphold the responsibilities entrusted to me by our Constitution. We will bring those responsible to justice. But in these difficult times, we must stand united. Sordland has endured darker days, and together, we shall overcome this tragedy.” He also proclaimed a week of national mourning in honour of Serge Wolkner, the presidential driver killed in the attack, who would later be posthumously awarded the title of Hero of Sordland. The former Vice-President, now Acting President, offered reassurance in his first public statement without promising a recovery that doctors could not guarantee. Behind the scenes, however, those who had known Petr primarily as Rayne’s close friend and political ally now wondered how he would govern in the President’s absence. They did not have long to wait. An urgent report had just arrived from Agnolia: Valgsland had launched an assault on Heljiland. Vectern had been Acting President for only a few hours. Today, it is widely believed that Valgsland took advantage of Agnolia’s reduced attention to Heljiland, as the country remained focused on integrating the war-torn region of Dome, acquired during the Second Rummo-Sordish War. The outbreak of the Rummish Civil War further complicated matters, placing additional pressure on the Agnolian government and stretching its resources even thinner. For Valgsland, this was perhaps its last opportunity to retake the strategically vital island before its long-standing rival grew stronger, bolstered by the vast resources of its newly acquired territories. Whether Valgsland would succeed, however, remained to be seen. — Geopolitico — Latest edition, October 28, 1960 — https://preview.redd.it/ycbi4u288lwh1.png?width=2700&format=png&auto=webp&s=9807650cb87d5c6b0fc38e88bf48da7876fd45fc — Troubled Waters — The invasion of Heljiland confronted Vectern with a crisis that could not wait for Rayne’s recovery. Within hours of the first reports, Prime Minister Maartin Van Hoorten contacted Holsord to request assistance. Agnolia remained a valued ally of Sordland; the two countries had fought side by side in the Second Rummo–Sordish War. The Prime Minister naturally expected Holsord to come to his country’s defence. Vectern swiftly condemned the invasion and convened an emergency meeting with Foreign Minister Frens Ricter, Defence Minister Erik V. Martain, and Chief of the Armed Forces Iosef Lancea. All three agreed that the growing confrontation between the ATO and the CSP made direct intervention dangerous. Unlike Rumburg, which had faced the war diplomatically isolated, Valgsland enjoyed the backing of United Contana. Even a limited Sordish deployment could therefore draw the country into a much larger conflict. In this context, the Acting President officially authorised deliveries of military supplies and medical assistance to Agnolia, while ruling out the deployment of Sordish combat forces. Naval patrols were reinforced to protect national waters and monitor shipping. Unofficially, however, several elite volunteer brigades were dispatched to fight under the Agnolian flag and help repel the invasion. Ricter also pressed for closer cooperation with the ATO. Intelligence sharing and coordination with the alliance’s military operations expanded considerably, while consultations with ATO representatives sought to keep Holsord informed of developments and secure assurances that commercial shipping would be protected. Vectern’s policy drew criticism from both sides. Supporters welcomed aid to Agnolia, but others argued that supplies alone were insufficient for an ally that had fought alongside Sordland three years ago. Meanwhile, his growing cooperation with Arcasia raised fears that Sordland would be drawn into a wider conflict without a meaningful say in the decisions leading to it. Valgish propaganda posters by NiJo_C But the military theatre wasn’t the only concern. The closure of the Rika Strait delayed cargoes, disrupted export contracts, and drove up shipping and insurance costs. At Morna and Lachaven, companies began postponing departures while searching for alternative routes. Symon Holl warned the Cabinet that a prolonged disruption could undermine the recovery on which much of Rayne’s popularity rested. Vectern approved temporary credit guarantees for affected businesses and instructed the relevant ministries to prioritise essential imports. Holl resisted demands for broad subsidies, arguing that the government could not indefinitely compensate every company exposed to the crisis. Labour Minister Manoly Suheil, meanwhile, insisted that assistance should carry conditions protecting workers from immediate dismissal. These measures bought time, but they could not reopen the strait. It was during these discussions that the Qinal Canal became a serious consideration for the Sordish government. Several international partners, including ATO members, had already pledged support for renewed construction, while Intermerkopum countries had expressed interest in financing part of the project. Minister Holl remained cautious. Previous construction efforts had collapsed under mounting costs and difficult terrain, and completion was expected to take another two to five years. The canal would therefore offer no immediate relief from the crisis. Any decision to invest would have to await an official visit to Qinal to assess the project and discuss the terms of Sordland’s participation. — The Wolf Returns — After surviving an assassination attempt and enduring weeks of medical treatment and rehabilitation, Margret Wolfcher disregarded her doctors’ advice and decided to return to work. She returned to a profoundly changed Sordland. In her hospital room, flowers and cards of support filled every corner. Her husband, Willam, had rarely left her side throughout her recovery, while their son, Adrian, visited whenever his duties allowed. The television constantly blasted news of the unfolding crises across the country and abroad. With each passing day, watching events unfold from the sidelines only made her more eager to return to her duties. And eventually, she did just that. Still walking on crutches and visibly recovering from her injuries, Wolfcher left Emerald Hospital. Her husband remained close, instinctively ready to support her whenever she struggled to walk, while Adrian stayed only a few steps behind his mother. Outside the hospital, a crowd of journalists, supporters, government officials, and ordinary citizens had gathered to witness her departure. Standing before the hospital gates, Wolfcher delivered an impassioned speech to the waiting crowd. “I have spent too much time in a hospital bed. I’ve had enough of lying down.” Her speech ended with a defiant declaration that would soon echo across Sordland: “I will not stand idly by when my country needs me most. My duty is to Sordland, and I shall answer its call!” Margret Wolfcher had finally returned. Yet her comeback represented far more than the return of a government official. In the eyes of many Sords, she had become a symbol of resilience, determination, and courage. — Across the Qinal — By the end of November, Qinal hosted a major diplomatic conference, bringing together representatives from numerous ATO and Intermerkopum countries, alongside private investors eager to finance the completion of the long-delayed Qinal Canal. Unsurprisingly, no CSP country had sent a delegation. With the Rika Strait closed for nearly thirty days, the unfinished canal had suddenly become an urgent geopolitical necessity. For Sordland, increasingly affected by the disruption of international trade, the stakes were particularly high. Vectern quickly won over the delegates with his jokes and natural charisma. Yet behind the diplomatic small talk, disagreements emerged. Qinal demanded majority control over the canal’s future revenues, Arcasia sought greater private involvement and an ATO role in protecting the waterway from piracy, while Intermerkopum demanded guaranteed international access. After days of negotiations, a compromise was reached. Qinal would retain 51 percent of future revenues, of which five percentage points would be allocated to a new Canal Security Agency supported by Arcasian naval forces, leaving Qinal with an effective share of 46 percent. ATO investors would receive 30 percent, with Arcasia holding the largest share, while the remaining 19 percent would be divided between Intermerkopum, Sordland, other investors, and private interests. Commercial access would remain guaranteed regardless of geopolitical alignment. It is believed that President Dwight Walker accepted Qinal’s majority share in an effort to repair the increasingly strained relationship between the two ATO countries. However, this agreement concerned the distribution of future revenues, not the financing of the canal itself. Although Qinal would retain control over 51 percent of the canal’s revenues, including the five percent reserved for security, it would not be required to cover an equivalent share of construction costs. Instead, much of the funding would come from foreign governments and private investors, who would contribute capital in exchange for a portion of the canal’s future earnings. Engineers estimated that completing the canal would require another 2.4 billion Arcasian Lira, or roughly 6 billion SR. An accelerated construction programme aimed for experimental crossings by 1963 and full commercial opening by the summer of 1964. The Sordish State committed around 120 million SR, securing two percent of the canal’s future revenues. Sordish private companies, including Bergia Steel and the Nedam Mining Group, invested heavily as well, collectively securing another three percent. With five percent of the canal’s future revenues now in Sordish hands, Vectern and the delegation returned to Holsord with the agreement signed and Sordland’s interests secured. Yet it wasn’t the only thing the Sordish delegation managed to secure. In a private agreement with President Walker, Vectern granted ATO naval forces docking rights in Sordish ports in exchange for increased Arcasian investment in Sordland, a concession that remained outside the official negotiations. Photo of the Qinali Diplomatic Summit, showcasing numerous diplomats and world leaders, including the Qinali Prime Minister Reza Ngoda reading his notes and, to his left, Lespian Prime Minister Juan Parezzi. — The NBI’s Revelation — By December, Karl Greiser, Director of the National Bureau of Investigation, delivered the NBI’s conclusions on the assassination attempt against Rayne. In a confidential report leaked to the press, the Bureau revealed that the assailant killed during the attack was a former Rumburgian migrant who had served with syndicalist forces during the Rummish Civil War before entering Sordland among the refugees. Yet the investigation remained far from complete. The NBI failed to locate his remaining accomplices, though investigators discovered what appeared to have been their hideout in an abandoned warehouse. Inside, detectives found burned documents and the remains of books and pamphlets closely associated with Malenyevist propaganda. They also discovered what appeared to be a partially destroyed Valgish passport. While the NBI stopped short of establishing a direct connection between Valgsland and the attackers, the discoveries immediately raised suspicions of foreign involvement. The leak caused outrage across the country. The headquarters of the Communist Party of Sordland in Holsord was burned down the following day. Outside the Valgish Embassy, under the watchful eyes of law enforcement, protesters gathered in anger, burning books and other works by Valgish and Contanan authors and artists. The outrage soon reached the Grand National Assembly. During a particularly heated session, NFP MPs began shouting across the chamber at their CPS counterparts, accusing them of defending those responsible for the attack. What followed quickly descended into chaos, as insults and accusations echoed throughout the Assembly. In an interview, Kesaro Kibener, leader of the NFP, urged Vectern to declare a state of siege, warning: “The enemies of Sordland are poisoning our society from within. I urge Acting President Vectern to invoke Article 36 of the Constitution and declare a state of siege before they have another chance to strike.” Rummo-Sords were also being targeted as the unrest spread. In Neuebourgh, several shops belonging to members of the minority community were vandalised, their windows smashed and storefronts defaced. Tensions escalated further when an armed gunman attempted to carry out an attack at a rural market. Although the attack was prevented before it could turn into a massacre, the incident further fuelled the atmosphere of fear gripping the region. The Governor of Rumland urged the central government to deploy additional security forces, warning that local authorities were struggling to contain the growing unrest. Across the country, paranoia was beginning to take hold. Interior Minister Lucian Galade led the government’s response, announcing a nationwide security operation aimed at restoring order and preventing further violence. With Vectern’s approval, additional police units were deployed across Rumland and other sensitive regions, while security was reinforced around Rummo-Sord communities, foreign embassies, political offices and major government buildings. Karl Greiser’s NBI was granted additional personnel and resources to assist local authorities. Within days, coordinated operations were conducted across the country against individuals suspected of involvement in the recent violence. The operation was initially well received. After days of burning buildings, vandalised shops and political chaos, images of police officers guarding threatened neighbourhoods and separating rival demonstrations gave the impression that the government was finally regaining control. Yet within the cabinet, the scale of the operation was already creating tensions. Justice Minister Nia Morgna warned that some arrests were being conducted on increasingly broad grounds. She insisted that the urgency of the crisis could not be allowed to weaken basic judicial protections. However, the strategy appeared to work. Street violence gradually subsided, demonstrations became more contained, and the government’s handling of the crisis received growing public approval. As the face of the government’s response, Galade appeared almost daily in newspapers and on television, presenting the latest measures and reassuring the public that order was being restored. His visibility and popularity grew considerably. On the opposite side, Morgna watched the developments with considerably less enthusiasm. — Bloodshed in Heljiland — While Holsord remained consumed by its internal politics, events in the Markian Sea were unfolding at a considerably faster pace. In Agnolia, Van Hoorten urged his allies to provide greater military support as Valgish forces continued their advance across Heljiland at an alarming rate. He called upon the “democracies” of Merkopa to take decisive action to deter further Valgish aggression. Fortunately for Agnolia, Acting President Vectern answered the call, as the Sordish military high command had become increasingly convinced that Valgsland might have been behind the assassination attempt on Rayne, making it more willing to support direct intervention in the conflict. Following Vectern’s orders, elements of the Sordish Navy departed their bases to join Lespian naval forces already en route to the island. Officially, their mission remained limited: escorting commercial vessels, patrolling international waters, and deterring further Valgish aggression. Naval commanders were strictly prohibited from initiating hostilities unless their forces came under attack. For the first time since the beginning of the Heljiland crisis, Sordish, Lespian, and Valgish warships would be operating within striking distance of one another near an active combat zone, raising fears that a single miscalculation could escalate into a much wider conflict. Meanwhile, private military companies, including Cerberus International, had begun deploying personnel to Heljiland to support Agnolian forces. Although officially operating independently of the Arcasian government, their involvement marked a significant development in the conflict. These companies would prove remarkably effective in guerrilla warfare, particularly in the mountainous terrain of southern Heljiland. Their expertise in unconventional warfare, reconnaissance, and small-unit operations allowed Agnolian defenders to exploit the island’s difficult geography, disrupting Valgish supply lines, launching ambushes, and gradually slowing the enemy’s advance. After three weeks of seemingly unstoppable territorial gains, the Valgish offensive finally began to lose momentum. The turning point came at Heljiport. Despite relentless coastal artillery bombardments and repeated air raids, Valgish forces failed to capture the strategically vital city. Attempts by elements of the city’s Valgish minority to provoke unrest and undermine Agnolian defenses had further complicated the situation, but ultimately failed to pave the way for the advancing Valgish military. Street fighting, artillery strikes, and aerial bombardments had reduced entire neighbourhoods to rubble. Thousands of civilians had fled the city, while those who remained struggled to survive under increasingly desperate conditions. Yet, despite the widespread destruction, Heljiport continued to resist. What Valgsland had initially envisioned as a swift military campaign was rapidly transforming into a prolonged and costly war of attrition. The Agnolian defenders, reinforced by foreign military contractors and encouraged by the growing presence of allied warships offshore, had succeeded in stabilizing the front. For the first time since the invasion began, the Valgish advance had been brought to a halt. Map of the Valgish invasion of Heljiland — November 1960 — Diplomatic Fallout — Troubled news came from Lespia when a bomb detonated inside Perla Central Station, killing seven people and wounding nearly a hundred others. Initial reports quickly raised suspicions of Valgish involvement after investigators discovered the suspected terrorist’s apartment filled with Malenyevist propaganda, revolutionary literature, and material sympathetic to the Valgish government. Investigators also uncovered links between the suspect and Malenyeva dez Lespia , the Lespian Communist Party. As in Sordland, however, investigators had yet to establish any direct connection between the attacker and the Valgish authorities. The similarities between the assassination attempt on Rayne and the bombing in Lespia were nevertheless difficult to ignore. Chancellor Hegel, while deeply engaged in his so-called “Liberation Campaign” in Heljiland, formally denied any involvement in either incident. He also condemned the numerous violent demonstrations outside Valgish embassies across Eastern Merkopa, particularly the public burning of Valgish literature, denouncing these acts as part of an “organised campaign of anti-Valgish hysteria”. Furthermore, he warned against foreign intervention in the Heljiland conflict, declaring that the Valgish military and navy would make no distinction between Agnolian forces and any foreign troops intervening on their behalf. Weeks later, the freshly elected centre-left Prime Minister of Lespia, Juan Parezzi, made an unprecedented announcement, formally banning Malenyeva dez Lespia and ordering the dissolution of the party. Parezzi declared that the party had “ strayed beyond the republican line ” and now posed a serious threat to national security. The decision marked one of the most significant crackdowns on the Lespian communist movement in decades and further intensified concerns among ATO member states that Valgish influence was being used to destabilise their governments from within. A special edition of Geopolitico magazine covering the recent political and military developments across Merkopa. Section 2: A Change in Course Due to Reddit's 40,000-character limit, I had to split Part Four into two halves. You can continue reading Part Four here.",
+      "text_excerpt": "Rayne’s Second Term and the Birth of the Third Sordish Republic, a Suzerain story. Part Four – First Half.\nStory written and imagined by: The Unthinkable. Rayne’s Second Term and the Birth of the Third Sordish Republic, a Suzerain story. Part one : Prologue: Victory Day Chapter 1: President Anton Rayne Part two : Chapter 2: A New Sordland Part three : Chapter 3: A Fire Rises Part four : Chapter 4: From humble beginning (You are here) Chapter 5: By any means necessary Chapter IV: From Humble Beginnings Following the attack, you were rushed to Emerald Hospital in Holsord. You felt weightless. Lost. You couldn’t remember what had happened. Every memory seemed to slip away the moment you tried t",
+      "url": "https://www.reddit.com/r/suzerain/comments/1xanklm/raynes_second_term_and_the_birth_of_the_third/",
+      "source_url": "https://www.reddit.com/r/suzerain/comments/1xanklm/raynes_second_term_and_the_birth_of_the_third/",
+      "primary_signal": "CROSSING_FACILITATION",
+      "signal_type": "CROSSING_FACILITATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "EASIER_CROSSING",
+      "priority": "HIGH",
+      "confidence": 0.97,
+      "score": 19.0,
+      "matched_signals": [
+        "CROSSING_FACILITATION"
+      ],
+      "matched_phrases": [
+        [
+          "route_information",
+          "route to"
+        ],
+        [
+          "information_spread",
+          "instructions"
+        ],
+        [
+          "border_condition",
+          "additional police"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrant",
+        "refugees"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 59.95,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "reddit_1xanklm"
+      ],
+      "related_authors": [
+        "Particular-Peace1069"
+      ],
+      "related_urls": [
+        "https://www.reddit.com/r/suzerain/comments/1xanklm/raynes_second_term_and_the_birth_of_the_third/"
+      ],
+      "related_sources": [
+        "REDDIT"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
+    {
       "id": 1107,
       "source": "REDDIT",
       "source_post_id": "reddit_1xa23kg",
@@ -2157,160 +2090,6 @@
       ],
       "related_sources": [
         "REDDIT"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
-    },
-    {
-      "id": 1096,
-      "source": "REDDIT",
-      "source_post_id": "reddit_1xa0gwg",
-      "author": "emorgoral",
-      "language": null,
-      "published_at": "2026-10-19T15:47:32Z",
-      "first_detected_at": "2026-10-19T16:41:30Z",
-      "last_detected_at": "2026-10-19T16:41:30Z",
-      "detection_count": 1,
-      "text": "Energy Secretary attacks Mahmood’s migrant crackdown: Miatta Fahnbulleh warns extending wait for right to remain would threaten integration",
-      "text_excerpt": "Energy Secretary attacks Mahmood’s migrant crackdown: Miatta Fahnbulleh warns extending wait for right to remain would threaten integration",
-      "url": "https://www.reddit.com/r/UKEarnedSettlement/comments/1xa0gwg/energy_secretary_attacks_mahmoods_migrant/",
-      "source_url": "https://www.reddit.com/r/UKEarnedSettlement/comments/1xa0gwg/energy_secretary_attacks_mahmoods_migrant/",
-      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
-      "signal_type": "LEGAL_MIGRATION_SIGNAL",
-      "signal_mode": "DIRECT",
-      "signal_intent": "LEGAL_ACCESS",
-      "priority": "MEDIUM",
-      "confidence": 0.99,
-      "score": 24.0,
-      "matched_signals": [
-        "LEGAL_MIGRATION_SIGNAL"
-      ],
-      "matched_phrases": [
-        [
-          "legal_signal",
-          "right to remain"
-        ],
-        [
-          "legal_protection",
-          "right to remain"
-        ],
-        [
-          "HIGH_VALUE",
-          "right to remain"
-        ]
-      ],
-      "matched_groups": [],
-      "context_matches": [
-        "migrant"
-      ],
-      "high_value_matches": [
-        "right to remain"
-      ],
-      "signal_context_rejections": {},
-      "migration_context": true,
-      "human_migration_context": null,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "2.6",
-      "priority_score": 50.65,
-      "analyst_priority": "MEDIUM",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "reddit_1xa0gwg"
-      ],
-      "related_authors": [
-        "emorgoral"
-      ],
-      "related_urls": [
-        "https://www.reddit.com/r/UKEarnedSettlement/comments/1xa0gwg/energy_secretary_attacks_mahmoods_migrant/"
-      ],
-      "related_sources": [
-        "REDDIT"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
-    },
-    {
-      "id": 1085,
-      "source": "X",
-      "source_post_id": "2112108595353428281",
-      "author": "docrussjackson",
-      "language": "en",
-      "published_at": "2026-10-19T09:08:24Z",
-      "first_detected_at": "2026-10-19T09:27:57Z",
-      "last_detected_at": "2026-10-19T10:05:55Z",
-      "detection_count": 2,
-      "text": "The front page of the billionaire-owned propaganda comic the Daily Mail promises to reveal the \"TRUE COST OF LABOUR MIGRATION DITHERING\". \n\nIt states \"at least 200,000 given right to remain since crackdown promise\", and a list of what settlement brings with it: benefits, NHS care https://t.co/XGBuN9IPv5",
-      "text_excerpt": "The front page of the billionaire-owned propaganda comic the Daily Mail promises to reveal the \"TRUE COST OF LABOUR MIGRATION DITHERING\". \n\nIt states \"at least 200,000 given right to remain since crackdown promise\", and a list of what settlement brings with it: benefits, NHS care https://t.co/XGBuN9IPv5",
-      "url": "https://x.com/docrussjackson/status/2112108595353428281",
-      "source_url": "https://x.com/docrussjackson/status/2112108595353428281",
-      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
-      "signal_type": "LEGAL_MIGRATION_SIGNAL",
-      "signal_mode": "DIRECT",
-      "signal_intent": "LEGAL_ACCESS",
-      "priority": "MEDIUM",
-      "confidence": 0.99,
-      "score": 24.0,
-      "matched_signals": [
-        "LEGAL_MIGRATION_SIGNAL"
-      ],
-      "matched_phrases": [
-        [
-          "legal_signal",
-          "right to remain"
-        ],
-        [
-          "legal_protection",
-          "right to remain"
-        ],
-        [
-          "HIGH_VALUE",
-          "right to remain"
-        ]
-      ],
-      "matched_groups": [],
-      "context_matches": [
-        "MIGRATION"
-      ],
-      "high_value_matches": [
-        "right to remain"
-      ],
-      "signal_context_rejections": {},
-      "migration_context": true,
-      "human_migration_context": null,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "2.6",
-      "priority_score": 50.65,
-      "analyst_priority": "MEDIUM",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "2112108595353428281"
-      ],
-      "related_authors": [
-        "docrussjackson"
-      ],
-      "related_urls": [
-        "https://x.com/docrussjackson/status/2112108595353428281"
-      ],
-      "related_sources": [
-        "X"
       ],
       "independent_author_count": 1,
       "platform_count": 1
@@ -2442,15 +2221,15 @@
       "label": "W43",
       "week_label": "W43",
       "week_start": "2026-10-19T00:00:00Z",
-      "posts": 673,
-      "post_count": 673,
-      "operational_posts": 26,
-      "influence_signals": 36,
+      "posts": 738,
+      "post_count": 738,
+      "operational_posts": 29,
+      "influence_signals": 40,
       "source_counts": {
-        "X": 521,
-        "REDDIT": 62,
-        "TELEGRAM": 26,
-        "MASTODON": 64
+        "X": 565,
+        "REDDIT": 69,
+        "TELEGRAM": 31,
+        "MASTODON": 73
       }
     }
   ],
@@ -2580,33 +2359,33 @@
       "label": "W43",
       "week_label": "W43",
       "week_start": "2026-10-19T00:00:00Z",
-      "posts": 673,
-      "post_count": 673,
-      "operational_posts": 26,
-      "influence_signals": 36,
+      "posts": 738,
+      "post_count": 738,
+      "operational_posts": 29,
+      "influence_signals": 40,
       "source_counts": {
-        "X": 521,
-        "REDDIT": 62,
-        "TELEGRAM": 26,
-        "MASTODON": 64
+        "X": 565,
+        "REDDIT": 69,
+        "TELEGRAM": 31,
+        "MASTODON": 73
       }
     }
   ],
   "information_activity_summary": {
-    "current_week": 673,
-    "previous_week": 256,
-    "current_week_to_date": 673,
-    "previous_week_same_period": 256,
+    "current_week": 738,
+    "previous_week": 326,
+    "current_week_to_date": 738,
+    "previous_week_same_period": 326,
     "previous_week_full": 2849,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": 162.89,
-    "change_label": "+162.9%",
+    "change_percent": 126.38,
+    "change_label": "+126.4%",
     "direction": "UP",
     "comparable": true,
-    "elapsed_hours": 30.8,
+    "elapsed_hours": 37.2,
     "current_period_start": "2026-10-19T00:00:00Z",
     "previous_period_start": "2026-10-12T00:00:00Z",
-    "previous_period_end": "2026-10-13T06:50:34Z"
+    "previous_period_end": "2026-10-13T13:11:14Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -2618,33 +2397,33 @@
       72,
       168
     ],
-    "generated_at": "2026-10-20T06:50:34Z",
-    "total_items": 2060,
-    "information_count": 312,
-    "early_warning_count": 1016,
-    "operational_count": 601,
+    "generated_at": "2026-10-20T13:11:15Z",
+    "total_items": 2065,
+    "information_count": 314,
+    "early_warning_count": 1017,
+    "operational_count": 603,
     "correlated_count": 131,
     "layer_counts": {
-      "EARLY_WARNING": 1016,
-      "INFORMATION": 312,
-      "OPERATIONAL": 601,
+      "INFORMATION": 314,
+      "EARLY_WARNING": 1017,
+      "OPERATIONAL": 603,
       "CORRELATED": 131
     },
     "source_counts": {
-      "X": 1474,
+      "X": 1478,
+      "MASTODON": 94,
       "REDDIT": 450,
-      "MASTODON": 93,
       "TELEGRAM": 43
     },
     "type_counts": {
+      "INFORMATION_SIGNAL": 314,
+      "MOVEMENT_EARLY_WARNING": 322,
       "ROUTE_EARLY_WARNING": 136,
-      "INFORMATION_SIGNAL": 312,
       "SMUGGLING_ACTIVITY": 68,
       "RESCUE_OPERATION": 40,
       "PRESSURE_EARLY_WARNING": 49,
-      "MOVEMENT_EARLY_WARNING": 321,
       "DETENTION": 48,
-      "BORDER_CROSSING": 252,
+      "BORDER_CROSSING": 254,
       "FACILITATION_EARLY_WARNING": 195,
       "DEPORTATION": 97,
       "INTERCEPTION": 32,
@@ -2666,6 +2445,238 @@
       "BORDER_CONDITION": 2
     },
     "items": [
+      {
+        "timeline_id": "information:20075",
+        "timestamp": "2026-10-20T13:00:39Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2112529430933360786",
+        "author": "Theorbitpost",
+        "url": "https://x.com/Theorbitpost/status/2112529430933360786",
+        "source_url": "https://x.com/Theorbitpost/status/2112529430933360786",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "boat",
+          "vessel",
+          "coast_guard"
+        ],
+        "freshness_cues": [],
+        "text": "Twelve migrants, including an infant, drowned on Monday in two incidents off the Greek islands of Lesbos and Samos. Off Lesbos their boat collided with a coast guard vessel and overturned. Off Samos a speedboat overturned during a chase. Two survivors were arrested on suspicion",
+        "text_excerpt": "Twelve migrants, including an infant, drowned on Monday in two incidents off the Greek islands of Lesbos and Samos. Off Lesbos their boat collided with a coast guard vessel and overturned. Off Samos a speedboat overturned during a chase. Two survivors were arrested on suspicion",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-20T13:09:06Z",
+        "last_collected_at": "2026-10-20T13:09:06Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:20062",
+        "timestamp": "2026-10-20T12:56:07Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2112528288199684379",
+        "author": "nounoune83",
+        "url": "https://x.com/nounoune83/status/2112528288199684379",
+        "source_url": "https://x.com/nounoune83/status/2112528288199684379",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "refugee_camp"
+        ],
+        "freshness_cues": [],
+        "text": "@Abebe57812398 @_hudsonc Supply hubs in Ethiopia provide shelter, protection, and staging grounds for combat drones that bombard refugee camps along the Sudanese border.",
+        "text_excerpt": "@Abebe57812398 @_hudsonc Supply hubs in Ethiopia provide shelter, protection, and staging grounds for combat drones that bombard refugee camps along the Sudanese border.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-20T13:08:07Z",
+        "last_collected_at": "2026-10-20T13:08:07Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:20065",
+        "timestamp": "2026-10-20T12:50:34Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2112526891982725356",
+        "author": "KnightKlubbing",
+        "url": "https://x.com/KnightKlubbing/status/2112526891982725356",
+        "source_url": "https://x.com/KnightKlubbing/status/2112526891982725356",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "border",
+          "deportation"
+        ],
+        "freshness_cues": [
+          "now"
+        ],
+        "text": "@DailyMail Yes, we overwhelmingly voted for President Trump in 2024 to deport our \"migrants\". We don't want to become a \"diverse\" SHITHOLE like the UK &amp; Europe. Americans still OVERWHELMINGLY support President Trump on CLOSING the border. Your country is a shithole now! Look at pathetic 🇫🇷",
+        "text_excerpt": "@DailyMail Yes, we overwhelmingly voted for President Trump in 2024 to deport our \"migrants\". We don't want to become a \"diverse\" SHITHOLE like the UK &amp; Europe. Americans still OVERWHELMINGLY support President Trump on CLOSING the border. Your country is a shithole now! Look at pathetic 🇫🇷",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-20T13:08:08Z",
+        "last_collected_at": "2026-10-20T13:08:08Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:20068",
+        "timestamp": "2026-10-20T12:46:41Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2112525913678389644",
+        "author": "IOM_Uganda",
+        "url": "https://x.com/IOM_Uganda/status/2112525913678389644",
+        "source_url": "https://x.com/IOM_Uganda/status/2112525913678389644",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.6,
+        "priority": "INFO",
+        "priority_score": 40,
+        "information_score": 4,
+        "matched_information_cues": [
+          "border",
+          "smuggling",
+          "trafficking"
+        ],
+        "freshness_cues": [
+          "now"
+        ],
+        "text": "Happening now: IOM, supported by @UEenRDC, has convened partners to validate findings on health implications of trafficking in persons and migrant smuggling along the 🇺🇬-🇨🇩border. https://t.co/VBsAcUwGSA",
+        "text_excerpt": "Happening now: IOM, supported by @UEenRDC, has convened partners to validate findings on health implications of trafficking in persons and migrant smuggling along the 🇺🇬-🇨🇩border. https://t.co/VBsAcUwGSA",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-20T13:08:08Z",
+        "last_collected_at": "2026-10-20T13:08:08Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "early_warning:1111",
+        "timestamp": "2026-10-20T12:37:38Z",
+        "layer": "EARLY_WARNING",
+        "type": "MOVEMENT_EARLY_WARNING",
+        "signal_type": "MOVEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2112523637878370433",
+        "author": "NMO_ORG",
+        "url": "https://x.com/NMO_ORG/status/2112523637878370433",
+        "source_url": "https://x.com/NMO_ORG/status/2112523637878370433",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.72,
+        "priority": "MEDIUM",
+        "priority_score": 25.2,
+        "analyst_priority": "LOW",
+        "text": "✈️خطوة نحو الوطن.. 138 لاجئًا صوماليًا يعودون إلى ديارهم\n\nغادر 138 لاجئًا صوماليًا مطار عدن الدولي عائدين إلى وطنهم، ضمن برنامج العودة الطوعية المدعومة #ASR التابع للمفوضية السامية للأمم المتحدة لشؤون اللاجئين @UNHCRYemen  \nتُمثّل هذه الرحلة رابع رحلة عودة طوعية يتم تنفيذها https://t.co/74fB23SMxH",
+        "text_excerpt": "✈️خطوة نحو الوطن.. 138 لاجئًا صوماليًا يعودون إلى ديارهم\n\nغادر 138 لاجئًا صوماليًا مطار عدن الدولي عائدين إلى وطنهم، ضمن برنامج العودة الطوعية المدعومة #ASR التابع للمفوضية السامية للأمم المتحدة لشؤون اللاجئين @UNHCRYemen  \nتُمثّل هذه الرحلة رابع رحلة عودة طوعية يتم تنفيذها https://t.co/74fB23SMxH",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "MOVEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-10-20T13:11:13Z",
+        "last_detected_at": "2026-10-20T13:11:13Z",
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
+      {
+        "timeline_id": "information:20051",
+        "timestamp": "2026-10-20T10:10:02Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "MASTODON",
+        "source_post_id": "mastodon_117472690352570347",
+        "author": null,
+        "url": "https://rssfeed.media/@guardianfeeds/117472690352570347",
+        "source_url": "https://rssfeed.media/@guardianfeeds/117472690352570347",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 40,
+        "information_score": 4,
+        "matched_information_cues": [
+          "crossing",
+          "route",
+          "boat",
+          "sea"
+        ],
+        "freshness_cues": [],
+        "text": "Fleeing the frontline: Yemeni families cross Red Sea to Djibouti as Houthi conflict rages By Carlos Mureithi in Obock Their overland routes to safety blocked off, several thousand people have boarded boats to escape gunfire, bombing and a dire humanitarian situation https://www. theguardian.com/world/2026/oct /20/families-cross-red-sea-to-djibouti-houthi-conflict-yemen # Yemen # MiddleEastandnorthAfrica # Worldnews # Houthis # Refugees # Djibouti # Africa # Migration # Humanrights # TheGuardian # CarlosMureithiinObock",
+        "text_excerpt": "Fleeing the frontline: Yemeni families cross Red Sea to Djibouti as Houthi conflict rages By Carlos Mureithi in Obock Their overland routes to safety blocked off, several thousand people have boarded boats to escape gunfire, bombing and a dire humanitarian situation https://www. theguardian.com/world/2026/oct /20/families-cross-red-sea-to-djibouti-houthi-conflict-yemen # Yemen # MiddleEastandnorthAfrica # Worldnews #…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-20T13:07:08Z",
+        "last_collected_at": "2026-10-20T13:07:08Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
       {
         "timeline_id": "early_warning:1103",
         "timestamp": "2026-10-20T06:47:21Z",
@@ -4010,8 +4021,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-19T16:42:01Z",
-        "last_collected_at": "2026-10-20T06:48:48Z",
-        "collection_count": 3,
+        "last_collected_at": "2026-10-20T13:08:09Z",
+        "collection_count": 4,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -4425,8 +4436,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-19T10:51:22Z",
-        "last_collected_at": "2026-10-19T21:49:28Z",
-        "collection_count": 3,
+        "last_collected_at": "2026-10-20T13:09:07Z",
+        "collection_count": 4,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -4464,8 +4475,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-19T10:51:22Z",
-        "last_collected_at": "2026-10-19T21:49:28Z",
-        "collection_count": 3,
+        "last_collected_at": "2026-10-20T13:09:07Z",
+        "collection_count": 4,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -6365,8 +6376,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-19T07:10:54Z",
-        "last_collected_at": "2026-10-20T06:48:49Z",
-        "collection_count": 11,
+        "last_collected_at": "2026-10-20T13:08:09Z",
+        "collection_count": 12,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -6431,6 +6442,38 @@
         "source_types": [
           "TELEGRAM"
         ],
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "operational:651",
+        "timestamp": "2026-10-19T02:08:16Z",
+        "layer": "OPERATIONAL",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "X",
+        "source_post_id": "2112002863128068194",
+        "author": "B_mirabilis",
+        "url": "https://x.com/B_mirabilis/status/2112002863128068194",
+        "source_url": "https://x.com/B_mirabilis/status/2112002863128068194",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.2,
+        "priority": "LOW",
+        "priority_score": 20.0,
+        "text": "@mirijoie @YehoshuaCohen__ @masadaboy48 https://t.co/wbvjOahB4h\nSounds like they arrived as refugees over the century prior, and mostly left after Rhodesia got going.",
+        "text_excerpt": "@mirijoie @YehoshuaCohen__ @masadaboy48 https://t.co/wbvjOahB4h\nSounds like they arrived as refugees over the century prior, and mostly left after Rhodesia got going.",
+        "event_group_id": 526,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -6813,6 +6856,38 @@
         "first_collected_at": "2026-10-18T23:56:42Z",
         "last_collected_at": "2026-10-18T23:56:42Z",
         "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "operational:648",
+        "timestamp": "2026-10-18T23:44:25Z",
+        "layer": "OPERATIONAL",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "X",
+        "source_post_id": "2111966663809679451",
+        "author": "Sophie_l_ours",
+        "url": "https://x.com/Sophie_l_ours/status/2111966663809679451",
+        "source_url": "https://x.com/Sophie_l_ours/status/2111966663809679451",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.25,
+        "priority": "LOW",
+        "priority_score": 25.0,
+        "text": "@The_WatcherUK @Karter1198672 In France most migrants live in tents, I think that's one of the reason they want to come to England so bad. I live in northern France and I saw hundreds of migrants in the beach towns this summer. (On two random days)\nThe newly arrived migrants in france do horrific crimes",
+        "text_excerpt": "@The_WatcherUK @Karter1198672 In France most migrants live in tents, I think that's one of the reason they want to come to England so bad. I live in northern France and I saw hundreds of migrants in the beach towns this summer. (On two random days)\nThe newly arrived migrants in france do horrific crimes",
+        "event_group_id": 523,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -7641,8 +7716,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-18T22:00:05Z",
-        "last_collected_at": "2026-10-19T21:49:29Z",
-        "collection_count": 9,
+        "last_collected_at": "2026-10-20T13:09:07Z",
+        "collection_count": 10,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -18524,86 +18599,6 @@
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
-        "timeline_id": "information:17333",
-        "timestamp": "2026-10-14T13:22:55Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2110360705077834000",
-        "author": "AsplinKevin",
-        "url": "https://x.com/AsplinKevin/status/2110360705077834000",
-        "source_url": "https://x.com/AsplinKevin/status/2110360705077834000",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 60,
-        "information_score": 6,
-        "matched_information_cues": [
-          "crossing",
-          "channel",
-          "boat",
-          "detention",
-          "deportation",
-          "migrant_camp"
-        ],
-        "freshness_cues": [],
-        "text": "@WiltsAnnabelle The migrant camps in France are awash with weapons, including automatic rifles. If a small boat crossing the channel opens fire on those looking to 'detain and deport' (who will not doubt be military), what is your plan then?",
-        "text_excerpt": "@WiltsAnnabelle The migrant camps in France are awash with weapons, including automatic rifles. If a small boat crossing the channel opens fire on those looking to 'detain and deport' (who will not doubt be military), what is your plan then?",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-14T13:25:46Z",
-        "last_collected_at": "2026-10-14T13:25:46Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:17344",
-        "timestamp": "2026-10-14T13:21:08Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2110360255293182434",
-        "author": "Mowers86",
-        "url": "https://x.com/Mowers86/status/2110360255293182434",
-        "source_url": "https://x.com/Mowers86/status/2110360255293182434",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "boat",
-          "coast_guard"
-        ],
-        "freshness_cues": [],
-        "text": "@AngelaHaye4 @WenaVoetsek @Itsallnuts2 So was it the French Coast Guard escorting illegal migrants to our waters or was it Danny Tommos boat?",
-        "text_excerpt": "@AngelaHaye4 @WenaVoetsek @Itsallnuts2 So was it the French Coast Guard escorting illegal migrants to our waters or was it Danny Tommos boat?",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-14T13:26:19Z",
-        "last_collected_at": "2026-10-14T13:26:19Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
         "timeline_id": "early_warning:1002",
         "timestamp": "2026-10-14T13:18:55Z",
         "layer": "EARLY_WARNING",
@@ -18634,44 +18629,6 @@
         "detection_count": 1,
         "first_detected_at": "2026-10-14T13:26:19Z",
         "last_detected_at": "2026-10-14T13:26:19Z",
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:17338",
-        "timestamp": "2026-10-14T13:16:15Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2110359026068242491",
-        "author": "RahimKarim1",
-        "url": "https://x.com/RahimKarim1/status/2110359026068242491",
-        "source_url": "https://x.com/RahimKarim1/status/2110359026068242491",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "crossing",
-          "channel"
-        ],
-        "freshness_cues": [],
-        "text": "@SkyNews The govt dont care about the migrants crossing the channel.\nThey want them to come across.\nIts orchestrated and coordinate I have finally concluded.",
-        "text_excerpt": "@SkyNews The govt dont care about the migrants crossing the channel.\nThey want them to come across.\nIts orchestrated and coordinate I have finally concluded.",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-14T13:25:46Z",
-        "last_collected_at": "2026-10-14T13:25:46Z",
-        "collection_count": 1,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -19121,9 +19078,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "FACILITATION_REVIEW",
-        "detection_count": 24,
+        "detection_count": 25,
         "first_detected_at": "2026-10-14T12:03:33Z",
-        "last_detected_at": "2026-10-20T06:49:45Z",
+        "last_detected_at": "2026-10-20T13:10:00Z",
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -19967,9 +19924,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "MOVEMENT_REVIEW",
-        "detection_count": 30,
+        "detection_count": 31,
         "first_detected_at": "2026-10-14T02:25:44Z",
-        "last_detected_at": "2026-10-20T06:49:46Z",
+        "last_detected_at": "2026-10-20T13:10:00Z",
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -20196,9 +20153,9 @@
         "related_source_count": null,
         "signal_mode": "DIRECT",
         "signal_intent": "MOBILIZATION_COORDINATION",
-        "detection_count": 31,
+        "detection_count": 32,
         "first_detected_at": "2026-10-13T17:15:52Z",
-        "last_detected_at": "2026-10-19T21:51:29Z",
+        "last_detected_at": "2026-10-20T13:11:13Z",
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -71838,21 +71795,21 @@
     "review_start_date": "2026-10-17",
     "review_cohort": "FIRST_RECORDED_ON_OR_AFTER_CUTOFF",
     "decisions": {
-      "REVIEW": 36,
-      "EXCLUDE": 39,
-      "PUBLISH": 25
+      "EXCLUDE": 42,
+      "REVIEW": 37,
+      "PUBLISH": 27
     },
     "removed_display_items": {
       "live_events": 16,
       "high_confidence_events": 0,
-      "event_groups": 5,
+      "event_groups": 6,
       "influence_signals": 12,
       "early_warning_signals": 12,
       "crossing_access_signals": 5,
       "top_crossing_access_posts": 3,
       "high_priority_intelligence": 3,
       "access_signals": 5,
-      "timeline": 70
+      "timeline": 73
     },
     "historical_review_status": "HISTORICAL_NOT_AI_REVIEWED",
     "narrative_layers_not_reviewed": [
