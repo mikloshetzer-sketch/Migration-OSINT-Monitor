@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-20T13:12:56.383827+00:00",
+  "generated_at": "2026-10-20T13:25:48.137649+00:00",
   "version": "3.0",
-  "candidates": 106,
-  "new_ai_calls": 8,
+  "candidates": 108,
+  "new_ai_calls": 2,
   "conflicting_identity_ids": [],
   "decisions": {
     "post:652": {
@@ -85,10 +85,6 @@
       "decision": "REVIEW",
       "reason": "The event is about migrants expelled from the US arriving in Burundi in late August, but the publication date is in the future (2026), and the event date is not precisely given. No corroboration from external sources is provided. It refers to a deportation-related event, which fits the event type. However, the date mismatch and lack of verification"
     },
-    "signal:1093": {
-      "decision": "PUBLISH",
-      "reason": "The post contains a contemporary migration-specific early warning about false promises regarding migrant caravans issued by the US Embassy, which is migration relevant and properly classified as an early warning. The information about deportations also adds relevant migration context. The event is appropriate for publication as a migration-specific"
-    },
     "signal:1094": {
       "decision": "PUBLISH",
       "reason": "The post reports a concrete and contemporary migration-related event involving a deadly migrant boat accident near Greece's Samos island, which fits the ROUTE_EARLY_WARNING category as a migration route hazard signal. The incident is recent and specific, indicating an operational early warning about the dangers on migration routes."
@@ -160,6 +156,14 @@
     "signal:1111": {
       "decision": "PUBLISH",
       "reason": "The record reports a concrete, contemporary migration-related event of voluntary return of 138 Somali refugees from Aden International Airport as part of a UNHCR-supported program, fitting the event type of a migration movement. Although tagged as an early warning, the information describes an actual migration movement occurring at present, meeting"
+    },
+    "signal:1112": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a political commentary containing no report of a concrete, contemporary migration-related event or specific facilitation action. It lacks factual detail on migration crossings or early warnings relevant to migration operations."
+    },
+    "signal:1113": {
+      "decision": "EXCLUDE",
+      "reason": "The post contains political commentary and opinion about immigration enforcement and electoral outcomes but does not report a concrete, contemporary migration-specific event, early warning, policy action, or route/access signal."
     },
     "group:530": {
       "decision": "EXCLUDE",
@@ -428,6 +432,10 @@
     "signal:1092": {
       "decision": "REVIEW",
       "reason": "The record references a 'Deadly Migrant Boat Incident Off Greece' which could be a migration event, but the details are vague and mixed with unrelated events (Albania protests, China drone controls). The text is truncated and does not provide a clear, concrete, current migration event or early warning specifically focused on migration. The event_ty"
+    },
+    "signal:1093": {
+      "decision": "PUBLISH",
+      "reason": "The post contains a contemporary migration-specific early warning about false promises regarding migrant caravans issued by the US Embassy, which is migration relevant and properly classified as an early warning. The information about deportations also adds relevant migration context. The event is appropriate for publication as a migration-specific"
     }
   }
 }
