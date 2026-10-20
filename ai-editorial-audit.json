@@ -1,22 +1,10 @@
 {
-  "generated_at": "2026-10-20T18:14:02.771741+00:00",
+  "generated_at": "2026-10-20T22:50:42.322553+00:00",
   "version": "3.0",
-  "candidates": 112,
-  "new_ai_calls": 8,
+  "candidates": 118,
+  "new_ai_calls": 11,
   "conflicting_identity_ids": [],
   "decisions": {
-    "post:656": {
-      "decision": "REVIEW",
-      "reason": "The report details a boat collision leading to migrant deaths and a suspected smuggler arrest, which relates primarily to a maritime accident and detention. However, the event_type 'DETENTION' is only partially accurate since the key event is a fatal boat collision involving migrants. Verification of the event as migration-specific and current is n"
-    },
-    "post:657": {
-      "decision": "REVIEW",
-      "reason": "The post reports a maritime migration-related event involving deaths and rescues but does not provide fully verifiable details such as precise location or official confirmation. The event_type 'RESCUE_OPERATION' partially fits but the information lacks corroboration and completeness."
-    },
-    "post:658": {
-      "decision": "EXCLUDE",
-      "reason": "The report does not describe a concrete, contemporary migration-related event of border crossing but an incidental mention of a 'Refugee from Algeria' caught in unrelated protests. No actual migration event is detailed."
-    },
     "post:659": {
       "decision": "EXCLUDE",
       "reason": "The post expresses an opinion about local council housing policies and alleged voting manipulation but does not report a concrete, contemporary migration-related event such as a border crossing or housing of migrants."
@@ -85,17 +73,17 @@
       "decision": "REVIEW",
       "reason": "The post reports on the recent arrest and detention of a person charged with smuggling migrants, which is migration-related. However, the location is vaguely stated as '-' and no further details confirm the exact location or timing. The event type 'DETENTION' aligns with the claim. Verification or more details needed to confirm event specifics and "
     },
-    "signal:1100": {
+    "post:676": {
       "decision": "EXCLUDE",
-      "reason": "The content is an aggressive opinion or complaint regarding asylum claims but does not describe a concrete, contemporary migration-specific legal event or policy action."
+      "reason": "The post discusses a crime and re-arrest record but does not describe a concrete, contemporary migration-related event or specific migration operational event. The mention of a Ukrainian refugee is incidental and not the focus of a migration event. The event type 'DETENTION' is not supported by the content as a migration detention event."
     },
-    "signal:1101": {
-      "decision": "PUBLISH",
-      "reason": "The record reports a contemporary, concrete migration-related event: two boat incidents near Lesbos and Samos resulting in 12 migrant deaths, involving suspected people-smuggling investigations. This fits a migration-specific early warning (ROUTE_EARLY_WARNING) about the dangers of the route. No unrelated content is present."
-    },
-    "signal:1102": {
+    "post:677": {
       "decision": "EXCLUDE",
-      "reason": "The post does not describe a concrete, contemporary migration-specific event or early warning. Instead, it presents sweeping unverified historical and demographic claims mixed with conspiracy themes, which are not suitable for publishing as migration-related events or signals."
+      "reason": "The content discusses a historical event with no indication of a contemporary migration-related operational event or a migration-specific early warning. It is a historical recollection unrelated to current migration events."
+    },
+    "post:678": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a speculative comment without reporting a specific, concrete, or contemporary migration-related event. There is no indication of an actual border crossing event or any operational migration event being reported."
     },
     "signal:1103": {
       "decision": "PUBLISH",
@@ -108,10 +96,6 @@
     "signal:1105": {
       "decision": "REVIEW",
       "reason": "The post alleges serious claims regarding migrant children being handed to traffickers, involving political actors and whistleblower testimony. However, it lacks independent verification and actionable details confirming a current or concrete facilitation event or early warning. The claim centers on political accusations and alleged evidence cited "
-    },
-    "signal:1106": {
-      "decision": "PUBLISH",
-      "reason": "The text reports a concrete, migration-specific early warning event regarding potential policy changes affecting aged care workforce migration. It includes specific visa and migration targets and an identified sector workforce shortfall, with direct testimony from affected individuals and providers. This meets criteria for publishing an early warni"
     },
     "signal:1108": {
       "decision": "EXCLUDE",
@@ -153,13 +137,25 @@
       "decision": "REVIEW",
       "reason": "The post claims a migration-related issue at Ceuta involving waste and migrants, tagged as a ROUTE_EARLY_WARNING signal. However, it does not clearly describe a concrete migration-specific early warning such as movements or route changes, just conditions after an arrival. The event type is plausible but lacks clarity and confirmation as a migration"
     },
-    "group:534": {
-      "decision": "PUBLISH",
-      "reason": "The post reports on a completed enforcement action in Karelia involving the identification and fining of unlawful migrants, deportation of 18 foreign nationals, and banning entry for 51 individuals. This is a concrete and contemporary migration-related event involving detention and deportation, matching the 'DETENTION' event type."
+    "signal:1118": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a political commentary and opinion without reporting a specific, contemporary migration-related event or early warning. It does not describe an operational migration event or a migration-specific early warning, nor does it report on crossing facilitation measures. The event_type 'CROSSING_FACILITATION' is not supported by the content."
     },
-    "group:535": {
+    "signal:1119": {
       "decision": "PUBLISH",
-      "reason": "The record reports concrete, contemporary migration-related incidents involving migrant boats capsizing near Greek islands resulting in deaths, which directly relates to migration events. Although labeled as 'SMUGGLING_ACTIVITY', the event type is relevant as it involves migrant smuggling operations leading to fatalities. The report is thus a valid"
+      "reason": "The record reports a concrete, contemporary migration-related event involving the interception and repatriation of migrants by the US Coast Guard, fitting the 'ROUTE_EARLY_WARNING' type as it signals migrant movement via sea routes near Puerto Rico."
+    },
+    "signal:1120": {
+      "decision": "PUBLISH",
+      "reason": "A specific, contemporary migration-related event is reported involving 66 migrants on a makeshift boat in the Caribbean, which directly relates to a migration route early warning due to the dangerous journey at sea. The event type aligns with the content, and it is a current event of interest to migration monitoring."
+    },
+    "signal:1121": {
+      "decision": "REVIEW",
+      "reason": "The event date is not clearly stated; the text mentions 'stopped Friday' but no exact date is given, and the publication date is in the future (2026), which is inconsistent. Additionally, no clear location is given besides 'Mona Passage'. The 'event_type' is ROUTE_EARLY_WARNING which fits the interception of a migrant boat, but more precise timing "
+    },
+    "signal:1122": {
+      "decision": "EXCLUDE",
+      "reason": "The content is an unsubstantiated accusatory statement without any concrete or verifiable information about a migration-related early warning or event. It is inflammatory and does not report a specific migration event or policy action."
     },
     "group:536": {
       "decision": "EXCLUDE",
@@ -188,6 +184,18 @@
     "group:542": {
       "decision": "REVIEW",
       "reason": "The report mentions a detention related to migrant smuggling, suggesting a migration-specific enforcement event; however, the lack of a precise date, location details, and source information limits verification and event contextualization."
+    },
+    "group:543": {
+      "decision": "EXCLUDE",
+      "reason": "The post discusses a crime and references a murder of a Ukrainian refugee but does not report a concrete migration-specific event such as an operational migration event or policy action. The event type 'DETENTION' is not clearly supported as the main focus is on crime criticism rather than a migration-related detention event. No verified or specifi"
+    },
+    "group:544": {
+      "decision": "EXCLUDE",
+      "reason": "The post discusses historical events and ancient figures with no link to contemporary migration or current migration events. There is no concrete, contemporary migration-related event reported to support publication."
+    },
+    "group:545": {
+      "decision": "EXCLUDE",
+      "reason": "The text is a speculative comment without any concrete report of a migration event or crossing. No specific event details or contemporary migration-related facts are presented."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -448,6 +456,22 @@
     "signal:1099": {
       "decision": "REVIEW",
       "reason": "The post claims an assertion by a Polish politician about border guard rules of engagement against illegal migrants, appearing as an early warning related to migration routes. However, it lacks clear indication that this is an official or verified policy or current practice, and the event_type as ROUTE_EARLY_WARNING is plausible but uncertain witho"
+    },
+    "signal:1100": {
+      "decision": "EXCLUDE",
+      "reason": "The content is an aggressive opinion or complaint regarding asylum claims but does not describe a concrete, contemporary migration-specific legal event or policy action."
+    },
+    "signal:1101": {
+      "decision": "PUBLISH",
+      "reason": "The record reports a contemporary, concrete migration-related event: two boat incidents near Lesbos and Samos resulting in 12 migrant deaths, involving suspected people-smuggling investigations. This fits a migration-specific early warning (ROUTE_EARLY_WARNING) about the dangers of the route. No unrelated content is present."
+    },
+    "signal:1102": {
+      "decision": "EXCLUDE",
+      "reason": "The post does not describe a concrete, contemporary migration-specific event or early warning. Instead, it presents sweeping unverified historical and demographic claims mixed with conspiracy themes, which are not suitable for publishing as migration-related events or signals."
+    },
+    "signal:1106": {
+      "decision": "PUBLISH",
+      "reason": "The text reports a concrete, migration-specific early warning event regarding potential policy changes affecting aged care workforce migration. It includes specific visa and migration targets and an identified sector workforce shortfall, with direct testimony from affected individuals and providers. This meets criteria for publishing an early warni"
     },
     "signal:1107": {
       "decision": "EXCLUDE",
