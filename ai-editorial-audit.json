@@ -1,14 +1,10 @@
 {
-  "generated_at": "2026-10-20T22:50:42.322553+00:00",
+  "generated_at": "2026-10-21T02:19:09.805039+00:00",
   "version": "3.0",
-  "candidates": 118,
-  "new_ai_calls": 11,
+  "candidates": 117,
+  "new_ai_calls": 1,
   "conflicting_identity_ids": [],
   "decisions": {
-    "post:659": {
-      "decision": "EXCLUDE",
-      "reason": "The post expresses an opinion about local council housing policies and alleged voting manipulation but does not report a concrete, contemporary migration-related event such as a border crossing or housing of migrants."
-    },
     "post:660": {
       "decision": "PUBLISH",
       "reason": "The post reports a concrete and contemporary migration-related event: high numbers of migrants crossing into Ceuta, which is a known migration hotspot. The type 'BORDER_CROSSING' is appropriate given the mention of over 70,000 migrants crossing the border. The involvement of Spain's King and Queen visiting the area to show solidarity confirms the e"
@@ -85,6 +81,10 @@
       "decision": "EXCLUDE",
       "reason": "The post is a speculative comment without reporting a specific, concrete, or contemporary migration-related event. There is no indication of an actual border crossing event or any operational migration event being reported."
     },
+    "post:679": {
+      "decision": "REVIEW",
+      "reason": "The report describes a maritime incident involving migrant deaths and arrests, which relates to migration. However, the event type is labeled as 'DETENTION', which is not fully accurate given the main event is migrant drownings and a capsized boat. Also, the exact location and timing details are minimal. More precise classification and additional c"
+    },
     "signal:1103": {
       "decision": "PUBLISH",
       "reason": "The report describes a migration-specific event involving the Coast Guard repatriating 63 migrants following an unsafe sea voyage via the Mona Passage. This is a concrete contemporary migration-related event involving a known migration route, matching the ROUTE_EARLY_WARNING event type assigned."
@@ -92,10 +92,6 @@
     "signal:1104": {
       "decision": "REVIEW",
       "reason": "The reported event describes multiple migrant drownings during coast guard pursuits, indicating a serious and contemporary migration-related incident. However, the event_type assigned is 'ROUTE_EARLY_WARNING', which is more typically used for alerts or signals prior to incidents rather than actual completed events. The text describes completed migr"
-    },
-    "signal:1105": {
-      "decision": "REVIEW",
-      "reason": "The post alleges serious claims regarding migrant children being handed to traffickers, involving political actors and whistleblower testimony. However, it lacks independent verification and actionable details confirming a current or concrete facilitation event or early warning. The claim centers on political accusations and alleged evidence cited "
     },
     "signal:1108": {
       "decision": "EXCLUDE",
@@ -156,10 +152,6 @@
     "signal:1122": {
       "decision": "EXCLUDE",
       "reason": "The content is an unsubstantiated accusatory statement without any concrete or verifiable information about a migration-related early warning or event. It is inflammatory and does not report a specific migration event or policy action."
-    },
-    "group:536": {
-      "decision": "EXCLUDE",
-      "reason": "The post describes ongoing peaceful protests and community concerns about young male migrants already residing at a camp, but it does not report a concrete migration-specific event such as an arrival, border crossing, or policy action. The event_type 'BORDER_CROSSING' is not supported by the content."
     },
     "group:537": {
       "decision": "PUBLISH",
@@ -468,6 +460,10 @@
     "signal:1102": {
       "decision": "EXCLUDE",
       "reason": "The post does not describe a concrete, contemporary migration-specific event or early warning. Instead, it presents sweeping unverified historical and demographic claims mixed with conspiracy themes, which are not suitable for publishing as migration-related events or signals."
+    },
+    "signal:1105": {
+      "decision": "REVIEW",
+      "reason": "The post alleges serious claims regarding migrant children being handed to traffickers, involving political actors and whistleblower testimony. However, it lacks independent verification and actionable details confirming a current or concrete facilitation event or early warning. The claim centers on political accusations and alleged evidence cited "
     },
     "signal:1106": {
       "decision": "PUBLISH",
