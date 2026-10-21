@@ -1,14 +1,10 @@
 {
-  "generated_at": "2026-10-21T02:19:09.805039+00:00",
+  "generated_at": "2026-10-21T09:04:54.764121+00:00",
   "version": "3.0",
-  "candidates": 117,
-  "new_ai_calls": 1,
+  "candidates": 122,
+  "new_ai_calls": 7,
   "conflicting_identity_ids": [],
   "decisions": {
-    "post:660": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete and contemporary migration-related event: high numbers of migrants crossing into Ceuta, which is a known migration hotspot. The type 'BORDER_CROSSING' is appropriate given the mention of over 70,000 migrants crossing the border. The involvement of Spain's King and Queen visiting the area to show solidarity confirms the e"
-    },
     "post:661": {
       "decision": "REVIEW",
       "reason": "The post describes two boat capsizing incidents off Greek islands resulting in migrant deaths and arrests of suspected smugglers. While the event is migration-related and contemporary, the event_type 'DETENTION' is not fully supported since the core event is the fatalities from capsizing boats; arrests are mentioned but not detailed. Clarification "
@@ -85,13 +81,9 @@
       "decision": "REVIEW",
       "reason": "The report describes a maritime incident involving migrant deaths and arrests, which relates to migration. However, the event type is labeled as 'DETENTION', which is not fully accurate given the main event is migrant drownings and a capsized boat. Also, the exact location and timing details are minimal. More precise classification and additional c"
     },
-    "signal:1103": {
-      "decision": "PUBLISH",
-      "reason": "The report describes a migration-specific event involving the Coast Guard repatriating 63 migrants following an unsafe sea voyage via the Mona Passage. This is a concrete contemporary migration-related event involving a known migration route, matching the ROUTE_EARLY_WARNING event type assigned."
-    },
-    "signal:1104": {
+    "post:680": {
       "decision": "REVIEW",
-      "reason": "The reported event describes multiple migrant drownings during coast guard pursuits, indicating a serious and contemporary migration-related incident. However, the event_type assigned is 'ROUTE_EARLY_WARNING', which is more typically used for alerts or signals prior to incidents rather than actual completed events. The text describes completed migr"
+      "reason": "The claim reports a cumulative number of irregular migrants arriving in the UK over a past ministerial tenure, not a concrete, specific, or contemporary migration event. The event date is not specified, and the data is historical or aggregated rather than a discrete operational event. The event_type BORDER_CROSSING may not be appropriate for a hist"
     },
     "signal:1108": {
       "decision": "EXCLUDE",
@@ -153,9 +145,25 @@
       "decision": "EXCLUDE",
       "reason": "The content is an unsubstantiated accusatory statement without any concrete or verifiable information about a migration-related early warning or event. It is inflammatory and does not report a specific migration event or policy action."
     },
-    "group:537": {
+    "signal:1123": {
       "decision": "PUBLISH",
-      "reason": "The post reports a concrete and recent migration-related enforcement event involving administrative actions against 468 persons for migration law violations, the deportation of 55 foreign nationals, and entry bans including long-term bans for some individuals in Ulyanovsk oblast. This is a valid and specific migration-related operational event."
+      "reason": "The record reports a concrete, contemporary migration-specific early warning of a large migrant caravan leaving Mexico's southern border, fitting the MOVEMENT_EARLY_WARNING event type."
+    },
+    "signal:1124": {
+      "decision": "REVIEW",
+      "reason": "The text references migrant entry to the UK by boat but provides no concrete, current event details about migration-specific early warning or a particular incident. The event lacks specificity necessary for PUBLISH as an early warning signal."
+    },
+    "signal:1125": {
+      "decision": "EXCLUDE",
+      "reason": "The content is a media critique and political commentary comparing social unrest in France with the George Floyd protests in the U.S., without reporting a concrete migration-specific event or early warning. The event_type 'CROSSING_FACILITATION' is not supported by the description, which lacks any direct reference to migration-specific actions, bor"
+    },
+    "signal:1126": {
+      "decision": "PUBLISH",
+      "reason": "The record describes a contemporary migration-specific early warning about a caravan of 500-600+ Central American migrants departing Tapachula on Oct 20, with multiple Mexican sources confirming the event. The details align with the signal type of MOVEMENT_EARLY_WARNING and indicate a real migration movement in progress."
+    },
+    "signal:1127": {
+      "decision": "REVIEW",
+      "reason": "The record discusses the historical and contemporary phenomenon of Chinese people leaving China, focusing on cultural and social trends ('Runology') rather than reporting a specific, concrete migration-related early warning or enforcement event. The 'ENFORCEMENT_EARLY_WARNING' event type assigned is not clearly supported by the content, which is la"
     },
     "group:538": {
       "decision": "REVIEW",
@@ -188,6 +196,10 @@
     "group:545": {
       "decision": "EXCLUDE",
       "reason": "The text is a speculative comment without any concrete report of a migration event or crossing. No specific event details or contemporary migration-related facts are presented."
+    },
+    "group:546": {
+      "decision": "REVIEW",
+      "reason": "The post claims a total number of irregular migrants arriving during a specific minister's tenure but lacks a specific, contemporary event date or detailed report of a new border crossing event. Also, the event date is not provided explicitly and there is no source to corroborate the data. The data is historical aggregate information rather than a "
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -460,6 +472,14 @@
     "signal:1102": {
       "decision": "EXCLUDE",
       "reason": "The post does not describe a concrete, contemporary migration-specific event or early warning. Instead, it presents sweeping unverified historical and demographic claims mixed with conspiracy themes, which are not suitable for publishing as migration-related events or signals."
+    },
+    "signal:1103": {
+      "decision": "PUBLISH",
+      "reason": "The report describes a migration-specific event involving the Coast Guard repatriating 63 migrants following an unsafe sea voyage via the Mona Passage. This is a concrete contemporary migration-related event involving a known migration route, matching the ROUTE_EARLY_WARNING event type assigned."
+    },
+    "signal:1104": {
+      "decision": "REVIEW",
+      "reason": "The reported event describes multiple migrant drownings during coast guard pursuits, indicating a serious and contemporary migration-related incident. However, the event_type assigned is 'ROUTE_EARLY_WARNING', which is more typically used for alerts or signals prior to incidents rather than actual completed events. The text describes completed migr"
     },
     "signal:1105": {
       "decision": "REVIEW",

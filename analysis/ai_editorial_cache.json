@@ -2774,5 +2774,61 @@
     "current_event": true,
     "completed_event": true,
     "corroboration": "UNVERIFIED"
+  },
+  "c0ea5877b7788682f58a506a58a85832b9606d471ad7b794e6e5692d7c528216": {
+    "decision": "REVIEW",
+    "reason": "The claim reports a cumulative number of irregular migrants arriving in the UK over a past ministerial tenure, not a concrete, specific, or contemporary migration event. The event date is not specified, and the data is historical or aggregated rather than a discrete operational event. The event_type BORDER_CROSSING may not be appropriate for a historical summary.",
+    "event_type_correct": false,
+    "current_event": false,
+    "completed_event": true,
+    "corroboration": "UNVERIFIED"
+  },
+  "9f2f412a6c4a5f9c1022731faabc8453e9beabcc0799203759041e1d7ab9bb81": {
+    "decision": "PUBLISH",
+    "reason": "The record reports a concrete, contemporary migration-specific early warning of a large migrant caravan leaving Mexico's southern border, fitting the MOVEMENT_EARLY_WARNING event type.",
+    "event_type_correct": true,
+    "current_event": true,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
+  },
+  "447293fbef779a14ef0ca3bed9bded050761edcec6e2a830fa23a8296f58ce6f": {
+    "decision": "REVIEW",
+    "reason": "The text references migrant entry to the UK by boat but provides no concrete, current event details about migration-specific early warning or a particular incident. The event lacks specificity necessary for PUBLISH as an early warning signal.",
+    "event_type_correct": true,
+    "current_event": false,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
+  },
+  "8e177ae872e9419ce7ee08306f1e46cd9775dc218793d9da893fd64b470b3cdf": {
+    "decision": "EXCLUDE",
+    "reason": "The content is a media critique and political commentary comparing social unrest in France with the George Floyd protests in the U.S., without reporting a concrete migration-specific event or early warning. The event_type 'CROSSING_FACILITATION' is not supported by the description, which lacks any direct reference to migration-specific actions, border crossings, or facilitation activities. The post is more about narratives and media framing rather than migration operations or signals.",
+    "event_type_correct": false,
+    "current_event": false,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
+  },
+  "383b7ba4f59c64373fb665ed76cbd2f9fc0fce4e568f59f58fd22837abda8558": {
+    "decision": "PUBLISH",
+    "reason": "The record describes a contemporary migration-specific early warning about a caravan of 500-600+ Central American migrants departing Tapachula on Oct 20, with multiple Mexican sources confirming the event. The details align with the signal type of MOVEMENT_EARLY_WARNING and indicate a real migration movement in progress.",
+    "event_type_correct": true,
+    "current_event": true,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
+  },
+  "e8f59a98c215c80aa1cb99644176455995149b3fd010f863343fd7bd1fc211de": {
+    "decision": "REVIEW",
+    "reason": "The record discusses the historical and contemporary phenomenon of Chinese people leaving China, focusing on cultural and social trends ('Runology') rather than reporting a specific, concrete migration-related early warning or enforcement event. The 'ENFORCEMENT_EARLY_WARNING' event type assigned is not clearly supported by the content, which is largely an analytical narrative without a distinct migration policy action or early warning signal. Review is suggested for better event type classification or confirmation of a relevant early warning event.",
+    "event_type_correct": false,
+    "current_event": false,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
+  },
+  "8e1f2b785d2f55cd4cadd58c63d2e9864e5f4ff8aa97beba8d24ea9e6644fc8e": {
+    "decision": "REVIEW",
+    "reason": "The post claims a total number of irregular migrants arriving during a specific minister's tenure but lacks a specific, contemporary event date or detailed report of a new border crossing event. Also, the event date is not provided explicitly and there is no source to corroborate the data. The data is historical aggregate information rather than a current operational event.",
+    "event_type_correct": true,
+    "current_event": false,
+    "completed_event": true,
+    "corroboration": "UNVERIFIED"
   }
 }
