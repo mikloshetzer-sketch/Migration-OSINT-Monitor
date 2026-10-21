@@ -1,18 +1,10 @@
 {
-  "generated_at": "2026-10-21T14:49:25.453977+00:00",
+  "generated_at": "2026-10-21T19:49:11.892581+00:00",
   "version": "3.0",
-  "candidates": 125,
-  "new_ai_calls": 9,
+  "candidates": 131,
+  "new_ai_calls": 10,
   "conflicting_identity_ids": [],
   "decisions": {
-    "post:664": {
-      "decision": "EXCLUDE",
-      "reason": "The post is a general commentary on historical and current populations in the Arabian Peninsula and Gulf states, lacking a report of a concrete, contemporary migration-related event such as an actual border crossing occurring now."
-    },
-    "post:665": {
-      "decision": "REVIEW",
-      "reason": "The post refers to a past event of the Libets family settling in Minnesota after escaping the war in Ukraine but does not report a concrete, contemporary migration-related event. The mention of visa application assistance is retrospective. The event type BORDER_CROSSING is not clearly supported as no recent border crossing is described."
-    },
     "post:666": {
       "decision": "PUBLISH",
       "reason": "The report details a contemporary, concrete migration-related event involving a fatal incident during a migrant sea crossing to Lesvos, Greece, which is migration-specific and fits the rescue operation category."
@@ -85,6 +77,14 @@
       "decision": "EXCLUDE",
       "reason": "The post does not describe a specific, contemporary migration event such as a border crossing or refugee movement. Instead, it discusses an energy policy announcement and background information about an individual who arrived in the UK as a refugee, but no actual migration event is reported. The assigned event type BORDER_CROSSING is not supported "
     },
+    "post:684": {
+      "decision": "EXCLUDE",
+      "reason": "This is a general commentary or claim regarding migrant hotel security staffing, not reporting a concrete, contemporary migration-related event such as a border crossing or asylum seeker movement."
+    },
+    "post:685": {
+      "decision": "REVIEW",
+      "reason": "The post discusses a deportation order and enforcement delays but lacks a concrete, specific event with clear location and date details to confirm an active deportation occurrence."
+    },
     "signal:1118": {
       "decision": "EXCLUDE",
       "reason": "The post is a political commentary and opinion without reporting a specific, contemporary migration-related event or early warning. It does not describe an operational migration event or a migration-specific early warning, nor does it report on crossing facilitation measures. The event_type 'CROSSING_FACILITATION' is not supported by the content."
@@ -113,10 +113,6 @@
       "decision": "REVIEW",
       "reason": "The text references migrant entry to the UK by boat but provides no concrete, current event details about migration-specific early warning or a particular incident. The event lacks specificity necessary for PUBLISH as an early warning signal."
     },
-    "signal:1125": {
-      "decision": "EXCLUDE",
-      "reason": "The content is a media critique and political commentary comparing social unrest in France with the George Floyd protests in the U.S., without reporting a concrete migration-specific event or early warning. The event_type 'CROSSING_FACILITATION' is not supported by the description, which lacks any direct reference to migration-specific actions, bor"
-    },
     "signal:1126": {
       "decision": "PUBLISH",
       "reason": "The record describes a contemporary migration-specific early warning about a caravan of 500-600+ Central American migrants departing Tapachula on Oct 20, with multiple Mexican sources confirming the event. The details align with the signal type of MOVEMENT_EARLY_WARNING and indicate a real migration movement in progress."
@@ -137,13 +133,29 @@
       "decision": "REVIEW",
       "reason": "The post claims the immediate movement of hundreds of migrants marching north in southern Mexico and plans for a bigger caravan, indicating potential migration mobilization. However, key details like exact location and corroborating information are missing. The future planned caravan date is beyond the knowledge cutoff and cannot be verified. The c"
     },
-    "group:539": {
+    "signal:1131": {
       "decision": "REVIEW",
-      "reason": "Inconsistent approval: The post reports a concrete, contemporary migration-related event involving the interception of a makeshift vessel carrying 66 migrants by the US Coast Guard, with subsequent repatriation of 63 passengers to the Dominican Republic. The event type INTERCEPTION is appropriate and supported by the content."
+      "reason": "The post claims 4,000 illegal boat migrants are waiting on French beaches to enter the UK and that border police are absent due to riots. It provides a migration-related early warning about potential crossings. However, the claim lacks concrete details, verification, or corroboration from external sources, and the scale of the number may be exagger"
     },
-    "group:542": {
+    "signal:1132": {
+      "decision": "EXCLUDE",
+      "reason": "The post does not describe a concrete, contemporary migration-specific operational event or early warning. It uses vague and unclear language with no verified migration-related signal. The scenario is implausible and not verifiable as a migration-specific event."
+    },
+    "signal:1133": {
       "decision": "REVIEW",
-      "reason": "The report mentions a detention related to migrant smuggling, suggesting a migration-specific enforcement event; however, the lack of a precise date, location details, and source information limits verification and event contextualization."
+      "reason": "The record describes observations from an immigration court involving migrant children, focusing on legal proceedings related to immigration and deportation processes. Although it reflects current challenges in migration-related legal facilitation, it does not report a specific discrete operational migration event or a concrete migration route/acce"
+    },
+    "signal:1134": {
+      "decision": "EXCLUDE",
+      "reason": "The post expresses a political opinion related to migration but does not report a concrete, contemporary migration-specific event or early warning of facilitation or other migration-related activity."
+    },
+    "signal:1135": {
+      "decision": "REVIEW",
+      "reason": "The post references a February 2026 UN report and ongoing investigations into forced labor and trafficking of migrants, suggesting a credible migration-related issue. However, it does not describe a concrete new event or specific operational change but rather refers to an existing report and investigations. This qualifies as a migration-specific ea"
+    },
+    "signal:1136": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a current migration event describing a large migrant caravan departing Mexico's southern border attempting to reach the United States, which constitutes a migration-specific early warning (movement)."
     },
     "group:543": {
       "decision": "EXCLUDE",
@@ -172,6 +184,14 @@
     "group:549": {
       "decision": "EXCLUDE",
       "reason": "The post discusses an energy policy decision and personal background of an individual, with no mention of any migration-related event such as border crossing, migration flows, or refugee movements. The assigned event type BORDER_CROSSING is incorrect and unsupported by the content."
+    },
+    "group:550": {
+      "decision": "EXCLUDE",
+      "reason": "The content is a speculative comment about migrant hotel security staff being asylum seekers and hiding licenses; it does not report a concrete or verified migration event, crossing, early warning, or policy action."
+    },
+    "group:551": {
+      "decision": "REVIEW",
+      "reason": "The post discusses a deportation case and enforcement delays but does not report a concrete, contemporary migration-related event such as an actual deportation operation or action. No specific event confirmation or official enforcement action is described."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -504,6 +524,10 @@
     "signal:1117": {
       "decision": "REVIEW",
       "reason": "The post claims a migration-related issue at Ceuta involving waste and migrants, tagged as a ROUTE_EARLY_WARNING signal. However, it does not clearly describe a concrete migration-specific early warning such as movements or route changes, just conditions after an arrival. The event type is plausible but lacks clarity and confirmation as a migration"
+    },
+    "signal:1125": {
+      "decision": "EXCLUDE",
+      "reason": "The content is a media critique and political commentary comparing social unrest in France with the George Floyd protests in the U.S., without reporting a concrete migration-specific event or early warning. The event_type 'CROSSING_FACILITATION' is not supported by the description, which lacks any direct reference to migration-specific actions, bor"
     }
   }
 }
