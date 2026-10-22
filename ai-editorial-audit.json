@@ -1,16 +1,12 @@
 {
-  "generated_at": "2026-10-22T09:03:16.328497+00:00",
+  "generated_at": "2026-10-22T14:47:40.354192+00:00",
   "version": "3.0",
-  "candidates": 144,
-  "new_ai_calls": 8,
+  "candidates": 146,
+  "new_ai_calls": 4,
   "conflicting_identity_ids": [
     "group:559"
   ],
   "decisions": {
-    "post:672": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete, contemporary migration-related event: the interception of a vessel carrying migrants by the US Coast Guard and subsequent repatriation, which aligns with the event type INTERCEPTION. The event date (October 16) is recent relative to publication. The source is plausible for this type of information."
-    },
     "post:676": {
       "decision": "EXCLUDE",
       "reason": "The post discusses a crime and re-arrest record but does not describe a concrete, contemporary migration-related event or specific migration operational event. The mention of a Ukrainian refugee is incidental and not the focus of a migration event. The event type 'DETENTION' is not supported by the content as a migration detention event."
@@ -87,9 +83,9 @@
       "decision": "EXCLUDE",
       "reason": "The text discusses historical context regarding immigration and interceptions during the British Mandate period, which is a historical event and not a contemporary migration event. The event date is not current, and the content is commentary rather than reporting a specific, concrete migration-related event occurring now."
     },
-    "signal:1130": {
-      "decision": "REVIEW",
-      "reason": "The post claims the immediate movement of hundreds of migrants marching north in southern Mexico and plans for a bigger caravan, indicating potential migration mobilization. However, key details like exact location and corroborating information are missing. The future planned caravan date is beyond the knowledge cutoff and cannot be verified. The c"
+    "post:695": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a specific, contemporary migration event involving the interception of migrants at sea by the US Coast Guard, which is directly related to migration and smuggling activity. The described event is dated Oct 16, 2026, matching the nature of the event_type 'SMUGGLING_ACTIVITY'. The source is unverified external, but the detailed opera"
     },
     "signal:1131": {
       "decision": "REVIEW",
@@ -98,10 +94,6 @@
     "signal:1132": {
       "decision": "EXCLUDE",
       "reason": "The post does not describe a concrete, contemporary migration-specific operational event or early warning. It uses vague and unclear language with no verified migration-related signal. The scenario is implausible and not verifiable as a migration-specific event."
-    },
-    "signal:1133": {
-      "decision": "REVIEW",
-      "reason": "The record describes observations from an immigration court involving migrant children, focusing on legal proceedings related to immigration and deportation processes. Although it reflects current challenges in migration-related legal facilitation, it does not report a specific discrete operational migration event or a concrete migration route/acce"
     },
     "signal:1134": {
       "decision": "EXCLUDE",
@@ -167,9 +159,13 @@
       "decision": "REVIEW",
       "reason": "The report claims a large migrant caravan is leaving Mexico's southern border en route to the US, indicating a migration-related movement early warning. However, the claim is unverified and lacks external corroboration or additional detail to confirm the event's occurrence and timing."
     },
-    "group:550": {
+    "signal:1150": {
+      "decision": "PUBLISH",
+      "reason": "The message reports a concrete, contemporary migration-related event involving the discovery of 74 immigrants in a confined and abusive situation, with associated law enforcement action. This corresponds appropriately to a migration-specific early warning about exploitation and dangerous conditions along a migration route."
+    },
+    "signal:1151": {
       "decision": "EXCLUDE",
-      "reason": "The content is a speculative comment about migrant hotel security staff being asylum seekers and hiding licenses; it does not report a concrete or verified migration event, crossing, early warning, or policy action."
+      "reason": "The text is a general political commentary about immigration policy and deportations, without reporting any specific or concrete migration-related event or early warning. No current migration-specific operational event or route early warning is described."
     },
     "group:552": {
       "decision": "EXCLUDE",
@@ -202,6 +198,10 @@
     "group:559": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:560": {
+      "decision": "PUBLISH",
+      "reason": "The report describes a specific and concrete migration-related operational event involving the interception of 66 migrants by the US Coast Guard near Puerto Rico. The event is contemporary and related directly to migration smuggling activity."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -582,6 +582,14 @@
     "signal:1129": {
       "decision": "REVIEW",
       "reason": "The event describes expulsions of migrants following public disorder, which relates to enforcement but the timing is in the future (2026), making it not a contemporary event. The enforcement early warning classification is plausible, but the future date and lack of corroboration require a review."
+    },
+    "signal:1130": {
+      "decision": "REVIEW",
+      "reason": "The post claims the immediate movement of hundreds of migrants marching north in southern Mexico and plans for a bigger caravan, indicating potential migration mobilization. However, key details like exact location and corroborating information are missing. The future planned caravan date is beyond the knowledge cutoff and cannot be verified. The c"
+    },
+    "signal:1133": {
+      "decision": "REVIEW",
+      "reason": "The record describes observations from an immigration court involving migrant children, focusing on legal proceedings related to immigration and deportation processes. Although it reflects current challenges in migration-related legal facilitation, it does not report a specific discrete operational migration event or a concrete migration route/acce"
     }
   }
 }
