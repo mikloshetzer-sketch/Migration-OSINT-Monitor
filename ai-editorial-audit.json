@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-22T19:40:46.661537+00:00",
+  "generated_at": "2026-10-22T22:53:38.775975+00:00",
   "version": "3.0",
-  "candidates": 150,
-  "new_ai_calls": 11,
+  "candidates": 154,
+  "new_ai_calls": 5,
   "conflicting_identity_ids": [
     "group:559",
     "group:562"
@@ -11,10 +11,6 @@
     "post:682": {
       "decision": "EXCLUDE",
       "reason": "The post contains inflammatory language about migrants but does not describe a concrete, contemporary migration-related event such as an actual border crossing or movement."
-    },
-    "post:683": {
-      "decision": "EXCLUDE",
-      "reason": "The post does not describe a specific, contemporary migration event such as a border crossing or refugee movement. Instead, it discusses an energy policy announcement and background information about an individual who arrived in the UK as a refugee, but no actual migration event is reported. The assigned event type BORDER_CROSSING is not supported "
     },
     "post:684": {
       "decision": "EXCLUDE",
@@ -88,29 +84,9 @@
       "decision": "PUBLISH",
       "reason": "The post reports a concrete, contemporary migration-related event involving an ICE operation arresting illegal migrants linked to human trafficking, supported by specific details and recent date. The event type DETENTION is appropriate and supported by the content."
     },
-    "signal:1131": {
-      "decision": "REVIEW",
-      "reason": "The post claims 4,000 illegal boat migrants are waiting on French beaches to enter the UK and that border police are absent due to riots. It provides a migration-related early warning about potential crossings. However, the claim lacks concrete details, verification, or corroboration from external sources, and the scale of the number may be exagger"
-    },
-    "signal:1137": {
-      "decision": "REVIEW",
-      "reason": "The source is Reddit, which is generally not considered a reliable source for official migration event confirmations. The post claims UK aid stops migrant smuggling attempts, but lacks detailed information, date, or corroboration from authoritative sources. The event type 'FACILITATION_EARLY_WARNING' is plausible but not firmly supported by the dat"
-    },
-    "signal:1138": {
-      "decision": "REVIEW",
-      "reason": "The post forecasts future migration events for 2025 and beyond, including zero releases and negative net migration, which are not completed or current events. It includes migration-related statistics but mainly as predictions or observations without concrete current event confirmation. Hence, suitable for review, not immediate publishing."
-    },
-    "signal:1139": {
+    "post:702": {
       "decision": "PUBLISH",
-      "reason": "The report describes a concrete and recent migration-related event involving the interception of a vessel carrying migrants, fitting the ROUTE_EARLY_WARNING event type well. The detection and interception details support this as a migration-specific early warning signal related to the maritime route near Puerto Rico."
-    },
-    "signal:1140": {
-      "decision": "PUBLISH",
-      "reason": "The record reports a contemporary migrant caravan departing a known location in southern Mexico, which aligns with the event type MOVEMENT_EARLY_WARNING. The claim is supported by independent Mexican media confirmation as stated in the text, making it a concrete, contemporary migration-specific early warning event suitable for publication."
-    },
-    "signal:1141": {
-      "decision": "PUBLISH",
-      "reason": "The record reports a current migrant group departure from the Tapachula area in southern Mexico, supported by multiple Mexican reports confirming caravans of hundreds to thousands departing around the same time. This constitutes a verified migration-specific early warning event about movement."
+      "reason": "The post reports a concrete, contemporary migration-related event of the U.S. Coast Guard intercepting a boat carrying 66 migrants in the Caribbean. The event type INTERCEPTION is accurate and the event is current."
     },
     "signal:1142": {
       "decision": "PUBLISH",
@@ -168,6 +144,18 @@
       "decision": "EXCLUDE",
       "reason": "The event describes a past criminal sentencing related to migrant deaths, not a current migration-specific event or facilitation early warning. It is a historical legal outcome, not an early warning signal or active migration event."
     },
+    "signal:1156": {
+      "decision": "REVIEW",
+      "reason": "The message references refugee returns affecting GDP per capita, implying a migration-related event, but lacks concrete details on the migration event's scale, timing, or impact. It is ambiguous whether this is an early warning of migration pressure or a post-event commentary."
+    },
+    "signal:1157": {
+      "decision": "EXCLUDE",
+      "reason": "The record describes an individual incident involving anti-migrant hatred and a legal incident but does not report a concrete, contemporary migration-related operational event or specific migration route early warning. It is primarily narrative and accusatory without migration-specific signal details."
+    },
+    "signal:1158": {
+      "decision": "EXCLUDE",
+      "reason": "The record discusses a political opinion and policy stance regarding deportations and ECHR membership without presenting a concrete, contemporary migration-specific event or policy action. It is also referencing a past statement and not a current or future signal of migration-related action."
+    },
     "group:554": {
       "decision": "REVIEW",
       "reason": "The text mentions multiple claims related to migration and deportation, such as the Trump administration revoking over 300,000 visas, DHS extending deportation protections for some immigrants, a US appeals court blocking rapid deportations, and reports of ill ICE detainees being deported. However, these are broad and partly contradictory policy and"
@@ -203,6 +191,10 @@
     "group:562": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:563": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete, contemporary migration-related event: the U.S. Coast Guard intercepting a boat with 66 migrants in the Caribbean, which fits the INTERCEPTION event type."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -588,6 +580,10 @@
       "decision": "REVIEW",
       "reason": "The post claims the immediate movement of hundreds of migrants marching north in southern Mexico and plans for a bigger caravan, indicating potential migration mobilization. However, key details like exact location and corroborating information are missing. The future planned caravan date is beyond the knowledge cutoff and cannot be verified. The c"
     },
+    "signal:1131": {
+      "decision": "REVIEW",
+      "reason": "The post claims 4,000 illegal boat migrants are waiting on French beaches to enter the UK and that border police are absent due to riots. It provides a migration-related early warning about potential crossings. However, the claim lacks concrete details, verification, or corroboration from external sources, and the scale of the number may be exagger"
+    },
     "signal:1132": {
       "decision": "EXCLUDE",
       "reason": "The post does not describe a concrete, contemporary migration-specific operational event or early warning. It uses vague and unclear language with no verified migration-related signal. The scenario is implausible and not verifiable as a migration-specific event."
@@ -607,6 +603,26 @@
     "signal:1136": {
       "decision": "PUBLISH",
       "reason": "The post reports a current migration event describing a large migrant caravan departing Mexico's southern border attempting to reach the United States, which constitutes a migration-specific early warning (movement)."
+    },
+    "signal:1137": {
+      "decision": "REVIEW",
+      "reason": "The source is Reddit, which is generally not considered a reliable source for official migration event confirmations. The post claims UK aid stops migrant smuggling attempts, but lacks detailed information, date, or corroboration from authoritative sources. The event type 'FACILITATION_EARLY_WARNING' is plausible but not firmly supported by the dat"
+    },
+    "signal:1138": {
+      "decision": "REVIEW",
+      "reason": "The post forecasts future migration events for 2025 and beyond, including zero releases and negative net migration, which are not completed or current events. It includes migration-related statistics but mainly as predictions or observations without concrete current event confirmation. Hence, suitable for review, not immediate publishing."
+    },
+    "signal:1139": {
+      "decision": "PUBLISH",
+      "reason": "The report describes a concrete and recent migration-related event involving the interception of a vessel carrying migrants, fitting the ROUTE_EARLY_WARNING event type well. The detection and interception details support this as a migration-specific early warning signal related to the maritime route near Puerto Rico."
+    },
+    "signal:1140": {
+      "decision": "PUBLISH",
+      "reason": "The record reports a contemporary migrant caravan departing a known location in southern Mexico, which aligns with the event type MOVEMENT_EARLY_WARNING. The claim is supported by independent Mexican media confirmation as stated in the text, making it a concrete, contemporary migration-specific early warning event suitable for publication."
+    },
+    "signal:1141": {
+      "decision": "PUBLISH",
+      "reason": "The record reports a current migrant group departure from the Tapachula area in southern Mexico, supported by multiple Mexican reports confirming caravans of hundreds to thousands departing around the same time. This constitutes a verified migration-specific early warning event about movement."
     }
   }
 }
