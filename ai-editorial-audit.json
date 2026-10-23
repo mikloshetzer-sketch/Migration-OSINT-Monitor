@@ -1,17 +1,14 @@
 {
-  "generated_at": "2026-10-22T22:53:38.775975+00:00",
+  "generated_at": "2026-10-23T02:20:09.635636+00:00",
   "version": "3.0",
-  "candidates": 154,
-  "new_ai_calls": 5,
+  "candidates": 156,
+  "new_ai_calls": 3,
   "conflicting_identity_ids": [
     "group:559",
-    "group:562"
+    "group:562",
+    "group:564"
   ],
   "decisions": {
-    "post:682": {
-      "decision": "EXCLUDE",
-      "reason": "The post contains inflammatory language about migrants but does not describe a concrete, contemporary migration-related event such as an actual border crossing or movement."
-    },
     "post:684": {
       "decision": "EXCLUDE",
       "reason": "This is a general commentary or claim regarding migrant hotel security staffing, not reporting a concrete, contemporary migration-related event such as a border crossing or asylum seeker movement."
@@ -88,17 +85,9 @@
       "decision": "PUBLISH",
       "reason": "The post reports a concrete, contemporary migration-related event of the U.S. Coast Guard intercepting a boat carrying 66 migrants in the Caribbean. The event type INTERCEPTION is accurate and the event is current."
     },
-    "signal:1142": {
-      "decision": "PUBLISH",
-      "reason": "The report describes a concrete and contemporary migration-related event involving human smuggling, which matches the FACILITATION_EARLY_WARNING event type. The event is recent and specific to migration enforcement and smuggling interdiction at the US border area."
-    },
-    "signal:1143": {
-      "decision": "PUBLISH",
-      "reason": "The report describes a concrete, contemporary event involving the interception of a makeshift boat with 66 migrants by the U.S. Coast Guard in the Caribbean. This is a migration-specific operational event related to a migration route, fitting the ROUTE_EARLY_WARNING type."
-    },
-    "signal:1144": {
-      "decision": "REVIEW",
-      "reason": "The post discusses organizations aiding migrants after release but does not describe a concrete, contemporary migration-specific early warning or policy action event. It is a general narrative about assistance and criticism without specific new developments or a clear early warning signal."
+    "post:703": {
+      "decision": "EXCLUDE",
+      "reason": "The content is a general complaint or political commentary about refugees and citizenship, lacks report of a specific migration-related event such as a border crossing, and contains unverified allegations without concrete event details."
     },
     "signal:1145": {
       "decision": "PUBLISH",
@@ -156,9 +145,13 @@
       "decision": "EXCLUDE",
       "reason": "The record discusses a political opinion and policy stance regarding deportations and ECHR membership without presenting a concrete, contemporary migration-specific event or policy action. It is also referencing a past statement and not a current or future signal of migration-related action."
     },
-    "group:554": {
+    "signal:1159": {
+      "decision": "EXCLUDE",
+      "reason": "The content is a historical narrative unrelated to contemporary migration events or movement early warnings. It does not report a specific, contemporary migration-related event or signal."
+    },
+    "signal:1160": {
       "decision": "REVIEW",
-      "reason": "The text mentions multiple claims related to migration and deportation, such as the Trump administration revoking over 300,000 visas, DHS extending deportation protections for some immigrants, a US appeals court blocking rapid deportations, and reports of ill ICE detainees being deported. However, these are broad and partly contradictory policy and"
+      "reason": "The report presents a general early warning about migrant payments to smugglers related to migration facilitation, but lacks concrete, contemporary event details and specific migration context to confirm this as a current migration-specific early warning event."
     },
     "group:555": {
       "decision": "REVIEW",
@@ -195,6 +188,10 @@
     "group:563": {
       "decision": "PUBLISH",
       "reason": "The post reports a concrete, contemporary migration-related event: the U.S. Coast Guard intercepting a boat with 66 migrants in the Caribbean, which fits the INTERCEPTION event type."
+    },
+    "group:564": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -623,6 +620,18 @@
     "signal:1141": {
       "decision": "PUBLISH",
       "reason": "The record reports a current migrant group departure from the Tapachula area in southern Mexico, supported by multiple Mexican reports confirming caravans of hundreds to thousands departing around the same time. This constitutes a verified migration-specific early warning event about movement."
+    },
+    "signal:1142": {
+      "decision": "PUBLISH",
+      "reason": "The report describes a concrete and contemporary migration-related event involving human smuggling, which matches the FACILITATION_EARLY_WARNING event type. The event is recent and specific to migration enforcement and smuggling interdiction at the US border area."
+    },
+    "signal:1143": {
+      "decision": "PUBLISH",
+      "reason": "The report describes a concrete, contemporary event involving the interception of a makeshift boat with 66 migrants by the U.S. Coast Guard in the Caribbean. This is a migration-specific operational event related to a migration route, fitting the ROUTE_EARLY_WARNING type."
+    },
+    "signal:1144": {
+      "decision": "REVIEW",
+      "reason": "The post discusses organizations aiding migrants after release but does not describe a concrete, contemporary migration-specific early warning or policy action event. It is a general narrative about assistance and criticism without specific new developments or a clear early warning signal."
     }
   }
 }
