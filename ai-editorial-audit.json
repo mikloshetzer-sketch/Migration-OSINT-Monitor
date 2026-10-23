@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-23T14:34:40.346260+00:00",
+  "generated_at": "2026-10-23T19:40:28.620647+00:00",
   "version": "3.0",
-  "candidates": 163,
-  "new_ai_calls": 8,
+  "candidates": 165,
+  "new_ai_calls": 4,
   "conflicting_identity_ids": [
     "group:559",
     "group:562",
@@ -11,10 +11,6 @@
     "group:567"
   ],
   "decisions": {
-    "post:687": {
-      "decision": "EXCLUDE",
-      "reason": "The post is a personal narrative reflecting on Rep. Omar's experience as a refugee but does not report a concrete, contemporary migration event or border crossing."
-    },
     "post:689": {
       "decision": "REVIEW",
       "reason": "Inconsistent approval: The report includes multiple contemporary migration-related events explicitly involving deportations, such as revocation of over 300,000 US visas, extension of deportation protections for Sudanese and Ukrainian immigrants despite prior policy vows, U.S. appeals court blocking rapid deportation policy, and deportation of grave"
@@ -91,17 +87,9 @@
       "decision": "PUBLISH",
       "reason": "The post reports a concrete and contemporary event involving a large number of illegal migrants arriving in the Canary Islands within the last 48 hours, including specific numbers of migrants and boats. This fits the BORDER_CROSSING event type and qualifies as a migration-specific event with operational impact."
     },
-    "signal:1152": {
-      "decision": "REVIEW",
-      "reason": "The text discusses reports and allegations of violent pushbacks by Croatian border police against irregular migrants, including mention of human rights violations and lack of accountability. However, no specific event, date, or newly reported incident is given; it mainly reflects a narrative or ongoing trend without concrete contemporary event deta"
-    },
-    "signal:1154": {
-      "decision": "REVIEW",
-      "reason": "The report mentions recent crossing of the Red Sea by people described as refugees or gypsies from Arabia, suggesting a migration-related route event. However, the information is vague, lacks detail on the specific location or confirmation of the crossing, and uses informal or potentially unclear terminology. Additional verification needed to confi"
-    },
-    "signal:1155": {
+    "post:708": {
       "decision": "EXCLUDE",
-      "reason": "The event describes a past criminal sentencing related to migrant deaths, not a current migration-specific event or facilitation early warning. It is a historical legal outcome, not an early warning signal or active migration event."
+      "reason": "The post is a query requesting confirmation and statistics about open borders and migrant arrivals in France, not a report of a concrete, contemporary migration event or early warning. It lacks any event or factual data."
     },
     "signal:1156": {
       "decision": "REVIEW",
@@ -151,9 +139,13 @@
       "decision": "REVIEW",
       "reason": "The report mentions a migrant caravan moving toward the United States, which is a concrete migration-specific early warning event. However, the details are vague (no specific dates, numbers, or route), and the connection to elections is speculative. More specific information is required to confirm the signal's immediacy and relevance."
     },
-    "group:558": {
+    "signal:1169": {
       "decision": "EXCLUDE",
-      "reason": "The post contains speculative political commentary about deportation and border enforcement but does not report a concrete, contemporary migration-related event such as an actual deportation operation."
+      "reason": "The text is a political opinion and general commentary about migration policy and border crossings, without reporting a concrete, specific, or verifiable migration event or early warning. There is no specific operational migration event described, nor a distinct early warning signal supported by evidence."
+    },
+    "signal:1170": {
+      "decision": "PUBLISH",
+      "reason": "The record reports a concrete, contemporary migration-related event indicating a complete halt in small boat crossings over the English Channel due to sea conditions and poor weather, corresponding to the assigned event type MOVEMENT_EARLY_WARNING as it signals a change in migration patterns and movement accessibility."
     },
     "group:559": {
       "decision": "REVIEW",
@@ -186,6 +178,10 @@
     "group:567": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:568": {
+      "decision": "EXCLUDE",
+      "reason": "This is an inquiry requesting information about migration, not a report of a concrete, contemporary migration-related event. No event of border crossing or migration is reported or described."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -655,9 +651,21 @@
       "decision": "EXCLUDE",
       "reason": "The text is a general political commentary about immigration policy and deportations, without reporting any specific or concrete migration-related event or early warning. No current migration-specific operational event or route early warning is described."
     },
+    "signal:1152": {
+      "decision": "REVIEW",
+      "reason": "The text discusses reports and allegations of violent pushbacks by Croatian border police against irregular migrants, including mention of human rights violations and lack of accountability. However, no specific event, date, or newly reported incident is given; it mainly reflects a narrative or ongoing trend without concrete contemporary event deta"
+    },
     "signal:1153": {
       "decision": "EXCLUDE",
       "reason": "The record describes general political commentary and unrest narratives, focusing on protests and political reactions involving migration rhetoric, but does not report a concrete, contemporary migration-related event or a specific policy action. The described events relate mostly to social unrest and political discourse rather than a migration-spec"
+    },
+    "signal:1154": {
+      "decision": "REVIEW",
+      "reason": "The report mentions recent crossing of the Red Sea by people described as refugees or gypsies from Arabia, suggesting a migration-related route event. However, the information is vague, lacks detail on the specific location or confirmation of the crossing, and uses informal or potentially unclear terminology. Additional verification needed to confi"
+    },
+    "signal:1155": {
+      "decision": "EXCLUDE",
+      "reason": "The event describes a past criminal sentencing related to migrant deaths, not a current migration-specific event or facilitation early warning. It is a historical legal outcome, not an early warning signal or active migration event."
     },
     "signal:1160": {
       "decision": "REVIEW",
