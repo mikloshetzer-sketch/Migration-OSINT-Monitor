@@ -1,10 +1,9 @@
 {
-  "generated_at": "2026-10-24T13:46:34.160727+00:00",
+  "generated_at": "2026-10-24T17:08:11.376510+00:00",
   "version": "3.0",
-  "candidates": 181,
-  "new_ai_calls": 11,
+  "candidates": 184,
+  "new_ai_calls": 5,
   "conflicting_identity_ids": [
-    "group:567",
     "group:571"
   ],
   "decisions": {
@@ -19,10 +18,6 @@
     "post:699": {
       "decision": "REVIEW",
       "reason": "The post reports an ICE operation arresting illegal migrants with children from a home used for human trafficking, involving law enforcement and K-9 units with drones. However, it lacks sufficient detail and external corroboration to confirm this as a migration-specific detention event. The date is future relative to today, making verification impo"
-    },
-    "post:700": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete, contemporary migration-related event involving an ICE operation detaining illegal migrants linked with human trafficking, specifying the operation platforms and date consistent with event type 'DETENTION'."
     },
     "post:702": {
       "decision": "PUBLISH",
@@ -88,17 +83,9 @@
       "decision": "EXCLUDE",
       "reason": "The event date is in the future (2026), and the information cannot be currently verified or confirmed as contemporary."
     },
-    "signal:1165": {
-      "decision": "REVIEW",
-      "reason": "The post mentions a migrant caravan currently moving toward the United States, indicating a migration-related early warning. However, the timing is speculative regarding its arrival and impact, without concrete details on the caravan's size, origin, or precise current location. Therefore, while the event type matches, more concrete evidence is need"
-    },
-    "signal:1169": {
+    "post:718": {
       "decision": "EXCLUDE",
-      "reason": "The text is a political opinion and general commentary about migration policy and border crossings, without reporting a concrete, specific, or verifiable migration event or early warning. There is no specific operational migration event described, nor a distinct early warning signal supported by evidence."
-    },
-    "signal:1170": {
-      "decision": "PUBLISH",
-      "reason": "The record reports a concrete, contemporary migration-related event indicating a complete halt in small boat crossings over the English Channel due to sea conditions and poor weather, corresponding to the assigned event type MOVEMENT_EARLY_WARNING as it signals a change in migration patterns and movement accessibility."
+      "reason": "The event describes a mountaineering avalanche casualty, not a migration-specific event."
     },
     "signal:1171": {
       "decision": "REVIEW",
@@ -168,9 +155,17 @@
       "decision": "REVIEW",
       "reason": "The post mentions a migrant caravan currently moving toward the United States, which is a migration-specific early warning. However, the location is unspecified and the timing is uncertain as it speculates about coinciding with upcoming elections, which is not a concrete event. Additional information required to verify the immediacy and specifics."
     },
-    "group:567": {
+    "signal:1188": {
+      "decision": "EXCLUDE",
+      "reason": "The content is a general, opinionated statement about legal processes involving migrants, without reporting a concrete or specific migration-related event or policy action. It also contains offensive language and does not provide a verifiable migration-specific early warning or signal."
+    },
+    "signal:1189": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete, contemporary migration-related event indicating the landing of 41 migrants by boat near Cartagena, Spain, with interception by authorities. The event type as a migration early warning signal is supported by the details of the arrival and interception of migrants."
+    },
+    "signal:1190": {
       "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
+      "reason": "The date of the event (2026) is in the future relative to current knowledge cutoff (2024), making verification impossible. Also, the location is unspecified and external verification is lacking."
     },
     "group:568": {
       "decision": "EXCLUDE",
@@ -199,6 +194,10 @@
     "group:574": {
       "decision": "REVIEW",
       "reason": "The post reports a detention related to smuggling of migrants found in Greece; however, the location is vague ('-'), the source is missing, and the publication date is missing. Without a clear timestamp, source, and precise location, we cannot verify if this is a concrete, contemporary migration-related event suitable for publication."
+    },
+    "group:575": {
+      "decision": "EXCLUDE",
+      "reason": "Event concerns avalanche on Broad Peak involving climbers, unrelated to human migration events or migration-specific issues."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -720,6 +719,10 @@
       "decision": "EXCLUDE",
       "reason": "The post discusses unverified reports and expert opinions about possible shark attacks following a shipwreck but does not confirm a concrete migration operational event or early warning. It mainly presents speculative and skeptical commentary rather than a verified or concrete migration-specific event or signal."
     },
+    "signal:1165": {
+      "decision": "REVIEW",
+      "reason": "The post mentions a migrant caravan currently moving toward the United States, indicating a migration-related early warning. However, the timing is speculative regarding its arrival and impact, without concrete details on the caravan's size, origin, or precise current location. Therefore, while the event type matches, more concrete evidence is need"
+    },
     "signal:1166": {
       "decision": "REVIEW",
       "reason": "The record reports a migrant caravan currently moving toward the US and considers timing related to upcoming elections, which constitutes a migration-specific early warning signal. However, the lack of specific details about the caravan's composition, size, or precise route reduces immediate actionable clarity."
@@ -731,6 +734,14 @@
     "signal:1168": {
       "decision": "REVIEW",
       "reason": "The report mentions a migrant caravan moving toward the United States, which is a concrete migration-specific early warning event. However, the details are vague (no specific dates, numbers, or route), and the connection to elections is speculative. More specific information is required to confirm the signal's immediacy and relevance."
+    },
+    "signal:1169": {
+      "decision": "EXCLUDE",
+      "reason": "The text is a political opinion and general commentary about migration policy and border crossings, without reporting a concrete, specific, or verifiable migration event or early warning. There is no specific operational migration event described, nor a distinct early warning signal supported by evidence."
+    },
+    "signal:1170": {
+      "decision": "PUBLISH",
+      "reason": "The record reports a concrete, contemporary migration-related event indicating a complete halt in small boat crossings over the English Channel due to sea conditions and poor weather, corresponding to the assigned event type MOVEMENT_EARLY_WARNING as it signals a change in migration patterns and movement accessibility."
     }
   }
 }
