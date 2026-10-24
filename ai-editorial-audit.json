@@ -1,20 +1,15 @@
 {
-  "generated_at": "2026-10-23T22:45:47.596515+00:00",
+  "generated_at": "2026-10-24T02:17:41.559862+00:00",
   "version": "3.0",
-  "candidates": 170,
-  "new_ai_calls": 5,
+  "candidates": 171,
+  "new_ai_calls": 6,
   "conflicting_identity_ids": [
-    "group:559",
     "group:562",
     "group:564",
     "group:565",
     "group:567"
   ],
   "decisions": {
-    "post:689": {
-      "decision": "REVIEW",
-      "reason": "Inconsistent approval: The report includes multiple contemporary migration-related events explicitly involving deportations, such as revocation of over 300,000 US visas, extension of deportation protections for Sudanese and Ukrainian immigrants despite prior policy vows, U.S. appeals court blocking rapid deportation policy, and deportation of grave"
-    },
     "post:690": {
       "decision": "REVIEW",
       "reason": "The post discusses cumulative immigration numbers and welfare dependence rates over extended periods but does not report a specific or current migration event. The event type 'BORDER_CROSSING' does not fit the content, which is more about immigration policy or impact rather than an operational crossing. No concrete migration event or early warning "
@@ -23,10 +18,6 @@
       "decision": "EXCLUDE",
       "reason": "The post makes a general statement about refugees arriving in Palestine but does not provide a concrete, contemporary migration-related event or details about border crossing as an event. No specific or verified event is described."
     },
-    "post:692": {
-      "decision": "EXCLUDE",
-      "reason": "The post contains general political commentary and unsubstantiated claims about immigration fraud and refugee resettlement without reporting a concrete, contemporary migration-related event. The event_type 'BORDER_CROSSING' is not supported by the content, which does not describe any specific crossing or movement event."
-    },
     "post:693": {
       "decision": "EXCLUDE",
       "reason": "The post does not report a concrete, contemporary migration-related deportation event. It contains allegations and political commentary without verified information about an actual deportation action occurring."
@@ -34,10 +25,6 @@
     "post:694": {
       "decision": "EXCLUDE",
       "reason": "The text discusses historical context regarding immigration and interceptions during the British Mandate period, which is a historical event and not a contemporary migration event. The event date is not current, and the content is commentary rather than reporting a specific, concrete migration-related event occurring now."
-    },
-    "post:695": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a specific, contemporary migration event involving the interception of migrants at sea by the US Coast Guard, which is directly related to migration and smuggling activity. The described event is dated Oct 16, 2026, matching the nature of the event_type 'SMUGGLING_ACTIVITY'. The source is unverified external, but the detailed opera"
     },
     "post:696": {
       "decision": "REVIEW",
@@ -91,13 +78,17 @@
       "decision": "EXCLUDE",
       "reason": "The post is a query requesting confirmation and statistics about open borders and migrant arrivals in France, not a report of a concrete, contemporary migration event or early warning. It lacks any event or factual data."
     },
-    "signal:1156": {
-      "decision": "REVIEW",
-      "reason": "The message references refugee returns affecting GDP per capita, implying a migration-related event, but lacks concrete details on the migration event's scale, timing, or impact. It is ambiguous whether this is an early warning of migration pressure or a post-event commentary."
+    "post:709": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete, contemporary migration-related event describing a large wave of illegal boat migrants arriving in the Canary Islands with specific numbers and timing, matching the BORDER_CROSSING event type."
     },
-    "signal:1159": {
+    "post:710": {
       "decision": "EXCLUDE",
-      "reason": "The content is a historical narrative unrelated to contemporary migration events or movement early warnings. It does not report a specific, contemporary migration-related event or signal."
+      "reason": "The post contains offensive language and a general call for deportation without reporting a specific, concrete migration-related event. The event_type 'DEPORTATION' is not supported by the content, which lacks any factual report of deportation action."
+    },
+    "post:711": {
+      "decision": "EXCLUDE",
+      "reason": "The post discusses historical migration during the late Ottoman and British Mandate periods, which is not a contemporary migration event. It is a historical narration and does not describe a current or recent migration event or early warning."
     },
     "signal:1161": {
       "decision": "REVIEW",
@@ -159,13 +150,9 @@
       "decision": "REVIEW",
       "reason": "The record mentions a migrant caravan currently moving toward the United States as an early warning signal, but lacks concrete details such as location, size, or specific timing. The message is somewhat vague and speculative regarding the impact relative to elections, needing more precise information to confirm the early warning nature."
     },
-    "group:559": {
-      "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
-    },
-    "group:561": {
-      "decision": "REVIEW",
-      "reason": "The post reports a claim of imminent deportation of immigrants with serious medical conditions to African countries, but it lacks clear, verifiable details such as specific names, dates, or official confirmation. The provided source is incomplete, and there is no concrete evidence to verify the event as a confirmed deportation occurring now. The ev"
+    "signal:1176": {
+      "decision": "EXCLUDE",
+      "reason": "The report is anecdotal and lacks concrete evidence of a migration-specific event or verified facilitation issue. It is an unverified personal claim without corroboration or clear link to migration facilitation or early warning."
     },
     "group:562": {
       "decision": "REVIEW",
@@ -194,6 +181,14 @@
     "group:568": {
       "decision": "EXCLUDE",
       "reason": "This is an inquiry requesting information about migration, not a report of a concrete, contemporary migration-related event. No event of border crossing or migration is reported or described."
+    },
+    "group:569": {
+      "decision": "EXCLUDE",
+      "reason": "The record is an offensive, unverified personal attack expressing a desire for deportation but does not report a concrete or ongoing migration-related event such as an actual deportation or policy enforcement."
+    },
+    "group:570": {
+      "decision": "EXCLUDE",
+      "reason": "The post discusses historical migration during Ottoman and British Mandate periods, which is not a current or contemporary event. It is a historical recollection without specific current migration event details."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -679,6 +674,10 @@
       "decision": "EXCLUDE",
       "reason": "The event describes a past criminal sentencing related to migrant deaths, not a current migration-specific event or facilitation early warning. It is a historical legal outcome, not an early warning signal or active migration event."
     },
+    "signal:1156": {
+      "decision": "REVIEW",
+      "reason": "The message references refugee returns affecting GDP per capita, implying a migration-related event, but lacks concrete details on the migration event's scale, timing, or impact. It is ambiguous whether this is an early warning of migration pressure or a post-event commentary."
+    },
     "signal:1157": {
       "decision": "EXCLUDE",
       "reason": "The record describes an individual incident involving anti-migrant hatred and a legal incident but does not report a concrete, contemporary migration-related operational event or specific migration route early warning. It is primarily narrative and accusatory without migration-specific signal details."
@@ -686,6 +685,10 @@
     "signal:1158": {
       "decision": "EXCLUDE",
       "reason": "The record discusses a political opinion and policy stance regarding deportations and ECHR membership without presenting a concrete, contemporary migration-specific event or policy action. It is also referencing a past statement and not a current or future signal of migration-related action."
+    },
+    "signal:1159": {
+      "decision": "EXCLUDE",
+      "reason": "The content is a historical narrative unrelated to contemporary migration events or movement early warnings. It does not report a specific, contemporary migration-related event or signal."
     },
     "signal:1160": {
       "decision": "REVIEW",
