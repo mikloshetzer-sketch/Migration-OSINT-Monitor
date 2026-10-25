@@ -1,14 +1,10 @@
 {
-  "generated_at": "2026-10-25T17:22:14.955705+00:00",
+  "generated_at": "2026-10-25T20:09:14.916886+00:00",
   "version": "3.0",
-  "candidates": 205,
-  "new_ai_calls": 7,
+  "candidates": 211,
+  "new_ai_calls": 8,
   "conflicting_identity_ids": [],
   "decisions": {
-    "post:706": {
-      "decision": "REVIEW",
-      "reason": "The post claims ongoing facilitation of migrant flows as hybrid tactics by Belarus and Russia since 2021, mentioning interception-related activity but does not describe a specific concrete, contemporary operational interception event."
-    },
     "post:707": {
       "decision": "PUBLISH",
       "reason": "The post reports a concrete and contemporary event involving a large number of illegal migrants arriving in the Canary Islands within the last 48 hours, including specific numbers of migrants and boats. This fits the BORDER_CROSSING event type and qualifies as a migration-specific event with operational impact."
@@ -85,33 +81,9 @@
       "decision": "EXCLUDE",
       "reason": "The event described is a historical migration event from 1783, not a contemporary migration-related event. The date of occurrence is over two centuries ago, and thus does not qualify as a current migration event."
     },
-    "signal:1191": {
+    "post:726": {
       "decision": "EXCLUDE",
-      "reason": "The text is a political commentary making claims about past and future immigration enforcement without reporting a specific, contemporary migration-related event or early warning. It mixes historical and speculative content and is not a concrete migration-specific early warning."
-    },
-    "signal:1192": {
-      "decision": "REVIEW",
-      "reason": "The record describes a past ICE enforcement action with arrests and is labeled as an enforcement early warning signal, but it refers to a completed operation rather than an early warning; event timing and details are unclear, and location is unspecified. Further verification and clarification of event timing and type are needed."
-    },
-    "signal:1193": {
-      "decision": "REVIEW",
-      "reason": "The post reports a large ICE enforcement action and uses the 'ENFORCEMENT_EARLY_WARNING' event type. However, the data lacks sufficient detail to verify this as a concrete enforcement event. The date suggests a future event relative to the knowledge cutoff, and no external verification is available. Clarification on timing and corroboration is need"
-    },
-    "signal:1194": {
-      "decision": "EXCLUDE",
-      "reason": "The claim about police intercepting hundreds of machetes being delivered to asylum seekers at a refugee center is unverified, lacks independent corroboration, and appears to be derogatory commentary rather than a documented enforcement or early warning event."
-    },
-    "signal:1195": {
-      "decision": "EXCLUDE",
-      "reason": "The post makes a claim about police intercepting weapons delivered to asylum seekers without any corroborating evidence or verification; the event is unverified and the source is social media with inflammatory language, lacking concrete details or official confirmation."
-    },
-    "signal:1196": {
-      "decision": "REVIEW",
-      "reason": "The claim about police intercepting machetes delivered to asylum seekers at their refugee center is a concrete enforcement-related early warning if factual, but it lacks external verification or context to confirm its authenticity and relevance to migration enforcement. The source is a single social media post without corroboration."
-    },
-    "signal:1197": {
-      "decision": "REVIEW",
-      "reason": "The claim involves a future date (2026) which is beyond the current knowledge cutoff and is unverified. The event description is alarming but lacks concrete details such as location or official confirmation. The event type (ENFORCEMENT_EARLY_WARNING) is plausible for a potential security-related warning but cannot be confirmed as specific to migrat"
+      "reason": "The event describes the arrival of a Long-eared Owl, which is a bird species, not a human migrant. This is not a migration-related event concerning people crossing borders or migration policy."
     },
     "signal:1198": {
       "decision": "EXCLUDE",
@@ -157,13 +129,29 @@
       "decision": "EXCLUDE",
       "reason": "The post contains a general narrative about illegal migration and local authorities but does not report a concrete, specific migration-related event or early warning with actionable details. It is an unverified complaint rather than a migration-specific early warning event."
     },
+    "signal:1212": {
+      "decision": "REVIEW",
+      "reason": "The claim about '69% are also migrants being stopped/intercepted at the border' lacks clear details about location, timing, and context to confirm a specific route early warning event. The event's contemporary and concrete nature cannot be verified from the provided information."
+    },
+    "signal:1213": {
+      "decision": "EXCLUDE",
+      "reason": "The record discusses statistical clarification about deportations but does not report a concrete, contemporary migration-specific event, early warning, policy action, or route/access signal. It is general commentary without a specific migration operational event."
+    },
+    "signal:1214": {
+      "decision": "EXCLUDE",
+      "reason": "The post contains a general conspiracy narrative about NGOs and politicians allegedly causing migration chaos but does not report any concrete, contemporary migration-specific early warning event or policy action. The content is speculative and not a verifiable migration event."
+    },
+    "signal:1215": {
+      "decision": "EXCLUDE",
+      "reason": "The post contains general political commentary and unsubstantiated claims about migrant-related expenditures and issues without reporting a specific, concrete, contemporary migration-related event or early warning. It does not support the assigned event type FACILITATION_EARLY_WARNING."
+    },
+    "signal:1216": {
+      "decision": "REVIEW",
+      "reason": "The record describes a general narrative about migration trends without reporting a concrete, specific, contemporary migration-related event or specific early warning with facts or data. It is more of an observation or opinion rather than a verifiable signal or event."
+    },
     "group:573": {
       "decision": "PUBLISH",
       "reason": "The record reports a concrete migration-related event involving the detention of a boat skipper who moved migrants. The event is migration-specific and contemporary given the recent last_seen date, even though the published_at field is empty. The detention event type matches the described content."
-    },
-    "group:574": {
-      "decision": "REVIEW",
-      "reason": "The post reports a detention related to smuggling of migrants found in Greece; however, the location is vague ('-'), the source is missing, and the publication date is missing. Without a clear timestamp, source, and precise location, we cannot verify if this is a concrete, contemporary migration-related event suitable for publication."
     },
     "group:575": {
       "decision": "EXCLUDE",
@@ -192,6 +180,10 @@
     "group:581": {
       "decision": "EXCLUDE",
       "reason": "The event described is a historical migration from 1783 which does not represent a contemporary migration-related event. The event date is historical, and no current or future migration event is reported."
+    },
+    "group:582": {
+      "decision": "EXCLUDE",
+      "reason": "The event describes the arrival of a Long-eared Owl, which is a bird species, not a human migrant. Thus, it is unrelated to human migration events."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -817,6 +809,34 @@
       "decision": "REVIEW",
       "reason": "The date of the event (2026) is in the future relative to current knowledge cutoff (2024), making verification impossible. Also, the location is unspecified and external verification is lacking."
     },
+    "signal:1191": {
+      "decision": "EXCLUDE",
+      "reason": "The text is a political commentary making claims about past and future immigration enforcement without reporting a specific, contemporary migration-related event or early warning. It mixes historical and speculative content and is not a concrete migration-specific early warning."
+    },
+    "signal:1192": {
+      "decision": "REVIEW",
+      "reason": "The record describes a past ICE enforcement action with arrests and is labeled as an enforcement early warning signal, but it refers to a completed operation rather than an early warning; event timing and details are unclear, and location is unspecified. Further verification and clarification of event timing and type are needed."
+    },
+    "signal:1193": {
+      "decision": "REVIEW",
+      "reason": "The post reports a large ICE enforcement action and uses the 'ENFORCEMENT_EARLY_WARNING' event type. However, the data lacks sufficient detail to verify this as a concrete enforcement event. The date suggests a future event relative to the knowledge cutoff, and no external verification is available. Clarification on timing and corroboration is need"
+    },
+    "signal:1194": {
+      "decision": "EXCLUDE",
+      "reason": "The claim about police intercepting hundreds of machetes being delivered to asylum seekers at a refugee center is unverified, lacks independent corroboration, and appears to be derogatory commentary rather than a documented enforcement or early warning event."
+    },
+    "signal:1195": {
+      "decision": "EXCLUDE",
+      "reason": "The post makes a claim about police intercepting weapons delivered to asylum seekers without any corroborating evidence or verification; the event is unverified and the source is social media with inflammatory language, lacking concrete details or official confirmation."
+    },
+    "signal:1196": {
+      "decision": "REVIEW",
+      "reason": "The claim about police intercepting machetes delivered to asylum seekers at their refugee center is a concrete enforcement-related early warning if factual, but it lacks external verification or context to confirm its authenticity and relevance to migration enforcement. The source is a single social media post without corroboration."
+    },
+    "signal:1197": {
+      "decision": "REVIEW",
+      "reason": "The claim involves a future date (2026) which is beyond the current knowledge cutoff and is unverified. The event description is alarming but lacks concrete details such as location or official confirmation. The event type (ENFORCEMENT_EARLY_WARNING) is plausible for a potential security-related warning but cannot be confirmed as specific to migrat"
+    },
     "signal:1201": {
       "decision": "REVIEW",
       "reason": "The report claims UK aid stopped over 100 migrant smuggling attempts in the Western Balkans, which suggests a migration-related facilitation or interdiction event. However, the source is Reddit, which is not authoritative or independently verifiable, and no specific date or detailed context is provided. Additionally, the event date (2026) is in the"
@@ -824,6 +844,10 @@
     "signal:1202": {
       "decision": "REVIEW",
       "reason": "The report is about a UK aid program stopping migration attempts, which may fit as a facilitation early warning, but location is unspecified and source is Reddit without further corroboration. More detail is needed to confirm a concrete, contemporary migration-specific event or early warning."
+    },
+    "signal:1211": {
+      "decision": "PUBLISH",
+      "reason": "The report provides a concrete and recent migration-specific event about 315 migrants landing in Lampedusa after departing Libya within the last 36 hours, fitting the movement early warning category."
     }
   }
 }
