@@ -1,20 +1,12 @@
 {
-  "generated_at": "2026-10-24T22:08:34.501012+00:00",
+  "generated_at": "2026-10-25T02:06:28.659205+00:00",
   "version": "3.0",
-  "candidates": 196,
+  "candidates": 198,
   "new_ai_calls": 6,
   "conflicting_identity_ids": [
     "group:571"
   ],
   "decisions": {
-    "post:697": {
-      "decision": "PUBLISH",
-      "reason": "The post describes a specific, concrete migration-related event involving the arrest of illegal migrants during an ICE operation, including details about the operation and its date, which supports the event type 'DETENTION'."
-    },
-    "post:702": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete, contemporary migration-related event of the U.S. Coast Guard intercepting a boat carrying 66 migrants in the Caribbean. The event type INTERCEPTION is accurate and the event is current."
-    },
     "post:703": {
       "decision": "EXCLUDE",
       "reason": "The content is a general complaint or political commentary about refugees and citizenship, lacks report of a specific migration-related event such as a border crossing, and contains unverified allegations without concrete event details."
@@ -87,13 +79,13 @@
       "decision": "PUBLISH",
       "reason": "The post reports a concrete, contemporary migration-related event involving the arrival of over 400 illegal migrants to Spain's El Hierro in a single day with specific numbers of people and boats, indicating a border crossing event. This supports the specified event_type 'BORDER_CROSSING'."
     },
-    "signal:1177": {
-      "decision": "REVIEW",
-      "reason": "The post expresses a concern about migration and mentions policy actions but lacks a concrete, contemporary migration-specific event or early warning with clear operational details or authorities' announcements, making it uncertain for publication."
+    "post:721": {
+      "decision": "EXCLUDE",
+      "reason": "The event date appears to be in the future (2026), making the timing unlikely or unverified; additionally, the report is incomplete and lacks location specificity beyond Houston, and cannot be independently corroborated from this single social media post. The claim could be an exaggerated or misleading early report without adequate evidence."
     },
-    "signal:1182": {
-      "decision": "REVIEW",
-      "reason": "The report discusses climate migrants arriving in cities, indicating a current migration-related issue consistent with an early warning signal. However, the source is a social media post referencing an article dated in the future (2026-10), the event location is unspecified, and there is no independent verification of the migration event itself bey"
+    "post:722": {
+      "decision": "EXCLUDE",
+      "reason": "The claim about weapons being intercepted being delivered to migrants in the UK is unverified and lacks any supporting evidence. The narrative includes political rhetoric and calls for regime change unrelated to a verified migration event. The event type is not supported by any concrete, contemporaneous migration event reporting."
     },
     "signal:1183": {
       "decision": "PUBLISH",
@@ -167,13 +159,13 @@
       "decision": "REVIEW",
       "reason": "The post mentions increasing migrant boat arrivals but provides no concrete contemporary event details, locations, or specific data to support a clear migration early warning event. The text is a general claim without a specific event or verified signal."
     },
-    "group:569": {
+    "signal:1203": {
       "decision": "EXCLUDE",
-      "reason": "The record is an offensive, unverified personal attack expressing a desire for deportation but does not report a concrete or ongoing migration-related event such as an actual deportation or policy enforcement."
+      "reason": "The message reports a general statement of support for a migrant rescue mission but does not confirm an actual, contemporary event of mobilization or coordination of a rescue operation. The event date is in the future and no operational details or actions are provided."
     },
-    "group:570": {
+    "signal:1204": {
       "decision": "EXCLUDE",
-      "reason": "The post discusses historical migration during Ottoman and British Mandate periods, which is not a current or contemporary event. It is a historical recollection without specific current migration event details."
+      "reason": "The record describes historical migration events from 1948-1950s, not a contemporary migration-specific early warning or signal event. The assigned event_type 'FACILITATION_EARLY_WARNING' is incorrect for this post, which is a historical recollection rather than an ongoing or future migration event. The record does not mention any active or imminen"
     },
     "group:571": {
       "decision": "REVIEW",
@@ -198,6 +190,14 @@
     "group:576": {
       "decision": "EXCLUDE",
       "reason": "The post is a historical commentary or comparison referring to events from 1652, not reporting a concrete, contemporary migration-related event or border crossing. No actual border crossing event is described or evidenced."
+    },
+    "group:577": {
+      "decision": "REVIEW",
+      "reason": "The text claims a large ICE raid arresting over 400 illegal migrants but lacks key details such as date, precise location, source, and verification. The event_type 'DETENTION' is appropriate if the event is true, but current information is incomplete and uncorroborated."
+    },
+    "group:578": {
+      "decision": "EXCLUDE",
+      "reason": "The post contains an unsubstantiated claim about weapons being delivered to migrants in the UK without any concrete details or evidence. It also conflates migration with regime change and political rhetoric, lacking a clear, verifiable migration-related event. The event_type 'INTERCEPTION' is not supported by the content, and no specific time or lo"
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -767,6 +767,10 @@
       "decision": "EXCLUDE",
       "reason": "The report is anecdotal and lacks concrete evidence of a migration-specific event or verified facilitation issue. It is an unverified personal claim without corroboration or clear link to migration facilitation or early warning."
     },
+    "signal:1177": {
+      "decision": "REVIEW",
+      "reason": "The post expresses a concern about migration and mentions policy actions but lacks a concrete, contemporary migration-specific event or early warning with clear operational details or authorities' announcements, making it uncertain for publication."
+    },
     "signal:1178": {
       "decision": "REVIEW",
       "reason": "The report claims French police punctured a boat carrying illegal migrants attempting to cross the English Channel, which could be a migration-related operational event. However, key details such as the date of the incident, exact location, and independent corroboration are missing or unclear, making it difficult to verify as a concrete, current mi"
@@ -782,6 +786,10 @@
     "signal:1181": {
       "decision": "EXCLUDE",
       "reason": "The record is a general narrative and cultural commentary about the historical and contemporary phenomenon of Chinese emigration ('Runology') and does not report a concrete, contemporary migration-specific event, early warning, or policy action. It lacks a specific operational migration event or actionable early warning related to current migration"
+    },
+    "signal:1182": {
+      "decision": "REVIEW",
+      "reason": "The report discusses climate migrants arriving in cities, indicating a current migration-related issue consistent with an early warning signal. However, the source is a social media post referencing an article dated in the future (2026-10), the event location is unspecified, and there is no independent verification of the migration event itself bey"
     },
     "signal:1201": {
       "decision": "REVIEW",
