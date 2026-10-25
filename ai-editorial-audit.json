@@ -1,16 +1,12 @@
 {
-  "generated_at": "2026-10-25T07:25:45.218142+00:00",
+  "generated_at": "2026-10-25T12:53:07.279746+00:00",
   "version": "3.0",
-  "candidates": 200,
-  "new_ai_calls": 2,
+  "candidates": 201,
+  "new_ai_calls": 3,
   "conflicting_identity_ids": [
     "group:571"
   ],
   "decisions": {
-    "post:703": {
-      "decision": "EXCLUDE",
-      "reason": "The content is a general complaint or political commentary about refugees and citizenship, lacks report of a specific migration-related event such as a border crossing, and contains unverified allegations without concrete event details."
-    },
     "post:704": {
       "decision": "EXCLUDE",
       "reason": "The post describes seminars about Afghanistan focusing on cultural and social context to support the integration of refugees, but it does not report a concrete, contemporary migration-related event such as a border crossing, arrival, or movement event. The event type 'BORDER_CROSSING' is not supported by the content."
@@ -87,6 +83,10 @@
       "decision": "EXCLUDE",
       "reason": "The claim about weapons being intercepted being delivered to migrants in the UK is unverified and lacks any supporting evidence. The narrative includes political rhetoric and calls for regime change unrelated to a verified migration event. The event type is not supported by any concrete, contemporaneous migration event reporting."
     },
+    "post:723": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a political commentary referring to a past border closure and claims about political corruption. It does not report a concrete, contemporary migration-related event or current border measure action. The event_type 'BORDER_MEASURE' is not supported by the content as no actual recent border measure is described."
+    },
     "signal:1184": {
       "decision": "REVIEW",
       "reason": "The record reports a claimed early warning about a migrant caravan moving toward the United States, which fits the migration-specific early warning category. However, the information is incomplete and lacks specifics such as exact timing, location, or confirmation from other sources to verify the early warning's validity or concreteness."
@@ -94,10 +94,6 @@
     "signal:1185": {
       "decision": "REVIEW",
       "reason": "The post claims a migrant caravan is currently moving toward the US, indicating a migration-specific early warning. However, it lacks concrete details about the caravan's size, route, or verifying information to confirm the event's actuality. The timing is speculative and no independent corroboration is available from the content provided."
-    },
-    "signal:1186": {
-      "decision": "REVIEW",
-      "reason": "The text claims a migrant caravan is currently moving toward the United States, which matches the movement early warning type. However, the claim is incomplete and lacks specific timing, route details, or corroboration to assess the immediacy or scale of the movement. The mention of election timing indicates a future conditional concern rather than"
     },
     "signal:1188": {
       "decision": "EXCLUDE",
@@ -167,13 +163,13 @@
       "decision": "EXCLUDE",
       "reason": "The content is a vague political commentary with no concrete, contemporary migration-specific early warning event described or supported. It contains inflammatory rhetoric rather than a factual early warning about migration routes, access, or policy actions."
     },
+    "signal:1207": {
+      "decision": "EXCLUDE",
+      "reason": "The report is a general political commentary on legal frameworks related to migration and does not describe a specific, contemporary migration event or early warning suitable for publishing as a migration-specific signal."
+    },
     "group:571": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
-    },
-    "group:572": {
-      "decision": "REVIEW",
-      "reason": "The post alleges a rescue operation involving migrant children exploited at California marijuana facilities, indicating forced labor and potential trafficking; however, key details such as date, source, and official confirmation are missing, making it difficult to verify the event's occurrence and current status."
     },
     "group:573": {
       "decision": "PUBLISH",
@@ -198,6 +194,10 @@
     "group:578": {
       "decision": "EXCLUDE",
       "reason": "The post contains an unsubstantiated claim about weapons being delivered to migrants in the UK without any concrete details or evidence. It also conflates migration with regime change and political rhetoric, lacking a clear, verifiable migration-related event. The event_type 'INTERCEPTION' is not supported by the content, and no specific time or lo"
+    },
+    "group:579": {
+      "decision": "EXCLUDE",
+      "reason": "The post makes generalized political claims without reporting a specific, concrete, and contemporary migration-related border event or policy measure. There is no verifiable description of an operational border closure or measure; instead, it references past actions and political opinions without supporting evidence. The event type BORDER_MEASURE i"
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -794,6 +794,10 @@
     "signal:1183": {
       "decision": "PUBLISH",
       "reason": "The record reports a contemporary migration-specific early warning about facilitation activities by Russian and Belarusian intelligence aiding migrant flows to EU borders, supported by details such as phone data and official reports from Latvian authorities, matching the FACILITATION_EARLY_WARNING event type."
+    },
+    "signal:1186": {
+      "decision": "REVIEW",
+      "reason": "The text claims a migrant caravan is currently moving toward the United States, which matches the movement early warning type. However, the claim is incomplete and lacks specific timing, route details, or corroboration to assess the immediacy or scale of the movement. The mention of election timing indicates a future conditional concern rather than"
     },
     "signal:1187": {
       "decision": "REVIEW",
