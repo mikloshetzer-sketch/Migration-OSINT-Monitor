@@ -1,21 +1,15 @@
 {
-  "generated_at": "2026-10-25T20:09:14.916886+00:00",
+  "generated_at": "2026-10-25T23:43:08.342916+00:00",
   "version": "3.0",
-  "candidates": 211,
-  "new_ai_calls": 8,
-  "conflicting_identity_ids": [],
+  "candidates": 213,
+  "new_ai_calls": 5,
+  "conflicting_identity_ids": [
+    "group:583"
+  ],
   "decisions": {
-    "post:707": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete and contemporary event involving a large number of illegal migrants arriving in the Canary Islands within the last 48 hours, including specific numbers of migrants and boats. This fits the BORDER_CROSSING event type and qualifies as a migration-specific event with operational impact."
-    },
     "post:708": {
       "decision": "EXCLUDE",
       "reason": "The post is a query requesting confirmation and statistics about open borders and migrant arrivals in France, not a report of a concrete, contemporary migration event or early warning. It lacks any event or factual data."
-    },
-    "post:709": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete, contemporary migration-related event describing a large wave of illegal boat migrants arriving in the Canary Islands with specific numbers and timing, matching the BORDER_CROSSING event type."
     },
     "post:710": {
       "decision": "EXCLUDE",
@@ -85,17 +79,13 @@
       "decision": "EXCLUDE",
       "reason": "The event describes the arrival of a Long-eared Owl, which is a bird species, not a human migrant. This is not a migration-related event concerning people crossing borders or migration policy."
     },
-    "signal:1198": {
+    "post:727": {
       "decision": "EXCLUDE",
-      "reason": "The record discusses societal and economic effects of the COVID-19 pandemic on volunteering in Victoria and general political/economic commentary. It does not report a concrete, contemporary migration-related event, nor migration-specific early warning or policy action. The event_type 'MOBILIZATION_COORDINATION' is not supported by the content, whi"
+      "reason": "The post discusses the heritage and ancestry of President Bukele and does not report a concrete, contemporary migration-related event such as a border crossing, migration-specific early warning, or policy action."
     },
-    "signal:1199": {
-      "decision": "PUBLISH",
-      "reason": "The record reports a contemporary, concrete migration-specific early warning event involving new national border control legislation and migrant expulsions by the Italian Prime Minister. This is migration-related and matches the signal event type of PRESSURE_EARLY_WARNING."
-    },
-    "signal:1200": {
-      "decision": "REVIEW",
-      "reason": "The post mentions increasing migrant boat arrivals but provides no concrete contemporary event details, locations, or specific data to support a clear migration early warning event. The text is a general claim without a specific event or verified signal."
+    "post:728": {
+      "decision": "EXCLUDE",
+      "reason": "The record is a commentary on President Bukele's ancestry and does not report a concrete, contemporary migration-related event such as a border crossing, migration movement, or policy action."
     },
     "signal:1203": {
       "decision": "EXCLUDE",
@@ -149,13 +139,13 @@
       "decision": "REVIEW",
       "reason": "The record describes a general narrative about migration trends without reporting a concrete, specific, contemporary migration-related event or specific early warning with facts or data. It is more of an observation or opinion rather than a verifiable signal or event."
     },
-    "group:573": {
-      "decision": "PUBLISH",
-      "reason": "The record reports a concrete migration-related event involving the detention of a boat skipper who moved migrants. The event is migration-specific and contemporary given the recent last_seen date, even though the published_at field is empty. The detention event type matches the described content."
-    },
-    "group:575": {
+    "signal:1217": {
       "decision": "EXCLUDE",
-      "reason": "Event concerns avalanche on Broad Peak involving climbers, unrelated to human migration events or migration-specific issues."
+      "reason": "The report concerns a political controversy about a purported state program and related claims of fraud; it does not describe an actual migration-specific event, movement, or early warning directly related to migration flows or policies. The event type as a migration early warning is unsupported by the content, which is opinionated and lacks eviden"
+    },
+    "signal:1218": {
+      "decision": "REVIEW",
+      "reason": "The post discusses federal transport costs related to migrants but does not provide a concrete, contemporary migration-specific early warning, policy action, or route/access signal. The content is accusatory and lacks specific details on a migration event or action."
     },
     "group:576": {
       "decision": "EXCLUDE",
@@ -184,6 +174,14 @@
     "group:582": {
       "decision": "EXCLUDE",
       "reason": "The event describes the arrival of a Long-eared Owl, which is a bird species, not a human migrant. Thus, it is unrelated to human migration events."
+    },
+    "group:583": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:584": {
+      "decision": "EXCLUDE",
+      "reason": "The post discusses the ancestry of President Bukele but does not report any concrete, contemporary migration-related event such as a border crossing or migration operation. It is commentary on heritage, not an operational migration event."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -836,6 +834,18 @@
     "signal:1197": {
       "decision": "REVIEW",
       "reason": "The claim involves a future date (2026) which is beyond the current knowledge cutoff and is unverified. The event description is alarming but lacks concrete details such as location or official confirmation. The event type (ENFORCEMENT_EARLY_WARNING) is plausible for a potential security-related warning but cannot be confirmed as specific to migrat"
+    },
+    "signal:1198": {
+      "decision": "EXCLUDE",
+      "reason": "The record discusses societal and economic effects of the COVID-19 pandemic on volunteering in Victoria and general political/economic commentary. It does not report a concrete, contemporary migration-related event, nor migration-specific early warning or policy action. The event_type 'MOBILIZATION_COORDINATION' is not supported by the content, whi"
+    },
+    "signal:1199": {
+      "decision": "PUBLISH",
+      "reason": "The record reports a contemporary, concrete migration-specific early warning event involving new national border control legislation and migrant expulsions by the Italian Prime Minister. This is migration-related and matches the signal event type of PRESSURE_EARLY_WARNING."
+    },
+    "signal:1200": {
+      "decision": "REVIEW",
+      "reason": "The post mentions increasing migrant boat arrivals but provides no concrete contemporary event details, locations, or specific data to support a clear migration early warning event. The text is a general claim without a specific event or verified signal."
     },
     "signal:1201": {
       "decision": "REVIEW",
