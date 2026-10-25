@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-25T02:06:28.659205+00:00",
+  "generated_at": "2026-10-25T07:25:45.218142+00:00",
   "version": "3.0",
-  "candidates": 198,
-  "new_ai_calls": 6,
+  "candidates": 200,
+  "new_ai_calls": 2,
   "conflicting_identity_ids": [
     "group:571"
   ],
@@ -87,10 +87,6 @@
       "decision": "EXCLUDE",
       "reason": "The claim about weapons being intercepted being delivered to migrants in the UK is unverified and lacks any supporting evidence. The narrative includes political rhetoric and calls for regime change unrelated to a verified migration event. The event type is not supported by any concrete, contemporaneous migration event reporting."
     },
-    "signal:1183": {
-      "decision": "PUBLISH",
-      "reason": "The record reports a contemporary migration-specific early warning about facilitation activities by Russian and Belarusian intelligence aiding migrant flows to EU borders, supported by details such as phone data and official reports from Latvian authorities, matching the FACILITATION_EARLY_WARNING event type."
-    },
     "signal:1184": {
       "decision": "REVIEW",
       "reason": "The record reports a claimed early warning about a migrant caravan moving toward the United States, which fits the migration-specific early warning category. However, the information is incomplete and lacks specifics such as exact timing, location, or confirmation from other sources to verify the early warning's validity or concreteness."
@@ -102,10 +98,6 @@
     "signal:1186": {
       "decision": "REVIEW",
       "reason": "The text claims a migrant caravan is currently moving toward the United States, which matches the movement early warning type. However, the claim is incomplete and lacks specific timing, route details, or corroboration to assess the immediacy or scale of the movement. The mention of election timing indicates a future conditional concern rather than"
-    },
-    "signal:1187": {
-      "decision": "REVIEW",
-      "reason": "The post mentions a migrant caravan currently moving toward the United States, which is a migration-specific early warning. However, the location is unspecified and the timing is uncertain as it speculates about coinciding with upcoming elections, which is not a concrete event. Additional information required to verify the immediacy and specifics."
     },
     "signal:1188": {
       "decision": "EXCLUDE",
@@ -166,6 +158,14 @@
     "signal:1204": {
       "decision": "EXCLUDE",
       "reason": "The record describes historical migration events from 1948-1950s, not a contemporary migration-specific early warning or signal event. The assigned event_type 'FACILITATION_EARLY_WARNING' is incorrect for this post, which is a historical recollection rather than an ongoing or future migration event. The record does not mention any active or imminen"
+    },
+    "signal:1205": {
+      "decision": "EXCLUDE",
+      "reason": "The post contains unverified claims about crime attributed to migrants without concrete event reporting or evidence. It is a general negative narrative rather than a specific migration event or verified early warning."
+    },
+    "signal:1206": {
+      "decision": "EXCLUDE",
+      "reason": "The content is a vague political commentary with no concrete, contemporary migration-specific early warning event described or supported. It contains inflammatory rhetoric rather than a factual early warning about migration routes, access, or policy actions."
     },
     "group:571": {
       "decision": "REVIEW",
@@ -790,6 +790,14 @@
     "signal:1182": {
       "decision": "REVIEW",
       "reason": "The report discusses climate migrants arriving in cities, indicating a current migration-related issue consistent with an early warning signal. However, the source is a social media post referencing an article dated in the future (2026-10), the event location is unspecified, and there is no independent verification of the migration event itself bey"
+    },
+    "signal:1183": {
+      "decision": "PUBLISH",
+      "reason": "The record reports a contemporary migration-specific early warning about facilitation activities by Russian and Belarusian intelligence aiding migrant flows to EU borders, supported by details such as phone data and official reports from Latvian authorities, matching the FACILITATION_EARLY_WARNING event type."
+    },
+    "signal:1187": {
+      "decision": "REVIEW",
+      "reason": "The post mentions a migrant caravan currently moving toward the United States, which is a migration-specific early warning. However, the location is unspecified and the timing is uncertain as it speculates about coinciding with upcoming elections, which is not a concrete event. Additional information required to verify the immediacy and specifics."
     },
     "signal:1201": {
       "decision": "REVIEW",
