@@ -1,31 +1,15 @@
 {
-  "generated_at": "2026-10-25T23:43:08.342916+00:00",
+  "generated_at": "2026-10-26T02:05:09.738938+00:00",
   "version": "3.0",
-  "candidates": 213,
-  "new_ai_calls": 5,
+  "candidates": 214,
+  "new_ai_calls": 6,
   "conflicting_identity_ids": [
     "group:583"
   ],
   "decisions": {
-    "post:708": {
-      "decision": "EXCLUDE",
-      "reason": "The post is a query requesting confirmation and statistics about open borders and migrant arrivals in France, not a report of a concrete, contemporary migration event or early warning. It lacks any event or factual data."
-    },
-    "post:710": {
-      "decision": "EXCLUDE",
-      "reason": "The post contains offensive language and a general call for deportation without reporting a specific, concrete migration-related event. The event_type 'DEPORTATION' is not supported by the content, which lacks any factual report of deportation action."
-    },
-    "post:711": {
-      "decision": "EXCLUDE",
-      "reason": "The post discusses historical migration during the late Ottoman and British Mandate periods, which is not a contemporary migration event. It is a historical narration and does not describe a current or recent migration event or early warning."
-    },
     "post:712": {
       "decision": "EXCLUDE",
       "reason": "The post expresses an opinion about deportation policy but does not report any concrete, contemporary migration-related event such as an actual deportation or policy action."
-    },
-    "post:713": {
-      "decision": "REVIEW",
-      "reason": "Inconsistent approval: The post reports a concrete and contemporary migration-related event involving a large number of migrants crossing into Ceuta, Spain, with additional security forces deployed. The event type 'BORDER_CROSSING' is appropriate for this report, which describes an actual border crossing crisis. Although the source is a social medi"
     },
     "post:714": {
       "decision": "REVIEW",
@@ -87,13 +71,21 @@
       "decision": "EXCLUDE",
       "reason": "The record is a commentary on President Bukele's ancestry and does not report a concrete, contemporary migration-related event such as a border crossing, migration movement, or policy action."
     },
-    "signal:1203": {
+    "post:729": {
       "decision": "EXCLUDE",
-      "reason": "The message reports a general statement of support for a migrant rescue mission but does not confirm an actual, contemporary event of mobilization or coordination of a rescue operation. The event date is in the future and no operational details or actions are provided."
+      "reason": "The record describes law enforcement targeting illegal weapon importers, not a migration-specific event like interception of migrants or migration routes. The event is not related to migration operations or early warnings concerning migration."
     },
-    "signal:1204": {
+    "post:730": {
+      "decision": "REVIEW",
+      "reason": "The post reports a detention of a specific migrant in Italy linked to alleged activities, which is a concrete migration-related event. However, the information lacks details on the migration context, confirmation, and current status of the event. More verification or additional context is needed before publishing."
+    },
+    "post:731": {
       "decision": "EXCLUDE",
-      "reason": "The record describes historical migration events from 1948-1950s, not a contemporary migration-specific early warning or signal event. The assigned event_type 'FACILITATION_EARLY_WARNING' is incorrect for this post, which is a historical recollection rather than an ongoing or future migration event. The record does not mention any active or imminen"
+      "reason": "The event concerns a police operation targeting illegal weapon importation, not a migration-specific event or migration-related operation; no migration-related event type is supported here."
+    },
+    "post:732": {
+      "decision": "EXCLUDE",
+      "reason": "The reported event relates to a police operation intercepting illegal weapon imports, not a migration-specific event. The location is not a migrant center and no migration-related aspect is described or implied."
     },
     "signal:1205": {
       "decision": "EXCLUDE",
@@ -147,9 +139,9 @@
       "decision": "REVIEW",
       "reason": "The post discusses federal transport costs related to migrants but does not provide a concrete, contemporary migration-specific early warning, policy action, or route/access signal. The content is accusatory and lacks specific details on a migration event or action."
     },
-    "group:576": {
-      "decision": "EXCLUDE",
-      "reason": "The post is a historical commentary or comparison referring to events from 1652, not reporting a concrete, contemporary migration-related event or border crossing. No actual border crossing event is described or evidenced."
+    "group:574": {
+      "decision": "REVIEW",
+      "reason": "The post reports the detention of a migrant in Italy but lacks details on whether this is a recent and migration-specific operational event. The event timing is uncertain and lacks supporting source information, so further verification is needed."
     },
     "group:577": {
       "decision": "REVIEW",
@@ -182,6 +174,10 @@
     "group:584": {
       "decision": "EXCLUDE",
       "reason": "The post discusses the ancestry of President Bukele but does not report any concrete, contemporary migration-related event such as a border crossing or migration operation. It is commentary on heritage, not an operational migration event."
+    },
+    "group:585": {
+      "decision": "EXCLUDE",
+      "reason": "The event describes an interception of illegal weapons but does not report a migration-related event or specifically involve migrants or migration-related issues."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -854,6 +850,14 @@
     "signal:1202": {
       "decision": "REVIEW",
       "reason": "The report is about a UK aid program stopping migration attempts, which may fit as a facilitation early warning, but location is unspecified and source is Reddit without further corroboration. More detail is needed to confirm a concrete, contemporary migration-specific event or early warning."
+    },
+    "signal:1203": {
+      "decision": "EXCLUDE",
+      "reason": "The message reports a general statement of support for a migrant rescue mission but does not confirm an actual, contemporary event of mobilization or coordination of a rescue operation. The event date is in the future and no operational details or actions are provided."
+    },
+    "signal:1204": {
+      "decision": "EXCLUDE",
+      "reason": "The record describes historical migration events from 1948-1950s, not a contemporary migration-specific early warning or signal event. The assigned event_type 'FACILITATION_EARLY_WARNING' is incorrect for this post, which is a historical recollection rather than an ongoing or future migration event. The record does not mention any active or imminen"
     },
     "signal:1211": {
       "decision": "PUBLISH",
