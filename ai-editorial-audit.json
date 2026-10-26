@@ -1,16 +1,13 @@
 {
-  "generated_at": "2026-10-26T09:30:50.440499+00:00",
+  "generated_at": "2026-10-26T16:25:29.289816+00:00",
   "version": "3.0",
-  "candidates": 218,
-  "new_ai_calls": 15,
+  "candidates": 219,
+  "new_ai_calls": 2,
   "conflicting_identity_ids": [
-    "group:583"
+    "group:583",
+    "group:590"
   ],
   "decisions": {
-    "post:719": {
-      "decision": "EXCLUDE",
-      "reason": "The text is a general political commentary comparing historical events and does not report a concrete, contemporary migration-related event."
-    },
     "post:720": {
       "decision": "PUBLISH",
       "reason": "The post reports a concrete, contemporary migration-related event involving the arrival of over 400 illegal migrants to Spain's El Hierro in a single day with specific numbers of people and boats, indicating a border crossing event. This supports the specified event_type 'BORDER_CROSSING'."
@@ -87,13 +84,9 @@
       "decision": "EXCLUDE",
       "reason": "The text is a political commentary or opinion referencing past refugee arrival, without reporting a concrete, contemporary migration-related event like an actual border crossing."
     },
-    "signal:1207": {
-      "decision": "EXCLUDE",
-      "reason": "The report is a general political commentary on legal frameworks related to migration and does not describe a specific, contemporary migration event or early warning suitable for publishing as a migration-specific signal."
-    },
-    "signal:1208": {
-      "decision": "EXCLUDE",
-      "reason": "The text is a fictional narrative describing an individual's social credit ranking system and personal circumstances, with no concrete or contemporary migration-specific event, early warning, policy action, or route/access signal reported. It does not describe a migration operational event or a relevant early warning signal. The event_type 'MOVEMEN"
+    "post:739": {
+      "decision": "REVIEW",
+      "reason": "The report lacks specific details such as the exact location, timing, and source credibility to fully verify the interception event. The source 'REDDIT' is insufficient for confirmation without additional corroboration."
     },
     "signal:1209": {
       "decision": "REVIEW",
@@ -151,13 +144,13 @@
       "decision": "PUBLISH",
       "reason": "The record describes a concrete and contemporary migration-related event involving the transport of hundreds of undocumented migrants towards Orléans from multiple cities, supported by a recent date and police interception details; it aligns with the FACILITATION_EARLY_WARNING event type as a current migration-specific early warning."
     },
+    "signal:1224": {
+      "decision": "PUBLISH",
+      "reason": "The report describes a concrete, contemporary migration-related event involving Moroccan migrants who recently crossed into Ceuta and are now returning home after failing to reach mainland Europe. The event involves actual migrant movement and is migration-specific, fitting the MOVEMENT_EARLY_WARNING signal type as it highlights migration dynamics "
+    },
     "group:574": {
       "decision": "REVIEW",
       "reason": "The post reports the detention of a migrant in Italy but lacks details on whether this is a recent and migration-specific operational event. The event timing is uncertain and lacks supporting source information, so further verification is needed."
-    },
-    "group:582": {
-      "decision": "EXCLUDE",
-      "reason": "The event describes the arrival of a Long-eared Owl, which is a bird species, not a human migrant. Thus, it is unrelated to human migration events."
     },
     "group:583": {
       "decision": "REVIEW",
@@ -186,6 +179,10 @@
     "group:589": {
       "decision": "EXCLUDE",
       "reason": "The post does not describe a concrete, contemporary migration-related event or crossing. It is an opinion about refugees and territorial claims without reporting an operational migration event or border crossing."
+    },
+    "group:590": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -874,6 +871,14 @@
     "signal:1206": {
       "decision": "EXCLUDE",
       "reason": "The content is a vague political commentary with no concrete, contemporary migration-specific early warning event described or supported. It contains inflammatory rhetoric rather than a factual early warning about migration routes, access, or policy actions."
+    },
+    "signal:1207": {
+      "decision": "EXCLUDE",
+      "reason": "The report is a general political commentary on legal frameworks related to migration and does not describe a specific, contemporary migration event or early warning suitable for publishing as a migration-specific signal."
+    },
+    "signal:1208": {
+      "decision": "EXCLUDE",
+      "reason": "The text is a fictional narrative describing an individual's social credit ranking system and personal circumstances, with no concrete or contemporary migration-specific event, early warning, policy action, or route/access signal reported. It does not describe a migration operational event or a relevant early warning signal. The event_type 'MOVEMEN"
     },
     "signal:1211": {
       "decision": "PUBLISH",
