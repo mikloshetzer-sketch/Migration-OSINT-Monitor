@@ -1,19 +1,16 @@
 {
-  "generated_at": "2026-10-27T19:08:13.272275+00:00",
+  "generated_at": "2026-10-27T23:23:12.936881+00:00",
   "version": "3.0",
-  "candidates": 232,
-  "new_ai_calls": 4,
+  "candidates": 235,
+  "new_ai_calls": 9,
   "conflicting_identity_ids": [
     "group:590",
-    "group:593",
     "group:594",
-    "group:597"
+    "group:597",
+    "group:601",
+    "group:602"
   ],
   "decisions": {
-    "post:731": {
-      "decision": "EXCLUDE",
-      "reason": "The event concerns a police operation targeting illegal weapon importation, not a migration-specific event or migration-related operation; no migration-related event type is supported here."
-    },
     "post:733": {
       "decision": "REVIEW",
       "reason": "The event describes a migration-related arrival indicating a potential border crossing of illegal sub-Saharan migrants by boat to El Hierro, Canary Islands, which is consistent with the event type 'BORDER_CROSSING'. However, the post's date is future relative to the knowledge cutoff and source details are limited, so independent verification or cor"
@@ -21,18 +18,6 @@
     "post:734": {
       "decision": "REVIEW",
       "reason": "Inconsistent approval: The post reports a concrete, contemporary migration event involving a significant number of migrants crossing borders in the Red Sea & Gulf of Aden region in 2026, with specific figures and timing, which aligns with the event type BORDER_CROSSING."
-    },
-    "post:735": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete and contemporary migration-related event involving migrant casualties in a vehicle crash. The event type CASUALTY is appropriate based on the content. Despite the future publication date, the event date (11/7) indicates a specific incident, which warrants publishing."
-    },
-    "post:736": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete, contemporary migration-related event: the arrival of a cayuco boat with 158 sub-Saharan migrants to the Canary Islands, which is a known migration route. The event type BORDER_CROSSING is appropriate and supported by the text. The information is recent and specific, describing the migrants' arrival and planned onward mo"
-    },
-    "post:737": {
-      "decision": "REVIEW",
-      "reason": "The post references arrests of Dutch nationals for suspected migrant smuggling in Croatia, but the event date is in the future (2026-10-26), making the timing questionable and not contemporary. Location is unspecified and details insufficient for full verification. Need further corroboration and clarification."
     },
     "post:738": {
       "decision": "EXCLUDE",
@@ -90,17 +75,21 @@
       "decision": "EXCLUDE",
       "reason": "The post discusses reasons for Turkey building a border wall with Iran, but does not report a concrete, contemporary migration-related event or a specific current border crossing activity. It is a general explanation rather than an operational event or early warning."
     },
-    "signal:1225": {
+    "post:752": {
       "decision": "EXCLUDE",
-      "reason": "The content does not report a concrete, contemporary migration-specific event. It describes a review of archival media content and narratives rather than an operational migration event or an early warning of a migration-related development."
+      "reason": "The post contains political commentary and unsubstantiated allegations about 'Putin weaponizing poor Muslims and Africans' without reporting a concrete, contemporary migration-related event. No actual border crossing event or verified migration-specific information is presented. The location is unspecified and no corroboration is provided."
     },
-    "signal:1226": {
+    "post:753": {
+      "decision": "REVIEW",
+      "reason": "The post reports deportation of migrants from Spain to Morocco, which aligns with the DEPORTATION event type. However, the event date is in the future (2026-10-27), which is beyond the knowledge cutoff and current date. Without confirmation of the event being contemporary or already completed, the record requires review."
+    },
+    "post:754": {
       "decision": "EXCLUDE",
-      "reason": "The post does not report a concrete, contemporary migration-related event; it is a speculative political-economic commentary without an actual crossing facilitation event or early warning signal."
+      "reason": "The content is a general political commentary on ancestry and immigration history, with no report or evidence of a specific, contemporary migration-related event such as a border crossing or movement."
     },
-    "signal:1227": {
-      "decision": "PUBLISH",
-      "reason": "This signal provides a contemporary and specific early warning about a potential barrier in urgent processing of citizenship applications related to amended documents, particularly birth certificates with legal name and gender marker changes, which is migration-specific and operationally relevant."
+    "post:755": {
+      "decision": "REVIEW",
+      "reason": "The post mentions '8400 migrants have arrived' suggesting a migration-related event, but provides no corroborating details such as location, timing, or context to confirm a concrete, contemporary migration event. The event type BORDER_CROSSING may be appropriate if further details confirm it, but current data is insufficient."
     },
     "signal:1228": {
       "decision": "EXCLUDE",
@@ -130,9 +119,21 @@
       "decision": "EXCLUDE",
       "reason": "The record contains general political commentary on Libya and historical events, not a specific, concrete, contemporary migration-related event or early warning. It does not report an operational migration event or actionable early warning relevant to migration routes or policies."
     },
+    "signal:1237": {
+      "decision": "REVIEW",
+      "reason": "The post reports a statistical trend suggesting increased voluntary departures and decreased entries of Venezuelan migrants, implying a migration-related development. However, it lacks specific details about a concrete, ongoing migration event or direct operational signal. The source is social media without verification, and the event type 'MOVEMEN"
+    },
+    "signal:1238": {
+      "decision": "REVIEW",
+      "reason": "The event date (July 30, 2026) is in the future relative to the publication date, so it cannot be confirmed as a completed or ongoing event now. It is a migration-specific early warning about a mass crossing; however, future events should be carefully evaluated. More corroboration is needed to confirm the event's occurrence and details."
+    },
+    "signal:1239": {
+      "decision": "PUBLISH",
+      "reason": "This is a migration-specific early warning signal reporting an actual incident where Moroccan police intercepted and returned a migrant attempting to swim to Spain's Ceuta enclave. It involves border enforcement related to a migration route, supporting the ROUTE_EARLY_WARNING event type and a concrete, contemporary migration event."
+    },
     "group:547": {
       "decision": "REVIEW",
-      "reason": "The post reports judicial sentences related to immigrants and mentions expulsions but does not specify a concrete, contemporary deportation event taking place now. It mentions conditions (apagon) impacting the trials but lacks details confirming the event's nature and timing as an operational deportation occurrence."
+      "reason": "The post reports judicial actions related to immigrants and mentions expulsions, consistent with deportations. However, the details are vague about whether the deportations are concrete and current events or court rulings with enforced expulsions. Source credibility is unclear and event timing is uncertain due to future last_seen date."
     },
     "group:573": {
       "decision": "REVIEW",
@@ -142,21 +143,9 @@
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
     },
-    "group:593": {
-      "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
-    },
     "group:594": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
-    },
-    "group:595": {
-      "decision": "EXCLUDE",
-      "reason": "The record is a general political commentary listing various claimed social and economic outcomes, including a broad statement about illegal migrant deportations, but it does not report a concrete, contemporary migration-related event. It lacks details on a specific deportation event or operational migration activity."
-    },
-    "group:596": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete, contemporary migration-related event: the rescue of 47 irregular migrants by a Turkish chemical tanker, which matches the event type RESCUE_OPERATION. There is no conflicting information against the nature of the event; thus it is suitable for publishing."
     },
     "group:597": {
       "decision": "REVIEW",
@@ -169,6 +158,18 @@
     "group:599": {
       "decision": "EXCLUDE",
       "reason": "The text discusses reasons for Turkey building a border wall with Iran but does not report a specific or contemporary migration event such as a crossing, interception, or new policy implementation. The event_type 'BORDER_CROSSING' is not supported by the content, which is more of a general statement rather than reporting an operational event."
+    },
+    "group:600": {
+      "decision": "EXCLUDE",
+      "reason": "The post contains political commentary and conspiracy claims without reporting any specific, concrete, or contemporary migration-related event or verified border crossing. No actionable migration event is described."
+    },
+    "group:601": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:602": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -929,6 +930,18 @@
     "signal:1224": {
       "decision": "PUBLISH",
       "reason": "The report describes a concrete, contemporary migration-related event involving Moroccan migrants who recently crossed into Ceuta and are now returning home after failing to reach mainland Europe. The event involves actual migrant movement and is migration-specific, fitting the MOVEMENT_EARLY_WARNING signal type as it highlights migration dynamics "
+    },
+    "signal:1225": {
+      "decision": "EXCLUDE",
+      "reason": "The content does not report a concrete, contemporary migration-specific event. It describes a review of archival media content and narratives rather than an operational migration event or an early warning of a migration-related development."
+    },
+    "signal:1226": {
+      "decision": "EXCLUDE",
+      "reason": "The post does not report a concrete, contemporary migration-related event; it is a speculative political-economic commentary without an actual crossing facilitation event or early warning signal."
+    },
+    "signal:1227": {
+      "decision": "PUBLISH",
+      "reason": "This signal provides a contemporary and specific early warning about a potential barrier in urgent processing of citizenship applications related to amended documents, particularly birth certificates with legal name and gender marker changes, which is migration-specific and operationally relevant."
     },
     "signal:1234": {
       "decision": "REVIEW",
