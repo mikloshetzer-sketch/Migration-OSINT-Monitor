@@ -1,16 +1,13 @@
 {
-  "generated_at": "2026-10-27T01:14:36.524265+00:00",
+  "generated_at": "2026-10-27T07:01:18.640191+00:00",
   "version": "3.0",
-  "candidates": 222,
-  "new_ai_calls": 0,
+  "candidates": 228,
+  "new_ai_calls": 7,
   "conflicting_identity_ids": [
-    "group:590"
+    "group:590",
+    "group:593"
   ],
   "decisions": {
-    "post:723": {
-      "decision": "EXCLUDE",
-      "reason": "The post is a political commentary referring to a past border closure and claims about political corruption. It does not report a concrete, contemporary migration-related event or current border measure action. The event_type 'BORDER_MEASURE' is not supported by the content as no actual recent border measure is described."
-    },
     "post:724": {
       "decision": "EXCLUDE",
       "reason": "The post includes an unsubstantiated and general claim about migrants breaking into the country without concrete details about any specific recent border crossing event. It lacks a clear, contemporary migration-related event or early warning. The location and timing are vague, and no verified information supports the assertion. Therefore, it does n"
@@ -87,6 +84,10 @@
       "decision": "EXCLUDE",
       "reason": "The event concerns an asylum appeal outcome related to a personal situation and death threats, not a concrete migration event such as a deportation action or early warning about migration routes. The event type 'DEPORTATION' is not correctly assigned because the migrant was not deported; instead, deportation was avoided. This does not report a curr"
     },
+    "post:743": {
+      "decision": "REVIEW",
+      "reason": "The post references deportation of Syrian refugees from camps in Jordan into the Syrian desert, which suggests a migration-related event. However, the information is unverified, anecdotal, and lacks specificity or corroboration about the timing and scale of such deportations. The event date is unclear, and the location is vague. Additional verifica"
+    },
     "signal:1219": {
       "decision": "REVIEW",
       "reason": "The text reports statistics about the number of migrant workers with patents in Moscow and Russia in general for the first nine months of 2026, which is recent data. However, it describes current registered numbers and a decrease compared to previous year but does not indicate a specific migration-related early warning event or policy action as req"
@@ -123,13 +124,33 @@
       "decision": "PUBLISH",
       "reason": "This signal provides a contemporary and specific early warning about a potential barrier in urgent processing of citizenship applications related to amended documents, particularly birth certificates with legal name and gender marker changes, which is migration-specific and operationally relevant."
     },
+    "signal:1228": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a general inquiry about the feasibility and requirements of obtaining a sponsored job in the Netherlands as an accountant. It does not report a concrete, contemporary migration-related event or an early warning signal related to migration policy or routes. It is a personal question seeking advice, without an actual event or policy actio"
+    },
+    "signal:1229": {
+      "decision": "EXCLUDE",
+      "reason": "The event date is in the future relative to current knowledge cutoff (2024-06). The report is about enforcement but cannot be confirmed as contemporary given the future date, and there is no location beyond generic region, limiting verification. Also, the age of the post is post cutoff, and the signal is not a clear early warning but a summary of p"
+    },
+    "signal:1230": {
+      "decision": "EXCLUDE",
+      "reason": "This is a general political commentary with hostile rhetoric about migration policies and border enforcement; it does not report a specific, concrete, or current migration event or action."
+    },
+    "signal:1231": {
+      "decision": "PUBLISH",
+      "reason": "The record reports a concrete, contemporary migration-related event involving a migrant intercepted attempting to reach Ceuta, matching the MOVEMENT_EARLY_WARNING type as it signals ongoing movement attempts and border enforcement activity. The event is current and clearly migration-specific."
+    },
+    "signal:1232": {
+      "decision": "PUBLISH",
+      "reason": "The report describes a concrete and contemporary migration-related event—a migrant intercepted while attempting to enter Ceuta by swimming, with Moroccan police pursuing into Spanish waters and returning the individual to Morocco. The event is consistent with the assigned type 'MOVEMENT_EARLY_WARNING' as it indicates a migration attempt and enforce"
+    },
+    "signal:1233": {
+      "decision": "REVIEW",
+      "reason": "The claim about all selected applicants being migrants from an internal memorandum is unverified and lacks supporting evidence. The information relates to recruitment of train drivers and migrant selection but does not clearly establish a concrete migration-specific early warning or policy action that can be reliably published without further corro"
+    },
     "group:547": {
       "decision": "REVIEW",
       "reason": "The post reports judicial sentences related to immigrants and mentions expulsions but does not specify a concrete, contemporary deportation event taking place now. It mentions conditions (apagon) impacting the trials but lacks details confirming the event's nature and timing as an operational deportation occurrence."
-    },
-    "group:585": {
-      "decision": "EXCLUDE",
-      "reason": "The event describes an interception of illegal weapons but does not report a migration-related event or specifically involve migrants or migration-related issues."
     },
     "group:586": {
       "decision": "PUBLISH",
@@ -158,6 +179,10 @@
     "group:592": {
       "decision": "REVIEW",
       "reason": "The claim involves a migration-related legal decision (asylum appeal), but lacks details on timing, location, and official sources. The event's currentness and verification status are uncertain, and the event type 'DEPORTATION' is not fully supported as the focus is on asylum appeal outcome, not a deportation event itself."
+    },
+    "group:593": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
     },
     "signal:1034": {
       "decision": "REVIEW",
