@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-27T13:47:47.459432+00:00",
+  "generated_at": "2026-10-27T19:08:13.272275+00:00",
   "version": "3.0",
   "candidates": 232,
-  "new_ai_calls": 12,
+  "new_ai_calls": 4,
   "conflicting_identity_ids": [
     "group:590",
     "group:593",
@@ -10,14 +10,6 @@
     "group:597"
   ],
   "decisions": {
-    "post:729": {
-      "decision": "EXCLUDE",
-      "reason": "The record describes law enforcement targeting illegal weapon importers, not a migration-specific event like interception of migrants or migration routes. The event is not related to migration operations or early warnings concerning migration."
-    },
-    "post:730": {
-      "decision": "REVIEW",
-      "reason": "The post reports a detention of a specific migrant in Italy linked to alleged activities, which is a concrete migration-related event. However, the information lacks details on the migration context, confirmation, and current status of the event. More verification or additional context is needed before publishing."
-    },
     "post:731": {
       "decision": "EXCLUDE",
       "reason": "The event concerns a police operation targeting illegal weapon importation, not a migration-specific event or migration-related operation; no migration-related event type is supported here."
@@ -90,6 +82,14 @@
       "decision": "REVIEW",
       "reason": "The post describes migrants expelled from Mauritania to Senegal with reports of arrests and poor treatment. The event type 'DEPORTATION' corresponds to migrant expulsion, but details on timing and corroboration are lacking; the specific contemporary event is not fully established from this single report."
     },
+    "post:750": {
+      "decision": "EXCLUDE",
+      "reason": "The post reports on arrests following riots but does not confirm that the event is specifically related to migrant movements or migration-specific incidents. The type 'DETENTION' is assigned, but the event's migration relevance is unclear and the narrative mixes unrelated political commentary. No corroborated contemporary migration event is clearly"
+    },
+    "post:751": {
+      "decision": "EXCLUDE",
+      "reason": "The post discusses reasons for Turkey building a border wall with Iran, but does not report a concrete, contemporary migration-related event or a specific current border crossing activity. It is a general explanation rather than an operational event or early warning."
+    },
     "signal:1225": {
       "decision": "EXCLUDE",
       "reason": "The content does not report a concrete, contemporary migration-specific event. It describes a review of archival media content and narratives rather than an operational migration event or an early warning of a migration-related development."
@@ -134,17 +134,13 @@
       "decision": "REVIEW",
       "reason": "The post reports judicial sentences related to immigrants and mentions expulsions but does not specify a concrete, contemporary deportation event taking place now. It mentions conditions (apagon) impacting the trials but lacks details confirming the event's nature and timing as an operational deportation occurrence."
     },
+    "group:573": {
+      "decision": "REVIEW",
+      "reason": "The post claims arrests related to migrant riots and looting in Barcelona, but lacks specific, verifiable details such as timing, sources, and confirmation. Also contains politicized and potentially biased language not pertinent to event verification. Event type 'DETENTION' is possible but unconfirmed here. Requires further corroboration before pub"
+    },
     "group:590": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
-    },
-    "group:591": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete and contemporary migration-related event involving the detention of a migrant smuggler on Crete, which is relevant to migration operational events and matches the assigned event type 'DETENTION'."
-    },
-    "group:592": {
-      "decision": "REVIEW",
-      "reason": "The claim involves a migration-related legal decision (asylum appeal), but lacks details on timing, location, and official sources. The event's currentness and verification status are uncertain, and the event type 'DEPORTATION' is not fully supported as the focus is on asylum appeal outcome, not a deportation event itself."
     },
     "group:593": {
       "decision": "REVIEW",
@@ -169,6 +165,10 @@
     "group:598": {
       "decision": "PUBLISH",
       "reason": "The post reports a concrete migration-related event involving migrants expelled (deported) from Mauritania to Senegal, mentioning arrests despite valid documents and detention conditions upon arrival. This aligns with the event type 'DEPORTATION' and indicates a current operational migration event."
+    },
+    "group:599": {
+      "decision": "EXCLUDE",
+      "reason": "The text discusses reasons for Turkey building a border wall with Iran but does not report a specific or contemporary migration event such as a crossing, interception, or new policy implementation. The event_type 'BORDER_CROSSING' is not supported by the content, which is more of a general statement rather than reporting an operational event."
     },
     "signal:1034": {
       "decision": "REVIEW",
