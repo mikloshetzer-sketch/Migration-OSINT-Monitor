@@ -1,28 +1,16 @@
 {
-  "generated_at": "2026-10-27T23:23:12.936881+00:00",
+  "generated_at": "2026-10-28T02:52:42.761121+00:00",
   "version": "3.0",
-  "candidates": 235,
-  "new_ai_calls": 9,
+  "candidates": 237,
+  "new_ai_calls": 6,
   "conflicting_identity_ids": [
     "group:590",
     "group:594",
-    "group:597",
     "group:601",
-    "group:602"
+    "group:602",
+    "group:603"
   ],
   "decisions": {
-    "post:733": {
-      "decision": "REVIEW",
-      "reason": "The event describes a migration-related arrival indicating a potential border crossing of illegal sub-Saharan migrants by boat to El Hierro, Canary Islands, which is consistent with the event type 'BORDER_CROSSING'. However, the post's date is future relative to the knowledge cutoff and source details are limited, so independent verification or cor"
-    },
-    "post:734": {
-      "decision": "REVIEW",
-      "reason": "Inconsistent approval: The post reports a concrete, contemporary migration event involving a significant number of migrants crossing borders in the Red Sea & Gulf of Aden region in 2026, with specific figures and timing, which aligns with the event type BORDER_CROSSING."
-    },
-    "post:738": {
-      "decision": "EXCLUDE",
-      "reason": "The text is a political commentary or opinion referencing past refugee arrival, without reporting a concrete, contemporary migration-related event like an actual border crossing."
-    },
     "post:739": {
       "decision": "REVIEW",
       "reason": "The report lacks specific details such as the exact location, timing, and source credibility to fully verify the interception event. The source 'REDDIT' is insufficient for confirmation without additional corroboration."
@@ -91,6 +79,18 @@
       "decision": "REVIEW",
       "reason": "The post mentions '8400 migrants have arrived' suggesting a migration-related event, but provides no corroborating details such as location, timing, or context to confirm a concrete, contemporary migration event. The event type BORDER_CROSSING may be appropriate if further details confirm it, but current data is insufficient."
     },
+    "post:756": {
+      "decision": "EXCLUDE",
+      "reason": "The post discusses ancient historical migration (Sea Peoples around 1200 BCE), not a contemporary migration event or early warning related to current migration. The event_type 'BORDER_CROSSING' is inappropriate here as the migration described is ancient and not operational or contemporary."
+    },
+    "post:757": {
+      "decision": "EXCLUDE",
+      "reason": "This is a general political commentary without concrete or specific reporting of a contemporary migration-related deportation event. No verified or specific deportation incident is described."
+    },
+    "post:758": {
+      "decision": "EXCLUDE",
+      "reason": "The post contains political commentary and opinion rather than reporting a concrete, contemporary migration-specific event such as an actual deportation action or policy measure. It does not describe a specific operational event involving migration or deportation."
+    },
     "signal:1228": {
       "decision": "EXCLUDE",
       "reason": "The post is a general inquiry about the feasibility and requirements of obtaining a sponsored job in the Netherlands as an accountant. It does not report a concrete, contemporary migration-related event or an early warning signal related to migration policy or routes. It is a personal question seeking advice, without an actual event or policy actio"
@@ -131,6 +131,14 @@
       "decision": "PUBLISH",
       "reason": "This is a migration-specific early warning signal reporting an actual incident where Moroccan police intercepted and returned a migrant attempting to swim to Spain's Ceuta enclave. It involves border enforcement related to a migration route, supporting the ROUTE_EARLY_WARNING event type and a concrete, contemporary migration event."
     },
+    "signal:1240": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete and recent incident involving a smuggling attempt of migrants via boat, fitting the FACILITATION_EARLY_WARNING event type as it highlights an active migration facilitation event detected by authorities."
+    },
+    "signal:1241": {
+      "decision": "PUBLISH",
+      "reason": "The text provides a migration-specific early warning related to economic opportunity driving Indian migration intentions, supported by survey data indicating key motivations such as financial growth and career advancement, which fits the FACILITATION_EARLY_WARNING event type criteria."
+    },
     "group:547": {
       "decision": "REVIEW",
       "reason": "The post reports judicial actions related to immigrants and mentions expulsions, consistent with deportations. However, the details are vague about whether the deportations are concrete and current events or court rulings with enforced expulsions. Source credibility is unclear and event timing is uncertain due to future last_seen date."
@@ -147,17 +155,13 @@
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
     },
-    "group:597": {
-      "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
-    },
     "group:598": {
       "decision": "PUBLISH",
       "reason": "The post reports a concrete migration-related event involving migrants expelled (deported) from Mauritania to Senegal, mentioning arrests despite valid documents and detention conditions upon arrival. This aligns with the event type 'DEPORTATION' and indicates a current operational migration event."
     },
     "group:599": {
       "decision": "EXCLUDE",
-      "reason": "The text discusses reasons for Turkey building a border wall with Iran but does not report a specific or contemporary migration event such as a crossing, interception, or new policy implementation. The event_type 'BORDER_CROSSING' is not supported by the content, which is more of a general statement rather than reporting an operational event."
+      "reason": "The content discusses ancient historical migrations (~1200 BCE) and genetic ancestry of the Philistines, which is not a contemporary migration event related to current migration or border crossing. The event_type 'BORDER_CROSSING' is incorrect for the described content. No contemporary or migration-specific early warning or policy signal is present"
     },
     "group:600": {
       "decision": "EXCLUDE",
@@ -168,6 +172,10 @@
       "reason": "Conflicting content for the same ID across dashboard sections"
     },
     "group:602": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:603": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
     },
