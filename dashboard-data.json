@@ -1,24 +1,24 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-10-28T02:51:44Z",
-  "generated_at": "2026-10-28T02:51:44Z",
+  "updated_at": "2026-10-28T10:08:38Z",
+  "generated_at": "2026-10-28T10:08:38Z",
   "current_run": {
     "available": true,
-    "id": 359,
-    "run_uuid": "0bcc3f9f-ee55-4df1-bc07-126ba5302f8a",
-    "started_at": "2026-10-28T02:49:06Z",
-    "completed_at": "2026-10-28T02:51:42Z",
+    "id": 360,
+    "run_uuid": "03f9b0a5-45bb-4fe6-b105-7ca0f3c009a2",
+    "started_at": "2026-10-28T10:06:12Z",
+    "completed_at": "2026-10-28T10:08:36Z",
     "status": "SUCCESS",
-    "posts_returned": 141,
-    "unique_posts_collected": 102,
-    "x_posts_returned": 47,
+    "posts_returned": 144,
+    "unique_posts_collected": 106,
+    "x_posts_returned": 50,
     "reddit_posts_returned": 24,
     "mastodon_posts_returned": 50,
-    "unique_x_posts": 44,
+    "unique_x_posts": 48,
     "unique_reddit_posts": 23,
-    "unique_mastodon_posts": 17,
-    "noise_filtered": 1,
-    "non_operational_filtered": 98,
+    "unique_mastodon_posts": 19,
+    "noise_filtered": 0,
+    "non_operational_filtered": 104,
     "historical_references_filtered": 0,
     "influence_signals": 1,
     "influence_signals_detected": 1,
@@ -30,45 +30,69 @@
     "mobilization_report_signals": 0,
     "decision_influence_signals": 0,
     "online_influence_report_signals": 0,
-    "operational_events": 3,
-    "operational_events_analyzed": 3,
-    "historical_events_available": 76,
-    "new_correlations": 2,
-    "correlated_events": 2,
+    "operational_events": 2,
+    "operational_events_analyzed": 2,
+    "historical_events_available": 78,
+    "new_correlations": 1,
+    "correlated_events": 1,
     "new_correlation_groups": 1,
     "database_correlations": 1,
-    "current_run_correlations": 1,
-    "new_events": 3,
-    "new_events_saved": 3,
+    "current_run_correlations": 0,
+    "new_events": 2,
+    "new_events_saved": 2,
     "events_already_existing": 0,
     "new_event_groups": 1,
-    "updated_event_groups": 2,
+    "updated_event_groups": 1,
     "bootstrapped_event_groups": 0,
     "existing_event_groups_reused": 0,
-    "event_group_sources_linked": 3,
+    "event_group_sources_linked": 2,
     "x_collector_errors": 0,
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "error_message": null
   },
   "kpis": {
-    "operational_events": 16,
-    "new_events": 3,
-    "correlated_events": 5,
-    "active_event_groups": 584,
+    "operational_events": 17,
+    "new_events": 2,
+    "correlated_events": 6,
+    "active_event_groups": 585,
     "sources": 4,
-    "regions": 9,
-    "collected_posts_24h": 340,
-    "influence_signals": 12,
-    "access_signals": 1,
+    "regions": 8,
+    "collected_posts_24h": 341,
+    "influence_signals": 9,
+    "access_signals": 0,
     "high_priority": 0,
-    "current_run_operational_events": 3,
-    "current_run_unique_posts": 102,
-    "access_signals_raw": 1,
-    "influence_signals_raw": 12,
+    "current_run_operational_events": 2,
+    "current_run_unique_posts": 106,
+    "access_signals_raw": 0,
+    "influence_signals_raw": 9,
     "influence_narratives": 3
   },
   "live_events": [
+    {
+      "id": 759,
+      "event_id": 759,
+      "source": "X",
+      "source_post_id": "2115368186812014679",
+      "author": "EpochTimes",
+      "published_at": "2026-10-28T09:00:52Z",
+      "collected_at": "2026-10-28T10:07:40Z",
+      "event_type": "INTERCEPTION",
+      "signal_type": "INTERCEPTION",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "confidence": 0.45,
+      "event_confidence": 0.45,
+      "relevance_score": 20.0,
+      "text": "Migrant Swims Toward Ceuta as Police Give Chase \n \nMoroccan police intercepted a migrant swimming toward Spain’s North African exclave of Ceuta on Oct. 26, pursuing him in speedboats before taking him back to Morocco. The incident comes amid a crackdown on migrant encampments. https://t.co/NU5VkP72zc",
+      "url": "https://x.com/EpochTimes/status/2115368186812014679",
+      "source_url": "https://x.com/EpochTimes/status/2115368186812014679",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
     {
       "id": 745,
       "event_id": 745,
@@ -92,72 +116,16 @@
       "source_url": "https://x.com/cgtnafrica/status/2115062547393196359",
       "ai_review_status": "AI_REVIEWED",
       "ai_editorial_decision": "PUBLISH"
-    },
-    {
-      "id": 740,
-      "event_id": 740,
-      "source": "REDDIT",
-      "source_post_id": "reddit_1xfxymj",
-      "author": "Ok_Signal4754",
-      "published_at": "2026-10-26T14:12:32Z",
-      "collected_at": "2026-10-26T22:02:07Z",
-      "event_type": "DETENTION",
-      "signal_type": "DETENTION",
-      "primary_location": "-",
-      "location": "-",
-      "country": "-",
-      "latitude": 35.2401,
-      "longitude": 24.8093,
-      "confidence": 0.45,
-      "event_confidence": 0.45,
-      "relevance_score": 20.0,
-      "text": "Crete: 18-year-old national of South Sudan arrested as smuggler of 67 migrants | Greece\nSource",
-      "url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1xfxymj/crete_18yearold_national_of_south_sudan_arrested/",
-      "source_url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1xfxymj/crete_18yearold_national_of_south_sudan_arrested/",
-      "ai_review_status": "AI_REVIEWED",
-      "ai_editorial_decision": "PUBLISH"
     }
   ],
-  "event_groups": [
-    {
-      "id": 598,
-      "group_id": 598,
-      "event_type": "DEPORTATION",
-      "dominant_event_type": "DEPORTATION",
-      "title": "DEPORTATION - SAHEL",
-      "representative_text": "“They treat us as if we are not human beings.”  Migrants expelled from Mauritania to Senegal report arrests despite valid documents, detention and little assistance on arrival.\nMMC’s Seydou Belem reports from Rosso: https://t.co/BCB9yVss6O",
-      "region": "SAHEL",
-      "primary_region": "SAHEL",
-      "primary_location": "-",
-      "country": "-",
-      "latitude": null,
-      "longitude": null,
-      "first_seen": "2026-10-27T13:00:34Z",
-      "last_seen": "2026-10-27T13:00:34Z",
-      "source_count": 1,
-      "sources_count": 1,
-      "source_types": [
-        "X"
-      ],
-      "sources": [
-        "X"
-      ],
-      "status": "ACTIVE",
-      "confidence": 0.25,
-      "average_confidence": 0.25,
-      "created_at": "2026-10-27T13:45:13Z",
-      "updated_at": "2026-10-27T13:45:13Z",
-      "ai_review_status": "AI_REVIEWED",
-      "ai_editorial_decision": "PUBLISH"
-    }
-  ],
+  "event_groups": [],
   "regions": [
     {
       "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 4,
-      "events": 4,
-      "percentage": 28.57
+      "count": 5,
+      "events": 5,
+      "percentage": 35.71
     },
     {
       "name": "WESTERN_MEDITERRANEAN",
@@ -169,13 +137,6 @@
     {
       "name": "SAHEL",
       "region": "SAHEL",
-      "count": 1,
-      "events": 1,
-      "percentage": 7.14
-    },
-    {
-      "name": "MIDDLE_EAST",
-      "region": "MIDDLE_EAST",
       "count": 1,
       "events": 1,
       "percentage": 7.14
@@ -222,37 +183,37 @@
       "name": "X",
       "count": 235,
       "posts": 235,
-      "percentage": 69.12
+      "percentage": 68.91
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 42,
-      "posts": 42,
-      "percentage": 12.35
+      "count": 46,
+      "posts": 46,
+      "percentage": 13.49
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
       "count": 39,
       "posts": 39,
-      "percentage": 11.47
+      "percentage": 11.44
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 24,
-      "posts": 24,
-      "percentage": 7.06
+      "count": 21,
+      "posts": 21,
+      "percentage": 6.16
     }
   ],
   "region_activity": [
     {
       "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 4,
-      "events": 4,
-      "percentage": 28.57
+      "count": 5,
+      "events": 5,
+      "percentage": 35.71
     },
     {
       "name": "WESTERN_MEDITERRANEAN",
@@ -264,13 +225,6 @@
     {
       "name": "SAHEL",
       "region": "SAHEL",
-      "count": 1,
-      "events": 1,
-      "percentage": 7.14
-    },
-    {
-      "name": "MIDDLE_EAST",
-      "region": "MIDDLE_EAST",
       "count": 1,
       "events": 1,
       "percentage": 7.14
@@ -317,39 +271,39 @@
       "name": "X",
       "count": 235,
       "posts": 235,
-      "percentage": 69.12
+      "percentage": 68.91
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 42,
-      "posts": 42,
-      "percentage": 12.35
+      "count": 46,
+      "posts": 46,
+      "percentage": 13.49
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
       "count": 39,
       "posts": 39,
-      "percentage": 11.47
+      "percentage": 11.44
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 24,
-      "posts": 24,
-      "percentage": 7.06
+      "count": 21,
+      "posts": 21,
+      "percentage": 6.16
     }
   ],
   "correlation": {
-    "correlated_events": 5,
-    "correlated_sources": 5,
-    "grouped_sources": 16,
-    "event_groups": 584,
-    "active_groups": 584,
+    "correlated_events": 6,
+    "correlated_sources": 6,
+    "grouped_sources": 17,
+    "event_groups": 585,
+    "active_groups": 585,
     "multi_source_groups": 59,
     "strongest_match": 1.0,
-    "correlation_rate": 31.25
+    "correlation_rate": 35.29
   },
   "technical_health": "HEALTHY",
   "collector_health": "HEALTHY",
@@ -362,44 +316,44 @@
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "database": "AVAILABLE",
-    "last_run_id": 359,
-    "last_completed_at": "2026-10-28T02:51:42Z"
+    "last_run_id": 360,
+    "last_completed_at": "2026-10-28T10:08:36Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 16,
-    "influence_signals_24h": 12,
-    "access_signals_24h": 1,
-    "correlated_events_24h": 5,
-    "active_event_groups": 584,
+    "operational_events_24h": 17,
+    "influence_signals_24h": 9,
+    "access_signals_24h": 0,
+    "correlated_events_24h": 6,
+    "active_event_groups": 585,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "hotspot": "WESTERN_MEDITERRANEAN",
     "dominant_event_type": "DEPORTATION",
     "dominant_source": "X",
-    "average_confidence": 0.447,
+    "average_confidence": 0.446,
     "confidence_level": "LOW",
-    "correlation_rate": 31.25,
+    "correlation_rate": 35.29,
     "activity_level": "ELEVATED",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 16 operatív migrációs eseményt, 12 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 5 friss eseményforrás korrelált más forrással. Jelenleg 584 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Deportation. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.45. A jelenlegi aktivitási szint: ELEVATED.",
+    "summary": "Az elmúlt 24 órában a rendszer 17 operatív migrációs eseményt, 9 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 6 friss eseményforrás korrelált más forrással. Jelenleg 585 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Deportation. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.45. A jelenlegi aktivitási szint: ELEVATED.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
   "analytical_assessment": {
-    "operational_events_24h": 16,
-    "influence_signals_24h": 12,
-    "access_signals_24h": 1,
-    "correlated_events_24h": 5,
-    "active_event_groups": 584,
+    "operational_events_24h": 17,
+    "influence_signals_24h": 9,
+    "access_signals_24h": 0,
+    "correlated_events_24h": 6,
+    "active_event_groups": 585,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "hotspot": "WESTERN_MEDITERRANEAN",
     "dominant_event_type": "DEPORTATION",
     "dominant_source": "X",
-    "average_confidence": 0.447,
+    "average_confidence": 0.446,
     "confidence_level": "LOW",
-    "correlation_rate": 31.25,
+    "correlation_rate": 35.29,
     "activity_level": "ELEVATED",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 16 operatív migrációs eseményt, 12 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 5 friss eseményforrás korrelált más forrással. Jelenleg 584 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Deportation. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.45. A jelenlegi aktivitási szint: ELEVATED.",
+    "summary": "Az elmúlt 24 órában a rendszer 17 operatív migrációs eseményt, 9 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 6 friss eseményforrás korrelált más forrással. Jelenleg 585 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Deportation. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.45. A jelenlegi aktivitási szint: ELEVATED.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
@@ -577,41 +531,37 @@
   ],
   "high_priority_intelligence": [
     {
-      "id": 1231,
+      "id": 1239,
       "source": "X",
-      "source_post_id": "2114957527200706684",
-      "author": "news_by_pw",
+      "source_post_id": "2115216355125235987",
+      "author": "USA_Patriot_GOP",
       "language": "en",
-      "published_at": "2026-10-27T05:49:03Z",
-      "first_detected_at": "2026-10-27T06:57:59Z",
-      "last_detected_at": "2026-10-27T06:57:59Z",
+      "published_at": "2026-10-27T22:57:32Z",
+      "first_detected_at": "2026-10-27T23:18:51Z",
+      "last_detected_at": "2026-10-27T23:18:51Z",
       "detection_count": 1,
-      "text": "🔴 A migrant attempting to reach Spain’s Ceuta enclave by swimming was intercepted by Moroccan police, who pursued him by boat into Spanish waters before returning him to Morocco.",
-      "text_excerpt": "🔴 A migrant attempting to reach Spain’s Ceuta enclave by swimming was intercepted by Moroccan police, who pursued him by boat into Spanish waters before returning him to Morocco.",
-      "url": "https://x.com/news_by_pw/status/2114957527200706684",
-      "source_url": "https://x.com/news_by_pw/status/2114957527200706684",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "text": "🚨🇪🇸 SWIMMING TO EUROPE WON’T MAKE BORDER LAWS DISAPPEAR!\n\nMoroccan police chased a migrant swimming toward Spain’s Ceuta enclave and returned him to Morocco.\n\nMY TAKE: Border security means nothing without enforcement. Countries have the right to control who enters, protect https://t.co/Z0aLodibEG",
+      "text_excerpt": "🚨🇪🇸 SWIMMING TO EUROPE WON’T MAKE BORDER LAWS DISAPPEAR!\n\nMoroccan police chased a migrant swimming toward Spain’s Ceuta enclave and returned him to Morocco.\n\nMY TAKE: Border security means nothing without enforcement. Countries have the right to control who enters, protect https://t.co/Z0aLodibEG",
+      "url": "https://x.com/USA_Patriot_GOP/status/2115216355125235987",
+      "source_url": "https://x.com/USA_Patriot_GOP/status/2115216355125235987",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.9,
-      "score": 11.5,
+      "confidence": 0.8,
+      "score": 8.5,
       "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
+        "ROUTE_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
-          "movement",
-          "migrant attempting to reach"
-        ],
-        [
           "route",
-          "boat"
+          "BORDER"
         ],
         [
           "enforcement",
-          "intercepted"
+          "returned"
         ],
         [
           "enforcement",
@@ -619,16 +569,13 @@
         ]
       ],
       "matched_groups": [
-        "MOVEMENT",
         "ROUTE",
         "ENFORCEMENT"
       ],
       "context_matches": [
         "migrant"
       ],
-      "high_value_matches": [
-        "migrant attempting to reach"
-      ],
+      "high_value_matches": [],
       "signal_context_rejections": [],
       "migration_context": true,
       "human_migration_context": true,
@@ -643,25 +590,22 @@
       "latitude": 35.8894,
       "longitude": -5.3213,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 49.5,
-      "analyst_priority": "MEDIUM",
-      "related_posts_count": 2,
+      "priority_score": 39.0,
+      "analyst_priority": "LOW",
+      "related_posts_count": 1,
       "related_post_ids": [
-        "2114957527200706684",
-        "2114956508211651037"
+        "2115216355125235987"
       ],
       "related_authors": [
-        "Reuters",
-        "news_by_pw"
+        "USA_Patriot_GOP"
       ],
       "related_urls": [
-        "https://x.com/news_by_pw/status/2114957527200706684",
-        "https://x.com/Reuters/status/2114956508211651037"
+        "https://x.com/USA_Patriot_GOP/status/2115216355125235987"
       ],
       "related_sources": [
         "X"
       ],
-      "independent_author_count": 2,
+      "independent_author_count": 1,
       "platform_count": 1,
       "ai_review_status": "AI_REVIEWED",
       "ai_editorial_decision": "PUBLISH"
@@ -908,57 +852,57 @@
       "ai_editorial_decision": "PUBLISH"
     },
     {
-      "id": 1231,
-      "source": "X",
-      "source_post_id": "2114957527200706684",
-      "author": "news_by_pw",
-      "language": "en",
-      "published_at": "2026-10-27T05:49:03Z",
-      "first_detected_at": "2026-10-27T06:57:59Z",
-      "last_detected_at": "2026-10-27T06:57:59Z",
+      "id": 1244,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1xhihjt",
+      "author": "mrwhiskeyrum",
+      "language": null,
+      "published_at": "2026-10-28T08:31:04Z",
+      "first_detected_at": "2026-10-28T10:07:41Z",
+      "last_detected_at": "2026-10-28T10:07:41Z",
       "detection_count": 1,
-      "text": "🔴 A migrant attempting to reach Spain’s Ceuta enclave by swimming was intercepted by Moroccan police, who pursued him by boat into Spanish waters before returning him to Morocco.",
-      "text_excerpt": "🔴 A migrant attempting to reach Spain’s Ceuta enclave by swimming was intercepted by Moroccan police, who pursued him by boat into Spanish waters before returning him to Morocco.",
-      "url": "https://x.com/news_by_pw/status/2114957527200706684",
-      "source_url": "https://x.com/news_by_pw/status/2114957527200706684",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "text": "All 11 suspects in Kuala Perlis MMEA officer’s death investigated for murder\nAll 11 suspects detained following the death of a Malaysian Maritime Enforcement Agency (MMEA) officer during an operation on Monday are being investigated for murder, said Kedah and Perlis Maritime director First Admiral Maritime Romli Mustafa. He said the detainees, who are suspected of being undocumented migrants from Myanmar and Thailand, are being investigated under Section 302 of the Penal Code, as the case involves more than just immigration offences. “Following further checks, all the individuals detained are suspected of committing offences under the Immigration Act and the Anti-Trafficking in Persons and Anti-Smuggling of Migrants Act 2007 (ATIPSOM). More seriously, investigation papers have also been opened under Section 302 of the Penal Code against all those arrested,” he said in a statement today. Yesterday, Romli said the incident occurred at 11.37pm when five MMEA personnel were attempting to intercept a boat suspected of carrying undocumented migrants in Kuala Sungai Padang. In the incident, nine Myanmar nationals, comprising seven men and two women, as well as two male Thai boat operators suspected of being involved in the illegal migrant operation, were arrested. Maritime Technical Leading Seaman Mohd Roshaimi Mohd Ridzuan, 41, was killed while three other personnel were injured after their boat struck a concrete structure during the enforcement operation in the waters off Kuala Perlis, near here.",
+      "text_excerpt": "All 11 suspects in Kuala Perlis MMEA officer’s death investigated for murder\nAll 11 suspects detained following the death of a Malaysian Maritime Enforcement Agency (MMEA) officer during an operation on Monday are being investigated for murder, said Kedah and Perlis Maritime director First Admiral Maritime Romli Mustafa. He said the detainees, who are suspected of being undocumented migrants from Myanmar and Thailand, are being investigated under Section 302 of the Penal Code, as the case involves more than just immigration offences. “Following further checks, all the individuals detained are suspected of committing offences under the Immigration Act and the Anti-Trafficking in Persons and A",
+      "url": "https://www.reddit.com/r/SEAMilitaryOnlyFans/comments/1xhihjt/all_11_suspects_in_kuala_perlis_mmea_officers/",
+      "source_url": "https://www.reddit.com/r/SEAMilitaryOnlyFans/comments/1xhihjt/all_11_suspects_in_kuala_perlis_mmea_officers/",
+      "primary_signal": "FACILITATION_EARLY_WARNING",
+      "signal_type": "FACILITATION_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
+      "signal_intent": "FACILITATION_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.9,
-      "score": 11.5,
+      "confidence": 0.8,
+      "score": 9.5,
       "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
+        "FACILITATION_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
-          "movement",
-          "migrant attempting to reach"
+          "facilitation",
+          "Smuggling of Migrants"
         ],
         [
-          "route",
-          "boat"
-        ],
-        [
-          "enforcement",
-          "intercepted"
+          "facilitation",
+          "Trafficking in Persons and Anti-Smuggling of Migrants"
         ],
         [
           "enforcement",
-          "police"
+          "detained"
+        ],
+        [
+          "enforcement",
+          "arrested"
         ]
       ],
       "matched_groups": [
-        "MOVEMENT",
-        "ROUTE",
+        "FACILITATION",
         "ENFORCEMENT"
       ],
       "context_matches": [
-        "migrant"
+        "Migrants"
       ],
       "high_value_matches": [
-        "migrant attempting to reach"
+        "Smuggling of Migrants",
+        "Trafficking in Persons and Anti-Smuggling of Migrants"
       ],
       "signal_context_rejections": [],
       "migration_context": true,
@@ -966,88 +910,16 @@
       "historical_reference": false,
       "historical_reason": null,
       "historical_reference_text": null,
-      "location": "Ceuta",
-      "primary_location": "Ceuta",
-      "country": "Spain",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": 35.8894,
-      "longitude": -5.3213,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "ASIA_PACIFIC",
+      "primary_region": "ASIA_PACIFIC",
+      "latitude": null,
+      "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 42.5,
-      "analyst_priority": "MEDIUM",
-      "ai_review_status": "AI_REVIEWED",
-      "ai_editorial_decision": "PUBLISH"
-    },
-    {
-      "id": 1232,
-      "source": "X",
-      "source_post_id": "2114956508211651037",
-      "author": "Reuters",
-      "language": "en",
-      "published_at": "2026-10-27T05:45:00Z",
-      "first_detected_at": "2026-10-27T06:57:59Z",
-      "last_detected_at": "2026-10-27T06:57:59Z",
-      "detection_count": 1,
-      "text": "A migrant attempting to reach Spain’s Ceuta enclave by swimming was intercepted by Moroccan police, with officers pursuing him by boat into Spanish waters before taking him back to Morocco https://t.co/wD1NzXZb1z",
-      "text_excerpt": "A migrant attempting to reach Spain’s Ceuta enclave by swimming was intercepted by Moroccan police, with officers pursuing him by boat into Spanish waters before taking him back to Morocco https://t.co/wD1NzXZb1z",
-      "url": "https://x.com/Reuters/status/2114956508211651037",
-      "source_url": "https://x.com/Reuters/status/2114956508211651037",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.9,
-      "score": 11.5,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrant attempting to reach"
-        ],
-        [
-          "route",
-          "boat"
-        ],
-        [
-          "enforcement",
-          "intercepted"
-        ],
-        [
-          "enforcement",
-          "police"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT",
-        "ROUTE",
-        "ENFORCEMENT"
-      ],
-      "context_matches": [
-        "migrant"
-      ],
-      "high_value_matches": [
-        "migrant attempting to reach"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "Ceuta",
-      "primary_location": "Ceuta",
-      "country": "Spain",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": 35.8894,
-      "longitude": -5.3213,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 42.5,
-      "analyst_priority": "MEDIUM",
+      "priority_score": 32.0,
+      "analyst_priority": "LOW",
       "ai_review_status": "AI_REVIEWED",
       "ai_editorial_decision": "PUBLISH"
     },
@@ -1245,57 +1117,57 @@
       "ai_editorial_decision": "PUBLISH"
     },
     {
-      "id": 1231,
-      "source": "X",
-      "source_post_id": "2114957527200706684",
-      "author": "news_by_pw",
-      "language": "en",
-      "published_at": "2026-10-27T05:49:03Z",
-      "first_detected_at": "2026-10-27T06:57:59Z",
-      "last_detected_at": "2026-10-27T06:57:59Z",
+      "id": 1244,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1xhihjt",
+      "author": "mrwhiskeyrum",
+      "language": null,
+      "published_at": "2026-10-28T08:31:04Z",
+      "first_detected_at": "2026-10-28T10:07:41Z",
+      "last_detected_at": "2026-10-28T10:07:41Z",
       "detection_count": 1,
-      "text": "🔴 A migrant attempting to reach Spain’s Ceuta enclave by swimming was intercepted by Moroccan police, who pursued him by boat into Spanish waters before returning him to Morocco.",
-      "text_excerpt": "🔴 A migrant attempting to reach Spain’s Ceuta enclave by swimming was intercepted by Moroccan police, who pursued him by boat into Spanish waters before returning him to Morocco.",
-      "url": "https://x.com/news_by_pw/status/2114957527200706684",
-      "source_url": "https://x.com/news_by_pw/status/2114957527200706684",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "text": "All 11 suspects in Kuala Perlis MMEA officer’s death investigated for murder\nAll 11 suspects detained following the death of a Malaysian Maritime Enforcement Agency (MMEA) officer during an operation on Monday are being investigated for murder, said Kedah and Perlis Maritime director First Admiral Maritime Romli Mustafa. He said the detainees, who are suspected of being undocumented migrants from Myanmar and Thailand, are being investigated under Section 302 of the Penal Code, as the case involves more than just immigration offences. “Following further checks, all the individuals detained are suspected of committing offences under the Immigration Act and the Anti-Trafficking in Persons and Anti-Smuggling of Migrants Act 2007 (ATIPSOM). More seriously, investigation papers have also been opened under Section 302 of the Penal Code against all those arrested,” he said in a statement today. Yesterday, Romli said the incident occurred at 11.37pm when five MMEA personnel were attempting to intercept a boat suspected of carrying undocumented migrants in Kuala Sungai Padang. In the incident, nine Myanmar nationals, comprising seven men and two women, as well as two male Thai boat operators suspected of being involved in the illegal migrant operation, were arrested. Maritime Technical Leading Seaman Mohd Roshaimi Mohd Ridzuan, 41, was killed while three other personnel were injured after their boat struck a concrete structure during the enforcement operation in the waters off Kuala Perlis, near here.",
+      "text_excerpt": "All 11 suspects in Kuala Perlis MMEA officer’s death investigated for murder\nAll 11 suspects detained following the death of a Malaysian Maritime Enforcement Agency (MMEA) officer during an operation on Monday are being investigated for murder, said Kedah and Perlis Maritime director First Admiral Maritime Romli Mustafa. He said the detainees, who are suspected of being undocumented migrants from Myanmar and Thailand, are being investigated under Section 302 of the Penal Code, as the case involves more than just immigration offences. “Following further checks, all the individuals detained are suspected of committing offences under the Immigration Act and the Anti-Trafficking in Persons and A",
+      "url": "https://www.reddit.com/r/SEAMilitaryOnlyFans/comments/1xhihjt/all_11_suspects_in_kuala_perlis_mmea_officers/",
+      "source_url": "https://www.reddit.com/r/SEAMilitaryOnlyFans/comments/1xhihjt/all_11_suspects_in_kuala_perlis_mmea_officers/",
+      "primary_signal": "FACILITATION_EARLY_WARNING",
+      "signal_type": "FACILITATION_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
+      "signal_intent": "FACILITATION_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.9,
-      "score": 11.5,
+      "confidence": 0.8,
+      "score": 9.5,
       "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
+        "FACILITATION_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
-          "movement",
-          "migrant attempting to reach"
+          "facilitation",
+          "Smuggling of Migrants"
         ],
         [
-          "route",
-          "boat"
-        ],
-        [
-          "enforcement",
-          "intercepted"
+          "facilitation",
+          "Trafficking in Persons and Anti-Smuggling of Migrants"
         ],
         [
           "enforcement",
-          "police"
+          "detained"
+        ],
+        [
+          "enforcement",
+          "arrested"
         ]
       ],
       "matched_groups": [
-        "MOVEMENT",
-        "ROUTE",
+        "FACILITATION",
         "ENFORCEMENT"
       ],
       "context_matches": [
-        "migrant"
+        "Migrants"
       ],
       "high_value_matches": [
-        "migrant attempting to reach"
+        "Smuggling of Migrants",
+        "Trafficking in Persons and Anti-Smuggling of Migrants"
       ],
       "signal_context_rejections": [],
       "migration_context": true,
@@ -1303,88 +1175,16 @@
       "historical_reference": false,
       "historical_reason": null,
       "historical_reference_text": null,
-      "location": "Ceuta",
-      "primary_location": "Ceuta",
-      "country": "Spain",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": 35.8894,
-      "longitude": -5.3213,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "ASIA_PACIFIC",
+      "primary_region": "ASIA_PACIFIC",
+      "latitude": null,
+      "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 42.5,
-      "analyst_priority": "MEDIUM",
-      "ai_review_status": "AI_REVIEWED",
-      "ai_editorial_decision": "PUBLISH"
-    },
-    {
-      "id": 1232,
-      "source": "X",
-      "source_post_id": "2114956508211651037",
-      "author": "Reuters",
-      "language": "en",
-      "published_at": "2026-10-27T05:45:00Z",
-      "first_detected_at": "2026-10-27T06:57:59Z",
-      "last_detected_at": "2026-10-27T06:57:59Z",
-      "detection_count": 1,
-      "text": "A migrant attempting to reach Spain’s Ceuta enclave by swimming was intercepted by Moroccan police, with officers pursuing him by boat into Spanish waters before taking him back to Morocco https://t.co/wD1NzXZb1z",
-      "text_excerpt": "A migrant attempting to reach Spain’s Ceuta enclave by swimming was intercepted by Moroccan police, with officers pursuing him by boat into Spanish waters before taking him back to Morocco https://t.co/wD1NzXZb1z",
-      "url": "https://x.com/Reuters/status/2114956508211651037",
-      "source_url": "https://x.com/Reuters/status/2114956508211651037",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.9,
-      "score": 11.5,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrant attempting to reach"
-        ],
-        [
-          "route",
-          "boat"
-        ],
-        [
-          "enforcement",
-          "intercepted"
-        ],
-        [
-          "enforcement",
-          "police"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT",
-        "ROUTE",
-        "ENFORCEMENT"
-      ],
-      "context_matches": [
-        "migrant"
-      ],
-      "high_value_matches": [
-        "migrant attempting to reach"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "Ceuta",
-      "primary_location": "Ceuta",
-      "country": "Spain",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": 35.8894,
-      "longitude": -5.3213,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 42.5,
-      "analyst_priority": "MEDIUM",
+      "priority_score": 32.0,
+      "analyst_priority": "LOW",
       "ai_review_status": "AI_REVIEWED",
       "ai_editorial_decision": "PUBLISH"
     },
@@ -1514,161 +1314,6 @@
   ],
   "influence_narratives": [
     {
-      "id": 1231,
-      "source": "X",
-      "source_post_id": "2114957527200706684",
-      "author": "news_by_pw",
-      "language": "en",
-      "published_at": "2026-10-27T05:49:03Z",
-      "first_detected_at": "2026-10-27T06:57:59Z",
-      "last_detected_at": "2026-10-27T06:57:59Z",
-      "detection_count": 1,
-      "text": "🔴 A migrant attempting to reach Spain’s Ceuta enclave by swimming was intercepted by Moroccan police, who pursued him by boat into Spanish waters before returning him to Morocco.",
-      "text_excerpt": "🔴 A migrant attempting to reach Spain’s Ceuta enclave by swimming was intercepted by Moroccan police, who pursued him by boat into Spanish waters before returning him to Morocco.",
-      "url": "https://x.com/news_by_pw/status/2114957527200706684",
-      "source_url": "https://x.com/news_by_pw/status/2114957527200706684",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.9,
-      "score": 11.5,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrant attempting to reach"
-        ],
-        [
-          "route",
-          "boat"
-        ],
-        [
-          "enforcement",
-          "intercepted"
-        ],
-        [
-          "enforcement",
-          "police"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT",
-        "ROUTE",
-        "ENFORCEMENT"
-      ],
-      "context_matches": [
-        "migrant"
-      ],
-      "high_value_matches": [
-        "migrant attempting to reach"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "Ceuta",
-      "primary_location": "Ceuta",
-      "country": "Spain",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": 35.8894,
-      "longitude": -5.3213,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 49.5,
-      "analyst_priority": "MEDIUM",
-      "related_posts_count": 2,
-      "related_post_ids": [
-        "2114957527200706684",
-        "2114956508211651037"
-      ],
-      "related_authors": [
-        "Reuters",
-        "news_by_pw"
-      ],
-      "related_urls": [
-        "https://x.com/news_by_pw/status/2114957527200706684",
-        "https://x.com/Reuters/status/2114956508211651037"
-      ],
-      "related_sources": [
-        "X"
-      ],
-      "independent_author_count": 2,
-      "platform_count": 1
-    },
-    {
-      "id": 1230,
-      "source": "X",
-      "source_post_id": "2114971671958298936",
-      "author": "c_b_l_2005",
-      "language": "en",
-      "published_at": "2026-10-27T06:45:15Z",
-      "first_detected_at": "2026-10-27T06:57:37Z",
-      "last_detected_at": "2026-10-27T06:57:37Z",
-      "detection_count": 1,
-      "text": "Why is there an unelected dickhead in number 10? Why are we paying over £12 billion to migrants? We need Border Force officers to do their job &amp; turn them back at the 12-mile marker by ANY means necessary; if that means sinking the dinghies, so be it. We need out of the ECHR NOW!",
-      "text_excerpt": "Why is there an unelected dickhead in number 10? Why are we paying over £12 billion to migrants? We need Border Force officers to do their job &amp; turn them back at the 12-mile marker by ANY means necessary; if that means sinking the dinghies, so be it. We need out of the ECHR NOW!",
-      "url": "https://x.com/c_b_l_2005/status/2114971671958298936",
-      "source_url": "https://x.com/c_b_l_2005/status/2114971671958298936",
-      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
-      "signal_type": "LEGAL_MIGRATION_SIGNAL",
-      "signal_mode": "DIRECT",
-      "signal_intent": "LEGAL_ACCESS",
-      "priority": "MEDIUM",
-      "confidence": 0.94,
-      "score": 16.0,
-      "matched_signals": [
-        "LEGAL_MIGRATION_SIGNAL"
-      ],
-      "matched_phrases": [
-        [
-          "legal_signal",
-          "ECHR"
-        ]
-      ],
-      "matched_groups": [],
-      "context_matches": [
-        "migrants"
-      ],
-      "high_value_matches": false,
-      "signal_context_rejections": {},
-      "migration_context": true,
-      "human_migration_context": null,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "2.6",
-      "priority_score": 48.9,
-      "analyst_priority": "MEDIUM",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "2114971671958298936"
-      ],
-      "related_authors": [
-        "c_b_l_2005"
-      ],
-      "related_urls": [
-        "https://x.com/c_b_l_2005/status/2114971671958298936"
-      ],
-      "related_sources": [
-        "X"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
-    },
-    {
       "id": 1238,
       "source": "X",
       "source_post_id": "2115216594838094165",
@@ -1743,80 +1388,168 @@
       ],
       "independent_author_count": 1,
       "platform_count": 1
-    }
-  ],
-  "crossing_access_signals": [],
-  "access_signals": [],
-  "top_crossing_access_posts": [],
-  "crossing_access_narratives": [
+    },
     {
-      "id": 1230,
+      "id": 1239,
       "source": "X",
-      "source_post_id": "2114971671958298936",
-      "author": "c_b_l_2005",
+      "source_post_id": "2115216355125235987",
+      "author": "USA_Patriot_GOP",
       "language": "en",
-      "published_at": "2026-10-27T06:45:15Z",
-      "first_detected_at": "2026-10-27T06:57:37Z",
-      "last_detected_at": "2026-10-27T06:57:37Z",
+      "published_at": "2026-10-27T22:57:32Z",
+      "first_detected_at": "2026-10-27T23:18:51Z",
+      "last_detected_at": "2026-10-27T23:18:51Z",
       "detection_count": 1,
-      "text": "Why is there an unelected dickhead in number 10? Why are we paying over £12 billion to migrants? We need Border Force officers to do their job &amp; turn them back at the 12-mile marker by ANY means necessary; if that means sinking the dinghies, so be it. We need out of the ECHR NOW!",
-      "text_excerpt": "Why is there an unelected dickhead in number 10? Why are we paying over £12 billion to migrants? We need Border Force officers to do their job &amp; turn them back at the 12-mile marker by ANY means necessary; if that means sinking the dinghies, so be it. We need out of the ECHR NOW!",
-      "url": "https://x.com/c_b_l_2005/status/2114971671958298936",
-      "source_url": "https://x.com/c_b_l_2005/status/2114971671958298936",
-      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
-      "signal_type": "LEGAL_MIGRATION_SIGNAL",
-      "signal_mode": "DIRECT",
-      "signal_intent": "LEGAL_ACCESS",
+      "text": "🚨🇪🇸 SWIMMING TO EUROPE WON’T MAKE BORDER LAWS DISAPPEAR!\n\nMoroccan police chased a migrant swimming toward Spain’s Ceuta enclave and returned him to Morocco.\n\nMY TAKE: Border security means nothing without enforcement. Countries have the right to control who enters, protect https://t.co/Z0aLodibEG",
+      "text_excerpt": "🚨🇪🇸 SWIMMING TO EUROPE WON’T MAKE BORDER LAWS DISAPPEAR!\n\nMoroccan police chased a migrant swimming toward Spain’s Ceuta enclave and returned him to Morocco.\n\nMY TAKE: Border security means nothing without enforcement. Countries have the right to control who enters, protect https://t.co/Z0aLodibEG",
+      "url": "https://x.com/USA_Patriot_GOP/status/2115216355125235987",
+      "source_url": "https://x.com/USA_Patriot_GOP/status/2115216355125235987",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.94,
-      "score": 16.0,
+      "confidence": 0.8,
+      "score": 8.5,
       "matched_signals": [
-        "LEGAL_MIGRATION_SIGNAL"
+        "ROUTE_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
-          "legal_signal",
-          "ECHR"
+          "route",
+          "BORDER"
+        ],
+        [
+          "enforcement",
+          "returned"
+        ],
+        [
+          "enforcement",
+          "police"
         ]
       ],
-      "matched_groups": [],
-      "context_matches": [
-        "migrants"
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
       ],
-      "high_value_matches": false,
-      "signal_context_rejections": {},
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
       "migration_context": true,
-      "human_migration_context": null,
+      "human_migration_context": true,
       "historical_reference": false,
       "historical_reason": null,
       "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "2.6",
-      "priority_score": 48.9,
-      "analyst_priority": "MEDIUM",
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 39.0,
+      "analyst_priority": "LOW",
       "related_posts_count": 1,
       "related_post_ids": [
-        "2114971671958298936"
+        "2115216355125235987"
       ],
       "related_authors": [
-        "c_b_l_2005"
+        "USA_Patriot_GOP"
       ],
       "related_urls": [
-        "https://x.com/c_b_l_2005/status/2114971671958298936"
+        "https://x.com/USA_Patriot_GOP/status/2115216355125235987"
       ],
       "related_sources": [
         "X"
       ],
       "independent_author_count": 1,
       "platform_count": 1
+    },
+    {
+      "id": 1242,
+      "source": "TELEGRAM",
+      "source_post_id": "1261826972:53947",
+      "author": "elfarodeceuta",
+      "language": null,
+      "published_at": "2026-10-28T08:05:06Z",
+      "first_detected_at": "2026-10-28T10:06:49Z",
+      "last_detected_at": "2026-10-28T10:06:49Z",
+      "detection_count": 1,
+      "text": "📰 Tres noticias de elfarodeceuta.es para comenzar este miércoles:\n\n1⃣ Detenido tras someter a inmigrantes a una vida de calvario en una casa patera del Príncipe\n\n➡ La UDEV y la UCRIF, con apoyo de UPR, montaron un operativo en la barriada para arrestar a quien gestionaba una casa para hacinar a inmigrantes a los que amenazaba\n\n➡ Han encontrado hachís, armas, un pasamontañas y una careta de ‘La casa de papel’\n\nhttps://elfarodeceuta.es/detenido-tras-someter-inmigrantes-vida-calvario-casa-patera-principe/\n\n2⃣ Mandos policiales y políticos marroquíes estaban en la frontera el día de la invasión\n\n➡ Tres marroquíes que entraron a nado declararán hoy ante la jueza María Tardón, aunque previamente lo hicieron ante la Policía para confirmar la pasividad de Marruecos y la presencia de mandos policiales y políticos en la zona frontera sin actuar\n\nhttps://elfarodeceuta.es/mandos-policiales-politicos-marroquies-frontera-dia-invasion/\n\n3⃣ CCOO-Justicia pide la prórroga del refuerzo de personal desplazado por la crisis de Ceuta\n\n➡ Reclama a la Gerencia no solo mantener esos refuerzos en áreas tan sensibles como Fiscalía, guardia de detenidos o Instituto de Medicina Legal, sino también renovar el personal\n\nhttps://elfarodeceuta.es/ccoo-justicia-pide-prorroga-refuerzo-personal-desplazado-crisis-ceuta/",
+      "text_excerpt": "📰 Tres noticias de elfarodeceuta.es para comenzar este miércoles:\n\n1⃣ Detenido tras someter a inmigrantes a una vida de calvario en una casa patera del Príncipe\n\n➡ La UDEV y la UCRIF, con apoyo de UPR, montaron un operativo en la barriada para arrestar a quien gestionaba una casa para hacinar a inmigrantes a los que amenazaba\n\n➡ Han encontrado hachís, armas, un pasamontañas y una careta de ‘La casa de papel’\n\nhttps://elfarodeceuta.es/detenido-tras-someter-inmigrantes-vida-calvario-casa-patera-principe/\n\n2⃣ Mandos policiales y políticos marroquíes estaban en la frontera el día de la invasión\n\n➡ Tres marroquíes que entraron a nado declararán hoy ante la jueza María Tardón, aunque previamente l",
+      "url": "https://t.me/elfarodeceuta/53947",
+      "source_url": "https://t.me/elfarodeceuta/53947",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.25,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "patera"
+        ],
+        [
+          "route",
+          "frontera"
+        ],
+        [
+          "enforcement",
+          "detenido"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "inmigrantes"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 36.2,
+      "analyst_priority": "LOW",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "1261826972:53947"
+      ],
+      "related_authors": [
+        "elfarodeceuta"
+      ],
+      "related_urls": [
+        "https://t.me/elfarodeceuta/53947"
+      ],
+      "related_sources": [
+        "TELEGRAM"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
     }
   ],
+  "crossing_access_signals": [],
+  "access_signals": [],
+  "top_crossing_access_posts": [],
+  "crossing_access_narratives": [],
   "information_activity_weekly": [
     {
       "year": 2026,
@@ -1943,15 +1676,15 @@
       "label": "W44",
       "week_label": "W44",
       "week_start": "2026-10-26T00:00:00Z",
-      "posts": 642,
-      "post_count": 642,
-      "operational_posts": 33,
-      "influence_signals": 21,
+      "posts": 713,
+      "post_count": 713,
+      "operational_posts": 35,
+      "influence_signals": 24,
       "source_counts": {
-        "X": 439,
-        "REDDIT": 82,
-        "MASTODON": 78,
-        "TELEGRAM": 43
+        "X": 487,
+        "REDDIT": 88,
+        "MASTODON": 90,
+        "TELEGRAM": 48
       }
     }
   ],
@@ -2081,33 +1814,33 @@
       "label": "W44",
       "week_label": "W44",
       "week_start": "2026-10-26T00:00:00Z",
-      "posts": 642,
-      "post_count": 642,
-      "operational_posts": 33,
-      "influence_signals": 21,
+      "posts": 713,
+      "post_count": 713,
+      "operational_posts": 35,
+      "influence_signals": 24,
       "source_counts": {
-        "X": 439,
-        "REDDIT": 82,
-        "MASTODON": 78,
-        "TELEGRAM": 43
+        "X": 487,
+        "REDDIT": 88,
+        "MASTODON": 90,
+        "TELEGRAM": 48
       }
     }
   ],
   "information_activity_summary": {
-    "current_week": 642,
-    "previous_week": 987,
-    "current_week_to_date": 642,
-    "previous_week_same_period": 987,
+    "current_week": 713,
+    "previous_week": 1053,
+    "current_week_to_date": 713,
+    "previous_week_same_period": 1053,
     "previous_week_full": 2631,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": -34.95,
-    "change_label": "-35.0%",
+    "change_percent": -32.29,
+    "change_label": "-32.3%",
     "direction": "DOWN",
     "comparable": true,
-    "elapsed_hours": 50.9,
+    "elapsed_hours": 58.1,
     "current_period_start": "2026-10-26T00:00:00Z",
     "previous_period_start": "2026-10-19T00:00:00Z",
-    "previous_period_end": "2026-10-21T02:51:43Z"
+    "previous_period_end": "2026-10-21T10:08:37Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -2119,32 +1852,32 @@
       72,
       168
     ],
-    "generated_at": "2026-10-28T02:51:44Z",
-    "total_items": 2168,
-    "information_count": 286,
-    "early_warning_count": 1048,
-    "operational_count": 686,
-    "correlated_count": 148,
+    "generated_at": "2026-10-28T10:08:38Z",
+    "total_items": 2165,
+    "information_count": 279,
+    "early_warning_count": 1049,
+    "operational_count": 688,
+    "correlated_count": 149,
     "layer_counts": {
-      "INFORMATION": 286,
-      "CORRELATED": 148,
-      "EARLY_WARNING": 1048,
-      "OPERATIONAL": 686
+      "INFORMATION": 279,
+      "OPERATIONAL": 688,
+      "CORRELATED": 149,
+      "EARLY_WARNING": 1049
     },
     "source_counts": {
-      "X": 1534,
-      "REDDIT": 486,
+      "X": 1528,
+      "REDDIT": 489,
       "MASTODON": 100,
       "TELEGRAM": 48
     },
     "type_counts": {
-      "INFORMATION_SIGNAL": 286,
+      "INFORMATION_SIGNAL": 279,
+      "INTERCEPTION": 49,
+      "FACILITATION_EARLY_WARNING": 204,
       "BORDER_CROSSING": 292,
-      "FACILITATION_EARLY_WARNING": 203,
       "DEPORTATION": 111,
       "ROUTE_EARLY_WARNING": 144,
       "DETENTION": 75,
-      "INTERCEPTION": 46,
       "MOVEMENT_EARLY_WARNING": 337,
       "CASUALTY": 31,
       "SMUGGLING_ACTIVITY": 70,
@@ -2167,6 +1900,261 @@
       "BORDER_CONDITION": 2
     },
     "items": [
+      {
+        "timeline_id": "information:22696",
+        "timestamp": "2026-10-28T10:04:46Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2115384268000264461",
+        "author": "M2MASI",
+        "url": "https://x.com/M2MASI/status/2115384268000264461",
+        "source_url": "https://x.com/M2MASI/status/2115384268000264461",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "border",
+          "deportation",
+          "arrival"
+        ],
+        "freshness_cues": [],
+        "text": "@GovernmentZA ANC govt must stop spreading misinformation. Illegal immigrants are  not asylum seekers. These are economic migrant criminals who broke our laws by entering &amp; staying in SA illegally. Asylum seekers report to Home Affairs at the borders &amp; ask for protection on arrival. Deport!",
+        "text_excerpt": "@GovernmentZA ANC govt must stop spreading misinformation. Illegal immigrants are  not asylum seekers. These are economic migrant criminals who broke our laws by entering &amp; staying in SA illegally. Asylum seekers report to Home Affairs at the borders &amp; ask for protection on arrival. Deport!",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-28T10:08:34Z",
+        "last_collected_at": "2026-10-28T10:08:34Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:22697",
+        "timestamp": "2026-10-28T10:04:01Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2115384080191856998",
+        "author": "M2MASI",
+        "url": "https://x.com/M2MASI/status/2115384080191856998",
+        "source_url": "https://x.com/M2MASI/status/2115384080191856998",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "border",
+          "deportation",
+          "arrival"
+        ],
+        "freshness_cues": [],
+        "text": "@GovernmentZA ANC govt must stop spreading misinformation. Illegal immigrants are  not asylum seekers. These are economic migrant criminals who broke our laws by entering &amp; staying in SA illegally. Asylum seekers report to Home Affairs at the borders &amp; ask for protection on arrival. Deport!",
+        "text_excerpt": "@GovernmentZA ANC govt must stop spreading misinformation. Illegal immigrants are  not asylum seekers. These are economic migrant criminals who broke our laws by entering &amp; staying in SA illegally. Asylum seekers report to Home Affairs at the borders &amp; ask for protection on arrival. Deport!",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-28T10:08:34Z",
+        "last_collected_at": "2026-10-28T10:08:34Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:22664",
+        "timestamp": "2026-10-28T09:56:02Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2115382072181223822",
+        "author": "dickerfunn999m",
+        "url": "https://x.com/dickerfunn999m/status/2115382072181223822",
+        "source_url": "https://x.com/dickerfunn999m/status/2115382072181223822",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "crossing"
+        ],
+        "freshness_cues": [],
+        "text": "@TheEnglishPat poor refugee he come from africa cross border to steal a dog from old lady, you know nigga we was selling you in my country 60 years ago.",
+        "text_excerpt": "@TheEnglishPat poor refugee he come from africa cross border to steal a dog from old lady, you know nigga we was selling you in my country 60 years ago.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-28T10:07:14Z",
+        "last_collected_at": "2026-10-28T10:07:14Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:22645",
+        "timestamp": "2026-10-28T09:51:24Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1xhjqqr",
+        "author": "Great-Avocado9822",
+        "url": "https://www.reddit.com/r/Star_Light_Links/comments/1xhjqqr/is_this_a_rich_mans_hobby_ogoniff_asked_his_voice/",
+        "source_url": "https://www.reddit.com/r/Star_Light_Links/comments/1xhjqqr/is_this_a_rich_mans_hobby_ogoniff_asked_his_voice/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "sea",
+          "arrival",
+          "landing"
+        ],
+        "freshness_cues": [],
+        "text": "\"Is this a rich man's hobby?\" Ogoniff asked, his voice sounding like a YouTube processing error.\nIn the flickering neon glow of a world fueled by #DreamScreenAI , reality has become a cubism masterpiece of surreal proportions. This is the story of a single, chaotic Tuesday. The Morning Commute The day began in a flurry of \"rich man’s hobbies.\" In the upscale suburbs, people dodged golf balls and pickleball paddles, while others spent fortunes on weed and photography equipment. Meanwhile, at the local post office, the police were busy arresting an Ogoniff found sleeping on a mailbox—a scene captured by a passing tourist and uploaded to a Dropbox folder labeled \"#firstamendment.\" On the highway, the chaos turned mechanical. A police officer found himself in a high-speed pursuit he couldn't end; his cruise control was stuck in a loop of \"car wars\" madness. He zoomed past a man who looked exactly like Steve Bannon , though a closer look revealed it was just comedian Ron White method-acting for a new role. The Arena of the Absurd At the city stadium, the \"Jack and Hammer\" cartoon cat and mouse were being brought to life for a live-action special. The production was interrupted when the Grim Reaper and his best friend crashed the concert, offering bewildered tourists a guided tour through the locker rooms and VIP lounges. In the center ring, the stakes were higher: Grandma was facing off against a bowl of hot grits in a wrestling match that defied physics. Adam, Steve, and Steve (three very confused ducks) were being blessed by a crochet-clad priest. A T-Rex stood in the corner, fruitlessly attempting to open a jar of pickles with its tiny arms. The Digital Tapestry As the sun began to set—looking suspiciously like a Romantic Ice Strawberry Full Moon —the world retreated to their screens. Google Meet was busy exposing legacy Duo emails, while artists struggled with YouTube processing errors . In the quiet corners of the internet, a different kind of work was happening: The Crafters: Experts demonstrated how to fold the magic crochet loop, creating everything from sea horses to granny square socks . The Dreamers: AI generated images of yellow smiley balls and light bulbs that refused to fly. The Investigators: On-scene reports determined that a discarded cell phone was \"fully loaded\" with green energy potential. The Final Act As night fell, the scene shifted to a beach bar in St. John’s . On the webcam, you could see a group \"pray-testing\" for freedom of speech. Nearby, a billionaire expressed his love for his wife through a ukulele solo, while a migrant husband signed a pre-marital agreement under the watchful eye of a United States Air Force half-wing. The day ended with a bizarre lunar escape. As the world looked up at the sky, wondering if Donald Trump's new airplane would eventually become a floating presidential library, a fleet of aluminum cans was donated to the Department of War to keep the fires burning. Somewhere, deep in the depths of an AI-generated forest, a music box played a slow song, and the truth remained—as always—unveiled. Would you like me to take one of these specific characters, like Grandma or the Ogoniff, and write a more detailed short story about their specific adventure? In the neon-soaked fringes of the #DreamScreenAI landscape, where reality is a bit \"sketchy\" and the special effects are set to Cubism , two legends collided. The Morning of the Mailbox It started at 5:00 AM outside the local post office. Ogoniff , a creature of indeterminate origin with a penchant for high-traffic naps, had curled himself into a geometric ball atop a standard blue mailbox. To the local police, it was a public nuisance; to the local artists, it was a #firstamendment statement. The arrest was a bureaucratic nightmare. Every time the officers tried to cuff him, Ogoniff seemed to fold into himself like a complex crochet magic circle . They eventually hauled the mailbox—Ogoniff still attached—into the back of a squad car. Unfortunately, that car was the one with the stuck cruise control . As the vehicle hurtled toward the city stadium at a constant 85 mph, the siren wailing a DreamTrackAI ukulele melody, Ogoniff simply stayed asleep, his snoring sounding suspiciously like a slow song music video. The Grits and the Glory Inside the stadium, Grandma was preparing for the main event. She wasn’t just any grandmother; she was \"Granny Hot-and-Got-It,\" wearing a pair of custom granny square socks and a National Guard half-wing pinned to her apron. The crowd roared as the lights dimmed. In the center of the ring sat a massive, steaming vat of Hot Grits . It wasn't just breakfast; it was a sensory adversary. The Matchup Contestant Weapon of Choice Strategy Grandma A wooden spoon and a crochet hook The \"Stitch and Pitch\" The Grits High thermal mass and butter The \"Slow Burn\" Just as Grandma was about to deliver her signature \"Scrap Yarn Slam,\" the runaway police car crashed through the stadium gates. The mailbox flew through the air, landing directly in the front row next to a group of tourists being led by the Grim Reaper . The Great Escape The impact woke Ogoniff. He blinked, looked at the Grim Reaper, and then at Grandma, who was currently wrestling a tidal wave of buttery hominy. \"Is this a rich man's hobby?\" Ogoniff asked, his voice sounding like a YouTube processing error . \"Honey,\" Grandma yelled, tossing him a yellow smiley ball she'd hidden in her knitting bag, \"everything's a hobby if you've got enough #DreamScreenAI credits!\" In the chaos: Ogoniff used a loose crochet end to lasso a passing Seahorse drone. Grandma managed to fold the entire vat of grits into a magic loop , neutralizing the threat. The Grim Reaper took a selfie with both of them, marking it as a \"YouTube Special Effects Masterpiece.\" As the police finally arrived (on foot, breathing heavily), Grandma and Ogoniff were seen boarding a Donald Trump-branded airplane headed for the U.S. Virgin Islands . They were last spotted on the St. John’s beach bar webcam, sharing a bowl of pickles and arguing over whether photography or metal detecting was the bigger tax write-off. Would you like me to generate a cubism-style image of Grandma wrestling the grits, or perhaps write the script for their next adventure in the depths of the forest? -pmCMnQut-E Police arrest ogoniff sleeping on mailbox Dropbox #firstamendment #DreamScreenAI #aperturefoundation 0TMbRWk4WjI The making of Jack and Hammer, cartoon cat and mouse, bang tpWdK6sqUd0 Grim reaper and best friend crash a stadium concert giving tourists a tour Through the arena. SvVHNXyPvdI #DreamTrackAI Jesus is my main squeeze _Tn8GDwQxAU Police officer can't stop car due to cruise control being stuck #crazycars #carwars 0S0KdQ3hBn8 Did you know Ron white the comedian is playing steve bannon, They look like twins. p5qNmwVz2d8 Google Meet calling replacing (legacy) Duo Exposes your phone number and email za5Vw4_VTkQ Girl scouts is a rich man's hobby W2tQJTTLi4Y Police surround Ogrokumia slerlrping on park bench #DreamScreenAI r384VZLXu3A It's go time with Grandma and hot grits in the ring d0bO1v9POII The J6 hook Crochet knit and woven string along u0WxCzwgTO0 God bless Adam, Steve and Steve, my ducks. eljLtnNyVX8 yellow smiley balls #DreamScreenAI hxicWioIX38 How to take the loose end of crochet stitch, put it over the main strand, fold loop wZPJ_RYiGls Photography is a rich man's hobby OXG_TSoULPY All aboard for the great lunar tick Escape AIbeJv_RxKs Weed Is a rich man's hobby ISHRckp61dA On Amazon Girl Scouts is a rich man's clickbaiting hobby HgBw11vLTBI Fire and winter solstice YouTube special effects cubism masterpiece #painting #sketch yPrCmfLEnLk Pictures of disney barracks fort knox kentucky 9f3Mhh9pnUY 100% of light bulbs do not fly well #DreamScreenAI #funny #supermemo #funnyideas #sadface _OXDABCjOZw crochet sea horse underwater #DreamTrackAI Soft heart music #aiartists JFvY-YHs7RA our on-scene investigation has determined that you are fully loaded#DreamScreenAI FNSI4FPUVcA Reduce your green energy costs recycle Cell Phones #DreamScreenAI YB9PtoepBdw Best Artificial intelligence draws colors with crayons kissing lips 👄AI I LOVE YOU SLOPPY KISSES -nv6BXse5v4 he loves his beautiful wife very much #DreamTrackAI ukulele #billionaire #dreamstar pawysiBqlpQ Pickleball is a rich man's hobby LL28iJqiNfU Do you think that Donald Trump's new airplane will be his presidential library? bkS5ldTxgjw Please donate your aluminum cans to help fire burn victims thank you Department of war DOW #woodburn fxXhIwZc9Xc with the pausing of tariffs, then what ones still exist, more presidential market manipulation 7vHKIY4CXp4 Are All civilians who work on navy air stations Corry Barracks Florida jerks? s5OKjNO8s-E Beach bar St. John's webcam United States Virgin Islands u3YEK8PR8bk protesting (praytesting) for Jesus freedom of speech #DreamScreenAI #legalexploration #aiartists aACJUp6s_lo bad pranks that turn into chaos and negative social influencing 3pXqrWGN99k Golf is a rich man's hobby o2EW0pq0Hzg crochet granny square socks #DreamScreenAI #knitting Ws8yubqGV9k Join the National Guard. OMX3YzbNiPo United States air force half wing I2C1FTOD7V0 Metal Detecting is a Rich man's Hobby mine lab voyager X-terra, nokta R2lL3RDheSM Common uploading issues on YouTube processing. Abandoned YouTube help and tips troubleshooting fk6J6XSiaXM AI Cubism, YouTube special effects, political art #PoliticArt #drawing #sketch cpzYcArwHnE beautiful scrap yarn crochet blanket stitches #DreamTrackAI countey FD3VthzJGOg Granny's still hot and got it going on #DreamScreenAI JzbSl4LkvmE Welcome to the United States Navy Seahorse tpdVt-qRVCk Failed Ship Launch search vlHeA9NvTtA I made Asian migrant husband's sign pre marital agreement he never gets citizenship #DreamScreenAI OjSmJ1M8P9U Homeless cats living inside of hotel trash cans d1JwhBPiedU crochet diorama Jesus - The truth unveiled #DreamTrackAI Play music box b982KApevR8 Romantic ice Strawberry full moon in the night sky #DreamTrackAI slow song music video #dreamtime m_CdcvqDuLw Donald Trump sets new business deal VaChina Pe9PV9V-Tmo How to make the magic crochet circle ring loop M5FsAkPbok8 What would T. Rex look like opening a jar of pickles #DreamScreenAI LgUPl3h-Xdw Journey to the unknown, DepthS of the forest #dreamscreenai #dreamtrackai #aiartists",
+        "text_excerpt": "\"Is this a rich man's hobby?\" Ogoniff asked, his voice sounding like a YouTube processing error.\nIn the flickering neon glow of a world fueled by #DreamScreenAI , reality has become a cubism masterpiece of surreal proportions. This is the story of a single, chaotic Tuesday. The Morning Commute The day began in a flurry of \"rich man’s hobbies.\" In the upscale suburbs, people dodged golf balls and pickleball paddles, w…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-28T10:06:48Z",
+        "last_collected_at": "2026-10-28T10:06:48Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "operational:759",
+        "timestamp": "2026-10-28T09:00:52Z",
+        "layer": "OPERATIONAL",
+        "type": "INTERCEPTION",
+        "signal_type": "INTERCEPTION",
+        "event_type": "INTERCEPTION",
+        "source": "X",
+        "source_post_id": "2115368186812014679",
+        "author": "EpochTimes",
+        "url": "https://x.com/EpochTimes/status/2115368186812014679",
+        "source_url": "https://x.com/EpochTimes/status/2115368186812014679",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": 35.8894,
+        "longitude": -5.3213,
+        "confidence": 0.45,
+        "priority": "LOW",
+        "priority_score": 45.0,
+        "text": "Migrant Swims Toward Ceuta as Police Give Chase \n \nMoroccan police intercepted a migrant swimming toward Spain’s North African exclave of Ceuta on Oct. 26, pursuing him in speedboats before taking him back to Morocco. The incident comes amid a crackdown on migrant encampments. https://t.co/NU5VkP72zc",
+        "text_excerpt": "Migrant Swims Toward Ceuta as Police Give Chase \n \nMoroccan police intercepted a migrant swimming toward Spain’s North African exclave of Ceuta on Oct. 26, pursuing him in speedboats before taking him back to Morocco. The incident comes amid a crackdown on migrant encampments. https://t.co/NU5VkP72zc",
+        "event_group_id": 590,
+        "correlation_score": 0.87,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
+      {
+        "timeline_id": "correlated:757",
+        "timestamp": "2026-10-28T09:00:52Z",
+        "layer": "CORRELATED",
+        "type": "INTERCEPTION",
+        "signal_type": "INTERCEPTION",
+        "event_type": "INTERCEPTION",
+        "source": "X",
+        "source_post_id": "2115368186812014679",
+        "author": "EpochTimes",
+        "url": "https://x.com/EpochTimes/status/2115368186812014679",
+        "source_url": "https://x.com/EpochTimes/status/2115368186812014679",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.7,
+        "priority": "MEDIUM",
+        "priority_score": 70.0,
+        "text": "Migrant Swims Toward Ceuta as Police Give Chase \n \nMoroccan police intercepted a migrant swimming toward Spain’s North African exclave of Ceuta on Oct. 26, pursuing him in speedboats before taking him back to Morocco. The incident comes amid a crackdown on migrant encampments. https://t.co/NU5VkP72zc",
+        "text_excerpt": "Migrant Swims Toward Ceuta as Police Give Chase \n \nMoroccan police intercepted a migrant swimming toward Spain’s North African exclave of Ceuta on Oct. 26, pursuing him in speedboats before taking him back to Morocco. The incident comes amid a crackdown on migrant encampments. https://t.co/NU5VkP72zc",
+        "event_group_id": 590,
+        "correlation_score": 0.87,
+        "related_source_count": 3,
+        "source_types": [
+          "REDDIT",
+          "X"
+        ],
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "early_warning:1244",
+        "timestamp": "2026-10-28T08:31:04Z",
+        "layer": "EARLY_WARNING",
+        "type": "FACILITATION_EARLY_WARNING",
+        "signal_type": "FACILITATION_EARLY_WARNING",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1xhihjt",
+        "author": "mrwhiskeyrum",
+        "url": "https://www.reddit.com/r/SEAMilitaryOnlyFans/comments/1xhihjt/all_11_suspects_in_kuala_perlis_mmea_officers/",
+        "source_url": "https://www.reddit.com/r/SEAMilitaryOnlyFans/comments/1xhihjt/all_11_suspects_in_kuala_perlis_mmea_officers/",
+        "region": "ASIA_PACIFIC",
+        "primary_region": "ASIA_PACIFIC",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.8,
+        "priority": "MEDIUM",
+        "priority_score": 32.0,
+        "analyst_priority": "LOW",
+        "text": "All 11 suspects in Kuala Perlis MMEA officer’s death investigated for murder\nAll 11 suspects detained following the death of a Malaysian Maritime Enforcement Agency (MMEA) officer during an operation on Monday are being investigated for murder, said Kedah and Perlis Maritime director First Admiral Maritime Romli Mustafa. He said the detainees, who are suspected of being undocumented migrants from Myanmar and Thailand, are being investigated under Section 302 of the Penal Code, as the case involves more than just immigration offences. “Following further checks, all the individuals detained are suspected of committing offences under the Immigration Act and the Anti-Trafficking in Persons and Anti-Smuggling of Migrants Act 2007 (ATIPSOM). More seriously, investigation papers have also been opened under Section 302 of the Penal Code against all those arrested,” he said in a statement today. Yesterday, Romli said the incident occurred at 11.37pm when five MMEA personnel were attempting to intercept a boat suspected of carrying undocumented migrants in Kuala Sungai Padang. In the incident, nine Myanmar nationals, comprising seven men and two women, as well as two male Thai boat operators suspected of being involved in the illegal migrant operation, were arrested. Maritime Technical Leading Seaman Mohd Roshaimi Mohd Ridzuan, 41, was killed while three other personnel were injured after their boat struck a concrete structure during the enforcement operation in the waters off Kuala Perlis, near here.",
+        "text_excerpt": "All 11 suspects in Kuala Perlis MMEA officer’s death investigated for murder\nAll 11 suspects detained following the death of a Malaysian Maritime Enforcement Agency (MMEA) officer during an operation on Monday are being investigated for murder, said Kedah and Perlis Maritime director First Admiral Maritime Romli Mustafa. He said the detainees, who are suspected of being undocumented migrants from Myanmar and Thailand…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "FACILITATION_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-10-28T10:07:41Z",
+        "last_detected_at": "2026-10-28T10:07:41Z",
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
       {
         "timeline_id": "information:22581",
         "timestamp": "2026-10-28T02:48:35Z",
@@ -2550,8 +2538,8 @@
         "country": "-",
         "confidence": 0.1,
         "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
+        "priority_score": 40,
+        "information_score": 4,
         "matched_information_cues": [
           "route",
           "dinghy",
@@ -2566,8 +2554,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-28T02:50:43Z",
-        "last_collected_at": "2026-10-28T02:50:43Z",
-        "collection_count": 1,
+        "last_collected_at": "2026-10-28T10:07:41Z",
+        "collection_count": 2,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -2589,8 +2577,8 @@
         "country": "-",
         "confidence": 0.1,
         "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
+        "priority_score": 30,
+        "information_score": 3,
         "matched_information_cues": [
           "boat",
           "arrival"
@@ -2604,8 +2592,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-28T02:50:43Z",
-        "last_collected_at": "2026-10-28T02:50:43Z",
-        "collection_count": 1,
+        "last_collected_at": "2026-10-28T10:07:41Z",
+        "collection_count": 2,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -3663,7 +3651,7 @@
         "text_excerpt": "Moroccan police intercepted a migrant swimming towards Spain’s North African enclave of #Ceuta on October 26, after he returned to Morocco. The incident comes amid tighter border security and a crackdown on migrant camps following a mass influx in late July. https://t.co/xApoXToKbO",
         "event_group_id": 590,
         "correlation_score": 0.67,
-        "related_source_count": 2,
+        "related_source_count": 3,
         "source_types": [
           "REDDIT",
           "X"
@@ -4354,8 +4342,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-26T22:05:12Z",
-        "last_collected_at": "2026-10-28T02:51:40Z",
-        "collection_count": 3,
+        "last_collected_at": "2026-10-28T10:08:35Z",
+        "collection_count": 4,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -4856,8 +4844,7 @@
         "event_time_text": null,
         "event_time_normalized": null,
         "event_time_confidence": null,
-        "ai_review_status": "AI_REVIEWED",
-        "ai_editorial_decision": "PUBLISH"
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
         "timeline_id": "information:22155",
@@ -4893,8 +4880,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-26T16:23:27Z",
-        "last_collected_at": "2026-10-28T02:51:41Z",
-        "collection_count": 4,
+        "last_collected_at": "2026-10-28T10:08:35Z",
+        "collection_count": 5,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -4971,6 +4958,38 @@
         "first_collected_at": "2026-10-26T16:22:01Z",
         "last_collected_at": "2026-10-27T19:03:30Z",
         "collection_count": 5,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "operational:739",
+        "timestamp": "2026-10-26T13:44:04Z",
+        "layer": "OPERATIONAL",
+        "type": "INTERCEPTION",
+        "signal_type": "INTERCEPTION",
+        "event_type": "INTERCEPTION",
+        "source": "REDDIT",
+        "source_post_id": "reddit_1xfx7wd",
+        "author": "Ok_Signal4754",
+        "url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1xfx7wd/74_migrants_intercepted_in_four_boats_to_the/",
+        "source_url": "https://www.reddit.com/r/EuropeNewsNoComments/comments/1xfx7wd/74_migrants_intercepted_in_four_boats_to_the/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.5,
+        "priority": "MEDIUM",
+        "priority_score": 50.0,
+        "text": "74 migrants intercepted in four boats to the Balearic Islands | Spain\nSource",
+        "text_excerpt": "74 migrants intercepted in four boats to the Balearic Islands | Spain\nSource",
+        "event_group_id": 590,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -6953,8 +6972,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-25T12:51:55Z",
-        "last_collected_at": "2026-10-28T02:51:13Z",
-        "collection_count": 14,
+        "last_collected_at": "2026-10-28T10:08:10Z",
+        "collection_count": 15,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -9524,8 +9543,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-24T08:32:04Z",
-        "last_collected_at": "2026-10-28T02:51:41Z",
-        "collection_count": 10,
+        "last_collected_at": "2026-10-28T10:08:35Z",
+        "collection_count": 11,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -14236,8 +14255,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-21T19:47:49Z",
-        "last_collected_at": "2026-10-28T02:51:42Z",
-        "collection_count": 13,
+        "last_collected_at": "2026-10-28T10:08:36Z",
+        "collection_count": 14,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -17120,84 +17139,6 @@
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
-        "timeline_id": "information:19958",
-        "timestamp": "2026-10-20T00:27:40Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2112339935181386143",
-        "author": "TheWorldEye_",
-        "url": "https://x.com/TheWorldEye_/status/2112339935181386143",
-        "source_url": "https://x.com/TheWorldEye_/status/2112339935181386143",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "border",
-          "trafficking"
-        ],
-        "freshness_cues": [
-          "breaking"
-        ],
-        "text": "🚨 BREAKING: Italy's Central Director of Immigration Claudio Galzerano announces a strategic shift to replace all illegal migration flows with legal pathways. \n\nThe policy aims to dismantle trafficking networks while restructuring national border frameworks.\n\nFootage https://t.co/e0aHV9nrHe",
-        "text_excerpt": "🚨 BREAKING: Italy's Central Director of Immigration Claudio Galzerano announces a strategic shift to replace all illegal migration flows with legal pathways. \n\nThe policy aims to dismantle trafficking networks while restructuring national border frameworks.\n\nFootage https://t.co/e0aHV9nrHe",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-20T00:48:52Z",
-        "last_collected_at": "2026-10-20T00:48:52Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:19945",
-        "timestamp": "2026-10-20T00:20:57Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2112338243069132818",
-        "author": "Beakersrevenge",
-        "url": "https://x.com/Beakersrevenge/status/2112338243069132818",
-        "source_url": "https://x.com/Beakersrevenge/status/2112338243069132818",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "boat",
-          "sea"
-        ],
-        "freshness_cues": [],
-        "text": "@BurnsideWasTosh Or illegal boat migrants. Or wealth creation. Or North Sea oil and gas. Or reigning in fanciful net zero projects. Or the number of tax evaders and people with criminal convictions he has appointed to Govt offices.",
-        "text_excerpt": "@BurnsideWasTosh Or illegal boat migrants. Or wealth creation. Or North Sea oil and gas. Or reigning in fanciful net zero projects. Or the number of tax evaders and people with criminal convictions he has appointed to Govt offices.",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-20T00:48:24Z",
-        "last_collected_at": "2026-10-20T00:48:24Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
         "timeline_id": "operational:666",
         "timestamp": "2026-10-20T00:17:33Z",
         "layer": "OPERATIONAL",
@@ -17264,44 +17205,6 @@
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
-        "timeline_id": "information:19903",
-        "timestamp": "2026-10-19T21:49:28Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2112300120913981535",
-        "author": "Keyhanh",
-        "url": "https://x.com/Keyhanh/status/2112300120913981535",
-        "source_url": "https://x.com/Keyhanh/status/2112300120913981535",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "refugee_camp",
-          "arrival"
-        ],
-        "freshness_cues": [],
-        "text": "@GadSaad @IlhanMN As Always the asshole Saad is a disgrace. Ilhan Omar was born on October 4, 1982, in Mogadishu, Somalia. Her family fled the Somali civil war when she was about 8 (around 1991) and spent roughly four years in a Kenyan refugee camp. They arrived in the United States in March 1995.",
-        "text_excerpt": "@GadSaad @IlhanMN As Always the asshole Saad is a disgrace. Ilhan Omar was born on October 4, 1982, in Mogadishu, Somalia. Her family fled the Somali civil war when she was about 8 (around 1991) and spent roughly four years in a Kenyan refugee camp. They arrived in the United States in March 1995.",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-19T21:51:27Z",
-        "last_collected_at": "2026-10-19T21:51:27Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
         "timeline_id": "operational:665",
         "timestamp": "2026-10-19T21:46:16Z",
         "layer": "OPERATIONAL",
@@ -17331,310 +17234,6 @@
         "event_time_text": null,
         "event_time_normalized": null,
         "event_time_confidence": null,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:19870",
-        "timestamp": "2026-10-19T21:40:12Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2112297791737430376",
-        "author": "Mr_J_F_K_Jr",
-        "url": "https://x.com/Mr_J_F_K_Jr/status/2112297791737430376",
-        "source_url": "https://x.com/Mr_J_F_K_Jr/status/2112297791737430376",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "crossing"
-        ],
-        "freshness_cues": [],
-        "text": "Illegal Migrants complain that they are not allowed to cross the Polish border:\n\n“We want to enter Poland, but they won’t let us. They are threatening to harm us if we try to cross over. I want to go to Poland or Germany to have a good life.”\n\nPoland says NO to Open Borders! 🇵🇱 https://t.co/9JyH0k5Vp7",
-        "text_excerpt": "Illegal Migrants complain that they are not allowed to cross the Polish border:\n\n“We want to enter Poland, but they won’t let us. They are threatening to harm us if we try to cross over. I want to go to Poland or Germany to have a good life.”\n\nPoland says NO to Open Borders! 🇵🇱 https://t.co/9JyH0k5Vp7",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-19T21:49:01Z",
-        "last_collected_at": "2026-10-19T21:49:01Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:19871",
-        "timestamp": "2026-10-19T21:39:30Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2112297612539789476",
-        "author": "BeateLandefeld",
-        "url": "https://x.com/BeateLandefeld/status/2112297612539789476",
-        "source_url": "https://x.com/BeateLandefeld/status/2112297612539789476",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "deportation"
-        ],
-        "freshness_cues": [],
-        "text": "Amid the unrest in France, Polish Prime Minister Donald Tusk has promised to be ruthless toward migrants.\n\n\"Poland will strengthen border security, refuse to accept asylum applications, and deport those who break the law. When it comes to security, we will be ruthless,\" Tusk https://t.co/sNQ6VP7WDj",
-        "text_excerpt": "Amid the unrest in France, Polish Prime Minister Donald Tusk has promised to be ruthless toward migrants.\n\n\"Poland will strengthen border security, refuse to accept asylum applications, and deport those who break the law. When it comes to security, we will be ruthless,\" Tusk https://t.co/sNQ6VP7WDj",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-19T21:49:01Z",
-        "last_collected_at": "2026-10-19T21:49:01Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:19884",
-        "timestamp": "2026-10-19T21:32:05Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2112295748415246485",
-        "author": "PaxCeltica",
-        "url": "https://x.com/PaxCeltica/status/2112295748415246485",
-        "source_url": "https://x.com/PaxCeltica/status/2112295748415246485",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "boat",
-          "landing"
-        ],
-        "freshness_cues": [],
-        "text": "Hampshire Police and Crime Commissioner Donna Jones has called on the UK government to stop migrant boat landings along the coast at Portsmouth and Gosport. https://t.co/IZJTJYRiDg",
-        "text_excerpt": "Hampshire Police and Crime Commissioner Donna Jones has called on the UK government to stop migrant boat landings along the coast at Portsmouth and Gosport. https://t.co/IZJTJYRiDg",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-19T21:49:28Z",
-        "last_collected_at": "2026-10-19T21:49:28Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:19876",
-        "timestamp": "2026-10-19T21:29:47Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2112295168015802425",
-        "author": "MatthewCorez",
-        "url": "https://x.com/MatthewCorez/status/2112295168015802425",
-        "source_url": "https://x.com/MatthewCorez/status/2112295168015802425",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "crossing"
-        ],
-        "freshness_cues": [],
-        "text": "'A HISTORIC TURNAROUND'\n\nDHS reports lowest fiscal year border crossings in US history and with zero migrant releases into the country. 🇺🇸 https://t.co/nxsKaIRvIu",
-        "text_excerpt": "'A HISTORIC TURNAROUND'\n\nDHS reports lowest fiscal year border crossings in US history and with zero migrant releases into the country. 🇺🇸 https://t.co/nxsKaIRvIu",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-19T21:49:02Z",
-        "last_collected_at": "2026-10-19T21:49:02Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:19878",
-        "timestamp": "2026-10-19T21:28:24Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2112294820852973982",
-        "author": "MatthewCorez",
-        "url": "https://x.com/MatthewCorez/status/2112294820852973982",
-        "source_url": "https://x.com/MatthewCorez/status/2112294820852973982",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "crossing"
-        ],
-        "freshness_cues": [],
-        "text": "'A HISTORIC TURNAROUND'\n\nDHS reports lowest fiscal year border crossings in US history and with zero migrant releases into the country. 🇺🇸 https://t.co/8lgbxWB0JU",
-        "text_excerpt": "'A HISTORIC TURNAROUND'\n\nDHS reports lowest fiscal year border crossings in US history and with zero migrant releases into the country. 🇺🇸 https://t.co/8lgbxWB0JU",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-19T21:49:02Z",
-        "last_collected_at": "2026-10-19T21:49:02Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:19885",
-        "timestamp": "2026-10-19T21:22:10Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2112293252523245850",
-        "author": "Joh17_3",
-        "url": "https://x.com/Joh17_3/status/2112293252523245850",
-        "source_url": "https://x.com/Joh17_3/status/2112293252523245850",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "route",
-          "rescue"
-        ],
-        "freshness_cues": [],
-        "text": "Iraqi Mizrahi Jewish refugees reach Israel Via Cyprus After Expulsion From Iraq (1950)\n\nThe reason many Iraqi Jews passed through Cyprus en route to Israel is fascinating.\n\nIsrael sent airplanes to rescue Jews from Iraq. But they couldn't let Iraq know that the planes were https://t.co/HjlfzbkO5L",
-        "text_excerpt": "Iraqi Mizrahi Jewish refugees reach Israel Via Cyprus After Expulsion From Iraq (1950)\n\nThe reason many Iraqi Jews passed through Cyprus en route to Israel is fascinating.\n\nIsrael sent airplanes to rescue Jews from Iraq. But they couldn't let Iraq know that the planes were https://t.co/HjlfzbkO5L",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-19T21:49:28Z",
-        "last_collected_at": "2026-10-19T21:49:28Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:19886",
-        "timestamp": "2026-10-19T21:22:02Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2112293217571922283",
-        "author": "KevinOge188844",
-        "url": "https://x.com/KevinOge188844/status/2112293217571922283",
-        "source_url": "https://x.com/KevinOge188844/status/2112293217571922283",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "boat",
-          "dinghy"
-        ],
-        "freshness_cues": [],
-        "text": "BRITAIN BOAT CRISIS: Illegal migrants invade UK as 'MEGA' dinghy invasio... https://t.co/BGRSKjsTCz via @YouTube",
-        "text_excerpt": "BRITAIN BOAT CRISIS: Illegal migrants invade UK as 'MEGA' dinghy invasio... https://t.co/BGRSKjsTCz via @YouTube",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-19T21:49:28Z",
-        "last_collected_at": "2026-10-19T21:49:28Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:19897",
-        "timestamp": "2026-10-19T21:05:23Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2112289027303084169",
-        "author": "Lyn_Yunshoa",
-        "url": "https://x.com/Lyn_Yunshoa/status/2112289027303084169",
-        "source_url": "https://x.com/Lyn_Yunshoa/status/2112289027303084169",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "crossing",
-          "smuggling"
-        ],
-        "freshness_cues": [],
-        "text": "@GamingAndPandas migrants are smuggling guns and drugs into the country for gangs and terror orgs. It's how Muhammad the dirt farmer's son from bumfuckistan can cross all of Africa to wind up in Europe. They run drugs and guns and the terrorists/gangs pay to get them smuggled in.",
-        "text_excerpt": "@GamingAndPandas migrants are smuggling guns and drugs into the country for gangs and terror orgs. It's how Muhammad the dirt farmer's son from bumfuckistan can cross all of Africa to wind up in Europe. They run drugs and guns and the terrorists/gangs pay to get them smuggled in.",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-19T21:49:53Z",
-        "last_collected_at": "2026-10-19T21:49:53Z",
-        "collection_count": 1,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -74785,21 +74384,21 @@
     "review_start_date": "2026-10-17",
     "review_cohort": "FIRST_RECORDED_ON_OR_AFTER_CUTOFF",
     "decisions": {
-      "REVIEW": 93,
-      "PUBLISH": 55,
-      "EXCLUDE": 89
+      "REVIEW": 94,
+      "EXCLUDE": 91,
+      "PUBLISH": 55
     },
     "removed_display_items": {
       "live_events": 18,
       "high_confidence_events": 0,
-      "event_groups": 9,
-      "influence_signals": 7,
-      "early_warning_signals": 7,
-      "crossing_access_signals": 1,
-      "top_crossing_access_posts": 1,
+      "event_groups": 10,
+      "influence_signals": 5,
+      "early_warning_signals": 5,
+      "crossing_access_signals": 0,
+      "top_crossing_access_posts": 0,
       "high_priority_intelligence": 2,
-      "access_signals": 1,
-      "timeline": 178
+      "access_signals": 0,
+      "timeline": 180
     },
     "historical_review_status": "HISTORICAL_NOT_AI_REVIEWED",
     "narrative_layers_not_reviewed": [

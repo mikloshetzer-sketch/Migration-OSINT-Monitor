@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-28T02:52:42.761121+00:00",
+  "generated_at": "2026-10-28T10:09:44.238441+00:00",
   "version": "3.0",
-  "candidates": 237,
+  "candidates": 240,
   "new_ai_calls": 6,
   "conflicting_identity_ids": [
     "group:590",
@@ -11,14 +11,6 @@
     "group:603"
   ],
   "decisions": {
-    "post:739": {
-      "decision": "REVIEW",
-      "reason": "The report lacks specific details such as the exact location, timing, and source credibility to fully verify the interception event. The source 'REDDIT' is insufficient for confirmation without additional corroboration."
-    },
-    "post:740": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete, contemporary migration-related event involving the detention of a smuggler of migrants, consistent with the DETENTION event type."
-    },
     "post:741": {
       "decision": "REVIEW",
       "reason": "The post claims that Spanish police expelled rejected asylum seekers from Ceuta to the Moroccan border as of a specific date. However, no direct corroboration or additional concrete details are provided to verify the event's occurrence or timing. The content aligns with deportation, but lacks enough verification for immediate publishing."
@@ -91,29 +83,13 @@
       "decision": "EXCLUDE",
       "reason": "The post contains political commentary and opinion rather than reporting a concrete, contemporary migration-specific event such as an actual deportation action or policy measure. It does not describe a specific operational event involving migration or deportation."
     },
-    "signal:1228": {
-      "decision": "EXCLUDE",
-      "reason": "The post is a general inquiry about the feasibility and requirements of obtaining a sponsored job in the Netherlands as an accountant. It does not report a concrete, contemporary migration-related event or an early warning signal related to migration policy or routes. It is a personal question seeking advice, without an actual event or policy actio"
-    },
-    "signal:1229": {
-      "decision": "EXCLUDE",
-      "reason": "The event date is in the future relative to current knowledge cutoff (2024-06). The report is about enforcement but cannot be confirmed as contemporary given the future date, and there is no location beyond generic region, limiting verification. Also, the age of the post is post cutoff, and the signal is not a clear early warning but a summary of p"
-    },
-    "signal:1230": {
-      "decision": "EXCLUDE",
-      "reason": "This is a general political commentary with hostile rhetoric about migration policies and border enforcement; it does not report a specific, concrete, or current migration event or action."
-    },
-    "signal:1231": {
+    "post:759": {
       "decision": "PUBLISH",
-      "reason": "The record reports a concrete, contemporary migration-related event involving a migrant intercepted attempting to reach Ceuta, matching the MOVEMENT_EARLY_WARNING type as it signals ongoing movement attempts and border enforcement activity. The event is current and clearly migration-specific."
+      "reason": "The post describes a concrete, recent migration-related event involving the interception of a migrant swimming toward Ceuta, which is a known migration hotspot. The event type INTERCEPTION is supported by the description of police pursuit and return to Morocco. The event is contemporary and specific to migration."
     },
-    "signal:1232": {
-      "decision": "PUBLISH",
-      "reason": "The report describes a concrete and contemporary migration-related event—a migrant intercepted while attempting to enter Ceuta by swimming, with Moroccan police pursuing into Spanish waters and returning the individual to Morocco. The event is consistent with the assigned type 'MOVEMENT_EARLY_WARNING' as it indicates a migration attempt and enforce"
-    },
-    "signal:1233": {
-      "decision": "REVIEW",
-      "reason": "The claim about all selected applicants being migrants from an internal memorandum is unverified and lacks supporting evidence. The information relates to recruitment of train drivers and migrant selection but does not clearly establish a concrete migration-specific early warning or policy action that can be reliably published without further corro"
+    "post:760": {
+      "decision": "EXCLUDE",
+      "reason": "The post contains a question about deportations but no concrete or contemporary event reporting an actual deportation."
     },
     "signal:1236": {
       "decision": "EXCLUDE",
@@ -139,6 +115,18 @@
       "decision": "PUBLISH",
       "reason": "The text provides a migration-specific early warning related to economic opportunity driving Indian migration intentions, supported by survey data indicating key motivations such as financial growth and career advancement, which fits the FACILITATION_EARLY_WARNING event type criteria."
     },
+    "signal:1242": {
+      "decision": "REVIEW",
+      "reason": "The input contains multiple news items including one about the detention of a person managing a 'casa patera' with immigrants subjected to poor conditions, which relates to migration. However, it also includes other items about police and political officials and a union request related to staff reinforcement. The event type 'ROUTE_EARLY_WARNING' se"
+    },
+    "signal:1243": {
+      "decision": "REVIEW",
+      "reason": "The post references EU border policy ambitions and raises a question about deportations but lacks a concrete, specific migration-related event or policy action currently underway. The event type 'ROUTE_EARLY_WARNING' is plausible given the policy context, but the content is more a general commentary than a confirmed early warning or operational upd"
+    },
+    "signal:1244": {
+      "decision": "PUBLISH",
+      "reason": "The report details a concrete, contemporary migration-related enforcement operation involving undocumented migrants and resulting legal investigations, fitting the criteria for a migration-specific signal. The case involves investigation under immigration and anti-smuggling laws following an incident during interception of a boat suspected of carry"
+    },
     "group:547": {
       "decision": "REVIEW",
       "reason": "The post reports judicial actions related to immigrants and mentions expulsions, consistent with deportations. However, the details are vague about whether the deportations are concrete and current events or court rulings with enforced expulsions. Source credibility is unclear and event timing is uncertain due to future last_seen date."
@@ -154,10 +142,6 @@
     "group:594": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
-    },
-    "group:598": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete migration-related event involving migrants expelled (deported) from Mauritania to Senegal, mentioning arrests despite valid documents and detention conditions upon arrival. This aligns with the event type 'DEPORTATION' and indicates a current operational migration event."
     },
     "group:599": {
       "decision": "EXCLUDE",
@@ -178,6 +162,10 @@
     "group:603": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:604": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a question and does not report a concrete, contemporary migration event such as an actual deportation action. No event is described or claimed to have occurred."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -950,6 +938,30 @@
     "signal:1227": {
       "decision": "PUBLISH",
       "reason": "This signal provides a contemporary and specific early warning about a potential barrier in urgent processing of citizenship applications related to amended documents, particularly birth certificates with legal name and gender marker changes, which is migration-specific and operationally relevant."
+    },
+    "signal:1228": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a general inquiry about the feasibility and requirements of obtaining a sponsored job in the Netherlands as an accountant. It does not report a concrete, contemporary migration-related event or an early warning signal related to migration policy or routes. It is a personal question seeking advice, without an actual event or policy actio"
+    },
+    "signal:1229": {
+      "decision": "EXCLUDE",
+      "reason": "The event date is in the future relative to current knowledge cutoff (2024-06). The report is about enforcement but cannot be confirmed as contemporary given the future date, and there is no location beyond generic region, limiting verification. Also, the age of the post is post cutoff, and the signal is not a clear early warning but a summary of p"
+    },
+    "signal:1230": {
+      "decision": "EXCLUDE",
+      "reason": "This is a general political commentary with hostile rhetoric about migration policies and border enforcement; it does not report a specific, concrete, or current migration event or action."
+    },
+    "signal:1231": {
+      "decision": "PUBLISH",
+      "reason": "The record reports a concrete, contemporary migration-related event involving a migrant intercepted attempting to reach Ceuta, matching the MOVEMENT_EARLY_WARNING type as it signals ongoing movement attempts and border enforcement activity. The event is current and clearly migration-specific."
+    },
+    "signal:1232": {
+      "decision": "PUBLISH",
+      "reason": "The report describes a concrete and contemporary migration-related event—a migrant intercepted while attempting to enter Ceuta by swimming, with Moroccan police pursuing into Spanish waters and returning the individual to Morocco. The event is consistent with the assigned type 'MOVEMENT_EARLY_WARNING' as it indicates a migration attempt and enforce"
+    },
+    "signal:1233": {
+      "decision": "REVIEW",
+      "reason": "The claim about all selected applicants being migrants from an internal memorandum is unverified and lacks supporting evidence. The information relates to recruitment of train drivers and migrant selection but does not clearly establish a concrete migration-specific early warning or policy action that can be reliably published without further corro"
     },
     "signal:1234": {
       "decision": "REVIEW",
