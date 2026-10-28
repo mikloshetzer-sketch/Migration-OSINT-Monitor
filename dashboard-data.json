@@ -1,71 +1,71 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-10-28T10:08:38Z",
-  "generated_at": "2026-10-28T10:08:38Z",
+  "updated_at": "2026-10-28T17:33:31Z",
+  "generated_at": "2026-10-28T17:33:31Z",
   "current_run": {
     "available": true,
-    "id": 360,
-    "run_uuid": "03f9b0a5-45bb-4fe6-b105-7ca0f3c009a2",
-    "started_at": "2026-10-28T10:06:12Z",
-    "completed_at": "2026-10-28T10:08:36Z",
+    "id": 361,
+    "run_uuid": "c769d60c-fffe-41df-9273-17ab8db873a5",
+    "started_at": "2026-10-28T17:31:04Z",
+    "completed_at": "2026-10-28T17:33:29Z",
     "status": "SUCCESS",
     "posts_returned": 144,
-    "unique_posts_collected": 106,
+    "unique_posts_collected": 104,
     "x_posts_returned": 50,
     "reddit_posts_returned": 24,
     "mastodon_posts_returned": 50,
-    "unique_x_posts": 48,
-    "unique_reddit_posts": 23,
-    "unique_mastodon_posts": 19,
+    "unique_x_posts": 47,
+    "unique_reddit_posts": 24,
+    "unique_mastodon_posts": 18,
     "noise_filtered": 0,
-    "non_operational_filtered": 104,
-    "historical_references_filtered": 0,
-    "influence_signals": 1,
-    "influence_signals_detected": 1,
+    "non_operational_filtered": 99,
+    "historical_references_filtered": 1,
+    "influence_signals": 2,
+    "influence_signals_detected": 2,
     "crossing_facilitation_signals": 1,
-    "legal_migration_signals": 0,
+    "legal_migration_signals": 1,
     "policy_signals": 0,
     "recruitment_coordination_signals": 0,
     "mobilization_coordination_signals": 0,
     "mobilization_report_signals": 0,
     "decision_influence_signals": 0,
     "online_influence_report_signals": 0,
-    "operational_events": 2,
-    "operational_events_analyzed": 2,
-    "historical_events_available": 78,
-    "new_correlations": 1,
-    "correlated_events": 1,
-    "new_correlation_groups": 1,
-    "database_correlations": 1,
+    "operational_events": 4,
+    "operational_events_analyzed": 4,
+    "historical_events_available": 77,
+    "new_correlations": 0,
+    "correlated_events": 0,
+    "new_correlation_groups": 4,
+    "database_correlations": 0,
     "current_run_correlations": 0,
-    "new_events": 2,
-    "new_events_saved": 2,
+    "new_events": 4,
+    "new_events_saved": 4,
     "events_already_existing": 0,
-    "new_event_groups": 1,
-    "updated_event_groups": 1,
+    "new_event_groups": 4,
+    "updated_event_groups": 0,
     "bootstrapped_event_groups": 0,
     "existing_event_groups_reused": 0,
-    "event_group_sources_linked": 2,
+    "event_group_sources_linked": 4,
     "x_collector_errors": 0,
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "error_message": null
   },
   "kpis": {
-    "operational_events": 17,
-    "new_events": 2,
-    "correlated_events": 6,
-    "active_event_groups": 585,
+    "operational_events": 15,
+    "new_events": 4,
+    "correlated_events": 5,
+    "active_event_groups": 589,
     "sources": 4,
-    "regions": 8,
-    "collected_posts_24h": 341,
-    "influence_signals": 9,
-    "access_signals": 0,
+    "regions": 7,
+    "collected_posts_24h": 321,
+    "influence_signals": 11,
+    "access_signals": 1,
     "high_priority": 0,
-    "current_run_operational_events": 2,
-    "current_run_unique_posts": 106,
-    "access_signals_raw": 0,
-    "influence_signals_raw": 9,
+    "current_run_operational_events": 4,
+    "current_run_unique_posts": 104,
+    "access_signals_raw": 1,
+    "influence_signals_raw": 11,
     "influence_narratives": 3
   },
   "live_events": [
@@ -125,86 +125,79 @@
       "region": "GLOBAL",
       "count": 5,
       "events": 5,
-      "percentage": 35.71
+      "percentage": 38.46
     },
     {
       "name": "WESTERN_MEDITERRANEAN",
       "region": "WESTERN_MEDITERRANEAN",
       "count": 3,
       "events": 3,
-      "percentage": 21.43
+      "percentage": 23.08
     },
     {
-      "name": "SAHEL",
-      "region": "SAHEL",
+      "name": "MIDDLE_EAST",
+      "region": "MIDDLE_EAST",
       "count": 1,
       "events": 1,
-      "percentage": 7.14
+      "percentage": 7.69
     },
     {
       "name": "EASTERN_MEDITERRANEAN",
       "region": "EASTERN_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 7.14
+      "percentage": 7.69
     },
     {
       "name": "EASTERN_EU_BORDER",
       "region": "EASTERN_EU_BORDER",
       "count": 1,
       "events": 1,
-      "percentage": 7.14
-    },
-    {
-      "name": "CENTRAL_MEDITERRANEAN",
-      "region": "CENTRAL_MEDITERRANEAN",
-      "count": 1,
-      "events": 1,
-      "percentage": 7.14
+      "percentage": 7.69
     },
     {
       "name": "ASIA_PACIFIC",
       "region": "ASIA_PACIFIC",
       "count": 1,
       "events": 1,
-      "percentage": 7.14
+      "percentage": 7.69
     },
     {
       "name": "AMERICAS",
       "region": "AMERICAS",
       "count": 1,
       "events": 1,
-      "percentage": 7.14
+      "percentage": 7.69
     }
   ],
   "sources": [
     {
       "source": "X",
       "name": "X",
-      "count": 235,
-      "posts": 235,
-      "percentage": 68.91
+      "count": 230,
+      "posts": 230,
+      "percentage": 71.65
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 46,
-      "posts": 46,
-      "percentage": 13.49
+      "count": 38,
+      "posts": 38,
+      "percentage": 11.84
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 39,
-      "posts": 39,
-      "percentage": 11.44
+      "count": 36,
+      "posts": 36,
+      "percentage": 11.21
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 21,
-      "posts": 21,
-      "percentage": 6.16
+      "count": 17,
+      "posts": 17,
+      "percentage": 5.3
     }
   ],
   "region_activity": [
@@ -213,97 +206,90 @@
       "region": "GLOBAL",
       "count": 5,
       "events": 5,
-      "percentage": 35.71
+      "percentage": 38.46
     },
     {
       "name": "WESTERN_MEDITERRANEAN",
       "region": "WESTERN_MEDITERRANEAN",
       "count": 3,
       "events": 3,
-      "percentage": 21.43
+      "percentage": 23.08
     },
     {
-      "name": "SAHEL",
-      "region": "SAHEL",
+      "name": "MIDDLE_EAST",
+      "region": "MIDDLE_EAST",
       "count": 1,
       "events": 1,
-      "percentage": 7.14
+      "percentage": 7.69
     },
     {
       "name": "EASTERN_MEDITERRANEAN",
       "region": "EASTERN_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 7.14
+      "percentage": 7.69
     },
     {
       "name": "EASTERN_EU_BORDER",
       "region": "EASTERN_EU_BORDER",
       "count": 1,
       "events": 1,
-      "percentage": 7.14
-    },
-    {
-      "name": "CENTRAL_MEDITERRANEAN",
-      "region": "CENTRAL_MEDITERRANEAN",
-      "count": 1,
-      "events": 1,
-      "percentage": 7.14
+      "percentage": 7.69
     },
     {
       "name": "ASIA_PACIFIC",
       "region": "ASIA_PACIFIC",
       "count": 1,
       "events": 1,
-      "percentage": 7.14
+      "percentage": 7.69
     },
     {
       "name": "AMERICAS",
       "region": "AMERICAS",
       "count": 1,
       "events": 1,
-      "percentage": 7.14
+      "percentage": 7.69
     }
   ],
   "source_activity": [
     {
       "source": "X",
       "name": "X",
-      "count": 235,
-      "posts": 235,
-      "percentage": 68.91
+      "count": 230,
+      "posts": 230,
+      "percentage": 71.65
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 46,
-      "posts": 46,
-      "percentage": 13.49
+      "count": 38,
+      "posts": 38,
+      "percentage": 11.84
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 39,
-      "posts": 39,
-      "percentage": 11.44
+      "count": 36,
+      "posts": 36,
+      "percentage": 11.21
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 21,
-      "posts": 21,
-      "percentage": 6.16
+      "count": 17,
+      "posts": 17,
+      "percentage": 5.3
     }
   ],
   "correlation": {
-    "correlated_events": 6,
-    "correlated_sources": 6,
-    "grouped_sources": 17,
-    "event_groups": 585,
-    "active_groups": 585,
+    "correlated_events": 5,
+    "correlated_sources": 5,
+    "grouped_sources": 15,
+    "event_groups": 589,
+    "active_groups": 589,
     "multi_source_groups": 59,
     "strongest_match": 1.0,
-    "correlation_rate": 35.29
+    "correlation_rate": 33.33
   },
   "technical_health": "HEALTHY",
   "collector_health": "HEALTHY",
@@ -316,44 +302,44 @@
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "database": "AVAILABLE",
-    "last_run_id": 360,
-    "last_completed_at": "2026-10-28T10:08:36Z"
+    "last_run_id": 361,
+    "last_completed_at": "2026-10-28T17:33:29Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 17,
-    "influence_signals_24h": 9,
-    "access_signals_24h": 0,
-    "correlated_events_24h": 6,
-    "active_event_groups": 585,
+    "operational_events_24h": 15,
+    "influence_signals_24h": 11,
+    "access_signals_24h": 1,
+    "correlated_events_24h": 5,
+    "active_event_groups": 589,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "hotspot": "WESTERN_MEDITERRANEAN",
-    "dominant_event_type": "DEPORTATION",
+    "dominant_event_type": "BORDER_CROSSING",
     "dominant_source": "X",
-    "average_confidence": 0.446,
+    "average_confidence": 0.445,
     "confidence_level": "LOW",
-    "correlation_rate": 35.29,
+    "correlation_rate": 33.33,
     "activity_level": "ELEVATED",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 17 operatív migrációs eseményt, 9 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 6 friss eseményforrás korrelált más forrással. Jelenleg 585 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Deportation. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.45. A jelenlegi aktivitási szint: ELEVATED.",
+    "summary": "Az elmúlt 24 órában a rendszer 15 operatív migrációs eseményt, 11 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 5 friss eseményforrás korrelált más forrással. Jelenleg 589 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.45. A jelenlegi aktivitási szint: ELEVATED.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
   "analytical_assessment": {
-    "operational_events_24h": 17,
-    "influence_signals_24h": 9,
-    "access_signals_24h": 0,
-    "correlated_events_24h": 6,
-    "active_event_groups": 585,
+    "operational_events_24h": 15,
+    "influence_signals_24h": 11,
+    "access_signals_24h": 1,
+    "correlated_events_24h": 5,
+    "active_event_groups": 589,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "hotspot": "WESTERN_MEDITERRANEAN",
-    "dominant_event_type": "DEPORTATION",
+    "dominant_event_type": "BORDER_CROSSING",
     "dominant_source": "X",
-    "average_confidence": 0.446,
+    "average_confidence": 0.445,
     "confidence_level": "LOW",
-    "correlation_rate": 35.29,
+    "correlation_rate": 33.33,
     "activity_level": "ELEVATED",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 17 operatív migrációs eseményt, 9 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 6 friss eseményforrás korrelált más forrással. Jelenleg 585 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Deportation. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.45. A jelenlegi aktivitási szint: ELEVATED.",
+    "summary": "Az elmúlt 24 órában a rendszer 15 operatív migrációs eseményt, 11 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 5 friss eseményforrás korrelált más forrással. Jelenleg 589 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.45. A jelenlegi aktivitási szint: ELEVATED.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
@@ -859,8 +845,8 @@
       "language": null,
       "published_at": "2026-10-28T08:31:04Z",
       "first_detected_at": "2026-10-28T10:07:41Z",
-      "last_detected_at": "2026-10-28T10:07:41Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-10-28T17:32:34Z",
+      "detection_count": 2,
       "text": "All 11 suspects in Kuala Perlis MMEA officer’s death investigated for murder\nAll 11 suspects detained following the death of a Malaysian Maritime Enforcement Agency (MMEA) officer during an operation on Monday are being investigated for murder, said Kedah and Perlis Maritime director First Admiral Maritime Romli Mustafa. He said the detainees, who are suspected of being undocumented migrants from Myanmar and Thailand, are being investigated under Section 302 of the Penal Code, as the case involves more than just immigration offences. “Following further checks, all the individuals detained are suspected of committing offences under the Immigration Act and the Anti-Trafficking in Persons and Anti-Smuggling of Migrants Act 2007 (ATIPSOM). More seriously, investigation papers have also been opened under Section 302 of the Penal Code against all those arrested,” he said in a statement today. Yesterday, Romli said the incident occurred at 11.37pm when five MMEA personnel were attempting to intercept a boat suspected of carrying undocumented migrants in Kuala Sungai Padang. In the incident, nine Myanmar nationals, comprising seven men and two women, as well as two male Thai boat operators suspected of being involved in the illegal migrant operation, were arrested. Maritime Technical Leading Seaman Mohd Roshaimi Mohd Ridzuan, 41, was killed while three other personnel were injured after their boat struck a concrete structure during the enforcement operation in the waters off Kuala Perlis, near here.",
       "text_excerpt": "All 11 suspects in Kuala Perlis MMEA officer’s death investigated for murder\nAll 11 suspects detained following the death of a Malaysian Maritime Enforcement Agency (MMEA) officer during an operation on Monday are being investigated for murder, said Kedah and Perlis Maritime director First Admiral Maritime Romli Mustafa. He said the detainees, who are suspected of being undocumented migrants from Myanmar and Thailand, are being investigated under Section 302 of the Penal Code, as the case involves more than just immigration offences. “Following further checks, all the individuals detained are suspected of committing offences under the Immigration Act and the Anti-Trafficking in Persons and A",
       "url": "https://www.reddit.com/r/SEAMilitaryOnlyFans/comments/1xhihjt/all_11_suspects_in_kuala_perlis_mmea_officers/",
@@ -1124,8 +1110,8 @@
       "language": null,
       "published_at": "2026-10-28T08:31:04Z",
       "first_detected_at": "2026-10-28T10:07:41Z",
-      "last_detected_at": "2026-10-28T10:07:41Z",
-      "detection_count": 1,
+      "last_detected_at": "2026-10-28T17:32:34Z",
+      "detection_count": 2,
       "text": "All 11 suspects in Kuala Perlis MMEA officer’s death investigated for murder\nAll 11 suspects detained following the death of a Malaysian Maritime Enforcement Agency (MMEA) officer during an operation on Monday are being investigated for murder, said Kedah and Perlis Maritime director First Admiral Maritime Romli Mustafa. He said the detainees, who are suspected of being undocumented migrants from Myanmar and Thailand, are being investigated under Section 302 of the Penal Code, as the case involves more than just immigration offences. “Following further checks, all the individuals detained are suspected of committing offences under the Immigration Act and the Anti-Trafficking in Persons and Anti-Smuggling of Migrants Act 2007 (ATIPSOM). More seriously, investigation papers have also been opened under Section 302 of the Penal Code against all those arrested,” he said in a statement today. Yesterday, Romli said the incident occurred at 11.37pm when five MMEA personnel were attempting to intercept a boat suspected of carrying undocumented migrants in Kuala Sungai Padang. In the incident, nine Myanmar nationals, comprising seven men and two women, as well as two male Thai boat operators suspected of being involved in the illegal migrant operation, were arrested. Maritime Technical Leading Seaman Mohd Roshaimi Mohd Ridzuan, 41, was killed while three other personnel were injured after their boat struck a concrete structure during the enforcement operation in the waters off Kuala Perlis, near here.",
       "text_excerpt": "All 11 suspects in Kuala Perlis MMEA officer’s death investigated for murder\nAll 11 suspects detained following the death of a Malaysian Maritime Enforcement Agency (MMEA) officer during an operation on Monday are being investigated for murder, said Kedah and Perlis Maritime director First Admiral Maritime Romli Mustafa. He said the detainees, who are suspected of being undocumented migrants from Myanmar and Thailand, are being investigated under Section 302 of the Penal Code, as the case involves more than just immigration offences. “Following further checks, all the individuals detained are suspected of committing offences under the Immigration Act and the Anti-Trafficking in Persons and A",
       "url": "https://www.reddit.com/r/SEAMilitaryOnlyFans/comments/1xhihjt/all_11_suspects_in_kuala_perlis_mmea_officers/",
@@ -1314,6 +1300,74 @@
   ],
   "influence_narratives": [
     {
+      "id": 1247,
+      "source": "X",
+      "source_post_id": "2115488942871003153",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-10-28T17:00:42Z",
+      "first_detected_at": "2026-10-28T17:33:27Z",
+      "last_detected_at": "2026-10-28T17:33:27Z",
+      "detection_count": 1,
+      "text": "@Truthseekerrr99 Reform UK policies map more closely to current Conservative positions on leaving the ECHR, deporting illegal migrants, raising the personal allowance, inheritance tax relief on homes, and ending net zero rules. Restore Britain goes further, seeking full asylum system abolition,",
+      "text_excerpt": "@Truthseekerrr99 Reform UK policies map more closely to current Conservative positions on leaving the ECHR, deporting illegal migrants, raising the personal allowance, inheritance tax relief on homes, and ending net zero rules. Restore Britain goes further, seeking full asylum system abolition,",
+      "url": "https://x.com/grok/status/2115488942871003153",
+      "source_url": "https://x.com/grok/status/2115488942871003153",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.94,
+      "score": 15.0,
+      "matched_signals": [
+        "LEGAL_MIGRATION_SIGNAL"
+      ],
+      "matched_phrases": [
+        [
+          "legal_signal",
+          "ECHR"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants",
+        "asylum"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 48.9,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2115488942871003153"
+      ],
+      "related_authors": [
+        "grok"
+      ],
+      "related_urls": [
+        "https://x.com/grok/status/2115488942871003153"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
+    {
       "id": 1238,
       "source": "X",
       "source_post_id": "2115216594838094165",
@@ -1466,90 +1520,81 @@
       ],
       "independent_author_count": 1,
       "platform_count": 1
-    },
-    {
-      "id": 1242,
-      "source": "TELEGRAM",
-      "source_post_id": "1261826972:53947",
-      "author": "elfarodeceuta",
-      "language": null,
-      "published_at": "2026-10-28T08:05:06Z",
-      "first_detected_at": "2026-10-28T10:06:49Z",
-      "last_detected_at": "2026-10-28T10:06:49Z",
-      "detection_count": 1,
-      "text": "📰 Tres noticias de elfarodeceuta.es para comenzar este miércoles:\n\n1⃣ Detenido tras someter a inmigrantes a una vida de calvario en una casa patera del Príncipe\n\n➡ La UDEV y la UCRIF, con apoyo de UPR, montaron un operativo en la barriada para arrestar a quien gestionaba una casa para hacinar a inmigrantes a los que amenazaba\n\n➡ Han encontrado hachís, armas, un pasamontañas y una careta de ‘La casa de papel’\n\nhttps://elfarodeceuta.es/detenido-tras-someter-inmigrantes-vida-calvario-casa-patera-principe/\n\n2⃣ Mandos policiales y políticos marroquíes estaban en la frontera el día de la invasión\n\n➡ Tres marroquíes que entraron a nado declararán hoy ante la jueza María Tardón, aunque previamente lo hicieron ante la Policía para confirmar la pasividad de Marruecos y la presencia de mandos policiales y políticos en la zona frontera sin actuar\n\nhttps://elfarodeceuta.es/mandos-policiales-politicos-marroquies-frontera-dia-invasion/\n\n3⃣ CCOO-Justicia pide la prórroga del refuerzo de personal desplazado por la crisis de Ceuta\n\n➡ Reclama a la Gerencia no solo mantener esos refuerzos en áreas tan sensibles como Fiscalía, guardia de detenidos o Instituto de Medicina Legal, sino también renovar el personal\n\nhttps://elfarodeceuta.es/ccoo-justicia-pide-prorroga-refuerzo-personal-desplazado-crisis-ceuta/",
-      "text_excerpt": "📰 Tres noticias de elfarodeceuta.es para comenzar este miércoles:\n\n1⃣ Detenido tras someter a inmigrantes a una vida de calvario en una casa patera del Príncipe\n\n➡ La UDEV y la UCRIF, con apoyo de UPR, montaron un operativo en la barriada para arrestar a quien gestionaba una casa para hacinar a inmigrantes a los que amenazaba\n\n➡ Han encontrado hachís, armas, un pasamontañas y una careta de ‘La casa de papel’\n\nhttps://elfarodeceuta.es/detenido-tras-someter-inmigrantes-vida-calvario-casa-patera-principe/\n\n2⃣ Mandos policiales y políticos marroquíes estaban en la frontera el día de la invasión\n\n➡ Tres marroquíes que entraron a nado declararán hoy ante la jueza María Tardón, aunque previamente l",
-      "url": "https://t.me/elfarodeceuta/53947",
-      "source_url": "https://t.me/elfarodeceuta/53947",
-      "primary_signal": "ROUTE_EARLY_WARNING",
-      "signal_type": "ROUTE_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ROUTE_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.72,
-      "score": 7.25,
-      "matched_signals": [
-        "ROUTE_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "route",
-          "patera"
-        ],
-        [
-          "route",
-          "frontera"
-        ],
-        [
-          "enforcement",
-          "detenido"
-        ]
-      ],
-      "matched_groups": [
-        "ROUTE",
-        "ENFORCEMENT"
-      ],
-      "context_matches": [
-        "inmigrantes"
-      ],
-      "high_value_matches": [],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "Ceuta",
-      "primary_location": "Ceuta",
-      "country": "Spain",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": 35.8894,
-      "longitude": -5.3213,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 36.2,
-      "analyst_priority": "LOW",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "1261826972:53947"
-      ],
-      "related_authors": [
-        "elfarodeceuta"
-      ],
-      "related_urls": [
-        "https://t.me/elfarodeceuta/53947"
-      ],
-      "related_sources": [
-        "TELEGRAM"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
     }
   ],
   "crossing_access_signals": [],
   "access_signals": [],
   "top_crossing_access_posts": [],
-  "crossing_access_narratives": [],
+  "crossing_access_narratives": [
+    {
+      "id": 1247,
+      "source": "X",
+      "source_post_id": "2115488942871003153",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-10-28T17:00:42Z",
+      "first_detected_at": "2026-10-28T17:33:27Z",
+      "last_detected_at": "2026-10-28T17:33:27Z",
+      "detection_count": 1,
+      "text": "@Truthseekerrr99 Reform UK policies map more closely to current Conservative positions on leaving the ECHR, deporting illegal migrants, raising the personal allowance, inheritance tax relief on homes, and ending net zero rules. Restore Britain goes further, seeking full asylum system abolition,",
+      "text_excerpt": "@Truthseekerrr99 Reform UK policies map more closely to current Conservative positions on leaving the ECHR, deporting illegal migrants, raising the personal allowance, inheritance tax relief on homes, and ending net zero rules. Restore Britain goes further, seeking full asylum system abolition,",
+      "url": "https://x.com/grok/status/2115488942871003153",
+      "source_url": "https://x.com/grok/status/2115488942871003153",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.94,
+      "score": 15.0,
+      "matched_signals": [
+        "LEGAL_MIGRATION_SIGNAL"
+      ],
+      "matched_phrases": [
+        [
+          "legal_signal",
+          "ECHR"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants",
+        "asylum"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 48.9,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2115488942871003153"
+      ],
+      "related_authors": [
+        "grok"
+      ],
+      "related_urls": [
+        "https://x.com/grok/status/2115488942871003153"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    }
+  ],
   "information_activity_weekly": [
     {
       "year": 2026,
@@ -1676,15 +1721,15 @@
       "label": "W44",
       "week_label": "W44",
       "week_start": "2026-10-26T00:00:00Z",
-      "posts": 713,
-      "post_count": 713,
-      "operational_posts": 35,
-      "influence_signals": 24,
+      "posts": 780,
+      "post_count": 780,
+      "operational_posts": 40,
+      "influence_signals": 27,
       "source_counts": {
-        "X": 487,
-        "REDDIT": 88,
-        "MASTODON": 90,
-        "TELEGRAM": 48
+        "X": 534,
+        "REDDIT": 94,
+        "MASTODON": 99,
+        "TELEGRAM": 53
       }
     }
   ],
@@ -1814,33 +1859,33 @@
       "label": "W44",
       "week_label": "W44",
       "week_start": "2026-10-26T00:00:00Z",
-      "posts": 713,
-      "post_count": 713,
-      "operational_posts": 35,
-      "influence_signals": 24,
+      "posts": 780,
+      "post_count": 780,
+      "operational_posts": 40,
+      "influence_signals": 27,
       "source_counts": {
-        "X": 487,
-        "REDDIT": 88,
-        "MASTODON": 90,
-        "TELEGRAM": 48
+        "X": 534,
+        "REDDIT": 94,
+        "MASTODON": 99,
+        "TELEGRAM": 53
       }
     }
   ],
   "information_activity_summary": {
-    "current_week": 713,
-    "previous_week": 1053,
-    "current_week_to_date": 713,
-    "previous_week_same_period": 1053,
+    "current_week": 780,
+    "previous_week": 1137,
+    "current_week_to_date": 780,
+    "previous_week_same_period": 1137,
     "previous_week_full": 2631,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": -32.29,
-    "change_label": "-32.3%",
+    "change_percent": -31.4,
+    "change_label": "-31.4%",
     "direction": "DOWN",
     "comparable": true,
-    "elapsed_hours": 58.1,
+    "elapsed_hours": 65.6,
     "current_period_start": "2026-10-26T00:00:00Z",
     "previous_period_start": "2026-10-19T00:00:00Z",
-    "previous_period_end": "2026-10-21T10:08:37Z"
+    "previous_period_end": "2026-10-21T17:33:30Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -1852,38 +1897,38 @@
       72,
       168
     ],
-    "generated_at": "2026-10-28T10:08:38Z",
-    "total_items": 2165,
-    "information_count": 279,
+    "generated_at": "2026-10-28T17:33:31Z",
+    "total_items": 2167,
+    "information_count": 275,
     "early_warning_count": 1049,
-    "operational_count": 688,
-    "correlated_count": 149,
+    "operational_count": 692,
+    "correlated_count": 151,
     "layer_counts": {
-      "INFORMATION": 279,
-      "OPERATIONAL": 688,
-      "CORRELATED": 149,
+      "INFORMATION": 275,
+      "OPERATIONAL": 692,
+      "CORRELATED": 151,
       "EARLY_WARNING": 1049
     },
     "source_counts": {
-      "X": 1528,
-      "REDDIT": 489,
+      "X": 1530,
+      "REDDIT": 488,
       "MASTODON": 100,
-      "TELEGRAM": 48
+      "TELEGRAM": 49
     },
     "type_counts": {
-      "INFORMATION_SIGNAL": 279,
+      "INFORMATION_SIGNAL": 275,
       "INTERCEPTION": 49,
       "FACILITATION_EARLY_WARNING": 204,
-      "BORDER_CROSSING": 292,
-      "DEPORTATION": 111,
+      "BORDER_CROSSING": 294,
+      "DEPORTATION": 113,
       "ROUTE_EARLY_WARNING": 144,
-      "DETENTION": 75,
+      "DETENTION": 76,
+      "RESCUE_OPERATION": 45,
       "MOVEMENT_EARLY_WARNING": 337,
       "CASUALTY": 31,
       "SMUGGLING_ACTIVITY": 70,
       "BORDER_MEASURE": 15,
       "PRESSURE_EARLY_WARNING": 50,
-      "RESCUE_OPERATION": 44,
       "ENFORCEMENT_EARLY_WARNING": 56,
       "POLICY_SIGNAL": 11,
       "MOBILIZATION_COORDINATION": 29,
@@ -1900,6 +1945,127 @@
       "BORDER_CONDITION": 2
     },
     "items": [
+      {
+        "timeline_id": "information:22731",
+        "timestamp": "2026-10-28T17:28:41Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2115495983257948291",
+        "author": "MsMacAttack321",
+        "url": "https://x.com/MsMacAttack321/status/2115495983257948291",
+        "source_url": "https://x.com/MsMacAttack321/status/2115495983257948291",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "crossing"
+        ],
+        "freshness_cues": [],
+        "text": "@WhipKClark We had 4 years of Democrats who let 25 million migrants cross our border and lady, WE'RE STILL PAYING FOR THAT.",
+        "text_excerpt": "@WhipKClark We had 4 years of Democrats who let 25 million migrants cross our border and lady, WE'RE STILL PAYING FOR THAT.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-28T17:32:06Z",
+        "last_collected_at": "2026-10-28T17:32:06Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:22747",
+        "timestamp": "2026-10-28T17:10:50Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2115491494098342322",
+        "author": "channelwatchuk",
+        "url": "https://x.com/channelwatchuk/status/2115491494098342322",
+        "source_url": "https://x.com/channelwatchuk/status/2115491494098342322",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 50,
+        "information_score": 5,
+        "matched_information_cues": [
+          "crossing",
+          "boat",
+          "vessel",
+          "sea"
+        ],
+        "freshness_cues": [
+          "now"
+        ],
+        "text": "🟡 Alert Level: AMBER 🟡\n= Illegal migrant boat crossings likely over the next few days.\n\nThe evidence: \n\n🚢 Vessels which “monitor” small boat crossings from the French coast are now out on patrol. These include the RIDENS and the KERMORVAN.\n\n🌊 Sea conditions are calming after",
+        "text_excerpt": "🟡 Alert Level: AMBER 🟡\n= Illegal migrant boat crossings likely over the next few days.\n\nThe evidence: \n\n🚢 Vessels which “monitor” small boat crossings from the French coast are now out on patrol. These include the RIDENS and the KERMORVAN.\n\n🌊 Sea conditions are calming after",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-28T17:32:33Z",
+        "last_collected_at": "2026-10-28T17:32:33Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:22749",
+        "timestamp": "2026-10-28T15:26:57Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1xhr60p",
+        "author": "TheUnPopulist",
+        "url": "https://www.reddit.com/r/neoliberal/comments/1xhr60p/its_open_season_for_racism_and_bigotry_in_the/",
+        "source_url": "https://www.reddit.com/r/neoliberal/comments/1xhr60p/its_open_season_for_racism_and_bigotry_in_the/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "boat",
+          "deportation"
+        ],
+        "freshness_cues": [
+          "today",
+          "now"
+        ],
+        "text": "It’s Open Season for Racism and Bigotry in the Republican Party This Midterm\nAmericans have come to expect hateful campaign rhetoric from Republican candidates and their proxies. Comments that once were off-limits to politicians are now standard fare. Donald Trump did more than anyone to normalize such vicious attacks, and his example continues to inspire imitation. The 2026 midterm elections have spawned a hurricane of extremist vitriol. Republicans used to rhapsodize about curbing federal deficits, minimizing government intervention in the economy, and standing for democracy around the world. But those themes are obsolete under Trump. Today, the GOP takes a distinctly different approach: vilifying one marginal and vulnerable group after another in an effort to provoke fear and anger among voters. And Trump’s noxious views and tactics have permeated to the lowest offices on the ballot. There was a time not so long ago when appeals to racial prejudice had to be subtle and deniable, like Ronald Reagan’s denunciation of “welfare queens.” Those were bad enough. But Trump has normalized overt racism so thoroughly that some Republican candidates feel empowered to practice it openly. The Texas Races Bo French, running for the Texas Railroad Commission, posted a photo of dark-skinned students, apparently of South Asian descent, cheering at a University of Texas football game with the lament: “I heard UT graduation this year looked like this. I didn’t believe it. The problem is now obviously far worse than anyone imagined.” Facing criticism, he added : “Like body-cams expose criminals, social media is exposing how many Americans have been displaced by foreigners.” For French, who chaired the Republican Party of Tarrant County, home to Fort Worth and 2.2 million people, this was nothing unusual. Earlier this year he demanded that Muslims “go home,” declaring, “That’s the only way we’re going to stop the Islamification of Texas and America.” He charged that the federal H-1B visa program replaces American workers with “low IQ, document mill fake diploma having, non assimilating third worlders.” Such inflammatory invective would have rendered him radioactive with a previous generation of GOP leaders—even in Texas, where the comparatively moderate George W. Bush once reigned supreme. But those days are gone. The Texas Tribune reported , “Even as a long line of Republicans condemn French—calling his comments racist—none have rescinded their endorsements. Meanwhile, some party leaders—like Lt. Gov. Dan Patrick—have remained silent.” Gov. Greg Abbott’s prim response was that French’s tirades were “not my message.” Texas has no peers when it comes to baseless smears and nasty abuse. Sen. John Cornyn lost to his primary foe, Attorney General Ken Paxton, after accusing him of being “soft on radical Islam”—an astonishing claim against someone who has sued to block a Muslim residential development near Dallas while vowing , “There will be no ‘Sharia city’ in Texas under my watch.” Paxton responded by asserting that Cornyn “helped radical Islamic Afghans invade Texas”—referring to a commendable program to admit people who had helped American forces in the war against the Taliban. Islamophobia is not the only poisonous Republican theme in this Senate race. A Republican PAC has run ads accusing the Democratic nominee, state Rep. James Talarico, of voting to use “taxpayer dollars for sex change surgeries on children,” which he didn’t. White House aide Stephen Miller feigned surprise that Democrats would “nominate their first transgender senate candidate, who is clearly transitioning to female.” Vice President JD Vance, who has turned the office into a delivery system for MAGA’s most inflammatory talking points, suggested that Talarico, a Presbyterian seminarian with a longtime girlfriend, is gay. At a rally for Paxton, hearing an expression of support from a man in the audience, he said: “I love you too, sir. In a totally platonic way, to be clear. I’m the vice president, not James Talarico.” He also implied that Talarico is a pedophile: “He was asked what he loves in life besides his own family and friends, and he responded, without skipping a beat, and I quote, ‘trans children,’” said Vance. “Now, you gotta wonder what the Internet search history of a man like that looks like.” It was a malicious misrepresentation. Talarico had been asked in an interview what he loves besides family and friends, and he mentioned transgender kids who had come to the Texas Capitol to speak up for themselves. His reply : “I love—and I’m just going to say this because it’s on my mind—the trans children who showed up at the State Capitol to advocate for their humanity. They shouldn’t have to, but it was an inspiration to watch.” The obvious term for that sentiment would be “kind.” Michigan’s Senate and House Races But if Texas is second to none in crude hyperbole, Michigan can hold its own. Former Rep. Mike Rogers, running for the Senate against Democrat Abdul El-Sayed, said : “Never in a million years did I think that I would be running against someone who believes America deserved 9/11.” The remark cited by Rogers actually came from leftist commentator Hasan Piker, who campaigned with El-Sayed before the primary. But Piker retracted it, and El-Sayed has said, “Of course I don’t think 9/11 was justified.” Referring to an attack on a synagogue that houses a preschool in a Detroit suburb, Rogers has claimed that his opponent “could not condemn the terrorist who tried to attack and kill 140 Jewish children right here in Michigan.” El-Sayed did condemn the attack. Then, in a follow-up statement offering “context,” he said that “hurt people hurt people,” which sounded like a lame rationalization of the attempt. He later apologized , saying, “I made a mistake.” Campaigning with Rogers, Louisiana Sen. John Kennedy said El-Sayed “sleeps in a bin Laden jersey.” When social media provocateur Dave Portnoy called the Democrat a “terrorist,” Rogers said he was “exactly right.” Rogers charged that his opponent “has taken money from individuals on his campaign who openly support Hamas, Hezbollah, al-Qaeda.” PolitiFact concluded that Rogers was “cherry-picking donations and associations from El-Sayed supporters.” Let’s not forget that Rogers decided to run after getting a call from Trump saying, “I need you to do this”—the same Trump who incited the insurrection at the Capitol on Jan. 6, a shocking episode of domestic terrorism, and who accepted a $400 million plane from Qatar, a country with a long history of funding the Muslim Brotherhood. Rogers has suggested that El-Sayed is a radical Islamist while, hilariously, also attacking him for supporting transgender rights. “Abdul thinks football is bad but men playing in women’s sports is good,” said a Rogers campaign ad . El-Sayed, who played football in high school, has talked about the dilemma of enjoying a sport that inflicts so much damage on players, which hardly makes him un-American. And on the subject of transgender participants in athletics, El-Sayed has said , “I think it’s perfectly within the means of local communities and sporting governing bodies to lead the conversation about high school sports.” Michigan also boasts the candidacy of Tom Smith, the GOP nominee for Congress in its 8th District, who is firmly ensconced on the right-wing lunatic fringe. Earlier this year, he reposted a tweet that urged, “Eliminate every demonic violent liberal terrorist and deport the corrupt Somali infestation from American soil.” A CNN review of his social media history found “repeated accusations of treason, attacks on Muslim Americans and Islam, birther-style conspiracy theories about Barack Obama, and posts in which Smith said he had been awakened before dawn with a message from God for conservative radio host Dan Bongino.” Smith calls his Democratic opponent, Rep. Kristen McDonald Rivet, a “communist.” Rivet has signed on to the Promise to America, a project of centrist Democrats who reject democratic socialism. Smith won the primary despite dropping out of the race. He beat Amir Hassan, who is Black and had Trump’s endorsement—but whose name apparently turned off GOP voters. After the primary, Laura Loomer, a notoriously extreme MAGA enthusiast, waxed triumphant, noting that Hassan “claims he’s not a Muslim, but it doesn’t matter. His name sounds like he’s fresh off the boat and MAGA voters reject the Islamic infiltration of our country and party.” Beyond Texas and Michigan There are plenty of other examples across the country. In the House, more than 65 Republicans have joined a “Sharia-Free America” caucus. In response to El-Sayed’s nomination, South Carolina Rep. Nancy Mace posted on X , “Every single Muslim holding public office in America is a Trojan horse, and a threat to both national security and our republic.” Tennessee Rep. Andy Ogles, who lost his August reelection primary, said that “Muslims don’t belong in American society.” In 2024, asked about the deaths of Palestinian children in Gaza, he replied , “I think we should kill them all.” Bruce Blakeman, running for governor of New York, asked a group of Hasidic Jews, “If there is rioting here, if they’re burning down the yeshivas and your shuls, and burning down your house and raping your women, you think Zohran Mamdani is going to stop them?” Trevor Lee, a Utah state representative running for reelection, responded to the entry of Democrat Liban Mohamed into a race for Congress by posting , “This is what happens when past policies to incentives (sic) foreigners and not protect your culture run unchecked,” while endorsing “prosecuting and deporting foreign invaders.” Mohamed, whose parents came from Somalia, was born in Utah. As usual, the president is happy to join in. He has repeatedly called El-Sayed a jihadist and a terrorist . “If Abdul and the Democrats win, they will open the floodgates and invite hordes of jihadis to our shores, creating a nightmare of violence and terror until you cannot even have a Christmas,” he said at a Sunday rally in Port Huron. Asked in August for his advice to GOP candidates, he said , “We have jihadists being elected all over the place.” On Truth Social, he referred to South Carolina’s Democratic Senate candidate as “Annie ‘Trannie’ Andrews.” Andrews is not transgender. At a recent rally in Youngstown, Ohio, supporting GOP candidates, he bragged about expelling Haitians who had been here legally, recalling his absurd 2024 claim that those in Springfield were eating pets. He denounced Somali immigrants as “low-IQ people” from a country where “all they do is shoot each other.” He said Democrats favor the “transgender mutilization of your children.” He said Democratic Senate nominee Sherrod Brown is the choice of “Marxists, communists and anti-Americans.” Campaigning in Kansas, he did more of the same. “If you want to see what’s at stake in this election, just look at what’s happening in France, a once great nation, that is being conquered, looted and burned to the ground by migrants, jihadists and communists who hate Christianity, and they hate, frankly, Western civilization itself,” Trump said . “When you see burning steeples and raging fires in France, just remember that is what the radical Democrats want to do in America.” (The left is hardly immune to demagoguery, but nothing on that side approaches the torrential downpour of extremism that Republicans, from candidates on the ballot to the president himself, are peddling.) How the GOP Got Here What happened to make such rhetoric not only acceptable but popular among much of the party rank and file? The immediate explanation is that given the unpopularity of their president, Republicans desperately want to change the subject. But their thuggish methods are not a new thing. The election of Barack Obama, who not only is Black but has an Arabic middle name (see: Loomer’s “insight,” above), brought out the latent racial and religious prejudice of many white Americans, which the GOP fanned and exploited. Bush’s war on terrorism induced many of the same people to equate Islam with extremist violence. The push to protect transgender people offends many Americans who have no experience with them and perceive a dire threat to religious dictates and gender norms. The growing share of immigrants and their kids in the national population has created fantastical fears that nonwhites will seize power, punish whites, and destroy American culture. All these factors create a fertile environment for right-wing efforts to demonize Muslims, immigrants, transgender people, and conventional liberals. Democrats are likely to win a sweeping national victory in November in the face of this systematic fear-mongering. But given how far it’s taken them and Trump, it may be too much to hope that Republicans will give it up.",
+        "text_excerpt": "It’s Open Season for Racism and Bigotry in the Republican Party This Midterm\nAmericans have come to expect hateful campaign rhetoric from Republican candidates and their proxies. Comments that once were off-limits to politicians are now standard fare. Donald Trump did more than anyone to normalize such vicious attacks, and his example continues to inspire imitation. The 2026 midterm elections have spawned a hurricane…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-28T17:32:33Z",
+        "last_collected_at": "2026-10-28T17:32:33Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
       {
         "timeline_id": "information:22696",
         "timestamp": "2026-10-28T10:04:46Z",
@@ -2149,9 +2315,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "FACILITATION_REVIEW",
-        "detection_count": 1,
+        "detection_count": 2,
         "first_detected_at": "2026-10-28T10:07:41Z",
-        "last_detected_at": "2026-10-28T10:07:41Z",
+        "last_detected_at": "2026-10-28T17:32:34Z",
         "ai_review_status": "AI_REVIEWED",
         "ai_editorial_decision": "PUBLISH"
       },
@@ -2554,8 +2720,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-28T02:50:43Z",
-        "last_collected_at": "2026-10-28T10:07:41Z",
-        "collection_count": 2,
+        "last_collected_at": "2026-10-28T17:32:34Z",
+        "collection_count": 3,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -2592,8 +2758,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-28T02:50:43Z",
-        "last_collected_at": "2026-10-28T10:07:41Z",
-        "collection_count": 2,
+        "last_collected_at": "2026-10-28T17:32:34Z",
+        "collection_count": 3,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -3659,6 +3825,38 @@
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
+        "timeline_id": "operational:747",
+        "timestamp": "2026-10-27T12:24:16Z",
+        "layer": "OPERATIONAL",
+        "type": "RESCUE_OPERATION",
+        "signal_type": "RESCUE_OPERATION",
+        "event_type": "RESCUE_OPERATION",
+        "source": "X",
+        "source_post_id": "2115056987499352190",
+        "author": "newsatseacom",
+        "url": "https://x.com/newsatseacom/status/2115056987499352190",
+        "source_url": "https://x.com/newsatseacom/status/2115056987499352190",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.5,
+        "priority": "MEDIUM",
+        "priority_score": 50.0,
+        "text": "Turkish vessel carries out rescue operation\n\nA chemical tanker belonging to West Ace Tanker &amp; Shipping rescues 47 irregular migrants from death.\n\nhttps://t.co/2wpXLhrMip\n\n#Channel16 #ChemicalTanker #Ivyan #Libya #WestAceTankerShipping https://t.co/jBSV5iSQib",
+        "text_excerpt": "Turkish vessel carries out rescue operation\n\nA chemical tanker belonging to West Ace Tanker &amp; Shipping rescues 47 irregular migrants from death.\n\nhttps://t.co/2wpXLhrMip\n\n#Channel16 #ChemicalTanker #Ivyan #Libya #WestAceTankerShipping https://t.co/jBSV5iSQib",
+        "event_group_id": 596,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
         "timeline_id": "information:22392",
         "timestamp": "2026-10-27T12:08:41Z",
         "layer": "INFORMATION",
@@ -3740,6 +3938,38 @@
         "first_collected_at": "2026-10-27T06:58:56Z",
         "last_collected_at": "2026-10-27T06:58:56Z",
         "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "operational:743",
+        "timestamp": "2026-10-27T06:30:37Z",
+        "layer": "OPERATIONAL",
+        "type": "DEPORTATION",
+        "signal_type": "DEPORTATION",
+        "event_type": "DEPORTATION",
+        "source": "X",
+        "source_post_id": "2114967988654739859",
+        "author": "BlagRami",
+        "url": "https://x.com/BlagRami/status/2114967988654739859",
+        "source_url": "https://x.com/BlagRami/status/2114967988654739859",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.2,
+        "priority": "LOW",
+        "priority_score": 20.0,
+        "text": "@datafan12 It was really tough.\nLeaving Syria, I got to learn about المقذوفين i.e. Syrian refugees expelled from even these Jordan desert camps into the Syrian wild desert.\nA love-hate relationship with Jordan.\nThe Syrian mood since last night has been one of \"feeling betrayed\".",
+        "text_excerpt": "@datafan12 It was really tough.\nLeaving Syria, I got to learn about المقذوفين i.e. Syrian refugees expelled from even these Jordan desert camps into the Syrian wild desert.\nA love-hate relationship with Jordan.\nThe Syrian mood since last night has been one of \"feeling betrayed\".",
+        "event_group_id": 593,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -4239,6 +4469,38 @@
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
+        "timeline_id": "operational:741",
+        "timestamp": "2026-10-26T21:36:40Z",
+        "layer": "OPERATIONAL",
+        "type": "DEPORTATION",
+        "signal_type": "DEPORTATION",
+        "event_type": "DEPORTATION",
+        "source": "X",
+        "source_post_id": "2114833616257658929",
+        "author": "BFirstParty",
+        "url": "https://x.com/BFirstParty/status/2114833616257658929",
+        "source_url": "https://x.com/BFirstParty/status/2114833616257658929",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": 35.8894,
+        "longitude": -5.3213,
+        "confidence": 0.45,
+        "priority": "LOW",
+        "priority_score": 45.0,
+        "text": "SPAIN EXPELS REJECTED ASYLUM SEEKERS FROM CEUTA\n\nSpanish police moved migrants whose asylum claims were refused from Ceuta's migrant centre to the Moroccan border today, RTVE reported. El Español said about 70 were due to be removed but most fled before police arrived, and Antena https://t.co/tf0Sr1FlSJ",
+        "text_excerpt": "SPAIN EXPELS REJECTED ASYLUM SEEKERS FROM CEUTA\n\nSpanish police moved migrants whose asylum claims were refused from Ceuta's migrant centre to the Moroccan border today, RTVE reported. El Español said about 70 were due to be removed but most fled before police arrived, and Antena https://t.co/tf0Sr1FlSJ",
+        "event_group_id": 547,
+        "correlation_score": 0.65,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
         "timeline_id": "correlated:739",
         "timestamp": "2026-10-26T21:36:40Z",
         "layer": "CORRELATED",
@@ -4269,6 +4531,38 @@
           "TELEGRAM",
           "X"
         ],
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "operational:742",
+        "timestamp": "2026-10-26T21:06:45Z",
+        "layer": "OPERATIONAL",
+        "type": "DEPORTATION",
+        "signal_type": "DEPORTATION",
+        "event_type": "DEPORTATION",
+        "source": "X",
+        "source_post_id": "2114826087205044418",
+        "author": "TheMercianNews",
+        "url": "https://x.com/TheMercianNews/status/2114826087205044418",
+        "source_url": "https://x.com/TheMercianNews/status/2114826087205044418",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.25,
+        "priority": "LOW",
+        "priority_score": 25.0,
+        "text": "🚨 BREAKING: Iraqi migrant will not be deported after he claimed that he faces death threats for sleeping with another man's wife.\n\n• An Iraqi migrant in his twenties, known only as HI, has won an asylum appeal after a judge accepted he faced death threats following an affair https://t.co/H6b8E51QPZ",
+        "text_excerpt": "🚨 BREAKING: Iraqi migrant will not be deported after he claimed that he faces death threats for sleeping with another man's wife.\n\n• An Iraqi migrant in his twenties, known only as HI, has won an asylum appeal after a judge accepted he faced death threats following an affair https://t.co/H6b8E51QPZ",
+        "event_group_id": 592,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -4342,8 +4636,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-26T22:05:12Z",
-        "last_collected_at": "2026-10-28T10:08:35Z",
-        "collection_count": 4,
+        "last_collected_at": "2026-10-28T17:33:28Z",
+        "collection_count": 5,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -4880,8 +5174,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-26T16:23:27Z",
-        "last_collected_at": "2026-10-28T10:08:35Z",
-        "collection_count": 5,
+        "last_collected_at": "2026-10-28T17:33:28Z",
+        "collection_count": 6,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -9543,8 +9837,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-24T08:32:04Z",
-        "last_collected_at": "2026-10-28T10:08:35Z",
-        "collection_count": 11,
+        "last_collected_at": "2026-10-28T17:33:28Z",
+        "collection_count": 12,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -14255,8 +14549,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-21T19:47:49Z",
-        "last_collected_at": "2026-10-28T10:08:36Z",
-        "collection_count": 14,
+        "last_collected_at": "2026-10-28T17:33:29Z",
+        "collection_count": 15,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -16835,164 +17129,6 @@
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
-        "timeline_id": "information:20009",
-        "timestamp": "2026-10-20T06:22:27Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2112429220542517486",
-        "author": "ClaireBearWebst",
-        "url": "https://x.com/ClaireBearWebst/status/2112429220542517486",
-        "source_url": "https://x.com/ClaireBearWebst/status/2112429220542517486",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "crossing",
-          "boat"
-        ],
-        "freshness_cues": [],
-        "text": "👇I get why people turned 2 @reformparty_uk, the migrant issue must be sorted! Thankfully boat crossings R down but there's so much more 2 be done. \nREFORM are NOT THE ANSWER however!\n#ReformRTORIES #ReformPartyOfTheSuperRich #ReformAreLiars #ReformAreRacist #ReformAreCriminals https://t.co/OCgGKX3xgd",
-        "text_excerpt": "👇I get why people turned 2 @reformparty_uk, the migrant issue must be sorted! Thankfully boat crossings R down but there's so much more 2 be done. \nREFORM are NOT THE ANSWER however!\n#ReformRTORIES #ReformPartyOfTheSuperRich #ReformAreLiars #ReformAreRacist #ReformAreCriminals https://t.co/OCgGKX3xgd",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-20T06:49:18Z",
-        "last_collected_at": "2026-10-20T06:49:18Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:19995",
-        "timestamp": "2026-10-20T06:21:31Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2112428984101126254",
-        "author": "grok",
-        "url": "https://x.com/grok/status/2112428984101126254",
-        "source_url": "https://x.com/grok/status/2112428984101126254",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "border",
-          "crossing",
-          "trafficking"
-        ],
-        "freshness_cues": [],
-        "text": "@disokko @ForgottenV1918 I don't hide facts. The July 2026 Ceuta surge involved 70-80k crossings from Morocco, with most returning quickly and thousands remaining amid strained local services. Sanchez attributes it to social media and traffickers; opposition and some reports cite Moroccan border laxity.",
-        "text_excerpt": "@disokko @ForgottenV1918 I don't hide facts. The July 2026 Ceuta surge involved 70-80k crossings from Morocco, with most returning quickly and thousands remaining amid strained local services. Sanchez attributes it to social media and traffickers; opposition and some reports cite Moroccan border laxity.",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-20T06:48:48Z",
-        "last_collected_at": "2026-10-20T06:48:48Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:19998",
-        "timestamp": "2026-10-20T06:15:29Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2112427463829868823",
-        "author": "DJFelix_The_Cat",
-        "url": "https://x.com/DJFelix_The_Cat/status/2112427463829868823",
-        "source_url": "https://x.com/DJFelix_The_Cat/status/2112427463829868823",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "crossing"
-        ],
-        "freshness_cues": [],
-        "text": "@ZaraRiffler Stop killing Palestinians and they don't come to Europe.\nDid you know ISRAID - directly sponsored by Israel, helps illegal migrants crossing the borders into EU?",
-        "text_excerpt": "@ZaraRiffler Stop killing Palestinians and they don't come to Europe.\nDid you know ISRAID - directly sponsored by Israel, helps illegal migrants crossing the borders into EU?",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-20T06:48:48Z",
-        "last_collected_at": "2026-10-20T06:48:48Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:20127",
-        "timestamp": "2026-10-20T06:11:26Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1xakfgz",
-        "author": "CriticalAnalytical",
-        "url": "https://www.reddit.com/r/sundaysarthak/comments/1xakfgz/chinas_playbook_for_crushing_dissent_a_protesters/",
-        "source_url": "https://www.reddit.com/r/sundaysarthak/comments/1xakfgz/chinas_playbook_for_crushing_dissent_a_protesters/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 50,
-        "information_score": 5,
-        "matched_information_cues": [
-          "border",
-          "crossing",
-          "detention",
-          "deportation"
-        ],
-        "freshness_cues": [
-          "breaking",
-          "now"
-        ],
-        "text": "CHINA'S PLAYBOOK FOR CRUSHING DISSENT: A Protester's Manifesto & Warning to Global Activists - Modi is at Phase 2 and Phase 3 right now. Read then Comment.\nCHINA'S PLAYBOOK FOR CRUSHING DISSENT: A Protester's Manifesto & Warning to Global Activists From Hong Kong to the World—What Every Freedom Fighter Must Know THE CHINA PLAYBOOK: Point-by-Point Breakdown of Tactics Used to Dismantle Hong Kong's Freedom What follows is not academic analysis—it is a stark warning extracted from the lived experience of Hong Kong's 2 million protesters. This is the systematic dismantling of freedom, exposed. Every tactic listed below is replicable, exportable, and already being deployed globally. PHASE 1: BEFORE THE UPRISING—BUILD THE LEGAL FRAMEWORK OF CONTROL Tactic 1.1: Reinterpret Constitutional Guarantees What China Did: The Chinese government reinterpreted the Basic Law—Hong Kong's mini-constitution promising 50 years of \"one country, two systems\"—gradually removing safeguards on judicial independence, freedom of press, and assembly rights. This was not a coup; it was legal erosion. Since 1997, Beijing had slowly encroached on Hong Kong's autonomy, with documented incidents including the expulsion of pro-democracy lawmakers, arbitrary detention of Hong Kong residents transported to mainland China, and sustained attacks on media critical of Beijing. What This Means: Authoritarian governments do not always seize power violently. They often legalize tyranny. They rewrite rules, reinterpret constitutions, and make oppression technically \"lawful.\" For Global Protesters: Defend your legal protections before they are eroded. Every concession—every \"temporary emergency measure,\" every \"security clarification\"—is a foothold for further control. Fight for constitutional interpretation at the grassroots level. Tactic 1.2: Issue Veiled Threats Against \"Rule-Breakers\" What China Did: In 2017, Xi Jinping warned that any attempt to \"endanger China's national sovereignty and security\" or challenge the Central Government's power would cross a \"red line\" and \"be dealt with harshly.\" These threats were broadcast but vague enough to instill widespread fear. What This Means: Authoritarian regimes often use ambiguity as a weapon. Citizens begin self-censoring not because a law explicitly forbids something, but because the consequences are undefined and potentially catastrophic. For Global Protesters: Recognize preemptive messaging as a control tactic. When a government issues general threats against undefined \"troublemakers,\" understand they are testing how much fear they can cultivate without naming specific crimes. PHASE 2: DURING THE UPRISING—DEPLOY OVERWHELMING FORCE Tactic 2.1: Respond to Peaceful Protest with Disproportionate Police Violence What China Did: When 2 million people marched on June 16, 2019 to oppose the extradition bill, Hong Kong police responded with tear gas, rubber bullets, pepper spray, water cannons, and batons against predominantly peaceful crowds. Over 10,000 protesters were arrested, with more than 2,600 injured. Amnesty International documented systematic beatings of arrested protesters, with officers inflicting fractured ribs, cracked teeth, and ruptured eyes. What This Means: Governments use police brutality not just to hurt people—they use it to delegitimize movements. Violent police responses provoke angry reactions, which the government then uses to claim the movement itself is violent and uncontrollable. For Global Protesters: Document everything. Record police actions with multiple phones, from multiple angles. Governments rely on narrative control; eyewitness documentation combats this. Maintain discipline. Stay peaceful even when provoked. The moment a movement appears violent, democratic governments may withdraw support, and authoritarian governments gain justification for escalation. Train de-escalation teams. Some of Hong Kong's greatest strength came from medics, supply runners, and people trained to calm tense situations—roles beyond frontline protesters. Tactic 2.2: Deploy Undercover Police and Criminal Proxies to Incite Violence What China Did: Hong Kong police allegedly deployed plainclothes officers disguised as protesters who carried out or incited violence against police—a tactic that allowed the government to tar the movement's reputation. Additionally, organized crime groups known as triads were used as proxies. On July 21, 2019, a mob including large numbers of triad gang members attacked peaceful protesters, injuring at least 45 people. Hong Kong police were captured on video ignoring requests for assistance and leaving the scene, pointing to government complicity in violent reprisals. What This Means: If police appear to be instigating violence, they likely are. Governments use agent provocateurs to create an excuse for harsher crackdowns. For Global Protesters: Train people to identify police infiltrators: Look for inconsistencies—protesters who dress too perfectly, communicate suspiciously, or push for illegal actions despite warnings. Create accountability structures: Have trusted people monitor protest dynamics and call out suspicious behavior. Use encrypted communication apps (Telegram, Signal) so only trusted people participate in tactical discussions, making infiltration harder. Tactic 2.3: Block Media Coverage and Control Narrative What China Did: The Chinese government sought to control and influence the narrative about Hong Kong protests through its robust media censorship and propaganda systems—not only in mainland China, but also in Hong Kong and internationally. What This Means: Governments understand that losing the narrative is losing the battle. They will attack journalists, limit international reporting, and flood social media with propaganda. For Global Protesters: Become your own media: Use social media, TikTok, Instagram, and YouTube to document and broadcast what mainstream media ignores. Create international solidarity: Share footage with foreign journalists, NGOs, and international media who may have more freedom to report. Translate materials into multiple languages so international audiences understand your cause. PHASE 3: IDENTIFYING AND ARRESTING LEADERS—ONE BY ONE Tactic 3.1: Target the Most Visible Activists What China Did: On August 29, 2019, prominent young activists Joshua Wong and Agnes Chow were arrested—deliberately timed before a planned demonstration and on the eve of sensitive anniversaries. Joshua Wong, a symbol of Hong Kong's youth movement, was arrested repeatedly, barred from running in elections, disqualified from legislative elections, and sentenced to 13.5 months in jail for unauthorized assembly. What This Means: Governments attack celebrity activists first because their arrest demoralizes supporters and removes powerful symbols. For Global Protesters: Rotate leadership visibly. Do not let one or two faces become the movement. Train dozens of people to speak publicly. Protect your most prominent leaders. If key figures face imminent arrest, consider having them leave the country temporarily. Understand that arrest of leaders is expected, not failure. Plan succession and continuity. Tactic 3.2: Issue Arbitrary Disqualifications What China Did: Joshua Wong was barred from running in district council elections, disqualified from legislative elections, and blocked from political participation through administrative decisions that were unclear and impossible to legally contest. What This Means: Governments often use bureaucratic mechanisms instead of explicit bans—it feels more \"lawful\" but achieves the same result. For Global Protesters: Challenge every disqualification, appeal every decision, use it to expose the system's unfairness. Document how vague the reasons are. Tactic 3.3: Hunt Activists Who Flee What China Did: When Nathan Law and other activists fled Hong Kong in 2020, China did not stop hunting them. Beijing weaponized Interpol's Red Notice system, using vague allegations of fraud and embezzlement against exiled activists to threaten them internationally. Activists living abroad found themselves unable to travel freely, facing arrest threats in foreign countries. What This Means: Authoritarian governments do not respect borders. They will pursue dissidents globally using international legal systems. For Global Protesters: If you must flee, go to countries with strong legal protections and extradition treaties that prohibit political persecution. Connect with international asylum networks and NGOs that protect dissidents. Build networks of exiled activists who can pressure democratic governments to protect you. PHASE 4: AFTER THE PROTESTS—TOTAL INSTITUTIONAL DISMANTLING Tactic 4.1: Impose a Sweeping \"National Security Law\" with Vague Definitions What China Did: On June 30, 2020, China imposed its sweeping National Security Law on Hong Kong—bypassing Hong Kong's legislature and imposing it unilaterally. The law criminalized \"secession,\" \"subversion,\" \"terrorism,\" and \"foreign collusion,\" with penalties reaching life imprisonment. The definitions were deliberately vague. Peaceful speech became \"subversion.\" Political activism became \"foreign interference.\" Organizing became \"conspiracy.\" What This Means: When a law is vague, no one knows what is safe. Everyone self-censors. This is worse than explicit censorship because it freezes society through fear. For Global Protesters: Document and publicize the law's vagueness. Show the world how impossible it is to know what is legal. Use international courts and human rights bodies to challenge such laws. Prepare civil disobedience campaigns that explicitly violate such laws and expose their injustice through mass action. Tactic 4.2: Systematically Disband All Opposition Political Parties What China Did: Over 60 organizations disbanded, including nearly every pro-democracy political party. Demosistō, founded by Joshua Wong, disbanded on June 30, 2020—the very day the National Security Law passed. By 2025, the League of Social Democrats—the last active pro-democracy party—finally closed its doors. The pro-democracy camp, once vibrant and diverse, had been systematically extinguished. What This Means: Eliminating formal opposition is easier than eliminating dissent. Governments target institutional opposition first because it is visible and easier to regulate. For Global Protesters: Decentralize. Do not rely solely on formal political parties. Build networks, unions, neighborhood organizations, and informal structures. Protect your institutions through redundancy. Have multiple parties, multiple organizations, multiple nodes so that eliminating one does not eliminate the movement. Tactic 4.3: Close Bookstores, Ban Books, Target Cultural Spaces What China Did: Over 600 books were banned from public and school libraries, including works by Joshua Wong, George Orwell's \"1984,\" and biographies of imprisoned democracy advocate Jimmy Lai. Independent bookstores—havens for free thought—were raided. Hunter Bookstore owner Leticia Wong was arrested in June 2026 on sedition charges. Book Punch owner Pong Yat-ming was arrested in March on sedition charges. Restaurants, shops, and businesses supporting protesters through the \"yellow economy\" movement faced delicensing and closure. What This Means: Governments understand that movements need infrastructure—physical spaces where people gather, learn, and organize. Destroying these spaces destroys the movement. For Global Protesters: Build redundancy into cultural spaces. Do not rely on one bookstore, one café, one gathering place. Create digital libraries and online communities that cannot be physically closed. Support independent media and culture through crowdfunding and community networks. Tactic 4.4: Use Transnational Repression—Hunt Dissidents Globally What China Did: China operates covert police \"service\" stations in more than 50 countries, used to monitor and intimidate overseas Chinese communities. Between April 2021 and July 2022, some 230,000 people were pressured to return to China. The International Consortium of Investigative Journalists found that among 105 people targeted by Chinese authorities across 23 countries, half had seen relatives in China interrogated or intimidated by authorities—often within hours of taking part in a protest abroad.In February 2026, the father of exiled Hong Kong activist Anna Kwok received an eight-month sentence for violating national security laws after trying to cash in his daughter's education savings. What This Means: Your family becomes leverage. If you protest abroad, relatives at home may face retaliation. This is psychological torture. For Global Protesters: If possible, evacuate your family before you protest. Get them to a safe country with strong legal protections. Create support networks for families of exiled activists. Money, legal aid, and emotional support are critical. Report transnational repression to international human rights bodies and foreign governments. Governments that tolerate this become complicit. Tactic 4.5: Target Family Members as Leverage What China Did: Activists who fled became targets of transnational repression. Their families back home remained vulnerable to retaliation—interrogation, asset seizure, detention. In January, Thailand arrested a Montagnard indigenous activist, Y Quynh Bdap, following a request from neighboring Vietnam. Prior to the arrest, his father reported that local Vietnamese officials visited his family and attempted to intimidate them to sign a document urging him to voluntarily return to Vietnam. What This Means: Authoritarian governments understand psychology. Breaking an activist's will through their family is often more effective than direct torture. For Global Protesters: Have an evacuation plan for your family before you begin high-risk activism. Connect with organizations specializing in refugee resettlement and asylum. Create financial support systems so that families of imprisoned activists can survive. PHASE 5: THE INFRASTRUCTURE OF GLOBAL REPRESSION Tactic 5.1: Weaponize Interpol and International Systems What China Did: China weaponized Interpol's Red Notice system by pressuring Malaysia to detain and deport activists on dubious charges. Beijing has proven adept at using its geopolitical and economic clout to provoke foreign governments in India, Thailand, Serbia, Malaysia, Egypt, Kazakhstan, UAE, Turkey, and Nepal to use their own security forces to detain and deport CCP critics. What This Means: Democracies must strengthen safeguards. Red Notices should require higher evidentiary standards for political crimes. For Global Protesters: Understand your host country's extradition laws. Know if you are in a country with strong asylum protections. Build international legal networks of lawyers who specialize in extradition defense. Pressure your host government to demand proper due process before extradition. Tactic 5.2: Infiltrate the UN and International Human Rights Systems What China Did: China has packed the U.N. human rights system with dozens of fake civil society groups. These government-organized NGOs (GONGOs) pose as independent organizations but are charged with monitoring activists attending U.N. sessions and disrupting criticism of Beijing. What This Means: International organizations are not neutral. Authoritarian regimes exploit them. For Global Protesters: Go to the UN and other international forums anyway. Your testimony matters, even if the room contains spies. Verify the NGOs you work with. Research their funding sources and history.",
-        "text_excerpt": "CHINA'S PLAYBOOK FOR CRUSHING DISSENT: A Protester's Manifesto & Warning to Global Activists - Modi is at Phase 2 and Phase 3 right now. Read then Comment.\nCHINA'S PLAYBOOK FOR CRUSHING DISSENT: A Protester's Manifesto & Warning to Global Activists From Hong Kong to the World—What Every Freedom Fighter Must Know THE CHINA PLAYBOOK: Point-by-Point Breakdown of Tactics Used to Dismantle Hong Kong's Freedom What follows…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-20T13:24:23Z",
-        "last_collected_at": "2026-10-20T13:24:23Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
         "timeline_id": "operational:667",
         "timestamp": "2026-10-20T03:27:22Z",
         "layer": "OPERATIONAL",
@@ -17022,120 +17158,6 @@
         "event_time_text": null,
         "event_time_normalized": null,
         "event_time_confidence": null,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:19931",
-        "timestamp": "2026-10-20T00:43:53Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2112344017736217049",
-        "author": "stealthsteve360",
-        "url": "https://x.com/stealthsteve360/status/2112344017736217049",
-        "source_url": "https://x.com/stealthsteve360/status/2112344017736217049",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "deportation"
-        ],
-        "freshness_cues": [],
-        "text": "@HidinFromBiden9 @MattH_4America •  Ended catch-and-release with zero illegal releases for 15–17 consecutive months, achieved the lowest recorded border encounters, recorded negative net migration in 2025, and saw millions of migrants leave through deportations and self-deportations.\n•  Signed the Working",
-        "text_excerpt": "@HidinFromBiden9 @MattH_4America •  Ended catch-and-release with zero illegal releases for 15–17 consecutive months, achieved the lowest recorded border encounters, recorded negative net migration in 2025, and saw millions of migrants leave through deportations and self-deportations.\n•  Signed the Working",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-20T00:47:54Z",
-        "last_collected_at": "2026-10-20T00:47:54Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:19932",
-        "timestamp": "2026-10-20T00:43:51Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2112344006659117247",
-        "author": "Julianassange43",
-        "url": "https://x.com/Julianassange43/status/2112344006659117247",
-        "source_url": "https://x.com/Julianassange43/status/2112344006659117247",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "crossing"
-        ],
-        "freshness_cues": [],
-        "text": "Illegal Migrants complain that they are not allowed to cross the Polish border:\n\n“We want to enter Poland, but they won’t let us. They are threatening to harm us if we try to cross over. I want to go to Poland or Germany to have a good life.”\n\nPoland says NO to Open Borders! 🇵🇱",
-        "text_excerpt": "Illegal Migrants complain that they are not allowed to cross the Polish border:\n\n“We want to enter Poland, but they won’t let us. They are threatening to harm us if we try to cross over. I want to go to Poland or Germany to have a good life.”\n\nPoland says NO to Open Borders! 🇵🇱",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-20T00:47:54Z",
-        "last_collected_at": "2026-10-20T00:47:54Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:19935",
-        "timestamp": "2026-10-20T00:34:49Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2112341736190308596",
-        "author": "johnnyb88_",
-        "url": "https://x.com/johnnyb88_/status/2112341736190308596",
-        "source_url": "https://x.com/johnnyb88_/status/2112341736190308596",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "crossing",
-          "channel"
-        ],
-        "freshness_cues": [],
-        "text": "It’s these people who encourage migrants crossing the channel. You encourage people risking their kids lives you fucking spastic. Take a good look at yourself and re evaluate your life you horrible horrible person https://t.co/uLsOdCZZh8",
-        "text_excerpt": "It’s these people who encourage migrants crossing the channel. You encourage people risking their kids lives you fucking spastic. Take a good look at yourself and re evaluate your life you horrible horrible person https://t.co/uLsOdCZZh8",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-20T00:47:54Z",
-        "last_collected_at": "2026-10-20T00:47:54Z",
-        "collection_count": 1,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -20402,38 +20424,6 @@
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
-        "timeline_id": "correlated:606",
-        "timestamp": "2026-10-15T19:17:33Z",
-        "layer": "CORRELATED",
-        "type": "DEPORTATION",
-        "signal_type": "DEPORTATION",
-        "event_type": "DEPORTATION",
-        "source": "REDDIT",
-        "source_post_id": "reddit_1x6utvx",
-        "author": "AutoNewsAdmin",
-        "url": "https://www.reddit.com/r/NYPOSTauto/comments/1x6utvx/local_criminal_illegal_migrant_already_deported_5/",
-        "source_url": "https://www.reddit.com/r/NYPOSTauto/comments/1x6utvx/local_criminal_illegal_migrant_already_deported_5/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "latitude": null,
-        "longitude": null,
-        "confidence": 0.25,
-        "priority": "MEDIUM",
-        "priority_score": 25.0,
-        "text": "[Local] - Criminal illegal migrant already deported 5 times is nabbed by ICE in wealthy California enclave",
-        "text_excerpt": "[Local] - Criminal illegal migrant already deported 5 times is nabbed by ICE in wealthy California enclave",
-        "event_group_id": 489,
-        "correlation_score": 0.64,
-        "related_source_count": 2,
-        "source_types": [
-          "REDDIT"
-        ],
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
         "timeline_id": "operational:609",
         "timestamp": "2026-10-15T18:57:24Z",
         "layer": "OPERATIONAL",
@@ -20792,6 +20782,38 @@
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
+        "timeline_id": "correlated:602",
+        "timestamp": "2026-10-15T08:04:36Z",
+        "layer": "CORRELATED",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "X",
+        "source_post_id": "2110642984706511163",
+        "author": "Bioclandestine7",
+        "url": "https://x.com/Bioclandestine7/status/2110642984706511163",
+        "source_url": "https://x.com/Bioclandestine7/status/2110642984706511163",
+        "region": "HORN_OF_AFRICA",
+        "primary_region": "HORN_OF_AFRICA",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.25,
+        "priority": "MEDIUM",
+        "priority_score": 25.0,
+        "text": "Sagal Abdi-Wali, 42, who arrived in Britain from Somalia as a six-year-old refugee, has officially replaced former Prime Minister Keir Starmer as the Labour MP for Holborn and St Pancras in central London. https://t.co/kDi7UXidg2",
+        "text_excerpt": "Sagal Abdi-Wali, 42, who arrived in Britain from Somalia as a six-year-old refugee, has officially replaced former Prime Minister Keir Starmer as the Labour MP for Holborn and St Pancras in central London. https://t.co/kDi7UXidg2",
+        "event_group_id": 472,
+        "correlation_score": 0.77,
+        "related_source_count": 7,
+        "source_types": [
+          "X"
+        ],
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
         "timeline_id": "early_warning:1015",
         "timestamp": "2026-10-15T08:03:53Z",
         "layer": "EARLY_WARNING",
@@ -20953,6 +20975,38 @@
         "event_time_text": null,
         "event_time_normalized": null,
         "event_time_confidence": null,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "correlated:601",
+        "timestamp": "2026-10-15T01:13:01Z",
+        "layer": "CORRELATED",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "X",
+        "source_post_id": "2110539406423515397",
+        "author": "S_W_Somerville",
+        "url": "https://x.com/S_W_Somerville/status/2110539406423515397",
+        "source_url": "https://x.com/S_W_Somerville/status/2110539406423515397",
+        "region": "HORN_OF_AFRICA",
+        "primary_region": "HORN_OF_AFRICA",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.25,
+        "priority": "MEDIUM",
+        "priority_score": 25.0,
+        "text": "@TahraHoops Her father was a full colonel in the brutal military dictatorship that collapsed and left Somalia in ruins. He arrived in the US claiming \"refugee\" status but his paperwork has vanished so we may never know who lied or who paid for his \"citizenship.\" We do know that Ilhan Omar's",
+        "text_excerpt": "@TahraHoops Her father was a full colonel in the brutal military dictatorship that collapsed and left Somalia in ruins. He arrived in the US claiming \"refugee\" status but his paperwork has vanished so we may never know who lied or who paid for his \"citizenship.\" We do know that Ilhan Omar's",
+        "event_group_id": 472,
+        "correlation_score": 0.76,
+        "related_source_count": 7,
+        "source_types": [
+          "X"
+        ],
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -21603,6 +21657,38 @@
         "event_time_text": null,
         "event_time_normalized": null,
         "event_time_confidence": null,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "correlated:594",
+        "timestamp": "2026-10-14T10:59:13Z",
+        "layer": "CORRELATED",
+        "type": "DETENTION",
+        "signal_type": "DETENTION",
+        "event_type": "DETENTION",
+        "source": "TELEGRAM",
+        "source_post_id": "1604168769:12212",
+        "author": "migrantlar24",
+        "url": "https://t.me/migrantlar24/12212",
+        "source_url": "https://t.me/migrantlar24/12212",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.45,
+        "priority": "MEDIUM",
+        "priority_score": 45.0,
+        "text": "Москвада ақилли камералар орқали миграция қоидаларини бузган 80 нафар шахс аниқланди\n\nКотельники метро бекати яқинида ўтказилган рейд давомида биометрик идентификация тизими ёрдамида Россияда ноқонуний юрган 80 нафар чет эл фуқароси аниқланди. Қоидабузарларнинг барчасига нисбатан маъмурий баённомалар расмийлаштирилиб, уларга жарима солинди ва мамлакатдан чиқариб юбориш белгиланди.\n\n👉https://migrantlar24.com/chhq85",
+        "text_excerpt": "Москвада ақилли камералар орқали миграция қоидаларини бузган 80 нафар шахс аниқланди\n\nКотельники метро бекати яқинида ўтказилган рейд давомида биометрик идентификация тизими ёрдамида Россияда ноқонуний юрган 80 нафар чет эл фуқароси аниқланди. Қоидабузарларнинг барчасига нисбатан маъмурий баённомалар расмийлаштирилиб, уларга жарима солинди ва мамлакатдан чиқариб юбориш белгиланди.\n\n👉https://migrantlar24.com/chhq85",
+        "event_group_id": 424,
+        "correlation_score": 0.72,
+        "related_source_count": 4,
+        "source_types": [
+          "TELEGRAM"
+        ],
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -74384,21 +74470,21 @@
     "review_start_date": "2026-10-17",
     "review_cohort": "FIRST_RECORDED_ON_OR_AFTER_CUTOFF",
     "decisions": {
-      "REVIEW": 94,
-      "EXCLUDE": 91,
-      "PUBLISH": 55
+      "EXCLUDE": 100,
+      "PUBLISH": 55,
+      "REVIEW": 88
     },
     "removed_display_items": {
       "live_events": 18,
       "high_confidence_events": 0,
       "event_groups": 10,
-      "influence_signals": 5,
-      "early_warning_signals": 5,
-      "crossing_access_signals": 0,
-      "top_crossing_access_posts": 0,
+      "influence_signals": 7,
+      "early_warning_signals": 7,
+      "crossing_access_signals": 1,
+      "top_crossing_access_posts": 1,
       "high_priority_intelligence": 2,
-      "access_signals": 0,
-      "timeline": 180
+      "access_signals": 1,
+      "timeline": 181
     },
     "historical_review_status": "HISTORICAL_NOT_AI_REVIEWED",
     "narrative_layers_not_reviewed": [
@@ -74407,6 +74493,6 @@
     ],
     "risk_metrics_recalculated": false,
     "warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking.",
-    "conflicting_identity_count": 5
+    "conflicting_identity_count": 3
   }
 }

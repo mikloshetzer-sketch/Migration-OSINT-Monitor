@@ -1,28 +1,14 @@
 {
-  "generated_at": "2026-10-28T10:09:44.238441+00:00",
+  "generated_at": "2026-10-28T17:34:54.610032+00:00",
   "version": "3.0",
-  "candidates": 240,
-  "new_ai_calls": 6,
+  "candidates": 243,
+  "new_ai_calls": 10,
   "conflicting_identity_ids": [
     "group:590",
-    "group:594",
-    "group:601",
-    "group:602",
-    "group:603"
+    "group:603",
+    "group:606"
   ],
   "decisions": {
-    "post:741": {
-      "decision": "REVIEW",
-      "reason": "The post claims that Spanish police expelled rejected asylum seekers from Ceuta to the Moroccan border as of a specific date. However, no direct corroboration or additional concrete details are provided to verify the event's occurrence or timing. The content aligns with deportation, but lacks enough verification for immediate publishing."
-    },
-    "post:742": {
-      "decision": "EXCLUDE",
-      "reason": "The event concerns an asylum appeal outcome related to a personal situation and death threats, not a concrete migration event such as a deportation action or early warning about migration routes. The event type 'DEPORTATION' is not correctly assigned because the migrant was not deported; instead, deportation was avoided. This does not report a curr"
-    },
-    "post:743": {
-      "decision": "REVIEW",
-      "reason": "The post references deportation of Syrian refugees from camps in Jordan into the Syrian desert, which suggests a migration-related event. However, the information is unverified, anecdotal, and lacks specificity or corroboration about the timing and scale of such deportations. The event date is unclear, and the location is vague. Additional verifica"
-    },
     "post:744": {
       "decision": "EXCLUDE",
       "reason": "The post discusses claims about deportation policy and status of migrants but does not report a concrete, contemporary migration-related event such as an actual deportation or an operational action. It is a general commentary lacking specific event details."
@@ -34,10 +20,6 @@
     "post:746": {
       "decision": "REVIEW",
       "reason": "The post references various social and economic metrics and mentions over 70,000 illegal migrants deported, but does not provide a clear, concrete, or current migration-related event. The mention of deportations is a claim among others without clear event context or timing, making it unsuitable for outright publishing."
-    },
-    "post:747": {
-      "decision": "REVIEW",
-      "reason": "The post reports a rescue of 47 irregular migrants by a chemical tanker, which aligns with a migration-related rescue event. However, the event date is in the future (2026-10-27), making it uncertain or potentially incorrect. Verification of the event timing or additional corroboration is needed before publishing."
     },
     "post:748": {
       "decision": "EXCLUDE",
@@ -91,9 +73,21 @@
       "decision": "EXCLUDE",
       "reason": "The post contains a question about deportations but no concrete or contemporary event reporting an actual deportation."
     },
-    "signal:1236": {
+    "post:761": {
       "decision": "EXCLUDE",
-      "reason": "The record contains general political commentary on Libya and historical events, not a specific, concrete, contemporary migration-related event or early warning. It does not report an operational migration event or actionable early warning relevant to migration routes or policies."
+      "reason": "The post contains general claims without a concrete, contemporary migration-related event or specific deportation action reported. It is largely opinion and policy argument rather than a direct event report."
+    },
+    "post:762": {
+      "decision": "EXCLUDE",
+      "reason": "This post provides general information about migrant smuggling costs and promotes UNODC research, but does not report a concrete, contemporary smuggling event or early warning related to migration."
+    },
+    "post:763": {
+      "decision": "EXCLUDE",
+      "reason": "The event described is a personal tragedy involving a refugee after arrival and does not constitute a migration operational event such as a border crossing or migration-specific early warning. The event type 'BORDER_CROSSING' is not supported by the content, which concerns a post-arrival individual issue rather than a crossing event."
+    },
+    "post:764": {
+      "decision": "EXCLUDE",
+      "reason": "The post discusses historical and political views on Israel and Palestine but does not report a concrete, contemporary migration-related event such as a border crossing or refugee movement. The event_type 'BORDER_CROSSING' is not supported by the content."
     },
     "signal:1237": {
       "decision": "REVIEW",
@@ -127,19 +121,23 @@
       "decision": "PUBLISH",
       "reason": "The report details a concrete, contemporary migration-related enforcement operation involving undocumented migrants and resulting legal investigations, fitting the criteria for a migration-specific signal. The case involves investigation under immigration and anti-smuggling laws following an incident during interception of a boat suspected of carry"
     },
+    "signal:1245": {
+      "decision": "EXCLUDE",
+      "reason": "The content is a political opinion or commentary with no concrete, contemporary migration-specific event or early warning reported."
+    },
+    "signal:1246": {
+      "decision": "EXCLUDE",
+      "reason": "The post contains general political commentary with unsubstantiated claims about migrants; it does not report a concrete, contemporary migration-specific early warning, policy action, or event."
+    },
+    "signal:1247": {
+      "decision": "EXCLUDE",
+      "reason": "The record discusses political party policy positions related to migration but does not report a concrete, contemporary migration-specific event or early warning. It is a general online narrative regarding policy stances, without a specific operational or signal event."
+    },
     "group:547": {
       "decision": "REVIEW",
       "reason": "The post reports judicial actions related to immigrants and mentions expulsions, consistent with deportations. However, the details are vague about whether the deportations are concrete and current events or court rulings with enforced expulsions. Source credibility is unclear and event timing is uncertain due to future last_seen date."
     },
-    "group:573": {
-      "decision": "REVIEW",
-      "reason": "The post claims arrests related to migrant riots and looting in Barcelona, but lacks specific, verifiable details such as timing, sources, and confirmation. Also contains politicized and potentially biased language not pertinent to event verification. Event type 'DETENTION' is possible but unconfirmed here. Requires further corroboration before pub"
-    },
     "group:590": {
-      "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
-    },
-    "group:594": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
     },
@@ -151,14 +149,6 @@
       "decision": "EXCLUDE",
       "reason": "The post contains political commentary and conspiracy claims without reporting any specific, concrete, or contemporary migration-related event or verified border crossing. No actionable migration event is described."
     },
-    "group:601": {
-      "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
-    },
-    "group:602": {
-      "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
-    },
     "group:603": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
@@ -166,6 +156,22 @@
     "group:604": {
       "decision": "EXCLUDE",
       "reason": "The post is a question and does not report a concrete, contemporary migration event such as an actual deportation action. No event is described or claimed to have occurred."
+    },
+    "group:605": {
+      "decision": "EXCLUDE",
+      "reason": "The post contains general claims and opinions about border status and crime rates without reporting a specific, concrete, contemporary migration-related event. No verifiable or specific deportation event is described."
+    },
+    "group:606": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:607": {
+      "decision": "EXCLUDE",
+      "reason": "The record describes a personal tragic event (suicide) of an individual refugee and includes no report of a migration-related operational event such as border crossing, arrival, or migration movement. The event_type 'BORDER_CROSSING' is incorrect for this content. There is no concrete migration event occurring contemporaneously; it is a post-migrat"
+    },
+    "group:608": {
+      "decision": "EXCLUDE",
+      "reason": "The content is a historical narrative and general commentary about the arrival of Jewish people in Palestine and subsequent land issues; it does not describe a concrete, contemporary migration-related event such as a specific border crossing or migration incident. The assigned event_type 'BORDER_CROSSING' is incorrect and unsupported by the text."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -970,6 +976,10 @@
     "signal:1235": {
       "decision": "EXCLUDE",
       "reason": "The record describes a personal incident involving detention and alleged mistreatment of a journalist, but it does not report a concrete, contemporary migration-related event or early warning related to population movements, migration policy, or access routes. The event described is a security and detention issue unrelated to migration. Furthermore"
+    },
+    "signal:1236": {
+      "decision": "EXCLUDE",
+      "reason": "The record contains general political commentary on Libya and historical events, not a specific, concrete, contemporary migration-related event or early warning. It does not report an operational migration event or actionable early warning relevant to migration routes or policies."
     }
   }
 }
