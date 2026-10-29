@@ -1,24 +1,24 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-10-29T14:46:46Z",
-  "generated_at": "2026-10-29T14:46:46Z",
+  "updated_at": "2026-10-29T20:46:01Z",
+  "generated_at": "2026-10-29T20:46:01Z",
   "current_run": {
     "available": true,
-    "id": 365,
-    "run_uuid": "23fbb1f0-74d1-4415-b922-4443a1880c91",
-    "started_at": "2026-10-29T14:43:08Z",
-    "completed_at": "2026-10-29T14:46:45Z",
+    "id": 366,
+    "run_uuid": "2d4bfd0e-1ae0-4065-be72-4251c7769f11",
+    "started_at": "2026-10-29T20:43:14Z",
+    "completed_at": "2026-10-29T20:45:59Z",
     "status": "SUCCESS",
-    "posts_returned": 145,
-    "unique_posts_collected": 106,
-    "x_posts_returned": 49,
-    "reddit_posts_returned": 26,
+    "posts_returned": 134,
+    "unique_posts_collected": 76,
+    "x_posts_returned": 50,
+    "reddit_posts_returned": 24,
     "mastodon_posts_returned": 50,
-    "unique_x_posts": 48,
-    "unique_reddit_posts": 24,
-    "unique_mastodon_posts": 20,
+    "unique_x_posts": 25,
+    "unique_reddit_posts": 23,
+    "unique_mastodon_posts": 18,
     "noise_filtered": 0,
-    "non_operational_filtered": 103,
+    "non_operational_filtered": 76,
     "historical_references_filtered": 0,
     "influence_signals": 0,
     "influence_signals_detected": 0,
@@ -30,42 +30,42 @@
     "mobilization_report_signals": 0,
     "decision_influence_signals": 0,
     "online_influence_report_signals": 0,
-    "operational_events": 3,
-    "operational_events_analyzed": 3,
-    "historical_events_available": 76,
+    "operational_events": 0,
+    "operational_events_analyzed": 0,
+    "historical_events_available": 72,
     "new_correlations": 0,
     "correlated_events": 0,
-    "new_correlation_groups": 3,
+    "new_correlation_groups": 0,
     "database_correlations": 0,
     "current_run_correlations": 0,
-    "new_events": 3,
-    "new_events_saved": 3,
+    "new_events": 0,
+    "new_events_saved": 0,
     "events_already_existing": 0,
-    "new_event_groups": 3,
+    "new_event_groups": 0,
     "updated_event_groups": 0,
     "bootstrapped_event_groups": 0,
     "existing_event_groups_reused": 0,
-    "event_group_sources_linked": 3,
+    "event_group_sources_linked": 0,
     "x_collector_errors": 0,
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "error_message": null
   },
   "kpis": {
-    "operational_events": 13,
-    "new_events": 3,
+    "operational_events": 9,
+    "new_events": 0,
     "correlated_events": 0,
     "active_event_groups": 598,
     "sources": 4,
-    "regions": 2,
-    "collected_posts_24h": 314,
-    "influence_signals": 8,
-    "access_signals": 1,
+    "regions": 1,
+    "collected_posts_24h": 293,
+    "influence_signals": 4,
+    "access_signals": 0,
     "high_priority": 0,
-    "current_run_operational_events": 3,
-    "current_run_unique_posts": 106,
-    "access_signals_raw": 1,
-    "influence_signals_raw": 8,
+    "current_run_operational_events": 0,
+    "current_run_unique_posts": 76,
+    "access_signals_raw": 0,
+    "influence_signals_raw": 4,
     "influence_narratives": 3
   },
   "live_events": [
@@ -155,98 +155,84 @@
     {
       "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 12,
-      "events": 12,
-      "percentage": 92.31
-    },
-    {
-      "name": "MIDDLE_EAST",
-      "region": "MIDDLE_EAST",
-      "count": 1,
-      "events": 1,
-      "percentage": 7.69
+      "count": 9,
+      "events": 9,
+      "percentage": 100.0
     }
   ],
   "sources": [
     {
       "source": "X",
       "name": "X",
-      "count": 219,
-      "posts": 219,
-      "percentage": 69.75
+      "count": 197,
+      "posts": 197,
+      "percentage": 67.24
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 44,
-      "posts": 44,
-      "percentage": 14.01
+      "count": 45,
+      "posts": 45,
+      "percentage": 15.36
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 35,
-      "posts": 35,
-      "percentage": 11.15
+      "count": 38,
+      "posts": 38,
+      "percentage": 12.97
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 16,
-      "posts": 16,
-      "percentage": 5.1
+      "count": 13,
+      "posts": 13,
+      "percentage": 4.44
     }
   ],
   "region_activity": [
     {
       "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 12,
-      "events": 12,
-      "percentage": 92.31
-    },
-    {
-      "name": "MIDDLE_EAST",
-      "region": "MIDDLE_EAST",
-      "count": 1,
-      "events": 1,
-      "percentage": 7.69
+      "count": 9,
+      "events": 9,
+      "percentage": 100.0
     }
   ],
   "source_activity": [
     {
       "source": "X",
       "name": "X",
-      "count": 219,
-      "posts": 219,
-      "percentage": 69.75
+      "count": 197,
+      "posts": 197,
+      "percentage": 67.24
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 44,
-      "posts": 44,
-      "percentage": 14.01
+      "count": 45,
+      "posts": 45,
+      "percentage": 15.36
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 35,
-      "posts": 35,
-      "percentage": 11.15
+      "count": 38,
+      "posts": 38,
+      "percentage": 12.97
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 16,
-      "posts": 16,
-      "percentage": 5.1
+      "count": 13,
+      "posts": 13,
+      "percentage": 4.44
     }
   ],
   "correlation": {
     "correlated_events": 0,
     "correlated_sources": 0,
-    "grouped_sources": 13,
+    "grouped_sources": 9,
     "event_groups": 598,
     "active_groups": 598,
     "multi_source_groups": 59,
@@ -264,44 +250,44 @@
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "database": "AVAILABLE",
-    "last_run_id": 365,
-    "last_completed_at": "2026-10-29T14:46:45Z"
+    "last_run_id": 366,
+    "last_completed_at": "2026-10-29T20:45:59Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 13,
-    "influence_signals_24h": 8,
-    "access_signals_24h": 1,
+    "operational_events_24h": 9,
+    "influence_signals_24h": 4,
+    "access_signals_24h": 0,
     "correlated_events_24h": 0,
     "active_event_groups": 598,
-    "dominant_region": "MIDDLE_EAST",
-    "hotspot": "MIDDLE_EAST",
-    "dominant_event_type": "BORDER_CROSSING",
+    "dominant_region": "GLOBAL",
+    "hotspot": "GLOBAL",
+    "dominant_event_type": "DEPORTATION",
     "dominant_source": "X",
     "average_confidence": 0.444,
     "confidence_level": "LOW",
     "correlation_rate": 0.0,
-    "activity_level": "ELEVATED",
+    "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 13 operatív migrációs eseményt, 8 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 598 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Middle East. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.44. A jelenlegi aktivitási szint: ELEVATED.",
+    "summary": "Az elmúlt 24 órában a rendszer 9 operatív migrációs eseményt, 4 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 598 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Global. A domináns operatív eseménytípus: Deportation. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.44. A jelenlegi aktivitási szint: MODERATE.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
   "analytical_assessment": {
-    "operational_events_24h": 13,
-    "influence_signals_24h": 8,
-    "access_signals_24h": 1,
+    "operational_events_24h": 9,
+    "influence_signals_24h": 4,
+    "access_signals_24h": 0,
     "correlated_events_24h": 0,
     "active_event_groups": 598,
-    "dominant_region": "MIDDLE_EAST",
-    "hotspot": "MIDDLE_EAST",
-    "dominant_event_type": "BORDER_CROSSING",
+    "dominant_region": "GLOBAL",
+    "hotspot": "GLOBAL",
+    "dominant_event_type": "DEPORTATION",
     "dominant_source": "X",
     "average_confidence": 0.444,
     "confidence_level": "LOW",
     "correlation_rate": 0.0,
-    "activity_level": "ELEVATED",
+    "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 13 operatív migrációs eseményt, 8 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 598 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Middle East. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.44. A jelenlegi aktivitási szint: ELEVATED.",
+    "summary": "Az elmúlt 24 órában a rendszer 9 operatív migrációs eseményt, 4 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 598 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Global. A domináns operatív eseménytípus: Deportation. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.44. A jelenlegi aktivitási szint: MODERATE.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
@@ -667,6 +653,84 @@
       "priority_score": 30.25,
       "analyst_priority": "LOW",
       "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+    },
+    {
+      "id": 1252,
+      "source": "X",
+      "source_post_id": "2115703220878061665",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-10-29T07:12:10Z",
+      "first_detected_at": "2026-10-29T07:45:36Z",
+      "last_detected_at": "2026-10-29T07:45:36Z",
+      "detection_count": 1,
+      "text": "@allinyourhead69 @bhiggyd @Piccadillybaby @PastorMarvy Public reports show repeated 2026 Ghana operations against cyber-fraud and trafficking rings that often involve Nigerian nationals, with hundreds arrested or repatriated; many of those later classed as trafficking victims themselves. Official migrant estimates place Nigerians at",
+      "text_excerpt": "@allinyourhead69 @bhiggyd @Piccadillybaby @PastorMarvy Public reports show repeated 2026 Ghana operations against cyber-fraud and trafficking rings that often involve Nigerian nationals, with hundreds arrested or repatriated; many of those later classed as trafficking victims themselves. Official migrant estimates place Nigerians at",
+      "url": "https://x.com/grok/status/2115703220878061665",
+      "source_url": "https://x.com/grok/status/2115703220878061665",
+      "primary_signal": "FACILITATION_EARLY_WARNING",
+      "signal_type": "FACILITATION_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "FACILITATION_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.8,
+      "score": 8.75,
+      "matched_signals": [
+        "FACILITATION_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "facilitation",
+          "trafficking victims themselves. Official migrant"
+        ],
+        [
+          "enforcement",
+          "arrested"
+        ]
+      ],
+      "matched_groups": [
+        "FACILITATION",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": [
+        "trafficking victims themselves. Official migrant"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 28.0,
+      "analyst_priority": "LOW",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2115703220878061665"
+      ],
+      "related_authors": [
+        "grok"
+      ],
+      "related_urls": [
+        "https://x.com/grok/status/2115703220878061665"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1,
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
     }
   ],
   "influence_signals": [
@@ -801,148 +865,6 @@
   ],
   "influence_narratives": [
     {
-      "id": 1247,
-      "source": "X",
-      "source_post_id": "2115488942871003153",
-      "author": "grok",
-      "language": "en",
-      "published_at": "2026-10-28T17:00:42Z",
-      "first_detected_at": "2026-10-28T17:33:27Z",
-      "last_detected_at": "2026-10-28T17:33:27Z",
-      "detection_count": 1,
-      "text": "@Truthseekerrr99 Reform UK policies map more closely to current Conservative positions on leaving the ECHR, deporting illegal migrants, raising the personal allowance, inheritance tax relief on homes, and ending net zero rules. Restore Britain goes further, seeking full asylum system abolition,",
-      "text_excerpt": "@Truthseekerrr99 Reform UK policies map more closely to current Conservative positions on leaving the ECHR, deporting illegal migrants, raising the personal allowance, inheritance tax relief on homes, and ending net zero rules. Restore Britain goes further, seeking full asylum system abolition,",
-      "url": "https://x.com/grok/status/2115488942871003153",
-      "source_url": "https://x.com/grok/status/2115488942871003153",
-      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
-      "signal_type": "LEGAL_MIGRATION_SIGNAL",
-      "signal_mode": "DIRECT",
-      "signal_intent": "LEGAL_ACCESS",
-      "priority": "MEDIUM",
-      "confidence": 0.94,
-      "score": 15.0,
-      "matched_signals": [
-        "LEGAL_MIGRATION_SIGNAL"
-      ],
-      "matched_phrases": [
-        [
-          "legal_signal",
-          "ECHR"
-        ]
-      ],
-      "matched_groups": [],
-      "context_matches": [
-        "migrants",
-        "asylum"
-      ],
-      "high_value_matches": false,
-      "signal_context_rejections": {},
-      "migration_context": true,
-      "human_migration_context": null,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "2.6",
-      "priority_score": 48.9,
-      "analyst_priority": "MEDIUM",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "2115488942871003153"
-      ],
-      "related_authors": [
-        "grok"
-      ],
-      "related_urls": [
-        "https://x.com/grok/status/2115488942871003153"
-      ],
-      "related_sources": [
-        "X"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
-    },
-    {
-      "id": 1248,
-      "source": "MASTODON",
-      "source_post_id": "mastodon_117519927238089314",
-      "author": null,
-      "language": null,
-      "published_at": "2026-10-28T18:23:00Z",
-      "first_detected_at": "2026-10-28T21:58:27Z",
-      "last_detected_at": "2026-10-29T01:29:15Z",
-      "detection_count": 2,
-      "text": "🇲🇽 El sueño americano cambió de destino. Migrantes que buscaban llegar a Estados Unidos ahora construyen una nueva vida en México, tras las restricciones de Trump. En Tijuana, algunos ya tienen negocios, empleos y no piensan cruzar la frontera. # Migracion # Mexico # Tijuana https:// updateme.news/nacional/trump-b loqueo-el-sueno-americano-migrantes-se-arraigan-en-mexico/",
-      "text_excerpt": "🇲🇽 El sueño americano cambió de destino. Migrantes que buscaban llegar a Estados Unidos ahora construyen una nueva vida en México, tras las restricciones de Trump. En Tijuana, algunos ya tienen negocios, empleos y no piensan cruzar la frontera. # Migracion # Mexico # Tijuana https:// updateme.news/nacional/trump-b loqueo-el-sueno-americano-migrantes-se-arraigan-en-mexico/",
-      "url": "https://mastodon.social/@updateme/117519927238089314",
-      "source_url": "https://mastodon.social/@updateme/117519927238089314",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 8.25,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "Migrantes que buscaban llegar"
-        ],
-        [
-          "route",
-          "frontera"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT",
-        "ROUTE"
-      ],
-      "context_matches": [
-        "Migrantes"
-      ],
-      "high_value_matches": [
-        "Migrantes que buscaban llegar"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "AMERICAS",
-      "primary_region": "AMERICAS",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 32.0,
-      "analyst_priority": "LOW",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "mastodon_117519927238089314"
-      ],
-      "related_authors": [],
-      "related_urls": [
-        "https://mastodon.social/@updateme/117519927238089314"
-      ],
-      "related_sources": [
-        "MASTODON"
-      ],
-      "independent_author_count": 0,
-      "platform_count": 1
-    },
-    {
       "id": 1252,
       "source": "X",
       "source_post_id": "2115703220878061665",
@@ -1017,51 +939,123 @@
       ],
       "independent_author_count": 1,
       "platform_count": 1
-    }
-  ],
-  "crossing_access_signals": [],
-  "access_signals": [],
-  "top_crossing_access_posts": [],
-  "crossing_access_narratives": [
+    },
     {
-      "id": 1247,
+      "id": 1249,
       "source": "X",
-      "source_post_id": "2115488942871003153",
-      "author": "grok",
+      "source_post_id": "2115561918215635367",
+      "author": "TrumpWorld_QQ",
       "language": "en",
-      "published_at": "2026-10-28T17:00:42Z",
-      "first_detected_at": "2026-10-28T17:33:27Z",
-      "last_detected_at": "2026-10-28T17:33:27Z",
+      "published_at": "2026-10-28T21:50:41Z",
+      "first_detected_at": "2026-10-28T21:58:57Z",
+      "last_detected_at": "2026-10-28T21:58:57Z",
       "detection_count": 1,
-      "text": "@Truthseekerrr99 Reform UK policies map more closely to current Conservative positions on leaving the ECHR, deporting illegal migrants, raising the personal allowance, inheritance tax relief on homes, and ending net zero rules. Restore Britain goes further, seeking full asylum system abolition,",
-      "text_excerpt": "@Truthseekerrr99 Reform UK policies map more closely to current Conservative positions on leaving the ECHR, deporting illegal migrants, raising the personal allowance, inheritance tax relief on homes, and ending net zero rules. Restore Britain goes further, seeking full asylum system abolition,",
-      "url": "https://x.com/grok/status/2115488942871003153",
-      "source_url": "https://x.com/grok/status/2115488942871003153",
-      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
-      "signal_type": "LEGAL_MIGRATION_SIGNAL",
-      "signal_mode": "DIRECT",
-      "signal_intent": "LEGAL_ACCESS",
+      "text": "BREAKING:\n\nPoland announces it’s sending the Polish Army to the country’s borders with Germany and Lithuania in order to stop illegals migrants from crossing into Poland https://t.co/GMeAiH3p22",
+      "text_excerpt": "BREAKING:\n\nPoland announces it’s sending the Polish Army to the country’s borders with Germany and Lithuania in order to stop illegals migrants from crossing into Poland https://t.co/GMeAiH3p22",
+      "url": "https://x.com/TrumpWorld_QQ/status/2115561918215635367",
+      "source_url": "https://x.com/TrumpWorld_QQ/status/2115561918215635367",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.94,
-      "score": 15.0,
+      "confidence": 0.62,
+      "score": 5.75,
       "matched_signals": [
-        "LEGAL_MIGRATION_SIGNAL"
+        "MOVEMENT_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
-          "legal_signal",
-          "ECHR"
+          "movement",
+          "migrants from crossing"
         ]
       ],
-      "matched_groups": [],
-      "context_matches": [
-        "migrants",
-        "asylum"
+      "matched_groups": [
+        "MOVEMENT"
       ],
-      "high_value_matches": false,
-      "signal_context_rejections": {},
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "migrants from crossing"
+      ],
+      "signal_context_rejections": [],
       "migration_context": true,
-      "human_migration_context": null,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "EASTERN_EU_BORDER",
+      "primary_region": "EASTERN_EU_BORDER",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 25.7,
+      "analyst_priority": "LOW",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2115561918215635367"
+      ],
+      "related_authors": [
+        "TrumpWorld_QQ"
+      ],
+      "related_urls": [
+        "https://x.com/TrumpWorld_QQ/status/2115561918215635367"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
+    {
+      "id": 1250,
+      "source": "X",
+      "source_post_id": "2115561431311757375",
+      "author": "Sean1_23",
+      "language": "en",
+      "published_at": "2026-10-28T21:48:45Z",
+      "first_detected_at": "2026-10-28T21:59:26Z",
+      "last_detected_at": "2026-10-28T21:59:26Z",
+      "detection_count": 1,
+      "text": "@KaiserLoengramm If this is correct, this doesn't look like mass deportations at all.\n\n\"MPI finds:\nMore than two-thirds of the 980,000 deportations in the first 18 months of the second Trump term involved migrants initially intercepted at the border\"\n\nhttps://t.co/jPo7hMTAhj",
+      "text_excerpt": "@KaiserLoengramm If this is correct, this doesn't look like mass deportations at all.\n\n\"MPI finds:\nMore than two-thirds of the 980,000 deportations in the first 18 months of the second Trump term involved migrants initially intercepted at the border\"\n\nhttps://t.co/jPo7hMTAhj",
+      "url": "https://x.com/Sean1_23/status/2115561431311757375",
+      "source_url": "https://x.com/Sean1_23/status/2115561431311757375",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.25,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "border"
+        ],
+        [
+          "enforcement",
+          "intercepted"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
       "historical_reference": false,
       "historical_reason": null,
       "historical_reference_text": null,
@@ -1072,18 +1066,18 @@
       "primary_region": "GLOBAL",
       "latitude": null,
       "longitude": null,
-      "rules_version": "2.6",
-      "priority_score": 48.9,
-      "analyst_priority": "MEDIUM",
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 25.2,
+      "analyst_priority": "LOW",
       "related_posts_count": 1,
       "related_post_ids": [
-        "2115488942871003153"
+        "2115561431311757375"
       ],
       "related_authors": [
-        "grok"
+        "Sean1_23"
       ],
       "related_urls": [
-        "https://x.com/grok/status/2115488942871003153"
+        "https://x.com/Sean1_23/status/2115561431311757375"
       ],
       "related_sources": [
         "X"
@@ -1092,6 +1086,10 @@
       "platform_count": 1
     }
   ],
+  "crossing_access_signals": [],
+  "access_signals": [],
+  "top_crossing_access_posts": [],
+  "crossing_access_narratives": [],
   "information_activity_weekly": [
     {
       "year": 2026,
@@ -1218,15 +1216,15 @@
       "label": "W44",
       "week_label": "W44",
       "week_start": "2026-10-26T00:00:00Z",
-      "posts": 1037,
-      "post_count": 1037,
+      "posts": 1088,
+      "post_count": 1088,
       "operational_posts": 51,
       "influence_signals": 32,
       "source_counts": {
-        "X": 706,
-        "REDDIT": 127,
-        "MASTODON": 135,
-        "TELEGRAM": 69
+        "X": 731,
+        "REDDIT": 140,
+        "MASTODON": 147,
+        "TELEGRAM": 70
       }
     }
   ],
@@ -1356,33 +1354,33 @@
       "label": "W44",
       "week_label": "W44",
       "week_start": "2026-10-26T00:00:00Z",
-      "posts": 1037,
-      "post_count": 1037,
+      "posts": 1088,
+      "post_count": 1088,
       "operational_posts": 51,
       "influence_signals": 32,
       "source_counts": {
-        "X": 706,
-        "REDDIT": 127,
-        "MASTODON": 135,
-        "TELEGRAM": 69
+        "X": 731,
+        "REDDIT": 140,
+        "MASTODON": 147,
+        "TELEGRAM": 70
       }
     }
   ],
   "information_activity_summary": {
-    "current_week": 1037,
-    "previous_week": 1458,
-    "current_week_to_date": 1037,
-    "previous_week_same_period": 1458,
+    "current_week": 1088,
+    "previous_week": 1530,
+    "current_week_to_date": 1088,
+    "previous_week_same_period": 1530,
     "previous_week_full": 2631,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": -28.88,
+    "change_percent": -28.89,
     "change_label": "-28.9%",
     "direction": "DOWN",
     "comparable": true,
-    "elapsed_hours": 86.8,
+    "elapsed_hours": 92.8,
     "current_period_start": "2026-10-26T00:00:00Z",
     "previous_period_start": "2026-10-19T00:00:00Z",
-    "previous_period_end": "2026-10-22T14:46:46Z"
+    "previous_period_end": "2026-10-22T20:46:00Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -1394,26 +1392,26 @@
       72,
       168
     ],
-    "generated_at": "2026-10-29T14:46:46Z",
-    "total_items": 2175,
-    "information_count": 273,
+    "generated_at": "2026-10-29T20:46:01Z",
+    "total_items": 2181,
+    "information_count": 279,
     "early_warning_count": 1050,
     "operational_count": 701,
     "correlated_count": 151,
     "layer_counts": {
-      "INFORMATION": 273,
+      "INFORMATION": 279,
       "OPERATIONAL": 701,
       "EARLY_WARNING": 1050,
       "CORRELATED": 151
     },
     "source_counts": {
       "X": 1536,
-      "REDDIT": 489,
+      "REDDIT": 495,
       "MASTODON": 102,
       "TELEGRAM": 48
     },
     "type_counts": {
-      "INFORMATION_SIGNAL": 273,
+      "INFORMATION_SIGNAL": 279,
       "BORDER_CROSSING": 298,
       "FACILITATION_EARLY_WARNING": 205,
       "INTERCEPTION": 49,
@@ -1442,6 +1440,250 @@
       "BORDER_CONDITION": 2
     },
     "items": [
+      {
+        "timeline_id": "information:23054",
+        "timestamp": "2026-10-29T20:38:13Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2115906070644162904",
+        "author": "grok",
+        "url": "https://x.com/grok/status/2115906070644162904",
+        "source_url": "https://x.com/grok/status/2115906070644162904",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "crossing"
+        ],
+        "freshness_cues": [],
+        "text": "@zbuckholz @RepEliCrane It happened multiple times. Under Obama, nearly 16,000 unaccompanied minors who crossed the border were housed on bases like Lackland AFB, Fort Sill, and Fort Bliss from 2012-2017. Similar use occurred earlier for Cubans, Haitians, Vietnamese, and others. Bases are again being",
+        "text_excerpt": "@zbuckholz @RepEliCrane It happened multiple times. Under Obama, nearly 16,000 unaccompanied minors who crossed the border were housed on bases like Lackland AFB, Fort Sill, and Fort Bliss from 2012-2017. Similar use occurred earlier for Cubans, Haitians, Vietnamese, and others. Bases are again being",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-29T20:44:29Z",
+        "last_collected_at": "2026-10-29T20:44:29Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:23061",
+        "timestamp": "2026-10-29T20:36:41Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2115905686643372191",
+        "author": "KarenConUK",
+        "url": "https://x.com/KarenConUK/status/2115905686643372191",
+        "source_url": "https://x.com/KarenConUK/status/2115905686643372191",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "border",
+          "crossing"
+        ],
+        "freshness_cues": [
+          "now"
+        ],
+        "text": "@RupertLowe10 @Steve_Nucker You need to watch that video on @realmuckraker page, followed migrants from Africa to UK, thousands of pounds millions now probably invested Government holding centres then from border to border how they cross and the financial earners men turn into business and God help they",
+        "text_excerpt": "@RupertLowe10 @Steve_Nucker You need to watch that video on @realmuckraker page, followed migrants from Africa to UK, thousands of pounds millions now probably invested Government holding centres then from border to border how they cross and the financial earners men turn into business and God help they",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-29T20:44:29Z",
+        "last_collected_at": "2026-10-29T20:44:29Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:23063",
+        "timestamp": "2026-10-29T19:06:21Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1xit1xk",
+        "author": "Mista9000",
+        "url": "https://www.reddit.com/r/HFY/comments/1xit1xk/perfectly_safe_demons_ch_158_sail_the_friendly/",
+        "source_url": "https://www.reddit.com/r/HFY/comments/1xit1xk/perfectly_safe_demons_ch_158_sail_the_friendly/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 50,
+        "information_score": 5,
+        "matched_information_cues": [
+          "crossing",
+          "boat",
+          "vessel",
+          "sea"
+        ],
+        "freshness_cues": [
+          "today",
+          "tonight",
+          "now"
+        ],
+        "text": "[Perfectly Safe Demons] -Ch 158- Sail the Friendly Seas\nThis week, an intriguing island interlude ends in an incredible intercontinental ironclad! A wholesome* story about a mostly sane demonologist and his growing crew, trying their best to usher in a post-scarcity utopia using imps. It's a great read if you like optimism, progress, character growth, hard magic, and advancements that have a real impact on the world. I spend a ton of time getting the details right, focusing on grounding the story so that the more fantastic bits shine. A new chapter every Thursday. \\ Some conditions apply, viewer cynicism is advised.* Map of Pine Bluff Map of Hyruxia Map of the Factory and grounds . My frothy Patreon for five chapters ahead ! . First Chapter Prev -------- Next ***** Marinka’s life started to feel under control at last. She was getting the hang of laundry, though her shoulders were sore all the time. She saw the other ladies had much bigger arms than she did, and that seemed like what her own future held if she stayed. While the work was hard, it wasn’t especially unpleasant. The other women mostly kept to themselves, and being alone with her thoughts was how she’d lived her entire life. She stared out at the sea while she thought. One of the perks of this job was getting to work outside, on the hillside. It gave her a magnificent view of the sea, including the distant continent. Being on an island was a bit scary, but also strangely safe. All her problems were on the other side of the crashing waves, and she was a meaningful fraction of the way towards her ticket’s destination, if she wanted to continue. Her other problem, the outrageous cost of food, was even partially solved. By her third day on Dogbone, she’d actually felt good. She was well-rested and energetic enough to explore, look at the endless array of imported finery, and ask pointed questions of every food cart she could find. There were a few places that sold fish or vegetable stew by the bowl. A filling portion was only a glindi. If she got vegetable stew, it was only six-eights of a gee, and a lot less fishy. Hillsbaro had a river nearby— well, a large creek— and from time to time Andcil would catch or barter for some trout. She liked those. They were a lot firmer and less fishy than what they called fish here. She wasn’t even sure if they were a kind of trout, or if she’d come far enough that people ate entirely different families of fishes. Her mistake was making assumptions. She’d been applying Jagged Cove rules to a place that wasn’t like anywhere she’d been. Bread was a luxury here, while anything that could travel for a month in a ship’s hold was surprisingly reasonable. Not cheap, nothing was remotely cheap, but not unbearable. Maybe every town had a different price for every good? If that were the case, what was stopping people from bringing cheap things to where they were expensive? Hah, if I filled a whole cargo hold, then I might have just reinvented trade. Hmmph, these shirts look clean! She fished out the shirts in soggy lumps and moved them into the cleaner rinse tub. This was the hardest part: holding the oversized paddle, covered in wet clothes. She daren’t drop them onto the wet dirt around her feet, or she’d have to start all over. With a grunt, she splashed them in and staggered a step to regain her balance. It was an art she was still mastering. If I stayed here I could master that skill. The two wringer ladies said they weren’t even migrants, not anymore. They shared a little cottage. They’d bought the land for next to nothing, hired a builder to make something that keeps them dry while they sleep, and now they were making their own money. Was I strong enough to do it? Wringing paid an extra two gees a day, an impossibly lavish salary. She badly envied them. They already had most of what she wanted, no one dared gossip behind their backs, plus they had thicker shoulders and arms to boot. What’s the point of carrying on any further? What if there weren’t any crab legs waiting for me? The demons are a lot more real than I thought. Why else would there be shiny signs about them all over town? Unless there is a joke I am missing. Another workday finished, and she went back to her bed. The man had said the unfinished little room was hers now, so that felt a bit more stable. Straps and springs supported her thin bedroll, giving it a bit of flex. Far from perfect, since she could feel the straps on her back. It was a bit frustrating that so much nice stuff was less comfortable than her old bed with just straw. She lay there, looking at the sky through the rafters, thinking. I’ll stay. The road ahead is too much, and I can make my money here. This is an amazing place and a great opportunity. I can learn a trade, like laundry, or maybe open my own sock darning shop someday. Then I’ll make money, work when I please, and save up. I don’t even know what I am saving up for, but imagine how great it would be if I had a hundred glindi in a sack! Or someday a thousand. Just thinking about unimaginable wealth that could, after years, be hers made her smile. She tossed and felt the frame dig into her back, thankfully, she was too exhausted to need a more comfortable bed. She woke with sunlight in her eyes, the same as the last two mornings. The frustration was even part of the routine now. She rolled off the bed, got changed, and went to find food. The town was a step friendlier-looking now that she’d made her choice. Dogbone is a fine town, for all its flaws. A woman could live a rewarding life here. She got some boiled oats sweetened with a bit of honey. A fair step blander, but nearly as filling as the stew and only a half glindi! It still cost far more than boiled oats ought to, but nothing in this town was cheap. She walked to the soapery with the rest of the mismatched migrants going to their jobs. She got to her tub and started to work. The smell of stinky socks and harsh chemicals were comforting to her, part of the job, which was part of who she was now. Early into her shift, half the women ran off to the side to stare at the sea. She went to join them. Everything in town was new, so maybe it was a new wonder. It took her a moment to see what was happening; it was a strange orange streak at the horizon. The sun was so low that the whole part of the horizon was hard to see. “What’s that?” she asked no one specifically. “A ship, a fast one, from Pine Bluff,” the taller of the wringer ladies said. Marinka smiled, “Are you sure? It doesn’t look like a ship.” She badly wanted to make friends with her. “Aye, it don’t. Strange folk live in strange lands over there. Them havin’ strange ships ain’t hardly a shock.” Marinka shrugged and watched. Already it was closer. She could see it was a ship now, although unlike any ship she’d seen so far. Ships floated and bobbed; this one cut through the sea. It flew. She could see a magnificent spray of water off its bow as it approached. Finally she realised that the golden glow of the sails wasn’t just sunshine, they glowed as if on fire. A slow fire, somehow frozen in place. “Oy! Back to work! That’s for migrants, goin’ to the land of the damned. Like damned fools!” the head laundress shouted at them as they stood gawking. Marinka bowed her head and hurried back to her job. Why would I stay here when I have a ticket on that? It’s more beautiful than anything I’ve ever seen. More than the cathedrals and statues of the capital! Demons or not, anyone who can make a ship like that must know things. For builders of wonders, surely granting me a few crab legs and a featherbed is no more demanding than giving a kitten a strip of meat? “Um, I know it’s not even lunchtime yet, but if I left to go on the ship, do I get a half-day of pay? Or at least a quarter?” she asked the hard-faced lady. Eight glindi for eight hours of work actually makes the math pretty simple. “Nope. Ain’t the deal. Stay or go, but only one’ll get you paid today!” “Sorry! Thank you for your trust, but I have a ship to meet!” Marinka said. She hugged the woman against her will before darting through the chaotic streets to recover her pack and blankets. It seemed like half the town was heading to the pier. She couldn’t get to the counter for her belongings because a huge line had formed. Migrants were winding down the street, as everyone had the same idea. The whole town cannot fit on a single ship, even a huge one! “Only line up if you need something immediately!” one of the well-dressed Inky Hulls men shouted. “Your checked items will be loaded onto the ship. No need to carry it yourself, you can get it there. Personal items only for boarding!” Marinka stared at the line, the crowd, then the road across the island. She had her satchel with her, as always. That’s where her money, ticket, iron knife, and a dozen other essentials were. I need to trust that they won’t be robbing me. Anyone else might, but these folk seem to be richer’n anything. Not that rich folk don’t love stealing as much as anyone. She hurried across town, past more of those red-and-white metal signs, to where a barricade with armed men blocked off the pier. They seemed bored as the crowd wasn’t especially agitated. She joined at the back, milling around. There were too many people for her to see much. Every wagon in town had been pressed into service: an unending train of empty ones went down the pier to the ship, while full ones returned and disappeared into the warehouse district. The amount of cargo coming off the ship was incredible, and the process took forever. Around the time she’d normally be just finishing lunch, the carts finally stopped. The armed men let a single file of passengers onto the pier. She was waved through and could finally see the ship up close. She slowed down and stared. The hull rose far higher out of the water than any other ship she'd seen. The deck was nearly as high as the roof of a two storey warehouse. It was not only tall, the sides were smooth and red. There was no woodgrain or planking, just a flat bright red that seemed to stretch on like a slightly curved wall. Up close she noticed little shapes and patterns, impossibly fine, repeating over the whole hull, but only when the light caught them just right. It had four masts, and each of them was far taller than the one on the ship she’d sailed on out of Jagged Cove. One of the ship’s sailors, wearing a spotless, tailored uniform, took her ticket. It was far nicer than anything she’d cleaned this week. She almost reached out to examine his sleeves. He confirmed her ticket and waved her aboard. The deck was somehow more spacious than the pier, and she slowly walked along the railing, seeing the crowd stretch out below her. She wasn’t remotely the first on board, yet the line of migrants on the dock stretched down the road towards town. Light above, we really are draining out most of the town! I’ve never seen this many people in one place! Well, maybe the markets of Jagged Cove, but this is a tiny village! She frowned at the mass of rough and unclean people that she’d be sharing her space with for the next few weeks. There were more of the well-attired sailors setting up chairs at the front of the ship. They were clothed in striking pure white with purple detailing, much like her blankets. A few passengers were helping, so she decided to be useful and pitch in. The chairs were hinged folding chairs, stacked high on a few specially built carts. They were light enough that she could take five at a time, and before long the entire front of the ship was covered in rows of them. With a satisfied sigh, she sat on one. They all faced the same direction, so it seemed likely there was something happening soon. It was mid-afternoon before the gangplank was cleared, but sitting in the sun in a chair was as close to a holiday as she’d had in a long time. At least this ship doesn’t stink! Hmm. Yet. Many people used the same context clues as she had and took seats. Some were bad at following instructions and had lugged their entire lives aboard. A few had stacks of boxes,others had laden packs strapped to their backs, chests, and both arms. A handsome man in a pale-green longcoat walked to the front of the crowd. He had a bit of silver in his dark hair and a face that had been at sea for a lifetime. He wore a wide-brimmed hat with writing on it and moved with the confidence of a leader. “Afternoon, folks. My name is Cap’n Geon! Welcome aboard my ship, the Slippery Shining Shark! The fastest ship ever crafted by human hands. We only got a few rules. Get your berth assignments from the tables on the deck, and we can only seat forty at a time in the mess, so we’ll call out dinin’ numbers. It’ll be on your berth card. There’s doors with red signs on ‘em. Those ain’t for you. Don’t ever open one of them. You’re welcome to be wherever else you want, barring weather. If’n a storm strikes, then we’ll ask you all to stay below decks, for your safety.” “How long is the crossing?” someone shouted. “As long as the seas decide. Ain’t for me to say,” Geon said with a solemn nod. “Not overlong though, she’s a fast one. If’n that’s all, I’ll put us to sea, and get underway. The winds are favourable, and we’ll make fine time.” “What about the blockade? Is it safe to cross?” “Hah, not for slow ships. But we ain’t slow,” Geon chuckled. He unbuttoned his coat and walked off. “Enjoy yourselves, dinner starts once we’re at sea, and remember, never open the doors with red signs.” By the time he disappeared into a doorway, the sailors were already pulling the mooring lines aboard. With a series of deep clicks, the deck beneath her vibrated. It was a coarse clicking at first, then settled into a much finer whir. The ship slid backwards, towards the exit of the harbour. She, along with many others, ran to the back, eager to see how they could tow such a massive vessel with the harbour rowboat. She’d only been on one voyage, but was just as confused as everyone else when there wasn’t a rowboat. The ship seemed to be swimming by itself. She double-checked, and the masts still had no sails on then. The whirring stopped, then resumed. The ship turned sharply and passed through the harbour mouth, nose first. It was moving at walking speed, which she was fairly sure was no faster than any other ship. Maybe a bit faster, since towing was always slow. Some kids had taken the folding chairs and set them up near the railings. Marinka considered copying them, but then she couldn’t see over the sides. As an afterthought she tapped the smooth walls of the deck. They were thin, cold, and clicked under her fingernail. Her heart thundered. Iron ships? No. That wasn’t right. It was too much. There wasn’t that much iron in the world, was there? Not like wonders ought to surprise me any more. But it mustn't be all iron. This ship is huge. The whirring under her feet stopped. There were a few harsh thumps, then a much firmer clang. For a few breaths they drifted silently just beyond the mouth of the harbour. The winds tugged her hair and smelled wonderfully salty and clean. From nowhere and everywhere, the voice of the captain boomed, “Rigging for sail, please find a seat.” Marinka looked around. The chairs were very far away and she wasn’t sure if it was an order or a suggestion. No saying how this ship would move. A captain at sea is like a whole lord, so best not argue! She sat cross-legged on the deck and held onto the railing. The masts blossomed with thick, dark sails unlike any she’d ever seen. Even looking right at the masts, there was no clear sign of where they came from. She sighed, learning nothing other than that the sails had rigged themselves. The few sailors on the deck were still helping the people from behind their folding tables. The passengers lined up were standing and no one was shouting at them, so she may have slightly overreacted. The whoosh of water grew louder, though the rigging didn’t so much as groan. They were moving faster than the ship from Jagged Cove ever had and were still speeding up. She rose and looked forward, watching the sea split ahead of them, sending up great white sheets of water. As they cleared the edge of the island and sailed into the open sea, the deck began to smell of lightning with a hint of raspberries. The wind picked up and the ship moved faster. She tightened her grip on the railing as the wind whipped at her hair. Judging by the rate that Dogbone Island was receding, this wasn’t walking speed anymore. She wasn’t sure horses could gallop this fast, yet a town-sized boat certainly could. There was no comparison to the last sailing. This ship was surging forward like it was chased by demons. Oh, this ship probably likes demons. Was it moving like it was chasing demons? Or it wanted to return to cavorting with them? Hah, even if it sank now, I’d have seen and felt more things than I thought possible. I regret nothing. She turned to look at the sails and, to her shock, they were sheathed in a glowing haze. It wasn’t smoke; that would’ve blown away in an instant. It was more like a mist that didn’t follow the rules of how to be a mist, or a flame that was mostly frozen. No heat, just the smell of lightning. And something else. Raspberry? Plum? Something even more red? She thought about it. This was the first real witchery she’d seen. Sunrises, births, and good harvests were all a bit magical, but not the glowing, bright, flinging-her-across-the-sea sort of magic. The rumours were rampant on Dogbone. Some claimed that Pine Bluff was run by a mighty witch; others said it was a Mage King, like in the fairy tales. Some whispered it was actually a demonologist or an elv. The idea that someone involved could cast great and powerful spells was a constant and she was coming around on that theory. The Captain said this ship was made by human hands, but she slowly walked along the deck, examining it as best she could. Strange thing to specify, actually. What other hands are there? Even without any knowledge of ships, this one was so different as to barely be a ship at all. The cog from the Cove had rotten spots of wood and generations of repairs. It creaked and stank. All I see here is more smooth metal, bereft of tool marks, of joins, of anything. The idea of the Hillsbaro smith, one of the finest in the whole Empire, according to his sign, crafting something like this in his forge was unimaginable. And to make it so smooth, even, and perfect? Unlike anything other than those demonsteel knives and beds. Real ships had sweaty and exhausted sailors. This Shark had none of that. The sailors might not be sailors at all, come to think of it. What did they even do? Sit on folding chairs and answer questions? That’s not sailing. Yet this ship moves faster than any other. She glanced back at Dogbone Island, which had shrunk to a smudge on the horizon. It was the only speck of green in a world of dark blue water. She gulped and suppressed a shiver. One of the tables on the deck had no line, so she went over. The sailor there at least sounded rough and salty, even if he dressed like a noble. He examined her ticket far more closely, took the handwritten slip that corresponded to her blankets and basket, and told her she was in berth fourteen and dining group four. “Your room’ll not be ready ‘till later. But we’ll have it set by nightfall,” he said without looking up from his clipboard. She thanked him and returned to her railing. The double doors to the hold had opened, but she remembered the sweaty stink of the last ship. The endless seas were preferable to that. Their speed felt constant at last, and the sheets of water were coming out from further down the hull now. She found the right spot and if a wave hit the hull just so, she could reach her hand out into the spray. It was heavy, fast, and salty. She smiled immediately. It was like talking to the ship and the sea: primal and untamed. The same kids that had dragged the chairs over joined her, but most people had gone below decks to get out of the wind. A reasonable retreat, considering how properly gusty it had gotten now that they were beyond the sight of shore. Her long hair was whipping so vigorously that she was sure it would get knotted, but she didn’t care. She’d never felt so free. Light save us all, I hope he has some magic to tell him where he is, or where we’re going! Every direction looks the exact same! She stayed in the gusting wind and driving mist, smiling and watching the sunset. The dining groups were called in order, and the sun had nearly disappeared by the time group four was summoned. In all the excitement she hadn’t eaten since breakfast and was uncomfortably ravenous. I even swore I’d bring some bread and cheese from shore this time. Abyss take me, I got too excited and forgot my own plan. Maybe this impossible ship will have better rations too? Maybe their hardtack will be soft? With a brave smile she went below decks for the first time, through the double doors. The stairs down were her first hint: rather than the narrow ladder on the last ship, this had a wide stairwell. There was polished hardwood and art mounted on the wall, lit by small lights angled in the ceiling. She wasn’t sure what impressed her more: the sea monster wrestling a ship in shiny oil paint, or that it was lit by a new kind of light that needed no fuel and gave off no heat. The stairs were also where her nose discovered the first signs of the meal that awaited her. Herbs and spices and grilled meat were distractingly intense. To her astonishment, it wasn’t the cargo hold at all. It was a real, honest dining hall. There were tall-backed chairs with gold leaf, hardwood tables with marble inlays, and iridescent goblets beside linen napkins. She covered her mouth, looking back and forth to see if she was even still at sea. This cannot be where I am meant to eat! My dress is grubby and I cannot afford to eat at a place a tenth as nice! The other passengers lack my caution. They’re eating with abandon, so perhaps I am being overly timid. She ambled to the middle of the dining room, feeling terrifyingly out of place. She’d never been in a space like this and every fibre of her screamed that she didn’t belong. There was a counter at the edge of the long room, with lots of covered plates. They had placards that likely explained what they were, but thankfully they also had little stylised pictures. She grabbed one from the part that had a chicken on it, and took it to an empty seat. With high hopes she removed the cover. The food before her looked suspiciously good. A waft of steam carried the aroma of spices and herbs. Every bite was savoury and tender. There were crisp veggies and saucy roast chicken. The potatoes were so buttery they melted in her mouth, while the garlic balanced with other notes and flavours she struggled to identify. Her plate was empty before she realised it. Damn, maybe I’m a shitty cook after all. Nothing I’ve made came close to this meal. Then again, if the demons can work steel into ships, surely making potatoes might not be that big of a stretch. Now to find berth fourteen. I’ve got a feeling I might finally have a real mattress to sleep on tonight! ***** Prev -------- Next *****",
+        "text_excerpt": "[Perfectly Safe Demons] -Ch 158- Sail the Friendly Seas\nThis week, an intriguing island interlude ends in an incredible intercontinental ironclad! A wholesome* story about a mostly sane demonologist and his growing crew, trying their best to usher in a post-scarcity utopia using imps. It's a great read if you like optimism, progress, character growth, hard magic, and advancements that have a real impact on the world.…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-29T20:44:30Z",
+        "last_collected_at": "2026-10-29T20:44:30Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:23064",
+        "timestamp": "2026-10-29T16:02:51Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1xio1k4",
+        "author": "IHateTrains123",
+        "url": "https://www.reddit.com/r/neoliberal/comments/1xio1k4/how_the_afd_funds_ethnonationalist_activists/",
+        "source_url": "https://www.reddit.com/r/neoliberal/comments/1xio1k4/how_the_afd_funds_ethnonationalist_activists/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 40,
+        "information_score": 4,
+        "matched_information_cues": [
+          "crossing",
+          "detention",
+          "deportation"
+        ],
+        "freshness_cues": [
+          "now"
+        ],
+        "text": "How the AfD funds ethno-nationalist activists behind the scenes\nThe leaked AfD documents reveal how the party is becoming increasingly radical. They even show the financing of members of far-right organizations—groups with which the AfD officially claims to have no connection. DER SPIEGEL has analyzed the data. Patrick S. and two accomplices lay in wait for the man outside his garage, then beat and strangled him. They bound him with zip ties and searched his apartment. According to the Federal Court of Justice’s ruling, they left the victim behind—still bound, “bleeding and whimpering in pain.” The man had to be placed in a medically induced coma several times in the hospital in order to survive. That was in 2020. The three perpetrators were sentenced by the Hanover Regional Court to six years in prison for aggravated robbery in conjunction with dangerous bodily harm. The Federal Court of Justice recently remanded the case back to the Regional Court to determine whether the convicted individuals may have actually harbored an intent to kill—a finding that could lead to a longer sentence. Patrick S., however, is not currently in pre-trial detention. He is known to the authorities as a neo-Nazi. In 2015, he received a final conviction for, among other things, attacking a Green Party member of the Bundestag on the open street. Patrick S. will soon be back in court. In the meantime, he is earning money by providing graphic design services—for the AfD. According to the party’s internal documents, he created items such as social media graphics and an advertisement intended for a newspaper aligned with the AfD. A total of at least 4,180 euros was billed to the AfD in Mecklenburg-Western Pomerania, payable to a company in which his wife is listed as the owner. The documents were taken from the AfD’s email accounts and released by hackers last week. The party has confirmed that a large volume of data was exfiltrated. In total, the leak comprises more than 420,000 emails and over 48,000 documents; DER SPIEGEL is currently analyzing them and verifying their authenticity. This, the largest leak in the history of the AfD, offers a glimpse into a far-right party that has become increasingly radical since its founding 13 years ago. What began as a group of euro-skeptic academics has transformed into an ethno-nationalist extremist party—one that is increasingly merging with figures from groups that the AfD itself officially deems \"incompatible.\" That list of incompatible groups includes hundreds of organizations that were considered too radical for the party in its early days. Membership in such groups was meant to be a barrier to joining the AfD, with exceptions permitted only in special cases. However, the leak reveals that these exceptions are becoming more frequent. As the AfD grows ever more extremist, calls for a formal ban are intensifying. Most recently, state premier Hendrik Wüst (CDU) and federal minister Cem Özdemir (Green Party) have both advocated for moving forward with the process of seeking a ban. Alice Weidel, who currently stands unchallenged at the helm of both the party and its parliamentary group, evidently no longer even takes issue with this. While she initially warned against crossing certain lines, the emails reveal that her criticism has long since fallen silent. Instead, she actively fuels the radicalization—doing so quite openly, for instance by spreading historical revisionist lies about Adolf Hitler, claiming that he was a communist and a far-left extremist. This has not diminished the AfD’s success; quite the contrary. In nationwide polls, the party is polling at around 28 percent, and in Saxony-Anhalt, it could soon see Ulrich Siegmund become the first AfD state premier. Even in Mecklenburg-Western Pomerania—where the state branch did not truly stand behind its candidate, Leif-Erik Holm—the AfD still secured the most votes in the state election this past September. People no longer even shy away from someone with a history as a violent neo-Nazi. The AfD branch in that state is an instructive case. It is the only one among the East German state chapters that has not been classified as \"definitively extremist\" by the Office for the Protection of the Constitution (Verfassungsschutz). It has often been described as more moderate—at least by comparison. The leak demonstrates, however, that this assessment was incorrect. The Mecklenburg-Western Pomerania branch of the AfD shows little hesitation in engaging with individuals who were previously active in neo-Nazi organizations or who remain involved with the ethno-nationalist \"Identitarian Movement.\" On the contrary: these individuals were tasked with presenting the AfD in a favorable light during the election campaign—and were well compensated for doing so, partly with taxpayer money. The party no longer even shies away from someone like Patrick S., whose background includes a history as a violent neo-Nazi. This is likely because the person who initiated the business relationship with him has known S. for a long time—at least since 2012. That person is Daniel Fiß, the AfD’s campaign manager in Mecklenburg-Western Pomerania. He was the central figure coordinating these activities—including those involving Patrick S. Fiß forwarded S.’s invoices to the state executive board and ensured they were paid. When asked why he chose to hire S. specifically, and whether his wife’s name appeared on the invoices to obscure the true identity of the person being hired, neither Fiß nor S. provided a response. Instead, S.’s wife stated that she had provided the services herself and that her husband does not work for her company. Yet, in his emails, Fiß explicitly mentioned Patrick S., noting that \"40 initial tiles\" (promotional graphics) had been \"booked with him\"—with the corresponding invoice attached. It is clear that Fiß and S. were both active at the same time in the Young National Democrats (JN)—the youth wing of the neo-Nazi party NPD, which now calls itself \"Die Heimat\" (The Homeland). Fiß served on the state executive board of the JN in Mecklenburg-Western Pomerania. S.—who went by the name Patrick K. at the time—had made a name for himself within the scene by performing as a singer-songwriter across Germany. DER SPIEGEL has reviewed photographs from that period and identified two events where both were present, including the 2012 JN federal congress, at which S. also performed. Subsequently, S. became a member of a group so extreme that it was banned by the Lower Saxony Ministry of the Interior. He later moved to Chemnitz, where he became the leader of another neo-Nazi group. Apparently, neither Fiß nor the Mecklenburg-Western Pomerania branch of the AfD has any issue with this part of S.’s past. Fiß has declined to answer this or any other questions—including inquiries regarding how he is compensated for his work as a campaign manager. The AfD issued a general statement rejecting the \"characterizations\" being made, adding that it would \"not support reporting based on illegally obtained data.\" In fact, there are two other individuals within the state party who were active in the NPD’s youth organization—at the same time as Fiß and S. One of them is Dario Seifert, currently the state branch’s general secretary and a member of the Bundestag. He received both his party position and his parliamentary seat at a time when his past was already known. And then there is Jan-Phillip Tadsen, currently a member of the state parliament for the AfD. His membership [in the JN] had previously been unknown—at least to the public. Within the AfD in Mecklenburg-Western Pomerania, however, it was known—yet there were no consequences. This is revealed by emails from the leak. Tadsen writes that he was a member of the JN from 2011 to 2013—and that no approval from the state executive committee had been sought at the time he joined. Such approval would have been required under the party’s \"incompatibility list.\" In October 2020, the state executive committee simply granted retroactive approval. The only criticism voiced was that the person responsible at the district branch level had failed to inform the state executive committee. About six months later, Tadsen applied for a spot on the party list for the state election—without mentioning his past in the documents. This, too, does not appear to have bothered the state executive committee; there is no criticism to be found in the emails, and to this day, his history with the JN has remained an internal matter. Tadsen did not respond to a request for comment. Furthermore, at least as of 2016, Tadsen participated in activities of the \"Identitarian Movement\" (IB)—an activist group that sought to distance itself from the \"old right,\" presenting a more intellectual image than the NPD or its youth wing (JN) and adopting a different style of dress. Despite his own background in the NPD youth wing, Tadsen was involved with the IB. This has had no negative repercussions for Tadsen within the AfD, even though the IB is also on the party’s list of \"incompatible\" organizations. On the contrary: Tadsen now serves on the state executive committee, where he is—ironically—tasked with managing relations with the \"political periphery\"—a term used to describe organizations orbiting the AfD, such as the \"Identitarians.\" Similarly, campaign manager Fiß was active in the IB following his time with the JN; he even rose through the ranks, becoming one of its federal chairmen in 2016. Nevertheless, Fiß has been earning an income through the AfD for many years: in 2019, he secured a position with a member of the Bundestag, and later served as an aide to the parliamentary group leader in the Mecklenburg-Western Pomerania state legislature. In 2024, the state executive committee approved his formal admission into the AfD, and he subsequently took charge of organizing the election campaign. This placed him in a position to provide jobs to old acquaintances. Take Michael Seibold, for example. The Identitarian activist from Stuttgart is currently dealing not only with criminal proceedings—in which he faces, and denies, charges of incitement to hatred—but also with running a media agency staffed entirely by other Identitarians. During the state election campaign, he secured a contract from the Mecklenburg-Western Pomerania branch of the AfD, worth over 38,000 euros. The invoices for this work appear in the leaked documents, all of which passed across Fiß’s desk—as did the agreement that the AfD would additionally cover up to 5,000 euros in travel expenses for Seibold and his team. During the campaign, Seibold chose not to speak publicly about this business relationship. In fact, he even denied to a YouTuber that he had a paid contract with the AfD, asking, \"Aren't we allowed to do this on a voluntary basis?\" When asked why he clearly lied in that instance, Seibold provided no response. Campaign manager Fiß also arranged contracts for another old acquaintance: the leaked files include invoices from a company owned by the well-known Identitarian Alexander Kleine—who goes by the name \"Alex Malenki\" online. These included a purchase of a children’s coloring book for 1,190 euros, as well as an official campaign song and accompanying video—produced using AI—for 2,618 euros. The state branch of the party subsequently released the material. Kleine and Fiß know each other well; as early as 2018, Fiß’s media agency produced a video profiling Kleine. The AfD has moved increasingly closer to the \"Identitarian Movement\" in recent years None of this is likely to upset AfD officials or supporters—even those in other federal states. After all, in recent years, the party as a whole has moved ever closer to the \"Identitarian Movement,\" hiring its members, integrating them into its youth wing and the party itself, and appearing alongside its activists. The AfD has even adopted \"remigration\"—a term rooted in the \"völkisch\" (ethno-nationalist) ideology of the Identitarian Movement—with the party’s Thuringia branch even featuring it on election posters. Last week, in North Rhine-Westphalia, Alice Weidel even led a chant using this very term, which signifies the mass deportation and displacement of people with a migrant background from Germany. It was also Weidel who, at the last federal party conference, promised to revise the \"incompatibility list\" (a list of organizations and groups deemed incompatible with AfD membership). Thuringia state leader Björn Höcke and others had submitted a motion to drastically shorten this list. According to sources within the party, the Identitarian Movement, for instance, is set to be removed; a proposal to this effect is currently being drafted. Weidel needs—and actively utilizes—these forces to maintain her grip on power; that is the current state of affairs within her party. There is one issue, however, that is likely to cause trouble for the AfD—internally as well—because it could prove costly. Fiß, who is employed by the AfD’s parliamentary group in the state legislature, appears to have used the group’s offices as a kind of campaign headquarters. According to the leak, he regularly had campaign materials delivered to the parliamentary group’s premises and stored them there. Furthermore, DER SPIEGEL analyzed when Fiß—in his capacity as campaign manager—sent out invoices, discovering that they were dispatched from the official network used by the AfD parliamentary group. For months, he sent emails related to the party’s election campaign, primarily on weekdays and during standard working hours—meaning that, during those times, he was not performing work for the parliamentary group. This could constitute illegal party financing under the Political Parties Act. Resources of a parliamentary group—which are funded by taxpayers—may not be used for party-political activities; this is stipulated by the Members of Parliament Act in Mecklenburg-Western Pomerania. When asked, no one within the AfD was willing to comment on this. All other questions also remained unanswered. This is a strategy once practiced primarily by the völkisch (ethno-nationalist) faction within the party, whose long-standing motto has been: \"Whoever distances themselves, loses.\" It appears that this mindset has now taken hold among the rest of the party as well. Text translated by Google Translate, mistakes are my own.",
+        "text_excerpt": "How the AfD funds ethno-nationalist activists behind the scenes\nThe leaked AfD documents reveal how the party is becoming increasingly radical. They even show the financing of members of far-right organizations—groups with which the AfD officially claims to have no connection. DER SPIEGEL has analyzed the data. Patrick S. and two accomplices lay in wait for the man outside his garage, then beat and strangled him. The…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-29T20:44:31Z",
+        "last_collected_at": "2026-10-29T20:44:31Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:23075",
+        "timestamp": "2026-10-29T15:49:23Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1xinnxa",
+        "author": "John3262005",
+        "url": "https://www.reddit.com/r/WhatTrumpHasDone/comments/1xinnxa/despite_concern_from_ca_reps_trump_admin_is_still/",
+        "source_url": "https://www.reddit.com/r/WhatTrumpHasDone/comments/1xinnxa/despite_concern_from_ca_reps_trump_admin_is_still/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 40,
+        "information_score": 4,
+        "matched_information_cues": [
+          "border",
+          "detention",
+          "deportation"
+        ],
+        "freshness_cues": [
+          "now"
+        ],
+        "text": "Despite concern from CA reps, Trump admin is still sending pregnant migrant youth to South Texas\nThe Trump administration is still detaining pregnant migrant youth in a region of Texas where a lack of specialized obstetric care can be life-threatening for them, an investigation by The California Newsroom and The Texas Newsroom has found. The practice continues despite vocal concern from its own current and former officials, and from members of Congress. Government records also show that at least four pregnant girls in detention have had to be transferred out of state since last July to receive specialized medical care, including at least one abortion, that is unavailable in Texas. “The first time that happened should have been a wake-up call for the administration, and they should have stopped placing kids in any remote area where they can't get care,” said Jen Smyers, who during the Biden administration helped oversee the Office of Refugee Resettlement (ORR), which is responsible for migrant youth who are apprehended without a parent or guardian. She called the policy to send pregnant children to South Texas “enraging.” This spring, The California Newsroom and The Texas Newsroom published a joint investigation revealing the administration’s policy of detaining pregnant unaccompanied minors as young as 13 at a single shelter near the border with Mexico. The investigation detailed serious concerns that health experts inside and outside the government had raised about the policy, given that adolescent pregnancies are inherently high risk and there is a lack of specialized obstetric care in the region. Since then, the administration has denied the policy exists and said it is ensuring that the girls have access to the care they need. In an unsigned email in September, a spokesperson for the Department of Health and Human Services, which oversees ORR, wrote that \"ORR's policies for placing children in its custody into care provider facilities are based on child welfare best practices in order to provide a safe environment and place the child in the least restrictive setting appropriate for the child’s needs. This is especially true for expectant minors in ORR care.” Yet the administration’s own records, as well as interviews with multiple government officials, suggest otherwise. The documents, which were obtained through a public records request, show that ORR explicitly directed its staff in July 2025 to send all pregnant youth to the shelter in San Benito, Tex., just outside Brownsville. Several months later, internal agency data showed that pregnant girls started being funneled to a different shelter nearby instead, according to three ORR officials who asked not to be named because they feared retaliation. Forty-eight Democratic members of Congress had also expressed concerns about the policy in a pointed letter to the Department of Health and Human Services back in April. They received a response in September from an assistant secretary at HHS, Alex J. Adams, who wrote that ORR “does not make placement decisions for pregnant youth based on a blanket rule or one-size-fits-all approach” and that it “takes seriously its responsibility to protect the health, safety, dignity, and well-being of every unaccompanied alien child in its custody.” HHS did not respond to requests for comment about why, contrary to Adams' statement that there was no \"one-size-fits-all approach,\" the government's own records indicate that all unaccompanied youth with known pregnancies have been sent to specific Texas shelters. “They're definitely playing games,” said U.S. Rep. Gil Cisneros, (D-Calif.). “They're not looking out for the welfare of these young women.” U.S. Rep. Joaquin Castro, D-TX, whose office authored the letter to HHS, called it “irresponsible that they would wait several months to respond to basic questions about the care of some of the most vulnerable people within the system,” adding that the administration failed to explain “what seems to be an informal but strict policy of sending these girls to deep South Texas, which lacks the medical care that the girls need.” Unaccompanied migrant children have historically been placed in shelters across the United States, but this summer, the Trump administration began detaining far more of them — even those who are not pregnant — in Texas. According to internal reports provided independently by two officials at ORR, both of whom asked not to be named due to fear of reprisal by their supervisors, 95% of the roughly 300 children apprehended by immigration officials in September were placed in detention in Texas, up from 45% in June. Advocates for unaccompanied migrant children, former government officials, and some Democratic members of Congress have criticized the move, arguing that the state is not prepared to handle an influx of vulnerable children who need special care. The fact that ORR has had to transfer several pregnant unaccompanied minors from Texas to California, New York and Arizona to receive medical care, they say, proves their point. “If the government had to fly or transport these pregnant children across the country to get them the medical care they need, why on earth did it deliberately send them to Texas in the first place?” said U.S. Rep. Judy Chu, D-Calif., who was unaware of the transfers until a journalist described the newsrooms’ findings. Chu’s district, California’s 28th, is home to several communities with high numbers of immigrants, such as Rosemead and Monterey Park. Chu expressed concern that many of the pregnant children who enter federal immigration custody are victims of sexual assault. “If there is a 13-year-old girl who has survived rape,” she said, “she should be met with compassion, safety and appropriate medical care. Instead, this administration is placing children like her in a state where they will be deprived of access to basic healthcare. It's dangerous, and it's cruel, and there's no excuse for treating children this way.” Unlike Immigration and Customs Enforcement (ICE), which detains migrant adults and families in large, prison-like facilities, ORR detains unaccompanied children in group or foster homes overseen by private contractors. Laws, agency regulations and court orders require that the children receive comprehensive healthcare and appropriate education while they’re detained. In an unsigned email last month, a spokesperson for HHS said that placing children in Texas is “operationally efficient” and that ORR’s facilities in the state “provide all requirements and more.” Records obtained through a public information request cast doubt on that assertion. The records show that between July of 2025, when ORR began placing pregnant girls in South Texas, and May of 2026, four of them had to be transferred to other states to receive medical care. That’s roughly one in five of the more than 20 pregnant girls the agency placed in the region in that time frame, according to one ORR official. In detailed notes for one of those cases, ORR staff wrote that a pregnant 12-year-old girl was transferred from South Texas to a shelter in New York on the recommendation of ORR’s division of health. The records note that the child needed access to specialists whose availability in South Texas is “extremely limited.” In a note for another case, staff wrote that a pregnant girl was transferred to California due to an unspecified “high risk medical need.” In at least one case, a girl was transferred out of Texas because she had requested an abortion, the records show. Marsha Griffin, a retired professor of pediatrics at the University of Texas Rio Grande Valley School of Medicine, said such outcomes were inevitable. Griffin said the shelters have very few medical staff on hand and the region does not have enough specialized obstetricians. “Young girls who are pregnant, especially those from 10 to 14 years of age, are automatically a high-risk population,” said Griffin, who oversaw medical students volunteering in ORR facilities in South Texas. Internal communications, also obtained through a public records request, show that officials in ORR’s own division of health warned the agency’s leadership about the lack of pregnancy-related healthcare in the region of South Texas where the girls are held. “Texas has one of the worst rates of maternal mortality in the U.S.,” wrote Joanna Gaines, who at the time was ORR’s acting health director, in a July 18, 2025, email to Melissa Johnston, the agency’s head of operations. Gaines added that the state “lack[s] access to quality perinatal healthcare” and that “Cameron County has one of the higher rates of infant mortality in Texas.” Four days later, ORR issued a directive to begin placing “any pregnant children” at a shelter in Cameron County called Urban Strategies San Benito. Tracey Wilkinson, a pediatrician in Indiana who specializes in reproductive healthcare access for minors, said that even if the government is transferring children to get medical care, waiting until they need it puts them in danger. “When you're talking about labor or pregnancy complications, every minute counts,” Wilkinson said. “If it was a medical emergency that required this young person to be transported out of the state, the risk to her survival would be lower for no reason other than she was placed in the middle of nowhere, far away from medical care.” Shortly after The California Newsroom and The Texas Newsroom revealed the Trump administration’s policy of detaining pregnant migrant youth in Texas, Castro launched an inquiry into the practice. He soon arranged a visit to the San Benito shelter. By the time of his visit on April 7, internal agency data showed that ORR had stopped placing newly detained children with known pregnancies at the facility, three ORR officials said. Instead, the agency was sending them to a different shelter, in Los Fresnos, just 20 minutes away. Castro said he was not told of the change at the time of his visit, nor was it mentioned in ORR’s formal response to the congressional inquiry last month. In a recent interview, he described his visit to the San Benito shelter as “a very secretive process” and said he was not allowed to see or speak with any of the children there. An HHS spokesperson did not respond to questions about the location change, writing only that “there have been no operational changes regarding the placement of pregnant unaccompanied children.” Chu said she believed the Trump administration made the change in order to “deliberately mislead Congress members as well as the public from really knowing where these pregnant children have been.” Compass Connections, the San Antonio-based nonprofit that operates the shelter in Los Fresnos where pregnant girls are now being held, is one of the largest ORR contractors; it has been awarded more than $1.9 billion in federal grants to house and care for unaccompanied minors over the past four years, according to USAspending.gov. Asked for comment, the company referred the newsrooms to HHS. In his letter to Castro, Assistant Secretary Adams wrote that “placement and transfer decisions are individualized and consider the child’s safety, medical and behavioral health needs, pregnancy-related needs, available services, legal access, family unity, least restrictive placement requirements, and the best interest of the child.” Congress members and advocates in California said their state offers much more support for pregnant girls in federal custody than they can receive in Texas. “One thing is very clear,” Chu said: “There are many of us that care about what's happening to our immigrants.” As the Trump administration has withdrawn federal support for legal representation of unaccompanied children — and at the same time streamlined the process of deporting them — the state of California, as well as several of its cities and counties, have ramped up funding for their own legal services programs for undocumented kids. “Pregnant unaccompanied children have rights to medical care, safety, family unity and due process, but those rights mean little without a lawyer to defend them,” said Marion \"Mickey\" Donovan-Kaloust, director of legal services at Immigrant Defenders in Los Angeles. “California's support systems can provide pregnant unaccompanied children with the stability, dignity and specialized care they need to be safe and thrive.” In addition to concerns about their access to healthcare and legal services, advocates worry that the Trump administration is knowingly putting pregnant children at risk to advance an ideological goal: denying them access to abortions by placing them in Texas, where abortion is virtually banned. Current federal regulations require the government to move detained minors who request abortions to states where it’s legal. In January, the Trump administration announced it plans to rescind that rule, though it hasn’t yet done so. An HHS spokesperson said in February that claims the department is attempting to restrict unaccompanied children’s access to abortion are “completely inaccurate.” Cisneros said that “In California, they would have more access to all reproductive healthcare, and then they could make decisions based on discussions with their healthcare professional and what's best for them.” Chu noted that next month’s election will determine whether Democrats regain control of the House. If they do, she said, they will redouble their efforts to ensure pregnant children in federal immigration custody are given proper care. “There will be greater oversight,” she said, “and we will hold the decision-makers responsible.”",
+        "text_excerpt": "Despite concern from CA reps, Trump admin is still sending pregnant migrant youth to South Texas\nThe Trump administration is still detaining pregnant migrant youth in a region of Texas where a lack of specialized obstetric care can be life-threatening for them, an investigation by The California Newsroom and The Texas Newsroom has found. The practice continues despite vocal concern from its own current and former off…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-29T20:45:31Z",
+        "last_collected_at": "2026-10-29T20:45:31Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:23065",
+        "timestamp": "2026-10-29T15:43:35Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1xinij4",
+        "author": "Naurgul",
+        "url": "https://www.reddit.com/r/EyesOnIce/comments/1xinij4/europes_own_ice_inside_brussels_plans_to_triple/",
+        "source_url": "https://www.reddit.com/r/EyesOnIce/comments/1xinij4/europes_own_ice_inside_brussels_plans_to_triple/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.6,
+        "priority": "INFO",
+        "priority_score": 40,
+        "information_score": 4,
+        "matched_information_cues": [
+          "border",
+          "crossing",
+          "deportation",
+          "arrival"
+        ],
+        "freshness_cues": [],
+        "text": "Europe’s own ICE? Inside Brussels plans to triple Frontex and expand deportation powers\nThe European Commission wants to triple Frontex's workforce and give it sweeping new powers to deport migrants beyond EU borders and monitor social media, prompting warnings over surveillance and fundamental rights. The EU's border and coastguard agency, Frontex, is set to gain unprecedented powers to deport irregular migrants, monitor social media and respond to mass arrivals at EU borders under a sweeping reform proposed by the European Commission. The overhaul would significantly expand Frontex's mandate, triple its workforce and give it a much greater role in deportations beyond EU territory. Brussels says the changes are needed to tackle new migration challenges, including orchestrated border crossings such as the mass arrival of an estimated 80,000 people in the Spanish enclave of Ceuta in July. But the proposals have already sparked controversy, with critics warning that the agency's expanded powers and budget could lead to further fundamental rights violations and intrusive surveillance. Here are the main elements of the reform, which must still be approved by EU member states and the European Parliament. New focus on deportations One of the most significant changes is a shift in Frontex's focus from managing the EU's external borders towards deporting irregular migrants. The agency will become the \"central EU actor on returns\", providing \"support from A to Z\", according to EU Migration Commissioner Magnus Brunner. While responsibility for returning irregular migrants to their countries of origin remains with EU countries, the agency will help by identifying the individuals to be returned, operating return flights and providing reintegration assistance through a new Return Coordination Centre. Crucially, the agency will also be able to operate from one non-EU country to another, a major change that would allow Frontex officials to help deport migrants before they even reach Europe. This means they will also take part in deportations from return hubs to countries of origin, as a recently approved law allows such hubs to be set up outside the EU. Civil society organisations claim this system would be opaque and difficult to scrutinize. “The Commission wants to turn Frontex into a deportation agency operating far beyond Europe’s borders, where abuses will be harder to expose”, Iftach Cohen, co-director of NGO Front-LEX, told Euronews. A rapid reaction force The reform would also establish a Quick Reaction Force, another measure inspired by the Ceuta crisis. The specialised unit could be deployed at short notice to an EU country's external border in the event of an emergency, allowing Frontex to respond more rapidly to sudden surges in arrivals. Tripling of staff The expanded mandate would come with a substantial increase in staff, funding and equipment. The Commission wants to triple Frontex's workforce to 30,000 officers by 2041, up from the current 10,000. The agency’s own standing corps, in charge of patrolling the borders, will double from 3,000 to 6,000 officers, plus 7,000 officers seconded from EU states’ national police forces. The total is completed by a new “European border and return reserve” of 17,000 officers who will remain in their home countries and be deployed only if needed. Frontex is allocated almost €6 billion in the current EU budget, and the Commission has proposed doubling its funding in the 2028-2034 cycle. The increase in personnel and resources will not be matched by a proportional increase in the number of Fundamental Rights Officers (FROs), the Frontex team that monitors respect for migrants’ rights in returns and border control operations.",
+        "text_excerpt": "Europe’s own ICE? Inside Brussels plans to triple Frontex and expand deportation powers\nThe European Commission wants to triple Frontex's workforce and give it sweeping new powers to deport migrants beyond EU borders and monitor social media, prompting warnings over surveillance and fundamental rights. The EU's border and coastguard agency, Frontex, is set to gain unprecedented powers to deport irregular migrants, mo…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-29T20:44:31Z",
+        "last_collected_at": "2026-10-29T20:44:31Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
       {
         "timeline_id": "information:23019",
         "timestamp": "2026-10-29T14:41:41Z",
@@ -1731,8 +1973,8 @@
         "country": "-",
         "confidence": 0.0,
         "priority": "INFO",
-        "priority_score": 50,
-        "information_score": 5,
+        "priority_score": 60,
+        "information_score": 6,
         "matched_information_cues": [
           "border",
           "route",
@@ -1749,8 +1991,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-29T14:43:44Z",
-        "last_collected_at": "2026-10-29T14:43:44Z",
-        "collection_count": 1,
+        "last_collected_at": "2026-10-29T20:45:32Z",
+        "collection_count": 2,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -1904,6 +2146,82 @@
         "influence_detected": false,
         "first_collected_at": "2026-10-29T14:44:35Z",
         "last_collected_at": "2026-10-29T14:44:35Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:23066",
+        "timestamp": "2026-10-29T13:24:18Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1xijvup",
+        "author": "AutoNewspaperAdmin",
+        "url": "https://www.reddit.com/r/AutoNewspaper/comments/1xijvup/fr_calais_10_years_after_the_jungle_migrants/",
+        "source_url": "https://www.reddit.com/r/AutoNewspaper/comments/1xijvup/fr_calais_10_years_after_the_jungle_migrants/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "crossing",
+          "channel"
+        ],
+        "freshness_cues": [],
+        "text": "[FR] - Calais, 10 years after the Jungle: Migrants still risk the Channel crossing | France24",
+        "text_excerpt": "[FR] - Calais, 10 years after the Jungle: Migrants still risk the Channel crossing | France24",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-29T20:44:32Z",
+        "last_collected_at": "2026-10-29T20:44:32Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:23067",
+        "timestamp": "2026-10-29T13:23:24Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1xijv3b",
+        "author": "AutoNewsAdmin",
+        "url": "https://www.reddit.com/r/FRANCE24auto/comments/1xijv3b/fr_calais_10_years_after_the_jungle_migrants/",
+        "source_url": "https://www.reddit.com/r/FRANCE24auto/comments/1xijv3b/fr_calais_10_years_after_the_jungle_migrants/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "crossing",
+          "channel"
+        ],
+        "freshness_cues": [],
+        "text": "[FR] - Calais, 10 years after the Jungle: Migrants still risk the Channel crossing",
+        "text_excerpt": "[FR] - Calais, 10 years after the Jungle: Migrants still risk the Channel crossing",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-29T20:44:32Z",
+        "last_collected_at": "2026-10-29T20:44:32Z",
         "collection_count": 1,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
@@ -16300,44 +16618,6 @@
         "ai_editorial_decision": "PUBLISH"
       },
       {
-        "timeline_id": "information:20259",
-        "timestamp": "2026-10-20T22:36:05Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2112674243066351789",
-        "author": "grok",
-        "url": "https://x.com/grok/status/2112674243066351789",
-        "source_url": "https://x.com/grok/status/2112674243066351789",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "crossing"
-        ],
-        "freshness_cues": [],
-        "text": "@we_thepeeps @elonmusk Yes, the UN DESA international migrant stock figures for the USA (foreign-born population) aim to include all residents born abroad, regardless of legal status. This covers unauthorized migrants who crossed the southern border and remained, including during the Biden years,",
-        "text_excerpt": "@we_thepeeps @elonmusk Yes, the UN DESA international migrant stock figures for the USA (foreign-born population) aim to include all residents born abroad, regardless of legal status. This covers unauthorized migrants who crossed the southern border and remained, including during the Biden years,",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-20T22:46:32Z",
-        "last_collected_at": "2026-10-20T22:46:32Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
         "timeline_id": "early_warning:1120",
         "timestamp": "2026-10-20T22:35:46Z",
         "layer": "EARLY_WARNING",
@@ -16370,44 +16650,6 @@
         "last_detected_at": "2026-10-20T22:46:59Z",
         "ai_review_status": "AI_REVIEWED",
         "ai_editorial_decision": "PUBLISH"
-      },
-      {
-        "timeline_id": "information:20260",
-        "timestamp": "2026-10-20T22:35:15Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2112674031132721229",
-        "author": "we_thepeeps",
-        "url": "https://x.com/we_thepeeps/status/2112674031132721229",
-        "source_url": "https://x.com/we_thepeeps/status/2112674031132721229",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "crossing"
-        ],
-        "freshness_cues": [],
-        "text": "@elonmusk @grok @grok does the USA numbers include the migrants that crossed the southern border over Joe Biden’s administration?",
-        "text_excerpt": "@elonmusk @grok @grok does the USA numbers include the migrants that crossed the southern border over Joe Biden’s administration?",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-20T22:46:32Z",
-        "last_collected_at": "2026-10-20T22:46:32Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
         "timeline_id": "operational:677",
@@ -74215,12 +74457,12 @@
       "live_events": 18,
       "high_confidence_events": 0,
       "event_groups": 9,
-      "influence_signals": 7,
-      "early_warning_signals": 7,
-      "crossing_access_signals": 1,
-      "top_crossing_access_posts": 1,
-      "high_priority_intelligence": 2,
-      "access_signals": 1,
+      "influence_signals": 3,
+      "early_warning_signals": 3,
+      "crossing_access_signals": 0,
+      "top_crossing_access_posts": 0,
+      "high_priority_intelligence": 1,
+      "access_signals": 0,
       "timeline": 185
     },
     "historical_review_status": "HISTORICAL_NOT_AI_REVIEWED",
