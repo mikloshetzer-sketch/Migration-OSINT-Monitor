@@ -1,12 +1,13 @@
 {
-  "generated_at": "2026-10-28T22:01:41.544701+00:00",
+  "generated_at": "2026-10-29T01:35:23.476978+00:00",
   "version": "3.0",
-  "candidates": 246,
-  "new_ai_calls": 3,
+  "candidates": 247,
+  "new_ai_calls": 4,
   "conflicting_identity_ids": [
     "group:590",
     "group:603",
-    "group:606"
+    "group:606",
+    "group:609"
   ],
   "decisions": {
     "post:744": {
@@ -16,14 +17,6 @@
     "post:745": {
       "decision": "PUBLISH",
       "reason": "The post reports a concrete and recent event regarding the interception of a migrant swimming towards Ceuta, Spain's North African enclave, which is a clear migration-specific operational event. The event date of October 26 is recent and the event type INTERCEPTION is appropriate given the description of border security measures and a direct interc"
-    },
-    "post:746": {
-      "decision": "REVIEW",
-      "reason": "The post references various social and economic metrics and mentions over 70,000 illegal migrants deported, but does not provide a clear, concrete, or current migration-related event. The mention of deportations is a claim among others without clear event context or timing, making it unsuitable for outright publishing."
-    },
-    "post:748": {
-      "decision": "EXCLUDE",
-      "reason": "The text is a political commentary urging action on migration drivers but does not report a concrete, contemporary deportation event."
     },
     "post:749": {
       "decision": "REVIEW",
@@ -89,13 +82,13 @@
       "decision": "EXCLUDE",
       "reason": "The post discusses historical and political views on Israel and Palestine but does not report a concrete, contemporary migration-related event such as a border crossing or refugee movement. The event_type 'BORDER_CROSSING' is not supported by the content."
     },
-    "signal:1238": {
-      "decision": "REVIEW",
-      "reason": "The event date (July 30, 2026) is in the future relative to the publication date, so it cannot be confirmed as a completed or ongoing event now. It is a migration-specific early warning about a mass crossing; however, future events should be carefully evaluated. More corroboration is needed to confirm the event's occurrence and details."
+    "post:765": {
+      "decision": "EXCLUDE",
+      "reason": "Claim about US including Cubans among 'most barbaric' migrants deported to third countries lacks specific, verifiable evidence of an actual deportation event; also, the source is Reddit without external verification, and no concrete event details or timing are provided."
     },
-    "signal:1239": {
-      "decision": "PUBLISH",
-      "reason": "This is a migration-specific early warning signal reporting an actual incident where Moroccan police intercepted and returned a migrant attempting to swim to Spain's Ceuta enclave. It involves border enforcement related to a migration route, supporting the ROUTE_EARLY_WARNING event type and a concrete, contemporary migration event."
+    "post:766": {
+      "decision": "EXCLUDE",
+      "reason": "The post is an accusatory and vague social media comment with no concrete or verifiable information about a specific migration event. It lacks details such as time, place, or an actual reported crossing event. The event type 'BORDER_CROSSING' is not supported by the content."
     },
     "signal:1240": {
       "decision": "PUBLISH",
@@ -141,9 +134,9 @@
       "decision": "REVIEW",
       "reason": "The record discusses deportation data from the Trump administration, which is historical and not a contemporary migration event or early warning. It lacks a concrete, current migration-specific event or route warning."
     },
-    "group:547": {
-      "decision": "REVIEW",
-      "reason": "The post reports judicial actions related to immigrants and mentions expulsions, consistent with deportations. However, the details are vague about whether the deportations are concrete and current events or court rulings with enforced expulsions. Source credibility is unclear and event timing is uncertain due to future last_seen date."
+    "signal:1251": {
+      "decision": "EXCLUDE",
+      "reason": "The event reported is a historical incident from June 27, 2022, described as the deadliest human-smuggling event in U.S. history. This is not a contemporary migration-specific early warning or a current operational event. The publication date in 2026 is after the event date, and the post describes a past incident, not an impending or ongoing migrat"
     },
     "group:590": {
       "decision": "REVIEW",
@@ -152,10 +145,6 @@
     "group:599": {
       "decision": "EXCLUDE",
       "reason": "The content discusses ancient historical migrations (~1200 BCE) and genetic ancestry of the Philistines, which is not a contemporary migration event related to current migration or border crossing. The event_type 'BORDER_CROSSING' is incorrect for the described content. No contemporary or migration-specific early warning or policy signal is present"
-    },
-    "group:600": {
-      "decision": "EXCLUDE",
-      "reason": "The post contains political commentary and conspiracy claims without reporting any specific, concrete, or contemporary migration-related event or verified border crossing. No actionable migration event is described."
     },
     "group:603": {
       "decision": "REVIEW",
@@ -180,6 +169,14 @@
     "group:608": {
       "decision": "EXCLUDE",
       "reason": "The content is a historical narrative and general commentary about the arrival of Jewish people in Palestine and subsequent land issues; it does not describe a concrete, contemporary migration-related event such as a specific border crossing or migration incident. The assigned event_type 'BORDER_CROSSING' is incorrect and unsupported by the text."
+    },
+    "group:609": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:610": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a derogatory, vague commentary without a concrete, contemporary migration-related event, no specific border crossing reported, and no route, policy, or early warning details provided."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -992,6 +989,14 @@
     "signal:1237": {
       "decision": "REVIEW",
       "reason": "The post reports a statistical trend suggesting increased voluntary departures and decreased entries of Venezuelan migrants, implying a migration-related development. However, it lacks specific details about a concrete, ongoing migration event or direct operational signal. The source is social media without verification, and the event type 'MOVEMEN"
+    },
+    "signal:1238": {
+      "decision": "REVIEW",
+      "reason": "The event date (July 30, 2026) is in the future relative to the publication date, so it cannot be confirmed as a completed or ongoing event now. It is a migration-specific early warning about a mass crossing; however, future events should be carefully evaluated. More corroboration is needed to confirm the event's occurrence and details."
+    },
+    "signal:1239": {
+      "decision": "PUBLISH",
+      "reason": "This is a migration-specific early warning signal reporting an actual incident where Moroccan police intercepted and returned a migrant attempting to swim to Spain's Ceuta enclave. It involves border enforcement related to a migration route, supporting the ROUTE_EARLY_WARNING event type and a concrete, contemporary migration event."
     }
   }
 }
