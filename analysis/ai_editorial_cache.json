@@ -4998,5 +4998,45 @@
     "current_event": false,
     "completed_event": false,
     "corroboration": "UNVERIFIED"
+  },
+  "62f90cc5e9040f1c133ff58433d3393aeaaeae0b7b4432c0e9e5be6f27c3175d": {
+    "decision": "PUBLISH",
+    "reason": "The post reports a concrete, current migration-related event: approximately 150 migrants crossing the Channel today, which is supported by the source and explicitly linked to the migration event type BORDER_CROSSING. It provides details relevant to migration, such as the waiting migrants in camps and the crossing route, making it suitable for publication.",
+    "event_type_correct": true,
+    "current_event": true,
+    "completed_event": true,
+    "corroboration": "UNVERIFIED"
+  },
+  "cd7ac7241f2bad57edc81c287680c60eb3ebeba9ffe6844dc8944b3be9c1bf64": {
+    "decision": "EXCLUDE",
+    "reason": "The post reports convictions related to a past people smuggling network, which is a historical event rather than a current migration event or an early warning. No ongoing or new migration activity is described, and the event is not contemporary.",
+    "event_type_correct": true,
+    "current_event": false,
+    "completed_event": true,
+    "corroboration": "UNVERIFIED"
+  },
+  "3dcf19bc040569e0ee149fad437bb4aac83a49e968205a5a8cf69dc7ca1d9e86": {
+    "decision": "EXCLUDE",
+    "reason": "The post refers to a past arrest of a refugee but does not report a concrete, contemporary migration event or specific border crossing occurring now. The event type 'BORDER_CROSSING' is not supported by the content, which focuses on a past criminal case rather than a migration event.",
+    "event_type_correct": false,
+    "current_event": false,
+    "completed_event": true,
+    "corroboration": "UNVERIFIED"
+  },
+  "69e65c9dc417bae2910467c377ba19ff617d2edabf9843f43854355535836e75": {
+    "decision": "PUBLISH",
+    "reason": "The report details a concrete, recent event of migrant crossings of the Channel with approximate numbers, indicating a specific migration-related operational event. Although the exact current date is beyond the knowledge cutoff, the event described is contemporary within the given data and matches the BORDER_CROSSING event type.",
+    "event_type_correct": true,
+    "current_event": true,
+    "completed_event": true,
+    "corroboration": "UNVERIFIED"
+  },
+  "47068b352b43b9cc43d2cbfd636be8a98194d2f319da5001ed414384beab5bb1": {
+    "decision": "REVIEW",
+    "reason": "The post refers to a person who arrived via a Refugee program and was arrested for sex crimes, but the event_type 'BORDER_CROSSING' is not clearly supported. There is no specific, concrete migration event such as an attempt to cross a border described. The post describes a situation after arrival, not a crossing event. No corroboration or source is provided.",
+    "event_type_correct": false,
+    "current_event": false,
+    "completed_event": true,
+    "corroboration": "UNVERIFIED"
   }
 }
