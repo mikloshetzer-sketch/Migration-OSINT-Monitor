@@ -1,48 +1,48 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-10-30T01:27:31Z",
-  "generated_at": "2026-10-30T01:27:31Z",
+  "updated_at": "2026-10-30T07:52:43Z",
+  "generated_at": "2026-10-30T07:52:43Z",
   "current_run": {
     "available": true,
-    "id": 367,
-    "run_uuid": "a1f84c82-16f3-49d4-b276-26b15bf057f3",
-    "started_at": "2026-10-30T01:24:51Z",
-    "completed_at": "2026-10-30T01:27:29Z",
+    "id": 368,
+    "run_uuid": "2d24f59c-fb9c-425a-ace5-cf721ace9ce2",
+    "started_at": "2026-10-30T07:50:16Z",
+    "completed_at": "2026-10-30T07:52:42Z",
     "status": "SUCCESS",
-    "posts_returned": 137,
-    "unique_posts_collected": 98,
+    "posts_returned": 130,
+    "unique_posts_collected": 94,
     "x_posts_returned": 50,
-    "reddit_posts_returned": 27,
+    "reddit_posts_returned": 20,
     "mastodon_posts_returned": 50,
-    "unique_x_posts": 45,
-    "unique_reddit_posts": 24,
+    "unique_x_posts": 46,
+    "unique_reddit_posts": 19,
     "unique_mastodon_posts": 19,
     "noise_filtered": 0,
-    "non_operational_filtered": 95,
+    "non_operational_filtered": 91,
     "historical_references_filtered": 1,
-    "influence_signals": 0,
-    "influence_signals_detected": 0,
+    "influence_signals": 1,
+    "influence_signals_detected": 1,
     "crossing_facilitation_signals": 0,
     "legal_migration_signals": 0,
     "policy_signals": 0,
     "recruitment_coordination_signals": 0,
-    "mobilization_coordination_signals": 0,
+    "mobilization_coordination_signals": 1,
     "mobilization_report_signals": 0,
     "decision_influence_signals": 0,
     "online_influence_report_signals": 0,
     "operational_events": 2,
     "operational_events_analyzed": 2,
-    "historical_events_available": 71,
-    "new_correlations": 0,
-    "correlated_events": 0,
-    "new_correlation_groups": 2,
-    "database_correlations": 0,
+    "historical_events_available": 72,
+    "new_correlations": 1,
+    "correlated_events": 1,
+    "new_correlation_groups": 1,
+    "database_correlations": 1,
     "current_run_correlations": 0,
     "new_events": 2,
     "new_events_saved": 2,
     "events_already_existing": 0,
-    "new_event_groups": 2,
-    "updated_event_groups": 0,
+    "new_event_groups": 1,
+    "updated_event_groups": 1,
     "bootstrapped_event_groups": 0,
     "existing_event_groups_reused": 0,
     "event_group_sources_linked": 2,
@@ -52,20 +52,20 @@
     "error_message": null
   },
   "kpis": {
-    "operational_events": 9,
+    "operational_events": 7,
     "new_events": 2,
-    "correlated_events": 0,
-    "active_event_groups": 600,
+    "correlated_events": 1,
+    "active_event_groups": 601,
     "sources": 4,
-    "regions": 1,
-    "collected_posts_24h": 264,
-    "influence_signals": 5,
-    "access_signals": 0,
-    "high_priority": 0,
+    "regions": 2,
+    "collected_posts_24h": 243,
+    "influence_signals": 7,
+    "access_signals": 1,
+    "high_priority": 1,
     "current_run_operational_events": 2,
-    "current_run_unique_posts": 98,
-    "access_signals_raw": 0,
-    "influence_signals_raw": 5,
+    "current_run_unique_posts": 94,
+    "access_signals_raw": 1,
+    "influence_signals_raw": 7,
     "influence_narratives": 3
   },
   "live_events": [
@@ -155,89 +155,103 @@
     {
       "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 9,
-      "events": 9,
-      "percentage": 100.0
+      "count": 6,
+      "events": 6,
+      "percentage": 85.71
+    },
+    {
+      "name": "AMERICAS",
+      "region": "AMERICAS",
+      "count": 1,
+      "events": 1,
+      "percentage": 14.29
     }
   ],
   "sources": [
     {
       "source": "X",
       "name": "X",
-      "count": 175,
-      "posts": 175,
-      "percentage": 66.29
+      "count": 164,
+      "posts": 164,
+      "percentage": 67.49
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 42,
-      "posts": 42,
-      "percentage": 15.91
+      "count": 38,
+      "posts": 38,
+      "percentage": 15.64
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 34,
-      "posts": 34,
-      "percentage": 12.88
+      "count": 30,
+      "posts": 30,
+      "percentage": 12.35
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 13,
-      "posts": 13,
-      "percentage": 4.92
+      "count": 11,
+      "posts": 11,
+      "percentage": 4.53
     }
   ],
   "region_activity": [
     {
       "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 9,
-      "events": 9,
-      "percentage": 100.0
+      "count": 6,
+      "events": 6,
+      "percentage": 85.71
+    },
+    {
+      "name": "AMERICAS",
+      "region": "AMERICAS",
+      "count": 1,
+      "events": 1,
+      "percentage": 14.29
     }
   ],
   "source_activity": [
     {
       "source": "X",
       "name": "X",
-      "count": 175,
-      "posts": 175,
-      "percentage": 66.29
+      "count": 164,
+      "posts": 164,
+      "percentage": 67.49
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 42,
-      "posts": 42,
-      "percentage": 15.91
+      "count": 38,
+      "posts": 38,
+      "percentage": 15.64
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 34,
-      "posts": 34,
-      "percentage": 12.88
+      "count": 30,
+      "posts": 30,
+      "percentage": 12.35
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 13,
-      "posts": 13,
-      "percentage": 4.92
+      "count": 11,
+      "posts": 11,
+      "percentage": 4.53
     }
   ],
   "correlation": {
-    "correlated_events": 0,
-    "correlated_sources": 0,
-    "grouped_sources": 9,
-    "event_groups": 600,
-    "active_groups": 600,
+    "correlated_events": 1,
+    "correlated_sources": 1,
+    "grouped_sources": 7,
+    "event_groups": 601,
+    "active_groups": 601,
     "multi_source_groups": 59,
     "strongest_match": 1.0,
-    "correlation_rate": 0.0
+    "correlation_rate": 14.29
   },
   "technical_health": "HEALTHY",
   "collector_health": "HEALTHY",
@@ -250,44 +264,44 @@
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "database": "AVAILABLE",
-    "last_run_id": 367,
-    "last_completed_at": "2026-10-30T01:27:29Z"
+    "last_run_id": 368,
+    "last_completed_at": "2026-10-30T07:52:42Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 9,
-    "influence_signals_24h": 5,
-    "access_signals_24h": 0,
-    "correlated_events_24h": 0,
-    "active_event_groups": 600,
-    "dominant_region": "GLOBAL",
-    "hotspot": "GLOBAL",
-    "dominant_event_type": "DEPORTATION",
+    "operational_events_24h": 7,
+    "influence_signals_24h": 7,
+    "access_signals_24h": 1,
+    "correlated_events_24h": 1,
+    "active_event_groups": 601,
+    "dominant_region": "AMERICAS",
+    "hotspot": "AMERICAS",
+    "dominant_event_type": "BORDER_CROSSING",
     "dominant_source": "X",
     "average_confidence": 0.443,
     "confidence_level": "LOW",
-    "correlation_rate": 0.0,
+    "correlation_rate": 14.29,
     "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 9 operatív migrációs eseményt, 5 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 600 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Global. A domináns operatív eseménytípus: Deportation. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.44. A jelenlegi aktivitási szint: MODERATE.",
+    "summary": "Az elmúlt 24 órában a rendszer 7 operatív migrációs eseményt, 7 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 1 friss eseményforrás korrelált más forrással. Jelenleg 601 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Americas. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.44. A jelenlegi aktivitási szint: MODERATE.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
   "analytical_assessment": {
-    "operational_events_24h": 9,
-    "influence_signals_24h": 5,
-    "access_signals_24h": 0,
-    "correlated_events_24h": 0,
-    "active_event_groups": 600,
-    "dominant_region": "GLOBAL",
-    "hotspot": "GLOBAL",
-    "dominant_event_type": "DEPORTATION",
+    "operational_events_24h": 7,
+    "influence_signals_24h": 7,
+    "access_signals_24h": 1,
+    "correlated_events_24h": 1,
+    "active_event_groups": 601,
+    "dominant_region": "AMERICAS",
+    "hotspot": "AMERICAS",
+    "dominant_event_type": "BORDER_CROSSING",
     "dominant_source": "X",
     "average_confidence": 0.443,
     "confidence_level": "LOW",
-    "correlation_rate": 0.0,
+    "correlation_rate": 14.29,
     "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 9 operatív migrációs eseményt, 5 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 600 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Global. A domináns operatív eseménytípus: Deportation. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.44. A jelenlegi aktivitási szint: MODERATE.",
+    "summary": "Az elmúlt 24 órában a rendszer 7 operatív migrációs eseményt, 7 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 1 friss eseményforrás korrelált más forrással. Jelenleg 601 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Americas. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.44. A jelenlegi aktivitási szint: MODERATE.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
@@ -464,6 +478,75 @@
     }
   ],
   "high_priority_intelligence": [
+    {
+      "id": 1259,
+      "source": "X",
+      "source_post_id": "2116052664400118202",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-10-30T06:20:44Z",
+      "first_detected_at": "2026-10-30T07:52:41Z",
+      "last_detected_at": "2026-10-30T07:52:41Z",
+      "detection_count": 1,
+      "text": "@ghst_0nx @dec_lea1 These are migrants at a gathering point in Gravelines, northern France. The town is a regular departure site for small-boat (dinghy) crossings of the Channel to the UK. Groups often wait near bus stops or the harbour before moving to beaches to board inflatable boats organised by",
+      "text_excerpt": "@ghst_0nx @dec_lea1 These are migrants at a gathering point in Gravelines, northern France. The town is a regular departure site for small-boat (dinghy) crossings of the Channel to the UK. Groups often wait near bus stops or the harbour before moving to beaches to board inflatable boats organised by",
+      "url": "https://x.com/grok/status/2116052664400118202",
+      "source_url": "https://x.com/grok/status/2116052664400118202",
+      "primary_signal": "MOBILIZATION_COORDINATION",
+      "signal_type": "MOBILIZATION_COORDINATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "MOBILIZATION_COORDINATION",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 18.0,
+      "matched_signals": [
+        "MOBILIZATION_COORDINATION"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization",
+          "organised by"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 64.65,
+      "analyst_priority": "HIGH",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2116052664400118202"
+      ],
+      "related_authors": [
+        "grok"
+      ],
+      "related_urls": [
+        "https://x.com/grok/status/2116052664400118202"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1,
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
     {
       "id": 474,
       "group_id": 474,
@@ -657,52 +740,43 @@
   ],
   "influence_signals": [
     {
-      "id": 1252,
+      "id": 1259,
       "source": "X",
-      "source_post_id": "2115703220878061665",
+      "source_post_id": "2116052664400118202",
       "author": "grok",
       "language": "en",
-      "published_at": "2026-10-29T07:12:10Z",
-      "first_detected_at": "2026-10-29T07:45:36Z",
-      "last_detected_at": "2026-10-29T07:45:36Z",
+      "published_at": "2026-10-30T06:20:44Z",
+      "first_detected_at": "2026-10-30T07:52:41Z",
+      "last_detected_at": "2026-10-30T07:52:41Z",
       "detection_count": 1,
-      "text": "@allinyourhead69 @bhiggyd @Piccadillybaby @PastorMarvy Public reports show repeated 2026 Ghana operations against cyber-fraud and trafficking rings that often involve Nigerian nationals, with hundreds arrested or repatriated; many of those later classed as trafficking victims themselves. Official migrant estimates place Nigerians at",
-      "text_excerpt": "@allinyourhead69 @bhiggyd @Piccadillybaby @PastorMarvy Public reports show repeated 2026 Ghana operations against cyber-fraud and trafficking rings that often involve Nigerian nationals, with hundreds arrested or repatriated; many of those later classed as trafficking victims themselves. Official migrant estimates place Nigerians at",
-      "url": "https://x.com/grok/status/2115703220878061665",
-      "source_url": "https://x.com/grok/status/2115703220878061665",
-      "primary_signal": "FACILITATION_EARLY_WARNING",
-      "signal_type": "FACILITATION_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "FACILITATION_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 8.75,
+      "text": "@ghst_0nx @dec_lea1 These are migrants at a gathering point in Gravelines, northern France. The town is a regular departure site for small-boat (dinghy) crossings of the Channel to the UK. Groups often wait near bus stops or the harbour before moving to beaches to board inflatable boats organised by",
+      "text_excerpt": "@ghst_0nx @dec_lea1 These are migrants at a gathering point in Gravelines, northern France. The town is a regular departure site for small-boat (dinghy) crossings of the Channel to the UK. Groups often wait near bus stops or the harbour before moving to beaches to board inflatable boats organised by",
+      "url": "https://x.com/grok/status/2116052664400118202",
+      "source_url": "https://x.com/grok/status/2116052664400118202",
+      "primary_signal": "MOBILIZATION_COORDINATION",
+      "signal_type": "MOBILIZATION_COORDINATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "MOBILIZATION_COORDINATION",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 18.0,
       "matched_signals": [
-        "FACILITATION_EARLY_WARNING"
+        "MOBILIZATION_COORDINATION"
       ],
       "matched_phrases": [
         [
-          "facilitation",
-          "trafficking victims themselves. Official migrant"
-        ],
-        [
-          "enforcement",
-          "arrested"
+          "mobilization",
+          "organised by"
         ]
       ],
-      "matched_groups": [
-        "FACILITATION",
-        "ENFORCEMENT"
-      ],
+      "matched_groups": [],
       "context_matches": [
-        "migrant"
+        "migrants"
       ],
-      "high_value_matches": [
-        "trafficking victims themselves. Official migrant"
-      ],
-      "signal_context_rejections": [],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
       "migration_context": true,
-      "human_migration_context": true,
+      "human_migration_context": null,
       "historical_reference": false,
       "historical_reason": null,
       "historical_reference_text": null,
@@ -713,8 +787,125 @@
       "primary_region": "GLOBAL",
       "latitude": null,
       "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 64.65,
+      "analyst_priority": "HIGH",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
+      "id": 1258,
+      "source": "X",
+      "source_post_id": "2116068421028765972",
+      "author": "Abom1nabl3",
+      "language": "en",
+      "published_at": "2026-10-30T07:23:20Z",
+      "first_detected_at": "2026-10-30T07:51:13Z",
+      "last_detected_at": "2026-10-30T07:51:13Z",
+      "detection_count": 1,
+      "text": "Belarus border: the pressure is back\n\nLithuania's border guard (VSAT) turned back 24 irregular migrants from Belarus in the last day, after two days with none. That brings this year's total to nearly 1,800.\n\nLatvia turned back 15 on Thursday, and Poland reported no attempts on",
+      "text_excerpt": "Belarus border: the pressure is back\n\nLithuania's border guard (VSAT) turned back 24 irregular migrants from Belarus in the last day, after two days with none. That brings this year's total to nearly 1,800.\n\nLatvia turned back 15 on Thursday, and Poland reported no attempts on",
+      "url": "https://x.com/Abom1nabl3/status/2116068421028765972",
+      "source_url": "https://x.com/Abom1nabl3/status/2116068421028765972",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.25,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "border"
+        ],
+        [
+          "enforcement",
+          "border guard"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "EASTERN_EU_BORDER",
+      "primary_region": "EASTERN_EU_BORDER",
+      "latitude": null,
+      "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
+      "priority_score": 29.2,
+      "analyst_priority": "LOW",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
+      "id": 1257,
+      "source": "TELEGRAM",
+      "source_post_id": "1604168769:12407",
+      "author": "migrantlar24",
+      "language": null,
+      "published_at": "2026-10-30T02:12:01Z",
+      "first_detected_at": "2026-10-30T07:50:50Z",
+      "last_detected_at": "2026-10-30T07:50:50Z",
+      "detection_count": 1,
+      "text": "Уссурийскда ноқонуний мигрантлар ушланди\n\nПриморье ўлкасининг Уссурийск шаҳрида ўтказилган рейд давомида ҳужжатларида муаммоси бўлган етти нафар хориж фуқароси қўлга олинди. Олти нафар шахсга жарима солиниб, уларга Россия ҳудудини мустақил тарк этиш мажбурияти юкланди, суд қарорини бажармаган яна бир фуқаро эса мажбурий тартибда чиқариб юборилади.\n\n👉https://migrantlar24.com/5c6zt9",
+      "text_excerpt": "Уссурийскда ноқонуний мигрантлар ушланди\n\nПриморье ўлкасининг Уссурийск шаҳрида ўтказилган рейд давомида ҳужжатларида муаммоси бўлган етти нафар хориж фуқароси қўлга олинди. Олти нафар шахсга жарима солиниб, уларга Россия ҳудудини мустақил тарк этиш мажбурияти юкланди, суд қарорини бажармаган яна бир фуқаро эса мажбурий тартибда чиқариб юборилади.\n\n👉https://migrantlar24.com/5c6zt9",
+      "url": "https://t.me/migrantlar24/12407",
+      "source_url": "https://t.me/migrantlar24/12407",
+      "primary_signal": "ENFORCEMENT_EARLY_WARNING",
+      "signal_type": "ENFORCEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ENFORCEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.62,
+      "score": 6.0,
+      "matched_signals": [
+        "ENFORCEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "enforcement",
+          "рейд"
+        ]
+      ],
+      "matched_groups": [
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "мигрантлар"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "EASTERN_EU_BORDER",
+      "primary_region": "EASTERN_EU_BORDER",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 25.7,
       "analyst_priority": "LOW",
       "ai_review_status": "AI_REVIEWED",
       "ai_editorial_decision": "PUBLISH"
@@ -778,52 +969,43 @@
   ],
   "early_warning_signals": [
     {
-      "id": 1252,
+      "id": 1259,
       "source": "X",
-      "source_post_id": "2115703220878061665",
+      "source_post_id": "2116052664400118202",
       "author": "grok",
       "language": "en",
-      "published_at": "2026-10-29T07:12:10Z",
-      "first_detected_at": "2026-10-29T07:45:36Z",
-      "last_detected_at": "2026-10-29T07:45:36Z",
+      "published_at": "2026-10-30T06:20:44Z",
+      "first_detected_at": "2026-10-30T07:52:41Z",
+      "last_detected_at": "2026-10-30T07:52:41Z",
       "detection_count": 1,
-      "text": "@allinyourhead69 @bhiggyd @Piccadillybaby @PastorMarvy Public reports show repeated 2026 Ghana operations against cyber-fraud and trafficking rings that often involve Nigerian nationals, with hundreds arrested or repatriated; many of those later classed as trafficking victims themselves. Official migrant estimates place Nigerians at",
-      "text_excerpt": "@allinyourhead69 @bhiggyd @Piccadillybaby @PastorMarvy Public reports show repeated 2026 Ghana operations against cyber-fraud and trafficking rings that often involve Nigerian nationals, with hundreds arrested or repatriated; many of those later classed as trafficking victims themselves. Official migrant estimates place Nigerians at",
-      "url": "https://x.com/grok/status/2115703220878061665",
-      "source_url": "https://x.com/grok/status/2115703220878061665",
-      "primary_signal": "FACILITATION_EARLY_WARNING",
-      "signal_type": "FACILITATION_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "FACILITATION_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 8.75,
+      "text": "@ghst_0nx @dec_lea1 These are migrants at a gathering point in Gravelines, northern France. The town is a regular departure site for small-boat (dinghy) crossings of the Channel to the UK. Groups often wait near bus stops or the harbour before moving to beaches to board inflatable boats organised by",
+      "text_excerpt": "@ghst_0nx @dec_lea1 These are migrants at a gathering point in Gravelines, northern France. The town is a regular departure site for small-boat (dinghy) crossings of the Channel to the UK. Groups often wait near bus stops or the harbour before moving to beaches to board inflatable boats organised by",
+      "url": "https://x.com/grok/status/2116052664400118202",
+      "source_url": "https://x.com/grok/status/2116052664400118202",
+      "primary_signal": "MOBILIZATION_COORDINATION",
+      "signal_type": "MOBILIZATION_COORDINATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "MOBILIZATION_COORDINATION",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 18.0,
       "matched_signals": [
-        "FACILITATION_EARLY_WARNING"
+        "MOBILIZATION_COORDINATION"
       ],
       "matched_phrases": [
         [
-          "facilitation",
-          "trafficking victims themselves. Official migrant"
-        ],
-        [
-          "enforcement",
-          "arrested"
+          "mobilization",
+          "organised by"
         ]
       ],
-      "matched_groups": [
-        "FACILITATION",
-        "ENFORCEMENT"
-      ],
+      "matched_groups": [],
       "context_matches": [
-        "migrant"
+        "migrants"
       ],
-      "high_value_matches": [
-        "trafficking victims themselves. Official migrant"
-      ],
-      "signal_context_rejections": [],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
       "migration_context": true,
-      "human_migration_context": true,
+      "human_migration_context": null,
       "historical_reference": false,
       "historical_reason": null,
       "historical_reference_text": null,
@@ -834,8 +1016,125 @@
       "primary_region": "GLOBAL",
       "latitude": null,
       "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 64.65,
+      "analyst_priority": "HIGH",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
+      "id": 1258,
+      "source": "X",
+      "source_post_id": "2116068421028765972",
+      "author": "Abom1nabl3",
+      "language": "en",
+      "published_at": "2026-10-30T07:23:20Z",
+      "first_detected_at": "2026-10-30T07:51:13Z",
+      "last_detected_at": "2026-10-30T07:51:13Z",
+      "detection_count": 1,
+      "text": "Belarus border: the pressure is back\n\nLithuania's border guard (VSAT) turned back 24 irregular migrants from Belarus in the last day, after two days with none. That brings this year's total to nearly 1,800.\n\nLatvia turned back 15 on Thursday, and Poland reported no attempts on",
+      "text_excerpt": "Belarus border: the pressure is back\n\nLithuania's border guard (VSAT) turned back 24 irregular migrants from Belarus in the last day, after two days with none. That brings this year's total to nearly 1,800.\n\nLatvia turned back 15 on Thursday, and Poland reported no attempts on",
+      "url": "https://x.com/Abom1nabl3/status/2116068421028765972",
+      "source_url": "https://x.com/Abom1nabl3/status/2116068421028765972",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.25,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "border"
+        ],
+        [
+          "enforcement",
+          "border guard"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "EASTERN_EU_BORDER",
+      "primary_region": "EASTERN_EU_BORDER",
+      "latitude": null,
+      "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
+      "priority_score": 29.2,
+      "analyst_priority": "LOW",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
+      "id": 1257,
+      "source": "TELEGRAM",
+      "source_post_id": "1604168769:12407",
+      "author": "migrantlar24",
+      "language": null,
+      "published_at": "2026-10-30T02:12:01Z",
+      "first_detected_at": "2026-10-30T07:50:50Z",
+      "last_detected_at": "2026-10-30T07:50:50Z",
+      "detection_count": 1,
+      "text": "Уссурийскда ноқонуний мигрантлар ушланди\n\nПриморье ўлкасининг Уссурийск шаҳрида ўтказилган рейд давомида ҳужжатларида муаммоси бўлган етти нафар хориж фуқароси қўлга олинди. Олти нафар шахсга жарима солиниб, уларга Россия ҳудудини мустақил тарк этиш мажбурияти юкланди, суд қарорини бажармаган яна бир фуқаро эса мажбурий тартибда чиқариб юборилади.\n\n👉https://migrantlar24.com/5c6zt9",
+      "text_excerpt": "Уссурийскда ноқонуний мигрантлар ушланди\n\nПриморье ўлкасининг Уссурийск шаҳрида ўтказилган рейд давомида ҳужжатларида муаммоси бўлган етти нафар хориж фуқароси қўлга олинди. Олти нафар шахсга жарима солиниб, уларга Россия ҳудудини мустақил тарк этиш мажбурияти юкланди, суд қарорини бажармаган яна бир фуқаро эса мажбурий тартибда чиқариб юборилади.\n\n👉https://migrantlar24.com/5c6zt9",
+      "url": "https://t.me/migrantlar24/12407",
+      "source_url": "https://t.me/migrantlar24/12407",
+      "primary_signal": "ENFORCEMENT_EARLY_WARNING",
+      "signal_type": "ENFORCEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ENFORCEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.62,
+      "score": 6.0,
+      "matched_signals": [
+        "ENFORCEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "enforcement",
+          "рейд"
+        ]
+      ],
+      "matched_groups": [
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "мигрантлар"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "EASTERN_EU_BORDER",
+      "primary_region": "EASTERN_EU_BORDER",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 25.7,
       "analyst_priority": "LOW",
       "ai_review_status": "AI_REVIEWED",
       "ai_editorial_decision": "PUBLISH"
@@ -898,6 +1197,73 @@
     }
   ],
   "influence_narratives": [
+    {
+      "id": 1259,
+      "source": "X",
+      "source_post_id": "2116052664400118202",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-10-30T06:20:44Z",
+      "first_detected_at": "2026-10-30T07:52:41Z",
+      "last_detected_at": "2026-10-30T07:52:41Z",
+      "detection_count": 1,
+      "text": "@ghst_0nx @dec_lea1 These are migrants at a gathering point in Gravelines, northern France. The town is a regular departure site for small-boat (dinghy) crossings of the Channel to the UK. Groups often wait near bus stops or the harbour before moving to beaches to board inflatable boats organised by",
+      "text_excerpt": "@ghst_0nx @dec_lea1 These are migrants at a gathering point in Gravelines, northern France. The town is a regular departure site for small-boat (dinghy) crossings of the Channel to the UK. Groups often wait near bus stops or the harbour before moving to beaches to board inflatable boats organised by",
+      "url": "https://x.com/grok/status/2116052664400118202",
+      "source_url": "https://x.com/grok/status/2116052664400118202",
+      "primary_signal": "MOBILIZATION_COORDINATION",
+      "signal_type": "MOBILIZATION_COORDINATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "MOBILIZATION_COORDINATION",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 18.0,
+      "matched_signals": [
+        "MOBILIZATION_COORDINATION"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization",
+          "organised by"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 64.65,
+      "analyst_priority": "HIGH",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2116052664400118202"
+      ],
+      "related_authors": [
+        "grok"
+      ],
+      "related_urls": [
+        "https://x.com/grok/status/2116052664400118202"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
     {
       "id": 1255,
       "source": "X",
@@ -981,36 +1347,41 @@
       "platform_count": 1
     },
     {
-      "id": 1253,
-      "source": "REDDIT",
-      "source_post_id": "reddit_1xj27bi",
-      "author": "John3262005",
-      "language": null,
-      "published_at": "2026-10-30T01:21:53Z",
-      "first_detected_at": "2026-10-30T01:25:30Z",
-      "last_detected_at": "2026-10-30T01:25:30Z",
+      "id": 1258,
+      "source": "X",
+      "source_post_id": "2116068421028765972",
+      "author": "Abom1nabl3",
+      "language": "en",
+      "published_at": "2026-10-30T07:23:20Z",
+      "first_detected_at": "2026-10-30T07:51:13Z",
+      "last_detected_at": "2026-10-30T07:51:13Z",
       "detection_count": 1,
-      "text": "Trump’s Deportation Deal With Cameroon Will Equip Unit Accused of War Crimes\nThe Trump administration agreed to send around $35 million in military aid to a Central African military unit previously accused of war crimes as part of a wider arrangement to deport third-country migrants to the region, U.S. officials and congressional aides said. Those people, all of whom were involved in or briefed on the negotiations, said the military aid and deportation deal were brokered simultaneously by State Department officials as part of the same package. The deal offers a window into how the Trump administration is expanding its deportation program across oceans and tying its deportation agenda to foreign military assistance, as it makes arrangements with numerous African countries—many with checkered human-rights records—to accept flights of illegal migrants who were detained in the U.S. Cameroon agreed to begin accepting U.S. deportation flights of third-country nationals in December. It has accepted at least 36 U.S. deportees since then, according to rights group Refugees International. Some of the officials said the administration has plans to scale up the number of deportation flights to African countries in the coming months. The deportation agreement included a previously undisclosed military aid package to deliver armored personnel carriers to an elite military unit in Cameroon called the Rapid Intervention Battalion, or BIR, the officials and congressional aides said. The U.S. cut off some assistance to the BIR during the first Trump administration after human rights groups published findings that it committed abuses including torturing detainees to death. The State Department notified Congress of the military aid package in January about a month after the deportation deal was struck, some of the officials and aides said. Around the same time, the U.S. agreed to channel $30 million to the United Nations refugee agency’s work in Cameroon despite broader cutbacks to foreign aid under the Trump administration. Sen. Jeanne Shaheen, the top Democrat on the Senate Foreign Relations Committee, placed a hold on the military aid package earlier this year, some of the people familiar with the matter said. That paused the deal for several months, but in April, Secretary of State Marco Rubio’s team notified her that the administration was overriding her hold and moving forward with the deal, officials said. Shaheen, who didn’t go public about placing the hold earlier this year, called the deal “grotesque” this week and said she was disappointed in Rubio for allowing it. “The United States should not be exchanging sensitive military equipment with countries that have questionable human-rights records—especially in exchange for human beings,” she said in a statement. The State Department declined to comment on the specifics on any agreement but said the U.S. and Cameroon have “a strong partnership on a range of shared priorities, including regional security and counterterrorism” and cooperate on security threats to U.S. interests or the homeland. The statement added that the department adheres to the Leahy Law, which bans military assistance to forces implicated in human-rights abuses. President Trump has made cracking down on illegal migration a core part of his administration’s policy platform and has touted progress in deporting thousands of illegal migrants with criminal records, including some to African countries. Cameroon is one of around a dozen African countries that have concluded so-called “third-country nationals agreements” with the Trump administration to accept deportees, alongside the Central African Republic, Democratic Republic of Congo, Equatorial Guinea and others. The individuals that the U.S. is deporting to African countries often can’t be returned to their home countries either because they say they would risk violence or persecution there or because those countries won’t accept them. Cameroon, which 93-year-old President Paul Biya has ruled for over 40 years, earlier this year briefly detained journalists and lawyers who sought to meet with the U.S. deportees in the country. U.S. Africa Command, the Pentagon’s combatant command responsible for U.S. military operations and security partnerships in Africa, considers Cameroon an important partner in the fight against violent Islamic extremist groups that have gained ground in West and Central Africa in recent years. The military aid package to the BIR, officials said, served the dual purpose of adding a new incentive for Cameroon to cooperate on accepting U.S. deportees while also supporting U.S. counterterrorism efforts in the region. Gen. Dagvin Anderson, the commander of U.S. forces in Africa, told Congress in May that AFRICOM’s area of responsibility “has become the center of gravity for global jihadism, with West Africa accounting for over 51 percent of global terror-related deaths” in recent years. Two State Department officials who have played key roles in helping secure deportation deals with African countries are Christian Erhardt, a deputy assistant secretary at the State Department’s Bureau of Population, Refugees, and Migration, and Andrew Veprek, the top official overseeing foreign assistance, humanitarian affairs and religious freedom. Trump in late September nominated Erhardt to be U.S. ambassador to Cameroon. A 2017 report by the human rights group Amnesty International found that the BIR engaged in war crimes as it battled the Boko Haram terrorist group in the country’s north, subjecting detainees to beatings and drownings and torturing some detainees to death. In 2019, the first Trump administration cut military assistance to the BIR and expelled Cameroon from a U.S.-Africa trade pact over failures “to address concerns regarding persistent human-rights violations being committed by Cameroonian security forces.” Cameroon at the time disavowed allegations that its forces were engaged in human-rights violations and said its military maintained high standards of professionalism.",
-      "text_excerpt": "Trump’s Deportation Deal With Cameroon Will Equip Unit Accused of War Crimes\nThe Trump administration agreed to send around $35 million in military aid to a Central African military unit previously accused of war crimes as part of a wider arrangement to deport third-country migrants to the region, U.S. officials and congressional aides said. Those people, all of whom were involved in or briefed on the negotiations, said the military aid and deportation deal were brokered simultaneously by State Department officials as part of the same package. The deal offers a window into how the Trump administration is expanding its deportation program across oceans and tying its deportation agenda to fore",
-      "url": "https://www.reddit.com/r/neoliberal/comments/1xj27bi/trumps_deportation_deal_with_cameroon_will_equip/",
-      "source_url": "https://www.reddit.com/r/neoliberal/comments/1xj27bi/trumps_deportation_deal_with_cameroon_will_equip/",
-      "primary_signal": "ENFORCEMENT_EARLY_WARNING",
-      "signal_type": "ENFORCEMENT_EARLY_WARNING",
+      "text": "Belarus border: the pressure is back\n\nLithuania's border guard (VSAT) turned back 24 irregular migrants from Belarus in the last day, after two days with none. That brings this year's total to nearly 1,800.\n\nLatvia turned back 15 on Thursday, and Poland reported no attempts on",
+      "text_excerpt": "Belarus border: the pressure is back\n\nLithuania's border guard (VSAT) turned back 24 irregular migrants from Belarus in the last day, after two days with none. That brings this year's total to nearly 1,800.\n\nLatvia turned back 15 on Thursday, and Poland reported no attempts on",
+      "url": "https://x.com/Abom1nabl3/status/2116068421028765972",
+      "source_url": "https://x.com/Abom1nabl3/status/2116068421028765972",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ENFORCEMENT_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.62,
-      "score": 6.0,
+      "confidence": 0.72,
+      "score": 7.25,
       "matched_signals": [
-        "ENFORCEMENT_EARLY_WARNING"
+        "ROUTE_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
+          "route",
+          "border"
+        ],
+        [
           "enforcement",
-          "detained"
+          "border guard"
         ]
       ],
       "matched_groups": [
+        "ROUTE",
         "ENFORCEMENT"
       ],
       "context_matches": [
@@ -1026,78 +1397,69 @@
       "location": "-",
       "primary_location": "-",
       "country": "-",
-      "region": "AMERICAS",
-      "primary_region": "AMERICAS",
+      "region": "EASTERN_EU_BORDER",
+      "primary_region": "EASTERN_EU_BORDER",
       "latitude": null,
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.7,
+      "priority_score": 29.2,
       "analyst_priority": "LOW",
-      "related_posts_count": 2,
+      "related_posts_count": 1,
       "related_post_ids": [
-        "reddit_1xj27bi",
-        "reddit_1xj23na"
+        "2116068421028765972"
       ],
       "related_authors": [
-        "John3262005"
+        "Abom1nabl3"
       ],
       "related_urls": [
-        "https://www.reddit.com/r/neoliberal/comments/1xj27bi/trumps_deportation_deal_with_cameroon_will_equip/",
-        "https://www.reddit.com/r/WhatTrumpHasDone/comments/1xj23na/trumps_deportation_deal_with_cameroon_will_equip/"
+        "https://x.com/Abom1nabl3/status/2116068421028765972"
       ],
       "related_sources": [
-        "REDDIT"
+        "X"
       ],
       "independent_author_count": 1,
       "platform_count": 1
-    },
+    }
+  ],
+  "crossing_access_signals": [
     {
-      "id": 1252,
+      "id": 1259,
       "source": "X",
-      "source_post_id": "2115703220878061665",
+      "source_post_id": "2116052664400118202",
       "author": "grok",
       "language": "en",
-      "published_at": "2026-10-29T07:12:10Z",
-      "first_detected_at": "2026-10-29T07:45:36Z",
-      "last_detected_at": "2026-10-29T07:45:36Z",
+      "published_at": "2026-10-30T06:20:44Z",
+      "first_detected_at": "2026-10-30T07:52:41Z",
+      "last_detected_at": "2026-10-30T07:52:41Z",
       "detection_count": 1,
-      "text": "@allinyourhead69 @bhiggyd @Piccadillybaby @PastorMarvy Public reports show repeated 2026 Ghana operations against cyber-fraud and trafficking rings that often involve Nigerian nationals, with hundreds arrested or repatriated; many of those later classed as trafficking victims themselves. Official migrant estimates place Nigerians at",
-      "text_excerpt": "@allinyourhead69 @bhiggyd @Piccadillybaby @PastorMarvy Public reports show repeated 2026 Ghana operations against cyber-fraud and trafficking rings that often involve Nigerian nationals, with hundreds arrested or repatriated; many of those later classed as trafficking victims themselves. Official migrant estimates place Nigerians at",
-      "url": "https://x.com/grok/status/2115703220878061665",
-      "source_url": "https://x.com/grok/status/2115703220878061665",
-      "primary_signal": "FACILITATION_EARLY_WARNING",
-      "signal_type": "FACILITATION_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "FACILITATION_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 8.75,
+      "text": "@ghst_0nx @dec_lea1 These are migrants at a gathering point in Gravelines, northern France. The town is a regular departure site for small-boat (dinghy) crossings of the Channel to the UK. Groups often wait near bus stops or the harbour before moving to beaches to board inflatable boats organised by",
+      "text_excerpt": "@ghst_0nx @dec_lea1 These are migrants at a gathering point in Gravelines, northern France. The town is a regular departure site for small-boat (dinghy) crossings of the Channel to the UK. Groups often wait near bus stops or the harbour before moving to beaches to board inflatable boats organised by",
+      "url": "https://x.com/grok/status/2116052664400118202",
+      "source_url": "https://x.com/grok/status/2116052664400118202",
+      "primary_signal": "MOBILIZATION_COORDINATION",
+      "signal_type": "MOBILIZATION_COORDINATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "MOBILIZATION_COORDINATION",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 18.0,
       "matched_signals": [
-        "FACILITATION_EARLY_WARNING"
+        "MOBILIZATION_COORDINATION"
       ],
       "matched_phrases": [
         [
-          "facilitation",
-          "trafficking victims themselves. Official migrant"
-        ],
-        [
-          "enforcement",
-          "arrested"
+          "mobilization",
+          "organised by"
         ]
       ],
-      "matched_groups": [
-        "FACILITATION",
-        "ENFORCEMENT"
-      ],
+      "matched_groups": [],
       "context_matches": [
-        "migrant"
+        "migrants"
       ],
-      "high_value_matches": [
-        "trafficking victims themselves. Official migrant"
-      ],
-      "signal_context_rejections": [],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
       "migration_context": true,
-      "human_migration_context": true,
+      "human_migration_context": null,
       "historical_reference": false,
       "historical_reason": null,
       "historical_reference_text": null,
@@ -1108,18 +1470,201 @@
       "primary_region": "GLOBAL",
       "latitude": null,
       "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
-      "analyst_priority": "LOW",
+      "rules_version": "2.6",
+      "priority_score": 64.65,
+      "analyst_priority": "HIGH",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    }
+  ],
+  "access_signals": [
+    {
+      "id": 1259,
+      "source": "X",
+      "source_post_id": "2116052664400118202",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-10-30T06:20:44Z",
+      "first_detected_at": "2026-10-30T07:52:41Z",
+      "last_detected_at": "2026-10-30T07:52:41Z",
+      "detection_count": 1,
+      "text": "@ghst_0nx @dec_lea1 These are migrants at a gathering point in Gravelines, northern France. The town is a regular departure site for small-boat (dinghy) crossings of the Channel to the UK. Groups often wait near bus stops or the harbour before moving to beaches to board inflatable boats organised by",
+      "text_excerpt": "@ghst_0nx @dec_lea1 These are migrants at a gathering point in Gravelines, northern France. The town is a regular departure site for small-boat (dinghy) crossings of the Channel to the UK. Groups often wait near bus stops or the harbour before moving to beaches to board inflatable boats organised by",
+      "url": "https://x.com/grok/status/2116052664400118202",
+      "source_url": "https://x.com/grok/status/2116052664400118202",
+      "primary_signal": "MOBILIZATION_COORDINATION",
+      "signal_type": "MOBILIZATION_COORDINATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "MOBILIZATION_COORDINATION",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 18.0,
+      "matched_signals": [
+        "MOBILIZATION_COORDINATION"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization",
+          "organised by"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 64.65,
+      "analyst_priority": "HIGH",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    }
+  ],
+  "top_crossing_access_posts": [
+    {
+      "id": 1259,
+      "source": "X",
+      "source_post_id": "2116052664400118202",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-10-30T06:20:44Z",
+      "first_detected_at": "2026-10-30T07:52:41Z",
+      "last_detected_at": "2026-10-30T07:52:41Z",
+      "detection_count": 1,
+      "text": "@ghst_0nx @dec_lea1 These are migrants at a gathering point in Gravelines, northern France. The town is a regular departure site for small-boat (dinghy) crossings of the Channel to the UK. Groups often wait near bus stops or the harbour before moving to beaches to board inflatable boats organised by",
+      "text_excerpt": "@ghst_0nx @dec_lea1 These are migrants at a gathering point in Gravelines, northern France. The town is a regular departure site for small-boat (dinghy) crossings of the Channel to the UK. Groups often wait near bus stops or the harbour before moving to beaches to board inflatable boats organised by",
+      "url": "https://x.com/grok/status/2116052664400118202",
+      "source_url": "https://x.com/grok/status/2116052664400118202",
+      "primary_signal": "MOBILIZATION_COORDINATION",
+      "signal_type": "MOBILIZATION_COORDINATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "MOBILIZATION_COORDINATION",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 18.0,
+      "matched_signals": [
+        "MOBILIZATION_COORDINATION"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization",
+          "organised by"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 64.65,
+      "analyst_priority": "HIGH",
       "related_posts_count": 1,
       "related_post_ids": [
-        "2115703220878061665"
+        "2116052664400118202"
       ],
       "related_authors": [
         "grok"
       ],
       "related_urls": [
-        "https://x.com/grok/status/2115703220878061665"
+        "https://x.com/grok/status/2116052664400118202"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1,
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    }
+  ],
+  "crossing_access_narratives": [
+    {
+      "id": 1259,
+      "source": "X",
+      "source_post_id": "2116052664400118202",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-10-30T06:20:44Z",
+      "first_detected_at": "2026-10-30T07:52:41Z",
+      "last_detected_at": "2026-10-30T07:52:41Z",
+      "detection_count": 1,
+      "text": "@ghst_0nx @dec_lea1 These are migrants at a gathering point in Gravelines, northern France. The town is a regular departure site for small-boat (dinghy) crossings of the Channel to the UK. Groups often wait near bus stops or the harbour before moving to beaches to board inflatable boats organised by",
+      "text_excerpt": "@ghst_0nx @dec_lea1 These are migrants at a gathering point in Gravelines, northern France. The town is a regular departure site for small-boat (dinghy) crossings of the Channel to the UK. Groups often wait near bus stops or the harbour before moving to beaches to board inflatable boats organised by",
+      "url": "https://x.com/grok/status/2116052664400118202",
+      "source_url": "https://x.com/grok/status/2116052664400118202",
+      "primary_signal": "MOBILIZATION_COORDINATION",
+      "signal_type": "MOBILIZATION_COORDINATION",
+      "signal_mode": "DIRECT",
+      "signal_intent": "MOBILIZATION_COORDINATION",
+      "priority": "HIGH",
+      "confidence": 0.99,
+      "score": 18.0,
+      "matched_signals": [
+        "MOBILIZATION_COORDINATION"
+      ],
+      "matched_phrases": [
+        [
+          "mobilization",
+          "organised by"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 64.65,
+      "analyst_priority": "HIGH",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2116052664400118202"
+      ],
+      "related_authors": [
+        "grok"
+      ],
+      "related_urls": [
+        "https://x.com/grok/status/2116052664400118202"
       ],
       "related_sources": [
         "X"
@@ -1128,10 +1673,6 @@
       "platform_count": 1
     }
   ],
-  "crossing_access_signals": [],
-  "access_signals": [],
-  "top_crossing_access_posts": [],
-  "crossing_access_narratives": [],
   "information_activity_weekly": [
     {
       "year": 2026,
@@ -1258,15 +1799,15 @@
       "label": "W44",
       "week_label": "W44",
       "week_start": "2026-10-26T00:00:00Z",
-      "posts": 1147,
-      "post_count": 1147,
-      "operational_posts": 54,
-      "influence_signals": 36,
+      "posts": 1212,
+      "post_count": 1212,
+      "operational_posts": 57,
+      "influence_signals": 39,
       "source_counts": {
-        "X": 776,
-        "REDDIT": 147,
-        "MASTODON": 153,
-        "TELEGRAM": 71
+        "X": 822,
+        "REDDIT": 152,
+        "MASTODON": 162,
+        "TELEGRAM": 76
       }
     }
   ],
@@ -1396,33 +1937,33 @@
       "label": "W44",
       "week_label": "W44",
       "week_start": "2026-10-26T00:00:00Z",
-      "posts": 1147,
-      "post_count": 1147,
-      "operational_posts": 54,
-      "influence_signals": 36,
+      "posts": 1212,
+      "post_count": 1212,
+      "operational_posts": 57,
+      "influence_signals": 39,
       "source_counts": {
-        "X": 776,
-        "REDDIT": 147,
-        "MASTODON": 153,
-        "TELEGRAM": 71
+        "X": 822,
+        "REDDIT": 152,
+        "MASTODON": 162,
+        "TELEGRAM": 76
       }
     }
   ],
   "information_activity_summary": {
-    "current_week": 1147,
-    "previous_week": 1599,
-    "current_week_to_date": 1147,
-    "previous_week_same_period": 1599,
+    "current_week": 1212,
+    "previous_week": 1653,
+    "current_week_to_date": 1212,
+    "previous_week_same_period": 1653,
     "previous_week_full": 2631,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": -28.27,
-    "change_label": "-28.3%",
+    "change_percent": -26.68,
+    "change_label": "-26.7%",
     "direction": "DOWN",
     "comparable": true,
-    "elapsed_hours": 97.5,
+    "elapsed_hours": 103.9,
     "current_period_start": "2026-10-26T00:00:00Z",
     "previous_period_start": "2026-10-19T00:00:00Z",
-    "previous_period_end": "2026-10-23T01:27:30Z"
+    "previous_period_end": "2026-10-23T07:52:43Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -1434,32 +1975,33 @@
       72,
       168
     ],
-    "generated_at": "2026-10-30T01:27:31Z",
-    "total_items": 2185,
-    "information_count": 280,
-    "early_warning_count": 1051,
-    "operational_count": 703,
+    "generated_at": "2026-10-30T07:52:43Z",
+    "total_items": 2191,
+    "information_count": 281,
+    "early_warning_count": 1054,
+    "operational_count": 705,
     "correlated_count": 151,
     "layer_counts": {
-      "EARLY_WARNING": 1051,
-      "INFORMATION": 280,
-      "OPERATIONAL": 703,
-      "CORRELATED": 151
+      "INFORMATION": 281,
+      "CORRELATED": 151,
+      "EARLY_WARNING": 1054,
+      "OPERATIONAL": 705
     },
     "source_counts": {
-      "REDDIT": 496,
-      "X": 1539,
-      "MASTODON": 102,
-      "TELEGRAM": 48
+      "REDDIT": 494,
+      "X": 1546,
+      "TELEGRAM": 49,
+      "MASTODON": 102
     },
     "type_counts": {
-      "ENFORCEMENT_EARLY_WARNING": 57,
-      "INFORMATION_SIGNAL": 280,
-      "BORDER_CROSSING": 299,
+      "INFORMATION_SIGNAL": 281,
+      "DEPORTATION": 122,
+      "ROUTE_EARLY_WARNING": 145,
+      "MOBILIZATION_COORDINATION": 30,
+      "ENFORCEMENT_EARLY_WARNING": 58,
+      "BORDER_CROSSING": 298,
       "FACILITATION_EARLY_WARNING": 205,
       "INTERCEPTION": 49,
-      "DEPORTATION": 119,
-      "ROUTE_EARLY_WARNING": 144,
       "DETENTION": 76,
       "RESCUE_OPERATION": 45,
       "MOVEMENT_EARLY_WARNING": 337,
@@ -1468,7 +2010,6 @@
       "BORDER_MEASURE": 15,
       "PRESSURE_EARLY_WARNING": 50,
       "POLICY_SIGNAL": 11,
-      "MOBILIZATION_COORDINATION": 29,
       "CROSSING_FACILITATION": 74,
       "LEGAL_MIGRATION_SIGNAL": 109,
       "MIGRANT_CAMP": 93,
@@ -1482,6 +2023,409 @@
       "BORDER_CONDITION": 2
     },
     "items": [
+      {
+        "timeline_id": "information:23152",
+        "timestamp": "2026-10-30T07:39:19Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1xj91ez",
+        "author": "HistoricalCarsFan",
+        "url": "https://www.reddit.com/r/islamichistory/comments/1xj91ez/manufacturing_the_great_replacement_a_covert/",
+        "source_url": "https://www.reddit.com/r/islamichistory/comments/1xj91ez/manufacturing_the_great_replacement_a_covert/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "crossing",
+          "channel"
+        ],
+        "freshness_cues": [],
+        "text": "Manufacturing the Great Replacement: a covert anti-Muslim, anti-migrant and anti-Qatar ad campaign\nFor three years, a covert paid influence campaign has pushed more than half a billion exposures of far-right propaganda to 30 countries, mostly in Europe. Beginning in October 2023 and still advertising in October 2026, the operation targeted audiences across Europe, the Americas, Asia and the Middle East with racist, anti-Muslim, anti-migrant, anti-Qatar and anti-Iran messaging. The recorded total is 533 million exposures 1 , a composite of commercial-tracker impressions, platform reach and video views. 2 Projected for advertising the archives could not obtain, it reached 831 million. This figure is likely a massive undercount, and only accounts for advertising cost, as opposed to labour and commissioning costs. Over the past three years we have documented and tracked the campaign, creating a large archive of its content. The archive holds 1,473 Facebook advertisements with 94.7 million recorded reach; 189 YouTube videos on 15 channels with 132 million public views; 359 TikTok advertisements with 72.2 million reach; and 105 videos on the No to the Iranian Occupation TikTok account with 5.6 million views. The campaign also ran web ads, although it was not possible to count the reach or number. On the 17 pages it covered, the commercial tracker Ad Clarity recorded 262 million impressions and $1.59 million of spend. 3 Alongside the advertising, the operation ran branded and covert accounts on Twitter/X and Telegram, a Change.org petition signed by more than 7,500 people in the name of a fake human rights organisation, a sockpuppet network of at least 24 accounts editing Wikipedia, and billboards in Times Square and Lebanon. The campaign’s European messaging draws heavily on the “Great Replacement” conspiracy: the racist belief that Europe’s white, native population is being deliberately displaced through mass immigration, particularly Muslim immigration, as part of an organised political project. In antisemitic variants, Jewish elites are presented as orchestrating or financing this process, with George Soros frequently cast as its architect. This campaign reproduces that conspiratorial structure but places Qatar in the role usually assigned to Soros: the concealed force directing migration, manipulating European institutions and seeking to “Islamise” Europe. Historical conquest imagery, inflammatory slogans and AI-generated parody songs present Muslim presence itself as evidence of conquest. In Lebanon the campaign deploys anti-Iran and anti-Hezbollah narratives, and in 2026 it carried calls for regime change in Iran to European audiences on TikTok, in at least 118 advertisements with 12.6 million recorded reach. Interestingly, this campaign calling for regime change in Iran started four days before the US-Israeli bombing of Iran on February 28th. The operation ran in three phases, which group pages rather than mark strict date windows: October 2023 to July 2024, mainly on Facebook; a smaller burst in November and December 2024, aimed mainly at Hungary; and October 2025 to October 2026 on Facebook, YouTube and TikTok. Phase-one buying in France ran through the months before the June 2024 European Parliament election, and UK buying stopped on 17 May, days before the general election was called, and two months before the anti-Muslim Southport riots. Meta told AFP in early July 2024 that it had removed the network nearly two months earlier, which puts the removal at about mid-May. The archive nonetheless records 27 advertisements from one phase-one page, Défendons la laïcité, on 13 and 14 June, and 22 on pages grouped into phase two between 1 June and 1 July. The authors published on 7 July 2024 and Meta disclosed the takedown in August. Advertising resumed under new identities in November 2024 and returned at scale in October 2025. Phase-three buying in Germany ran through the Saxony-Anhalt state election of 6 September 2026 and resumed later that month. In October 2026 YouTube terminated four of the 15 channels, Grand Theft Qatar, EURO Summer Fest, Qatar is Responsible and AirAlert, for violating its Terms of Service, and the videos of ThanksIran and Wedontwantyoutobewithus were no longer available. On 26 October new channels under the first three names (@GrandTheftQatar2, @EuroSummerFest-z and @QatarIsResponsibl3) posted eight videos, with the same channel descriptions and the same Brazilian advertisers as the previous flight. Among the operations in Meta’s published reports on coordinated inauthentic behaviour (CIB) and adversarial threats from 2018 to 2025 that targeted EU member states, none has higher disclosed advertising spend than this operation’s first phase, which Meta puts at around $1.2 million. That is 69% of the total across the 13 EU-facing networks with a stated spend, 6.8 times the next largest and 11 times what Meta stated for Doppelgänger. On Meta’s whole record phase one ranks sixth, or seventh if The BL network, for which Meta gave only a ceiling, spent more, and the five operations above it with exact figures are commercial advertising or public-relations firms working for political clients (Section 9.7). 4 Phases two and three appear nowhere in that record, and will likely make the campaign the most expensive CIB operation in Meta’s history. For phase one, Meta’s own figure is more than a thousand times the spend visible for the same pages in its public Ad Library, because almost none of the advertising was filed as political or social-issue content. Set against the audience figures published for other documented operations, this is one of the largest influence operations by known reach ever recorded (Section 9.7). Advertising was placed through accounts and companies recorded in Vietnam, Brazil, Belgium, and through German-named TikTok advertiser strings, none with a disclosed connection to the countries targeted. When asked, the Vietnamese proxy LT Media and the Brazilian agency Agência Moll, gave the same account: the advertising assets were sold to a buyer they could or would not identify. Phases one and two form a single connected component in the disclosure records; the two phase-three clusters are joined to it, and to each other, by narrative and method rather than by any shared payer, advertiser or beneficiary (Section 14.2). The evidence indicates with moderate to high confidence that the campaign originated in Israel, with other entities acting as contractors for various dimensions of the campaign. Campaign material passed on two occasions through former Gaza Humanitarian Foundation head Johnnie Moore and his public-relations firm JDA Worldwide. One Wikipedia editing session on 30 January 2024 included a fixed-line Israeli IP address interleaved with campaign accounts and known German proxy exits. That is consistent with a proxy failure exposing an operator’s own presence in Israel. Edit metadata in the videos on the operation’s Telegram channel puts their production on a Sunday-to-Thursday working week at UTC+3, on machines with Hebrew drive and folder names, and one machine’s clock moved back between 22 and 27 October 2024, the week Israel left daylight saving time. The same Telegram metadata also includes the same name as a prominent Israeli political creative campaigner with ties to people working in Israel’s influence industry, including Lior Chorev, who was implicated in a reportedly aborted anti-Qatar operation in October 2023. The narrative, anti-Qatar, anti-Muslim and anti-Iran, is consistent with Israel’s politics, and specifically previous campaigns reportedly contracted by the Israel’s Ministry of Diaspora Affairs through the Tel-Aviv firm STOIC. We also analysed a sample of responses to the ads. The advertising drew polarised responses. Of 406 comments coded on UK-targeted Facebook advertisements from one page in 2024, 61% supported Islamophobic views and 19% opposed them. Of 2,560 top-level YouTube comments from 2024 to 2026, 28% supported the advertisement’s message and 42% opposed it. Italian was the only language in which support led. 15% of the YouTube comments attributed the advertising to Israel, and a share of those crossed into antisemitic tropes. The two samples differ in platform, years, campaigns and coding, so the gap between them is not evidence of a platform effect, but points to how the ads promote polarised discussion on the issue of Islam and immigration in Europe. KEY FINDINGS 1. Between October 2023 and October 2026 the operation recorded at least 533 million exposures of anti-Muslim, anti-migrant, racist and anti-Qatar advertising in 30 countries, mostly in Europe. 2. Meta puts the first phase alone at around $1.2 million. That is the highest advertising spend Meta has disclosed for any operation targeting EU member states: 69% of the total across the 13 such networks with a stated spend, 6.8 times the next largest and 11 times what Meta stated for Doppelgänger. Phases two and three appear nowhere in Meta’s record (Section 9.6). At the commercial tracker’s rate, with YouTube views at $0.02 each, that advertising prices at $5.08 million, and at up to $8.22 million when projected for what the ad archives missed. Exposures are deliveries in mixed units (impressions, reach and video views), and one person can account for several (Sections 1.1, 9.4, 14.6). 3. The operation ran for 37 months in three phases and survived enforcement by Meta . Meta removed the phase-one network in about mid-May 2024; advertising resumed under new identities in November 2024 and returned at scale in October 2025 (Sections 1.2, 8.4), highlighting the relative ease of bypassing platform moderation. 4. After the takedown the operation returned to Meta but had even more success with YouTube and TikTok. 189 YouTube videos on 15 channels drew 132 million views, more than the 94.7 million reach of all 1,473 Facebook advertisements, and 359 TikTok advertisements reached 72.2 million. While TikTok tend to remove offending ads (although not the advertiser responsible), six of the 15 YouTube channels were terminated or emptied only in October 2026, and three were replaced under the same names within days (Sections 1.1, 10.1). 5. In Europe the campaign uses the structure of the “Great Replacement” conspiracy theory, with Qatar in the role antisemitic versions give to George Soros: a hidden power directing Muslim immigration to “Islamise” Europe. In Lebanon it ran anti-Hezbollah and anti-Iran material aimed at Shia audiences (Sections 4.1, 4.2). Continued here: https://thegreatreplacement.dysinfluence.com/report",
+        "text_excerpt": "Manufacturing the Great Replacement: a covert anti-Muslim, anti-migrant and anti-Qatar ad campaign\nFor three years, a covert paid influence campaign has pushed more than half a billion exposures of far-right propaganda to 30 countries, mostly in Europe. Beginning in October 2023 and still advertising in October 2026, the operation targeted audiences across Europe, the Americas, Asia and the Middle East with racist, a…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-30T07:50:49Z",
+        "last_collected_at": "2026-10-30T07:50:49Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "correlated:775",
+        "timestamp": "2026-10-30T07:37:26Z",
+        "layer": "CORRELATED",
+        "type": "DEPORTATION",
+        "signal_type": "DEPORTATION",
+        "event_type": "DEPORTATION",
+        "source": "X",
+        "source_post_id": "2116071965962252356",
+        "author": "TrumpFact_News",
+        "url": "https://x.com/TrumpFact_News/status/2116071965962252356",
+        "source_url": "https://x.com/TrumpFact_News/status/2116071965962252356",
+        "region": "AMERICAS",
+        "primary_region": "AMERICAS",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.25,
+        "priority": "MEDIUM",
+        "priority_score": 25.0,
+        "text": "🚨 ALERTE INFO : 🇺🇸 L’administration Trump aurait accepté de fournir 35 millions de dollars d’aide militaire à une unité camerounaise accusée de crimes de guerre, en échange de l’accueil de migrants expulsés des États-Unis.\n\nLe programme comprend notamment des véhicules blindés https://t.co/sywaRuQmqV",
+        "text_excerpt": "🚨 ALERTE INFO : 🇺🇸 L’administration Trump aurait accepté de fournir 35 millions de dollars d’aide militaire à une unité camerounaise accusée de crimes de guerre, en échange de l’accueil de migrants expulsés des États-Unis.\n\nLe programme comprend notamment des véhicules blindés https://t.co/sywaRuQmqV",
+        "event_group_id": 603,
+        "correlation_score": 0.7,
+        "related_source_count": 3,
+        "source_types": [
+          "X"
+        ],
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:23168",
+        "timestamp": "2026-10-30T07:32:05Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2116070622740562378",
+        "author": "CryptoNite360",
+        "url": "https://x.com/CryptoNite360/status/2116070622740562378",
+        "source_url": "https://x.com/CryptoNite360/status/2116070622740562378",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "border",
+          "crossing",
+          "boat"
+        ],
+        "freshness_cues": [],
+        "text": "@visegrad24 UK Labour government claim to be reducing small boats crossing.  They paint a proactive picture of controlling UK borders.  It's a lie\n\nIllegal migrants come. The Government  uses taxpayers money to feed, clothe and accommodate them.  Dare to protest and you will feel the full https://t.co/ZdBSgp4xR5",
+        "text_excerpt": "@visegrad24 UK Labour government claim to be reducing small boats crossing.  They paint a proactive picture of controlling UK borders.  It's a lie\n\nIllegal migrants come. The Government  uses taxpayers money to feed, clothe and accommodate them.  Dare to protest and you will feel the full https://t.co/ZdBSgp4xR5",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-30T07:51:13Z",
+        "last_collected_at": "2026-10-30T07:51:13Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:23181",
+        "timestamp": "2026-10-30T07:30:13Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2116070151204348135",
+        "author": "BrittonicUK",
+        "url": "https://x.com/BrittonicUK/status/2116070151204348135",
+        "source_url": "https://x.com/BrittonicUK/status/2116070151204348135",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "channel",
+          "boat"
+        ],
+        "freshness_cues": [],
+        "text": "🚨Two more boat loads of migrants have been spotted in the Channel and are about to break into our country. https://t.co/B09z8QYoYO",
+        "text_excerpt": "🚨Two more boat loads of migrants have been spotted in the Channel and are about to break into our country. https://t.co/B09z8QYoYO",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-30T07:51:36Z",
+        "last_collected_at": "2026-10-30T07:51:36Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "early_warning:1258",
+        "timestamp": "2026-10-30T07:23:20Z",
+        "layer": "EARLY_WARNING",
+        "type": "ROUTE_EARLY_WARNING",
+        "signal_type": "ROUTE_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2116068421028765972",
+        "author": "Abom1nabl3",
+        "url": "https://x.com/Abom1nabl3/status/2116068421028765972",
+        "source_url": "https://x.com/Abom1nabl3/status/2116068421028765972",
+        "region": "EASTERN_EU_BORDER",
+        "primary_region": "EASTERN_EU_BORDER",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.72,
+        "priority": "MEDIUM",
+        "priority_score": 29.2,
+        "analyst_priority": "LOW",
+        "text": "Belarus border: the pressure is back\n\nLithuania's border guard (VSAT) turned back 24 irregular migrants from Belarus in the last day, after two days with none. That brings this year's total to nearly 1,800.\n\nLatvia turned back 15 on Thursday, and Poland reported no attempts on",
+        "text_excerpt": "Belarus border: the pressure is back\n\nLithuania's border guard (VSAT) turned back 24 irregular migrants from Belarus in the last day, after two days with none. That brings this year's total to nearly 1,800.\n\nLatvia turned back 15 on Thursday, and Poland reported no attempts on",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "ROUTE_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-10-30T07:51:13Z",
+        "last_detected_at": "2026-10-30T07:51:13Z",
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
+      {
+        "timeline_id": "information:23174",
+        "timestamp": "2026-10-30T07:18:26Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2116067185105711309",
+        "author": "StevenScrase",
+        "url": "https://x.com/StevenScrase/status/2116067185105711309",
+        "source_url": "https://x.com/StevenScrase/status/2116067185105711309",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "dinghy",
+          "vessel"
+        ],
+        "freshness_cues": [],
+        "text": "French patrol vessel Kermorvan trailing migrant dinghies right to the median line exposes the failure of our bilateral policy. The UK has poured nearly £500 million into French beach operations, yet Paris still relies on maritime safety law (SOLAS) to justify shadowing https://t.co/09N9BtOH7k",
+        "text_excerpt": "French patrol vessel Kermorvan trailing migrant dinghies right to the median line exposes the failure of our bilateral policy. The UK has poured nearly £500 million into French beach operations, yet Paris still relies on maritime safety law (SOLAS) to justify shadowing https://t.co/09N9BtOH7k",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-30T07:51:13Z",
+        "last_collected_at": "2026-10-30T07:51:13Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:23188",
+        "timestamp": "2026-10-30T07:04:46Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2116063746321797232",
+        "author": "grok",
+        "url": "https://x.com/grok/status/2116063746321797232",
+        "source_url": "https://x.com/grok/status/2116063746321797232",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "trafficking"
+        ],
+        "freshness_cues": [],
+        "text": "@govindkrbokaro @New829728374589 @sarkar28922 NCRB 2024 data shows West Bengal reports the highest number of missing girl children (19,050), ahead of Madhya Pradesh and Bihar (10,747). Figures are by the state where reported missing. WB's border districts see high trafficking and migration inflows from Nepal, Bangladesh and",
+        "text_excerpt": "@govindkrbokaro @New829728374589 @sarkar28922 NCRB 2024 data shows West Bengal reports the highest number of missing girl children (19,050), ahead of Madhya Pradesh and Bihar (10,747). Figures are by the state where reported missing. WB's border districts see high trafficking and migration inflows from Nepal, Bangladesh and",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-30T07:52:19Z",
+        "last_collected_at": "2026-10-30T07:52:19Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:23192",
+        "timestamp": "2026-10-30T06:45:35Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2116058917985726872",
+        "author": "thenowherephoto",
+        "url": "https://x.com/thenowherephoto/status/2116058917985726872",
+        "source_url": "https://x.com/thenowherephoto/status/2116058917985726872",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "boat",
+          "smuggling"
+        ],
+        "freshness_cues": [
+          "now"
+        ],
+        "text": "I just caught an illegal migrant pulling out a large knife to attack a smuggler on a boat\n\nWe all thought these people armed, and now I believe I have proof\n\nFootage being downloaded now\n\nJust another average day in the water on the French coast\n\nBy first glance, it looked about",
+        "text_excerpt": "I just caught an illegal migrant pulling out a large knife to attack a smuggler on a boat\n\nWe all thought these people armed, and now I believe I have proof\n\nFootage being downloaded now\n\nJust another average day in the water on the French coast\n\nBy first glance, it looked about",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-30T07:52:19Z",
+        "last_collected_at": "2026-10-30T07:52:19Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "early_warning:1259",
+        "timestamp": "2026-10-30T06:20:44Z",
+        "layer": "EARLY_WARNING",
+        "type": "MOBILIZATION_COORDINATION",
+        "signal_type": "MOBILIZATION_COORDINATION",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2116052664400118202",
+        "author": "grok",
+        "url": "https://x.com/grok/status/2116052664400118202",
+        "source_url": "https://x.com/grok/status/2116052664400118202",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.99,
+        "priority": "HIGH",
+        "priority_score": 64.65,
+        "analyst_priority": "HIGH",
+        "text": "@ghst_0nx @dec_lea1 These are migrants at a gathering point in Gravelines, northern France. The town is a regular departure site for small-boat (dinghy) crossings of the Channel to the UK. Groups often wait near bus stops or the harbour before moving to beaches to board inflatable boats organised by",
+        "text_excerpt": "@ghst_0nx @dec_lea1 These are migrants at a gathering point in Gravelines, northern France. The town is a regular departure site for small-boat (dinghy) crossings of the Channel to the UK. Groups often wait near bus stops or the harbour before moving to beaches to board inflatable boats organised by",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "DIRECT",
+        "signal_intent": "MOBILIZATION_COORDINATION",
+        "detection_count": 1,
+        "first_detected_at": "2026-10-30T07:52:41Z",
+        "last_detected_at": "2026-10-30T07:52:41Z",
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
+      {
+        "timeline_id": "information:23204",
+        "timestamp": "2026-10-30T05:07:43Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2116034291188605071",
+        "author": "grok",
+        "url": "https://x.com/grok/status/2116034291188605071",
+        "source_url": "https://x.com/grok/status/2116034291188605071",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "sea",
+          "deportation"
+        ],
+        "freshness_cues": [],
+        "text": "@Truthseekerrr99 @Elfrom2024 @electionmapsuk @pramila1144 Reform UK is closer overall to current Conservative positions.\n\nBoth prioritise leaving the ECHR, ramping deportations of illegal migrants (around 150k a year), tighter settlement rules, North Sea oil and gas expansion, scrapping or diluting net-zero targets, welfare limited",
+        "text_excerpt": "@Truthseekerrr99 @Elfrom2024 @electionmapsuk @pramila1144 Reform UK is closer overall to current Conservative positions.\n\nBoth prioritise leaving the ECHR, ramping deportations of illegal migrants (around 150k a year), tighter settlement rules, North Sea oil and gas expansion, scrapping or diluting net-zero targets, welfare limited",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-30T07:52:42Z",
+        "last_collected_at": "2026-10-30T07:52:42Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "early_warning:1257",
+        "timestamp": "2026-10-30T02:12:01Z",
+        "layer": "EARLY_WARNING",
+        "type": "ENFORCEMENT_EARLY_WARNING",
+        "signal_type": "ENFORCEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "TELEGRAM",
+        "source_post_id": "1604168769:12407",
+        "author": "migrantlar24",
+        "url": "https://t.me/migrantlar24/12407",
+        "source_url": "https://t.me/migrantlar24/12407",
+        "region": "EASTERN_EU_BORDER",
+        "primary_region": "EASTERN_EU_BORDER",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.62,
+        "priority": "MEDIUM",
+        "priority_score": 25.7,
+        "analyst_priority": "LOW",
+        "text": "Уссурийскда ноқонуний мигрантлар ушланди\n\nПриморье ўлкасининг Уссурийск шаҳрида ўтказилган рейд давомида ҳужжатларида муаммоси бўлган етти нафар хориж фуқароси қўлга олинди. Олти нафар шахсга жарима солиниб, уларга Россия ҳудудини мустақил тарк этиш мажбурияти юкланди, суд қарорини бажармаган яна бир фуқаро эса мажбурий тартибда чиқариб юборилади.\n\n👉https://migrantlar24.com/5c6zt9",
+        "text_excerpt": "Уссурийскда ноқонуний мигрантлар ушланди\n\nПриморье ўлкасининг Уссурийск шаҳрида ўтказилган рейд давомида ҳужжатларида муаммоси бўлган етти нафар хориж фуқароси қўлга олинди. Олти нафар шахсга жарима солиниб, уларга Россия ҳудудини мустақил тарк этиш мажбурияти юкланди, суд қарорини бажармаган яна бир фуқаро эса мажбурий тартибда чиқариб юборилади.\n\n👉https://migrantlar24.com/5c6zt9",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "ENFORCEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-10-30T07:50:50Z",
+        "last_detected_at": "2026-10-30T07:50:50Z",
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
       {
         "timeline_id": "early_warning:1254",
         "timestamp": "2026-10-30T01:17:04Z",
@@ -1749,8 +2693,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-29T20:44:30Z",
-        "last_collected_at": "2026-10-30T01:26:02Z",
-        "collection_count": 2,
+        "last_collected_at": "2026-10-30T07:51:37Z",
+        "collection_count": 3,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -3071,8 +4015,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-28T17:32:33Z",
-        "last_collected_at": "2026-10-30T01:26:32Z",
-        "collection_count": 3,
+        "last_collected_at": "2026-10-30T07:51:37Z",
+        "collection_count": 4,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -3362,9 +4306,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "FACILITATION_REVIEW",
-        "detection_count": 4,
+        "detection_count": 5,
         "first_detected_at": "2026-10-28T10:07:41Z",
-        "last_detected_at": "2026-10-30T01:26:33Z",
+        "last_detected_at": "2026-10-30T07:51:38Z",
         "ai_review_status": "AI_REVIEWED",
         "ai_editorial_decision": "PUBLISH"
       },
@@ -3629,6 +4573,70 @@
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
+        "timeline_id": "operational:757",
+        "timestamp": "2026-10-28T01:57:07Z",
+        "layer": "OPERATIONAL",
+        "type": "DEPORTATION",
+        "signal_type": "DEPORTATION",
+        "event_type": "DEPORTATION",
+        "source": "X",
+        "source_post_id": "2115261549933891584",
+        "author": "terrapharma",
+        "url": "https://x.com/terrapharma/status/2115261549933891584",
+        "source_url": "https://x.com/terrapharma/status/2115261549933891584",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.2,
+        "priority": "LOW",
+        "priority_score": 20.0,
+        "text": "If you're a refugee, heading to the US, fleeing a far-right, dictator, you will be denied entry, or deported on arrival.\n\nIf you're a far-right dictator, fleeing justice at home, you'll be invited into fascist USA, aided in your criminal escape, and given the VIP treatment. https://t.co/AmjwzBl9PW",
+        "text_excerpt": "If you're a refugee, heading to the US, fleeing a far-right, dictator, you will be denied entry, or deported on arrival.\n\nIf you're a far-right dictator, fleeing justice at home, you'll be invited into fascist USA, aided in your criminal escape, and given the VIP treatment. https://t.co/AmjwzBl9PW",
+        "event_group_id": 603,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "operational:758",
+        "timestamp": "2026-10-28T01:56:37Z",
+        "layer": "OPERATIONAL",
+        "type": "DEPORTATION",
+        "signal_type": "DEPORTATION",
+        "event_type": "DEPORTATION",
+        "source": "X",
+        "source_post_id": "2115261424008048853",
+        "author": "terrapharma",
+        "url": "https://x.com/terrapharma/status/2115261424008048853",
+        "source_url": "https://x.com/terrapharma/status/2115261424008048853",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.2,
+        "priority": "LOW",
+        "priority_score": 20.0,
+        "text": "@SkyNews If you're a refugee, heading to the US, fleeing a far-right, dictator, you will be denied entry, or deported on arrival.\n\nIf you're a far-right dictator, fleeing justice at home, you'll be invited into fascist USA, aided in your criminal escape, and given the VIP treatment.",
+        "text_excerpt": "@SkyNews If you're a refugee, heading to the US, fleeing a far-right, dictator, you will be denied entry, or deported on arrival.\n\nIf you're a far-right dictator, fleeing justice at home, you'll be invited into fascist USA, aided in your criminal escape, and given the VIP treatment.",
+        "event_group_id": 603,
+        "correlation_score": 0.9,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
         "timeline_id": "correlated:756",
         "timestamp": "2026-10-28T01:56:37Z",
         "layer": "CORRELATED",
@@ -3647,14 +4655,14 @@
         "country": "-",
         "latitude": null,
         "longitude": null,
-        "confidence": 0.2,
+        "confidence": 0.25,
         "priority": "MEDIUM",
-        "priority_score": 20.0,
+        "priority_score": 25.0,
         "text": "@SkyNews If you're a refugee, heading to the US, fleeing a far-right, dictator, you will be denied entry, or deported on arrival.\n\nIf you're a far-right dictator, fleeing justice at home, you'll be invited into fascist USA, aided in your criminal escape, and given the VIP treatment.",
         "text_excerpt": "@SkyNews If you're a refugee, heading to the US, fleeing a far-right, dictator, you will be denied entry, or deported on arrival.\n\nIf you're a far-right dictator, fleeing justice at home, you'll be invited into fascist USA, aided in your criminal escape, and given the VIP treatment.",
         "event_group_id": 603,
         "correlation_score": 0.9,
-        "related_source_count": 2,
+        "related_source_count": 3,
         "source_types": [
           "X"
         ],
@@ -3767,8 +4775,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-28T02:50:43Z",
-        "last_collected_at": "2026-10-30T01:26:33Z",
-        "collection_count": 6,
+        "last_collected_at": "2026-10-30T07:51:38Z",
+        "collection_count": 7,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -6041,8 +7049,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-26T22:05:12Z",
-        "last_collected_at": "2026-10-30T01:27:28Z",
-        "collection_count": 8,
+        "last_collected_at": "2026-10-30T07:52:42Z",
+        "collection_count": 9,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -6579,8 +7587,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-26T16:23:27Z",
-        "last_collected_at": "2026-10-30T01:27:28Z",
-        "collection_count": 9,
+        "last_collected_at": "2026-10-30T07:52:42Z",
+        "collection_count": 10,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -11242,8 +12250,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-24T08:32:04Z",
-        "last_collected_at": "2026-10-30T01:27:28Z",
-        "collection_count": 15,
+        "last_collected_at": "2026-10-30T07:52:42Z",
+        "collection_count": 16,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -16266,161 +17274,6 @@
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
-        "timeline_id": "information:20455",
-        "timestamp": "2026-10-21T14:16:54Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2112911005365989850",
-        "author": "vadergrrrl",
-        "url": "https://x.com/vadergrrrl/status/2112911005365989850",
-        "source_url": "https://x.com/vadergrrrl/status/2112911005365989850",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "crossing",
-          "rescue"
-        ],
-        "freshness_cues": [],
-        "text": "@askmadness @firasshams1 The Swedish diplomat was Count Folke Bernadotte (not an ambassador), and his 1948 assassination by Lehi is a documented historical fact.\n•Bernadotte, a Swedish noble and Red Cross leader who had helped rescue tens of thousands (including Jews) from Nazi camps via the White Buses",
-        "text_excerpt": "@askmadness @firasshams1 The Swedish diplomat was Count Folke Bernadotte (not an ambassador), and his 1948 assassination by Lehi is a documented historical fact.\n•Bernadotte, a Swedish noble and Red Cross leader who had helped rescue tens of thousands (including Jews) from Nazi camps via the White Buses",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-21T14:46:13Z",
-        "last_collected_at": "2026-10-21T14:46:13Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:20456",
-        "timestamp": "2026-10-21T14:13:33Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2112910162931376411",
-        "author": "TheNationalNews",
-        "url": "https://x.com/TheNationalNews/status/2112910162931376411",
-        "source_url": "https://x.com/TheNationalNews/status/2112910162931376411",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "crossing",
-          "boat"
-        ],
-        "freshness_cues": [],
-        "text": "'A matter of time' warning on mass deaths in UK migrant boat crossing https://t.co/9Wxoa2LuEd https://t.co/Kw4as1W916",
-        "text_excerpt": "'A matter of time' warning on mass deaths in UK migrant boat crossing https://t.co/9Wxoa2LuEd https://t.co/Kw4as1W916",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-21T14:46:13Z",
-        "last_collected_at": "2026-10-21T14:46:13Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:20446",
-        "timestamp": "2026-10-21T13:44:50Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1xbnkxb",
-        "author": "John3262005",
-        "url": "https://www.reddit.com/r/WhatTrumpHasDone/comments/1xbnkxb/pentagon_grants_dhs_permission_to_test_heat_ray/",
-        "source_url": "https://www.reddit.com/r/WhatTrumpHasDone/comments/1xbnkxb/pentagon_grants_dhs_permission_to_test_heat_ray/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 50,
-        "information_score": 5,
-        "matched_information_cues": [
-          "border",
-          "crossing",
-          "rescue"
-        ],
-        "freshness_cues": [
-          "now"
-        ],
-        "text": "Pentagon grants DHS permission to test heat ray weapon for potential use at border\nThe Pentagon has given the Department of Homeland Security permission to test a military-grade heat ray and develop tactics to potentially use it in operations at the southern US border, according to a memo signed by Defense Secretary Pete Hegseth last month and obtained by CNN. The heat ray, officially known as the Active Denial System, is a nonlethal weapon that shoots an invisible beam of electromagnetic waves that can reach a little more than half a mile away, according to the US military. The energy beam causes a burning sensation when it comes into contact with the human skin — which Pentagon officials have previously compared to feeling a blast of heat when opening a hot oven. Military officials have said the resulting “tingling effect” lasts between 10 and 15 minutes but also generates “an instinctive and irresistible urge to run from the effect.” Deploying the heat ray at the US border would be an unprecedented step, even for the Trump administration, which has made border security and clamping down on immigration a top priority. The DHS request did not specify where or how the weapon would be tested and how it might eventually be used, but over the years, there have been internal discussions about potentially using it for crowd dispersal along the US-Mexico border, according to current and former Customs and Border Protection officials. US officials had also considered deploying the system during moments of domestic unrest, including at the end of President Donald Trump’s first term when protests erupted over the murder of George Floyd, according to a former US official familiar with those discussions. The memo authorizes the “temporary loan” of one ADS system for seven months, starting in September, and states that it “shall not be operated by DoW (Department of War) personnel,” appearing to absolve the Pentagon of any responsibility for how the directed-energy system may ultimately be deployed. It also states that DHS is solely responsible for “system employment, use and development of tactics, techniques and procedures.” At the end of the seven-month loan period, DHS can submit an additional request for further use of the Pentagon system in border operations based on need, a defense official told CNN. “CBP is continually evaluating new technologies, especially those that enhance operational effectiveness and strengthen mission capabilities,” a Customs and Border Protection spokesperson said in a statement to CNN. The Pentagon referred CNN to DHS when asked for comment. The US military briefly deployed the system to Afghanistan nearly two decades ago but ultimately declined to use it during active combat operations. The US military also considered using the system for crowd control purposes at US facilities abroad where terrorist detainees were being held at the time but ultimately declined to employ it for that purpose as well, according to a source familiar with those previous internal considerations. Customs and Border Protection officials have previously entertained the idea of using the system in areas where there’s a high concentration of illegal crossings. Border officials have occasionally discussed potentially using the system as a crowd dispersal tool, but it has never been deployed. Officials ran into hurdles over legalities, use of force, effectiveness, and potential issues over sovereignty, particularly if the system was deployed on people in Mexico who had not yet crossed into the US. Chief among those concerns, however, was whether people could be harmed, either directly or indirectly, by the weapon. “Even if they’re chasing people back to the river, you don’t want them to go in and drown,” a former CBP official told CNN. “For the cost, for the training and for the policies you’re going to create, is the juice worth the squeeze?” El Centro sector, which covers around 70 miles along the US-Mexico border, evaluated the system several years ago, when Rodney Scott, who now serves as CBP commissioner, helmed that sector, according to a CBP official. At the time, officials were discussing whether the system might help agents with an influx of illegal crossings along the nearby river by discouraging people from trying to cross in that area or pushing them to get out of the water. One of the considerations at the time was whether the system might result in more rescues if people were incapacitated by the technology, the official said, though it’s unclear why it wasn’t deployed. In 2018, prior to midterms, CBP officials also weighed using it against migrants, but then-Homeland Security Secretary Kirstjen Nielsen shot it down. “The issue was treating immigrants and citizens like enemy combatants,” a former DHS official familiar with previous discussions about using the weapon against migrants told CNN. “Thematically, inhumane treatments typically get rejected.” Some Border Patrol agents have more recently cast doubt over whether they need the tool at all amid low border crossings and an increase in personnel, according to another former CBP official.",
-        "text_excerpt": "Pentagon grants DHS permission to test heat ray weapon for potential use at border\nThe Pentagon has given the Department of Homeland Security permission to test a military-grade heat ray and develop tactics to potentially use it in operations at the southern US border, according to a memo signed by Defense Secretary Pete Hegseth last month and obtained by CNN. The heat ray, officially known as the Active Denial Syste…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-21T14:45:44Z",
-        "last_collected_at": "2026-10-22T02:11:31Z",
-        "collection_count": 4,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:20447",
-        "timestamp": "2026-10-21T12:25:25Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1xblqlo",
-        "author": "dailymail",
-        "url": "https://www.reddit.com/r/ukpolitics/comments/1xblqlo/nearly_4000_migrants_waiting_to_cross_to_britain/",
-        "source_url": "https://www.reddit.com/r/ukpolitics/comments/1xblqlo/nearly_4000_migrants_waiting_to_cross_to_britain/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "border",
-          "crossing"
-        ],
-        "freshness_cues": [],
-        "text": "Nearly 4,000 migrants waiting to cross to Britain - double the normal amount - warns border security commander",
-        "text_excerpt": "Nearly 4,000 migrants waiting to cross to Britain - double the normal amount - warns border security commander",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-21T14:45:44Z",
-        "last_collected_at": "2026-10-21T22:52:56Z",
-        "collection_count": 3,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
         "timeline_id": "early_warning:1128",
         "timestamp": "2026-10-21T11:33:28Z",
         "layer": "EARLY_WARNING",
@@ -16484,85 +17337,6 @@
         "event_time_text": null,
         "event_time_normalized": null,
         "event_time_confidence": null,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:20448",
-        "timestamp": "2026-10-21T10:28:34Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1xbjiaz",
-        "author": "Best_Association_378",
-        "url": "https://www.reddit.com/r/vce/comments/1xbjiaz/mark_my_creating_text_for_country_stimulus_was/",
-        "source_url": "https://www.reddit.com/r/vce/comments/1xbjiaz/mark_my_creating_text_for_country_stimulus_was/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 40,
-        "information_score": 4,
-        "matched_information_cues": [
-          "crossing",
-          "sea",
-          "arrival"
-        ],
-        "freshness_cues": [
-          "now"
-        ],
-        "text": "Mark my creating text for country stimulus was the 2025 exam origins\nOrigins Written by Emma Whatson, Owner of the Whittlesea Weekly Newspaper Published: Tuesday 20th of November 2026 1:03pm It was 1961, and nineteen-year-old Rosa Maria stood on Station Pier with a suitcase, a borrowed English-language book and, stitched into the lining of her waistcoat, a pinch of tomato seeds wrapped in newspaper. They came from her father’s farm in Tuscany. Officially, she was carrying nothing, but in her pockets was the country of her past. Now, sixty years later in the Whittlesea community garden, those same seeds are teaching school children what it means to belong. Rosa is kneeling in the black soil with her knuckles knotted in the vines. In front of her are the descendants of those seeds. They climb the trellises of the Barkly Street community garden. They are fat, split-skinned and red in the February heat. These tomatoes find their way across the neighbourhood where people who have never met Rosa savour the harvest, folding them into curries, pastas and parmas. The weight we carry Australia records its arrivals through lists, ships and dates. Less often, it records the small things people carry with them: wedding photographs, rings, a handful of seeds. For the 1 in 3 Australians born overseas, these objects are more than souvenirs. They are anchors to past country. Psychologists who study migration describe “place attachment” as the emotional bond people formed with a landscape. They analyse how it does not dissolve with distance but rather how it travels, and it hungers for somewhere to rest. Rosa’s seeds became her way of staying connected to home. “When you plant something,” she says, pressing a seedling into the soil with her thumb, “you’re putting down roots. You’re saying you intend to stay, that this place might become home. But you’re also carrying something of where you came from. You don’t have to leave one place behind to belong to another.” Her words capture one of the contradictions of migration. A person can cross an ocean in a matter of weeks, but feeling at home can take a lifetime. And when that feeling finally comes, it rarely arrives alone. A soil with its own memory Rosa is not the first to grow food on this land. Long before the community garden existed, this was Wurundjeri Woi-wurrung Country, part of the lands of the Kulin Nation. Murnong, or yam daisy, was once an important food source across these grasslands. Its small yellow flowers spread across the plains, and harvested for its sweet, nutty tubers. For generations, First Nations people cared for and harvested the plants that sustained them. But, then came the settlers and their sheep. As grazing spread across the plains, murnong was trampled and eaten, and the grasslands that had supported it began to disappear. A food source sustained through generations of knowledge and care was devastated within a relatively short period of colonisation. Standing in the garden, I think about everything this ground has witnessed: the grasslands, the grazing, the market gardens, and the migrants who followed. Each generation has left its mark, often without asking what came before them. That history feels close as the murrnong grows next to Rosa’s tomatoes with the guidance of local Aboriginal horticulturalists. Their proximity is not a neat symbol of reconciliation, nor can a new seedling undo what has been lost. Yet, as Rosa presses her Italian plants into Whittlesea’s golden soil, she is not replacing the past, but rather borrowing the soil briefly. Her tomatoes grow alongside an ancient memory, a reminder that to truly belong to this Country, one must learn to listen to the deep, enduring history beneath the roots. Two ways of being rooted Among the stakes and watering cans, an uneasy but hopeful idea begins to take shape: belonging is not ownership. For many First Nations Australians, Country is not simply a place on a map, but a living relationship with land, community, culture and responsibility. For many migrants, the homeland they leave behind remains a source of identity and connection. Distinct in their origins, both connections ultimately dismantle the assumption that belonging is born of ownership. True connection to land cannot be contained within a property deed. The garden offers its own lesson. Tending a plot requires patience and a willingness to pay attention. Soil does not care about your passport or your politics. It asks whether you will show up, learn its rhythms and give back more than you take. The harvest By late afternoon, the light falls copper across the garden beds, and the garden begins to fill. A teenager films the tomatoes on her phone. Two older men talk animatedly in Japanese as they tend their bonsais. A young family is planting a tree, and a grandmother is harvesting her greens. Rosa hands me a tomato, freshly picked from the vine. Its skin splits at the first bite, releasing a sweetness that lingers on my tongue. I think of her family’s farm in Tuscany, of yellow flowers growing in grasslands now hidden beneath pavements. Rosa hands me a pile of seeds. “Take some,” she says. “Plant them. Tell them where they’re from.” I think of the journey of these seeds. From the soil of Italy to the harsh tides of the sea, to the fruitful earth of Melbourne. Origins, it turns out, are not simply behind us. They are not just a place we left or a country we lost. They are something we keep sowing: in new ground, among new neighbours, on land that held its own stories long before we arrived. At home, the seeds sit in an envelope on my windowsill. I haven’t found the right pot yet. I am still learning how to listen to the history waiting inside",
-        "text_excerpt": "Mark my creating text for country stimulus was the 2025 exam origins\nOrigins Written by Emma Whatson, Owner of the Whittlesea Weekly Newspaper Published: Tuesday 20th of November 2026 1:03pm It was 1961, and nineteen-year-old Rosa Maria stood on Station Pier with a suitcase, a borrowed English-language book and, stitched into the lining of her waistcoat, a pinch of tomato seeds wrapped in newspaper. They came from he…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-21T14:45:45Z",
-        "last_collected_at": "2026-10-21T14:45:45Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:20362",
-        "timestamp": "2026-10-21T08:50:42Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2112828916692136244",
-        "author": "BradGarbs",
-        "url": "https://x.com/BradGarbs/status/2112828916692136244",
-        "source_url": "https://x.com/BradGarbs/status/2112828916692136244",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "crossing"
-        ],
-        "freshness_cues": [],
-        "text": "@IsnitJustKit @jgbgt @AyoubKhanMP Certainly not Egypt when they're charging refugees thousands to cross over their heavily fortified border.\n\nAny soldier who commits a crime should be tried. Which was the case here, he was sentenced and the IDF replaced the statue.",
-        "text_excerpt": "@IsnitJustKit @jgbgt @AyoubKhanMP Certainly not Egypt when they're charging refugees thousands to cross over their heavily fortified border.\n\nAny soldier who commits a crime should be tried. Which was the case here, he was sentenced and the IDF replaced the statue.",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-21T08:58:09Z",
-        "last_collected_at": "2026-10-21T08:58:09Z",
-        "collection_count": 1,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -20610,38 +21384,6 @@
         "event_time_text": null,
         "event_time_normalized": null,
         "event_time_confidence": null,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "correlated:603",
-        "timestamp": "2026-10-15T14:28:09Z",
-        "layer": "CORRELATED",
-        "type": "BORDER_CROSSING",
-        "signal_type": "BORDER_CROSSING",
-        "event_type": "BORDER_CROSSING",
-        "source": "X",
-        "source_post_id": "2110739508207485093",
-        "author": "jcmeyer119",
-        "url": "https://x.com/jcmeyer119/status/2110739508207485093",
-        "source_url": "https://x.com/jcmeyer119/status/2110739508207485093",
-        "region": "HORN_OF_AFRICA",
-        "primary_region": "HORN_OF_AFRICA",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "latitude": null,
-        "longitude": null,
-        "confidence": 0.25,
-        "priority": "MEDIUM",
-        "priority_score": 25.0,
-        "text": "@TheModerateCase If this case is accurate, it's just another politically motivated prosecution from the Trump playbook. Documentary proof of her exact birthdate from decades ago in Somalia likely doesn't exist; whatever immigration recorded when she arrived as a refugee controls. USCIS has her",
-        "text_excerpt": "@TheModerateCase If this case is accurate, it's just another politically motivated prosecution from the Trump playbook. Documentary proof of her exact birthdate from decades ago in Somalia likely doesn't exist; whatever immigration recorded when she arrived as a refugee controls. USCIS has her",
-        "event_group_id": 472,
-        "correlation_score": 0.77,
-        "related_source_count": 7,
-        "source_types": [
-          "X"
-        ],
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -74626,9 +75368,9 @@
     "review_start_date": "2026-10-17",
     "review_cohort": "FIRST_RECORDED_ON_OR_AFTER_CUTOFF",
     "decisions": {
-      "EXCLUDE": 103,
-      "PUBLISH": 58,
-      "REVIEW": 91
+      "EXCLUDE": 101,
+      "PUBLISH": 61,
+      "REVIEW": 93
     },
     "removed_display_items": {
       "live_events": 18,
@@ -74638,9 +75380,9 @@
       "early_warning_signals": 3,
       "crossing_access_signals": 0,
       "top_crossing_access_posts": 0,
-      "high_priority_intelligence": 2,
+      "high_priority_intelligence": 1,
       "access_signals": 0,
-      "timeline": 188
+      "timeline": 189
     },
     "historical_review_status": "HISTORICAL_NOT_AI_REVIEWED",
     "narrative_layers_not_reviewed": [
@@ -74649,6 +75391,6 @@
     ],
     "risk_metrics_recalculated": false,
     "warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking.",
-    "conflicting_identity_count": 3
+    "conflicting_identity_count": 4
   }
 }
