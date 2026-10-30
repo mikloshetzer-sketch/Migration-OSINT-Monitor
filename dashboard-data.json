@@ -1,25 +1,25 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-10-29T20:46:01Z",
-  "generated_at": "2026-10-29T20:46:01Z",
+  "updated_at": "2026-10-30T01:27:31Z",
+  "generated_at": "2026-10-30T01:27:31Z",
   "current_run": {
     "available": true,
-    "id": 366,
-    "run_uuid": "2d4bfd0e-1ae0-4065-be72-4251c7769f11",
-    "started_at": "2026-10-29T20:43:14Z",
-    "completed_at": "2026-10-29T20:45:59Z",
+    "id": 367,
+    "run_uuid": "a1f84c82-16f3-49d4-b276-26b15bf057f3",
+    "started_at": "2026-10-30T01:24:51Z",
+    "completed_at": "2026-10-30T01:27:29Z",
     "status": "SUCCESS",
-    "posts_returned": 134,
-    "unique_posts_collected": 76,
+    "posts_returned": 137,
+    "unique_posts_collected": 98,
     "x_posts_returned": 50,
-    "reddit_posts_returned": 24,
+    "reddit_posts_returned": 27,
     "mastodon_posts_returned": 50,
-    "unique_x_posts": 25,
-    "unique_reddit_posts": 23,
-    "unique_mastodon_posts": 18,
+    "unique_x_posts": 45,
+    "unique_reddit_posts": 24,
+    "unique_mastodon_posts": 19,
     "noise_filtered": 0,
-    "non_operational_filtered": 76,
-    "historical_references_filtered": 0,
+    "non_operational_filtered": 95,
+    "historical_references_filtered": 1,
     "influence_signals": 0,
     "influence_signals_detected": 0,
     "crossing_facilitation_signals": 0,
@@ -30,22 +30,22 @@
     "mobilization_report_signals": 0,
     "decision_influence_signals": 0,
     "online_influence_report_signals": 0,
-    "operational_events": 0,
-    "operational_events_analyzed": 0,
-    "historical_events_available": 72,
+    "operational_events": 2,
+    "operational_events_analyzed": 2,
+    "historical_events_available": 71,
     "new_correlations": 0,
     "correlated_events": 0,
-    "new_correlation_groups": 0,
+    "new_correlation_groups": 2,
     "database_correlations": 0,
     "current_run_correlations": 0,
-    "new_events": 0,
-    "new_events_saved": 0,
+    "new_events": 2,
+    "new_events_saved": 2,
     "events_already_existing": 0,
-    "new_event_groups": 0,
+    "new_event_groups": 2,
     "updated_event_groups": 0,
     "bootstrapped_event_groups": 0,
     "existing_event_groups_reused": 0,
-    "event_group_sources_linked": 0,
+    "event_group_sources_linked": 2,
     "x_collector_errors": 0,
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
@@ -53,19 +53,19 @@
   },
   "kpis": {
     "operational_events": 9,
-    "new_events": 0,
+    "new_events": 2,
     "correlated_events": 0,
-    "active_event_groups": 598,
+    "active_event_groups": 600,
     "sources": 4,
     "regions": 1,
-    "collected_posts_24h": 293,
-    "influence_signals": 4,
+    "collected_posts_24h": 264,
+    "influence_signals": 5,
     "access_signals": 0,
     "high_priority": 0,
-    "current_run_operational_events": 0,
-    "current_run_unique_posts": 76,
+    "current_run_operational_events": 2,
+    "current_run_unique_posts": 98,
     "access_signals_raw": 0,
-    "influence_signals_raw": 4,
+    "influence_signals_raw": 5,
     "influence_narratives": 3
   },
   "live_events": [
@@ -164,30 +164,30 @@
     {
       "source": "X",
       "name": "X",
-      "count": 197,
-      "posts": 197,
-      "percentage": 67.24
+      "count": 175,
+      "posts": 175,
+      "percentage": 66.29
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 45,
-      "posts": 45,
-      "percentage": 15.36
+      "count": 42,
+      "posts": 42,
+      "percentage": 15.91
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 38,
-      "posts": 38,
-      "percentage": 12.97
+      "count": 34,
+      "posts": 34,
+      "percentage": 12.88
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
       "count": 13,
       "posts": 13,
-      "percentage": 4.44
+      "percentage": 4.92
     }
   ],
   "region_activity": [
@@ -203,38 +203,38 @@
     {
       "source": "X",
       "name": "X",
-      "count": 197,
-      "posts": 197,
-      "percentage": 67.24
+      "count": 175,
+      "posts": 175,
+      "percentage": 66.29
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 45,
-      "posts": 45,
-      "percentage": 15.36
+      "count": 42,
+      "posts": 42,
+      "percentage": 15.91
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 38,
-      "posts": 38,
-      "percentage": 12.97
+      "count": 34,
+      "posts": 34,
+      "percentage": 12.88
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
       "count": 13,
       "posts": 13,
-      "percentage": 4.44
+      "percentage": 4.92
     }
   ],
   "correlation": {
     "correlated_events": 0,
     "correlated_sources": 0,
     "grouped_sources": 9,
-    "event_groups": 598,
-    "active_groups": 598,
+    "event_groups": 600,
+    "active_groups": 600,
     "multi_source_groups": 59,
     "strongest_match": 1.0,
     "correlation_rate": 0.0
@@ -250,44 +250,44 @@
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "database": "AVAILABLE",
-    "last_run_id": 366,
-    "last_completed_at": "2026-10-29T20:45:59Z"
+    "last_run_id": 367,
+    "last_completed_at": "2026-10-30T01:27:29Z"
   },
   "operational_assessment": {
     "operational_events_24h": 9,
-    "influence_signals_24h": 4,
+    "influence_signals_24h": 5,
     "access_signals_24h": 0,
     "correlated_events_24h": 0,
-    "active_event_groups": 598,
+    "active_event_groups": 600,
     "dominant_region": "GLOBAL",
     "hotspot": "GLOBAL",
     "dominant_event_type": "DEPORTATION",
     "dominant_source": "X",
-    "average_confidence": 0.444,
+    "average_confidence": 0.443,
     "confidence_level": "LOW",
     "correlation_rate": 0.0,
     "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 9 operatív migrációs eseményt, 4 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 598 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Global. A domináns operatív eseménytípus: Deportation. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.44. A jelenlegi aktivitási szint: MODERATE.",
+    "summary": "Az elmúlt 24 órában a rendszer 9 operatív migrációs eseményt, 5 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 600 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Global. A domináns operatív eseménytípus: Deportation. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.44. A jelenlegi aktivitási szint: MODERATE.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
   "analytical_assessment": {
     "operational_events_24h": 9,
-    "influence_signals_24h": 4,
+    "influence_signals_24h": 5,
     "access_signals_24h": 0,
     "correlated_events_24h": 0,
-    "active_event_groups": 598,
+    "active_event_groups": 600,
     "dominant_region": "GLOBAL",
     "hotspot": "GLOBAL",
     "dominant_event_type": "DEPORTATION",
     "dominant_source": "X",
-    "average_confidence": 0.444,
+    "average_confidence": 0.443,
     "confidence_level": "LOW",
     "correlation_rate": 0.0,
     "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 9 operatív migrációs eseményt, 4 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 598 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Global. A domináns operatív eseménytípus: Deportation. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.44. A jelenlegi aktivitási szint: MODERATE.",
+    "summary": "Az elmúlt 24 órában a rendszer 9 operatív migrációs eseményt, 5 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 600 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Global. A domináns operatív eseménytípus: Deportation. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.44. A jelenlegi aktivitási szint: MODERATE.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
@@ -653,84 +653,6 @@
       "priority_score": 30.25,
       "analyst_priority": "LOW",
       "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-    },
-    {
-      "id": 1252,
-      "source": "X",
-      "source_post_id": "2115703220878061665",
-      "author": "grok",
-      "language": "en",
-      "published_at": "2026-10-29T07:12:10Z",
-      "first_detected_at": "2026-10-29T07:45:36Z",
-      "last_detected_at": "2026-10-29T07:45:36Z",
-      "detection_count": 1,
-      "text": "@allinyourhead69 @bhiggyd @Piccadillybaby @PastorMarvy Public reports show repeated 2026 Ghana operations against cyber-fraud and trafficking rings that often involve Nigerian nationals, with hundreds arrested or repatriated; many of those later classed as trafficking victims themselves. Official migrant estimates place Nigerians at",
-      "text_excerpt": "@allinyourhead69 @bhiggyd @Piccadillybaby @PastorMarvy Public reports show repeated 2026 Ghana operations against cyber-fraud and trafficking rings that often involve Nigerian nationals, with hundreds arrested or repatriated; many of those later classed as trafficking victims themselves. Official migrant estimates place Nigerians at",
-      "url": "https://x.com/grok/status/2115703220878061665",
-      "source_url": "https://x.com/grok/status/2115703220878061665",
-      "primary_signal": "FACILITATION_EARLY_WARNING",
-      "signal_type": "FACILITATION_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "FACILITATION_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 8.75,
-      "matched_signals": [
-        "FACILITATION_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "facilitation",
-          "trafficking victims themselves. Official migrant"
-        ],
-        [
-          "enforcement",
-          "arrested"
-        ]
-      ],
-      "matched_groups": [
-        "FACILITATION",
-        "ENFORCEMENT"
-      ],
-      "context_matches": [
-        "migrant"
-      ],
-      "high_value_matches": [
-        "trafficking victims themselves. Official migrant"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
-      "analyst_priority": "LOW",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "2115703220878061665"
-      ],
-      "related_authors": [
-        "grok"
-      ],
-      "related_urls": [
-        "https://x.com/grok/status/2115703220878061665"
-      ],
-      "related_sources": [
-        "X"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1,
-      "ai_review_status": "AI_REVIEWED",
-      "ai_editorial_decision": "PUBLISH"
     }
   ],
   "influence_signals": [
@@ -793,6 +715,62 @@
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
       "priority_score": 28.0,
+      "analyst_priority": "LOW",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
+      "id": 1254,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1xj23na",
+      "author": "John3262005",
+      "language": null,
+      "published_at": "2026-10-30T01:17:04Z",
+      "first_detected_at": "2026-10-30T01:25:31Z",
+      "last_detected_at": "2026-10-30T01:25:31Z",
+      "detection_count": 1,
+      "text": "Trump’s Deportation Deal With Cameroon Will Equip Unit Accused of War Crimes\nThe Trump administration agreed to send around $35 million in military aid to a Central African military unit previously accused of war crimes as part of a wider arrangement to deport third-country migrants to the region, U.S. officials and congressional aides said. Those people, all of whom were involved in or briefed on the negotiations, said the military aid and deportation deal were brokered simultaneously by State Department officials as part of the same package. The deal offers a window into how the Trump administration is expanding its deportation program across oceans and tying its deportation agenda to foreign military assistance, as it makes arrangements with numerous African countries—many with checkered human-rights records—to accept flights of illegal migrants who were detained in the U.S. Cameroon agreed to begin accepting U.S. deportation flights of third-country nationals in December. It has accepted at least 36 U.S. deportees since then, according to rights group Refugees International. Some of the officials said the administration has plans to scale up the number of deportation flights to African countries in the coming months. The deportation agreement included a previously undisclosed military aid package to deliver armored personnel carriers to an elite military unit in Cameroon called the Rapid Intervention Battalion, or BIR, the officials and congressional aides said. The U.S. cut off some assistance to the BIR during the first Trump administration after human rights groups published findings that it committed abuses including torturing detainees to death. The State Department notified Congress of the military aid package in January about a month after the deportation deal was struck, some of the officials and aides said. Around the same time, the U.S. agreed to channel $30 million to the United Nations refugee agency’s work in Cameroon despite broader cutbacks to foreign aid under the Trump administration. Sen. Jeanne Shaheen, the top Democrat on the Senate Foreign Relations Committee, placed a hold on the military aid package earlier this year, some of the people familiar with the matter said. That paused the deal for several months, but in April, Secretary of State Marco Rubio’s team notified her that the administration was overriding her hold and moving forward with the deal, officials said. Shaheen, who didn’t go public about placing the hold earlier this year, called the deal “grotesque” this week and said she was disappointed in Rubio for allowing it. “The United States should not be exchanging sensitive military equipment with countries that have questionable human-rights records—especially in exchange for human beings,” she said in a statement. The State Department declined to comment on the specifics on any agreement but said the U.S. and Cameroon have “a strong partnership on a range of shared priorities, including regional security and counterterrorism” and cooperate on security threats to U.S. interests or the homeland. The statement added that the department adheres to the Leahy Law, which bans military assistance to forces implicated in human-rights abuses. President Trump has made cracking down on illegal migration a core part of his administration’s policy platform and has touted progress in deporting thousands of illegal migrants with criminal records, including some to African countries. Cameroon is one of around a dozen African countries that have concluded so-called “third-country nationals agreements” with the Trump administration to accept deportees, alongside the Central African Republic, Democratic Republic of Congo, Equatorial Guinea and others. The individuals that the U.S. is deporting to African countries often can’t be returned to their home countries either because they say they would risk violence or persecution there or because those countries won’t accept them. Cameroon, which 93-year-old President Paul Biya has ruled for over 40 years, earlier this year briefly detained journalists and lawyers who sought to meet with the U.S. deportees in the country. U.S. Africa Command, the Pentagon’s combatant command responsible for U.S. military operations and security partnerships in Africa, considers Cameroon an important partner in the fight against violent Islamic extremist groups that have gained ground in West and Central Africa in recent years. The military aid package to the BIR, officials said, served the dual purpose of adding a new incentive for Cameroon to cooperate on accepting U.S. deportees while also supporting U.S. counterterrorism efforts in the region. Gen. Dagvin Anderson, the commander of U.S. forces in Africa, told Congress in May that AFRICOM’s area of responsibility “has become the center of gravity for global jihadism, with West Africa accounting for over 51 percent of global terror-related deaths” in recent years. Two State Department officials who have played key roles in helping secure deportation deals with African countries are Christian Erhardt, a deputy assistant secretary at the State Department’s Bureau of Population, Refugees, and Migration, and Andrew Veprek, the top official overseeing foreign assistance, humanitarian affairs and religious freedom. Trump in late September nominated Erhardt to be U.S. ambassador to Cameroon. A 2017 report by the human rights group Amnesty International found that the BIR engaged in war crimes as it battled the Boko Haram terrorist group in the country’s north, subjecting detainees to beatings and drownings and torturing some detainees to death. In 2019, the first Trump administration cut military assistance to the BIR and expelled Cameroon from a U.S.-Africa trade pact over failures “to address concerns regarding persistent human-rights violations being committed by Cameroonian security forces.” Cameroon at the time disavowed allegations that its forces were engaged in human-rights violations and said its military maintained high standards of professionalism.",
+      "text_excerpt": "Trump’s Deportation Deal With Cameroon Will Equip Unit Accused of War Crimes\nThe Trump administration agreed to send around $35 million in military aid to a Central African military unit previously accused of war crimes as part of a wider arrangement to deport third-country migrants to the region, U.S. officials and congressional aides said. Those people, all of whom were involved in or briefed on the negotiations, said the military aid and deportation deal were brokered simultaneously by State Department officials as part of the same package. The deal offers a window into how the Trump administration is expanding its deportation program across oceans and tying its deportation agenda to fore",
+      "url": "https://www.reddit.com/r/WhatTrumpHasDone/comments/1xj23na/trumps_deportation_deal_with_cameroon_will_equip/",
+      "source_url": "https://www.reddit.com/r/WhatTrumpHasDone/comments/1xj23na/trumps_deportation_deal_with_cameroon_will_equip/",
+      "primary_signal": "ENFORCEMENT_EARLY_WARNING",
+      "signal_type": "ENFORCEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ENFORCEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.62,
+      "score": 6.0,
+      "matched_signals": [
+        "ENFORCEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "enforcement",
+          "detained"
+        ]
+      ],
+      "matched_groups": [
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "AMERICAS",
+      "primary_region": "AMERICAS",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 25.7,
       "analyst_priority": "LOW",
       "ai_review_status": "AI_REVIEWED",
       "ai_editorial_decision": "PUBLISH"
@@ -861,9 +839,218 @@
       "analyst_priority": "LOW",
       "ai_review_status": "AI_REVIEWED",
       "ai_editorial_decision": "PUBLISH"
+    },
+    {
+      "id": 1254,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1xj23na",
+      "author": "John3262005",
+      "language": null,
+      "published_at": "2026-10-30T01:17:04Z",
+      "first_detected_at": "2026-10-30T01:25:31Z",
+      "last_detected_at": "2026-10-30T01:25:31Z",
+      "detection_count": 1,
+      "text": "Trump’s Deportation Deal With Cameroon Will Equip Unit Accused of War Crimes\nThe Trump administration agreed to send around $35 million in military aid to a Central African military unit previously accused of war crimes as part of a wider arrangement to deport third-country migrants to the region, U.S. officials and congressional aides said. Those people, all of whom were involved in or briefed on the negotiations, said the military aid and deportation deal were brokered simultaneously by State Department officials as part of the same package. The deal offers a window into how the Trump administration is expanding its deportation program across oceans and tying its deportation agenda to foreign military assistance, as it makes arrangements with numerous African countries—many with checkered human-rights records—to accept flights of illegal migrants who were detained in the U.S. Cameroon agreed to begin accepting U.S. deportation flights of third-country nationals in December. It has accepted at least 36 U.S. deportees since then, according to rights group Refugees International. Some of the officials said the administration has plans to scale up the number of deportation flights to African countries in the coming months. The deportation agreement included a previously undisclosed military aid package to deliver armored personnel carriers to an elite military unit in Cameroon called the Rapid Intervention Battalion, or BIR, the officials and congressional aides said. The U.S. cut off some assistance to the BIR during the first Trump administration after human rights groups published findings that it committed abuses including torturing detainees to death. The State Department notified Congress of the military aid package in January about a month after the deportation deal was struck, some of the officials and aides said. Around the same time, the U.S. agreed to channel $30 million to the United Nations refugee agency’s work in Cameroon despite broader cutbacks to foreign aid under the Trump administration. Sen. Jeanne Shaheen, the top Democrat on the Senate Foreign Relations Committee, placed a hold on the military aid package earlier this year, some of the people familiar with the matter said. That paused the deal for several months, but in April, Secretary of State Marco Rubio’s team notified her that the administration was overriding her hold and moving forward with the deal, officials said. Shaheen, who didn’t go public about placing the hold earlier this year, called the deal “grotesque” this week and said she was disappointed in Rubio for allowing it. “The United States should not be exchanging sensitive military equipment with countries that have questionable human-rights records—especially in exchange for human beings,” she said in a statement. The State Department declined to comment on the specifics on any agreement but said the U.S. and Cameroon have “a strong partnership on a range of shared priorities, including regional security and counterterrorism” and cooperate on security threats to U.S. interests or the homeland. The statement added that the department adheres to the Leahy Law, which bans military assistance to forces implicated in human-rights abuses. President Trump has made cracking down on illegal migration a core part of his administration’s policy platform and has touted progress in deporting thousands of illegal migrants with criminal records, including some to African countries. Cameroon is one of around a dozen African countries that have concluded so-called “third-country nationals agreements” with the Trump administration to accept deportees, alongside the Central African Republic, Democratic Republic of Congo, Equatorial Guinea and others. The individuals that the U.S. is deporting to African countries often can’t be returned to their home countries either because they say they would risk violence or persecution there or because those countries won’t accept them. Cameroon, which 93-year-old President Paul Biya has ruled for over 40 years, earlier this year briefly detained journalists and lawyers who sought to meet with the U.S. deportees in the country. U.S. Africa Command, the Pentagon’s combatant command responsible for U.S. military operations and security partnerships in Africa, considers Cameroon an important partner in the fight against violent Islamic extremist groups that have gained ground in West and Central Africa in recent years. The military aid package to the BIR, officials said, served the dual purpose of adding a new incentive for Cameroon to cooperate on accepting U.S. deportees while also supporting U.S. counterterrorism efforts in the region. Gen. Dagvin Anderson, the commander of U.S. forces in Africa, told Congress in May that AFRICOM’s area of responsibility “has become the center of gravity for global jihadism, with West Africa accounting for over 51 percent of global terror-related deaths” in recent years. Two State Department officials who have played key roles in helping secure deportation deals with African countries are Christian Erhardt, a deputy assistant secretary at the State Department’s Bureau of Population, Refugees, and Migration, and Andrew Veprek, the top official overseeing foreign assistance, humanitarian affairs and religious freedom. Trump in late September nominated Erhardt to be U.S. ambassador to Cameroon. A 2017 report by the human rights group Amnesty International found that the BIR engaged in war crimes as it battled the Boko Haram terrorist group in the country’s north, subjecting detainees to beatings and drownings and torturing some detainees to death. In 2019, the first Trump administration cut military assistance to the BIR and expelled Cameroon from a U.S.-Africa trade pact over failures “to address concerns regarding persistent human-rights violations being committed by Cameroonian security forces.” Cameroon at the time disavowed allegations that its forces were engaged in human-rights violations and said its military maintained high standards of professionalism.",
+      "text_excerpt": "Trump’s Deportation Deal With Cameroon Will Equip Unit Accused of War Crimes\nThe Trump administration agreed to send around $35 million in military aid to a Central African military unit previously accused of war crimes as part of a wider arrangement to deport third-country migrants to the region, U.S. officials and congressional aides said. Those people, all of whom were involved in or briefed on the negotiations, said the military aid and deportation deal were brokered simultaneously by State Department officials as part of the same package. The deal offers a window into how the Trump administration is expanding its deportation program across oceans and tying its deportation agenda to fore",
+      "url": "https://www.reddit.com/r/WhatTrumpHasDone/comments/1xj23na/trumps_deportation_deal_with_cameroon_will_equip/",
+      "source_url": "https://www.reddit.com/r/WhatTrumpHasDone/comments/1xj23na/trumps_deportation_deal_with_cameroon_will_equip/",
+      "primary_signal": "ENFORCEMENT_EARLY_WARNING",
+      "signal_type": "ENFORCEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ENFORCEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.62,
+      "score": 6.0,
+      "matched_signals": [
+        "ENFORCEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "enforcement",
+          "detained"
+        ]
+      ],
+      "matched_groups": [
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "AMERICAS",
+      "primary_region": "AMERICAS",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 25.7,
+      "analyst_priority": "LOW",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
     }
   ],
   "influence_narratives": [
+    {
+      "id": 1255,
+      "source": "X",
+      "source_post_id": "2115973614407413823",
+      "author": "NewsNew97351204",
+      "language": "en",
+      "published_at": "2026-10-30T01:06:37Z",
+      "first_detected_at": "2026-10-30T01:26:31Z",
+      "last_detected_at": "2026-10-30T01:26:31Z",
+      "detection_count": 1,
+      "text": "Breaking News\n'The gangs are laughing at us': Channel migrants board 'custom-made' small boat in colours of the Kurdish flag, as Belgian police stand and watch\n\nMigrants are heading to Britain on a ‘custom-made’ small boat in the colours of the Kurdish flag, in an apparent https://t.co/2KrA39Qscd",
+      "text_excerpt": "Breaking News\n'The gangs are laughing at us': Channel migrants board 'custom-made' small boat in colours of the Kurdish flag, as Belgian police stand and watch\n\nMigrants are heading to Britain on a ‘custom-made’ small boat in the colours of the Kurdish flag, in an apparent https://t.co/2KrA39Qscd",
+      "url": "https://x.com/NewsNew97351204/status/2115973614407413823",
+      "source_url": "https://x.com/NewsNew97351204/status/2115973614407413823",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.9,
+      "score": 10.25,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "Migrants are heading"
+        ],
+        [
+          "route",
+          "boat"
+        ],
+        [
+          "enforcement",
+          "police"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT",
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants",
+        "Migrants"
+      ],
+      "high_value_matches": [
+        "Migrants are heading"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 31.5,
+      "analyst_priority": "LOW",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2115973614407413823"
+      ],
+      "related_authors": [
+        "NewsNew97351204"
+      ],
+      "related_urls": [
+        "https://x.com/NewsNew97351204/status/2115973614407413823"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
+    {
+      "id": 1253,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1xj27bi",
+      "author": "John3262005",
+      "language": null,
+      "published_at": "2026-10-30T01:21:53Z",
+      "first_detected_at": "2026-10-30T01:25:30Z",
+      "last_detected_at": "2026-10-30T01:25:30Z",
+      "detection_count": 1,
+      "text": "Trump’s Deportation Deal With Cameroon Will Equip Unit Accused of War Crimes\nThe Trump administration agreed to send around $35 million in military aid to a Central African military unit previously accused of war crimes as part of a wider arrangement to deport third-country migrants to the region, U.S. officials and congressional aides said. Those people, all of whom were involved in or briefed on the negotiations, said the military aid and deportation deal were brokered simultaneously by State Department officials as part of the same package. The deal offers a window into how the Trump administration is expanding its deportation program across oceans and tying its deportation agenda to foreign military assistance, as it makes arrangements with numerous African countries—many with checkered human-rights records—to accept flights of illegal migrants who were detained in the U.S. Cameroon agreed to begin accepting U.S. deportation flights of third-country nationals in December. It has accepted at least 36 U.S. deportees since then, according to rights group Refugees International. Some of the officials said the administration has plans to scale up the number of deportation flights to African countries in the coming months. The deportation agreement included a previously undisclosed military aid package to deliver armored personnel carriers to an elite military unit in Cameroon called the Rapid Intervention Battalion, or BIR, the officials and congressional aides said. The U.S. cut off some assistance to the BIR during the first Trump administration after human rights groups published findings that it committed abuses including torturing detainees to death. The State Department notified Congress of the military aid package in January about a month after the deportation deal was struck, some of the officials and aides said. Around the same time, the U.S. agreed to channel $30 million to the United Nations refugee agency’s work in Cameroon despite broader cutbacks to foreign aid under the Trump administration. Sen. Jeanne Shaheen, the top Democrat on the Senate Foreign Relations Committee, placed a hold on the military aid package earlier this year, some of the people familiar with the matter said. That paused the deal for several months, but in April, Secretary of State Marco Rubio’s team notified her that the administration was overriding her hold and moving forward with the deal, officials said. Shaheen, who didn’t go public about placing the hold earlier this year, called the deal “grotesque” this week and said she was disappointed in Rubio for allowing it. “The United States should not be exchanging sensitive military equipment with countries that have questionable human-rights records—especially in exchange for human beings,” she said in a statement. The State Department declined to comment on the specifics on any agreement but said the U.S. and Cameroon have “a strong partnership on a range of shared priorities, including regional security and counterterrorism” and cooperate on security threats to U.S. interests or the homeland. The statement added that the department adheres to the Leahy Law, which bans military assistance to forces implicated in human-rights abuses. President Trump has made cracking down on illegal migration a core part of his administration’s policy platform and has touted progress in deporting thousands of illegal migrants with criminal records, including some to African countries. Cameroon is one of around a dozen African countries that have concluded so-called “third-country nationals agreements” with the Trump administration to accept deportees, alongside the Central African Republic, Democratic Republic of Congo, Equatorial Guinea and others. The individuals that the U.S. is deporting to African countries often can’t be returned to their home countries either because they say they would risk violence or persecution there or because those countries won’t accept them. Cameroon, which 93-year-old President Paul Biya has ruled for over 40 years, earlier this year briefly detained journalists and lawyers who sought to meet with the U.S. deportees in the country. U.S. Africa Command, the Pentagon’s combatant command responsible for U.S. military operations and security partnerships in Africa, considers Cameroon an important partner in the fight against violent Islamic extremist groups that have gained ground in West and Central Africa in recent years. The military aid package to the BIR, officials said, served the dual purpose of adding a new incentive for Cameroon to cooperate on accepting U.S. deportees while also supporting U.S. counterterrorism efforts in the region. Gen. Dagvin Anderson, the commander of U.S. forces in Africa, told Congress in May that AFRICOM’s area of responsibility “has become the center of gravity for global jihadism, with West Africa accounting for over 51 percent of global terror-related deaths” in recent years. Two State Department officials who have played key roles in helping secure deportation deals with African countries are Christian Erhardt, a deputy assistant secretary at the State Department’s Bureau of Population, Refugees, and Migration, and Andrew Veprek, the top official overseeing foreign assistance, humanitarian affairs and religious freedom. Trump in late September nominated Erhardt to be U.S. ambassador to Cameroon. A 2017 report by the human rights group Amnesty International found that the BIR engaged in war crimes as it battled the Boko Haram terrorist group in the country’s north, subjecting detainees to beatings and drownings and torturing some detainees to death. In 2019, the first Trump administration cut military assistance to the BIR and expelled Cameroon from a U.S.-Africa trade pact over failures “to address concerns regarding persistent human-rights violations being committed by Cameroonian security forces.” Cameroon at the time disavowed allegations that its forces were engaged in human-rights violations and said its military maintained high standards of professionalism.",
+      "text_excerpt": "Trump’s Deportation Deal With Cameroon Will Equip Unit Accused of War Crimes\nThe Trump administration agreed to send around $35 million in military aid to a Central African military unit previously accused of war crimes as part of a wider arrangement to deport third-country migrants to the region, U.S. officials and congressional aides said. Those people, all of whom were involved in or briefed on the negotiations, said the military aid and deportation deal were brokered simultaneously by State Department officials as part of the same package. The deal offers a window into how the Trump administration is expanding its deportation program across oceans and tying its deportation agenda to fore",
+      "url": "https://www.reddit.com/r/neoliberal/comments/1xj27bi/trumps_deportation_deal_with_cameroon_will_equip/",
+      "source_url": "https://www.reddit.com/r/neoliberal/comments/1xj27bi/trumps_deportation_deal_with_cameroon_will_equip/",
+      "primary_signal": "ENFORCEMENT_EARLY_WARNING",
+      "signal_type": "ENFORCEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ENFORCEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.62,
+      "score": 6.0,
+      "matched_signals": [
+        "ENFORCEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "enforcement",
+          "detained"
+        ]
+      ],
+      "matched_groups": [
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "AMERICAS",
+      "primary_region": "AMERICAS",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 28.7,
+      "analyst_priority": "LOW",
+      "related_posts_count": 2,
+      "related_post_ids": [
+        "reddit_1xj27bi",
+        "reddit_1xj23na"
+      ],
+      "related_authors": [
+        "John3262005"
+      ],
+      "related_urls": [
+        "https://www.reddit.com/r/neoliberal/comments/1xj27bi/trumps_deportation_deal_with_cameroon_will_equip/",
+        "https://www.reddit.com/r/WhatTrumpHasDone/comments/1xj23na/trumps_deportation_deal_with_cameroon_will_equip/"
+      ],
+      "related_sources": [
+        "REDDIT"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
     {
       "id": 1252,
       "source": "X",
@@ -933,151 +1120,6 @@
       ],
       "related_urls": [
         "https://x.com/grok/status/2115703220878061665"
-      ],
-      "related_sources": [
-        "X"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
-    },
-    {
-      "id": 1249,
-      "source": "X",
-      "source_post_id": "2115561918215635367",
-      "author": "TrumpWorld_QQ",
-      "language": "en",
-      "published_at": "2026-10-28T21:50:41Z",
-      "first_detected_at": "2026-10-28T21:58:57Z",
-      "last_detected_at": "2026-10-28T21:58:57Z",
-      "detection_count": 1,
-      "text": "BREAKING:\n\nPoland announces it’s sending the Polish Army to the country’s borders with Germany and Lithuania in order to stop illegals migrants from crossing into Poland https://t.co/GMeAiH3p22",
-      "text_excerpt": "BREAKING:\n\nPoland announces it’s sending the Polish Army to the country’s borders with Germany and Lithuania in order to stop illegals migrants from crossing into Poland https://t.co/GMeAiH3p22",
-      "url": "https://x.com/TrumpWorld_QQ/status/2115561918215635367",
-      "source_url": "https://x.com/TrumpWorld_QQ/status/2115561918215635367",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.62,
-      "score": 5.75,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrants from crossing"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT"
-      ],
-      "context_matches": [
-        "migrants"
-      ],
-      "high_value_matches": [
-        "migrants from crossing"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "EASTERN_EU_BORDER",
-      "primary_region": "EASTERN_EU_BORDER",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 25.7,
-      "analyst_priority": "LOW",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "2115561918215635367"
-      ],
-      "related_authors": [
-        "TrumpWorld_QQ"
-      ],
-      "related_urls": [
-        "https://x.com/TrumpWorld_QQ/status/2115561918215635367"
-      ],
-      "related_sources": [
-        "X"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
-    },
-    {
-      "id": 1250,
-      "source": "X",
-      "source_post_id": "2115561431311757375",
-      "author": "Sean1_23",
-      "language": "en",
-      "published_at": "2026-10-28T21:48:45Z",
-      "first_detected_at": "2026-10-28T21:59:26Z",
-      "last_detected_at": "2026-10-28T21:59:26Z",
-      "detection_count": 1,
-      "text": "@KaiserLoengramm If this is correct, this doesn't look like mass deportations at all.\n\n\"MPI finds:\nMore than two-thirds of the 980,000 deportations in the first 18 months of the second Trump term involved migrants initially intercepted at the border\"\n\nhttps://t.co/jPo7hMTAhj",
-      "text_excerpt": "@KaiserLoengramm If this is correct, this doesn't look like mass deportations at all.\n\n\"MPI finds:\nMore than two-thirds of the 980,000 deportations in the first 18 months of the second Trump term involved migrants initially intercepted at the border\"\n\nhttps://t.co/jPo7hMTAhj",
-      "url": "https://x.com/Sean1_23/status/2115561431311757375",
-      "source_url": "https://x.com/Sean1_23/status/2115561431311757375",
-      "primary_signal": "ROUTE_EARLY_WARNING",
-      "signal_type": "ROUTE_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ROUTE_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.72,
-      "score": 7.25,
-      "matched_signals": [
-        "ROUTE_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "route",
-          "border"
-        ],
-        [
-          "enforcement",
-          "intercepted"
-        ]
-      ],
-      "matched_groups": [
-        "ROUTE",
-        "ENFORCEMENT"
-      ],
-      "context_matches": [
-        "migrants"
-      ],
-      "high_value_matches": [],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 25.2,
-      "analyst_priority": "LOW",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "2115561431311757375"
-      ],
-      "related_authors": [
-        "Sean1_23"
-      ],
-      "related_urls": [
-        "https://x.com/Sean1_23/status/2115561431311757375"
       ],
       "related_sources": [
         "X"
@@ -1216,15 +1258,15 @@
       "label": "W44",
       "week_label": "W44",
       "week_start": "2026-10-26T00:00:00Z",
-      "posts": 1088,
-      "post_count": 1088,
-      "operational_posts": 51,
-      "influence_signals": 32,
+      "posts": 1147,
+      "post_count": 1147,
+      "operational_posts": 54,
+      "influence_signals": 36,
       "source_counts": {
-        "X": 731,
-        "REDDIT": 140,
-        "MASTODON": 147,
-        "TELEGRAM": 70
+        "X": 776,
+        "REDDIT": 147,
+        "MASTODON": 153,
+        "TELEGRAM": 71
       }
     }
   ],
@@ -1354,33 +1396,33 @@
       "label": "W44",
       "week_label": "W44",
       "week_start": "2026-10-26T00:00:00Z",
-      "posts": 1088,
-      "post_count": 1088,
-      "operational_posts": 51,
-      "influence_signals": 32,
+      "posts": 1147,
+      "post_count": 1147,
+      "operational_posts": 54,
+      "influence_signals": 36,
       "source_counts": {
-        "X": 731,
-        "REDDIT": 140,
-        "MASTODON": 147,
-        "TELEGRAM": 70
+        "X": 776,
+        "REDDIT": 147,
+        "MASTODON": 153,
+        "TELEGRAM": 71
       }
     }
   ],
   "information_activity_summary": {
-    "current_week": 1088,
-    "previous_week": 1530,
-    "current_week_to_date": 1088,
-    "previous_week_same_period": 1530,
+    "current_week": 1147,
+    "previous_week": 1599,
+    "current_week_to_date": 1147,
+    "previous_week_same_period": 1599,
     "previous_week_full": 2631,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": -28.89,
-    "change_label": "-28.9%",
+    "change_percent": -28.27,
+    "change_label": "-28.3%",
     "direction": "DOWN",
     "comparable": true,
-    "elapsed_hours": 92.8,
+    "elapsed_hours": 97.5,
     "current_period_start": "2026-10-26T00:00:00Z",
     "previous_period_start": "2026-10-19T00:00:00Z",
-    "previous_period_end": "2026-10-22T20:46:00Z"
+    "previous_period_end": "2026-10-23T01:27:30Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -1392,30 +1434,31 @@
       72,
       168
     ],
-    "generated_at": "2026-10-29T20:46:01Z",
-    "total_items": 2181,
-    "information_count": 279,
-    "early_warning_count": 1050,
-    "operational_count": 701,
+    "generated_at": "2026-10-30T01:27:31Z",
+    "total_items": 2185,
+    "information_count": 280,
+    "early_warning_count": 1051,
+    "operational_count": 703,
     "correlated_count": 151,
     "layer_counts": {
-      "INFORMATION": 279,
-      "OPERATIONAL": 701,
-      "EARLY_WARNING": 1050,
+      "EARLY_WARNING": 1051,
+      "INFORMATION": 280,
+      "OPERATIONAL": 703,
       "CORRELATED": 151
     },
     "source_counts": {
-      "X": 1536,
-      "REDDIT": 495,
+      "REDDIT": 496,
+      "X": 1539,
       "MASTODON": 102,
       "TELEGRAM": 48
     },
     "type_counts": {
-      "INFORMATION_SIGNAL": 279,
-      "BORDER_CROSSING": 298,
+      "ENFORCEMENT_EARLY_WARNING": 57,
+      "INFORMATION_SIGNAL": 280,
+      "BORDER_CROSSING": 299,
       "FACILITATION_EARLY_WARNING": 205,
       "INTERCEPTION": 49,
-      "DEPORTATION": 118,
+      "DEPORTATION": 119,
       "ROUTE_EARLY_WARNING": 144,
       "DETENTION": 76,
       "RESCUE_OPERATION": 45,
@@ -1424,7 +1467,6 @@
       "SMUGGLING_ACTIVITY": 70,
       "BORDER_MEASURE": 15,
       "PRESSURE_EARLY_WARNING": 50,
-      "ENFORCEMENT_EARLY_WARNING": 56,
       "POLICY_SIGNAL": 11,
       "MOBILIZATION_COORDINATION": 29,
       "CROSSING_FACILITATION": 74,
@@ -1440,6 +1482,155 @@
       "BORDER_CONDITION": 2
     },
     "items": [
+      {
+        "timeline_id": "early_warning:1254",
+        "timestamp": "2026-10-30T01:17:04Z",
+        "layer": "EARLY_WARNING",
+        "type": "ENFORCEMENT_EARLY_WARNING",
+        "signal_type": "ENFORCEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1xj23na",
+        "author": "John3262005",
+        "url": "https://www.reddit.com/r/WhatTrumpHasDone/comments/1xj23na/trumps_deportation_deal_with_cameroon_will_equip/",
+        "source_url": "https://www.reddit.com/r/WhatTrumpHasDone/comments/1xj23na/trumps_deportation_deal_with_cameroon_will_equip/",
+        "region": "AMERICAS",
+        "primary_region": "AMERICAS",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.62,
+        "priority": "MEDIUM",
+        "priority_score": 25.7,
+        "analyst_priority": "LOW",
+        "text": "Trump’s Deportation Deal With Cameroon Will Equip Unit Accused of War Crimes\nThe Trump administration agreed to send around $35 million in military aid to a Central African military unit previously accused of war crimes as part of a wider arrangement to deport third-country migrants to the region, U.S. officials and congressional aides said. Those people, all of whom were involved in or briefed on the negotiations, said the military aid and deportation deal were brokered simultaneously by State Department officials as part of the same package. The deal offers a window into how the Trump administration is expanding its deportation program across oceans and tying its deportation agenda to foreign military assistance, as it makes arrangements with numerous African countries—many with checkered human-rights records—to accept flights of illegal migrants who were detained in the U.S. Cameroon agreed to begin accepting U.S. deportation flights of third-country nationals in December. It has accepted at least 36 U.S. deportees since then, according to rights group Refugees International. Some of the officials said the administration has plans to scale up the number of deportation flights to African countries in the coming months. The deportation agreement included a previously undisclosed military aid package to deliver armored personnel carriers to an elite military unit in Cameroon called the Rapid Intervention Battalion, or BIR, the officials and congressional aides said. The U.S. cut off some assistance to the BIR during the first Trump administration after human rights groups published findings that it committed abuses including torturing detainees to death. The State Department notified Congress of the military aid package in January about a month after the deportation deal was struck, some of the officials and aides said. Around the same time, the U.S. agreed to channel $30 million to the United Nations refugee agency’s work in Cameroon despite broader cutbacks to foreign aid under the Trump administration. Sen. Jeanne Shaheen, the top Democrat on the Senate Foreign Relations Committee, placed a hold on the military aid package earlier this year, some of the people familiar with the matter said. That paused the deal for several months, but in April, Secretary of State Marco Rubio’s team notified her that the administration was overriding her hold and moving forward with the deal, officials said. Shaheen, who didn’t go public about placing the hold earlier this year, called the deal “grotesque” this week and said she was disappointed in Rubio for allowing it. “The United States should not be exchanging sensitive military equipment with countries that have questionable human-rights records—especially in exchange for human beings,” she said in a statement. The State Department declined to comment on the specifics on any agreement but said the U.S. and Cameroon have “a strong partnership on a range of shared priorities, including regional security and counterterrorism” and cooperate on security threats to U.S. interests or the homeland. The statement added that the department adheres to the Leahy Law, which bans military assistance to forces implicated in human-rights abuses. President Trump has made cracking down on illegal migration a core part of his administration’s policy platform and has touted progress in deporting thousands of illegal migrants with criminal records, including some to African countries. Cameroon is one of around a dozen African countries that have concluded so-called “third-country nationals agreements” with the Trump administration to accept deportees, alongside the Central African Republic, Democratic Republic of Congo, Equatorial Guinea and others. The individuals that the U.S. is deporting to African countries often can’t be returned to their home countries either because they say they would risk violence or persecution there or because those countries won’t accept them. Cameroon, which 93-year-old President Paul Biya has ruled for over 40 years, earlier this year briefly detained journalists and lawyers who sought to meet with the U.S. deportees in the country. U.S. Africa Command, the Pentagon’s combatant command responsible for U.S. military operations and security partnerships in Africa, considers Cameroon an important partner in the fight against violent Islamic extremist groups that have gained ground in West and Central Africa in recent years. The military aid package to the BIR, officials said, served the dual purpose of adding a new incentive for Cameroon to cooperate on accepting U.S. deportees while also supporting U.S. counterterrorism efforts in the region. Gen. Dagvin Anderson, the commander of U.S. forces in Africa, told Congress in May that AFRICOM’s area of responsibility “has become the center of gravity for global jihadism, with West Africa accounting for over 51 percent of global terror-related deaths” in recent years. Two State Department officials who have played key roles in helping secure deportation deals with African countries are Christian Erhardt, a deputy assistant secretary at the State Department’s Bureau of Population, Refugees, and Migration, and Andrew Veprek, the top official overseeing foreign assistance, humanitarian affairs and religious freedom. Trump in late September nominated Erhardt to be U.S. ambassador to Cameroon. A 2017 report by the human rights group Amnesty International found that the BIR engaged in war crimes as it battled the Boko Haram terrorist group in the country’s north, subjecting detainees to beatings and drownings and torturing some detainees to death. In 2019, the first Trump administration cut military assistance to the BIR and expelled Cameroon from a U.S.-Africa trade pact over failures “to address concerns regarding persistent human-rights violations being committed by Cameroonian security forces.” Cameroon at the time disavowed allegations that its forces were engaged in human-rights violations and said its military maintained high standards of professionalism.",
+        "text_excerpt": "Trump’s Deportation Deal With Cameroon Will Equip Unit Accused of War Crimes\nThe Trump administration agreed to send around $35 million in military aid to a Central African military unit previously accused of war crimes as part of a wider arrangement to deport third-country migrants to the region, U.S. officials and congressional aides said. Those people, all of whom were involved in or briefed on the negotiations, s…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "ENFORCEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-10-30T01:25:31Z",
+        "last_detected_at": "2026-10-30T01:25:31Z",
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
+      {
+        "timeline_id": "information:23113",
+        "timestamp": "2026-10-30T00:56:50Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2115971153852502179",
+        "author": "PhilipWood35962",
+        "url": "https://x.com/PhilipWood35962/status/2115971153852502179",
+        "source_url": "https://x.com/PhilipWood35962/status/2115971153852502179",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "boat"
+        ],
+        "freshness_cues": [],
+        "text": "@foreverusa76 Close the Borders and tell  France every Migrant boat that comes one fishing boats goes.",
+        "text_excerpt": "@foreverusa76 Close the Borders and tell  France every Migrant boat that comes one fishing boats goes.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-30T01:26:31Z",
+        "last_collected_at": "2026-10-30T01:26:31Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:23116",
+        "timestamp": "2026-10-30T00:34:51Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2115965621984968985",
+        "author": "VertSpecTheory",
+        "url": "https://x.com/VertSpecTheory/status/2115965621984968985",
+        "source_url": "https://x.com/VertSpecTheory/status/2115965621984968985",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "route",
+          "sea"
+        ],
+        "freshness_cues": [],
+        "text": "@MAGA__Patriot Grok?\n\nThe Arab/Muslim slave trade in sub-Saharan Africans (via the trans-Saharan, Red Sea, and Indian Ocean routes) is one of the longest and largest in history. It ran from roughly the 7th century (after the Arab conquests and the spread of Islam into North Africa) into the",
+        "text_excerpt": "@MAGA__Patriot Grok?\n\nThe Arab/Muslim slave trade in sub-Saharan Africans (via the trans-Saharan, Red Sea, and Indian Ocean routes) is one of the longest and largest in history. It ran from roughly the 7th century (after the Arab conquests and the spread of Islam into North Africa) into the",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-30T01:26:31Z",
+        "last_collected_at": "2026-10-30T01:26:31Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:23109",
+        "timestamp": "2026-10-29T23:57:18Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1xj0d2b",
+        "author": "Ill-Orchid-804",
+        "url": "https://www.reddit.com/r/USCIS/comments/1xj0d2b/is_it_still_possible_to_enter_the_us_through_the/",
+        "source_url": "https://www.reddit.com/r/USCIS/comments/1xj0d2b/is_it_still_possible_to_enter_the_us_through_the/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "border",
+          "crossing",
+          "detention"
+        ],
+        "freshness_cues": [],
+        "text": "Is it still possible to enter the US through the Mexico border and remain in the US in 2026?\nHi everyone, I'm an Uzbek citizen from Central Asia, and I'm trying to understand the current situation at the US–Mexico border. I've read stories about migrants crossing the southern border, being apprehended by Border Patrol, and sometimes being released into the US while their immigration cases are pending. However, I've also heard that the situation has become much stricter recently. I'd appreciate honest answers to these questions: What generally happens to people who cross the US–Mexico border without authorization in 2026? Are people still being released into the US, or are most of them detained or removed? Does nationality make a difference? Are there any specific experiences involving people from Central Asia or other Asian countries? If someone has no valid US visa and wants to immigrate for work and a better future, what legal options might they have? Are there any recent firsthand accounts from people who went through this process? I'm looking for recent, realistic information rather than rumors or assumptions. I understand that everyone's circumstances are different, and I'm not assuming that asylum is available to someone who doesn't qualify. Thank you for sharing your experiences or pointing me toward reliable sources.",
+        "text_excerpt": "Is it still possible to enter the US through the Mexico border and remain in the US in 2026?\nHi everyone, I'm an Uzbek citizen from Central Asia, and I'm trying to understand the current situation at the US–Mexico border. I've read stories about migrants crossing the southern border, being apprehended by Border Patrol, and sometimes being released into the US while their immigration cases are pending. However, I've a…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-10-30T01:26:02Z",
+        "last_collected_at": "2026-10-30T01:26:02Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
       {
         "timeline_id": "information:23054",
         "timestamp": "2026-10-29T20:38:13Z",
@@ -1537,8 +1728,8 @@
         "country": "-",
         "confidence": 0.1,
         "priority": "INFO",
-        "priority_score": 50,
-        "information_score": 5,
+        "priority_score": 60,
+        "information_score": 6,
         "matched_information_cues": [
           "crossing",
           "boat",
@@ -1558,8 +1749,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-29T20:44:30Z",
-        "last_collected_at": "2026-10-29T20:44:30Z",
-        "collection_count": 1,
+        "last_collected_at": "2026-10-30T01:26:02Z",
+        "collection_count": 2,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -1581,8 +1772,8 @@
         "country": "-",
         "confidence": 0.1,
         "priority": "INFO",
-        "priority_score": 40,
-        "information_score": 4,
+        "priority_score": 50,
+        "information_score": 5,
         "matched_information_cues": [
           "crossing",
           "detention",
@@ -1599,8 +1790,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-29T20:44:31Z",
-        "last_collected_at": "2026-10-29T20:44:31Z",
-        "collection_count": 1,
+        "last_collected_at": "2026-10-30T01:26:03Z",
+        "collection_count": 2,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -1663,8 +1854,8 @@
         "country": "-",
         "confidence": 0.6,
         "priority": "INFO",
-        "priority_score": 40,
-        "information_score": 4,
+        "priority_score": 50,
+        "information_score": 5,
         "matched_information_cues": [
           "border",
           "crossing",
@@ -1680,8 +1871,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-29T20:44:31Z",
-        "last_collected_at": "2026-10-29T20:44:31Z",
-        "collection_count": 1,
+        "last_collected_at": "2026-10-30T01:26:04Z",
+        "collection_count": 2,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -2880,8 +3071,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-28T17:32:33Z",
-        "last_collected_at": "2026-10-29T14:44:35Z",
-        "collection_count": 2,
+        "last_collected_at": "2026-10-30T01:26:32Z",
+        "collection_count": 3,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -3171,9 +3362,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "FACILITATION_REVIEW",
-        "detection_count": 3,
+        "detection_count": 4,
         "first_detected_at": "2026-10-28T10:07:41Z",
-        "last_detected_at": "2026-10-29T14:44:36Z",
+        "last_detected_at": "2026-10-30T01:26:33Z",
         "ai_review_status": "AI_REVIEWED",
         "ai_editorial_decision": "PUBLISH"
       },
@@ -3576,8 +3767,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-28T02:50:43Z",
-        "last_collected_at": "2026-10-29T14:44:36Z",
-        "collection_count": 5,
+        "last_collected_at": "2026-10-30T01:26:33Z",
+        "collection_count": 6,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -3654,6 +3845,38 @@
         "first_collected_at": "2026-10-27T23:18:25Z",
         "last_collected_at": "2026-10-27T23:18:25Z",
         "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "operational:752",
+        "timestamp": "2026-10-27T23:13:45Z",
+        "layer": "OPERATIONAL",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "X",
+        "source_post_id": "2115220435725906271",
+        "author": "candelario_rump",
+        "url": "https://x.com/candelario_rump/status/2115220435725906271",
+        "source_url": "https://x.com/candelario_rump/status/2115220435725906271",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.55,
+        "priority": "MEDIUM",
+        "priority_score": 55.0,
+        "text": "@PoissonPoker @StephanieG56261 @LaColitruche Putin is weaponizing poor Muslims and poor Africans to wage war against Europe! Except for Poland! For some reason Putin likes Poland, so there are no migrants crossing the border into Poland. Ursula is as arrogant and as psychopathic and as full of shit as Macron. https://t.co/4qTMt1JrFj",
+        "text_excerpt": "@PoissonPoker @StephanieG56261 @LaColitruche Putin is weaponizing poor Muslims and poor Africans to wage war against Europe! Except for Poland! For some reason Putin likes Poland, so there are no migrants crossing the border into Poland. Ursula is as arrogant and as psychopathic and as full of shit as Macron. https://t.co/4qTMt1JrFj",
+        "event_group_id": 600,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -3883,6 +4106,38 @@
         "first_collected_at": "2026-10-27T23:18:25Z",
         "last_collected_at": "2026-10-27T23:18:25Z",
         "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "operational:753",
+        "timestamp": "2026-10-27T22:15:00Z",
+        "layer": "OPERATIONAL",
+        "type": "DEPORTATION",
+        "signal_type": "DEPORTATION",
+        "event_type": "DEPORTATION",
+        "source": "X",
+        "source_post_id": "2115205649122390348",
+        "author": "Washington_Rep",
+        "url": "https://x.com/Washington_Rep/status/2115205649122390348",
+        "source_url": "https://x.com/Washington_Rep/status/2115205649122390348",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": 35.8894,
+        "longitude": -5.3213,
+        "confidence": 0.7,
+        "priority": "MEDIUM",
+        "priority_score": 70.0,
+        "text": "@Reuters 🇪🇸 Spain Deports African and Asian Asylum Seekers to Morocco, Sparking Human Rights Outcry\n\n🚨 16 Migrants Deported: Spain has deported 16 migrants from its North African enclave of Ceuta to Morocco after rejecting their asylum applications. Humanitarian organizations identified",
+        "text_excerpt": "@Reuters 🇪🇸 Spain Deports African and Asian Asylum Seekers to Morocco, Sparking Human Rights Outcry\n\n🚨 16 Migrants Deported: Spain has deported 16 migrants from its North African enclave of Ceuta to Morocco after rejecting their asylum applications. Humanitarian organizations identified",
+        "event_group_id": 547,
+        "correlation_score": 0.68,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -5786,8 +6041,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-26T22:05:12Z",
-        "last_collected_at": "2026-10-29T14:46:44Z",
-        "collection_count": 7,
+        "last_collected_at": "2026-10-30T01:27:28Z",
+        "collection_count": 8,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -6324,8 +6579,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-26T16:23:27Z",
-        "last_collected_at": "2026-10-29T14:46:45Z",
-        "collection_count": 8,
+        "last_collected_at": "2026-10-30T01:27:28Z",
+        "collection_count": 9,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -10987,8 +11242,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-10-24T08:32:04Z",
-        "last_collected_at": "2026-10-29T14:46:45Z",
-        "collection_count": 14,
+        "last_collected_at": "2026-10-30T01:27:28Z",
+        "collection_count": 15,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -16377,44 +16632,6 @@
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
-        "timeline_id": "information:20367",
-        "timestamp": "2026-10-21T08:42:49Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2112826931645399260",
-        "author": "LadyZeekt",
-        "url": "https://x.com/LadyZeekt/status/2112826931645399260",
-        "source_url": "https://x.com/LadyZeekt/status/2112826931645399260",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "crossing"
-        ],
-        "freshness_cues": [],
-        "text": "@PolitiCutZa @kwets11 1. Trace cross-border recruitment networks and dismantle them at the source. 2. Penalize countries for illegals in SA. 3. Migrants MUST grow balls 4. We need to learn and unlearn about each other. Too many migrants would rather call SAns lazy than acknowledge their exploitation",
-        "text_excerpt": "@PolitiCutZa @kwets11 1. Trace cross-border recruitment networks and dismantle them at the source. 2. Penalize countries for illegals in SA. 3. Migrants MUST grow balls 4. We need to learn and unlearn about each other. Too many migrants would rather call SAns lazy than acknowledge their exploitation",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-21T08:58:10Z",
-        "last_collected_at": "2026-10-21T08:58:10Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
         "timeline_id": "early_warning:1126",
         "timestamp": "2026-10-21T08:22:25Z",
         "layer": "EARLY_WARNING",
@@ -16447,44 +16664,6 @@
         "last_detected_at": "2026-10-21T09:03:41Z",
         "ai_review_status": "AI_REVIEWED",
         "ai_editorial_decision": "PUBLISH"
-      },
-      {
-        "timeline_id": "information:20370",
-        "timestamp": "2026-10-21T08:21:03Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2112821452676202870",
-        "author": "SuzieD755164",
-        "url": "https://x.com/SuzieD755164/status/2112821452676202870",
-        "source_url": "https://x.com/SuzieD755164/status/2112821452676202870",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "boat",
-          "sea"
-        ],
-        "freshness_cues": [],
-        "text": "⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ \nHARD TRUTH...These men who came on boats are willing to say on camera that they tie women's hands together and throw them in the sea on those boat journeys. In the belief they are witches (or probably to hide evidence of their crime of gang rape). https://t.co/7GfB00g2CG",
-        "text_excerpt": "⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ \nHARD TRUTH...These men who came on boats are willing to say on camera that they tie women's hands together and throw them in the sea on those boat journeys. In the belief they are witches (or probably to hide evidence of their crime of gang rape). https://t.co/7GfB00g2CG",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-21T08:58:10Z",
-        "last_collected_at": "2026-10-21T08:58:10Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
         "timeline_id": "operational:679",
@@ -19524,40 +19703,6 @@
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
-        "timeline_id": "correlated:618",
-        "timestamp": "2026-10-16T22:42:59Z",
-        "layer": "CORRELATED",
-        "type": "BORDER_CROSSING",
-        "signal_type": "BORDER_CROSSING",
-        "event_type": "BORDER_CROSSING",
-        "source": "REDDIT",
-        "source_post_id": "reddit_1x7uatp",
-        "author": "amogusdevilman",
-        "url": "https://www.reddit.com/r/antiizquierdapolitica/comments/1x7uatp/el_70_de_los_migrantes_marroquíes_que_entraron_en/",
-        "source_url": "https://www.reddit.com/r/antiizquierdapolitica/comments/1x7uatp/el_70_de_los_migrantes_marroquíes_que_entraron_en/",
-        "region": "WESTERN_MEDITERRANEAN",
-        "primary_region": "WESTERN_MEDITERRANEAN",
-        "location": "Ceuta",
-        "primary_location": "Ceuta",
-        "country": "Spain",
-        "latitude": 35.8894,
-        "longitude": -5.3213,
-        "confidence": 0.8,
-        "priority": "HIGH",
-        "priority_score": 80.0,
-        "text": "🇪🇸 El 70 % de los migrantes marroquíes que entraron en Ceuta alegan su orientación sexual en sus solicitudes de asilo",
-        "text_excerpt": "🇪🇸 El 70 % de los migrantes marroquíes que entraron en Ceuta alegan su orientación sexual en sus solicitudes de asilo",
-        "event_group_id": 474,
-        "correlation_score": 0.7,
-        "related_source_count": 12,
-        "source_types": [
-          "MASTODON",
-          "REDDIT",
-          "X"
-        ],
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
         "timeline_id": "early_warning:1032",
         "timestamp": "2026-10-16T19:41:21Z",
         "layer": "EARLY_WARNING",
@@ -20240,6 +20385,38 @@
         "event_time_text": null,
         "event_time_normalized": null,
         "event_time_confidence": null,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "correlated:609",
+        "timestamp": "2026-10-15T21:50:22Z",
+        "layer": "CORRELATED",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "X",
+        "source_post_id": "2110850798930588079",
+        "author": "Trumpusa1A1",
+        "url": "https://x.com/Trumpusa1A1/status/2110850798930588079",
+        "source_url": "https://x.com/Trumpusa1A1/status/2110850798930588079",
+        "region": "HORN_OF_AFRICA",
+        "primary_region": "HORN_OF_AFRICA",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.25,
+        "priority": "MEDIUM",
+        "priority_score": 25.0,
+        "text": "FOLKS ENGLAND AS WE HAVE KNOWN IN PAST, IS GONE \n\nSagal Abdi-Wali, 42, who arrived in Britain from Somalia as a six-year-old refugee, has officially replaced former Prime Minister Keir Starmer as the Labour MP for Holborn and St Pancras in central London.\n\nFollowing her victory, https://t.co/JpS6WkVWdJ",
+        "text_excerpt": "FOLKS ENGLAND AS WE HAVE KNOWN IN PAST, IS GONE \n\nSagal Abdi-Wali, 42, who arrived in Britain from Somalia as a six-year-old refugee, has officially replaced former Prime Minister Keir Starmer as the Labour MP for Holborn and St Pancras in central London.\n\nFollowing her victory, https://t.co/JpS6WkVWdJ",
+        "event_group_id": 472,
+        "correlation_score": 0.93,
+        "related_source_count": 7,
+        "source_types": [
+          "X"
+        ],
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -74449,9 +74626,9 @@
     "review_start_date": "2026-10-17",
     "review_cohort": "FIRST_RECORDED_ON_OR_AFTER_CUTOFF",
     "decisions": {
-      "EXCLUDE": 102,
-      "REVIEW": 89,
-      "PUBLISH": 57
+      "EXCLUDE": 103,
+      "PUBLISH": 58,
+      "REVIEW": 91
     },
     "removed_display_items": {
       "live_events": 18,
@@ -74461,9 +74638,9 @@
       "early_warning_signals": 3,
       "crossing_access_signals": 0,
       "top_crossing_access_posts": 0,
-      "high_priority_intelligence": 1,
+      "high_priority_intelligence": 2,
       "access_signals": 0,
-      "timeline": 185
+      "timeline": 188
     },
     "historical_review_status": "HISTORICAL_NOT_AI_REVIEWED",
     "narrative_layers_not_reviewed": [

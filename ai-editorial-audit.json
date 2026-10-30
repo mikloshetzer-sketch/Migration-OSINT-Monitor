@@ -1,22 +1,14 @@
 {
-  "generated_at": "2026-10-29T20:46:38.878903+00:00",
+  "generated_at": "2026-10-30T01:28:33.690731+00:00",
   "version": "3.0",
-  "candidates": 248,
-  "new_ai_calls": 0,
+  "candidates": 252,
+  "new_ai_calls": 7,
   "conflicting_identity_ids": [
-    "group:609",
     "group:612",
-    "group:616"
+    "group:616",
+    "group:618"
   ],
   "decisions": {
-    "post:752": {
-      "decision": "EXCLUDE",
-      "reason": "The post contains political commentary and unsubstantiated allegations about 'Putin weaponizing poor Muslims and Africans' without reporting a concrete, contemporary migration-related event. No actual border crossing event or verified migration-specific information is presented. The location is unspecified and no corroboration is provided."
-    },
-    "post:753": {
-      "decision": "REVIEW",
-      "reason": "The post reports deportation of migrants from Spain to Morocco, which aligns with the DEPORTATION event type. However, the event date is in the future (2026-10-27), which is beyond the knowledge cutoff and current date. Without confirmation of the event being contemporary or already completed, the record requires review."
-    },
     "post:756": {
       "decision": "EXCLUDE",
       "reason": "The post discusses ancient historical migration (Sea Peoples around 1200 BCE), not a contemporary migration event or early warning related to current migration. The event_type 'BORDER_CROSSING' is inappropriate here as the migration described is ancient and not operational or contemporary."
@@ -89,29 +81,33 @@
       "decision": "EXCLUDE",
       "reason": "The post refers to a past arrest of a refugee but does not report a concrete, contemporary migration event or specific border crossing occurring now. The event type 'BORDER_CROSSING' is not supported by the content, which focuses on a past criminal case rather than a migration event."
     },
-    "signal:1249": {
+    "post:774": {
       "decision": "REVIEW",
-      "reason": "The post reports a deployment of military to borders to stop illegal migrants, which is a migration-specific early warning signal, but lacks corroboration and precise location information is missing."
+      "reason": "The record refers to deportations occurring in September and reported by NY Post in October 2026, describing a record number but details are not sufficient to verify concreteness or contemporaneous event with this individual record. The source is a social media post summarizing a third-party article; verification beyond the claim is absent."
     },
-    "signal:1250": {
-      "decision": "REVIEW",
-      "reason": "The record discusses deportation data from the Trump administration, which is historical and not a contemporary migration event or early warning. It lacks a concrete, current migration-specific event or route warning."
-    },
-    "signal:1251": {
+    "post:775": {
       "decision": "EXCLUDE",
-      "reason": "The event reported is a historical incident from June 27, 2022, described as the deadliest human-smuggling event in U.S. history. This is not a contemporary migration-specific early warning or a current operational event. The publication date in 2026 is after the event date, and the post describes a past incident, not an impending or ongoing migrat"
+      "reason": "The post describes a historical personal migration event of a refugee becoming Freddie Mercury, not a contemporary operational migration event or early warning relevant to current migration issues."
     },
     "signal:1252": {
       "decision": "PUBLISH",
       "reason": "The post reports current, concrete early warning signals about migration-related operations in Ghana in 2026, mentioning multiple arrests and repatriations linked to trafficking rings, which supports the event type of FACILITATION_EARLY_WARNING for migration."
     },
-    "group:605": {
-      "decision": "EXCLUDE",
-      "reason": "The post contains general claims and opinions about border status and crime rates without reporting a specific, concrete, contemporary migration-related event. No verifiable or specific deportation event is described."
-    },
-    "group:609": {
+    "signal:1253": {
       "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
+      "reason": "The text describes a policy arrangement involving deportation agreements and military aid linked to Cameroon, which is related to migration enforcement. However, it combines multiple complex topics including foreign military assistance, human rights concerns, and deportation programs without clear, concrete operational event details or an explicit "
+    },
+    "signal:1254": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a contemporary migration-specific early warning signal involving a deportation agreement between the U.S. and Cameroon that ties military aid to deportation deals with significant implications for migration enforcement policies. This fits the 'ENFORCEMENT_EARLY_WARNING' event type as it details ongoing and planned deportation fligh"
+    },
+    "signal:1255": {
+      "decision": "EXCLUDE",
+      "reason": "The post provides an unverified claim about a specific boat design and police response without concrete, verifiable details about an actual migration event or early warning. It lacks sufficient evidence to confirm an operational migration event or early warning. The date is in the future relative to current knowledge cutoff, so cannot be confirmed."
+    },
+    "signal:1256": {
+      "decision": "REVIEW",
+      "reason": "The post ambiguously claims Belgium and police are helping migrants cross to the UK, which is a significant migration event or early warning if true, but provides no verifiable details or external corroboration and the source is unverified."
     },
     "group:610": {
       "decision": "EXCLUDE",
@@ -144,6 +140,14 @@
     "group:617": {
       "decision": "REVIEW",
       "reason": "The post refers to a person who arrived via a Refugee program and was arrested for sex crimes, but the event_type 'BORDER_CROSSING' is not clearly supported. There is no specific, concrete migration event such as an attempt to cross a border described. The post describes a situation after arrival, not a crossing event. No corroboration or source is"
+    },
+    "group:618": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:619": {
+      "decision": "EXCLUDE",
+      "reason": "This record is a biographical or historical narrative unrelated to a contemporary migration event or migration-specific early warning. The mentioned border crossing is not a current operational migration event but a past personal history with no migration-related event. The text does not describe a specific migration event or policy action."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1000,6 +1004,18 @@
     "signal:1248": {
       "decision": "REVIEW",
       "reason": "The post suggests a change in migrant settlement patterns in Mexico due to past US policies but does not report a concrete, contemporary migration-specific event or an immediate early warning about routes or policy actions. The event_type as an early warning signal is not clearly supported by the narrative. It is more an analysis or trend statement"
+    },
+    "signal:1249": {
+      "decision": "REVIEW",
+      "reason": "The post reports a deployment of military to borders to stop illegal migrants, which is a migration-specific early warning signal, but lacks corroboration and precise location information is missing."
+    },
+    "signal:1250": {
+      "decision": "REVIEW",
+      "reason": "The record discusses deportation data from the Trump administration, which is historical and not a contemporary migration event or early warning. It lacks a concrete, current migration-specific event or route warning."
+    },
+    "signal:1251": {
+      "decision": "EXCLUDE",
+      "reason": "The event reported is a historical incident from June 27, 2022, described as the deadliest human-smuggling event in U.S. history. This is not a contemporary migration-specific early warning or a current operational event. The publication date in 2026 is after the event date, and the post describes a past incident, not an impending or ongoing migrat"
     }
   }
 }
