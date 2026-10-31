@@ -1,26 +1,13 @@
 {
-  "generated_at": "2026-10-30T20:21:00.670586+00:00",
+  "generated_at": "2026-10-31T01:14:59.164569+00:00",
   "version": "3.0",
-  "candidates": 260,
-  "new_ai_calls": 8,
+  "candidates": 264,
+  "new_ai_calls": 10,
   "conflicting_identity_ids": [
     "group:603",
-    "group:618",
     "group:622"
   ],
   "decisions": {
-    "post:761": {
-      "decision": "EXCLUDE",
-      "reason": "The post contains general claims without a concrete, contemporary migration-related event or specific deportation action reported. It is largely opinion and policy argument rather than a direct event report."
-    },
-    "post:763": {
-      "decision": "EXCLUDE",
-      "reason": "The event described is a personal tragedy involving a refugee after arrival and does not constitute a migration operational event such as a border crossing or migration-specific early warning. The event type 'BORDER_CROSSING' is not supported by the content, which concerns a post-arrival individual issue rather than a crossing event."
-    },
-    "post:765": {
-      "decision": "EXCLUDE",
-      "reason": "Claim about US including Cubans among 'most barbaric' migrants deported to third countries lacks specific, verifiable evidence of an actual deportation event; also, the source is Reddit without external verification, and no concrete event details or timing are provided."
-    },
     "post:766": {
       "decision": "EXCLUDE",
       "reason": "The post is an accusatory and vague social media comment with no concrete or verifiable information about a specific migration event. It lacks details such as time, place, or an actual reported crossing event. The event type 'BORDER_CROSSING' is not supported by the content."
@@ -89,6 +76,18 @@
       "decision": "REVIEW",
       "reason": "The event date is in the future (2026), which cannot be verified currently. The claimed numbers of migrants and boats crossing need external verification, and the 'Armed Migrants' phrase is an unsubstantiated sensational claim. The report mentions specific crossing numbers indicating a migration event, but the date and sensational language require "
     },
+    "post:783": {
+      "decision": "REVIEW",
+      "reason": "The post claims a future deportation event planned for 2026 involving Afghan immigrants being flown from LA to Pakistan before being expelled to Afghanistan. The date mentioned is in the future relative to the claim's publication, and the source is unverified social media (Mastodon) referencing a New York Times link with a suspicious URL including "
+    },
+    "post:784": {
+      "decision": "EXCLUDE",
+      "reason": "The content discusses general quantitative studies on border deterrence effects without reporting a concrete, contemporary migration-related event or specific operational measure."
+    },
+    "post:785": {
+      "decision": "EXCLUDE",
+      "reason": "The post is an analytical and historical narrative about the origins of the Syrian uprising focusing on Kurdish farmers, with no concrete report of a specific, contemporary migration event, border crossing, or early warning signal. The event_type 'BORDER_CROSSING' assigned is unsupported by the content. It is not a migration event or early warning "
+    },
     "signal:1253": {
       "decision": "REVIEW",
       "reason": "The text describes a policy arrangement involving deportation agreements and military aid linked to Cameroon, which is related to migration enforcement. However, it combines multiple complex topics including foreign military assistance, human rights concerns, and deportation programs without clear, concrete operational event details or an explicit "
@@ -96,14 +95,6 @@
     "signal:1254": {
       "decision": "PUBLISH",
       "reason": "The post reports a contemporary migration-specific early warning signal involving a deportation agreement between the U.S. and Cameroon that ties military aid to deportation deals with significant implications for migration enforcement policies. This fits the 'ENFORCEMENT_EARLY_WARNING' event type as it details ongoing and planned deportation fligh"
-    },
-    "signal:1255": {
-      "decision": "EXCLUDE",
-      "reason": "The post provides an unverified claim about a specific boat design and police response without concrete, verifiable details about an actual migration event or early warning. It lacks sufficient evidence to confirm an operational migration event or early warning. The date is in the future relative to current knowledge cutoff, so cannot be confirmed."
-    },
-    "signal:1256": {
-      "decision": "REVIEW",
-      "reason": "The post ambiguously claims Belgium and police are helping migrants cross to the UK, which is a significant migration event or early warning if true, but provides no verifiable details or external corroboration and the source is unverified."
     },
     "signal:1257": {
       "decision": "PUBLISH",
@@ -137,19 +128,23 @@
       "decision": "EXCLUDE",
       "reason": "The content is a political commentary focusing on a reported racially motivated shooting in France, categorized here as 'MOBILIZATION_COORDINATION' which is not supported by the text. The text does not describe any migration-specific event, early warning, or policy-related signal. It is a general political and social narrative unrelated to migratio"
     },
-    "group:603": {
-      "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
+    "signal:1265": {
+      "decision": "EXCLUDE",
+      "reason": "The post discusses historical and religious narratives and political commentary rather than reporting a concrete, contemporary migration-specific event or early warning. It lacks an actual migration event or relevant policy action."
     },
-    "group:615": {
+    "signal:1266": {
+      "decision": "REVIEW",
+      "reason": "The report concerns police actions against a migrant boat attempting to cross the English Channel, suggesting a concrete migration-related operational event. However, the details are sparse, including the exact date and location, and the language is informal and potentially politicized. The event type 'MOVEMENT_EARLY_WARNING' seems plausible but ca"
+    },
+    "signal:1267": {
       "decision": "PUBLISH",
-      "reason": "The report details a concrete, recent event of migrant crossings of the Channel with approximate numbers, indicating a specific migration-related operational event. Although the exact current date is beyond the knowledge cutoff, the event described is contemporary within the given data and matches the BORDER_CROSSING event type."
+      "reason": "The record reports a concrete, contemporary migration-specific event of more than 150 migrants crossing the English Channel, marking the first arrivals in three weeks and indicating ongoing movement. The event type as a movement early warning is appropriate given the renewed arrivals following bad weather, signaling continued migration pressure alo"
     },
-    "group:617": {
-      "decision": "REVIEW",
-      "reason": "The post refers to a person who arrived via a Refugee program and was arrested for sex crimes, but the event_type 'BORDER_CROSSING' is not clearly supported. There is no specific, concrete migration event such as an attempt to cross a border described. The post describes a situation after arrival, not a crossing event. No corroboration or source is"
+    "signal:1268": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a general commentary on migration policy and social issues without reporting a concrete, contemporary migration-specific early warning, policy action or route/access event. The claim about aiming for net zero migration and leaving the ECHR is stated as a plan but no specific event, action or official policy announcement is reported; thu"
     },
-    "group:618": {
+    "group:603": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
     },
@@ -176,6 +171,18 @@
     "group:624": {
       "decision": "REVIEW",
       "reason": "The post claims large numbers of migrants arriving by boats recently but provides no verifiable source or location details, and the language is sensational. The event timing is uncertain and lacks corroboration, so it cannot be confidently published as a verified border crossing event."
+    },
+    "group:625": {
+      "decision": "REVIEW",
+      "reason": "The post references a planned deportation event involving Afghan immigrants being flown from LA to Pakistan with subsequent expulsion to Afghanistan, citing dates in 2026 which is in the future and cannot be verified. The source link is to a New York Times article but the URL is likely fabricated or invalid. The claim involves a specific deportatio"
+    },
+    "group:626": {
+      "decision": "EXCLUDE",
+      "reason": "The content is a general commentary on studies about border measures and deterrence without reporting a concrete, contemporary migration-related event or specific operational measure. It lacks a specific event, policy action, or migration flow data to support publication."
+    },
+    "group:627": {
+      "decision": "EXCLUDE",
+      "reason": "The text is a historical and analytical discussion of the origins of the Syrian uprising related to Kurdish farmers and political concessions; it does not report a concrete, contemporary migration-related event or border crossing. The event_type 'BORDER_CROSSING' is incorrect for this content, which is a historical narrative and does not describe a"
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1048,6 +1055,14 @@
     "signal:1252": {
       "decision": "PUBLISH",
       "reason": "The post reports current, concrete early warning signals about migration-related operations in Ghana in 2026, mentioning multiple arrests and repatriations linked to trafficking rings, which supports the event type of FACILITATION_EARLY_WARNING for migration."
+    },
+    "signal:1255": {
+      "decision": "EXCLUDE",
+      "reason": "The post provides an unverified claim about a specific boat design and police response without concrete, verifiable details about an actual migration event or early warning. It lacks sufficient evidence to confirm an operational migration event or early warning. The date is in the future relative to current knowledge cutoff, so cannot be confirmed."
+    },
+    "signal:1256": {
+      "decision": "REVIEW",
+      "reason": "The post ambiguously claims Belgium and police are helping migrants cross to the UK, which is a significant migration event or early warning if true, but provides no verifiable details or external corroboration and the source is unverified."
     }
   }
 }
