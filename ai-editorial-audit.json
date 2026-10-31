@@ -1,37 +1,13 @@
 {
-  "generated_at": "2026-10-31T07:45:16.454219+00:00",
+  "generated_at": "2026-10-31T14:02:03.260818+00:00",
   "version": "3.0",
-  "candidates": 270,
-  "new_ai_calls": 9,
+  "candidates": 272,
+  "new_ai_calls": 13,
   "conflicting_identity_ids": [
-    "group:622",
+    "group:590",
     "group:629"
   ],
   "decisions": {
-    "post:767": {
-      "decision": "REVIEW",
-      "reason": "The post mentions deportation of over 1 million migrants but does not provide concrete details about a specific, contemporary deportation event. It mixes various claims unrelated directly to a singular migration event and lacks clear date or location for the claimed deportations or border closure. The event_type 'DEPORTATION' is only partially supp"
-    },
-    "post:768": {
-      "decision": "EXCLUDE",
-      "reason": "The post is derogatory and does not report a concrete, contemporary migration-related event such as a deportation action. It contains general commentary rather than describing an operational migration event."
-    },
-    "post:769": {
-      "decision": "EXCLUDE",
-      "reason": "The post contains a disparaging comment about migrants and refers vaguely to deportations without reporting a specific deportation event or concrete migration-related incident. No contemporary migration event is described."
-    },
-    "post:771": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete, current migration-related event: approximately 150 migrants crossing the Channel today, which is supported by the source and explicitly linked to the migration event type BORDER_CROSSING. It provides details relevant to migration, such as the waiting migrants in camps and the crossing route, making it suitable for publi"
-    },
-    "post:772": {
-      "decision": "EXCLUDE",
-      "reason": "The post reports convictions related to a past people smuggling network, which is a historical event rather than a current migration event or an early warning. No ongoing or new migration activity is described, and the event is not contemporary."
-    },
-    "post:773": {
-      "decision": "EXCLUDE",
-      "reason": "The post refers to a past arrest of a refugee but does not report a concrete, contemporary migration event or specific border crossing occurring now. The event type 'BORDER_CROSSING' is not supported by the content, which focuses on a past criminal case rather than a migration event."
-    },
     "post:774": {
       "decision": "REVIEW",
       "reason": "The record refers to deportations occurring in September and reported by NY Post in October 2026, describing a record number but details are not sufficient to verify concreteness or contemporaneous event with this individual record. The source is a social media post summarizing a third-party article; verification beyond the claim is absent."
@@ -87,6 +63,30 @@
     "post:787": {
       "decision": "PUBLISH",
       "reason": "The post reports a specific and recent migration event involving 263 migrants landing at Dover, which is a concrete and contemporary migration-related event matching the BORDER_CROSSING type."
+    },
+    "post:788": {
+      "decision": "REVIEW",
+      "reason": "The event is a concrete migration-related crossing but lacks verifiable location details and is sourced solely from Reddit without additional corroboration. The report of arrival in the Netherlands in 2026 is unverified, and the date is in the future, which raises questions about event timing and certainty."
+    },
+    "post:789": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete, contemporary migration-related operational event: interception of a rubber dinghy with migrants and suspected smugglers at the Dutch coast, a unique recent occurrence. Event type INTERCEPTION is appropriate and supported by multiple named sources."
+    },
+    "post:790": {
+      "decision": "REVIEW",
+      "reason": "The post reports a concrete migration interception event, but the location is vague and the source is unverified Reddit. Temporal context is in the future relative to current knowledge cutoff, making verification impossible."
+    },
+    "post:791": {
+      "decision": "REVIEW",
+      "reason": "The post reports a recent rescue operation with some details; however, the source is Reddit, which is not a highly reliable or official source for such events. The location is vague and not confirmed. More corroboration is needed to confirm the concrete, contemporary migration event."
+    },
+    "post:792": {
+      "decision": "REVIEW",
+      "reason": "The report mentions migrant arrivals to Formentera but lacks clear, specific details such as dates, precise location verification, and credible source corroboration. The event_type 'BORDER_CROSSING' is plausible but not sufficiently supported in this post alone."
+    },
+    "post:793": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete, contemporary migration-related event of people arriving illegally in the UK on migrant dinghies, consistent with the 'BORDER_CROSSING' event type. The report provides specific recent dates and numbers, making it relevant and suitable for publication as a migration event report."
     },
     "signal:1260": {
       "decision": "REVIEW",
@@ -148,29 +148,21 @@
       "decision": "EXCLUDE",
       "reason": "The post discusses historical political actions and events regarding refugee movements from the 1950s and the Marichjhapi incident, which is a past event. It does not report a concrete, contemporary migration-related event or early warning. The text is a general commentary on past refugee policies for political reasons rather than a specific, curre"
     },
-    "group:620": {
+    "signal:1275": {
+      "decision": "REVIEW",
+      "reason": "The event describes a boat carrying migrants arriving in the Netherlands for the first time, which is a concrete and contemporary migration-related event. However, the event type 'MOVEMENT_EARLY_WARNING' suggests a warning or signal prior to movement, whereas this describes actual arrival (movement completed). The event type may be mismatched or th"
+    },
+    "signal:1276": {
+      "decision": "REVIEW",
+      "reason": "The text indicates a recurring monthly arrival of unaccompanied migrant children by boat to Dover, which is a migration-related movement and could represent an early warning. However, the data lacks precise event timing or direct evidence of a new or imminent movement, and the date is in the future relative to the current knowledge cutoff. Verifica"
+    },
+    "signal:1277": {
       "decision": "EXCLUDE",
-      "reason": "The record is a general narrative expressing an opinion or demand related to refugee camps and deportations, without reporting a concrete, contemporary migration-related event or action. It does not provide evidence or a direct report of an operational migration event or early warning."
+      "reason": "The record is a general political commentary alleging conspiracies and criminal activities but does not describe a concrete, contemporary migration-related event or early warning. It lacks specific details on migration flows, policy, or facilitation routes and is unverified inflammatory rhetoric."
     },
-    "group:621": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete, recent event concerning the arrival of migrants by dinghy, relevant to migration and border crossing."
-    },
-    "group:622": {
+    "group:590": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
-    },
-    "group:623": {
-      "decision": "EXCLUDE",
-      "reason": "The post lacks any actual report about contemporary migration events or specific migration-related early warnings. It is an opinionated commentary rather than a report of an operational migration event or policy relevant to migration flows or access. The assigned event type 'BORDER_CROSSING' is not supported by the content."
-    },
-    "group:624": {
-      "decision": "REVIEW",
-      "reason": "The post claims large numbers of migrants arriving by boats recently but provides no verifiable source or location details, and the language is sensational. The event timing is uncertain and lacks corroboration, so it cannot be confidently published as a verified border crossing event."
-    },
-    "group:625": {
-      "decision": "REVIEW",
-      "reason": "The post references a planned deportation event involving Afghan immigrants being flown from LA to Pakistan with subsequent expulsion to Afghanistan, citing dates in 2026 which is in the future and cannot be verified. The source link is to a New York Times article but the URL is likely fabricated or invalid. The claim involves a specific deportatio"
     },
     "group:626": {
       "decision": "EXCLUDE",
@@ -187,6 +179,22 @@
     "group:629": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:630": {
+      "decision": "REVIEW",
+      "reason": "The text reports a contemporary migration-related event (arrival of a migrant dinghy with 38 male illegal migrants in the Netherlands), consistent with the stated event_type BORDER_CROSSING, but lacks source information and specific location details to verify the claim."
+    },
+    "group:631": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete migration-related event: a recent interception of a rubber dinghy with 38 people off the Dutch coast, including arrests. The event type 'INTERCEPTION' is appropriate and the report is contemporary, detailing a first known arrival at the Dutch coast. Although exact date/time of event is approximate, the information is spe"
+    },
+    "group:632": {
+      "decision": "REVIEW",
+      "reason": "Inconsistent approval: The record describes a concrete, contemporary migration-related event—a rescue operation involving 36 migrants off the coast of Ierapetra, Crete. The event type RESCUE_OPERATION is supported by the description."
+    },
+    "group:633": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a specific, recent event involving the arrival of 671 illegal migrants in the UK on 9 dinghies on a specific day, plus an additional 263 migrants two days prior, totaling nearly 1000 migrants over two days. This qualifies as a concrete, contemporary migration-related event involving border crossings."
     },
     "signal:1034": {
       "decision": "REVIEW",
