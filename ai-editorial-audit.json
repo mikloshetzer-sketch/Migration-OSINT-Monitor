@@ -1,17 +1,13 @@
 {
-  "generated_at": "2026-10-31T01:14:59.164569+00:00",
+  "generated_at": "2026-10-31T07:45:16.454219+00:00",
   "version": "3.0",
-  "candidates": 264,
-  "new_ai_calls": 10,
+  "candidates": 270,
+  "new_ai_calls": 9,
   "conflicting_identity_ids": [
-    "group:603",
-    "group:622"
+    "group:622",
+    "group:629"
   ],
   "decisions": {
-    "post:766": {
-      "decision": "EXCLUDE",
-      "reason": "The post is an accusatory and vague social media comment with no concrete or verifiable information about a specific migration event. It lacks details such as time, place, or an actual reported crossing event. The event type 'BORDER_CROSSING' is not supported by the content."
-    },
     "post:767": {
       "decision": "REVIEW",
       "reason": "The post mentions deportation of over 1 million migrants but does not provide concrete details about a specific, contemporary deportation event. It mixes various claims unrelated directly to a singular migration event and lacks clear date or location for the claimed deportations or border closure. The event_type 'DEPORTATION' is only partially supp"
@@ -23,10 +19,6 @@
     "post:769": {
       "decision": "EXCLUDE",
       "reason": "The post contains a disparaging comment about migrants and refers vaguely to deportations without reporting a specific deportation event or concrete migration-related incident. No contemporary migration event is described."
-    },
-    "post:770": {
-      "decision": "EXCLUDE",
-      "reason": "The post is hostile and discriminatory but does not report a concrete, contemporary migration-related event or border crossing. It expresses opinions and ethnic tensions without factual event details."
     },
     "post:771": {
       "decision": "PUBLISH",
@@ -88,25 +80,13 @@
       "decision": "EXCLUDE",
       "reason": "The post is an analytical and historical narrative about the origins of the Syrian uprising focusing on Kurdish farmers, with no concrete report of a specific, contemporary migration event, border crossing, or early warning signal. The event_type 'BORDER_CROSSING' assigned is unsupported by the content. It is not a migration event or early warning "
     },
-    "signal:1253": {
-      "decision": "REVIEW",
-      "reason": "The text describes a policy arrangement involving deportation agreements and military aid linked to Cameroon, which is related to migration enforcement. However, it combines multiple complex topics including foreign military assistance, human rights concerns, and deportation programs without clear, concrete operational event details or an explicit "
+    "post:786": {
+      "decision": "EXCLUDE",
+      "reason": "The event is about the arrest of an individual related to a confrontation but does not report a concrete migration-related event such as a migrant movement, crossing, or operational migration incident."
     },
-    "signal:1254": {
+    "post:787": {
       "decision": "PUBLISH",
-      "reason": "The post reports a contemporary migration-specific early warning signal involving a deportation agreement between the U.S. and Cameroon that ties military aid to deportation deals with significant implications for migration enforcement policies. This fits the 'ENFORCEMENT_EARLY_WARNING' event type as it details ongoing and planned deportation fligh"
-    },
-    "signal:1257": {
-      "decision": "PUBLISH",
-      "reason": "The record reports a concrete migration enforcement event involving the detention and penalty of undocumented foreign nationals and an expulsion order in Ussuriysk, Primorye region. The event aligns with the 'ENFORCEMENT_EARLY_WARNING' type as a migration control action. The report is contemporary and specific to migration enforcement."
-    },
-    "signal:1258": {
-      "decision": "PUBLISH",
-      "reason": "The report provides a contemporary migration-specific early warning about increased irregular migration attempts at the Belarus border, with concrete numbers from Lithuania, Latvia, and Poland border guards, matching the signal event type about a migration route early warning."
-    },
-    "signal:1259": {
-      "decision": "PUBLISH",
-      "reason": "The post describes a contemporary migration-specific early warning signal of migrant gatherings at a known crossing point in Gravelines, northern France, indicating potential small-boat crossings into the UK. This matches the 'MOBILIZATION_COORDINATION' event type as it relates to the coordination or presence of migrants preparing for crossings."
+      "reason": "The post reports a specific and recent migration event involving 263 migrants landing at Dover, which is a concrete and contemporary migration-related event matching the BORDER_CROSSING type."
     },
     "signal:1260": {
       "decision": "REVIEW",
@@ -144,13 +124,29 @@
       "decision": "EXCLUDE",
       "reason": "The post is a general commentary on migration policy and social issues without reporting a concrete, contemporary migration-specific early warning, policy action or route/access event. The claim about aiming for net zero migration and leaving the ECHR is stated as a plan but no specific event, action or official policy announcement is reported; thu"
     },
-    "group:603": {
-      "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
-    },
-    "group:619": {
+    "signal:1269": {
       "decision": "EXCLUDE",
-      "reason": "This record is a biographical or historical narrative unrelated to a contemporary migration event or migration-specific early warning. The mentioned border crossing is not a current operational migration event but a past personal history with no migration-related event. The text does not describe a specific migration event or policy action."
+      "reason": "The text is a general political and social commentary on migration trends, public opinion, and the political debate around migration. It does not report a concrete, specific, contemporary migration enforcement event, early warning, or policy action. The mention of tens of thousands crossing the Morocco-Spanish border at Ceuta is descriptive and lac"
+    },
+    "signal:1270": {
+      "decision": "REVIEW",
+      "reason": "The post mentions a tactic change and claims about migrant children arrivals but lacks a concrete, verifiable event or specific current movement data. The source is a social media post referencing a news article, potentially a general narrative without a direct, current migration-specific early warning event clearly stated."
+    },
+    "signal:1271": {
+      "decision": "EXCLUDE",
+      "reason": "The record describes participation in a workshop on OSINT for trafficking and smuggling investigations, which is an event of coordination/training rather than a concrete migration operational event or specific migration-related early warning. It does not report an operational migration event or immediate signal such as movement, policy change, or r"
+    },
+    "signal:1272": {
+      "decision": "EXCLUDE",
+      "reason": "The record describes general issues of modern slavery without reporting a specific, concrete, or contemporary migration-related event or early warning. It lacks details on a particular facilitation event or early warning tied to migration routes or policies."
+    },
+    "signal:1273": {
+      "decision": "REVIEW",
+      "reason": "The post implies a situation involving migrants and resource allocation but does not report a concrete, specific, contemporary migration-related event or an early warning with clear details."
+    },
+    "signal:1274": {
+      "decision": "EXCLUDE",
+      "reason": "The post discusses historical political actions and events regarding refugee movements from the 1950s and the Marichjhapi incident, which is a past event. It does not report a concrete, contemporary migration-related event or early warning. The text is a general commentary on past refugee policies for political reasons rather than a specific, curre"
     },
     "group:620": {
       "decision": "EXCLUDE",
@@ -183,6 +179,14 @@
     "group:627": {
       "decision": "EXCLUDE",
       "reason": "The text is a historical and analytical discussion of the origins of the Syrian uprising related to Kurdish farmers and political concessions; it does not report a concrete, contemporary migration-related event or border crossing. The event_type 'BORDER_CROSSING' is incorrect for this content, which is a historical narrative and does not describe a"
+    },
+    "group:628": {
+      "decision": "EXCLUDE",
+      "reason": "The event describes the arrest of an individual after a confrontation but does not provide a concrete migration-related operational event. There is no specific migration movement, early warning, policy action, or route/access signal reported. The event is more about a law enforcement action involving a far-right individual rather than migration its"
+    },
+    "group:629": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1056,6 +1060,14 @@
       "decision": "PUBLISH",
       "reason": "The post reports current, concrete early warning signals about migration-related operations in Ghana in 2026, mentioning multiple arrests and repatriations linked to trafficking rings, which supports the event type of FACILITATION_EARLY_WARNING for migration."
     },
+    "signal:1253": {
+      "decision": "REVIEW",
+      "reason": "The text describes a policy arrangement involving deportation agreements and military aid linked to Cameroon, which is related to migration enforcement. However, it combines multiple complex topics including foreign military assistance, human rights concerns, and deportation programs without clear, concrete operational event details or an explicit "
+    },
+    "signal:1254": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a contemporary migration-specific early warning signal involving a deportation agreement between the U.S. and Cameroon that ties military aid to deportation deals with significant implications for migration enforcement policies. This fits the 'ENFORCEMENT_EARLY_WARNING' event type as it details ongoing and planned deportation fligh"
+    },
     "signal:1255": {
       "decision": "EXCLUDE",
       "reason": "The post provides an unverified claim about a specific boat design and police response without concrete, verifiable details about an actual migration event or early warning. It lacks sufficient evidence to confirm an operational migration event or early warning. The date is in the future relative to current knowledge cutoff, so cannot be confirmed."
@@ -1063,6 +1075,18 @@
     "signal:1256": {
       "decision": "REVIEW",
       "reason": "The post ambiguously claims Belgium and police are helping migrants cross to the UK, which is a significant migration event or early warning if true, but provides no verifiable details or external corroboration and the source is unverified."
+    },
+    "signal:1257": {
+      "decision": "PUBLISH",
+      "reason": "The record reports a concrete migration enforcement event involving the detention and penalty of undocumented foreign nationals and an expulsion order in Ussuriysk, Primorye region. The event aligns with the 'ENFORCEMENT_EARLY_WARNING' type as a migration control action. The report is contemporary and specific to migration enforcement."
+    },
+    "signal:1258": {
+      "decision": "PUBLISH",
+      "reason": "The report provides a contemporary migration-specific early warning about increased irregular migration attempts at the Belarus border, with concrete numbers from Lithuania, Latvia, and Poland border guards, matching the signal event type about a migration route early warning."
+    },
+    "signal:1259": {
+      "decision": "PUBLISH",
+      "reason": "The post describes a contemporary migration-specific early warning signal of migrant gatherings at a known crossing point in Gravelines, northern France, indicating potential small-boat crossings into the UK. This matches the 'MOBILIZATION_COORDINATION' event type as it relates to the coordination or presence of migrants preparing for crossings."
     }
   }
 }
