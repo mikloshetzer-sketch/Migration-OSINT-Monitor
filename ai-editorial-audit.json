@@ -1,14 +1,10 @@
 {
-  "generated_at": "2026-11-01T10:55:58.272326+00:00",
+  "generated_at": "2026-11-01T17:24:02.962094+00:00",
   "version": "3.0",
-  "candidates": 295,
-  "new_ai_calls": 17,
+  "candidates": 296,
+  "new_ai_calls": 3,
   "conflicting_identity_ids": [],
   "decisions": {
-    "post:786": {
-      "decision": "EXCLUDE",
-      "reason": "The event is about the arrest of an individual related to a confrontation but does not report a concrete migration-related event such as a migrant movement, crossing, or operational migration incident."
-    },
     "post:788": {
       "decision": "REVIEW",
       "reason": "The event is a concrete migration-related crossing but lacks verifiable location details and is sourced solely from Reddit without additional corroboration. The report of arrival in the Netherlands in 2026 is unverified, and the date is in the future, which raises questions about event timing and certainty."
@@ -84,6 +80,10 @@
     "post:806": {
       "decision": "REVIEW",
       "reason": "The post reports a recent arrival of a large number of migrants and boats en route, fitting a BORDER_CROSSING event type. However, it lacks verifiable details such as location, specific sources, or corroboration, and includes politicized language that affects neutrality. Further verification is needed before publishing."
+    },
+    "post:807": {
+      "decision": "EXCLUDE",
+      "reason": "The event date is in the future (2026), making it not a contemporary event. Also, the location is not clearly specified as relevant for migration operational tracking."
     },
     "signal:1278": {
       "decision": "REVIEW",
@@ -165,10 +165,6 @@
       "decision": "REVIEW",
       "reason": "The post claims a violent migrant arrival via small boats and provides an exact number (671) arriving yesterday, suggesting a recent event, but lacks clear supporting evidence or context for verification. The term 'violent migrants' is inflammatory and subjective, and the event location is unspecified. Source credibility and corroboration are uncle"
     },
-    "group:634": {
-      "decision": "REVIEW",
-      "reason": "The post reports detentions related to anti-migrant acts, which is tangentially related to migration context but does not clearly report a specific migration-related event such as migrant movement, interception, or policy enforcement. The event type 'DETENTION' is linked but somewhat ambiguous regarding migration specifics. Location is unspecified."
-    },
     "group:635": {
       "decision": "REVIEW",
       "reason": "The post claims a deportation event involving a grandmother moved from Alabama to a Central African country but lacks details on timing, confirmation, and precise location. Source link mentions deportations involving the Central African Republic but specifics and date context are unclear. Further verification needed to confirm this as a contemporar"
@@ -204,6 +200,10 @@
     "group:643": {
       "decision": "REVIEW",
       "reason": "The claim refers to 1200 illegal migrants arriving in the last 3 days and additional boats heading currently, but lacks a verifiable source, specific location, and concrete evidence to confirm the event. The statement also contains political commentary and attribution that is not supported by evidence."
+    },
+    "group:644": {
+      "decision": "PUBLISH",
+      "reason": "The report describes a concrete, contemporary migration-related event involving rescue of migrants and arrests related to human smuggling, supporting the event type SMUGGLING_ACTIVITY. The event is consistent with migration operational activity and indicates an incident rather than general narrative."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1184,6 +1184,10 @@
     "signal:1287": {
       "decision": "EXCLUDE",
       "reason": "The post lacks concrete, specific information about a current migration-related early warning event. The mention of 'violent migrants' jumping into boats and an arrival number is vague and unverified, with no clear evidence supporting a specific early warning signal. The publication date is in the future relative to the current knowledge cutoff, ca"
+    },
+    "signal:1300": {
+      "decision": "REVIEW",
+      "reason": "The post discusses a newly introduced government policy providing safe and legal routes for refugee arrivals in Britain, which is a current migration-specific event of crossing facilitation type. However, the text includes significant opinion, speculation, and lacks direct official details beyond the mention of a Home Office link which is not fully"
     }
   }
 }
