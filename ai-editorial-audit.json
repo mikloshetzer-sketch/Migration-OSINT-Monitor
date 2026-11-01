@@ -1,23 +1,15 @@
 {
-  "generated_at": "2026-10-31T23:00:59.577434+00:00",
+  "generated_at": "2026-11-01T02:56:09.697785+00:00",
   "version": "3.0",
-  "candidates": 285,
-  "new_ai_calls": 10,
+  "candidates": 288,
+  "new_ai_calls": 6,
   "conflicting_identity_ids": [
     "group:590"
   ],
   "decisions": {
-    "post:780": {
-      "decision": "REVIEW",
-      "reason": "The post reports a planned future deportation event, not a completed or ongoing event. The event_type 'DETENTION' does not fully match the described action of deportation planning. Verification and further details are needed to confirm the specifics of the migration event and its timing."
-    },
     "post:781": {
       "decision": "EXCLUDE",
       "reason": "The post does not report a concrete, contemporary migration-related event such as a border crossing or migration movement. Instead, it comments on government funding policies related to workplace abuse and family violence prevention. The assigned event type 'BORDER_CROSSING' is incorrect as no border crossing event is described."
-    },
-    "post:782": {
-      "decision": "REVIEW",
-      "reason": "The event date is in the future (2026), which cannot be verified currently. The claimed numbers of migrants and boats crossing need external verification, and the 'Armed Migrants' phrase is an unsubstantiated sensational claim. The report mentions specific crossing numbers indicating a migration event, but the date and sensational language require "
     },
     "post:783": {
       "decision": "REVIEW",
@@ -87,6 +79,14 @@
       "decision": "REVIEW",
       "reason": "The event involves arrest related to migrant smuggling, consistent with migration-related detention focus. However, the source is Reddit without any corroborating details or verifiable information, and the location is not precisely identified beyond Crete. Verification through more reliable sources is needed for publication."
     },
+    "post:800": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a political commentary about border security and does not report a specific, concrete migration-related event such as an observed border crossing or a migration-specific early warning. It expresses an opinion on the situation rather than confirming a discrete event."
+    },
+    "post:801": {
+      "decision": "EXCLUDE",
+      "reason": "The post contains unverifiable and unrelated personal allegations rather than reporting a specific, concrete migration-related event such as a recent border crossing or migration incident."
+    },
     "signal:1270": {
       "decision": "REVIEW",
       "reason": "The post mentions a tactic change and claims about migrant children arrivals but lacks a concrete, verifiable event or specific current movement data. The source is a social media post referencing a news article, potentially a general narrative without a direct, current migration-specific early warning event clearly stated."
@@ -94,14 +94,6 @@
     "signal:1271": {
       "decision": "EXCLUDE",
       "reason": "The record describes participation in a workshop on OSINT for trafficking and smuggling investigations, which is an event of coordination/training rather than a concrete migration operational event or specific migration-related early warning. It does not report an operational migration event or immediate signal such as movement, policy change, or r"
-    },
-    "signal:1272": {
-      "decision": "EXCLUDE",
-      "reason": "The record describes general issues of modern slavery without reporting a specific, concrete, or contemporary migration-related event or early warning. It lacks details on a particular facilitation event or early warning tied to migration routes or policies."
-    },
-    "signal:1274": {
-      "decision": "EXCLUDE",
-      "reason": "The post discusses historical political actions and events regarding refugee movements from the 1950s and the Marichjhapi incident, which is a past event. It does not report a concrete, contemporary migration-related event or early warning. The text is a general commentary on past refugee policies for political reasons rather than a specific, curre"
     },
     "signal:1275": {
       "decision": "REVIEW",
@@ -167,13 +159,17 @@
       "decision": "REVIEW",
       "reason": "The post mentions a large arrival of migrants and describes violent behavior but lacks detailed, verifiable information about the event specifics, such as exact location, timing beyond 'yesterday', or credible independent sources. The claim is significant but not adequately confirmed or detailed to confirm a concrete contemporary migration event or"
     },
+    "signal:1291": {
+      "decision": "REVIEW",
+      "reason": "The report indicates a deployment of military forces to borders aiming to stop illegal migrants, which corresponds to a migration-related early warning. However, the source is unverified and no external corroboration is provided. The location is imprecisely noted as '-', and the event date is in the future (2026), raising concerns about temporal va"
+    },
+    "signal:1292": {
+      "decision": "EXCLUDE",
+      "reason": "The post expresses a politicized argument about terminology related to human trafficking and ethnic cleansing victims but does not describe a concrete migration-specific early warning, policy action, or route/access signal. It does not report a specific migration event or a verifiable early warning."
+    },
     "group:590": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
-    },
-    "group:591": {
-      "decision": "PUBLISH",
-      "reason": "The record reports a concrete, contemporary migration-related event involving the arrest (detention) of a migrant smuggler and the smuggling of 52 migrants in Crete, Greece. The event type 'DETENTION' is accurate and matches the content. No contradictory or unrelated information detected."
     },
     "group:630": {
       "decision": "REVIEW",
@@ -202,6 +198,14 @@
     "group:636": {
       "decision": "REVIEW",
       "reason": "The claim involves a deportation event but specifies an unusual destination (Central African Republic) from the US, which is uncommon and requires verification. The source and event date are unclear or missing, and there is no corroboration. Further verification needed before publishing."
+    },
+    "group:637": {
+      "decision": "REVIEW",
+      "reason": "The post claims ongoing border crossings but provides no concrete, verifiable details about a specific migration event or evidence supporting the border crossing claim. The event lacks clear temporal and geographic specifics, and no source is cited to verify the claim. Therefore, it cannot be published as a confirmed migration-related event at this"
+    },
+    "group:638": {
+      "decision": "EXCLUDE",
+      "reason": "The post does not report a concrete, contemporary migration-related event. It is a personal claim about ancestry with no migration event described. The event_type 'BORDER_CROSSING' is not supported by the content."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1143,9 +1147,17 @@
       "decision": "EXCLUDE",
       "reason": "The text is a general political and social commentary on migration trends, public opinion, and the political debate around migration. It does not report a concrete, specific, contemporary migration enforcement event, early warning, or policy action. The mention of tens of thousands crossing the Morocco-Spanish border at Ceuta is descriptive and lac"
     },
+    "signal:1272": {
+      "decision": "EXCLUDE",
+      "reason": "The record describes general issues of modern slavery without reporting a specific, concrete, or contemporary migration-related event or early warning. It lacks details on a particular facilitation event or early warning tied to migration routes or policies."
+    },
     "signal:1273": {
       "decision": "REVIEW",
       "reason": "The post implies a situation involving migrants and resource allocation but does not report a concrete, specific, contemporary migration-related event or an early warning with clear details."
+    },
+    "signal:1274": {
+      "decision": "EXCLUDE",
+      "reason": "The post discusses historical political actions and events regarding refugee movements from the 1950s and the Marichjhapi incident, which is a past event. It does not report a concrete, contemporary migration-related event or early warning. The text is a general commentary on past refugee policies for political reasons rather than a specific, curre"
     }
   }
 }
