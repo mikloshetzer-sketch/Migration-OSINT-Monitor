@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-02T01:09:19.611640+00:00",
+  "generated_at": "2026-11-02T08:37:04.118129+00:00",
   "version": "3.0",
   "candidates": 300,
-  "new_ai_calls": 6,
+  "new_ai_calls": 2,
   "conflicting_identity_ids": [],
   "decisions": {
     "post:788": {
@@ -16,10 +16,6 @@
     "post:790": {
       "decision": "REVIEW",
       "reason": "The post reports a concrete migration interception event, but the location is vague and the source is unverified Reddit. Temporal context is in the future relative to current knowledge cutoff, making verification impossible."
-    },
-    "post:791": {
-      "decision": "REVIEW",
-      "reason": "The post reports a recent rescue operation with some details; however, the source is Reddit, which is not a highly reliable or official source for such events. The location is vague and not confirmed. More corroboration is needed to confirm the concrete, contemporary migration event."
     },
     "post:793": {
       "decision": "PUBLISH",
@@ -85,13 +81,9 @@
       "decision": "EXCLUDE",
       "reason": "The post contains a general commentary about harassment of refugees and does not report a concrete, contemporary migration-related event such as a specific border crossing or migration movement in France. The event_type 'BORDER_CROSSING' is not supported by the content."
     },
-    "signal:1291": {
+    "post:811": {
       "decision": "REVIEW",
-      "reason": "The report indicates a deployment of military forces to borders aiming to stop illegal migrants, which corresponds to a migration-related early warning. However, the source is unverified and no external corroboration is provided. The location is imprecisely noted as '-', and the event date is in the future (2026), raising concerns about temporal va"
-    },
-    "signal:1292": {
-      "decision": "EXCLUDE",
-      "reason": "The post expresses a politicized argument about terminology related to human trafficking and ethnic cleansing victims but does not describe a concrete migration-specific early warning, policy action, or route/access signal. It does not report a specific migration event or a verifiable early warning."
+      "reason": "The report describes a recent raid and detention of undocumented migrants, which is a concrete migration-related enforcement event. However, the location is unclear ('-'), and there is no evidence from external verification. The event appears current and matches the 'DETENTION' event type, but lack of location and corroboration warrant review rathe"
     },
     "signal:1293": {
       "decision": "EXCLUDE",
@@ -137,10 +129,6 @@
       "decision": "PUBLISH",
       "reason": "The report details a significant and current migration-related operational event involving more than 1,600 migrants crossing the Channel in four days, indicating a concrete early warning regarding migration movements on the Channel route."
     },
-    "group:637": {
-      "decision": "REVIEW",
-      "reason": "The post claims ongoing border crossings but provides no concrete, verifiable details about a specific migration event or evidence supporting the border crossing claim. The event lacks clear temporal and geographic specifics, and no source is cited to verify the claim. Therefore, it cannot be published as a confirmed migration-related event at this"
-    },
     "group:639": {
       "decision": "REVIEW",
       "reason": "The post claims a recent surge in migrant crossings and boat launches but lacks specific location details, verification of numbers, and credible source information. Without verification or more specific event data, it is not suitable for PUBLISH."
@@ -176,6 +164,10 @@
     "group:647": {
       "decision": "EXCLUDE",
       "reason": "The input is a general commentary on harassment of refugees without reporting a concrete, contemporary migration event such as a border crossing or similar action. The event_type 'BORDER_CROSSING' is not supported by the content, and no specific migration event is described."
+    },
+    "group:648": {
+      "decision": "PUBLISH",
+      "reason": "The report details a contemporary migration-related event involving the detention of four undocumented foreign nationals in Yekaterinburg during a joint operation by law enforcement and volunteers, fitting the DETENTION event type."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1200,6 +1192,14 @@
     "signal:1290": {
       "decision": "REVIEW",
       "reason": "The post mentions a large arrival of migrants and describes violent behavior but lacks detailed, verifiable information about the event specifics, such as exact location, timing beyond 'yesterday', or credible independent sources. The claim is significant but not adequately confirmed or detailed to confirm a concrete contemporary migration event or"
+    },
+    "signal:1291": {
+      "decision": "REVIEW",
+      "reason": "The report indicates a deployment of military forces to borders aiming to stop illegal migrants, which corresponds to a migration-related early warning. However, the source is unverified and no external corroboration is provided. The location is imprecisely noted as '-', and the event date is in the future (2026), raising concerns about temporal va"
+    },
+    "signal:1292": {
+      "decision": "EXCLUDE",
+      "reason": "The post expresses a politicized argument about terminology related to human trafficking and ethnic cleansing victims but does not describe a concrete migration-specific early warning, policy action, or route/access signal. It does not report a specific migration event or a verifiable early warning."
     },
     "signal:1300": {
       "decision": "REVIEW",
