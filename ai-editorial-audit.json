@@ -1,22 +1,15 @@
 {
-  "generated_at": "2026-11-03T17:30:05.750375+00:00",
+  "generated_at": "2026-11-03T22:43:54.216841+00:00",
   "version": "3.0",
-  "candidates": 310,
+  "candidates": 316,
   "new_ai_calls": 9,
   "conflicting_identity_ids": [
     "group:652",
     "group:654",
-    "group:655"
+    "group:655",
+    "group:656"
   ],
   "decisions": {
-    "post:800": {
-      "decision": "EXCLUDE",
-      "reason": "The post is a political commentary about border security and does not report a specific, concrete migration-related event such as an observed border crossing or a migration-specific early warning. It expresses an opinion on the situation rather than confirming a discrete event."
-    },
-    "post:801": {
-      "decision": "EXCLUDE",
-      "reason": "The post contains unverifiable and unrelated personal allegations rather than reporting a specific, concrete migration-related event such as a recent border crossing or migration incident."
-    },
     "post:802": {
       "decision": "REVIEW",
       "reason": "The post claims a recent high number of migrant crossings, but lacks precise location or authoritative source verification. The event type matches the content but has no corroboration or specific details to confirm the report's accuracy or timing beyond the claim. Further verification needed."
@@ -89,9 +82,13 @@
       "decision": "REVIEW",
       "reason": "The post reports a detention related to a suspected African migrant attempting to steal a boat to reach France, which is a migration-related event. However, the event location is unspecified and the report lacks detail to confirm a concrete operational migration event. The event date is also in the future relative to current date (2026). Verificati"
     },
-    "signal:1307": {
+    "post:820": {
       "decision": "REVIEW",
-      "reason": "The record describes a personal observation of a rescue attempt during an illegal migrant boat crossing, implying a migration-specific movement early warning. However, details are incomplete and vague, with no clear operational event or corroborated early warning; location is unclear ('-'). Needs further information to confirm event specifics and c"
+      "reason": "The post reports a migration-related rescue operation and is labeled as RESCUE_OPERATION, which matches the content. However, the source is a single Reddit post with no additional corroboration and location detail is vague ('-'). Without further verification or more precise location data, it is uncertain if the event is real and current. Recommend "
+    },
+    "post:821": {
+      "decision": "REVIEW",
+      "reason": "The post reports a detention related to migration (suspected smuggler arrested after leaving migrants stranded), but the event date and location details are unclear or missing. The link is not accessible to corroborate further details. Verification of contemporary migration-related event details needed."
     },
     "signal:1311": {
       "decision": "EXCLUDE",
@@ -113,13 +110,33 @@
       "decision": "PUBLISH",
       "reason": "The report provides a concrete and contemporary migration-specific early warning detailing over 1,200 migrants arriving in the UK by small boats after a three-week weather pause, supported by official figures from the UK Home Office."
     },
-    "group:646": {
-      "decision": "EXCLUDE",
-      "reason": "The post discusses census and population estimates of Somali residents in Ohio, with no mention of a concrete, contemporary migration event such as border crossing or new arrivals. The event_type 'BORDER_CROSSING' is incorrect as the content does not report any ongoing or recent border crossing event."
+    "signal:1316": {
+      "decision": "PUBLISH",
+      "reason": "This record describes a specific, contemporary migration policy change with detailed legal implications and signals a coordinated legal challenge and mobilization planned in response. The discussion of the retrospective change to the settlement rules and the planned judicial review represents a clear migration-related early warning about access to "
     },
-    "group:647": {
+    "signal:1317": {
       "decision": "EXCLUDE",
-      "reason": "The input is a general commentary on harassment of refugees without reporting a concrete, contemporary migration event such as a border crossing or similar action. The event_type 'BORDER_CROSSING' is not supported by the content, and no specific migration event is described."
+      "reason": "The post is an opinion about an election outcome and migration attitudes, without reporting a specific or concrete migration event or early warning. The event_type 'CROSSING_FACILITATION' is not supported by the content, which is speculative commentary rather than a report on facilitation of crossings."
+    },
+    "signal:1318": {
+      "decision": "REVIEW",
+      "reason": "The message refers to a migrant vessel incident involving a lifeboat reaching the French coast, implying a migration-related event. However, details are vague, the exact event date and location are unspecified, and the source is a social media post without additional corroboration. More information is needed to confirm a concrete, contemporary migr"
+    },
+    "signal:1319": {
+      "decision": "REVIEW",
+      "reason": "The post alleges a maritime service facilitating illegal migration from France to the UK but provides no concrete evidence or details about a specific migration event or policy. The claim about police escorts and a 'boat service' is unverified and could be speculative or opinion. The event type as ROUTE_EARLY_WARNING may be appropriate if verified,"
+    },
+    "signal:1320": {
+      "decision": "EXCLUDE",
+      "reason": "The record is a general political commentary about Brexit and Channel crossings, not a concrete, contemporary migration-specific event or early warning. It lacks specific operational migration details or actions."
+    },
+    "signal:1321": {
+      "decision": "REVIEW",
+      "reason": "The post mentions seeing a migrant bus leaving an election office, which suggests a movement event, but lacks specific information about the context, destination, number of migrants, or concrete details about the event. Without further corroboration or detail, it is uncertain whether this constitutes a verified migration-specific early warning even"
+    },
+    "group:632": {
+      "decision": "REVIEW",
+      "reason": "Inconsistent approval: The record reports a concrete, contemporary migration-related event—a rescue operation of 42 migrants south of Crete detected by Frontex drone."
     },
     "group:648": {
       "decision": "PUBLISH",
@@ -146,6 +163,10 @@
       "reason": "Conflicting content for the same ID across dashboard sections"
     },
     "group:655": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:656": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
     },
@@ -1236,6 +1257,10 @@
     "signal:1306": {
       "decision": "EXCLUDE",
       "reason": "The source is a social media post on Reddit without independent verification, and the claim is generic without specific, actionable early warning details or official confirmation. The event date is in the future relative to the current date, making it a future warning not yet completed."
+    },
+    "signal:1307": {
+      "decision": "REVIEW",
+      "reason": "The record describes a personal observation of a rescue attempt during an illegal migrant boat crossing, implying a migration-specific movement early warning. However, details are incomplete and vague, with no clear operational event or corroborated early warning; location is unclear ('-'). Needs further information to confirm event specifics and c"
     },
     "signal:1308": {
       "decision": "EXCLUDE",
