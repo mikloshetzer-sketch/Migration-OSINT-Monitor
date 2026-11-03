@@ -1,18 +1,12 @@
 {
-  "generated_at": "2026-11-02T19:56:37.018815+00:00",
+  "generated_at": "2026-11-03T01:59:19.495531+00:00",
   "version": "3.0",
   "candidates": 304,
-  "new_ai_calls": 8,
-  "conflicting_identity_ids": [],
+  "new_ai_calls": 3,
+  "conflicting_identity_ids": [
+    "group:651"
+  ],
   "decisions": {
-    "post:789": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete, contemporary migration-related operational event: interception of a rubber dinghy with migrants and suspected smugglers at the Dutch coast, a unique recent occurrence. Event type INTERCEPTION is appropriate and supported by multiple named sources."
-    },
-    "post:793": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete, contemporary migration-related event of people arriving illegally in the UK on migrant dinghies, consistent with the 'BORDER_CROSSING' event type. The report provides specific recent dates and numbers, making it relevant and suitable for publication as a migration event report."
-    },
     "post:794": {
       "decision": "REVIEW",
       "reason": "The event refers to a detention related to anti-migrant acts but does not clearly describe a migration-related operational event such as migrant movements or direct migrant-related actions. It is also dated in the future (2026) which is inconsistent for current assessment, and lacks sufficient location details beyond 'near Dunkirk'. Additional veri"
@@ -85,21 +79,13 @@
       "decision": "EXCLUDE",
       "reason": "The text is a political commentary on migrant language proficiency, not a report of a concrete migration-related event such as a border crossing or movement."
     },
-    "signal:1301": {
+    "post:814": {
       "decision": "EXCLUDE",
-      "reason": "The text does not describe a concrete, contemporary migration-related event or migration-specific early warning. It primarily focuses on commentary about social issues, dog attacks, and complex narratives unrelated to specific operational migration events or policies, and does not support the event type 'LEGAL_MIGRATION_SIGNAL'."
+      "reason": "The post is general commentary on migrants and Spain's status; it does not report a concrete, contemporary migration-related event such as a border crossing or other operational event."
     },
-    "signal:1302": {
+    "post:815": {
       "decision": "EXCLUDE",
-      "reason": "The text is a hostile and vague commentary rather than a concrete, contemporary migration-specific early warning or a report of a migration event. It lacks specific information about routes, policies, or operational details related to migration."
-    },
-    "signal:1303": {
-      "decision": "REVIEW",
-      "reason": "The post discusses speculative political actions and policy debates about indefinite leave to remain (ILR) rules and Labour party proposals, without reporting a concrete or contemporaneous migration event or signal. It primarily contains opinion and hypotheticals rather than a verifiable migration-specific early warning or policy change announcemen"
-    },
-    "signal:1304": {
-      "decision": "PUBLISH",
-      "reason": "The report details a significant and current migration-related operational event involving more than 1,600 migrants crossing the Channel in four days, indicating a concrete early warning regarding migration movements on the Channel route."
+      "reason": "This is a fictional fanon narrative and dialogue reconstruction related to a military or game universe and does not describe any real-world migration event or migration-specific early warning."
     },
     "signal:1305": {
       "decision": "PUBLISH",
@@ -116,14 +102,6 @@
     "group:639": {
       "decision": "REVIEW",
       "reason": "The post claims a recent surge in migrant crossings and boat launches but lacks specific location details, verification of numbers, and credible source information. Without verification or more specific event data, it is not suitable for PUBLISH."
-    },
-    "group:640": {
-      "decision": "EXCLUDE",
-      "reason": "The post does not report a concrete, contemporary migration-related event but rather comments on past political actions and criticisms, lacking a specific recent operational event or measure."
-    },
-    "group:642": {
-      "decision": "EXCLUDE",
-      "reason": "The content is a historical generalization and does not report a contemporary, concrete migration-related deportation event. There is no specific or current operational migration event described."
     },
     "group:644": {
       "decision": "PUBLISH",
@@ -152,6 +130,10 @@
     "group:650": {
       "decision": "EXCLUDE",
       "reason": "The content is a general commentary on language skills of migrants in London and does not report a specific, concrete migration event or early warning. The event_type 'BORDER_CROSSING' is not supported by the content."
+    },
+    "group:651": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1217,9 +1199,29 @@
       "decision": "REVIEW",
       "reason": "The post discusses a newly introduced government policy providing safe and legal routes for refugee arrivals in Britain, which is a current migration-specific event of crossing facilitation type. However, the text includes significant opinion, speculation, and lacks direct official details beyond the mention of a Home Office link which is not fully"
     },
+    "signal:1301": {
+      "decision": "EXCLUDE",
+      "reason": "The text does not describe a concrete, contemporary migration-related event or migration-specific early warning. It primarily focuses on commentary about social issues, dog attacks, and complex narratives unrelated to specific operational migration events or policies, and does not support the event type 'LEGAL_MIGRATION_SIGNAL'."
+    },
+    "signal:1302": {
+      "decision": "EXCLUDE",
+      "reason": "The text is a hostile and vague commentary rather than a concrete, contemporary migration-specific early warning or a report of a migration event. It lacks specific information about routes, policies, or operational details related to migration."
+    },
+    "signal:1303": {
+      "decision": "REVIEW",
+      "reason": "The post discusses speculative political actions and policy debates about indefinite leave to remain (ILR) rules and Labour party proposals, without reporting a concrete or contemporaneous migration event or signal. It primarily contains opinion and hypotheticals rather than a verifiable migration-specific early warning or policy change announcemen"
+    },
+    "signal:1304": {
+      "decision": "PUBLISH",
+      "reason": "The report details a significant and current migration-related operational event involving more than 1,600 migrants crossing the Channel in four days, indicating a concrete early warning regarding migration movements on the Channel route."
+    },
     "signal:1308": {
       "decision": "EXCLUDE",
       "reason": "The text is a general discourse on the historical and socio-political causes of migration and immigration debates, without reporting any concrete, specific, or current migration-related event, early warning, policy action, or migration route/access signal. The event_type 'POLICY_SIGNAL' is not supported by the content, which lacks a defined event o"
+    },
+    "signal:1309": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a fictional narrative or fan-created dialogue without any concrete or real-world migration-related event or recruitment activity. The event type RECRUITMENT_COORDINATION is not supported by the content, which depicts a scripted scene unrelated to actual migration or recruitment events. There is no evidence of a real operational migratio"
     }
   }
 }
