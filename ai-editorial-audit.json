@@ -1,10 +1,9 @@
 {
-  "generated_at": "2026-11-04T03:41:53.638767+00:00",
+  "generated_at": "2026-11-04T11:44:36.758853+00:00",
   "version": "3.0",
-  "candidates": 322,
-  "new_ai_calls": 10,
+  "candidates": 324,
+  "new_ai_calls": 7,
   "conflicting_identity_ids": [
-    "group:652",
     "group:654",
     "group:655",
     "group:656",
@@ -12,14 +11,6 @@
     "group:659"
   ],
   "decisions": {
-    "post:802": {
-      "decision": "REVIEW",
-      "reason": "The post claims a recent high number of migrant crossings, but lacks precise location or authoritative source verification. The event type matches the content but has no corroboration or specific details to confirm the report's accuracy or timing beyond the claim. Further verification needed."
-    },
-    "post:803": {
-      "decision": "EXCLUDE",
-      "reason": "The post contains general political commentary and historical reference to past border measures but does not report a concrete, contemporary migration-related event or specific current border measure action."
-    },
     "post:807": {
       "decision": "EXCLUDE",
       "reason": "The event date is in the future (2026), making it not a contemporary event. Also, the location is not clearly specified as relevant for migration operational tracking."
@@ -51,10 +42,6 @@
     "post:814": {
       "decision": "EXCLUDE",
       "reason": "The post is general commentary on migrants and Spain's status; it does not report a concrete, contemporary migration-related event such as a border crossing or other operational event."
-    },
-    "post:815": {
-      "decision": "EXCLUDE",
-      "reason": "This is a fictional fanon narrative and dialogue reconstruction related to a military or game universe and does not describe any real-world migration event or migration-specific early warning."
     },
     "post:816": {
       "decision": "REVIEW",
@@ -92,9 +79,17 @@
       "decision": "EXCLUDE",
       "reason": "The content is historical and general information about indigenous peoples and their ancient migration, not a concrete, contemporary migration-related event or early warning. It does not include any current border crossing event or migration-specific signal."
     },
-    "signal:1311": {
+    "post:825": {
       "decision": "EXCLUDE",
-      "reason": "The post is a general narrative and advocacy message regarding government policy and support for refugees without reporting a concrete, contemporary migration-specific event or early warning. It does not describe a specific facilitation event or early warning of migration movement."
+      "reason": "The event described is a claim about an arrest related to attempting to steal a boat, not a confirmed deportation event. The label 'DEPORTATION' is not supported by the content, which lacks actual deportation information."
+    },
+    "post:826": {
+      "decision": "EXCLUDE",
+      "reason": "The post makes a general, politically charged claim about deportation policy without reporting a specific, concrete migration-related deportation event."
+    },
+    "post:827": {
+      "decision": "EXCLUDE",
+      "reason": "The post discusses internal U.S. state migration trends tied to election results and political affiliations, not a concrete external migration event such as border crossing or refugee movement. It is opinionated political commentary rather than a report of a migration-specific event."
     },
     "signal:1312": {
       "decision": "EXCLUDE",
@@ -160,13 +155,9 @@
       "decision": "EXCLUDE",
       "reason": "The post contains a subjective complaint about modular homes and migrants but does not report a concrete, contemporary migration-specific event or early warning related to facilitation or migration routes. No verifiable migration event is described."
     },
-    "group:632": {
-      "decision": "REVIEW",
-      "reason": "Inconsistent approval: The record reports a concrete, contemporary migration-related event—a rescue operation of 42 migrants south of Crete detected by Frontex drone."
-    },
-    "group:652": {
-      "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
+    "signal:1328": {
+      "decision": "EXCLUDE",
+      "reason": "The text is a political commentary on US election outcomes and economic conditions, with some mention of immigration policy in passing but no concrete, contemporary migration event or specific early warning related to migration. The event_type 'PRESSURE_EARLY_WARNING' is not supported as there is no migration-specific early warning or signal presen"
     },
     "group:653": {
       "decision": "EXCLUDE",
@@ -195,6 +186,18 @@
     "group:659": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:660": {
+      "decision": "REVIEW",
+      "reason": "The report mentions an arrest of a Sudanese man for attempting to steal a boat, possibly linked to migrant activity, but lacks clear details on actual deportation or confirmed migration event. The event type 'DEPORTATION' is not sufficiently supported by the text provided."
+    },
+    "group:661": {
+      "decision": "EXCLUDE",
+      "reason": "The post contains a general opinion about migrants and deportation without reporting a specific, concrete, and contemporary migration event such as an actual deportation operation."
+    },
+    "group:662": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a general political commentary expressing an opinion about migration and election results, without reporting a concrete, contemporary migration-related event or specific border crossing incident. No specific event data provided."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1299,6 +1302,10 @@
     "signal:1310": {
       "decision": "PUBLISH",
       "reason": "The record reports a concrete and contemporary migration-related policy announcement regarding changes in migrant settlement timelines in the UK. It specifies distinct settlement durations tied to migrant categories and conditions, which constitutes a migration-specific early warning signal about legal status changes affecting migrants. The event t"
+    },
+    "signal:1311": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a general narrative and advocacy message regarding government policy and support for refugees without reporting a concrete, contemporary migration-specific event or early warning. It does not describe a specific facilitation event or early warning of migration movement."
     }
   }
 }
