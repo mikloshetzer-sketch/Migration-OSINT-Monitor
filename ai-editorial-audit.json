@@ -1,13 +1,15 @@
 {
-  "generated_at": "2026-11-03T22:43:54.216841+00:00",
+  "generated_at": "2026-11-04T03:41:53.638767+00:00",
   "version": "3.0",
-  "candidates": 316,
-  "new_ai_calls": 9,
+  "candidates": 322,
+  "new_ai_calls": 10,
   "conflicting_identity_ids": [
     "group:652",
     "group:654",
     "group:655",
-    "group:656"
+    "group:656",
+    "group:658",
+    "group:659"
   ],
   "decisions": {
     "post:802": {
@@ -17,18 +19,6 @@
     "post:803": {
       "decision": "EXCLUDE",
       "reason": "The post contains general political commentary and historical reference to past border measures but does not report a concrete, contemporary migration-related event or specific current border measure action."
-    },
-    "post:804": {
-      "decision": "EXCLUDE",
-      "reason": "The event date is in the future and the information is a general report about smuggling networks being dismantled, without a specific contemporary migration event occurring now."
-    },
-    "post:805": {
-      "decision": "EXCLUDE",
-      "reason": "The post references a historical event unrelated to current migration or deportation events. It does not report a contemporary or ongoing migration-related event and thus does not fit the criteria for publication."
-    },
-    "post:806": {
-      "decision": "REVIEW",
-      "reason": "The post reports a recent arrival of a large number of migrants and boats en route, fitting a BORDER_CROSSING event type. However, it lacks verifiable details such as location, specific sources, or corroboration, and includes politicized language that affects neutrality. Further verification is needed before publishing."
     },
     "post:807": {
       "decision": "EXCLUDE",
@@ -90,6 +80,18 @@
       "decision": "REVIEW",
       "reason": "The post reports a detention related to migration (suspected smuggler arrested after leaving migrants stranded), but the event date and location details are unclear or missing. The link is not accessible to corroborate further details. Verification of contemporary migration-related event details needed."
     },
+    "post:822": {
+      "decision": "EXCLUDE",
+      "reason": "The event date is in the future relative to the knowledge cutoff; the claim is unverified and lacks details or evidence. No contemporaneous migration event can be confirmed from this post."
+    },
+    "post:823": {
+      "decision": "EXCLUDE",
+      "reason": "The post contains political commentary and opinion without reporting a concrete, contemporary migration-related event or specific border measure. No verifiable event is described to support the assigned event type BORDER_MEASURE."
+    },
+    "post:824": {
+      "decision": "EXCLUDE",
+      "reason": "The content is historical and general information about indigenous peoples and their ancient migration, not a concrete, contemporary migration-related event or early warning. It does not include any current border crossing event or migration-specific signal."
+    },
     "signal:1311": {
       "decision": "EXCLUDE",
       "reason": "The post is a general narrative and advocacy message regarding government policy and support for refugees without reporting a concrete, contemporary migration-specific event or early warning. It does not describe a specific facilitation event or early warning of migration movement."
@@ -134,21 +136,33 @@
       "decision": "REVIEW",
       "reason": "The post mentions seeing a migrant bus leaving an election office, which suggests a movement event, but lacks specific information about the context, destination, number of migrants, or concrete details about the event. Without further corroboration or detail, it is uncertain whether this constitutes a verified migration-specific early warning even"
     },
+    "signal:1322": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a highly emotional and speculative statement without concrete information about any specific, contemporary migration event or policy action. It does not provide verified or clear details about US border reopening or migration flows. The location is unspecified, and there is no supporting corroboration."
+    },
+    "signal:1323": {
+      "decision": "EXCLUDE",
+      "reason": "The post is an emotional and speculative commentary about a possible reopening of the US border and a resulting influx of migrants. It does not report a concrete, contemporary migration-related event or an official early warning with verifiable details. The event date is in the future and the post lacks informative content supporting a migration-sp"
+    },
+    "signal:1324": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a general commentary and opinion about men seeking asylum and the societal attitudes towards male refugees, without reporting a concrete, contemporary migration-specific early warning, policy action, or event. The mention of young Moroccan men migrating to Spain lacks a specific, verified event context and does not constitute an operati"
+    },
+    "signal:1325": {
+      "decision": "EXCLUDE",
+      "reason": "The content is a narrative critical of migrant housing policy, lacking a concrete, contemporary migration-specific event or early warning. No verifiable policy action or signal is reported, and the text is primarily opinion without substantiated facilitation or early warning details."
+    },
+    "signal:1326": {
+      "decision": "REVIEW",
+      "reason": "The claim concerns migrants under asylum voting in Texas and implies facilitation related to voting access, which may be politically sensitive and related to migration policy enforcement. However, the event type FACILITATION_EARLY_WARNING usually applies to warnings about migration routes or access to migration benefits, not voting rights specifica"
+    },
+    "signal:1327": {
+      "decision": "EXCLUDE",
+      "reason": "The post contains a subjective complaint about modular homes and migrants but does not report a concrete, contemporary migration-specific event or early warning related to facilitation or migration routes. No verifiable migration event is described."
+    },
     "group:632": {
       "decision": "REVIEW",
       "reason": "Inconsistent approval: The record reports a concrete, contemporary migration-related event—a rescue operation of 42 migrants south of Crete detected by Frontex drone."
-    },
-    "group:648": {
-      "decision": "PUBLISH",
-      "reason": "The report details a contemporary migration-related event involving the detention of four undocumented foreign nationals in Yekaterinburg during a joint operation by law enforcement and volunteers, fitting the DETENTION event type."
-    },
-    "group:649": {
-      "decision": "EXCLUDE",
-      "reason": "The record is a question about the number of illegal migrants under a government, not a report of a concrete, contemporary migration-related event or verified data."
-    },
-    "group:650": {
-      "decision": "EXCLUDE",
-      "reason": "The content is a general commentary on language skills of migrants in London and does not report a specific, concrete migration event or early warning. The event_type 'BORDER_CROSSING' is not supported by the content."
     },
     "group:652": {
       "decision": "REVIEW",
@@ -167,6 +181,18 @@
       "reason": "Conflicting content for the same ID across dashboard sections"
     },
     "group:656": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:657": {
+      "decision": "EXCLUDE",
+      "reason": "The claim refers to actions by Trump, which are historical, and no concrete contemporary event is reported; the text is vague and lacks supporting details about a specific border measure event."
+    },
+    "group:658": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:659": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
     },
