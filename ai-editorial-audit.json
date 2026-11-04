@@ -1,20 +1,15 @@
 {
-  "generated_at": "2026-11-04T11:44:36.758853+00:00",
+  "generated_at": "2026-11-04T19:01:56.661190+00:00",
   "version": "3.0",
-  "candidates": 324,
-  "new_ai_calls": 7,
+  "candidates": 326,
+  "new_ai_calls": 4,
   "conflicting_identity_ids": [
     "group:654",
-    "group:655",
     "group:656",
     "group:658",
     "group:659"
   ],
   "decisions": {
-    "post:807": {
-      "decision": "EXCLUDE",
-      "reason": "The event date is in the future (2026), making it not a contemporary event. Also, the location is not clearly specified as relevant for migration operational tracking."
-    },
     "post:808": {
       "decision": "EXCLUDE",
       "reason": "The content is a political commentary with subjective opinions about migrants and refugees, not reporting a concrete migration-related event such as a specific border crossing or arrival."
@@ -91,21 +86,9 @@
       "decision": "EXCLUDE",
       "reason": "The post discusses internal U.S. state migration trends tied to election results and political affiliations, not a concrete external migration event such as border crossing or refugee movement. It is opinionated political commentary rather than a report of a migration-specific event."
     },
-    "signal:1312": {
-      "decision": "EXCLUDE",
-      "reason": "The report describes a fraud crime involving a migrant individual but does not describe a concrete migration-specific event or an early warning related to migration flows, policies, or routes. It is a criminal case, not a migration operational event or signal."
-    },
-    "signal:1313": {
-      "decision": "EXCLUDE",
-      "reason": "The post uses inflammatory and derogatory language without providing concrete evidence of a specific migration-related event or policy action. It does not report a verifiable or specific migration early warning but rather expresses a general, unverified accusation."
-    },
-    "signal:1314": {
-      "decision": "EXCLUDE",
-      "reason": "The post contains general accusations about illegal migration and human trafficking but does not report a specific, concrete migration-related operational event or early warning. It is a political commentary lacking a clear contemporary migration-specific event or policy action."
-    },
-    "signal:1315": {
-      "decision": "PUBLISH",
-      "reason": "The report provides a concrete and contemporary migration-specific early warning detailing over 1,200 migrants arriving in the UK by small boats after a three-week weather pause, supported by official figures from the UK Home Office."
+    "post:828": {
+      "decision": "REVIEW",
+      "reason": "The post references figures about migrants intercepted and turned away but does not report a specific, concrete, and contemporary migration-related event. It discusses data and interpretations rather than describing a clear, current event of interception."
     },
     "signal:1316": {
       "decision": "PUBLISH",
@@ -159,15 +142,19 @@
       "decision": "EXCLUDE",
       "reason": "The text is a political commentary on US election outcomes and economic conditions, with some mention of immigration policy in passing but no concrete, contemporary migration event or specific early warning related to migration. The event_type 'PRESSURE_EARLY_WARNING' is not supported as there is no migration-specific early warning or signal presen"
     },
+    "signal:1329": {
+      "decision": "PUBLISH",
+      "reason": "The report describes a concrete and contemporary migration-related event involving a migrant boat found drifting and people rescued, which fits the ROUTE_EARLY_WARNING event type indicating an incident on a migration route."
+    },
+    "signal:1330": {
+      "decision": "EXCLUDE",
+      "reason": "The post is an unverified claim and general political commentary about migrant child trafficking and hotline calls, without reporting a concrete, contemporary migration-related event or policy action."
+    },
     "group:653": {
       "decision": "EXCLUDE",
       "reason": "The content is a general political opinion about refugee status and deportation, without reporting a specific, concrete, contemporary migration-related event or action. There is no operational migration event or early warning described."
     },
     "group:654": {
-      "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
-    },
-    "group:655": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
     },
@@ -198,6 +185,10 @@
     "group:662": {
       "decision": "EXCLUDE",
       "reason": "The post is a general political commentary expressing an opinion about migration and election results, without reporting a concrete, contemporary migration-related event or specific border crossing incident. No specific event data provided."
+    },
+    "group:663": {
+      "decision": "REVIEW",
+      "reason": "The post references statistics about migrants intercepted and turned around at the border but lacks a concrete, contemporary migration-related event. It is a commentary on an article's data without specifying a distinct operational event on migration interception."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1306,6 +1297,22 @@
     "signal:1311": {
       "decision": "EXCLUDE",
       "reason": "The post is a general narrative and advocacy message regarding government policy and support for refugees without reporting a concrete, contemporary migration-specific event or early warning. It does not describe a specific facilitation event or early warning of migration movement."
+    },
+    "signal:1312": {
+      "decision": "EXCLUDE",
+      "reason": "The report describes a fraud crime involving a migrant individual but does not describe a concrete migration-specific event or an early warning related to migration flows, policies, or routes. It is a criminal case, not a migration operational event or signal."
+    },
+    "signal:1313": {
+      "decision": "EXCLUDE",
+      "reason": "The post uses inflammatory and derogatory language without providing concrete evidence of a specific migration-related event or policy action. It does not report a verifiable or specific migration early warning but rather expresses a general, unverified accusation."
+    },
+    "signal:1314": {
+      "decision": "EXCLUDE",
+      "reason": "The post contains general accusations about illegal migration and human trafficking but does not report a specific, concrete migration-related operational event or early warning. It is a political commentary lacking a clear contemporary migration-specific event or policy action."
+    },
+    "signal:1315": {
+      "decision": "PUBLISH",
+      "reason": "The report provides a concrete and contemporary migration-specific early warning detailing over 1,200 migrants arriving in the UK by small boats after a three-week weather pause, supported by official figures from the UK Home Office."
     }
   }
 }
