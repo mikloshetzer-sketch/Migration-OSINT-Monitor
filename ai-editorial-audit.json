@@ -1,27 +1,14 @@
 {
-  "generated_at": "2026-11-05T00:38:52.728695+00:00",
+  "generated_at": "2026-11-05T08:45:06.917550+00:00",
   "version": "3.0",
-  "candidates": 330,
-  "new_ai_calls": 4,
+  "candidates": 334,
+  "new_ai_calls": 9,
   "conflicting_identity_ids": [
-    "group:654",
-    "group:656",
     "group:658",
-    "group:659"
+    "group:659",
+    "group:664"
   ],
   "decisions": {
-    "post:808": {
-      "decision": "EXCLUDE",
-      "reason": "The content is a political commentary with subjective opinions about migrants and refugees, not reporting a concrete migration-related event such as a specific border crossing or arrival."
-    },
-    "post:809": {
-      "decision": "EXCLUDE",
-      "reason": "The post provides information about the Somali population in Ohio but does not report a specific, concrete, contemporary migration event such as border crossing or refugee arrival. The event_type 'BORDER_CROSSING' is incorrect for this content, and no operational migration event is described."
-    },
-    "post:810": {
-      "decision": "EXCLUDE",
-      "reason": "The post contains a general commentary about harassment of refugees and does not report a concrete, contemporary migration-related event such as a specific border crossing or migration movement in France. The event_type 'BORDER_CROSSING' is not supported by the content."
-    },
     "post:811": {
       "decision": "REVIEW",
       "reason": "The report describes a recent raid and detention of undocumented migrants, which is a concrete migration-related enforcement event. However, the location is unclear ('-'), and there is no evidence from external verification. The event appears current and matches the 'DETENTION' event type, but lack of location and corroboration warrant review rathe"
@@ -90,25 +77,17 @@
       "decision": "REVIEW",
       "reason": "The post references figures about migrants intercepted and turned away but does not report a specific, concrete, and contemporary migration-related event. It discusses data and interpretations rather than describing a clear, current event of interception."
     },
-    "signal:1322": {
+    "post:829": {
       "decision": "EXCLUDE",
-      "reason": "The post is a highly emotional and speculative statement without concrete information about any specific, contemporary migration event or policy action. It does not provide verified or clear details about US border reopening or migration flows. The location is unspecified, and there is no supporting corroboration."
+      "reason": "The post discusses a boat with migrants removed and a rescue operation but does not report a specific migration event such as a deportation or actual movement of migrants."
     },
-    "signal:1323": {
+    "post:830": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete, recent migration-related event involving the rescue of stranded migrant workers during severe flooding, which qualifies as a migration-specific operational event."
+    },
+    "post:831": {
       "decision": "EXCLUDE",
-      "reason": "The post is an emotional and speculative commentary about a possible reopening of the US border and a resulting influx of migrants. It does not report a concrete, contemporary migration-related event or an official early warning with verifiable details. The event date is in the future and the post lacks informative content supporting a migration-sp"
-    },
-    "signal:1325": {
-      "decision": "EXCLUDE",
-      "reason": "The content is a narrative critical of migrant housing policy, lacking a concrete, contemporary migration-specific event or early warning. No verifiable policy action or signal is reported, and the text is primarily opinion without substantiated facilitation or early warning details."
-    },
-    "signal:1326": {
-      "decision": "REVIEW",
-      "reason": "The claim concerns migrants under asylum voting in Texas and implies facilitation related to voting access, which may be politically sensitive and related to migration policy enforcement. However, the event type FACILITATION_EARLY_WARNING usually applies to warnings about migration routes or access to migration benefits, not voting rights specifica"
-    },
-    "signal:1327": {
-      "decision": "EXCLUDE",
-      "reason": "The post contains a subjective complaint about modular homes and migrants but does not report a concrete, contemporary migration-specific event or early warning related to facilitation or migration routes. No verifiable migration event is described."
+      "reason": "The post discusses stereotypes about migrants but does not report a concrete, contemporary migration-related event such as a border crossing."
     },
     "signal:1328": {
       "decision": "EXCLUDE",
@@ -138,17 +117,21 @@
       "decision": "PUBLISH",
       "reason": "The record reports a concrete, contemporary migration-related early warning of a caravan movement starting on Nov 3, 2026 from San Pedro Sula, Honduras, heading north. The event type 'MOVEMENT_EARLY_WARNING' is correctly assigned to an early warning signal about migration movement."
     },
-    "group:653": {
+    "signal:1335": {
+      "decision": "REVIEW",
+      "reason": "The report concerns a future date (November 2026) and references anticipated ICE raids and enforcement actions, constituting an early warning signal. However, it includes a vague reference to an incident ('agents abducted a migrant after slight resistance') without clear location or verifiable details. The source is Reddit, which is unverified. The"
+    },
+    "signal:1336": {
+      "decision": "REVIEW",
+      "reason": "The post discusses announced government reforms related to 'earned settlement' affecting immigration status and settlement timelines differentiated by income and refugee status. While it concerns policy changes, it does not present concrete details of an implemented event or enforceable measure, rather it reflects commentary on announced reforms. V"
+    },
+    "signal:1337": {
+      "decision": "PUBLISH",
+      "reason": "The record describes a concrete, current migration-related pressure event at the Belarus border, supported by specific numbers of irregular migrants turned back by Lithuanian and Latvian border guards. It constitutes a migration-specific early warning (pressure increase) consistent with the assigned type."
+    },
+    "signal:1338": {
       "decision": "EXCLUDE",
-      "reason": "The content is a general political opinion about refugee status and deportation, without reporting a specific, concrete, contemporary migration-related event or action. There is no operational migration event or early warning described."
-    },
-    "group:654": {
-      "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
-    },
-    "group:656": {
-      "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
+      "reason": "The content is a general commentary on migration numbers rather than reporting a concrete, contemporary migration-specific event or early warning. No specific operational event, policy action, or route/access signal is described."
     },
     "group:657": {
       "decision": "EXCLUDE",
@@ -177,6 +160,18 @@
     "group:663": {
       "decision": "REVIEW",
       "reason": "The post references statistics about migrants intercepted and turned around at the border but lacks a concrete, contemporary migration-related event. It is a commentary on an article's data without specifying a distinct operational event on migration interception."
+    },
+    "group:664": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:665": {
+      "decision": "PUBLISH",
+      "reason": "The report details a concrete and contemporary migration-related event involving the rescue of stranded migrant workers amid flooding caused by Cyclone Murasu, clearly fitting the 'RESCUE_OPERATION' event type."
+    },
+    "group:666": {
+      "decision": "EXCLUDE",
+      "reason": "The record contains a narrative statement with a general opinion on Chinese migrants and a racial stereotype, but does not report a specific, contemporary migration event or crossing. The event_type 'BORDER_CROSSING' is not supported by the content, which lacks any concrete migration event detail."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1326,9 +1321,29 @@
       "decision": "REVIEW",
       "reason": "The post mentions seeing a migrant bus leaving an election office, which suggests a movement event, but lacks specific information about the context, destination, number of migrants, or concrete details about the event. Without further corroboration or detail, it is uncertain whether this constitutes a verified migration-specific early warning even"
     },
+    "signal:1322": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a highly emotional and speculative statement without concrete information about any specific, contemporary migration event or policy action. It does not provide verified or clear details about US border reopening or migration flows. The location is unspecified, and there is no supporting corroboration."
+    },
+    "signal:1323": {
+      "decision": "EXCLUDE",
+      "reason": "The post is an emotional and speculative commentary about a possible reopening of the US border and a resulting influx of migrants. It does not report a concrete, contemporary migration-related event or an official early warning with verifiable details. The event date is in the future and the post lacks informative content supporting a migration-sp"
+    },
     "signal:1324": {
       "decision": "EXCLUDE",
       "reason": "The post is a general commentary and opinion about men seeking asylum and the societal attitudes towards male refugees, without reporting a concrete, contemporary migration-specific early warning, policy action, or event. The mention of young Moroccan men migrating to Spain lacks a specific, verified event context and does not constitute an operati"
+    },
+    "signal:1325": {
+      "decision": "EXCLUDE",
+      "reason": "The content is a narrative critical of migrant housing policy, lacking a concrete, contemporary migration-specific event or early warning. No verifiable policy action or signal is reported, and the text is primarily opinion without substantiated facilitation or early warning details."
+    },
+    "signal:1326": {
+      "decision": "REVIEW",
+      "reason": "The claim concerns migrants under asylum voting in Texas and implies facilitation related to voting access, which may be politically sensitive and related to migration policy enforcement. However, the event type FACILITATION_EARLY_WARNING usually applies to warnings about migration routes or access to migration benefits, not voting rights specifica"
+    },
+    "signal:1327": {
+      "decision": "EXCLUDE",
+      "reason": "The post contains a subjective complaint about modular homes and migrants but does not report a concrete, contemporary migration-specific event or early warning related to facilitation or migration routes. No verifiable migration event is described."
     }
   }
 }
