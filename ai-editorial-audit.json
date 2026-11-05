@@ -1,18 +1,13 @@
 {
-  "generated_at": "2026-11-05T08:45:06.917550+00:00",
+  "generated_at": "2026-11-05T17:48:03.565287+00:00",
   "version": "3.0",
-  "candidates": 334,
-  "new_ai_calls": 9,
+  "candidates": 337,
+  "new_ai_calls": 5,
   "conflicting_identity_ids": [
     "group:658",
-    "group:659",
     "group:664"
   ],
   "decisions": {
-    "post:811": {
-      "decision": "REVIEW",
-      "reason": "The report describes a recent raid and detention of undocumented migrants, which is a concrete migration-related enforcement event. However, the location is unclear ('-'), and there is no evidence from external verification. The event appears current and matches the 'DETENTION' event type, but lack of location and corroboration warrant review rathe"
-    },
     "post:812": {
       "decision": "EXCLUDE",
       "reason": "The post is a query about the number of illegal migrants arriving and does not report a concrete, contemporary migration-related event or established data on border crossings."
@@ -89,9 +84,9 @@
       "decision": "EXCLUDE",
       "reason": "The post discusses stereotypes about migrants but does not report a concrete, contemporary migration-related event such as a border crossing."
     },
-    "signal:1328": {
+    "post:832": {
       "decision": "EXCLUDE",
-      "reason": "The text is a political commentary on US election outcomes and economic conditions, with some mention of immigration policy in passing but no concrete, contemporary migration event or specific early warning related to migration. The event_type 'PRESSURE_EARLY_WARNING' is not supported as there is no migration-specific early warning or signal presen"
+      "reason": "The post discusses a historical migration event from a decade ago, not a current or ongoing migration event. It is a retrospective commentary rather than a concrete contemporary migration-related event."
     },
     "signal:1329": {
       "decision": "PUBLISH",
@@ -133,15 +128,23 @@
       "decision": "EXCLUDE",
       "reason": "The content is a general commentary on migration numbers rather than reporting a concrete, contemporary migration-specific event or early warning. No specific operational event, policy action, or route/access signal is described."
     },
+    "signal:1339": {
+      "decision": "PUBLISH",
+      "reason": "The record reports a concrete, contemporary migration-specific early warning about the impact of new Ministry of Transport regulations in Russia on migrant courier workers. It highlights potential consequences for migrant workers who may be unable to meet new licensing requirements, which directly relates to migration labor issues. The policy propo"
+    },
+    "signal:1340": {
+      "decision": "EXCLUDE",
+      "reason": "The post discusses political affiliations of migrants and challenges a narrative, but does not report a concrete, contemporary migration-specific early warning, policy action, or route/access signal. It is a general online narrative without a verified migration event or early warning."
+    },
+    "signal:1341": {
+      "decision": "REVIEW",
+      "reason": "The post discusses funding and expenditures related to migrant children but does not report a specific, concrete migration event or immediate early warning related to migration routes, policy actions, or access. The event_type 'FACILITATION_EARLY_WARNING' is not clearly supported by the content, which focuses on financial oversight rather than an i"
+    },
     "group:657": {
       "decision": "EXCLUDE",
       "reason": "The claim refers to actions by Trump, which are historical, and no concrete contemporary event is reported; the text is vague and lacks supporting details about a specific border measure event."
     },
     "group:658": {
-      "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
-    },
-    "group:659": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
     },
@@ -172,6 +175,10 @@
     "group:666": {
       "decision": "EXCLUDE",
       "reason": "The record contains a narrative statement with a general opinion on Chinese migrants and a racial stereotype, but does not report a specific, contemporary migration event or crossing. The event_type 'BORDER_CROSSING' is not supported by the content, which lacks any concrete migration event detail."
+    },
+    "group:667": {
+      "decision": "EXCLUDE",
+      "reason": "The post refers to a historical event (a decade ago) rather than a contemporary or ongoing migration event. It is a retrospective narrative, not reporting a current or imminent migration-specific event or warning."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1344,6 +1351,10 @@
     "signal:1327": {
       "decision": "EXCLUDE",
       "reason": "The post contains a subjective complaint about modular homes and migrants but does not report a concrete, contemporary migration-specific event or early warning related to facilitation or migration routes. No verifiable migration event is described."
+    },
+    "signal:1328": {
+      "decision": "EXCLUDE",
+      "reason": "The text is a political commentary on US election outcomes and economic conditions, with some mention of immigration policy in passing but no concrete, contemporary migration event or specific early warning related to migration. The event_type 'PRESSURE_EARLY_WARNING' is not supported as there is no migration-specific early warning or signal presen"
     }
   }
 }
