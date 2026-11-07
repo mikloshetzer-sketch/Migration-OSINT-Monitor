@@ -1,33 +1,12 @@
 {
-  "generated_at": "2026-11-06T23:56:34.100976+00:00",
+  "generated_at": "2026-11-07T03:33:29.930728+00:00",
   "version": "3.0",
-  "candidates": 354,
-  "new_ai_calls": 9,
+  "candidates": 357,
+  "new_ai_calls": 11,
   "conflicting_identity_ids": [
-    "group:603",
-    "group:664"
+    "group:603"
   ],
   "decisions": {
-    "post:817": {
-      "decision": "EXCLUDE",
-      "reason": "This content is an opinion or commentary about deportation policy with no report of a concrete, contemporary migration-related event. No actual event of deportation or operational action is described."
-    },
-    "post:821": {
-      "decision": "REVIEW",
-      "reason": "The post reports a detention related to migration (suspected smuggler arrested after leaving migrants stranded), but the event date and location details are unclear or missing. The link is not accessible to corroborate further details. Verification of contemporary migration-related event details needed."
-    },
-    "post:822": {
-      "decision": "EXCLUDE",
-      "reason": "The event date is in the future relative to the knowledge cutoff; the claim is unverified and lacks details or evidence. No contemporaneous migration event can be confirmed from this post."
-    },
-    "post:823": {
-      "decision": "EXCLUDE",
-      "reason": "The post contains political commentary and opinion without reporting a concrete, contemporary migration-related event or specific border measure. No verifiable event is described to support the assigned event type BORDER_MEASURE."
-    },
-    "post:824": {
-      "decision": "EXCLUDE",
-      "reason": "The content is historical and general information about indigenous peoples and their ancient migration, not a concrete, contemporary migration-related event or early warning. It does not include any current border crossing event or migration-specific signal."
-    },
     "post:825": {
       "decision": "EXCLUDE",
       "reason": "The event described is a claim about an arrest related to attempting to steal a boat, not a confirmed deportation event. The label 'DEPORTATION' is not supported by the content, which lacks actual deportation information."
@@ -88,13 +67,25 @@
       "decision": "EXCLUDE",
       "reason": "The post does not report a specific, contemporary migration-related event but comments on past policies and estimates without confirming a specific current event."
     },
-    "signal:1347": {
-      "decision": "REVIEW",
-      "reason": "The post discusses a bus fare hike in Karnataka affecting migrant workers' ability to travel home for Deepavali, suggesting increased household expenses and a potential impact on migrant mobility. However, it lacks a specific, concrete, and contemporary migration-related event or policy action announcement. It is more of an early warning or pressur"
+    "post:840": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete, contemporary migration-related event involving a rescue operation of migrants arriving by boat to El Hierro island, Canary Islands, which matches the RESCUE_OPERATION type. The event is current and migration-specific, supported by credible content though source is social media, no contradiction present."
     },
-    "signal:1348": {
+    "post:841": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete and contemporary migration-specific event of over 1,000 migrants arriving in the Canary Islands via maritime route, matching the BORDER_CROSSING event type."
+    },
+    "post:842": {
+      "decision": "REVIEW",
+      "reason": "The report describes a large, recent surge of migrant arrivals by boat to the Canary Islands, fitting the border crossing event type. However, the source is Reddit, which is not independently verified, and details such as exact location and official confirmation are missing. More corroboration is needed to confirm the concrete, contemporary migrati"
+    },
+    "post:843": {
       "decision": "EXCLUDE",
-      "reason": "The post reports a violent crime allegedly committed by an individual described as a migrant but does not report a concrete, contemporary migration-specific event, early warning, or policy action related to migration routes or access. It includes politicized commentary and lacks clear migration operational content."
+      "reason": "The post reports a political replacement and casts subjective opinions; it does not describe a concrete, contemporary migration-related event such as a border crossing or refugee movement. The event_type 'BORDER_CROSSING' is unsupported by the content."
+    },
+    "post:844": {
+      "decision": "EXCLUDE",
+      "reason": "The post is an opinion about urbanization and migration demographics without reporting a specific, contemporary migration event such as border crossing or operational movement. The event_type 'BORDER_CROSSING' is not supported by the content."
     },
     "signal:1349": {
       "decision": "PUBLISH",
@@ -140,21 +131,21 @@
       "decision": "REVIEW",
       "reason": "The post discusses ongoing modern slavery and trafficking issues as of 2026, but it is a general statement about conditions rather than a report of a specific, concrete, and contemporary event or policy action. It is better classified as a general narrative or contextual information, not a discrete migration-specific early warning event."
     },
+    "signal:1360": {
+      "decision": "REVIEW",
+      "reason": "The post claims a mass migrant caravan rush triggered by a political event, but lacks specific details about the migration event, location, timing, or verification of the caravan movement. The event_type 'ROUTE_EARLY_WARNING' may be appropriate, but the vague and sensational nature of the claim requires further verification and corroboration before"
+    },
+    "signal:1361": {
+      "decision": "PUBLISH",
+      "reason": "The report provides a concrete, contemporary early warning of increased migrant arrivals with supporting mentions of Spanish media and rescue reports confirming multiple boats arriving, consistent with the event type MOVEMENT_EARLY_WARNING at the Canary Islands."
+    },
+    "signal:1362": {
+      "decision": "EXCLUDE",
+      "reason": "The reported incident involves a criminal event allegedly involving an individual described as a Sudanese illegal migrant but does not constitute a migration-specific early warning, operational event, or migration route/access signal. It is a criminal allegation with migration status mentioned incidentally; thus, it does not meet the criteria for p"
+    },
     "group:603": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
-    },
-    "group:664": {
-      "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
-    },
-    "group:665": {
-      "decision": "PUBLISH",
-      "reason": "The report details a concrete and contemporary migration-related event involving the rescue of stranded migrant workers amid flooding caused by Cyclone Murasu, clearly fitting the 'RESCUE_OPERATION' event type."
-    },
-    "group:667": {
-      "decision": "EXCLUDE",
-      "reason": "The post refers to a historical event (a decade ago) rather than a contemporary or ongoing migration event. It is a retrospective narrative, not reporting a current or imminent migration-specific event or warning."
     },
     "group:668": {
       "decision": "EXCLUDE",
@@ -175,6 +166,18 @@
     "group:672": {
       "decision": "EXCLUDE",
       "reason": "The post discusses historical or policy commentary about detention quotas and migrant children but does not report a specific, concrete, contemporary migration-related detention event."
+    },
+    "group:673": {
+      "decision": "PUBLISH",
+      "reason": "The record describes a concrete, contemporary migration-related event involving the rescue of migrants arriving on El Hierro island in the Canary Islands amid a surge in migration crossings, consistent with the RESCUE_OPERATION event type."
+    },
+    "group:674": {
+      "decision": "EXCLUDE",
+      "reason": "The content discusses a political replacement and includes derogatory political commentary. There is no report of a concrete, contemporary migration-related event such as an individual crossing border, refugee arrivals at the border, or migration-specific early warning. The mention of family refugee status is background info, not a current migratio"
+    },
+    "group:675": {
+      "decision": "EXCLUDE",
+      "reason": "The message is a commentary on urbanization and migrant populations without reporting any specific, concrete migration event such as border crossing or arrival. It lacks details of an actual migration event or early warning."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1423,6 +1426,14 @@
     "signal:1346": {
       "decision": "REVIEW",
       "reason": "The text is a detailed excerpt from a future-dated Vatican encyclical letter focusing on ethical and social issues related to artificial intelligence, dignity, and justice, including treatment of migrants. However, it is a general policy or normative statement rather than reporting a concrete, contemporary migration-related event or early warning s"
+    },
+    "signal:1347": {
+      "decision": "REVIEW",
+      "reason": "The post discusses a bus fare hike in Karnataka affecting migrant workers' ability to travel home for Deepavali, suggesting increased household expenses and a potential impact on migrant mobility. However, it lacks a specific, concrete, and contemporary migration-related event or policy action announcement. It is more of an early warning or pressur"
+    },
+    "signal:1348": {
+      "decision": "EXCLUDE",
+      "reason": "The post reports a violent crime allegedly committed by an individual described as a migrant but does not report a concrete, contemporary migration-specific event, early warning, or policy action related to migration routes or access. It includes politicized commentary and lacks clear migration operational content."
     }
   }
 }
