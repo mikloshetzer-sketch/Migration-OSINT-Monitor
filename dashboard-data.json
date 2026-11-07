@@ -1,29 +1,29 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-11-07T03:32:14Z",
-  "generated_at": "2026-11-07T03:32:14Z",
+  "updated_at": "2026-11-07T10:52:29Z",
+  "generated_at": "2026-11-07T10:52:29Z",
   "current_run": {
     "available": true,
-    "id": 398,
-    "run_uuid": "4750c7dd-dc65-410b-8299-059a78f6d8d0",
-    "started_at": "2026-11-07T03:29:15Z",
-    "completed_at": "2026-11-07T03:32:12Z",
+    "id": 399,
+    "run_uuid": "5b24e370-e4a3-490d-a370-aac63a24eb2e",
+    "started_at": "2026-11-07T10:45:16Z",
+    "completed_at": "2026-11-07T10:52:27Z",
     "status": "SUCCESS",
-    "posts_returned": 155,
-    "unique_posts_collected": 101,
-    "x_posts_returned": 50,
-    "reddit_posts_returned": 24,
+    "posts_returned": 165,
+    "unique_posts_collected": 110,
+    "x_posts_returned": 49,
+    "reddit_posts_returned": 34,
     "mastodon_posts_returned": 50,
     "unique_x_posts": 46,
-    "unique_reddit_posts": 21,
-    "unique_mastodon_posts": 19,
-    "noise_filtered": 0,
-    "non_operational_filtered": 92,
-    "historical_references_filtered": 3,
-    "influence_signals": 0,
-    "influence_signals_detected": 0,
+    "unique_reddit_posts": 31,
+    "unique_mastodon_posts": 18,
+    "noise_filtered": 1,
+    "non_operational_filtered": 103,
+    "historical_references_filtered": 0,
+    "influence_signals": 2,
+    "influence_signals_detected": 2,
     "crossing_facilitation_signals": 0,
-    "legal_migration_signals": 0,
+    "legal_migration_signals": 2,
     "policy_signals": 0,
     "recruitment_coordination_signals": 0,
     "mobilization_coordination_signals": 0,
@@ -32,43 +32,67 @@
     "online_influence_report_signals": 0,
     "operational_events": 6,
     "operational_events_analyzed": 6,
-    "historical_events_available": 54,
+    "historical_events_available": 57,
     "new_correlations": 2,
     "correlated_events": 2,
     "new_correlation_groups": 4,
-    "database_correlations": 1,
-    "current_run_correlations": 1,
-    "new_events": 5,
-    "new_events_saved": 5,
-    "events_already_existing": 1,
+    "database_correlations": 2,
+    "current_run_correlations": 0,
+    "new_events": 4,
+    "new_events_saved": 4,
+    "events_already_existing": 2,
     "new_event_groups": 3,
-    "updated_event_groups": 2,
+    "updated_event_groups": 1,
     "bootstrapped_event_groups": 0,
-    "existing_event_groups_reused": 1,
-    "event_group_sources_linked": 5,
+    "existing_event_groups_reused": 2,
+    "event_group_sources_linked": 4,
     "x_collector_errors": 0,
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "error_message": null
   },
   "kpis": {
-    "operational_events": 10,
-    "new_events": 5,
-    "correlated_events": 3,
-    "active_event_groups": 656,
+    "operational_events": 14,
+    "new_events": 4,
+    "correlated_events": 4,
+    "active_event_groups": 659,
     "sources": 4,
     "regions": 6,
-    "collected_posts_24h": 280,
-    "influence_signals": 14,
-    "access_signals": 0,
+    "collected_posts_24h": 300,
+    "influence_signals": 18,
+    "access_signals": 2,
     "high_priority": 0,
     "current_run_operational_events": 6,
-    "current_run_unique_posts": 101,
-    "access_signals_raw": 0,
-    "influence_signals_raw": 14,
+    "current_run_unique_posts": 110,
+    "access_signals_raw": 2,
+    "influence_signals_raw": 18,
     "influence_narratives": 3
   },
   "live_events": [
+    {
+      "id": 848,
+      "event_id": 848,
+      "source": "X",
+      "source_post_id": "2119015562181239160",
+      "author": "neuralnetw0rks",
+      "published_at": "2026-11-07T10:34:14Z",
+      "collected_at": "2026-11-07T10:52:25Z",
+      "event_type": "BORDER_CROSSING",
+      "signal_type": "BORDER_CROSSING",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": 28.2916,
+      "longitude": -16.6291,
+      "confidence": 0.5,
+      "event_confidence": 0.5,
+      "relevance_score": 30.0,
+      "text": "More than 3,000 migrants have arrived in the Canary Islands over the course of a few days, prompting local authorities to sound the alarm.\n\nThe situation is particularly difficult on the island of El Hierro. https://t.co/y6LUHQ5Ovm",
+      "url": "https://x.com/neuralnetw0rks/status/2119015562181239160",
+      "source_url": "https://x.com/neuralnetw0rks/status/2119015562181239160",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
     {
       "id": 841,
       "event_id": 841,
@@ -157,9 +181,9 @@
       "latitude": 35.8894,
       "longitude": -5.3213,
       "first_seen": "2026-10-14T08:53:10Z",
-      "last_seen": "2026-11-07T03:19:51Z",
-      "source_count": 17,
-      "sources_count": 17,
+      "last_seen": "2026-11-07T10:34:14Z",
+      "source_count": 18,
+      "sources_count": 18,
       "source_types": [
         "MASTODON",
         "REDDIT",
@@ -174,7 +198,7 @@
       "confidence": 0.8,
       "average_confidence": 0.8,
       "created_at": "2026-10-14T09:06:42Z",
-      "updated_at": "2026-11-07T03:30:41Z",
+      "updated_at": "2026-11-07T10:52:25Z",
       "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
     },
     {
@@ -242,161 +266,161 @@
   ],
   "regions": [
     {
+      "name": "GLOBAL",
+      "region": "GLOBAL",
+      "count": 5,
+      "events": 5,
+      "percentage": 45.45
+    },
+    {
       "name": "WESTERN_MEDITERRANEAN",
       "region": "WESTERN_MEDITERRANEAN",
       "count": 2,
       "events": 2,
-      "percentage": 25.0
-    },
-    {
-      "name": "GLOBAL",
-      "region": "GLOBAL",
-      "count": 2,
-      "events": 2,
-      "percentage": 25.0
+      "percentage": 18.18
     },
     {
       "name": "EASTERN_MEDITERRANEAN",
       "region": "EASTERN_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 12.5
+      "percentage": 9.09
     },
     {
       "name": "CENTRAL_MEDITERRANEAN",
       "region": "CENTRAL_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 12.5
+      "percentage": 9.09
     },
     {
       "name": "ASIA_PACIFIC",
       "region": "ASIA_PACIFIC",
       "count": 1,
       "events": 1,
-      "percentage": 12.5
+      "percentage": 9.09
     },
     {
       "name": "AMERICAS",
       "region": "AMERICAS",
       "count": 1,
       "events": 1,
-      "percentage": 12.5
+      "percentage": 9.09
     }
   ],
   "sources": [
     {
       "source": "X",
       "name": "X",
-      "count": 206,
-      "posts": 206,
-      "percentage": 73.57
+      "count": 222,
+      "posts": 222,
+      "percentage": 74.0
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 38,
-      "posts": 38,
-      "percentage": 13.57
+      "count": 40,
+      "posts": 40,
+      "percentage": 13.33
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 26,
-      "posts": 26,
-      "percentage": 9.29
+      "count": 29,
+      "posts": 29,
+      "percentage": 9.67
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 10,
-      "posts": 10,
-      "percentage": 3.57
+      "count": 9,
+      "posts": 9,
+      "percentage": 3.0
     }
   ],
   "region_activity": [
+    {
+      "name": "GLOBAL",
+      "region": "GLOBAL",
+      "count": 5,
+      "events": 5,
+      "percentage": 45.45
+    },
     {
       "name": "WESTERN_MEDITERRANEAN",
       "region": "WESTERN_MEDITERRANEAN",
       "count": 2,
       "events": 2,
-      "percentage": 25.0
-    },
-    {
-      "name": "GLOBAL",
-      "region": "GLOBAL",
-      "count": 2,
-      "events": 2,
-      "percentage": 25.0
+      "percentage": 18.18
     },
     {
       "name": "EASTERN_MEDITERRANEAN",
       "region": "EASTERN_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 12.5
+      "percentage": 9.09
     },
     {
       "name": "CENTRAL_MEDITERRANEAN",
       "region": "CENTRAL_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 12.5
+      "percentage": 9.09
     },
     {
       "name": "ASIA_PACIFIC",
       "region": "ASIA_PACIFIC",
       "count": 1,
       "events": 1,
-      "percentage": 12.5
+      "percentage": 9.09
     },
     {
       "name": "AMERICAS",
       "region": "AMERICAS",
       "count": 1,
       "events": 1,
-      "percentage": 12.5
+      "percentage": 9.09
     }
   ],
   "source_activity": [
     {
       "source": "X",
       "name": "X",
-      "count": 206,
-      "posts": 206,
-      "percentage": 73.57
+      "count": 222,
+      "posts": 222,
+      "percentage": 74.0
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 38,
-      "posts": 38,
-      "percentage": 13.57
+      "count": 40,
+      "posts": 40,
+      "percentage": 13.33
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 26,
-      "posts": 26,
-      "percentage": 9.29
+      "count": 29,
+      "posts": 29,
+      "percentage": 9.67
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 10,
-      "posts": 10,
-      "percentage": 3.57
+      "count": 9,
+      "posts": 9,
+      "percentage": 3.0
     }
   ],
   "correlation": {
-    "correlated_events": 3,
-    "correlated_sources": 3,
-    "grouped_sources": 10,
-    "event_groups": 656,
-    "active_groups": 656,
+    "correlated_events": 4,
+    "correlated_sources": 4,
+    "grouped_sources": 14,
+    "event_groups": 659,
+    "active_groups": 659,
     "multi_source_groups": 63,
     "strongest_match": 1.0,
-    "correlation_rate": 30.0
+    "correlation_rate": 28.57
   },
   "technical_health": "HEALTHY",
   "collector_health": "HEALTHY",
@@ -409,44 +433,44 @@
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "database": "AVAILABLE",
-    "last_run_id": 398,
-    "last_completed_at": "2026-11-07T03:32:12Z"
+    "last_run_id": 399,
+    "last_completed_at": "2026-11-07T10:52:27Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 10,
-    "influence_signals_24h": 14,
-    "access_signals_24h": 0,
-    "correlated_events_24h": 3,
-    "active_event_groups": 656,
+    "operational_events_24h": 14,
+    "influence_signals_24h": 18,
+    "access_signals_24h": 2,
+    "correlated_events_24h": 4,
+    "active_event_groups": 659,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "hotspot": "WESTERN_MEDITERRANEAN",
     "dominant_event_type": "BORDER_CROSSING",
     "dominant_source": "X",
-    "average_confidence": 0.44,
+    "average_confidence": 0.439,
     "confidence_level": "LOW",
-    "correlation_rate": 30.0,
+    "correlation_rate": 28.57,
     "activity_level": "ELEVATED",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 10 operatív migrációs eseményt, 14 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 3 friss eseményforrás korrelált más forrással. Jelenleg 656 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.44. A jelenlegi aktivitási szint: ELEVATED.",
+    "summary": "Az elmúlt 24 órában a rendszer 14 operatív migrációs eseményt, 18 influence/early-warning jelzést és 2 átkelési vagy bejutási jelzést tart nyilván. 4 friss eseményforrás korrelált más forrással. Jelenleg 659 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.44. A jelenlegi aktivitási szint: ELEVATED.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
   "analytical_assessment": {
-    "operational_events_24h": 10,
-    "influence_signals_24h": 14,
-    "access_signals_24h": 0,
-    "correlated_events_24h": 3,
-    "active_event_groups": 656,
+    "operational_events_24h": 14,
+    "influence_signals_24h": 18,
+    "access_signals_24h": 2,
+    "correlated_events_24h": 4,
+    "active_event_groups": 659,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "hotspot": "WESTERN_MEDITERRANEAN",
     "dominant_event_type": "BORDER_CROSSING",
     "dominant_source": "X",
-    "average_confidence": 0.44,
+    "average_confidence": 0.439,
     "confidence_level": "LOW",
-    "correlation_rate": 30.0,
+    "correlation_rate": 28.57,
     "activity_level": "ELEVATED",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 10 operatív migrációs eseményt, 14 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 3 friss eseményforrás korrelált más forrással. Jelenleg 656 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.44. A jelenlegi aktivitási szint: ELEVATED.",
+    "summary": "Az elmúlt 24 órában a rendszer 14 operatív migrációs eseményt, 18 influence/early-warning jelzést és 2 átkelési vagy bejutási jelzést tart nyilván. 4 friss eseményforrás korrelált más forrással. Jelenleg 659 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.44. A jelenlegi aktivitási szint: ELEVATED.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
@@ -479,8 +503,8 @@
       "primary_region": "WESTERN_MEDITERRANEAN",
       "confidence": 0.8,
       "average_confidence": 0.8,
-      "source_count": 17,
-      "last_seen": "2026-11-07T03:19:51Z",
+      "source_count": 18,
+      "last_seen": "2026-11-07T10:34:14Z",
       "representative_text": "🇪🇸 Massive surge of illegal sub-Saharan boat migrant in the Canary Islands\nMore than 1400 illegal migrants arrived yesterday on 12 boats. More than 3400 have arrived in the past 5 days. Hundreds more have arrived today. Locals have gathered in the port on the island of El Hierro to protest against the arrival of so many illegal migrants . Most of the boats are discovered just off the African coast and are then towed by the Spanish authorities for hundreds of kilometers to the Canary Islands “to rescue them.”",
       "text": "🇪🇸 Massive surge of illegal sub-Saharan boat migrant in the Canary Islands\nMore than 1400 illegal migrants arrived yesterday on 12 boats. More than 3400 have arrived in the past 5 days. Hundreds more have arrived today. Locals have gathered in the port on the island of El Hierro to protest against the arrival of so many illegal migrants . Most of the boats are discovered just off the African coast and are then towed by the Spanish authorities for hundreds of kilometers to the Canary Islands “to rescue them.”",
       "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
@@ -624,6 +648,76 @@
   ],
   "high_priority_intelligence": [
     {
+      "id": 1363,
+      "source": "X",
+      "source_post_id": "2119018281373671542",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-11-07T10:45:02Z",
+      "first_detected_at": "2026-11-07T10:45:47Z",
+      "last_detected_at": "2026-11-07T10:45:47Z",
+      "detection_count": 1,
+      "text": "@vindictdrvvl @P0eMPieDinges Many European states, including the Netherlands, argue ECHR interpretations of Articles 3 and 8 constrain deportations and asylum control, sustaining high costs and inflows. Exit is legally possible but leaves the Refugee Convention and EU rules intact, with diplomatic costs.",
+      "text_excerpt": "@vindictdrvvl @P0eMPieDinges Many European states, including the Netherlands, argue ECHR interpretations of Articles 3 and 8 constrain deportations and asylum control, sustaining high costs and inflows. Exit is legally possible but leaves the Refugee Convention and EU rules intact, with diplomatic costs.",
+      "url": "https://x.com/grok/status/2119018281373671542",
+      "source_url": "https://x.com/grok/status/2119018281373671542",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.94,
+      "score": 15.0,
+      "matched_signals": [
+        "LEGAL_MIGRATION_SIGNAL"
+      ],
+      "matched_phrases": [
+        [
+          "legal_signal",
+          "ECHR"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "Refugee",
+        "asylum"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 48.9,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2119018281373671542"
+      ],
+      "related_authors": [
+        "grok"
+      ],
+      "related_urls": [
+        "https://x.com/grok/status/2119018281373671542"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1,
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
       "id": 1361,
       "source": "X",
       "source_post_id": "2118890892144615601",
@@ -713,89 +807,13 @@
       "primary_region": "WESTERN_MEDITERRANEAN",
       "confidence": 0.8,
       "average_confidence": 0.8,
-      "source_count": 17,
-      "last_seen": "2026-11-07T03:19:51Z",
+      "source_count": 18,
+      "last_seen": "2026-11-07T10:34:14Z",
       "representative_text": "🇪🇸 Massive surge of illegal sub-Saharan boat migrant in the Canary Islands\nMore than 1400 illegal migrants arrived yesterday on 12 boats. More than 3400 have arrived in the past 5 days. Hundreds more have arrived today. Locals have gathered in the port on the island of El Hierro to protest against the arrival of so many illegal migrants . Most of the boats are discovered just off the African coast and are then towed by the Spanish authorities for hundreds of kilometers to the Canary Islands “to rescue them.”",
       "text": "🇪🇸 Massive surge of illegal sub-Saharan boat migrant in the Canary Islands\nMore than 1400 illegal migrants arrived yesterday on 12 boats. More than 3400 have arrived in the past 5 days. Hundreds more have arrived today. Locals have gathered in the port on the island of El Hierro to protest against the arrival of so many illegal migrants . Most of the boats are discovered just off the African coast and are then towed by the Spanish authorities for hundreds of kilometers to the Canary Islands “to rescue them.”",
       "priority_score": 39.0,
       "analyst_priority": "LOW",
       "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-    },
-    {
-      "id": 1349,
-      "source": "MASTODON",
-      "source_post_id": "mastodon_117569196068272911",
-      "author": null,
-      "language": null,
-      "published_at": "2026-11-06T11:12:43Z",
-      "first_detected_at": "2026-11-06T11:40:56Z",
-      "last_detected_at": "2026-11-06T11:40:56Z",
-      "detection_count": 1,
-      "text": "Más de mil llegadas en una noche y una muerte en Canarias. ¿Qué está cambiando en la ruta atlántica? # Canarias # ElHierro # Lanzarote # GranCanaria # Migracion # Cayucos # SalvamentoMaritimo # RutaCanaria # Senegal # AfricaOccidental # Actualidad # felizviernes # 6denoviembre https:// elfolio.es/llegada-de-migrante s-a-canarias-noviembre-2026/",
-      "text_excerpt": "Más de mil llegadas en una noche y una muerte en Canarias. ¿Qué está cambiando en la ruta atlántica? # Canarias # ElHierro # Lanzarote # GranCanaria # Migracion # Cayucos # SalvamentoMaritimo # RutaCanaria # Senegal # AfricaOccidental # Actualidad # felizviernes # 6denoviembre https:// elfolio.es/llegada-de-migrante s-a-canarias-noviembre-2026/",
-      "url": "https://mastodon.social/@elfolio/117569196068272911",
-      "source_url": "https://mastodon.social/@elfolio/117569196068272911",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 8.25,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "llegada-de-migrante"
-        ],
-        [
-          "route",
-          "ruta"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT",
-        "ROUTE"
-      ],
-      "context_matches": [
-        "migrante"
-      ],
-      "high_value_matches": [
-        "llegada-de-migrante"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "Canary Islands",
-      "primary_location": "Canary Islands",
-      "country": "Spain",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": 28.2916,
-      "longitude": -16.6291,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 39.0,
-      "analyst_priority": "LOW",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "mastodon_117569196068272911"
-      ],
-      "related_authors": [],
-      "related_urls": [
-        "https://mastodon.social/@elfolio/117569196068272911"
-      ],
-      "related_sources": [
-        "MASTODON"
-      ],
-      "independent_author_count": 0,
-      "platform_count": 1,
-      "ai_review_status": "AI_REVIEWED",
-      "ai_editorial_decision": "PUBLISH"
     },
     {
       "id": 349,
@@ -948,82 +966,64 @@
       "priority_score": 37.25,
       "analyst_priority": "LOW",
       "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-    },
-    {
-      "id": 1355,
-      "source": "REDDIT",
-      "source_post_id": "reddit_1xpkvdg",
-      "author": "XGramatik",
-      "language": null,
-      "published_at": "2026-11-06T18:52:22Z",
-      "first_detected_at": "2026-11-06T23:52:32Z",
-      "last_detected_at": "2026-11-07T03:30:41Z",
-      "detection_count": 2,
-      "text": "Over 3,000 illegal migrants arrive in the Canary Islands in just a few days — local authorities sound the alarm\nMore than 1,000 people were brought to the islands by Spanish rescue services overnight from November 5 to 6. Most of the arrivals are migrants entering Spain irregularly from West African countries, crossing the Atlantic in overcrowded wooden boats. The situation is particularly difficult on the island of El Hierro. Local residents complain that hospitals, shelters, and infrastructure are overwhelmed. Canary Islands President Fernando Clavijo described the situation as “absolutely unsustainable.” Spanish rescue teams continue to locate boats at sea and bring migrants to ports. According to media reports, one person died during one of the latest rescue operations.",
-      "text_excerpt": "Over 3,000 illegal migrants arrive in the Canary Islands in just a few days — local authorities sound the alarm\nMore than 1,000 people were brought to the islands by Spanish rescue services overnight from November 5 to 6. Most of the arrivals are migrants entering Spain irregularly from West African countries, crossing the Atlantic in overcrowded wooden boats. The situation is particularly difficult on the island of El Hierro. Local residents complain that hospitals, shelters, and infrastructure are overwhelmed. Canary Islands President Fernando Clavijo described the situation as “absolutely unsustainable.” Spanish rescue teams continue to locate boats at sea and bring migrants to ports. Acc",
-      "url": "https://www.reddit.com/r/TheDailyChaos/comments/1xpkvdg/over_3000_illegal_migrants_arrive_in_the_canary/",
-      "source_url": "https://www.reddit.com/r/TheDailyChaos/comments/1xpkvdg/over_3000_illegal_migrants_arrive_in_the_canary/",
-      "primary_signal": "ENFORCEMENT_EARLY_WARNING",
-      "signal_type": "ENFORCEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ENFORCEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.62,
-      "score": 5.25,
-      "matched_signals": [
-        "ENFORCEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "enforcement",
-          "Over 3,000 illegal migrants arrive in the Canary Islands in just a few days — local authorities sound the alarm More than 1,000 people were brought to the islands by Spanish rescue services overnight from November 5 to 6. Most of the arrivals are migrants entering Spain irregularly from West African countries, crossing the Atlantic in overcrowded wooden boats. The situation is particularly difficult on the island of El Hierro. Local residents complain that hospitals, shelters, and infrastructure are overwhelmed. Canary Islands President Fernando Clavijo described the situation as “absolutely unsustainable.” Spanish rescue teams continue to locate boats at sea and bring migrants to ports. According to media reports, one person died during one of the latest rescue operations."
-        ]
-      ],
-      "matched_groups": [
-        "ENFORCEMENT"
-      ],
-      "context_matches": [
-        "migrants"
-      ],
-      "high_value_matches": [
-        "authorities sound the alarm More than 1,000 people were brought to the islands by Spanish rescue services overnight from November 5 to 6"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "Canary Islands",
-      "primary_location": "Canary Islands",
-      "country": "Spain",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": 28.2916,
-      "longitude": -16.6291,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 32.7,
-      "analyst_priority": "LOW",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "reddit_1xpkvdg"
-      ],
-      "related_authors": [
-        "XGramatik"
-      ],
-      "related_urls": [
-        "https://www.reddit.com/r/TheDailyChaos/comments/1xpkvdg/over_3000_illegal_migrants_arrive_in_the_canary/"
-      ],
-      "related_sources": [
-        "REDDIT"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1,
-      "ai_review_status": "AI_REVIEWED",
-      "ai_editorial_decision": "PUBLISH"
     }
   ],
   "influence_signals": [
+    {
+      "id": 1363,
+      "source": "X",
+      "source_post_id": "2119018281373671542",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-11-07T10:45:02Z",
+      "first_detected_at": "2026-11-07T10:45:47Z",
+      "last_detected_at": "2026-11-07T10:45:47Z",
+      "detection_count": 1,
+      "text": "@vindictdrvvl @P0eMPieDinges Many European states, including the Netherlands, argue ECHR interpretations of Articles 3 and 8 constrain deportations and asylum control, sustaining high costs and inflows. Exit is legally possible but leaves the Refugee Convention and EU rules intact, with diplomatic costs.",
+      "text_excerpt": "@vindictdrvvl @P0eMPieDinges Many European states, including the Netherlands, argue ECHR interpretations of Articles 3 and 8 constrain deportations and asylum control, sustaining high costs and inflows. Exit is legally possible but leaves the Refugee Convention and EU rules intact, with diplomatic costs.",
+      "url": "https://x.com/grok/status/2119018281373671542",
+      "source_url": "https://x.com/grok/status/2119018281373671542",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.94,
+      "score": 15.0,
+      "matched_signals": [
+        "LEGAL_MIGRATION_SIGNAL"
+      ],
+      "matched_phrases": [
+        [
+          "legal_signal",
+          "ECHR"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "Refugee",
+        "asylum"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 48.9,
+      "analyst_priority": "MEDIUM",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
     {
       "id": 1361,
       "source": "X",
@@ -1096,8 +1096,8 @@
       "language": null,
       "published_at": "2026-11-06T16:13:31Z",
       "first_detected_at": "2026-11-06T18:37:57Z",
-      "last_detected_at": "2026-11-07T03:29:50Z",
-      "detection_count": 3,
+      "last_detected_at": "2026-11-07T10:45:50Z",
+      "detection_count": 4,
       "text": "🚩 El Servicio Marítimo de la Guardia Civil se enfrenta a situaciones límite con las fugas de inmigrantes que huyen de la expulsión\n\n➡️ Solo esta pasada madrugada, han sido interceptados casi 40 inmigrantes en gomas y kayaks, evitándose un naufragio en la zona entre Calamocarro y Benzú\n\nhttps://elfarodeceuta.es/actualidad/frontera-inmigracion/servicio-maritimo-guardia-civil-fugas-inmigrantes-huyen-expulsion/",
       "text_excerpt": "🚩 El Servicio Marítimo de la Guardia Civil se enfrenta a situaciones límite con las fugas de inmigrantes que huyen de la expulsión\n\n➡️ Solo esta pasada madrugada, han sido interceptados casi 40 inmigrantes en gomas y kayaks, evitándose un naufragio en la zona entre Calamocarro y Benzú\n\nhttps://elfarodeceuta.es/actualidad/frontera-inmigracion/servicio-maritimo-guardia-civil-fugas-inmigrantes-huyen-expulsion/",
       "url": "https://t.me/elfarodeceuta/54329",
@@ -1345,8 +1345,8 @@
       "language": null,
       "published_at": "2026-11-06T18:52:22Z",
       "first_detected_at": "2026-11-06T23:52:32Z",
-      "last_detected_at": "2026-11-07T03:30:41Z",
-      "detection_count": 2,
+      "last_detected_at": "2026-11-07T10:46:36Z",
+      "detection_count": 3,
       "text": "Over 3,000 illegal migrants arrive in the Canary Islands in just a few days — local authorities sound the alarm\nMore than 1,000 people were brought to the islands by Spanish rescue services overnight from November 5 to 6. Most of the arrivals are migrants entering Spain irregularly from West African countries, crossing the Atlantic in overcrowded wooden boats. The situation is particularly difficult on the island of El Hierro. Local residents complain that hospitals, shelters, and infrastructure are overwhelmed. Canary Islands President Fernando Clavijo described the situation as “absolutely unsustainable.” Spanish rescue teams continue to locate boats at sea and bring migrants to ports. According to media reports, one person died during one of the latest rescue operations.",
       "text_excerpt": "Over 3,000 illegal migrants arrive in the Canary Islands in just a few days — local authorities sound the alarm\nMore than 1,000 people were brought to the islands by Spanish rescue services overnight from November 5 to 6. Most of the arrivals are migrants entering Spain irregularly from West African countries, crossing the Atlantic in overcrowded wooden boats. The situation is particularly difficult on the island of El Hierro. Local residents complain that hospitals, shelters, and infrastructure are overwhelmed. Canary Islands President Fernando Clavijo described the situation as “absolutely unsustainable.” Spanish rescue teams continue to locate boats at sea and bring migrants to ports. Acc",
       "url": "https://www.reddit.com/r/TheDailyChaos/comments/1xpkvdg/over_3000_illegal_migrants_arrive_in_the_canary/",
@@ -1398,6 +1398,61 @@
   ],
   "early_warning_signals": [
     {
+      "id": 1363,
+      "source": "X",
+      "source_post_id": "2119018281373671542",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-11-07T10:45:02Z",
+      "first_detected_at": "2026-11-07T10:45:47Z",
+      "last_detected_at": "2026-11-07T10:45:47Z",
+      "detection_count": 1,
+      "text": "@vindictdrvvl @P0eMPieDinges Many European states, including the Netherlands, argue ECHR interpretations of Articles 3 and 8 constrain deportations and asylum control, sustaining high costs and inflows. Exit is legally possible but leaves the Refugee Convention and EU rules intact, with diplomatic costs.",
+      "text_excerpt": "@vindictdrvvl @P0eMPieDinges Many European states, including the Netherlands, argue ECHR interpretations of Articles 3 and 8 constrain deportations and asylum control, sustaining high costs and inflows. Exit is legally possible but leaves the Refugee Convention and EU rules intact, with diplomatic costs.",
+      "url": "https://x.com/grok/status/2119018281373671542",
+      "source_url": "https://x.com/grok/status/2119018281373671542",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.94,
+      "score": 15.0,
+      "matched_signals": [
+        "LEGAL_MIGRATION_SIGNAL"
+      ],
+      "matched_phrases": [
+        [
+          "legal_signal",
+          "ECHR"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "Refugee",
+        "asylum"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 48.9,
+      "analyst_priority": "MEDIUM",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
       "id": 1361,
       "source": "X",
       "source_post_id": "2118890892144615601",
@@ -1469,8 +1524,8 @@
       "language": null,
       "published_at": "2026-11-06T16:13:31Z",
       "first_detected_at": "2026-11-06T18:37:57Z",
-      "last_detected_at": "2026-11-07T03:29:50Z",
-      "detection_count": 3,
+      "last_detected_at": "2026-11-07T10:45:50Z",
+      "detection_count": 4,
       "text": "🚩 El Servicio Marítimo de la Guardia Civil se enfrenta a situaciones límite con las fugas de inmigrantes que huyen de la expulsión\n\n➡️ Solo esta pasada madrugada, han sido interceptados casi 40 inmigrantes en gomas y kayaks, evitándose un naufragio en la zona entre Calamocarro y Benzú\n\nhttps://elfarodeceuta.es/actualidad/frontera-inmigracion/servicio-maritimo-guardia-civil-fugas-inmigrantes-huyen-expulsion/",
       "text_excerpt": "🚩 El Servicio Marítimo de la Guardia Civil se enfrenta a situaciones límite con las fugas de inmigrantes que huyen de la expulsión\n\n➡️ Solo esta pasada madrugada, han sido interceptados casi 40 inmigrantes en gomas y kayaks, evitándose un naufragio en la zona entre Calamocarro y Benzú\n\nhttps://elfarodeceuta.es/actualidad/frontera-inmigracion/servicio-maritimo-guardia-civil-fugas-inmigrantes-huyen-expulsion/",
       "url": "https://t.me/elfarodeceuta/54329",
@@ -1718,8 +1773,8 @@
       "language": null,
       "published_at": "2026-11-06T18:52:22Z",
       "first_detected_at": "2026-11-06T23:52:32Z",
-      "last_detected_at": "2026-11-07T03:30:41Z",
-      "detection_count": 2,
+      "last_detected_at": "2026-11-07T10:46:36Z",
+      "detection_count": 3,
       "text": "Over 3,000 illegal migrants arrive in the Canary Islands in just a few days — local authorities sound the alarm\nMore than 1,000 people were brought to the islands by Spanish rescue services overnight from November 5 to 6. Most of the arrivals are migrants entering Spain irregularly from West African countries, crossing the Atlantic in overcrowded wooden boats. The situation is particularly difficult on the island of El Hierro. Local residents complain that hospitals, shelters, and infrastructure are overwhelmed. Canary Islands President Fernando Clavijo described the situation as “absolutely unsustainable.” Spanish rescue teams continue to locate boats at sea and bring migrants to ports. According to media reports, one person died during one of the latest rescue operations.",
       "text_excerpt": "Over 3,000 illegal migrants arrive in the Canary Islands in just a few days — local authorities sound the alarm\nMore than 1,000 people were brought to the islands by Spanish rescue services overnight from November 5 to 6. Most of the arrivals are migrants entering Spain irregularly from West African countries, crossing the Atlantic in overcrowded wooden boats. The situation is particularly difficult on the island of El Hierro. Local residents complain that hospitals, shelters, and infrastructure are overwhelmed. Canary Islands President Fernando Clavijo described the situation as “absolutely unsustainable.” Spanish rescue teams continue to locate boats at sea and bring migrants to ports. Acc",
       "url": "https://www.reddit.com/r/TheDailyChaos/comments/1xpkvdg/over_3000_illegal_migrants_arrive_in_the_canary/",
@@ -1770,6 +1825,141 @@
     }
   ],
   "influence_narratives": [
+    {
+      "id": 1363,
+      "source": "X",
+      "source_post_id": "2119018281373671542",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-11-07T10:45:02Z",
+      "first_detected_at": "2026-11-07T10:45:47Z",
+      "last_detected_at": "2026-11-07T10:45:47Z",
+      "detection_count": 1,
+      "text": "@vindictdrvvl @P0eMPieDinges Many European states, including the Netherlands, argue ECHR interpretations of Articles 3 and 8 constrain deportations and asylum control, sustaining high costs and inflows. Exit is legally possible but leaves the Refugee Convention and EU rules intact, with diplomatic costs.",
+      "text_excerpt": "@vindictdrvvl @P0eMPieDinges Many European states, including the Netherlands, argue ECHR interpretations of Articles 3 and 8 constrain deportations and asylum control, sustaining high costs and inflows. Exit is legally possible but leaves the Refugee Convention and EU rules intact, with diplomatic costs.",
+      "url": "https://x.com/grok/status/2119018281373671542",
+      "source_url": "https://x.com/grok/status/2119018281373671542",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.94,
+      "score": 15.0,
+      "matched_signals": [
+        "LEGAL_MIGRATION_SIGNAL"
+      ],
+      "matched_phrases": [
+        [
+          "legal_signal",
+          "ECHR"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "Refugee",
+        "asylum"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 48.9,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2119018281373671542"
+      ],
+      "related_authors": [
+        "grok"
+      ],
+      "related_urls": [
+        "https://x.com/grok/status/2119018281373671542"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
+    {
+      "id": 1366,
+      "source": "REDDIT",
+      "source_post_id": "reddit_1xpy3ty",
+      "author": "Away_Counter_3006",
+      "language": null,
+      "published_at": "2026-11-07T05:05:18Z",
+      "first_detected_at": "2026-11-07T10:52:27Z",
+      "last_detected_at": "2026-11-07T10:52:27Z",
+      "detection_count": 1,
+      "text": "Big Ole' Crossword (OC)\n(i hope the photo came through in good quality) ACROSS 1. One of five on a hand (6) Giant sea wave set off by an undersea earthquake (7) Statement that seems to contradict itself yet may be true (7) Timber sawn into boards and planks (6) A model of excellence; a perfect example (7) Threatening, like dark storm clouds (7) Vineyard business where grapes are crushed and fermented (6) River or canal that boats can travel along (8) Clear-headed, or describing a dream you know you're having (5) Cement, sand, gravel and water that hardens like stone (8) Person who is habitually intoxicated (8) Wheat protein that people with celiac disease must avoid (6) Nickname of the 5,300-year-old Iceman found in the Alps in 1991 (4) Metal with the chemical symbol Fe (4) So gripping you can't look away (8) Distinct period of time in history or geology (5) Fill with vigor; give power to (8) Make deliberately unclear or confusing (9) British spelling of a place where plays are staged (7) Extinct giant shark of prehistoric seas (9) Latin for Earth (5) Relating to worlds that orbit a star (9) Betrayal of one's own country (7) Foul vapor once blamed for spreading disease (6) Imagined society where everything has gone wrong, as in Orwell's 1984 (8) Belief that goes against official church doctrine (6) Tiny pocket in the skin that a hair grows from (8) Navigator's instrument for measuring the angle of the sun or stars (7) Study of past human life by digging up artifacts (11) In each other's company; as a group (8) Protection granted to a refugee (6) Soft paper for blowing your nose, or a group of similar cells (6) Moving apart in different directions (10) Break into many pieces, like dropped glass (7) Founder of the Mongol Empire (7, 4) What a witness swears to tell (5) Track laid for trains (8) Roman structure built to carry water long distances (8) Bark used to stop up wine bottles (4) Mentally unhinged (8) Heavy iron grille lowered to block a castle gateway (10) Combination of several things into one (12) NASA program that landed astronauts on the Moon (6) Block of sentences that starts on a new line (9) An artist's greatest work (6, 4) Fighting between armed forces (6) Bound pad of paper for jotting things down (8) Large ecological regions such as tundra and rainforest (6) Mischief or silly tricks (11) What water does at 100 °C (7) First U.S. national park, home of Old Faithful (11) Ability to feel what someone else is feeling (7) A line of people waiting their turn, to a Brit (5) Full name of DNA (16, 4) Female big cat that does most of the pride's hunting (7) What PC stands for (8, 8) A country's system of money, trade and jobs (7) Sport of shooting arrows at a target (7) Largest of the great apes (7) Sand-filled timer (9) Star-shaped symbol (*) (8) Japanese street-food balls filled with octopus (8) Turn a secret message back into plain text (6) Largest planet in our solar system (7) Strong alloy of iron and carbon (5) Slang for a U.S. Marine (7) Small shaking of the ground (6) Spiky Southeast Asian fruit famous for its smell (6) The northern or southern lights (6) DOWN 2. Substance like oxygen or gold that can't be broken down chemically (7) Person who preaches what they don't practice (9) Large underground chamber (6) Sad and lonely, as if abandoned (7) Huge explosion of a dying star (9) Change in a gene's DNA sequence (8) Measurement system based on meters and grams (6) Type of particle named after Satyendra Nath Bose, like the Higgs (5) Short heavy club, or to beat with one (8) Cigarette brand once advertised by a cowboy (8) Brilliant red color (7) Famous enough to be talked about for generations (9) Plan and follow a route (8) Quality of being new and unusual (7) Traditional story of gods and heroes (4) Fan of land where a river meets the sea; also a Greek letter (5) Hardest natural gemstone, made of carbon (7) Placed side by side for contrast (10) The way things actually are (7) Pattern that repeats itself at every scale (7) Sand and silt that settle at the bottom of water (8) Happening right now, without delay (9) How good something is (7) Folded dish of beaten, cooked eggs (8) Ridicule, or a laughable imitation (7) Einstein's four-dimensional blend of distance and time (9) Season when the leaves fall (6) Officer in charge of a unit or ship (9) Unit measuring how much light a bulb gives off (5) Relating to the core of an atom (7) Skill shown in making things by hand (13) Holy person recognized by the church (5) Coming together at one point (11) Science that searches for life beyond Earth (12) Material in computer chips, partway between a conductor and an insulator (13) Region around a star where liquid water could exist: not too hot, not too cold (10, 4) Jewelry worn on the lobe (7) Imagined perfect society, the opposite of 48 Across (6) Religion founded on the teachings of Jesus (12) Science of how particles behave at the tiniest scales (7, 7) Warrior women of Greek myth (7) Tailored jacket, often with a school or club crest (6) Falling apart from age and neglect (11) Sedimentary rock formed largely from ancient shells (9) Describing an artificial limb (10) Game bird, or to grumble (6) Pleasing combination of musical notes (7) Soft-covered book (9) Energy given off by uranium or the sun (9) Using 1s and 0s, as opposed to analog (7) When the Moon blocks the Sun (7) A 3D pixel, the building block of blocky game graphics (5) Kings, queens and their families (7) Small village, or Shakespeare's Danish prince (6) Relating to the smallest unit of an element (6) Doubtful or suspect (7) Bravery in the face of fear (7) Tremble suddenly from fear or cold (7) Spear, halberd or other weapon on a long shaft (7) Color of fresh snow (5) Black volcanic glass (8) Adam ___, cyborg villain of Cyberpunk 2077 (7) Realizing every passerby has a life as vivid as your own (6) This word is both a crime and an electronic component (7) Spreading quickly online (5) Milk, cheese and yogurt, as a food group (5)",
+      "text_excerpt": "Big Ole' Crossword (OC)\n(i hope the photo came through in good quality) ACROSS 1. One of five on a hand (6) Giant sea wave set off by an undersea earthquake (7) Statement that seems to contradict itself yet may be true (7) Timber sawn into boards and planks (6) A model of excellence; a perfect example (7) Threatening, like dark storm clouds (7) Vineyard business where grapes are crushed and fermented (6) River or canal that boats can travel along (8) Clear-headed, or describing a dream you know you're having (5) Cement, sand, gravel and water that hardens like stone (8) Person who is habitually intoxicated (8) Wheat protein that people with celiac disease must avoid (6) Nickname of the 5,300",
+      "url": "https://www.reddit.com/r/puzzles/comments/1xpy3ty/big_ole_crossword_oc/",
+      "source_url": "https://www.reddit.com/r/puzzles/comments/1xpy3ty/big_ole_crossword_oc/",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.94,
+      "score": 14.0,
+      "matched_signals": [
+        "LEGAL_MIGRATION_SIGNAL"
+      ],
+      "matched_phrases": [
+        [
+          "legal_signal",
+          "Protection granted"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "refugee"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 48.9,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "reddit_1xpy3ty"
+      ],
+      "related_authors": [
+        "Away_Counter_3006"
+      ],
+      "related_urls": [
+        "https://www.reddit.com/r/puzzles/comments/1xpy3ty/big_ole_crossword_oc/"
+      ],
+      "related_sources": [
+        "REDDIT"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
     {
       "id": 1361,
       "source": "X",
@@ -1846,145 +2036,323 @@
       ],
       "independent_author_count": 1,
       "platform_count": 1
-    },
+    }
+  ],
+  "crossing_access_signals": [
     {
-      "id": 1349,
-      "source": "MASTODON",
-      "source_post_id": "mastodon_117569196068272911",
-      "author": null,
-      "language": null,
-      "published_at": "2026-11-06T11:12:43Z",
-      "first_detected_at": "2026-11-06T11:40:56Z",
-      "last_detected_at": "2026-11-06T11:40:56Z",
+      "id": 1363,
+      "source": "X",
+      "source_post_id": "2119018281373671542",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-11-07T10:45:02Z",
+      "first_detected_at": "2026-11-07T10:45:47Z",
+      "last_detected_at": "2026-11-07T10:45:47Z",
       "detection_count": 1,
-      "text": "Más de mil llegadas en una noche y una muerte en Canarias. ¿Qué está cambiando en la ruta atlántica? # Canarias # ElHierro # Lanzarote # GranCanaria # Migracion # Cayucos # SalvamentoMaritimo # RutaCanaria # Senegal # AfricaOccidental # Actualidad # felizviernes # 6denoviembre https:// elfolio.es/llegada-de-migrante s-a-canarias-noviembre-2026/",
-      "text_excerpt": "Más de mil llegadas en una noche y una muerte en Canarias. ¿Qué está cambiando en la ruta atlántica? # Canarias # ElHierro # Lanzarote # GranCanaria # Migracion # Cayucos # SalvamentoMaritimo # RutaCanaria # Senegal # AfricaOccidental # Actualidad # felizviernes # 6denoviembre https:// elfolio.es/llegada-de-migrante s-a-canarias-noviembre-2026/",
-      "url": "https://mastodon.social/@elfolio/117569196068272911",
-      "source_url": "https://mastodon.social/@elfolio/117569196068272911",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
+      "text": "@vindictdrvvl @P0eMPieDinges Many European states, including the Netherlands, argue ECHR interpretations of Articles 3 and 8 constrain deportations and asylum control, sustaining high costs and inflows. Exit is legally possible but leaves the Refugee Convention and EU rules intact, with diplomatic costs.",
+      "text_excerpt": "@vindictdrvvl @P0eMPieDinges Many European states, including the Netherlands, argue ECHR interpretations of Articles 3 and 8 constrain deportations and asylum control, sustaining high costs and inflows. Exit is legally possible but leaves the Refugee Convention and EU rules intact, with diplomatic costs.",
+      "url": "https://x.com/grok/status/2119018281373671542",
+      "source_url": "https://x.com/grok/status/2119018281373671542",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
       "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 8.25,
+      "confidence": 0.94,
+      "score": 15.0,
       "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
+        "LEGAL_MIGRATION_SIGNAL"
       ],
       "matched_phrases": [
         [
-          "movement",
-          "llegada-de-migrante"
-        ],
-        [
-          "route",
-          "ruta"
+          "legal_signal",
+          "ECHR"
         ]
       ],
-      "matched_groups": [
-        "MOVEMENT",
-        "ROUTE"
-      ],
+      "matched_groups": [],
       "context_matches": [
-        "migrante"
+        "Refugee",
+        "asylum"
       ],
-      "high_value_matches": [
-        "llegada-de-migrante"
-      ],
-      "signal_context_rejections": [],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
       "migration_context": true,
-      "human_migration_context": true,
+      "human_migration_context": null,
       "historical_reference": false,
       "historical_reason": null,
       "historical_reference_text": null,
-      "location": "Canary Islands",
-      "primary_location": "Canary Islands",
-      "country": "Spain",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": 28.2916,
-      "longitude": -16.6291,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 39.0,
-      "analyst_priority": "LOW",
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 48.9,
+      "analyst_priority": "MEDIUM",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    }
+  ],
+  "access_signals": [
+    {
+      "id": 1363,
+      "source": "X",
+      "source_post_id": "2119018281373671542",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-11-07T10:45:02Z",
+      "first_detected_at": "2026-11-07T10:45:47Z",
+      "last_detected_at": "2026-11-07T10:45:47Z",
+      "detection_count": 1,
+      "text": "@vindictdrvvl @P0eMPieDinges Many European states, including the Netherlands, argue ECHR interpretations of Articles 3 and 8 constrain deportations and asylum control, sustaining high costs and inflows. Exit is legally possible but leaves the Refugee Convention and EU rules intact, with diplomatic costs.",
+      "text_excerpt": "@vindictdrvvl @P0eMPieDinges Many European states, including the Netherlands, argue ECHR interpretations of Articles 3 and 8 constrain deportations and asylum control, sustaining high costs and inflows. Exit is legally possible but leaves the Refugee Convention and EU rules intact, with diplomatic costs.",
+      "url": "https://x.com/grok/status/2119018281373671542",
+      "source_url": "https://x.com/grok/status/2119018281373671542",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.94,
+      "score": 15.0,
+      "matched_signals": [
+        "LEGAL_MIGRATION_SIGNAL"
+      ],
+      "matched_phrases": [
+        [
+          "legal_signal",
+          "ECHR"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "Refugee",
+        "asylum"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 48.9,
+      "analyst_priority": "MEDIUM",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    }
+  ],
+  "top_crossing_access_posts": [
+    {
+      "id": 1363,
+      "source": "X",
+      "source_post_id": "2119018281373671542",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-11-07T10:45:02Z",
+      "first_detected_at": "2026-11-07T10:45:47Z",
+      "last_detected_at": "2026-11-07T10:45:47Z",
+      "detection_count": 1,
+      "text": "@vindictdrvvl @P0eMPieDinges Many European states, including the Netherlands, argue ECHR interpretations of Articles 3 and 8 constrain deportations and asylum control, sustaining high costs and inflows. Exit is legally possible but leaves the Refugee Convention and EU rules intact, with diplomatic costs.",
+      "text_excerpt": "@vindictdrvvl @P0eMPieDinges Many European states, including the Netherlands, argue ECHR interpretations of Articles 3 and 8 constrain deportations and asylum control, sustaining high costs and inflows. Exit is legally possible but leaves the Refugee Convention and EU rules intact, with diplomatic costs.",
+      "url": "https://x.com/grok/status/2119018281373671542",
+      "source_url": "https://x.com/grok/status/2119018281373671542",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.94,
+      "score": 15.0,
+      "matched_signals": [
+        "LEGAL_MIGRATION_SIGNAL"
+      ],
+      "matched_phrases": [
+        [
+          "legal_signal",
+          "ECHR"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "Refugee",
+        "asylum"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 48.9,
+      "analyst_priority": "MEDIUM",
       "related_posts_count": 1,
       "related_post_ids": [
-        "mastodon_117569196068272911"
+        "2119018281373671542"
       ],
-      "related_authors": [],
+      "related_authors": [
+        "grok"
+      ],
       "related_urls": [
-        "https://mastodon.social/@elfolio/117569196068272911"
+        "https://x.com/grok/status/2119018281373671542"
       ],
       "related_sources": [
-        "MASTODON"
+        "X"
       ],
-      "independent_author_count": 0,
+      "independent_author_count": 1,
+      "platform_count": 1,
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    }
+  ],
+  "crossing_access_narratives": [
+    {
+      "id": 1363,
+      "source": "X",
+      "source_post_id": "2119018281373671542",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-11-07T10:45:02Z",
+      "first_detected_at": "2026-11-07T10:45:47Z",
+      "last_detected_at": "2026-11-07T10:45:47Z",
+      "detection_count": 1,
+      "text": "@vindictdrvvl @P0eMPieDinges Many European states, including the Netherlands, argue ECHR interpretations of Articles 3 and 8 constrain deportations and asylum control, sustaining high costs and inflows. Exit is legally possible but leaves the Refugee Convention and EU rules intact, with diplomatic costs.",
+      "text_excerpt": "@vindictdrvvl @P0eMPieDinges Many European states, including the Netherlands, argue ECHR interpretations of Articles 3 and 8 constrain deportations and asylum control, sustaining high costs and inflows. Exit is legally possible but leaves the Refugee Convention and EU rules intact, with diplomatic costs.",
+      "url": "https://x.com/grok/status/2119018281373671542",
+      "source_url": "https://x.com/grok/status/2119018281373671542",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.94,
+      "score": 15.0,
+      "matched_signals": [
+        "LEGAL_MIGRATION_SIGNAL"
+      ],
+      "matched_phrases": [
+        [
+          "legal_signal",
+          "ECHR"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "Refugee",
+        "asylum"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 48.9,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2119018281373671542"
+      ],
+      "related_authors": [
+        "grok"
+      ],
+      "related_urls": [
+        "https://x.com/grok/status/2119018281373671542"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
       "platform_count": 1
     },
     {
-      "id": 1355,
+      "id": 1366,
       "source": "REDDIT",
-      "source_post_id": "reddit_1xpkvdg",
-      "author": "XGramatik",
+      "source_post_id": "reddit_1xpy3ty",
+      "author": "Away_Counter_3006",
       "language": null,
-      "published_at": "2026-11-06T18:52:22Z",
-      "first_detected_at": "2026-11-06T23:52:32Z",
-      "last_detected_at": "2026-11-07T03:30:41Z",
-      "detection_count": 2,
-      "text": "Over 3,000 illegal migrants arrive in the Canary Islands in just a few days — local authorities sound the alarm\nMore than 1,000 people were brought to the islands by Spanish rescue services overnight from November 5 to 6. Most of the arrivals are migrants entering Spain irregularly from West African countries, crossing the Atlantic in overcrowded wooden boats. The situation is particularly difficult on the island of El Hierro. Local residents complain that hospitals, shelters, and infrastructure are overwhelmed. Canary Islands President Fernando Clavijo described the situation as “absolutely unsustainable.” Spanish rescue teams continue to locate boats at sea and bring migrants to ports. According to media reports, one person died during one of the latest rescue operations.",
-      "text_excerpt": "Over 3,000 illegal migrants arrive in the Canary Islands in just a few days — local authorities sound the alarm\nMore than 1,000 people were brought to the islands by Spanish rescue services overnight from November 5 to 6. Most of the arrivals are migrants entering Spain irregularly from West African countries, crossing the Atlantic in overcrowded wooden boats. The situation is particularly difficult on the island of El Hierro. Local residents complain that hospitals, shelters, and infrastructure are overwhelmed. Canary Islands President Fernando Clavijo described the situation as “absolutely unsustainable.” Spanish rescue teams continue to locate boats at sea and bring migrants to ports. Acc",
-      "url": "https://www.reddit.com/r/TheDailyChaos/comments/1xpkvdg/over_3000_illegal_migrants_arrive_in_the_canary/",
-      "source_url": "https://www.reddit.com/r/TheDailyChaos/comments/1xpkvdg/over_3000_illegal_migrants_arrive_in_the_canary/",
-      "primary_signal": "ENFORCEMENT_EARLY_WARNING",
-      "signal_type": "ENFORCEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ENFORCEMENT_REVIEW",
+      "published_at": "2026-11-07T05:05:18Z",
+      "first_detected_at": "2026-11-07T10:52:27Z",
+      "last_detected_at": "2026-11-07T10:52:27Z",
+      "detection_count": 1,
+      "text": "Big Ole' Crossword (OC)\n(i hope the photo came through in good quality) ACROSS 1. One of five on a hand (6) Giant sea wave set off by an undersea earthquake (7) Statement that seems to contradict itself yet may be true (7) Timber sawn into boards and planks (6) A model of excellence; a perfect example (7) Threatening, like dark storm clouds (7) Vineyard business where grapes are crushed and fermented (6) River or canal that boats can travel along (8) Clear-headed, or describing a dream you know you're having (5) Cement, sand, gravel and water that hardens like stone (8) Person who is habitually intoxicated (8) Wheat protein that people with celiac disease must avoid (6) Nickname of the 5,300-year-old Iceman found in the Alps in 1991 (4) Metal with the chemical symbol Fe (4) So gripping you can't look away (8) Distinct period of time in history or geology (5) Fill with vigor; give power to (8) Make deliberately unclear or confusing (9) British spelling of a place where plays are staged (7) Extinct giant shark of prehistoric seas (9) Latin for Earth (5) Relating to worlds that orbit a star (9) Betrayal of one's own country (7) Foul vapor once blamed for spreading disease (6) Imagined society where everything has gone wrong, as in Orwell's 1984 (8) Belief that goes against official church doctrine (6) Tiny pocket in the skin that a hair grows from (8) Navigator's instrument for measuring the angle of the sun or stars (7) Study of past human life by digging up artifacts (11) In each other's company; as a group (8) Protection granted to a refugee (6) Soft paper for blowing your nose, or a group of similar cells (6) Moving apart in different directions (10) Break into many pieces, like dropped glass (7) Founder of the Mongol Empire (7, 4) What a witness swears to tell (5) Track laid for trains (8) Roman structure built to carry water long distances (8) Bark used to stop up wine bottles (4) Mentally unhinged (8) Heavy iron grille lowered to block a castle gateway (10) Combination of several things into one (12) NASA program that landed astronauts on the Moon (6) Block of sentences that starts on a new line (9) An artist's greatest work (6, 4) Fighting between armed forces (6) Bound pad of paper for jotting things down (8) Large ecological regions such as tundra and rainforest (6) Mischief or silly tricks (11) What water does at 100 °C (7) First U.S. national park, home of Old Faithful (11) Ability to feel what someone else is feeling (7) A line of people waiting their turn, to a Brit (5) Full name of DNA (16, 4) Female big cat that does most of the pride's hunting (7) What PC stands for (8, 8) A country's system of money, trade and jobs (7) Sport of shooting arrows at a target (7) Largest of the great apes (7) Sand-filled timer (9) Star-shaped symbol (*) (8) Japanese street-food balls filled with octopus (8) Turn a secret message back into plain text (6) Largest planet in our solar system (7) Strong alloy of iron and carbon (5) Slang for a U.S. Marine (7) Small shaking of the ground (6) Spiky Southeast Asian fruit famous for its smell (6) The northern or southern lights (6) DOWN 2. Substance like oxygen or gold that can't be broken down chemically (7) Person who preaches what they don't practice (9) Large underground chamber (6) Sad and lonely, as if abandoned (7) Huge explosion of a dying star (9) Change in a gene's DNA sequence (8) Measurement system based on meters and grams (6) Type of particle named after Satyendra Nath Bose, like the Higgs (5) Short heavy club, or to beat with one (8) Cigarette brand once advertised by a cowboy (8) Brilliant red color (7) Famous enough to be talked about for generations (9) Plan and follow a route (8) Quality of being new and unusual (7) Traditional story of gods and heroes (4) Fan of land where a river meets the sea; also a Greek letter (5) Hardest natural gemstone, made of carbon (7) Placed side by side for contrast (10) The way things actually are (7) Pattern that repeats itself at every scale (7) Sand and silt that settle at the bottom of water (8) Happening right now, without delay (9) How good something is (7) Folded dish of beaten, cooked eggs (8) Ridicule, or a laughable imitation (7) Einstein's four-dimensional blend of distance and time (9) Season when the leaves fall (6) Officer in charge of a unit or ship (9) Unit measuring how much light a bulb gives off (5) Relating to the core of an atom (7) Skill shown in making things by hand (13) Holy person recognized by the church (5) Coming together at one point (11) Science that searches for life beyond Earth (12) Material in computer chips, partway between a conductor and an insulator (13) Region around a star where liquid water could exist: not too hot, not too cold (10, 4) Jewelry worn on the lobe (7) Imagined perfect society, the opposite of 48 Across (6) Religion founded on the teachings of Jesus (12) Science of how particles behave at the tiniest scales (7, 7) Warrior women of Greek myth (7) Tailored jacket, often with a school or club crest (6) Falling apart from age and neglect (11) Sedimentary rock formed largely from ancient shells (9) Describing an artificial limb (10) Game bird, or to grumble (6) Pleasing combination of musical notes (7) Soft-covered book (9) Energy given off by uranium or the sun (9) Using 1s and 0s, as opposed to analog (7) When the Moon blocks the Sun (7) A 3D pixel, the building block of blocky game graphics (5) Kings, queens and their families (7) Small village, or Shakespeare's Danish prince (6) Relating to the smallest unit of an element (6) Doubtful or suspect (7) Bravery in the face of fear (7) Tremble suddenly from fear or cold (7) Spear, halberd or other weapon on a long shaft (7) Color of fresh snow (5) Black volcanic glass (8) Adam ___, cyborg villain of Cyberpunk 2077 (7) Realizing every passerby has a life as vivid as your own (6) This word is both a crime and an electronic component (7) Spreading quickly online (5) Milk, cheese and yogurt, as a food group (5)",
+      "text_excerpt": "Big Ole' Crossword (OC)\n(i hope the photo came through in good quality) ACROSS 1. One of five on a hand (6) Giant sea wave set off by an undersea earthquake (7) Statement that seems to contradict itself yet may be true (7) Timber sawn into boards and planks (6) A model of excellence; a perfect example (7) Threatening, like dark storm clouds (7) Vineyard business where grapes are crushed and fermented (6) River or canal that boats can travel along (8) Clear-headed, or describing a dream you know you're having (5) Cement, sand, gravel and water that hardens like stone (8) Person who is habitually intoxicated (8) Wheat protein that people with celiac disease must avoid (6) Nickname of the 5,300",
+      "url": "https://www.reddit.com/r/puzzles/comments/1xpy3ty/big_ole_crossword_oc/",
+      "source_url": "https://www.reddit.com/r/puzzles/comments/1xpy3ty/big_ole_crossword_oc/",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
       "priority": "MEDIUM",
-      "confidence": 0.62,
-      "score": 5.25,
+      "confidence": 0.94,
+      "score": 14.0,
       "matched_signals": [
-        "ENFORCEMENT_EARLY_WARNING"
+        "LEGAL_MIGRATION_SIGNAL"
       ],
       "matched_phrases": [
         [
-          "enforcement",
-          "Over 3,000 illegal migrants arrive in the Canary Islands in just a few days — local authorities sound the alarm More than 1,000 people were brought to the islands by Spanish rescue services overnight from November 5 to 6. Most of the arrivals are migrants entering Spain irregularly from West African countries, crossing the Atlantic in overcrowded wooden boats. The situation is particularly difficult on the island of El Hierro. Local residents complain that hospitals, shelters, and infrastructure are overwhelmed. Canary Islands President Fernando Clavijo described the situation as “absolutely unsustainable.” Spanish rescue teams continue to locate boats at sea and bring migrants to ports. According to media reports, one person died during one of the latest rescue operations."
+          "legal_signal",
+          "Protection granted"
         ]
       ],
-      "matched_groups": [
-        "ENFORCEMENT"
-      ],
+      "matched_groups": [],
       "context_matches": [
-        "migrants"
+        "refugee"
       ],
-      "high_value_matches": [
-        "authorities sound the alarm More than 1,000 people were brought to the islands by Spanish rescue services overnight from November 5 to 6"
-      ],
-      "signal_context_rejections": [],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
       "migration_context": true,
-      "human_migration_context": true,
+      "human_migration_context": null,
       "historical_reference": false,
       "historical_reason": null,
       "historical_reference_text": null,
-      "location": "Canary Islands",
-      "primary_location": "Canary Islands",
-      "country": "Spain",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": 28.2916,
-      "longitude": -16.6291,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 32.7,
-      "analyst_priority": "LOW",
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 48.9,
+      "analyst_priority": "MEDIUM",
       "related_posts_count": 1,
       "related_post_ids": [
-        "reddit_1xpkvdg"
+        "reddit_1xpy3ty"
       ],
       "related_authors": [
-        "XGramatik"
+        "Away_Counter_3006"
       ],
       "related_urls": [
-        "https://www.reddit.com/r/TheDailyChaos/comments/1xpkvdg/over_3000_illegal_migrants_arrive_in_the_canary/"
+        "https://www.reddit.com/r/puzzles/comments/1xpy3ty/big_ole_crossword_oc/"
       ],
       "related_sources": [
         "REDDIT"
@@ -1993,10 +2361,6 @@
       "platform_count": 1
     }
   ],
-  "crossing_access_signals": [],
-  "access_signals": [],
-  "top_crossing_access_posts": [],
-  "crossing_access_narratives": [],
   "information_activity_weekly": [
     {
       "year": 2026,
@@ -2123,15 +2487,15 @@
       "label": "W45",
       "week_label": "W45",
       "week_start": "2026-11-02T00:00:00Z",
-      "posts": 1268,
-      "post_count": 1268,
-      "operational_posts": 47,
-      "influence_signals": 56,
+      "posts": 1333,
+      "post_count": 1333,
+      "operational_posts": 51,
+      "influence_signals": 60,
       "source_counts": {
-        "X": 866,
-        "REDDIT": 156,
-        "MASTODON": 172,
-        "TELEGRAM": 74
+        "X": 912,
+        "REDDIT": 163,
+        "MASTODON": 183,
+        "TELEGRAM": 75
       }
     }
   ],
@@ -2261,33 +2625,33 @@
       "label": "W45",
       "week_label": "W45",
       "week_start": "2026-11-02T00:00:00Z",
-      "posts": 1268,
-      "post_count": 1268,
-      "operational_posts": 47,
-      "influence_signals": 56,
+      "posts": 1333,
+      "post_count": 1333,
+      "operational_posts": 51,
+      "influence_signals": 60,
       "source_counts": {
-        "X": 866,
-        "REDDIT": 156,
-        "MASTODON": 172,
-        "TELEGRAM": 74
+        "X": 912,
+        "REDDIT": 163,
+        "MASTODON": 183,
+        "TELEGRAM": 75
       }
     }
   ],
   "information_activity_summary": {
-    "current_week": 1268,
-    "previous_week": 1418,
-    "current_week_to_date": 1268,
-    "previous_week_same_period": 1418,
+    "current_week": 1333,
+    "previous_week": 1481,
+    "current_week_to_date": 1333,
+    "previous_week_same_period": 1481,
     "previous_week_full": 1963,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": -10.58,
-    "change_label": "-10.6%",
+    "change_percent": -9.99,
+    "change_label": "-10.0%",
     "direction": "DOWN",
     "comparable": true,
-    "elapsed_hours": 123.5,
+    "elapsed_hours": 130.9,
     "current_period_start": "2026-11-02T00:00:00Z",
     "previous_period_start": "2026-10-26T00:00:00Z",
-    "previous_period_end": "2026-10-31T03:32:12Z"
+    "previous_period_end": "2026-10-31T10:52:28Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -2299,44 +2663,44 @@
       72,
       168
     ],
-    "generated_at": "2026-11-07T03:32:14Z",
-    "total_items": 2207,
-    "information_count": 298,
-    "early_warning_count": 1043,
-    "operational_count": 717,
-    "correlated_count": 149,
+    "generated_at": "2026-11-07T10:52:29Z",
+    "total_items": 2210,
+    "information_count": 294,
+    "early_warning_count": 1044,
+    "operational_count": 722,
+    "correlated_count": 150,
     "layer_counts": {
-      "OPERATIONAL": 717,
-      "CORRELATED": 149,
-      "INFORMATION": 298,
-      "EARLY_WARNING": 1043
+      "EARLY_WARNING": 1044,
+      "OPERATIONAL": 722,
+      "CORRELATED": 150,
+      "INFORMATION": 294
     },
     "source_counts": {
-      "X": 1539,
-      "REDDIT": 515,
+      "X": 1546,
+      "REDDIT": 512,
       "TELEGRAM": 52,
-      "MASTODON": 101
+      "MASTODON": 100
     },
     "type_counts": {
-      "BORDER_CROSSING": 331,
+      "LEGAL_MIGRATION_SIGNAL": 103,
+      "BORDER_CROSSING": 335,
+      "INFORMATION_SIGNAL": 294,
       "RESCUE_OPERATION": 49,
-      "INFORMATION_SIGNAL": 298,
       "MOVEMENT_EARLY_WARNING": 349,
       "ENFORCEMENT_EARLY_WARNING": 61,
       "ROUTE_EARLY_WARNING": 148,
-      "DEPORTATION": 136,
+      "DEPORTATION": 138,
       "FACILITATION_EARLY_WARNING": 205,
       "PRESSURE_EARLY_WARNING": 51,
+      "INTERCEPTION": 49,
       "BORDER_MEASURE": 17,
-      "DETENTION": 87,
+      "DETENTION": 86,
       "MOBILIZATION_COORDINATION": 30,
       "SMUGGLING_ACTIVITY": 44,
       "COORDINATION": 17,
-      "INTERCEPTION": 48,
       "CASUALTY": 28,
       "POLICY_SIGNAL": 11,
       "CROSSING_FACILITATION": 61,
-      "LEGAL_MIGRATION_SIGNAL": 102,
       "MIGRANT_CAMP": 86,
       "RECRUITMENT_COORDINATION": 20,
       "MOBILIZATION_REPORT": 1,
@@ -2346,6 +2710,304 @@
       "ARRIVAL": 15
     },
     "items": [
+      {
+        "timeline_id": "early_warning:1363",
+        "timestamp": "2026-11-07T10:45:02Z",
+        "layer": "EARLY_WARNING",
+        "type": "LEGAL_MIGRATION_SIGNAL",
+        "signal_type": "LEGAL_MIGRATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2119018281373671542",
+        "author": "grok",
+        "url": "https://x.com/grok/status/2119018281373671542",
+        "source_url": "https://x.com/grok/status/2119018281373671542",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.94,
+        "priority": "MEDIUM",
+        "priority_score": 48.9,
+        "analyst_priority": "MEDIUM",
+        "text": "@vindictdrvvl @P0eMPieDinges Many European states, including the Netherlands, argue ECHR interpretations of Articles 3 and 8 constrain deportations and asylum control, sustaining high costs and inflows. Exit is legally possible but leaves the Refugee Convention and EU rules intact, with diplomatic costs.",
+        "text_excerpt": "@vindictdrvvl @P0eMPieDinges Many European states, including the Netherlands, argue ECHR interpretations of Articles 3 and 8 constrain deportations and asylum control, sustaining high costs and inflows. Exit is legally possible but leaves the Refugee Convention and EU rules intact, with diplomatic costs.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "DIRECT",
+        "signal_intent": "LEGAL_ACCESS",
+        "detection_count": 1,
+        "first_detected_at": "2026-11-07T10:45:47Z",
+        "last_detected_at": "2026-11-07T10:45:47Z",
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
+      {
+        "timeline_id": "operational:848",
+        "timestamp": "2026-11-07T10:34:14Z",
+        "layer": "OPERATIONAL",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "X",
+        "source_post_id": "2119015562181239160",
+        "author": "neuralnetw0rks",
+        "url": "https://x.com/neuralnetw0rks/status/2119015562181239160",
+        "source_url": "https://x.com/neuralnetw0rks/status/2119015562181239160",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": 28.2916,
+        "longitude": -16.6291,
+        "confidence": 0.5,
+        "priority": "MEDIUM",
+        "priority_score": 50.0,
+        "text": "More than 3,000 migrants have arrived in the Canary Islands over the course of a few days, prompting local authorities to sound the alarm.\n\nThe situation is particularly difficult on the island of El Hierro. https://t.co/y6LUHQ5Ovm",
+        "text_excerpt": "More than 3,000 migrants have arrived in the Canary Islands over the course of a few days, prompting local authorities to sound the alarm.\n\nThe situation is particularly difficult on the island of El Hierro. https://t.co/y6LUHQ5Ovm",
+        "event_group_id": 474,
+        "correlation_score": 0.77,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
+      {
+        "timeline_id": "correlated:846",
+        "timestamp": "2026-11-07T10:34:14Z",
+        "layer": "CORRELATED",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "X",
+        "source_post_id": "2119015562181239160",
+        "author": "neuralnetw0rks",
+        "url": "https://x.com/neuralnetw0rks/status/2119015562181239160",
+        "source_url": "https://x.com/neuralnetw0rks/status/2119015562181239160",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "Ceuta",
+        "primary_location": "Ceuta",
+        "country": "Spain",
+        "latitude": 35.8894,
+        "longitude": -5.3213,
+        "confidence": 0.8,
+        "priority": "HIGH",
+        "priority_score": 80.0,
+        "text": "More than 3,000 migrants have arrived in the Canary Islands over the course of a few days, prompting local authorities to sound the alarm.\n\nThe situation is particularly difficult on the island of El Hierro. https://t.co/y6LUHQ5Ovm",
+        "text_excerpt": "More than 3,000 migrants have arrived in the Canary Islands over the course of a few days, prompting local authorities to sound the alarm.\n\nThe situation is particularly difficult on the island of El Hierro. https://t.co/y6LUHQ5Ovm",
+        "event_group_id": 474,
+        "correlation_score": 0.77,
+        "related_source_count": 18,
+        "source_types": [
+          "MASTODON",
+          "REDDIT",
+          "X"
+        ],
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:25252",
+        "timestamp": "2026-11-07T10:31:08Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2119014785081540779",
+        "author": "Enoughsenough00",
+        "url": "https://x.com/Enoughsenough00/status/2119014785081540779",
+        "source_url": "https://x.com/Enoughsenough00/status/2119014785081540779",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "crossing",
+          "boat"
+        ],
+        "freshness_cues": [],
+        "text": "🚨 Two Tier Britain Exposed: Home Office Bans Dutch Woman from Entering Britain for Opposing the Boats — While the Illegal Boats Keep Coming\n\nLook at the two random X posts stacked together. At the top, GB News reports Britain is braced for another migrant crossing surge, with https://t.co/jjUneBGq7h",
+        "text_excerpt": "🚨 Two Tier Britain Exposed: Home Office Bans Dutch Woman from Entering Britain for Opposing the Boats — While the Illegal Boats Keep Coming\n\nLook at the two random X posts stacked together. At the top, GB News reports Britain is braced for another migrant crossing surge, with https://t.co/jjUneBGq7h",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-07T10:46:12Z",
+        "last_collected_at": "2026-11-07T10:46:12Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:25255",
+        "timestamp": "2026-11-07T10:21:58Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2119012477086089421",
+        "author": "channelwatchuk",
+        "url": "https://x.com/channelwatchuk/status/2119012477086089421",
+        "source_url": "https://x.com/channelwatchuk/status/2119012477086089421",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 40,
+        "information_score": 4,
+        "matched_information_cues": [
+          "border",
+          "boat",
+          "coast_guard"
+        ],
+        "freshness_cues": [
+          "now"
+        ],
+        "text": "⚠️ WE NEED TO EXPOSE THIS: \n \nFRONTEX is now the key facilitator of the whole small boats crisis and is set to receive Billions of Euros for the privilege.\n\nWHAT IS FRONTEX?\nFrontex is the European Border and Coast Guard Agency. Established in 2004, part of its stated purpose was https://t.co/KmOfRHk8sK",
+        "text_excerpt": "⚠️ WE NEED TO EXPOSE THIS: \n \nFRONTEX is now the key facilitator of the whole small boats crisis and is set to receive Billions of Euros for the privilege.\n\nWHAT IS FRONTEX?\nFrontex is the European Border and Coast Guard Agency. Established in 2004, part of its stated purpose was https://t.co/KmOfRHk8sK",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-07T10:46:13Z",
+        "last_collected_at": "2026-11-07T10:46:13Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:25264",
+        "timestamp": "2026-11-07T10:19:21Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2119011816420593750",
+        "author": "BrightonReez1",
+        "url": "https://x.com/BrightonReez1/status/2119011816420593750",
+        "source_url": "https://x.com/BrightonReez1/status/2119011816420593750",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 40,
+        "information_score": 4,
+        "matched_information_cues": [
+          "boat",
+          "sea",
+          "arrival",
+          "landing"
+        ],
+        "freshness_cues": [],
+        "text": "⚠️Illegal immigration policy\n\n✅Australia reportedly recorded zero migrant drownings attempting to reach its shores last year. Unlike Europe, Australia strictly prevents unauthorized boat arrivals from landing. The result? Fewer attempts and, reportedly, no deaths at sea.",
+        "text_excerpt": "⚠️Illegal immigration policy\n\n✅Australia reportedly recorded zero migrant drownings attempting to reach its shores last year. Unlike Europe, Australia strictly prevents unauthorized boat arrivals from landing. The result? Fewer attempts and, reportedly, no deaths at sea.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-07T10:46:35Z",
+        "last_collected_at": "2026-11-07T10:46:35Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:25269",
+        "timestamp": "2026-11-07T09:59:02Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2119006707187605571",
+        "author": "JuniorM26048432",
+        "url": "https://x.com/JuniorM26048432/status/2119006707187605571",
+        "source_url": "https://x.com/JuniorM26048432/status/2119006707187605571",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "rescue",
+          "refugee_camp"
+        ],
+        "freshness_cues": [
+          "breaking"
+        ],
+        "text": "Breaking | #Gaza Civil Defense says a residential building partially collapsed in Nuseirat refugee camp in central #Gaza, as rescue crews evacuated its residents.\n\n#israeliTerrorism #GazaGenocide https://t.co/TRjm7g6TKK",
+        "text_excerpt": "Breaking | #Gaza Civil Defense says a residential building partially collapsed in Nuseirat refugee camp in central #Gaza, as rescue crews evacuated its residents.\n\n#israeliTerrorism #GazaGenocide https://t.co/TRjm7g6TKK",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-07T10:46:35Z",
+        "last_collected_at": "2026-11-07T10:46:35Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:25290",
+        "timestamp": "2026-11-07T09:54:43Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2119005617595752568",
+        "author": "RosieArmilton",
+        "url": "https://x.com/RosieArmilton/status/2119005617595752568",
+        "source_url": "https://x.com/RosieArmilton/status/2119005617595752568",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "arrival"
+        ],
+        "freshness_cues": [],
+        "text": "The post raises concerns about continued migrant arrivals in the UK, claiming that more than 1,400 people have arrived within the past seven days. It questions the government's approach to border security and immigration control. https://t.co/ORwkbgiJ0o",
+        "text_excerpt": "The post raises concerns about continued migrant arrivals in the UK, claiming that more than 1,400 people have arrived within the past seven days. It questions the government's approach to border security and immigration control. https://t.co/ORwkbgiJ0o",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-07T10:52:26Z",
+        "last_collected_at": "2026-11-07T10:52:26Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
       {
         "timeline_id": "operational:841",
         "timestamp": "2026-11-07T03:19:51Z",
@@ -2405,7 +3067,7 @@
         "text_excerpt": "More than 1,000 migrants arrived in Spain's Canary Islands on Friday as maritime rescue crews continued responding to boats along the Atlantic route. A late-day tally counted 1,066 arrivals across ten vessels, including 1,003 people reaching El Hierro. At La Restinga,",
         "event_group_id": 474,
         "correlation_score": 0.55,
-        "related_source_count": 17,
+        "related_source_count": 18,
         "source_types": [
           "MASTODON",
           "REDDIT",
@@ -2503,8 +3165,8 @@
         "country": "-",
         "confidence": 0.1,
         "priority": "INFO",
-        "priority_score": 60,
-        "information_score": 6,
+        "priority_score": 70,
+        "information_score": 7,
         "matched_information_cues": [
           "border",
           "deportation",
@@ -2525,8 +3187,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-11-07T03:29:48Z",
-        "last_collected_at": "2026-11-07T03:29:48Z",
-        "collection_count": 1,
+        "last_collected_at": "2026-11-07T10:48:28Z",
+        "collection_count": 2,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -3088,7 +3750,7 @@
         "text_excerpt": "🇪🇸 Massive surge of illegal sub-Saharan boat migrant in the Canary Islands\nMore than 1400 illegal migrants arrived yesterday on 12 boats. More than 3400 have arrived in the past 5 days. Hundreds more have arrived today. Locals have gathered in the port on the island of El Hierro to protest against the arrival of so many illegal migrants . Most of the boats are discovered just off the African coast and are then towed…",
         "event_group_id": 474,
         "correlation_score": 0.74,
-        "related_source_count": 17,
+        "related_source_count": 18,
         "source_types": [
           "MASTODON",
           "REDDIT",
@@ -3124,9 +3786,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "ENFORCEMENT_REVIEW",
-        "detection_count": 2,
+        "detection_count": 3,
         "first_detected_at": "2026-11-06T23:52:32Z",
-        "last_detected_at": "2026-11-07T03:30:41Z",
+        "last_detected_at": "2026-11-07T10:46:36Z",
         "ai_review_status": "AI_REVIEWED",
         "ai_editorial_decision": "PUBLISH"
       },
@@ -3344,8 +4006,8 @@
         "country": "-",
         "confidence": 0.1,
         "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
+        "priority_score": 30,
+        "information_score": 3,
         "matched_information_cues": [
           "trafficking",
           "departure"
@@ -3359,8 +4021,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-11-06T23:55:26Z",
-        "last_collected_at": "2026-11-06T23:55:26Z",
-        "collection_count": 1,
+        "last_collected_at": "2026-11-07T10:52:26Z",
+        "collection_count": 2,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -3391,9 +4053,9 @@
         "related_source_count": null,
         "signal_mode": "ANALYST_REVIEW",
         "signal_intent": "ROUTE_REVIEW",
-        "detection_count": 3,
+        "detection_count": 4,
         "first_detected_at": "2026-11-06T18:37:57Z",
-        "last_detected_at": "2026-11-07T03:29:50Z",
+        "last_detected_at": "2026-11-07T10:45:50Z",
         "ai_review_status": "AI_REVIEWED",
         "ai_editorial_decision": "PUBLISH"
       },
@@ -3649,7 +4311,7 @@
         "text_excerpt": "📷More than 800 migrants arrived in just 24-hours on the Spanish islands of El Hierro, Lanzarote, Gran Canaria and La Gomera this week.  All the boats were described as \"precarious\" but each vessel was nevertheless carrying between 11 and 127 people respectively. https://t.co/j3Zwx0x6E6",
         "event_group_id": 474,
         "correlation_score": 0.59,
-        "related_source_count": 17,
+        "related_source_count": 18,
         "source_types": [
           "MASTODON",
           "REDDIT",
@@ -4015,8 +4677,8 @@
         "country": "-",
         "confidence": 0.1,
         "priority": "INFO",
-        "priority_score": 40,
-        "information_score": 4,
+        "priority_score": 50,
+        "information_score": 5,
         "matched_information_cues": [
           "arrival",
           "landing",
@@ -4033,8 +4695,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-11-06T23:55:27Z",
-        "last_collected_at": "2026-11-06T23:55:27Z",
-        "collection_count": 1,
+        "last_collected_at": "2026-11-07T10:52:26Z",
+        "collection_count": 2,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -4850,8 +5512,8 @@
         "country": "-",
         "confidence": 0.1,
         "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
+        "priority_score": 40,
+        "information_score": 4,
         "matched_information_cues": [
           "boat",
           "sea"
@@ -4867,8 +5529,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-11-07T03:30:41Z",
-        "last_collected_at": "2026-11-07T03:30:41Z",
-        "collection_count": 1,
+        "last_collected_at": "2026-11-07T10:46:36Z",
+        "collection_count": 2,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -5327,6 +5989,38 @@
         "first_collected_at": "2026-11-04T18:59:38Z",
         "last_collected_at": "2026-11-04T18:59:38Z",
         "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "operational:828",
+        "timestamp": "2026-11-04T18:51:20Z",
+        "layer": "OPERATIONAL",
+        "type": "INTERCEPTION",
+        "signal_type": "INTERCEPTION",
+        "event_type": "INTERCEPTION",
+        "source": "X",
+        "source_post_id": "2118053499959193652",
+        "author": "mrcornfield",
+        "url": "https://x.com/mrcornfield/status/2118053499959193652",
+        "source_url": "https://x.com/mrcornfield/status/2118053499959193652",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.5,
+        "priority": "MEDIUM",
+        "priority_score": 50.0,
+        "text": "@michael_stonks @DearOldState_16 @frontierism @MAGAmutiny From that same article btw \"about 340,000 (35 percent) were of migrants intercepted at the border and turned around\". That 69% includes someclose enough to the border that they include them there, but they weren't turned away there.",
+        "text_excerpt": "@michael_stonks @DearOldState_16 @frontierism @MAGAmutiny From that same article btw \"about 340,000 (35 percent) were of migrants intercepted at the border and turned around\". That 69% includes someclose enough to the border that they include them there, but they weren't turned away there.",
+        "event_group_id": 663,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -5798,6 +6492,70 @@
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
+        "timeline_id": "operational:825",
+        "timestamp": "2026-11-04T11:11:07Z",
+        "layer": "OPERATIONAL",
+        "type": "DEPORTATION",
+        "signal_type": "DEPORTATION",
+        "event_type": "DEPORTATION",
+        "source": "X",
+        "source_post_id": "2117937683561365765",
+        "author": "DaveKent101",
+        "url": "https://x.com/DaveKent101/status/2117937683561365765",
+        "source_url": "https://x.com/DaveKent101/status/2117937683561365765",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.25,
+        "priority": "LOW",
+        "priority_score": 25.0,
+        "text": "So if this is yet another dinghy migrant, surely he should be deported for apparently trying to steal a fishing boat to collect his family from France?🤔\n\nSudanese man arrested for ‘trying to steal boat to collect family from France’\nThe suspected migrant reportedly boarded a",
+        "text_excerpt": "So if this is yet another dinghy migrant, surely he should be deported for apparently trying to steal a fishing boat to collect his family from France?🤔\n\nSudanese man arrested for ‘trying to steal boat to collect family from France’\nThe suspected migrant reportedly boarded a",
+        "event_group_id": 660,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "operational:827",
+        "timestamp": "2026-11-04T11:00:26Z",
+        "layer": "OPERATIONAL",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "X",
+        "source_post_id": "2117934993427026043",
+        "author": "BambBeeker",
+        "url": "https://x.com/BambBeeker/status/2117934993427026043",
+        "source_url": "https://x.com/BambBeeker/status/2117934993427026043",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.25,
+        "priority": "LOW",
+        "priority_score": 25.0,
+        "text": "@kjburt0311 The worst part of the election results is knowing that blue states will shed more people to red states &amp; the newly arrived economic migrants will keep voting for democrats even as they flee democrat policies. \nSee: Texas",
+        "text_excerpt": "@kjburt0311 The worst part of the election results is knowing that blue states will shed more people to red states &amp; the newly arrived economic migrants will keep voting for democrats even as they flee democrat policies. \nSee: Texas",
+        "event_group_id": 662,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
         "timeline_id": "information:24495",
         "timestamp": "2026-11-04T10:51:07Z",
         "layer": "INFORMATION",
@@ -5834,6 +6592,38 @@
         "first_collected_at": "2026-11-04T11:41:07Z",
         "last_collected_at": "2026-11-04T11:41:07Z",
         "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "operational:826",
+        "timestamp": "2026-11-04T10:50:29Z",
+        "layer": "OPERATIONAL",
+        "type": "DEPORTATION",
+        "signal_type": "DEPORTATION",
+        "event_type": "DEPORTATION",
+        "source": "X",
+        "source_post_id": "2117932487980810643",
+        "author": "Vin10105",
+        "url": "https://x.com/Vin10105/status/2117932487980810643",
+        "source_url": "https://x.com/Vin10105/status/2117932487980810643",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.25,
+        "priority": "LOW",
+        "priority_score": 25.0,
+        "text": "Do you mean the small boat migrants that enter the country illegally and should be immediately deported…governments now awarding illegal activity https://t.co/bpg4gf2AhC",
+        "text_excerpt": "Do you mean the small boat migrants that enter the country illegally and should be immediately deported…governments now awarding illegal activity https://t.co/bpg4gf2AhC",
+        "event_group_id": 661,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -6427,6 +7217,44 @@
         "event_time_text": null,
         "event_time_normalized": null,
         "event_time_confidence": null,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:24362",
+        "timestamp": "2026-11-03T20:49:36Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "REDDIT",
+        "source_post_id": "reddit_1xn4qvq",
+        "author": "kimchi_peachi",
+        "url": "https://www.reddit.com/r/SkilledWorkerVisaUK/comments/1xn4qvq/mps_who_had_challenged_retrospective_ilr_changes/",
+        "source_url": "https://www.reddit.com/r/SkilledWorkerVisaUK/comments/1xn4qvq/mps_who_had_challenged_retrospective_ilr_changes/",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "route",
+          "trafficking"
+        ],
+        "freshness_cues": [],
+        "text": "MPs who had challenged retrospective ILR changes\nSee below list of Civil Society Groups, Lords and MPs we should write to. Explain exactly how we have contributed to the economy society, how the ILR update impact us. How we have gone above and beyond at work, been law biding. We pay 1000£ per year to NHS, tuition fees 3-4 times local , contribution of our tax to fund social infrastructure Unlike the claims, our visas also do not allow us to claim public funds. Civil Society Advice UK; African Rainbow; Family After Exploitation - Victoria Marks, Director; Anti Trafficking and Labour Exploitation Unit (ATLEU); Black Activists Against Rising Cuts (BARAC) UK; Rosalyn Akar Grams, Managing Director of Legal Practice and Children’s Rights; Coram Children's Centre; Employment Legal Advice Network (ELAN); Focus on Labour Exploitation (FLEX); Greater Manchester Immigration Aid Unit (GMAIU); Haringey Migrant Support Centre; Homecare Association Immigration Law Practitioners Association (ILPA); Kalayaan; Latin American Women's Rights Service (LAWRS); Lewisham Refugee and Migrant Network (LRMN); Long Residence Group; Maryhill Integration Network; Migrant Voice; Minnie Rahman, CEO, Praxis; Refugee & Migrant Forum of Essex and London (RAMFEL); Refugee Employment Network; Regularise - Sunitha Dwarakanath; Reunite Families; UK Roma Support Group; Skilled Workers Justice Alliance; Southeast and East Asian Women's Association; Selma Taha, Executive Director, Southall Black Sisters; Andreea Dumitrache, the3million; The William Gomes Podcast; Rumbidzai Bvunzawabaya, Tulia Group CIC; Young Roots; Patricia Chinyoka Women of Zimbabwe; Zoe Gardner, Another Europe is Possible. Peers: Baroness Bennett of Manor Castle; Baroness Blower Lord Boateng CVO; Baroness Burt of Solihull; Lord Cashman; Earl of Clancarty; Lord Davies of Brixton; Lord Dholakia; Earl of Dundee; Baroness Hooper; Baroness Hussein-Ece OBE; Baroness Jones of Moulsecoomb; Lord Kerr of Kinlochard; Baroness Lister of Burtersett CBE; Baroness Neuberger; Baroness Uddin. MPs: Paul Kohler (Liberal Democrat) proposed amendments calling for those eligible on settlement pathway to be protected from new policy Tony Vaughan (Folkestone & Hythe) Strongly opposes retrospective changes to the 5-year route Sarah Olney (Richmond Park) Raises concerns about extending wait for skilled migrants Margaret Mullane (Labour) 37 Labour MPs had previously written to the Home Secretary demanding changes to the ILR proposals. signatory list: Diane Abbott Paula Barker Lee Barron Lorraine Beavers Apsana Begum Olivia Blake Richard Burgon Ian Byrne Cat Eccles Chris Hinchliff Imran Hussain Kim Johnson Warinder Juss Mary Kelly Foy Afzal Khan Peter Lamb Ian Lavery Brian Leishman Emma Lewell Clive Lewis Rebecca Long-Bailey Rachael Maskell John McDonnell Navendu Mishra Abtisam Mohamed Grahame Morris Simon Opher Kate Osamor Kate Osborne Richard Quigley Bell Ribeiro-Addy Alex Sobel Jon Trickett Tony Vaughan Nadia Whittome Steve Witherden Kirsteen Sullivan",
+        "text_excerpt": "MPs who had challenged retrospective ILR changes\nSee below list of Civil Society Groups, Lords and MPs we should write to. Explain exactly how we have contributed to the economy society, how the ILR update impact us. How we have gone above and beyond at work, been law biding. We pay 1000£ per year to NHS, tuition fees 3-4 times local , contribution of our tax to fund social infrastructure Unlike the claims, our visas…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-03T22:39:31Z",
+        "last_collected_at": "2026-11-07T10:48:29Z",
+        "collection_count": 2,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -7607,7 +8435,7 @@
         "text_excerpt": "@john4852061 @ProjectLiberal Migrants didn’t make Spain great. Spain was already great once migrants arrived.\n\nAll the migrants did is put Spain on a trajectory of decline",
         "event_group_id": 474,
         "correlation_score": 0.72,
-        "related_source_count": 17,
+        "related_source_count": 18,
         "source_types": [
           "MASTODON",
           "REDDIT",
@@ -8019,8 +8847,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-11-02T19:52:51Z",
-        "last_collected_at": "2026-11-05T23:07:15Z",
-        "collection_count": 2,
+        "last_collected_at": "2026-11-07T10:48:29Z",
+        "collection_count": 3,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -11838,7 +12666,7 @@
         "text_excerpt": "The arrival of two other boats increases to 144 migrants arrived in Formentera in less than 48 hours | Spain\nSource",
         "event_group_id": 474,
         "correlation_score": 0.58,
-        "related_source_count": 17,
+        "related_source_count": 18,
         "source_types": [
           "MASTODON",
           "REDDIT",
@@ -17472,125 +18300,6 @@
         "ai_editorial_decision": "PUBLISH"
       },
       {
-        "timeline_id": "information:22547",
-        "timestamp": "2026-10-27T22:45:53Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2115213425219670390",
-        "author": "638Keying18647",
-        "url": "https://x.com/638Keying18647/status/2115213425219670390",
-        "source_url": "https://x.com/638Keying18647/status/2115213425219670390",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "rescue",
-          "trafficking"
-        ],
-        "freshness_cues": [],
-        "text": "21 Oct 2026   Nigeria   🇳🇬\n\n▫️Over 5,000 trafficking victims rescued in Nigeria as FG seeks global crackdown on organised crime\nNigeria says it has rescued, rehabilitated and reintegrated more than 5,400 human trafficking victims over three years, while securing 26 convictions.",
-        "text_excerpt": "21 Oct 2026   Nigeria   🇳🇬\n\n▫️Over 5,000 trafficking victims rescued in Nigeria as FG seeks global crackdown on organised crime\nNigeria says it has rescued, rehabilitated and reintegrated more than 5,400 human trafficking victims over three years, while securing 26 convictions.",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-27T23:19:15Z",
-        "last_collected_at": "2026-10-27T23:19:15Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:22524",
-        "timestamp": "2026-10-27T22:41:44Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "MASTODON",
-        "source_post_id": "mastodon_b90dee9da9373274a042",
-        "author": null,
-        "url": "https://bots.gruezi.net/@kuow/statuses/01M5ZRDM9XCV7R1XWVZMP7GXPN",
-        "source_url": "https://bots.gruezi.net/@kuow/statuses/01M5ZRDM9XCV7R1XWVZMP7GXPN",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "deportation"
-        ],
-        "freshness_cues": [],
-        "text": "A Canadian woman died while facing U.S. voter fraud allegations because she was too afraid to leave her western Washington home to seek medical care, according to her son. https://www.kuow.org/immigration/2026-10-27/an-innocent-mistake-canadian-woman-dies-in-border-town-amid-deportation-fears-in-wa-voter-fraud-case # KUOW # News # Health # Immigration # Politics # ImmigrationInTheNorthwest",
-        "text_excerpt": "A Canadian woman died while facing U.S. voter fraud allegations because she was too afraid to leave her western Washington home to seek medical care, according to her son. https://www.kuow.org/immigration/2026-10-27/an-innocent-mistake-canadian-woman-dies-in-border-town-amid-deportation-fears-in-wa-voter-fraud-case # KUOW # News # Health # Immigration # Politics # ImmigrationInTheNorthwest",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-27T23:18:26Z",
-        "last_collected_at": "2026-10-27T23:18:26Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:22519",
-        "timestamp": "2026-10-27T22:18:01Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1xh6mzd",
-        "author": "GeniusYaar",
-        "url": "https://www.reddit.com/r/Indians_StudyAbroad/comments/1xh6mzd/the_unbroken_cycle_of_extraction_that_keeps_on/",
-        "source_url": "https://www.reddit.com/r/Indians_StudyAbroad/comments/1xh6mzd/the_unbroken_cycle_of_extraction_that_keeps_on/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 50,
-        "information_score": 5,
-        "matched_information_cues": [
-          "border",
-          "crossing",
-          "route",
-          "arrival"
-        ],
-        "freshness_cues": [
-          "today",
-          "now"
-        ],
-        "text": "The unbroken cycle of extraction that keeps on going. Do you agree?\nThe real need of the hour is to cut through the political spin and talk about the absolute hypocrisy of the UK immigration stance toward Indian students. The math is staring everyone right in the face. Centuries ago, the formula was simple: take trillions out of India, use that wealth to fund the British Industrial Revolution, and build the very university endowments the West brags about today. Fast forward to right now, and the dependency has not stopped, it just changed forms. The UK higher education system is running on international student fees. Because domestic tuition is capped, universities lose money on local students. To survive bankruptcy, they treat overseas grads like cash cows, charging them three to four times what locals pay. International tuition injects over twelve billion pounds a year into their system. It is a massive cross-subsidy funding their local education. But here is where it gets incredibly ugly. The moment the UK deals with its own domestic mess like inflation, housing shortages, and failing public services; politicians need an easy target. And who better than international students? They pay massive fees upfront, fork over thousands for the NHS surcharge while banned from claiming any state benefits, and crucially, they cannot vote. They are the perfect political punchline. So, they roll out hostile policies to squeeze them out. They ban master's students from bringing their families. They squeeze the post-study Graduate visa route down from 2 years to 18 months. They aggressively drop visa refusal safety thresholds so universities cancel admissions out of pure fear. And the financial exploitation is locking in a permanent baseline. The government is bringing in a new international student levy that forces universities to pay a flat nine hundred and twenty five pound annual fee per student. Everyone knows these costs are already being passed down, forcing overseas students to budget for massive annual tuition hikes after 2028. They are literally taxing people from developing nations to pay for the education of their own citizens. The gatekeeping does not stop at graduation either. They have weaponized the system to ensure you cannot build a long-term life there. Under their proposed earned settlement model, the standard baseline to qualify for permanent residency is planned to double from 5 years to a grueling 10 years for most migrants. For those trying to transition into the workforce right now, they have artificially choked off job sponsorships by aggressively inflating the Skilled Worker salary threshold to a massive £41,700. They are indirectly freezing migrants out of the job market by pricing them completely out of corporate budgets. Yet, while legal, fee-contributing international students face maximum scrutiny and shifting goalposts, the borders seem porous for those arriving undocumented. It creates a bitter contrast where legal immigration is heavily penalized while unauthorized entry faces a completely different standard of enforcement. Worse still is the toxic cultural reality that greets students once they step outside the protective bubbles of London or elite campus towns. Outside these zones, racism against Indians has steadily flared up, fueled by far-right rhetoric that normalizes hostility. There is a deep, nauseating irony here. Local populations treat law-abiding brown students with aggressive resentment, acting as if the UK is doing these migrants a massive personal favor by letting them breathe their air. They entirely blind themselves to the economic truth: their local economies are breathing the heavily recycled wealth extracted from the Global South. The very systems keeping their public services afloat are cross-subsidized by the astronomical fees paid out of Indian family life savings. They treat the descendants of the people they plundered like uninvited burdens, while actively surviving on their money. When the Empire wanted unrestricted access to India's wealth, resources, and taxes, borders were non-existent. But today, when the descendants of that exploited wealth show up, paying life savings to sit in lecture halls funded by that history, they are treated like an unwelcome burden. They rely on foreign money to keep their lights on, but intend to send everyone out the second the graduation ceremony ends. That is not an immigration policy. It is just the exact same extractive entitlement, updated for the modern era. Ignore: my_qualifications",
-        "text_excerpt": "The unbroken cycle of extraction that keeps on going. Do you agree?\nThe real need of the hour is to cut through the political spin and talk about the absolute hypocrisy of the UK immigration stance toward Indian students. The math is staring everyone right in the face. Centuries ago, the formula was simple: take trillions out of India, use that wealth to fund the British Industrial Revolution, and build the very univ…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-27T23:18:25Z",
-        "last_collected_at": "2026-10-27T23:18:25Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
         "timeline_id": "operational:753",
         "timestamp": "2026-10-27T22:15:00Z",
         "layer": "OPERATIONAL",
@@ -17653,49 +18362,6 @@
           "TELEGRAM",
           "X"
         ],
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:22520",
-        "timestamp": "2026-10-27T22:11:27Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1xh6h0t",
-        "author": "GeniusYaar",
-        "url": "https://www.reddit.com/r/IndiansInUK/comments/1xh6h0t/the_unbroken_cycle_of_extraction/",
-        "source_url": "https://www.reddit.com/r/IndiansInUK/comments/1xh6h0t/the_unbroken_cycle_of_extraction/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 50,
-        "information_score": 5,
-        "matched_information_cues": [
-          "border",
-          "crossing",
-          "route",
-          "arrival"
-        ],
-        "freshness_cues": [
-          "today",
-          "now"
-        ],
-        "text": "The Unbroken Cycle of Extraction\nThe real need of the hour is to cut through the political spin and talk about the absolute hypocrisy of the UK immigration stance toward Indian students. The math is staring everyone right in the face. Centuries ago, the formula was simple: take trillions out of India, use that wealth to fund the British Industrial Revolution, and build the very university endowments the West brags about today. Fast forward to right now, and the dependency has not stopped, it just changed forms. The UK higher education system is running on international student fees. Because domestic tuition is capped, universities lose money on local students. To survive bankruptcy, they treat overseas grads like cash cows, charging them three to four times what locals pay. International tuition injects over twelve billion pounds a year into their system. It is a massive cross-subsidy funding their local education. But here is where it gets incredibly ugly. The moment the UK deals with its own domestic mess like inflation, housing shortages, and failing public services; politicians need an easy target. And who better than international students? They pay massive fees upfront, fork over thousands for the NHS surcharge while banned from claiming any state benefits, and crucially, they cannot vote. They are the perfect political punchline. So, they roll out hostile policies to squeeze them out. They ban master's students from bringing their families. They squeeze the post-study Graduate visa route down from 2 years to 18 months. They aggressively drop visa refusal safety thresholds so universities cancel admissions out of pure fear. And the financial exploitation is locking in a permanent baseline. The government is bringing in a new international student levy that forces universities to pay a flat nine hundred and twenty five pound annual fee per student. Everyone knows these costs are already being passed down, forcing overseas students to budget for massive annual tuition hikes after 2028. They are literally taxing people from developing nations to pay for the education of their own citizens. The gatekeeping does not stop at graduation either. They have weaponized the system to ensure you cannot build a long-term life there. Under their proposed earned settlement model, the standard baseline to qualify for permanent residency is planned to double from 5 years to a grueling 10 years for most migrants. For those trying to transition into the workforce right now, they have artificially choked off job sponsorships by aggressively inflating the Skilled Worker salary threshold to a massive £41,700. They are indirectly freezing migrants out of the job market by pricing them completely out of corporate budgets. Yet, while legal, fee-contributing international students face maximum scrutiny and shifting goalposts, the borders seem porous for those arriving undocumented. It creates a bitter contrast where legal immigration is heavily penalized while unauthorized entry faces a completely different standard of enforcement. Worse still is the toxic cultural reality that greets students once they step outside the protective bubbles of London or elite campus towns. Outside these zones, racism against Indians has steadily flared up, fueled by far-right rhetoric that normalizes hostility. There is a deep, nauseating irony here. Local populations treat law-abiding brown students with aggressive resentment, acting as if the UK is doing these migrants a massive personal favor by letting them breathe their air. They entirely blind themselves to the economic truth: their local economies are breathing the heavily recycled wealth extracted from the Global South. The very systems keeping their public services afloat are cross-subsidized by the astronomical fees paid out of Indian family life savings. They treat the descendants of the people they plundered like uninvited burdens, while actively surviving on their money. When the Empire wanted unrestricted access to India's wealth, resources, and taxes, borders were non-existent. But today, when the descendants of that exploited wealth show up, paying life savings to sit in lecture halls funded by that history, they are treated like an unwelcome burden. They rely on foreign money to keep their lights on, but intend to send everyone out the second the graduation ceremony ends. That is not an immigration policy. It is just the exact same extractive entitlement, updated for the modern era.",
-        "text_excerpt": "The Unbroken Cycle of Extraction\nThe real need of the hour is to cut through the political spin and talk about the absolute hypocrisy of the UK immigration stance toward Indian students. The math is staring everyone right in the face. Centuries ago, the formula was simple: take trillions out of India, use that wealth to fund the British Industrial Revolution, and build the very university endowments the West brags ab…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-27T23:18:25Z",
-        "last_collected_at": "2026-10-27T23:18:25Z",
-        "collection_count": 1,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -17763,86 +18429,6 @@
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
-        "timeline_id": "information:22570",
-        "timestamp": "2026-10-27T21:38:17Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1xh5mrk",
-        "author": "PapaGrandalf",
-        "url": "https://www.reddit.com/r/fantasywriters/comments/1xh5mrk/the_banner_company_high_fantasy_924_words/",
-        "source_url": "https://www.reddit.com/r/fantasywriters/comments/1xh5mrk/the_banner_company_high_fantasy_924_words/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "sea",
-          "arrival"
-        ],
-        "freshness_cues": [
-          "now"
-        ],
-        "text": "The Banner Company [High Fantasy, 924 words]\n\"The great road took a traveler westward to the edge of the land–as far as he could travel without barge or sail–a memory of empire long absent. It was here where Bram walked, at the turning of the seasons. The leaves crunched beneath his boot as he steered off the Warden’s' road, down to the sheer cliffs and rushing falls of the easternmost of Marrodain's many vales. The stout man took a seat on a great stone just out of sight of the highway. The rock faced north and had a carven surface flat almost as if wrought to serve as a carven throne. The clattering of hooves was heard at least every quarter of an hour as men of purpose and means raced throughout the realms–whatever their business, it did not matter now. The time had come–to leave it all behind. He had no other choice after all. To live as a refugee by the mercy of others, to have no blood ties to one's new 'home'. Against all better judgement, these were things Bram would no longer abide. A crisp breeze arrived from the northern seas as Bram shut his eyes and searched for some trace of regret–however he only found fresh resolve. He had sworn to his father and mother to return to the Tynd, and that oath transcended all new bonds since forged. The stone chair he had claimed no longer comforted him, so he began to pace. At the fourth pass he turned around, and while shocked by the quietness of his approach, there was the man he was waiting for. Gareth the Golden, or so he was called. An old knight whose greying hair and ragged raiment betrayed his moniker. \"Here you are, in the Eastern Vale, at the seasons' turn. Despite all you told me,\" Gareth spoke with somber amusement. \"Indeed here I am, on winter's eve. Despite all I told you,\" replied Bram. Upon Gareth's face was a warm, easy smile. \"I understand, young man. To plant a son of Tyndor in the Marrodain would be to open a vineyard on the pale stones of Sindevar. You will not grow here–your roots have not even reached the soil. I have the same affliction.\" Bram laughed heartily and looked the old man in his dour but kind grey eyes, \"Aye, it is so. My heart yearns for the foothills of Duskar, and the crisp mountain air. Perhaps it is Dwarven blood.\" Gareth began to move further from the sound of horses and wagons upon the warden’s road as he spoke, \"We are not alone, my friend. Let me show you to the company. We will depart soon.\" The two walked carefully down the improvised paths of stone and wood that ran carefully from the top of the cliffs down to lower lands, where the falls met the grimsalde and flowed to the sea. For a time while the valley of autumn foliage blazed before them, only the sound of the rushing stream accompanied their descent. As they reached the lower paths with flatter ground, Gareth reached into his silken pouch, he handed some strips of dried pork to Bram who followed closely at his back, “Twenty years it's been, since the Green Aurochs Banner flew upon the Tynd. How old were you then, ten-and-three?” Bram took a bite of the old ration. The hunger that had grown during his eastward journey made even the driest of meat satisfying like a warm stew in bitter cold, “Ten-and-four. Strange it feels, I have spent much time in the Marrodain Realms, many would say I have much, but my heart says otherwise.” Gareth led Bram to the end of the path; they stood now within the trough of the vale by the clear stream known as Grimsalde. Within it he sunk his waterskin, “It’s what it's become that sickens you. I can see clear as day. All of your memories of the place blackened with the shadow of Thrazmiran.” “Keep that word behind your teeth, I don’t wish to hear it,” Bram snapped. “I will not, all the world must hear it. You would do well to remember it–we are not going to Tyndor, we are going to Thrazmiran–its devourer,” Gareth stared with a steadfast intensity. A silence filled the air as leaves of crimson and gold cascaded down to the rocky stream, and a great northern wind filled the vale with colors ere the onset of winter. Finally Bram spoke, “The disdain I feel towards that foul sorcerer does not change the way of the world. I fear I spoke rudely, I beg your pardon, Gareth.” “No need, it is because you feel strongly that you came all this way, no forgiveness is necessary. I will have one as yourself in my company even in the darkest of hours,” the old man spoke cheerily. Bram filled his waterskin in the crisp Grimsalde as he finished his pork, “Being no man-at-arms myself it left me bewildered that a fine captain such as you, Gareth the Golden, wanted a gallivanter like myself in his Banner Company, and you promised me you’d tell in time–how about now?” “Well–” Gareth brought his arms together behind his back for a stretch to ease his old aches, “We are going through Duskar, it’s the only path that won’t leave us as food for carrion” “Duskar is closed. Has been for some time”, Bram said as if belabored by the utterance. Gareth smiled with a glint of the evening sun in his eye, “not for you, half-dwarf”.",
-        "text_excerpt": "The Banner Company [High Fantasy, 924 words]\n\"The great road took a traveler westward to the edge of the land–as far as he could travel without barge or sail–a memory of empire long absent. It was here where Bram walked, at the turning of the seasons. The leaves crunched beneath his boot as he steered off the Warden’s' road, down to the sheer cliffs and rushing falls of the easternmost of Marrodain's many vales. The…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-27T23:21:50Z",
-        "last_collected_at": "2026-10-27T23:21:50Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:22571",
-        "timestamp": "2026-10-27T21:35:44Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1xh5kgf",
-        "author": "PapaGrandalf",
-        "url": "https://www.reddit.com/r/fantasywriting/comments/1xh5kgf/the_banner_company_first_attempt_from_a_chronic/",
-        "source_url": "https://www.reddit.com/r/fantasywriting/comments/1xh5kgf/the_banner_company_first_attempt_from_a_chronic/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "sea",
-          "arrival"
-        ],
-        "freshness_cues": [
-          "now"
-        ],
-        "text": "The Banner Company - First attempt from a chronic worldbuilder\n\"The great road took a traveler westward to the edge of the land–as far as he could travel without barge or sail–a memory of empire long absent. It was here where Bram walked, at the turning of the seasons. The leaves crunched beneath his boot as he steered off the Warden’s' road, down to the sheer cliffs and rushing falls of the easternmost of Marrodain's many vales. The stout man took a seat on a great stone just out of sight of the highway. The rock faced north and had a carven surface flat almost as if wrought to serve as a carven throne. The clattering of hooves was heard at least every quarter of an hour as men of purpose and means raced throughout the realms–whatever their business, it did not matter now. The time had come–to leave it all behind. He had no other choice after all. To live as a refugee by the mercy of others, to have no blood ties to one's new 'home'. Against all better judgement, these were things Bram would no longer abide. A crisp breeze arrived from the northern seas as Bram shut his eyes and searched for some trace of regret–however he only found fresh resolve. He had sworn to his father and mother to return to the Tynd, and that oath transcended all new bonds since forged. The stone chair he had claimed no longer comforted him, so he began to pace. At the fourth pass he turned around, and while shocked by the quietness of his approach, there was the man he was waiting for. Gareth the Golden, or so he was called. An old knight whose greying hair and ragged raiment betrayed his moniker. \"Here you are, in the Eastern Vale, at the seasons' turn. Despite all you told me,\" Gareth spoke with somber amusement. \"Indeed here I am, on winter's eve. Despite all I told you,\" replied Bram. Upon Gareth's face was a warm, easy smile. \"I understand, young man. To plant a son of Tyndor in the Marrodain would be to open a vineyard on the pale stones of Sindevar. You will not grow here–your roots have not even reached the soil. I have the same affliction.\" Bram laughed heartily and looked the old man in his dour but kind grey eyes, \"Aye, it is so. My heart yearns for the foothills of Duskar, and the crisp mountain air. Perhaps it is Dwarven blood.\" Gareth began to move further from the sound of horses and wagons upon the warden’s road as he spoke, \"We are not alone, my friend. Let me show you to the company. We will depart soon.\" The two walked carefully down the improvised paths of stone and wood that ran carefully from the top of the cliffs down to lower lands, where the falls met the grimsalde and flowed to the sea. For a time while the valley of autumn foliage blazed before them, only the sound of the rushing stream accompanied their descent. As they reached the lower paths with flatter ground, Gareth reached into his silken pouch, he handed some strips of dried pork to Bram who followed closely at his back, “Twenty years it's been, since the Green Aurochs Banner flew upon the Tynd. How old were you then, ten-and-three?” Bram took a bite of the old ration. The hunger that had grown during his eastward journey made even the driest of meat satisfying like a warm stew in bitter cold, “Ten-and-four. Strange it feels, I have spent much time in the Marrodain Realms, many would say I have much, but my heart says otherwise.” Gareth led Bram to the end of the path; they stood now within the trough of the vale by the clear stream known as Grimsalde. Within it he sunk his waterskin, “It’s what it's become that sickens you. I can see clear as day. All of your memories of the place blackened with the shadow of Thrazmiran.” “Keep that word behind your teeth, I don’t wish to hear it,” Bram snapped. “I will not, all the world must hear it. You would do well to remember it–we are not going to Tyndor, we are going to Thrazmiran–its devourer,” Gareth stared with a steadfast intensity. A silence filled the air as leaves of crimson and gold cascaded down to the rocky stream, and a great northern wind filled the vale with colors ere the onset of winter. Finally Bram spoke, “The disdain I feel towards that foul sorcerer does not change the way of the world. I fear I spoke rudely, I beg your pardon, Gareth.” “No need, it is because you feel strongly that you came all this way, no forgiveness is necessary. I will have one as yourself in my company even in the darkest of hours,” the old man spoke cheerily. Bram filled his waterskin in the crisp Grimsalde as he finished his pork, “Being no man-at-arms myself it left me bewildered that a fine captain such as you, Gareth the Golden, wanted a gallivanter like myself in his Banner Company, and you promised me you’d tell in time–how about now?” “Well–” Gareth brought his arms together behind his back for a stretch to ease his old aches, “We are going through Duskar, it’s the only path that won’t leave us as food for carrion” “Duskar is closed. Has been for some time”, Bram said as if belabored by the utterance. Gareth smiled with a glint of the evening sun in his eye, “not for you, half-dwarf”.",
-        "text_excerpt": "The Banner Company - First attempt from a chronic worldbuilder\n\"The great road took a traveler westward to the edge of the land–as far as he could travel without barge or sail–a memory of empire long absent. It was here where Bram walked, at the turning of the seasons. The leaves crunched beneath his boot as he steered off the Warden’s' road, down to the sheer cliffs and rushing falls of the easternmost of Marrodain'…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-27T23:21:50Z",
-        "last_collected_at": "2026-10-27T23:21:50Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
         "timeline_id": "operational:750",
         "timestamp": "2026-10-27T19:00:00Z",
         "layer": "OPERATIONAL",
@@ -17905,160 +18491,6 @@
           "REDDIT",
           "X"
         ],
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:22497",
-        "timestamp": "2026-10-27T18:58:53Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2115156298673389720",
-        "author": "Marieaaow",
-        "url": "https://x.com/Marieaaow/status/2115156298673389720",
-        "source_url": "https://x.com/Marieaaow/status/2115156298673389720",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "detention",
-          "deportation",
-          "arrival"
-        ],
-        "freshness_cues": [],
-        "text": "@FoxNews an illegal migrant without papers tries to enter the🇺🇸. Detain and deport him on arrival.\n\n\"Brazil’s Supreme Court has ordered police to confiscate the passports of Flávio Bolsonaro as part of a criminal investigation related to a money laundering scheme.\"\nhttps://t.co/tTGa7srbmR https://t.co/rJm0wqtQrd",
-        "text_excerpt": "@FoxNews an illegal migrant without papers tries to enter the🇺🇸. Detain and deport him on arrival.\n\n\"Brazil’s Supreme Court has ordered police to confiscate the passports of Flávio Bolsonaro as part of a criminal investigation related to a money laundering scheme.\"\nhttps://t.co/tTGa7srbmR https://t.co/rJm0wqtQrd",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-27T19:07:23Z",
-        "last_collected_at": "2026-10-27T19:07:23Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:22464",
-        "timestamp": "2026-10-27T18:52:48Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2115154767773323579",
-        "author": "nounoune83",
-        "url": "https://x.com/nounoune83/status/2115154767773323579",
-        "source_url": "https://x.com/nounoune83/status/2115154767773323579",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "refugee_camp"
-        ],
-        "freshness_cues": [],
-        "text": "@175rng @Pontifex @HolySeePress Supply hubs in Ethiopia provide shelter, protection, and staging grounds for combat drones that bombard refugee camps along the Sudanese border.",
-        "text_excerpt": "@175rng @Pontifex @HolySeePress Supply hubs in Ethiopia provide shelter, protection, and staging grounds for combat drones that bombard refugee camps along the Sudanese border.",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-27T19:03:28Z",
-        "last_collected_at": "2026-10-27T19:03:28Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:22467",
-        "timestamp": "2026-10-27T18:45:00Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2115152802003427690",
-        "author": "DannyDrinksWine",
-        "url": "https://x.com/DannyDrinksWine/status/2115152802003427690",
-        "source_url": "https://x.com/DannyDrinksWine/status/2115152802003427690",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "smuggling"
-        ],
-        "freshness_cues": [],
-        "text": "Anthony Mann's \"Border Incident\" (1949) is a unique film-noir that almost feels like a Western, looks like a Western, has characters behave like in a Western but it isn't a Western. It also gives a docudrama vibe. It focuses on the illegal smuggling of Mexican migrant workers to",
-        "text_excerpt": "Anthony Mann's \"Border Incident\" (1949) is a unique film-noir that almost feels like a Western, looks like a Western, has characters behave like in a Western but it isn't a Western. It also gives a docudrama vibe. It focuses on the illegal smuggling of Mexican migrant workers to",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-27T19:03:28Z",
-        "last_collected_at": "2026-10-27T19:03:28Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:22468",
-        "timestamp": "2026-10-27T18:44:36Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2115152703982571701",
-        "author": "rwrjbb",
-        "url": "https://x.com/rwrjbb/status/2115152703982571701",
-        "source_url": "https://x.com/rwrjbb/status/2115152703982571701",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "crossing",
-          "channel",
-          "boat"
-        ],
-        "freshness_cues": [],
-        "text": "The \"boat\" crisis was caused by Farage's #BrexitDisaster, migrants were not crossing the channel much before then\n\nThis is just rhetoric for gullible racists, and completely unenforceable, even the Nazi's failed in their quest https://t.co/7z2bvR9sQy",
-        "text_excerpt": "The \"boat\" crisis was caused by Farage's #BrexitDisaster, migrants were not crossing the channel much before then\n\nThis is just rhetoric for gullible racists, and completely unenforceable, even the Nazi's failed in their quest https://t.co/7z2bvR9sQy",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-27T19:03:28Z",
-        "last_collected_at": "2026-10-27T19:03:28Z",
-        "collection_count": 1,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -18737,7 +19169,7 @@
         "text_excerpt": "#JUSTIN:Another cayuco with 158 illegal sub-Saharan boat migrants arrived yesterday to El Hierro in the Canary Islands\n\nFrom there, they will eventually be moved to mainland Spain, from where many of them will continue their journeys to France, Belgium, the UK, Germany &amp; other https://t.co/MGldlndo3g https://t.co/CHGwIKmKzT",
         "event_group_id": 474,
         "correlation_score": 0.74,
-        "related_source_count": 17,
+        "related_source_count": 18,
         "source_types": [
           "MASTODON",
           "REDDIT",
@@ -18899,7 +19331,7 @@
         "text_excerpt": "Another cayuco with 158 illegal sub-Saharan boat migrants arrived yesterday to El Hierro in the Canary Islands\n\nFrom there, they will eventually be moved to mainland Spain, from where many of them will continue their journeys to France, Belgium, the UK, Germany &amp; other countries https://t.co/6OB3nseP1n",
         "event_group_id": 474,
         "correlation_score": 0.99,
-        "related_source_count": 17,
+        "related_source_count": 18,
         "source_types": [
           "MASTODON",
           "REDDIT",
@@ -19548,7 +19980,7 @@
         "text_excerpt": "🇪🇸 OVER 400 ILLEGAL MIGRANTS REACH SPAIN’S EL HIERRO IN A SINGLE DAY\n\nMore than 800 illegal migrants have arrived in Spain’s Canary Islands over the past 48 hours, with three boats carrying 205, 170 and 41 people reaching shore today. Arrivals have surged 159% in just two months https://t.co/bt0ruQLKnn",
         "event_group_id": 474,
         "correlation_score": 0.8,
-        "related_source_count": 17,
+        "related_source_count": 18,
         "source_types": [
           "MASTODON",
           "REDDIT",
@@ -19974,7 +20406,7 @@
         "text_excerpt": "60,000 migrants flood Spain’s Ceuta border Spain has deployed additional security forces to its North African territory of Ceuta after a massive wave of migrants crossed from Morocco, creating one of the largest border crises in the region’s recent history. Ceuta’s President Juan Jesús Vivas said aroun… https:// justpaste.in/news/60000-migran ts-flood-spains-ceuta-border/ # ceuta # migrants # spain # border # morocco",
         "event_group_id": 474,
         "correlation_score": 0.66,
-        "related_source_count": 17,
+        "related_source_count": 18,
         "source_types": [
           "MASTODON",
           "REDDIT",
@@ -20170,7 +20602,7 @@
         "text_excerpt": "A new large wave of illegal migration is hitting Spain again. More than 800 boat migrants have arrived in the Canary Islands over the past 48 hours. 3 boats with 205, 170 and 41 illegal migrants have arrived so far today.\nVideo via CanarioToday",
         "event_group_id": 474,
         "correlation_score": 0.99,
-        "related_source_count": 17,
+        "related_source_count": 18,
         "source_types": [
           "MASTODON",
           "REDDIT",
@@ -20236,7 +20668,7 @@
         "text_excerpt": "BREAKING:\n\nA new large wave of illegal migration is hitting Spain again.\n\nMore than 800 boat migrants have arrived in the Canary Islands over the past 48 hours.\n\n3 boats with 205, 170 and 41 illegal migrants have arrived so far today.\n\nVideo via @CanarioToday https://t.co/JzM6Fa4UCq",
         "event_group_id": 474,
         "correlation_score": 0.56,
-        "related_source_count": 17,
+        "related_source_count": 18,
         "source_types": [
           "MASTODON",
           "REDDIT",
@@ -21777,39 +22209,6 @@
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
-        "timeline_id": "correlated:677",
-        "timestamp": "2026-10-21T02:16:50Z",
-        "layer": "CORRELATED",
-        "type": "DETENTION",
-        "signal_type": "DETENTION",
-        "event_type": "DETENTION",
-        "source": "X",
-        "source_post_id": "2112729794223788036",
-        "author": "ViralZentra",
-        "url": "https://x.com/ViralZentra/status/2112729794223788036",
-        "source_url": "https://x.com/ViralZentra/status/2112729794223788036",
-        "region": "EASTERN_MEDITERRANEAN",
-        "primary_region": "EASTERN_MEDITERRANEAN",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "latitude": null,
-        "longitude": null,
-        "confidence": 0.5,
-        "priority": "MEDIUM",
-        "priority_score": 50.0,
-        "text": "Twelve migrants drowned off Greece's Lesbos and Samos islands on Monday after their boats capsized — one boat colliding with a coast guard vessel. Among the dead were two women and an infant; two alleged smugglers were arrested. #Greece #AegeanSea #BreakingNews #Migrants https://t.co/dDxvWGUQ8q",
-        "text_excerpt": "Twelve migrants drowned off Greece's Lesbos and Samos islands on Monday after their boats capsized — one boat colliding with a coast guard vessel. Among the dead were two women and an infant; two alleged smugglers were arrested. #Greece #AegeanSea #BreakingNews #Migrants https://t.co/dDxvWGUQ8q",
-        "event_group_id": 470,
-        "correlation_score": 0.74,
-        "related_source_count": 4,
-        "source_types": [
-          "REDDIT",
-          "X"
-        ],
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
         "timeline_id": "operational:676",
         "timestamp": "2026-10-20T22:44:57Z",
         "layer": "OPERATIONAL",
@@ -22952,7 +23351,7 @@
         "text_excerpt": "🇪🇸 #Spain's King Felipe and Queen Letizia kicked off a visit to #Ceuta on Tuesday to show solidarity with residents of the Spanish exclave as they grapple with a migration crisis. \n\nThe trip comes after after more than 70,000 migrants crossed Ceuta's border from #Morocco in https://t.co/QUfsbqXrlw",
         "event_group_id": 474,
         "correlation_score": 0.69,
-        "related_source_count": 17,
+        "related_source_count": 18,
         "source_types": [
           "MASTODON",
           "REDDIT",
@@ -23252,7 +23651,7 @@
         "text_excerpt": "@benonwine Yeah.\n\nA recently arrived \"Refugee from Algeria\" was simply wanting to shop for cantaloupe and got caught in the cross fire of mostly peaceful student protests about class sizes.",
         "event_group_id": 474,
         "correlation_score": 0.58,
-        "related_source_count": 17,
+        "related_source_count": 18,
         "source_types": [
           "MASTODON",
           "REDDIT",
@@ -24419,7 +24818,7 @@
         "text_excerpt": "@EdwigeLest23737 @jon_delorraine le probleme c'est que si ils baissent les armes ca sera l'anarchie et sous moins de 6h la France sera pas mieux que Ceuta quand tous les migrants sont arrivés",
         "event_group_id": 474,
         "correlation_score": 0.77,
-        "related_source_count": 17,
+        "related_source_count": 18,
         "source_types": [
           "MASTODON",
           "REDDIT",
@@ -24807,7 +25206,7 @@
         "text_excerpt": "🇪🇸 El 70 % de los migrantes marroquíes que entraron en Ceuta alegan su orientación sexual en sus solicitudes de asilo",
         "event_group_id": 474,
         "correlation_score": 0.7,
-        "related_source_count": 17,
+        "related_source_count": 18,
         "source_types": [
           "MASTODON",
           "REDDIT",
@@ -25787,6 +26186,38 @@
         "event_time_text": null,
         "event_time_normalized": null,
         "event_time_confidence": null,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "correlated:603",
+        "timestamp": "2026-10-15T14:28:09Z",
+        "layer": "CORRELATED",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "X",
+        "source_post_id": "2110739508207485093",
+        "author": "jcmeyer119",
+        "url": "https://x.com/jcmeyer119/status/2110739508207485093",
+        "source_url": "https://x.com/jcmeyer119/status/2110739508207485093",
+        "region": "HORN_OF_AFRICA",
+        "primary_region": "HORN_OF_AFRICA",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.25,
+        "priority": "MEDIUM",
+        "priority_score": 25.0,
+        "text": "@TheModerateCase If this case is accurate, it's just another politically motivated prosecution from the Trump playbook. Documentary proof of her exact birthdate from decades ago in Somalia likely doesn't exist; whatever immigration recorded when she arrived as a refugee controls. USCIS has her",
+        "text_excerpt": "@TheModerateCase If this case is accurate, it's just another politically motivated prosecution from the Trump playbook. Documentary proof of her exact birthdate from decades ago in Somalia likely doesn't exist; whatever immigration recorded when she arrived as a refugee controls. USCIS has her",
+        "event_group_id": 472,
+        "correlation_score": 0.77,
+        "related_source_count": 7,
+        "source_types": [
+          "X"
+        ],
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -27375,7 +27806,7 @@
         "text_excerpt": "King Felipe VI and Queen Letizia visited the Spanish city of Ceuta in North Africa on Tuesday after about 80,000 migrants crossed Ceuta’s border in July. Most of those who crossed returned, but thousands remain in the city. https://t.co/YrzLBg3QHp",
         "event_group_id": 474,
         "correlation_score": 1.0,
-        "related_source_count": 17,
+        "related_source_count": 18,
         "source_types": [
           "MASTODON",
           "REDDIT",
@@ -76371,21 +76802,21 @@
     "review_start_date": "2026-10-17",
     "review_cohort": "FIRST_RECORDED_ON_OR_AFTER_CUTOFF",
     "decisions": {
-      "EXCLUDE": 139,
-      "REVIEW": 134,
-      "PUBLISH": 84
+      "EXCLUDE": 140,
+      "PUBLISH": 86,
+      "REVIEW": 135
     },
     "removed_display_items": {
-      "live_events": 17,
+      "live_events": 16,
       "high_confidence_events": 0,
       "event_groups": 7,
-      "influence_signals": 8,
-      "early_warning_signals": 8,
-      "crossing_access_signals": 0,
-      "top_crossing_access_posts": 0,
-      "high_priority_intelligence": 0,
-      "access_signals": 0,
-      "timeline": 267
+      "influence_signals": 11,
+      "early_warning_signals": 11,
+      "crossing_access_signals": 1,
+      "top_crossing_access_posts": 1,
+      "high_priority_intelligence": 1,
+      "access_signals": 1,
+      "timeline": 269
     },
     "historical_review_status": "HISTORICAL_NOT_AI_REVIEWED",
     "narrative_layers_not_reviewed": [

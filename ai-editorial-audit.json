@@ -1,28 +1,12 @@
 {
-  "generated_at": "2026-11-07T03:33:29.930728+00:00",
+  "generated_at": "2026-11-07T10:53:26.533553+00:00",
   "version": "3.0",
-  "candidates": 357,
-  "new_ai_calls": 11,
+  "candidates": 361,
+  "new_ai_calls": 10,
   "conflicting_identity_ids": [
-    "group:603"
+    "group:677"
   ],
   "decisions": {
-    "post:825": {
-      "decision": "EXCLUDE",
-      "reason": "The event described is a claim about an arrest related to attempting to steal a boat, not a confirmed deportation event. The label 'DEPORTATION' is not supported by the content, which lacks actual deportation information."
-    },
-    "post:826": {
-      "decision": "EXCLUDE",
-      "reason": "The post makes a general, politically charged claim about deportation policy without reporting a specific, concrete migration-related deportation event."
-    },
-    "post:827": {
-      "decision": "EXCLUDE",
-      "reason": "The post discusses internal U.S. state migration trends tied to election results and political affiliations, not a concrete external migration event such as border crossing or refugee movement. It is opinionated political commentary rather than a report of a migration-specific event."
-    },
-    "post:828": {
-      "decision": "REVIEW",
-      "reason": "The post references figures about migrants intercepted and turned away but does not report a specific, concrete, and contemporary migration-related event. It discusses data and interpretations rather than describing a clear, current event of interception."
-    },
     "post:829": {
       "decision": "EXCLUDE",
       "reason": "The post discusses a boat with migrants removed and a rescue operation but does not report a specific migration event such as a deportation or actual movement of migrants."
@@ -87,6 +71,22 @@
       "decision": "EXCLUDE",
       "reason": "The post is an opinion about urbanization and migration demographics without reporting a specific, contemporary migration event such as border crossing or operational movement. The event_type 'BORDER_CROSSING' is not supported by the content."
     },
+    "post:845": {
+      "decision": "EXCLUDE",
+      "reason": "The event involves a criminal incident (arrest related to a threat) near a political figure but does not pertain to migration-specific operational events such as movement, policy, early warning, or migration route activity."
+    },
+    "post:846": {
+      "decision": "REVIEW",
+      "reason": "The post claims a specific migrant arrival number and timeframe indicating a migration event, but the future publication date and lack of corroboration or additional details create uncertainty about the event's actual occurrence and timing."
+    },
+    "post:847": {
+      "decision": "EXCLUDE",
+      "reason": "The post refers to past events and general claims about crime related to migration but does not report a concrete, contemporary migration-related event or a specific border measure happening currently. The event type 'BORDER_MEASURE' is not supported by the content, which describes historical migration and crime issues without clear policy action o"
+    },
+    "post:848": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete, contemporary migration-specific event about the arrival of over 3,000 migrants in the Canary Islands, triggering local authorities to alarm. This is a clear border crossing event relevant to migration."
+    },
     "signal:1349": {
       "decision": "PUBLISH",
       "reason": "The post reports a concrete migration event involving more than a thousand arrivals in a single night in the Canary Islands and a death, indicating a significant change on the Atlantic migration route. It constitutes a migration-specific early warning signal regarding recent developments on a known migration route, consistent with the MOVEMENT_EARL"
@@ -143,17 +143,21 @@
       "decision": "EXCLUDE",
       "reason": "The reported incident involves a criminal event allegedly involving an individual described as a Sudanese illegal migrant but does not constitute a migration-specific early warning, operational event, or migration route/access signal. It is a criminal allegation with migration status mentioned incidentally; thus, it does not meet the criteria for p"
     },
-    "group:603": {
+    "signal:1363": {
+      "decision": "PUBLISH",
+      "reason": "The post discusses a clear, migration-specific legal and policy signal about European states' views on the European Court of Human Rights' impact on deportations and asylum control, which is a relevant migration policy issue."
+    },
+    "signal:1364": {
       "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
+      "reason": "The post contains multiple unrelated news items including police actions during the July 2021 Ceuta migration event, the imprisonment of a well-known immigrant, and a court ruling on a criminal case unrelated to migration routes. The content partially relates to historical migration events (the 30 July Ceuta invasion) but does not provide a clear, "
     },
-    "group:668": {
+    "signal:1365": {
       "decision": "EXCLUDE",
-      "reason": "The post discusses a historical precedent regarding Irish arrivals during the Potato Famine and Civil War, not a current migration event. No contemporary, concrete migration-related event is reported. The 'event_type' is incorrectly assigned as BORDER_CROSSING; the content is historical commentary without a specific migration event."
+      "reason": "The claim that illegal migrants are given driving licenses without evidence does not represent a concrete, verifiable migration-related event or credible early warning. The statement is vague, lacks specific location or policy details, and contains potentially misleading insinuations without corroboration."
     },
-    "group:669": {
+    "signal:1366": {
       "decision": "EXCLUDE",
-      "reason": "The text is a political opinion post discussing bigotry and migration-related issues, but it does not report a concrete, contemporary migration-related event such as a deportation or enforcement action. There is no specific event, date, location, or authoritative source confirming a deportation or direct migration operational event. The 'event_type"
+      "reason": "The content is a general crossword puzzle unrelated to any specific, contemporary migration event, signal, or policy. There is no indication of a migration-related early warning or operational migration event. The event type legal migration signal is unsupported by the content."
     },
     "group:670": {
       "decision": "PUBLISH",
@@ -178,6 +182,18 @@
     "group:675": {
       "decision": "EXCLUDE",
       "reason": "The message is a commentary on urbanization and migrant populations without reporting any specific, concrete migration event such as border crossing or arrival. It lacks details of an actual migration event or early warning."
+    },
+    "group:676": {
+      "decision": "EXCLUDE",
+      "reason": "The event relates to a criminal arrest of a Venezuelan national with no indication it is connected to migration operations or policies. It is not a migration-specific event or early warning."
+    },
+    "group:677": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:678": {
+      "decision": "EXCLUDE",
+      "reason": "The post discusses past migration-related conditions and crime in Texas with reference to a border closure in 2024 but does not report a concrete or current migration event or enforcement action. The event type BORDER_MEASURE is not supported by the content as no contemporary border measure or policy action is reported. The mention is historical an"
     },
     "signal:1034": {
       "decision": "REVIEW",
