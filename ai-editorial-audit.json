@@ -1,16 +1,12 @@
 {
-  "generated_at": "2026-11-07T17:09:19.073276+00:00",
+  "generated_at": "2026-11-07T21:16:00.678387+00:00",
   "version": "3.0",
-  "candidates": 363,
-  "new_ai_calls": 15,
+  "candidates": 366,
+  "new_ai_calls": 5,
   "conflicting_identity_ids": [
     "group:677"
   ],
   "decisions": {
-    "post:836": {
-      "decision": "EXCLUDE",
-      "reason": "The post primarily expresses opinions and broad claims about migrants and minorities, with no concrete, contemporary migration-related event reported. The mention of a deportation action or policy is absent; instead, the text is a political commentary mixing several themes, unsupported claims, and generalizations, not a verified or specific operati"
-    },
     "post:837": {
       "decision": "REVIEW",
       "reason": "Inconsistent approval: The post reports a concrete and contemporary migration-related event involving the rescue of Rohingya refugees during an armed conflict with suspected human traffickers near the Myanmar border, which aligns with the event type RESCUE_OPERATION. The event is specific, migration-related, and clearly described by the source."
@@ -87,9 +83,9 @@
       "decision": "EXCLUDE",
       "reason": "The post contains unsubstantiated historical claims about ancient populations and migrations that do not describe a contemporary migration-related event or border crossing. The content is narrative and speculative, not reporting a current operational event or early warning."
     },
-    "signal:1352": {
-      "decision": "REVIEW",
-      "reason": "The report mentions authorities bracing for a surge in Channel crossings, which aligns with a migration-specific early warning signaling potential future increased crossings. However, the text is partly an opinion and the event is prospective, not ongoing. Further verification and detail needed to confirm the warning's concrete nature."
+    "post:856": {
+      "decision": "EXCLUDE",
+      "reason": "The event described is an anecdotal incident involving migrants at a funeral home with no indication of a contemporary migration-related event such as border crossing or entry process. The assigned event_type 'BORDER_CROSSING' is not supported by the content, which does not report any border crossing event or migration-specific operational event."
     },
     "signal:1353": {
       "decision": "REVIEW",
@@ -98,10 +94,6 @@
     "signal:1354": {
       "decision": "REVIEW",
       "reason": "The claim reports an enforcement-related arrest of a Venezuelan individual near the White House, which relates to migration enforcement. However, the text includes inflammatory and non-factual language, and lacks verification or external corroboration. The event date is stated as November 5, 2026, making it contemporary. Given the seriousness of th"
-    },
-    "signal:1355": {
-      "decision": "PUBLISH",
-      "reason": "The record reports a concrete, contemporary migration-specific early warning event involving a high number of irregular migrants arriving in the Canary Islands, overwhelming local infrastructure and prompting alarm from authorities. The event type ENFORCEMENT_EARLY_WARNING is appropriate as it signals ongoing enforcement/rescue operations and an un"
     },
     "signal:1356": {
       "decision": "PUBLISH",
@@ -155,13 +147,21 @@
       "decision": "REVIEW",
       "reason": "The report provides a specific early warning about a large number of migrants arriving and additional boats en route to the Canary Islands, fitting the MOVEMENT_EARLY_WARNING event type. However, the date of publication is in the future relative to current knowledge cutoff, and the claim lacks external verification at this time."
     },
+    "signal:1369": {
+      "decision": "EXCLUDE",
+      "reason": "The content is a hostile commentary on deportation legality without reporting a concrete, contemporary migration-specific event or early warning. It does not provide verifiable information on migration routes or policy actions."
+    },
+    "signal:1370": {
+      "decision": "PUBLISH",
+      "reason": "The report details a concrete and contemporary migration-specific early warning regarding Afghan migrants and accused smugglers found in distress on a rubber boat off Breskens, including specifics like engine failure and lack of life jackets, meeting criteria for a legitimate route early warning event."
+    },
+    "signal:1371": {
+      "decision": "REVIEW",
+      "reason": "The record references funding and audit of Migrant Help UK with some links to services and government bodies, but does not report a specific or concrete migration event or early warning. The event_type label 'MOVEMENT_EARLY_WARNING' is not clearly supported by the content, which is general commentary on funding rather than a specific migration-rela"
+    },
     "group:674": {
       "decision": "EXCLUDE",
       "reason": "The content describes a political event unrelated to migration events, early warnings, or migration-specific signals. The claim about Aisha Wahab replacing Eric Swalwell is political representation, not a migration crossing or early warning. No contemporary migration event is reported or supported by the text."
-    },
-    "group:676": {
-      "decision": "EXCLUDE",
-      "reason": "The event relates to a criminal arrest of a Venezuelan national with no indication it is connected to migration operations or policies. It is not a migration-specific event or early warning."
     },
     "group:677": {
       "decision": "REVIEW",
@@ -190,6 +190,10 @@
     "group:683": {
       "decision": "EXCLUDE",
       "reason": "This is a historical statement about Somali refugees arriving in the early 1990s, not a contemporary migration event or early warning. No specific event or actionable migration information is reported."
+    },
+    "group:684": {
+      "decision": "EXCLUDE",
+      "reason": "The reported incident involves a culturally sensitive event related to migrants but does not describe a migration-specific operational event such as border crossing, arrival processing, or migration route activity. The event type 'BORDER_CROSSING' is not supported by the content, which focuses on a cultural dispute at a funeral home rather than a m"
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1458,6 +1462,14 @@
     "signal:1351": {
       "decision": "PUBLISH",
       "reason": "The post reports a concrete, contemporary migration-specific early warning involving maritime interceptions of migrants attempting to evade expulsion, with details confirming the event's nature and recent occurrence."
+    },
+    "signal:1352": {
+      "decision": "REVIEW",
+      "reason": "The report mentions authorities bracing for a surge in Channel crossings, which aligns with a migration-specific early warning signaling potential future increased crossings. However, the text is partly an opinion and the event is prospective, not ongoing. Further verification and detail needed to confirm the warning's concrete nature."
+    },
+    "signal:1355": {
+      "decision": "PUBLISH",
+      "reason": "The record reports a concrete, contemporary migration-specific early warning event involving a high number of irregular migrants arriving in the Canary Islands, overwhelming local infrastructure and prompting alarm from authorities. The event type ENFORCEMENT_EARLY_WARNING is appropriate as it signals ongoing enforcement/rescue operations and an un"
     }
   }
 }
