@@ -1,23 +1,15 @@
 {
-  "generated_at": "2026-11-08T08:18:23.144461+00:00",
+  "generated_at": "2026-11-08T16:30:02.105763+00:00",
   "version": "3.0",
-  "candidates": 371,
-  "new_ai_calls": 10,
+  "candidates": 375,
+  "new_ai_calls": 7,
   "conflicting_identity_ids": [
     "group:685"
   ],
   "decisions": {
-    "post:845": {
-      "decision": "EXCLUDE",
-      "reason": "The event involves a criminal incident (arrest related to a threat) near a political figure but does not pertain to migration-specific operational events such as movement, policy, early warning, or migration route activity."
-    },
     "post:846": {
       "decision": "REVIEW",
       "reason": "The post claims a specific migrant arrival number and timeframe indicating a migration event, but the future publication date and lack of corroboration or additional details create uncertainty about the event's actual occurrence and timing."
-    },
-    "post:847": {
-      "decision": "EXCLUDE",
-      "reason": "The post refers to past events and general claims about crime related to migration but does not report a concrete, contemporary migration-related event or a specific border measure happening currently. The event type 'BORDER_MEASURE' is not supported by the content, which describes historical migration and crime issues without clear policy action o"
     },
     "post:848": {
       "decision": "PUBLISH",
@@ -87,13 +79,13 @@
       "decision": "EXCLUDE",
       "reason": "The record describes a historical event from 1942 regarding the evacuation of Italian civilians during WWII, which is not a contemporary migration event. The event date is clearly historical, and it does not represent a current migration-specific event, early warning, or policy action."
     },
-    "signal:1363": {
+    "post:865": {
       "decision": "PUBLISH",
-      "reason": "The post discusses a clear, migration-specific legal and policy signal about European states' views on the European Court of Human Rights' impact on deportations and asylum control, which is a relevant migration policy issue."
+      "reason": "The record clearly reports a specific, recent migration event involving illegal boat arrivals in Spain, detailing dates, numbers, and locations. The event type 'BORDER_CROSSING' is appropriate for this concrete migration-related event, and the timing is contemporary to the report. The report constitutes a verified migration event claim suitable for"
     },
-    "signal:1365": {
+    "post:866": {
       "decision": "EXCLUDE",
-      "reason": "The claim that illegal migrants are given driving licenses without evidence does not represent a concrete, verifiable migration-related event or credible early warning. The statement is vague, lacks specific location or policy details, and contains potentially misleading insinuations without corroboration."
+      "reason": "The post discusses historical migration and settlement narratives rather than reporting a specific contemporary migration event; the event_type 'BORDER_CROSSING' is not supported by the content."
     },
     "signal:1367": {
       "decision": "PUBLISH",
@@ -135,6 +127,22 @@
       "decision": "PUBLISH",
       "reason": "The signal reports a recent and concrete migration-related early warning regarding a significant increase in boat migrants arriving in the Canary Islands within a defined recent period, which aligns with the assigned event type of ROUTE_EARLY_WARNING and corresponds to current migration-related monitoring."
     },
+    "signal:1377": {
+      "decision": "REVIEW",
+      "reason": "The record describes a large community art project (a quilt) representing immigrants taken by ICE during a past period. It is primarily a form of protest and activism, not a direct early warning signal of a concrete, contemporary migration event or policy change. The event described spans a past timeframe and is not a direct report of an ongoing or"
+    },
+    "signal:1378": {
+      "decision": "EXCLUDE",
+      "reason": "The post expresses an opinion about policing and immigration policy but does not report a concrete, contemporary migration-specific event or early warning. There is no mention of an actual migration route change, specific policy action, or a verified event relevant to migration."
+    },
+    "signal:1379": {
+      "decision": "EXCLUDE",
+      "reason": "The text contains false and misleading references (e.g., a non-existent war in the Netherlands) and does not report a concrete, contemporary migration-related event or credible early warning. It appears to be satire or incorrect commentary rather than a genuine migration facilitation signal."
+    },
+    "signal:1380": {
+      "decision": "EXCLUDE",
+      "reason": "The post contains generalized, unverified accusations and inflammatory language without reporting any specific, concrete migration-related event or policy action. It does not provide a verifiable migration-specific early warning or operational event."
+    },
     "group:674": {
       "decision": "EXCLUDE",
       "reason": "The content describes a political event unrelated to migration events, early warnings, or migration-specific signals. The claim about Aisha Wahab replacing Eric Swalwell is political representation, not a migration crossing or early warning. No contemporary migration event is reported or supported by the text."
@@ -142,10 +150,6 @@
     "group:680": {
       "decision": "EXCLUDE",
       "reason": "This is a historical account relating to events from 1941-1942 involving evacuation and maritime incidents during World War II, not a contemporary migration event or early warning signal. The 'CASUALTY' event type is misleading here as it relates to wartime naval actions rather than migration-related casualties."
-    },
-    "group:682": {
-      "decision": "EXCLUDE",
-      "reason": "The post contains offensive language and no concrete migration event or specific information about an operational migration event is reported; it is general commentary without verified data."
     },
     "group:684": {
       "decision": "EXCLUDE",
@@ -170,6 +174,10 @@
     "group:689": {
       "decision": "EXCLUDE",
       "reason": "The post discusses ancient genetic origins and historical migration patterns rather than a contemporary operational migration event. The event_type 'BORDER_CROSSING' is unsupported by the content, which does not report any current cross-border movement."
+    },
+    "group:690": {
+      "decision": "EXCLUDE",
+      "reason": "The record discusses historical migration and settlement narratives without reporting a concrete, contemporary migration-related event or border crossing."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1483,9 +1491,17 @@
       "decision": "EXCLUDE",
       "reason": "The reported incident involves a criminal event allegedly involving an individual described as a Sudanese illegal migrant but does not constitute a migration-specific early warning, operational event, or migration route/access signal. It is a criminal allegation with migration status mentioned incidentally; thus, it does not meet the criteria for p"
     },
+    "signal:1363": {
+      "decision": "PUBLISH",
+      "reason": "The post discusses a clear, migration-specific legal and policy signal about European states' views on the European Court of Human Rights' impact on deportations and asylum control, which is a relevant migration policy issue."
+    },
     "signal:1364": {
       "decision": "REVIEW",
       "reason": "The post contains multiple unrelated news items including police actions during the July 2021 Ceuta migration event, the imprisonment of a well-known immigrant, and a court ruling on a criminal case unrelated to migration routes. The content partially relates to historical migration events (the 30 July Ceuta invasion) but does not provide a clear, "
+    },
+    "signal:1365": {
+      "decision": "EXCLUDE",
+      "reason": "The claim that illegal migrants are given driving licenses without evidence does not represent a concrete, verifiable migration-related event or credible early warning. The statement is vague, lacks specific location or policy details, and contains potentially misleading insinuations without corroboration."
     },
     "signal:1366": {
       "decision": "EXCLUDE",
