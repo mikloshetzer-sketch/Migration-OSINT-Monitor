@@ -1,32 +1,12 @@
 {
-  "generated_at": "2026-11-08T01:01:09.299517+00:00",
+  "generated_at": "2026-11-08T08:18:23.144461+00:00",
   "version": "3.0",
-  "candidates": 370,
-  "new_ai_calls": 8,
+  "candidates": 371,
+  "new_ai_calls": 10,
   "conflicting_identity_ids": [
     "group:685"
   ],
   "decisions": {
-    "post:839": {
-      "decision": "EXCLUDE",
-      "reason": "The post does not report a specific, contemporary migration-related event but comments on past policies and estimates without confirming a specific current event."
-    },
-    "post:840": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete, contemporary migration-related event involving a rescue operation of migrants arriving by boat to El Hierro island, Canary Islands, which matches the RESCUE_OPERATION type. The event is current and migration-specific, supported by credible content though source is social media, no contradiction present."
-    },
-    "post:841": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete and contemporary migration-specific event of over 1,000 migrants arriving in the Canary Islands via maritime route, matching the BORDER_CROSSING event type."
-    },
-    "post:843": {
-      "decision": "EXCLUDE",
-      "reason": "The post reports a political replacement and casts subjective opinions; it does not describe a concrete, contemporary migration-related event such as a border crossing or refugee movement. The event_type 'BORDER_CROSSING' is unsupported by the content."
-    },
-    "post:844": {
-      "decision": "EXCLUDE",
-      "reason": "The post is an opinion about urbanization and migration demographics without reporting a specific, contemporary migration event such as border crossing or operational movement. The event_type 'BORDER_CROSSING' is not supported by the content."
-    },
     "post:845": {
       "decision": "EXCLUDE",
       "reason": "The event involves a criminal incident (arrest related to a threat) near a political figure but does not pertain to migration-specific operational events such as movement, policy, early warning, or migration route activity."
@@ -87,33 +67,33 @@
       "decision": "REVIEW",
       "reason": "The post is very vague and provides no concrete details about the migration event, such as location, numbers, or timing. The event date is in the future relative to the knowledge cutoff and the location is unspecified, making it impossible to confirm the event type or its relevance."
     },
-    "signal:1360": {
+    "post:860": {
       "decision": "REVIEW",
-      "reason": "The post claims a mass migrant caravan rush triggered by a political event, but lacks specific details about the migration event, location, timing, or verification of the caravan movement. The event_type 'ROUTE_EARLY_WARNING' may be appropriate, but the vague and sensational nature of the claim requires further verification and corroboration before"
+      "reason": "The post contains a variety of events, some related to migration ('El Hierro declares social emergency over arrivals'), but the assigned event type 'SMUGGLING_ACTIVITY' does not accurately represent the content. The main migration-related event is a general social emergency declaration due to migrant arrivals, but no specific smuggling activity is "
     },
-    "signal:1361": {
-      "decision": "PUBLISH",
-      "reason": "The report provides a concrete, contemporary early warning of increased migrant arrivals with supporting mentions of Spanish media and rescue reports confirming multiple boats arriving, consistent with the event type MOVEMENT_EARLY_WARNING at the Canary Islands."
+    "post:861": {
+      "decision": "REVIEW",
+      "reason": "Inconsistent approval: The post reports a concrete, contemporary migration-related event involving the arrival of over 3,300 migrants by boat to El Hierro island since 1 November and a declared emergency. This is a direct migration event concerning border crossing and local emergency response, with specifics about location and impact."
     },
-    "signal:1362": {
+    "post:862": {
       "decision": "EXCLUDE",
-      "reason": "The reported incident involves a criminal event allegedly involving an individual described as a Sudanese illegal migrant but does not constitute a migration-specific early warning, operational event, or migration route/access signal. It is a criminal allegation with migration status mentioned incidentally; thus, it does not meet the criteria for p"
+      "reason": "The post discusses genetic origins and historical migration patterns from thousands of years ago. It does not report a contemporary migration-related event, border crossing, or early warning relevant to current migration dynamics."
+    },
+    "post:863": {
+      "decision": "REVIEW",
+      "reason": "Inconsistent approval: The post reports a current, concrete migration-related event involving a significant number of migrants arriving in El Hierro, Canary Islands, leading to a state of emergency declaration and a request for federal assistance, which is a direct migration operational event."
+    },
+    "post:864": {
+      "decision": "EXCLUDE",
+      "reason": "The record describes a historical event from 1942 regarding the evacuation of Italian civilians during WWII, which is not a contemporary migration event. The event date is clearly historical, and it does not represent a current migration-specific event, early warning, or policy action."
     },
     "signal:1363": {
       "decision": "PUBLISH",
       "reason": "The post discusses a clear, migration-specific legal and policy signal about European states' views on the European Court of Human Rights' impact on deportations and asylum control, which is a relevant migration policy issue."
     },
-    "signal:1364": {
-      "decision": "REVIEW",
-      "reason": "The post contains multiple unrelated news items including police actions during the July 2021 Ceuta migration event, the imprisonment of a well-known immigrant, and a court ruling on a criminal case unrelated to migration routes. The content partially relates to historical migration events (the 30 July Ceuta invasion) but does not provide a clear, "
-    },
     "signal:1365": {
       "decision": "EXCLUDE",
       "reason": "The claim that illegal migrants are given driving licenses without evidence does not represent a concrete, verifiable migration-related event or credible early warning. The statement is vague, lacks specific location or policy details, and contains potentially misleading insinuations without corroboration."
-    },
-    "signal:1366": {
-      "decision": "EXCLUDE",
-      "reason": "The content is a general crossword puzzle unrelated to any specific, contemporary migration event, signal, or policy. There is no indication of a migration-related early warning or operational migration event. The event type legal migration signal is unsupported by the content."
     },
     "signal:1367": {
       "decision": "PUBLISH",
@@ -147,29 +127,25 @@
       "decision": "EXCLUDE",
       "reason": "The post is a general commentary on past Syrian refugee movements and does not report a concrete, contemporary migration-specific early warning event. It contains no specific, verified information about an ongoing or imminent migration event."
     },
+    "signal:1375": {
+      "decision": "REVIEW",
+      "reason": "The text primarily details upcoming immigration reforms related to settlement qualifying periods and adjustments to benefits service delivery methods. It does not report on a specific, contemporary migration event or crossing facilitation but discusses planned policy changes and internal procedures. The event type CROSSING_FACILITATION is not suppo"
+    },
+    "signal:1376": {
+      "decision": "PUBLISH",
+      "reason": "The signal reports a recent and concrete migration-related early warning regarding a significant increase in boat migrants arriving in the Canary Islands within a defined recent period, which aligns with the assigned event type of ROUTE_EARLY_WARNING and corresponds to current migration-related monitoring."
+    },
     "group:674": {
       "decision": "EXCLUDE",
       "reason": "The content describes a political event unrelated to migration events, early warnings, or migration-specific signals. The claim about Aisha Wahab replacing Eric Swalwell is political representation, not a migration crossing or early warning. No contemporary migration event is reported or supported by the text."
     },
-    "group:679": {
-      "decision": "REVIEW",
-      "reason": "The report mentions detentions related to irregular migration, which is potentially a migration-specific event. However, the details provided are minimal and lack corroboration or specifics like date, location consistency, and source verification. The location given is '-', indicating insufficient location data. Further verification needed to confi"
-    },
     "group:680": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a specific and concrete migration-related event involving casualties among migrants attempting to reach the Canary Islands, which is a contemporary operational migration event. The event type 'CASUALTY' is appropriate. The event is likely current as it references recent arrivals since Saturday and includes specific details about th"
-    },
-    "group:681": {
       "decision": "EXCLUDE",
-      "reason": "The post is a question about migrant arrival methods without reporting a specific migration event."
+      "reason": "This is a historical account relating to events from 1941-1942 involving evacuation and maritime incidents during World War II, not a contemporary migration event or early warning signal. The 'CASUALTY' event type is misleading here as it relates to wartime naval actions rather than migration-related casualties."
     },
     "group:682": {
       "decision": "EXCLUDE",
       "reason": "The post contains offensive language and no concrete migration event or specific information about an operational migration event is reported; it is general commentary without verified data."
-    },
-    "group:683": {
-      "decision": "EXCLUDE",
-      "reason": "This is a historical statement about Somali refugees arriving in the early 1990s, not a contemporary migration event or early warning. No specific event or actionable migration information is reported."
     },
     "group:684": {
       "decision": "EXCLUDE",
@@ -186,6 +162,14 @@
     "group:687": {
       "decision": "REVIEW",
       "reason": "The post mentions a \"recently arrived migrant\" implying a border crossing, but provides no details about where or when the event occurred, nor any supporting location data or sources."
+    },
+    "group:688": {
+      "decision": "REVIEW",
+      "reason": "Inconsistent approval: The entry reports a current and concrete migration-related event: El Hierro's island council declared a social emergency due to migrant arrivals straining reception services, with about 4,000 arrivals in November and a government meeting planned. This fits the migration-related event type despite the assigned event_type 'SMUG"
+    },
+    "group:689": {
+      "decision": "EXCLUDE",
+      "reason": "The post discusses ancient genetic origins and historical migration patterns rather than a contemporary operational migration event. The event_type 'BORDER_CROSSING' is unsupported by the content, which does not report any current cross-border movement."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1486,6 +1470,26 @@
     "signal:1359": {
       "decision": "REVIEW",
       "reason": "The post discusses ongoing modern slavery and trafficking issues as of 2026, but it is a general statement about conditions rather than a report of a specific, concrete, and contemporary event or policy action. It is better classified as a general narrative or contextual information, not a discrete migration-specific early warning event."
+    },
+    "signal:1360": {
+      "decision": "REVIEW",
+      "reason": "The post claims a mass migrant caravan rush triggered by a political event, but lacks specific details about the migration event, location, timing, or verification of the caravan movement. The event_type 'ROUTE_EARLY_WARNING' may be appropriate, but the vague and sensational nature of the claim requires further verification and corroboration before"
+    },
+    "signal:1361": {
+      "decision": "PUBLISH",
+      "reason": "The report provides a concrete, contemporary early warning of increased migrant arrivals with supporting mentions of Spanish media and rescue reports confirming multiple boats arriving, consistent with the event type MOVEMENT_EARLY_WARNING at the Canary Islands."
+    },
+    "signal:1362": {
+      "decision": "EXCLUDE",
+      "reason": "The reported incident involves a criminal event allegedly involving an individual described as a Sudanese illegal migrant but does not constitute a migration-specific early warning, operational event, or migration route/access signal. It is a criminal allegation with migration status mentioned incidentally; thus, it does not meet the criteria for p"
+    },
+    "signal:1364": {
+      "decision": "REVIEW",
+      "reason": "The post contains multiple unrelated news items including police actions during the July 2021 Ceuta migration event, the imprisonment of a well-known immigrant, and a court ruling on a criminal case unrelated to migration routes. The content partially relates to historical migration events (the 30 July Ceuta invasion) but does not provide a clear, "
+    },
+    "signal:1366": {
+      "decision": "EXCLUDE",
+      "reason": "The content is a general crossword puzzle unrelated to any specific, contemporary migration event, signal, or policy. There is no indication of a migration-related early warning or operational migration event. The event type legal migration signal is unsupported by the content."
     }
   }
 }
