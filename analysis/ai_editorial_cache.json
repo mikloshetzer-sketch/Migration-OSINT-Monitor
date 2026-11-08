@@ -7326,5 +7326,37 @@
     "current_event": false,
     "completed_event": false,
     "corroboration": "UNVERIFIED"
+  },
+  "72135a1d6cb0ef9f844ebe276d789e6ca871eb844590823595c923560d1195d8": {
+    "decision": "PUBLISH",
+    "reason": "The signal reports a concrete and contemporary migration-related event involving a migrant boat capsizing with casualties, which fits within the migration-specific early warning type (ROUTE_EARLY_WARNING). The event is current and involves a migration route incident.",
+    "event_type_correct": true,
+    "current_event": true,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
+  },
+  "d1de507ff91f87d5305f4316b38aa1f9b142d9820fd595210733fc3f4d2a1e0d": {
+    "decision": "EXCLUDE",
+    "reason": "The content refers to general nationwide unrest and violent clashes involving left-wing groups and migrants, but does not describe a specific, concrete migration-related enforcement event or early warning. The event_type 'ENFORCEMENT_EARLY_WARNING' is not supported by the information provided, which is a broad political protest narrative rather than a migration-specific operational signal.",
+    "event_type_correct": false,
+    "current_event": true,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
+  },
+  "d7049f54e7e6018fa3356bb75925e0ddee7fe08d4b8504913676f45d028480a4": {
+    "decision": "PUBLISH",
+    "reason": "The report provides a migration-specific early warning about ongoing human trafficking and modern slavery in Libya, supported by references to recent UN and US State Department reports. This constitutes a concrete, contemporary migration-related early warning event, fitting the FACILITATION_EARLY_WARNING event type.",
+    "event_type_correct": true,
+    "current_event": true,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
+  },
+  "d7cf33c23f79b9c491ba069d5a1bc1b5e7037576bc91ea318189f9dbe7ade180": {
+    "decision": "EXCLUDE",
+    "reason": "The post is a vague, unsubstantiated narrative alleging large-scale human trafficking deaths without providing a concrete, contemporary migration-specific early warning event or policy action. It lacks specific details or verifiable indications related to facilitation or early warning. The event type is not correct for the content.",
+    "event_type_correct": false,
+    "current_event": false,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
   }
 }
