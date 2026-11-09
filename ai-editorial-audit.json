@@ -1,35 +1,15 @@
 {
-  "generated_at": "2026-11-08T21:31:45.708285+00:00",
+  "generated_at": "2026-11-09T01:21:29.221302+00:00",
   "version": "3.0",
-  "candidates": 379,
-  "new_ai_calls": 4,
+  "candidates": 380,
+  "new_ai_calls": 11,
   "conflicting_identity_ids": [
     "group:685"
   ],
   "decisions": {
-    "post:846": {
-      "decision": "REVIEW",
-      "reason": "The post claims a specific migrant arrival number and timeframe indicating a migration event, but the future publication date and lack of corroboration or additional details create uncertainty about the event's actual occurrence and timing."
-    },
-    "post:848": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete, contemporary migration-specific event about the arrival of over 3,000 migrants in the Canary Islands, triggering local authorities to alarm. This is a clear border crossing event relevant to migration."
-    },
-    "post:849": {
-      "decision": "REVIEW",
-      "reason": "The post reports detentions related to irregular migration and economic exploitation, which is a concrete migration-related event. However, the source is a social media platform without further corroboration, and the location is unspecified. Verification or additional details are needed before publishing."
-    },
     "post:850": {
       "decision": "PUBLISH",
       "reason": "The post reports a concrete, contemporary migration-related event describing a new migrant caravan crossing from Guatemala into southern Mexico, which aligns with the BORDER_CROSSING event type."
-    },
-    "post:851": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete and contemporary migration-related casualty event involving a migrant boat tragedy near the Canary Islands with specific numbers of migrants rescued and dead. This is a clear migration-specific event matching the 'CASUALTY' type."
-    },
-    "post:852": {
-      "decision": "EXCLUDE",
-      "reason": "The post is a question about how migrants arrived and does not report a concrete migration event involving border crossing. It expresses skepticism but does not contain a verified or claimed event."
     },
     "post:853": {
       "decision": "EXCLUDE",
@@ -38,10 +18,6 @@
     "post:854": {
       "decision": "EXCLUDE",
       "reason": "The post refers to a historical event from the early 1990s and does not report a concrete, contemporary migration-related event. The event type 'BORDER_CROSSING' is not supported as this is a past event, not current."
-    },
-    "post:855": {
-      "decision": "EXCLUDE",
-      "reason": "The post contains unsubstantiated historical claims about ancient populations and migrations that do not describe a contemporary migration-related event or border crossing. The content is narrative and speculative, not reporting a current operational event or early warning."
     },
     "post:856": {
       "decision": "EXCLUDE",
@@ -87,17 +63,29 @@
       "decision": "EXCLUDE",
       "reason": "The post discusses historical migration and settlement narratives rather than reporting a specific contemporary migration event; the event_type 'BORDER_CROSSING' is not supported by the content."
     },
-    "signal:1372": {
-      "decision": "PUBLISH",
-      "reason": "The message reports recent, concrete footage of a migrant group crossing a known migration route on 6-7 November 2026, consistent with a movement early warning event. Multiple outlets reportedly covered the event, and the media details match current observations, supporting the early warning classification."
+    "post:867": {
+      "decision": "REVIEW",
+      "reason": "The post claims an arrest of an 8-year-old refugee boy from Haiti by GOP, but provides no verifiable details, date, or location. The claim is highly unusual and unsupported by external verification. The event type 'DETENTION' is plausible if true, but the authenticity is uncertain without corroboration. The date is in the future (2026), further dem"
     },
-    "signal:1373": {
-      "decision": "PUBLISH",
-      "reason": "The record describes ongoing fighting causing humanitarian and migration impacts specifically mentioning over 50,000 refugees fleeing to Kenya, which is a contemporary, concrete migration-related event. The event type 'FACILITATION_EARLY_WARNING' aligns with the report of transport disruption and pending refugee movements crossing a border, constit"
-    },
-    "signal:1374": {
+    "post:868": {
       "decision": "EXCLUDE",
-      "reason": "The post is a general commentary on past Syrian refugee movements and does not report a concrete, contemporary migration-specific early warning event. It contains no specific, verified information about an ongoing or imminent migration event."
+      "reason": "The post is a general historical commentary comparing historical and recent migration but does not report a specific, concrete, contemporary migration-related event such as an actual border crossing."
+    },
+    "post:869": {
+      "decision": "EXCLUDE",
+      "reason": "The post mentions migrant arrivals and government plans but does not report a deportation event; 'DEPORTATION' event type is incorrect and no concrete deportation event is described."
+    },
+    "post:870": {
+      "decision": "EXCLUDE",
+      "reason": "The post does not report a concrete, contemporary migration-related event; it contains speculative commentary unrelated to an actual border crossing or migration event."
+    },
+    "post:871": {
+      "decision": "EXCLUDE",
+      "reason": "The post claims a deportation event but reports arrivals and distribution of undocumented migrants rather than deportations; event_type 'DEPORTATION' is not supported by the content, which instead describes migrant arrivals. The event is not migration-specific in the sense of deportation or removal."
+    },
+    "post:872": {
+      "decision": "REVIEW",
+      "reason": "The post describes an event of undocumented migrants arriving in Spain in early November, which suggests a migration-related event. However, the post lacks specific details such as exact location, date, or official confirmation. The claim about no deportations and government plans is unverified and speculative. The source is a social media post wit"
     },
     "signal:1375": {
       "decision": "REVIEW",
@@ -139,17 +127,9 @@
       "decision": "EXCLUDE",
       "reason": "The post is a vague, unsubstantiated narrative alleging large-scale human trafficking deaths without providing a concrete, contemporary migration-specific early warning event or policy action. It lacks specific details or verifiable indications related to facilitation or early warning. The event type is not correct for the content."
     },
-    "group:674": {
-      "decision": "EXCLUDE",
-      "reason": "The content describes a political event unrelated to migration events, early warnings, or migration-specific signals. The claim about Aisha Wahab replacing Eric Swalwell is political representation, not a migration crossing or early warning. No contemporary migration event is reported or supported by the text."
-    },
-    "group:680": {
-      "decision": "EXCLUDE",
-      "reason": "This is a historical account relating to events from 1941-1942 involving evacuation and maritime incidents during World War II, not a contemporary migration event or early warning signal. The 'CASUALTY' event type is misleading here as it relates to wartime naval actions rather than migration-related casualties."
-    },
-    "group:684": {
-      "decision": "EXCLUDE",
-      "reason": "The reported incident involves a culturally sensitive event related to migrants but does not describe a migration-specific operational event such as border crossing, arrival processing, or migration route activity. The event type 'BORDER_CROSSING' is not supported by the content, which focuses on a cultural dispute at a funeral home rather than a m"
+    "signal:1385": {
+      "decision": "PUBLISH",
+      "reason": "The post describes a contemporary, location-specific migration early warning event involving a high number of migrant arrivals since Nov. 1, leading to an emergency declaration by local authorities. This fits the criteria for a migration-specific early warning signal."
     },
     "group:685": {
       "decision": "REVIEW",
@@ -158,10 +138,6 @@
     "group:686": {
       "decision": "EXCLUDE",
       "reason": "The content is a general social media commentary without a clear report of a specific, concrete border crossing event or migration-related incident."
-    },
-    "group:687": {
-      "decision": "REVIEW",
-      "reason": "The post mentions a \"recently arrived migrant\" implying a border crossing, but provides no details about where or when the event occurred, nor any supporting location data or sources."
     },
     "group:688": {
       "decision": "REVIEW",
@@ -174,6 +150,22 @@
     "group:690": {
       "decision": "EXCLUDE",
       "reason": "The record discusses historical migration and settlement narratives without reporting a concrete, contemporary migration-related event or border crossing."
+    },
+    "group:691": {
+      "decision": "EXCLUDE",
+      "reason": "The record reports alleged detention of an 8-year-old refugee but lacks any specific, current, verifiable details such as time, place, or official source to substantiate a concrete migration-related event."
+    },
+    "group:692": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a general commentary on historical population changes and does not describe a specific, concrete, contemporary migration event or crossing. It discusses historical periods and categories of people rather than reporting a current migration event."
+    },
+    "group:693": {
+      "decision": "REVIEW",
+      "reason": "The post mentions over 4,000 undocumented migrants arriving in Spain but provides no verifiable information about an actual deportation event or operation; the event type 'DEPORTATION' is not supported by the content. The claim about migrants distribution is speculative policy information, not a reported operational movement. No reliable source is "
+    },
+    "group:694": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a speculative comment with no concrete or contemporary migration-related event reported. It lacks any actual migration event or early warning and does not provide credible information about migration specifics."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1522,6 +1514,18 @@
     "signal:1371": {
       "decision": "REVIEW",
       "reason": "The record references funding and audit of Migrant Help UK with some links to services and government bodies, but does not report a specific or concrete migration event or early warning. The event_type label 'MOVEMENT_EARLY_WARNING' is not clearly supported by the content, which is general commentary on funding rather than a specific migration-rela"
+    },
+    "signal:1372": {
+      "decision": "PUBLISH",
+      "reason": "The message reports recent, concrete footage of a migrant group crossing a known migration route on 6-7 November 2026, consistent with a movement early warning event. Multiple outlets reportedly covered the event, and the media details match current observations, supporting the early warning classification."
+    },
+    "signal:1373": {
+      "decision": "PUBLISH",
+      "reason": "The record describes ongoing fighting causing humanitarian and migration impacts specifically mentioning over 50,000 refugees fleeing to Kenya, which is a contemporary, concrete migration-related event. The event type 'FACILITATION_EARLY_WARNING' aligns with the report of transport disruption and pending refugee movements crossing a border, constit"
+    },
+    "signal:1374": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a general commentary on past Syrian refugee movements and does not report a concrete, contemporary migration-specific early warning event. It contains no specific, verified information about an ongoing or imminent migration event."
     }
   }
 }
