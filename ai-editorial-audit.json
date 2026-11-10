@@ -1,27 +1,14 @@
 {
-  "generated_at": "2026-11-10T11:59:31.569292+00:00",
+  "generated_at": "2026-11-10T19:02:42.144581+00:00",
   "version": "3.0",
-  "candidates": 403,
-  "new_ai_calls": 6,
+  "candidates": 405,
+  "new_ai_calls": 8,
   "conflicting_identity_ids": [
-    "group:696",
     "group:697",
     "group:698",
     "group:699"
   ],
   "decisions": {
-    "post:862": {
-      "decision": "EXCLUDE",
-      "reason": "The post discusses genetic origins and historical migration patterns from thousands of years ago. It does not report a contemporary migration-related event, border crossing, or early warning relevant to current migration dynamics."
-    },
-    "post:863": {
-      "decision": "REVIEW",
-      "reason": "Inconsistent approval: The post reports a current, concrete migration-related event involving a significant number of migrants arriving in El Hierro, Canary Islands, leading to a state of emergency declaration and a request for federal assistance, which is a direct migration operational event."
-    },
-    "post:865": {
-      "decision": "PUBLISH",
-      "reason": "The record clearly reports a specific, recent migration event involving illegal boat arrivals in Spain, detailing dates, numbers, and locations. The event type 'BORDER_CROSSING' is appropriate for this concrete migration-related event, and the timing is contemporary to the report. The report constitutes a verified migration event claim suitable for"
-    },
     "post:866": {
       "decision": "EXCLUDE",
       "reason": "The post discusses historical migration and settlement narratives rather than reporting a specific contemporary migration event; the event_type 'BORDER_CROSSING' is not supported by the content."
@@ -90,6 +77,18 @@
       "decision": "REVIEW",
       "reason": "Inconsistent approval: The post reports a concrete, contemporary migration-related event involving a large influx of migrants to El Hierro, an urgent response including protocols and aid requests, which is consistent with a BORDER_CROSSING event type and meets criteria for publication."
     },
+    "post:883": {
+      "decision": "REVIEW",
+      "reason": "The record describes multiple alleged criminal incidents involving migrants in various European countries, but does not report a specific, concrete migration event such as a smuggling operation happening currently, a migration route activity, or an official policy action. The narrative is more a general commentary with claims about illegal migratio"
+    },
+    "post:884": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete and contemporary migration-related operational event: the interception of 18 migrants off the California coast by federal authorities, including the Coast Guard. The event type 'INTERCEPTION' is accurate and supported by the content."
+    },
+    "post:885": {
+      "decision": "REVIEW",
+      "reason": "The post reports about migrant arrivals in Crete from Libya during 2026, suggesting a migration event involving illegal crossings. However, the text contains speculative elements about political pressure and a 'TurkoLibyan memorandum' without clear verification. The arrival figures are not corroborated by external sources. The event is contemporary"
+    },
     "signal:1394": {
       "decision": "PUBLISH",
       "reason": "The record reports a concrete, contemporary migration-specific early warning about a caravan of several hundred to ~1,000 mostly Honduran migrants entering southern Mexico and heading north, which matches the MOVEMENT_EARLY_WARNING type."
@@ -150,17 +149,13 @@
       "decision": "REVIEW",
       "reason": "The post claims a specific figure of illegal migrants crossing the channel under Labour, but lacks supporting evidence or details to verify the claim. The event type MOVEMENT_EARLY_WARNING is assigned, but the post describes a retrospective cumulative count rather than an early warning of a current or imminent situation."
     },
-    "group:632": {
+    "signal:1409": {
       "decision": "PUBLISH",
-      "reason": "The report provides concrete information on a recent maritime migration-related event involving migrants found dead and survivors rescued by the Greek coast guard near Crete. The event type 'RESCUE_OPERATION' is appropriate and supported by the details."
+      "reason": "The record reports a recent, concrete migration-related event involving a boat carrying 21 migrants reaching Kent without interception, described as an uncontrolled landing by the Home Office. This qualifies as a migration-specific early warning or signal regarding unescorted beach arrivals, with reference to a relevant policy statement by the Home"
     },
     "group:674": {
       "decision": "EXCLUDE",
       "reason": "The post discusses a political figure and her background, but does not report any concrete, contemporary migration-related event such as an actual border crossing or refugee arrival. The labeled event_type 'BORDER_CROSSING' is incorrect for the content. There is no migration-specific operational event or early warning present."
-    },
-    "group:692": {
-      "decision": "EXCLUDE",
-      "reason": "The post is a general commentary on historical population changes and does not describe a specific, concrete, contemporary migration event or crossing. It discusses historical periods and categories of people rather than reporting a current migration event."
     },
     "group:693": {
       "decision": "REVIEW",
@@ -169,10 +164,6 @@
     "group:695": {
       "decision": "EXCLUDE",
       "reason": "The post reports the arrival of officials for a refugee plan meeting but does not state any concrete, contemporary migration-related event such as a border crossing or refugee movement. The event_type 'BORDER_CROSSING' is not supported by the content."
-    },
-    "group:696": {
-      "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
     },
     "group:697": {
       "decision": "REVIEW",
@@ -185,6 +176,18 @@
     "group:699": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:700": {
+      "decision": "REVIEW",
+      "reason": "The record lists multiple incidents involving alleged crimes by migrants in various European cities, including an event near Crete involving deaths of migrants and arrests of organizers. However, the overall post mixes incident reports with political commentary and generalizations, reducing focus and clarity on a single, concrete smuggling-related "
+    },
+    "group:701": {
+      "decision": "PUBLISH",
+      "reason": "The report details a concrete, contemporary migration-related event involving federal authorities intercepting 18 Mexican nationals attempting to enter U.S. waters near California coast, matching the INTERCEPTION event type."
+    },
+    "group:702": {
+      "decision": "REVIEW",
+      "reason": "The event date is in the future (2026) which conflicts with current temporal context and is unusual. Also lacks source information to verify the claim about illegal arrivals and the Turko-Libyan memorandum's effect. Event type BORDER_CROSSING fits the claim, but verification is needed due to uncertain timing and no corroboration."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1621,6 +1624,10 @@
     "signal:1393": {
       "decision": "EXCLUDE",
       "reason": "The event date is in the future (2026), making it a future warning or narrative, not a current migration-specific early warning suitable for publication."
+    },
+    "signal:1410": {
+      "decision": "EXCLUDE",
+      "reason": "The event is dated in the future (2026) and the text does not present a verified or concrete migration-specific early warning or policy action. The source is Reddit, which alone does not verify the event. No clear migration route or facilitation event is confirmed."
     }
   }
 }
