@@ -1,17 +1,14 @@
 {
-  "generated_at": "2026-11-11T08:36:41.049323+00:00",
+  "generated_at": "2026-11-11T17:35:26.547683+00:00",
   "version": "3.0",
-  "candidates": 413,
-  "new_ai_calls": 8,
+  "candidates": 416,
+  "new_ai_calls": 4,
   "conflicting_identity_ids": [
     "group:699",
-    "group:705"
+    "group:705",
+    "group:707"
   ],
   "decisions": {
-    "post:867": {
-      "decision": "REVIEW",
-      "reason": "The post claims an arrest of an 8-year-old refugee boy from Haiti by GOP, but provides no verifiable details, date, or location. The claim is highly unusual and unsupported by external verification. The event type 'DETENTION' is plausible if true, but the authenticity is uncertain without corroboration. The date is in the future (2026), further dem"
-    },
     "post:868": {
       "decision": "EXCLUDE",
       "reason": "The post is a general historical commentary comparing historical and recent migration but does not report a specific, concrete, contemporary migration-related event such as an actual border crossing."
@@ -88,21 +85,9 @@
       "decision": "EXCLUDE",
       "reason": "The post describes personal experiences of a refugee and exploitation but does not report a concrete, contemporary migration-related event such as a specific border crossing or an operational migration event. The event_type 'BORDER_CROSSING' is not supported by the content."
     },
-    "signal:1405": {
-      "decision": "REVIEW",
-      "reason": "The message suggests a claim of illegal maritime activity related to migrant crossings, which could be a migration-specific early warning. However, it lacks concrete detail about a specific operational event or confirmed policy action and does not specify timing or location. More evidence is needed."
-    },
-    "signal:1406": {
+    "post:891": {
       "decision": "EXCLUDE",
-      "reason": "The post is a general political commentary and opinion about migration policy, not a concrete or specific migration-related event or an early warning signal. It discusses a person's stance without reporting a specific, contemporary event or policy action."
-    },
-    "signal:1407": {
-      "decision": "EXCLUDE",
-      "reason": "The claim concerns a political statement alleging cumulative illegal crossings under a named PM, but lacks a concrete, contemporary migration-specific event or early warning. No actual operational event or new policy action is reported. Statement is unverified and more political rhetoric than factual early warning."
-    },
-    "signal:1408": {
-      "decision": "REVIEW",
-      "reason": "The post claims a specific figure of illegal migrants crossing the channel under Labour, but lacks supporting evidence or details to verify the claim. The event type MOVEMENT_EARLY_WARNING is assigned, but the post describes a retrospective cumulative count rather than an early warning of a current or imminent situation."
+      "reason": "The text describes an alleged criminal incident involving child abduction attempt, not a migration-related detention or migration event. The event_type 'DETENTION' is incorrect, and there is no migration context or signal in the post."
     },
     "signal:1409": {
       "decision": "PUBLISH",
@@ -140,9 +125,17 @@
       "decision": "REVIEW",
       "reason": "The signal includes a comment about rising migrant arrivals and mentions cumulative interception figures from 2018-2024, but the specific early warning event for 3 Nov about Greek government concerns is not clearly detailed or corroborated by concrete evidence in the record. The event type matches a movement early warning, but the publication date "
     },
-    "group:674": {
+    "signal:1419": {
       "decision": "EXCLUDE",
-      "reason": "The post discusses a political figure and her background, but does not report any concrete, contemporary migration-related event such as an actual border crossing or refugee arrival. The labeled event_type 'BORDER_CROSSING' is incorrect for the content. There is no migration-specific operational event or early warning present."
+      "reason": "The post is a political appeal concerning Egypt's compliance with the Refugee Convention and access through the Rafah crossing, but it does not report a concrete, contemporary migration-specific event or early warning. It is a narrative or demand rather than a documented operational movement or verified warning."
+    },
+    "signal:1420": {
+      "decision": "PUBLISH",
+      "reason": "The record reports a concrete and contemporary migration-related event involving the repatriation of migrants by coast guard and navy vessels, categorized as a ROUTE_EARLY_WARNING signal due to monitoring and transfer along migration routes offshore the Dominican Republic."
+    },
+    "signal:1421": {
+      "decision": "EXCLUDE",
+      "reason": "The record discusses a general opinion about a policy (EU Family Reunification Directive) as a signal but does not report a concrete, contemporary migration-specific event, policy change, or enforcement action. It lacks specific timing or direct indication of a current or completed policy event suitable for publication."
     },
     "group:699": {
       "decision": "REVIEW",
@@ -175,6 +168,10 @@
     "group:706": {
       "decision": "EXCLUDE",
       "reason": "The post recounts a personal refugee experience but does not explicitly report a concrete, contemporary migration event such as a specific border crossing or migration movement. The event_type BORDER_CROSSING is not supported by the content, which focuses on exploitation after arrival and lacks details about the migration event itself. The event da"
+    },
+    "group:707": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1655,6 +1652,22 @@
     "signal:1404": {
       "decision": "PUBLISH",
       "reason": "The post reports a concrete and current migration-specific event involving migrants crossing from North Africa to Crete, with casualties and rescues, fitting the migration route early warning event type."
+    },
+    "signal:1405": {
+      "decision": "REVIEW",
+      "reason": "The message suggests a claim of illegal maritime activity related to migrant crossings, which could be a migration-specific early warning. However, it lacks concrete detail about a specific operational event or confirmed policy action and does not specify timing or location. More evidence is needed."
+    },
+    "signal:1406": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a general political commentary and opinion about migration policy, not a concrete or specific migration-related event or an early warning signal. It discusses a person's stance without reporting a specific, contemporary event or policy action."
+    },
+    "signal:1407": {
+      "decision": "EXCLUDE",
+      "reason": "The claim concerns a political statement alleging cumulative illegal crossings under a named PM, but lacks a concrete, contemporary migration-specific event or early warning. No actual operational event or new policy action is reported. Statement is unverified and more political rhetoric than factual early warning."
+    },
+    "signal:1408": {
+      "decision": "REVIEW",
+      "reason": "The post claims a specific figure of illegal migrants crossing the channel under Labour, but lacks supporting evidence or details to verify the claim. The event type MOVEMENT_EARLY_WARNING is assigned, but the post describes a retrospective cumulative count rather than an early warning of a current or imminent situation."
     },
     "signal:1410": {
       "decision": "EXCLUDE",
