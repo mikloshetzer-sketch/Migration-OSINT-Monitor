@@ -1,74 +1,98 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-11-10T19:01:16Z",
-  "generated_at": "2026-11-10T19:01:16Z",
+  "updated_at": "2026-11-11T00:22:38Z",
+  "generated_at": "2026-11-11T00:22:38Z",
   "current_run": {
     "available": true,
-    "id": 411,
-    "run_uuid": "d5c50df8-9245-40aa-950e-3d0e818715eb",
-    "started_at": "2026-11-10T18:58:30Z",
-    "completed_at": "2026-11-10T19:01:14Z",
+    "id": 412,
+    "run_uuid": "c40e9b15-5b81-455f-bf8d-ba5b55baf041",
+    "started_at": "2026-11-11T00:17:48Z",
+    "completed_at": "2026-11-11T00:22:36Z",
     "status": "SUCCESS",
-    "posts_returned": 147,
-    "unique_posts_collected": 99,
-    "x_posts_returned": 49,
-    "reddit_posts_returned": 24,
+    "posts_returned": 123,
+    "unique_posts_collected": 81,
+    "x_posts_returned": 50,
+    "reddit_posts_returned": 0,
     "mastodon_posts_returned": 50,
-    "unique_x_posts": 44,
-    "unique_reddit_posts": 22,
-    "unique_mastodon_posts": 20,
+    "unique_x_posts": 47,
+    "unique_reddit_posts": 0,
+    "unique_mastodon_posts": 21,
     "noise_filtered": 0,
-    "non_operational_filtered": 96,
-    "historical_references_filtered": 0,
-    "influence_signals": 0,
-    "influence_signals_detected": 0,
+    "non_operational_filtered": 78,
+    "historical_references_filtered": 2,
+    "influence_signals": 2,
+    "influence_signals_detected": 2,
     "crossing_facilitation_signals": 0,
-    "legal_migration_signals": 0,
-    "policy_signals": 0,
+    "legal_migration_signals": 1,
+    "policy_signals": 1,
     "recruitment_coordination_signals": 0,
     "mobilization_coordination_signals": 0,
     "mobilization_report_signals": 0,
     "decision_influence_signals": 0,
     "online_influence_report_signals": 0,
-    "operational_events": 3,
-    "operational_events_analyzed": 3,
-    "historical_events_available": 63,
+    "operational_events": 1,
+    "operational_events_analyzed": 1,
+    "historical_events_available": 64,
     "new_correlations": 0,
     "correlated_events": 0,
-    "new_correlation_groups": 3,
+    "new_correlation_groups": 1,
     "database_correlations": 0,
     "current_run_correlations": 0,
-    "new_events": 3,
-    "new_events_saved": 3,
+    "new_events": 1,
+    "new_events_saved": 1,
     "events_already_existing": 0,
-    "new_event_groups": 3,
+    "new_event_groups": 1,
     "updated_event_groups": 0,
     "bootstrapped_event_groups": 0,
     "existing_event_groups_reused": 0,
-    "event_group_sources_linked": 3,
+    "event_group_sources_linked": 1,
     "x_collector_errors": 0,
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "error_message": null
   },
   "kpis": {
-    "operational_events": 8,
-    "new_events": 3,
-    "correlated_events": 3,
-    "active_event_groups": 683,
+    "operational_events": 6,
+    "new_events": 1,
+    "correlated_events": 1,
+    "active_event_groups": 684,
     "sources": 4,
-    "regions": 4,
-    "collected_posts_24h": 261,
-    "influence_signals": 16,
-    "access_signals": 1,
+    "regions": 3,
+    "collected_posts_24h": 254,
+    "influence_signals": 18,
+    "access_signals": 2,
     "high_priority": 0,
-    "current_run_operational_events": 3,
-    "current_run_unique_posts": 99,
-    "access_signals_raw": 1,
-    "influence_signals_raw": 16,
+    "current_run_operational_events": 1,
+    "current_run_unique_posts": 81,
+    "access_signals_raw": 2,
+    "influence_signals_raw": 18,
     "influence_narratives": 3
   },
   "live_events": [
+    {
+      "id": 886,
+      "event_id": 886,
+      "source": "X",
+      "source_post_id": "2120303378014273969",
+      "author": "sunitausara",
+      "published_at": "2026-11-10T23:51:33Z",
+      "collected_at": "2026-11-11T00:18:44Z",
+      "event_type": "DETENTION",
+      "signal_type": "DETENTION",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.5,
+      "event_confidence": 0.5,
+      "relevance_score": 10.0,
+      "text": "🇺🇸 U.S. Border Patrol agents discovered 18 migrants concealed inside a boat named “Gonna Miss Her” approximately 12 miles from Catalina Island, California. A federal aircraft spotted the vessel before officers boarded it. Two boat operators were arrested, while the migrants were https://t.co/IYaLPqsz50",
+      "url": "https://x.com/sunitausara/status/2120303378014273969",
+      "source_url": "https://x.com/sunitausara/status/2120303378014273969",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
     {
       "id": 884,
       "event_id": 884,
@@ -168,6 +192,37 @@
   ],
   "event_groups": [
     {
+      "id": 703,
+      "group_id": 703,
+      "event_type": "DETENTION",
+      "dominant_event_type": "DETENTION",
+      "title": "DETENTION",
+      "representative_text": "🇺🇸 U.S. Border Patrol agents discovered 18 migrants concealed inside a boat named “Gonna Miss Her” approximately 12 miles from Catalina Island, California. A federal aircraft spotted the vessel before officers boarded it. Two boat operators were arrested, while the migrants were https://t.co/IYaLPqsz50",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "primary_location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "first_seen": "2026-11-10T23:51:33Z",
+      "last_seen": "2026-11-10T23:51:33Z",
+      "source_count": 1,
+      "sources_count": 1,
+      "source_types": [
+        "X"
+      ],
+      "sources": [
+        "X"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.5,
+      "average_confidence": 0.5,
+      "created_at": "2026-11-11T00:18:44Z",
+      "updated_at": "2026-11-11T00:18:44Z",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
       "id": 701,
       "group_id": 701,
       "event_type": "INTERCEPTION",
@@ -239,58 +294,51 @@
       "region": "GLOBAL",
       "count": 3,
       "events": 3,
-      "percentage": 37.5
-    },
-    {
-      "name": "WESTERN_MEDITERRANEAN",
-      "region": "WESTERN_MEDITERRANEAN",
-      "count": 2,
-      "events": 2,
-      "percentage": 25.0
+      "percentage": 50.0
     },
     {
       "name": "EASTERN_MEDITERRANEAN",
       "region": "EASTERN_MEDITERRANEAN",
       "count": 2,
       "events": 2,
-      "percentage": 25.0
+      "percentage": 33.33
     },
     {
-      "name": "AMERICAS",
-      "region": "AMERICAS",
+      "name": "WESTERN_MEDITERRANEAN",
+      "region": "WESTERN_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 12.5
+      "percentage": 16.67
     }
   ],
   "sources": [
     {
       "source": "X",
       "name": "X",
-      "count": 180,
-      "posts": 180,
-      "percentage": 68.97
+      "count": 181,
+      "posts": 181,
+      "percentage": 71.26
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 41,
-      "posts": 41,
-      "percentage": 15.71
+      "count": 40,
+      "posts": 40,
+      "percentage": 15.75
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 28,
-      "posts": 28,
-      "percentage": 10.73
+      "count": 19,
+      "posts": 19,
+      "percentage": 7.48
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 12,
-      "posts": 12,
-      "percentage": 4.6
+      "count": 14,
+      "posts": 14,
+      "percentage": 5.51
     }
   ],
   "region_activity": [
@@ -299,69 +347,62 @@
       "region": "GLOBAL",
       "count": 3,
       "events": 3,
-      "percentage": 37.5
-    },
-    {
-      "name": "WESTERN_MEDITERRANEAN",
-      "region": "WESTERN_MEDITERRANEAN",
-      "count": 2,
-      "events": 2,
-      "percentage": 25.0
+      "percentage": 50.0
     },
     {
       "name": "EASTERN_MEDITERRANEAN",
       "region": "EASTERN_MEDITERRANEAN",
       "count": 2,
       "events": 2,
-      "percentage": 25.0
+      "percentage": 33.33
     },
     {
-      "name": "AMERICAS",
-      "region": "AMERICAS",
+      "name": "WESTERN_MEDITERRANEAN",
+      "region": "WESTERN_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 12.5
+      "percentage": 16.67
     }
   ],
   "source_activity": [
     {
       "source": "X",
       "name": "X",
-      "count": 180,
-      "posts": 180,
-      "percentage": 68.97
+      "count": 181,
+      "posts": 181,
+      "percentage": 71.26
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 41,
-      "posts": 41,
-      "percentage": 15.71
+      "count": 40,
+      "posts": 40,
+      "percentage": 15.75
     },
     {
       "source": "REDDIT",
       "name": "REDDIT",
-      "count": 28,
-      "posts": 28,
-      "percentage": 10.73
+      "count": 19,
+      "posts": 19,
+      "percentage": 7.48
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 12,
-      "posts": 12,
-      "percentage": 4.6
+      "count": 14,
+      "posts": 14,
+      "percentage": 5.51
     }
   ],
   "correlation": {
-    "correlated_events": 3,
-    "correlated_sources": 3,
-    "grouped_sources": 8,
-    "event_groups": 683,
-    "active_groups": 683,
+    "correlated_events": 1,
+    "correlated_sources": 1,
+    "grouped_sources": 6,
+    "event_groups": 684,
+    "active_groups": 684,
     "multi_source_groups": 66,
     "strongest_match": 1.0,
-    "correlation_rate": 37.5
+    "correlation_rate": 16.67
   },
   "technical_health": "HEALTHY",
   "collector_health": "HEALTHY",
@@ -374,44 +415,44 @@
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "database": "AVAILABLE",
-    "last_run_id": 411,
-    "last_completed_at": "2026-11-10T19:01:14Z"
+    "last_run_id": 412,
+    "last_completed_at": "2026-11-11T00:22:36Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 8,
-    "influence_signals_24h": 16,
-    "access_signals_24h": 1,
-    "correlated_events_24h": 3,
-    "active_event_groups": 683,
-    "dominant_region": "WESTERN_MEDITERRANEAN",
-    "hotspot": "WESTERN_MEDITERRANEAN",
+    "operational_events_24h": 6,
+    "influence_signals_24h": 18,
+    "access_signals_24h": 2,
+    "correlated_events_24h": 1,
+    "active_event_groups": 684,
+    "dominant_region": "EASTERN_MEDITERRANEAN",
+    "hotspot": "EASTERN_MEDITERRANEAN",
     "dominant_event_type": "BORDER_CROSSING",
     "dominant_source": "X",
     "average_confidence": 0.436,
     "confidence_level": "LOW",
-    "correlation_rate": 37.5,
+    "correlation_rate": 16.67,
     "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 8 operatív migrációs eseményt, 16 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 3 friss eseményforrás korrelált más forrással. Jelenleg 683 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.44. A jelenlegi aktivitási szint: MODERATE.",
+    "summary": "Az elmúlt 24 órában a rendszer 6 operatív migrációs eseményt, 18 influence/early-warning jelzést és 2 átkelési vagy bejutási jelzést tart nyilván. 1 friss eseményforrás korrelált más forrással. Jelenleg 684 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Eastern Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.44. A jelenlegi aktivitási szint: MODERATE.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
   "analytical_assessment": {
-    "operational_events_24h": 8,
-    "influence_signals_24h": 16,
-    "access_signals_24h": 1,
-    "correlated_events_24h": 3,
-    "active_event_groups": 683,
-    "dominant_region": "WESTERN_MEDITERRANEAN",
-    "hotspot": "WESTERN_MEDITERRANEAN",
+    "operational_events_24h": 6,
+    "influence_signals_24h": 18,
+    "access_signals_24h": 2,
+    "correlated_events_24h": 1,
+    "active_event_groups": 684,
+    "dominant_region": "EASTERN_MEDITERRANEAN",
+    "hotspot": "EASTERN_MEDITERRANEAN",
     "dominant_event_type": "BORDER_CROSSING",
     "dominant_source": "X",
     "average_confidence": 0.436,
     "confidence_level": "LOW",
-    "correlation_rate": 37.5,
+    "correlation_rate": 16.67,
     "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 8 operatív migrációs eseményt, 16 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 3 friss eseményforrás korrelált más forrással. Jelenleg 683 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.44. A jelenlegi aktivitási szint: MODERATE.",
+    "summary": "Az elmúlt 24 órában a rendszer 6 operatív migrációs eseményt, 18 influence/early-warning jelzést és 2 átkelési vagy bejutási jelzést tart nyilván. 1 friss eseményforrás korrelált más forrással. Jelenleg 684 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Eastern Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.44. A jelenlegi aktivitási szint: MODERATE.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
@@ -672,90 +713,6 @@
       ],
       "related_sources": [
         "X"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1,
-      "ai_review_status": "AI_REVIEWED",
-      "ai_editorial_decision": "PUBLISH"
-    },
-    {
-      "id": 1401,
-      "source": "REDDIT",
-      "source_post_id": "reddit_1xsa21k",
-      "author": "alexmark002",
-      "language": null,
-      "published_at": "2026-11-10T01:30:54Z",
-      "first_detected_at": "2026-11-10T03:53:58Z",
-      "last_detected_at": "2026-11-10T18:59:42Z",
-      "detection_count": 3,
-      "text": "Senegal boat disaster kills 39. Another 14 migrants die off Greece.\nThe death toll from Sunday’s migrant boat capsize off Senegal rose to 39 today, with only 1 survivor reported and search operations continuing. The boat left Saint-Louis for Spain, following an Atlantic route used by thousands of young West Africans. This is not an isolated disaster. A June report by migrant-rights group Caminando Fronteras counted 1,317 deaths attempting to reach Spain during the first 5 months of 2026, including 635 on the Atlantic route to the Canary Islands. Crossings had fallen, but the death rate had increased. Meanwhile, Greek authorities confirmed 14 deaths from a separate boat found south of Crete. ... Read more... READ MORE... Disclaimer: This post is shared for discussion and critical analysis only. Submission does not equal endorsement. The content may reflect claims or opinions from the original source. Please verify information independently and review primary sources before forming conclusions. If you notice factual errors, misleading claims, or possible AI generated or edited clips, please leave a fact check comment with sources for the community.",
-      "text_excerpt": "Senegal boat disaster kills 39. Another 14 migrants die off Greece.\nThe death toll from Sunday’s migrant boat capsize off Senegal rose to 39 today, with only 1 survivor reported and search operations continuing. The boat left Saint-Louis for Spain, following an Atlantic route used by thousands of young West Africans. This is not an isolated disaster. A June report by migrant-rights group Caminando Fronteras counted 1,317 deaths attempting to reach Spain during the first 5 months of 2026, including 635 on the Atlantic route to the Canary Islands. Crossings had fallen, but the death rate had increased. Meanwhile, Greek authorities confirmed 14 deaths from a separate boat found south of Crete. ",
-      "url": "https://www.reddit.com/r/CitizenWatchNews/comments/1xsa21k/senegal_boat_disaster_kills_39_another_14/",
-      "source_url": "https://www.reddit.com/r/CitizenWatchNews/comments/1xsa21k/senegal_boat_disaster_kills_39_another_14/",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.9,
-      "score": 11.25,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrant-rights group Caminando Fronteras counted 1,317 deaths attempting to reach"
-        ],
-        [
-          "route",
-          "route"
-        ],
-        [
-          "pressure",
-          "Crossings had fallen, but the death rate had increased"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT",
-        "ROUTE",
-        "PRESSURE"
-      ],
-      "context_matches": [
-        "migrant"
-      ],
-      "high_value_matches": [
-        "migrant-rights group Caminando Fronteras counted 1,317 deaths attempting to reach",
-        "Crossings had fallen, but the death rate had increased"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "Canary Islands",
-      "primary_location": "Canary Islands",
-      "country": "Spain",
-      "region": "EASTERN_MEDITERRANEAN",
-      "primary_region": "EASTERN_MEDITERRANEAN",
-      "latitude": 28.2916,
-      "longitude": -16.6291,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 42.5,
-      "analyst_priority": "MEDIUM",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "reddit_1xsa21k"
-      ],
-      "related_authors": [
-        "alexmark002"
-      ],
-      "related_urls": [
-        "https://www.reddit.com/r/CitizenWatchNews/comments/1xsa21k/senegal_boat_disaster_kills_39_another_14/"
-      ],
-      "related_sources": [
-        "REDDIT"
       ],
       "independent_author_count": 1,
       "platform_count": 1,
@@ -1206,62 +1163,118 @@
       "ai_editorial_decision": "PUBLISH"
     },
     {
-      "id": 1397,
+      "id": 1414,
       "source": "X",
-      "source_post_id": "2119874204778545552",
-      "author": "ekathimerini",
+      "source_post_id": "2120305940012687487",
+      "author": "111Truth777",
       "language": "en",
-      "published_at": "2026-11-09T19:26:10Z",
-      "first_detected_at": "2026-11-09T20:17:11Z",
-      "last_detected_at": "2026-11-09T20:17:11Z",
+      "published_at": "2026-11-11T00:01:44Z",
+      "first_detected_at": "2026-11-11T00:22:35Z",
+      "last_detected_at": "2026-11-11T00:22:35Z",
       "detection_count": 1,
-      "text": "Four suspected members of smuggling rings have been arrested over the weekend near Greece's northeastern land border with Turkey, driving vehicles crammed with migrants west. https://t.co/uuLqfL4C5E",
-      "text_excerpt": "Four suspected members of smuggling rings have been arrested over the weekend near Greece's northeastern land border with Turkey, driving vehicles crammed with migrants west. https://t.co/uuLqfL4C5E",
-      "url": "https://x.com/ekathimerini/status/2119874204778545552",
-      "source_url": "https://x.com/ekathimerini/status/2119874204778545552",
-      "primary_signal": "ROUTE_EARLY_WARNING",
-      "signal_type": "ROUTE_EARLY_WARNING",
+      "text": "A hundred clandestine migrants have just arrived at Puerto de la Estaca on the island of El Hierro in the Canary Islands.The migrants are waiting to take ferries to Tenerife.\nInstead of deporting them back home, are they being accommodated to receive better care?🫨 https://t.co/lOPypXbpZF",
+      "text_excerpt": "A hundred clandestine migrants have just arrived at Puerto de la Estaca on the island of El Hierro in the Canary Islands.The migrants are waiting to take ferries to Tenerife.\nInstead of deporting them back home, are they being accommodated to receive better care?🫨 https://t.co/lOPypXbpZF",
+      "url": "https://x.com/111Truth777/status/2120305940012687487",
+      "source_url": "https://x.com/111Truth777/status/2120305940012687487",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ROUTE_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 8.5,
+      "confidence": 0.72,
+      "score": 7.75,
       "matched_signals": [
-        "ROUTE_EARLY_WARNING"
+        "MOVEMENT_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
-          "route",
-          "border"
-        ],
-        [
-          "enforcement",
-          "arrested"
+          "movement",
+          "migrants have just arrived"
         ]
       ],
       "matched_groups": [
-        "ROUTE",
-        "ENFORCEMENT"
+        "MOVEMENT"
       ],
       "context_matches": [
         "migrants"
       ],
-      "high_value_matches": [],
+      "high_value_matches": [
+        "migrants have just arrived"
+      ],
       "signal_context_rejections": [],
       "migration_context": true,
       "human_migration_context": true,
       "historical_reference": false,
       "historical_reason": null,
       "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "EASTERN_MEDITERRANEAN",
-      "primary_region": "EASTERN_MEDITERRANEAN",
-      "latitude": null,
-      "longitude": null,
+      "location": "Canary Islands",
+      "primary_location": "Canary Islands",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 28.2916,
+      "longitude": -16.6291,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 32.0,
+      "priority_score": 36.2,
+      "analyst_priority": "LOW",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
+      "id": 1415,
+      "source": "X",
+      "source_post_id": "2120302975667298422",
+      "author": "DrageLiten",
+      "language": "en",
+      "published_at": "2026-11-10T23:49:57Z",
+      "first_detected_at": "2026-11-11T00:22:35Z",
+      "last_detected_at": "2026-11-11T00:22:35Z",
+      "detection_count": 1,
+      "text": "@TRobinsonNewEra Hundreds of sub-Saharan illegal migrants who arrived in recent days in the Canary Islands are now being taken to mainland Spain, from where some of them will be relocated to other EU member states as “EU Quota Migrants” under the EU’s new Migration Pact. https://t.co/kFgpgOZaZt",
+      "text_excerpt": "@TRobinsonNewEra Hundreds of sub-Saharan illegal migrants who arrived in recent days in the Canary Islands are now being taken to mainland Spain, from where some of them will be relocated to other EU member states as “EU Quota Migrants” under the EU’s new Migration Pact. https://t.co/kFgpgOZaZt",
+      "url": "https://x.com/DrageLiten/status/2120302975667298422",
+      "source_url": "https://x.com/DrageLiten/status/2120302975667298422",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 6.5,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "migrants who arrived"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT"
+      ],
+      "context_matches": [
+        "migrants",
+        "Migrants"
+      ],
+      "high_value_matches": [
+        "migrants who arrived"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Canary Islands",
+      "primary_location": "Canary Islands",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 28.2916,
+      "longitude": -16.6291,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 36.2,
       "analyst_priority": "LOW",
       "ai_review_status": "AI_REVIEWED",
       "ai_editorial_decision": "PUBLISH"
@@ -1458,64 +1471,6 @@
       "longitude": -16.6291,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
       "priority_score": 36.2,
-      "analyst_priority": "LOW",
-      "ai_review_status": "AI_REVIEWED",
-      "ai_editorial_decision": "PUBLISH"
-    },
-    {
-      "id": 1394,
-      "source": "X",
-      "source_post_id": "2119886028194414626",
-      "author": "grok",
-      "language": "en",
-      "published_at": "2026-11-09T20:13:09Z",
-      "first_detected_at": "2026-11-09T20:16:07Z",
-      "last_detected_at": "2026-11-09T20:16:07Z",
-      "detection_count": 1,
-      "text": "@guocity @Polymarket Yes. Reuters, AP, CNN and others confirm a caravan of several hundred to ~1,000 mostly Honduran migrants entered southern Mexico this weekend and is heading north. Some participants said they hope Democratic midterm gains will ease US enforcement. Current border policies remain",
-      "text_excerpt": "@guocity @Polymarket Yes. Reuters, AP, CNN and others confirm a caravan of several hundred to ~1,000 mostly Honduran migrants entered southern Mexico this weekend and is heading north. Some participants said they hope Democratic midterm gains will ease US enforcement. Current border policies remain",
-      "url": "https://x.com/grok/status/2119886028194414626",
-      "source_url": "https://x.com/grok/status/2119886028194414626",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.72,
-      "score": 7.75,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrants entered southern Mexico this weekend and is heading"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT"
-      ],
-      "context_matches": [
-        "migrants"
-      ],
-      "high_value_matches": [
-        "migrants entered southern Mexico this weekend and is heading"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "AMERICAS",
-      "primary_region": "AMERICAS",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 29.2,
       "analyst_priority": "LOW",
       "ai_review_status": "AI_REVIEWED",
       "ai_editorial_decision": "PUBLISH"
@@ -1793,62 +1748,118 @@
       "ai_editorial_decision": "PUBLISH"
     },
     {
-      "id": 1397,
+      "id": 1414,
       "source": "X",
-      "source_post_id": "2119874204778545552",
-      "author": "ekathimerini",
+      "source_post_id": "2120305940012687487",
+      "author": "111Truth777",
       "language": "en",
-      "published_at": "2026-11-09T19:26:10Z",
-      "first_detected_at": "2026-11-09T20:17:11Z",
-      "last_detected_at": "2026-11-09T20:17:11Z",
+      "published_at": "2026-11-11T00:01:44Z",
+      "first_detected_at": "2026-11-11T00:22:35Z",
+      "last_detected_at": "2026-11-11T00:22:35Z",
       "detection_count": 1,
-      "text": "Four suspected members of smuggling rings have been arrested over the weekend near Greece's northeastern land border with Turkey, driving vehicles crammed with migrants west. https://t.co/uuLqfL4C5E",
-      "text_excerpt": "Four suspected members of smuggling rings have been arrested over the weekend near Greece's northeastern land border with Turkey, driving vehicles crammed with migrants west. https://t.co/uuLqfL4C5E",
-      "url": "https://x.com/ekathimerini/status/2119874204778545552",
-      "source_url": "https://x.com/ekathimerini/status/2119874204778545552",
-      "primary_signal": "ROUTE_EARLY_WARNING",
-      "signal_type": "ROUTE_EARLY_WARNING",
+      "text": "A hundred clandestine migrants have just arrived at Puerto de la Estaca on the island of El Hierro in the Canary Islands.The migrants are waiting to take ferries to Tenerife.\nInstead of deporting them back home, are they being accommodated to receive better care?🫨 https://t.co/lOPypXbpZF",
+      "text_excerpt": "A hundred clandestine migrants have just arrived at Puerto de la Estaca on the island of El Hierro in the Canary Islands.The migrants are waiting to take ferries to Tenerife.\nInstead of deporting them back home, are they being accommodated to receive better care?🫨 https://t.co/lOPypXbpZF",
+      "url": "https://x.com/111Truth777/status/2120305940012687487",
+      "source_url": "https://x.com/111Truth777/status/2120305940012687487",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ROUTE_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 8.5,
+      "confidence": 0.72,
+      "score": 7.75,
       "matched_signals": [
-        "ROUTE_EARLY_WARNING"
+        "MOVEMENT_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
-          "route",
-          "border"
-        ],
-        [
-          "enforcement",
-          "arrested"
+          "movement",
+          "migrants have just arrived"
         ]
       ],
       "matched_groups": [
-        "ROUTE",
-        "ENFORCEMENT"
+        "MOVEMENT"
       ],
       "context_matches": [
         "migrants"
       ],
-      "high_value_matches": [],
+      "high_value_matches": [
+        "migrants have just arrived"
+      ],
       "signal_context_rejections": [],
       "migration_context": true,
       "human_migration_context": true,
       "historical_reference": false,
       "historical_reason": null,
       "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "EASTERN_MEDITERRANEAN",
-      "primary_region": "EASTERN_MEDITERRANEAN",
-      "latitude": null,
-      "longitude": null,
+      "location": "Canary Islands",
+      "primary_location": "Canary Islands",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 28.2916,
+      "longitude": -16.6291,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 32.0,
+      "priority_score": 36.2,
+      "analyst_priority": "LOW",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
+      "id": 1415,
+      "source": "X",
+      "source_post_id": "2120302975667298422",
+      "author": "DrageLiten",
+      "language": "en",
+      "published_at": "2026-11-10T23:49:57Z",
+      "first_detected_at": "2026-11-11T00:22:35Z",
+      "last_detected_at": "2026-11-11T00:22:35Z",
+      "detection_count": 1,
+      "text": "@TRobinsonNewEra Hundreds of sub-Saharan illegal migrants who arrived in recent days in the Canary Islands are now being taken to mainland Spain, from where some of them will be relocated to other EU member states as “EU Quota Migrants” under the EU’s new Migration Pact. https://t.co/kFgpgOZaZt",
+      "text_excerpt": "@TRobinsonNewEra Hundreds of sub-Saharan illegal migrants who arrived in recent days in the Canary Islands are now being taken to mainland Spain, from where some of them will be relocated to other EU member states as “EU Quota Migrants” under the EU’s new Migration Pact. https://t.co/kFgpgOZaZt",
+      "url": "https://x.com/DrageLiten/status/2120302975667298422",
+      "source_url": "https://x.com/DrageLiten/status/2120302975667298422",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 6.5,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "migrants who arrived"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT"
+      ],
+      "context_matches": [
+        "migrants",
+        "Migrants"
+      ],
+      "high_value_matches": [
+        "migrants who arrived"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Canary Islands",
+      "primary_location": "Canary Islands",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 28.2916,
+      "longitude": -16.6291,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 36.2,
       "analyst_priority": "LOW",
       "ai_review_status": "AI_REVIEWED",
       "ai_editorial_decision": "PUBLISH"
@@ -2048,64 +2059,6 @@
       "analyst_priority": "LOW",
       "ai_review_status": "AI_REVIEWED",
       "ai_editorial_decision": "PUBLISH"
-    },
-    {
-      "id": 1394,
-      "source": "X",
-      "source_post_id": "2119886028194414626",
-      "author": "grok",
-      "language": "en",
-      "published_at": "2026-11-09T20:13:09Z",
-      "first_detected_at": "2026-11-09T20:16:07Z",
-      "last_detected_at": "2026-11-09T20:16:07Z",
-      "detection_count": 1,
-      "text": "@guocity @Polymarket Yes. Reuters, AP, CNN and others confirm a caravan of several hundred to ~1,000 mostly Honduran migrants entered southern Mexico this weekend and is heading north. Some participants said they hope Democratic midterm gains will ease US enforcement. Current border policies remain",
-      "text_excerpt": "@guocity @Polymarket Yes. Reuters, AP, CNN and others confirm a caravan of several hundred to ~1,000 mostly Honduran migrants entered southern Mexico this weekend and is heading north. Some participants said they hope Democratic midterm gains will ease US enforcement. Current border policies remain",
-      "url": "https://x.com/grok/status/2119886028194414626",
-      "source_url": "https://x.com/grok/status/2119886028194414626",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.72,
-      "score": 7.75,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrants entered southern Mexico this weekend and is heading"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT"
-      ],
-      "context_matches": [
-        "migrants"
-      ],
-      "high_value_matches": [
-        "migrants entered southern Mexico this weekend and is heading"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "AMERICAS",
-      "primary_region": "AMERICAS",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 29.2,
-      "analyst_priority": "LOW",
-      "ai_review_status": "AI_REVIEWED",
-      "ai_editorial_decision": "PUBLISH"
     }
   ],
   "influence_narratives": [
@@ -2180,6 +2133,73 @@
       ],
       "related_urls": [
         "https://x.com/londonA84648/status/2120121236483092696"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
+    {
+      "id": 1416,
+      "source": "X",
+      "source_post_id": "2120299062427562367",
+      "author": "Farawaybrother6",
+      "language": "en",
+      "published_at": "2026-11-10T23:34:24Z",
+      "first_detected_at": "2026-11-11T00:22:36Z",
+      "last_detected_at": "2026-11-11T00:22:36Z",
+      "detection_count": 1,
+      "text": "@Teaseryy Reducing Foreign aid, leaving the doomed ECHR and Stopping and returning illegal migrants \nwould be the best place to start so the people could benefit from the wealth they create",
+      "text_excerpt": "@Teaseryy Reducing Foreign aid, leaving the doomed ECHR and Stopping and returning illegal migrants \nwould be the best place to start so the people could benefit from the wealth they create",
+      "url": "https://x.com/Farawaybrother6/status/2120299062427562367",
+      "source_url": "https://x.com/Farawaybrother6/status/2120299062427562367",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.94,
+      "score": 14.0,
+      "matched_signals": [
+        "LEGAL_MIGRATION_SIGNAL"
+      ],
+      "matched_phrases": [
+        [
+          "legal_signal",
+          "ECHR"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 48.9,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2120299062427562367"
+      ],
+      "related_authors": [
+        "Farawaybrother6"
+      ],
+      "related_urls": [
+        "https://x.com/Farawaybrother6/status/2120299062427562367"
       ],
       "related_sources": [
         "X"
@@ -2274,88 +2294,6 @@
       ],
       "independent_author_count": 1,
       "platform_count": 1
-    },
-    {
-      "id": 1401,
-      "source": "REDDIT",
-      "source_post_id": "reddit_1xsa21k",
-      "author": "alexmark002",
-      "language": null,
-      "published_at": "2026-11-10T01:30:54Z",
-      "first_detected_at": "2026-11-10T03:53:58Z",
-      "last_detected_at": "2026-11-10T18:59:42Z",
-      "detection_count": 3,
-      "text": "Senegal boat disaster kills 39. Another 14 migrants die off Greece.\nThe death toll from Sunday’s migrant boat capsize off Senegal rose to 39 today, with only 1 survivor reported and search operations continuing. The boat left Saint-Louis for Spain, following an Atlantic route used by thousands of young West Africans. This is not an isolated disaster. A June report by migrant-rights group Caminando Fronteras counted 1,317 deaths attempting to reach Spain during the first 5 months of 2026, including 635 on the Atlantic route to the Canary Islands. Crossings had fallen, but the death rate had increased. Meanwhile, Greek authorities confirmed 14 deaths from a separate boat found south of Crete. ... Read more... READ MORE... Disclaimer: This post is shared for discussion and critical analysis only. Submission does not equal endorsement. The content may reflect claims or opinions from the original source. Please verify information independently and review primary sources before forming conclusions. If you notice factual errors, misleading claims, or possible AI generated or edited clips, please leave a fact check comment with sources for the community.",
-      "text_excerpt": "Senegal boat disaster kills 39. Another 14 migrants die off Greece.\nThe death toll from Sunday’s migrant boat capsize off Senegal rose to 39 today, with only 1 survivor reported and search operations continuing. The boat left Saint-Louis for Spain, following an Atlantic route used by thousands of young West Africans. This is not an isolated disaster. A June report by migrant-rights group Caminando Fronteras counted 1,317 deaths attempting to reach Spain during the first 5 months of 2026, including 635 on the Atlantic route to the Canary Islands. Crossings had fallen, but the death rate had increased. Meanwhile, Greek authorities confirmed 14 deaths from a separate boat found south of Crete. ",
-      "url": "https://www.reddit.com/r/CitizenWatchNews/comments/1xsa21k/senegal_boat_disaster_kills_39_another_14/",
-      "source_url": "https://www.reddit.com/r/CitizenWatchNews/comments/1xsa21k/senegal_boat_disaster_kills_39_another_14/",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.9,
-      "score": 11.25,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrant-rights group Caminando Fronteras counted 1,317 deaths attempting to reach"
-        ],
-        [
-          "route",
-          "route"
-        ],
-        [
-          "pressure",
-          "Crossings had fallen, but the death rate had increased"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT",
-        "ROUTE",
-        "PRESSURE"
-      ],
-      "context_matches": [
-        "migrant"
-      ],
-      "high_value_matches": [
-        "migrant-rights group Caminando Fronteras counted 1,317 deaths attempting to reach",
-        "Crossings had fallen, but the death rate had increased"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "Canary Islands",
-      "primary_location": "Canary Islands",
-      "country": "Spain",
-      "region": "EASTERN_MEDITERRANEAN",
-      "primary_region": "EASTERN_MEDITERRANEAN",
-      "latitude": 28.2916,
-      "longitude": -16.6291,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 42.5,
-      "analyst_priority": "MEDIUM",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "reddit_1xsa21k"
-      ],
-      "related_authors": [
-        "alexmark002"
-      ],
-      "related_urls": [
-        "https://www.reddit.com/r/CitizenWatchNews/comments/1xsa21k/senegal_boat_disaster_kills_39_another_14/"
-      ],
-      "related_sources": [
-        "REDDIT"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
     }
   ],
   "crossing_access_signals": [],
@@ -2433,6 +2371,73 @@
       ],
       "related_urls": [
         "https://x.com/londonA84648/status/2120121236483092696"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
+    {
+      "id": 1416,
+      "source": "X",
+      "source_post_id": "2120299062427562367",
+      "author": "Farawaybrother6",
+      "language": "en",
+      "published_at": "2026-11-10T23:34:24Z",
+      "first_detected_at": "2026-11-11T00:22:36Z",
+      "last_detected_at": "2026-11-11T00:22:36Z",
+      "detection_count": 1,
+      "text": "@Teaseryy Reducing Foreign aid, leaving the doomed ECHR and Stopping and returning illegal migrants \nwould be the best place to start so the people could benefit from the wealth they create",
+      "text_excerpt": "@Teaseryy Reducing Foreign aid, leaving the doomed ECHR and Stopping and returning illegal migrants \nwould be the best place to start so the people could benefit from the wealth they create",
+      "url": "https://x.com/Farawaybrother6/status/2120299062427562367",
+      "source_url": "https://x.com/Farawaybrother6/status/2120299062427562367",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.94,
+      "score": 14.0,
+      "matched_signals": [
+        "LEGAL_MIGRATION_SIGNAL"
+      ],
+      "matched_phrases": [
+        [
+          "legal_signal",
+          "ECHR"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 48.9,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2120299062427562367"
+      ],
+      "related_authors": [
+        "Farawaybrother6"
+      ],
+      "related_urls": [
+        "https://x.com/Farawaybrother6/status/2120299062427562367"
       ],
       "related_sources": [
         "X"
@@ -2567,15 +2572,15 @@
       "label": "W46",
       "week_label": "W46",
       "week_start": "2026-11-09T00:00:00Z",
-      "posts": 405,
-      "post_count": 405,
-      "operational_posts": 18,
-      "influence_signals": 26,
+      "posts": 461,
+      "post_count": 461,
+      "operational_posts": 21,
+      "influence_signals": 32,
       "source_counts": {
-        "X": 262,
+        "X": 309,
         "REDDIT": 53,
-        "MASTODON": 68,
-        "TELEGRAM": 22
+        "MASTODON": 75,
+        "TELEGRAM": 24
       }
     }
   ],
@@ -2705,33 +2710,33 @@
       "label": "W46",
       "week_label": "W46",
       "week_start": "2026-11-09T00:00:00Z",
-      "posts": 405,
-      "post_count": 405,
-      "operational_posts": 18,
-      "influence_signals": 26,
+      "posts": 461,
+      "post_count": 461,
+      "operational_posts": 21,
+      "influence_signals": 32,
       "source_counts": {
-        "X": 262,
+        "X": 309,
         "REDDIT": 53,
-        "MASTODON": 68,
-        "TELEGRAM": 22
+        "MASTODON": 75,
+        "TELEGRAM": 24
       }
     }
   ],
   "information_activity_summary": {
-    "current_week": 405,
-    "previous_week": 405,
-    "current_week_to_date": 405,
-    "previous_week_same_period": 405,
+    "current_week": 461,
+    "previous_week": 474,
+    "current_week_to_date": 461,
+    "previous_week_same_period": 474,
     "previous_week_full": 1732,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": 0.0,
-    "change_label": "+0.0%",
-    "direction": "FLAT",
+    "change_percent": -2.74,
+    "change_label": "-2.7%",
+    "direction": "DOWN",
     "comparable": true,
-    "elapsed_hours": 43.0,
+    "elapsed_hours": 48.4,
     "current_period_start": "2026-11-09T00:00:00Z",
     "previous_period_start": "2026-11-02T00:00:00Z",
-    "previous_period_end": "2026-11-03T19:01:15Z"
+    "previous_period_end": "2026-11-04T00:22:37Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -2743,33 +2748,33 @@
       72,
       168
     ],
-    "generated_at": "2026-11-10T19:01:16Z",
-    "total_items": 2208,
-    "information_count": 315,
-    "early_warning_count": 1023,
-    "operational_count": 718,
+    "generated_at": "2026-11-11T00:22:38Z",
+    "total_items": 2211,
+    "information_count": 314,
+    "early_warning_count": 1025,
+    "operational_count": 720,
     "correlated_count": 152,
     "layer_counts": {
-      "INFORMATION": 315,
-      "OPERATIONAL": 718,
-      "EARLY_WARNING": 1023,
+      "INFORMATION": 314,
+      "EARLY_WARNING": 1025,
+      "OPERATIONAL": 720,
       "CORRELATED": 152
     },
     "source_counts": {
-      "X": 1554,
-      "REDDIT": 505,
+      "X": 1558,
+      "REDDIT": 504,
       "MASTODON": 101,
       "TELEGRAM": 48
     },
     "type_counts": {
-      "INFORMATION_SIGNAL": 315,
+      "INFORMATION_SIGNAL": 314,
+      "MOVEMENT_EARLY_WARNING": 345,
+      "DETENTION": 89,
       "INTERCEPTION": 49,
-      "MOVEMENT_EARLY_WARNING": 343,
-      "BORDER_CROSSING": 356,
+      "BORDER_CROSSING": 357,
       "ROUTE_EARLY_WARNING": 153,
       "PRESSURE_EARLY_WARNING": 51,
       "DEPORTATION": 144,
-      "DETENTION": 88,
       "RESCUE_OPERATION": 52,
       "CASUALTY": 32,
       "FACILITATION_EARLY_WARNING": 203,
@@ -2789,6 +2794,297 @@
       "GENERAL_DISCUSSION": 1
     },
     "items": [
+      {
+        "timeline_id": "information:26142",
+        "timestamp": "2026-11-11T00:20:02Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2120310545102315956",
+        "author": "TRUMPGIRL_STL",
+        "url": "https://x.com/TRUMPGIRL_STL/status/2120310545102315956",
+        "source_url": "https://x.com/TRUMPGIRL_STL/status/2120310545102315956",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "departure"
+        ],
+        "freshness_cues": [],
+        "text": "MIGRANTS THANK DEMOCRATS FOR ELECTION VICTORIES AS 2,000-PERSON CARAVAN HEADS NORTH!\nReal America’s Voice’s Oscar Blue reports from Mexico’s southern border, where a municipal officer estimates 2,000 migrants have joined a departing caravan.\nBlue says migrants are THANKING https://t.co/IEv0t51pCa",
+        "text_excerpt": "MIGRANTS THANK DEMOCRATS FOR ELECTION VICTORIES AS 2,000-PERSON CARAVAN HEADS NORTH!\nReal America’s Voice’s Oscar Blue reports from Mexico’s southern border, where a municipal officer estimates 2,000 migrants have joined a departing caravan.\nBlue says migrants are THANKING https://t.co/IEv0t51pCa",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-11T00:22:35Z",
+        "last_collected_at": "2026-11-11T00:22:35Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:26122",
+        "timestamp": "2026-11-11T00:08:38Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2120307679365337449",
+        "author": "AussiePunter32",
+        "url": "https://x.com/AussiePunter32/status/2120307679365337449",
+        "source_url": "https://x.com/AussiePunter32/status/2120307679365337449",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "boat",
+          "arrival"
+        ],
+        "freshness_cues": [],
+        "text": "@VNDsRevenge @PepperGii @Bhandafod_ Absolute bullshit, the boat people refugees who fled Vietnam and arrived in Australia had absolute nothing but the clothes on their backs having made a long and perilous journey to reach our shores.",
+        "text_excerpt": "@VNDsRevenge @PepperGii @Bhandafod_ Absolute bullshit, the boat people refugees who fled Vietnam and arrived in Australia had absolute nothing but the clothes on their backs having made a long and perilous journey to reach our shores.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-11T00:19:07Z",
+        "last_collected_at": "2026-11-11T00:19:07Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "early_warning:1414",
+        "timestamp": "2026-11-11T00:01:44Z",
+        "layer": "EARLY_WARNING",
+        "type": "MOVEMENT_EARLY_WARNING",
+        "signal_type": "MOVEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2120305940012687487",
+        "author": "111Truth777",
+        "url": "https://x.com/111Truth777/status/2120305940012687487",
+        "source_url": "https://x.com/111Truth777/status/2120305940012687487",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "Canary Islands",
+        "primary_location": "Canary Islands",
+        "country": "Spain",
+        "confidence": 0.72,
+        "priority": "MEDIUM",
+        "priority_score": 36.2,
+        "analyst_priority": "LOW",
+        "text": "A hundred clandestine migrants have just arrived at Puerto de la Estaca on the island of El Hierro in the Canary Islands.The migrants are waiting to take ferries to Tenerife.\nInstead of deporting them back home, are they being accommodated to receive better care?🫨 https://t.co/lOPypXbpZF",
+        "text_excerpt": "A hundred clandestine migrants have just arrived at Puerto de la Estaca on the island of El Hierro in the Canary Islands.The migrants are waiting to take ferries to Tenerife.\nInstead of deporting them back home, are they being accommodated to receive better care?🫨 https://t.co/lOPypXbpZF",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "MOVEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-11-11T00:22:35Z",
+        "last_detected_at": "2026-11-11T00:22:35Z",
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
+      {
+        "timeline_id": "information:26123",
+        "timestamp": "2026-11-10T23:58:51Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2120305217346387987",
+        "author": "annapiexoxo",
+        "url": "https://x.com/annapiexoxo/status/2120305217346387987",
+        "source_url": "https://x.com/annapiexoxo/status/2120305217346387987",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "boat",
+          "arrival"
+        ],
+        "freshness_cues": [],
+        "text": "El Hierro Declares Emergency as Migrant Boat Arrivals Surge\n\nhttps://t.co/hysp2YXdCv\n\n#ElHierro #CanaryIslands #MigrationCrisis",
+        "text_excerpt": "El Hierro Declares Emergency as Migrant Boat Arrivals Surge\n\nhttps://t.co/hysp2YXdCv\n\n#ElHierro #CanaryIslands #MigrationCrisis",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-11T00:19:07Z",
+        "last_collected_at": "2026-11-11T00:19:07Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "operational:886",
+        "timestamp": "2026-11-10T23:51:33Z",
+        "layer": "OPERATIONAL",
+        "type": "DETENTION",
+        "signal_type": "DETENTION",
+        "event_type": "DETENTION",
+        "source": "X",
+        "source_post_id": "2120303378014273969",
+        "author": "sunitausara",
+        "url": "https://x.com/sunitausara/status/2120303378014273969",
+        "source_url": "https://x.com/sunitausara/status/2120303378014273969",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.5,
+        "priority": "MEDIUM",
+        "priority_score": 50.0,
+        "text": "🇺🇸 U.S. Border Patrol agents discovered 18 migrants concealed inside a boat named “Gonna Miss Her” approximately 12 miles from Catalina Island, California. A federal aircraft spotted the vessel before officers boarded it. Two boat operators were arrested, while the migrants were https://t.co/IYaLPqsz50",
+        "text_excerpt": "🇺🇸 U.S. Border Patrol agents discovered 18 migrants concealed inside a boat named “Gonna Miss Her” approximately 12 miles from Catalina Island, California. A federal aircraft spotted the vessel before officers boarded it. Two boat operators were arrested, while the migrants were https://t.co/IYaLPqsz50",
+        "event_group_id": 703,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
+      {
+        "timeline_id": "early_warning:1415",
+        "timestamp": "2026-11-10T23:49:57Z",
+        "layer": "EARLY_WARNING",
+        "type": "MOVEMENT_EARLY_WARNING",
+        "signal_type": "MOVEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2120302975667298422",
+        "author": "DrageLiten",
+        "url": "https://x.com/DrageLiten/status/2120302975667298422",
+        "source_url": "https://x.com/DrageLiten/status/2120302975667298422",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "Canary Islands",
+        "primary_location": "Canary Islands",
+        "country": "Spain",
+        "confidence": 0.72,
+        "priority": "MEDIUM",
+        "priority_score": 36.2,
+        "analyst_priority": "LOW",
+        "text": "@TRobinsonNewEra Hundreds of sub-Saharan illegal migrants who arrived in recent days in the Canary Islands are now being taken to mainland Spain, from where some of them will be relocated to other EU member states as “EU Quota Migrants” under the EU’s new Migration Pact. https://t.co/kFgpgOZaZt",
+        "text_excerpt": "@TRobinsonNewEra Hundreds of sub-Saharan illegal migrants who arrived in recent days in the Canary Islands are now being taken to mainland Spain, from where some of them will be relocated to other EU member states as “EU Quota Migrants” under the EU’s new Migration Pact. https://t.co/kFgpgOZaZt",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "MOVEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-11-11T00:22:35Z",
+        "last_detected_at": "2026-11-11T00:22:35Z",
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
+      {
+        "timeline_id": "information:26136",
+        "timestamp": "2026-11-10T23:34:35Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2120299109865115834",
+        "author": "IbrahimkhailP",
+        "url": "https://x.com/IbrahimkhailP/status/2120299109865115834",
+        "source_url": "https://x.com/IbrahimkhailP/status/2120299109865115834",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "smuggling",
+          "trafficking"
+        ],
+        "freshness_cues": [],
+        "text": "ASRA | Organised Smuggling Infrastructure and Regional Oil-Trafficking Networks\n\nGeospatial Intelligence and OSINT Report | Afghanistan–Pakistan–Iran Frontier\n\nFurther geospatial intelligence and OSINT investigations conducted under the ASRA Initiative have identified additional https://t.co/KVOHIkdTKO https://t.co/bH0LAkpX3v",
+        "text_excerpt": "ASRA | Organised Smuggling Infrastructure and Regional Oil-Trafficking Networks\n\nGeospatial Intelligence and OSINT Report | Afghanistan–Pakistan–Iran Frontier\n\nFurther geospatial intelligence and OSINT investigations conducted under the ASRA Initiative have identified additional https://t.co/KVOHIkdTKO https://t.co/bH0LAkpX3v",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-11T00:20:25Z",
+        "last_collected_at": "2026-11-11T00:20:25Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:26140",
+        "timestamp": "2026-11-10T23:15:39Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2120294342740844877",
+        "author": "IbrahimkhailP",
+        "url": "https://x.com/IbrahimkhailP/status/2120294342740844877",
+        "source_url": "https://x.com/IbrahimkhailP/status/2120294342740844877",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "smuggling"
+        ],
+        "freshness_cues": [],
+        "text": "Geospatial Intelligence Assessment | Organised Smuggling Infrastructure at the Afghanistan–Pakistan–Iran Frontier\n\nGeospatial analysis conducted under the ASRA Initiative has identified a discontinuity in the mapped Afghanistan–Pakistan border fence in the southern Nimruz desert https://t.co/5WNfAmnGPL",
+        "text_excerpt": "Geospatial Intelligence Assessment | Organised Smuggling Infrastructure at the Afghanistan–Pakistan–Iran Frontier\n\nGeospatial analysis conducted under the ASRA Initiative has identified a discontinuity in the mapped Afghanistan–Pakistan border fence in the southern Nimruz desert https://t.co/5WNfAmnGPL",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-11T00:20:26Z",
+        "last_collected_at": "2026-11-11T00:20:26Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
       {
         "timeline_id": "information:26088",
         "timestamp": "2026-11-10T19:00:01Z",
@@ -3105,8 +3401,8 @@
         "country": "-",
         "confidence": 0.1,
         "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
+        "priority_score": 30,
+        "information_score": 3,
         "matched_information_cues": [
           "detention",
           "smuggling"
@@ -3120,8 +3416,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-11-10T19:00:45Z",
-        "last_collected_at": "2026-11-10T19:00:45Z",
-        "collection_count": 1,
+        "last_collected_at": "2026-11-11T00:20:26Z",
+        "collection_count": 2,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -5990,6 +6286,38 @@
         "first_collected_at": "2026-11-08T16:27:40Z",
         "last_collected_at": "2026-11-08T16:27:40Z",
         "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "operational:866",
+        "timestamp": "2026-11-08T16:15:13Z",
+        "layer": "OPERATIONAL",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "X",
+        "source_post_id": "2119463763036320029",
+        "author": "grok",
+        "url": "https://x.com/grok/status/2119463763036320029",
+        "source_url": "https://x.com/grok/status/2119463763036320029",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.25,
+        "priority": "LOW",
+        "priority_score": 25.0,
+        "text": "@Ovbiedo_ @Achilles0055199 @4Man_urboi Olugbo account: Ugbo (Ilaje) were the aboriginal settlers of pre-Oduduwa Ile-Ife (then Ugbomokun). Oranfe and Osangangan Obamakin ruled first. Oduduwa arrived later as a migrant from the East, was hosted, then conflict followed; Ugbo later moved to the coast.\n\nOoni account:",
+        "text_excerpt": "@Ovbiedo_ @Achilles0055199 @4Man_urboi Olugbo account: Ugbo (Ilaje) were the aboriginal settlers of pre-Oduduwa Ile-Ife (then Ugbomokun). Oranfe and Osangangan Obamakin ruled first. Oduduwa arrived later as a migrant from the East, was hosted, then conflict followed; Ugbo later moved to the coast.\n\nOoni account:",
+        "event_group_id": 690,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -19770,44 +20098,6 @@
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
-        "timeline_id": "information:23391",
-        "timestamp": "2026-10-31T00:19:54Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2116324246230106223",
-        "author": "freespeechmarty",
-        "url": "https://x.com/freespeechmarty/status/2116324246230106223",
-        "source_url": "https://x.com/freespeechmarty/status/2116324246230106223",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "boat",
-          "arrival"
-        ],
-        "freshness_cues": [],
-        "text": "' 400 ' migrant pedophiles , rapists,  drug dealers/ druggies arrived on small boats , and labours Communist dictator andy Burnham and his lunatic labour MPs say welcome here's your free hotel room and food ! https://t.co/iETH50HmMJ",
-        "text_excerpt": "' 400 ' migrant pedophiles , rapists,  drug dealers/ druggies arrived on small boats , and labours Communist dictator andy Burnham and his lunatic labour MPs say welcome here's your free hotel room and food ! https://t.co/iETH50HmMJ",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-31T01:13:43Z",
-        "last_collected_at": "2026-10-31T01:13:43Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
         "timeline_id": "operational:784",
         "timestamp": "2026-10-31T00:19:32Z",
         "layer": "OPERATIONAL",
@@ -19837,161 +20127,6 @@
         "event_time_text": null,
         "event_time_normalized": null,
         "event_time_confidence": null,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:23392",
-        "timestamp": "2026-10-31T00:15:20Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2116323099150795220",
-        "author": "grok",
-        "url": "https://x.com/grok/status/2116323099150795220",
-        "source_url": "https://x.com/grok/status/2116323099150795220",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "arrival"
-        ],
-        "freshness_cues": [],
-        "text": "@rnr04816 @rabbimandyx HIAS and similar groups advocate expanded refugee intake in the US and Europe through public campaigns rooted in Jewish texts on welcoming strangers. In Israel they offer legal aid and services to the existing ~30k African asylum seekers who arrived before the border fence,",
-        "text_excerpt": "@rnr04816 @rabbimandyx HIAS and similar groups advocate expanded refugee intake in the US and Europe through public campaigns rooted in Jewish texts on welcoming strangers. In Israel they offer legal aid and services to the existing ~30k African asylum seekers who arrived before the border fence,",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-31T01:13:43Z",
-        "last_collected_at": "2026-10-31T01:13:43Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:23384",
-        "timestamp": "2026-10-31T00:11:03Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2116322017934729494",
-        "author": "RayceRJacobson",
-        "url": "https://x.com/RayceRJacobson/status/2116322017934729494",
-        "source_url": "https://x.com/RayceRJacobson/status/2116322017934729494",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "boat",
-          "smuggling"
-        ],
-        "freshness_cues": [],
-        "text": "@HumanProgress But what he does undermines the little value he creates.\nIt's a net negative.\nI hardly think spaceships make up for helping a megalomaniac blow up migrant boats for suspicion of drug smuggling.",
-        "text_excerpt": "@HumanProgress But what he does undermines the little value he creates.\nIt's a net negative.\nI hardly think spaceships make up for helping a megalomaniac blow up migrant boats for suspicion of drug smuggling.",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-31T01:11:53Z",
-        "last_collected_at": "2026-10-31T01:11:53Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:23387",
-        "timestamp": "2026-10-30T23:57:23Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2116318579557855459",
-        "author": "Micksan51",
-        "url": "https://x.com/Micksan51/status/2116318579557855459",
-        "source_url": "https://x.com/Micksan51/status/2116318579557855459",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "trafficking"
-        ],
-        "freshness_cues": [],
-        "text": "@RyanAckermann_ You voted for open borders again, child trafficking, mass illegal migration, men in women’s bathrooms, massive fraud, green energy programs under fake climate science, higher taxes and high crime.  Nice!",
-        "text_excerpt": "@RyanAckermann_ You voted for open borders again, child trafficking, mass illegal migration, men in women’s bathrooms, massive fraud, green energy programs under fake climate science, higher taxes and high crime.  Nice!",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-31T01:11:54Z",
-        "last_collected_at": "2026-10-31T01:11:54Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:23400",
-        "timestamp": "2026-10-30T22:37:30Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1xjtlgd",
-        "author": "RealityChecksReddit",
-        "url": "https://www.reddit.com/r/RealityChecksReddit/comments/1xjtlgd/the_lynchpin_how_jared_kushner_has_had_his/",
-        "source_url": "https://www.reddit.com/r/RealityChecksReddit/comments/1xjtlgd/the_lynchpin_how_jared_kushner_has_had_his/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 50,
-        "information_score": 5,
-        "matched_information_cues": [
-          "channel",
-          "rescue",
-          "departure"
-        ],
-        "freshness_cues": [
-          "now"
-        ],
-        "text": "The Lynchpin: How Jared Kushner Has Had His Fingers in Every Modern Trump Administration Foreign Policy Disaster\nOct 30, 2026 One Man at Every Junction Jared Kushner has never been elected to anything. In Trump's second term he holds no Senate-confirmed post. In February 2026, Trump announced he was making Kushner an \"envoy of peace\" alongside Steve Witkoff, and the White House then clarified the role would not be an official one. He is still present at nearly every major foreign policy decision the Trump administrations have made in the Middle East, from the embassy move in 2017 to the war with Iran in 2026. He arrives at those decisions carrying two kinds of baggage. One is a personal relationship with Benjamin Netanyahu that goes back to his teenage years. The other is a financial relationship with the governments of Saudi Arabia, Qatar and the UAE, whose sovereign funds are the three largest investors in his private equity firm. What follows is the record, in order. Documented facts are sourced. Where the piece draws an inference, it says so. The Family Friend Benjamin Netanyahu was a friend of Charles Kushner, Jared's father, a New Jersey real estate developer and a major donor to Israeli causes. On at least one visit, Netanyahu stayed overnight at the family home in Livingston, New Jersey, and slept in Jared's bedroom. Jared slept in the basement. This is not a rumor. The New York Times reported it in February 2017, weeks after Trump took office. Kushner later confirmed it in his own memoir, describing a weekend in the early 2000s when he bunked on pullout couches in the basement with Netanyahu's security detail. He calls Netanyahu a \"bold defender of Israel.\" In 1999, Netanyahu visited Charles Kushner's office and ate lunch at a New Jersey school named for the Kushner family. Charles Kushner sat in on the September 2016 meeting between Netanyahu, Trump and Jared. That is the relationship Trump put in charge of Israeli-Palestinian policy. The First Term: The Israel Portfolio Trump handed Kushner the Israeli-Palestinian file early in the first term. Kushner had no government or diplomatic experience. What followed was a run of moves no previous president had made: Jerusalem. The US recognized Jerusalem as Israel's capital and moved the embassy there in 2018. Presidents of both parties had promised it and declined to do it. Kushner was the public face of the move. UNRWA. The administration cut and then ended US funding for the UN agency that serves Palestinian refugees. The PLO office. The administration shut the Palestine Liberation Organization's office in Washington. The Golan Heights. In March 2019, the US recognized Israeli sovereignty over territory taken from Syria in 1967, which the rest of the world treats as occupied. The Abraham Accords. In 2020, Kushner brokered normalization deals between Israel and several Arab states, starting with the UAE and Bahrain. The deals were widely read as a way to go around the Palestinian leadership entirely. Every one of these moves lined up with Netanyahu's stated priorities. The Palestinian Authority cut ties with the US over Kushner's peace plan, which Netanyahu endorsed. Kushner's supporters count this portfolio as his crowning success. It is also the foundation for everything that comes after, because it is where he built the Gulf relationships he would later monetize. Qatar: The Building and the Reversal The Kushner family's biggest financial problem in the Trump years was 666 Fifth Avenue, a Manhattan tower Jared bought for $1.8 billion in 2007, just before the crash. It carried more than $1.1 billion in debt and was a drag on the family company for a decade. The hunt for a rescue ran straight through Qatar: 2016 campaign. Jared and Charles Kushner talked with Sheikh Hamad bin Jassim, Qatar's former prime minister and former head of its sovereign wealth fund, about investing in the building. Spring 2017. Kushner unsuccessfully lobbied the Qatari government to invest. A month later, Saudi Arabia and the UAE launched a blockade of Qatar. Trump publicly backed it and accused Qatar of funding terrorism. Kushner was on the team advising Trump on how to respond, despite his prior meetings with Qataris over the building. August 2018. Brookfield took a 99-year lease on the tower and paid about $1.1 billion up front, rescuing the Kushners. Qatar's sovereign wealth fund was Brookfield Property Partners' second-largest investor. The reversal. Just before the lease became public, Trump dropped his support for the blockade he had cheered a year earlier. Brookfield said no Qatar-linked entity had any involvement in the deal or even knew about it. Senator Ron Wyden and Rep. Joaquin Castro opened an investigation anyway, calling Trump's turn a \"stunning reversal.\" Inference: the sequence shows a family whose business needed Gulf money, a president whose policy toward that Gulf state moved in step with the family's business, and a son-in-law sitting on both sides. No document proves the two were linked. The timing is the evidence. Saudi Arabia: Khashoggi and the $2 Billion Kushner's relationship with Saudi Crown Prince Mohammed bin Salman began in November 2016, when the prince's aides met with him days after Trump won. Within months of the inauguration, Kushner was asking about the Saudi royal succession and whether the US could influence it. Senior officials feared he wanted to help Mohammed, who was not yet crown prince. Martin Indyk, a former US Middle East envoy, said the Kushner-MBS relationship was the foundation of Trump's policy toward the entire region. On October 2, 2018, Saudi agents killed and dismembered Washington Post columnist Jamal Khashoggi inside the Saudi consulate in Istanbul. US intelligence concluded the crown prince ordered it. The White House acknowledged one call between Kushner and the prince after the killing, on October 10, with National Security Adviser John Bolton on the line. The New York Times reported that the two kept talking informally, outside the protocol requiring National Security Council staff on calls with foreign leaders. According to a Saudi source briefed on the talks, Kushner advised the prince on how to weather the storm. After the CIA's assessment, Kushner became the prince's most important defender inside the White House, urging Trump to stand by him. Six months after Kushner left the White House in 2021, the Saudi Public Investment Fund, chaired by the same crown prince, committed $2 billion to Kushner's brand-new firm, Affinity Partners. The fund's own screening panel recommended against it. Its minutes cited \"the inexperience of the Affinity Fund management,\" excessive fees, due diligence that found the operation unsatisfactory, and public relations risk from Kushner's government role. The board, led by Mohammed bin Salman, overruled the panel. Mother Jones reports the fund has since generated more than $100 million in management fees for Kushner and his partners. Senator Wyden wrote that an investment so soon after Kushner's departure raised concerns it was a reward for official actions he took on the Saudis' behalf. Affinity Partners: The Gulf on the Cap Table The Saudis were first, not alone. Kushner has said his three largest investors are Saudi Arabia's PIF, the Qatar Investment Authority and Abu Dhabi's Lunate. These are the governments he dealt with as an official. When Investor Amount December 2024, after Trump won Qatar Investment Authority and Lunate (Abu Dhabi) $1.5 billion combined, extending the fund to 2029 Reported March 2023 UAE sovereign fund; a Qatari entity More than $200 million each July 2021, six months after leaving office Saudi PIF $2 billion, over its screening panel's objection Kushner said the December 2024 money was committed \"irrespective\" of the election, and that he told investors not to expect anything from him if Trump won. Affinity's assets climbed to about $4.8 billion. Kushner is its sole owner. Affinity resisted Senate Finance Committee requests in 2024 for its financial details and would not fully disclose its foreign investors. Mother Jones notes the fund lets investors pull out after five years, which means the Saudi and Qatari governments hold the power to gut Kushner's firm in the middle of Trump's second term. Inference: by 2025, Kushner was a private businessman whose fortune depended on three Gulf monarchies, and an unofficial envoy whose advice shaped how his father-in-law treated those same monarchies and their enemies. Gaza: From Waterfront Property to the Board of Peace In February 2024, out of office and running Affinity, Kushner sat for a talk at Harvard. While Gaza was being bombed and half its population faced famine, he said \"Gaza's waterfront property could be very valuable.\" He said that from Israel's perspective he would move the people out and clean it up. He suggested relocating Gaza's civilians to the Negev desert. Asked whether Netanyahu would let them return, he paused and said, \"Maybe.\" He called a Palestinian state a \"super bad idea.\" Eighteen months later, still holding no official role, he was in Sharm el-Sheikh negotiating the Gaza ceasefire alongside Steve Witkoff. He met Netanyahu in Jerusalem and sat in on the Israeli cabinet meeting that ratified the deal. He told that meeting the deal would not have been possible without the bravery of the IDF. In January 2026, the White House named him to the Board of Peace that oversees Gaza's transition and reconstruction. Trump chairs it. Reporting said permanent seats came with a $1 billion price tag. Palestinians were not included. At the board's Davos launch, Kushner presented the Gaza master plan and credited Qatar and Saudi Arabia, among others, for the deal. Kushner gets real credit for the ceasefire and the return of the hostages. Inference: the man who described Gaza as real estate, and whose firm is funded by the Gulf states now positioned to pay for rebuilding it, is the man drawing up the plan for what gets built. Iran: Geneva, the Warning, and the War The New York Times reported that Netanyahu personally lobbied Trump for months to go to war with Iran and worked to make sure diplomatic talks did not derail the plan. Axios reported the two began planning a joint strike at Mar-a-Lago in late December 2025. While that planning ran, Kushner and Witkoff were the US negotiators in the nuclear talks with Iran in Geneva. Kushner held no formal government role and was still running Affinity. The Guardian reported that Trump's decision on strikes would hinge in part on their judgment of whether Tehran was stalling. The sequence: Geneva. The third round of talks wrapped up in late February 2026. According to an anonymous administration source quoted by the Times of Israel, Kushner told Trump that Iran was \"basically playing games.\" February 23. Netanyahu called Trump and tipped him that Khamenei and his top advisers would be gathered in Tehran. February 28. A coordinated US-Israeli strike killed Iran's Supreme Leader. The war began. March 9. Trump told reporters his decision was informed by Kushner, who had warned him Iran was about to attack the United States. The intelligence. In private briefings after the war began, administration officials told congressional staff that US intelligence did not show Iran preparing a preemptive strike. CNN reported that the UAE, whose sovereign money sits in Affinity, was lobbying Trump behind the scenes to strike Iran. Raw Story raised the question of whether Iran's leadership was gathered in one place because it was in the middle of an active negotiation with Kushner. No reporting has established that the talks were used that way. It is a question the record makes reasonable to ask. Inference: the war Netanyahu spent months pushing for was launched on the word of the man Netanyahu once shared a house with, based on a threat the intelligence agencies did not see, while at least one of that man's major financial backers was lobbying for the strike. The Cleanup: Back to Qatar The war went on for months. In May, Trump said he held off a planned strike at the request of the leaders of Qatar, Saudi Arabia and the UAE. Iran struck Gulf states, Qatar among them. On June 29, Trump announced he was sending Kushner and Witkoff to Qatar for talks with Iran. Indirect talks in Doha, mediated by Qatar and Pakistan, became the channel for holding the ceasefire. At the G7 that month, Trump praised Qatar's role and called working with its people \"a pleasure.\" So the same man who helped persuade Trump to start the war was sent to negotiate its end, in the capital of a government that is one of his firm's three largest investors. It is the same arc as Gaza. Kushner is present when the policy is set, present when it goes wrong, and present again when it is time to negotiate the settlement. At no point does the record show him paying a price for the outcome. The Lynchpin Line the record up and one name sits at every joint: The Israel policy that broke with every prior administration was his portfolio. The Qatar blockade was cheered while his family sought Qatari money, and dropped as a Qatar-backed firm bailed out his family's building. The Saudi crown prince he defended after Khashoggi put $2 billion into his firm over the objections of the crown prince's own advisers. Qatar and Abu Dhabi added $1.5 billion more after Trump won again. The Gaza he called valuable waterfront is now being replanned by a board he sits on. The Iran war was launched partly on his warning, a warning the intelligence did not support. The talks to end that war run through Doha, with him in the room. No single document proves Kushner traded policy for money. What the record shows is a structure: an unelected, unconfirmed adviser with a personal tie to one foreign leader and a financial dependence on several foreign governments, placed at the decision point again and again by a president who trusts family over institutions. That structure does not need a bribe to produce bad outcomes. It only needs the man in the middle to want what his friends and funders want. On the evidence, he has. Congress has asked Affinity for its investor details more than once. It has not gotten a full answer. Until it does, every foreign policy decision Kushner touches carries the same open question: whose interest was he serving?",
-        "text_excerpt": "The Lynchpin: How Jared Kushner Has Had His Fingers in Every Modern Trump Administration Foreign Policy Disaster\nOct 30, 2026 One Man at Every Junction Jared Kushner has never been elected to anything. In Trump's second term he holds no Senate-confirmed post. In February 2026, Trump announced he was making Kushner an \"envoy of peace\" alongside Steve Witkoff, and the White House then clarified the role would not be an…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-31T01:13:45Z",
-        "last_collected_at": "2026-11-03T01:58:26Z",
-        "collection_count": 3,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -20056,47 +20191,6 @@
         "event_time_text": null,
         "event_time_normalized": null,
         "event_time_confidence": null,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:23300",
-        "timestamp": "2026-10-30T20:05:20Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2116260181436969286",
-        "author": "AnnBriggsomjf",
-        "url": "https://x.com/AnnBriggsomjf/status/2116260181436969286",
-        "source_url": "https://x.com/AnnBriggsomjf/status/2116260181436969286",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.6,
-        "priority": "INFO",
-        "priority_score": 50,
-        "information_score": 5,
-        "matched_information_cues": [
-          "border",
-          "boat",
-          "coast_guard",
-          "interception",
-          "smuggling"
-        ],
-        "freshness_cues": [],
-        "text": "Maritime Interdictions: The video features footage of the U.S. Coast Guard and Border Patrol intercepting migrant smuggling boats near Florida and the Texas coast😇🙏🇺🇸🌎\nhttps://t.co/7xSUGm6SNj",
-        "text_excerpt": "Maritime Interdictions: The video features footage of the U.S. Coast Guard and Border Patrol intercepting migrant smuggling boats near Florida and the Texas coast😇🙏🇺🇸🌎\nhttps://t.co/7xSUGm6SNj",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-10-30T20:16:17Z",
-        "last_collected_at": "2026-10-30T20:16:17Z",
-        "collection_count": 1,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -76978,21 +77072,21 @@
     "review_start_date": "2026-10-17",
     "review_cohort": "FIRST_RECORDED_ON_OR_AFTER_CUTOFF",
     "decisions": {
-      "EXCLUDE": 151,
-      "REVIEW": 149,
-      "PUBLISH": 105
+      "REVIEW": 150,
+      "EXCLUDE": 152,
+      "PUBLISH": 109
     },
     "removed_display_items": {
-      "live_events": 16,
+      "live_events": 15,
       "high_confidence_events": 0,
-      "event_groups": 8,
-      "influence_signals": 7,
-      "early_warning_signals": 7,
-      "crossing_access_signals": 1,
-      "top_crossing_access_posts": 1,
-      "high_priority_intelligence": 1,
-      "access_signals": 1,
-      "timeline": 295
+      "event_groups": 7,
+      "influence_signals": 9,
+      "early_warning_signals": 9,
+      "crossing_access_signals": 2,
+      "top_crossing_access_posts": 2,
+      "high_priority_intelligence": 2,
+      "access_signals": 2,
+      "timeline": 298
     },
     "historical_review_status": "HISTORICAL_NOT_AI_REVIEWED",
     "narrative_layers_not_reviewed": [
