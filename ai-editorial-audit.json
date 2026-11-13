@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-13T02:22:09.132530+00:00",
+  "generated_at": "2026-11-13T11:44:21.818958+00:00",
   "version": "3.0",
-  "candidates": 430,
-  "new_ai_calls": 6,
+  "candidates": 431,
+  "new_ai_calls": 1,
   "conflicting_identity_ids": [
     "group:711",
     "group:715"
@@ -88,18 +88,6 @@
       "decision": "EXCLUDE",
       "reason": "The content does not describe a specific, concrete migration event such as a border crossing or policy action. It discusses individuals' immigration ages without detailing a current event or early warning related to migration operations. The event_type 'BORDER_CROSSING' is not supported by the content."
     },
-    "signal:1423": {
-      "decision": "PUBLISH",
-      "reason": "The record reports a specific and contemporary migration-related event: a caravan of roughly 1,500-2,000 migrants departing Tapachula on November 10, 2026, which constitutes a migration route early warning. The event type ROUTE_EARLY_WARNING is appropriate and the timing is current relative to publication."
-    },
-    "signal:1424": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete and contemporary migration-specific early warning about an unusually high number of illegal migrant arrivals in the Canary Islands in October 2026, which is relevant to migration monitoring."
-    },
-    "signal:1425": {
-      "decision": "REVIEW",
-      "reason": "The report contains concrete migration events, including rescue of migrants and a deadly boat capsizing off Senegal. However, the publication date is in the future (2026), which raises authenticity concerns. The event is reported as a route early warning which aligns with the content. Verification needed due to temporal inconsistency."
-    },
     "signal:1426": {
       "decision": "EXCLUDE",
       "reason": "The input contains unverified political commentary and threats related to tariffs, not a confirmed migration-specific early warning event. The claim about the migrant caravan is unverified and lacks corroboration. The event date is in the future from the publication date, indicating a possible warning but insufficient concrete event data supporting"
@@ -139,6 +127,10 @@
     "signal:1435": {
       "decision": "PUBLISH",
       "reason": "The record reports a current migration-specific early warning about a caravan of approximately 1,000-1,500 migrants leaving Tapachula, Mexico, headed north this week, which is a concrete and contemporary migration movement event. Multiple reputable outlets are cited as sources, supporting the relevance of the early warning signal. The content match"
+    },
+    "signal:1436": {
+      "decision": "EXCLUDE",
+      "reason": "The record refers to political commentary and a call to quit the European Convention on Human Rights in relation to small-boat migrants, which is a general political narrative, not a concrete, contemporary migration-specific event or signal."
     },
     "group:674": {
       "decision": "EXCLUDE",
@@ -1727,6 +1719,18 @@
     "signal:1422": {
       "decision": "PUBLISH",
       "reason": "The signal reports a specific, contemporary migration-related early warning concerning proposed policy changes: expansion of social payment and employment restrictions on migrants from the Khanty-Mansiysk experience to other Russian regions, including data on reduced migrant inflow and planned sector restrictions. This matches the assigned type PRE"
+    },
+    "signal:1423": {
+      "decision": "PUBLISH",
+      "reason": "The record reports a specific and contemporary migration-related event: a caravan of roughly 1,500-2,000 migrants departing Tapachula on November 10, 2026, which constitutes a migration route early warning. The event type ROUTE_EARLY_WARNING is appropriate and the timing is current relative to publication."
+    },
+    "signal:1424": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete and contemporary migration-specific early warning about an unusually high number of illegal migrant arrivals in the Canary Islands in October 2026, which is relevant to migration monitoring."
+    },
+    "signal:1425": {
+      "decision": "REVIEW",
+      "reason": "The report contains concrete migration events, including rescue of migrants and a deadly boat capsizing off Senegal. However, the publication date is in the future (2026), which raises authenticity concerns. The event is reported as a route early warning which aligns with the content. Verification needed due to temporal inconsistency."
     }
   }
 }
