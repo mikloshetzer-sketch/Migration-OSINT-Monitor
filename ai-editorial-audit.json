@@ -1,25 +1,16 @@
 {
-  "generated_at": "2026-11-12T22:02:07.557881+00:00",
+  "generated_at": "2026-11-13T02:22:09.132530+00:00",
   "version": "3.0",
-  "candidates": 428,
-  "new_ai_calls": 8,
+  "candidates": 430,
+  "new_ai_calls": 6,
   "conflicting_identity_ids": [
-    "group:707",
     "group:711",
     "group:715"
   ],
   "decisions": {
-    "post:883": {
-      "decision": "REVIEW",
-      "reason": "The record describes multiple alleged criminal incidents involving migrants in various European countries, but does not report a specific, concrete migration event such as a smuggling operation happening currently, a migration route activity, or an official policy action. The narrative is more a general commentary with claims about illegal migratio"
-    },
     "post:884": {
       "decision": "PUBLISH",
       "reason": "The post reports a concrete and contemporary migration-related operational event: the interception of 18 migrants off the California coast by federal authorities, including the Coast Guard. The event type 'INTERCEPTION' is accurate and supported by the content."
-    },
-    "post:885": {
-      "decision": "REVIEW",
-      "reason": "The post reports about migrant arrivals in Crete from Libya during 2026, suggesting a migration event involving illegal crossings. However, the text contains speculative elements about political pressure and a 'TurkoLibyan memorandum' without clear verification. The arrival figures are not corroborated by external sources. The event is contemporary"
     },
     "post:886": {
       "decision": "PUBLISH",
@@ -89,9 +80,13 @@
       "decision": "EXCLUDE",
       "reason": "The content discusses linguistic and historical information about Somalis and Islam but does not report any specific migration-related event such as a border crossing or movement of people."
     },
-    "signal:1422": {
-      "decision": "PUBLISH",
-      "reason": "The signal reports a specific, contemporary migration-related early warning concerning proposed policy changes: expansion of social payment and employment restrictions on migrants from the Khanty-Mansiysk experience to other Russian regions, including data on reduced migrant inflow and planned sector restrictions. This matches the assigned type PRE"
+    "post:903": {
+      "decision": "REVIEW",
+      "reason": "Inconsistent approval: The post reports a concrete, contemporary migration-related event involving a group of approximately 1,000 to 1,500 migrants setting off from southern Mexico toward the U.S. border, which aligns with the BORDER_CROSSING event type and is relevant for display."
+    },
+    "post:904": {
+      "decision": "EXCLUDE",
+      "reason": "The content does not describe a specific, concrete migration event such as a border crossing or policy action. It discusses individuals' immigration ages without detailing a current event or early warning related to migration operations. The event_type 'BORDER_CROSSING' is not supported by the content."
     },
     "signal:1423": {
       "decision": "PUBLISH",
@@ -137,13 +132,17 @@
       "decision": "PUBLISH",
       "reason": "The report details recent Coast Guard interdictions of overloaded migrant boats in the Mona Passage, a known migration route between Hispaniola and Puerto Rico, indicating a concrete and contemporary migration-related event that constitutes a route early warning."
     },
-    "group:707": {
-      "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
+    "signal:1434": {
+      "decision": "PUBLISH",
+      "reason": "The record reports a concrete, contemporary migration-specific early warning about a group of approximately 1,500 migrants leaving Tapachula, Mexico, heading north with their intended destination Mexico City. This matches the ROUTE_EARLY_WARNING event type and is suitable for publication as a migration-specific early warning."
     },
-    "group:708": {
+    "signal:1435": {
+      "decision": "PUBLISH",
+      "reason": "The record reports a current migration-specific early warning about a caravan of approximately 1,000-1,500 migrants leaving Tapachula, Mexico, headed north this week, which is a concrete and contemporary migration movement event. Multiple reputable outlets are cited as sources, supporting the relevance of the early warning signal. The content match"
+    },
+    "group:674": {
       "decision": "EXCLUDE",
-      "reason": "The post is a political statement about deportation policy without reporting a concrete, contemporary migration-related event or specific deportation action. It lacks details of an actual event and does not provide verifiable operational information."
+      "reason": "The post discusses a political replacement and characterizes a political figure, without reporting any concrete, contemporary migration-related event such as a border crossing or refugee movement. The event_type 'BORDER_CROSSING' is not supported by the content, which does not describe any migration event or early warning."
     },
     "group:709": {
       "decision": "EXCLUDE",
@@ -172,6 +171,10 @@
     "group:715": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:716": {
+      "decision": "EXCLUDE",
+      "reason": "The content discusses individual immigrant backgrounds without reporting a concrete, contemporary migration-related event or border crossing. It lacks a specific, current migration event relevant to publication."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1720,6 +1723,10 @@
     "signal:1421": {
       "decision": "EXCLUDE",
       "reason": "The record discusses a general opinion about a policy (EU Family Reunification Directive) as a signal but does not report a concrete, contemporary migration-specific event, policy change, or enforcement action. It lacks specific timing or direct indication of a current or completed policy event suitable for publication."
+    },
+    "signal:1422": {
+      "decision": "PUBLISH",
+      "reason": "The signal reports a specific, contemporary migration-related early warning concerning proposed policy changes: expansion of social payment and employment restrictions on migrants from the Khanty-Mansiysk experience to other Russian regions, including data on reduced migrant inflow and planned sector restrictions. This matches the assigned type PRE"
     }
   }
 }
