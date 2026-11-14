@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-14T00:37:37.729786+00:00",
+  "generated_at": "2026-11-14T08:17:25.633647+00:00",
   "version": "3.0",
-  "candidates": 434,
+  "candidates": 436,
   "new_ai_calls": 2,
   "conflicting_identity_ids": [
     "group:715",
@@ -88,14 +88,6 @@
       "decision": "EXCLUDE",
       "reason": "The post contains a vague and unverifiable claim without describing a specific, contemporary migration-related event. The assigned event type 'BORDER_CROSSING' is not supported by the content, since it is an assertion without details about an actual border crossing event."
     },
-    "signal:1434": {
-      "decision": "PUBLISH",
-      "reason": "The record reports a concrete, contemporary migration-specific early warning about a group of approximately 1,500 migrants leaving Tapachula, Mexico, heading north with their intended destination Mexico City. This matches the ROUTE_EARLY_WARNING event type and is suitable for publication as a migration-specific early warning."
-    },
-    "signal:1435": {
-      "decision": "PUBLISH",
-      "reason": "The record reports a current migration-specific early warning about a caravan of approximately 1,000-1,500 migrants leaving Tapachula, Mexico, headed north this week, which is a concrete and contemporary migration movement event. Multiple reputable outlets are cited as sources, supporting the relevance of the early warning signal. The content match"
-    },
     "signal:1436": {
       "decision": "EXCLUDE",
       "reason": "The record refers to political commentary and a call to quit the European Convention on Human Rights in relation to small-boat migrants, which is a general political narrative, not a concrete, contemporary migration-specific event or signal."
@@ -107,6 +99,14 @@
     "signal:1438": {
       "decision": "EXCLUDE",
       "reason": "The text does not report a concrete, contemporary migration-specific event or early warning; it is a speculative question without a specific movement or policy action reported."
+    },
+    "signal:1439": {
+      "decision": "REVIEW",
+      "reason": "The record reports a future-oriented claim of a migrant caravan movement as a reaction to a political event and a political threat related to tariffs, but does not specify concrete or verified migration movement data or dates. It is an early warning but lacks specific, verifiable event details and corroboration."
+    },
+    "signal:1440": {
+      "decision": "REVIEW",
+      "reason": "The text reports about conflict-related displacement and refugees entering Moyale, Kenya, indicating a migration-related early warning. However, the report is truncated and lacks detail about enforcement actions or specific migration early warning measures. The event type 'ENFORCEMENT_EARLY_WARNING' is not fully supported by the given truncated tex"
     },
     "group:674": {
       "decision": "EXCLUDE",
@@ -1743,6 +1743,14 @@
     "signal:1433": {
       "decision": "PUBLISH",
       "reason": "The report details recent Coast Guard interdictions of overloaded migrant boats in the Mona Passage, a known migration route between Hispaniola and Puerto Rico, indicating a concrete and contemporary migration-related event that constitutes a route early warning."
+    },
+    "signal:1434": {
+      "decision": "PUBLISH",
+      "reason": "The record reports a concrete, contemporary migration-specific early warning about a group of approximately 1,500 migrants leaving Tapachula, Mexico, heading north with their intended destination Mexico City. This matches the ROUTE_EARLY_WARNING event type and is suitable for publication as a migration-specific early warning."
+    },
+    "signal:1435": {
+      "decision": "PUBLISH",
+      "reason": "The record reports a current migration-specific early warning about a caravan of approximately 1,000-1,500 migrants leaving Tapachula, Mexico, headed north this week, which is a concrete and contemporary migration movement event. Multiple reputable outlets are cited as sources, supporting the relevance of the early warning signal. The content match"
     }
   }
 }
