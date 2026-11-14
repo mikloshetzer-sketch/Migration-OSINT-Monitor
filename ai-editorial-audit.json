@@ -1,10 +1,9 @@
 {
-  "generated_at": "2026-11-13T18:55:37.834798+00:00",
+  "generated_at": "2026-11-14T00:37:37.729786+00:00",
   "version": "3.0",
   "candidates": 434,
-  "new_ai_calls": 7,
+  "new_ai_calls": 2,
   "conflicting_identity_ids": [
-    "group:711",
     "group:715",
     "group:718"
   ],
@@ -16,10 +15,6 @@
     "post:889": {
       "decision": "PUBLISH",
       "reason": "The post reports a concrete, contemporary migration-related event involving nearly 6,000 African migrants arriving in the Canary Islands within a defined recent period, including a social emergency declaration due to rising arrivals, which aligns with the specified event type BORDER_CROSSING."
-    },
-    "post:890": {
-      "decision": "EXCLUDE",
-      "reason": "The post describes personal experiences of a refugee and exploitation but does not report a concrete, contemporary migration-related event such as a specific border crossing or an operational migration event. The event_type 'BORDER_CROSSING' is not supported by the content."
     },
     "post:891": {
       "decision": "EXCLUDE",
@@ -89,13 +84,9 @@
       "decision": "EXCLUDE",
       "reason": "The record reports a personal migration history related to an individual refugee from Iraq to Sweden but does not describe a concrete, contemporary migration-related event such as a new border crossing or movement. The assigned event_type 'BORDER_CROSSING' is not supported by the content, which is a biographical summary rather than an operational m"
     },
-    "signal:1432": {
-      "decision": "PUBLISH",
-      "reason": "The report describes a concrete, contemporary migration-specific early warning event involving a caravan of migrants in Mexico being escorted by Mexican authorities. The event type 'MOVEMENT_EARLY_WARNING' is appropriate and supported by local confirmations mentioned in the source."
-    },
-    "signal:1433": {
-      "decision": "PUBLISH",
-      "reason": "The report details recent Coast Guard interdictions of overloaded migrant boats in the Mona Passage, a known migration route between Hispaniola and Puerto Rico, indicating a concrete and contemporary migration-related event that constitutes a route early warning."
+    "post:908": {
+      "decision": "EXCLUDE",
+      "reason": "The post contains a vague and unverifiable claim without describing a specific, contemporary migration-related event. The assigned event type 'BORDER_CROSSING' is not supported by the content, since it is an assertion without details about an actual border crossing event."
     },
     "signal:1434": {
       "decision": "PUBLISH",
@@ -129,10 +120,6 @@
       "decision": "REVIEW",
       "reason": "The post refers to a 'Migrant caravan crossing Mexico' but lacks clear, specific information on a concrete and current migration-related event such as an actual interception or official action. The event_type 'INTERCEPTION' is not supported by the content. No explicit date or verified source is provided to confirm the timing or details of the event"
     },
-    "group:711": {
-      "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
-    },
     "group:713": {
       "decision": "REVIEW",
       "reason": "The headline implies ongoing deportations despite court orders, which constitutes a migration-related event; however, no specific details on timing, location, or concrete event instances are provided, and the source URL appears incomplete or malformed, limiting verification and clarity."
@@ -156,6 +143,10 @@
     "group:718": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:719": {
+      "decision": "EXCLUDE",
+      "reason": "The record is a general accusation or commentary without reporting a concrete, contemporary migration-related event; lacks details of an actual border crossing event."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1744,6 +1735,14 @@
     "signal:1431": {
       "decision": "PUBLISH",
       "reason": "The record reports a concrete, contemporary migration-specific policy action as an early warning, stating that damaging property of criminal gangs smuggling migrants into Britain is now a criminal offense. This constitutes a valid facilitation early warning relevant to migration."
+    },
+    "signal:1432": {
+      "decision": "PUBLISH",
+      "reason": "The report describes a concrete, contemporary migration-specific early warning event involving a caravan of migrants in Mexico being escorted by Mexican authorities. The event type 'MOVEMENT_EARLY_WARNING' is appropriate and supported by local confirmations mentioned in the source."
+    },
+    "signal:1433": {
+      "decision": "PUBLISH",
+      "reason": "The report details recent Coast Guard interdictions of overloaded migrant boats in the Mona Passage, a known migration route between Hispaniola and Puerto Rico, indicating a concrete and contemporary migration-related event that constitutes a route early warning."
     }
   }
 }
