@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-14T08:17:25.633647+00:00",
+  "generated_at": "2026-11-14T16:15:43.639502+00:00",
   "version": "3.0",
-  "candidates": 436,
-  "new_ai_calls": 2,
+  "candidates": 439,
+  "new_ai_calls": 5,
   "conflicting_identity_ids": [
     "group:715",
     "group:718"
@@ -11,10 +11,6 @@
     "post:887": {
       "decision": "PUBLISH",
       "reason": "The post reports a concrete and contemporary migration-related event involving Mexican security forces detaining approximately 40 Central American migrants from a caravan near the US border region, which aligns with the BORDER_MEASURE event type. The information describes a specific enforcement action relevant to migration flows."
-    },
-    "post:889": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete, contemporary migration-related event involving nearly 6,000 African migrants arriving in the Canary Islands within a defined recent period, including a social emergency declaration due to rising arrivals, which aligns with the specified event type BORDER_CROSSING."
     },
     "post:891": {
       "decision": "EXCLUDE",
@@ -88,9 +84,9 @@
       "decision": "EXCLUDE",
       "reason": "The post contains a vague and unverifiable claim without describing a specific, contemporary migration-related event. The assigned event type 'BORDER_CROSSING' is not supported by the content, since it is an assertion without details about an actual border crossing event."
     },
-    "signal:1436": {
+    "post:909": {
       "decision": "EXCLUDE",
-      "reason": "The record refers to political commentary and a call to quit the European Convention on Human Rights in relation to small-boat migrants, which is a general political narrative, not a concrete, contemporary migration-specific event or signal."
+      "reason": "The post is a general political commentary and opinion about immigration history and attitudes, not a report of a specific, concrete migration-related event such as a border crossing or operational migration activity."
     },
     "signal:1437": {
       "decision": "REVIEW",
@@ -108,6 +104,18 @@
       "decision": "REVIEW",
       "reason": "The text reports about conflict-related displacement and refugees entering Moyale, Kenya, indicating a migration-related early warning. However, the report is truncated and lacks detail about enforcement actions or specific migration early warning measures. The event type 'ENFORCEMENT_EARLY_WARNING' is not fully supported by the given truncated tex"
     },
+    "signal:1441": {
+      "decision": "PUBLISH",
+      "reason": "The content reports a specific migration-related early warning of approximately 1,500 migrants moving north from southern Mexico, which qualifies as a contemporary migration-related event. The event type as MOVEMENT_EARLY_WARNING is correctly assigned. The post is timely and directly concerns a migration movement signal."
+    },
+    "signal:1442": {
+      "decision": "REVIEW",
+      "reason": "The post claims a caravan of migrants heading to the US as a migration movement early warning, but does not provide concrete details or specific evidence to confirm this event is currently occurring or accurately described. The political commentary and unverified claims reduce reliability."
+    },
+    "signal:1443": {
+      "decision": "EXCLUDE",
+      "reason": "Message does not report a concrete migration-specific event or early warning; it is a general narrative expressing anticipation and community support activities without current event details or operational specifics."
+    },
     "group:674": {
       "decision": "EXCLUDE",
       "reason": "The post discusses a political replacement and characterizes a political figure, without reporting any concrete, contemporary migration-related event such as a border crossing or refugee movement. The event_type 'BORDER_CROSSING' is not supported by the content, which does not describe any migration event or early warning."
@@ -115,10 +123,6 @@
     "group:709": {
       "decision": "EXCLUDE",
       "reason": "The content is a rhetorical question and commentary without reporting a concrete, contemporary migration-related event or specific border measure. There is no verified border closure event mentioned or described."
-    },
-    "group:710": {
-      "decision": "REVIEW",
-      "reason": "The post refers to a 'Migrant caravan crossing Mexico' but lacks clear, specific information on a concrete and current migration-related event such as an actual interception or official action. The event_type 'INTERCEPTION' is not supported by the content. No explicit date or verified source is provided to confirm the timing or details of the event"
     },
     "group:713": {
       "decision": "REVIEW",
@@ -147,6 +151,10 @@
     "group:719": {
       "decision": "EXCLUDE",
       "reason": "The record is a general accusation or commentary without reporting a concrete, contemporary migration-related event; lacks details of an actual border crossing event."
+    },
+    "group:720": {
+      "decision": "EXCLUDE",
+      "reason": "The text is a historical commentary and general political opinion, not reporting a concrete, contemporary migration-related event. No specific operational migration event, early warning, or policy action is described."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1751,6 +1759,10 @@
     "signal:1435": {
       "decision": "PUBLISH",
       "reason": "The record reports a current migration-specific early warning about a caravan of approximately 1,000-1,500 migrants leaving Tapachula, Mexico, headed north this week, which is a concrete and contemporary migration movement event. Multiple reputable outlets are cited as sources, supporting the relevance of the early warning signal. The content match"
+    },
+    "signal:1436": {
+      "decision": "EXCLUDE",
+      "reason": "The record refers to political commentary and a call to quit the European Convention on Human Rights in relation to small-boat migrants, which is a general political narrative, not a concrete, contemporary migration-specific event or signal."
     }
   }
 }
