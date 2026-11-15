@@ -1,28 +1,16 @@
 {
-  "generated_at": "2026-11-15T01:31:16.590778+00:00",
+  "generated_at": "2026-11-15T08:36:04.564400+00:00",
   "version": "3.0",
-  "candidates": 442,
-  "new_ai_calls": 2,
+  "candidates": 444,
+  "new_ai_calls": 8,
   "conflicting_identity_ids": [
     "group:715",
     "group:718"
   ],
   "decisions": {
-    "post:887": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete and contemporary migration-related event involving Mexican security forces detaining approximately 40 Central American migrants from a caravan near the US border region, which aligns with the BORDER_MEASURE event type. The information describes a specific enforcement action relevant to migration flows."
-    },
-    "post:891": {
-      "decision": "EXCLUDE",
-      "reason": "The text describes an alleged criminal incident involving child abduction attempt, not a migration-related detention or migration event. The event_type 'DETENTION' is incorrect, and there is no migration context or signal in the post."
-    },
     "post:892": {
       "decision": "EXCLUDE",
       "reason": "The post contains a statement about deportation policies but does not report a concrete, contemporary migration-related event. It is a general political claim without evidence of action, timing, or specifics. The event date is in the future relative to all known data and there is no confirmation this is a real event. The content is more political c"
-    },
-    "post:893": {
-      "decision": "EXCLUDE",
-      "reason": "The post expresses a political opinion or a statement of intent rather than reporting a concrete, contemporary migration-related deportation event. It lacks specific information about an actual event or policy action currently underway and is thus unsuitable for publication as a verified event."
     },
     "post:894": {
       "decision": "EXCLUDE",
@@ -88,13 +76,17 @@
       "decision": "EXCLUDE",
       "reason": "The post is a general political commentary and opinion about immigration history and attitudes, not a report of a specific, concrete migration-related event such as a border crossing or operational migration activity."
     },
-    "signal:1439": {
-      "decision": "REVIEW",
-      "reason": "The record reports a future-oriented claim of a migrant caravan movement as a reaction to a political event and a political threat related to tariffs, but does not specify concrete or verified migration movement data or dates. It is an early warning but lacks specific, verifiable event details and corroboration."
+    "post:910": {
+      "decision": "PUBLISH",
+      "reason": "The post clearly reports a concrete and contemporary migration-related event: a record number of migrants (1,488) rescued from 14 boats in the Canary Islands on a single day. The event type 'RESCUE_OPERATION' accurately describes the situation, which is migration-specific and operational in nature. The date in the post is contemporary relative to t"
     },
-    "signal:1440": {
-      "decision": "REVIEW",
-      "reason": "The text reports about conflict-related displacement and refugees entering Moyale, Kenya, indicating a migration-related early warning. However, the report is truncated and lacks detail about enforcement actions or specific migration early warning measures. The event type 'ENFORCEMENT_EARLY_WARNING' is not fully supported by the given truncated tex"
+    "post:911": {
+      "decision": "EXCLUDE",
+      "reason": "The post expresses an opinion advocating deportation but does not report a concrete, actual deportation event or policy."
+    },
+    "post:912": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete and specific migration-related event: a large number of migrants arriving in the Canary Islands within a defined recent period, leading to the declaration of a state of emergency. This matches the BORDER_CROSSING event type effectively and represents a current, operational migration event."
     },
     "signal:1441": {
       "decision": "PUBLISH",
@@ -120,21 +112,21 @@
       "decision": "PUBLISH",
       "reason": "The post reports a migration-specific early warning related to the reimposition of stricter controls at the Polish-German border and the activities of a border defense group monitoring migrant returns. This is a contemporary and concrete migration-related signal consistent with the ROUTE_EARLY_WARNING event type."
     },
+    "signal:1447": {
+      "decision": "PUBLISH",
+      "reason": "The report details a specific, contemporary migration-related event involving migrants attempting to cross the Channel and a rescue operation. The event qualifies as a route early warning given the danger encountered on the typical migration route. The event is relevant, concrete, and the type 'ROUTE_EARLY_WARNING' is appropriate despite the exact "
+    },
+    "signal:1448": {
+      "decision": "REVIEW",
+      "reason": "The post complains about migrant-related festivals and public transport maintenance, but it does not report a concrete, contemporary migration-specific early warning or policy action. The described train line maintenance is unrelated to migration facilitation. No clear migration-specific operational event is presented."
+    },
     "group:674": {
       "decision": "EXCLUDE",
       "reason": "The post discusses a political replacement and characterizes a political figure, without reporting any concrete, contemporary migration-related event such as a border crossing or refugee movement. The event_type 'BORDER_CROSSING' is not supported by the content, which does not describe any migration event or early warning."
     },
-    "group:709": {
+    "group:693": {
       "decision": "EXCLUDE",
-      "reason": "The content is a rhetorical question and commentary without reporting a concrete, contemporary migration-related event or specific border measure. There is no verified border closure event mentioned or described."
-    },
-    "group:713": {
-      "decision": "REVIEW",
-      "reason": "The headline implies ongoing deportations despite court orders, which constitutes a migration-related event; however, no specific details on timing, location, or concrete event instances are provided, and the source URL appears incomplete or malformed, limiting verification and clarity."
-    },
-    "group:714": {
-      "decision": "PUBLISH",
-      "reason": "The post provides specific, recent statistical data on migration-related enforcement actions within Khanty-Mansi Autonomous Okrug (ХМАО), including deportations, refusals of citizenship applications, and restrictions on migrant employment across various economic sectors. This concrete data supports the classification of the event as related to depo"
+      "reason": "The post claims a past arrival of undocumented migrants but does not report a specific, concrete deportation event. It presents general commentary about migrant distribution and policy intentions rather than documenting an actual operational migration event related to deportations. The event_type 'DEPORTATION' is incorrect as no deportation action "
     },
     "group:715": {
       "decision": "REVIEW",
@@ -159,6 +151,14 @@
     "group:720": {
       "decision": "EXCLUDE",
       "reason": "The text is a historical commentary and general political opinion, not reporting a concrete, contemporary migration-related event. No specific operational migration event, early warning, or policy action is described."
+    },
+    "group:721": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete and recent migration-specific event: a rescue operation of 1,488 migrants from multiple boats in the Canary Islands, which aligns with the 'RESCUE_OPERATION' event type."
+    },
+    "group:722": {
+      "decision": "EXCLUDE",
+      "reason": "No concrete or contemporary migration-related deportation event reported; the text expresses an opinion advocating deportation, not an actual event."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1775,6 +1775,14 @@
     "signal:1438": {
       "decision": "EXCLUDE",
       "reason": "The text does not report a concrete, contemporary migration-specific event or early warning; it is a speculative question without a specific movement or policy action reported."
+    },
+    "signal:1439": {
+      "decision": "REVIEW",
+      "reason": "The record reports a future-oriented claim of a migrant caravan movement as a reaction to a political event and a political threat related to tariffs, but does not specify concrete or verified migration movement data or dates. It is an early warning but lacks specific, verifiable event details and corroboration."
+    },
+    "signal:1440": {
+      "decision": "REVIEW",
+      "reason": "The text reports about conflict-related displacement and refugees entering Moyale, Kenya, indicating a migration-related early warning. However, the report is truncated and lacks detail about enforcement actions or specific migration early warning measures. The event type 'ENFORCEMENT_EARLY_WARNING' is not fully supported by the given truncated tex"
     }
   }
 }
