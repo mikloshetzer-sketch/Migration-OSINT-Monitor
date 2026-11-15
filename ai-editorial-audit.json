@@ -1,21 +1,12 @@
 {
-  "generated_at": "2026-11-15T08:36:04.564400+00:00",
+  "generated_at": "2026-11-15T16:45:08.517364+00:00",
   "version": "3.0",
-  "candidates": 444,
-  "new_ai_calls": 8,
+  "candidates": 450,
+  "new_ai_calls": 10,
   "conflicting_identity_ids": [
-    "group:715",
     "group:718"
   ],
   "decisions": {
-    "post:892": {
-      "decision": "EXCLUDE",
-      "reason": "The post contains a statement about deportation policies but does not report a concrete, contemporary migration-related event. It is a general political claim without evidence of action, timing, or specifics. The event date is in the future relative to all known data and there is no confirmation this is a real event. The content is more political c"
-    },
-    "post:894": {
-      "decision": "EXCLUDE",
-      "reason": "The event date is in the future (2026), which is not contemporary; the claim is not verified and appears to be a general narrative with inflammatory language rather than a concrete current migration event."
-    },
     "post:895": {
       "decision": "EXCLUDE",
       "reason": "The content is a vague commentary or question on migration related to border status, without reporting a specific, concrete migration-related event or measure. No actual event or policy action is described."
@@ -88,17 +79,13 @@
       "decision": "PUBLISH",
       "reason": "The post reports a concrete and specific migration-related event: a large number of migrants arriving in the Canary Islands within a defined recent period, leading to the declaration of a state of emergency. This matches the BORDER_CROSSING event type effectively and represents a current, operational migration event."
     },
-    "signal:1441": {
-      "decision": "PUBLISH",
-      "reason": "The content reports a specific migration-related early warning of approximately 1,500 migrants moving north from southern Mexico, which qualifies as a contemporary migration-related event. The event type as MOVEMENT_EARLY_WARNING is correctly assigned. The post is timely and directly concerns a migration movement signal."
-    },
-    "signal:1442": {
-      "decision": "REVIEW",
-      "reason": "The post claims a caravan of migrants heading to the US as a migration movement early warning, but does not provide concrete details or specific evidence to confirm this event is currently occurring or accurately described. The political commentary and unverified claims reduce reliability."
-    },
-    "signal:1443": {
+    "post:913": {
       "decision": "EXCLUDE",
-      "reason": "Message does not report a concrete migration-specific event or early warning; it is a general narrative expressing anticipation and community support activities without current event details or operational specifics."
+      "reason": "The content is general commentary about human trafficking and migrants without reporting a specific, concrete, or contemporary migration-related detention event."
+    },
+    "post:914": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a commentary about Brexit policy and deportation, without reporting a specific, contemporary migration-related event or border crossing. It does not describe an operational migration event or provide a migration-specific early warning."
     },
     "signal:1444": {
       "decision": "EXCLUDE",
@@ -120,17 +107,33 @@
       "decision": "REVIEW",
       "reason": "The post complains about migrant-related festivals and public transport maintenance, but it does not report a concrete, contemporary migration-specific early warning or policy action. The described train line maintenance is unrelated to migration facilitation. No clear migration-specific operational event is presented."
     },
-    "group:674": {
+    "signal:1449": {
+      "decision": "PUBLISH",
+      "reason": "The post provides a concrete, recent migration-specific early warning signal about a surge in migrant arrivals to the Canary Islands, a known migration entry point. Although the source is social media, the account reports a current event relevant to migration."
+    },
+    "signal:1450": {
       "decision": "EXCLUDE",
-      "reason": "The post discusses a political replacement and characterizes a political figure, without reporting any concrete, contemporary migration-related event such as a border crossing or refugee movement. The event_type 'BORDER_CROSSING' is not supported by the content, which does not describe any migration event or early warning."
+      "reason": "The post discusses migration methods and accountability but does not report a specific, concrete migration-related event or early warning. It is opinion commentary rather than a signal of a migration event or facilitation."
+    },
+    "signal:1451": {
+      "decision": "REVIEW",
+      "reason": "The post reports recent arrivals of migrants by boat to the Canary Islands, indicating a current migration movement. However, it is labeled as an early warning signal but the report refers to an event that has already occurred (arrivals). Clarification is needed whether this is considered an early warning or a report of an actual movement event. Ad"
+    },
+    "signal:1452": {
+      "decision": "EXCLUDE",
+      "reason": "The content is a general narrative or opinion about migrants and asylum seekers, lacking a concrete, contemporary migration-specific event or policy action. The event type 'LEGAL_MIGRATION_SIGNAL' is not supported by the provided information, which focuses on claims rather than a verified migration policy signal or early warning."
+    },
+    "signal:1453": {
+      "decision": "EXCLUDE",
+      "reason": "The post contains unverified, generalized claims about a global migration crisis and cartels smuggling migrants, without reporting any concrete or specific migration-related event or early warning. The content is speculative and lacks credible evidence or details to support facilitation or early warning categorization."
+    },
+    "signal:1454": {
+      "decision": "PUBLISH",
+      "reason": "This is a contemporary, migration-specific event involving displacement of nearly 500 Syrian refugees due to a fire destroying their tents in a refugee camp in Lebanon. The event type of a movement early warning is appropriate as the incident may cause immediate displacement and require humanitarian response. The report is recent and specific, focu"
     },
     "group:693": {
       "decision": "EXCLUDE",
       "reason": "The post claims a past arrival of undocumented migrants but does not report a specific, concrete deportation event. It presents general commentary about migrant distribution and policy intentions rather than documenting an actual operational migration event related to deportations. The event_type 'DEPORTATION' is incorrect as no deportation action "
-    },
-    "group:715": {
-      "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
     },
     "group:716": {
       "decision": "EXCLUDE",
@@ -159,6 +162,14 @@
     "group:722": {
       "decision": "EXCLUDE",
       "reason": "No concrete or contemporary migration-related deportation event reported; the text expresses an opinion advocating deportation, not an actual event."
+    },
+    "group:723": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a general commentary on human trafficking and NGOs, with no specific, concrete, or contemporary migration-related event reported. The event_type 'DETENTION' is not supported by the content of the post."
+    },
+    "group:724": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a general political commentary on Brexit and deportation policy, without reporting a concrete, contemporary migration-related event."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1783,6 +1794,18 @@
     "signal:1440": {
       "decision": "REVIEW",
       "reason": "The text reports about conflict-related displacement and refugees entering Moyale, Kenya, indicating a migration-related early warning. However, the report is truncated and lacks detail about enforcement actions or specific migration early warning measures. The event type 'ENFORCEMENT_EARLY_WARNING' is not fully supported by the given truncated tex"
+    },
+    "signal:1441": {
+      "decision": "PUBLISH",
+      "reason": "The content reports a specific migration-related early warning of approximately 1,500 migrants moving north from southern Mexico, which qualifies as a contemporary migration-related event. The event type as MOVEMENT_EARLY_WARNING is correctly assigned. The post is timely and directly concerns a migration movement signal."
+    },
+    "signal:1442": {
+      "decision": "REVIEW",
+      "reason": "The post claims a caravan of migrants heading to the US as a migration movement early warning, but does not provide concrete details or specific evidence to confirm this event is currently occurring or accurately described. The political commentary and unverified claims reduce reliability."
+    },
+    "signal:1443": {
+      "decision": "EXCLUDE",
+      "reason": "Message does not report a concrete migration-specific event or early warning; it is a general narrative expressing anticipation and community support activities without current event details or operational specifics."
     }
   }
 }
