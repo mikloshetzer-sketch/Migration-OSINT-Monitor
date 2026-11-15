@@ -1,28 +1,28 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-11-14T21:50:27Z",
-  "generated_at": "2026-11-14T21:50:27Z",
+  "updated_at": "2026-11-15T01:30:46Z",
+  "generated_at": "2026-11-15T01:30:46Z",
   "current_run": {
     "available": true,
-    "id": 425,
-    "run_uuid": "8c3b2aea-c15d-4525-b9b3-5824b61f7862",
-    "started_at": "2026-11-14T21:45:15Z",
-    "completed_at": "2026-11-14T21:50:26Z",
+    "id": 426,
+    "run_uuid": "1bfcb548-c695-453d-a245-b9c35a971b2b",
+    "started_at": "2026-11-15T01:24:45Z",
+    "completed_at": "2026-11-15T01:30:45Z",
     "status": "SUCCESS",
     "posts_returned": 124,
-    "unique_posts_collected": 77,
+    "unique_posts_collected": 83,
     "x_posts_returned": 50,
     "reddit_posts_returned": 0,
     "mastodon_posts_returned": 50,
-    "unique_x_posts": 41,
+    "unique_x_posts": 47,
     "unique_reddit_posts": 0,
     "unique_mastodon_posts": 20,
     "noise_filtered": 0,
-    "non_operational_filtered": 77,
+    "non_operational_filtered": 83,
     "historical_references_filtered": 0,
-    "influence_signals": 1,
-    "influence_signals_detected": 1,
-    "crossing_facilitation_signals": 1,
+    "influence_signals": 0,
+    "influence_signals_detected": 0,
+    "crossing_facilitation_signals": 0,
     "legal_migration_signals": 0,
     "policy_signals": 0,
     "recruitment_coordination_signals": 0,
@@ -32,7 +32,7 @@
     "online_influence_report_signals": 0,
     "operational_events": 0,
     "operational_events_analyzed": 0,
-    "historical_events_available": 53,
+    "historical_events_available": 50,
     "new_correlations": 0,
     "correlated_events": 0,
     "new_correlation_groups": 0,
@@ -52,20 +52,20 @@
     "error_message": null
   },
   "kpis": {
-    "operational_events": 2,
+    "operational_events": 1,
     "new_events": 0,
     "correlated_events": 0,
     "active_event_groups": 701,
     "sources": 3,
     "regions": 1,
-    "collected_posts_24h": 229,
-    "influence_signals": 6,
+    "collected_posts_24h": 233,
+    "influence_signals": 8,
     "access_signals": 1,
     "high_priority": 0,
     "current_run_operational_events": 0,
-    "current_run_unique_posts": 77,
+    "current_run_unique_posts": 83,
     "access_signals_raw": 1,
-    "influence_signals_raw": 6,
+    "influence_signals_raw": 8,
     "influence_narratives": 3
   },
   "live_events": [
@@ -131,8 +131,8 @@
     {
       "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 2,
-      "events": 2,
+      "count": 1,
+      "events": 1,
       "percentage": 100.0
     }
   ],
@@ -140,31 +140,31 @@
     {
       "source": "X",
       "name": "X",
-      "count": 178,
-      "posts": 178,
-      "percentage": 77.73
+      "count": 181,
+      "posts": 181,
+      "percentage": 77.68
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 39,
-      "posts": 39,
-      "percentage": 17.03
+      "count": 40,
+      "posts": 40,
+      "percentage": 17.17
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
       "count": 12,
       "posts": 12,
-      "percentage": 5.24
+      "percentage": 5.15
     }
   ],
   "region_activity": [
     {
       "name": "GLOBAL",
       "region": "GLOBAL",
-      "count": 2,
-      "events": 2,
+      "count": 1,
+      "events": 1,
       "percentage": 100.0
     }
   ],
@@ -172,29 +172,29 @@
     {
       "source": "X",
       "name": "X",
-      "count": 178,
-      "posts": 178,
-      "percentage": 77.73
+      "count": 181,
+      "posts": 181,
+      "percentage": 77.68
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 39,
-      "posts": 39,
-      "percentage": 17.03
+      "count": 40,
+      "posts": 40,
+      "percentage": 17.17
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
       "count": 12,
       "posts": 12,
-      "percentage": 5.24
+      "percentage": 5.15
     }
   ],
   "correlation": {
     "correlated_events": 0,
     "correlated_sources": 0,
-    "grouped_sources": 2,
+    "grouped_sources": 1,
     "event_groups": 701,
     "active_groups": 701,
     "multi_source_groups": 69,
@@ -212,12 +212,12 @@
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "database": "AVAILABLE",
-    "last_run_id": 425,
-    "last_completed_at": "2026-11-14T21:50:26Z"
+    "last_run_id": 426,
+    "last_completed_at": "2026-11-15T01:30:45Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 2,
-    "influence_signals_24h": 6,
+    "operational_events_24h": 1,
+    "influence_signals_24h": 8,
     "access_signals_24h": 1,
     "correlated_events_24h": 0,
     "active_event_groups": 701,
@@ -230,13 +230,13 @@
     "correlation_rate": 0.0,
     "activity_level": "LOW",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 2 operatív migrációs eseményt, 6 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 701 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Global. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.43. A jelenlegi aktivitási szint: LOW.",
+    "summary": "Az elmúlt 24 órában a rendszer 1 operatív migrációs eseményt, 8 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 701 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Global. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.43. A jelenlegi aktivitási szint: LOW.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
   "analytical_assessment": {
-    "operational_events_24h": 2,
-    "influence_signals_24h": 6,
+    "operational_events_24h": 1,
+    "influence_signals_24h": 8,
     "access_signals_24h": 1,
     "correlated_events_24h": 0,
     "active_event_groups": 701,
@@ -249,7 +249,7 @@
     "correlation_rate": 0.0,
     "activity_level": "LOW",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 2 operatív migrációs eseményt, 6 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 701 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Global. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.43. A jelenlegi aktivitási szint: LOW.",
+    "summary": "Az elmúlt 24 órában a rendszer 1 operatív migrációs eseményt, 8 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 701 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Global. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.43. A jelenlegi aktivitási szint: LOW.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
@@ -619,6 +619,132 @@
   ],
   "influence_signals": [
     {
+      "id": 1445,
+      "source": "X",
+      "source_post_id": "2121774864432333230",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-11-15T01:18:43Z",
+      "first_detected_at": "2026-11-15T01:25:37Z",
+      "last_detected_at": "2026-11-15T01:25:37Z",
+      "detection_count": 1,
+      "text": "@oogu @TheKekSocietyX No independent confirmation of German police using forest dirt roads to dump migrants in Poland. Polish Border Guard and Interior Ministry data show zero informal transfers in 2025-2026; reverse flow is higher. Citizen patrols claim monitoring and deterrence amid formal returns",
+      "text_excerpt": "@oogu @TheKekSocietyX No independent confirmation of German police using forest dirt roads to dump migrants in Poland. Polish Border Guard and Interior Ministry data show zero informal transfers in 2025-2026; reverse flow is higher. Citizen patrols claim monitoring and deterrence amid formal returns",
+      "url": "https://x.com/grok/status/2121774864432333230",
+      "source_url": "https://x.com/grok/status/2121774864432333230",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.25,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "Border"
+        ],
+        [
+          "enforcement",
+          "Border Guard"
+        ],
+        [
+          "enforcement",
+          "police"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "EASTERN_EU_BORDER",
+      "primary_region": "EASTERN_EU_BORDER",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 29.2,
+      "analyst_priority": "LOW",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
+      "id": 1446,
+      "source": "X",
+      "source_post_id": "2121767357265686538",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-11-15T00:48:53Z",
+      "first_detected_at": "2026-11-15T01:30:44Z",
+      "last_detected_at": "2026-11-15T01:30:44Z",
+      "detection_count": 1,
+      "text": "@UserTronWA @Josephlochem @TheKekSocietyX ROG (Ruch Obrony Granic) was founded in spring 2025 by nationalist activist Robert Bąkiewicz. Volunteers in yellow vests patrol the Polish-German border, claim to document informal migrant returns by German police, and press for stricter controls (which Poland reimposed in July",
+      "text_excerpt": "@UserTronWA @Josephlochem @TheKekSocietyX ROG (Ruch Obrony Granic) was founded in spring 2025 by nationalist activist Robert Bąkiewicz. Volunteers in yellow vests patrol the Polish-German border, claim to document informal migrant returns by German police, and press for stricter controls (which Poland reimposed in July",
+      "url": "https://x.com/grok/status/2121767357265686538",
+      "source_url": "https://x.com/grok/status/2121767357265686538",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.25,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "border"
+        ],
+        [
+          "enforcement",
+          "police"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "EASTERN_EU_BORDER",
+      "primary_region": "EASTERN_EU_BORDER",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 29.2,
+      "analyst_priority": "LOW",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
       "id": 1441,
       "source": "X",
       "source_post_id": "2121634679434444885",
@@ -678,6 +804,132 @@
     }
   ],
   "early_warning_signals": [
+    {
+      "id": 1445,
+      "source": "X",
+      "source_post_id": "2121774864432333230",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-11-15T01:18:43Z",
+      "first_detected_at": "2026-11-15T01:25:37Z",
+      "last_detected_at": "2026-11-15T01:25:37Z",
+      "detection_count": 1,
+      "text": "@oogu @TheKekSocietyX No independent confirmation of German police using forest dirt roads to dump migrants in Poland. Polish Border Guard and Interior Ministry data show zero informal transfers in 2025-2026; reverse flow is higher. Citizen patrols claim monitoring and deterrence amid formal returns",
+      "text_excerpt": "@oogu @TheKekSocietyX No independent confirmation of German police using forest dirt roads to dump migrants in Poland. Polish Border Guard and Interior Ministry data show zero informal transfers in 2025-2026; reverse flow is higher. Citizen patrols claim monitoring and deterrence amid formal returns",
+      "url": "https://x.com/grok/status/2121774864432333230",
+      "source_url": "https://x.com/grok/status/2121774864432333230",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.25,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "Border"
+        ],
+        [
+          "enforcement",
+          "Border Guard"
+        ],
+        [
+          "enforcement",
+          "police"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "EASTERN_EU_BORDER",
+      "primary_region": "EASTERN_EU_BORDER",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 29.2,
+      "analyst_priority": "LOW",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
+      "id": 1446,
+      "source": "X",
+      "source_post_id": "2121767357265686538",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-11-15T00:48:53Z",
+      "first_detected_at": "2026-11-15T01:30:44Z",
+      "last_detected_at": "2026-11-15T01:30:44Z",
+      "detection_count": 1,
+      "text": "@UserTronWA @Josephlochem @TheKekSocietyX ROG (Ruch Obrony Granic) was founded in spring 2025 by nationalist activist Robert Bąkiewicz. Volunteers in yellow vests patrol the Polish-German border, claim to document informal migrant returns by German police, and press for stricter controls (which Poland reimposed in July",
+      "text_excerpt": "@UserTronWA @Josephlochem @TheKekSocietyX ROG (Ruch Obrony Granic) was founded in spring 2025 by nationalist activist Robert Bąkiewicz. Volunteers in yellow vests patrol the Polish-German border, claim to document informal migrant returns by German police, and press for stricter controls (which Poland reimposed in July",
+      "url": "https://x.com/grok/status/2121767357265686538",
+      "source_url": "https://x.com/grok/status/2121767357265686538",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.25,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "border"
+        ],
+        [
+          "enforcement",
+          "police"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "EASTERN_EU_BORDER",
+      "primary_region": "EASTERN_EU_BORDER",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 29.2,
+      "analyst_priority": "LOW",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
     {
       "id": 1441,
       "source": "X",
@@ -893,44 +1145,51 @@
       "platform_count": 1
     },
     {
-      "id": 1441,
+      "id": 1445,
       "source": "X",
-      "source_post_id": "2121634679434444885",
-      "author": "RealAmericanRep",
+      "source_post_id": "2121774864432333230",
+      "author": "grok",
       "language": "en",
-      "published_at": "2026-11-14T16:01:40Z",
-      "first_detected_at": "2026-11-14T16:13:12Z",
-      "last_detected_at": "2026-11-14T16:13:12Z",
+      "published_at": "2026-11-15T01:18:43Z",
+      "first_detected_at": "2026-11-15T01:25:37Z",
+      "last_detected_at": "2026-11-15T01:25:37Z",
       "detection_count": 1,
-      "text": "~1,500 migrants heading north from southern Mexico. Trump: \"MEXICO MUST STOP THEM, NOW\" or tariffs \"IMMEDIATELY DOUBLED.\"\n\nDouble them if the caravan isn't stopped?\nLike = YES\nRepost = NO\n\n#Border #RealAmerican https://t.co/I7p8pSfCjg",
-      "text_excerpt": "~1,500 migrants heading north from southern Mexico. Trump: \"MEXICO MUST STOP THEM, NOW\" or tariffs \"IMMEDIATELY DOUBLED.\"\n\nDouble them if the caravan isn't stopped?\nLike = YES\nRepost = NO\n\n#Border #RealAmerican https://t.co/I7p8pSfCjg",
-      "url": "https://x.com/RealAmericanRep/status/2121634679434444885",
-      "source_url": "https://x.com/RealAmericanRep/status/2121634679434444885",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "text": "@oogu @TheKekSocietyX No independent confirmation of German police using forest dirt roads to dump migrants in Poland. Polish Border Guard and Interior Ministry data show zero informal transfers in 2025-2026; reverse flow is higher. Citizen patrols claim monitoring and deterrence amid formal returns",
+      "text_excerpt": "@oogu @TheKekSocietyX No independent confirmation of German police using forest dirt roads to dump migrants in Poland. Polish Border Guard and Interior Ministry data show zero informal transfers in 2025-2026; reverse flow is higher. Citizen patrols claim monitoring and deterrence amid formal returns",
+      "url": "https://x.com/grok/status/2121774864432333230",
+      "source_url": "https://x.com/grok/status/2121774864432333230",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
       "priority": "MEDIUM",
       "confidence": 0.72,
-      "score": 6.5,
+      "score": 7.25,
       "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
+        "ROUTE_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
-          "movement",
-          "migrants heading"
+          "route",
+          "Border"
+        ],
+        [
+          "enforcement",
+          "Border Guard"
+        ],
+        [
+          "enforcement",
+          "police"
         ]
       ],
       "matched_groups": [
-        "MOVEMENT"
+        "ROUTE",
+        "ENFORCEMENT"
       ],
       "context_matches": [
         "migrants"
       ],
-      "high_value_matches": [
-        "migrants heading"
-      ],
+      "high_value_matches": [],
       "signal_context_rejections": [],
       "migration_context": true,
       "human_migration_context": true,
@@ -940,8 +1199,8 @@
       "location": "-",
       "primary_location": "-",
       "country": "-",
-      "region": "AMERICAS",
-      "primary_region": "AMERICAS",
+      "region": "EASTERN_EU_BORDER",
+      "primary_region": "EASTERN_EU_BORDER",
       "latitude": null,
       "longitude": null,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
@@ -949,13 +1208,13 @@
       "analyst_priority": "LOW",
       "related_posts_count": 1,
       "related_post_ids": [
-        "2121634679434444885"
+        "2121774864432333230"
       ],
       "related_authors": [
-        "RealAmericanRep"
+        "grok"
       ],
       "related_urls": [
-        "https://x.com/RealAmericanRep/status/2121634679434444885"
+        "https://x.com/grok/status/2121774864432333230"
       ],
       "related_sources": [
         "X"
@@ -1172,14 +1431,14 @@
       "label": "W46",
       "week_label": "W46",
       "week_start": "2026-11-09T00:00:00Z",
-      "posts": 1258,
-      "post_count": 1258,
+      "posts": 1311,
+      "post_count": 1311,
       "operational_posts": 51,
-      "influence_signals": 60,
+      "influence_signals": 62,
       "source_counts": {
-        "X": 901,
+        "X": 948,
         "REDDIT": 53,
-        "MASTODON": 213,
+        "MASTODON": 219,
         "TELEGRAM": 91
       }
     }
@@ -1310,33 +1569,33 @@
       "label": "W46",
       "week_label": "W46",
       "week_start": "2026-11-09T00:00:00Z",
-      "posts": 1258,
-      "post_count": 1258,
+      "posts": 1311,
+      "post_count": 1311,
       "operational_posts": 51,
-      "influence_signals": 60,
+      "influence_signals": 62,
       "source_counts": {
-        "X": 901,
+        "X": 948,
         "REDDIT": 53,
-        "MASTODON": 213,
+        "MASTODON": 219,
         "TELEGRAM": 91
       }
     }
   ],
   "information_activity_summary": {
-    "current_week": 1258,
-    "previous_week": 1473,
-    "current_week_to_date": 1258,
-    "previous_week_same_period": 1473,
+    "current_week": 1311,
+    "previous_week": 1529,
+    "current_week_to_date": 1311,
+    "previous_week_same_period": 1529,
     "previous_week_full": 1732,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": -14.6,
-    "change_label": "-14.6%",
+    "change_percent": -14.26,
+    "change_label": "-14.3%",
     "direction": "DOWN",
     "comparable": true,
-    "elapsed_hours": 141.8,
+    "elapsed_hours": 145.5,
     "current_period_start": "2026-11-09T00:00:00Z",
     "previous_period_start": "2026-11-02T00:00:00Z",
-    "previous_period_end": "2026-11-07T21:50:26Z"
+    "previous_period_end": "2026-11-08T01:30:45Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -1348,29 +1607,29 @@
       72,
       168
     ],
-    "generated_at": "2026-11-14T21:50:27Z",
-    "total_items": 2126,
-    "information_count": 288,
-    "early_warning_count": 972,
+    "generated_at": "2026-11-15T01:30:46Z",
+    "total_items": 2129,
+    "information_count": 289,
+    "early_warning_count": 974,
     "operational_count": 715,
     "correlated_count": 151,
     "layer_counts": {
-      "INFORMATION": 288,
-      "EARLY_WARNING": 972,
+      "INFORMATION": 289,
+      "EARLY_WARNING": 974,
       "CORRELATED": 151,
       "OPERATIONAL": 715
     },
     "source_counts": {
-      "X": 1533,
+      "X": 1537,
       "MASTODON": 98,
       "TELEGRAM": 50,
-      "REDDIT": 445
+      "REDDIT": 444
     },
     "type_counts": {
-      "INFORMATION_SIGNAL": 288,
+      "INFORMATION_SIGNAL": 289,
+      "ROUTE_EARLY_WARNING": 153,
       "MOVEMENT_EARLY_WARNING": 330,
       "BORDER_CROSSING": 361,
-      "ROUTE_EARLY_WARNING": 151,
       "DEPORTATION": 149,
       "FACILITATION_EARLY_WARNING": 190,
       "PRESSURE_EARLY_WARNING": 46,
@@ -1393,6 +1652,268 @@
       "ONLINE_INFLUENCE_REPORT": 1
     },
     "items": [
+      {
+        "timeline_id": "information:26963",
+        "timestamp": "2026-11-15T01:20:38Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2121775346961760585",
+        "author": "social_suzie",
+        "url": "https://x.com/social_suzie/status/2121775346961760585",
+        "source_url": "https://x.com/social_suzie/status/2121775346961760585",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "border",
+          "crossing",
+          "arrival"
+        ],
+        "freshness_cues": [],
+        "text": "@SenSanders @grok is this true and if so why? Are the migrants who cross our borders generally vaccinated for measles and other diseases when they arrive here?  If they are caught at the border does the U.S. vaccinate them for measles and other diseases?",
+        "text_excerpt": "@SenSanders @grok is this true and if so why? Are the migrants who cross our borders generally vaccinated for measles and other diseases when they arrive here?  If they are caught at the border does the U.S. vaccinate them for measles and other diseases?",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-15T01:25:36Z",
+        "last_collected_at": "2026-11-15T01:25:36Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:26964",
+        "timestamp": "2026-11-15T01:19:05Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2121774960624492545",
+        "author": "Firecrackstar",
+        "url": "https://x.com/Firecrackstar/status/2121774960624492545",
+        "source_url": "https://x.com/Firecrackstar/status/2121774960624492545",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "border",
+          "crossing"
+        ],
+        "freshness_cues": [
+          "today"
+        ],
+        "text": "@michaelt5656 If you were to show that man all the refugees and the problems of today you would see a man who would have literally put troops on the border with the express order saying anyone who crosses that border opened fire",
+        "text_excerpt": "@michaelt5656 If you were to show that man all the refugees and the problems of today you would see a man who would have literally put troops on the border with the express order saying anyone who crosses that border opened fire",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-15T01:25:37Z",
+        "last_collected_at": "2026-11-15T01:25:37Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "early_warning:1445",
+        "timestamp": "2026-11-15T01:18:43Z",
+        "layer": "EARLY_WARNING",
+        "type": "ROUTE_EARLY_WARNING",
+        "signal_type": "ROUTE_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2121774864432333230",
+        "author": "grok",
+        "url": "https://x.com/grok/status/2121774864432333230",
+        "source_url": "https://x.com/grok/status/2121774864432333230",
+        "region": "EASTERN_EU_BORDER",
+        "primary_region": "EASTERN_EU_BORDER",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.72,
+        "priority": "MEDIUM",
+        "priority_score": 29.2,
+        "analyst_priority": "LOW",
+        "text": "@oogu @TheKekSocietyX No independent confirmation of German police using forest dirt roads to dump migrants in Poland. Polish Border Guard and Interior Ministry data show zero informal transfers in 2025-2026; reverse flow is higher. Citizen patrols claim monitoring and deterrence amid formal returns",
+        "text_excerpt": "@oogu @TheKekSocietyX No independent confirmation of German police using forest dirt roads to dump migrants in Poland. Polish Border Guard and Interior Ministry data show zero informal transfers in 2025-2026; reverse flow is higher. Citizen patrols claim monitoring and deterrence amid formal returns",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "ROUTE_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-11-15T01:25:37Z",
+        "last_detected_at": "2026-11-15T01:25:37Z",
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
+      {
+        "timeline_id": "information:26968",
+        "timestamp": "2026-11-15T01:07:13Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2121771973504127065",
+        "author": "tdavy66",
+        "url": "https://x.com/tdavy66/status/2121771973504127065",
+        "source_url": "https://x.com/tdavy66/status/2121771973504127065",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "crossing"
+        ],
+        "freshness_cues": [],
+        "text": "@RepJeffries President Joe Biden recorded the highest number of migrant encounters and border crossings in U.S. history during his term (2021–2025). [1, 2]",
+        "text_excerpt": "@RepJeffries President Joe Biden recorded the highest number of migrant encounters and border crossings in U.S. history during his term (2021–2025). [1, 2]",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-15T01:25:37Z",
+        "last_collected_at": "2026-11-15T01:25:37Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:26984",
+        "timestamp": "2026-11-15T00:52:28Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2121768259456249891",
+        "author": "grok",
+        "url": "https://x.com/grok/status/2121768259456249891",
+        "source_url": "https://x.com/grok/status/2121768259456249891",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "rescue",
+          "smuggling"
+        ],
+        "freshness_cues": [],
+        "text": "@NafoBuster @RabbiJeffx FEMA \"coffins\" are private burial vaults sold for normal funerals and stored outdoors by manufacturers for years—repeatedly fact-checked as unrelated to any agency stockpile. Cargo trains (autoracks) get used by smugglers to hide migrants, causing real deaths and rescues;",
+        "text_excerpt": "@NafoBuster @RabbiJeffx FEMA \"coffins\" are private burial vaults sold for normal funerals and stored outdoors by manufacturers for years—repeatedly fact-checked as unrelated to any agency stockpile. Cargo trains (autoracks) get used by smugglers to hide migrants, causing real deaths and rescues;",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-15T01:28:02Z",
+        "last_collected_at": "2026-11-15T01:28:02Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "early_warning:1446",
+        "timestamp": "2026-11-15T00:48:53Z",
+        "layer": "EARLY_WARNING",
+        "type": "ROUTE_EARLY_WARNING",
+        "signal_type": "ROUTE_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2121767357265686538",
+        "author": "grok",
+        "url": "https://x.com/grok/status/2121767357265686538",
+        "source_url": "https://x.com/grok/status/2121767357265686538",
+        "region": "EASTERN_EU_BORDER",
+        "primary_region": "EASTERN_EU_BORDER",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.72,
+        "priority": "MEDIUM",
+        "priority_score": 29.2,
+        "analyst_priority": "LOW",
+        "text": "@UserTronWA @Josephlochem @TheKekSocietyX ROG (Ruch Obrony Granic) was founded in spring 2025 by nationalist activist Robert Bąkiewicz. Volunteers in yellow vests patrol the Polish-German border, claim to document informal migrant returns by German police, and press for stricter controls (which Poland reimposed in July",
+        "text_excerpt": "@UserTronWA @Josephlochem @TheKekSocietyX ROG (Ruch Obrony Granic) was founded in spring 2025 by nationalist activist Robert Bąkiewicz. Volunteers in yellow vests patrol the Polish-German border, claim to document informal migrant returns by German police, and press for stricter controls (which Poland reimposed in July",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "ROUTE_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-11-15T01:30:44Z",
+        "last_detected_at": "2026-11-15T01:30:44Z",
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
+      {
+        "timeline_id": "information:27001",
+        "timestamp": "2026-11-15T00:14:35Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2121758727732863235",
+        "author": "GrahmPrater",
+        "url": "https://x.com/GrahmPrater/status/2121758727732863235",
+        "source_url": "https://x.com/GrahmPrater/status/2121758727732863235",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "crossing",
+          "arrival",
+          "landing"
+        ],
+        "freshness_cues": [],
+        "text": "@Carloxxxx2 The traitor has left his lair.\nThe Chinese Ogre has landed in San Diego.\nThe Taiwanese Tiger has arrived in Irvine.\nThe monstrous migrant has spent the night in LA.\nThe serial cheater has crossed through Santa Barbara.\nThe adulterer was seen 60 miles from the Bay Area.",
+        "text_excerpt": "@Carloxxxx2 The traitor has left his lair.\nThe Chinese Ogre has landed in San Diego.\nThe Taiwanese Tiger has arrived in Irvine.\nThe monstrous migrant has spent the night in LA.\nThe serial cheater has crossed through Santa Barbara.\nThe adulterer was seen 60 miles from the Bay Area.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-15T01:30:45Z",
+        "last_collected_at": "2026-11-15T01:30:45Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
       {
         "timeline_id": "information:26923",
         "timestamp": "2026-11-14T21:43:45Z",
@@ -17193,82 +17714,6 @@
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
-        "timeline_id": "information:24229",
-        "timestamp": "2026-11-03T08:29:37Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2117534651895947679",
-        "author": "tvsaab",
-        "url": "https://x.com/tvsaab/status/2117534651895947679",
-        "source_url": "https://x.com/tvsaab/status/2117534651895947679",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "boat",
-          "arrival"
-        ],
-        "freshness_cues": [],
-        "text": "A small boat carrying 20 individuals originally from #Yemen, who fled the ongoing conflicts and security conditions in their country, has arrived in the city of Berbera, according to #Somaliland's Ministry of Resettlement and Humanitarian Affairs.\n\nUpon the boat’s arrival at the https://t.co/BQyfrBTRBz",
-        "text_excerpt": "A small boat carrying 20 individuals originally from #Yemen, who fled the ongoing conflicts and security conditions in their country, has arrived in the city of Berbera, according to #Somaliland's Ministry of Resettlement and Humanitarian Affairs.\n\nUpon the boat’s arrival at the https://t.co/BQyfrBTRBz",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-03T08:46:13Z",
-        "last_collected_at": "2026-11-03T08:46:13Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:24239",
-        "timestamp": "2026-11-03T08:26:19Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2117533822212571455",
-        "author": "AdrianFaiers",
-        "url": "https://x.com/AdrianFaiers/status/2117533822212571455",
-        "source_url": "https://x.com/AdrianFaiers/status/2117533822212571455",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "boat",
-          "arrival"
-        ],
-        "freshness_cues": [],
-        "text": "Making refugees who arrive by boat wait longer risks breaching Section 31(1) of the 1999 Immigration and Asylum Act by unduly penalising them for entering a country without authorization even when they are seeking international protection.\n\n#BBCBreakfast #R4Today ..... https://t.co/0CqmYpVIOt",
-        "text_excerpt": "Making refugees who arrive by boat wait longer risks breaching Section 31(1) of the 1999 Immigration and Asylum Act by unduly penalising them for entering a country without authorization even when they are seeking international protection.\n\n#BBCBreakfast #R4Today ..... https://t.co/0CqmYpVIOt",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-03T08:46:43Z",
-        "last_collected_at": "2026-11-03T08:46:43Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
         "timeline_id": "operational:816",
         "timestamp": "2026-11-03T08:03:55Z",
         "layer": "OPERATIONAL",
@@ -17298,82 +17743,6 @@
         "event_time_text": null,
         "event_time_normalized": null,
         "event_time_confidence": null,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:24887",
-        "timestamp": "2026-11-03T07:04:22Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1xmm8pb",
-        "author": "aviii_shekk",
-        "url": "https://www.reddit.com/r/u_aviii_shekk/comments/1xmm8pb/career_transition_from_media_operations_creative/",
-        "source_url": "https://www.reddit.com/r/u_aviii_shekk/comments/1xmm8pb/career_transition_from_media_operations_creative/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "trafficking",
-          "landing"
-        ],
-        "freshness_cues": [],
-        "text": "Career transition from Media Operations / Creative QA to CM360 Ad Operations or Programmatic – Need advice\nHi everyone, I’m looking for some honest advice on transitioning my career into Ad Operations or Programmatic. I have around 3.5 years of experience across digital marketing, performance marketing and media operations. My experience: Started with performance marketing, managing Google and Meta campaigns focused on app acquisition, CPI, conversions and optimization. Worked in international campaign operations, supporting Google and LinkedIn campaign setup, launches, migrations and reporting. Currently working in media operations, primarily handling creative QA for HTML5, GIF, static and video creatives. My responsibilities include checking creative specifications, landing page URLs, click functionality and rendering. I have view-only access to CM360 to review campaign and placement details, but I don’t have hands-on experience with end-to-end trafficking or tag generation. I haven’t worked on DV360 yet. My current CTC is ₹7 LPA, and I’m targeting a job switch within the next 3 months, with an expectation of ₹10–12 LPA. I’m planning to learn CM360 practically first, followed by DV360 and programmatic operations. I’d appreciate advice on: Is this transition realistic with my current experience? Should I target CM360 Ad Operations roles first or directly aim for DV360 / Programmatic Operations? How important is hands-on platform experience compared with certifications and training? Which skills should I prioritise to become job-ready within 3 months? What job titles should I search for, and is my salary expectation realistic? I’d particularly appreciate advice from people working in Ad Operations, CM360, DV360 or Programmatic. Thanks! submitted by /u/aviii_shekk to u/aviii_shekk",
-        "text_excerpt": "Career transition from Media Operations / Creative QA to CM360 Ad Operations or Programmatic – Need advice\nHi everyone, I’m looking for some honest advice on transitioning my career into Ad Operations or Programmatic. I have around 3.5 years of experience across digital marketing, performance marketing and media operations. My experience: Started with performance marketing, managing Google and Meta campaigns focused…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-05T23:07:15Z",
-        "last_collected_at": "2026-11-05T23:07:15Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:24166",
-        "timestamp": "2026-11-03T01:55:07Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2117435374331113719",
-        "author": "nounoune83",
-        "url": "https://x.com/nounoune83/status/2117435374331113719",
-        "source_url": "https://x.com/nounoune83/status/2117435374331113719",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "refugee_camp"
-        ],
-        "freshness_cues": [],
-        "text": "@Context_19 Supply hubs in Ethiopia provide shelter, protection, and staging grounds for combat drones that bombard refugee camps along the Sudanese border.",
-        "text_excerpt": "@Context_19 Supply hubs in Ethiopia provide shelter, protection, and staging grounds for combat drones that bombard refugee camps along the Sudanese border.",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-03T01:55:52Z",
-        "last_collected_at": "2026-11-03T01:55:52Z",
-        "collection_count": 1,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -72664,7 +73033,7 @@
     "review_start_date": "2026-10-17",
     "review_cohort": "FIRST_RECORDED_ON_OR_AFTER_CUTOFF",
     "decisions": {
-      "PUBLISH": 115,
+      "PUBLISH": 117,
       "EXCLUDE": 166,
       "REVIEW": 159
     },
