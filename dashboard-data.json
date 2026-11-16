@@ -1,74 +1,98 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-11-16T12:14:33Z",
-  "generated_at": "2026-11-16T12:14:33Z",
+  "updated_at": "2026-11-16T23:08:48Z",
+  "generated_at": "2026-11-16T23:08:48Z",
   "current_run": {
     "available": true,
-    "id": 431,
-    "run_uuid": "d79fc467-31b7-4d76-bb0c-72d5c197b37b",
-    "started_at": "2026-11-16T12:09:53Z",
-    "completed_at": "2026-11-16T12:14:31Z",
+    "id": 432,
+    "run_uuid": "8894d4ef-b473-408b-ac7a-2274394bc4de",
+    "started_at": "2026-11-16T23:05:21Z",
+    "completed_at": "2026-11-16T23:08:47Z",
     "status": "SUCCESS",
     "posts_returned": 123,
-    "unique_posts_collected": 81,
+    "unique_posts_collected": 73,
     "x_posts_returned": 50,
     "reddit_posts_returned": 0,
     "mastodon_posts_returned": 50,
-    "unique_x_posts": 45,
+    "unique_x_posts": 39,
     "unique_reddit_posts": 0,
-    "unique_mastodon_posts": 21,
+    "unique_mastodon_posts": 18,
     "noise_filtered": 1,
-    "non_operational_filtered": 76,
-    "historical_references_filtered": 0,
-    "influence_signals": 0,
-    "influence_signals_detected": 0,
+    "non_operational_filtered": 69,
+    "historical_references_filtered": 1,
+    "influence_signals": 3,
+    "influence_signals_detected": 3,
     "crossing_facilitation_signals": 0,
-    "legal_migration_signals": 0,
+    "legal_migration_signals": 3,
     "policy_signals": 0,
     "recruitment_coordination_signals": 0,
     "mobilization_coordination_signals": 0,
     "mobilization_report_signals": 0,
     "decision_influence_signals": 0,
     "online_influence_report_signals": 0,
-    "operational_events": 4,
-    "operational_events_analyzed": 4,
+    "operational_events": 2,
+    "operational_events_analyzed": 2,
     "historical_events_available": 45,
-    "new_correlations": 4,
-    "correlated_events": 4,
-    "new_correlation_groups": 0,
-    "database_correlations": 2,
-    "current_run_correlations": 2,
-    "new_events": 4,
-    "new_events_saved": 4,
+    "new_correlations": 1,
+    "correlated_events": 1,
+    "new_correlation_groups": 1,
+    "database_correlations": 1,
+    "current_run_correlations": 0,
+    "new_events": 2,
+    "new_events_saved": 2,
     "events_already_existing": 0,
-    "new_event_groups": 0,
-    "updated_event_groups": 4,
+    "new_event_groups": 1,
+    "updated_event_groups": 1,
     "bootstrapped_event_groups": 0,
     "existing_event_groups_reused": 0,
-    "event_group_sources_linked": 4,
+    "event_group_sources_linked": 2,
     "x_collector_errors": 0,
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "error_message": null
   },
   "kpis": {
-    "operational_events": 12,
-    "new_events": 4,
+    "operational_events": 11,
+    "new_events": 2,
     "correlated_events": 9,
-    "active_event_groups": 706,
+    "active_event_groups": 707,
     "sources": 3,
-    "regions": 4,
-    "collected_posts_24h": 215,
-    "influence_signals": 11,
-    "access_signals": 2,
+    "regions": 3,
+    "collected_posts_24h": 177,
+    "influence_signals": 9,
+    "access_signals": 3,
     "high_priority": 0,
-    "current_run_operational_events": 4,
-    "current_run_unique_posts": 81,
-    "access_signals_raw": 2,
-    "influence_signals_raw": 11,
+    "current_run_operational_events": 2,
+    "current_run_unique_posts": 73,
+    "access_signals_raw": 3,
+    "influence_signals_raw": 9,
     "influence_narratives": 3
   },
   "live_events": [
+    {
+      "id": 927,
+      "event_id": 927,
+      "source": "X",
+      "source_post_id": "2122463806400127179",
+      "author": "ssc_globa1",
+      "published_at": "2026-11-16T22:56:19Z",
+      "collected_at": "2026-11-16T23:06:23Z",
+      "event_type": "BORDER_CROSSING",
+      "signal_type": "BORDER_CROSSING",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": 28.2916,
+      "longitude": -16.6291,
+      "confidence": 0.75,
+      "event_confidence": 0.75,
+      "relevance_score": 40.0,
+      "text": "More than 2,000 people reached Spain’s Canary Islands by boat in just two days.\n\nSpanish maritime rescue services reported that around 2,200 migrants arrived during the surge.\n\nMany make the dangerous Atlantic crossing from West Africa, sometimes spending days or weeks at sea.",
+      "url": "https://x.com/ssc_globa1/status/2122463806400127179",
+      "source_url": "https://x.com/ssc_globa1/status/2122463806400127179",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
     {
       "id": 923,
       "event_id": 923,
@@ -225,119 +249,105 @@
   ],
   "regions": [
     {
-      "name": "GLOBAL",
-      "region": "GLOBAL",
-      "count": 2,
-      "events": 2,
-      "percentage": 40.0
-    },
-    {
       "name": "WESTERN_MEDITERRANEAN",
       "region": "WESTERN_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 20.0
+      "percentage": 33.33
+    },
+    {
+      "name": "GLOBAL",
+      "region": "GLOBAL",
+      "count": 1,
+      "events": 1,
+      "percentage": 33.33
     },
     {
       "name": "EASTERN_MEDITERRANEAN",
       "region": "EASTERN_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 20.0
-    },
-    {
-      "name": "AMERICAS",
-      "region": "AMERICAS",
-      "count": 1,
-      "events": 1,
-      "percentage": 20.0
+      "percentage": 33.33
     }
   ],
   "sources": [
     {
       "source": "X",
       "name": "X",
-      "count": 158,
-      "posts": 158,
-      "percentage": 73.49
+      "count": 126,
+      "posts": 126,
+      "percentage": 71.19
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 38,
-      "posts": 38,
-      "percentage": 17.67
+      "count": 34,
+      "posts": 34,
+      "percentage": 19.21
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 19,
-      "posts": 19,
-      "percentage": 8.84
+      "count": 17,
+      "posts": 17,
+      "percentage": 9.6
     }
   ],
   "region_activity": [
-    {
-      "name": "GLOBAL",
-      "region": "GLOBAL",
-      "count": 2,
-      "events": 2,
-      "percentage": 40.0
-    },
     {
       "name": "WESTERN_MEDITERRANEAN",
       "region": "WESTERN_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 20.0
+      "percentage": 33.33
+    },
+    {
+      "name": "GLOBAL",
+      "region": "GLOBAL",
+      "count": 1,
+      "events": 1,
+      "percentage": 33.33
     },
     {
       "name": "EASTERN_MEDITERRANEAN",
       "region": "EASTERN_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 20.0
-    },
-    {
-      "name": "AMERICAS",
-      "region": "AMERICAS",
-      "count": 1,
-      "events": 1,
-      "percentage": 20.0
+      "percentage": 33.33
     }
   ],
   "source_activity": [
     {
       "source": "X",
       "name": "X",
-      "count": 158,
-      "posts": 158,
-      "percentage": 73.49
+      "count": 126,
+      "posts": 126,
+      "percentage": 71.19
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 38,
-      "posts": 38,
-      "percentage": 17.67
+      "count": 34,
+      "posts": 34,
+      "percentage": 19.21
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 19,
-      "posts": 19,
-      "percentage": 8.84
+      "count": 17,
+      "posts": 17,
+      "percentage": 9.6
     }
   ],
   "correlation": {
     "correlated_events": 9,
     "correlated_sources": 9,
-    "grouped_sources": 12,
-    "event_groups": 706,
-    "active_groups": 706,
+    "grouped_sources": 11,
+    "event_groups": 707,
+    "active_groups": 707,
     "multi_source_groups": 69,
     "strongest_match": 1.0,
-    "correlation_rate": 75.0
+    "correlation_rate": 81.82
   },
   "technical_health": "HEALTHY",
   "collector_health": "HEALTHY",
@@ -350,44 +360,44 @@
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "database": "AVAILABLE",
-    "last_run_id": 431,
-    "last_completed_at": "2026-11-16T12:14:31Z"
+    "last_run_id": 432,
+    "last_completed_at": "2026-11-16T23:08:47Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 12,
-    "influence_signals_24h": 11,
-    "access_signals_24h": 2,
+    "operational_events_24h": 11,
+    "influence_signals_24h": 9,
+    "access_signals_24h": 3,
     "correlated_events_24h": 9,
-    "active_event_groups": 706,
+    "active_event_groups": 707,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "hotspot": "WESTERN_MEDITERRANEAN",
     "dominant_event_type": "BORDER_CROSSING",
     "dominant_source": "X",
     "average_confidence": 0.433,
     "confidence_level": "LOW",
-    "correlation_rate": 75.0,
+    "correlation_rate": 81.82,
     "activity_level": "ELEVATED",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 12 operatív migrációs eseményt, 11 influence/early-warning jelzést és 2 átkelési vagy bejutási jelzést tart nyilván. 9 friss eseményforrás korrelált más forrással. Jelenleg 706 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.43. A jelenlegi aktivitási szint: ELEVATED.",
+    "summary": "Az elmúlt 24 órában a rendszer 11 operatív migrációs eseményt, 9 influence/early-warning jelzést és 3 átkelési vagy bejutási jelzést tart nyilván. 9 friss eseményforrás korrelált más forrással. Jelenleg 707 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.43. A jelenlegi aktivitási szint: ELEVATED.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
   "analytical_assessment": {
-    "operational_events_24h": 12,
-    "influence_signals_24h": 11,
-    "access_signals_24h": 2,
+    "operational_events_24h": 11,
+    "influence_signals_24h": 9,
+    "access_signals_24h": 3,
     "correlated_events_24h": 9,
-    "active_event_groups": 706,
+    "active_event_groups": 707,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "hotspot": "WESTERN_MEDITERRANEAN",
     "dominant_event_type": "BORDER_CROSSING",
     "dominant_source": "X",
     "average_confidence": 0.433,
     "confidence_level": "LOW",
-    "correlation_rate": 75.0,
+    "correlation_rate": 81.82,
     "activity_level": "ELEVATED",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 12 operatív migrációs eseményt, 11 influence/early-warning jelzést és 2 átkelési vagy bejutási jelzést tart nyilván. 9 friss eseményforrás korrelált más forrással. Jelenleg 706 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.43. A jelenlegi aktivitási szint: ELEVATED.",
+    "summary": "Az elmúlt 24 órában a rendszer 11 operatív migrációs eseményt, 9 influence/early-warning jelzést és 3 átkelési vagy bejutási jelzést tart nyilván. 9 friss eseményforrás korrelált más forrással. Jelenleg 707 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.43. A jelenlegi aktivitási szint: ELEVATED.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
@@ -548,100 +558,6 @@
     }
   ],
   "high_priority_intelligence": [
-    {
-      "id": 1457,
-      "source": "X",
-      "source_post_id": "2122299608386748475",
-      "author": "TrenchesAndCity",
-      "language": "en",
-      "published_at": "2026-11-16T12:03:51Z",
-      "first_detected_at": "2026-11-16T12:10:44Z",
-      "last_detected_at": "2026-11-16T12:10:44Z",
-      "detection_count": 1,
-      "text": "🇪🇸 Nearly 3100 migrants have reached Spain's Canary Islands by boat over the last two days as the country declared a national emergency.\n\nSpain's El Hierro Canary Islands with 11,000 residents, has faced a sharp surge in migrant arrivals via Atlantic route from Senegal. https://t.co/Bk6OlNBSgQ",
-      "text_excerpt": "🇪🇸 Nearly 3100 migrants have reached Spain's Canary Islands by boat over the last two days as the country declared a national emergency.\n\nSpain's El Hierro Canary Islands with 11,000 residents, has faced a sharp surge in migrant arrivals via Atlantic route from Senegal. https://t.co/Bk6OlNBSgQ",
-      "url": "https://x.com/TrenchesAndCity/status/2122299608386748475",
-      "source_url": "https://x.com/TrenchesAndCity/status/2122299608386748475",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.9,
-      "score": 13.25,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrants have reached"
-        ],
-        [
-          "movement",
-          "migrant arrivals"
-        ],
-        [
-          "route",
-          "boat"
-        ],
-        [
-          "route",
-          "route"
-        ],
-        [
-          "pressure",
-          "surge"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT",
-        "ROUTE",
-        "PRESSURE"
-      ],
-      "context_matches": [
-        "migrants",
-        "migrant"
-      ],
-      "high_value_matches": [
-        "migrants have reached",
-        "migrant arrivals",
-        "surge"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "Canary Islands",
-      "primary_location": "Canary Islands",
-      "country": "Spain",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": 28.2916,
-      "longitude": -16.6291,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 42.5,
-      "analyst_priority": "MEDIUM",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "2122299608386748475"
-      ],
-      "related_authors": [
-        "TrenchesAndCity"
-      ],
-      "related_urls": [
-        "https://x.com/TrenchesAndCity/status/2122299608386748475"
-      ],
-      "related_sources": [
-        "X"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1,
-      "ai_review_status": "AI_REVIEWED",
-      "ai_editorial_decision": "PUBLISH"
-    },
     {
       "id": 474,
       "group_id": 474,
@@ -816,6 +732,83 @@
   ],
   "influence_signals": [
     {
+      "id": 1462,
+      "source": "X",
+      "source_post_id": "2122455819665256951",
+      "author": "Milatrud11",
+      "language": "en",
+      "published_at": "2026-11-16T22:24:35Z",
+      "first_detected_at": "2026-11-16T23:08:05Z",
+      "last_detected_at": "2026-11-16T23:08:05Z",
+      "detection_count": 1,
+      "text": "6 arrested as Alicante police take part in operation against smuggling of unaccompanied child migrants (\"menas\") into Spain:\nSuspects entered on tourist visas,abandoned their North African children(16-17), and returned home:\n\nIt´s dubbed „Menas Erasmus“\nhttps://t.co/PtBO96vnqQ https://t.co/QuxcMAdpoN",
+      "text_excerpt": "6 arrested as Alicante police take part in operation against smuggling of unaccompanied child migrants (\"menas\") into Spain:\nSuspects entered on tourist visas,abandoned their North African children(16-17), and returned home:\n\nIt´s dubbed „Menas Erasmus“\nhttps://t.co/PtBO96vnqQ https://t.co/QuxcMAdpoN",
+      "url": "https://x.com/Milatrud11/status/2122455819665256951",
+      "source_url": "https://x.com/Milatrud11/status/2122455819665256951",
+      "primary_signal": "FACILITATION_EARLY_WARNING",
+      "signal_type": "FACILITATION_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "FACILITATION_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.9,
+      "score": 11.75,
+      "matched_signals": [
+        "FACILITATION_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "migrants (\"menas\") into Spain: Suspects entered"
+        ],
+        [
+          "facilitation",
+          "smuggling of unaccompanied child migrants"
+        ],
+        [
+          "enforcement",
+          "arrested"
+        ],
+        [
+          "enforcement",
+          "returned"
+        ],
+        [
+          "enforcement",
+          "police"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT",
+        "FACILITATION",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "migrants (\"menas\") into Spain: Suspects entered",
+        "smuggling of unaccompanied child migrants"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 35.5,
+      "analyst_priority": "LOW",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
       "id": 1457,
       "source": "X",
       "source_post_id": "2122299608386748475",
@@ -891,133 +884,6 @@
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
       "priority_score": 42.5,
       "analyst_priority": "MEDIUM",
-      "ai_review_status": "AI_REVIEWED",
-      "ai_editorial_decision": "PUBLISH"
-    },
-    {
-      "id": 1449,
-      "source": "MASTODON",
-      "source_post_id": "mastodon_117621193389027152",
-      "author": null,
-      "language": null,
-      "published_at": "2026-11-15T15:36:19Z",
-      "first_detected_at": "2026-11-15T16:41:29Z",
-      "last_detected_at": "2026-11-15T16:41:29Z",
-      "detection_count": 1,
-      "text": "The Canary Islands remain a key entry point for migrants reaching Europe. What does the latest surge mean for Spain? https:// usa.ntlivenews.com/spain-canar y-islands-migration-nearly-2200-migrants-arrive-by-boat-in-two-days/ # CanaryIslandsMigration # EuropeNews # Immigration",
-      "text_excerpt": "The Canary Islands remain a key entry point for migrants reaching Europe. What does the latest surge mean for Spain? https:// usa.ntlivenews.com/spain-canar y-islands-migration-nearly-2200-migrants-arrive-by-boat-in-two-days/ # CanaryIslandsMigration # EuropeNews # Immigration",
-      "url": "https://mastodon.social/@USAtrendz/117621193389027152",
-      "source_url": "https://mastodon.social/@USAtrendz/117621193389027152",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.9,
-      "score": 12.0,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrants-arrive"
-        ],
-        [
-          "route",
-          "boat"
-        ],
-        [
-          "pressure",
-          "surge"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT",
-        "ROUTE",
-        "PRESSURE"
-      ],
-      "context_matches": [
-        "migrants"
-      ],
-      "high_value_matches": [
-        "migrants-arrive",
-        "surge"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "Canary Islands",
-      "primary_location": "Canary Islands",
-      "country": "Spain",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": 28.2916,
-      "longitude": -16.6291,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 42.5,
-      "analyst_priority": "MEDIUM",
-      "ai_review_status": "AI_REVIEWED",
-      "ai_editorial_decision": "PUBLISH"
-    },
-    {
-      "id": 1454,
-      "source": "X",
-      "source_post_id": "2122007221919711577",
-      "author": "Jonathanbello02",
-      "language": "en",
-      "published_at": "2026-11-15T16:42:01Z",
-      "first_detected_at": "2026-11-15T16:43:31Z",
-      "last_detected_at": "2026-11-15T16:43:31Z",
-      "detection_count": 1,
-      "text": "Breaking 🌐 \n\nA fire tore through a Syrian refugee camp in Bar Elias, eastern Lebanon, destroying all 59 tents and leaving nearly 500 people homeless.\n\nCivil defence teams extinguished the blaze, but the cause remains unknown, Anadolu Agency reported, citing eyewitnesses. https://t.co/C2Mss3dULm",
-      "text_excerpt": "Breaking 🌐 \n\nA fire tore through a Syrian refugee camp in Bar Elias, eastern Lebanon, destroying all 59 tents and leaving nearly 500 people homeless.\n\nCivil defence teams extinguished the blaze, but the cause remains unknown, Anadolu Agency reported, citing eyewitnesses. https://t.co/C2Mss3dULm",
-      "url": "https://x.com/Jonathanbello02/status/2122007221919711577",
-      "source_url": "https://x.com/Jonathanbello02/status/2122007221919711577",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.72,
-      "score": 6.5,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "refugee camp in Bar Elias, eastern Lebanon, destroying all 59 tents and leaving"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT"
-      ],
-      "context_matches": [
-        "refugee"
-      ],
-      "high_value_matches": [
-        "refugee camp in Bar Elias, eastern Lebanon, destroying all 59 tents and leaving"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "MIDDLE_EAST",
-      "primary_region": "MIDDLE_EAST",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 29.2,
-      "analyst_priority": "LOW",
       "ai_review_status": "AI_REVIEWED",
       "ai_editorial_decision": "PUBLISH"
     },
@@ -1162,6 +1028,83 @@
   ],
   "early_warning_signals": [
     {
+      "id": 1462,
+      "source": "X",
+      "source_post_id": "2122455819665256951",
+      "author": "Milatrud11",
+      "language": "en",
+      "published_at": "2026-11-16T22:24:35Z",
+      "first_detected_at": "2026-11-16T23:08:05Z",
+      "last_detected_at": "2026-11-16T23:08:05Z",
+      "detection_count": 1,
+      "text": "6 arrested as Alicante police take part in operation against smuggling of unaccompanied child migrants (\"menas\") into Spain:\nSuspects entered on tourist visas,abandoned their North African children(16-17), and returned home:\n\nIt´s dubbed „Menas Erasmus“\nhttps://t.co/PtBO96vnqQ https://t.co/QuxcMAdpoN",
+      "text_excerpt": "6 arrested as Alicante police take part in operation against smuggling of unaccompanied child migrants (\"menas\") into Spain:\nSuspects entered on tourist visas,abandoned their North African children(16-17), and returned home:\n\nIt´s dubbed „Menas Erasmus“\nhttps://t.co/PtBO96vnqQ https://t.co/QuxcMAdpoN",
+      "url": "https://x.com/Milatrud11/status/2122455819665256951",
+      "source_url": "https://x.com/Milatrud11/status/2122455819665256951",
+      "primary_signal": "FACILITATION_EARLY_WARNING",
+      "signal_type": "FACILITATION_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "FACILITATION_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.9,
+      "score": 11.75,
+      "matched_signals": [
+        "FACILITATION_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "migrants (\"menas\") into Spain: Suspects entered"
+        ],
+        [
+          "facilitation",
+          "smuggling of unaccompanied child migrants"
+        ],
+        [
+          "enforcement",
+          "arrested"
+        ],
+        [
+          "enforcement",
+          "returned"
+        ],
+        [
+          "enforcement",
+          "police"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT",
+        "FACILITATION",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "migrants (\"menas\") into Spain: Suspects entered",
+        "smuggling of unaccompanied child migrants"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 35.5,
+      "analyst_priority": "LOW",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
       "id": 1457,
       "source": "X",
       "source_post_id": "2122299608386748475",
@@ -1237,133 +1180,6 @@
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
       "priority_score": 42.5,
       "analyst_priority": "MEDIUM",
-      "ai_review_status": "AI_REVIEWED",
-      "ai_editorial_decision": "PUBLISH"
-    },
-    {
-      "id": 1449,
-      "source": "MASTODON",
-      "source_post_id": "mastodon_117621193389027152",
-      "author": null,
-      "language": null,
-      "published_at": "2026-11-15T15:36:19Z",
-      "first_detected_at": "2026-11-15T16:41:29Z",
-      "last_detected_at": "2026-11-15T16:41:29Z",
-      "detection_count": 1,
-      "text": "The Canary Islands remain a key entry point for migrants reaching Europe. What does the latest surge mean for Spain? https:// usa.ntlivenews.com/spain-canar y-islands-migration-nearly-2200-migrants-arrive-by-boat-in-two-days/ # CanaryIslandsMigration # EuropeNews # Immigration",
-      "text_excerpt": "The Canary Islands remain a key entry point for migrants reaching Europe. What does the latest surge mean for Spain? https:// usa.ntlivenews.com/spain-canar y-islands-migration-nearly-2200-migrants-arrive-by-boat-in-two-days/ # CanaryIslandsMigration # EuropeNews # Immigration",
-      "url": "https://mastodon.social/@USAtrendz/117621193389027152",
-      "source_url": "https://mastodon.social/@USAtrendz/117621193389027152",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.9,
-      "score": 12.0,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrants-arrive"
-        ],
-        [
-          "route",
-          "boat"
-        ],
-        [
-          "pressure",
-          "surge"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT",
-        "ROUTE",
-        "PRESSURE"
-      ],
-      "context_matches": [
-        "migrants"
-      ],
-      "high_value_matches": [
-        "migrants-arrive",
-        "surge"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "Canary Islands",
-      "primary_location": "Canary Islands",
-      "country": "Spain",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": 28.2916,
-      "longitude": -16.6291,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 42.5,
-      "analyst_priority": "MEDIUM",
-      "ai_review_status": "AI_REVIEWED",
-      "ai_editorial_decision": "PUBLISH"
-    },
-    {
-      "id": 1454,
-      "source": "X",
-      "source_post_id": "2122007221919711577",
-      "author": "Jonathanbello02",
-      "language": "en",
-      "published_at": "2026-11-15T16:42:01Z",
-      "first_detected_at": "2026-11-15T16:43:31Z",
-      "last_detected_at": "2026-11-15T16:43:31Z",
-      "detection_count": 1,
-      "text": "Breaking 🌐 \n\nA fire tore through a Syrian refugee camp in Bar Elias, eastern Lebanon, destroying all 59 tents and leaving nearly 500 people homeless.\n\nCivil defence teams extinguished the blaze, but the cause remains unknown, Anadolu Agency reported, citing eyewitnesses. https://t.co/C2Mss3dULm",
-      "text_excerpt": "Breaking 🌐 \n\nA fire tore through a Syrian refugee camp in Bar Elias, eastern Lebanon, destroying all 59 tents and leaving nearly 500 people homeless.\n\nCivil defence teams extinguished the blaze, but the cause remains unknown, Anadolu Agency reported, citing eyewitnesses. https://t.co/C2Mss3dULm",
-      "url": "https://x.com/Jonathanbello02/status/2122007221919711577",
-      "source_url": "https://x.com/Jonathanbello02/status/2122007221919711577",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.72,
-      "score": 6.5,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "refugee camp in Bar Elias, eastern Lebanon, destroying all 59 tents and leaving"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT"
-      ],
-      "context_matches": [
-        "refugee"
-      ],
-      "high_value_matches": [
-        "refugee camp in Bar Elias, eastern Lebanon, destroying all 59 tents and leaving"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "MIDDLE_EAST",
-      "primary_region": "MIDDLE_EAST",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 29.2,
-      "analyst_priority": "LOW",
       "ai_review_status": "AI_REVIEWED",
       "ai_editorial_decision": "PUBLISH"
     },
@@ -1508,37 +1324,179 @@
   ],
   "influence_narratives": [
     {
-      "id": 1450,
-      "source": "X",
-      "source_post_id": "2122007026976899445",
-      "author": "SinisterSleuth",
-      "language": "en",
-      "published_at": "2026-11-15T16:41:14Z",
-      "first_detected_at": "2026-11-15T16:41:59Z",
-      "last_detected_at": "2026-11-15T16:41:59Z",
+      "id": 1460,
+      "source": "MASTODON",
+      "source_post_id": "mastodon_117628259375989102",
+      "author": null,
+      "language": null,
+      "published_at": "2026-11-16T21:33:17Z",
+      "first_detected_at": "2026-11-16T23:05:55Z",
+      "last_detected_at": "2026-11-16T23:05:55Z",
       "detection_count": 1,
-      "text": "@zarahussain999 A safe route is taking an airplane via the legal channels. Completely irresponsible of the migrants. Accountability is needed sometimes for one's actions.",
-      "text_excerpt": "@zarahussain999 A safe route is taking an airplane via the legal channels. Completely irresponsible of the migrants. Accountability is needed sometimes for one's actions.",
-      "url": "https://x.com/SinisterSleuth/status/2122007026976899445",
-      "source_url": "https://x.com/SinisterSleuth/status/2122007026976899445",
-      "primary_signal": "CROSSING_FACILITATION",
-      "signal_type": "CROSSING_FACILITATION",
+      "text": "Germany, Denmark, Austria, Greece and the Netherlands are planning to establish a joint # migrant return # hub in # Rwanda , with the aim of beginning transfers in 2027. The centre would accommodate migrants who have no legal right to remain in the participating countries, including those whose asylum applications have been rejected, while arrangements are made for their return. The initiative forms part of a broader European push to accelerate deportations and increase cooperation with third countries on migration management. The plans remain subject to negotiations with Rwanda. # Immigration # Europe # Rwanda # Germany # Denmark # Austria # Greece",
+      "text_excerpt": "Germany, Denmark, Austria, Greece and the Netherlands are planning to establish a joint # migrant return # hub in # Rwanda , with the aim of beginning transfers in 2027. The centre would accommodate migrants who have no legal right to remain in the participating countries, including those whose asylum applications have been rejected, while arrangements are made for their return. The initiative forms part of a broader European push to accelerate deportations and increase cooperation with third countries on migration management. The plans remain subject to negotiations with Rwanda. # Immigration # Europe # Rwanda # Germany # Denmark # Austria # Greece",
+      "url": "https://todon.eu/@faab64/117628259375989102",
+      "source_url": "https://todon.eu/@faab64/117628259375989102",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
       "signal_mode": "DIRECT",
-      "signal_intent": "EASIER_CROSSING",
-      "priority": "HIGH",
-      "confidence": 0.92,
-      "score": 18.0,
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.99,
+      "score": 25.0,
       "matched_signals": [
-        "CROSSING_FACILITATION"
+        "LEGAL_MIGRATION_SIGNAL"
       ],
       "matched_phrases": [
         [
-          "route_information",
-          "safe route"
+          "legal_signal",
+          "right to remain"
         ],
         [
-          "route_promotion",
-          "safe route"
+          "legal_protection",
+          "right to remain"
+        ],
+        [
+          "HIGH_VALUE",
+          "right to remain"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrant",
+        "migrants",
+        "migration",
+        "asylum"
+      ],
+      "high_value_matches": [
+        "right to remain"
+      ],
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "EASTERN_MEDITERRANEAN",
+      "primary_region": "EASTERN_MEDITERRANEAN",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 54.65,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "mastodon_117628259375989102"
+      ],
+      "related_authors": [],
+      "related_urls": [
+        "https://todon.eu/@faab64/117628259375989102"
+      ],
+      "related_sources": [
+        "MASTODON"
+      ],
+      "independent_author_count": 0,
+      "platform_count": 1
+    },
+    {
+      "id": 1461,
+      "source": "X",
+      "source_post_id": "2122456875388281056",
+      "author": "mariathena",
+      "language": "en",
+      "published_at": "2026-11-16T22:28:47Z",
+      "first_detected_at": "2026-11-16T23:08:05Z",
+      "last_detected_at": "2026-11-16T23:08:05Z",
+      "detection_count": 1,
+      "text": "@PeterSweden7 It all sounds encouraging, and certainly a step in addressing illegal immigration. But here is the real question and the elephant in the room:\n#Greece is being flooded with Sudanese migrants trafficked from #Libya . They know they are highly likely to ALL  be granted asylum in",
+      "text_excerpt": "@PeterSweden7 It all sounds encouraging, and certainly a step in addressing illegal immigration. But here is the real question and the elephant in the room:\n#Greece is being flooded with Sudanese migrants trafficked from #Libya . They know they are highly likely to ALL  be granted asylum in",
+      "url": "https://x.com/mariathena/status/2122456875388281056",
+      "source_url": "https://x.com/mariathena/status/2122456875388281056",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.97,
+      "score": 16.0,
+      "matched_signals": [
+        "LEGAL_MIGRATION_SIGNAL"
+      ],
+      "matched_phrases": [
+        [
+          "legal_signal",
+          "granted asylum"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants",
+        "asylum"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "CENTRAL_MEDITERRANEAN",
+      "primary_region": "CENTRAL_MEDITERRANEAN",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 53.95,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2122456875388281056"
+      ],
+      "related_authors": [
+        "mariathena"
+      ],
+      "related_urls": [
+        "https://x.com/mariathena/status/2122456875388281056"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
+    {
+      "id": 1463,
+      "source": "X",
+      "source_post_id": "2122464127046254820",
+      "author": "BBCPropaganda",
+      "language": "en",
+      "published_at": "2026-11-16T22:57:36Z",
+      "first_detected_at": "2026-11-16T23:08:47Z",
+      "last_detected_at": "2026-11-16T23:08:47Z",
+      "detection_count": 1,
+      "text": "You have got to be kidding. You lost a general election pushing this fantasy politics. Rwanda would never have stopped the boats. Only leaving ECHR and deporting all economic illegals (and many uneconomic legal migrants the last Tory government let in) will solve the problem https://t.co/UYC6r6iuze",
+      "text_excerpt": "You have got to be kidding. You lost a general election pushing this fantasy politics. Rwanda would never have stopped the boats. Only leaving ECHR and deporting all economic illegals (and many uneconomic legal migrants the last Tory government let in) will solve the problem https://t.co/UYC6r6iuze",
+      "url": "https://x.com/BBCPropaganda/status/2122464127046254820",
+      "source_url": "https://x.com/BBCPropaganda/status/2122464127046254820",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.94,
+      "score": 14.0,
+      "matched_signals": [
+        "LEGAL_MIGRATION_SIGNAL"
+      ],
+      "matched_phrases": [
+        [
+          "legal_signal",
+          "ECHR"
         ]
       ],
       "matched_groups": [],
@@ -1560,177 +1518,17 @@
       "latitude": null,
       "longitude": null,
       "rules_version": "2.6",
-      "priority_score": 58.2,
-      "analyst_priority": "MEDIUM",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "2122007026976899445"
-      ],
-      "related_authors": [
-        "SinisterSleuth"
-      ],
-      "related_urls": [
-        "https://x.com/SinisterSleuth/status/2122007026976899445"
-      ],
-      "related_sources": [
-        "X"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
-    },
-    {
-      "id": 1452,
-      "source": "X",
-      "source_post_id": "2122002535477071923",
-      "author": "ArcticAdvisory",
-      "language": "en",
-      "published_at": "2026-11-15T16:23:24Z",
-      "first_detected_at": "2026-11-15T16:42:31Z",
-      "last_detected_at": "2026-11-15T16:42:31Z",
-      "detection_count": 1,
-      "text": "@zarahussain999 But let us be clear. They are not \"migrants\", they are illegals. They throw away their passports at Sea, and are told to say that they seek asylum. Under ECHR convention we must accept them. They throw away IDs so their story cannot be checked by UK's custom &amp; Exercise personnel",
-      "text_excerpt": "@zarahussain999 But let us be clear. They are not \"migrants\", they are illegals. They throw away their passports at Sea, and are told to say that they seek asylum. Under ECHR convention we must accept them. They throw away IDs so their story cannot be checked by UK's custom &amp; Exercise personnel",
-      "url": "https://x.com/ArcticAdvisory/status/2122002535477071923",
-      "source_url": "https://x.com/ArcticAdvisory/status/2122002535477071923",
-      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
-      "signal_type": "LEGAL_MIGRATION_SIGNAL",
-      "signal_mode": "DIRECT",
-      "signal_intent": "LEGAL_ACCESS",
-      "priority": "MEDIUM",
-      "confidence": 0.94,
-      "score": 15.0,
-      "matched_signals": [
-        "LEGAL_MIGRATION_SIGNAL"
-      ],
-      "matched_phrases": [
-        [
-          "legal_signal",
-          "ECHR"
-        ]
-      ],
-      "matched_groups": [],
-      "context_matches": [
-        "migrants",
-        "asylum"
-      ],
-      "high_value_matches": false,
-      "signal_context_rejections": {},
-      "migration_context": true,
-      "human_migration_context": null,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "2.6",
       "priority_score": 48.9,
       "analyst_priority": "MEDIUM",
       "related_posts_count": 1,
       "related_post_ids": [
-        "2122002535477071923"
+        "2122464127046254820"
       ],
       "related_authors": [
-        "ArcticAdvisory"
+        "BBCPropaganda"
       ],
       "related_urls": [
-        "https://x.com/ArcticAdvisory/status/2122002535477071923"
-      ],
-      "related_sources": [
-        "X"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
-    },
-    {
-      "id": 1457,
-      "source": "X",
-      "source_post_id": "2122299608386748475",
-      "author": "TrenchesAndCity",
-      "language": "en",
-      "published_at": "2026-11-16T12:03:51Z",
-      "first_detected_at": "2026-11-16T12:10:44Z",
-      "last_detected_at": "2026-11-16T12:10:44Z",
-      "detection_count": 1,
-      "text": "🇪🇸 Nearly 3100 migrants have reached Spain's Canary Islands by boat over the last two days as the country declared a national emergency.\n\nSpain's El Hierro Canary Islands with 11,000 residents, has faced a sharp surge in migrant arrivals via Atlantic route from Senegal. https://t.co/Bk6OlNBSgQ",
-      "text_excerpt": "🇪🇸 Nearly 3100 migrants have reached Spain's Canary Islands by boat over the last two days as the country declared a national emergency.\n\nSpain's El Hierro Canary Islands with 11,000 residents, has faced a sharp surge in migrant arrivals via Atlantic route from Senegal. https://t.co/Bk6OlNBSgQ",
-      "url": "https://x.com/TrenchesAndCity/status/2122299608386748475",
-      "source_url": "https://x.com/TrenchesAndCity/status/2122299608386748475",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.9,
-      "score": 13.25,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrants have reached"
-        ],
-        [
-          "movement",
-          "migrant arrivals"
-        ],
-        [
-          "route",
-          "boat"
-        ],
-        [
-          "route",
-          "route"
-        ],
-        [
-          "pressure",
-          "surge"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT",
-        "ROUTE",
-        "PRESSURE"
-      ],
-      "context_matches": [
-        "migrants",
-        "migrant"
-      ],
-      "high_value_matches": [
-        "migrants have reached",
-        "migrant arrivals",
-        "surge"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "Canary Islands",
-      "primary_location": "Canary Islands",
-      "country": "Spain",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "latitude": 28.2916,
-      "longitude": -16.6291,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 42.5,
-      "analyst_priority": "MEDIUM",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "2122299608386748475"
-      ],
-      "related_authors": [
-        "TrenchesAndCity"
-      ],
-      "related_urls": [
-        "https://x.com/TrenchesAndCity/status/2122299608386748475"
+        "https://x.com/BBCPropaganda/status/2122464127046254820"
       ],
       "related_sources": [
         "X"
@@ -1744,37 +1542,179 @@
   "top_crossing_access_posts": [],
   "crossing_access_narratives": [
     {
-      "id": 1450,
-      "source": "X",
-      "source_post_id": "2122007026976899445",
-      "author": "SinisterSleuth",
-      "language": "en",
-      "published_at": "2026-11-15T16:41:14Z",
-      "first_detected_at": "2026-11-15T16:41:59Z",
-      "last_detected_at": "2026-11-15T16:41:59Z",
+      "id": 1460,
+      "source": "MASTODON",
+      "source_post_id": "mastodon_117628259375989102",
+      "author": null,
+      "language": null,
+      "published_at": "2026-11-16T21:33:17Z",
+      "first_detected_at": "2026-11-16T23:05:55Z",
+      "last_detected_at": "2026-11-16T23:05:55Z",
       "detection_count": 1,
-      "text": "@zarahussain999 A safe route is taking an airplane via the legal channels. Completely irresponsible of the migrants. Accountability is needed sometimes for one's actions.",
-      "text_excerpt": "@zarahussain999 A safe route is taking an airplane via the legal channels. Completely irresponsible of the migrants. Accountability is needed sometimes for one's actions.",
-      "url": "https://x.com/SinisterSleuth/status/2122007026976899445",
-      "source_url": "https://x.com/SinisterSleuth/status/2122007026976899445",
-      "primary_signal": "CROSSING_FACILITATION",
-      "signal_type": "CROSSING_FACILITATION",
+      "text": "Germany, Denmark, Austria, Greece and the Netherlands are planning to establish a joint # migrant return # hub in # Rwanda , with the aim of beginning transfers in 2027. The centre would accommodate migrants who have no legal right to remain in the participating countries, including those whose asylum applications have been rejected, while arrangements are made for their return. The initiative forms part of a broader European push to accelerate deportations and increase cooperation with third countries on migration management. The plans remain subject to negotiations with Rwanda. # Immigration # Europe # Rwanda # Germany # Denmark # Austria # Greece",
+      "text_excerpt": "Germany, Denmark, Austria, Greece and the Netherlands are planning to establish a joint # migrant return # hub in # Rwanda , with the aim of beginning transfers in 2027. The centre would accommodate migrants who have no legal right to remain in the participating countries, including those whose asylum applications have been rejected, while arrangements are made for their return. The initiative forms part of a broader European push to accelerate deportations and increase cooperation with third countries on migration management. The plans remain subject to negotiations with Rwanda. # Immigration # Europe # Rwanda # Germany # Denmark # Austria # Greece",
+      "url": "https://todon.eu/@faab64/117628259375989102",
+      "source_url": "https://todon.eu/@faab64/117628259375989102",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
       "signal_mode": "DIRECT",
-      "signal_intent": "EASIER_CROSSING",
-      "priority": "HIGH",
-      "confidence": 0.92,
-      "score": 18.0,
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.99,
+      "score": 25.0,
       "matched_signals": [
-        "CROSSING_FACILITATION"
+        "LEGAL_MIGRATION_SIGNAL"
       ],
       "matched_phrases": [
         [
-          "route_information",
-          "safe route"
+          "legal_signal",
+          "right to remain"
         ],
         [
-          "route_promotion",
-          "safe route"
+          "legal_protection",
+          "right to remain"
+        ],
+        [
+          "HIGH_VALUE",
+          "right to remain"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrant",
+        "migrants",
+        "migration",
+        "asylum"
+      ],
+      "high_value_matches": [
+        "right to remain"
+      ],
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "EASTERN_MEDITERRANEAN",
+      "primary_region": "EASTERN_MEDITERRANEAN",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 54.65,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "mastodon_117628259375989102"
+      ],
+      "related_authors": [],
+      "related_urls": [
+        "https://todon.eu/@faab64/117628259375989102"
+      ],
+      "related_sources": [
+        "MASTODON"
+      ],
+      "independent_author_count": 0,
+      "platform_count": 1
+    },
+    {
+      "id": 1461,
+      "source": "X",
+      "source_post_id": "2122456875388281056",
+      "author": "mariathena",
+      "language": "en",
+      "published_at": "2026-11-16T22:28:47Z",
+      "first_detected_at": "2026-11-16T23:08:05Z",
+      "last_detected_at": "2026-11-16T23:08:05Z",
+      "detection_count": 1,
+      "text": "@PeterSweden7 It all sounds encouraging, and certainly a step in addressing illegal immigration. But here is the real question and the elephant in the room:\n#Greece is being flooded with Sudanese migrants trafficked from #Libya . They know they are highly likely to ALL  be granted asylum in",
+      "text_excerpt": "@PeterSweden7 It all sounds encouraging, and certainly a step in addressing illegal immigration. But here is the real question and the elephant in the room:\n#Greece is being flooded with Sudanese migrants trafficked from #Libya . They know they are highly likely to ALL  be granted asylum in",
+      "url": "https://x.com/mariathena/status/2122456875388281056",
+      "source_url": "https://x.com/mariathena/status/2122456875388281056",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.97,
+      "score": 16.0,
+      "matched_signals": [
+        "LEGAL_MIGRATION_SIGNAL"
+      ],
+      "matched_phrases": [
+        [
+          "legal_signal",
+          "granted asylum"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrants",
+        "asylum"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "CENTRAL_MEDITERRANEAN",
+      "primary_region": "CENTRAL_MEDITERRANEAN",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 53.95,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2122456875388281056"
+      ],
+      "related_authors": [
+        "mariathena"
+      ],
+      "related_urls": [
+        "https://x.com/mariathena/status/2122456875388281056"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
+    {
+      "id": 1463,
+      "source": "X",
+      "source_post_id": "2122464127046254820",
+      "author": "BBCPropaganda",
+      "language": "en",
+      "published_at": "2026-11-16T22:57:36Z",
+      "first_detected_at": "2026-11-16T23:08:47Z",
+      "last_detected_at": "2026-11-16T23:08:47Z",
+      "detection_count": 1,
+      "text": "You have got to be kidding. You lost a general election pushing this fantasy politics. Rwanda would never have stopped the boats. Only leaving ECHR and deporting all economic illegals (and many uneconomic legal migrants the last Tory government let in) will solve the problem https://t.co/UYC6r6iuze",
+      "text_excerpt": "You have got to be kidding. You lost a general election pushing this fantasy politics. Rwanda would never have stopped the boats. Only leaving ECHR and deporting all economic illegals (and many uneconomic legal migrants the last Tory government let in) will solve the problem https://t.co/UYC6r6iuze",
+      "url": "https://x.com/BBCPropaganda/status/2122464127046254820",
+      "source_url": "https://x.com/BBCPropaganda/status/2122464127046254820",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.94,
+      "score": 14.0,
+      "matched_signals": [
+        "LEGAL_MIGRATION_SIGNAL"
+      ],
+      "matched_phrases": [
+        [
+          "legal_signal",
+          "ECHR"
         ]
       ],
       "matched_groups": [],
@@ -1796,85 +1736,17 @@
       "latitude": null,
       "longitude": null,
       "rules_version": "2.6",
-      "priority_score": 58.2,
-      "analyst_priority": "MEDIUM",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "2122007026976899445"
-      ],
-      "related_authors": [
-        "SinisterSleuth"
-      ],
-      "related_urls": [
-        "https://x.com/SinisterSleuth/status/2122007026976899445"
-      ],
-      "related_sources": [
-        "X"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
-    },
-    {
-      "id": 1452,
-      "source": "X",
-      "source_post_id": "2122002535477071923",
-      "author": "ArcticAdvisory",
-      "language": "en",
-      "published_at": "2026-11-15T16:23:24Z",
-      "first_detected_at": "2026-11-15T16:42:31Z",
-      "last_detected_at": "2026-11-15T16:42:31Z",
-      "detection_count": 1,
-      "text": "@zarahussain999 But let us be clear. They are not \"migrants\", they are illegals. They throw away their passports at Sea, and are told to say that they seek asylum. Under ECHR convention we must accept them. They throw away IDs so their story cannot be checked by UK's custom &amp; Exercise personnel",
-      "text_excerpt": "@zarahussain999 But let us be clear. They are not \"migrants\", they are illegals. They throw away their passports at Sea, and are told to say that they seek asylum. Under ECHR convention we must accept them. They throw away IDs so their story cannot be checked by UK's custom &amp; Exercise personnel",
-      "url": "https://x.com/ArcticAdvisory/status/2122002535477071923",
-      "source_url": "https://x.com/ArcticAdvisory/status/2122002535477071923",
-      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
-      "signal_type": "LEGAL_MIGRATION_SIGNAL",
-      "signal_mode": "DIRECT",
-      "signal_intent": "LEGAL_ACCESS",
-      "priority": "MEDIUM",
-      "confidence": 0.94,
-      "score": 15.0,
-      "matched_signals": [
-        "LEGAL_MIGRATION_SIGNAL"
-      ],
-      "matched_phrases": [
-        [
-          "legal_signal",
-          "ECHR"
-        ]
-      ],
-      "matched_groups": [],
-      "context_matches": [
-        "migrants",
-        "asylum"
-      ],
-      "high_value_matches": false,
-      "signal_context_rejections": {},
-      "migration_context": true,
-      "human_migration_context": null,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "2.6",
       "priority_score": 48.9,
       "analyst_priority": "MEDIUM",
       "related_posts_count": 1,
       "related_post_ids": [
-        "2122002535477071923"
+        "2122464127046254820"
       ],
       "related_authors": [
-        "ArcticAdvisory"
+        "BBCPropaganda"
       ],
       "related_urls": [
-        "https://x.com/ArcticAdvisory/status/2122002535477071923"
+        "https://x.com/BBCPropaganda/status/2122464127046254820"
       ],
       "related_sources": [
         "X"
@@ -2009,14 +1881,14 @@
       "label": "W47",
       "week_label": "W47",
       "week_start": "2026-11-16T00:00:00Z",
-      "posts": 112,
-      "post_count": 112,
-      "operational_posts": 9,
-      "influence_signals": 5,
+      "posts": 175,
+      "post_count": 175,
+      "operational_posts": 12,
+      "influence_signals": 9,
       "source_counts": {
-        "X": 87,
-        "MASTODON": 17,
-        "TELEGRAM": 8
+        "X": 126,
+        "MASTODON": 32,
+        "TELEGRAM": 17
       }
     }
   ],
@@ -2146,32 +2018,32 @@
       "label": "W47",
       "week_label": "W47",
       "week_start": "2026-11-16T00:00:00Z",
-      "posts": 112,
-      "post_count": 112,
-      "operational_posts": 9,
-      "influence_signals": 5,
+      "posts": 175,
+      "post_count": 175,
+      "operational_posts": 12,
+      "influence_signals": 9,
       "source_counts": {
-        "X": 87,
-        "MASTODON": 17,
-        "TELEGRAM": 8
+        "X": 126,
+        "MASTODON": 32,
+        "TELEGRAM": 17
       }
     }
   ],
   "information_activity_summary": {
-    "current_week": 112,
-    "previous_week": 115,
-    "current_week_to_date": 112,
-    "previous_week_same_period": 115,
+    "current_week": 175,
+    "previous_week": 207,
+    "current_week_to_date": 175,
+    "previous_week_same_period": 207,
     "previous_week_full": 1482,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": -2.61,
-    "change_label": "-2.6%",
+    "change_percent": -15.46,
+    "change_label": "-15.5%",
     "direction": "DOWN",
     "comparable": true,
-    "elapsed_hours": 12.2,
+    "elapsed_hours": 23.1,
     "current_period_start": "2026-11-16T00:00:00Z",
     "previous_period_start": "2026-11-09T00:00:00Z",
-    "previous_period_end": "2026-11-09T12:14:32Z"
+    "previous_period_end": "2026-11-09T23:08:48Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -2183,44 +2055,44 @@
       72,
       168
     ],
-    "generated_at": "2026-11-16T12:14:33Z",
-    "total_items": 2129,
-    "information_count": 287,
-    "early_warning_count": 951,
-    "operational_count": 728,
+    "generated_at": "2026-11-16T23:08:48Z",
+    "total_items": 2117,
+    "information_count": 283,
+    "early_warning_count": 942,
+    "operational_count": 729,
     "correlated_count": 163,
     "layer_counts": {
-      "EARLY_WARNING": 951,
+      "INFORMATION": 283,
+      "OPERATIONAL": 729,
       "CORRELATED": 163,
-      "OPERATIONAL": 728,
-      "INFORMATION": 287
+      "EARLY_WARNING": 942
     },
     "source_counts": {
-      "X": 1550,
+      "X": 1544,
       "MASTODON": 107,
       "TELEGRAM": 51,
-      "REDDIT": 421
+      "REDDIT": 415
     },
     "type_counts": {
-      "MOVEMENT_EARLY_WARNING": 321,
-      "DEPORTATION": 165,
+      "INFORMATION_SIGNAL": 283,
       "BORDER_CROSSING": 372,
-      "INFORMATION_SIGNAL": 287,
-      "RESCUE_OPERATION": 49,
+      "DEPORTATION": 166,
+      "FACILITATION_EARLY_WARNING": 187,
+      "MOVEMENT_EARLY_WARNING": 318,
+      "RESCUE_OPERATION": 50,
       "ROUTE_EARLY_WARNING": 151,
       "BORDER_MEASURE": 20,
       "INTERCEPTION": 44,
-      "FACILITATION_EARLY_WARNING": 188,
-      "PRESSURE_EARLY_WARNING": 46,
+      "PRESSURE_EARLY_WARNING": 45,
       "DETENTION": 89,
-      "SMUGGLING_ACTIVITY": 35,
+      "SMUGGLING_ACTIVITY": 34,
       "CASUALTY": 30,
-      "LEGAL_MIGRATION_SIGNAL": 92,
+      "LEGAL_MIGRATION_SIGNAL": 91,
       "ENFORCEMENT_EARLY_WARNING": 53,
       "MOBILIZATION_COORDINATION": 24,
       "COORDINATION": 14,
       "POLICY_SIGNAL": 8,
-      "CROSSING_FACILITATION": 45,
+      "CROSSING_FACILITATION": 42,
       "MIGRANT_CAMP": 73,
       "RECRUITMENT_COORDINATION": 18,
       "MOBILIZATION_REPORT": 1,
@@ -2228,6 +2100,263 @@
       "ONLINE_INFLUENCE_REPORT": 1
     },
     "items": [
+      {
+        "timeline_id": "information:27325",
+        "timestamp": "2026-11-16T23:00:51Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2122464945006596507",
+        "author": "WSWS_Updates",
+        "url": "https://x.com/WSWS_Updates/status/2122464945006596507",
+        "source_url": "https://x.com/WSWS_Updates/status/2122464945006596507",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "boat",
+          "arrival"
+        ],
+        "freshness_cues": [],
+        "text": "Home Secretary Shabana Mahmood’s policy on care workers leaves hundreds of thousands of migrants facing a 10-year wait for settlement, while refugees arriving by small boat face up to 30 years. https://t.co/9QPNEvUoT2",
+        "text_excerpt": "Home Secretary Shabana Mahmood’s policy on care workers leaves hundreds of thousands of migrants facing a 10-year wait for settlement, while refugees arriving by small boat face up to 30 years. https://t.co/9QPNEvUoT2",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-16T23:06:47Z",
+        "last_collected_at": "2026-11-16T23:06:47Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:27321",
+        "timestamp": "2026-11-16T23:00:05Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2122464755117887961",
+        "author": "mariathena",
+        "url": "https://x.com/mariathena/status/2122464755117887961",
+        "source_url": "https://x.com/mariathena/status/2122464755117887961",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "crossing",
+          "route"
+        ],
+        "freshness_cues": [],
+        "text": "@Ronnie40791207 @PeterSweden7 More than 18,000 Sudanese migrants are estimated to have entered Greece illegally in the last 3 years . There is no precise number available .\nThere is a striking increase through the Libya to Crete route .\nYes, they are entitled to asylum despite having crossed safe countries to",
+        "text_excerpt": "@Ronnie40791207 @PeterSweden7 More than 18,000 Sudanese migrants are estimated to have entered Greece illegally in the last 3 years . There is no precise number available .\nThere is a striking increase through the Libya to Crete route .\nYes, they are entitled to asylum despite having crossed safe countries to",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-16T23:06:22Z",
+        "last_collected_at": "2026-11-16T23:06:22Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "operational:927",
+        "timestamp": "2026-11-16T22:56:19Z",
+        "layer": "OPERATIONAL",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "X",
+        "source_post_id": "2122463806400127179",
+        "author": "ssc_globa1",
+        "url": "https://x.com/ssc_globa1/status/2122463806400127179",
+        "source_url": "https://x.com/ssc_globa1/status/2122463806400127179",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": 28.2916,
+        "longitude": -16.6291,
+        "confidence": 0.75,
+        "priority": "HIGH",
+        "priority_score": 75.0,
+        "text": "More than 2,000 people reached Spain’s Canary Islands by boat in just two days.\n\nSpanish maritime rescue services reported that around 2,200 migrants arrived during the surge.\n\nMany make the dangerous Atlantic crossing from West Africa, sometimes spending days or weeks at sea.",
+        "text_excerpt": "More than 2,000 people reached Spain’s Canary Islands by boat in just two days.\n\nSpanish maritime rescue services reported that around 2,200 migrants arrived during the surge.\n\nMany make the dangerous Atlantic crossing from West Africa, sometimes spending days or weeks at sea.",
+        "event_group_id": 693,
+        "correlation_score": 0.84,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
+      {
+        "timeline_id": "correlated:925",
+        "timestamp": "2026-11-16T22:56:19Z",
+        "layer": "CORRELATED",
+        "type": "DEPORTATION",
+        "signal_type": "DEPORTATION",
+        "event_type": "DEPORTATION",
+        "source": "X",
+        "source_post_id": "2122463806400127179",
+        "author": "ssc_globa1",
+        "url": "https://x.com/ssc_globa1/status/2122463806400127179",
+        "source_url": "https://x.com/ssc_globa1/status/2122463806400127179",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.8,
+        "priority": "HIGH",
+        "priority_score": 80.0,
+        "text": "More than 2,000 people reached Spain’s Canary Islands by boat in just two days.\n\nSpanish maritime rescue services reported that around 2,200 migrants arrived during the surge.\n\nMany make the dangerous Atlantic crossing from West Africa, sometimes spending days or weeks at sea.",
+        "text_excerpt": "More than 2,000 people reached Spain’s Canary Islands by boat in just two days.\n\nSpanish maritime rescue services reported that around 2,200 migrants arrived during the surge.\n\nMany make the dangerous Atlantic crossing from West Africa, sometimes spending days or weeks at sea.",
+        "event_group_id": 693,
+        "correlation_score": 0.84,
+        "related_source_count": 15,
+        "source_types": [
+          "MASTODON",
+          "X"
+        ],
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:27326",
+        "timestamp": "2026-11-16T22:51:56Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2122462701570146766",
+        "author": "MandiblesT99117",
+        "url": "https://x.com/MandiblesT99117/status/2122462701570146766",
+        "source_url": "https://x.com/MandiblesT99117/status/2122462701570146766",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "boat",
+          "deportation"
+        ],
+        "freshness_cues": [
+          "now"
+        ],
+        "text": "@politics_w_sami Not a chance in hell, I see a shitstain in the street now I assume boat migrant😂 DEPORT THEM ALL!",
+        "text_excerpt": "@politics_w_sami Not a chance in hell, I see a shitstain in the street now I assume boat migrant😂 DEPORT THEM ALL!",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-16T23:06:47Z",
+        "last_collected_at": "2026-11-16T23:06:47Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "early_warning:1462",
+        "timestamp": "2026-11-16T22:24:35Z",
+        "layer": "EARLY_WARNING",
+        "type": "FACILITATION_EARLY_WARNING",
+        "signal_type": "FACILITATION_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2122455819665256951",
+        "author": "Milatrud11",
+        "url": "https://x.com/Milatrud11/status/2122455819665256951",
+        "source_url": "https://x.com/Milatrud11/status/2122455819665256951",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.9,
+        "priority": "MEDIUM",
+        "priority_score": 35.5,
+        "analyst_priority": "LOW",
+        "text": "6 arrested as Alicante police take part in operation against smuggling of unaccompanied child migrants (\"menas\") into Spain:\nSuspects entered on tourist visas,abandoned their North African children(16-17), and returned home:\n\nIt´s dubbed „Menas Erasmus“\nhttps://t.co/PtBO96vnqQ https://t.co/QuxcMAdpoN",
+        "text_excerpt": "6 arrested as Alicante police take part in operation against smuggling of unaccompanied child migrants (\"menas\") into Spain:\nSuspects entered on tourist visas,abandoned their North African children(16-17), and returned home:\n\nIt´s dubbed „Menas Erasmus“\nhttps://t.co/PtBO96vnqQ https://t.co/QuxcMAdpoN",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "FACILITATION_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-11-16T23:08:05Z",
+        "last_detected_at": "2026-11-16T23:08:05Z",
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
+      {
+        "timeline_id": "information:27302",
+        "timestamp": "2026-11-16T21:32:18Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "MASTODON",
+        "source_post_id": "mastodon_117628255505702085",
+        "author": null,
+        "url": "https://tilde.zone/@mk30/117628255505702085",
+        "source_url": "https://tilde.zone/@mk30/117628255505702085",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "arrival",
+          "landing"
+        ],
+        "freshness_cues": [
+          "yesterday",
+          "now"
+        ],
+        "text": "yesterday was the anniversary of my family's arrival to the USA in 1989. it's sort of a family holiday...my parents always call me and we think about how far we've come. it was a miserable november evening in chicago when we arrived! we were like \"where have we landed....\" and now i'm the luckiest little immigrant from the former soviet union, living in hawai'i. my folks have their dream house in the suburbs. my brothers have their own families and jobs. this country gave us opportunities and allowed us to become citizens. obviously the path was much much much easier because we're white. and even my dad understands this now. (former soviets are not known to have progressive insights into racism, ya know?) my family moved to this country to get away from a miserable regime where there was no rule of law, no respect for the individual, where people COULD be snatched off the street, where people COULD be disappeared by the government, where you didn't have legal protections from discrimination... america was supposed to be a \"free country\"....and although that promise was never real for so many immigrants, it's gotten even more horrific since the increases in ICE roundups in the current administration. you don't see me post a lot about immigration because the things that are happening to everyday people in this country are so horrible and i feel so so powerless to affect it. it's too painful to post about it. but i do think that it's important to remember that there are thousands of people who are currently locked up in nightmare conditions with no hope of due process, and often without even any accessible record of their location. they are literally disappeared.... # immigration # immigrants # ICE # USPol",
+        "text_excerpt": "yesterday was the anniversary of my family's arrival to the USA in 1989. it's sort of a family holiday...my parents always call me and we think about how far we've come. it was a miserable november evening in chicago when we arrived! we were like \"where have we landed....\" and now i'm the luckiest little immigrant from the former soviet union, living in hawai'i. my folks have their dream house in the suburbs. my brot…",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-16T23:05:55Z",
+        "last_collected_at": "2026-11-16T23:05:55Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
       {
         "timeline_id": "early_warning:1457",
         "timestamp": "2026-11-16T12:03:51Z",
@@ -2288,7 +2417,7 @@
         "text_excerpt": "🚨 Canary Islands: 3,047 migrants landed in a single weekend, on 23 boats. On Sunday alone, 1,467 arrived in nine cayucos, eight of them on El Hierro (EFE).\n\nA border that depends on the weather is not a border. It's a waiting room. https://t.co/ZXRHk7xM1W",
         "event_group_id": 693,
         "correlation_score": 0.75,
-        "related_source_count": 14,
+        "related_source_count": 15,
         "source_types": [
           "MASTODON",
           "X"
@@ -2354,7 +2483,7 @@
         "text_excerpt": "Nearly 2,200 migrants arrived in #Spain’s #CanaryIslands over Saturday and Sunday, braving a dangerous journey by sea in hopes of reaching the archipelago’s El Hierro island.\nWhile aid workers do their best to provide care for the record number of new arrivals, the influx has https://t.co/Ijacq23L44",
         "event_group_id": 693,
         "correlation_score": 0.76,
-        "related_source_count": 14,
+        "related_source_count": 15,
         "source_types": [
           "MASTODON",
           "X"
@@ -2427,7 +2556,7 @@
         "text_excerpt": "Meanwhile…. The residents of the Canary Islands are fed up.\n\nAlejandro Gomes from the VOX party: \"About a thousand migrants arrived in El Hierro in a single day, and the hospital is already overwhelmed.\"\n\n@tzviyehezkely https://t.co/niMoMCci2W",
         "event_group_id": 693,
         "correlation_score": 0.82,
-        "related_source_count": 14,
+        "related_source_count": 15,
         "source_types": [
           "MASTODON",
           "X"
@@ -2460,7 +2589,7 @@
         "text_excerpt": "🚨GLOBAL NEWS\n\nNearly 2,200 migrants have arrived by boat in Spain's Canary Islands over two days, as rescue teams continue to respond to dangerous Atlantic crossings from West Africa.\n\nSpain's Maritime Rescue Service said it assisted 1,324 people aboard 14 boats, most of whom https://t.co/KKYyruPb85",
         "event_group_id": 693,
         "correlation_score": 0.82,
-        "related_source_count": 14,
+        "related_source_count": 15,
         "source_types": [
           "MASTODON",
           "X"
@@ -2716,7 +2845,7 @@
         "text_excerpt": "Рекордное за четыре года число мигрантов прибыло на Канарские острова за день / A record number of migrants in four years arrived in the Canary Islands in a single day. Reuters: Nearly 1,500 migrants arrived in the Canary Islands in one day. News. Spain:\n\nhttps://t.co/DkiyrGg4hI",
         "event_group_id": 693,
         "correlation_score": 0.78,
-        "related_source_count": 14,
+        "related_source_count": 15,
         "source_types": [
           "MASTODON",
           "X"
@@ -2898,7 +3027,7 @@
         "text_excerpt": "@ElizaaaSwan Migrants crossed from West Africa (mainly Senegal, Gambia, Mauritania) in overcrowded wooden cayucos. Trips last 4-7 days; one boat alone held 240 people. Autumn seas favor the dangerous Atlantic route.\n\nEl Hierro (pop. ~12,000) took most of the ~1,500 Saturday arrivals,",
         "event_group_id": 693,
         "correlation_score": 0.65,
-        "related_source_count": 14,
+        "related_source_count": 15,
         "source_types": [
           "MASTODON",
           "X"
@@ -2931,7 +3060,7 @@
         "text_excerpt": "🚨 BREAKING: Spain Declares a Migration Emergency in the Canary Islands\n\n🌊 Nearly 2,200 migrants arrived in 48 hours, including nearly 1,500 on Saturday, the highest single-day total since 2020.\n\nHey @grok, how did so many migrants reach the Canaries in just two days? How https://t.co/p3VOxITT4C",
         "event_group_id": 693,
         "correlation_score": 0.88,
-        "related_source_count": 14,
+        "related_source_count": 15,
         "source_types": [
           "MASTODON",
           "X"
@@ -3003,7 +3132,7 @@
         "text_excerpt": "Canary Islands Hit by Massive Migrant Surge: 1,500 Arrive in One Day\n\nAnother day, another mass arrival. Canary Islands overwhelmed, locals left to deal with the consequences. This policy failure keeps repeating. Enough is enough.\n https://t.co/y4W2Ds4jYT",
         "event_group_id": 693,
         "correlation_score": 0.93,
-        "related_source_count": 14,
+        "related_source_count": 15,
         "source_types": [
           "MASTODON",
           "X"
@@ -3628,7 +3757,7 @@
         "text_excerpt": "Spain's maritime rescue service says nearly 2,200 migrants have arrived in the Canary Islands over the past two days # Politics # Immigration # Worldnews # Generalnews Spain says nearly 2,200 migrants reached Canary Islands in 2 days",
         "event_group_id": 693,
         "correlation_score": 0.81,
-        "related_source_count": 14,
+        "related_source_count": 15,
         "source_types": [
           "MASTODON",
           "X"
@@ -3992,7 +4121,7 @@
         "text_excerpt": "State of emergency declared after 7,400 migrants arrived in the Canary Islands aka Spain within the first 10 days of November. Thousands more have reached the islands amidst overwhelming conditions at local reception centers. \n\nSanchez is a despicable shitweazel 🖕 https://t.co/56B5R3RJRx",
         "event_group_id": 693,
         "correlation_score": 0.66,
-        "related_source_count": 14,
+        "related_source_count": 15,
         "source_types": [
           "MASTODON",
           "X"
@@ -5261,6 +5390,38 @@
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
+        "timeline_id": "operational:905",
+        "timestamp": "2026-11-13T18:33:40Z",
+        "layer": "OPERATIONAL",
+        "type": "RESCUE_OPERATION",
+        "signal_type": "RESCUE_OPERATION",
+        "event_type": "RESCUE_OPERATION",
+        "source": "X",
+        "source_post_id": "2121310544049160479",
+        "author": "_BrianMankin_",
+        "url": "https://x.com/_BrianMankin_/status/2121310544049160479",
+        "source_url": "https://x.com/_BrianMankin_/status/2121310544049160479",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.25,
+        "priority": "LOW",
+        "priority_score": 25.0,
+        "text": "@Bbbbyoip @welshmaan Surely the boat and the migrants belong together?  If the migrants were rescued in British waters by British rescuers — surely the boat should also come to Britain?",
+        "text_excerpt": "@Bbbbyoip @welshmaan Surely the boat and the migrants belong together?  If the migrants were rescued in British waters by British rescuers — surely the boat should also come to Britain?",
+        "event_group_id": 717,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
         "timeline_id": "information:26685",
         "timestamp": "2026-11-13T18:33:38Z",
         "layer": "INFORMATION",
@@ -5526,6 +5687,38 @@
         "first_collected_at": "2026-11-13T18:54:06Z",
         "last_collected_at": "2026-11-13T18:54:06Z",
         "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "operational:906",
+        "timestamp": "2026-11-13T18:15:12Z",
+        "layer": "OPERATIONAL",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "X",
+        "source_post_id": "2121305897527857446",
+        "author": "_charlie_cc",
+        "url": "https://x.com/_charlie_cc/status/2121305897527857446",
+        "source_url": "https://x.com/_charlie_cc/status/2121305897527857446",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.55,
+        "priority": "MEDIUM",
+        "priority_score": 55.0,
+        "text": "216,139 illegal migrants have arrived via small boat as of 12 November 2026. \n\n924 migrants arrived via small boat in the last 7 days.\n\nIf we assume a lifetime net fiscal cost of £350,000 per arrival, the cost of the arrivals in just the last 7 days will total £323.4 million. https://t.co/DKXQPRGgx0",
+        "text_excerpt": "216,139 illegal migrants have arrived via small boat as of 12 November 2026. \n\n924 migrants arrived via small boat in the last 7 days.\n\nIf we assume a lifetime net fiscal cost of £350,000 per arrival, the cost of the arrivals in just the last 7 days will total £323.4 million. https://t.co/DKXQPRGgx0",
+        "event_group_id": 718,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -10355,7 +10548,7 @@
         "text_excerpt": "The immigration crisis engulfing Spain's Canary Islands has exposed the mounting pressure on local communities and raised serious questions about the PSOE government's handling of the country's borders under Prime Minister Pedro Sánchez.\n\nNearly 5,000 migrants have arrived on the https://t.co/GoRAOuPAvv",
         "event_group_id": 693,
         "correlation_score": 0.69,
-        "related_source_count": 14,
+        "related_source_count": 15,
         "source_types": [
           "MASTODON",
           "X"
@@ -11527,7 +11720,7 @@
         "text_excerpt": "🇪🇸 Spain, early November. More than 4,000 undocumented migrants arrived, almost all of them Muslim men. Not one is expected to be deported. Pedro Sánchez plans to distribute them across Spain and eventually throughout Europe. Pedro Sánchez is a criminal.\nsgtnews https://t.co/fJ4jbHW2ms",
         "event_group_id": 693,
         "correlation_score": 0.99,
-        "related_source_count": 14,
+        "related_source_count": 15,
         "source_types": [
           "MASTODON",
           "X"
@@ -11592,7 +11785,7 @@
         "text_excerpt": "WAKE UP CALL:⚠️🇪🇸 Spain, early November. More than 4,000 undocumented migrants arrived, almost all of them Muslim men. \n - Not one is expected to be deported. \n - Pedro Sánchez plans to distribute them across Spain and eventually throughout Europe. \n - Pedro Sánchez is a https://t.co/g8Bun4LcSf https://t.co/awrh2WXd6f",
         "event_group_id": 693,
         "correlation_score": 0.79,
-        "related_source_count": 14,
+        "related_source_count": 15,
         "source_types": [
           "MASTODON",
           "X"
@@ -18637,323 +18830,6 @@
         "influence_detected": false,
         "first_collected_at": "2026-11-04T19:00:09Z",
         "last_collected_at": "2026-11-04T19:00:09Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:24613",
-        "timestamp": "2026-11-04T18:25:21Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2118046960942711134",
-        "author": "Ben_Nupnau",
-        "url": "https://x.com/Ben_Nupnau/status/2118046960942711134",
-        "source_url": "https://x.com/Ben_Nupnau/status/2118046960942711134",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.6,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "smuggling",
-          "trafficking"
-        ],
-        "freshness_cues": [],
-        "text": "Pleased to join Supreme Court &amp; EU4FAST at the regional conference on common challenges and practices in the Western Balkans. Tackling migrant smuggling, human trafficking, and supporting victims, requires strong laws &amp; effective practices aligned with international standards. https://t.co/SrYkI20taY",
-        "text_excerpt": "Pleased to join Supreme Court &amp; EU4FAST at the regional conference on common challenges and practices in the Western Balkans. Tackling migrant smuggling, human trafficking, and supporting victims, requires strong laws &amp; effective practices aligned with international standards. https://t.co/SrYkI20taY",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-04T19:00:09Z",
-        "last_collected_at": "2026-11-04T19:00:09Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:24614",
-        "timestamp": "2026-11-04T18:18:03Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2118045123355283773",
-        "author": "grok",
-        "url": "https://x.com/grok/status/2118045123355283773",
-        "source_url": "https://x.com/grok/status/2118045123355283773",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "rescue",
-          "trafficking"
-        ],
-        "freshness_cues": [],
-        "text": "@Smokeydouble7 @TheMaineWonk @lion_politics @TheDemocrats Homan said ICE located 3,364 previously untracked unaccompanied migrant children in Minnesota during Operation Metro Surge. Reports frame this as closing administrative gaps in prior tracking records, not verified rescues from a Democratic sex-trafficking scheme. No public",
-        "text_excerpt": "@Smokeydouble7 @TheMaineWonk @lion_politics @TheDemocrats Homan said ICE located 3,364 previously untracked unaccompanied migrant children in Minnesota during Operation Metro Surge. Reports frame this as closing administrative gaps in prior tracking records, not verified rescues from a Democratic sex-trafficking scheme. No public",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-04T19:00:10Z",
-        "last_collected_at": "2026-11-04T19:00:10Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:24601",
-        "timestamp": "2026-11-04T15:10:44Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1xnqn9w",
-        "author": "coffeewalnut08",
-        "url": "https://www.reddit.com/r/LabourUK/comments/1xnqn9w/mahmood_exempts_care_workers_from_new_settlement/",
-        "source_url": "https://www.reddit.com/r/LabourUK/comments/1xnqn9w/mahmood_exempts_care_workers_from_new_settlement/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 40,
-        "information_score": 4,
-        "matched_information_cues": [
-          "route",
-          "boat",
-          "arrival"
-        ],
-        "freshness_cues": [],
-        "text": "Mahmood exempts care workers from new settlement rules\nCare workers who came to the UK after the pandemic, but before the original proposals were announced in May 2025, will keep a five-year route to settlement rather than a new 10-year period. The same rules will apply to public sector workers in education and healthcare – for example auxiliary nurses. Mahmood said rights granted under settlement, including access to the NHS and education, should “not be automatic, it should be earned”. A criminal record, a failure to speak English to a high standard, unpaid debt to HM Revenue and Customs, or a lack of national insurance contributions would disqualify them from settlement. She added that the current system, under which people can apply for settlement after five years, does not represent true fairness. Under the Home Office’s new proposals, legal migrants will be able to settle permanently in the UK after: • 3 years for those earning over £125,141 or highly skilled migrants who are on visas such as the Global Talent and Innovator Founder • 5 years for those on a salary of over £50,271; skilled public service workers such as doctors, nurses and teachers, refugees arriving on safe and legal routes; or for care workers who have been earning £25,000 per year working in social care • 10 years for all other migrants, as well as refugees who move into work and study Twenty years for those claiming certain benefits or who have committed a visa offence, or refugees who arrive on, for example, a small boat and enter work or study. Thirty years for refugees who arrive on a small boat and do not enter work or study. Mahmood also tackled the misuse of sponsorship by rogue employers in the social care sector. She said those who have not fulfilled the conditions of their visa, will be offered a “second chance” by applying for another five-year visa. She said: “Everyone will have a fair shot to make a contribution and no one will be punished for the sins of their employer.”",
-        "text_excerpt": "Mahmood exempts care workers from new settlement rules\nCare workers who came to the UK after the pandemic, but before the original proposals were announced in May 2025, will keep a five-year route to settlement rather than a new 10-year period. The same rules will apply to public sector workers in education and healthcare – for example auxiliary nurses. Mahmood said rights granted under settlement, including access t…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-04T18:59:39Z",
-        "last_collected_at": "2026-11-05T00:36:47Z",
-        "collection_count": 2,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:24602",
-        "timestamp": "2026-11-04T12:21:21Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1xnmted",
-        "author": "askmac",
-        "url": "https://www.reddit.com/r/northernireland/comments/1xnmted/huge_weapons_haul_on_shankill_road_linked_to/",
-        "source_url": "https://www.reddit.com/r/northernireland/comments/1xnmted/huge_weapons_haul_on_shankill_road_linked_to/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 50,
-        "information_score": 5,
-        "matched_information_cues": [
-          "channel",
-          "boat",
-          "rescue"
-        ],
-        "freshness_cues": [
-          "now"
-        ],
-        "text": "Huge weapons haul on Shankill Road linked to ‘extreme far-right terrorism’\nAllison Morris Amnesty International express concerns as PSNI confirm link between explosive devices and far-right extremism The PSNI has confirmed that an investigation into a huge haul of explosive devices discovered in the Shankill Road area of Belfast at the weekend is linked to “extreme far-right terrorism”. One man, 35-year-old Wesley Thomas Fletcher, has been remanded in custody charged with storing explosives and detonators. Fletcher, who has posted support for extremist group Combat 18 on social media, is further accused of having a consignment of Taser stun guns. Police seized the devices during searches at properties on the Shankill Road and Edwina Street over the weekend. A number of residents had to be evacuated from their homes as a precaution while the security operation was carried out. Detectives charged Fletcher with three offences linked to the seizures. The accused, with an address on Leopold Street in the city, appeared at Belfast Magistrates’ Court on Monday to face two counts of possessing explosives in suspicious circumstances. The court was told 17 improvised explosive devices (IEDs) and two detonators containing a charge were also discovered. He was further charged with possessing five stun guns without the authority of the Secretary of State. It represents the largest haul of weaponry linked to the far right ever seized in Northern Ireland. With no bail address available, the former Orangeman was remanded in custody and no further details were read out in court. However, the PSNI has confirmed that the investigation is linked to “extreme right-wing terrorism”. No other police forces are currently involved in the investigation being carried out by the PSNI’s Terrorism Investigations Unit. While loyalist paramilitaries have had strong links with groups such as Combat 18 and the National Front dating back to the 1980s, this is the first time that a weapons haul of this size has been linked exclusively to far-right terrorism. Fletcher’s social media has posts showing support for far-right extremism and he is also thought to be part of a men’s online group, urging “white Christian men”, to train in martial arts to get ready for future “wars”. There have been growing links between anti migrant activists in Northern Ireland and those linked to extremist groups in England. In September, Daniel Thomas, who goes by Danny Tommo on social media, was pictured in the east of the city with local far-right figures as disorder gripped the streets. Thomas previously said he “came away inspired” after his time in Belfast during the riots. He is currently remanded in custody, accused of criminal damage, after a video appeared to show him slashing a boat in the English channel with a knife, while a rescue crew member was on board. For the last three years running there have been race hate riots in Northern Ireland with dozens of families displaced from their homes as a result. Anti immigrant campaigner Stephen Yaxley Lennon, also known as Tommy Robinson, has taken to social media to praise those involved in the disorder. Patrick Corrigan, Head of Nations and Regions at Amnesty International UK, said: “It is deeply alarming that this explosives and firearms find is being linked to far-right extremism. “Northern Ireland has already suffered years of escalating racist violence, leaving in its wake children who are afraid to go to school, families who are scared to leave their homes and communities scarred. “It now appears that the far right aim to intensify this in the most chilling way, and we need assurance from the police that everyone involved will be brought to justice”. https://www.belfasttelegraph.co.uk/news/crime/huge-weapons-haul-on-shankill-road-linked-to-extreme-far-right-terrorism/a/164024909.html",
-        "text_excerpt": "Huge weapons haul on Shankill Road linked to ‘extreme far-right terrorism’\nAllison Morris Amnesty International express concerns as PSNI confirm link between explosive devices and far-right extremism The PSNI has confirmed that an investigation into a huge haul of explosive devices discovered in the Shankill Road area of Belfast at the weekend is linked to “extreme far-right terrorism”. One man, 35-year-old Wesley Th…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-04T18:59:39Z",
-        "last_collected_at": "2026-11-05T00:36:48Z",
-        "collection_count": 2,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:24721",
-        "timestamp": "2026-11-04T12:08:22Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1xnmkkg",
-        "author": "mollusc_in_the_wind",
-        "url": "https://www.reddit.com/r/trading212/comments/1xnmkkg/wise_plc/",
-        "source_url": "https://www.reddit.com/r/trading212/comments/1xnmkkg/wise_plc/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 60,
-        "information_score": 6,
-        "matched_information_cues": [
-          "border",
-          "crossing",
-          "route",
-          "arrival"
-        ],
-        "freshness_cues": [
-          "today",
-          "yesterday",
-          "now"
-        ],
-        "text": "Would be interested to hear if anyone has considered and/or looked at WISE PLC stock as an investment. TL;DR: As I have explained elsewhere, I have a concentrated 17-stock growth portfolio and Wise is one of the only companies that passes my screening gates and fills a gap nothing else in the port addresses. Perhaps even more importantly, it moves less with the rest of my port than almost anything else I own. That is to say that, historically, its price action is not correlated with AI capex names or software, which comprise the lion’s share of my portfolio. The Belgian AML investigation is a significant issue. No denying that. However, waiting for that to resolve will inevitably lead me to paying a higher price if I was to use that as a reason to delay buying the stock. With all that in mind, I initiated a position in Wise yesterday at 800p. It now comprises approx. 3.5% of my portfolio. Below I set out my understanding of the company and why it appeals to me, based on my investment framework. DISCLAIMER: This entire post is written by me (I know that matters to the soft lads out there). What is Wise? Wise moves money across borders for 12.5 million active people and businesses. On its face, it looks like an app. However, upon closer analysis, it is more than that in three particular ways. It owns its rails: It has direct connections into nine payment systems (UK, SEPA, Singapore, Australia, Hungary, Philippines, Brazil, Japan, Malaysia) and 80-plus licences. Most money never actually crosses a border because Wise matches flows going in opposite directions and pays out locally. 78% of transfers now arrive within 20 seconds. It owns the customer: Customers hold $43.5bn with Wise and spent $14.3bn on its cards last quarter. Balances (+28%) and card spend (+30%) are growing faster than transfers (+22%), so the account is becoming the centre of gravity. Banks plug into it: Wise Platform puts Wise’s transfers inside banks’ own apps — Standard Chartered, Morgan Stanley, UniCredit, Itaú, Nubank and Monzo among them. It also hands the savings from scale back to customers on purpose . The take rate has fallen from 0.64% to 0.49% in a little over two years, and management plans more cuts. Think Costco. Looking at it last quarter’s results (Q2 FY27, to September): revenue +21% to $739m, volume +22% to $71.7bn. FY27 is guided to 17.5–20% growth with a pre-tax margin around 25%. Really impressive figures, especially for a stock HQ’d in the UK. Why Wise intrigues me Unique exposure : Nothing I own moves money across borders. MELI’s fintech is domestic LatAm and credit-led; SHOP’s payments sit inside commerce. Unlike MELI, Wise doesn’t have a lending book either. This adds a further degree of separation between the two in terms of ‘risk’. Gen Z/Millennial trend fit : The base looks skewed to people living international lives: migrants, expats, freelancers, travellers, small exporters. Wise doesn’t disclose customer ages, so this is inferred. The disclosed proxies point the same way: about 70% of new customers come by referral, and the account keeps deepening. It diversifies the risk I worry about most : As mentioned above, I ran a rough test on monthly returns from August 2021 to June 2026, comparing Wise with eight of my holdings: Its correlation with the rest of the book was 0.36, second-lowest after LLY (0.25). AXON, MELI and ISRG (my current decorrelators) came in at 0.51–0.61. Its correlation with software stocks was 0.28. Importantly, however, it is strictly a decorrelator, not a defensive . Volatility runs around 51% a year, and it falls with the market in trade shocks. But it held up exactly where my portfolio is weakest: software/AI sell-offs and rising rates, since its interest income rises with them. I am not looking at Wise as a low growth defensive hedge. That’s clearly not what the company is based on the growth alone. Agents : My working hypothesis (I’ve posted this elsewhere) is that agents change where money flows more than how much, with value pooling at compute, control planes, money movers and fulfillers. Wise is a pure money mover. An agent choosing FX on price picks the cheapest rail. This blunts the principal weapon neobanks like Revolut have against Wise (being the default app). At this stage, it would be too big a jump to attribute Wise the label of being I “agentic infrastructure”. There’s no agent product per se and an agent picking Wise on merit can just as easily pick someone else. The only genuinely sticky route is inside a bank already plugged into Platform. Platform is currently a relatively small part of the business, so I’m view this as optional upside not as part of my base case. Management : Also of particular importance to me is that it’s founder-led. I generally find founder-led companies (particularly growth companies) to be more agile when it comes to making bold moves in terms of business strategy. They aren’t burdened by a complicate corporate structure. This is all very important for growth companies specifically given that they often operate in competitive spaces where the ability to move quickly can be highly advantageous (if not critical). The risks The moat is copyable : Licences, connections and treasury capability can be built with time and capital. It took Wise a decade and a half to assemble their suite of licences and connections, but time alone isn’t an unbreakable moat. About a quarter of revenue is interest on customer balances : Management means to pay more of it back to customers; the long-run margin target is 15–20%, against ~25% today. Two legs of my thesis are unproven : - Platform has sat near 6% of volume for two quarters, against a 10% medium-term target. - The personal take rate has reached 0.55% (Wise is cutting prices deliberately, though, to deepen their consumer penetration). Regulatory pressure: Wise Europe, the Belgian entity that passports Wise across the EU, has been under investigation by Brussels prosecutors since 2025 over alleged anti-money-laundering failures. In June the prosecutors said they were finalising a summons to criminal court. In August the National Bank of Belgium publicly named Wise Europe for missing a deadline to comply with an AML order. On top of that: - a 2025 US multi-state consent order - the OCC’s refusal of a US trust-bank charter in July (Wise is reapplying) - a US securities class action Competition Airwallex is arguably Wise’s closest infrastructure competitor. It has assembled an extensive network of licences, payment connections and embedded financial services, but its business is principally focused on B2B customers and platforms rather than serving consumers directly. That distinction matters, although Airwallex can already provide consumer-facing financial services through its partners. Competition between the two is likely to intensify as Wise Business and Wise Platform expand. Revolut and other neobanks represent the more direct threat to Wise’s consumer franchise. They could conceivably replicate much of Wise’s regulatory and payment infrastructure, and Revolut already competes for the same internationally mobile customers. However, Revolut faces a potential conflict in offering its infrastructure to banks that it is simultaneously trying to compete with for customers. Wise isn’t entirely free of that conflict, but its relatively focused cross-border infrastructure proposition makes it a more natural partner for incumbent banks. The distinction is the combination: Wise has the direct consumer distribution of a neobank alongside an infrastructure business capable of powering international payments for competing financial institutions. Airwallex has much of the infrastructure but lacks Wise’s established direct-to-consumer franchise; Revolut has the consumer franchise but lacks an equivalent established bank-facing cross-border infrastructure business. That doesn’t make Wise’s moat impossible to replicate, as explained above, but Wise has already assembled these capabilities into a business serving both consumers and financial institutions, with each side contributing volume and scale to the underlying network. It is this combination, rather than any individual licence or payment connection, that I consider its strongest competitive differentiator. Conclusion For me, Wise is a compelling combination of structural growth, differentiated infrastructure, founder-led execution and exposure to a market with a very long runway. Its competitive advantage isn’t unassailable, but I think the combination of its consumer franchise and underlying payment infrastructure is more difficult to replicate than either business in isolation. Crucially, it also offers something my existing portfolio doesn’t, both in terms of business exposure and historical price behaviour. I’d be particularly interested to hear from anyone who has looked closely at Wise, especially those who disagree with my assessment of its competitive position or think I’m underestimating the regulatory risks.",
-        "text_excerpt": "Would be interested to hear if anyone has considered and/or looked at WISE PLC stock as an investment. TL;DR: As I have explained elsewhere, I have a concentrated 17-stock growth portfolio and Wise is one of the only companies that passes my screening gates and fills a gap nothing else in the port addresses. Perhaps even more importantly, it moves less with the rest of my port than almost anything else I own. That is…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-05T08:40:41Z",
-        "last_collected_at": "2026-11-06T23:52:33Z",
-        "collection_count": 4,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:24533",
-        "timestamp": "2026-11-04T11:35:45Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2117943880393871848",
-        "author": "PaulGolding",
-        "url": "https://x.com/PaulGolding/status/2117943880393871848",
-        "source_url": "https://x.com/PaulGolding/status/2117943880393871848",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 40,
-        "information_score": 4,
-        "matched_information_cues": [
-          "border",
-          "crossing",
-          "smuggling"
-        ],
-        "freshness_cues": [
-          "now"
-        ],
-        "text": "SMUGGLING SOLD ON TIKTOK\n\nThe NCA has arrested a man in Brent over a TikTok account advertising illegal crossings between Britain and Europe. He's already been bailed.\n\nIllegal migration is now marketed like a package holiday, and this government still can't secure our borders. https://t.co/ru1IdDeXox",
-        "text_excerpt": "SMUGGLING SOLD ON TIKTOK\n\nThe NCA has arrested a man in Brent over a TikTok account advertising illegal crossings between Britain and Europe. He's already been bailed.\n\nIllegal migration is now marketed like a package holiday, and this government still can't secure our borders. https://t.co/ru1IdDeXox",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-04T11:42:48Z",
-        "last_collected_at": "2026-11-04T11:42:48Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:24509",
-        "timestamp": "2026-11-04T11:32:52Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2117943155291046037",
-        "author": "ekathimerini",
-        "url": "https://x.com/ekathimerini/status/2117943155291046037",
-        "source_url": "https://x.com/ekathimerini/status/2117943155291046037",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "crossing",
-          "sea"
-        ],
-        "freshness_cues": [],
-        "text": "Authorities have raised to more than 850 the number of migrants who reached Greek shores on Monday, mostly crossing the Mediterranean Sea from north Africa to the southern island of Crete. https://t.co/oG94HT0Hxr",
-        "text_excerpt": "Authorities have raised to more than 850 the number of migrants who reached Greek shores on Monday, mostly crossing the Mediterranean Sea from north Africa to the southern island of Crete. https://t.co/oG94HT0Hxr",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-04T11:41:34Z",
-        "last_collected_at": "2026-11-04T11:41:34Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:24510",
-        "timestamp": "2026-11-04T11:30:50Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2117942642306961641",
-        "author": "JNorton1974",
-        "url": "https://x.com/JNorton1974/status/2117942642306961641",
-        "source_url": "https://x.com/JNorton1974/status/2117942642306961641",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "departure"
-        ],
-        "freshness_cues": [],
-        "text": "A new migrant caravan—comprising hundreds to over a thousand individuals primarily from Honduras, Guatemala, El Salvador, Ecuador, and Haiti—departed San Pedro Sula, Honduras, on September 20, 2026, and is traveling north through Mexico toward the U.S. border.",
-        "text_excerpt": "A new migrant caravan—comprising hundreds to over a thousand individuals primarily from Honduras, Guatemala, El Salvador, Ecuador, and Haiti—departed San Pedro Sula, Honduras, on September 20, 2026, and is traveling north through Mexico toward the U.S. border.",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-04T11:41:34Z",
-        "last_collected_at": "2026-11-04T11:41:34Z",
         "collection_count": 1,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
@@ -73110,433 +72986,6 @@
         "first_detected_at": "2026-08-19T06:05:20Z",
         "last_detected_at": "2026-08-19T10:30:20Z",
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "early_warning:218",
-        "timestamp": "2026-08-18T22:20:28Z",
-        "layer": "EARLY_WARNING",
-        "type": "LEGAL_MIGRATION_SIGNAL",
-        "signal_type": "LEGAL_MIGRATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1vs3xkm",
-        "author": "EPBiever",
-        "url": "https://www.reddit.com/r/AntiTrumpAlliance/comments/1vs3xkm/a_first_group_of_20_us_deportees_is_expected_to/",
-        "source_url": "https://www.reddit.com/r/AntiTrumpAlliance/comments/1vs3xkm/a_first_group_of_20_us_deportees_is_expected_to/",
-        "region": "HORN_OF_AFRICA",
-        "primary_region": "HORN_OF_AFRICA",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.99,
-        "priority": "MEDIUM",
-        "priority_score": 54.65,
-        "analyst_priority": "MEDIUM",
-        "text": "A first group of 20 U.S. deportees is expected to arrive in Liberia this week.\n* In order to convince nations to enter into those agreements, the administration has offered a range of incentives, including paying for foreign security forces and offering to ease visa restrictions or tariffs, as The New York Times has reported. The Liberian government said on Tuesday that it would take up to 1,200 deportees from the United States in the next year, one of the largest known deals that the Trump administration has struck to send migrants to countries where they often have no ties. The first group of 20 deportees is expected to arrive in Liberia on Thursday, the country’s government said in a statement. The announcement comes as the Trump administration has said it wants to send to Liberia the Salvadoran immigrant Kilmar Armando Abrego Garcia, who was wrongfully expelled last year from his adopted home in Maryland and has since been returned to the United States. His lawyers are currently fighting that effort in the courts. As part of its push to accelerate deportations, the administration has tried to strike agreements with countries around the world to accept migrants who legally cannot be deported to their own home countries for a variety of reasons, including that some could face persecution there. In order to convince nations to enter into those agreements, the administration has offered a range of incentives, including paying for foreign security forces and offering to ease visa restrictions or tariffs, as The New York Times has reported. The Liberian government said on Tuesday that its agreement with the United States was “not a transaction with a quid pro quo.” “Liberia has not demanded or received any compensation or promise of reward in exchange for its consent to participate in the program,” the government said in its statement. “Liberia will receive support to help manage the program and strengthen its migration system more broadly.” The Department of Homeland Security did not immediately respond to requests for comment. A State Department official said in a statement that the department does not comment on the details of private diplomatic communications with other governments. The administration has struck third-country deportation deals with more than 30 nations since the start of President Trump’s second term, according to Human Rights First, a nonprofit group that tracks deportations. Those countries include the Dominican Republic, Eswatini, Cameroon and South Sudan. Such arrangements have come under intense criticism from human rights groups, which say that the Trump administration is dispatching vulnerable migrants to unfamiliar countries, including those with a history of human rights abuses. Some of the deportees have also been subject to detention after being sent to third countries. The Liberian government said on Tuesday that it would be welcoming the migrants from the United States as “guests” and that they would be offered “the necessary support” to be safe during their stay. They will be free to leave the country or remain and apply for asylum, the government said. The administration has been pushing to send to Liberia Mr. Abrego Garcia, who spent months in a notorious prison built for terrorists after being deported to El Salvador. Mr. Abrego Garcia was ultimately brought back to the United States to face human smuggling charges that were later thrown out by a federal judge in Nashville for being an abuse of prosecutorial powers. Even before the criminal case was dismissed, his lawyers have been fighting his expulsion to Liberia, just as they fought his removal to a series of other African nations, saying that the government cannot simply deport to him to a third country, especially when he has agreed to be sent to Costa Rica and that country’s government has agreed to take him.",
-        "text_excerpt": "A first group of 20 U.S. deportees is expected to arrive in Liberia this week.\n* In order to convince nations to enter into those agreements, the administration has offered a range of incentives, including paying for foreign security forces and offering to ease visa restrictions or tariffs, as The New York Times has reported. The Liberian government said on Tuesday that it would take up to 1,200 deportees from the Un…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "signal_mode": "DIRECT",
-        "signal_intent": "LEGAL_ACCESS",
-        "detection_count": 1,
-        "first_detected_at": "2026-08-19T06:06:36Z",
-        "last_detected_at": "2026-08-19T06:06:36Z",
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "operational:180",
-        "timestamp": "2026-08-18T22:20:28Z",
-        "layer": "OPERATIONAL",
-        "type": "SMUGGLING_ACTIVITY",
-        "signal_type": "SMUGGLING_ACTIVITY",
-        "event_type": "SMUGGLING_ACTIVITY",
-        "source": "REDDIT",
-        "source_post_id": "reddit_1vs3xkm",
-        "author": "EPBiever",
-        "url": "https://www.reddit.com/r/AntiTrumpAlliance/comments/1vs3xkm/a_first_group_of_20_us_deportees_is_expected_to/",
-        "source_url": "https://www.reddit.com/r/AntiTrumpAlliance/comments/1vs3xkm/a_first_group_of_20_us_deportees_is_expected_to/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "latitude": null,
-        "longitude": null,
-        "confidence": 0.5,
-        "priority": "MEDIUM",
-        "priority_score": 50.0,
-        "text": "A first group of 20 U.S. deportees is expected to arrive in Liberia this week.\n* In order to convince nations to enter into those agreements, the administration has offered a range of incentives, including paying for foreign security forces and offering to ease visa restrictions or tariffs, as The New York Times has reported. The Liberian government said on Tuesday that it would take up to 1,200 deportees from the United States in the next year, one of the largest known deals that the Trump administration has struck to send migrants to countries where they often have no ties. The first group of 20 deportees is expected to arrive in Liberia on Thursday, the country’s government said in a statement. The announcement comes as the Trump administration has said it wants to send to Liberia the Salvadoran immigrant Kilmar Armando Abrego Garcia, who was wrongfully expelled last year from his adopted home in Maryland and has since been returned to the United States. His lawyers are currently fighting that effort in the courts. As part of its push to accelerate deportations, the administration has tried to strike agreements with countries around the world to accept migrants who legally cannot be deported to their own home countries for a variety of reasons, including that some could face persecution there. In order to convince nations to enter into those agreements, the administration has offered a range of incentives, including paying for foreign security forces and offering to ease visa restrictions or tariffs, as The New York Times has reported. The Liberian government said on Tuesday that its agreement with the United States was “not a transaction with a quid pro quo.” “Liberia has not demanded or received any compensation or promise of reward in exchange for its consent to participate in the program,” the government said in its statement. “Liberia will receive support to help manage the program and strengthen its migration system more broadly.” The Department of Homeland Security did not immediately respond to requests for comment. A State Department official said in a statement that the department does not comment on the details of private diplomatic communications with other governments. The administration has struck third-country deportation deals with more than 30 nations since the start of President Trump’s second term, according to Human Rights First, a nonprofit group that tracks deportations. Those countries include the Dominican Republic, Eswatini, Cameroon and South Sudan. Such arrangements have come under intense criticism from human rights groups, which say that the Trump administration is dispatching vulnerable migrants to unfamiliar countries, including those with a history of human rights abuses. Some of the deportees have also been subject to detention after being sent to third countries. The Liberian government said on Tuesday that it would be welcoming the migrants from the United States as “guests” and that they would be offered “the necessary support” to be safe during their stay. They will be free to leave the country or remain and apply for asylum, the government said. The administration has been pushing to send to Liberia Mr. Abrego Garcia, who spent months in a notorious prison built for terrorists after being deported to El Salvador. Mr. Abrego Garcia was ultimately brought back to the United States to face human smuggling charges that were later thrown out by a federal judge in Nashville for being an abuse of prosecutorial powers. Even before the criminal case was dismissed, his lawyers have been fighting his expulsion to Liberia, just as they fought his removal to a series of other African nations, saying that the government cannot simply deport to him to a third country, especially when he has agreed to be sent to Costa Rica and that country’s government has agreed to take him.",
-        "text_excerpt": "A first group of 20 U.S. deportees is expected to arrive in Liberia this week.\n* In order to convince nations to enter into those agreements, the administration has offered a range of incentives, including paying for foreign security forces and offering to ease visa restrictions or tariffs, as The New York Times has reported. The Liberian government said on Tuesday that it would take up to 1,200 deportees from the Un…",
-        "event_group_id": 140,
-        "correlation_score": null,
-        "related_source_count": null,
-        "event_time_text": null,
-        "event_time_normalized": null,
-        "event_time_confidence": null,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "early_warning:204",
-        "timestamp": "2026-08-18T16:47:34Z",
-        "layer": "EARLY_WARNING",
-        "type": "CROSSING_FACILITATION",
-        "signal_type": "CROSSING_FACILITATION",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2089756101227282742",
-        "author": "just_in_america",
-        "url": "https://x.com/just_in_america/status/2089756101227282742",
-        "source_url": "https://x.com/just_in_america/status/2089756101227282742",
-        "region": "WESTERN_MEDITERRANEAN",
-        "primary_region": "WESTERN_MEDITERRANEAN",
-        "location": "Ceuta",
-        "primary_location": "Ceuta",
-        "country": "Spain",
-        "confidence": 0.89,
-        "priority": "HIGH",
-        "priority_score": 68.15,
-        "analyst_priority": "HIGH",
-        "text": "IT'S AN INVASION\n\nA 'second wave' of migrants attempting to cross the border from Morocco into the sovereign Spanish enclave of Ceuta.\n\nOnly @vox_es can put a stop to this insanity. https://t.co/rsiasznbOw",
-        "text_excerpt": "IT'S AN INVASION\n\nA 'second wave' of migrants attempting to cross the border from Morocco into the sovereign Spanish enclave of Ceuta.\n\nOnly @vox_es can put a stop to this insanity. https://t.co/rsiasznbOw",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "signal_mode": "DIRECT",
-        "signal_intent": "EASIER_CROSSING",
-        "detection_count": 1,
-        "first_detected_at": "2026-08-18T17:00:29Z",
-        "last_detected_at": "2026-08-18T17:00:29Z",
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "early_warning:205",
-        "timestamp": "2026-08-18T16:43:18Z",
-        "layer": "EARLY_WARNING",
-        "type": "CROSSING_FACILITATION",
-        "signal_type": "CROSSING_FACILITATION",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2089755024914350588",
-        "author": "davidnino_boxer",
-        "url": "https://x.com/davidnino_boxer/status/2089755024914350588",
-        "source_url": "https://x.com/davidnino_boxer/status/2089755024914350588",
-        "region": "WESTERN_MEDITERRANEAN",
-        "primary_region": "WESTERN_MEDITERRANEAN",
-        "location": "Ceuta",
-        "primary_location": "Ceuta",
-        "country": "Spain",
-        "confidence": 0.89,
-        "priority": "HIGH",
-        "priority_score": 68.15,
-        "analyst_priority": "HIGH",
-        "text": "IT'S AN INVASION\n\nA 'second wave' of migrants attempting to cross the border from Morocco into the sovereign Spanish enclave of Ceuta.\n\nOnly @vox_es can put a stop to this insanity. https://t.co/8nPe38wG32",
-        "text_excerpt": "IT'S AN INVASION\n\nA 'second wave' of migrants attempting to cross the border from Morocco into the sovereign Spanish enclave of Ceuta.\n\nOnly @vox_es can put a stop to this insanity. https://t.co/8nPe38wG32",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "signal_mode": "DIRECT",
-        "signal_intent": "EASIER_CROSSING",
-        "detection_count": 1,
-        "first_detected_at": "2026-08-18T17:00:30Z",
-        "last_detected_at": "2026-08-18T17:00:30Z",
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "early_warning:208",
-        "timestamp": "2026-08-18T16:40:58Z",
-        "layer": "EARLY_WARNING",
-        "type": "MOVEMENT_EARLY_WARNING",
-        "signal_type": "MOVEMENT_EARLY_WARNING",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2089754437707247784",
-        "author": "TexasTaff",
-        "url": "https://x.com/TexasTaff/status/2089754437707247784",
-        "source_url": "https://x.com/TexasTaff/status/2089754437707247784",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.9,
-        "priority": "MEDIUM",
-        "priority_score": 31.5,
-        "analyst_priority": "LOW",
-        "text": "@andyburnham Burnham's followers are acting like the crowd in The Emperor's New Clothes.\n\nWhen c.200 migrants can assemble on a beach and all get on a 'small boat' without the French police noticing. The French, who @YvetteCooperMP paid millions to stop the boats. The last thing we want to",
-        "text_excerpt": "@andyburnham Burnham's followers are acting like the crowd in The Emperor's New Clothes.\n\nWhen c.200 migrants can assemble on a beach and all get on a 'small boat' without the French police noticing. The French, who @YvetteCooperMP paid millions to stop the boats. The last thing we want to",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "signal_mode": "ANALYST_REVIEW",
-        "signal_intent": "MOVEMENT_REVIEW",
-        "detection_count": 1,
-        "first_detected_at": "2026-08-18T17:01:26Z",
-        "last_detected_at": "2026-08-18T17:01:26Z",
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "early_warning:209",
-        "timestamp": "2026-08-18T16:40:00Z",
-        "layer": "EARLY_WARNING",
-        "type": "FACILITATION_EARLY_WARNING",
-        "signal_type": "FACILITATION_EARLY_WARNING",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2089754195884998817",
-        "author": "ghananews_ai",
-        "url": "https://x.com/ghananews_ai/status/2089754195884998817",
-        "source_url": "https://x.com/ghananews_ai/status/2089754195884998817",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.8,
-        "priority": "MEDIUM",
-        "priority_score": 28.0,
-        "analyst_priority": "LOW",
-        "text": "Moroccan authorities have overseen the voluntary return of 531 migrants near the Spanish enclave of Sebta to disrupt human trafficking networks. Security forces are intensifying patrols along the northern coast to manage irregular migration. https://t.co/OwWbtYrHo5",
-        "text_excerpt": "Moroccan authorities have overseen the voluntary return of 531 migrants near the Spanish enclave of Sebta to disrupt human trafficking networks. Security forces are intensifying patrols along the northern coast to manage irregular migration. https://t.co/OwWbtYrHo5",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "signal_mode": "ANALYST_REVIEW",
-        "signal_intent": "FACILITATION_REVIEW",
-        "detection_count": 1,
-        "first_detected_at": "2026-08-18T17:02:27Z",
-        "last_detected_at": "2026-08-18T17:02:27Z",
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "early_warning:206",
-        "timestamp": "2026-08-18T16:39:35Z",
-        "layer": "EARLY_WARNING",
-        "type": "CROSSING_FACILITATION",
-        "signal_type": "CROSSING_FACILITATION",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2089754092176638004",
-        "author": "Backupbarneslaw",
-        "url": "https://x.com/Backupbarneslaw/status/2089754092176638004",
-        "source_url": "https://x.com/Backupbarneslaw/status/2089754092176638004",
-        "region": "WESTERN_MEDITERRANEAN",
-        "primary_region": "WESTERN_MEDITERRANEAN",
-        "location": "Ceuta",
-        "primary_location": "Ceuta",
-        "country": "Spain",
-        "confidence": 0.89,
-        "priority": "HIGH",
-        "priority_score": 68.15,
-        "analyst_priority": "HIGH",
-        "text": "IT'S AN INVASION\n\nA 'second wave' of migrants attempting to cross the border from Morocco into the sovereign Spanish enclave of Ceuta.\n\nOnly @vox_es can put a stop to this insanity. https://t.co/fKQ5C2VLSS",
-        "text_excerpt": "IT'S AN INVASION\n\nA 'second wave' of migrants attempting to cross the border from Morocco into the sovereign Spanish enclave of Ceuta.\n\nOnly @vox_es can put a stop to this insanity. https://t.co/fKQ5C2VLSS",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "signal_mode": "DIRECT",
-        "signal_intent": "EASIER_CROSSING",
-        "detection_count": 1,
-        "first_detected_at": "2026-08-18T17:00:30Z",
-        "last_detected_at": "2026-08-18T17:00:30Z",
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "early_warning:210",
-        "timestamp": "2026-08-18T16:37:02Z",
-        "layer": "EARLY_WARNING",
-        "type": "MOVEMENT_EARLY_WARNING",
-        "signal_type": "MOVEMENT_EARLY_WARNING",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2089753449567052236",
-        "author": "DoSi7375",
-        "url": "https://x.com/DoSi7375/status/2089753449567052236",
-        "source_url": "https://x.com/DoSi7375/status/2089753449567052236",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.72,
-        "priority": "MEDIUM",
-        "priority_score": 25.2,
-        "analyst_priority": "LOW",
-        "text": "@NaomiSeibt @UlrichSiegmund @Deu_Kurier Stupid Naomi talking bullshit again.\n\n65% of Syrian refugees who arrived in Germany in 2015 are now employed, according to IAB research. Men reached a ~75% employment rate, while women stand at ~31%.",
-        "text_excerpt": "@NaomiSeibt @UlrichSiegmund @Deu_Kurier Stupid Naomi talking bullshit again.\n\n65% of Syrian refugees who arrived in Germany in 2015 are now employed, according to IAB research. Men reached a ~75% employment rate, while women stand at ~31%.",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "signal_mode": "ANALYST_REVIEW",
-        "signal_intent": "MOVEMENT_REVIEW",
-        "detection_count": 1,
-        "first_detected_at": "2026-08-18T17:03:23Z",
-        "last_detected_at": "2026-08-18T17:03:23Z",
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "operational:178",
-        "timestamp": "2026-08-18T16:29:39Z",
-        "layer": "OPERATIONAL",
-        "type": "BORDER_CROSSING",
-        "signal_type": "BORDER_CROSSING",
-        "event_type": "BORDER_CROSSING",
-        "source": "X",
-        "source_post_id": "2089751589753925759",
-        "author": "t_hobart76",
-        "url": "https://x.com/t_hobart76/status/2089751589753925759",
-        "source_url": "https://x.com/t_hobart76/status/2089751589753925759",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "latitude": null,
-        "longitude": null,
-        "confidence": 0.55,
-        "priority": "MEDIUM",
-        "priority_score": 55.0,
-        "text": "@MoroccoIntel Moroccans here acting like the illegal migrants crossed over to be in Morocco. They went there to be in Spain/Europe. Stop fantasising about “occupation”, you’re ignoring the problem that tidy embarrassed Morocco by leaving for a better life in the first place",
-        "text_excerpt": "@MoroccoIntel Moroccans here acting like the illegal migrants crossed over to be in Morocco. They went there to be in Spain/Europe. Stop fantasising about “occupation”, you’re ignoring the problem that tidy embarrassed Morocco by leaving for a better life in the first place",
-        "event_group_id": 13,
-        "correlation_score": 0.62,
-        "related_source_count": null,
-        "event_time_text": null,
-        "event_time_normalized": null,
-        "event_time_confidence": null,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "correlated:174",
-        "timestamp": "2026-08-18T16:29:39Z",
-        "layer": "CORRELATED",
-        "type": "BORDER_CROSSING",
-        "signal_type": "BORDER_CROSSING",
-        "event_type": "BORDER_CROSSING",
-        "source": "X",
-        "source_post_id": "2089751589753925759",
-        "author": "t_hobart76",
-        "url": "https://x.com/t_hobart76/status/2089751589753925759",
-        "source_url": "https://x.com/t_hobart76/status/2089751589753925759",
-        "region": "WESTERN_MEDITERRANEAN",
-        "primary_region": "WESTERN_MEDITERRANEAN",
-        "location": "Fnideq",
-        "primary_location": "Fnideq",
-        "country": "Morocco",
-        "latitude": 35.8498,
-        "longitude": -5.3578,
-        "confidence": 0.8,
-        "priority": "HIGH",
-        "priority_score": 80.0,
-        "text": "@MoroccoIntel Moroccans here acting like the illegal migrants crossed over to be in Morocco. They went there to be in Spain/Europe. Stop fantasising about “occupation”, you’re ignoring the problem that tidy embarrassed Morocco by leaving for a better life in the first place",
-        "text_excerpt": "@MoroccoIntel Moroccans here acting like the illegal migrants crossed over to be in Morocco. They went there to be in Spain/Europe. Stop fantasising about “occupation”, you’re ignoring the problem that tidy embarrassed Morocco by leaving for a better life in the first place",
-        "event_group_id": 13,
-        "correlation_score": 0.62,
-        "related_source_count": 18,
-        "source_types": [
-          "REDDIT",
-          "X"
-        ],
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "early_warning:211",
-        "timestamp": "2026-08-18T16:09:04Z",
-        "layer": "EARLY_WARNING",
-        "type": "MOVEMENT_EARLY_WARNING",
-        "signal_type": "MOVEMENT_EARLY_WARNING",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2089746409800990875",
-        "author": "ehannah0",
-        "url": "https://x.com/ehannah0/status/2089746409800990875",
-        "source_url": "https://x.com/ehannah0/status/2089746409800990875",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.72,
-        "priority": "MEDIUM",
-        "priority_score": 25.2,
-        "analyst_priority": "LOW",
-        "text": "Nearly £4.5 million has been allocated for electric car charging points to be installed at Home Office buildings. \n\nMeanwhile, over 80,000 illegal migrants have arrived in small boats since Labour took office. \n\nUnbelievably wrong priorities",
-        "text_excerpt": "Nearly £4.5 million has been allocated for electric car charging points to be installed at Home Office buildings. \n\nMeanwhile, over 80,000 illegal migrants have arrived in small boats since Labour took office. \n\nUnbelievably wrong priorities",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "signal_mode": "ANALYST_REVIEW",
-        "signal_intent": "MOVEMENT_REVIEW",
-        "detection_count": 1,
-        "first_detected_at": "2026-08-18T17:03:23Z",
-        "last_detected_at": "2026-08-18T17:03:23Z",
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "early_warning:203",
-        "timestamp": "2026-08-18T15:42:17Z",
-        "layer": "EARLY_WARNING",
-        "type": "PRESSURE_EARLY_WARNING",
-        "signal_type": "PRESSURE_EARLY_WARNING",
-        "event_type": null,
-        "source": "MASTODON",
-        "source_post_id": "mastodon_117117271254528038",
-        "author": null,
-        "url": "https://mastodon.social/@ianchai/117117271254528038",
-        "source_url": "https://mastodon.social/@ianchai/117117271254528038",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.62,
-        "priority": "MEDIUM",
-        "priority_score": 21.7,
-        "analyst_priority": "LOW",
-        "text": "A sharp increase in hate speech towards non-Malay groups and anti-Rohingya hate speech and disinformation on Malaysian social media platforms since mid-2026 shows clear signs of coordinated amplification by paid networks, engagement farmers, and cybertrooper-style operations rather than purely spontaneous public anger. # racism # refugees # demonisation # demonization https:// murrayhunter.substack.com/p/or ganized-cybergroups-appear-to-be",
-        "text_excerpt": "A sharp increase in hate speech towards non-Malay groups and anti-Rohingya hate speech and disinformation on Malaysian social media platforms since mid-2026 shows clear signs of coordinated amplification by paid networks, engagement farmers, and cybertrooper-style operations rather than purely spontaneous public anger. # racism # refugees # demonisation # demonization https:// murrayhunter.substack.com/p/or ganized-c…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "signal_mode": "ANALYST_REVIEW",
-        "signal_intent": "PRESSURE_REVIEW",
-        "detection_count": 1,
-        "first_detected_at": "2026-08-18T16:59:37Z",
-        "last_detected_at": "2026-08-18T16:59:37Z",
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "early_warning:207",
-        "timestamp": "2026-08-18T14:08:31Z",
-        "layer": "EARLY_WARNING",
-        "type": "FACILITATION_EARLY_WARNING",
-        "signal_type": "FACILITATION_EARLY_WARNING",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1vrq8ke",
-        "author": "AlertMedia",
-        "url": "https://www.reddit.com/r/Intelligence/comments/1vrq8ke/morning_intelligence_brief_august_18_2026/",
-        "source_url": "https://www.reddit.com/r/Intelligence/comments/1vrq8ke/morning_intelligence_brief_august_18_2026/",
-        "region": "EASTERN_EU_BORDER",
-        "primary_region": "EASTERN_EU_BORDER",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.8,
-        "priority": "MEDIUM",
-        "priority_score": 32.0,
-        "analyst_priority": "LOW",
-        "text": "Morning Intelligence Brief - August 18, 2026\nUkraine Launches Major Drone Attack on Moscow Region: Ukraine launched one of its largest drone attacks on the Moscow region early Tuesday, with Russian officials reporting 180 drones downed near the capital and temporary airport restrictions. Debris reportedly damaged a Wildberries warehouse and injured three people, while Moscow continued strikes on Ukrainian energy assets to degrade production capacity ahead of winter. The exchange shows both sides widening long-range campaigns beyond the front line. For Russia, repeated drone activity near Moscow has disrupted logistics, aviation, and public events while eroding domestic confidence. Iran Signals Offensive Posture as Hormuz Tensions Escalate: Iran signaled it will move to a fully offensive posture after talks with the U.S. failed to produce a final peace deal before the interim deadline. The dispute centers on control of the Strait of Hormuz, where shipping remains severely disrupted. Only six commodity vessels transited on Monday, below the recent average, with no VLCCs or LNG tankers recorded. UKMTO also reported a vessel struck by an unknown projectile in the Strait, causing engine damage and one crew casualty. Reduced traffic through Hormuz and Bab el-Mandeb continues to pressure global energy and freight routes as regional tensions remain elevated. School Shooting in Philippines Raises Security Concerns: A student killed a classmate and then themselves at a Catholic junior high school in Zamboanga City, marking the Philippines’ second deadly school shooting in less than two months. Police said the Grade 9 student brought firearms onto campus and fired inside classrooms. Although school shootings remain rare in the Philippines, the proximity of this incident to June’s fatal Tacloban school attack could intensify scrutiny of campus access controls and student access to firearms. Germany Targets Channel Smuggling Networks: Germany conducted its first raids under a new law targeting migrant-smuggling supply chains used for UK-bound Channel crossings. Authorities seized more than 9,000 life jackets, dozens of dinghies and engines, and hundreds of pumps in North Rhine-Westphalia. The law gives German authorities a clearer domestic basis to act against Germany-based facilitation of crossings to the UK rather than relying mainly on French or Belgian warrants. The operation expands Germany’s role in joint efforts with the UK and French authorities to disrupt smuggling networks. Further raids and seizures are likely, although smugglers’ use of larger boats and shifting routes points to continued pressure on Channel security and cross-border policing. China’s Wang Yi to Visit South Korea: China’s Wang Yi will make his first official visit to South Korea in five years as Seoul seeks to stabilize regional ties while managing renewed uncertainty over the U.S. alliance. The visit gives both sides a venue to prepare for high-level exchanges ahead of APEC and assess progress in restoring relations. Its timing is sensitive as Trump’s unilateral call to reduce U.S.-South Korea drills has amplified doubts in Seoul over alliance reliability. South Korea is likely to pursue broader diplomatic options without weakening its core US security posture.",
-        "text_excerpt": "Morning Intelligence Brief - August 18, 2026\nUkraine Launches Major Drone Attack on Moscow Region: Ukraine launched one of its largest drone attacks on the Moscow region early Tuesday, with Russian officials reporting 180 drones downed near the capital and temporary airport restrictions. Debris reportedly damaged a Wildberries warehouse and injured three people, while Moscow continued strikes on Ukrainian energy asse…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "signal_mode": "ANALYST_REVIEW",
-        "signal_intent": "FACILITATION_REVIEW",
-        "detection_count": 8,
-        "first_detected_at": "2026-08-18T17:00:30Z",
-        "last_detected_at": "2026-08-21T09:33:39Z",
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       }
     ]
   },
@@ -73583,21 +73032,21 @@
     "review_start_date": "2026-10-17",
     "review_cohort": "FIRST_RECORDED_ON_OR_AFTER_CUTOFF",
     "decisions": {
-      "REVIEW": 160,
-      "EXCLUDE": 168,
-      "PUBLISH": 127
+      "EXCLUDE": 170,
+      "PUBLISH": 129,
+      "REVIEW": 160
     },
     "removed_display_items": {
-      "live_events": 15,
+      "live_events": 14,
       "high_confidence_events": 1,
       "event_groups": 9,
-      "influence_signals": 6,
-      "early_warning_signals": 6,
-      "crossing_access_signals": 2,
-      "top_crossing_access_posts": 2,
-      "high_priority_intelligence": 2,
-      "access_signals": 2,
-      "timeline": 319
+      "influence_signals": 5,
+      "early_warning_signals": 5,
+      "crossing_access_signals": 3,
+      "top_crossing_access_posts": 3,
+      "high_priority_intelligence": 3,
+      "access_signals": 3,
+      "timeline": 321
     },
     "historical_review_status": "HISTORICAL_NOT_AI_REVIEWED",
     "narrative_layers_not_reviewed": [
