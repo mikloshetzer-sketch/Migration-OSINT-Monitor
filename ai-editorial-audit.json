@@ -1,18 +1,12 @@
 {
-  "generated_at": "2026-11-16T23:10:45.373979+00:00",
+  "generated_at": "2026-11-17T05:32:49.635351+00:00",
   "version": "3.0",
-  "candidates": 459,
-  "new_ai_calls": 8,
-  "conflicting_identity_ids": [],
+  "candidates": 461,
+  "new_ai_calls": 7,
+  "conflicting_identity_ids": [
+    "group:728"
+  ],
   "decisions": {
-    "post:908": {
-      "decision": "EXCLUDE",
-      "reason": "The post contains a vague and unverifiable claim without describing a specific, contemporary migration-related event. The assigned event type 'BORDER_CROSSING' is not supported by the content, since it is an assertion without details about an actual border crossing event."
-    },
-    "post:909": {
-      "decision": "EXCLUDE",
-      "reason": "The post is a general political commentary and opinion about immigration history and attitudes, not a report of a specific, concrete migration-related event such as a border crossing or operational migration activity."
-    },
     "post:910": {
       "decision": "PUBLISH",
       "reason": "The post clearly reports a concrete and contemporary migration-related event: a record number of migrants (1,488) rescued from 14 boats in the Canary Islands on a single day. The event type 'RESCUE_OPERATION' accurately describes the situation, which is migration-specific and operational in nature. The date in the post is contemporary relative to t"
@@ -20,10 +14,6 @@
     "post:911": {
       "decision": "EXCLUDE",
       "reason": "The post expresses an opinion advocating deportation but does not report a concrete, actual deportation event or policy."
-    },
-    "post:912": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete and specific migration-related event: a large number of migrants arriving in the Canary Islands within a defined recent period, leading to the declaration of a state of emergency. This matches the BORDER_CROSSING event type effectively and represents a current, operational migration event."
     },
     "post:913": {
       "decision": "EXCLUDE",
@@ -85,9 +75,17 @@
       "decision": "PUBLISH",
       "reason": "The post reports a specific, concrete recent migration event involving more than 2,000 people arriving in the Canary Islands by boat over two days, consistent with the BORDER_CROSSING event type, and with details of maritime rescue services reporting the numbers. This is a migration-specific, contemporary event worthy of publication."
     },
-    "signal:1455": {
-      "decision": "REVIEW",
-      "reason": "The report is unverified and lacks official confirmation or mainstream media support; it describes citizen patrol claims but no confirmed evidence of police dumping migrants via forest dirt roads. The event date is in the future relative to the mentioned monitoring start date, causing temporal uncertainty."
+    "post:928": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a political commentary and does not report a specific, concrete migration event such as an actual border crossing or caravan occurrence. It references claims and opinions rather than evidencing a current event."
+    },
+    "post:929": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete, contemporary migration-related event involving nearly 2,200 migrants arriving by boat in the Canary Islands, which aligns with the BORDER_CROSSING event type. The event is specific and clearly migration-related."
+    },
+    "post:930": {
+      "decision": "EXCLUDE",
+      "reason": "The claim reports a future event date (2026) and provides no verifiable sources or details confirming a concrete, contemporary migration event. It appears to be narrative speculation rather than a verified migration event."
     },
     "signal:1456": {
       "decision": "PUBLISH",
@@ -121,21 +119,21 @@
       "decision": "EXCLUDE",
       "reason": "The post is a political commentary about migration policy, not a direct report of a concrete, contemporary migration-specific early warning, policy action, or route/access signal. It does not describe a specific event related to legal migration."
     },
+    "signal:1464": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a specific, contemporary migration-related event describing 'one in, one out' UK-France asylum seeker flights, which aligns with a migration facilitation early warning."
+    },
+    "signal:1465": {
+      "decision": "REVIEW",
+      "reason": "The text refers to commentary on an upcoming migrant caravan and claims about organization and funding, which indicates a migration-specific early warning. However, it lacks concrete details or verification about the actual caravan movement or its imminence. No specific event is confirmed or described in detail, and the publication date is in the f"
+    },
     "group:674": {
       "decision": "REVIEW",
       "reason": "Inconsistent approval: The post reports a concrete, contemporary migration event: a caravan of more than 100 migrants departing Honduras toward the United States, intending to cross Guatemala and Mexico. This constitutes a migration-related event suitable for publication under the BORDER_CROSSING event type."
     },
     "group:693": {
       "decision": "REVIEW",
-      "reason": "The post reports a recent arrival of over 4,000 undocumented migrants in Spain and mentions policies regarding distribution, but the event type 'DEPORTATION' is incorrectly assigned as no deportation event is actually reported. More precise event type or additional details are needed to confirm the nature of the event."
-    },
-    "group:719": {
-      "decision": "EXCLUDE",
-      "reason": "The record is a general accusation or commentary without reporting a concrete, contemporary migration-related event; lacks details of an actual border crossing event."
-    },
-    "group:720": {
-      "decision": "EXCLUDE",
-      "reason": "The text is a historical commentary and general political opinion, not reporting a concrete, contemporary migration-related event. No specific operational migration event, early warning, or policy action is described."
+      "reason": "The post describes a migration event involving arrival and distribution of migrants, but labels the event_type as 'DEPORTATION', which is inconsistent with the content. The post lacks a clear date and source, making verification difficult."
     },
     "group:721": {
       "decision": "PUBLISH",
@@ -160,6 +158,14 @@
     "group:726": {
       "decision": "EXCLUDE",
       "reason": "The post provides instructions on how to register for permanent residence online with the Uruguayan migration service (Migración), but does not report a concrete, contemporary migration event or measure. It is an informational guide rather than an event or policy action. The event_type 'BORDER_MEASURE' is not appropriate as this is not a new policy"
+    },
+    "group:727": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a political commentary disputing claims about a migrant caravan and border closure, without reporting a concrete, contemporary migration event. No specific operational migration event or early warning is described."
+    },
+    "group:728": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1840,6 +1846,10 @@
     "signal:1454": {
       "decision": "PUBLISH",
       "reason": "This is a contemporary, migration-specific event involving displacement of nearly 500 Syrian refugees due to a fire destroying their tents in a refugee camp in Lebanon. The event type of a movement early warning is appropriate as the incident may cause immediate displacement and require humanitarian response. The report is recent and specific, focu"
+    },
+    "signal:1455": {
+      "decision": "REVIEW",
+      "reason": "The report is unverified and lacks official confirmation or mainstream media support; it describes citizen patrol claims but no confirmed evidence of police dumping migrants via forest dirt roads. The event date is in the future relative to the mentioned monitoring start date, causing temporal uncertainty."
     }
   }
 }
