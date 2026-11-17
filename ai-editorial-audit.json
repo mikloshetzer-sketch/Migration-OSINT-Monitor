@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-17T15:06:16.088648+00:00",
+  "generated_at": "2026-11-17T23:18:28.972836+00:00",
   "version": "3.0",
-  "candidates": 463,
-  "new_ai_calls": 7,
+  "candidates": 465,
+  "new_ai_calls": 4,
   "conflicting_identity_ids": [
     "group:728",
     "group:729",
@@ -10,10 +10,6 @@
     "group:731"
   ],
   "decisions": {
-    "post:913": {
-      "decision": "EXCLUDE",
-      "reason": "The content is general commentary about human trafficking and migrants without reporting a specific, concrete, or contemporary migration-related detention event."
-    },
     "post:916": {
       "decision": "EXCLUDE",
       "reason": "The event date is in the future relative to the knowledge cutoff (2024-06), so it cannot be considered a contemporary event currently. Also, the event lacks precise location and confirmation beyond a generic social media post."
@@ -90,21 +86,9 @@
       "decision": "REVIEW",
       "reason": "The post reports a political accusation and references migrant arrivals but does not provide concrete, verifiable details about a specific migration event such as exact timing or operational details. The 'event_type' as BORDER_CROSSING is only partially supported by the mention of over 11,000 migrants arriving in November, but the arrival period is"
     },
-    "signal:1460": {
+    "post:935": {
       "decision": "REVIEW",
-      "reason": "The post reports a planned initiative regarding a joint migrant return hub in Rwanda, with transfers aimed to start in 2027. It is a forward-looking signal related to migration management policies, involving multiple European countries and Rwanda, representing a migration-specific early warning or policy signal. However, the event is not yet finali"
-    },
-    "signal:1461": {
-      "decision": "REVIEW",
-      "reason": "The text discusses illegal migration and asylum prospects but does not report a concrete, contemporary migration-specific event or policy action. It is incomplete and speculative about migration flows without a clear, verifiable operational event or signal."
-    },
-    "signal:1462": {
-      "decision": "PUBLISH",
-      "reason": "This record reports a concrete and contemporary migration-specific early warning event regarding police action against smuggling and facilitation of unaccompanied child migrants entering Spain on tourist visas, which falls under the FACILITATION_EARLY_WARNING event type and is migration relevant."
-    },
-    "signal:1463": {
-      "decision": "EXCLUDE",
-      "reason": "The post is a political commentary about migration policy, not a direct report of a concrete, contemporary migration-specific early warning, policy action, or route/access signal. It does not describe a specific event related to legal migration."
+      "reason": "The post claims a large number of deportations of criminals but provides no specific, verifiable details about a particular deportation event or operation. The claim appears to be more of a general political statement rather than reporting a concrete, current migration event."
     },
     "signal:1464": {
       "decision": "PUBLISH",
@@ -122,6 +106,14 @@
       "decision": "EXCLUDE",
       "reason": "The post is political commentary with no concrete, contemporary migration-specific facilitation event or early warning. It alleges policy about transport benefits but provides no verified evidence of migration-related facilitation actions or early warnings."
     },
+    "signal:1468": {
+      "decision": "EXCLUDE",
+      "reason": "The record is an opinionated narrative with no concrete migration-specific early warning, policy action, or migration event reported. It contains speculative commentary unrelated to a factual migration event."
+    },
+    "signal:1469": {
+      "decision": "EXCLUDE",
+      "reason": "This is a general political commentary about Brexit and migration figures, without reporting a concrete migration-specific early warning or event."
+    },
     "group:674": {
       "decision": "REVIEW",
       "reason": "Inconsistent approval: The post reports a concrete, contemporary migration event: a caravan of more than 100 migrants departing Honduras toward the United States, intending to cross Guatemala and Mexico. This constitutes a migration-related event suitable for publication under the BORDER_CROSSING event type."
@@ -129,10 +121,6 @@
     "group:693": {
       "decision": "REVIEW",
       "reason": "The post reports a migration-related event (arrival of undocumented migrants in Spain) but the event_type 'DEPORTATION' conflicts with the content, which states no deportations are expected. The event timing and details are not fully clear or confirmed. Additional information needed to confirm event specifics and accurate event type."
-    },
-    "group:723": {
-      "decision": "EXCLUDE",
-      "reason": "The post is a general commentary on human trafficking and NGOs, with no specific, concrete, or contemporary migration-related event reported. The event_type 'DETENTION' is not supported by the content of the post."
     },
     "group:725": {
       "decision": "EXCLUDE",
@@ -161,6 +149,10 @@
     "group:731": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:732": {
+      "decision": "REVIEW",
+      "reason": "The post claims that more than 300,000 criminals who are illegal migrants have been deported, implying a completed deportation event. However, it lacks specific details such as date, place, or official source to verify a concrete deportation event. The statement is general and could reflect opinion rather than a report of an actual event. No corrob"
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1861,6 +1853,22 @@
     "signal:1459": {
       "decision": "REVIEW",
       "reason": "The report claims immediate action related to blocking migrants at a port, indicating a migration-specific early warning. However, the source is a single unverified social media post with limited corroboration. Location is vague, and event timing conflicts with current date rules. Verification needed for event validity and timing."
+    },
+    "signal:1460": {
+      "decision": "REVIEW",
+      "reason": "The post reports a planned initiative regarding a joint migrant return hub in Rwanda, with transfers aimed to start in 2027. It is a forward-looking signal related to migration management policies, involving multiple European countries and Rwanda, representing a migration-specific early warning or policy signal. However, the event is not yet finali"
+    },
+    "signal:1461": {
+      "decision": "REVIEW",
+      "reason": "The text discusses illegal migration and asylum prospects but does not report a concrete, contemporary migration-specific event or policy action. It is incomplete and speculative about migration flows without a clear, verifiable operational event or signal."
+    },
+    "signal:1462": {
+      "decision": "PUBLISH",
+      "reason": "This record reports a concrete and contemporary migration-specific early warning event regarding police action against smuggling and facilitation of unaccompanied child migrants entering Spain on tourist visas, which falls under the FACILITATION_EARLY_WARNING event type and is migration relevant."
+    },
+    "signal:1463": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a political commentary about migration policy, not a direct report of a concrete, contemporary migration-specific early warning, policy action, or route/access signal. It does not describe a specific event related to legal migration."
     }
   }
 }
