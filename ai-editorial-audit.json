@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-18T14:44:42.290036+00:00",
+  "generated_at": "2026-11-18T22:50:26.647287+00:00",
   "version": "3.0",
   "candidates": 469,
-  "new_ai_calls": 2,
+  "new_ai_calls": 4,
   "conflicting_identity_ids": [
     "group:728",
     "group:729",
@@ -10,10 +10,6 @@
     "group:731"
   ],
   "decisions": {
-    "post:916": {
-      "decision": "EXCLUDE",
-      "reason": "The event date is in the future relative to the knowledge cutoff (2024-06), so it cannot be considered a contemporary event currently. Also, the event lacks precise location and confirmation beyond a generic social media post."
-    },
     "post:917": {
       "decision": "PUBLISH",
       "reason": "The post reports a concrete, contemporary migration-related event describing a recent arrival of ~1,500 migrants crossing from West Africa to El Hierro, a specific location, via dangerous Atlantic sea routes. The event type 'BORDER_CROSSING' is appropriate given the description of unauthorized maritime arrival. The information is detailed and timel"
@@ -29,10 +25,6 @@
     "post:920": {
       "decision": "REVIEW",
       "reason": "The event date is in the future relative to the knowledge cutoff (2024-06), so the timing cannot be confirmed. However, the content describes a concrete migration arrival event with a large number of migrants reaching the Canary Islands on one day, which fits the migration operational event criteria. Verification of date and further corroboration i"
-    },
-    "post:921": {
-      "decision": "EXCLUDE",
-      "reason": "The post describes a historical event related to Jewish refugees after the Holocaust, not a contemporary migration event. It does not report a current migration incident or early warning."
     },
     "post:922": {
       "decision": "REVIEW",
@@ -90,17 +82,13 @@
       "decision": "REVIEW",
       "reason": "The post claims a large number of deportations of criminals but provides no specific, verifiable details about a particular deportation event or operation. The claim appears to be more of a general political statement rather than reporting a concrete, current migration event."
     },
-    "signal:1466": {
+    "post:936": {
       "decision": "REVIEW",
-      "reason": "The claim reports a very large number of African migrants landing on El Hierro island, an unusual and significant event. However, the scale (exceeding the local population) and escort detail require verification. The source is a social media post without independent confirmation."
+      "reason": "The event date is not clear from the text; 'Saturday' is mentioned but no specific date is given, and the publication date is in the future relative to current knowledge cutoff. The 'location' field is unspecified, and while the event type 'BORDER_CROSSING' is plausible, the lack of precise date and corroboration calls for review."
     },
-    "signal:1468": {
+    "post:937": {
       "decision": "EXCLUDE",
-      "reason": "The record is an opinionated narrative with no concrete migration-specific early warning, policy action, or migration event reported. It contains speculative commentary unrelated to a factual migration event."
-    },
-    "signal:1469": {
-      "decision": "EXCLUDE",
-      "reason": "This is a general political commentary about Brexit and migration figures, without reporting a concrete migration-specific early warning or event."
+      "reason": "The post contains derogatory commentary regarding migration but does not report a concrete, contemporary migration event such as a specific border crossing or movement. There is no factual report or description of a migration-related event, so it is not suitable for publication as a migration event."
     },
     "signal:1470": {
       "decision": "PUBLISH",
@@ -118,13 +106,9 @@
       "decision": "PUBLISH",
       "reason": "The record reports an awareness program focused on prevention of human trafficking and related migration issues, which fits the category of a migration-specific early warning or policy action signal. The event is concrete and contemporary as indicated by 'Today' in the text. The event type 'MOBILIZATION_COORDINATION' is appropriate given the coordi"
     },
-    "group:674": {
-      "decision": "REVIEW",
-      "reason": "Inconsistent approval: The post reports a concrete, contemporary migration event: a caravan of more than 100 migrants departing Honduras toward the United States, intending to cross Guatemala and Mexico. This constitutes a migration-related event suitable for publication under the BORDER_CROSSING event type."
-    },
     "group:693": {
-      "decision": "REVIEW",
-      "reason": "The post reports a migration-related event (arrival of undocumented migrants in Spain) but the event_type 'DEPORTATION' conflicts with the content, which states no deportations are expected. The event timing and details are not fully clear or confirmed. Additional information needed to confirm event specifics and accurate event type."
+      "decision": "EXCLUDE",
+      "reason": "The event type is labeled as 'DEPORTATION' but the content describes arrivals of undocumented migrants, not deportations. The post lacks clear, concrete information about a specific migration event such as an actual deportation action or policy enforcement. It is a narrative or claim without verified event details, and the event timing is uncertain"
     },
     "group:725": {
       "decision": "EXCLUDE",
@@ -157,6 +141,10 @@
     "group:732": {
       "decision": "REVIEW",
       "reason": "The post claims that more than 300,000 criminals who are illegal migrants have been deported, implying a completed deportation event. However, it lacks specific details such as date, place, or official source to verify a concrete deportation event. The statement is general and could reflect opinion rather than a report of an actual event. No corrob"
+    },
+    "group:733": {
+      "decision": "EXCLUDE",
+      "reason": "This post contains general commentary and opinion about demographic presence and does not report a concrete, contemporary migration-related event such as a border crossing. No specific migration operational event is described."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1882,9 +1870,21 @@
       "decision": "REVIEW",
       "reason": "The text refers to commentary on an upcoming migrant caravan and claims about organization and funding, which indicates a migration-specific early warning. However, it lacks concrete details or verification about the actual caravan movement or its imminence. No specific event is confirmed or described in detail, and the publication date is in the f"
     },
+    "signal:1466": {
+      "decision": "REVIEW",
+      "reason": "The claim reports a very large number of African migrants landing on El Hierro island, an unusual and significant event. However, the scale (exceeding the local population) and escort detail require verification. The source is a social media post without independent confirmation."
+    },
     "signal:1467": {
       "decision": "EXCLUDE",
       "reason": "The post is political commentary with no concrete, contemporary migration-specific facilitation event or early warning. It alleges policy about transport benefits but provides no verified evidence of migration-related facilitation actions or early warnings."
+    },
+    "signal:1468": {
+      "decision": "EXCLUDE",
+      "reason": "The record is an opinionated narrative with no concrete migration-specific early warning, policy action, or migration event reported. It contains speculative commentary unrelated to a factual migration event."
+    },
+    "signal:1469": {
+      "decision": "EXCLUDE",
+      "reason": "This is a general political commentary about Brexit and migration figures, without reporting a concrete migration-specific early warning or event."
     }
   }
 }
