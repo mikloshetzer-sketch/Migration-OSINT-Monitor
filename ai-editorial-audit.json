@@ -1,13 +1,14 @@
 {
-  "generated_at": "2026-11-18T22:50:26.647287+00:00",
+  "generated_at": "2026-11-19T04:49:28.678939+00:00",
   "version": "3.0",
-  "candidates": 469,
+  "candidates": 470,
   "new_ai_calls": 4,
   "conflicting_identity_ids": [
     "group:728",
     "group:729",
     "group:730",
-    "group:731"
+    "group:731",
+    "group:734"
   ],
   "decisions": {
     "post:917": {
@@ -17,14 +18,6 @@
     "post:918": {
       "decision": "REVIEW",
       "reason": "The report claims a record daily arrival of nearly 1,500 migrants to the Canary Islands, indicating a concrete migration-related event. However, the event date is unclear and the source is unverified social media (X). Further verification with external sources is needed before publishing."
-    },
-    "post:919": {
-      "decision": "EXCLUDE",
-      "reason": "The event date is in the future relative to the knowledge cutoff, and no verifiable details can be confirmed. The source is a social media post reporting a claim without external verification. Also, no concrete evidence supports the emergency declaration or migrant arrivals as stated."
-    },
-    "post:920": {
-      "decision": "REVIEW",
-      "reason": "The event date is in the future relative to the knowledge cutoff (2024-06), so the timing cannot be confirmed. However, the content describes a concrete migration arrival event with a large number of migrants reaching the Canary Islands on one day, which fits the migration operational event criteria. Verification of date and further corroboration i"
     },
     "post:922": {
       "decision": "REVIEW",
@@ -90,13 +83,13 @@
       "decision": "EXCLUDE",
       "reason": "The post contains derogatory commentary regarding migration but does not report a concrete, contemporary migration event such as a specific border crossing or movement. There is no factual report or description of a migration-related event, so it is not suitable for publication as a migration event."
     },
-    "signal:1470": {
-      "decision": "PUBLISH",
-      "reason": "The record reports a current migration-specific early warning regarding increased risks to refugees due to funding cuts, as highlighted by a UNHCR and University of Oxford report, matching the assigned event type of FACILITATION_EARLY_WARNING."
+    "post:938": {
+      "decision": "EXCLUDE",
+      "reason": "The post discusses historical migration over centuries without reporting a specific, contemporary migration event or border crossing. The event type 'BORDER_CROSSING' is misassigned as no concrete current event is described."
     },
-    "signal:1471": {
-      "decision": "PUBLISH",
-      "reason": "This is a migration-specific early warning report on the increased risk of trafficking, exploitation, and abuse for refugees due to funding cuts. The event type FACILITATION_EARLY_WARNING is appropriate as it warns about future or ongoing risks affecting refugees, especially children."
+    "post:939": {
+      "decision": "EXCLUDE",
+      "reason": "The content discusses ancient burials and genetic traits from a prehistoric farming community dated to ~4500–3900 BCE, which is a historical archaeological topic unrelated to contemporary migration events or movements. No concrete, contemporary migration event or early warning is reported."
     },
     "signal:1472": {
       "decision": "REVIEW",
@@ -106,17 +99,13 @@
       "decision": "PUBLISH",
       "reason": "The record reports an awareness program focused on prevention of human trafficking and related migration issues, which fits the category of a migration-specific early warning or policy action signal. The event is concrete and contemporary as indicated by 'Today' in the text. The event type 'MOBILIZATION_COORDINATION' is appropriate given the coordi"
     },
+    "signal:1474": {
+      "decision": "EXCLUDE",
+      "reason": "The content is a personal dispute or commentary unrelated to any concrete migration-related event or early warning. It lacks any specific operational migration information or credible signal."
+    },
     "group:693": {
       "decision": "EXCLUDE",
       "reason": "The event type is labeled as 'DEPORTATION' but the content describes arrivals of undocumented migrants, not deportations. The post lacks clear, concrete information about a specific migration event such as an actual deportation action or policy enforcement. It is a narrative or claim without verified event details, and the event timing is uncertain"
-    },
-    "group:725": {
-      "decision": "EXCLUDE",
-      "reason": "This record describes a historical event related to post-Holocaust Jewish refugees and their deportation by British authorities; it is not a contemporary migration-related event and thus not suitable for publishing as a current migration event."
-    },
-    "group:726": {
-      "decision": "EXCLUDE",
-      "reason": "The post provides instructions on how to register for permanent residence online with the Uruguayan migration service (Migración), but does not report a concrete, contemporary migration event or measure. It is an informational guide rather than an event or policy action. The event_type 'BORDER_MEASURE' is not appropriate as this is not a new policy"
     },
     "group:727": {
       "decision": "EXCLUDE",
@@ -145,6 +134,14 @@
     "group:733": {
       "decision": "EXCLUDE",
       "reason": "This post contains general commentary and opinion about demographic presence and does not report a concrete, contemporary migration-related event such as a border crossing. No specific migration operational event is described."
+    },
+    "group:734": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:735": {
+      "decision": "EXCLUDE",
+      "reason": "The content describes an ancient archaeological and genetic migration event from 4500–3900 BCE, which is historical and not a concrete, contemporary migration-related event. It does not report a current migration event or early warning related to migration."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1885,6 +1882,14 @@
     "signal:1469": {
       "decision": "EXCLUDE",
       "reason": "This is a general political commentary about Brexit and migration figures, without reporting a concrete migration-specific early warning or event."
+    },
+    "signal:1470": {
+      "decision": "PUBLISH",
+      "reason": "The record reports a current migration-specific early warning regarding increased risks to refugees due to funding cuts, as highlighted by a UNHCR and University of Oxford report, matching the assigned event type of FACILITATION_EARLY_WARNING."
+    },
+    "signal:1471": {
+      "decision": "PUBLISH",
+      "reason": "This is a migration-specific early warning report on the increased risk of trafficking, exploitation, and abuse for refugees due to funding cuts. The event type FACILITATION_EARLY_WARNING is appropriate as it warns about future or ongoing risks affecting refugees, especially children."
     }
   }
 }
