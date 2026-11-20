@@ -25,6 +25,43 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Diagnose GitHub authentication
+        env:
+          EDITORIAL_GITHUB_TOKEN: ${{ secrets.EDITORIAL_GITHUB_TOKEN }}
+        run: |
+          python - <<'PY'
+          import os
+          import json
+          from urllib.request import Request, urlopen
+          from urllib.error import HTTPError
+
+          token = os.getenv("EDITORIAL_GITHUB_TOKEN", "")
+          print("Token present:", bool(token))
+          print("Token length:", len(token))
+
+          urls = {
+              "Authentication": "https://api.github.com/user",
+              "Repository": "https://api.github.com/repos/mikloshetzer-sketch/Migration-OSINT-Editorial-Private",
+              "Archive": "https://api.github.com/repos/mikloshetzer-sketch/Migration-OSINT-Editorial-Private/contents/archive/2026-11-14.json"
+          }
+
+          for name, url in urls.items():
+              req = Request(url, headers={
+                  "Authorization": f"Bearer {token}",
+                  "Accept": "application/vnd.github+json",
+                  "User-Agent": "migration-editorial-diagnostic"
+              })
+              try:
+                  with urlopen(req, timeout=20) as response:
+                      print(name, "HTTP", response.status)
+              except HTTPError as error:
+                  print(name, "HTTP", error.code)
+                  try:
+                      body = json.loads(error.read())
+                      print("GitHub message:", body.get("message"))
+                  except Exception:
+                      pass
+          PY
       - name: Generate Hungarian summaries and AI editorial suggestions
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
