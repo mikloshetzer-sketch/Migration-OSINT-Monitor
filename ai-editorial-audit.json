@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-19T22:51:13.523382+00:00",
+  "generated_at": "2026-11-20T04:42:12.101322+00:00",
   "version": "3.0",
-  "candidates": 470,
-  "new_ai_calls": 0,
+  "candidates": 471,
+  "new_ai_calls": 2,
   "conflicting_identity_ids": [
     "group:729",
-    "group:730",
-    "group:734"
+    "group:734",
+    "group:739"
   ],
   "decisions": {
     "post:922": {
@@ -16,10 +16,6 @@
     "post:923": {
       "decision": "PUBLISH",
       "reason": "The post reports a concrete, contemporary migration-related event involving nearly 2,200 migrants arriving in Spain's Canary Islands, a known migration route by sea, which fits the BORDER_CROSSING event type."
-    },
-    "post:925": {
-      "decision": "REVIEW",
-      "reason": "The post reports a claim about a large number of migrants arriving in El Hierro and the hospital being overwhelmed, but the event date is unclear and there is no corroboration or additional details to confirm a concrete, contemporary migration-related event. The source is a social media post with no external verification."
     },
     "post:926": {
       "decision": "EXCLUDE",
@@ -89,19 +85,19 @@
       "decision": "REVIEW",
       "reason": "The event is dated in the future (2026), which is beyond current knowledge cutoff; unable to verify or confirm the actual occurrence of the event."
     },
-    "signal:1474": {
+    "post:943": {
       "decision": "EXCLUDE",
-      "reason": "The content is a personal dispute or commentary unrelated to any concrete migration-related event or early warning. It lacks any specific operational migration information or credible signal."
+      "reason": "The post contains political commentary including calls for policy actions such as sealing the border and deportation but does not report a concrete, contemporary migration-related event or actual deportation operation."
+    },
+    "signal:1475": {
+      "decision": "REVIEW",
+      "reason": "The reported event refers to an incident from June 17, 2025, which is not recent and thus not contemporary. It involves a political figure linked with a migrant and an ICE arrest during a hearing, which relates to migration enforcement issues. However, the event date makes it historical rather than current, which does not meet the criteria for publ"
     },
     "group:693": {
       "decision": "EXCLUDE",
       "reason": "The event type is labeled as 'DEPORTATION' but the content describes arrivals of undocumented migrants, not deportations. The post lacks clear, concrete information about a specific migration event such as an actual deportation action or policy enforcement. It is a narrative or claim without verified event details, and the event timing is uncertain"
     },
     "group:729": {
-      "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
-    },
-    "group:730": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
     },
@@ -132,6 +128,10 @@
     "group:738": {
       "decision": "PUBLISH",
       "reason": "The record reports a concrete, contemporary migration-related event involving migrant smuggling allegations and court proceedings in Poland, specifically related to transportation of migrants through the Balkan route into the EU. The event type SMUGGLING_ACTIVITY is supported by the content."
+    },
+    "group:739": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1888,6 +1888,10 @@
     "signal:1473": {
       "decision": "PUBLISH",
       "reason": "The record reports an awareness program focused on prevention of human trafficking and related migration issues, which fits the category of a migration-specific early warning or policy action signal. The event is concrete and contemporary as indicated by 'Today' in the text. The event type 'MOBILIZATION_COORDINATION' is appropriate given the coordi"
+    },
+    "signal:1474": {
+      "decision": "EXCLUDE",
+      "reason": "The content is a personal dispute or commentary unrelated to any concrete migration-related event or early warning. It lacks any specific operational migration information or credible signal."
     }
   }
 }
