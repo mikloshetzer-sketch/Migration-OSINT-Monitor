@@ -120,6 +120,9 @@ jobs:
           print('Gate:', g)
           PY
 
+      - name: Export hotspot map
+        run: python -m dashboard.export_hotspot_map
+
       - name: Export Source Intelligence
         id: source-intelligence
         continue-on-error: true
@@ -141,9 +144,9 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add dashboard-data.json analysis/ai_editorial_cache.json ai-editorial-audit.json
+          git add dashboard-data.json hotspot-map.json analysis/ai_editorial_cache.json ai-editorial-audit.json
           if ! git diff --cached --quiet; then
-            git commit -m 'Publish daily AI-gated migration dashboard'
+            git commit -m 'Publish daily AI-gated migration dashboard and hotspot map'
             git pull --rebase origin main
             git push origin HEAD:main
           fi
@@ -165,3 +168,4 @@ jobs:
         with:
           path: database/migration_osint_monitor.db
           key: migration-osint-db-${{ github.run_id }}
+
