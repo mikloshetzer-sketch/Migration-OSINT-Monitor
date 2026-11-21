@@ -1,21 +1,13 @@
 {
-  "generated_at": "2026-11-20T22:29:43.844295+00:00",
+  "generated_at": "2026-11-21T04:37:19.111247+00:00",
   "version": "3.0",
-  "candidates": 477,
-  "new_ai_calls": 1,
+  "candidates": 480,
+  "new_ai_calls": 7,
   "conflicting_identity_ids": [
     "group:734",
     "group:739"
   ],
   "decisions": {
-    "post:922": {
-      "decision": "REVIEW",
-      "reason": "The report details a recent, concrete event of mass migrant arrivals on the Canary Islands, which is relevant for migration monitoring. However, the source is a social media post (X/Twitter) and lacks independent verification or additional corroboration. The event date is unspecified beyond the weekend mention. Further verification needed before pu"
-    },
-    "post:926": {
-      "decision": "EXCLUDE",
-      "reason": "The post describes procedural information on how to register for permanent residency (ПМЖ) in Uruguay and does not report a specific, contemporary migration event or a change in border measures. It is general guidance rather than an event or early warning. The event type 'BORDER_MEASURE' is not supported by the content, which is administrative guid"
-    },
     "post:927": {
       "decision": "PUBLISH",
       "reason": "The post reports a specific, concrete recent migration event involving more than 2,000 people arriving in the Canary Islands by boat over two days, consistent with the BORDER_CROSSING event type, and with details of maritime rescue services reporting the numbers. This is a migration-specific, contemporary event worthy of publication."
@@ -88,9 +80,13 @@
       "decision": "EXCLUDE",
       "reason": "The report discusses hardships of migrants deported previously by the Trump administration, indicating a historical or retrospective issue rather than a current or contemporary migration event; also, the location is unclear and the claim is not substantiated as a current event."
     },
-    "signal:1475": {
+    "post:945": {
       "decision": "REVIEW",
-      "reason": "The reported event refers to an incident from June 17, 2025, which is not recent and thus not contemporary. It involves a political figure linked with a migrant and an ICE arrest during a hearing, which relates to migration enforcement issues. However, the event date makes it historical rather than current, which does not meet the criteria for publ"
+      "reason": "The report describes a new caravan of migrants entering Mexico, some said to be deported by ICE, moving towards the US. This seems like a contemporary migration event, but the event_type 'DEPORTATION' is not fully accurate since the main event is migrant caravan movement including possible deportees, not a specific deportation event. More clarifica"
+    },
+    "post:946": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a specific, contemporary migration event involving a group of approximately 300 Central American migrants crossing into southern Chiapas, Mexico. This constitutes a concrete border crossing event aligned with the assigned event type."
     },
     "signal:1476": {
       "decision": "EXCLUDE",
@@ -116,17 +112,21 @@
       "decision": "REVIEW",
       "reason": "The post mentions a legal case involving damage to an inflatable migrant dinghy, which is migration-related enforcement. However, it lacks clear temporal context and comprehensive detail to definitively confirm a current enforcement event. Verification of event timing and more complete information is required to determine publication suitability."
     },
+    "signal:1482": {
+      "decision": "EXCLUDE",
+      "reason": "This is a general political commentary without a concrete, contemporary migration-specific event or early warning. It lacks specific operational migration data, route, access information, or policy action."
+    },
+    "signal:1483": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a contemporary, concrete migration event: a mass crossing of mostly Moroccan migrants into Ceuta on July 30-31, 2026, with large estimated numbers and details about returns. This matches the assigned event type 'MOVEMENT_EARLY_WARNING' as it signals a significant movement event into Ceuta, a known migration hotspot."
+    },
+    "signal:1484": {
+      "decision": "EXCLUDE",
+      "reason": "The post expresses a political opinion and criticism regarding skilled migrants and family services and mentions elderly parent visas, but it does not report a concrete, contemporary migration-specific event, early warning, policy action, or route/access signal. It is general commentary rather than a specific operational migration event or signal."
+    },
     "group:693": {
       "decision": "EXCLUDE",
       "reason": "The event type is labeled as 'DEPORTATION' but the content describes arrivals of undocumented migrants, not deportations. The post lacks clear, concrete information about a specific migration event such as an actual deportation action or policy enforcement. It is a narrative or claim without verified event details, and the event timing is uncertain"
-    },
-    "group:732": {
-      "decision": "REVIEW",
-      "reason": "The post claims that more than 300,000 criminals who are illegal migrants have been deported, implying a completed deportation event. However, it lacks specific details such as date, place, or official source to verify a concrete deportation event. The statement is general and could reflect opinion rather than a report of an actual event. No corrob"
-    },
-    "group:733": {
-      "decision": "EXCLUDE",
-      "reason": "This post contains general commentary and opinion about demographic presence and does not report a concrete, contemporary migration-related event such as a border crossing. No specific migration operational event is described."
     },
     "group:734": {
       "decision": "REVIEW",
@@ -155,6 +155,14 @@
     "group:740": {
       "decision": "REVIEW",
       "reason": "The post claims mistreatment of deported migrants but lacks concrete details on a specific, current deportation event, date, location, or verifiable source to confirm the reported deportation or related event."
+    },
+    "group:741": {
+      "decision": "REVIEW",
+      "reason": "The post reports a new migrant caravan entering Mexico, but the event_type is set as 'DEPORTATION', which does not match the content that describes a caravan movement. The report mentions migrants allegedly deported by ICE, but the main event is about a caravan entering Mexico rather than an actual deportation event. The source is not specified and"
+    },
+    "group:742": {
+      "decision": "REVIEW",
+      "reason": "The report indicates a recent crossing of approximately 300 Central American migrants into southern Chiapas from Guatemala as part of a caravan. However, the message is incomplete (truncated) and lacks detailed, verified event information such as official confirmation or clearer sourcing. The event date is stated as 'As of Nov 20', but the publicat"
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1915,6 +1923,10 @@
     "signal:1474": {
       "decision": "EXCLUDE",
       "reason": "The content is a personal dispute or commentary unrelated to any concrete migration-related event or early warning. It lacks any specific operational migration information or credible signal."
+    },
+    "signal:1475": {
+      "decision": "REVIEW",
+      "reason": "The reported event refers to an incident from June 17, 2025, which is not recent and thus not contemporary. It involves a political figure linked with a migrant and an ICE arrest during a hearing, which relates to migration enforcement issues. However, the event date makes it historical rather than current, which does not meet the criteria for publ"
     }
   }
 }

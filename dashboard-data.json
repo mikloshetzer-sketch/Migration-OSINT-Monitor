@@ -1,24 +1,24 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-11-20T22:29:11Z",
-  "generated_at": "2026-11-20T22:29:11Z",
+  "updated_at": "2026-11-21T04:36:34Z",
+  "generated_at": "2026-11-21T04:36:34Z",
   "current_run": {
     "available": true,
-    "id": 446,
-    "run_uuid": "b8b6a5e4-58e9-493d-af93-409da127ea86",
-    "started_at": "2026-11-20T22:25:07Z",
-    "completed_at": "2026-11-20T22:29:09Z",
+    "id": 447,
+    "run_uuid": "a31ffb14-2a63-41b9-9934-f953c4e85aa4",
+    "started_at": "2026-11-21T04:32:13Z",
+    "completed_at": "2026-11-21T04:36:32Z",
     "status": "SUCCESS",
     "posts_returned": 130,
-    "unique_posts_collected": 63,
+    "unique_posts_collected": 87,
     "x_posts_returned": 50,
     "reddit_posts_returned": 0,
     "mastodon_posts_returned": 50,
-    "unique_x_posts": 26,
+    "unique_x_posts": 49,
     "unique_reddit_posts": 0,
     "unique_mastodon_posts": 20,
-    "noise_filtered": 0,
-    "non_operational_filtered": 63,
+    "noise_filtered": 1,
+    "non_operational_filtered": 84,
     "historical_references_filtered": 0,
     "influence_signals": 0,
     "influence_signals_detected": 0,
@@ -30,45 +30,69 @@
     "mobilization_report_signals": 0,
     "decision_influence_signals": 0,
     "online_influence_report_signals": 0,
-    "operational_events": 0,
-    "operational_events_analyzed": 0,
-    "historical_events_available": 37,
+    "operational_events": 2,
+    "operational_events_analyzed": 2,
+    "historical_events_available": 36,
     "new_correlations": 0,
     "correlated_events": 0,
-    "new_correlation_groups": 0,
+    "new_correlation_groups": 2,
     "database_correlations": 0,
     "current_run_correlations": 0,
-    "new_events": 0,
-    "new_events_saved": 0,
+    "new_events": 2,
+    "new_events_saved": 2,
     "events_already_existing": 0,
-    "new_event_groups": 0,
+    "new_event_groups": 2,
     "updated_event_groups": 0,
     "bootstrapped_event_groups": 0,
     "existing_event_groups_reused": 0,
-    "event_group_sources_linked": 0,
+    "event_group_sources_linked": 2,
     "x_collector_errors": 0,
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "error_message": null
   },
   "kpis": {
-    "operational_events": 2,
-    "new_events": 0,
+    "operational_events": 3,
+    "new_events": 2,
     "correlated_events": 0,
-    "active_event_groups": 721,
+    "active_event_groups": 723,
     "sources": 3,
     "regions": 2,
-    "collected_posts_24h": 284,
-    "influence_signals": 7,
+    "collected_posts_24h": 278,
+    "influence_signals": 9,
     "access_signals": 1,
     "high_priority": 1,
-    "current_run_operational_events": 0,
-    "current_run_unique_posts": 63,
+    "current_run_operational_events": 2,
+    "current_run_unique_posts": 87,
     "access_signals_raw": 1,
-    "influence_signals_raw": 7,
+    "influence_signals_raw": 9,
     "influence_narratives": 3
   },
   "live_events": [
+    {
+      "id": 946,
+      "event_id": 946,
+      "source": "X",
+      "source_post_id": "2123995986615787864",
+      "author": "grok",
+      "published_at": "2026-11-21T04:24:39Z",
+      "collected_at": "2026-11-21T04:33:06Z",
+      "event_type": "BORDER_CROSSING",
+      "signal_type": "BORDER_CROSSING",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": null,
+      "longitude": null,
+      "confidence": 0.55,
+      "event_confidence": 0.55,
+      "relevance_score": 30.0,
+      "text": "@KaterinaKaterna As of Nov 20, a new group of ~300 Central American migrants crossed into southern Chiapas from Guatemala, joining or paralleling the larger “Dios con Nosotros” caravan (originally ~1,500, now split into smaller groups near Arriaga and Tonalá).\n\nMexican officials report none of",
+      "url": "https://x.com/grok/status/2123995986615787864",
+      "source_url": "https://x.com/grok/status/2123995986615787864",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
     {
       "id": 929,
       "event_id": 929,
@@ -184,88 +208,88 @@
   ],
   "regions": [
     {
+      "name": "AMERICAS",
+      "region": "AMERICAS",
+      "count": 2,
+      "events": 2,
+      "percentage": 66.67
+    },
+    {
       "name": "HORN_OF_AFRICA",
       "region": "HORN_OF_AFRICA",
       "count": 1,
       "events": 1,
-      "percentage": 50.0
-    },
-    {
-      "name": "GLOBAL",
-      "region": "GLOBAL",
-      "count": 1,
-      "events": 1,
-      "percentage": 50.0
+      "percentage": 33.33
     }
   ],
   "sources": [
     {
       "source": "X",
       "name": "X",
-      "count": 233,
-      "posts": 233,
-      "percentage": 82.04
+      "count": 222,
+      "posts": 222,
+      "percentage": 79.86
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 36,
-      "posts": 36,
-      "percentage": 12.68
+      "count": 40,
+      "posts": 40,
+      "percentage": 14.39
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 15,
-      "posts": 15,
-      "percentage": 5.28
+      "count": 16,
+      "posts": 16,
+      "percentage": 5.76
     }
   ],
   "region_activity": [
+    {
+      "name": "AMERICAS",
+      "region": "AMERICAS",
+      "count": 2,
+      "events": 2,
+      "percentage": 66.67
+    },
     {
       "name": "HORN_OF_AFRICA",
       "region": "HORN_OF_AFRICA",
       "count": 1,
       "events": 1,
-      "percentage": 50.0
-    },
-    {
-      "name": "GLOBAL",
-      "region": "GLOBAL",
-      "count": 1,
-      "events": 1,
-      "percentage": 50.0
+      "percentage": 33.33
     }
   ],
   "source_activity": [
     {
       "source": "X",
       "name": "X",
-      "count": 233,
-      "posts": 233,
-      "percentage": 82.04
+      "count": 222,
+      "posts": 222,
+      "percentage": 79.86
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 36,
-      "posts": 36,
-      "percentage": 12.68
+      "count": 40,
+      "posts": 40,
+      "percentage": 14.39
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 15,
-      "posts": 15,
-      "percentage": 5.28
+      "count": 16,
+      "posts": 16,
+      "percentage": 5.76
     }
   ],
   "correlation": {
     "correlated_events": 0,
     "correlated_sources": 0,
-    "grouped_sources": 2,
-    "event_groups": 721,
-    "active_groups": 721,
+    "grouped_sources": 3,
+    "event_groups": 723,
+    "active_groups": 723,
     "multi_source_groups": 69,
     "strongest_match": 1.0,
     "correlation_rate": 0.0
@@ -281,44 +305,44 @@
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "database": "AVAILABLE",
-    "last_run_id": 446,
-    "last_completed_at": "2026-11-20T22:29:09Z"
+    "last_run_id": 447,
+    "last_completed_at": "2026-11-21T04:36:32Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 2,
-    "influence_signals_24h": 7,
+    "operational_events_24h": 3,
+    "influence_signals_24h": 9,
     "access_signals_24h": 1,
     "correlated_events_24h": 0,
-    "active_event_groups": 721,
-    "dominant_region": "HORN_OF_AFRICA",
-    "hotspot": "HORN_OF_AFRICA",
+    "active_event_groups": 723,
+    "dominant_region": "AMERICAS",
+    "hotspot": "AMERICAS",
     "dominant_event_type": "DEPORTATION",
     "dominant_source": "X",
     "average_confidence": 0.431,
     "confidence_level": "LOW",
     "correlation_rate": 0.0,
-    "activity_level": "LOW",
+    "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 2 operatív migrációs eseményt, 7 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 721 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Horn Of Africa. A domináns operatív eseménytípus: Deportation. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.43. A jelenlegi aktivitási szint: LOW.",
+    "summary": "Az elmúlt 24 órában a rendszer 3 operatív migrációs eseményt, 9 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 723 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Americas. A domináns operatív eseménytípus: Deportation. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.43. A jelenlegi aktivitási szint: MODERATE.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
   "analytical_assessment": {
-    "operational_events_24h": 2,
-    "influence_signals_24h": 7,
+    "operational_events_24h": 3,
+    "influence_signals_24h": 9,
     "access_signals_24h": 1,
     "correlated_events_24h": 0,
-    "active_event_groups": 721,
-    "dominant_region": "HORN_OF_AFRICA",
-    "hotspot": "HORN_OF_AFRICA",
+    "active_event_groups": 723,
+    "dominant_region": "AMERICAS",
+    "hotspot": "AMERICAS",
     "dominant_event_type": "DEPORTATION",
     "dominant_source": "X",
     "average_confidence": 0.431,
     "confidence_level": "LOW",
     "correlation_rate": 0.0,
-    "activity_level": "LOW",
+    "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 2 operatív migrációs eseményt, 7 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 721 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Horn Of Africa. A domináns operatív eseménytípus: Deportation. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.43. A jelenlegi aktivitási szint: LOW.",
+    "summary": "Az elmúlt 24 órában a rendszer 3 operatív migrációs eseményt, 9 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 723 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Americas. A domináns operatív eseménytípus: Deportation. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.43. A jelenlegi aktivitási szint: MODERATE.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
@@ -478,6 +502,84 @@
     }
   ],
   "high_priority_intelligence": [
+    {
+      "id": 1483,
+      "source": "X",
+      "source_post_id": "2123995339954757949",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-11-21T04:22:05Z",
+      "first_detected_at": "2026-11-21T04:33:06Z",
+      "last_detected_at": "2026-11-21T04:33:06Z",
+      "detection_count": 1,
+      "text": "@KaterinaKaterna @bennyjohnson Ceuta (not Cueta) saw a mass crossing of mostly Moroccan migrants on July 30-31 2026. Estimates range from the government's ~72,000 to police figures of 100,000-125,000.\n\nMost returned quickly to Morocco (tens of thousands in the first days; later tallies of voluntary returns and",
+      "text_excerpt": "@KaterinaKaterna @bennyjohnson Ceuta (not Cueta) saw a mass crossing of mostly Moroccan migrants on July 30-31 2026. Estimates range from the government's ~72,000 to police figures of 100,000-125,000.\n\nMost returned quickly to Morocco (tens of thousands in the first days; later tallies of voluntary returns and",
+      "url": "https://x.com/grok/status/2123995339954757949",
+      "source_url": "https://x.com/grok/status/2123995339954757949",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.8,
+      "score": 8.75,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "crossing of mostly Moroccan migrants"
+        ],
+        [
+          "enforcement",
+          "police"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "crossing of mostly Moroccan migrants"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 39.0,
+      "analyst_priority": "LOW",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2123995339954757949"
+      ],
+      "related_authors": [
+        "grok"
+      ],
+      "related_urls": [
+        "https://x.com/grok/status/2123995339954757949"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1,
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
     {
       "id": 474,
       "group_id": 474,
@@ -724,28 +826,72 @@
       "platform_count": 1,
       "ai_review_status": "AI_REVIEWED",
       "ai_editorial_decision": "PUBLISH"
-    },
-    {
-      "id": 693,
-      "group_id": 693,
-      "event_type": "DEPORTATION",
-      "primary_location": "-",
-      "location": "-",
-      "country": "-",
-      "region": "WESTERN_MEDITERRANEAN",
-      "primary_region": "WESTERN_MEDITERRANEAN",
-      "confidence": 0.8,
-      "average_confidence": 0.8,
-      "source_count": 18,
-      "last_seen": "2026-11-18T22:22:00Z",
-      "representative_text": "WAKE UP CALL:⚠️🇪🇸 Spain, early November. More than 4,000 undocumented migrants arrived, almost all of them Muslim men. \n - Not one is expected to be deported. \n - Pedro Sánchez plans to distribute them across Spain and eventually throughout Europe. \n - Pedro Sánchez is a https://t.co/g8Bun4LcSf https://t.co/awrh2WXd6f",
-      "text": "WAKE UP CALL:⚠️🇪🇸 Spain, early November. More than 4,000 undocumented migrants arrived, almost all of them Muslim men. \n - Not one is expected to be deported. \n - Pedro Sánchez plans to distribute them across Spain and eventually throughout Europe. \n - Pedro Sánchez is a https://t.co/g8Bun4LcSf https://t.co/awrh2WXd6f",
-      "priority_score": 32.0,
-      "analyst_priority": "LOW",
-      "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
     }
   ],
   "influence_signals": [
+    {
+      "id": 1483,
+      "source": "X",
+      "source_post_id": "2123995339954757949",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-11-21T04:22:05Z",
+      "first_detected_at": "2026-11-21T04:33:06Z",
+      "last_detected_at": "2026-11-21T04:33:06Z",
+      "detection_count": 1,
+      "text": "@KaterinaKaterna @bennyjohnson Ceuta (not Cueta) saw a mass crossing of mostly Moroccan migrants on July 30-31 2026. Estimates range from the government's ~72,000 to police figures of 100,000-125,000.\n\nMost returned quickly to Morocco (tens of thousands in the first days; later tallies of voluntary returns and",
+      "text_excerpt": "@KaterinaKaterna @bennyjohnson Ceuta (not Cueta) saw a mass crossing of mostly Moroccan migrants on July 30-31 2026. Estimates range from the government's ~72,000 to police figures of 100,000-125,000.\n\nMost returned quickly to Morocco (tens of thousands in the first days; later tallies of voluntary returns and",
+      "url": "https://x.com/grok/status/2123995339954757949",
+      "source_url": "https://x.com/grok/status/2123995339954757949",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.8,
+      "score": 8.75,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "crossing of mostly Moroccan migrants"
+        ],
+        [
+          "enforcement",
+          "police"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "crossing of mostly Moroccan migrants"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 39.0,
+      "analyst_priority": "LOW",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
     {
       "id": 1478,
       "source": "X",
@@ -809,6 +955,69 @@
     }
   ],
   "early_warning_signals": [
+    {
+      "id": 1483,
+      "source": "X",
+      "source_post_id": "2123995339954757949",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-11-21T04:22:05Z",
+      "first_detected_at": "2026-11-21T04:33:06Z",
+      "last_detected_at": "2026-11-21T04:33:06Z",
+      "detection_count": 1,
+      "text": "@KaterinaKaterna @bennyjohnson Ceuta (not Cueta) saw a mass crossing of mostly Moroccan migrants on July 30-31 2026. Estimates range from the government's ~72,000 to police figures of 100,000-125,000.\n\nMost returned quickly to Morocco (tens of thousands in the first days; later tallies of voluntary returns and",
+      "text_excerpt": "@KaterinaKaterna @bennyjohnson Ceuta (not Cueta) saw a mass crossing of mostly Moroccan migrants on July 30-31 2026. Estimates range from the government's ~72,000 to police figures of 100,000-125,000.\n\nMost returned quickly to Morocco (tens of thousands in the first days; later tallies of voluntary returns and",
+      "url": "https://x.com/grok/status/2123995339954757949",
+      "source_url": "https://x.com/grok/status/2123995339954757949",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.8,
+      "score": 8.75,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "crossing of mostly Moroccan migrants"
+        ],
+        [
+          "enforcement",
+          "police"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "crossing of mostly Moroccan migrants"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 39.0,
+      "analyst_priority": "LOW",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
     {
       "id": 1478,
       "source": "X",
@@ -948,6 +1157,82 @@
       "platform_count": 1
     },
     {
+      "id": 1483,
+      "source": "X",
+      "source_post_id": "2123995339954757949",
+      "author": "grok",
+      "language": "en",
+      "published_at": "2026-11-21T04:22:05Z",
+      "first_detected_at": "2026-11-21T04:33:06Z",
+      "last_detected_at": "2026-11-21T04:33:06Z",
+      "detection_count": 1,
+      "text": "@KaterinaKaterna @bennyjohnson Ceuta (not Cueta) saw a mass crossing of mostly Moroccan migrants on July 30-31 2026. Estimates range from the government's ~72,000 to police figures of 100,000-125,000.\n\nMost returned quickly to Morocco (tens of thousands in the first days; later tallies of voluntary returns and",
+      "text_excerpt": "@KaterinaKaterna @bennyjohnson Ceuta (not Cueta) saw a mass crossing of mostly Moroccan migrants on July 30-31 2026. Estimates range from the government's ~72,000 to police figures of 100,000-125,000.\n\nMost returned quickly to Morocco (tens of thousands in the first days; later tallies of voluntary returns and",
+      "url": "https://x.com/grok/status/2123995339954757949",
+      "source_url": "https://x.com/grok/status/2123995339954757949",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.8,
+      "score": 8.75,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "crossing of mostly Moroccan migrants"
+        ],
+        [
+          "enforcement",
+          "police"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "crossing of mostly Moroccan migrants"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Ceuta",
+      "primary_location": "Ceuta",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 35.8894,
+      "longitude": -5.3213,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 39.0,
+      "analyst_priority": "LOW",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2123995339954757949"
+      ],
+      "related_authors": [
+        "grok"
+      ],
+      "related_urls": [
+        "https://x.com/grok/status/2123995339954757949"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
+    {
       "id": 1478,
       "source": "X",
       "source_post_id": "2123762909297668434",
@@ -1014,82 +1299,6 @@
       ],
       "related_urls": [
         "https://x.com/InfoMigrants/status/2123762909297668434"
-      ],
-      "related_sources": [
-        "X"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
-    },
-    {
-      "id": 1475,
-      "source": "X",
-      "source_post_id": "2123623445992763660",
-      "author": "grok",
-      "language": "en",
-      "published_at": "2026-11-20T03:44:19Z",
-      "first_detected_at": "2026-11-20T04:42:02Z",
-      "last_detected_at": "2026-11-20T04:42:02Z",
-      "detection_count": 1,
-      "text": "@MisoMoxie22 @ForbiddenLeaksx The video is from June 17, 2025, not recent. Then-NYC Comptroller and mayoral candidate Brad Lander linked arms with a migrant leaving a hearing at 26 Federal Plaza and asked ICE for a judicial warrant. Agents arrested him (DHS cited assaulting/impeding officers). He was released",
-      "text_excerpt": "@MisoMoxie22 @ForbiddenLeaksx The video is from June 17, 2025, not recent. Then-NYC Comptroller and mayoral candidate Brad Lander linked arms with a migrant leaving a hearing at 26 Federal Plaza and asked ICE for a judicial warrant. Agents arrested him (DHS cited assaulting/impeding officers). He was released",
-      "url": "https://x.com/grok/status/2123623445992763660",
-      "source_url": "https://x.com/grok/status/2123623445992763660",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 8.75,
-      "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "movement",
-          "migrant leaving"
-        ],
-        [
-          "enforcement",
-          "arrested"
-        ]
-      ],
-      "matched_groups": [
-        "MOVEMENT",
-        "ENFORCEMENT"
-      ],
-      "context_matches": [
-        "migrant"
-      ],
-      "high_value_matches": [
-        "migrant leaving"
-      ],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
-      "analyst_priority": "LOW",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "2123623445992763660"
-      ],
-      "related_authors": [
-        "grok"
-      ],
-      "related_urls": [
-        "https://x.com/grok/status/2123623445992763660"
       ],
       "related_sources": [
         "X"
@@ -1304,14 +1513,14 @@
       "label": "W47",
       "week_label": "W47",
       "week_start": "2026-11-16T00:00:00Z",
-      "posts": 975,
-      "post_count": 975,
-      "operational_posts": 31,
-      "influence_signals": 27,
+      "posts": 1034,
+      "post_count": 1034,
+      "operational_posts": 33,
+      "influence_signals": 30,
       "source_counts": {
-        "X": 718,
-        "MASTODON": 169,
-        "TELEGRAM": 88
+        "X": 767,
+        "MASTODON": 178,
+        "TELEGRAM": 89
       }
     }
   ],
@@ -1441,32 +1650,32 @@
       "label": "W47",
       "week_label": "W47",
       "week_start": "2026-11-16T00:00:00Z",
-      "posts": 975,
-      "post_count": 975,
-      "operational_posts": 31,
-      "influence_signals": 27,
+      "posts": 1034,
+      "post_count": 1034,
+      "operational_posts": 33,
+      "influence_signals": 30,
       "source_counts": {
-        "X": 718,
-        "MASTODON": 169,
-        "TELEGRAM": 88
+        "X": 767,
+        "MASTODON": 178,
+        "TELEGRAM": 89
       }
     }
   ],
   "information_activity_summary": {
-    "current_week": 975,
-    "previous_week": 1030,
-    "current_week_to_date": 975,
-    "previous_week_same_period": 1030,
+    "current_week": 1034,
+    "previous_week": 1082,
+    "current_week_to_date": 1034,
+    "previous_week_same_period": 1082,
     "previous_week_full": 1482,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": -5.34,
-    "change_label": "-5.3%",
+    "change_percent": -4.44,
+    "change_label": "-4.4%",
     "direction": "DOWN",
     "comparable": true,
-    "elapsed_hours": 118.5,
+    "elapsed_hours": 124.6,
     "current_period_start": "2026-11-16T00:00:00Z",
     "previous_period_start": "2026-11-09T00:00:00Z",
-    "previous_period_end": "2026-11-13T22:29:09Z"
+    "previous_period_end": "2026-11-14T04:36:33Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -1478,35 +1687,35 @@
       72,
       168
     ],
-    "generated_at": "2026-11-20T22:29:10Z",
-    "total_items": 2011,
-    "information_count": 262,
-    "early_warning_count": 884,
-    "operational_count": 707,
+    "generated_at": "2026-11-21T04:36:34Z",
+    "total_items": 2008,
+    "information_count": 255,
+    "early_warning_count": 885,
+    "operational_count": 710,
     "correlated_count": 158,
     "layer_counts": {
-      "INFORMATION": 262,
-      "EARLY_WARNING": 884,
-      "CORRELATED": 158,
-      "OPERATIONAL": 707
+      "INFORMATION": 255,
+      "OPERATIONAL": 710,
+      "EARLY_WARNING": 885,
+      "CORRELATED": 158
     },
     "source_counts": {
       "X": 1483,
-      "MASTODON": 105,
-      "TELEGRAM": 48,
-      "REDDIT": 375
+      "MASTODON": 104,
+      "TELEGRAM": 49,
+      "REDDIT": 372
     },
     "type_counts": {
-      "INFORMATION_SIGNAL": 262,
+      "INFORMATION_SIGNAL": 255,
+      "BORDER_CROSSING": 374,
+      "MOVEMENT_EARLY_WARNING": 311,
       "ROUTE_EARLY_WARNING": 145,
       "DEPORTATION": 156,
       "MOBILIZATION_COORDINATION": 22,
       "FACILITATION_EARLY_WARNING": 172,
-      "BORDER_CROSSING": 372,
-      "MOVEMENT_EARLY_WARNING": 310,
+      "BORDER_MEASURE": 20,
       "DETENTION": 88,
       "RESCUE_OPERATION": 49,
-      "BORDER_MEASURE": 19,
       "INTERCEPTION": 39,
       "PRESSURE_EARLY_WARNING": 39,
       "SMUGGLING_ACTIVITY": 31,
@@ -1523,6 +1732,149 @@
       "ONLINE_INFLUENCE_REPORT": 1
     },
     "items": [
+      {
+        "timeline_id": "information:28176",
+        "timestamp": "2026-11-21T04:29:34Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2123997224065523840",
+        "author": "EliasMichalas",
+        "url": "https://x.com/EliasMichalas/status/2123997224065523840",
+        "source_url": "https://x.com/EliasMichalas/status/2123997224065523840",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "channel",
+          "boat"
+        ],
+        "freshness_cues": [],
+        "text": "Far-right activist Danny Tommo jailed for slashing migrant boat in English Channel https://t.co/n505Gvk7he #lbc #bbcbreakfast #ReformUK #NigelFarage",
+        "text_excerpt": "Far-right activist Danny Tommo jailed for slashing migrant boat in English Channel https://t.co/n505Gvk7he #lbc #bbcbreakfast #ReformUK #NigelFarage",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-21T04:33:28Z",
+        "last_collected_at": "2026-11-21T04:33:28Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "operational:946",
+        "timestamp": "2026-11-21T04:24:39Z",
+        "layer": "OPERATIONAL",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "X",
+        "source_post_id": "2123995986615787864",
+        "author": "grok",
+        "url": "https://x.com/grok/status/2123995986615787864",
+        "source_url": "https://x.com/grok/status/2123995986615787864",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.55,
+        "priority": "MEDIUM",
+        "priority_score": 55.0,
+        "text": "@KaterinaKaterna As of Nov 20, a new group of ~300 Central American migrants crossed into southern Chiapas from Guatemala, joining or paralleling the larger “Dios con Nosotros” caravan (originally ~1,500, now split into smaller groups near Arriaga and Tonalá).\n\nMexican officials report none of",
+        "text_excerpt": "@KaterinaKaterna As of Nov 20, a new group of ~300 Central American migrants crossed into southern Chiapas from Guatemala, joining or paralleling the larger “Dios con Nosotros” caravan (originally ~1,500, now split into smaller groups near Arriaga and Tonalá).\n\nMexican officials report none of",
+        "event_group_id": 742,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
+      {
+        "timeline_id": "early_warning:1483",
+        "timestamp": "2026-11-21T04:22:05Z",
+        "layer": "EARLY_WARNING",
+        "type": "MOVEMENT_EARLY_WARNING",
+        "signal_type": "MOVEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2123995339954757949",
+        "author": "grok",
+        "url": "https://x.com/grok/status/2123995339954757949",
+        "source_url": "https://x.com/grok/status/2123995339954757949",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "Ceuta",
+        "primary_location": "Ceuta",
+        "country": "Spain",
+        "confidence": 0.8,
+        "priority": "MEDIUM",
+        "priority_score": 39.0,
+        "analyst_priority": "LOW",
+        "text": "@KaterinaKaterna @bennyjohnson Ceuta (not Cueta) saw a mass crossing of mostly Moroccan migrants on July 30-31 2026. Estimates range from the government's ~72,000 to police figures of 100,000-125,000.\n\nMost returned quickly to Morocco (tens of thousands in the first days; later tallies of voluntary returns and",
+        "text_excerpt": "@KaterinaKaterna @bennyjohnson Ceuta (not Cueta) saw a mass crossing of mostly Moroccan migrants on July 30-31 2026. Estimates range from the government's ~72,000 to police figures of 100,000-125,000.\n\nMost returned quickly to Morocco (tens of thousands in the first days; later tallies of voluntary returns and",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "MOVEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-11-21T04:33:06Z",
+        "last_detected_at": "2026-11-21T04:33:06Z",
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
+      {
+        "timeline_id": "information:28183",
+        "timestamp": "2026-11-21T04:16:12Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2123993856928817324",
+        "author": "TheDirtyBrief",
+        "url": "https://x.com/TheDirtyBrief/status/2123993856928817324",
+        "source_url": "https://x.com/TheDirtyBrief/status/2123993856928817324",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "boat",
+          "rescue"
+        ],
+        "freshness_cues": [],
+        "text": "@RupertLowe10 15 months is real. So is this: migrants were already off, a French rescue worker was still on the boat, he slashed it about 8 times on a livestream, and he pleaded guilty. Compare other sentences if you want. Just date the receipts. 🗂️",
+        "text_excerpt": "@RupertLowe10 15 months is real. So is this: migrants were already off, a French rescue worker was still on the boat, he slashed it about 8 times on a livestream, and he pleaded guilty. Compare other sentences if you want. Just date the receipts. 🗂️",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-21T04:33:29Z",
+        "last_collected_at": "2026-11-21T04:33:29Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
       {
         "timeline_id": "information:28138",
         "timestamp": "2026-11-20T22:25:16Z",
@@ -4578,6 +4930,38 @@
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
+        "timeline_id": "operational:926",
+        "timestamp": "2026-11-16T19:00:25Z",
+        "layer": "OPERATIONAL",
+        "type": "BORDER_MEASURE",
+        "signal_type": "BORDER_MEASURE",
+        "event_type": "BORDER_MEASURE",
+        "source": "TELEGRAM",
+        "source_post_id": "3662047307:46",
+        "author": "move_uruguay",
+        "url": "https://t.me/move_uruguay/46",
+        "source_url": "https://t.me/move_uruguay/46",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.2,
+        "priority": "LOW",
+        "priority_score": 20.0,
+        "text": "📅 Как записаться в Migración\n\n1️⃣ Создаёте личный кабинет на gub.uy, нажимаете «Iniciar trámite en línea» и заполняете анкету на ПМЖ. Для записи нужна только копия загранпаспорта.\n2️⃣ Ждёте подтверждение анкеты на e-mail, обычно 1–2 недели. Если есть замечания, Migración попросит их исправить.\n3️⃣ Выбираете день, время и отделение. Очереди в отделениях сильно отличаются.\n4️⃣ Платите пошлину в течение нескольких дней после выбора даты, иначе запись отменят. Платить можно картой местного банка или через Abitab, после оплаты придёт письмо с подтверждением.\n5️⃣ На визит берёте оригиналы документов с переводами и приходите вовремя. Без обязательных документов запись и оплата пропадают, трамит начинаете заново.\n\nЗаписаться онлайн можно ещё до приезда в Уругвай, но гражданам РФ нельзя: из-за границы запись для россиян закрыта. Сам визит проходит в отделении Migración в Уругвае. Список документов на визит сверьте на gub.uy, он меняется.\n\n🤍 Нужна помощь с записью и оплатой? Пишите: @move_uruguay_t @move_uy",
+        "text_excerpt": "📅 Как записаться в Migración\n\n1️⃣ Создаёте личный кабинет на gub.uy, нажимаете «Iniciar trámite en línea» и заполняете анкету на ПМЖ. Для записи нужна только копия загранпаспорта.\n2️⃣ Ждёте подтверждение анкеты на e-mail, обычно 1–2 недели. Если есть замечания, Migración попросит их исправить.\n3️⃣ Выбираете день, время и отделение. Очереди в отделениях сильно отличаются.\n4️⃣ Платите пошлину в течение нескольких дней…",
+        "event_group_id": 726,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
         "timeline_id": "early_warning:1457",
         "timestamp": "2026-11-16T12:03:51Z",
         "layer": "EARLY_WARNING",
@@ -4610,6 +4994,38 @@
         "last_detected_at": "2026-11-16T12:10:44Z",
         "ai_review_status": "AI_REVIEWED",
         "ai_editorial_decision": "PUBLISH"
+      },
+      {
+        "timeline_id": "operational:922",
+        "timestamp": "2026-11-16T11:58:43Z",
+        "layer": "OPERATIONAL",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "X",
+        "source_post_id": "2122298315815698906",
+        "author": "BoccardoReal",
+        "url": "https://x.com/BoccardoReal/status/2122298315815698906",
+        "source_url": "https://x.com/BoccardoReal/status/2122298315815698906",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": 28.2916,
+        "longitude": -16.6291,
+        "confidence": 0.8,
+        "priority": "HIGH",
+        "priority_score": 80.0,
+        "text": "🚨 Canary Islands: 3,047 migrants landed in a single weekend, on 23 boats. On Sunday alone, 1,467 arrived in nine cayucos, eight of them on El Hierro (EFE).\n\nA border that depends on the weather is not a border. It's a waiting room. https://t.co/ZXRHk7xM1W",
+        "text_excerpt": "🚨 Canary Islands: 3,047 migrants landed in a single weekend, on 23 boats. On Sunday alone, 1,467 arrived in nine cayucos, eight of them on El Hierro (EFE).\n\nA border that depends on the weather is not a border. It's a waiting room. https://t.co/ZXRHk7xM1W",
+        "event_group_id": 693,
+        "correlation_score": 0.75,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
         "timeline_id": "correlated:920",
@@ -15955,158 +16371,6 @@
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
-        "timeline_id": "information:25446",
-        "timestamp": "2026-11-08T00:48:14Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2119230478196584904",
-        "author": "PeterPugh10",
-        "url": "https://x.com/PeterPugh10/status/2119230478196584904",
-        "source_url": "https://x.com/PeterPugh10/status/2119230478196584904",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "crossing"
-        ],
-        "freshness_cues": [],
-        "text": "Here they come !!!!\n\nUp to 500 Migrants Cross into Mexico Headed to U.S. Border After Democrat Victories\nhttps://t.co/yrvbIrNUio",
-        "text_excerpt": "Here they come !!!!\n\nUp to 500 Migrants Cross into Mexico Headed to U.S. Border After Democrat Victories\nhttps://t.co/yrvbIrNUio",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-08T00:58:11Z",
-        "last_collected_at": "2026-11-08T00:58:11Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:25447",
-        "timestamp": "2026-11-08T00:47:42Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2119230346730602963",
-        "author": "innerpeece",
-        "url": "https://x.com/innerpeece/status/2119230346730602963",
-        "source_url": "https://x.com/innerpeece/status/2119230346730602963",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "crossing"
-        ],
-        "freshness_cues": [],
-        "text": "@RepDonBacon Yes but those refugees who crossed the border had claims of asylum, which the USA is bound by treaty and statute to accept. And as a population you damn well know that they committed crimes at much lower rates. They were easy scapegoats for racist divisive propaganda",
-        "text_excerpt": "@RepDonBacon Yes but those refugees who crossed the border had claims of asylum, which the USA is bound by treaty and statute to accept. And as a population you damn well know that they committed crimes at much lower rates. They were easy scapegoats for racist divisive propaganda",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-08T00:58:11Z",
-        "last_collected_at": "2026-11-08T00:58:11Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:25434",
-        "timestamp": "2026-11-08T00:46:59Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1xqlmfh",
-        "author": "readingreviewsnow",
-        "url": "https://www.reddit.com/r/NewRepublicans/comments/1xqlmfh/up_to_500_migrants_cross_into_mexico_headed_to_us/",
-        "source_url": "https://www.reddit.com/r/NewRepublicans/comments/1xqlmfh/up_to_500_migrants_cross_into_mexico_headed_to_us/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "border",
-          "crossing"
-        ],
-        "freshness_cues": [],
-        "text": "Up to 500 Migrants Cross into Mexico Headed to U.S. Border After Democrat Victories",
-        "text_excerpt": "Up to 500 Migrants Cross into Mexico Headed to U.S. Border After Democrat Victories",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-08T00:57:44Z",
-        "last_collected_at": "2026-11-08T21:26:39Z",
-        "collection_count": 3,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:25436",
-        "timestamp": "2026-11-08T00:46:28Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1xqlm3c",
-        "author": "readingreviewsnow",
-        "url": "https://www.reddit.com/r/NewRepublicans/comments/1xqlm3c/up_to_500_migrants_cross_into_mexico_headed_to_us/",
-        "source_url": "https://www.reddit.com/r/NewRepublicans/comments/1xqlm3c/up_to_500_migrants_cross_into_mexico_headed_to_us/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "border",
-          "crossing"
-        ],
-        "freshness_cues": [],
-        "text": "Up to 500 Migrants Cross into Mexico Headed to U.S. Border After Democrat Victories",
-        "text_excerpt": "Up to 500 Migrants Cross into Mexico Headed to U.S. Border After Democrat Victories",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-08T00:57:44Z",
-        "last_collected_at": "2026-11-08T16:27:08Z",
-        "collection_count": 2,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
         "timeline_id": "early_warning:1373",
         "timestamp": "2026-11-08T00:42:37Z",
         "layer": "EARLY_WARNING",
@@ -16141,44 +16405,6 @@
         "ai_editorial_decision": "PUBLISH"
       },
       {
-        "timeline_id": "information:25453",
-        "timestamp": "2026-11-08T00:41:02Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2119228670065696902",
-        "author": "DHKITCH",
-        "url": "https://x.com/DHKITCH/status/2119228670065696902",
-        "source_url": "https://x.com/DHKITCH/status/2119228670065696902",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "boat",
-          "vessel"
-        ],
-        "freshness_cues": [],
-        "text": "@NoticerOfAll @NoticerOfAll\n\nYou’ve just attempted to justify criminal damage because somebody was frustrated about immigration.\n\nSince when did frustration grant anyone the authority to take a knife to a vessel?\n\nYes, French police have slashed migrant boats. Their tactics are controversial",
-        "text_excerpt": "@NoticerOfAll @NoticerOfAll\n\nYou’ve just attempted to justify criminal damage because somebody was frustrated about immigration.\n\nSince when did frustration grant anyone the authority to take a knife to a vessel?\n\nYes, French police have slashed migrant boats. Their tactics are controversial",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-08T00:58:37Z",
-        "last_collected_at": "2026-11-08T00:58:37Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
         "timeline_id": "operational:858",
         "timestamp": "2026-11-08T00:36:49Z",
         "layer": "OPERATIONAL",
@@ -16211,82 +16437,6 @@
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
-        "timeline_id": "information:25456",
-        "timestamp": "2026-11-08T00:20:37Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2119223529170239780",
-        "author": "GunnyP1775",
-        "url": "https://x.com/GunnyP1775/status/2119223529170239780",
-        "source_url": "https://x.com/GunnyP1775/status/2119223529170239780",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "sea",
-          "trafficking"
-        ],
-        "freshness_cues": [],
-        "text": "@GigaChadxf @AkevvFlurry @JacobWeinbergR Muslim societies ran the trans-Saharan, Red Sea and East African slave trades for over a millennium, taking millions of Africans. Trafficking, forced labor and sales of migrants persist in Libya per UN reports, though formal open auctions remain disputed. Male African slaves were",
-        "text_excerpt": "@GigaChadxf @AkevvFlurry @JacobWeinbergR Muslim societies ran the trans-Saharan, Red Sea and East African slave trades for over a millennium, taking millions of Africans. Trafficking, forced labor and sales of migrants persist in Libya per UN reports, though formal open auctions remain disputed. Male African slaves were",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-08T00:58:38Z",
-        "last_collected_at": "2026-11-08T00:58:38Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:25457",
-        "timestamp": "2026-11-08T00:19:45Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2119223312970641859",
-        "author": "grok",
-        "url": "https://x.com/grok/status/2119223312970641859",
-        "source_url": "https://x.com/grok/status/2119223312970641859",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "sea",
-          "trafficking"
-        ],
-        "freshness_cues": [],
-        "text": "@GunnyP1775 @GigaChadxf @AkevvFlurry @JacobWeinbergR Muslim societies ran the trans-Saharan, Red Sea and East African slave trades for over a millennium, taking millions of Africans. Trafficking, forced labor and sales of migrants persist in Libya per UN reports, though formal open auctions remain disputed. Male African slaves were",
-        "text_excerpt": "@GunnyP1775 @GigaChadxf @AkevvFlurry @JacobWeinbergR Muslim societies ran the trans-Saharan, Red Sea and East African slave trades for over a millennium, taking millions of Africans. Trafficking, forced labor and sales of migrants persist in Libya per UN reports, though formal open auctions remain disputed. Male African slaves were",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-08T00:58:38Z",
-        "last_collected_at": "2026-11-08T00:58:38Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
         "timeline_id": "operational:859",
         "timestamp": "2026-11-08T00:01:18Z",
         "layer": "OPERATIONAL",
@@ -16316,90 +16466,6 @@
         "event_time_text": null,
         "event_time_normalized": null,
         "event_time_confidence": null,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:25529",
-        "timestamp": "2026-11-07T23:32:40Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1xqk32x",
-        "author": "sparkylmagazine",
-        "url": "https://www.reddit.com/r/modernmarxism/comments/1xqk32x/article_ceuta_flashpoint_of_two_worlds/",
-        "source_url": "https://www.reddit.com/r/modernmarxism/comments/1xqk32x/article_ceuta_flashpoint_of_two_worlds/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.5,
-        "priority": "INFO",
-        "priority_score": 70,
-        "information_score": 7,
-        "matched_information_cues": [
-          "border",
-          "crossing",
-          "route",
-          "sea",
-          "interception",
-          "arrival"
-        ],
-        "freshness_cues": [
-          "today",
-          "now"
-        ],
-        "text": "(ARTICLE) Ceuta: Flashpoint of Two Worlds\nYou can also listen to the article on substack , YouTube , and sparkyl.org . ... Map: “Route used by migrants swimming from Morocco to the Spanish Autonomous City of Ceuta.” Image description: a map showing southern Spain and northern Morocco, labeled with the Spanish-controlled cities of Ceuta and Melilla that border Morocco, as well as a zoomed-in image of the Ceuta-Morocco border that migrants enter the sea to cross on either side. [1] At the end of July, Ceuta, the Spanish exclave on the North African coast, was inundated with a surge of illegal migration from its neighbor, Morocco. Spanish authorities stated that over 70,000 migrants were able to swim around the border into the exclave,[2] many of them minors.[3] It is estimated that at least 100 people died in the crossings.[4] Only a month prior and doubtlessly spurring on the crossings, the Supreme Court of Spain ruled that 2015 reforms which allowed for “hot returns” – the immediate return of intercepted illegal migrants without any legal or asylum-seeking procedures – did not apply to migrants who try to reach Ceuta or Melilla by sea, arguing that the 2015 laws specify only physical containment structures .[5] Motivated by the hope of asylum in Spain -- a threadbare hope that processing by Spanish immigration would result in residence in Spain -- this mass of lumpen, many of them originating from countries other than Morocco, responded to the antagonism of their class position, and acted out of hope for a new life, borders be damned. In an interview with the French news network, RFI, a representative from a Ceuta immigration NGO, who was on the ground at the time, said: There are many asylum seekers from countries such as Sudan, Yemen, Chad, Mali and Egypt...It is important to understand that many of them are asylum seekers. Since arriving in Ceuta, they have been telling us: \"I would rather die here than go back to Morocco. My life is in danger if I go back to Morocco.” Some have fled countries in conflict, such as Sudan or Palestine, and it has taken them months, even years, to get here.[6] The crossings garnered international attention, sending governments -- particularly those within the EU -- into an uproar. Despite the special rules surrounding Ceuta that preclude it from the EU’s border-free Schengen Agreement, its parent country, Spain, received enormous backlash by European powers for the dramatic breach in border security. Most significantly, Italy suspended its Schengen Agreement with Spain on July 31, saying that it was necessary to protect the integrity of its borders from “uncontrolled immigration.” The interior minister of Finland expressed full support for Italy’s decision, stating that Finland could follow suit, and Denmark’s Prime Minister petitioned the EU to “consider all options, including a suspension of Schengen co-operation.” Additionally, 22 of the 27 members of the EU sent a joint letter to EU leadership reminding them that the EU has “a duty to effectively deter and relentlessly combat illegal migration,” and that the individual nations were ready to take any necessary legal measures, “including through reinforcing or reintroducing temporary internal border controls.”[7] While Italy reinstated its Schengen agreement with Spain in October,[8] and many of the migrants have returned to Morocco,[9] ,\\ 10]) the terror the bourgeois hold for illegal migration remains. This terror does not originate from the people – that is, from the masses – but from the bourgeois minority, who are already seeing immense crisis in the European labor market, particularly due to the loss of manufacturing jobs, which is inundating the market with low-skilled labor.[11] The influx of thousands more low-skilled lumpen into the labor market only exacerbates the problem further, lowering the wages of already lowly-paid workers even more, swelling the army reserves of labor to the point of their incensing the masses against the government and generally disrupting the capitalists’ accumulations. With discontented masses and their protests already sweeping over many countries in Europe,[12] the ruling class has its hands full with the people already within their countries and they are terrified of the potential collapse that could occur with the influx of more, even as only an unconscious reflex, acting as they do within the confines of their parasitical position in production. But influxes of illegal migration are a circumstance that the ruling class must get used to, and not just from Morocco. Last March, the World Bank stated that, over the next 10 years, population growth within the global south will vastly outpace job growth, leaving nearly 800 million people jobless in the decade to come.[13] The recent migrations from Morocco are a single dramatic example of this trend, a response within the masses to their destitution and meager possibilities, a last-ditch effort to leave the economic destitution of “the global south” and to enter into the world of the “global north” or, to use more accurate terms, to leave a dependent country and enter into an imperially dominant country, where wages and livelihood are higher, two of many factors that ostensibly sell the promise of a better life to the individual. The imperial contradiction is of primary importance if we are to understand July’s crossings, not to mention immigration in general . Ceuta is part of Spain and Spain, as part of the European Union, is a member of an alliance of imperially dominant countries, housing a large portion of financiers and a beneficiary of imperial accumulations being done in the dependent countries, displaying also typical imperialist decadence and parasitism. The integration of Spain and Europe in general during the reconstruction period after World War II saw the nation folded into both the NATO alliance and western economic supply chains, boosting its economic gains and in turn, becoming a greater beneficiary of the oppression of the dependent nations tied to those chains. In contrast, sits Morocco, which was captured by the French in 1912 and turned into a protectorate for 44 years. As an exploited colony, the country was kept in servitude, incapable of owning a national economy until winning its independence in 1956. Despite the Moroccan government claiming themselves as the legitimate power in North Africa, boasting now their “own” economy and asserting also a claim on Spanish Ceuta due to its colonial foundations,[[14]](#_edn14) judging from its current orientation, there is very little chance that the country will ever press its claim in a real way, or achieve actual -- that is, economic -- independence. While no longer a colony politically, Morocco has not escaped its dependent status in relation to European powers, Spain in particular. Spain is the biggest importer of Moroccan goods, and, prior to 2025, was also the biggest exporter into Morocco,[15] absorbing more than 22% of Morocco’s total exports, and supplying almost 16% of their total imports in 2024.[16] In the 1960’s, Spain had a GDP per-capita that was roughly twice that of Morocco’s, and today, that gap has increased significantly. Today, Spain’s GDP per-capita surpasses, by more than 4 times , its dependent neighbor, Morocco.[17] But it is more than just Spain that benefits from Morocco’s dependency. A whopping 42% of Morocco’s total GDP is accounted for in foreign exports,[18] signifying that nearly half of production is oriented beyond the country for non-Moroccan consumers, mostly those within the EU. It is also European nations who supply the lion’s share of foreign direct investment (FDI), with France, Morocco’s historical colonizer, leading the pack ahead of United Arab Emirates, Germany, and Spain, alone supplying almost 62% of the country’s total FDI inflow.[19] Additionally, the World Bank, a leading organization of mostly American and European banking-bourgeois, has more than $29 billion invested in Moroccan projects, and more than $12.5 billion worth of financial exposure regarding Morocco.[20] The organization is also the country’s biggest holder of external debt,[21] constituting almost 42% of all the country’s external debt in 2023.[22] With these ties siphoning the labor value of the Moroccan proletariat, transforming it into capital for foreign bourgeois, and ensuring austerity on the part of the Moroccan monarchy in accordance with foreign debt, the country’s development is inhibited. Its economy grows one-sided, forced into the few boxes that fit the profit motives of imperialists abroad, stifling growth generally and unsustainably growing the lumpen. It should be no surprise to see a stark disparity between Morocco and its more imperially-privileged neighbor, especially when we look at the conditions of the working class. Spanish wages reflect the country’s imperialist position, with the federal minimum sitting at €7.96 an hour,[23] or $8.95 USD.[24] In contrast, the Moroccan minimum wage is 17.92 Moroccan dirham an hour,[25] a measly $1.83 USD. Additionally, the average wages between the countries is staggering. The average wage of Morocco is 72,000 dirham a year the equivalent of only a little more $7,300 USD, with half of all workers in Morocco earning less than 50% of that.[26] In contrast, Spain’s average salary is €29,400, more than $33,000 USD — low compared to many countries in Europe, but nearly 3.5 times higher than its North African neighbor.[27] Looking at these facts, no one should be surprised at all by the illegal crossings. A crucial point brought up in Lenin’s Imperialism , the Highest Stage of Capitalism rings as true then as it does now: One of the special features of imperialism...is the decline in emigration from imperialist countries and the increase in immigration into these countries from the more backward countries where lower wages are paid.[28] Ceuta, an island of EU imperial privilege in a sea of deprivation, can only be a flashpoint of illegal immigration. The people’s desperation, as well as the stark economic disparity between Spain and Morocco, makes this outcome unavoidable. History shows this to be true. Illegal crossings into Ceuta are a regular occurrence, though usually on a much smaller scale, averaging a little over 2,000 annually in the five years leading up to 2026.[29] July’s rush on Ceuta’s border shows the development of this trend, showing, particularly, that it will increase and grow more antagonistic, increasing in-step with the ongoing decline of Moroccan economic conditions,[30] especially the conditions of labor.[31] Ceuta can expect surges of immigration in accordance with its position within the global chain of production, in accordance with the fact that it – a small piece of land less than 8 sq miles on the North African coast – offers, ostensibly at least, much better economic opportunities compared to Africa and the Middle-East. The lumpen and underemployed will continuously seek better livelihoods, and the border to Ceuta will remain a target of their aspirations, legality aside. The Moroccan workers themselves have also spontaneously expressed their discontent at the economic conditions, and in a class way. Last year, at the behest of five primary Moroccan unions, a general strike that lasted from February 5 through the 6 th saw a reported 84.9% participation rate, including multiple sectors of industry. A statement from the unions called out the anti-labor policies of the government, and cited the typical grievances of spontaneous labor: “skyrocketing prices, unemployment, inflation, and the deterioration of the purchasing power of large groups and segments.\"[32] But with less than 4% of Moroccan workers covered by a collective bargaining agreement and unionized workers representing less than 11% of the workforce,[33] there is very little social power to back up any of these energetic actions and demands. With labor so little organized, it is no surprise that the youth, following an international trend,[34] are some of the most energetic voices of struggle in Morocco. Last year also saw a series of protests spurred on by the “Gen Z 212” discord server, with protesters demanding healthcare, education, and economic security.[35] An estimated 2,000 protesters were arrested, and as of October of last year, 17 have received heavy prison sentences.[36] While both protests and labor critique the government for the economic conditions, underlying the Moroccan government, and dictating its structure, is the global imperialist market it is subservient to. With these circumstances, any attempts at “economic security” that fail to raise a critique beyond the country’s borders are inadequate. The chains of production, investments, and supply within the global imperial market create a dependency on the poor labor conditions of the Moroccan proletariat, and cement the Moroccan government into a comprador force that aids and abets in the accumulation being done by foreign powers, seeking their investments, selling Moroccan wage-slaves wholesale to foreign bourgeois[37] while serving as an inhibiting force to the growth of production, incensing workers, as well as petty and small bourgeois. Devoid of a strong economic and working class critique – one that cuts through both nationalism and the spontaneity of populism, genuinely based in the struggle of the international working class – there can be little hope of improvement in the Moroccan people’s oppression. This critique should come, first and foremost, from the conscious Marxist element, who must put aside their politicking and devote themselves to the ideological struggle, seeing in the construction of centralized vanguard publications and media-producing organizations the building-blocks to an energetic and effective movement for the liberation of the working class, and by extension, the masses generally, as Lenin’s Where to Begin?, What is to Be Done? , and Sparkyl ’s pamphlet, Where to Begin When We Already Started? , instruct. As the lower classes in Morocco risk the perils of both soldiers and the sea in their demand for a humanly existence, it is the Marxists alone who are capable of revealing the truth of the situation to the people. Illegal migrants represent the lowest rungs of the working class, and a reserve army of labor, spontaneously seeking better markets to sell their labor for a higher price so they may purchase for themselves a more dignified life. The desperate position they are cast into by the imperial world market ensures that their critiques of society, as well as their disrespect for national borders, continuously springs up onto the international stage. It is the Marxists who know and propagate the truth that the often antagonistic national identifiers placed on persons as a result of their birth is first and foremost, a mark of the bourgeois, allowing for their facilitation by borders and state authorities, agents of the capitalists. The militarized restriction and facilitation of people by border protection in the name of “national security” serves the imperial market and its capitalist handlers, facilitating, in the first and final instance, the smooth extraction of labor value from the proletarians. Every Marxist knows and propagates the truth that national borders, as they exist today, are products of bourgeois relations, as well as a tool for bourgeois relations. It is only through abolishing bourgeois relations through the revolutionary institution of socialist relations, that the violence of borders, as well as the vile disparities and parasitism of the capitalist-imperial system, can be ended. The spontaneous forces of revolt that we are seeing everywhere these days are not capable of bringing forward this critique, even while it is so desperately needed if the people are to actually improve their position within production and subsequently improve their lives. But even spontaneity, once it is linked with the march of the working class, will begin to grasp at these truths, though they are incapable of cementing themselves within the class and of leading to practical revolutionary action without the conscious Marxist-Leninist element. Development is unavoidable and, regarding Morocco, the shifting imperial market develops both spontaneous revolt and the working class in dramatic ways. As recently as last year, China surpassed Spain as the country’s lead supplier, providing 13.9% of imports, compared to Spain’s 13.6%.[38] The continuing trend of Chinese economic growth and dominance – which is a global trend sending ripples throughout the international market[39] – continues to shift Morocco’s production, and, as large sections of China’s bourgeois have profit motives and interests quite outside and opposed to the interests of “Western” capital, the gains of China’s bourgeois bring political shifts as well, favoring new sections of both politicians and capitalists who are tied to the new Chinese accumulations over and against the more expired EU connections that have dominated Morocco’s past. There is also the fact that the world’s current (and expiring) biggest imperialist player who widely represents “Western” interest, the United States, is the country’s 4 th largest trading partner, sitting directly behind China, and has also dramatically increased its own exports into Morocco, with an enormous 25.2% increase on display between 2025 and 2026.[40] With Moroccan production oriented to so few Moroccans, and tugged between imperialist powers, the country cannot escape the national revolt of its people, particularly regarding the smaller bourgeois, whose proletarianization is helped along by the country’s shifts regarding international relations and trade. As Morocco, in response to China’s imports, augments its economy towards China, incentivizing bourgeois who respond to China’s investments and their production, it will augment its economy away from the EU and “Western” bloc of capitalists, likely due to economic protections enforced upon the country by China itself in defense of its monopolies, but, even without these, by the basic impulse within the mass of Moroccan capitalists to seek the highest return on their investments, making use of the greater quantity and thus, ostensibly, the cheaper price of supply coming from China. The same paradigm plays out from opposite sides in response to influxes of investment and exports coming from the other imperial players, namely, the US and EU. This tense situation continuously acts against the lower classes. As the country’s production teeters between the conflicting interests of the imperial world, new industries gaining profit, old industries shrinking and fading away, with exports and investments ping-ponging between two increasingly hostile imperial camps, thousands will be cast down into the ranks of the lower classes with each swing of the pendulum, fomenting revolt and providing opportunities for both the organization and empowerment of labor for socialism. There should be no underestimating the influence that a committed organization of vanguardist Marxist-Leninist ideological workers can have upon the masses, especially during times of transformation, crisis, and revolt. While the dispossessed bourgeois in Morocco raise their flags for “freedom,” they are incapable of doing anything more than shifting the country between the hands of one imperialist or another (the likeliest outcome), or of depressing their economy through harsh national protections, always sacrificing the workers and the poor in both their political ambitions and their businesses. If any real progress is to be made for the people of Morocco -- or anywhere -- the workers, their organizations, and the Communist Party must be able to make their own demands, and from a platform that is separate from the capitalist class in every fashion possible. They must be able to, at the very least, enter into the revolt in order to advance the cause of the international working class, and, in appropriate circumstances where the situation allows, take the lead in it , making the bourgeois a junior partner to the power of organized labor underneath a vanguard Party who, upon achieving victory, constitute themselves as the “state” of the dictatorship of the proletariat. No one should be confused regarding the fact that, most everywhere, the circumstances for this to happen are virtually non-existent at the moment. While labor is so unorganized, and while revisionist parties and spontaneity dominate “socialism,” grafting the workers to electoralism and bourgeois parties, labor is not able to even get organized, much less transform itself into a capable revolutionary class. This is as true in Morocco as it is anywhere else. It is only by uniting the anti-revisionist Marxist-Leninist element, as it exists now as a minority radical element within the upper classes and intelligentsia, and putting it to work constructing a country-wide media group for agitation and propaganda within the working class and the masses more generally that labor can receive the consciousness it needs to take up their historic struggle for socialism, the only struggle that is capable of ending the violence imposed on the masses by capitalist-imperialism, including the violence imposed upon poor immigrants, who receive the harshest of treatment at its hands. Endnotes [1] Dimitrova, Desislava. “The Spanish Supreme Court on Rejection at the Borders of Ceuta and Melilla: What About Human Rights at Sea?” EJIL: Talk! 30 July 2026. https://www.ejiltalk.org/the-spanish-supreme-court-on-rejection-at-the-borders-of-ceuta-and-melilla-what-about-human-rights-at-sea/ . [2] Fella, Stefano. “Ceuta: Migrant crossings and European reaction.” House of Commons Library. UK Parliament. 13 Aug 2026. https://commonslibrary.parliament.uk/research-briefings/cbp-10987/ . [3] Macias, Miguel. “What really happened in Ceuta? Why we may never find out.” NPR. 16 Aug 2026. https://www.npr.org/2026/08/16/nx-s1-5927053/what-happened-in-ceuta . [4] Fella. [5] Dimitrova. [6] RFI. “Migrants stranded in Ceuta say ‘I’d rather die here than go back to Morocco’”. RFI. 8 Aug 2026. https://www.rfi.fr/en/international/20260817-migrants-stranded-in-ceuta-say-i-d-rather-die-here-than-go-back-to-morocco . [7] Fella. [8] Pinto, Fortunato. “Italy and Spain to end border checks, easing tensions after Ceuta migrant row.” Euro News. 22 Oct 2026. https://www.euronews.com/2026/10/22/italy-and-spain-to-end-border-checks-easing-tensions-after-ceuta-migrant-row . [9] Fella. [10] Lecheb, Imane. “Spain plans to dismantle migrant shelters in Ceuta after 13,000 return to Morocco.” Hespress English. 3 Nov 2026. https://en.hespress.com/148494-spain-plans-to-dismantle-migrant-shelters-in-ceuta-after-13000-return-to-morocco.html . [11] Sheftalovich, Zoya. “Hundreds of thousands of jobs in EU at risk, Commission to warn.” Politico. 3 Jun 2026. https://www.politico.eu/article/eu-jobs-risk-energy-industry-green-transition-economy/ . [12] Kirchheim, Anna. “Protests sweep across Europe from France to Albania, Italy, Spain and Portugal.” EuroNews. 24 Oct 2026. https://www.euronews.com/2026/10/24/protests-sweep-across-europe-from-france-to-albania-italy-spain-and-portugal . [13] Zhang, Ming. “The world is facing a looming jobs crisis. Cities can help.” World Bank Blogs. 10 Mar 2025. https://blogs.worldbank.org/en/sustainablecities/the-world-is-facing-a-looming-jobs-crisis--cities-can-help- . [14] Demócrata. “Morocco claims its \"historical right\" over Ceuta and Melilla and proposes a commission to negotiate their future.” Demócrata. 21 Aug 2026. https://www.democrata.es/en/international/morocco-claims-its-historical-right-over-ceuta-and-melilla-and-proposes-a-commission-to-negotiate-their-future/ . [15] Observatory of Economic Complexity. “Morocco.” Accessed 28 Oct 2026. https://oec.world/en/profile/country/mar . [16]Solano, Daniel. “Maritime flows between Morocco and Spain offer promising prospects, supported by the reorganisation of supply chains. This market is whetting the appetite of transport and logistics operators.” Upply. 29 Oct 2025. https://market-insights.upply.com/en/spain-morocco-booming-maritime-traffic . [17] Our World in Data. “GDP per capita1956 to 2022.” Bolt and van Zanden – Maddison Project Database 2023. https://ourworldindata.org/grapher/gdp-per-capita-maddison-project-database?tab=line&time=1956..2022&country=MAR\\~GBR\\~ESP . [18] WITS. “Morocco trade statistics : Exports, Imports, Products, Tariffs, GDP and related Development Indicator.” https://wits.worldbank.org/CountryProfile/en/MAR . [19] Crédit Agricole Group. “Morocco: Foreign Direct Investment.” https://international.groupecreditagricole.com/en/international-support/morocco/investing . [20] World Bank Group. “Morocco.” Finances One. 30 Sep 2026. https://financesone.worldbank.org/countries/morocco . [21] Hadri, Safae. “Public Debt: who holds the keys to Morocco’s financing?” Telquel. 6 Oct 2026. https://telquel.ma/2025/10/06/public-debt-who-holds-the-keys-to-moroccos-financing\\_1953502 . [22] North African Post. “Who are Morocco’s main external creditors?” 27 Oct 2023. https://northafricapost.com/72487-who-are-moroccos-main-external-creditors.html . [23] Wage.is. “Morocco vs. Spain.” 4 Mar 2026. https://wage.is/morocco/vs/spain/ . [24] All USD Conversions from: Wise. “Euros to US Dollars Today.” Accessed on 3 Nov 2026. https://wise.com/us/currency-converter/eur-to-usd-rate & Wise. “1 thousand Moroccan dirhams to US dollars.” Accessed on 3 Nov 2026. https://wise.com/us/currency-converter/mad-to-usd-rate?amount=1000 . [25] Wage.is. “Morocco vs. Spain.” [26] Wage.is. “Morocco.” Jan 2026. https://wage.is/morocco/ . [27] Wage.is. “Spain.” Jan 2026. https://wage.is/spain/ . [28] Lenin, V. I. Imperialism: The Highest Stage of Capitalism . Written in 1916. Published as a pamphlet in 1917. Lenin Collected Works. Vol 22. Progress Publishers. 1977. Pg. 282. [29] Fella. [30] Afeznaoui, Hanane. “Morocco’s Dirham Weakens Against Euro and Dollar, Stock Market Drops 4.2%.” Morocco World News. 11 Oct 2026. https://www.moroccoworldnews.com/2026/10/341588/moroccos-dirham-weakens-against-euro-and-dollar-stock-market-drops-4-2/ . [31] Hespress EN. “Morocco faces growing labor shortages despite unemployment rate above 12%.” Hespress English. 25 Jun 2026. https://en.hespress.com/140639-morocco-faces-growing-labor-shortages-despite-unemployment-rate-above-12.html . [32] Madarr. “Moroccan workers fight back against ‘anti-worker’ bill.” People’s Dispatch. 13 Feb 2025. https://peoplesdispatch.org/2025/02/13/moroccan-workers-fight-back-against-anti-worker-bill/ . [33] ILOSTAT. “Morocco.” International Labour Organization. 2020 and 2019 data. https://ilostat.ilo.org/data/country-profiles/mar/ . Accessed on 31 Oct 2026. [34] Ronald, Issy. “Gen Z are leading the European protests. Here’s why they’re angry.” CNN. 24 Oct 2026. https://edition.cnn.com/2026/10/24/europe/gen-z-protests-europe-explainer-intl . [35] Zarhoule, Yasmine. “Understanding Morocco’s GenZ Uprising.” 24 Oct 2025. Diwan . https://carnegieendowment.org/middle-east/diwan/2025/10/moroccos-genz-uprising . [36] Roger, Simon. “Morocco cracks down on Gen Z.” Le Monde. 18 Oct 2025. https://www.lemonde.fr/en/le-monde-africa/article/2025/10/18/morocco-cracks-down-on-gen-z\\_6746543\\_124.html . [37] Agbetiloyle, Adekunle. “Morocco dethrones Africa’s richest country as most attractive investment hub as manufacturing growth draws investors north.” Business Insider Africa . 27 Oct 2026. https://africa.businessinsider.com/local/markets/morocco-dethrones-africas-richest-country-as-most-attractive-investment-hub-as/x1hn9e4 . [38] Babas, Latifa. “Spain was Morocco’s top trading partner in 2025, China its leading supplier.” Yabiladi. 16 Oct 2026. https://en.yabiladi.com/articles/details/205101/spain-morocco-s-trading-partner-2025.html . [39] Brühl, Volker. “The economic rise of China – an analysis of China’s growth drivers.” International Economic and Economic Policy . Vol. 22. 3 Dec 2024. https://link.springer.com/article/10.1007/s10368-024-00640-w . [40] El A, Nadia. “Morocco’s imports from the US outpace exports by more than 3 to 1.” Bladi.net. 3 Oct 2026. https://en.bladi.net/morocco-imports-outpace-exports,124126.html .",
-        "text_excerpt": "(ARTICLE) Ceuta: Flashpoint of Two Worlds\nYou can also listen to the article on substack , YouTube , and sparkyl.org . ... Map: “Route used by migrants swimming from Morocco to the Spanish Autonomous City of Ceuta.” Image description: a map showing southern Spain and northern Morocco, labeled with the Spanish-controlled cities of Ceuta and Melilla that border Morocco, as well as a zoomed-in image of the Ceuta-Morocco…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-08T08:14:30Z",
-        "last_collected_at": "2026-11-08T08:14:30Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:25389",
-        "timestamp": "2026-11-07T21:10:31Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "MASTODON",
-        "source_post_id": "mastodon_117577209046331731",
-        "author": null,
-        "url": "https://mastodon.social/@junijuin/117577209046331731",
-        "source_url": "https://mastodon.social/@junijuin/117577209046331731",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "border",
-          "arrival",
-          "departure"
-        ],
-        "freshness_cues": [],
-        "text": "The Bureau of Immigration backs a DOTr plan to open NAIA's e-gates to all departing and arriving passengers, not just foreigners and OFWs. Fewer queues, more machines reading faces at the border. # NAIA # Immigration",
-        "text_excerpt": "The Bureau of Immigration backs a DOTr plan to open NAIA's e-gates to all departing and arriving passengers, not just foreigners and OFWs. Fewer queues, more machines reading faces at the border. # NAIA # Immigration",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-07T21:11:11Z",
-        "last_collected_at": "2026-11-07T21:11:11Z",
-        "collection_count": 1,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -68808,21 +68874,21 @@
     "review_start_date": "2026-10-17",
     "review_cohort": "FIRST_RECORDED_ON_OR_AFTER_CUTOFF",
     "decisions": {
-      "REVIEW": 170,
+      "PUBLISH": 133,
       "EXCLUDE": 176,
-      "PUBLISH": 131
+      "REVIEW": 171
     },
     "removed_display_items": {
-      "live_events": 18,
+      "live_events": 17,
       "high_confidence_events": 1,
       "event_groups": 8,
-      "influence_signals": 6,
-      "early_warning_signals": 6,
+      "influence_signals": 7,
+      "early_warning_signals": 7,
       "crossing_access_signals": 1,
       "top_crossing_access_posts": 1,
       "high_priority_intelligence": 1,
       "access_signals": 1,
-      "timeline": 340
+      "timeline": 341
     },
     "historical_review_status": "HISTORICAL_NOT_AI_REVIEWED",
     "narrative_layers_not_reviewed": [
