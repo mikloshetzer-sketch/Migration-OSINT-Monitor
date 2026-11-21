@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-11-21T04:37:19.441641+00:00",
+  "generated_at": "2026-11-21T13:56:42.456120+00:00",
   "source": "dashboard-data.json / signal_timeline.items",
   "date_basis": "UTC source publication date; dashboard uses browser local dates",
   "selection": "daily dominant hotspot, matching matrixResolvedHotspot",
@@ -10,16 +10,16 @@
       "date": "2026-08-23",
       "region": "CENTRAL_MEDITERRANEAN",
       "location": null,
-      "records": 2,
+      "records": 1,
       "sources": {
-        "X": 2
+        "X": 1
       },
       "marker": {
         "latitude": 35.7,
         "longitude": 13.0,
         "precision": "illustrative_region"
       },
-      "total_timeline_items": 19
+      "total_timeline_items": 9
     },
     {
       "date": "2026-08-24",
@@ -876,32 +876,32 @@
       "date": "2026-10-26",
       "region": "WESTERN_MEDITERRANEAN",
       "location": "Ceuta",
-      "records": 3,
+      "records": 4,
       "sources": {
         "MASTODON": 1,
-        "X": 2
+        "X": 3
       },
       "marker": {
         "latitude": 35.8894,
         "longitude": -5.3213,
         "precision": "configured_location"
       },
-      "total_timeline_items": 22
+      "total_timeline_items": 23
     },
     {
       "date": "2026-10-27",
       "region": "WESTERN_MEDITERRANEAN",
       "location": "Ceuta",
-      "records": 6,
+      "records": 5,
       "sources": {
-        "X": 6
+        "X": 5
       },
       "marker": {
         "latitude": 35.8894,
         "longitude": -5.3213,
         "precision": "configured_location"
       },
-      "total_timeline_items": 19
+      "total_timeline_items": 18
     },
     {
       "date": "2026-10-28",
@@ -1066,7 +1066,7 @@
         "longitude": -5.3213,
         "precision": "configured_location"
       },
-      "total_timeline_items": 49
+      "total_timeline_items": 42
     },
     {
       "date": "2026-11-09",
@@ -1197,7 +1197,7 @@
         "longitude": -4.0,
         "precision": "illustrative_region"
       },
-      "total_timeline_items": 20
+      "total_timeline_items": 21
     },
     {
       "date": "2026-11-18",
@@ -1242,18 +1242,14 @@
     },
     {
       "date": "2026-11-21",
-      "region": "WESTERN_MEDITERRANEAN",
-      "location": "Ceuta",
+      "region": "ASIA_PACIFIC",
+      "location": null,
       "records": 1,
       "sources": {
         "X": 1
       },
-      "marker": {
-        "latitude": 35.8894,
-        "longitude": -5.3213,
-        "precision": "configured_location"
-      },
-      "total_timeline_items": 4
+      "marker": null,
+      "total_timeline_items": 14
     }
   ],
   "seven_day_windows": [
@@ -1264,7 +1260,7 @@
         {
           "region": "CENTRAL_MEDITERRANEAN",
           "location": null,
-          "records": 2,
+          "records": 1,
           "active_days": 1,
           "dates": [
             "2026-08-23"
@@ -1285,7 +1281,7 @@
         {
           "region": "CENTRAL_MEDITERRANEAN",
           "location": null,
-          "records": 6,
+          "records": 5,
           "active_days": 2,
           "dates": [
             "2026-08-23",
@@ -1307,7 +1303,7 @@
         {
           "region": "CENTRAL_MEDITERRANEAN",
           "location": null,
-          "records": 10,
+          "records": 9,
           "active_days": 3,
           "dates": [
             "2026-08-23",
@@ -1330,7 +1326,7 @@
         {
           "region": "CENTRAL_MEDITERRANEAN",
           "location": null,
-          "records": 10,
+          "records": 9,
           "active_days": 3,
           "dates": [
             "2026-08-23",
@@ -1367,7 +1363,7 @@
         {
           "region": "CENTRAL_MEDITERRANEAN",
           "location": null,
-          "records": 10,
+          "records": 9,
           "active_days": 3,
           "dates": [
             "2026-08-23",
@@ -1405,7 +1401,7 @@
         {
           "region": "CENTRAL_MEDITERRANEAN",
           "location": null,
-          "records": 10,
+          "records": 9,
           "active_days": 3,
           "dates": [
             "2026-08-23",
@@ -1472,7 +1468,7 @@
         {
           "region": "CENTRAL_MEDITERRANEAN",
           "location": null,
-          "records": 10,
+          "records": 9,
           "active_days": 3,
           "dates": [
             "2026-08-23",
@@ -4523,7 +4519,7 @@
         {
           "region": "WESTERN_MEDITERRANEAN",
           "location": "Ceuta",
-          "records": 8,
+          "records": 9,
           "active_days": 3,
           "dates": [
             "2026-10-23",
@@ -4833,7 +4829,7 @@
         {
           "region": "WESTERN_MEDITERRANEAN",
           "location": "Ceuta",
-          "records": 8,
+          "records": 7,
           "active_days": 2,
           "dates": [
             "2026-10-27",
@@ -5927,6 +5923,16 @@
           }
         },
         {
+          "region": "ASIA_PACIFIC",
+          "location": null,
+          "records": 1,
+          "active_days": 1,
+          "dates": [
+            "2026-11-21"
+          ],
+          "marker": null
+        },
+        {
           "region": "CENTRAL_MEDITERRANEAN",
           "location": null,
           "records": 1,
@@ -5938,20 +5944,6 @@
             "latitude": 35.7,
             "longitude": 13.0,
             "precision": "illustrative_region"
-          }
-        },
-        {
-          "region": "WESTERN_MEDITERRANEAN",
-          "location": "Ceuta",
-          "records": 1,
-          "active_days": 1,
-          "dates": [
-            "2026-11-21"
-          ],
-          "marker": {
-            "latitude": 35.8894,
-            "longitude": -5.3213,
-            "precision": "configured_location"
           }
         }
       ],
@@ -5993,6 +5985,16 @@
         }
       },
       {
+        "region": "ASIA_PACIFIC",
+        "location": null,
+        "records": 1,
+        "active_days": 1,
+        "dates": [
+          "2026-11-21"
+        ],
+        "marker": null
+      },
+      {
         "region": "CENTRAL_MEDITERRANEAN",
         "location": null,
         "records": 1,
@@ -6004,20 +6006,6 @@
           "latitude": 35.7,
           "longitude": 13.0,
           "precision": "illustrative_region"
-        }
-      },
-      {
-        "region": "WESTERN_MEDITERRANEAN",
-        "location": "Ceuta",
-        "records": 1,
-        "active_days": 1,
-        "dates": [
-          "2026-11-21"
-        ],
-        "marker": {
-          "latitude": 35.8894,
-          "longitude": -5.3213,
-          "precision": "configured_location"
         }
       }
     ],
