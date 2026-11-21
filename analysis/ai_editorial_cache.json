@@ -9254,5 +9254,45 @@
     "current_event": false,
     "completed_event": false,
     "corroboration": "UNVERIFIED"
+  },
+  "4c854f970b07d3ed0677b81d629d84735d1574c6d962b463e24d84e7f9878ac9": {
+    "decision": "EXCLUDE",
+    "reason": "The post contains sensational and inflammatory commentary without reporting a concrete, verifiable, contemporary migration-related event. The statistical claim about sexual assaults lacks credible verification, and the content does not specifically describe a migration event but rather a controversial opinion with unsubstantiated figures. Event type 'BORDER_CROSSING' is not adequately supported by the content.",
+    "event_type_correct": false,
+    "current_event": false,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
+  },
+  "63aa54b6b6a57f2a3845a0a32d70311d4118a01879bced9fa087db38816e15c3": {
+    "decision": "EXCLUDE",
+    "reason": "The location is unspecified and the claim lacks concrete details to confirm an ongoing migration event. The event date appears future relative to knowledge cutoff, and insufficient supporting information is provided to verify the border crossing event type.",
+    "event_type_correct": false,
+    "current_event": false,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
+  },
+  "20b4247f45c56e6d74278ff3baedc6342dbb838b9607d631a0e67a3ecdc8a8a7": {
+    "decision": "PUBLISH",
+    "reason": "The post reports a recent, concrete migration-related early warning involving a sudden, coordinated mass crossing attempt by migrants into Ceuta, which aligns with the PRESSURE_EARLY_WARNING event type. The event is contemporary and directly migration-related targeting a known migration hotspot.",
+    "event_type_correct": true,
+    "current_event": true,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
+  },
+  "ddfcd13cc7abdc2e648059c4d2fd22ca194f007e8c7dddf8947deba23fcbd209": {
+    "decision": "REVIEW",
+    "reason": "The text reports the arrival of undocumented migrants in Spain, which is a migration-related event, but the event_type is mislabeled as 'DEPORTATION' when the content focuses on arrival and distribution, not deportation. The date mentioned is 'early November' but without a specified year; the last seen date '2026-11-21' is in the future, inconsistent with current time reference. The source is missing, and the claim about no anticipated deportations and distribution plans needs verification. Due to inconsistencies in event type and date, and lack of source, the record should be reviewed further before publishing.",
+    "event_type_correct": false,
+    "current_event": false,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
+  },
+  "5afb7142c3d388b8d1cb40d9a40af64f86f212cbe690128d1185907db3a06443": {
+    "decision": "REVIEW",
+    "reason": "The post reports a sudden large migrant arrival on a small Spanish island, suggesting a border crossing event, but lacks details such as time, specific location, or source to verify the occurrence or timeframe. The event type 'BORDER_CROSSING' may be correct, but more information is needed to confirm the event's specifics and contemporaneity.",
+    "event_type_correct": true,
+    "current_event": false,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
   }
 }
