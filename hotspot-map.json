@@ -1,26 +1,11 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-11-22T17:32:37.388472+00:00",
+  "generated_at": "2026-11-22T22:59:32.520838+00:00",
   "source": "dashboard-data.json / signal_timeline.items",
   "date_basis": "UTC source publication date; dashboard uses browser local dates",
   "selection": "daily dominant hotspot, matching matrixResolvedHotspot",
   "coverage_note": "History is limited by the source timeline window and item limits",
   "daily_hotspots": [
-    {
-      "date": "2026-08-24",
-      "region": "CENTRAL_MEDITERRANEAN",
-      "location": null,
-      "records": 1,
-      "sources": {
-        "REDDIT": 1
-      },
-      "marker": {
-        "latitude": 35.7,
-        "longitude": 13.0,
-        "precision": "illustrative_region"
-      },
-      "total_timeline_items": 11
-    },
     {
       "date": "2026-08-25",
       "region": "CENTRAL_MEDITERRANEAN",
@@ -1066,7 +1051,7 @@
         "longitude": 24.8093,
         "precision": "configured_location"
       },
-      "total_timeline_items": 34
+      "total_timeline_items": 27
     },
     {
       "date": "2026-11-10",
@@ -1181,7 +1166,7 @@
         "longitude": -4.0,
         "precision": "illustrative_region"
       },
-      "total_timeline_items": 26
+      "total_timeline_items": 27
     },
     {
       "date": "2026-11-18",
@@ -1196,7 +1181,7 @@
         "longitude": -4.0,
         "precision": "illustrative_region"
       },
-      "total_timeline_items": 14
+      "total_timeline_items": 15
     },
     {
       "date": "2026-11-19",
@@ -1241,42 +1226,17 @@
     },
     {
       "date": "2026-11-22",
-      "region": "WESTERN_MEDITERRANEAN",
+      "region": "MIDDLE_EAST",
       "location": null,
       "records": 1,
       "sources": {
         "X": 1
       },
-      "marker": {
-        "latitude": 36.0,
-        "longitude": -4.0,
-        "precision": "illustrative_region"
-      },
-      "total_timeline_items": 17
+      "marker": null,
+      "total_timeline_items": 21
     }
   ],
   "seven_day_windows": [
-    {
-      "start_date": "2026-08-18",
-      "end_date": "2026-08-24",
-      "hotspots": [
-        {
-          "region": "CENTRAL_MEDITERRANEAN",
-          "location": null,
-          "records": 1,
-          "active_days": 1,
-          "dates": [
-            "2026-08-24"
-          ],
-          "marker": {
-            "latitude": 35.7,
-            "longitude": 13.0,
-            "precision": "illustrative_region"
-          }
-        }
-      ],
-      "unresolved_records": 0
-    },
     {
       "start_date": "2026-08-19",
       "end_date": "2026-08-25",
@@ -1284,10 +1244,9 @@
         {
           "region": "CENTRAL_MEDITERRANEAN",
           "location": null,
-          "records": 5,
-          "active_days": 2,
+          "records": 4,
+          "active_days": 1,
           "dates": [
-            "2026-08-24",
             "2026-08-25"
           ],
           "marker": {
@@ -1306,10 +1265,9 @@
         {
           "region": "CENTRAL_MEDITERRANEAN",
           "location": null,
-          "records": 5,
-          "active_days": 2,
+          "records": 4,
+          "active_days": 1,
           "dates": [
-            "2026-08-24",
             "2026-08-25"
           ],
           "marker": {
@@ -1342,10 +1300,9 @@
         {
           "region": "CENTRAL_MEDITERRANEAN",
           "location": null,
-          "records": 5,
-          "active_days": 2,
+          "records": 4,
+          "active_days": 1,
           "dates": [
-            "2026-08-24",
             "2026-08-25"
           ],
           "marker": {
@@ -1393,10 +1350,9 @@
         {
           "region": "CENTRAL_MEDITERRANEAN",
           "location": null,
-          "records": 5,
-          "active_days": 2,
+          "records": 4,
+          "active_days": 1,
           "dates": [
-            "2026-08-24",
             "2026-08-25"
           ],
           "marker": {
@@ -1445,10 +1401,9 @@
         {
           "region": "CENTRAL_MEDITERRANEAN",
           "location": null,
-          "records": 5,
-          "active_days": 2,
+          "records": 4,
+          "active_days": 1,
           "dates": [
-            "2026-08-24",
             "2026-08-25"
           ],
           "marker": {
@@ -1498,10 +1453,9 @@
         {
           "region": "CENTRAL_MEDITERRANEAN",
           "location": null,
-          "records": 5,
-          "active_days": 2,
+          "records": 4,
+          "active_days": 1,
           "dates": [
-            "2026-08-24",
             "2026-08-25"
           ],
           "marker": {
@@ -5950,12 +5904,11 @@
         {
           "region": "WESTERN_MEDITERRANEAN",
           "location": null,
-          "records": 4,
-          "active_days": 3,
+          "records": 3,
+          "active_days": 2,
           "dates": [
             "2026-11-17",
-            "2026-11-18",
-            "2026-11-22"
+            "2026-11-18"
           ],
           "marker": {
             "latitude": 36.0,
@@ -5990,6 +5943,16 @@
             "longitude": 13.0,
             "precision": "illustrative_region"
           }
+        },
+        {
+          "region": "MIDDLE_EAST",
+          "location": null,
+          "records": 1,
+          "active_days": 1,
+          "dates": [
+            "2026-11-22"
+          ],
+          "marker": null
         }
       ],
       "unresolved_records": 9
@@ -6016,12 +5979,11 @@
       {
         "region": "WESTERN_MEDITERRANEAN",
         "location": null,
-        "records": 4,
-        "active_days": 3,
+        "records": 3,
+        "active_days": 2,
         "dates": [
           "2026-11-17",
-          "2026-11-18",
-          "2026-11-22"
+          "2026-11-18"
         ],
         "marker": {
           "latitude": 36.0,
@@ -6056,12 +6018,22 @@
           "longitude": 13.0,
           "precision": "illustrative_region"
         }
+      },
+      {
+        "region": "MIDDLE_EAST",
+        "location": null,
+        "records": 1,
+        "active_days": 1,
+        "dates": [
+          "2026-11-22"
+        ],
+        "marker": null
       }
     ],
     "unresolved_records": 9
   },
   "summary": {
-    "days_with_data": 90,
-    "available_windows": 90
+    "days_with_data": 89,
+    "available_windows": 89
   }
 }

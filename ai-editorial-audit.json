@@ -1,24 +1,16 @@
 {
-  "generated_at": "2026-11-22T17:32:36.996450+00:00",
+  "generated_at": "2026-11-22T22:59:32.180430+00:00",
   "version": "3.0",
-  "candidates": 490,
-  "new_ai_calls": 3,
+  "candidates": 491,
+  "new_ai_calls": 5,
   "conflicting_identity_ids": [
     "group:743",
     "group:748"
   ],
   "decisions": {
-    "post:935": {
-      "decision": "REVIEW",
-      "reason": "The post claims a large number of deportations of criminals but provides no specific, verifiable details about a particular deportation event or operation. The claim appears to be more of a general political statement rather than reporting a concrete, current migration event."
-    },
     "post:936": {
       "decision": "REVIEW",
       "reason": "The event date is not clear from the text; 'Saturday' is mentioned but no specific date is given, and the publication date is in the future relative to current knowledge cutoff. The 'location' field is unspecified, and while the event type 'BORDER_CROSSING' is plausible, the lack of precise date and corroboration calls for review."
-    },
-    "post:937": {
-      "decision": "EXCLUDE",
-      "reason": "The post contains derogatory commentary regarding migration but does not report a concrete, contemporary migration event such as a specific border crossing or movement. There is no factual report or description of a migration-related event, so it is not suitable for publication as a migration event."
     },
     "post:938": {
       "decision": "EXCLUDE",
@@ -88,9 +80,13 @@
       "decision": "REVIEW",
       "reason": "The event mentions a migration emergency in the Canary Islands with hundreds of migrants arriving on El Hierro from West Africa, but lacks sufficient specific details such as date, official confirmation, or corroborating sources. The event type 'BORDER_CROSSING' is plausible but unconfirmed. The given publication date is in the future, which raises"
     },
-    "signal:1487": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a recent, concrete migration-related early warning involving a sudden, coordinated mass crossing attempt by migrants into Ceuta, which aligns with the PRESSURE_EARLY_WARNING event type. The event is contemporary and directly migration-related targeting a known migration hotspot."
+    "post:955": {
+      "decision": "EXCLUDE",
+      "reason": "The post explains the legal term used in Israeli law for a category of people entering outside official points but does not report a specific, current migration-related event or border crossing."
+    },
+    "post:956": {
+      "decision": "REVIEW",
+      "reason": "The post discusses Israeli terminology and a figure (~17,000) related to people entering Israel illegally before the fence via Egypt. However, it lacks a clear report of a contemporary, concrete migration event or a new development; it seems to be descriptive or historical information. The date and context do not confirm an ongoing or specific oper"
     },
     "signal:1488": {
       "decision": "EXCLUDE",
@@ -120,17 +116,13 @@
       "decision": "EXCLUDE",
       "reason": "The content is a personal anecdote unrelated to any concrete, contemporary migration-specific early warning, policy action, or route/access signal. It contains no verifiable migration event."
     },
+    "signal:1495": {
+      "decision": "PUBLISH",
+      "reason": "The report specifies a concrete government policy implemented to facilitate the departure of African migrants from Israel, including a $3,500 grant and flights. This constitutes a contemporary migration-specific early warning or signal related to migration management."
+    },
     "group:693": {
       "decision": "REVIEW",
       "reason": "The post claims an event of over 4,000 undocumented migrants arriving in Spain in early November, which is migration-related and potentially a current event. However, the event type is labeled DEPORTATION, but the content states 'Not one is expected to be deported,' indicating a mismatch in event type. Also, the source is not provided, and the clai"
-    },
-    "group:740": {
-      "decision": "REVIEW",
-      "reason": "The post claims mistreatment of deported migrants but lacks concrete details on a specific, current deportation event, date, location, or verifiable source to confirm the reported deportation or related event."
-    },
-    "group:741": {
-      "decision": "REVIEW",
-      "reason": "The post reports a new migrant caravan entering Mexico, but the event_type is set as 'DEPORTATION', which does not match the content that describes a caravan movement. The report mentions migrants allegedly deported by ICE, but the main event is about a caravan entering Mexico rather than an actual deportation event. The source is not specified and"
     },
     "group:742": {
       "decision": "REVIEW",
@@ -159,6 +151,14 @@
     "group:748": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:749": {
+      "decision": "EXCLUDE",
+      "reason": "The record discusses the legal definition of 'infiltrators' in Israeli law but does not report a concrete or contemporary migration event such as a border crossing incident or new arrival data. No specific migration event is being reported."
+    },
+    "group:750": {
+      "decision": "REVIEW",
+      "reason": "The post discusses the term 'infiltrators' used by Israeli authorities and references a figure (~17,000) related to illegal border crossings mostly via Egypt before the fence, but it lacks a concrete report of a current, specific migration event or new operational movement. The information is historical and partially explanatory rather than a direc"
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1967,6 +1967,10 @@
     "signal:1486": {
       "decision": "PUBLISH",
       "reason": "The record describes a concrete, contemporary migration-specific early warning event involving human traffickers abandoning migrants at sea. It is migration-related, timely, and matches the FACILITATION_EARLY_WARNING event type."
+    },
+    "signal:1487": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a recent, concrete migration-related early warning involving a sudden, coordinated mass crossing attempt by migrants into Ceuta, which aligns with the PRESSURE_EARLY_WARNING event type. The event is contemporary and directly migration-related targeting a known migration hotspot."
     }
   }
 }
