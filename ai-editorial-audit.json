@@ -1,17 +1,13 @@
 {
-  "generated_at": "2026-11-22T01:50:44.011837+00:00",
+  "generated_at": "2026-11-22T09:01:16.181696+00:00",
   "version": "3.0",
-  "candidates": 485,
-  "new_ai_calls": 5,
+  "candidates": 487,
+  "new_ai_calls": 4,
   "conflicting_identity_ids": [
     "group:743",
     "group:748"
   ],
   "decisions": {
-    "post:931": {
-      "decision": "EXCLUDE",
-      "reason": "The post discusses smuggling practices in a general and hypothetical manner without reporting a concrete, specific, or contemporary migration event. It lacks details of an actual identified incident occurring now or recently. The event_type 'SMUGGLING_ACTIVITY' is not conclusively supported by the content, which is more commentary than a report of "
-    },
     "post:935": {
       "decision": "REVIEW",
       "reason": "The post claims a large number of deportations of criminals but provides no specific, verifiable details about a particular deportation event or operation. The claim appears to be more of a general political statement rather than reporting a concrete, current migration event."
@@ -88,17 +84,9 @@
       "decision": "EXCLUDE",
       "reason": "The content discusses historical migration of the Mexica (Aztecs) during the 1200s-1400s, which is unrelated to a contemporary migration event; the event_type 'BORDER_CROSSING' does not apply to this historical narrative."
     },
-    "signal:1482": {
-      "decision": "EXCLUDE",
-      "reason": "This is a general political commentary without a concrete, contemporary migration-specific event or early warning. It lacks specific operational migration data, route, access information, or policy action."
-    },
-    "signal:1483": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a contemporary, concrete migration event: a mass crossing of mostly Moroccan migrants into Ceuta on July 30-31, 2026, with large estimated numbers and details about returns. This matches the assigned event type 'MOVEMENT_EARLY_WARNING' as it signals a significant movement event into Ceuta, a known migration hotspot."
-    },
-    "signal:1484": {
-      "decision": "EXCLUDE",
-      "reason": "The post expresses a political opinion and criticism regarding skilled migrants and family services and mentions elderly parent visas, but it does not report a concrete, contemporary migration-specific event, early warning, policy action, or route/access signal. It is general commentary rather than a specific operational migration event or signal."
+    "post:954": {
+      "decision": "REVIEW",
+      "reason": "The event mentions a migration emergency in the Canary Islands with hundreds of migrants arriving on El Hierro from West Africa, but lacks sufficient specific details such as date, official confirmation, or corroborating sources. The event type 'BORDER_CROSSING' is plausible but unconfirmed. The given publication date is in the future, which raises"
     },
     "signal:1485": {
       "decision": "REVIEW",
@@ -120,9 +108,17 @@
       "decision": "PUBLISH",
       "reason": "The post reports a concrete and contemporary migration-specific early warning event: DOJ charges against individuals involved in a human-smuggling operation linked to migrant deaths. This directly relates to migration facilitation and legal action, fitting the FACILITATION_EARLY_WARNING event type."
     },
+    "signal:1490": {
+      "decision": "EXCLUDE",
+      "reason": "The post makes a broad claim about crime statistics related to migrants and mentions measures in Paris transport but does not report a concrete, migration-specific early warning, policy action, or route/access signal. It mostly presents an unverifiable commentary without actionable migration-related event details or verification."
+    },
+    "signal:1491": {
+      "decision": "REVIEW",
+      "reason": "The message alleges a deliberate policy by the EU/France to send illegal migrants across the English Channel but provides no concrete new event, data, or early warning beyond opinion and accusation. The claim lacks corroboration, specificity, or a direct, specific migration-related operational event."
+    },
     "group:693": {
       "decision": "REVIEW",
-      "reason": "The text reports the arrival of undocumented migrants in Spain, which is a migration-related event, but the event_type is mislabeled as 'DEPORTATION' when the content focuses on arrival and distribution, not deportation. The date mentioned is 'early November' but without a specified year; the last seen date '2026-11-21' is in the future, inconsiste"
+      "reason": "The post claims an event of over 4,000 undocumented migrants arriving in Spain in early November, which is migration-related and potentially a current event. However, the event type is labeled DEPORTATION, but the content states 'Not one is expected to be deported,' indicating a mismatch in event type. Also, the source is not provided, and the clai"
     },
     "group:740": {
       "decision": "REVIEW",
@@ -1947,6 +1943,18 @@
     "signal:1481": {
       "decision": "REVIEW",
       "reason": "The post mentions a legal case involving damage to an inflatable migrant dinghy, which is migration-related enforcement. However, it lacks clear temporal context and comprehensive detail to definitively confirm a current enforcement event. Verification of event timing and more complete information is required to determine publication suitability."
+    },
+    "signal:1482": {
+      "decision": "EXCLUDE",
+      "reason": "This is a general political commentary without a concrete, contemporary migration-specific event or early warning. It lacks specific operational migration data, route, access information, or policy action."
+    },
+    "signal:1483": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a contemporary, concrete migration event: a mass crossing of mostly Moroccan migrants into Ceuta on July 30-31, 2026, with large estimated numbers and details about returns. This matches the assigned event type 'MOVEMENT_EARLY_WARNING' as it signals a significant movement event into Ceuta, a known migration hotspot."
+    },
+    "signal:1484": {
+      "decision": "EXCLUDE",
+      "reason": "The post expresses a political opinion and criticism regarding skilled migrants and family services and mentions elderly parent visas, but it does not report a concrete, contemporary migration-specific event, early warning, policy action, or route/access signal. It is general commentary rather than a specific operational migration event or signal."
     }
   }
 }
