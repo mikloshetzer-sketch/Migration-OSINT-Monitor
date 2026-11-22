@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-22T09:01:16.181696+00:00",
+  "generated_at": "2026-11-22T17:32:36.996450+00:00",
   "version": "3.0",
-  "candidates": 487,
-  "new_ai_calls": 4,
+  "candidates": 490,
+  "new_ai_calls": 3,
   "conflicting_identity_ids": [
     "group:743",
     "group:748"
@@ -88,14 +88,6 @@
       "decision": "REVIEW",
       "reason": "The event mentions a migration emergency in the Canary Islands with hundreds of migrants arriving on El Hierro from West Africa, but lacks sufficient specific details such as date, official confirmation, or corroborating sources. The event type 'BORDER_CROSSING' is plausible but unconfirmed. The given publication date is in the future, which raises"
     },
-    "signal:1485": {
-      "decision": "REVIEW",
-      "reason": "The report references a past event (July influx) but lacks clear evidence of a currently ongoing migration facilitation operation or an early warning that is active or upcoming. The event date is not confirmed as current, and the link is not verified for concrete, contemporaneous facilitation activities."
-    },
-    "signal:1486": {
-      "decision": "PUBLISH",
-      "reason": "The record describes a concrete, contemporary migration-specific early warning event involving human traffickers abandoning migrants at sea. It is migration-related, timely, and matches the FACILITATION_EARLY_WARNING event type."
-    },
     "signal:1487": {
       "decision": "PUBLISH",
       "reason": "The post reports a recent, concrete migration-related early warning involving a sudden, coordinated mass crossing attempt by migrants into Ceuta, which aligns with the PRESSURE_EARLY_WARNING event type. The event is contemporary and directly migration-related targeting a known migration hotspot."
@@ -115,6 +107,18 @@
     "signal:1491": {
       "decision": "REVIEW",
       "reason": "The message alleges a deliberate policy by the EU/France to send illegal migrants across the English Channel but provides no concrete new event, data, or early warning beyond opinion and accusation. The claim lacks corroboration, specificity, or a direct, specific migration-related operational event."
+    },
+    "signal:1492": {
+      "decision": "REVIEW",
+      "reason": "The post references new migrant caravans heading towards the United States as an early warning signal, but the source is a social media post with no direct event details or confirmed evidence. Needs further corroboration to confirm the concrete existence and current status of these caravans."
+    },
+    "signal:1493": {
+      "decision": "EXCLUDE",
+      "reason": "The event date is in the future (2026), which cannot be accepted as a contemporary migration event. Also, no specific current location is provided, making verification difficult."
+    },
+    "signal:1494": {
+      "decision": "EXCLUDE",
+      "reason": "The content is a personal anecdote unrelated to any concrete, contemporary migration-specific early warning, policy action, or route/access signal. It contains no verifiable migration event."
     },
     "group:693": {
       "decision": "REVIEW",
@@ -1955,6 +1959,14 @@
     "signal:1484": {
       "decision": "EXCLUDE",
       "reason": "The post expresses a political opinion and criticism regarding skilled migrants and family services and mentions elderly parent visas, but it does not report a concrete, contemporary migration-specific event, early warning, policy action, or route/access signal. It is general commentary rather than a specific operational migration event or signal."
+    },
+    "signal:1485": {
+      "decision": "REVIEW",
+      "reason": "The report references a past event (July influx) but lacks clear evidence of a currently ongoing migration facilitation operation or an early warning that is active or upcoming. The event date is not confirmed as current, and the link is not verified for concrete, contemporaneous facilitation activities."
+    },
+    "signal:1486": {
+      "decision": "PUBLISH",
+      "reason": "The record describes a concrete, contemporary migration-specific early warning event involving human traffickers abandoning migrants at sea. It is migration-related, timely, and matches the FACILITATION_EARLY_WARNING event type."
     }
   }
 }
