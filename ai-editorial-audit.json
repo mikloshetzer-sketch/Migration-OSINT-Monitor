@@ -1,24 +1,16 @@
 {
-  "generated_at": "2026-11-21T20:22:57.890364+00:00",
+  "generated_at": "2026-11-22T01:50:44.011837+00:00",
   "version": "3.0",
-  "candidates": 483,
+  "candidates": 485,
   "new_ai_calls": 5,
   "conflicting_identity_ids": [
-    "group:739",
-    "group:743"
+    "group:743",
+    "group:748"
   ],
   "decisions": {
     "post:931": {
       "decision": "EXCLUDE",
       "reason": "The post discusses smuggling practices in a general and hypothetical manner without reporting a concrete, specific, or contemporary migration event. It lacks details of an actual identified incident occurring now or recently. The event_type 'SMUGGLING_ACTIVITY' is not conclusively supported by the content, which is more commentary than a report of "
-    },
-    "post:932": {
-      "decision": "EXCLUDE",
-      "reason": "The post discusses political opinion and statistics about deportation policy rather than reporting a concrete, contemporary migration-specific event such as an actual deportation or removal operation. The event_type label 'DEPORTATION' is not supported by a specific operational event in the text."
-    },
-    "post:934": {
-      "decision": "REVIEW",
-      "reason": "The post reports a political accusation and references migrant arrivals but does not provide concrete, verifiable details about a specific migration event such as exact timing or operational details. The 'event_type' as BORDER_CROSSING is only partially supported by the mention of over 11,000 migrants arriving in November, but the arrival period is"
     },
     "post:935": {
       "decision": "REVIEW",
@@ -88,9 +80,13 @@
       "decision": "EXCLUDE",
       "reason": "The location is unspecified and the claim lacks concrete details to confirm an ongoing migration event. The event date appears future relative to knowledge cutoff, and insufficient supporting information is provided to verify the border crossing event type."
     },
-    "signal:1481": {
-      "decision": "REVIEW",
-      "reason": "The post mentions a legal case involving damage to an inflatable migrant dinghy, which is migration-related enforcement. However, it lacks clear temporal context and comprehensive detail to definitively confirm a current enforcement event. Verification of event timing and more complete information is required to determine publication suitability."
+    "post:952": {
+      "decision": "EXCLUDE",
+      "reason": "The post does not report a concrete, contemporary migration-related event. It references historical use of housing for refugees and immigrants up to the 1980s, which is not current or specific."
+    },
+    "post:953": {
+      "decision": "EXCLUDE",
+      "reason": "The content discusses historical migration of the Mexica (Aztecs) during the 1200s-1400s, which is unrelated to a contemporary migration event; the event_type 'BORDER_CROSSING' does not apply to this historical narrative."
     },
     "signal:1482": {
       "decision": "EXCLUDE",
@@ -116,17 +112,17 @@
       "decision": "PUBLISH",
       "reason": "The post reports a recent, concrete migration-related early warning involving a sudden, coordinated mass crossing attempt by migrants into Ceuta, which aligns with the PRESSURE_EARLY_WARNING event type. The event is contemporary and directly migration-related targeting a known migration hotspot."
     },
+    "signal:1488": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a general political commentary expressing an opinion about border policy and migrants, without reporting a concrete, contemporary migration-related event or specific early warning. No actual event of crossing facilitation or border opening for 7 million migrants is documented."
+    },
+    "signal:1489": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete and contemporary migration-specific early warning event: DOJ charges against individuals involved in a human-smuggling operation linked to migrant deaths. This directly relates to migration facilitation and legal action, fitting the FACILITATION_EARLY_WARNING event type."
+    },
     "group:693": {
       "decision": "REVIEW",
       "reason": "The text reports the arrival of undocumented migrants in Spain, which is a migration-related event, but the event_type is mislabeled as 'DEPORTATION' when the content focuses on arrival and distribution, not deportation. The date mentioned is 'early November' but without a specified year; the last seen date '2026-11-21' is in the future, inconsiste"
-    },
-    "group:737": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete and contemporary migration-related event: a migrant boat capsizing off Senegal with confirmed casualties and missing persons, consistent with the 'CASUALTY' event type."
-    },
-    "group:739": {
-      "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
     },
     "group:740": {
       "decision": "REVIEW",
@@ -155,6 +151,14 @@
     "group:746": {
       "decision": "REVIEW",
       "reason": "The post reports a sudden large migrant arrival on a small Spanish island, suggesting a border crossing event, but lacks details such as time, specific location, or source to verify the occurrence or timeframe. The event type 'BORDER_CROSSING' may be correct, but more information is needed to confirm the event's specifics and contemporaneity."
+    },
+    "group:747": {
+      "decision": "EXCLUDE",
+      "reason": "The post refers to historical use of housing for refugees and immigrants from WW2 through the 1980s, which is not a concrete, contemporary migration-related event. The event type 'BORDER_CROSSING' is not accurate for the content presented, which is historical commentary and lacks current or specific event details."
+    },
+    "group:748": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1939,6 +1943,10 @@
     "signal:1480": {
       "decision": "REVIEW",
       "reason": "Event is a protest related to transportation of migrants but does not clearly indicate a specific, concrete migration event or policy action. The facilitation early warning label is somewhat supported by the protest cause, but details on actual facilitation or immediate threat are vague. Further verification needed."
+    },
+    "signal:1481": {
+      "decision": "REVIEW",
+      "reason": "The post mentions a legal case involving damage to an inflatable migrant dinghy, which is migration-related enforcement. However, it lacks clear temporal context and comprehensive detail to definitively confirm a current enforcement event. Verification of event timing and more complete information is required to determine publication suitability."
     }
   }
 }
