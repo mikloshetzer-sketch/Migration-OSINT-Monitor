@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-22T22:59:32.180430+00:00",
+  "generated_at": "2026-11-23T04:28:56.716866+00:00",
   "version": "3.0",
   "candidates": 491,
-  "new_ai_calls": 5,
+  "new_ai_calls": 0,
   "conflicting_identity_ids": [
     "group:743",
     "group:748"
@@ -87,14 +87,6 @@
     "post:956": {
       "decision": "REVIEW",
       "reason": "The post discusses Israeli terminology and a figure (~17,000) related to people entering Israel illegally before the fence via Egypt. However, it lacks a clear report of a contemporary, concrete migration event or a new development; it seems to be descriptive or historical information. The date and context do not confirm an ongoing or specific oper"
-    },
-    "signal:1488": {
-      "decision": "EXCLUDE",
-      "reason": "The post is a general political commentary expressing an opinion about border policy and migrants, without reporting a concrete, contemporary migration-related event or specific early warning. No actual event of crossing facilitation or border opening for 7 million migrants is documented."
-    },
-    "signal:1489": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete and contemporary migration-specific early warning event: DOJ charges against individuals involved in a human-smuggling operation linked to migrant deaths. This directly relates to migration facilitation and legal action, fitting the FACILITATION_EARLY_WARNING event type."
     },
     "signal:1490": {
       "decision": "EXCLUDE",
@@ -1971,6 +1963,14 @@
     "signal:1487": {
       "decision": "PUBLISH",
       "reason": "The post reports a recent, concrete migration-related early warning involving a sudden, coordinated mass crossing attempt by migrants into Ceuta, which aligns with the PRESSURE_EARLY_WARNING event type. The event is contemporary and directly migration-related targeting a known migration hotspot."
+    },
+    "signal:1488": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a general political commentary expressing an opinion about border policy and migrants, without reporting a concrete, contemporary migration-related event or specific early warning. No actual event of crossing facilitation or border opening for 7 million migrants is documented."
+    },
+    "signal:1489": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete and contemporary migration-specific early warning event: DOJ charges against individuals involved in a human-smuggling operation linked to migrant deaths. This directly relates to migration facilitation and legal action, fitting the FACILITATION_EARLY_WARNING event type."
     }
   }
 }
