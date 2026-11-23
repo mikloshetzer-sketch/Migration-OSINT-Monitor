@@ -1,25 +1,14 @@
 {
-  "generated_at": "2026-11-23T04:28:56.716866+00:00",
+  "generated_at": "2026-11-23T16:46:37.764721+00:00",
   "version": "3.0",
-  "candidates": 491,
-  "new_ai_calls": 0,
+  "candidates": 493,
+  "new_ai_calls": 7,
   "conflicting_identity_ids": [
     "group:743",
-    "group:748"
+    "group:748",
+    "group:751"
   ],
   "decisions": {
-    "post:936": {
-      "decision": "REVIEW",
-      "reason": "The event date is not clear from the text; 'Saturday' is mentioned but no specific date is given, and the publication date is in the future relative to current knowledge cutoff. The 'location' field is unspecified, and while the event type 'BORDER_CROSSING' is plausible, the lack of precise date and corroboration calls for review."
-    },
-    "post:938": {
-      "decision": "EXCLUDE",
-      "reason": "The post discusses historical migration over centuries without reporting a specific, contemporary migration event or border crossing. The event type 'BORDER_CROSSING' is misassigned as no concrete current event is described."
-    },
-    "post:939": {
-      "decision": "EXCLUDE",
-      "reason": "The content discusses ancient burials and genetic traits from a prehistoric farming community dated to ~4500–3900 BCE, which is a historical archaeological topic unrelated to contemporary migration events or movements. No concrete, contemporary migration event or early warning is reported."
-    },
     "post:940": {
       "decision": "EXCLUDE",
       "reason": "The post is a question about vaccination checks on migrants, not a report of a concrete, contemporary migration-related event or early warning."
@@ -88,21 +77,17 @@
       "decision": "REVIEW",
       "reason": "The post discusses Israeli terminology and a figure (~17,000) related to people entering Israel illegally before the fence via Egypt. However, it lacks a clear report of a contemporary, concrete migration event or a new development; it seems to be descriptive or historical information. The date and context do not confirm an ongoing or specific oper"
     },
-    "signal:1490": {
+    "post:957": {
       "decision": "EXCLUDE",
-      "reason": "The post makes a broad claim about crime statistics related to migrants and mentions measures in Paris transport but does not report a concrete, migration-specific early warning, policy action, or route/access signal. It mostly presents an unverifiable commentary without actionable migration-related event details or verification."
+      "reason": "The content is a general opinion on deportation policy, not a report of a specific, concrete migration-related event. There is no actual event of deportation described or reported."
     },
-    "signal:1491": {
-      "decision": "REVIEW",
-      "reason": "The message alleges a deliberate policy by the EU/France to send illegal migrants across the English Channel but provides no concrete new event, data, or early warning beyond opinion and accusation. The claim lacks corroboration, specificity, or a direct, specific migration-related operational event."
+    "post:958": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete and contemporary migration-related event involving the arrival and rescue of migrants at sea near the Canary Islands, which fits the 'RESCUE_OPERATION' event type."
     },
-    "signal:1492": {
-      "decision": "REVIEW",
-      "reason": "The post references new migrant caravans heading towards the United States as an early warning signal, but the source is a social media post with no direct event details or confirmed evidence. Needs further corroboration to confirm the concrete existence and current status of these caravans."
-    },
-    "signal:1493": {
+    "post:959": {
       "decision": "EXCLUDE",
-      "reason": "The event date is in the future (2026), which cannot be accepted as a contemporary migration event. Also, no specific current location is provided, making verification difficult."
+      "reason": "The event date is in the future (2026-11-23), making the reported interception not contemporary or verifiable at this time."
     },
     "signal:1494": {
       "decision": "EXCLUDE",
@@ -112,25 +97,21 @@
       "decision": "PUBLISH",
       "reason": "The report specifies a concrete government policy implemented to facilitate the departure of African migrants from Israel, including a $3,500 grant and flights. This constitutes a contemporary migration-specific early warning or signal related to migration management."
     },
+    "signal:1496": {
+      "decision": "EXCLUDE",
+      "reason": "The post contains general commentary on asylum policy and illegal crossings but does not report a concrete, contemporary migration-specific event or early warning. The event type CROSSING_FACILITATION is unsupported by the content, which lacks details of an actual event or signal of facilitated crossings."
+    },
+    "signal:1497": {
+      "decision": "EXCLUDE",
+      "reason": "The text discusses a legal and policing issue related to migrant smuggling but does not report a specific, concrete migration-related event or an early warning about smuggling facilitation. It is a commentary rather than a direct indication of an ongoing operational or early warning event."
+    },
     "group:693": {
       "decision": "REVIEW",
       "reason": "The post claims an event of over 4,000 undocumented migrants arriving in Spain in early November, which is migration-related and potentially a current event. However, the event type is labeled DEPORTATION, but the content states 'Not one is expected to be deported,' indicating a mismatch in event type. Also, the source is not provided, and the clai"
     },
-    "group:742": {
-      "decision": "REVIEW",
-      "reason": "The report indicates a recent crossing of approximately 300 Central American migrants into southern Chiapas from Guatemala as part of a caravan. However, the message is incomplete (truncated) and lacks detailed, verified event information such as official confirmation or clearer sourcing. The event date is stated as 'As of Nov 20', but the publicat"
-    },
     "group:743": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
-    },
-    "group:744": {
-      "decision": "EXCLUDE",
-      "reason": "This is a general online narrative expressing opinions on perceived biases related to individuals and crimes, without reporting any concrete, contemporary migration-related event such as a border crossing or arrival."
-    },
-    "group:745": {
-      "decision": "REVIEW",
-      "reason": "The post mentions a large-scale arrival of 11,000 African asylum seekers on a Canary Islands island but provides no verifiable date or source, and the publication date is missing. The 'event_type' is BORDER_CROSSING which fits the claim, but lack of corroboration, specific time, and source raise uncertainty about contemporariness and validity."
     },
     "group:746": {
       "decision": "REVIEW",
@@ -151,6 +132,18 @@
     "group:750": {
       "decision": "REVIEW",
       "reason": "The post discusses the term 'infiltrators' used by Israeli authorities and references a figure (~17,000) related to illegal border crossings mostly via Egypt before the fence, but it lacks a concrete report of a current, specific migration event or new operational movement. The information is historical and partially explanatory rather than a direc"
+    },
+    "group:751": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:752": {
+      "decision": "PUBLISH",
+      "reason": "The text describes a concrete, contemporary migration-related event involving the arrival and rescue of migrants at the Canary Islands, which justifies publication as a rescue operation event. The event type RESCUE_OPERATION is appropriate as migrants were rescued at sea before arriving."
+    },
+    "group:753": {
+      "decision": "PUBLISH",
+      "reason": "The report details a specific and concrete migration-related event involving the interception of 101 migrants in Fimela, Senegal, including two children. This fits the 'INTERCEPTION' event type and relates directly to a migration event. Although the source is not specified, the event description is precise and plausible as a migration operational e"
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1971,6 +1964,22 @@
     "signal:1489": {
       "decision": "PUBLISH",
       "reason": "The post reports a concrete and contemporary migration-specific early warning event: DOJ charges against individuals involved in a human-smuggling operation linked to migrant deaths. This directly relates to migration facilitation and legal action, fitting the FACILITATION_EARLY_WARNING event type."
+    },
+    "signal:1490": {
+      "decision": "EXCLUDE",
+      "reason": "The post makes a broad claim about crime statistics related to migrants and mentions measures in Paris transport but does not report a concrete, migration-specific early warning, policy action, or route/access signal. It mostly presents an unverifiable commentary without actionable migration-related event details or verification."
+    },
+    "signal:1491": {
+      "decision": "REVIEW",
+      "reason": "The message alleges a deliberate policy by the EU/France to send illegal migrants across the English Channel but provides no concrete new event, data, or early warning beyond opinion and accusation. The claim lacks corroboration, specificity, or a direct, specific migration-related operational event."
+    },
+    "signal:1492": {
+      "decision": "REVIEW",
+      "reason": "The post references new migrant caravans heading towards the United States as an early warning signal, but the source is a social media post with no direct event details or confirmed evidence. Needs further corroboration to confirm the concrete existence and current status of these caravans."
+    },
+    "signal:1493": {
+      "decision": "EXCLUDE",
+      "reason": "The event date is in the future (2026), which cannot be accepted as a contemporary migration event. Also, no specific current location is provided, making verification difficult."
     }
   }
 }

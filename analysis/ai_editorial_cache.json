@@ -9430,5 +9430,61 @@
     "current_event": false,
     "completed_event": true,
     "corroboration": "UNVERIFIED"
+  },
+  "7ca04780e9be2f980520ffba1ddf32307022a0572e885905953533fc4036a815": {
+    "decision": "EXCLUDE",
+    "reason": "The content is a general opinion on deportation policy, not a report of a specific, concrete migration-related event. There is no actual event of deportation described or reported.",
+    "event_type_correct": false,
+    "current_event": false,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
+  },
+  "44314953eca494c34cc21e5503b4ccc9b14752e4e87bd92313fd16fdac28ea42": {
+    "decision": "PUBLISH",
+    "reason": "The post reports a concrete and contemporary migration-related event involving the arrival and rescue of migrants at sea near the Canary Islands, which fits the 'RESCUE_OPERATION' event type.",
+    "event_type_correct": true,
+    "current_event": true,
+    "completed_event": true,
+    "corroboration": "UNVERIFIED"
+  },
+  "de247f91562a8270b9576045f1a301cb25f2897f97cd019a592c0f716ea2576f": {
+    "decision": "EXCLUDE",
+    "reason": "The event date is in the future (2026-11-23), making the reported interception not contemporary or verifiable at this time.",
+    "event_type_correct": true,
+    "current_event": false,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
+  },
+  "90e19b1181bd330c66f7cd2ef1245a53c892a347131e8d56f4360e9a630bb560": {
+    "decision": "EXCLUDE",
+    "reason": "The post contains general commentary on asylum policy and illegal crossings but does not report a concrete, contemporary migration-specific event or early warning. The event type CROSSING_FACILITATION is unsupported by the content, which lacks details of an actual event or signal of facilitated crossings.",
+    "event_type_correct": false,
+    "current_event": false,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
+  },
+  "902e87adab2d4d6b45b3697fa74b45f82a8e9eb0b259a22631082911c6c0fb7b": {
+    "decision": "EXCLUDE",
+    "reason": "The text discusses a legal and policing issue related to migrant smuggling but does not report a specific, concrete migration-related event or an early warning about smuggling facilitation. It is a commentary rather than a direct indication of an ongoing operational or early warning event.",
+    "event_type_correct": false,
+    "current_event": false,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
+  },
+  "f42ea776f91493ba88341f8452ffbee295cffcabe7a368c173780b0b505bfd02": {
+    "decision": "PUBLISH",
+    "reason": "The text describes a concrete, contemporary migration-related event involving the arrival and rescue of migrants at the Canary Islands, which justifies publication as a rescue operation event. The event type RESCUE_OPERATION is appropriate as migrants were rescued at sea before arriving.",
+    "event_type_correct": true,
+    "current_event": true,
+    "completed_event": true,
+    "corroboration": "UNVERIFIED"
+  },
+  "f7a5dc386ad2bd88974ee686dff74df017617d4e501a2e201903b6c8cafdb339": {
+    "decision": "PUBLISH",
+    "reason": "The report details a specific and concrete migration-related event involving the interception of 101 migrants in Fimela, Senegal, including two children. This fits the 'INTERCEPTION' event type and relates directly to a migration event. Although the source is not specified, the event description is precise and plausible as a migration operational event and is sufficiently contemporary as per the last_seen timestamp.",
+    "event_type_correct": true,
+    "current_event": true,
+    "completed_event": true,
+    "corroboration": "UNVERIFIED"
   }
 }
