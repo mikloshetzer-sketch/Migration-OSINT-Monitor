@@ -1,74 +1,122 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-11-24T03:35:37Z",
-  "generated_at": "2026-11-24T03:35:37Z",
+  "updated_at": "2026-11-24T14:25:17Z",
+  "generated_at": "2026-11-24T14:25:17Z",
   "current_run": {
     "available": true,
-    "id": 456,
-    "run_uuid": "27abb904-eaff-4351-9274-d73272ee6004",
-    "started_at": "2026-11-24T03:32:53Z",
-    "completed_at": "2026-11-24T03:35:36Z",
+    "id": 457,
+    "run_uuid": "e96f427d-3f6c-4e9d-a867-d8a289e7ead8",
+    "started_at": "2026-11-24T14:22:27Z",
+    "completed_at": "2026-11-24T14:25:16Z",
     "status": "SUCCESS",
     "posts_returned": 130,
-    "unique_posts_collected": 89,
-    "x_posts_returned": 50,
+    "unique_posts_collected": 85,
+    "x_posts_returned": 49,
     "reddit_posts_returned": 0,
     "mastodon_posts_returned": 50,
-    "unique_x_posts": 49,
+    "unique_x_posts": 46,
     "unique_reddit_posts": 0,
-    "unique_mastodon_posts": 20,
+    "unique_mastodon_posts": 19,
     "noise_filtered": 0,
-    "non_operational_filtered": 84,
-    "historical_references_filtered": 1,
-    "influence_signals": 0,
-    "influence_signals_detected": 0,
+    "non_operational_filtered": 82,
+    "historical_references_filtered": 0,
+    "influence_signals": 1,
+    "influence_signals_detected": 1,
     "crossing_facilitation_signals": 0,
-    "legal_migration_signals": 0,
+    "legal_migration_signals": 1,
     "policy_signals": 0,
     "recruitment_coordination_signals": 0,
     "mobilization_coordination_signals": 0,
     "mobilization_report_signals": 0,
     "decision_influence_signals": 0,
     "online_influence_report_signals": 0,
-    "operational_events": 4,
-    "operational_events_analyzed": 4,
-    "historical_events_available": 32,
-    "new_correlations": 0,
-    "correlated_events": 0,
-    "new_correlation_groups": 4,
-    "database_correlations": 0,
+    "operational_events": 3,
+    "operational_events_analyzed": 3,
+    "historical_events_available": 33,
+    "new_correlations": 1,
+    "correlated_events": 1,
+    "new_correlation_groups": 2,
+    "database_correlations": 1,
     "current_run_correlations": 0,
-    "new_events": 4,
-    "new_events_saved": 4,
-    "events_already_existing": 0,
-    "new_event_groups": 4,
-    "updated_event_groups": 0,
+    "new_events": 2,
+    "new_events_saved": 2,
+    "events_already_existing": 1,
+    "new_event_groups": 1,
+    "updated_event_groups": 1,
     "bootstrapped_event_groups": 0,
-    "existing_event_groups_reused": 0,
-    "event_group_sources_linked": 4,
+    "existing_event_groups_reused": 1,
+    "event_group_sources_linked": 2,
     "x_collector_errors": 0,
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "error_message": null
   },
   "kpis": {
-    "operational_events": 7,
-    "new_events": 4,
-    "correlated_events": 0,
-    "active_event_groups": 738,
+    "operational_events": 9,
+    "new_events": 2,
+    "correlated_events": 1,
+    "active_event_groups": 739,
     "sources": 3,
-    "regions": 2,
-    "collected_posts_24h": 170,
-    "influence_signals": 9,
-    "access_signals": 1,
+    "regions": 3,
+    "collected_posts_24h": 188,
+    "influence_signals": 13,
+    "access_signals": 2,
     "high_priority": 0,
-    "current_run_operational_events": 4,
-    "current_run_unique_posts": 89,
-    "access_signals_raw": 1,
-    "influence_signals_raw": 9,
+    "current_run_operational_events": 3,
+    "current_run_unique_posts": 85,
+    "access_signals_raw": 2,
+    "influence_signals_raw": 13,
     "influence_narratives": 3
   },
   "live_events": [
+    {
+      "id": 965,
+      "event_id": 965,
+      "source": "X",
+      "source_post_id": "2125232026223530417",
+      "author": "oatribune_east",
+      "published_at": "2026-11-24T14:16:14Z",
+      "collected_at": "2026-11-24T14:23:40Z",
+      "event_type": "CASUALTY",
+      "signal_type": "CASUALTY",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": 11.5721,
+      "longitude": 43.1456,
+      "confidence": 0.7,
+      "event_confidence": 0.7,
+      "relevance_score": 20.0,
+      "text": "A desperate search for better opportunities ended in tragedy off the coast of Djibouti, where at least 139 migrants died after an overcrowded boat capsized while heading to Yemen. \n\nDozens more were reported missing, in one of the deadliest recent tragedies along the migration https://t.co/8SHeSWORnP",
+      "url": "https://x.com/oatribune_east/status/2125232026223530417",
+      "source_url": "https://x.com/oatribune_east/status/2125232026223530417",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
+      "id": 964,
+      "event_id": 964,
+      "source": "MASTODON",
+      "source_post_id": "mastodon_b36f24dc97305dc85cd2",
+      "author": null,
+      "published_at": "2026-11-24T09:51:14Z",
+      "collected_at": "2026-11-24T14:23:08Z",
+      "event_type": "BORDER_CROSSING",
+      "signal_type": "BORDER_CROSSING",
+      "primary_location": "-",
+      "location": "-",
+      "country": "-",
+      "latitude": 27.7255,
+      "longitude": -18.0243,
+      "confidence": 0.75,
+      "event_confidence": 0.75,
+      "relevance_score": 40.0,
+      "text": "🇪🇸 More than 800 #migrants reach #ElHierro and #Tenerife in single day as #Spain 's election debate intensifies https://www.surinenglish.com/spain/more-than-800-migrants-reach-hierro-and-20261124103556-nt.html A total of 815 undocumented migrants arrived on eight boats in El Hierro and Tenerife yesterday, pushing November #CanaryIslands arrivals to nearly 13,000 ahead of Sunday",
+      "url": "https://social.dromografos.report/notes/aty2wxi7sziv035i",
+      "source_url": "https://social.dromografos.report/notes/aty2wxi7sziv035i",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
     {
       "id": 960,
       "event_id": 960,
@@ -144,6 +192,37 @@
   ],
   "event_groups": [
     {
+      "id": 758,
+      "group_id": 758,
+      "event_type": "CASUALTY",
+      "dominant_event_type": "CASUALTY",
+      "title": "CASUALTY - Djibouti",
+      "representative_text": "A desperate search for better opportunities ended in tragedy off the coast of Djibouti, where at least 139 migrants died after an overcrowded boat capsized while heading to Yemen. \n\nDozens more were reported missing, in one of the deadliest recent tragedies along the migration https://t.co/8SHeSWORnP",
+      "region": "HORN_OF_AFRICA",
+      "primary_region": "HORN_OF_AFRICA",
+      "primary_location": "Djibouti",
+      "country": "Djibouti",
+      "latitude": 11.5721,
+      "longitude": 43.1456,
+      "first_seen": "2026-11-24T14:16:14Z",
+      "last_seen": "2026-11-24T14:16:14Z",
+      "source_count": 1,
+      "sources_count": 1,
+      "source_types": [
+        "X"
+      ],
+      "sources": [
+        "X"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.7,
+      "average_confidence": 0.7,
+      "created_at": "2026-11-24T14:23:40Z",
+      "updated_at": "2026-11-24T14:23:40Z",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
       "id": 752,
       "group_id": 752,
       "event_type": "RESCUE_OPERATION",
@@ -212,37 +291,44 @@
       "region": "GLOBAL",
       "count": 6,
       "events": 6,
-      "percentage": 85.71
+      "percentage": 66.67
     },
     {
       "name": "WESTERN_MEDITERRANEAN",
       "region": "WESTERN_MEDITERRANEAN",
+      "count": 2,
+      "events": 2,
+      "percentage": 22.22
+    },
+    {
+      "name": "HORN_OF_AFRICA",
+      "region": "HORN_OF_AFRICA",
       "count": 1,
       "events": 1,
-      "percentage": 14.29
+      "percentage": 11.11
     }
   ],
   "sources": [
     {
       "source": "X",
       "name": "X",
-      "count": 125,
-      "posts": 125,
-      "percentage": 73.53
+      "count": 142,
+      "posts": 142,
+      "percentage": 75.53
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 29,
-      "posts": 29,
-      "percentage": 17.06
+      "count": 36,
+      "posts": 36,
+      "percentage": 19.15
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 16,
-      "posts": 16,
-      "percentage": 9.41
+      "count": 10,
+      "posts": 10,
+      "percentage": 5.32
     }
   ],
   "region_activity": [
@@ -251,48 +337,55 @@
       "region": "GLOBAL",
       "count": 6,
       "events": 6,
-      "percentage": 85.71
+      "percentage": 66.67
     },
     {
       "name": "WESTERN_MEDITERRANEAN",
       "region": "WESTERN_MEDITERRANEAN",
+      "count": 2,
+      "events": 2,
+      "percentage": 22.22
+    },
+    {
+      "name": "HORN_OF_AFRICA",
+      "region": "HORN_OF_AFRICA",
       "count": 1,
       "events": 1,
-      "percentage": 14.29
+      "percentage": 11.11
     }
   ],
   "source_activity": [
     {
       "source": "X",
       "name": "X",
-      "count": 125,
-      "posts": 125,
-      "percentage": 73.53
+      "count": 142,
+      "posts": 142,
+      "percentage": 75.53
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 29,
-      "posts": 29,
-      "percentage": 17.06
+      "count": 36,
+      "posts": 36,
+      "percentage": 19.15
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 16,
-      "posts": 16,
-      "percentage": 9.41
+      "count": 10,
+      "posts": 10,
+      "percentage": 5.32
     }
   ],
   "correlation": {
-    "correlated_events": 0,
-    "correlated_sources": 0,
-    "grouped_sources": 7,
-    "event_groups": 738,
-    "active_groups": 738,
+    "correlated_events": 1,
+    "correlated_sources": 1,
+    "grouped_sources": 9,
+    "event_groups": 739,
+    "active_groups": 739,
     "multi_source_groups": 69,
     "strongest_match": 1.0,
-    "correlation_rate": 0.0
+    "correlation_rate": 11.11
   },
   "technical_health": "HEALTHY",
   "collector_health": "HEALTHY",
@@ -305,44 +398,44 @@
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "database": "AVAILABLE",
-    "last_run_id": 456,
-    "last_completed_at": "2026-11-24T03:35:36Z"
+    "last_run_id": 457,
+    "last_completed_at": "2026-11-24T14:25:16Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 7,
-    "influence_signals_24h": 9,
-    "access_signals_24h": 1,
-    "correlated_events_24h": 0,
-    "active_event_groups": 738,
+    "operational_events_24h": 9,
+    "influence_signals_24h": 13,
+    "access_signals_24h": 2,
+    "correlated_events_24h": 1,
+    "active_event_groups": 739,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "hotspot": "WESTERN_MEDITERRANEAN",
     "dominant_event_type": "BORDER_CROSSING",
     "dominant_source": "X",
     "average_confidence": 0.43,
     "confidence_level": "LOW",
-    "correlation_rate": 0.0,
+    "correlation_rate": 11.11,
     "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 7 operatív migrációs eseményt, 9 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 738 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.43. A jelenlegi aktivitási szint: MODERATE.",
+    "summary": "Az elmúlt 24 órában a rendszer 9 operatív migrációs eseményt, 13 influence/early-warning jelzést és 2 átkelési vagy bejutási jelzést tart nyilván. 1 friss eseményforrás korrelált más forrással. Jelenleg 739 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.43. A jelenlegi aktivitási szint: MODERATE.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
   "analytical_assessment": {
-    "operational_events_24h": 7,
-    "influence_signals_24h": 9,
-    "access_signals_24h": 1,
-    "correlated_events_24h": 0,
-    "active_event_groups": 738,
+    "operational_events_24h": 9,
+    "influence_signals_24h": 13,
+    "access_signals_24h": 2,
+    "correlated_events_24h": 1,
+    "active_event_groups": 739,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "hotspot": "WESTERN_MEDITERRANEAN",
     "dominant_event_type": "BORDER_CROSSING",
     "dominant_source": "X",
     "average_confidence": 0.43,
     "confidence_level": "LOW",
-    "correlation_rate": 0.0,
+    "correlation_rate": 11.11,
     "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 7 operatív migrációs eseményt, 9 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 0 friss eseményforrás korrelált más forrással. Jelenleg 738 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.43. A jelenlegi aktivitási szint: MODERATE.",
+    "summary": "Az elmúlt 24 órában a rendszer 9 operatív migrációs eseményt, 13 influence/early-warning jelzést és 2 átkelési vagy bejutási jelzést tart nyilván. 1 friss eseményforrás korrelált más forrással. Jelenleg 739 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.43. A jelenlegi aktivitási szint: MODERATE.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
@@ -673,9 +766,150 @@
       "priority_score": 37.25,
       "analyst_priority": "LOW",
       "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+    },
+    {
+      "id": 1505,
+      "source": "X",
+      "source_post_id": "2125230377895629153",
+      "author": "dmoritz08151",
+      "language": "en",
+      "published_at": "2026-11-24T14:09:41Z",
+      "first_detected_at": "2026-11-24T14:23:40Z",
+      "last_detected_at": "2026-11-24T14:23:40Z",
+      "detection_count": 1,
+      "text": "🚨 BREAKING: Two migrant caravans totaling approximately 1,000 people are making their way through Mexico toward the U.S. border, putting renewed attention on the ongoing immigration crisis.\n\nAccording to reports, around 200 migrants have begun moving north from southern Mexico, https://t.co/rF21GhkGgq",
+      "text_excerpt": "🚨 BREAKING: Two migrant caravans totaling approximately 1,000 people are making their way through Mexico toward the U.S. border, putting renewed attention on the ongoing immigration crisis.\n\nAccording to reports, around 200 migrants have begun moving north from southern Mexico, https://t.co/rF21GhkGgq",
+      "url": "https://x.com/dmoritz08151/status/2125230377895629153",
+      "source_url": "https://x.com/dmoritz08151/status/2125230377895629153",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.8,
+      "score": 9.0,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "migrants have begun moving"
+        ],
+        [
+          "route",
+          "border"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT",
+        "ROUTE"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "migrants have begun moving"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "AMERICAS",
+      "primary_region": "AMERICAS",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 32.0,
+      "analyst_priority": "LOW",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2125230377895629153"
+      ],
+      "related_authors": [
+        "dmoritz08151"
+      ],
+      "related_urls": [
+        "https://x.com/dmoritz08151/status/2125230377895629153"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1,
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
     }
   ],
   "influence_signals": [
+    {
+      "id": 1505,
+      "source": "X",
+      "source_post_id": "2125230377895629153",
+      "author": "dmoritz08151",
+      "language": "en",
+      "published_at": "2026-11-24T14:09:41Z",
+      "first_detected_at": "2026-11-24T14:23:40Z",
+      "last_detected_at": "2026-11-24T14:23:40Z",
+      "detection_count": 1,
+      "text": "🚨 BREAKING: Two migrant caravans totaling approximately 1,000 people are making their way through Mexico toward the U.S. border, putting renewed attention on the ongoing immigration crisis.\n\nAccording to reports, around 200 migrants have begun moving north from southern Mexico, https://t.co/rF21GhkGgq",
+      "text_excerpt": "🚨 BREAKING: Two migrant caravans totaling approximately 1,000 people are making their way through Mexico toward the U.S. border, putting renewed attention on the ongoing immigration crisis.\n\nAccording to reports, around 200 migrants have begun moving north from southern Mexico, https://t.co/rF21GhkGgq",
+      "url": "https://x.com/dmoritz08151/status/2125230377895629153",
+      "source_url": "https://x.com/dmoritz08151/status/2125230377895629153",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.8,
+      "score": 9.0,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "migrants have begun moving"
+        ],
+        [
+          "route",
+          "border"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT",
+        "ROUTE"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "migrants have begun moving"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "AMERICAS",
+      "primary_region": "AMERICAS",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 32.0,
+      "analyst_priority": "LOW",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
     {
       "id": 1504,
       "source": "X",
@@ -852,6 +1086,69 @@
     }
   ],
   "early_warning_signals": [
+    {
+      "id": 1505,
+      "source": "X",
+      "source_post_id": "2125230377895629153",
+      "author": "dmoritz08151",
+      "language": "en",
+      "published_at": "2026-11-24T14:09:41Z",
+      "first_detected_at": "2026-11-24T14:23:40Z",
+      "last_detected_at": "2026-11-24T14:23:40Z",
+      "detection_count": 1,
+      "text": "🚨 BREAKING: Two migrant caravans totaling approximately 1,000 people are making their way through Mexico toward the U.S. border, putting renewed attention on the ongoing immigration crisis.\n\nAccording to reports, around 200 migrants have begun moving north from southern Mexico, https://t.co/rF21GhkGgq",
+      "text_excerpt": "🚨 BREAKING: Two migrant caravans totaling approximately 1,000 people are making their way through Mexico toward the U.S. border, putting renewed attention on the ongoing immigration crisis.\n\nAccording to reports, around 200 migrants have begun moving north from southern Mexico, https://t.co/rF21GhkGgq",
+      "url": "https://x.com/dmoritz08151/status/2125230377895629153",
+      "source_url": "https://x.com/dmoritz08151/status/2125230377895629153",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.8,
+      "score": 9.0,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "migrants have begun moving"
+        ],
+        [
+          "route",
+          "border"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT",
+        "ROUTE"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "migrants have begun moving"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "AMERICAS",
+      "primary_region": "AMERICAS",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 32.0,
+      "analyst_priority": "LOW",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
     {
       "id": 1504,
       "source": "X",
@@ -1100,48 +1397,115 @@
       "platform_count": 1
     },
     {
-      "id": 1501,
+      "id": 1507,
       "source": "X",
-      "source_post_id": "2125054455003361415",
-      "author": "TexasScorecard",
+      "source_post_id": "2125230025385611639",
+      "author": "Davey5008A",
       "language": "en",
-      "published_at": "2026-11-24T02:30:38Z",
-      "first_detected_at": "2026-11-24T03:35:05Z",
-      "last_detected_at": "2026-11-24T03:35:05Z",
+      "published_at": "2026-11-24T14:08:17Z",
+      "first_detected_at": "2026-11-24T14:25:15Z",
+      "last_detected_at": "2026-11-24T14:25:15Z",
       "detection_count": 1,
-      "text": "A South Texas smuggling bust, renewed migrant caravan activity in Mexico, and changes to Houston’s immigration enforcement policy are drawing scrutiny ahead of 2027—even as federal officials report historically low border encounters.\nhttps://t.co/PnhkBNLOmQ",
-      "text_excerpt": "A South Texas smuggling bust, renewed migrant caravan activity in Mexico, and changes to Houston’s immigration enforcement policy are drawing scrutiny ahead of 2027—even as federal officials report historically low border encounters.\nhttps://t.co/PnhkBNLOmQ",
-      "url": "https://x.com/TexasScorecard/status/2125054455003361415",
-      "source_url": "https://x.com/TexasScorecard/status/2125054455003361415",
-      "primary_signal": "FACILITATION_EARLY_WARNING",
-      "signal_type": "FACILITATION_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "FACILITATION_REVIEW",
+      "text": "@NoLongerTheFuzz Don’t believe that for a second. This government bends over to lock the anus of the EU and the ECHR is their favourite thing to turn to to prevent these migrant filth from leaving. More lefty lies.",
+      "text_excerpt": "@NoLongerTheFuzz Don’t believe that for a second. This government bends over to lock the anus of the EU and the ECHR is their favourite thing to turn to to prevent these migrant filth from leaving. More lefty lies.",
+      "url": "https://x.com/Davey5008A/status/2125230025385611639",
+      "source_url": "https://x.com/Davey5008A/status/2125230025385611639",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
       "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 8.25,
+      "confidence": 0.94,
+      "score": 14.0,
       "matched_signals": [
-        "FACILITATION_EARLY_WARNING"
+        "LEGAL_MIGRATION_SIGNAL"
       ],
       "matched_phrases": [
         [
-          "route",
-          "border"
-        ],
-        [
-          "facilitation",
-          "smuggling bust, renewed migrant"
+          "legal_signal",
+          "ECHR"
         ]
       ],
-      "matched_groups": [
-        "ROUTE",
-        "FACILITATION"
-      ],
+      "matched_groups": [],
       "context_matches": [
         "migrant"
       ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 48.9,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2125230025385611639"
+      ],
+      "related_authors": [
+        "Davey5008A"
+      ],
+      "related_urls": [
+        "https://x.com/Davey5008A/status/2125230025385611639"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
+    {
+      "id": 1505,
+      "source": "X",
+      "source_post_id": "2125230377895629153",
+      "author": "dmoritz08151",
+      "language": "en",
+      "published_at": "2026-11-24T14:09:41Z",
+      "first_detected_at": "2026-11-24T14:23:40Z",
+      "last_detected_at": "2026-11-24T14:23:40Z",
+      "detection_count": 1,
+      "text": "🚨 BREAKING: Two migrant caravans totaling approximately 1,000 people are making their way through Mexico toward the U.S. border, putting renewed attention on the ongoing immigration crisis.\n\nAccording to reports, around 200 migrants have begun moving north from southern Mexico, https://t.co/rF21GhkGgq",
+      "text_excerpt": "🚨 BREAKING: Two migrant caravans totaling approximately 1,000 people are making their way through Mexico toward the U.S. border, putting renewed attention on the ongoing immigration crisis.\n\nAccording to reports, around 200 migrants have begun moving north from southern Mexico, https://t.co/rF21GhkGgq",
+      "url": "https://x.com/dmoritz08151/status/2125230377895629153",
+      "source_url": "https://x.com/dmoritz08151/status/2125230377895629153",
+      "primary_signal": "MOVEMENT_EARLY_WARNING",
+      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "MOVEMENT_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.8,
+      "score": 9.0,
+      "matched_signals": [
+        "MOVEMENT_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "movement",
+          "migrants have begun moving"
+        ],
+        [
+          "route",
+          "border"
+        ]
+      ],
+      "matched_groups": [
+        "MOVEMENT",
+        "ROUTE"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
       "high_value_matches": [
-        "smuggling bust, renewed migrant"
+        "migrants have begun moving"
       ],
       "signal_context_rejections": [],
       "migration_context": true,
@@ -1161,91 +1525,13 @@
       "analyst_priority": "LOW",
       "related_posts_count": 1,
       "related_post_ids": [
-        "2125054455003361415"
+        "2125230377895629153"
       ],
       "related_authors": [
-        "TexasScorecard"
+        "dmoritz08151"
       ],
       "related_urls": [
-        "https://x.com/TexasScorecard/status/2125054455003361415"
-      ],
-      "related_sources": [
-        "X"
-      ],
-      "independent_author_count": 1,
-      "platform_count": 1
-    },
-    {
-      "id": 1500,
-      "source": "X",
-      "source_post_id": "2125050520155107723",
-      "author": "BusinessMirror",
-      "language": "en",
-      "published_at": "2026-11-24T02:15:00Z",
-      "first_detected_at": "2026-11-24T03:34:35Z",
-      "last_detected_at": "2026-11-24T03:34:35Z",
-      "detection_count": 1,
-      "text": "The Department of Migrant Workers (DMW) said the rescued 19 Filipino crew of the Liberian-flagged MT Gas Husky, which sank off the Black Sea coast of Bulgaria last week after being hit by projectiles, are set to return home this week.\n\nhttps://t.co/CGKCd9HGww",
-      "text_excerpt": "The Department of Migrant Workers (DMW) said the rescued 19 Filipino crew of the Liberian-flagged MT Gas Husky, which sank off the Black Sea coast of Bulgaria last week after being hit by projectiles, are set to return home this week.\n\nhttps://t.co/CGKCd9HGww",
-      "url": "https://x.com/BusinessMirror/status/2125050520155107723",
-      "source_url": "https://x.com/BusinessMirror/status/2125050520155107723",
-      "primary_signal": "ROUTE_EARLY_WARNING",
-      "signal_type": "ROUTE_EARLY_WARNING",
-      "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "ROUTE_REVIEW",
-      "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 8.0,
-      "matched_signals": [
-        "ROUTE_EARLY_WARNING"
-      ],
-      "matched_phrases": [
-        [
-          "route",
-          "Sea"
-        ],
-        [
-          "route",
-          "coast"
-        ],
-        [
-          "enforcement",
-          "rescued"
-        ]
-      ],
-      "matched_groups": [
-        "ROUTE",
-        "ENFORCEMENT"
-      ],
-      "context_matches": [
-        "Migrant"
-      ],
-      "high_value_matches": [],
-      "signal_context_rejections": [],
-      "migration_context": true,
-      "human_migration_context": true,
-      "historical_reference": false,
-      "historical_reason": null,
-      "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "BLACK_SEA",
-      "primary_region": "BLACK_SEA",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 32.0,
-      "analyst_priority": "LOW",
-      "related_posts_count": 1,
-      "related_post_ids": [
-        "2125050520155107723"
-      ],
-      "related_authors": [
-        "BusinessMirror"
-      ],
-      "related_urls": [
-        "https://x.com/BusinessMirror/status/2125050520155107723"
+        "https://x.com/dmoritz08151/status/2125230377895629153"
       ],
       "related_sources": [
         "X"
@@ -1322,6 +1608,73 @@
       ],
       "related_urls": [
         "https://x.com/MancBastard1880/status/2124903072963211414"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1
+    },
+    {
+      "id": 1507,
+      "source": "X",
+      "source_post_id": "2125230025385611639",
+      "author": "Davey5008A",
+      "language": "en",
+      "published_at": "2026-11-24T14:08:17Z",
+      "first_detected_at": "2026-11-24T14:25:15Z",
+      "last_detected_at": "2026-11-24T14:25:15Z",
+      "detection_count": 1,
+      "text": "@NoLongerTheFuzz Don’t believe that for a second. This government bends over to lock the anus of the EU and the ECHR is their favourite thing to turn to to prevent these migrant filth from leaving. More lefty lies.",
+      "text_excerpt": "@NoLongerTheFuzz Don’t believe that for a second. This government bends over to lock the anus of the EU and the ECHR is their favourite thing to turn to to prevent these migrant filth from leaving. More lefty lies.",
+      "url": "https://x.com/Davey5008A/status/2125230025385611639",
+      "source_url": "https://x.com/Davey5008A/status/2125230025385611639",
+      "primary_signal": "LEGAL_MIGRATION_SIGNAL",
+      "signal_type": "LEGAL_MIGRATION_SIGNAL",
+      "signal_mode": "DIRECT",
+      "signal_intent": "LEGAL_ACCESS",
+      "priority": "MEDIUM",
+      "confidence": 0.94,
+      "score": 14.0,
+      "matched_signals": [
+        "LEGAL_MIGRATION_SIGNAL"
+      ],
+      "matched_phrases": [
+        [
+          "legal_signal",
+          "ECHR"
+        ]
+      ],
+      "matched_groups": [],
+      "context_matches": [
+        "migrant"
+      ],
+      "high_value_matches": false,
+      "signal_context_rejections": {},
+      "migration_context": true,
+      "human_migration_context": null,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "-",
+      "primary_location": "-",
+      "country": "-",
+      "region": "GLOBAL",
+      "primary_region": "GLOBAL",
+      "latitude": null,
+      "longitude": null,
+      "rules_version": "2.6",
+      "priority_score": 48.9,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2125230025385611639"
+      ],
+      "related_authors": [
+        "Davey5008A"
+      ],
+      "related_urls": [
+        "https://x.com/Davey5008A/status/2125230025385611639"
       ],
       "related_sources": [
         "X"
@@ -1455,14 +1808,14 @@
       "label": "W48",
       "week_label": "W48",
       "week_start": "2026-11-23T00:00:00Z",
-      "posts": 194,
-      "post_count": 194,
-      "operational_posts": 9,
-      "influence_signals": 9,
+      "posts": 260,
+      "post_count": 260,
+      "operational_posts": 11,
+      "influence_signals": 13,
       "source_counts": {
-        "X": 142,
-        "MASTODON": 35,
-        "TELEGRAM": 17
+        "X": 188,
+        "MASTODON": 49,
+        "TELEGRAM": 23
       }
     }
   ],
@@ -1591,32 +1944,32 @@
       "label": "W48",
       "week_label": "W48",
       "week_start": "2026-11-23T00:00:00Z",
-      "posts": 194,
-      "post_count": 194,
-      "operational_posts": 9,
-      "influence_signals": 9,
+      "posts": 260,
+      "post_count": 260,
+      "operational_posts": 11,
+      "influence_signals": 13,
       "source_counts": {
-        "X": 142,
-        "MASTODON": 35,
-        "TELEGRAM": 17
+        "X": 188,
+        "MASTODON": 49,
+        "TELEGRAM": 23
       }
     }
   ],
   "information_activity_summary": {
-    "current_week": 194,
-    "previous_week": 178,
-    "current_week_to_date": 194,
-    "previous_week_same_period": 178,
+    "current_week": 260,
+    "previous_week": 254,
+    "current_week_to_date": 260,
+    "previous_week_same_period": 254,
     "previous_week_full": 1391,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": 8.99,
-    "change_label": "+9.0%",
+    "change_percent": 2.36,
+    "change_label": "+2.4%",
     "direction": "UP",
     "comparable": true,
-    "elapsed_hours": 27.6,
+    "elapsed_hours": 38.4,
     "current_period_start": "2026-11-23T00:00:00Z",
     "previous_period_start": "2026-11-16T00:00:00Z",
-    "previous_period_end": "2026-11-17T03:35:37Z"
+    "previous_period_end": "2026-11-17T14:25:16Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -1628,35 +1981,35 @@
       72,
       168
     ],
-    "generated_at": "2026-11-24T03:35:37Z",
-    "total_items": 1928,
-    "information_count": 237,
+    "generated_at": "2026-11-24T14:25:17Z",
+    "total_items": 1929,
+    "information_count": 234,
     "early_warning_count": 848,
-    "operational_count": 693,
-    "correlated_count": 150,
+    "operational_count": 696,
+    "correlated_count": 151,
     "layer_counts": {
+      "INFORMATION": 234,
+      "OPERATIONAL": 696,
       "EARLY_WARNING": 848,
-      "INFORMATION": 237,
-      "OPERATIONAL": 693,
-      "CORRELATED": 150
+      "CORRELATED": 151
     },
     "source_counts": {
       "X": 1448,
-      "MASTODON": 98,
+      "MASTODON": 102,
       "TELEGRAM": 49,
-      "REDDIT": 333
+      "REDDIT": 330
     },
     "type_counts": {
-      "MOVEMENT_EARLY_WARNING": 304,
-      "INFORMATION_SIGNAL": 237,
+      "INFORMATION_SIGNAL": 234,
+      "CASUALTY": 26,
+      "MOVEMENT_EARLY_WARNING": 305,
+      "BORDER_CROSSING": 372,
+      "DEPORTATION": 154,
       "FACILITATION_EARLY_WARNING": 166,
-      "BORDER_CROSSING": 371,
       "RESCUE_OPERATION": 41,
-      "DEPORTATION": 151,
       "PRESSURE_EARLY_WARNING": 38,
       "ROUTE_EARLY_WARNING": 133,
-      "CASUALTY": 25,
-      "SMUGGLING_ACTIVITY": 33,
+      "SMUGGLING_ACTIVITY": 32,
       "MOBILIZATION_COORDINATION": 22,
       "DETENTION": 88,
       "BORDER_MEASURE": 19,
@@ -1665,7 +2018,7 @@
       "ENFORCEMENT_EARLY_WARNING": 44,
       "COORDINATION": 13,
       "POLICY_SIGNAL": 7,
-      "CROSSING_FACILITATION": 36,
+      "CROSSING_FACILITATION": 35,
       "MIGRANT_CAMP": 64,
       "RECRUITMENT_COORDINATION": 16,
       "MOBILIZATION_REPORT": 1,
@@ -1673,6 +2026,293 @@
       "ONLINE_INFLUENCE_REPORT": 1
     },
     "items": [
+      {
+        "timeline_id": "information:28783",
+        "timestamp": "2026-11-24T14:19:58Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2125232964233789771",
+        "author": "KingOffX_",
+        "url": "https://x.com/KingOffX_/status/2125232964233789771",
+        "source_url": "https://x.com/KingOffX_/status/2125232964233789771",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "border",
+          "crossing",
+          "tunnel"
+        ],
+        "freshness_cues": [],
+        "text": "Egypt’s 12km Gaza border is a fortress with underground barriers, steel walls, razor wire and buffer zones to stop Hamas tunnels. It refuses to take Palestinian refugees.\n\nEgypt's 245 km border with Israel has a high-tech fence but with working tourist crossings at Taba, regular https://t.co/W8ghtSGbhy",
+        "text_excerpt": "Egypt’s 12km Gaza border is a fortress with underground barriers, steel walls, razor wire and buffer zones to stop Hamas tunnels. It refuses to take Palestinian refugees.\n\nEgypt's 245 km border with Israel has a high-tech fence but with working tourist crossings at Taba, regular https://t.co/W8ghtSGbhy",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-24T14:23:39Z",
+        "last_collected_at": "2026-11-24T14:23:39Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "operational:965",
+        "timestamp": "2026-11-24T14:16:14Z",
+        "layer": "OPERATIONAL",
+        "type": "CASUALTY",
+        "signal_type": "CASUALTY",
+        "event_type": "CASUALTY",
+        "source": "X",
+        "source_post_id": "2125232026223530417",
+        "author": "oatribune_east",
+        "url": "https://x.com/oatribune_east/status/2125232026223530417",
+        "source_url": "https://x.com/oatribune_east/status/2125232026223530417",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": 11.5721,
+        "longitude": 43.1456,
+        "confidence": 0.7,
+        "priority": "MEDIUM",
+        "priority_score": 70.0,
+        "text": "A desperate search for better opportunities ended in tragedy off the coast of Djibouti, where at least 139 migrants died after an overcrowded boat capsized while heading to Yemen. \n\nDozens more were reported missing, in one of the deadliest recent tragedies along the migration https://t.co/8SHeSWORnP",
+        "text_excerpt": "A desperate search for better opportunities ended in tragedy off the coast of Djibouti, where at least 139 migrants died after an overcrowded boat capsized while heading to Yemen. \n\nDozens more were reported missing, in one of the deadliest recent tragedies along the migration https://t.co/8SHeSWORnP",
+        "event_group_id": 758,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
+      {
+        "timeline_id": "early_warning:1505",
+        "timestamp": "2026-11-24T14:09:41Z",
+        "layer": "EARLY_WARNING",
+        "type": "MOVEMENT_EARLY_WARNING",
+        "signal_type": "MOVEMENT_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2125230377895629153",
+        "author": "dmoritz08151",
+        "url": "https://x.com/dmoritz08151/status/2125230377895629153",
+        "source_url": "https://x.com/dmoritz08151/status/2125230377895629153",
+        "region": "AMERICAS",
+        "primary_region": "AMERICAS",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.8,
+        "priority": "MEDIUM",
+        "priority_score": 32.0,
+        "analyst_priority": "LOW",
+        "text": "🚨 BREAKING: Two migrant caravans totaling approximately 1,000 people are making their way through Mexico toward the U.S. border, putting renewed attention on the ongoing immigration crisis.\n\nAccording to reports, around 200 migrants have begun moving north from southern Mexico, https://t.co/rF21GhkGgq",
+        "text_excerpt": "🚨 BREAKING: Two migrant caravans totaling approximately 1,000 people are making their way through Mexico toward the U.S. border, putting renewed attention on the ongoing immigration crisis.\n\nAccording to reports, around 200 migrants have begun moving north from southern Mexico, https://t.co/rF21GhkGgq",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "MOVEMENT_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-11-24T14:23:40Z",
+        "last_detected_at": "2026-11-24T14:23:40Z",
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
+      {
+        "timeline_id": "information:28789",
+        "timestamp": "2026-11-24T14:08:19Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2125230033858187725",
+        "author": "AbhishekGauta11",
+        "url": "https://x.com/AbhishekGauta11/status/2125230033858187725",
+        "source_url": "https://x.com/AbhishekGauta11/status/2125230033858187725",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "landing"
+        ],
+        "freshness_cues": [],
+        "text": "@AbhishBanerj Under Vishwaguru - 104 Indian deportees—including men, women, and minors—landed in Amritsar after a roughly 40-hour journey. Footage released by U.S. Border Patrol showing shackled migrants",
+        "text_excerpt": "@AbhishBanerj Under Vishwaguru - 104 Indian deportees—including men, women, and minors—landed in Amritsar after a roughly 40-hour journey. Footage released by U.S. Border Patrol showing shackled migrants",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-24T14:23:40Z",
+        "last_collected_at": "2026-11-24T14:23:40Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:28790",
+        "timestamp": "2026-11-24T14:02:32Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2125228578870612131",
+        "author": "scenehours",
+        "url": "https://x.com/scenehours/status/2125228578870612131",
+        "source_url": "https://x.com/scenehours/status/2125228578870612131",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "sea",
+          "detention",
+          "trafficking"
+        ],
+        "freshness_cues": [],
+        "text": "Two teenage cousins leave their family in Senegal with big dreams of becoming music stars in Europe—only to face a harrowing journey across deserts, detention centers, and open sea. But saving up money and sneaking away from home is the easy part. Surviving ruthless traffickers, https://t.co/AVI2aurIMo",
+        "text_excerpt": "Two teenage cousins leave their family in Senegal with big dreams of becoming music stars in Europe—only to face a harrowing journey across deserts, detention centers, and open sea. But saving up money and sneaking away from home is the easy part. Surviving ruthless traffickers, https://t.co/AVI2aurIMo",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-24T14:23:40Z",
+        "last_collected_at": "2026-11-24T14:23:40Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:28802",
+        "timestamp": "2026-11-24T13:51:14Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2125225733865816103",
+        "author": "LesterLara81220",
+        "url": "https://x.com/LesterLara81220/status/2125225733865816103",
+        "source_url": "https://x.com/LesterLara81220/status/2125225733865816103",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "sea"
+        ],
+        "freshness_cues": [],
+        "text": "Greek Border Control open fire on migrants at sea!   https://t.co/u3BNDcoOTE",
+        "text_excerpt": "Greek Border Control open fire on migrants at sea!   https://t.co/u3BNDcoOTE",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-24T14:24:12Z",
+        "last_collected_at": "2026-11-24T14:24:12Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "operational:964",
+        "timestamp": "2026-11-24T09:51:14Z",
+        "layer": "OPERATIONAL",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "MASTODON",
+        "source_post_id": "mastodon_b36f24dc97305dc85cd2",
+        "author": null,
+        "url": "https://social.dromografos.report/notes/aty2wxi7sziv035i",
+        "source_url": "https://social.dromografos.report/notes/aty2wxi7sziv035i",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": 27.7255,
+        "longitude": -18.0243,
+        "confidence": 0.75,
+        "priority": "HIGH",
+        "priority_score": 75.0,
+        "text": "🇪🇸 More than 800 #migrants reach #ElHierro and #Tenerife in single day as #Spain 's election debate intensifies https://www.surinenglish.com/spain/more-than-800-migrants-reach-hierro-and-20261124103556-nt.html A total of 815 undocumented migrants arrived on eight boats in El Hierro and Tenerife yesterday, pushing November #CanaryIslands arrivals to nearly 13,000 ahead of Sunday",
+        "text_excerpt": "🇪🇸 More than 800 #migrants reach #ElHierro and #Tenerife in single day as #Spain 's election debate intensifies https://www.surinenglish.com/spain/more-than-800-migrants-reach-hierro-and-20261124103556-nt.html A total of 815 undocumented migrants arrived on eight boats in El Hierro and Tenerife yesterday, pushing November #CanaryIslands arrivals to nearly 13,000 ahead of Sunday",
+        "event_group_id": 693,
+        "correlation_score": 0.59,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
+      {
+        "timeline_id": "correlated:962",
+        "timestamp": "2026-11-24T09:51:14Z",
+        "layer": "CORRELATED",
+        "type": "DEPORTATION",
+        "signal_type": "DEPORTATION",
+        "event_type": "DEPORTATION",
+        "source": "MASTODON",
+        "source_post_id": "mastodon_b36f24dc97305dc85cd2",
+        "author": null,
+        "url": "https://social.dromografos.report/notes/aty2wxi7sziv035i",
+        "source_url": "https://social.dromografos.report/notes/aty2wxi7sziv035i",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.8,
+        "priority": "HIGH",
+        "priority_score": 80.0,
+        "text": "🇪🇸 More than 800 #migrants reach #ElHierro and #Tenerife in single day as #Spain 's election debate intensifies https://www.surinenglish.com/spain/more-than-800-migrants-reach-hierro-and-20261124103556-nt.html A total of 815 undocumented migrants arrived on eight boats in El Hierro and Tenerife yesterday, pushing November #CanaryIslands arrivals to nearly 13,000 ahead of Sunday",
+        "text_excerpt": "🇪🇸 More than 800 #migrants reach #ElHierro and #Tenerife in single day as #Spain 's election debate intensifies https://www.surinenglish.com/spain/more-than-800-migrants-reach-hierro-and-20261124103556-nt.html A total of 815 undocumented migrants arrived on eight boats in El Hierro and Tenerife yesterday, pushing November #CanaryIslands arrivals to nearly 13,000 ahead of Sunday",
+        "event_group_id": 693,
+        "correlation_score": 0.59,
+        "related_source_count": 21,
+        "source_types": [
+          "MASTODON",
+          "X"
+        ],
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
       {
         "timeline_id": "early_warning:1503",
         "timestamp": "2026-11-24T03:33:49Z",
@@ -1798,8 +2438,8 @@
         "country": "-",
         "confidence": 0.1,
         "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
+        "priority_score": 30,
+        "information_score": 3,
         "matched_information_cues": [
           "deportation",
           "trafficking"
@@ -1813,8 +2453,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-11-24T03:35:06Z",
-        "last_collected_at": "2026-11-24T03:35:06Z",
-        "collection_count": 1,
+        "last_collected_at": "2026-11-24T14:24:44Z",
+        "collection_count": 2,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -3017,7 +3657,7 @@
         "text_excerpt": "'It has sent the Canary Islands into a migration emergency!'\n\nDaily Mail Reporter Lettice Bromovsky says Spanish authorities are being pushed to the brink after hundreds of migrants arrived on the tiny island of El Hierro from West Africa. \n\n📺 Freeview 236, Sky 512, Virgin 604 https://t.co/ySY7Yo1jTs",
         "event_group_id": 693,
         "correlation_score": 0.64,
-        "related_source_count": 20,
+        "related_source_count": 21,
         "source_types": [
           "MASTODON",
           "X"
@@ -3577,7 +4217,7 @@
         "text_excerpt": "What say you who maintain that Islam is \"the religion of peace\"...these must be peaceful rapes. Any comment @UN_Women ??\n\n\"Since 80,000 migrants arrived in Ceuta from Morocco, sexual assaults have reportedly gone from 4 to 30 over the same period year on year. That's a 650% https://t.co/iw2vOJ9XvT",
         "event_group_id": 693,
         "correlation_score": 0.6,
-        "related_source_count": 20,
+        "related_source_count": 21,
         "source_types": [
           "MASTODON",
           "X"
@@ -4178,6 +4818,38 @@
         "first_collected_at": "2026-11-21T04:33:29Z",
         "last_collected_at": "2026-11-21T04:33:29Z",
         "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "operational:945",
+        "timestamp": "2026-11-21T03:28:31Z",
+        "layer": "OPERATIONAL",
+        "type": "DEPORTATION",
+        "signal_type": "DEPORTATION",
+        "event_type": "DEPORTATION",
+        "source": "MASTODON",
+        "source_post_id": "mastodon_117652305416525937",
+        "author": null,
+        "url": "https://mastodon.social/@updateme/117652305416525937",
+        "source_url": "https://mastodon.social/@updateme/117652305416525937",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.25,
+        "priority": "LOW",
+        "priority_score": 25.0,
+        "text": "Una nueva caravana de unos 250 migrantes ingresó a México por Chiapas con destino a Estados Unidos. Algunos aseguran que fueron deportados por el ICE y buscan reunirse con sus familias. Otro grupo de 100 personas avanza hacia Oaxaca. # Migracion # Chiapas # Mexico # EstadosUnidos https:// updateme.news/nacional/caravan a-de-250-migrantes-entra-a-mexico-rumbo-a-estados-unidos/",
+        "text_excerpt": "Una nueva caravana de unos 250 migrantes ingresó a México por Chiapas con destino a Estados Unidos. Algunos aseguran que fueron deportados por el ICE y buscan reunirse con sus familias. Otro grupo de 100 personas avanza hacia Oaxaca. # Migracion # Chiapas # Mexico # EstadosUnidos https:// updateme.news/nacional/caravan a-de-250-migrantes-entra-a-mexico-rumbo-a-estados-unidos/",
+        "event_group_id": 741,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -5176,6 +5848,38 @@
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
+        "timeline_id": "operational:944",
+        "timestamp": "2026-11-20T07:38:23Z",
+        "layer": "OPERATIONAL",
+        "type": "DEPORTATION",
+        "signal_type": "DEPORTATION",
+        "event_type": "DEPORTATION",
+        "source": "MASTODON",
+        "source_post_id": "mastodon_3214fe6c64c6d60d5b1d",
+        "author": null,
+        "url": "https://www.urbanmind.net/display/f7dd981d-57eaef58-646aa6719123f5b1",
+        "source_url": "https://www.urbanmind.net/display/f7dd981d-57eaef58-646aa6719123f5b1",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.25,
+        "priority": "LOW",
+        "priority_score": 25.0,
+        "text": "Migrants deported by the Trump administration to countries other than their own have endured hunger, thirst and other deprivations # Business # Politics # Immigration # Prisons # Washingtonnews # Generalnews # Worldnews US deportees in South Sudan went hungry as guards pocketed money from relatives, families say",
+        "text_excerpt": "Migrants deported by the Trump administration to countries other than their own have endured hunger, thirst and other deprivations # Business # Politics # Immigration # Prisons # Washingtonnews # Generalnews # Worldnews US deportees in South Sudan went hungry as guards pocketed money from relatives, families say",
+        "event_group_id": 740,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
         "timeline_id": "information:27899",
         "timestamp": "2026-11-20T04:38:31Z",
         "layer": "INFORMATION",
@@ -6037,7 +6741,7 @@
         "text_excerpt": "On Saturday, a RECORD 1,488 migrants arrived at Spain’s Canary Islands. Among other things, this is overcrowding Tenerife’s airport.\n\nLOTS OF MIGRANTS = LOTS OF PROBLEMS. https://t.co/AN6LbxP2pj",
         "event_group_id": 693,
         "correlation_score": 0.73,
-        "related_source_count": 20,
+        "related_source_count": 21,
         "source_types": [
           "MASTODON",
           "X"
@@ -7064,7 +7768,7 @@
         "text_excerpt": "Spain's VOX party leader Santiago Abascal accused Prime Minister Pedro Sánchez of facilitating a “planned invasion” of the Canary Islands during a campaign rally Monday, Nov. 16, as more than 11,000 migrants arrived in the Atlantic archipelago during the first half of November.",
         "event_group_id": 693,
         "correlation_score": 0.76,
-        "related_source_count": 20,
+        "related_source_count": 21,
         "source_types": [
           "MASTODON",
           "X"
@@ -7341,7 +8045,7 @@
         "text_excerpt": "Nearly 2,200 migrants have arrived by boat in Spain’s #CanaryIslands over the past two days.\n\nhttps://t.co/TT6wvL1dCi\n\n#Spain #Migration #Europe",
         "event_group_id": 693,
         "correlation_score": 0.82,
-        "related_source_count": 20,
+        "related_source_count": 21,
         "source_types": [
           "MASTODON",
           "X"
@@ -7590,7 +8294,7 @@
         "text_excerpt": "More than 2,000 people reached Spain’s Canary Islands by boat in just two days.\n\nSpanish maritime rescue services reported that around 2,200 migrants arrived during the surge.\n\nMany make the dangerous Atlantic crossing from West Africa, sometimes spending days or weeks at sea.",
         "event_group_id": 693,
         "correlation_score": 0.84,
-        "related_source_count": 20,
+        "related_source_count": 21,
         "source_types": [
           "MASTODON",
           "X"
@@ -7836,7 +8540,7 @@
         "text_excerpt": "🚨 Canary Islands: 3,047 migrants landed in a single weekend, on 23 boats. On Sunday alone, 1,467 arrived in nine cayucos, eight of them on El Hierro (EFE).\n\nA border that depends on the weather is not a border. It's a waiting room. https://t.co/ZXRHk7xM1W",
         "event_group_id": 693,
         "correlation_score": 0.75,
-        "related_source_count": 20,
+        "related_source_count": 21,
         "source_types": [
           "MASTODON",
           "X"
@@ -7901,7 +8605,7 @@
         "text_excerpt": "Nearly 2,200 migrants arrived in #Spain’s #CanaryIslands over Saturday and Sunday, braving a dangerous journey by sea in hopes of reaching the archipelago’s El Hierro island.\nWhile aid workers do their best to provide care for the record number of new arrivals, the influx has https://t.co/Ijacq23L44",
         "event_group_id": 693,
         "correlation_score": 0.76,
-        "related_source_count": 20,
+        "related_source_count": 21,
         "source_types": [
           "MASTODON",
           "X"
@@ -8006,7 +8710,7 @@
         "text_excerpt": "Meanwhile…. The residents of the Canary Islands are fed up.\n\nAlejandro Gomes from the VOX party: \"About a thousand migrants arrived in El Hierro in a single day, and the hospital is already overwhelmed.\"\n\n@tzviyehezkely https://t.co/niMoMCci2W",
         "event_group_id": 693,
         "correlation_score": 0.82,
-        "related_source_count": 20,
+        "related_source_count": 21,
         "source_types": [
           "MASTODON",
           "X"
@@ -8071,7 +8775,7 @@
         "text_excerpt": "🚨GLOBAL NEWS\n\nNearly 2,200 migrants have arrived by boat in Spain's Canary Islands over two days, as rescue teams continue to respond to dangerous Atlantic crossings from West Africa.\n\nSpain's Maritime Rescue Service said it assisted 1,324 people aboard 14 boats, most of whom https://t.co/KKYyruPb85",
         "event_group_id": 693,
         "correlation_score": 0.82,
-        "related_source_count": 20,
+        "related_source_count": 21,
         "source_types": [
           "MASTODON",
           "X"
@@ -8359,7 +9063,7 @@
         "text_excerpt": "Рекордное за четыре года число мигрантов прибыло на Канарские острова за день / A record number of migrants in four years arrived in the Canary Islands in a single day. Reuters: Nearly 1,500 migrants arrived in the Canary Islands in one day. News. Spain:\n\nhttps://t.co/DkiyrGg4hI",
         "event_group_id": 693,
         "correlation_score": 0.78,
-        "related_source_count": 20,
+        "related_source_count": 21,
         "source_types": [
           "MASTODON",
           "X"
@@ -8540,7 +9244,7 @@
         "text_excerpt": "@ElizaaaSwan Migrants crossed from West Africa (mainly Senegal, Gambia, Mauritania) in overcrowded wooden cayucos. Trips last 4-7 days; one boat alone held 240 people. Autumn seas favor the dangerous Atlantic route.\n\nEl Hierro (pop. ~12,000) took most of the ~1,500 Saturday arrivals,",
         "event_group_id": 693,
         "correlation_score": 0.65,
-        "related_source_count": 20,
+        "related_source_count": 21,
         "source_types": [
           "MASTODON",
           "X"
@@ -8605,7 +9309,7 @@
         "text_excerpt": "🚨 BREAKING: Spain Declares a Migration Emergency in the Canary Islands\n\n🌊 Nearly 2,200 migrants arrived in 48 hours, including nearly 1,500 on Saturday, the highest single-day total since 2020.\n\nHey @grok, how did so many migrants reach the Canaries in just two days? How https://t.co/p3VOxITT4C",
         "event_group_id": 693,
         "correlation_score": 0.88,
-        "related_source_count": 20,
+        "related_source_count": 21,
         "source_types": [
           "MASTODON",
           "X"
@@ -8709,7 +9413,7 @@
         "text_excerpt": "Canary Islands Hit by Massive Migrant Surge: 1,500 Arrive in One Day\n\nAnother day, another mass arrival. Canary Islands overwhelmed, locals left to deal with the consequences. This policy failure keeps repeating. Enough is enough.\n https://t.co/y4W2Ds4jYT",
         "event_group_id": 693,
         "correlation_score": 0.93,
-        "related_source_count": 20,
+        "related_source_count": 21,
         "source_types": [
           "MASTODON",
           "X"
@@ -9461,7 +10165,7 @@
         "text_excerpt": "Spain's maritime rescue service says nearly 2,200 migrants have arrived in the Canary Islands over the past two days # Politics # Immigration # Worldnews # Generalnews Spain says nearly 2,200 migrants reached Canary Islands in 2 days",
         "event_group_id": 693,
         "correlation_score": 0.81,
-        "related_source_count": 20,
+        "related_source_count": 21,
         "source_types": [
           "MASTODON",
           "X"
@@ -9855,7 +10559,7 @@
         "text_excerpt": "State of emergency declared after 7,400 migrants arrived in the Canary Islands aka Spain within the first 10 days of November. Thousands more have reached the islands amidst overwhelming conditions at local reception centers. \n\nSanchez is a despicable shitweazel 🖕 https://t.co/56B5R3RJRx",
         "event_group_id": 693,
         "correlation_score": 0.66,
-        "related_source_count": 20,
+        "related_source_count": 21,
         "source_types": [
           "MASTODON",
           "X"
@@ -14350,44 +15054,6 @@
         "ai_editorial_decision": "PUBLISH"
       },
       {
-        "timeline_id": "information:26123",
-        "timestamp": "2026-11-10T23:58:51Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2120305217346387987",
-        "author": "annapiexoxo",
-        "url": "https://x.com/annapiexoxo/status/2120305217346387987",
-        "source_url": "https://x.com/annapiexoxo/status/2120305217346387987",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "boat",
-          "arrival"
-        ],
-        "freshness_cues": [],
-        "text": "El Hierro Declares Emergency as Migrant Boat Arrivals Surge\n\nhttps://t.co/hysp2YXdCv\n\n#ElHierro #CanaryIslands #MigrationCrisis",
-        "text_excerpt": "El Hierro Declares Emergency as Migrant Boat Arrivals Surge\n\nhttps://t.co/hysp2YXdCv\n\n#ElHierro #CanaryIslands #MigrationCrisis",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-11T00:19:07Z",
-        "last_collected_at": "2026-11-11T00:19:07Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
         "timeline_id": "operational:886",
         "timestamp": "2026-11-10T23:51:33Z",
         "layer": "OPERATIONAL",
@@ -14454,198 +15120,6 @@
         "ai_editorial_decision": "PUBLISH"
       },
       {
-        "timeline_id": "information:26136",
-        "timestamp": "2026-11-10T23:34:35Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2120299109865115834",
-        "author": "IbrahimkhailP",
-        "url": "https://x.com/IbrahimkhailP/status/2120299109865115834",
-        "source_url": "https://x.com/IbrahimkhailP/status/2120299109865115834",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "smuggling",
-          "trafficking"
-        ],
-        "freshness_cues": [],
-        "text": "ASRA | Organised Smuggling Infrastructure and Regional Oil-Trafficking Networks\n\nGeospatial Intelligence and OSINT Report | Afghanistan–Pakistan–Iran Frontier\n\nFurther geospatial intelligence and OSINT investigations conducted under the ASRA Initiative have identified additional https://t.co/KVOHIkdTKO https://t.co/bH0LAkpX3v",
-        "text_excerpt": "ASRA | Organised Smuggling Infrastructure and Regional Oil-Trafficking Networks\n\nGeospatial Intelligence and OSINT Report | Afghanistan–Pakistan–Iran Frontier\n\nFurther geospatial intelligence and OSINT investigations conducted under the ASRA Initiative have identified additional https://t.co/KVOHIkdTKO https://t.co/bH0LAkpX3v",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-11T00:20:25Z",
-        "last_collected_at": "2026-11-11T00:20:25Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:26140",
-        "timestamp": "2026-11-10T23:15:39Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2120294342740844877",
-        "author": "IbrahimkhailP",
-        "url": "https://x.com/IbrahimkhailP/status/2120294342740844877",
-        "source_url": "https://x.com/IbrahimkhailP/status/2120294342740844877",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "border",
-          "smuggling"
-        ],
-        "freshness_cues": [],
-        "text": "Geospatial Intelligence Assessment | Organised Smuggling Infrastructure at the Afghanistan–Pakistan–Iran Frontier\n\nGeospatial analysis conducted under the ASRA Initiative has identified a discontinuity in the mapped Afghanistan–Pakistan border fence in the southern Nimruz desert https://t.co/5WNfAmnGPL",
-        "text_excerpt": "Geospatial Intelligence Assessment | Organised Smuggling Infrastructure at the Afghanistan–Pakistan–Iran Frontier\n\nGeospatial analysis conducted under the ASRA Initiative has identified a discontinuity in the mapped Afghanistan–Pakistan border fence in the southern Nimruz desert https://t.co/5WNfAmnGPL",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-11T00:20:26Z",
-        "last_collected_at": "2026-11-11T00:20:26Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:26088",
-        "timestamp": "2026-11-10T19:00:01Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2120230010875449376",
-        "author": "UKBorderWatch",
-        "url": "https://x.com/UKBorderWatch/status/2120230010875449376",
-        "source_url": "https://x.com/UKBorderWatch/status/2120230010875449376",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "route",
-          "boat",
-          "arrival"
-        ],
-        "freshness_cues": [],
-        "text": "JUST IN: The UN refugee agency has challenged the UK’s plan to make some refugees wait up to 30 years to settle\n\nThe proposal would affect some people granted refugee status after arriving by routes such as small boats, extending how long they could wait for permission to stay https://t.co/3ynSApoN7n",
-        "text_excerpt": "JUST IN: The UN refugee agency has challenged the UK’s plan to make some refugees wait up to 30 years to settle\n\nThe proposal would affect some people granted refugee status after arriving by routes such as small boats, extending how long they could wait for permission to stay https://t.co/3ynSApoN7n",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-10T19:01:14Z",
-        "last_collected_at": "2026-11-10T19:01:14Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:26054",
-        "timestamp": "2026-11-10T18:54:40Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2120228663618585036",
-        "author": "thenowherephoto",
-        "url": "https://x.com/thenowherephoto/status/2120228663618585036",
-        "source_url": "https://x.com/thenowherephoto/status/2120228663618585036",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "crossing",
-          "channel"
-        ],
-        "freshness_cues": [],
-        "text": "119 MIGRANTS. ONE FAILED CHANNEL CROSSING.\n\nBerck, France | Saturday 7 November 2026\n\nFollowing my earlier footage from Berck, where I filmed chaotic scenes involving aggression, objects being thrown and a baby being carried into the freezing water, the crossing ultimately https://t.co/RcnfUrECth",
-        "text_excerpt": "119 MIGRANTS. ONE FAILED CHANNEL CROSSING.\n\nBerck, France | Saturday 7 November 2026\n\nFollowing my earlier footage from Berck, where I filmed chaotic scenes involving aggression, objects being thrown and a baby being carried into the freezing water, the crossing ultimately https://t.co/RcnfUrECth",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-10T18:59:41Z",
-        "last_collected_at": "2026-11-10T18:59:41Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:26062",
-        "timestamp": "2026-11-10T18:50:57Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2120227729140310475",
-        "author": "grok",
-        "url": "https://x.com/grok/status/2120227729140310475",
-        "source_url": "https://x.com/grok/status/2120227729140310475",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "boat",
-          "rescue",
-          "arrival"
-        ],
-        "freshness_cues": [],
-        "text": "@vaibhavanand2 @visegrad24 The claim is roughly accurate amid a major surge. Spanish rescue services reported ~578 migrants on 5 boats arriving in the Canaries early on 9 Nov (close to the 562 figure), part of 1,000+ over the prior weekend and over 6,600 in the first 9 days of November. Exact daily counts",
-        "text_excerpt": "@vaibhavanand2 @visegrad24 The claim is roughly accurate amid a major surge. Spanish rescue services reported ~578 migrants on 5 boats arriving in the Canaries early on 9 Nov (close to the 562 figure), part of 1,000+ over the prior weekend and over 6,600 in the first 9 days of November. Exact daily counts",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-10T19:00:13Z",
-        "last_collected_at": "2026-11-10T19:00:13Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
         "timeline_id": "operational:884",
         "timestamp": "2026-11-10T18:40:52Z",
         "layer": "OPERATIONAL",
@@ -14675,44 +15149,6 @@
         "event_time_text": null,
         "event_time_normalized": null,
         "event_time_confidence": null,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:26035",
-        "timestamp": "2026-11-10T18:40:11Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1xsux9g",
-        "author": "alhikmahnews",
-        "url": "https://www.reddit.com/r/UMD/comments/1xsux9g/a_piece_of_my_heart_is_missing_umd_freshman_maria/",
-        "source_url": "https://www.reddit.com/r/UMD/comments/1xsux9g/a_piece_of_my_heart_is_missing_umd_freshman_maria/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "detention",
-          "deportation"
-        ],
-        "freshness_cues": [],
-        "text": "“A piece of my heart is missing”: UMD freshman Maria Flores and her mother detained by ICE\nEditor’s note: Maria Flores’ close family member’s quotes have been translated from Spanish by Diego Henriquez. At 8:20 a.m. on Thursday, Nov. 5, UMD freshman Maria Flores and her mother went to Baltimore’s United States Citizenship and Immigration Services (USCIS) office for their annual immigration check-in, a brief meeting that typically takes half an hour. But Flores’ family had no idea where the mother and daughter had gone until several hours later, at 11 a.m., when a close family member received a call from Maria’s mother saying that the two had been detained by U.S. Immigrations and Customs Enforcement (ICE). After that call last Thursday, no one from ICE or the broader Department of Homeland Security (DHS) had contacted Maria’s family or loved ones about the situation. “They went inside to go sign some papers, and they never returned,” Flores’ boyfriend Cesar Saavedra told Al-Hikmah . Maria — valedictorian of Parkdale High School’s class of 2026, a first-generation college student, and an aspiring doctor majoring in public health — is “unique, intelligent, hardworking, and strong,” her close relative, kept anonymous on grounds of safety, told Al-Hikmah . “I feel without strength, as if a piece of my heart is missing,” they said. “There is nothing that can be easy at this moment, everything is difficult.” Maria, who migrated to the U.S. at 9 from El Salvador, and her mother were then transferred to an ICE detention center in Chantilly, Virginia for about two nights before being transferred to Louisiana. Their phones have been taken away, but the two have been able to video call occasionally — at Louisiana’s center, detainees can only communicate with loved ones on a first-come, first-serve basis, Saavedra said. Still, he said Louisiana’s detention center has been a “little bit better” for the two than Chantilly. “They had no bed,” Saavedra said of Maria and her mother’s experience in Chantilly’s detention center: the place where the two were supposed to sleep was fully cemented. The food was also “horrible,” he said. “She saw the food and she started crying.” ICE officers and guards in the Chantilly facility were also using intimidation tactics against Maria, her mother, and other migrants, Saavedra said. “They were trying to scare them and tell them that they were going to be sent very far away.” Being in the centers is affecting their mental health, too, he said: many of the other people in the detention centers are “hopeless” and “waiting to get deported.” Maria’s five-year-old sibling is left in the care of her family member and asks when Maria and her mother will return. “[Her sibling is] very anxious to see them again,” the relative said. Taking care of Maria’s younger sibling has been challenging without her mother, the relative told Al-Hikmah , but the emotional toll has been especially intense. “Like Maria, [her mother] is a soldier. She is one-hundred-percent dedicated to her children,” they said. “Her mother was always present as both a mother and a father, always fighting for the betterment of their lives. She was deeply invested in Maria’s education.” In a statement to Al-Hikmah , UMD wrote: “The University of Maryland is aware that one of our students was taken into custody off campus by immigration enforcement officials last week. Our thoughts are with our student and their family and friends, and we are working to provide resources when possible and appropriate.” It is unclear when the university found out that Maria had been detained. Saavedra says the university reached out to him on Monday night and has been in contact. Maria’s ultimate dream, her close relative said, is to finish her studies so “she can begin helping people” as a doctor. “She makes her entire family proud of all that she has achieved,” her relative said warmly; you could hear the smile in their voice. “She lives off of dreams and turns them into reality.” Saavedra has started a GoFundMe for Maria and her mother’s family to offset legal costs that can be accessed here: gofundme.com/f/donate-to-support-maria-flores-and-her-mom . Read the full story here. Follow Al-Hikmah on Instagram at umd.alhikmah for updates on this story.",
-        "text_excerpt": "“A piece of my heart is missing”: UMD freshman Maria Flores and her mother detained by ICE\nEditor’s note: Maria Flores’ close family member’s quotes have been translated from Spanish by Diego Henriquez. At 8:20 a.m. on Thursday, Nov. 5, UMD freshman Maria Flores and her mother went to Baltimore’s United States Citizenship and Immigration Services (USCIS) office for their annual immigration check-in, a brief meeting t…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-10T18:59:10Z",
-        "last_collected_at": "2026-11-10T18:59:10Z",
-        "collection_count": 1,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -15304,7 +15740,7 @@
         "text_excerpt": "The immigration crisis engulfing Spain's Canary Islands has exposed the mounting pressure on local communities and raised serious questions about the PSOE government's handling of the country's borders under Prime Minister Pedro Sánchez.\n\nNearly 5,000 migrants have arrived on the https://t.co/GoRAOuPAvv",
         "event_group_id": 693,
         "correlation_score": 0.69,
-        "related_source_count": 20,
+        "related_source_count": 21,
         "source_types": [
           "MASTODON",
           "X"
@@ -15893,7 +16329,7 @@
         "text_excerpt": "🇪🇸 Spain, early November. More than 4,000 undocumented migrants arrived, almost all of them Muslim men. Not one is expected to be deported. Pedro Sánchez plans to distribute them across Spain and eventually throughout Europe. Pedro Sánchez is a criminal.\nsgtnews https://t.co/fJ4jbHW2ms",
         "event_group_id": 693,
         "correlation_score": 0.99,
-        "related_source_count": 20,
+        "related_source_count": 21,
         "source_types": [
           "MASTODON",
           "X"
@@ -15958,7 +16394,7 @@
         "text_excerpt": "WAKE UP CALL:⚠️🇪🇸 Spain, early November. More than 4,000 undocumented migrants arrived, almost all of them Muslim men. \n - Not one is expected to be deported. \n - Pedro Sánchez plans to distribute them across Spain and eventually throughout Europe. \n - Pedro Sánchez is a https://t.co/g8Bun4LcSf https://t.co/awrh2WXd6f",
         "event_group_id": 693,
         "correlation_score": 0.79,
-        "related_source_count": 20,
+        "related_source_count": 21,
         "source_types": [
           "MASTODON",
           "X"
@@ -65958,71 +66394,6 @@
         "event_time_normalized": null,
         "event_time_confidence": null,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "early_warning:319",
-        "timestamp": "2026-08-26T09:52:00Z",
-        "layer": "EARLY_WARNING",
-        "type": "CROSSING_FACILITATION",
-        "signal_type": "CROSSING_FACILITATION",
-        "event_type": null,
-        "source": "REDDIT",
-        "source_post_id": "reddit_1vysk9m",
-        "author": "moondog151",
-        "url": "https://www.reddit.com/r/TrueCrimeDiscussion/comments/1vysk9m/austriahungary_a_highway_worker_was_mowing_grass/",
-        "source_url": "https://www.reddit.com/r/TrueCrimeDiscussion/comments/1vysk9m/austriahungary_a_highway_worker_was_mowing_grass/",
-        "region": "EASTERN_MEDITERRANEAN",
-        "primary_region": "EASTERN_MEDITERRANEAN",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.97,
-        "priority": "HIGH",
-        "priority_score": 63.95,
-        "analyst_priority": "HIGH",
-        "text": "AUSTRIA/HUNGARY: A highway worker was mowing grass on the side of the highway when he took notice of a foul smelling truck that had been parked on the side of the road for a day. When the police investigated, they discovered 71 dead bodies inside the trailer, including four children. (Part 2)\n(Make sure to read part 1 first) The Austrian and Hungarian police retrieved data from the Hungarian toll system and 1,500 hours' worth of CCTV footage from highway cameras and the businesses alongside the highway and towns and cities they drove through, which they used to reconstruct the entire route. The truck left Kecskemét on the morning of August 26, travelled via the M5 motorway, continued on the M1 toward Austria, and crossed the border at Nickelsdorf around 10:00 a.m. So, with the data from the vehicle, tolls, their phone records/data and stitching together the statements of those arrested, this was how the authorities deemed their journey went down. On the night of August 24 and into the early morning hours of August 25, 2015, the 71 victims made their way through the forest near Domaszék, a small Hungarian village just across the Serbian border. They had all been dropped off in Domaszék by seperate cars that had driven them north from Belgrade. They then stayed in the village overnight as the smugglers told them they had to assess how strong the police presence was. So they were instructed to hide in the forests until the truck arrived, leaving them to be exposed to the summer heat for several hours and subsisting off of the apples growing from the local trees. At around 4:00-5:00 p.m. on August 26, near Mórahalom, the truck arrived and began boarding the 71 people. Before the truck even departed, these men, women and children probably realized they were in for an uncomfortable trip: the door could not be opened from the inside, there was no light, they couldn't hear the ventilation going, and they would have no way of communicating with the driver. It took around 40 minutes for those inside to start panicking from the heat and rapidly depleting oxygen. With no way to speak to Ivaylo and also needing to create some breathing holes, they all started pounding on the walls of the trailer with all their might and shouted and screamed for help. All the while, Ivaylo kept driving, passing Kecskemét at 6:03 a.m. As a matter of fact, Ivaylo could hear them doing this, and at first he assumed they must've just been fighting each other. But at 6:16 a.m. he called Metodi, audibly panicked. He told Metodi that he desperately needed water, but he couldn't stop at a gas station or anywhere with other vehicles, precisely because of how fiercely the refugees were banging on the walls. He also noticed a foul smell starting to fill the cab coming from the trailer behind him. Metodi passed this information along to Samsoor, telling him that \"It's too warm. The driver says many are saying: 'please, please!\" who at first suggested that Ivaylo should find somewhere quiet to pull over and give everyone water. Ivaylo did briefly pull over but started the truck back up once he saw the police in the area. Ivaylo, with the money he had on hand, was also unsure how to buy enough water for all 71 of the refugees without tipping someone off that he was doing something illegal. Fearing the police might see them again and that it could cut into their profits, Samsoor changed his mind about getting them water and instead ordered Ivaylo to never open the trailer doors under any circumstances. The exact words that Ivaylo heard were \"keep driving, do not stop, do not open the doors, get to the destination as quickly as possible\". If he disobeyed these orders or somehow confirmed their deaths some other way, Samsoor told him to just \"dump them in a forest in Germany\" before adding, \"Let them die instead; that's an order.\" the instructions continued with another sentence spoken by them being \"If they keep knocking like that, they'll hear it at the border. You just have to keep driving. That's the most important thing. Damn it.\". At this point, the deaths of these 71 men, women and children may as well have been intentional. Especially because Samsoor was quite intolerant of any dissenting opinions, telling the others \"not to interfere in his organization,\" that they were all nobodies with no right to give him any orders since he had been in this \"business\" for \"14 years,\" and that he would do as he pleased. Ivaylo listened to the sounds of what was happening in the back, 71 people desperately fighting for their lives for around 60-80 more minutes before it went quiet. Ivaylo passed Budapest at around 8:00 a.m., and by then everyone was dead. When he crossed the border into Austria at 9:03 a.m., the corpses had already started to rot. Ivaylo barely got into Austria's interior before suddenly panicking and abandoning the truck at the curb outside of Parndorf. Wenzeslaw was also being kept informed of the situation, so when he saw Ivaylo stop the truck, he knew what he was doing. Ivaylo headed toward Wenzeslaw's car, getting in the passenger seat while he turned back around toward Hungary. Samsoor, not being even a little bit shaken or even thinking he should lay low, ordered the next operation to begin immediately. The same day the truck was discovered, on August 27, another truck carrying 67 refugees had left Mórahalom. The ventilation also failed, this time upon reaching the Austrian town of Gols; however, they punctured the walls of the trailer with knives and sticks to create breathing holes before ultimately kicking the doors open, saving their lives. When the news began reporting on the truck discovered in Parndorf, Kassim called Metodi and said, \"What kind of stupid shit have you done? That truck is in my name!!!,\" before telling him that he was going to flee Hungary and advising him to do the same. Tragically, there was a chance they could've been saved. The Kecskemét district court approved a warrant to wiretap all of their homes and monitor their phone calls after Metodi, Kassim and Samsoor's names kept appearing on the cellphones of the various smugglers they'd arrest, and they had been listening to their conversations from August 13 onward. Unfortnuately, they were not listening in real time and instead reviewing the contents later and still had to translate what they were saying into Hungarian. So by the time they got around to listening to Ivaylo's phone call with Metodi and then Metodi's to Samsoor about how the victims were all dying, Ivaylo had already parked the truck. And speaking of their victims, the Austrian police were still working to identify them. They were transported to the Department of Forensic Medicine of the Medical University of Vienna so a more sophisticated forensic team could go over them. The victims being delieverd to Vienna. The team consisted of 27 specialists: 17 staff members of the Vienna forensic medicine department alongside experts in forensic toxicology, chemistry, and dentistry; specialists in virology and bacteriology; and physicians specializing in internal medicine, pulmonary diseases, and intensive care, so they could further narrow down the cause of death and the victims' final hours. Then, to identify them, DNA samples were taken from each victim, and the police also retained an Arabic studies scholar from the University of Vienna to assist in translating documents found with the victims. Help from the public was also sought, with the police setting up a multilingual hotline, staffed by all the interpreters they had at hand, to communicate directly with any possible loved ones who didn't join them on this trip. The hotline regularly got 100 calls per day. A call was also put out for any refugees across Western Europe, such as Germany and Sweden and those still in Iraq, Syria or Afghanistan who were able to comfortably travel to Europe to come forward to surrender a DNA sample in case they knew the victims. And then all of them, after giving the Austrian police their DNA, had to cross the border into Hungary for their police to question them about their relatives' deaths, as the case once more fell under their jurisdiction. Given the enormity of the task, they made remarkably quick work of it, and by November 26, three months after their deaths, they had managed to identify 69 of them, with the 70th identification coming not long after. The nationalities of the victims were as follows: 29 Iraqis, 21 Afghans, 15 Syrians, and 5 Iranians. The victims' names were Body No. 1, No. 2 and No. 3 were identified as 22-year-old Afghan, Yousefi Din Mohamad; 17-year-old Iraqi, Gailani Zainab Amer; and 21-year-old Afghan, Nazary Zahra. Bodies No. 4-8 were 33-year-old Iraqi, Al-Musawi Saad Jumaah Majeed; 27-year-old Afghan, Mohammad Dad; 21-year-old Iraqi, Soltani Ali Rezaa; 37-year-old Massoud Youssef; and 41-year-old Iraqi, Al-Ogaidi Imad Khalaf Jassam. Bodies No. 9-11 were 26-year-old Iraqi, Hamasaleh Hawkar Azeez; 48-year-old Syrian, Almahalhal Ayman; and 56-year-old Syrian, Alshaikh Abdel Alsalim. Bodies No. 12-15 were 27-year-old Iraqi, Qadir Mohammed Salin; 23-year-old Afghani, Shah Sayed Magsood; 36-year-old Syrian, Al Damen Hasan; and 23-year-old Syrian, Alshaikh Almuthanna. Bodies No. 16-20 were 27-year-old Iraqi, Sabah Hasan Ali; 22-year-old Iraqi, Hassan Ibrahim M. Salih; 28-year-old Iraqi, Ibrahim Abdalkhaliq Mohammed; 22-year-old Afghan, Heydari Haji Mohamad; and 20-year-old Afghan, Sabir Mohamad. Bodies No. 21-28 were 17-year-old Afgani, Hashimi Abdul Wasil, 40-year-old Agfani, Tagik Aqay Mohammed Amin, 27-year-old Iraqi, Rasol Nashwan, 54-year-old Syrian, Abdulrhman Fadila, 30-yaer-old Iranian, Vakili Azghandi Hojat, 22-year-old Afgani, Esmaeili Lal Agha, 30-year-old Syrian, Ali Muhannet Mudtafa and 22-year-old Afgani, Hejran Mohammad Musa. Bodies No. 29-31 were 35-year-old Iraqi, Saeed Othman Mohammed; 27-year-old Iraqi, Abdalla Sardasht Mohammed; and 20-year-old Syrian, Ahmad Lefana. Bodies No. 33-36 were 29-year-old Iraqi, Gori Hazhar Jomaa; 29-year-old Iraqi, Haji Khalid Ahmed; 23-year-old Iraqi, Hussein Shwan Jamal; and 1-year-old Afghan, Nazary Matin Mohammad. Bodies No. 37 and 38 were 19-year-old Afghan, Khan Sher and 25-year-old Afghan, Nazary Tamim Mohammad. Bodies No. 39-42 were 38-year-old Syrian, Hassan Jihad; 24-year-old Iraqi, Ahmed Azad Rahim Ahmed; 24-year-old Iraqi, Ishan Baba Mohamad; and 46-year-old Syrian, Khallo Kesra. Bodies No. 43 and 44 were 20-year-old Syrian Alabdalhabib Khaled and 14-year-old Iranian Davoodi Amir Arsalat. Bodies No. 45-47 were 14-year-old Iraqi, Kali Elin Hazim; 26-year-old Afghan, Uhraman Khalil; and 47-year-old Iranian, Doovadi Mehdi Hossein Reza. Bodies No. 48-50 were 17-year-old Syrian, Alshaikh Hend; 21-year-old Afghan, Mohamad Eid; and 31-year-old Iraqi, Ali Aqeel Salim. Bodies 51-54 were 23-year-old Iraqi, Gailani Zinah Amer Ismael; 6-year-old Afghan, Rahm Ahmad Shad; 29-year-old Iraqi, Al Obaidi Mahmood Abdulmugheth; and 37-year-old Afghan, Rahm Khuda. Bodies No. 55-57 were 22-year-old Iraqi, Ahmed Herish Dino; 33-year-old Iraqi, Gailani Ali Amer Ismael; and 26-year-old Afghan, Sediqi Ahmad Bashir Yusuf. Bodies No. 58-61 were 24-year-old Iraqi, Abdulkareem Aso Hama Salihk; 34-year-old Syrian, Mustafa Hussein; 60-year-old Iranian, Nazariyan Behzad; and 24-year-old Iraqi, Mouhmed Smean Nasr. Bodies No. 62 and 63 were 28-year-old Iraqi, Al Mawla Murtadha Zuhair Abdulsahib and 21-year-old Iraqi, Ali Herish Guli. Bodies No. 64 and 65 were 34-year-old Iraqi, Rafo Dakheel Badal and 16-year-old Iraqi, Kali Ali Alend. Bodies No. 66-68 were 23-year-old Iraqi, Ahmed Alan Hamad; 28-year-old Iraqi, Hamad Sarbaz Muaed; and 11-year-old Afghan, Rahm Mustafa. Bodies No. 69-71 were 11 month old Afgani, Rahm Lida; a 28-year-old Afghan, Rahm Shakareh; and a 21-year-old Syrian, Mustafa Raman Khalil. Now, with all their names, here are their stories. The one baby found, the youngest victim, was an 11-month-old girl from Kunduz, Afghanistan, named Lida Raham. The other three children were a 6-year-old, an 11-year-old boy and a 16-year-old boy. Three entire families, two of them from Afghanistan, were among the dead and were found embracing each other once the police opened the trailer doors.go The father of the family was Khuda Rahm, a police officer from Afghanistan. He decided to smuggle himself and his family out of the country because the Taliban had personally threatened to murder him and his entire family, including 11-month-old Lida. A second family from Afghanistan also died in that trailer. Three of the victims were Iraqi Yazidis: a 14-year-old girl, Kali Elin Hazim and her brother, 16-year-old Kali Ali Alend. Their father stayed behind in Iraq and therefore had to hear the news that both of his children had died. The two were also travelling with their uncle, 22-year-old Ahmed Herish Dino. Most of the victims were ordinary people fleeing war, while others were educated professionals fleeing persecution. Mahmoud Abidi was a four-star officer in the Iraqi military who fled Baghdad with his wife, Sine Gailani, with Sine persuading her Ali Gailani and Seineb Gailani to make the journey with them. Mahmoud's brother had already made the journey and was working as an engineer in Germany. There was also a Kurdish man from Northern Iraq named Saeed Othman Mohammed, from Sulaimaniyya. Like others, Saeed felt he wasn't safe in his homeland, having taken part in pro-democracy protests back in Iraq and found both politcal parties he had joined to be ineffectual and corrupt. But he also had a more immediate reason to leave. Saeed Othman Mohammed Saeed had only one functioning kidney, causing him chronic pain, and with the state of healthcare in his home country, he hoped that Western medicine could treat him since there were no organ donors in his hometown, and, if he could receive treatment, he'd then work in Germany as well, hoping to open a car wash or cell phone store. His entire family tried to talk him out of leaving, but he refused to budge. After all, he had already made this journey once before, only to be arrested in Turkey in 2006 and deported; Saeed felt he couldn't let a second opportunity slip away from him. On his journey, he was detained by the Bulgarian police for 4 days but wasn't deported, which enabled him to continue his journey. Hailing from Kirkuk, Mohammed Ishan Baba was unable to find work back home, which motivated him to make the journey. Baba also had dreams of becoming a professional football player. Mohammed Ishan Baba Two Iraqi Kurds: a 25-year-old man named Semian Nasser Mohammed and a 28-year-old man named Nashwan Mustafa Rasoul were cousins from a well-off family in Dohuk but opted to join the Kurdish Peshmerga to personally fight against ISIS. However, they ultimately grew disillusioned and frustrated with their homeland. Nashwan Mustafa Rasoul Nashwan sold his car to finance a trip out of Iraq. They got on a bus from Dohuk to Istanbul, Turkey. Then, upon arriving in Istanbul on August 11, they connected with an Iraqi Kurd to whom they each paid $7,500 for a passage to Munich. Other victims consisted of a pharmacist, a lawyer, traders, students, teenagers, and a fan of FC Barcelona who was identified by the sports jersey he had worn throughout his entire journey. All were trying to escape the devastation of war or their dictatorial governments at home. There was also Farah Al Alshaikh, a Syrian gynecologist living in Germany who had spent months trying and failing to bring the rest of her family, her siblings and parents, into Germany with her. She regularly pressured them to join her in Germany, even offering to let them stay in all the rooms in her own home. Her 57-year-old father was named Abdel, and he ran an auto parts business in Raqqa. As the instability in Syria grew stronger, his family home was destroyed and his business looted. Abdel feared the smugglers and wanted to get his family out of Syria via legal means. With 20,000 dollars to his name, he drove his entire family to the Turkish border before making their way to Europe. Her father appeared to have gotten over his fear since the last time he spoke to her daughter was to say, \"I have a good feeling about the trafficker; he doesn’t seem to do it for the first time\" Her 53-year-old mother, Fadila, suffered from severe asthma, and when the family crossed from Turkey and into Greece, she was seasick the entire trip. Her 23-year-old brother, Almuthanna, was a law student in Syria and was once arrested by ISIS for smoking a cigarette. While on the run from them, he passed his bar exam, sending a joking email to Farah that she should \"Be careful what you say to me from now on, I'm a lawyer.\" And finally, her 17-year-old sister, Hend. When ISIS occupied their hometown, Hend was banned from attending her final exams at school because she was a girl. She regularly listened to romantic pop music on her smartphone and wanted to study medicine. Hend was afraid of the ocean and had taken their mother's silver wedding ring to wear as protection when they were on the Greek island of Samos. They had all paid 1,600 euros per person for the Budapest-to-Germany leg of their journey. During their voyage to Greece, they were caught two times, almost got lost at sea and vomited from the stress; it was so bad that a lot of them were eager to reconsider. Hend cried and said, \"I’m done, I can’t go on anymore,\" while Fadila wanted to go back to Syria. The family and a group of other migrants they had travelled with considered staying in Greece but ultimately kept moving, fearing the borders would soon close. After taking a bus to the border, they were intercepted by the police in North Macedonia, who pepper-sprayed them and struck them with nightsticks as they fled, leaving Almuthanna with bruises. Eventually, they evaded the Macedonian police, making it to Serbia and later Hungary. The last time Alshaikh heard from any member of her family was on August 24, when they called her from a hotel in Belgrade, Serbia, and Hend mentioned that she wanted to visit a zoo upon their arrival in Germany, and so she promised Hend that they would. The police identified the family due to their passports that were left in the trailer. Another Syrian teacher from Deir az-Zur named Hasan Al-Damen was also a victim. He despised the ruling Assad regime, and the final straw prompting him to leave was when he received a draft notice to join the Syrian military. Furthermore, he could no longer earn a living, giving him another reason to flee. He had sewn his teaching diploma, translated into German, into his clothing so he would have it ready to present to German authorities as soon as the truck reached its destination. His wife and two sons were left behind in Damascus, but they weren't abandoned. Hasan intended to work in Germany long enough to establish a comfortable living so he could then bring the rest of his family into Germany with him. He messaged his wife for the last time on the night of August 25, from a forest near the Hungarian-Serbian border, telling her: \"I am in the woods. The human traffickers say we have to wait for police checks. I am hungry and eating apples from the trees. Please kiss the children for me. Soon everything will be over.\" 34-year-old Hussein Khalil Mustafa was a Kurdish man from Syria. He graduated from the University of Damascus and spoke four languages. He left Syria in 2013 to flee from ISIS as they were approaching the gates of his hometown. He called his family in Qamishli on August 25, the last time they ever heard from him. He had spent 1,600 euros for a new life in Germany. He was joined by his younger brother, 20-year-old Raman Mustafa. He earned a high school diploma in informatics back in Al-Qamishli and hoped to finish his computer science studies in Germany. The Mustafa brothers were accompanied by their childhood friend, 35-year-old Massoud Mohamed Yousef, a textile engineer. Massoud hoped to pursue a doctoral degree in Germany. The three men fled Syria on August 13, 2015, initially fleeing into Turkey before making their way to the Balkans. Then there was a married couple, Muhannad Ali and his wife Lefana. The two had been married for only three months and wanted to start a family in Germany so their children could grow up free of war and oppression. Abdalsalam Alshaikh was a Syrian businessman who suffered from asthma, although he didn't suffer from poverty. Unlike most of the victims who had to save up a lot of money, Abdalsalam was moderately wealthy, so he could very easily pay the fees not just to be smuggled in himself, but also to bring in his son and 17-year-old daughter, whom he was very protective of. The police also learned that there were some survivors after all, as originally, more were supposed to be on that truck. Abdalsalam's son, Youssef Alshaikh, was dropped off on the highway in Serbia by the driver of the car taking him to Hungary. The driver had gotten a phone call, and whatever was said in that call prompted him to abandon his passengers. Youssef had no SIM card and was unable to contact his family, so he eventually made his way to a Serbian village, took a taxi back to Belgrade, and did not rejoin the group, saving his life. While the police tried their best with most of them, some bodies were in simply too poor a condition or the family too impoverished to afford flying them abroad. The victims who couldn't be repatriated were interred in the Inzersdorf Muslim cemetery in Vienna. Ultimately, the Austrian police were able to identify 70 victims. One of them has never been identified, that being the 32nd victim. Body No. 32 was also buried at the Inzersdorf Muslim cemetery. Thankfully, they would all see justice. The trial opened before the Kecskemét Regional Court on June 21, 2017, with the defendants facing 1,200 counts of aggravated human trafficking for all of the operations they had conducted before their arrests. Furthermore, based on Samsoor's orders to Metodi and Ivaylo, they all faced 71 counts of murder, not manslaughter or negligent homicide, but murder. Hundreds of journalists flocked to Kecskemét to cover the trial, which actually exceeded the capacity for how many people the courtroom could fit. The Defandants being brought to court Although there were several defendants, mostly the other drivers who had been recruited, people mostly came to the trial just to see the core five be punished, and it was a foregone conclusion that they would be, as the prosecution came in with 59,000 pages' worth of evidence. The defense tried to argue that none of them intended for the refugees to die and had underestimated the severity of the situation. Samsoor was even brought into court wearing a grin on his face, wearing a shirt with Afghanistan's flag and carrying a sign written in Pashto that read \"Fellow Muslims! There is neither law nor justice. Even if a rightful decision is made, the Attorney General is a big liar. It is only proven by truth.\" The other side of the sign read \"I am neither a killer nor an oppressor,\" and then he also wrote \"Allah Akhbar\" and \"All Arabs are Islam\", a curious thing to say since Samsoor wasn't even an Arab himself. https://preview.redd.it/44se9hzk5mlh1.png?width=768&format=png&auto=webp&s=e731542154d84b265501c78500ece18b1618ece2 Samsoor and his signs. Although, of course, Samsoor's position was severely undercut, seeing as he wrote a text message that literally said, with zero room for ambiguity, \"Let them die instead; that's an order,\" followed by the suggestion that a mass grave be dug to \"dump them in the forest\". But Samsoor said that these were \"thoughtless remarks\" with no real malice or intent behind them. Samsoor's behaviour in court was also quite something to behold. During his 1.5 years in pre-trial detention, he had finally learned Hungarian, which he attempted to use in an attempt to represent himself in that language. Before the indictment was even read, some of the very first words he spoke in Hungarian were to go on a tirade against his Pashto interpreter, arguing that her command of the language was so poor that he, a native speaker, could not understand her. She defended herself by saying Samsoor was able to understand her perfectly fine when they first met, so therefore he must be lying, and that she wouldn't tolerate him saying he couldn't understand her. And with that, the two descended into an argument with one another, and when one of the other defendants tried to exercise his own right to make a statement, the judge evidently found the display quite entertaining as he told him to wait until after the argument. The indictment was at last read out once the argument was over. And once said argument was over, Samsoor changed his tune just like that; he admitted that he was involved in smuggling but still denied being a murderer. He asked for forgiveness in court and said that, should he be released, he would \"help humanity\". Ivaylo also had a display for the court as he constantly fell into crying fits, pleading for mercy and saying that he was only following Samsoor's orders and that he \"wasn't allowed\" to stop the truck because of him. As the evidence kept building up, the five began to do what one might expect. They turned on each other and tried to unload their own responsibility for the tragedy onto someone else. Metodi, who previously refused to testify, was now more than willing. He confessed that he was involved in human smuggling often as a truck driver or the scout who drove a car ahead of the truck and a recruiter, but he denied any involvement in the outcome of this case. He said that his involvement was simply to act as an interpreter for the other defendants to relay their initial orders to Wenzeslaw and Ivaylo. He said that he escorted the truck to the outskirts of Kecskemét; afterward, he returned home, ending his direct involvement. Though, just like with Samsoor, his phone records were working against him. Naturally, when asked about his communications with Samsoor and Ivaylo after the journey began, he explained that he didn't fully understand what was really going on. For example, he said that they told him that the refugees had removed the rubber seals between the doors and that Lahoo told him they were cutting holes in the walls, so he believed they were getting a fresh supply of air and that he was always suggesting they find somewhere to stop. But ultimately, Metodi concluded by saying that regardless, as a messenger it wasn't even his responsibility to make sure the refugees could breathe and therefore, their deaths fell on all the other defendants, while at the same time saying that he regretted not being able to prevent the deaths of which he just said he bore no responsibility for. Kassim even claimed that he was, in fact, an informant and, since 1996, had been providing information on various smuggling rings to the Bulgarian internal security service. He even claimed that he reported this journey, but nobody intervened. Kassim during the trial The prosecution deemed this irrelevant, stating that even if his claim proved true, it wouldn't grant him immunity and he'd be prosecuted regardless. Over 200 witnesses were called, mostly survivors from their previous operations who told the court that such conditions were nothing new, that they never showed any concern for their safety and often had to fight for their survival after the trucks they were loaded in started moving. The trial lasted for a year, but on June 14, 2018, all involved were found guilty. Ten of the other defendants were given sentences ranging from 3-12 years for human trafficking, some of whom were sentenced in absentia. But as for the main four, Samsoor Lahoo, Metodi Georgiev Ivanov, Wenzeslaw Todorov. and Ivaylo Nelev Stoyanov, they were all convicted of murder \"with particular cruelty\" and given sentences of 25 years' imprisonment. The verdict being read Upon their release, Samsoor would be permanently banned from Hungary while the others would receive bans of 10 years. Furthermore, when all added up, 103.3 million Hungarian Forints worth of assets were confiscated. The defence was quick to appeal, arguing that they should be given more lenient sentences on the grounds that the deaths had been accidental. The defence went so far as to claim that they shouldn't even face manslaughter charges and instead just answer for \"causing death by dangerous endangerment of road traffic\" The prosecution, in turn, launched its own appeal, arguing that the sentences were far too lenient given how horrific the 71 deaths were, including four children that they had knowingly caused. In the meantime, Kassim S, was convicted on February 27, 2019, and handed down a sentence of 4 years and 8 months' imprisonment. The appeal was held on June 20, 2019, at the Szeged Court of Appeal, and the prosecution won out. The judge increased all their sentences to life imprisonment for their \"egregiously inhumane crime\", making sure to state the ages of the children who had died when reading his verdict. Additionally, all except for Wenzeslaw were denied the possibility of parole, while Wenzeslaw could apply for it after 30 years. The appeal trial This ruling made it final that the three would never see the outside world again and, in fact, remain the harshest sentences a Hungarian court has ever given to human traffickers/smugglers. Sources (Should be in the comments)",
-        "text_excerpt": "AUSTRIA/HUNGARY: A highway worker was mowing grass on the side of the highway when he took notice of a foul smelling truck that had been parked on the side of the road for a day. When the police investigated, they discovered 71 dead bodies inside the trailer, including four children. (Part 2)\n(Make sure to read part 1 first) The Austrian and Hungarian police retrieved data from the Hungarian toll system and 1,500 hou…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "signal_mode": "DIRECT",
-        "signal_intent": "EASIER_CROSSING",
-        "detection_count": 6,
-        "first_detected_at": "2026-08-26T16:33:41Z",
-        "last_detected_at": "2026-08-29T07:55:14Z",
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "operational:251",
-        "timestamp": "2026-08-26T09:51:26Z",
-        "layer": "OPERATIONAL",
-        "type": "SMUGGLING_ACTIVITY",
-        "signal_type": "SMUGGLING_ACTIVITY",
-        "event_type": "SMUGGLING_ACTIVITY",
-        "source": "REDDIT",
-        "source_post_id": "reddit_1vysjx7",
-        "author": "moondog151",
-        "url": "https://www.reddit.com/r/TrueCrimeDiscussion/comments/1vysjx7/austriahungary_a_highway_worker_was_mowing_grass/",
-        "source_url": "https://www.reddit.com/r/TrueCrimeDiscussion/comments/1vysjx7/austriahungary_a_highway_worker_was_mowing_grass/",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "latitude": null,
-        "longitude": null,
-        "confidence": 0.75,
-        "priority": "HIGH",
-        "priority_score": 75.0,
-        "text": "AUSTRIA/HUNGARY: A highway worker was mowing grass on the side of the highway when he took notice of a foul smelling truck that had been parked on the side of the road for a day. When the police investigated, they discovered 71 dead bodies inside the trailer, including four children. (Part 1)\n(So for today's write-up, I am making an exception to my typical rule of not covering any cases that have an article on the English Wikipedia, as I try to opt for more obscure cases. But I'm making an exception here because the English Wikipedia article is quite short, and I've always wanted to cover one of these cases, but the one I've found from Bulgaria unfortunately has the trial \"frozen,\" and it seems unlikely it'll ever continue any time soon This is also a big write-up I've been meaning to tackle for a while, and even now, I still didn't include everything; if I did, this may have run for three parts) On the morning of August 27, 2015, an employee of ASFINAG, the Austrian state motorway operator, was mowing the grass along the A4 Ostautobahn just outside the village of Parndorf in the state of Burgenland, only a 20-minute drive from the Hungarian border. As he was mowing the grass, he approached a stationary refrigerated trailer truck left abandoned on the roadside. The truck bore both Hungarian license plates and the branding of a Slovak poultry company named Hyza, with Slovak text written all over the trailer's livery. Based on where the truck was discarded, it stood to reason that it had crossed the border very recently. The truck Seeing abandoned vehicles on the side of the road wasn't too unusual; perhaps the truck driver had simply suffered a mechanical failure. But this truck was in fact quite odd in the sense that it was truly abandoned; there was no driver in sight. The vehicle was also giving off an extremely foul scent, unlike anything he had smelled before, and finally, through the crevices of the trailer's doors, a reddish-brown liquid was dripping onto the asphalt. Desperately hoping that it was perhaps just the chicken they may have been transporting, the ASFINAG employee nervously called the police. The first officers to arrive at the scene were from the highway police dispatched out of Potzneusiedl. As the police pulled up to the vehicle, one thing aside from the smell struck them immideately; they recognized the truck. At 7:45 a.m., while responding to a different call, they had driven right past the truck. It was now 11:00 a.m., and the truck was still there. Just like with the ASFINAG employee, the stench the truck was giving off was overwhelming; the officers would go on to say that the only word they could use to describe how horrible the odour was was \"indescribable\". The officers also felt a certain degree of dread about what they might find; even from the outside, they noticed that the walls of the trailer had been dented outward and, in one place, partially slashed open as if something or someone from the inside had thrown themselves against the walls with all their might. The police knew they'd have to open the trailer doors eventually, but with how bad the smell was just from the outside, they decided to save that for last. Starting with the cab, the door was unlocked, and before they even knew what kind of crime may have taken place, they got their first lead as to who was responsible. In their rush to leave, the driver had left behind a purchase-and-sale document in the name of a Bulgarian citizen named Kassim S, who purchased the vehicle from a used-car dealership in Kecskemét, Hungary. Next, they finally opened the trailer. Well, it wasn't quite that simple; the trailer doors were unlocked, but somebody had tied pieces of wire around the handles. Upon removing the wire and opening the doors, the smell became so much worse and seeing the contents of the trailer didn't make them feel any less sick. The trailer was full of dead bodies piled against one another, sunk into each other; the scene was compared to \"passengers on a crowded subway who had fallen asleep while standing up\". How packed together the truck was All the corpses were submerged up to their ankles in a pool of feces, urine, and decomposition fluid, mixed and now spilling out onto the highway once the doors were opened. They called out into the hot, dark trailer, hoping for survivors, but heard nothing but the sounds of flowing liquids. Eventually, they finally went back to their car to request as much backup as possible from dispatch, telling them that there were \"approximately 20 dead\" inside the trailer. Several additional police officers arrived to set up a perimeter around the truck and brought a full forensic team with them. https://preview.redd.it/ektnhuve5mlh1.png?width=1200&format=png&auto=webp&s=6f3513519d0e3267471f6fed57a54dfe615e1434 https://preview.redd.it/lj0dvwtf5mlh1.png?width=1568&format=png&auto=webp&s=79fa84bdd7bfff88ea16b738b36cedb3da61e6ff The police and forensics at the scene Not every officer or forensic technician was quite as horrified by what they saw, though. One of the first responding officers had taken a picture and sent it to his police station so the higher-ups and their backup would have adequate warning of what they were dealing with; one of those in the chat would leak those photos to the press, who published them in the next day's newspaper. 17 officers were investigated for this, but no charges were filed, as it could never be determined who had leaked the image. As for the newspapers, they would defend publishing the images, saying they were the only way to convey the tragedy to their readers and to push those in charge to enact real change. Ultimately, the police and forensics didn't spend a long time on the highway; it was too vital a lifeline and too big a crime scene to conduct the investigation on site, let alone remove the bodies. So instead, the police summoned a tow truck to remove the vehicle and then commandeered a veterinary border inspection station in Nickelsdorf to be their makeshift morgue, as it was the closest facility with enough AC and space for the work ahead of them. The truck after being transported. Once they arrived, one by one the bodies were removed from the truck, and it became clear that the responding officers' initial count was quite off. Rather than 20 bodies, they instead removed a total of 71 corpses from the semi-truck and, in so doing, confirmed that there were no survivors. Of those 71, 59 were men, 8 were women, and 4 were children, including, tragically enough, a baby. With all the bodies removed, investigators could also step inside the trailer for their investigation. The conditions were awful. The area was 6 metres long and 2.15 metres wide, with no windows, seating or anything to grab onto. The cause of death was also clear to the investigators; despite being a refrigerated trailer, there was no refrigeration taking place. The cooling unit/AC showed no evidence that it had ever been turned on and running; in fact, it wasn't even connected. But even if it was, it would be insufficient to supply enough fresh air regardless. Additionally, the truck wasn't even roadworthy and maintenance to the vehicle itself had been neglected. With no fresh oxygen from the outside and with the outside temperature exceeding 30 degrees celcius, suffocation and then decomposition would've occurred around three hours after beginning the journey. They also would've struggled fiercely; there were scratch marks across the walls, and some of the victims had broken off their fingernails, which also caused blood to be one of the many liquids pooling on the floor. With that estimate in mind, that meant all 71 victims were dead before the vehicle ever crossed the Austrian border, which meant if they caught those responsible, prosecuting them for the deaths of the victims would fall on Hungary. As for who the victims were, identifying all 71 by name would be a time-consuming task, but based on their physical appearances and the circumstances of their discovery, the police concluded that they were likely Middle Eastern refugees and Migrants who were likely meant to be smuggled into another EU country like Germany. Several additional investigators were called in and assigned a body, which at the time was simply addressed as \"Body No. 1\" to \"Body No. 71\" It was a grizzly task for those it was assigned to; scraps of flesh and skin were peeled off when they tried to remove the victim's clothing and backpacks, as in the heat, their skin had practically adhered to them. The police could also tell some of the victims were family since quite a few of the corpses were found in an embrace, while the children among the group had been held up toward the ceiling by their parents, where the last bits of breathable air had pooled. Some victims were relatively easy to identify as they had brought their passports with them, and those passports were all from one of four countries: Iraq, Syria, Iran or Afghanistan. Some also carried a military ID, student IDs, photos, prescription medication, vaccination and marriage documents, and one had a teaching diploma from Syria sewn into his clothing. An Iranian marriage and vaccination certificate found in the truck. Other bodies would require more work. There were quite a few cellphones found inside the trailer, but most of them had been destroyed due to the heat and being submerged in the mixture of excrement, urine and decomposition fluid. One thing the police could determine about the victims they were so far unable to identify was their backgrounds. Based on their teeth, they had likely come from decently prosperous backgrounds; if they were able to maintain their teeth to the degree seen, it would also explain the large amount of currency the police recovered, consisting of Euros, Turkish lira and Serbian dinars. Finally, in identifying those responsible for their deaths, the forensic team did find one palm print on the exterior of the vehicle on the driver's side door, with DNA that the investigators were able to retrieve and hopefully use to identify the driver. The bodies were discovered the same day as the second Western Balkan Conference in Vienna, which was hosting the heads of government and foreign ministers of 10 Balkan and EU states, including German Chancellor Angela Merkel, to discuss economic development of the region and the ongoing refugee crisis in Europe. The timing made the second part of the now-overshadowed conference a far more pressing issue. Austria's federal president, Heinz Fischer, was among those in attendance, and he heard of the discovery mid-press conference, when he called for a moment of silence. Merkel addressed reporters outside of the conference, saying that \"We are all shaken by the terrible events,\". She stood alongside Austrian Chancellor Werner Faymann, who said, \"The smugglers must not be stronger than we are.\" Additionally, Austrian Interior Minister Johanna Mikl-Leitner and the Burgenland state police chief had been scheduled to hold a joint press conference in Nickelsdorf at the Hungarian border to address the ever-growing number of Middle Eastern refugees crossing into Austria from Hungary. As they were preparing for the press conference, the police had just finished towing the truck into Nickelsdorf, with news of the tragedy reaching them not long afterward, prompting them to cancel the press conference at the last minute. They then held a different press conference in Eisenstadt, where those watching saw how visibly uneasy the two were as they discussed the \"numerous dead\". Mikl-Leitner also called the incident a \"Dark day for Austria\" and said that \"Anyone who still believes that smugglers are benevolent helpers of refugees is beyond help\" When asked how the truck slipped through the cracks, they answered that smugglers typically used smaller vehicles, so they didn't recognize the semi-truck as a \"smuggler's vehicle,\" combined with the fact that with over 100 trucks crossing the border, a comprehensive check of them all would be impossible. Meanwhile, Fidez, Hungary's ruling party at the time, also condemned the tragedy and expressed their sympathies to the victims, but also blamed the incident on the EU's immigration policies, arguing that stricter border control was necessary to \"protect the lives of those misled and often deceived people who are being put at risk by irresponsible, profiteering, and prison-deserving human traffickers.\" It was such a shocking event that regular programming on Austrian TV Channels was interrupted to cover it. By 12:48 p.m., only an hour after it was found, several foreign outlets, including those from outside of Europe, began reporting on the case. As for how this problem came to be, Hungary used to be home to the largest numbers of asylum applicants in Europe who sought to use Hungary as a transit point to other EU nations like Germany, as the country was in the Schengen Area and directly on the way to Germany from the Balkans, where most first entered Europe. In 2013, Hungary recorded only 18,000, but by 2015, that number had jumped up to 170,000. Illegal border crossings produced even bigger numbers. Between January and August 2015 alone, roughly 400,000 migrants passed through Hungarian territory heading for the west. On August 23, 2015, alone, over 3,080 migrants crossed the border into Hungary from Serbia, followed by 2,890 on August 24. Under Prime Minister Viktor Orbán, Hungary made several attempts to crack down on this practice with Hungary beginning the construction of a 175-kilometre razor wire fence along the entire Hungarian-Serbian border, as well as having police posted at the rail stations to stop any suspected migrants from boarding westward trains. Sometimes, Hungarian police would drag them off the train even if they did have valid tickets and papers. Due to these measures, most turned to human smugglers, who soon found a very lucrative trade on their hands. The price for a \"seat\" in one of these packed semi-trucks from Budapest to Vienna could go for 300-400 Euros, while the full journey from Belgrade to Germany sometimes reached prices of 1,500 and 1,600 Euros. The smugglers became highly organized, now employing recruiters actively seeking refugees off the street, transit managers, vehicle providers, drivers, scouts, and money handlers. 5-6 billion USD was brought in from human smuggling alone, and various smugglers had multiple trucks gathered at the truck stop in Röszke, a small Hungarian village only 3 kilometres from the Serbian border, to approach the migrants once they crossed, with their rapidly increasing prices as their \"demand\" was starting to become too much for the trucks they had available. For a time, smuggling Middle Eastern Refugees into Western Europe was a \"business\" said to be just as, if not more, profitable than the drug trade. After the news immediately dominated a majority of the headlines in Europe and overseas, witnesses were quick to come forward. The most credible one claimed that he saw the truck pulled over at around 9:45 a.m. on August 26 and saw a man, likely the driver, get into another car, which wasted no time driving away. As this encounter happened at highway speeds, the witness was unable to give the police any usable descriptions of the men. The police then turned their attention to the truck itself. As mentioned, the trailer had the branding of the Slovak poultry company Hyza, a subsidiary of the Agrofert Holding. However, Hyza were not the owner. Hyza had sold 21 of their refrigerated trucks to seven different buyers. The fateful truck was sold to the Hungarian company MasterMobilKer kft., which had been in bankruptcy proceedings since July 2014, around the same time they purchased the vehicle from Hyza and evidently kept all the branding from its previous owners. Afterward, the Truck was then purchased from a used car dealership in Kecskemét only one week before the deaths by one of the smugglers, who made no attempt to hide his identity, registering the truck under his real name, Kassim S, on August 25. Right now, the purchase document left behind in the truck was the police's biggest lead, and they immideately used that information to alert the Hungarian authorities. The first man was arrested trying to flee across the Serbian border. Then, based on his contacts and after tracing this man's footsteps, they were led to an apartment in Budapest, which was raided, arresting the three people inside. Within just a few hours of the truck being discovered, the police had arrested the gang of smugglers. The owner of the truck, Kassim, was arrested at Kiszombor, right at the border with Romania. The mastermind behind this network was a 30-year-old man from Jalalabad, Afghanistan, named Samsoor Lahoo. Samsoor was born on January 6, 1987, as an ethnic Pashtun. Samsoor Lahoo He entered Hungary illegally from Serbia in March 2013 and was granted \"protected status\" by Hungarian officials and later got a residency permit, ironically making him a refugee himself. Samsoor later married and moved in with a local Hungarian woman. Samsoor was quite educated; he had two university degrees, one in architecture and another in psychology and could speak five languages with perfect fluency, those languages being English, Arabic, Pashto, Serbian, and Croatian, although, funnily enough, not Hungarian. One might assume that as the head of a massive human smuggling operation, Samsoor may have kept a low profile, but they would be wrong. Samsoor had no qualms about being in the public eye and regularly posted on his social media, showing off his BMW sedan and pictures of him on Margaret Island in the centre of Budapest. And speaking of human smuggling, long before getting himself involved in that, he had already built up a criminal record in Hungary, being arrested or investigated several times for speeding, disorderly conduct and even drug offences; in addition, he was once deported from Germany for residing there illegally. At first, Samsoor decided to deal in cars, buying vehicles in Bulgaria and exporting them to Afghanistan, although this later served as a gateway into human trafficking instead. However, if Samsoor is to be believed when he, after his arrest, said he was involved in the human trafficking business for \"14 years,\" he would've started in 2001, back when he was still 14. He did have a prior arrest for human smuggling; in February 2015, he was arrested attempting to transport five Afghan migrants to Italy, assisted by accomplices from Slovakia. This arrest seemed to have no effect on him, and so he kept going. Samsoor's second in command was a 29-30-year-old Bulgarian national named Metodi Georgiev Ivanov, though he often went by the name \"Mityo Krika\". Metodi Georgiev Ivanov Metodi grew up as a member of the Romani community in the northern Bulgarian town of Lom, one of the poorest regions of the European Union, where he still lived with his wife and two daughters aged 8 and 10. Even if he was rarely home, they still saw him as a good husband and father. Although Metodi described himself as an \"uneducated gypsy\", that was entirely by choice since he dropped out of school after 10th grade so he could start selling used cars, buying the vehicles, repairing them and selling them at a higher price. Eventually, he got a job as a minibus driver transporting Bulgarian workers to Western Europe, which was how he came to move to Germany, where he worked as a truck driver, albiet without a license, illegally driving trucks for 5-6 years. Metodi's criminal record was a bit more extensive than Samsoor's; In Bulgaria, he had several arrests for public intoxication and driving without a licence, failing to register for his probation while abroad. But in Germany, his record was a bit more extensive and alarming. In 2009, he was arrested for a nighttime armed robbery at a gas station in Bochum, in which he forced the cashier to hand over approximately 1,000 euros, only to be arrested when he returned to the same gas station as a customer using the same vehicle he fled the scene in and was promptly recognized by the cashier, who called the police. In August and September 2013, he was caught twice driving without a license and fined, only to never pay those fines. Eventually, Metodi was banned from Germany and deported back to Bulgaria. In 2014, while back in his homeland, a friend approched him and offered him a \"nice job,\" saying, \"Every evening you'll make a lot of money. You'll be transporting meat,\" with \"meat\" being a code word for migrants. At first, Metodi was making hardly anything as a driver, but soon he began taking a bigger role, helping to recruit other drivers and soon started to make thousands of Euros per trip he made, enabling him to live a lavish lifestyle back in Lom, buying 4-5 houses and deciding to try his hand at other crimes such as \"pimping\" and fraud. On May 14, 2015, Metodi fled Bulgaria for Hungary to escape his pending prison sentence. In Budapest, he resumed trading cars alongside Kassim S., whom he had known for 5 years. It was at a party in Budapest that he first met Samsoor, who was still buying cars from Bulgaria to export back to Afghanistan. The two became partners, splitting the profits from the cars they sold until, eventually, Samsoor asked Metodi if he could recruit other Bulgarians to be truck drivers who would transport migrants to Germany and Austria and just like that, Metodi became his \"deputy\". All the drivers recruited were exclusively from Bulgaria's poorest regions and mostly from the Roma community in Bulgaria. On July 25, 2015, Metodi was caught near the village of Hengersberg in Bavaria driving a truck with 38 Afghan migrants in the trailer. He and the man with him both fled the scene. Metodi's mother spoke to the media, saying that her son never wanted anyone to die, before adding that the whole area was involved in the \"refugee business\". His brother took it a step further, saying, \"My brother is an idiot. Everyone here has smuggled refugees across the border. But only the fools get caught\". And one of Metodi's other brothers was arrested for being a drug dealer. The third man was 50-year-old Kassim S, who was originally from Tyre, Lebanon. Kassim S Kassim was a dual citizen of both Lebanon and Bulgaria, and his role in their smuggling operation was to acquire the trucks they would use, the license plates, handle the registration and so on. Kassim ran a used-car lot in Linz, Austria and had been under investigation by the German police as a suspect in a bunch of other smuggling operations. But that wasn't how he portrayed himself. Like Samsoor, Kassim had a pretty active social media presence where he portrayed himself as an innocent family man, often posting pictures of himself smiling with his granddaughter. The fourth man was a 25-26-year-old Bulgarian man named Ivaylo Nelev Stoyanov. Ivaylo Nelev Stoyanov Ivaylo was the driver of the truck that day. Ivaylo was born in a village in Bulgaria's Montana Province called Brusartsi, and the Montana Province just happens to be Bulgaria's poorest region. It's unknown why, but during his childhood, Ivaylo was raised by his Romani grandmother, who lived a humble life growing vegetables in her garden. Ivaylo was described as a \"passable student\" at school and spent his free time playing football. When he was 15, Ivaylo's parents immigrated to Italy, bringing him and his brother with them. Ivaylo briefly worked as a baker at a pizzeria in Italy before moving back to his family home in Brusartsi after the death of his father. Unlike everyone else, who all had lengthy criminal records, Ivaylo at least made an attempt to live an honest life. After getting a loan of 2,000 Bulgarian leva from a friend of his named Wenzeslaw Todorov, he opened a small café on the edge of Brusartsi. However, the café closed within months because he never got any customers, and soon Wenzeslaw was demanding his loan back. Needing quick money to pay that loan back, Ivaylo accepted an offer to be a driver for one of Samsoor's many operations. He left Bulgaria for Hungary on August 17, telling his grandmother he was going to look for work. Ivaylo's grandmother insisted he was innocent and couldn't have driven the truck because he didn't even have a driver's license, calling him \"my sweet grandson\" and remembering how he always gave her money. When it became clear beyond any doubt that he was the driver, she instead insisted that he must've been blackmailed or threatened into driving the truck because of his debts. Though she still said this through her tears: \"If I had known he was doing something illegal, I would have broken his legs to make him stay.\" The fifth and final member was a 38-39-year-old Bulgarian national, Wenzeslaw Todorov, the same man who gave Ivaylo a loan for his café. Wenzeslaw Todorov Wenzeslaw's role was to drive a car ahead of the truck to alert Ivaylo if there were any police checkpoints up ahead, and it was also the car Ivaylo was seen entering after he parked the truck in Austria. Not a lot of information is known about Wenzeslaw's background, but he did eventually become a recruiter himself, responsible for hiring at least 15-20 of Samsoor's drivers. Wenzeslaw made 2,500 euros per Austria run and 3,500 euros per Germany run from Samsoor, only giving the drivers a cut of 500-600 Euros. As the months and years went by, the police would arrest various others who played more minor roles, such as another Bulgarian man who recruited the drivers for all their trucks, usually all from Bulgaria. During a psychiatric evaluation, Samsoor, Metodi, Ivaylo and Wenzeslaw were all found to have some form of Sociopathic traits, with Samsoor having just a bit extra since he was also diagnosed as a narcissist. Over 44 people were arrested, mostly just drivers for the other smuggling operations that did not end in disaster. One driver was arrested in Germany in December 2016 after a routine traffic stop and extradited to Hungary that February. Meanwhile, the police in France arrested another of Samsoor's Bulgarian drivers in February 2019 and also extradited him to Hungary. They started out small, typically carrying only 20-40 refugees at a time, but demand kept going up the longer the year dragged on. With more and more refugees seeking passage to Western Europe, they needed more trucks and needed to herd more of the refugees into those trucks, sometimes reaching 100 people per trip. Samsoor, however, didn't see this as a problem; he was described as having both \"endless greed\" and \"frightening indifference\" and began telling his accomplices that the new goal was, in fact, to cram as many refugees into a single trailer as possible for each journey going forward. Naturally, a lot of comfort was sacrificed for this; some vehicles weren't meant to transport more than one person, others were stuffed into the trunk of a car, and others were \"folded into\" passenger compartments. In one prior case, several of the refugees passed out in the trailer. And in a later case, one woman had suffocated to death (the rest of the refugees for that oppertunity survived). Samsoor did not see this as a warning and changed nothing about his operations. From February to August 2015, Samsoor and his gang smuggled 1,200 people into western Europe over 31 trips, and this failed smuggling attempt alone still netted Samsoor 300,000 Euros. Overall, they were estimated to have made 15.5 million Euros, with a lot of it being funnelled right back to Afghanistan through a network passing through a bunch of other countries such as Serbia, Romania, Ukraine, Russia, Kazakhstan, Uzbekistan, and Turkmenistan in an attempt to not detect the source of the funds. The person in Afghanistan the money was being sent to was Samsoor's brother. After the arrests were made, the story became an even bigger story abroad. On August 30, after concluding his Angelus address, Pope Francis addressed the tragedy directly: \"Let us ask for God's mercy and let us ask Him to help us for effective cooperation against these crimes against the entire family of humanity. Let us pray for all refugees who suffer and for all those who have lost their lives.\" Then the next day, on August 31, the Archbishop of Vienna, Christoph Schönborn, held a commemorative mass for the 71 victims while church bells across eastern Austria all rang in unison. The public was also enraged; the same day as the mass, 20,000 people marched through the streets of Vienna chanting the slogan \"Human Being in Austria\" before ending the march at Austria's parliament building. Similar displays occurred in other cities: 2,500 people gathered for a vigil in Linz, 900 in Wels around 71 black pedestals with candles, and smaller groups in Steyr, Eisenstadt, and Budapest were set up. In Innsbruck, the Young Greens, a left leaning politcal party, erected a memorial consisting of 71 pairs of shoes arranged across 13 square metres of ground, the same surface area as the trailer's floor. A freight company in Bochum also teamed up with a local theatre to host an event so the public would know just how awful the conditions were and open their eyes to the reality of what many refugees go through; a 7.5-ton truck of a similar design was parked in front of the theatre for 71 passersby to climb into so they could experiance first hand what had happened. But one aspect of stories like these that often gets overlooked is the stories of the victims; they are often blended together if the death toll is high enough, with their individual stories being overlooked. Continue with Part 2",
-        "text_excerpt": "AUSTRIA/HUNGARY: A highway worker was mowing grass on the side of the highway when he took notice of a foul smelling truck that had been parked on the side of the road for a day. When the police investigated, they discovered 71 dead bodies inside the trailer, including four children. (Part 1)\n(So for today's write-up, I am making an exception to my typical rule of not covering any cases that have an article on the En…",
-        "event_group_id": 197,
-        "correlation_score": null,
-        "related_source_count": null,
-        "event_time_text": "7:45",
-        "event_time_normalized": "2026-08-26T07:45:00+00:00",
-        "event_time_confidence": 0.9,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       }
     ]
   },
@@ -66069,21 +66440,21 @@
     "review_start_date": "2026-10-17",
     "review_cohort": "FIRST_RECORDED_ON_OR_AFTER_CUTOFF",
     "decisions": {
-      "EXCLUDE": 183,
-      "REVIEW": 177,
-      "PUBLISH": 140
+      "PUBLISH": 144,
+      "EXCLUDE": 184,
+      "REVIEW": 176
     },
     "removed_display_items": {
-      "live_events": 17,
+      "live_events": 15,
       "high_confidence_events": 1,
-      "event_groups": 8,
-      "influence_signals": 6,
-      "early_warning_signals": 6,
-      "crossing_access_signals": 1,
-      "top_crossing_access_posts": 1,
-      "high_priority_intelligence": 3,
-      "access_signals": 1,
-      "timeline": 356
+      "event_groups": 7,
+      "influence_signals": 9,
+      "early_warning_signals": 9,
+      "crossing_access_signals": 2,
+      "top_crossing_access_posts": 2,
+      "high_priority_intelligence": 2,
+      "access_signals": 2,
+      "timeline": 357
     },
     "historical_review_status": "HISTORICAL_NOT_AI_REVIEWED",
     "narrative_layers_not_reviewed": [

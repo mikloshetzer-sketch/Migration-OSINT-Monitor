@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-24T03:37:27.196267+00:00",
+  "generated_at": "2026-11-24T14:26:32.459975+00:00",
   "version": "3.0",
-  "candidates": 500,
-  "new_ai_calls": 12,
+  "candidates": 504,
+  "new_ai_calls": 8,
   "conflicting_identity_ids": [
     "group:751",
     "group:754",
@@ -10,14 +10,6 @@
     "group:757"
   ],
   "decisions": {
-    "post:944": {
-      "decision": "EXCLUDE",
-      "reason": "The report discusses hardships of migrants deported previously by the Trump administration, indicating a historical or retrospective issue rather than a current or contemporary migration event; also, the location is unclear and the claim is not substantiated as a current event."
-    },
-    "post:945": {
-      "decision": "REVIEW",
-      "reason": "The report describes a new caravan of migrants entering Mexico, some said to be deported by ICE, moving towards the US. This seems like a contemporary migration event, but the event_type 'DEPORTATION' is not fully accurate since the main event is migrant caravan movement including possible deportees, not a specific deportation event. More clarifica"
-    },
     "post:946": {
       "decision": "PUBLISH",
       "reason": "The post reports a specific, contemporary migration event involving a group of approximately 300 Central American migrants crossing into southern Chiapas, Mexico. This constitutes a concrete border crossing event aligned with the assigned event type."
@@ -90,6 +82,14 @@
       "decision": "REVIEW",
       "reason": "The post claims Texas will become a sanctuary state for millions of newly arrived economic migrants but lacks specific details about any concrete event or policy action and is speculative about future conditions."
     },
+    "post:964": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete and contemporary migration-related event: over 800 undocumented migrants arriving on the Spanish Canary Islands within a single day, which is a specific, verifiable border crossing event."
+    },
+    "post:965": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a recent and concrete migration-related event involving a deadly boat capsizing off the coast of Djibouti resulting in multiple migrant casualties, matching the event type CASUALTY as stated. This is a contemporary and specific migration incident."
+    },
     "signal:1496": {
       "decision": "EXCLUDE",
       "reason": "The post contains general commentary on asylum policy and illegal crossings but does not report a concrete, contemporary migration-specific event or early warning. The event type CROSSING_FACILITATION is unsupported by the content, which lacks details of an actual event or signal of facilitated crossings."
@@ -126,17 +126,29 @@
       "decision": "PUBLISH",
       "reason": "The post provides a concrete, migration-specific policy update about the Citizenship Amendment Act's implementation timeline and current administrative processing of certificates for qualifying non-Muslim migrants, constituting a migration-related early warning or policy signal relevant to migration operations."
     },
+    "signal:1505": {
+      "decision": "PUBLISH",
+      "reason": "The record reports a concrete and contemporary migration-related early warning—the movement of two migrant caravans totaling around 1,000 people through Mexico toward the U.S. border, which aligns with the declared event type MOVEMENT_EARLY_WARNING. This is a suitable migration-specific early warning suitable for publishing."
+    },
+    "signal:1506": {
+      "decision": "REVIEW",
+      "reason": "The record references an investigative report on 'shock glove' technology used by ICE to capture and transport migrants, which could relate to migration enforcement facilitation. However, the event date is in the future (2026), and the details provided are insufficient to confirm a concrete, contemporary migration-specific early warning or policy a"
+    },
+    "signal:1507": {
+      "decision": "EXCLUDE",
+      "reason": "The content is a vague and partisan narrative without reporting a concrete, contemporary migration-related event or credible migration-specific legal signal. It is inflammatory and lacks verifiable details about any migration policy or legal action."
+    },
+    "signal:1508": {
+      "decision": "EXCLUDE",
+      "reason": "The content is a general commentary alleging media bias and does not report a concrete, contemporary migration-specific event or early warning related to migration movements or policies."
+    },
     "group:693": {
       "decision": "REVIEW",
-      "reason": "The post claims an event of over 4,000 undocumented migrants arriving in Spain in early November, which is migration-related and potentially a current event. However, the event type is labeled DEPORTATION, but the content states 'Not one is expected to be deported,' indicating a mismatch in event type. Also, the source is not provided, and the clai"
+      "reason": "The report describes an actual migration event of more than 800 migrants arriving on boats, which is contemporary and migration-specific. However, the assigned event type 'DEPORTATION' is incorrect, as the event is an arrival, not a deportation. The event type needs correction before publishing."
     },
     "group:749": {
       "decision": "EXCLUDE",
       "reason": "The record discusses the legal definition of 'infiltrators' in Israeli law but does not report a concrete or contemporary migration event such as a border crossing incident or new arrival data. No specific migration event is being reported."
-    },
-    "group:750": {
-      "decision": "REVIEW",
-      "reason": "The post discusses the term 'infiltrators' used by Israeli authorities and references a figure (~17,000) related to illegal border crossings mostly via Egypt before the fence, but it lacks a concrete report of a current, specific migration event or new operational movement. The information is historical and partially explanatory rather than a direc"
     },
     "group:751": {
       "decision": "REVIEW",
@@ -165,6 +177,10 @@
     "group:757": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:758": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a specific, contemporary migration-related event involving a boat capsizing off Djibouti, resulting in mass casualties among migrants. The event type 'CASUALTY' is appropriate and supported by the content. Despite the lack of source details, the severity and specificity of the claim warrant publication."
     },
     "signal:1034": {
       "decision": "REVIEW",
