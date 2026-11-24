@@ -1,30 +1,15 @@
 {
-  "generated_at": "2026-11-23T16:46:37.764721+00:00",
+  "generated_at": "2026-11-24T03:37:27.196267+00:00",
   "version": "3.0",
-  "candidates": 493,
-  "new_ai_calls": 7,
+  "candidates": 500,
+  "new_ai_calls": 12,
   "conflicting_identity_ids": [
-    "group:743",
-    "group:748",
-    "group:751"
+    "group:751",
+    "group:754",
+    "group:756",
+    "group:757"
   ],
   "decisions": {
-    "post:940": {
-      "decision": "EXCLUDE",
-      "reason": "The post is a question about vaccination checks on migrants, not a report of a concrete, contemporary migration-related event or early warning."
-    },
-    "post:941": {
-      "decision": "REVIEW",
-      "reason": "Inconsistent approval: This report describes a concrete, recent migration-related maritime casualty event involving a migrant boat capsizing off Senegal with confirmed casualties and survivors, fitting the CASUALTY event type."
-    },
-    "post:942": {
-      "decision": "REVIEW",
-      "reason": "The event is dated in the future (2026), which is beyond current knowledge cutoff; unable to verify or confirm the actual occurrence of the event."
-    },
-    "post:943": {
-      "decision": "EXCLUDE",
-      "reason": "The post contains political commentary including calls for policy actions such as sealing the border and deportation but does not report a concrete, contemporary migration-related event or actual deportation operation."
-    },
     "post:944": {
       "decision": "EXCLUDE",
       "reason": "The report discusses hardships of migrants deported previously by the Trump administration, indicating a historical or retrospective issue rather than a current or contemporary migration event; also, the location is unclear and the claim is not substantiated as a current event."
@@ -89,13 +74,21 @@
       "decision": "EXCLUDE",
       "reason": "The event date is in the future (2026-11-23), making the reported interception not contemporary or verifiable at this time."
     },
-    "signal:1494": {
-      "decision": "EXCLUDE",
-      "reason": "The content is a personal anecdote unrelated to any concrete, contemporary migration-specific early warning, policy action, or route/access signal. It contains no verifiable migration event."
-    },
-    "signal:1495": {
+    "post:960": {
       "decision": "PUBLISH",
-      "reason": "The report specifies a concrete government policy implemented to facilitate the departure of African migrants from Israel, including a $3,500 grant and flights. This constitutes a contemporary migration-specific early warning or signal related to migration management."
+      "reason": "The post reports concrete and recent border crossing events involving migration to the Canary Islands in November 2026, with detailed numbers from official sources and media, clearly related to a migration-specific event at the borders."
+    },
+    "post:961": {
+      "decision": "EXCLUDE",
+      "reason": "The post references 'Illegal Migrants Arrested At Sea-Tac Airport' but provides no concrete, specific information about an actual current detention event, lacks corroborated details, and the location is unspecified; the event appears dated to a future time beyond knowledge cutoff and is not verifiable."
+    },
+    "post:962": {
+      "decision": "EXCLUDE",
+      "reason": "The text discusses the nature of government support for refugees or immigrants in a general and hypothetical manner without reporting a concrete, contemporary migration-related event such as an actual border crossing or arrival. There is no specific event described or confirmed to be current or completed."
+    },
+    "post:963": {
+      "decision": "REVIEW",
+      "reason": "The post claims Texas will become a sanctuary state for millions of newly arrived economic migrants but lacks specific details about any concrete event or policy action and is speculative about future conditions."
     },
     "signal:1496": {
       "decision": "EXCLUDE",
@@ -105,25 +98,37 @@
       "decision": "EXCLUDE",
       "reason": "The text discusses a legal and policing issue related to migrant smuggling but does not report a specific, concrete migration-related event or an early warning about smuggling facilitation. It is a commentary rather than a direct indication of an ongoing operational or early warning event."
     },
+    "signal:1498": {
+      "decision": "REVIEW",
+      "reason": "The post refers to a judicial decision dated October 30, 2025, annulling orders from February 2025 about drone usage on the Franco-Italian border. This is a concrete migration-related event concerning border surveillance policy, but the dates referenced are in the future relative to the publication date, creating temporal inconsistency. The event t"
+    },
+    "signal:1499": {
+      "decision": "EXCLUDE",
+      "reason": "The post contains general political commentary and opinion about border control and refugees without reporting a concrete, contemporary migration-related event or specific early warning related to migration routes or access. The content does not describe a specific migration event or actionable signal."
+    },
+    "signal:1500": {
+      "decision": "REVIEW",
+      "reason": "The event describes a crew rescue and repatriation, which is related to maritime accident response rather than migration-specific routes or early warnings. The event_type 'ROUTE_EARLY_WARNING' is not supported by this content; the description does not indicate a migration-specific early warning or policy action. The event is contemporary but does n"
+    },
+    "signal:1501": {
+      "decision": "REVIEW",
+      "reason": "The record refers to multiple migration-related issues, including a recent smuggling bust and migrant caravan activity, but the details are generalized and combined with policy changes and low border encounters. It is not clear if a concrete, specific, contemporary migration event or a clear early warning is detailed sufficiently to support publica"
+    },
+    "signal:1502": {
+      "decision": "PUBLISH",
+      "reason": "The signal provides a concrete, contemporary migration-specific early warning concerning widespread modern slavery and systematic trafficking of sub-Saharan African migrants in Libya, as reported by UN in 2026. This fits the FACILITATION_EARLY_WARNING type."
+    },
+    "signal:1503": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete migration-specific policy-related financial incentive (voluntary departure grant) for African migrants to leave Israel by a specified deadline, which is a clear migration-related early warning signal."
+    },
+    "signal:1504": {
+      "decision": "PUBLISH",
+      "reason": "The post provides a concrete, migration-specific policy update about the Citizenship Amendment Act's implementation timeline and current administrative processing of certificates for qualifying non-Muslim migrants, constituting a migration-related early warning or policy signal relevant to migration operations."
+    },
     "group:693": {
       "decision": "REVIEW",
       "reason": "The post claims an event of over 4,000 undocumented migrants arriving in Spain in early November, which is migration-related and potentially a current event. However, the event type is labeled DEPORTATION, but the content states 'Not one is expected to be deported,' indicating a mismatch in event type. Also, the source is not provided, and the clai"
-    },
-    "group:743": {
-      "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
-    },
-    "group:746": {
-      "decision": "REVIEW",
-      "reason": "The post reports a sudden large migrant arrival on a small Spanish island, suggesting a border crossing event, but lacks details such as time, specific location, or source to verify the occurrence or timeframe. The event type 'BORDER_CROSSING' may be correct, but more information is needed to confirm the event's specifics and contemporaneity."
-    },
-    "group:747": {
-      "decision": "EXCLUDE",
-      "reason": "The post refers to historical use of housing for refugees and immigrants from WW2 through the 1980s, which is not a concrete, contemporary migration-related event. The event type 'BORDER_CROSSING' is not accurate for the content presented, which is historical commentary and lacks current or specific event details."
-    },
-    "group:748": {
-      "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
     },
     "group:749": {
       "decision": "EXCLUDE",
@@ -144,6 +149,22 @@
     "group:753": {
       "decision": "PUBLISH",
       "reason": "The report details a specific and concrete migration-related event involving the interception of 101 migrants in Fimela, Senegal, including two children. This fits the 'INTERCEPTION' event type and relates directly to a migration event. Although the source is not specified, the event description is precise and plausible as a migration operational e"
+    },
+    "group:754": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:755": {
+      "decision": "REVIEW",
+      "reason": "The post claims detention of illegal migrants but provides no concrete details such as location, time, or corroborating information. The location is unspecified and the source is missing, so the event's reliability cannot be assessed."
+    },
+    "group:756": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:757": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -1980,6 +2001,14 @@
     "signal:1493": {
       "decision": "EXCLUDE",
       "reason": "The event date is in the future (2026), which cannot be accepted as a contemporary migration event. Also, no specific current location is provided, making verification difficult."
+    },
+    "signal:1494": {
+      "decision": "EXCLUDE",
+      "reason": "The content is a personal anecdote unrelated to any concrete, contemporary migration-specific early warning, policy action, or route/access signal. It contains no verifiable migration event."
+    },
+    "signal:1495": {
+      "decision": "PUBLISH",
+      "reason": "The report specifies a concrete government policy implemented to facilitate the departure of African migrants from Israel, including a $3,500 grant and flights. This constitutes a contemporary migration-specific early warning or signal related to migration management."
     }
   }
 }
