@@ -1,26 +1,17 @@
 {
-  "generated_at": "2026-11-25T10:41:31.659427+00:00",
+  "generated_at": "2026-11-25T20:52:09.491945+00:00",
   "version": "3.0",
-  "candidates": 507,
-  "new_ai_calls": 7,
+  "candidates": 508,
+  "new_ai_calls": 5,
   "conflicting_identity_ids": [
-    "group:751",
     "group:754",
     "group:756",
     "group:757"
   ],
   "decisions": {
-    "post:950": {
-      "decision": "EXCLUDE",
-      "reason": "The post contains sensational and inflammatory commentary without reporting a concrete, verifiable, contemporary migration-related event. The statistical claim about sexual assaults lacks credible verification, and the content does not specifically describe a migration event but rather a controversial opinion with unsubstantiated figures. Event typ"
-    },
     "post:952": {
       "decision": "EXCLUDE",
       "reason": "The post does not report a concrete, contemporary migration-related event. It references historical use of housing for refugees and immigrants up to the 1980s, which is not current or specific."
-    },
-    "post:953": {
-      "decision": "EXCLUDE",
-      "reason": "The content discusses historical migration of the Mexica (Aztecs) during the 1200s-1400s, which is unrelated to a contemporary migration event; the event_type 'BORDER_CROSSING' does not apply to this historical narrative."
     },
     "post:954": {
       "decision": "REVIEW",
@@ -90,21 +81,13 @@
       "decision": "PUBLISH",
       "reason": "The post reports a specific, concrete migration event with a date, location, and number of asylum seekers/refugees arriving at the island of El Hierro. The event type 'BORDER_CROSSING' is appropriate and contemporary to the publication date."
     },
-    "signal:1505": {
-      "decision": "PUBLISH",
-      "reason": "The record reports a concrete and contemporary migration-related early warning—the movement of two migrant caravans totaling around 1,000 people through Mexico toward the U.S. border, which aligns with the declared event type MOVEMENT_EARLY_WARNING. This is a suitable migration-specific early warning suitable for publishing."
-    },
-    "signal:1506": {
+    "post:971": {
       "decision": "REVIEW",
-      "reason": "The record references an investigative report on 'shock glove' technology used by ICE to capture and transport migrants, which could relate to migration enforcement facilitation. However, the event date is in the future (2026), and the details provided are insufficient to confirm a concrete, contemporary migration-specific early warning or policy a"
+      "reason": "The post describes a detention of an illegal migrant who attempted to flee police on an electric scooter. However, the event's date is in the future (2026), making it uncertain if this is a contemporary event or a fictional/incorrectly dated claim. Location is not clearly specified and event details lack external verification, so more corroboration"
     },
-    "signal:1507": {
-      "decision": "EXCLUDE",
-      "reason": "The content is a vague and partisan narrative without reporting a concrete, contemporary migration-related event or credible migration-specific legal signal. It is inflammatory and lacks verifiable details about any migration policy or legal action."
-    },
-    "signal:1508": {
-      "decision": "EXCLUDE",
-      "reason": "The content is a general commentary alleging media bias and does not report a concrete, contemporary migration-specific event or early warning related to migration movements or policies."
+    "post:972": {
+      "decision": "REVIEW",
+      "reason": "Inconsistent approval: The post reports a concrete, contemporary migration-related event: a level 2 emergency declared in the Canary Islands specifically due to a mass arrival of migrants by sea, supporting the BORDER_CROSSING event type."
     },
     "signal:1509": {
       "decision": "EXCLUDE",
@@ -118,13 +101,13 @@
       "decision": "EXCLUDE",
       "reason": "Message is a subjective commentary without reporting a concrete, contemporary migration-related event or specific early warning signal; no actual migration movement or policy action is described."
     },
+    "signal:1512": {
+      "decision": "REVIEW",
+      "reason": "The post claims over 11 thousand African migrants entered the Canary Islands by small boat in the first half of November, indicating a large-scale movement. However, no independent verification or source corroboration is provided, and the post's narrative includes inflammatory language ('THIS IS AN INVASION'), reducing its reliability. The event da"
+    },
     "group:693": {
       "decision": "EXCLUDE",
-      "reason": "The event type 'DEPORTATION' is incorrect. The record describes arrival of migrants, not deportations. The event is a contemporary migration event but mislabeled event type and missing reliable source. Needs correction of event type and reliable sourcing to be publishable."
-    },
-    "group:751": {
-      "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
+      "reason": "The event type 'DEPORTATION' is incorrect; the reported event is about migrant arrivals, not deportations."
     },
     "group:754": {
       "decision": "REVIEW",
@@ -157,6 +140,10 @@
     "group:761": {
       "decision": "EXCLUDE",
       "reason": "The record is a query asking about migrant arrivals, not a report of a concrete event. No contemporary migration-specific event reported."
+    },
+    "group:762": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete, contemporary migration-related event involving the detention of an undocumented migrant working illegally as a courier, who was stopped by police after a pursuit. The event type DETENTION is appropriate and supported by the narrative."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -2037,6 +2024,22 @@
     "signal:1504": {
       "decision": "PUBLISH",
       "reason": "The post provides a concrete, migration-specific policy update about the Citizenship Amendment Act's implementation timeline and current administrative processing of certificates for qualifying non-Muslim migrants, constituting a migration-related early warning or policy signal relevant to migration operations."
+    },
+    "signal:1505": {
+      "decision": "PUBLISH",
+      "reason": "The record reports a concrete and contemporary migration-related early warning—the movement of two migrant caravans totaling around 1,000 people through Mexico toward the U.S. border, which aligns with the declared event type MOVEMENT_EARLY_WARNING. This is a suitable migration-specific early warning suitable for publishing."
+    },
+    "signal:1506": {
+      "decision": "REVIEW",
+      "reason": "The record references an investigative report on 'shock glove' technology used by ICE to capture and transport migrants, which could relate to migration enforcement facilitation. However, the event date is in the future (2026), and the details provided are insufficient to confirm a concrete, contemporary migration-specific early warning or policy a"
+    },
+    "signal:1507": {
+      "decision": "EXCLUDE",
+      "reason": "The content is a vague and partisan narrative without reporting a concrete, contemporary migration-related event or credible migration-specific legal signal. It is inflammatory and lacks verifiable details about any migration policy or legal action."
+    },
+    "signal:1508": {
+      "decision": "EXCLUDE",
+      "reason": "The content is a general commentary alleging media bias and does not report a concrete, contemporary migration-specific event or early warning related to migration movements or policies."
     }
   }
 }
