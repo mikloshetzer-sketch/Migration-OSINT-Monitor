@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-24T14:26:32.459975+00:00",
+  "generated_at": "2026-11-25T00:16:50.051674+00:00",
   "version": "3.0",
   "candidates": 504,
-  "new_ai_calls": 8,
+  "new_ai_calls": 6,
   "conflicting_identity_ids": [
     "group:751",
     "group:754",
@@ -10,21 +10,9 @@
     "group:757"
   ],
   "decisions": {
-    "post:946": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a specific, contemporary migration event involving a group of approximately 300 Central American migrants crossing into southern Chiapas, Mexico. This constitutes a concrete border crossing event aligned with the assigned event type."
-    },
     "post:947": {
       "decision": "EXCLUDE",
       "reason": "The post reflects a personal historical recollection of crossing into Denmark as a refugee 34 years ago, not a contemporary migration event. The event date is in the past relative to the post and is not a current or future migration-specific early warning or policy action."
-    },
-    "post:948": {
-      "decision": "EXCLUDE",
-      "reason": "The post is a general political commentary and opinion involving individuals accused of crimes, with no concrete or specific migration event such as a border crossing or refugee arrival detailed. The claimed 'newly arrived refugee' committing crimes is vague and unspecific, with no event details or temporal context. No migration event is actually r"
-    },
-    "post:949": {
-      "decision": "EXCLUDE",
-      "reason": "The post discusses a past event involving 11,000 African asylum seekers arriving on boats to a Canary Island, which is historical context rather than a concrete, contemporary migration-related event. No specific current event details or dates are given to confirm the operational migration event is ongoing or recent."
     },
     "post:950": {
       "decision": "EXCLUDE",
@@ -90,13 +78,17 @@
       "decision": "PUBLISH",
       "reason": "The post reports a recent and concrete migration-related event involving a deadly boat capsizing off the coast of Djibouti resulting in multiple migrant casualties, matching the event type CASUALTY as stated. This is a contemporary and specific migration incident."
     },
-    "signal:1496": {
-      "decision": "EXCLUDE",
-      "reason": "The post contains general commentary on asylum policy and illegal crossings but does not report a concrete, contemporary migration-specific event or early warning. The event type CROSSING_FACILITATION is unsupported by the content, which lacks details of an actual event or signal of facilitated crossings."
+    "post:966": {
+      "decision": "REVIEW",
+      "reason": "The post describes a deportation event involving Kilmar Abrego García with complex circumstances and references a future date (2026-11-24), which raises doubts about the accuracy and contemporaneity of the event. The story involves claims of illegal deportation, court intervention, and threats involving extraordinary rendition. There is a lack of c"
     },
-    "signal:1497": {
+    "post:967": {
       "decision": "EXCLUDE",
-      "reason": "The text discusses a legal and policing issue related to migrant smuggling but does not report a specific, concrete migration-related event or an early warning about smuggling facilitation. It is a commentary rather than a direct indication of an ongoing operational or early warning event."
+      "reason": "The post discusses sentencing related to damages on an abandoned boat used by smugglers but does not report a concrete, contemporary migration-related event such as successful smuggling, interception, or a current migration flow. It focuses on legal consequences rather than an operational smuggling event. The event type SMUGGLING_ACTIVITY is not di"
+    },
+    "post:968": {
+      "decision": "REVIEW",
+      "reason": "The post claims a migration-related event involving boats arriving with migrants, but provides no verification or external corroboration, and includes serious allegations without evidence. The event date and location are unclear."
     },
     "signal:1498": {
       "decision": "REVIEW",
@@ -144,11 +136,7 @@
     },
     "group:693": {
       "decision": "REVIEW",
-      "reason": "The report describes an actual migration event of more than 800 migrants arriving on boats, which is contemporary and migration-specific. However, the assigned event type 'DEPORTATION' is incorrect, as the event is an arrival, not a deportation. The event type needs correction before publishing."
-    },
-    "group:749": {
-      "decision": "EXCLUDE",
-      "reason": "The record discusses the legal definition of 'infiltrators' in Israeli law but does not report a concrete or contemporary migration event such as a border crossing incident or new arrival data. No specific migration event is being reported."
+      "reason": "The post reports a concrete, contemporary migration event of over 800 undocumented migrants arriving in the Canary Islands in a single day, which is migration operationally relevant. However, the assigned event_type 'DEPORTATION' is incorrect as the event describes arrivals, not deportations. The event is current and contemporaneous, but corroborat"
     },
     "group:751": {
       "decision": "REVIEW",
@@ -157,10 +145,6 @@
     "group:752": {
       "decision": "PUBLISH",
       "reason": "The text describes a concrete, contemporary migration-related event involving the arrival and rescue of migrants at the Canary Islands, which justifies publication as a rescue operation event. The event type RESCUE_OPERATION is appropriate as migrants were rescued at sea before arriving."
-    },
-    "group:753": {
-      "decision": "PUBLISH",
-      "reason": "The report details a specific and concrete migration-related event involving the interception of 101 migrants in Fimela, Senegal, including two children. This fits the 'INTERCEPTION' event type and relates directly to a migration event. Although the source is not specified, the event description is precise and plausible as a migration operational e"
     },
     "group:754": {
       "decision": "REVIEW",
@@ -181,6 +165,14 @@
     "group:758": {
       "decision": "PUBLISH",
       "reason": "The post reports a specific, contemporary migration-related event involving a boat capsizing off Djibouti, resulting in mass casualties among migrants. The event type 'CASUALTY' is appropriate and supported by the content. Despite the lack of source details, the severity and specificity of the claim warrant publication."
+    },
+    "group:759": {
+      "decision": "REVIEW",
+      "reason": "The post claims a deportation event involving Kilmar Abrego García, but the event date is in the future (2026-11-24) and the article cannot be independently verified or trusted as authentic. The story includes complex elements (forced return, threat of deportation to Africa) needing corroboration. No reliable source or current confirmation present."
+    },
+    "group:760": {
+      "decision": "EXCLUDE",
+      "reason": "The post refers to a past event about a man damaging an abandoned boat used by smugglers, but it does not report a specific, concrete migration-related operational event. There is no clear current or completed migration event described, and the information is anecdotal with no direct migration event details."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -2025,6 +2017,14 @@
     "signal:1495": {
       "decision": "PUBLISH",
       "reason": "The report specifies a concrete government policy implemented to facilitate the departure of African migrants from Israel, including a $3,500 grant and flights. This constitutes a contemporary migration-specific early warning or signal related to migration management."
+    },
+    "signal:1496": {
+      "decision": "EXCLUDE",
+      "reason": "The post contains general commentary on asylum policy and illegal crossings but does not report a concrete, contemporary migration-specific event or early warning. The event type CROSSING_FACILITATION is unsupported by the content, which lacks details of an actual event or signal of facilitated crossings."
+    },
+    "signal:1497": {
+      "decision": "EXCLUDE",
+      "reason": "The text discusses a legal and policing issue related to migrant smuggling but does not report a specific, concrete migration-related event or an early warning about smuggling facilitation. It is a commentary rather than a direct indication of an ongoing operational or early warning event."
     }
   }
 }
