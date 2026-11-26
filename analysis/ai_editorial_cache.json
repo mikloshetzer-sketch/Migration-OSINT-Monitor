@@ -9822,5 +9822,53 @@
     "current_event": false,
     "completed_event": false,
     "corroboration": "UNVERIFIED"
+  },
+  "f8e9020708f6ba428f2123a1809b863294872fd10b876a4d9ce6a5938c735321": {
+    "decision": "REVIEW",
+    "reason": "Inconsistent approval: The post reports a concrete, contemporary migration-related event with specifics on illegal migrant arrivals in Crete and cumulative data for Greece in 2026, consistent with the event type 'BORDER_CROSSING'. This is a suitable migration operational event for publication.",
+    "event_type_correct": true,
+    "current_event": true,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
+  },
+  "f86e57547bbfec9489466b721e0ad831b2422030eb2a7414e91afb360d269b19": {
+    "decision": "EXCLUDE",
+    "reason": "The post expresses an opinion on migration policy but does not report a concrete migration-related event such as an actual deportation or policy action.",
+    "event_type_correct": false,
+    "current_event": false,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
+  },
+  "070a7c4668eed43d1085ecdf65799fdd941fbb1d2703a5901e5e6b13979673b3": {
+    "decision": "REVIEW",
+    "reason": "The post discusses Myanmar's refusal to comply with an international court ruling regarding genocide against the Rohingya, which relates to legal and political aspects of migration but is a general political declaration rather than a specific migration event or early warning. Therefore, it does not fully meet criteria for the LEGAL_MIGRATION_SIGNAL event type without clearer linkage to specific migration-related actions or warnings.",
+    "event_type_correct": false,
+    "current_event": true,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
+  },
+  "83343d0efe6f4d262a07500b42d709641c6fbafe30b2f396879f51f62e1c0634": {
+    "decision": "PUBLISH",
+    "reason": "The record reports concrete, recent migration-related data on family entry-clearance visa grants and changes in refugee family reunion grants, which directly pertain to migration pressures and early warning signals regarding policy and access changes. The event is correctly typified as a PRESSURE_EARLY_WARNING reflecting evolving entry-clearance trends and restrictions. The data is from the recent period ending September 2026, making it current and relevant.",
+    "event_type_correct": true,
+    "current_event": true,
+    "completed_event": true,
+    "corroboration": "UNVERIFIED"
+  },
+  "973711596a3dac644199cbd7190050450128e0656b67a6afd77b298eb4916818": {
+    "decision": "PUBLISH",
+    "reason": "The post reports a specific and contemporary migration event with concrete details: 92 illegal migrants landed on Crete on the current date. It includes migration-related metrics and ongoing trafficking flows from Libya, which supports the BORDER_CROSSING event type. Despite no source provided, these details pertain directly to a migration event and are timely.",
+    "event_type_correct": true,
+    "current_event": true,
+    "completed_event": true,
+    "corroboration": "UNVERIFIED"
+  },
+  "7f75e6f04eb7fefeba8cef772672c0c5e7aeeb86d72643c81e6080aede30f2dd": {
+    "decision": "EXCLUDE",
+    "reason": "The post expresses an opinion on immigration enforcement but does not report a concrete, contemporary migration-related event such as an actual deportation activity.",
+    "event_type_correct": false,
+    "current_event": false,
+    "completed_event": false,
+    "corroboration": "UNVERIFIED"
   }
 }

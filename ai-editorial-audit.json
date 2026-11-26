@@ -1,21 +1,12 @@
 {
-  "generated_at": "2026-11-26T03:53:26.809562+00:00",
+  "generated_at": "2026-11-26T13:22:18.387948+00:00",
   "version": "3.0",
-  "candidates": 508,
-  "new_ai_calls": 4,
+  "candidates": 510,
+  "new_ai_calls": 6,
   "conflicting_identity_ids": [
-    "group:756",
-    "group:757"
+    "group:756"
   ],
   "decisions": {
-    "post:955": {
-      "decision": "EXCLUDE",
-      "reason": "The post explains the legal term used in Israeli law for a category of people entering outside official points but does not report a specific, current migration-related event or border crossing."
-    },
-    "post:956": {
-      "decision": "REVIEW",
-      "reason": "The post discusses Israeli terminology and a figure (~17,000) related to people entering Israel illegally before the fence via Egypt. However, it lacks a clear report of a contemporary, concrete migration event or a new development; it seems to be descriptive or historical information. The date and context do not confirm an ongoing or specific oper"
-    },
     "post:957": {
       "decision": "EXCLUDE",
       "reason": "The content is a general opinion on deportation policy, not a report of a specific, concrete migration-related event. There is no actual event of deportation described or reported."
@@ -88,35 +79,31 @@
       "decision": "REVIEW",
       "reason": "The record claims over 2100 migrants arriving in 24 hours could be an operational migration event, but the event date is not explicitly stated and the source is a social media post without external verification. Further corroboration from verified external sources is needed to confirm the exact timing and scale of the arrival."
     },
-    "signal:1509": {
-      "decision": "EXCLUDE",
-      "reason": "The record discusses the legal classification of unarmed civilians seeking asylum and denies that an invasion is taking place. It does not report a concrete, contemporary migration-specific event, early warning, or policy action. The event_type MOBILIZATION_COORDINATION is not supported by the content, which is a commentary on definitions and legal"
+    "post:975": {
+      "decision": "REVIEW",
+      "reason": "Inconsistent approval: The post reports a concrete, contemporary migration-related event with specifics on illegal migrant arrivals in Crete and cumulative data for Greece in 2026, consistent with the event type 'BORDER_CROSSING'. This is a suitable migration operational event for publication."
     },
-    "signal:1510": {
-      "decision": "PUBLISH",
-      "reason": "The message provides a clear, contemporary migration-specific early warning about Cuban migrants missing at sea after departing Pinar del Río bound for Cancún, Mexico, citing credible early warning information such as mechanical failures and number of missing migrants. This fits the 'MOVEMENT_EARLY_WARNING' event type and is relevant to migration."
-    },
-    "signal:1511": {
+    "post:976": {
       "decision": "EXCLUDE",
-      "reason": "Message is a subjective commentary without reporting a concrete, contemporary migration-related event or specific early warning signal; no actual migration movement or policy action is described."
+      "reason": "The post expresses an opinion on migration policy but does not report a concrete migration-related event such as an actual deportation or policy action."
     },
     "signal:1512": {
       "decision": "REVIEW",
       "reason": "The post claims over 11 thousand African migrants entered the Canary Islands by small boat in the first half of November, indicating a large-scale movement. However, no independent verification or source corroboration is provided, and the post's narrative includes inflammatory language ('THIS IS AN INVASION'), reducing its reliability. The event da"
     },
+    "signal:1513": {
+      "decision": "REVIEW",
+      "reason": "The post discusses Myanmar's refusal to comply with an international court ruling regarding genocide against the Rohingya, which relates to legal and political aspects of migration but is a general political declaration rather than a specific migration event or early warning. Therefore, it does not fully meet criteria for the LEGAL_MIGRATION_SIGNAL"
+    },
+    "signal:1514": {
+      "decision": "PUBLISH",
+      "reason": "The record reports concrete, recent migration-related data on family entry-clearance visa grants and changes in refugee family reunion grants, which directly pertain to migration pressures and early warning signals regarding policy and access changes. The event is correctly typified as a PRESSURE_EARLY_WARNING reflecting evolving entry-clearance tr"
+    },
     "group:693": {
       "decision": "EXCLUDE",
       "reason": "The event_type 'DEPORTATION' does not match the described event, which reports arrivals of migrants, not deportations. The event is migration-related and contemporary, but the event_type assigned is incorrect, so cannot publish under the incorrect type."
     },
-    "group:755": {
-      "decision": "REVIEW",
-      "reason": "The post claims detention of illegal migrants but provides no concrete details such as location, time, or corroborating information. The location is unspecified and the source is missing, so the event's reliability cannot be assessed."
-    },
     "group:756": {
-      "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
-    },
-    "group:757": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
     },
@@ -143,6 +130,14 @@
     "group:763": {
       "decision": "EXCLUDE",
       "reason": "The post discusses a speculative social commentary about refugee youth aggression and violence in Australia, but it does not report a concrete, contemporary migration-related event such as a specific border crossing, arrival, or migration operation. The event type 'BORDER_CROSSING' is not supported by the content. No verified migration event is det"
+    },
+    "group:764": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a specific and contemporary migration event with concrete details: 92 illegal migrants landed on Crete on the current date. It includes migration-related metrics and ongoing trafficking flows from Libya, which supports the BORDER_CROSSING event type. Despite no source provided, these details pertain directly to a migration event an"
+    },
+    "group:765": {
+      "decision": "EXCLUDE",
+      "reason": "The post expresses an opinion on immigration enforcement but does not report a concrete, contemporary migration-related event such as an actual deportation activity."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -2039,6 +2034,18 @@
     "signal:1508": {
       "decision": "EXCLUDE",
       "reason": "The content is a general commentary alleging media bias and does not report a concrete, contemporary migration-specific event or early warning related to migration movements or policies."
+    },
+    "signal:1509": {
+      "decision": "EXCLUDE",
+      "reason": "The record discusses the legal classification of unarmed civilians seeking asylum and denies that an invasion is taking place. It does not report a concrete, contemporary migration-specific event, early warning, or policy action. The event_type MOBILIZATION_COORDINATION is not supported by the content, which is a commentary on definitions and legal"
+    },
+    "signal:1510": {
+      "decision": "PUBLISH",
+      "reason": "The message provides a clear, contemporary migration-specific early warning about Cuban migrants missing at sea after departing Pinar del Río bound for Cancún, Mexico, citing credible early warning information such as mechanical failures and number of missing migrants. This fits the 'MOVEMENT_EARLY_WARNING' event type and is relevant to migration."
+    },
+    "signal:1511": {
+      "decision": "EXCLUDE",
+      "reason": "Message is a subjective commentary without reporting a concrete, contemporary migration-related event or specific early warning signal; no actual migration movement or policy action is described."
     }
   }
 }
