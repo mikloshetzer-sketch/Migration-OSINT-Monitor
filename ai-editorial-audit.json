@@ -1,22 +1,13 @@
 {
-  "generated_at": "2026-11-25T20:52:09.491945+00:00",
+  "generated_at": "2026-11-26T03:53:26.809562+00:00",
   "version": "3.0",
   "candidates": 508,
-  "new_ai_calls": 5,
+  "new_ai_calls": 4,
   "conflicting_identity_ids": [
-    "group:754",
     "group:756",
     "group:757"
   ],
   "decisions": {
-    "post:952": {
-      "decision": "EXCLUDE",
-      "reason": "The post does not report a concrete, contemporary migration-related event. It references historical use of housing for refugees and immigrants up to the 1980s, which is not current or specific."
-    },
-    "post:954": {
-      "decision": "REVIEW",
-      "reason": "The event mentions a migration emergency in the Canary Islands with hundreds of migrants arriving on El Hierro from West Africa, but lacks sufficient specific details such as date, official confirmation, or corroborating sources. The event type 'BORDER_CROSSING' is plausible but unconfirmed. The given publication date is in the future, which raises"
-    },
     "post:955": {
       "decision": "EXCLUDE",
       "reason": "The post explains the legal term used in Israeli law for a category of people entering outside official points but does not report a specific, current migration-related event or border crossing."
@@ -89,6 +80,14 @@
       "decision": "REVIEW",
       "reason": "Inconsistent approval: The post reports a concrete, contemporary migration-related event: a level 2 emergency declared in the Canary Islands specifically due to a mass arrival of migrants by sea, supporting the BORDER_CROSSING event type."
     },
+    "post:973": {
+      "decision": "EXCLUDE",
+      "reason": "The post does not report a concrete, contemporary migration-related event. It presents a speculative narrative about refugee children reaching adulthood and links this to violence without evidence of a specific migration event or recent border crossing."
+    },
+    "post:974": {
+      "decision": "REVIEW",
+      "reason": "The record claims over 2100 migrants arriving in 24 hours could be an operational migration event, but the event date is not explicitly stated and the source is a social media post without external verification. Further corroboration from verified external sources is needed to confirm the exact timing and scale of the arrival."
+    },
     "signal:1509": {
       "decision": "EXCLUDE",
       "reason": "The record discusses the legal classification of unarmed civilians seeking asylum and denies that an invasion is taking place. It does not report a concrete, contemporary migration-specific event, early warning, or policy action. The event_type MOBILIZATION_COORDINATION is not supported by the content, which is a commentary on definitions and legal"
@@ -107,11 +106,7 @@
     },
     "group:693": {
       "decision": "EXCLUDE",
-      "reason": "The event type 'DEPORTATION' is incorrect; the reported event is about migrant arrivals, not deportations."
-    },
-    "group:754": {
-      "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
+      "reason": "The event_type 'DEPORTATION' does not match the described event, which reports arrivals of migrants, not deportations. The event is migration-related and contemporary, but the event_type assigned is incorrect, so cannot publish under the incorrect type."
     },
     "group:755": {
       "decision": "REVIEW",
@@ -144,6 +139,10 @@
     "group:762": {
       "decision": "PUBLISH",
       "reason": "The post reports a concrete, contemporary migration-related event involving the detention of an undocumented migrant working illegally as a courier, who was stopped by police after a pursuit. The event type DETENTION is appropriate and supported by the narrative."
+    },
+    "group:763": {
+      "decision": "EXCLUDE",
+      "reason": "The post discusses a speculative social commentary about refugee youth aggression and violence in Australia, but it does not report a concrete, contemporary migration-related event such as a specific border crossing, arrival, or migration operation. The event type 'BORDER_CROSSING' is not supported by the content. No verified migration event is det"
     },
     "signal:1034": {
       "decision": "REVIEW",

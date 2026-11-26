@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-11-25T20:52:09.752287+00:00",
+  "generated_at": "2026-11-26T03:53:27.151098+00:00",
   "source": "dashboard-data.json / signal_timeline.items",
   "date_basis": "UTC source publication date; dashboard uses browser local dates",
   "selection": "daily dominant hotspot, matching matrixResolvedHotspot",
@@ -10,10 +10,10 @@
       "date": "2026-08-28",
       "region": "WESTERN_MEDITERRANEAN",
       "location": "Ceuta",
-      "records": 8,
+      "records": 7,
       "sources": {
         "REDDIT": 2,
-        "X": 5,
+        "X": 4,
         "MASTODON": 1
       },
       "marker": {
@@ -21,7 +21,7 @@
         "longitude": -5.3213,
         "precision": "configured_location"
       },
-      "total_timeline_items": 35
+      "total_timeline_items": 34
     },
     {
       "date": "2026-08-29",
@@ -834,7 +834,7 @@
         "REDDIT": 1
       },
       "marker": null,
-      "total_timeline_items": 14
+      "total_timeline_items": 15
     },
     {
       "date": "2026-10-29",
@@ -1031,7 +1031,7 @@
         "longitude": -5.3213,
         "precision": "configured_location"
       },
-      "total_timeline_items": 10
+      "total_timeline_items": 9
     },
     {
       "date": "2026-11-12",
@@ -1046,7 +1046,7 @@
         "longitude": -5.3213,
         "precision": "configured_location"
       },
-      "total_timeline_items": 35
+      "total_timeline_items": 33
     },
     {
       "date": "2026-11-13",
@@ -1182,7 +1182,7 @@
         "X": 1
       },
       "marker": null,
-      "total_timeline_items": 22
+      "total_timeline_items": 24
     },
     {
       "date": "2026-11-23",
@@ -1226,6 +1226,21 @@
         "precision": "illustrative_region"
       },
       "total_timeline_items": 20
+    },
+    {
+      "date": "2026-11-26",
+      "region": "WESTERN_MEDITERRANEAN",
+      "location": null,
+      "records": 1,
+      "sources": {
+        "X": 1
+      },
+      "marker": {
+        "latitude": 36.0,
+        "longitude": -4.0,
+        "precision": "illustrative_region"
+      },
+      "total_timeline_items": 6
     }
   ],
   "seven_day_windows": [
@@ -1236,7 +1251,7 @@
         {
           "region": "WESTERN_MEDITERRANEAN",
           "location": "Ceuta",
-          "records": 8,
+          "records": 7,
           "active_days": 1,
           "dates": [
             "2026-08-28"
@@ -1257,7 +1272,7 @@
         {
           "region": "WESTERN_MEDITERRANEAN",
           "location": "Ceuta",
-          "records": 12,
+          "records": 11,
           "active_days": 2,
           "dates": [
             "2026-08-28",
@@ -1279,7 +1294,7 @@
         {
           "region": "WESTERN_MEDITERRANEAN",
           "location": "Ceuta",
-          "records": 15,
+          "records": 14,
           "active_days": 3,
           "dates": [
             "2026-08-28",
@@ -1302,7 +1317,7 @@
         {
           "region": "WESTERN_MEDITERRANEAN",
           "location": "Ceuta",
-          "records": 15,
+          "records": 14,
           "active_days": 3,
           "dates": [
             "2026-08-28",
@@ -1339,7 +1354,7 @@
         {
           "region": "WESTERN_MEDITERRANEAN",
           "location": "Ceuta",
-          "records": 15,
+          "records": 14,
           "active_days": 3,
           "dates": [
             "2026-08-28",
@@ -1390,7 +1405,7 @@
         {
           "region": "WESTERN_MEDITERRANEAN",
           "location": "Ceuta",
-          "records": 19,
+          "records": 18,
           "active_days": 4,
           "dates": [
             "2026-08-28",
@@ -1442,7 +1457,7 @@
         {
           "region": "WESTERN_MEDITERRANEAN",
           "location": "Ceuta",
-          "records": 34,
+          "records": 33,
           "active_days": 5,
           "dates": [
             "2026-08-28",
@@ -5863,20 +5878,82 @@
         }
       ],
       "unresolved_records": 7
+    },
+    {
+      "start_date": "2026-11-20",
+      "end_date": "2026-11-26",
+      "hotspots": [
+        {
+          "region": "WESTERN_MEDITERRANEAN",
+          "location": null,
+          "records": 5,
+          "active_days": 3,
+          "dates": [
+            "2026-11-24",
+            "2026-11-25",
+            "2026-11-26"
+          ],
+          "marker": {
+            "latitude": 36.0,
+            "longitude": -4.0,
+            "precision": "illustrative_region"
+          }
+        },
+        {
+          "region": "WESTERN_MEDITERRANEAN",
+          "location": "Ceuta",
+          "records": 3,
+          "active_days": 1,
+          "dates": [
+            "2026-11-21"
+          ],
+          "marker": {
+            "latitude": 35.8894,
+            "longitude": -5.3213,
+            "precision": "configured_location"
+          }
+        },
+        {
+          "region": "CENTRAL_MEDITERRANEAN",
+          "location": null,
+          "records": 1,
+          "active_days": 1,
+          "dates": [
+            "2026-11-20"
+          ],
+          "marker": {
+            "latitude": 35.7,
+            "longitude": 13.0,
+            "precision": "illustrative_region"
+          }
+        },
+        {
+          "region": "MIDDLE_EAST",
+          "location": null,
+          "records": 1,
+          "active_days": 1,
+          "dates": [
+            "2026-11-22"
+          ],
+          "marker": null
+        }
+      ],
+      "unresolved_records": 2
     }
   ],
   "latest_window": {
-    "start_date": "2026-11-19",
-    "end_date": "2026-11-25",
+    "start_date": "2026-11-20",
+    "end_date": "2026-11-26",
     "hotspots": [
       {
         "region": "WESTERN_MEDITERRANEAN",
         "location": null,
-        "records": 4,
-        "active_days": 2,
+        "records": 5,
+        "active_days": 3,
         "dates": [
           "2026-11-24",
-          "2026-11-25"
+          "2026-11-25",
+          "2026-11-26"
         ],
         "marker": {
           "latitude": 36.0,
@@ -5923,10 +6000,10 @@
         "marker": null
       }
     ],
-    "unresolved_records": 7
+    "unresolved_records": 2
   },
   "summary": {
-    "days_with_data": 89,
-    "available_windows": 89
+    "days_with_data": 90,
+    "available_windows": 90
   }
 }

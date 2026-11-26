@@ -1,25 +1,25 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-11-25T20:51:10Z",
-  "generated_at": "2026-11-25T20:51:10Z",
+  "updated_at": "2026-11-26T03:52:28Z",
+  "generated_at": "2026-11-26T03:52:28Z",
   "current_run": {
     "available": true,
-    "id": 460,
-    "run_uuid": "0ae61f75-5fec-44f2-8d59-7b9edc542c30",
-    "started_at": "2026-11-25T20:46:16Z",
-    "completed_at": "2026-11-25T20:51:09Z",
+    "id": 461,
+    "run_uuid": "db0422a8-5abf-4086-8c2c-c2525ae0e7e6",
+    "started_at": "2026-11-26T03:49:59Z",
+    "completed_at": "2026-11-26T03:52:27Z",
     "status": "SUCCESS",
     "posts_returned": 129,
-    "unique_posts_collected": 85,
+    "unique_posts_collected": 86,
     "x_posts_returned": 50,
     "reddit_posts_returned": 0,
     "mastodon_posts_returned": 50,
-    "unique_x_posts": 45,
+    "unique_x_posts": 47,
     "unique_reddit_posts": 0,
     "unique_mastodon_posts": 18,
-    "noise_filtered": 0,
-    "non_operational_filtered": 81,
-    "historical_references_filtered": 0,
+    "noise_filtered": 1,
+    "non_operational_filtered": 80,
+    "historical_references_filtered": 1,
     "influence_signals": 0,
     "influence_signals_detected": 0,
     "crossing_facilitation_signals": 0,
@@ -52,18 +52,18 @@
     "error_message": null
   },
   "kpis": {
-    "operational_events": 7,
+    "operational_events": 6,
     "new_events": 2,
     "correlated_events": 3,
-    "active_event_groups": 743,
+    "active_event_groups": 744,
     "sources": 3,
-    "regions": 3,
-    "collected_posts_24h": 177,
+    "regions": 4,
+    "collected_posts_24h": 179,
     "influence_signals": 4,
     "access_signals": 1,
     "high_priority": 1,
     "current_run_operational_events": 4,
-    "current_run_unique_posts": 85,
+    "current_run_unique_posts": 86,
     "access_signals_raw": 1,
     "influence_signals_raw": 4,
     "influence_narratives": 3
@@ -256,105 +256,119 @@
   ],
   "regions": [
     {
-      "name": "GLOBAL",
-      "region": "GLOBAL",
-      "count": 3,
-      "events": 3,
-      "percentage": 60.0
-    },
-    {
       "name": "WESTERN_MEDITERRANEAN",
       "region": "WESTERN_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 20.0
+      "percentage": 25.0
+    },
+    {
+      "name": "GLOBAL",
+      "region": "GLOBAL",
+      "count": 1,
+      "events": 1,
+      "percentage": 25.0
     },
     {
       "name": "EASTERN_EU_BORDER",
       "region": "EASTERN_EU_BORDER",
       "count": 1,
       "events": 1,
-      "percentage": 20.0
+      "percentage": 25.0
+    },
+    {
+      "name": "ASIA_PACIFIC",
+      "region": "ASIA_PACIFIC",
+      "count": 1,
+      "events": 1,
+      "percentage": 25.0
     }
   ],
   "sources": [
     {
       "source": "X",
       "name": "X",
-      "count": 133,
-      "posts": 133,
-      "percentage": 75.14
+      "count": 136,
+      "posts": 136,
+      "percentage": 75.98
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 32,
-      "posts": 32,
-      "percentage": 18.08
+      "count": 30,
+      "posts": 30,
+      "percentage": 16.76
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 12,
-      "posts": 12,
-      "percentage": 6.78
+      "count": 13,
+      "posts": 13,
+      "percentage": 7.26
     }
   ],
   "region_activity": [
-    {
-      "name": "GLOBAL",
-      "region": "GLOBAL",
-      "count": 3,
-      "events": 3,
-      "percentage": 60.0
-    },
     {
       "name": "WESTERN_MEDITERRANEAN",
       "region": "WESTERN_MEDITERRANEAN",
       "count": 1,
       "events": 1,
-      "percentage": 20.0
+      "percentage": 25.0
+    },
+    {
+      "name": "GLOBAL",
+      "region": "GLOBAL",
+      "count": 1,
+      "events": 1,
+      "percentage": 25.0
     },
     {
       "name": "EASTERN_EU_BORDER",
       "region": "EASTERN_EU_BORDER",
       "count": 1,
       "events": 1,
-      "percentage": 20.0
+      "percentage": 25.0
+    },
+    {
+      "name": "ASIA_PACIFIC",
+      "region": "ASIA_PACIFIC",
+      "count": 1,
+      "events": 1,
+      "percentage": 25.0
     }
   ],
   "source_activity": [
     {
       "source": "X",
       "name": "X",
-      "count": 133,
-      "posts": 133,
-      "percentage": 75.14
+      "count": 136,
+      "posts": 136,
+      "percentage": 75.98
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 32,
-      "posts": 32,
-      "percentage": 18.08
+      "count": 30,
+      "posts": 30,
+      "percentage": 16.76
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 12,
-      "posts": 12,
-      "percentage": 6.78
+      "count": 13,
+      "posts": 13,
+      "percentage": 7.26
     }
   ],
   "correlation": {
     "correlated_events": 3,
     "correlated_sources": 3,
-    "grouped_sources": 7,
-    "event_groups": 743,
-    "active_groups": 743,
+    "grouped_sources": 6,
+    "event_groups": 744,
+    "active_groups": 744,
     "multi_source_groups": 69,
     "strongest_match": 1.0,
-    "correlation_rate": 42.86
+    "correlation_rate": 50.0
   },
   "technical_health": "HEALTHY",
   "collector_health": "HEALTHY",
@@ -367,44 +381,44 @@
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "database": "AVAILABLE",
-    "last_run_id": 460,
-    "last_completed_at": "2026-11-25T20:51:09Z"
+    "last_run_id": 461,
+    "last_completed_at": "2026-11-26T03:52:27Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 7,
+    "operational_events_24h": 6,
     "influence_signals_24h": 4,
     "access_signals_24h": 1,
     "correlated_events_24h": 3,
-    "active_event_groups": 743,
+    "active_event_groups": 744,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "hotspot": "WESTERN_MEDITERRANEAN",
     "dominant_event_type": "BORDER_CROSSING",
     "dominant_source": "X",
     "average_confidence": 0.43,
     "confidence_level": "LOW",
-    "correlation_rate": 42.86,
+    "correlation_rate": 50.0,
     "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 7 operatív migrációs eseményt, 4 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 3 friss eseményforrás korrelált más forrással. Jelenleg 743 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.43. A jelenlegi aktivitási szint: MODERATE.",
+    "summary": "Az elmúlt 24 órában a rendszer 6 operatív migrációs eseményt, 4 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 3 friss eseményforrás korrelált más forrással. Jelenleg 744 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.43. A jelenlegi aktivitási szint: MODERATE.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
   "analytical_assessment": {
-    "operational_events_24h": 7,
+    "operational_events_24h": 6,
     "influence_signals_24h": 4,
     "access_signals_24h": 1,
     "correlated_events_24h": 3,
-    "active_event_groups": 743,
+    "active_event_groups": 744,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "hotspot": "WESTERN_MEDITERRANEAN",
     "dominant_event_type": "BORDER_CROSSING",
     "dominant_source": "X",
     "average_confidence": 0.43,
     "confidence_level": "LOW",
-    "correlation_rate": 42.86,
+    "correlation_rate": 50.0,
     "activity_level": "MODERATE",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 7 operatív migrációs eseményt, 4 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 3 friss eseményforrás korrelált más forrással. Jelenleg 743 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.43. A jelenlegi aktivitási szint: MODERATE.",
+    "summary": "Az elmúlt 24 órában a rendszer 6 operatív migrációs eseményt, 4 influence/early-warning jelzést és 1 átkelési vagy bejutási jelzést tart nyilván. 3 friss eseményforrás korrelált más forrással. Jelenleg 744 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.43. A jelenlegi aktivitási szint: MODERATE.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
@@ -689,8 +703,8 @@
       "primary_region": "WESTERN_MEDITERRANEAN",
       "confidence": 0.95,
       "average_confidence": 0.95,
-      "source_count": 24,
-      "last_seen": "2026-11-25T20:16:03Z",
+      "source_count": 25,
+      "last_seen": "2026-11-26T03:31:42Z",
       "representative_text": "🇪🇸 More than 800 #migrants reach #ElHierro and #Tenerife in single day as #Spain 's election debate intensifies https://www.surinenglish.com/spain/more-than-800-migrants-reach-hierro-and-20261124103556-nt.html A total of 815 undocumented migrants arrived on eight boats in El Hierro and Tenerife yesterday, pushing November #CanaryIslands arrivals to nearly 13,000 ahead of Sunday",
       "text": "🇪🇸 More than 800 #migrants reach #ElHierro and #Tenerife in single day as #Spain 's election debate intensifies https://www.surinenglish.com/spain/more-than-800-migrants-reach-hierro-and-20261124103556-nt.html A total of 815 undocumented migrants arrived on eight boats in El Hierro and Tenerife yesterday, pushing November #CanaryIslands arrivals to nearly 13,000 ahead of Sunday",
       "priority_score": 37.25,
@@ -1303,14 +1317,14 @@
       "label": "W48",
       "week_label": "W48",
       "week_start": "2026-11-23T00:00:00Z",
-      "posts": 448,
-      "post_count": 448,
-      "operational_posts": 19,
+      "posts": 502,
+      "post_count": 502,
+      "operational_posts": 22,
       "influence_signals": 17,
       "source_counts": {
-        "X": 321,
-        "MASTODON": 86,
-        "TELEGRAM": 41
+        "X": 368,
+        "MASTODON": 92,
+        "TELEGRAM": 42
       }
     }
   ],
@@ -1439,32 +1453,32 @@
       "label": "W48",
       "week_label": "W48",
       "week_start": "2026-11-23T00:00:00Z",
-      "posts": 448,
-      "post_count": 448,
-      "operational_posts": 19,
+      "posts": 502,
+      "post_count": 502,
+      "operational_posts": 22,
       "influence_signals": 17,
       "source_counts": {
-        "X": 321,
-        "MASTODON": 86,
-        "TELEGRAM": 41
+        "X": 368,
+        "MASTODON": 92,
+        "TELEGRAM": 42
       }
     }
   ],
   "information_activity_summary": {
-    "current_week": 448,
-    "previous_week": 503,
-    "current_week_to_date": 448,
-    "previous_week_same_period": 503,
+    "current_week": 502,
+    "previous_week": 566,
+    "current_week_to_date": 502,
+    "previous_week_same_period": 566,
     "previous_week_full": 1391,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": -10.93,
-    "change_label": "-10.9%",
+    "change_percent": -11.31,
+    "change_label": "-11.3%",
     "direction": "DOWN",
     "comparable": true,
-    "elapsed_hours": 68.9,
+    "elapsed_hours": 75.9,
     "current_period_start": "2026-11-23T00:00:00Z",
     "previous_period_start": "2026-11-16T00:00:00Z",
-    "previous_period_end": "2026-11-18T20:51:10Z"
+    "previous_period_end": "2026-11-19T03:52:27Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -1476,34 +1490,34 @@
       72,
       168
     ],
-    "generated_at": "2026-11-25T20:51:10Z",
-    "total_items": 1920,
-    "information_count": 236,
-    "early_warning_count": 838,
-    "operational_count": 693,
-    "correlated_count": 153,
+    "generated_at": "2026-11-26T03:52:28Z",
+    "total_items": 1925,
+    "information_count": 238,
+    "early_warning_count": 837,
+    "operational_count": 695,
+    "correlated_count": 155,
     "layer_counts": {
-      "INFORMATION": 236,
-      "CORRELATED": 153,
-      "EARLY_WARNING": 838,
-      "OPERATIONAL": 693
+      "INFORMATION": 238,
+      "CORRELATED": 155,
+      "EARLY_WARNING": 837,
+      "OPERATIONAL": 695
     },
     "source_counts": {
+      "X": 1451,
       "MASTODON": 100,
-      "X": 1446,
       "TELEGRAM": 49,
       "REDDIT": 325
     },
     "type_counts": {
-      "INFORMATION_SIGNAL": 236,
-      "DEPORTATION": 156,
+      "INFORMATION_SIGNAL": 238,
+      "DEPORTATION": 157,
       "MOVEMENT_EARLY_WARNING": 304,
-      "BORDER_CROSSING": 372,
+      "BORDER_CROSSING": 375,
       "CASUALTY": 26,
       "FACILITATION_EARLY_WARNING": 160,
       "RESCUE_OPERATION": 40,
       "PRESSURE_EARLY_WARNING": 37,
-      "ROUTE_EARLY_WARNING": 133,
+      "ROUTE_EARLY_WARNING": 132,
       "SMUGGLING_ACTIVITY": 32,
       "MOBILIZATION_COORDINATION": 22,
       "DETENTION": 87,
@@ -1521,6 +1535,232 @@
       "ONLINE_INFLUENCE_REPORT": 1
     },
     "items": [
+      {
+        "timeline_id": "information:29048",
+        "timestamp": "2026-11-26T03:33:28Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2125795044259205560",
+        "author": "austin_ros",
+        "url": "https://x.com/austin_ros/status/2125795044259205560",
+        "source_url": "https://x.com/austin_ros/status/2125795044259205560",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "border",
+          "boat",
+          "smuggling"
+        ],
+        "freshness_cues": [],
+        "text": "@Tim9the9Plumber @PaulRChase @unwizeneds Recovered migrant boats are routinely handed over to Border Force &amp; police as CRIMINAL EVIDENCE for smuggling investigations before being disposed of.\nBecause the dingy is being actively managed he cant  claim he believed they consented to a member of the public damaging it !",
+        "text_excerpt": "@Tim9the9Plumber @PaulRChase @unwizeneds Recovered migrant boats are routinely handed over to Border Force &amp; police as CRIMINAL EVIDENCE for smuggling investigations before being disposed of.\nBecause the dingy is being actively managed he cant  claim he believed they consented to a member of the public damaging it !",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-26T03:51:59Z",
+        "last_collected_at": "2026-11-26T03:51:59Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "correlated:972",
+        "timestamp": "2026-11-26T03:31:42Z",
+        "layer": "CORRELATED",
+        "type": "DEPORTATION",
+        "signal_type": "DEPORTATION",
+        "event_type": "DEPORTATION",
+        "source": "X",
+        "source_post_id": "2125794598064624007",
+        "author": "absafricatv",
+        "url": "https://x.com/absafricatv/status/2125794598064624007",
+        "source_url": "https://x.com/absafricatv/status/2125794598064624007",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.95,
+        "priority": "HIGH",
+        "priority_score": 95.0,
+        "text": "Canary Islands Receive Recording-Breaking Number of Migrants In Single Day\n\nRecord 2,100+ migrants arrived in the Canary Islands in 24 hours, escalating the crisis.\n\nRead More: https://t.co/G1F8CTuw70 https://t.co/pUqBgN4fq6",
+        "text_excerpt": "Canary Islands Receive Recording-Breaking Number of Migrants In Single Day\n\nRecord 2,100+ migrants arrived in the Canary Islands in 24 hours, escalating the crisis.\n\nRead More: https://t.co/G1F8CTuw70 https://t.co/pUqBgN4fq6",
+        "event_group_id": 693,
+        "correlation_score": 0.63,
+        "related_source_count": 25,
+        "source_types": [
+          "MASTODON",
+          "X"
+        ],
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:29050",
+        "timestamp": "2026-11-26T03:26:59Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2125793410539741576",
+        "author": "KittyTurd91",
+        "url": "https://x.com/KittyTurd91/status/2125793410539741576",
+        "source_url": "https://x.com/KittyTurd91/status/2125793410539741576",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "trafficking"
+        ],
+        "freshness_cues": [],
+        "text": "Democrats don't give a f*** about human beings... That's why they support open borders and mass migration.. Drug trafficking... Releasing hundreds of thousands of violent murderers and rapists back on the streets.. They don't care what our country looks like... It's anarchy",
+        "text_excerpt": "Democrats don't give a f*** about human beings... That's why they support open borders and mass migration.. Drug trafficking... Releasing hundreds of thousands of violent murderers and rapists back on the streets.. They don't care what our country looks like... It's anarchy",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-26T03:51:59Z",
+        "last_collected_at": "2026-11-26T03:51:59Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:29036",
+        "timestamp": "2026-11-26T03:17:16Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2125790965478686939",
+        "author": "expatassassin",
+        "url": "https://x.com/expatassassin/status/2125790965478686939",
+        "source_url": "https://x.com/expatassassin/status/2125790965478686939",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "boat",
+          "dinghy",
+          "sea"
+        ],
+        "freshness_cues": [],
+        "text": "Why can French Police legally slash small migrant dinghies full of migrants, but it's illegal for Danny Tommo to slash a boat with no illegal migrants in it.  It's true.  Reported by the BBC, \"Watch: French police wade into sea to slash migrant 'taxi-boat'.\"",
+        "text_excerpt": "Why can French Police legally slash small migrant dinghies full of migrants, but it's illegal for Danny Tommo to slash a boat with no illegal migrants in it.  It's true.  Reported by the BBC, \"Watch: French police wade into sea to slash migrant 'taxi-boat'.\"",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-26T03:51:30Z",
+        "last_collected_at": "2026-11-26T03:51:30Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:29051",
+        "timestamp": "2026-11-26T03:00:10Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2125786663041327600",
+        "author": "ChristiGivens3",
+        "url": "https://x.com/ChristiGivens3/status/2125786663041327600",
+        "source_url": "https://x.com/ChristiGivens3/status/2125786663041327600",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "detention",
+          "deportation",
+          "trafficking"
+        ],
+        "freshness_cues": [],
+        "text": "@Nguyen_anime3 But they put innocent migrants,  including children, in detention centers,  and deport them.\nSome even deported to another country they know nothing about.\n\nDoes that sound like HUMAN TRAFFICKING?",
+        "text_excerpt": "@Nguyen_anime3 But they put innocent migrants,  including children, in detention centers,  and deport them.\nSome even deported to another country they know nothing about.\n\nDoes that sound like HUMAN TRAFFICKING?",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-26T03:51:59Z",
+        "last_collected_at": "2026-11-26T03:51:59Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:29044",
+        "timestamp": "2026-11-26T02:23:21Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2125777397857558684",
+        "author": "samhill112026",
+        "url": "https://x.com/samhill112026/status/2125777397857558684",
+        "source_url": "https://x.com/samhill112026/status/2125777397857558684",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "boat",
+          "arrival"
+        ],
+        "freshness_cues": [],
+        "text": "Spain sets grim new record: 2,122 illegal boat migrants in one day hit the Canary Islands\n\n15 boats. 2,122 illegal arrivals. One day. The Canary Islands are being overwhelmed while politicians pretend this is sustainable. https://t.co/b3QsfsuNhO",
+        "text_excerpt": "Spain sets grim new record: 2,122 illegal boat migrants in one day hit the Canary Islands\n\n15 boats. 2,122 illegal arrivals. One day. The Canary Islands are being overwhelmed while politicians pretend this is sustainable. https://t.co/b3QsfsuNhO",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-26T03:51:30Z",
+        "last_collected_at": "2026-11-26T03:51:30Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
       {
         "timeline_id": "information:28992",
         "timestamp": "2026-11-25T20:46:04Z",
@@ -1740,7 +1980,7 @@
         "text_excerpt": "The #Canary Islands Government has declared a level 2 #emergency situation on the island of #ElHierro starting at 15:00 hours today, 25 November 2026, due to the mass arrival of #migrants by sea\nhttps://t.co/U2hGJ5NZeU",
         "event_group_id": 693,
         "correlation_score": 0.68,
-        "related_source_count": 24,
+        "related_source_count": 25,
         "source_types": [
           "MASTODON",
           "X"
@@ -2032,7 +2272,7 @@
         "text_excerpt": "2,100 asylum seekers/ refugees arrived on Tuesday 24 November 2026 — the canaries on the island of El Hierro. The population is around 12000. #obingo",
         "event_group_id": 693,
         "correlation_score": 0.74,
-        "related_source_count": 24,
+        "related_source_count": 25,
         "source_types": [
           "MASTODON",
           "X"
@@ -2295,7 +2535,7 @@
         "text_excerpt": "This is Manolo Dominguez, the Vice President of the Canary Islands. Today 10 boats have arrived full of migrants, they dont want these people entering illegally.... they can't cope. He says children are thrown overboard, women are raped &amp; a 17yr old was found dead at the bottom https://t.co/DTeBb7gOzX",
         "event_group_id": 693,
         "correlation_score": 0.67,
-        "related_source_count": 24,
+        "related_source_count": 25,
         "source_types": [
           "MASTODON",
           "X"
@@ -2658,7 +2898,7 @@
         "text_excerpt": "🇪🇸 More than 800 #migrants reach #ElHierro and #Tenerife in single day as #Spain 's election debate intensifies https://www.surinenglish.com/spain/more-than-800-migrants-reach-hierro-and-20261124103556-nt.html A total of 815 undocumented migrants arrived on eight boats in El Hierro and Tenerife yesterday, pushing November #CanaryIslands arrivals to nearly 13,000 ahead of Sunday",
         "event_group_id": 693,
         "correlation_score": 0.59,
-        "related_source_count": 24,
+        "related_source_count": 25,
         "source_types": [
           "MASTODON",
           "X"
@@ -2805,8 +3045,8 @@
         "is_operational": false,
         "influence_detected": false,
         "first_collected_at": "2026-11-24T03:35:06Z",
-        "last_collected_at": "2026-11-25T20:47:53Z",
-        "collection_count": 5,
+        "last_collected_at": "2026-11-26T03:51:59Z",
+        "collection_count": 6,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -3984,6 +4224,38 @@
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
+        "timeline_id": "operational:954",
+        "timestamp": "2026-11-22T07:57:27Z",
+        "layer": "OPERATIONAL",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "X",
+        "source_post_id": "2124411926205608231",
+        "author": "GBNEWS",
+        "url": "https://x.com/GBNEWS/status/2124411926205608231",
+        "source_url": "https://x.com/GBNEWS/status/2124411926205608231",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": 28.2916,
+        "longitude": -16.6291,
+        "confidence": 0.8,
+        "priority": "HIGH",
+        "priority_score": 80.0,
+        "text": "'It has sent the Canary Islands into a migration emergency!'\n\nDaily Mail Reporter Lettice Bromovsky says Spanish authorities are being pushed to the brink after hundreds of migrants arrived on the tiny island of El Hierro from West Africa. \n\n📺 Freeview 236, Sky 512, Virgin 604 https://t.co/ySY7Yo1jTs",
+        "text_excerpt": "'It has sent the Canary Islands into a migration emergency!'\n\nDaily Mail Reporter Lettice Bromovsky says Spanish authorities are being pushed to the brink after hundreds of migrants arrived on the tiny island of El Hierro from West Africa. \n\n📺 Freeview 236, Sky 512, Virgin 604 https://t.co/ySY7Yo1jTs",
+        "event_group_id": 693,
+        "correlation_score": 0.64,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
         "timeline_id": "correlated:952",
         "timestamp": "2026-11-22T07:57:27Z",
         "layer": "CORRELATED",
@@ -4009,7 +4281,7 @@
         "text_excerpt": "'It has sent the Canary Islands into a migration emergency!'\n\nDaily Mail Reporter Lettice Bromovsky says Spanish authorities are being pushed to the brink after hundreds of migrants arrived on the tiny island of El Hierro from West Africa. \n\n📺 Freeview 236, Sky 512, Virgin 604 https://t.co/ySY7Yo1jTs",
         "event_group_id": 693,
         "correlation_score": 0.64,
-        "related_source_count": 24,
+        "related_source_count": 25,
         "source_types": [
           "MASTODON",
           "X"
@@ -4052,6 +4324,38 @@
         "first_collected_at": "2026-11-22T08:59:46Z",
         "last_collected_at": "2026-11-22T08:59:46Z",
         "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "operational:952",
+        "timestamp": "2026-11-22T01:32:18Z",
+        "layer": "OPERATIONAL",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "X",
+        "source_post_id": "2124315001548898324",
+        "author": "Boost_Samurai",
+        "url": "https://x.com/Boost_Samurai/status/2124315001548898324",
+        "source_url": "https://x.com/Boost_Samurai/status/2124315001548898324",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.25,
+        "priority": "LOW",
+        "priority_score": 25.0,
+        "text": "@JimThom90458694 WW2 and beyond.  These were still being used in the 80s to house newly arrived refugees and immigrants.",
+        "text_excerpt": "@JimThom90458694 WW2 and beyond.  These were still being used in the 80s to house newly arrived refugees and immigrants.",
+        "event_group_id": 747,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -4633,7 +4937,7 @@
         "text_excerpt": "What say you who maintain that Islam is \"the religion of peace\"...these must be peaceful rapes. Any comment @UN_Women ??\n\n\"Since 80,000 migrants arrived in Ceuta from Morocco, sexual assaults have reportedly gone from 4 to 30 over the same period year on year. That's a 650% https://t.co/iw2vOJ9XvT",
         "event_group_id": 693,
         "correlation_score": 0.6,
-        "related_source_count": 24,
+        "related_source_count": 25,
         "source_types": [
           "MASTODON",
           "X"
@@ -7284,7 +7588,7 @@
         "text_excerpt": "On Saturday, a RECORD 1,488 migrants arrived at Spain’s Canary Islands. Among other things, this is overcrowding Tenerife’s airport.\n\nLOTS OF MIGRANTS = LOTS OF PROBLEMS. https://t.co/AN6LbxP2pj",
         "event_group_id": 693,
         "correlation_score": 0.73,
-        "related_source_count": 24,
+        "related_source_count": 25,
         "source_types": [
           "MASTODON",
           "X"
@@ -8311,7 +8615,7 @@
         "text_excerpt": "Spain's VOX party leader Santiago Abascal accused Prime Minister Pedro Sánchez of facilitating a “planned invasion” of the Canary Islands during a campaign rally Monday, Nov. 16, as more than 11,000 migrants arrived in the Atlantic archipelago during the first half of November.",
         "event_group_id": 693,
         "correlation_score": 0.76,
-        "related_source_count": 24,
+        "related_source_count": 25,
         "source_types": [
           "MASTODON",
           "X"
@@ -8588,7 +8892,7 @@
         "text_excerpt": "Nearly 2,200 migrants have arrived by boat in Spain’s #CanaryIslands over the past two days.\n\nhttps://t.co/TT6wvL1dCi\n\n#Spain #Migration #Europe",
         "event_group_id": 693,
         "correlation_score": 0.82,
-        "related_source_count": 24,
+        "related_source_count": 25,
         "source_types": [
           "MASTODON",
           "X"
@@ -8837,7 +9141,7 @@
         "text_excerpt": "More than 2,000 people reached Spain’s Canary Islands by boat in just two days.\n\nSpanish maritime rescue services reported that around 2,200 migrants arrived during the surge.\n\nMany make the dangerous Atlantic crossing from West Africa, sometimes spending days or weeks at sea.",
         "event_group_id": 693,
         "correlation_score": 0.84,
-        "related_source_count": 24,
+        "related_source_count": 25,
         "source_types": [
           "MASTODON",
           "X"
@@ -9083,7 +9387,7 @@
         "text_excerpt": "🚨 Canary Islands: 3,047 migrants landed in a single weekend, on 23 boats. On Sunday alone, 1,467 arrived in nine cayucos, eight of them on El Hierro (EFE).\n\nA border that depends on the weather is not a border. It's a waiting room. https://t.co/ZXRHk7xM1W",
         "event_group_id": 693,
         "correlation_score": 0.75,
-        "related_source_count": 24,
+        "related_source_count": 25,
         "source_types": [
           "MASTODON",
           "X"
@@ -9148,7 +9452,7 @@
         "text_excerpt": "Nearly 2,200 migrants arrived in #Spain’s #CanaryIslands over Saturday and Sunday, braving a dangerous journey by sea in hopes of reaching the archipelago’s El Hierro island.\nWhile aid workers do their best to provide care for the record number of new arrivals, the influx has https://t.co/Ijacq23L44",
         "event_group_id": 693,
         "correlation_score": 0.76,
-        "related_source_count": 24,
+        "related_source_count": 25,
         "source_types": [
           "MASTODON",
           "X"
@@ -9253,7 +9557,7 @@
         "text_excerpt": "Meanwhile…. The residents of the Canary Islands are fed up.\n\nAlejandro Gomes from the VOX party: \"About a thousand migrants arrived in El Hierro in a single day, and the hospital is already overwhelmed.\"\n\n@tzviyehezkely https://t.co/niMoMCci2W",
         "event_group_id": 693,
         "correlation_score": 0.82,
-        "related_source_count": 24,
+        "related_source_count": 25,
         "source_types": [
           "MASTODON",
           "X"
@@ -9318,7 +9622,7 @@
         "text_excerpt": "🚨GLOBAL NEWS\n\nNearly 2,200 migrants have arrived by boat in Spain's Canary Islands over two days, as rescue teams continue to respond to dangerous Atlantic crossings from West Africa.\n\nSpain's Maritime Rescue Service said it assisted 1,324 people aboard 14 boats, most of whom https://t.co/KKYyruPb85",
         "event_group_id": 693,
         "correlation_score": 0.82,
-        "related_source_count": 24,
+        "related_source_count": 25,
         "source_types": [
           "MASTODON",
           "X"
@@ -9606,7 +9910,7 @@
         "text_excerpt": "Рекордное за четыре года число мигрантов прибыло на Канарские острова за день / A record number of migrants in four years arrived in the Canary Islands in a single day. Reuters: Nearly 1,500 migrants arrived in the Canary Islands in one day. News. Spain:\n\nhttps://t.co/DkiyrGg4hI",
         "event_group_id": 693,
         "correlation_score": 0.78,
-        "related_source_count": 24,
+        "related_source_count": 25,
         "source_types": [
           "MASTODON",
           "X"
@@ -9787,7 +10091,7 @@
         "text_excerpt": "@ElizaaaSwan Migrants crossed from West Africa (mainly Senegal, Gambia, Mauritania) in overcrowded wooden cayucos. Trips last 4-7 days; one boat alone held 240 people. Autumn seas favor the dangerous Atlantic route.\n\nEl Hierro (pop. ~12,000) took most of the ~1,500 Saturday arrivals,",
         "event_group_id": 693,
         "correlation_score": 0.65,
-        "related_source_count": 24,
+        "related_source_count": 25,
         "source_types": [
           "MASTODON",
           "X"
@@ -9852,7 +10156,7 @@
         "text_excerpt": "🚨 BREAKING: Spain Declares a Migration Emergency in the Canary Islands\n\n🌊 Nearly 2,200 migrants arrived in 48 hours, including nearly 1,500 on Saturday, the highest single-day total since 2020.\n\nHey @grok, how did so many migrants reach the Canaries in just two days? How https://t.co/p3VOxITT4C",
         "event_group_id": 693,
         "correlation_score": 0.88,
-        "related_source_count": 24,
+        "related_source_count": 25,
         "source_types": [
           "MASTODON",
           "X"
@@ -9956,7 +10260,7 @@
         "text_excerpt": "Canary Islands Hit by Massive Migrant Surge: 1,500 Arrive in One Day\n\nAnother day, another mass arrival. Canary Islands overwhelmed, locals left to deal with the consequences. This policy failure keeps repeating. Enough is enough.\n https://t.co/y4W2Ds4jYT",
         "event_group_id": 693,
         "correlation_score": 0.93,
-        "related_source_count": 24,
+        "related_source_count": 25,
         "source_types": [
           "MASTODON",
           "X"
@@ -10708,7 +11012,7 @@
         "text_excerpt": "Spain's maritime rescue service says nearly 2,200 migrants have arrived in the Canary Islands over the past two days # Politics # Immigration # Worldnews # Generalnews Spain says nearly 2,200 migrants reached Canary Islands in 2 days",
         "event_group_id": 693,
         "correlation_score": 0.81,
-        "related_source_count": 24,
+        "related_source_count": 25,
         "source_types": [
           "MASTODON",
           "X"
@@ -11102,7 +11406,7 @@
         "text_excerpt": "State of emergency declared after 7,400 migrants arrived in the Canary Islands aka Spain within the first 10 days of November. Thousands more have reached the islands amidst overwhelming conditions at local reception centers. \n\nSanchez is a despicable shitweazel 🖕 https://t.co/56B5R3RJRx",
         "event_group_id": 693,
         "correlation_score": 0.66,
-        "related_source_count": 24,
+        "related_source_count": 25,
         "source_types": [
           "MASTODON",
           "X"
@@ -14408,46 +14712,6 @@
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
-        "timeline_id": "information:26375",
-        "timestamp": "2026-11-12T04:17:49Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2120732774311289246",
-        "author": "CashPublication",
-        "url": "https://x.com/CashPublication/status/2120732774311289246",
-        "source_url": "https://x.com/CashPublication/status/2120732774311289246",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.6,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "smuggling",
-          "trafficking"
-        ],
-        "freshness_cues": [
-          "now"
-        ],
-        "text": "Worth knowing: the money isn't only drugs now. Extortion, kidnapping, fuel theft, and migrant smuggling are core revenue streams across several regions, sometimes beating drug trafficking. The US designated Sinaloa and CJNG as Foreign Terrorist Organizations in February 2025.",
-        "text_excerpt": "Worth knowing: the money isn't only drugs now. Extortion, kidnapping, fuel theft, and migrant smuggling are core revenue streams across several regions, sometimes beating drug trafficking. The US designated Sinaloa and CJNG as Foreign Terrorist Organizations in February 2025.",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-12T04:41:01Z",
-        "last_collected_at": "2026-11-12T04:41:01Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
         "timeline_id": "operational:892",
         "timestamp": "2026-11-12T03:50:16Z",
         "layer": "OPERATIONAL",
@@ -14578,44 +14842,6 @@
         "ai_editorial_decision": "PUBLISH"
       },
       {
-        "timeline_id": "information:26370",
-        "timestamp": "2026-11-12T03:05:45Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2120714639935938565",
-        "author": "kevinobrieninnc",
-        "url": "https://x.com/kevinobrieninnc/status/2120714639935938565",
-        "source_url": "https://x.com/kevinobrieninnc/status/2120714639935938565",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "boat",
-          "rescue"
-        ],
-        "freshness_cues": [],
-        "text": "Nearly 7,500 migrants storm Spain's Canary Islands in November leaving rescue boats overwhelmed https://t.co/d9AjtrAoLk",
-        "text_excerpt": "Nearly 7,500 migrants storm Spain's Canary Islands in November leaving rescue boats overwhelmed https://t.co/d9AjtrAoLk",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-12T04:39:57Z",
-        "last_collected_at": "2026-11-12T04:39:57Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
         "timeline_id": "early_warning:1422",
         "timestamp": "2026-11-12T02:14:13Z",
         "layer": "EARLY_WARNING",
@@ -14648,44 +14874,6 @@
         "last_detected_at": "2026-11-12T04:38:59Z",
         "ai_review_status": "AI_REVIEWED",
         "ai_editorial_decision": "PUBLISH"
-      },
-      {
-        "timeline_id": "information:26303",
-        "timestamp": "2026-11-11T23:39:43Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2120662787580203099",
-        "author": "abby19980702",
-        "url": "https://x.com/abby19980702/status/2120662787580203099",
-        "source_url": "https://x.com/abby19980702/status/2120662787580203099",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 20,
-        "information_score": 2,
-        "matched_information_cues": [
-          "boat",
-          "arrival"
-        ],
-        "freshness_cues": [],
-        "text": "@ShabanaMahmood So this is Shabana’s idea of “FAIRNESS”: using LEGAL MIGRANTS’ contributions to fund small boat arrivals, while driving away the very workers who help keep Britain running. When labour shortages push prices up, it’s ORDINARY BRITISH PEOPLE who pay the price.",
-        "text_excerpt": "@ShabanaMahmood So this is Shabana’s idea of “FAIRNESS”: using LEGAL MIGRANTS’ contributions to fund small boat arrivals, while driving away the very workers who help keep Britain running. When labour shortages push prices up, it’s ORDINARY BRITISH PEOPLE who pay the price.",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-11T23:47:48Z",
-        "last_collected_at": "2026-11-11T23:47:48Z",
-        "collection_count": 1,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
         "timeline_id": "early_warning:1420",
@@ -15670,7 +15858,7 @@
         "text_excerpt": "The immigration crisis engulfing Spain's Canary Islands has exposed the mounting pressure on local communities and raised serious questions about the PSOE government's handling of the country's borders under Prime Minister Pedro Sánchez.\n\nNearly 5,000 migrants have arrived on the https://t.co/GoRAOuPAvv",
         "event_group_id": 693,
         "correlation_score": 0.69,
-        "related_source_count": 24,
+        "related_source_count": 25,
         "source_types": [
           "MASTODON",
           "X"
@@ -16259,7 +16447,7 @@
         "text_excerpt": "🇪🇸 Spain, early November. More than 4,000 undocumented migrants arrived, almost all of them Muslim men. Not one is expected to be deported. Pedro Sánchez plans to distribute them across Spain and eventually throughout Europe. Pedro Sánchez is a criminal.\nsgtnews https://t.co/fJ4jbHW2ms",
         "event_group_id": 693,
         "correlation_score": 0.99,
-        "related_source_count": 24,
+        "related_source_count": 25,
         "source_types": [
           "MASTODON",
           "X"
@@ -16324,7 +16512,7 @@
         "text_excerpt": "WAKE UP CALL:⚠️🇪🇸 Spain, early November. More than 4,000 undocumented migrants arrived, almost all of them Muslim men. \n - Not one is expected to be deported. \n - Pedro Sánchez plans to distribute them across Spain and eventually throughout Europe. \n - Pedro Sánchez is a https://t.co/g8Bun4LcSf https://t.co/awrh2WXd6f",
         "event_group_id": 693,
         "correlation_score": 0.79,
-        "related_source_count": 24,
+        "related_source_count": 25,
         "source_types": [
           "MASTODON",
           "X"
@@ -21673,6 +21861,38 @@
         "event_time_text": null,
         "event_time_normalized": null,
         "event_time_confidence": null,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "correlated:754",
+        "timestamp": "2026-10-28T02:27:41Z",
+        "layer": "CORRELATED",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "X",
+        "source_post_id": "2115269239674110403",
+        "author": "grok",
+        "url": "https://x.com/grok/status/2115269239674110403",
+        "source_url": "https://x.com/grok/status/2115269239674110403",
+        "region": "EASTERN_MEDITERRANEAN",
+        "primary_region": "EASTERN_MEDITERRANEAN",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.55,
+        "priority": "MEDIUM",
+        "priority_score": 55.0,
+        "text": "@sibatucadas @Bradley55153670 @MaxNordau DNA evidence from Ashkelon confirms early Philistines (source of the name Palestine via Peleshet) carried southern European ancestry from the Aegean region including Crete and Greece. They arrived around 1200 BCE as Sea Peoples migrants, distinct from local Bronze Age Canaanites,",
+        "text_excerpt": "@sibatucadas @Bradley55153670 @MaxNordau DNA evidence from Ashkelon confirms early Philistines (source of the name Palestine via Peleshet) carried southern European ancestry from the Aegean region including Crete and Greece. They arrived around 1200 BCE as Sea Peoples migrants, distinct from local Bronze Age Canaanites,",
+        "event_group_id": 599,
+        "correlation_score": 0.62,
+        "related_source_count": 2,
+        "source_types": [
+          "X"
+        ],
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -65575,39 +65795,6 @@
         "first_detected_at": "2026-08-28T04:23:14Z",
         "last_detected_at": "2026-08-28T04:23:14Z",
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "early_warning:331",
-        "timestamp": "2026-08-28T02:42:37Z",
-        "layer": "EARLY_WARNING",
-        "type": "ROUTE_EARLY_WARNING",
-        "signal_type": "ROUTE_EARLY_WARNING",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2093167340217053574",
-        "author": "grok",
-        "url": "https://x.com/grok/status/2093167340217053574",
-        "source_url": "https://x.com/grok/status/2093167340217053574",
-        "region": "WESTERN_MEDITERRANEAN",
-        "primary_region": "WESTERN_MEDITERRANEAN",
-        "location": "Ceuta",
-        "primary_location": "Ceuta",
-        "country": "Spain",
-        "confidence": 0.72,
-        "priority": "MEDIUM",
-        "priority_score": 36.2,
-        "analyst_priority": "LOW",
-        "text": "@WisecarverKA Mass migrant entry hit Ceuta July 30 from Morocco. Thousands remained camping on beaches nearly a month later amid strained resources.\n\nAug 26: Protesters dismantled tents and threw belongings into the sea; police intervened.\n\nAug 27 morning: Migrants stoned a military vehicle,",
-        "text_excerpt": "@WisecarverKA Mass migrant entry hit Ceuta July 30 from Morocco. Thousands remained camping on beaches nearly a month later amid strained resources.\n\nAug 26: Protesters dismantled tents and threw belongings into the sea; police intervened.\n\nAug 27 morning: Migrants stoned a military vehicle,",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "signal_mode": "ANALYST_REVIEW",
-        "signal_intent": "ROUTE_REVIEW",
-        "detection_count": 1,
-        "first_detected_at": "2026-08-28T04:24:17Z",
-        "last_detected_at": "2026-08-28T04:24:17Z",
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       }
     ]
   },
@@ -65654,8 +65841,8 @@
     "review_start_date": "2026-10-17",
     "review_cohort": "FIRST_RECORDED_ON_OR_AFTER_CUTOFF",
     "decisions": {
-      "EXCLUDE": 184,
-      "REVIEW": 180,
+      "EXCLUDE": 185,
+      "REVIEW": 179,
       "PUBLISH": 144
     },
     "removed_display_items": {
@@ -65668,7 +65855,7 @@
       "top_crossing_access_posts": 1,
       "high_priority_intelligence": 2,
       "access_signals": 1,
-      "timeline": 359
+      "timeline": 358
     },
     "historical_review_status": "HISTORICAL_NOT_AI_REVIEWED",
     "narrative_layers_not_reviewed": [
@@ -65677,6 +65864,6 @@
     ],
     "risk_metrics_recalculated": false,
     "warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking.",
-    "conflicting_identity_count": 3
+    "conflicting_identity_count": 2
   }
 }
