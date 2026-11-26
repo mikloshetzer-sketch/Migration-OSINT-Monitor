@@ -1,23 +1,13 @@
 {
-  "generated_at": "2026-11-26T13:22:18.387948+00:00",
+  "generated_at": "2026-11-26T22:43:31.516698+00:00",
   "version": "3.0",
-  "candidates": 510,
-  "new_ai_calls": 6,
-  "conflicting_identity_ids": [
-    "group:756"
-  ],
+  "candidates": 513,
+  "new_ai_calls": 7,
+  "conflicting_identity_ids": [],
   "decisions": {
     "post:957": {
       "decision": "EXCLUDE",
       "reason": "The content is a general opinion on deportation policy, not a report of a specific, concrete migration-related event. There is no actual event of deportation described or reported."
-    },
-    "post:958": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete and contemporary migration-related event involving the arrival and rescue of migrants at sea near the Canary Islands, which fits the 'RESCUE_OPERATION' event type."
-    },
-    "post:959": {
-      "decision": "EXCLUDE",
-      "reason": "The event date is in the future (2026-11-23), making the reported interception not contemporary or verifiable at this time."
     },
     "post:960": {
       "decision": "PUBLISH",
@@ -87,9 +77,13 @@
       "decision": "EXCLUDE",
       "reason": "The post expresses an opinion on migration policy but does not report a concrete migration-related event such as an actual deportation or policy action."
     },
-    "signal:1512": {
+    "post:977": {
+      "decision": "EXCLUDE",
+      "reason": "The post does not report a concrete, contemporary migration-related event; it only asks a question about migration statistics without providing specific event information."
+    },
+    "post:978": {
       "decision": "REVIEW",
-      "reason": "The post claims over 11 thousand African migrants entered the Canary Islands by small boat in the first half of November, indicating a large-scale movement. However, no independent verification or source corroboration is provided, and the post's narrative includes inflammatory language ('THIS IS AN INVASION'), reducing its reliability. The event da"
+      "reason": "The post discusses net migration statistics and illegal crossings, but it lacks a clear, specific event of migration or border crossing with definitive details. The numbers are given without a concrete event or verified source linkage, making it uncertain if this is a migration event report or just commentary on migration data."
     },
     "signal:1513": {
       "decision": "REVIEW",
@@ -99,17 +93,21 @@
       "decision": "PUBLISH",
       "reason": "The record reports concrete, recent migration-related data on family entry-clearance visa grants and changes in refugee family reunion grants, which directly pertain to migration pressures and early warning signals regarding policy and access changes. The event is correctly typified as a PRESSURE_EARLY_WARNING reflecting evolving entry-clearance tr"
     },
+    "signal:1515": {
+      "decision": "EXCLUDE",
+      "reason": "The record is a cancellation notification for a planned protest action against the European Migration Pact, not a concrete migration event or early warning. It lacks a contemporary migration-specific operational event. It is a narrative about planned mobilization that did not occur and does not itself report an active migration-related movement or "
+    },
+    "signal:1516": {
+      "decision": "EXCLUDE",
+      "reason": "The text discusses COVID-19 testing positivity rates among immigrants but does not report a concrete, contemporary migration-related event or an early warning about migration. It is a general statement without a clear migration-specific operational event or policy action."
+    },
+    "signal:1517": {
+      "decision": "PUBLISH",
+      "reason": "The record describes a concrete, contemporary signal related to migration: the USAID director addressing Facebook groups organizing an immigrant caravan, indicating coordination efforts pertinent to migration control policies. This aligns with an early warning or policy action regarding a migration-specific event."
+    },
     "group:693": {
       "decision": "EXCLUDE",
       "reason": "The event_type 'DEPORTATION' does not match the described event, which reports arrivals of migrants, not deportations. The event is migration-related and contemporary, but the event_type assigned is incorrect, so cannot publish under the incorrect type."
-    },
-    "group:756": {
-      "decision": "REVIEW",
-      "reason": "Conflicting content for the same ID across dashboard sections"
-    },
-    "group:758": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a specific, contemporary migration-related event involving a boat capsizing off Djibouti, resulting in mass casualties among migrants. The event type 'CASUALTY' is appropriate and supported by the content. Despite the lack of source details, the severity and specificity of the claim warrant publication."
     },
     "group:759": {
       "decision": "REVIEW",
@@ -138,6 +136,14 @@
     "group:765": {
       "decision": "EXCLUDE",
       "reason": "The post expresses an opinion on immigration enforcement but does not report a concrete, contemporary migration-related event such as an actual deportation activity."
+    },
+    "group:766": {
+      "decision": "EXCLUDE",
+      "reason": "The post does not report any concrete migration event; it is a question about statistics without data or report of actual border crossings or migration movements."
+    },
+    "group:767": {
+      "decision": "REVIEW",
+      "reason": "The post references migration figures and illegal crossings but presents a political critique without reporting a concrete, ongoing migration event or specific operational details. The type BORDER_CROSSING is not clearly supported as no specific incident is reported. No verifiable external corroboration is provided."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -2046,6 +2052,10 @@
     "signal:1511": {
       "decision": "EXCLUDE",
       "reason": "Message is a subjective commentary without reporting a concrete, contemporary migration-related event or specific early warning signal; no actual migration movement or policy action is described."
+    },
+    "signal:1512": {
+      "decision": "REVIEW",
+      "reason": "The post claims over 11 thousand African migrants entered the Canary Islands by small boat in the first half of November, indicating a large-scale movement. However, no independent verification or source corroboration is provided, and the post's narrative includes inflammatory language ('THIS IS AN INVASION'), reducing its reliability. The event da"
     }
   }
 }
