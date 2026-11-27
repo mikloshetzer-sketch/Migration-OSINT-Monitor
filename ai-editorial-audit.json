@@ -1,30 +1,10 @@
 {
-  "generated_at": "2026-11-27T05:43:37.901657+00:00",
+  "generated_at": "2026-11-27T15:49:35.890941+00:00",
   "version": "3.0",
-  "candidates": 517,
-  "new_ai_calls": 8,
+  "candidates": 521,
+  "new_ai_calls": 14,
   "conflicting_identity_ids": [],
   "decisions": {
-    "post:961": {
-      "decision": "EXCLUDE",
-      "reason": "The post references 'Illegal Migrants Arrested At Sea-Tac Airport' but provides no concrete, specific information about an actual current detention event, lacks corroborated details, and the location is unspecified; the event appears dated to a future time beyond knowledge cutoff and is not verifiable."
-    },
-    "post:962": {
-      "decision": "EXCLUDE",
-      "reason": "The text discusses the nature of government support for refugees or immigrants in a general and hypothetical manner without reporting a concrete, contemporary migration-related event such as an actual border crossing or arrival. There is no specific event described or confirmed to be current or completed."
-    },
-    "post:963": {
-      "decision": "REVIEW",
-      "reason": "The post claims Texas will become a sanctuary state for millions of newly arrived economic migrants but lacks specific details about any concrete event or policy action and is speculative about future conditions."
-    },
-    "post:964": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete and contemporary migration-related event: over 800 undocumented migrants arriving on the Spanish Canary Islands within a single day, which is a specific, verifiable border crossing event."
-    },
-    "post:965": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a recent and concrete migration-related event involving a deadly boat capsizing off the coast of Djibouti resulting in multiple migrant casualties, matching the event type CASUALTY as stated. This is a contemporary and specific migration incident."
-    },
     "post:966": {
       "decision": "REVIEW",
       "reason": "The post describes a deportation event involving Kilmar Abrego García with complex circumstances and references a future date (2026-11-24), which raises doubts about the accuracy and contemporaneity of the event. The story involves claims of illegal deportation, court intervention, and threats involving extraordinary rendition. There is a lack of c"
@@ -85,17 +65,25 @@
       "decision": "EXCLUDE",
       "reason": "The post is a question about Medicaid payments by refugees, not reporting a concrete migration event. It lacks a specific, contemporary migration event or early warning."
     },
-    "signal:1513": {
-      "decision": "REVIEW",
-      "reason": "The post discusses Myanmar's refusal to comply with an international court ruling regarding genocide against the Rohingya, which relates to legal and political aspects of migration but is a general political declaration rather than a specific migration event or early warning. Therefore, it does not fully meet criteria for the LEGAL_MIGRATION_SIGNAL"
-    },
-    "signal:1514": {
-      "decision": "PUBLISH",
-      "reason": "The record reports concrete, recent migration-related data on family entry-clearance visa grants and changes in refugee family reunion grants, which directly pertain to migration pressures and early warning signals regarding policy and access changes. The event is correctly typified as a PRESSURE_EARLY_WARNING reflecting evolving entry-clearance tr"
-    },
-    "signal:1515": {
+    "post:981": {
       "decision": "EXCLUDE",
-      "reason": "The record is a cancellation notification for a planned protest action against the European Migration Pact, not a concrete migration event or early warning. It lacks a contemporary migration-specific operational event. It is a narrative about planned mobilization that did not occur and does not itself report an active migration-related movement or "
+      "reason": "The post discusses the relocation of asylum seekers within accommodation managed by a state agency but does not report a specific, concrete migration event such as a new arrival, departure, or established camp formation. It is more of a commentary on policy and management issues rather than an operational migration event. The event_type 'MIGRANT_CA"
+    },
+    "post:982": {
+      "decision": "EXCLUDE",
+      "reason": "The post reports on arrests related to human trafficking but does not describe a contemporaneous migration-specific operational event or early warning involving migration flows. The fact that suspects are illegal migrants is not sufficient to classify this as a migration event. The location is unspecified ('-'), and the event is a law enforcement a"
+    },
+    "post:983": {
+      "decision": "REVIEW",
+      "reason": "The post claims a detention event involving illegal migrants related to human trafficking arrests, but lacks detailed information about the timing, location, and official confirmation beyond a brief statement. The event_type 'DETENTION' is plausible but not fully verified from the source text alone. Additional credible sources or specifics are need"
+    },
+    "post:984": {
+      "decision": "REVIEW",
+      "reason": "The post refers to statistical data on Indian nationals arriving as long-term migrants to the UK, which is a migration statistic rather than a specific migration event or operational early warning. It also references a future year (ending June 2026) which is inconsistent with the current publication date and may be a data projection or error. The e"
+    },
+    "post:985": {
+      "decision": "EXCLUDE",
+      "reason": "The post discusses income inequality among Asians and migrants but does not report a concrete, contemporary migration-related event such as a border crossing or migration movement. The event_type 'BORDER_CROSSING' is not supported by the content."
     },
     "signal:1516": {
       "decision": "EXCLUDE",
@@ -121,25 +109,21 @@
       "decision": "EXCLUDE",
       "reason": "The content explicitly states the video is old (from 2022) and recycled with false framing. It refers to a past event and does not report a new or current migration-related event. Also, the event_type 'RECRUITMENT_COORDINATION' is not supported by the content, which describes the discovery of smuggled migrants, not recruitment activities."
     },
-    "group:693": {
+    "signal:1522": {
       "decision": "EXCLUDE",
-      "reason": "The event_type 'DEPORTATION' does not match the described event, which reports arrivals of migrants, not deportations. The event is migration-related and contemporary, but the event_type assigned is incorrect, so cannot publish under the incorrect type."
+      "reason": "The post is a political statement warning about potential future migrant caravans and urging policy action, but does not report a concrete, contemporary migration-specific event or early warning with specific details or evidence. It lacks information on an actual movement event or early warning signal about routes or access."
     },
-    "group:761": {
-      "decision": "EXCLUDE",
-      "reason": "The record is a query asking about migrant arrivals, not a report of a concrete event. No contemporary migration-specific event reported."
+    "signal:1523": {
+      "decision": "REVIEW",
+      "reason": "The post claims to show a reaction to armed migrants arriving by boat, suggesting a migration-related event. However, it provides no direct evidence or detailed information about the event's timing, location, or verification. The event date and location are unspecified, and the provided video link cannot be independently evaluated here. Without cle"
     },
-    "group:762": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a concrete, contemporary migration-related event involving the detention of an undocumented migrant working illegally as a courier, who was stopped by police after a pursuit. The event type DETENTION is appropriate and supported by the narrative."
+    "signal:1524": {
+      "decision": "REVIEW",
+      "reason": "The post discusses net migration trends and claims large numbers of both migrants arriving and Brits leaving, but does not report a specific, concrete migration event or verified early warning signal. The data is general and the claim of 'massive numbers' is not supported by concrete evidence in the post itself."
     },
-    "group:763": {
-      "decision": "EXCLUDE",
-      "reason": "The post discusses a speculative social commentary about refugee youth aggression and violence in Australia, but it does not report a concrete, contemporary migration-related event such as a specific border crossing, arrival, or migration operation. The event type 'BORDER_CROSSING' is not supported by the content. No verified migration event is det"
-    },
-    "group:764": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a specific and contemporary migration event with concrete details: 92 illegal migrants landed on Crete on the current date. It includes migration-related metrics and ongoing trafficking flows from Libya, which supports the BORDER_CROSSING event type. Despite no source provided, these details pertain directly to a migration event an"
+    "signal:1525": {
+      "decision": "REVIEW",
+      "reason": "The content discusses income inequality among migrants in the U.S. but does not report a specific, concrete migration policy action, early warning, or route/access signal. The event_type 'POLICY_SIGNAL' is not clearly supported by the text as an actual policy event or signal."
     },
     "group:765": {
       "decision": "EXCLUDE",
@@ -160,6 +144,26 @@
     "group:769": {
       "decision": "EXCLUDE",
       "reason": "The post is a question regarding refugees and Medicaid payments, without reporting a concrete migration event or specific border crossing incident."
+    },
+    "group:770": {
+      "decision": "REVIEW",
+      "reason": "The post discusses issues related to asylum seekers and accommodation management but lacks a clear, concrete current migration event or operation. The event_type 'MIGRANT_CAMP' is not clearly supported by the content. The timing is unclear and there is no corroboration provided."
+    },
+    "group:771": {
+      "decision": "REVIEW",
+      "reason": "The report indicates arrests related to human trafficking involving migrants, but does not specify if these arrests constitute a direct migration event such as a migrant arrival, movement, or policy action. The location is unspecified, and no corroborating evidence or source is provided to verify the claim. The event type 'DETENTION' aligns with ar"
+    },
+    "group:772": {
+      "decision": "REVIEW",
+      "reason": "The report mentions arrests related to human trafficking involving illegal migrants but lacks sufficient detail about the event's timing, location, or confirmation. The event type 'DETENTION' is plausible but unconfirmed. The source is missing, so verification is not possible."
+    },
+    "group:773": {
+      "decision": "EXCLUDE",
+      "reason": "The post references a migration statistic for a future year ending June 2026, which is not a contemporary or completed event and does not describe a specific migration event but rather an aggregate forecast or projection. No reliable source is provided to verify the claim, and the event date is in the future relative to the last seen date; thus, it"
+    },
+    "group:774": {
+      "decision": "EXCLUDE",
+      "reason": "The post discusses income inequality among Asian groups and mentions refugee resettlement, family reunification, and labor-based migration, but it does not report a concrete, contemporary migration-related event such as a border crossing or migration movement."
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -2072,6 +2076,18 @@
     "signal:1512": {
       "decision": "REVIEW",
       "reason": "The post claims over 11 thousand African migrants entered the Canary Islands by small boat in the first half of November, indicating a large-scale movement. However, no independent verification or source corroboration is provided, and the post's narrative includes inflammatory language ('THIS IS AN INVASION'), reducing its reliability. The event da"
+    },
+    "signal:1513": {
+      "decision": "REVIEW",
+      "reason": "The post discusses Myanmar's refusal to comply with an international court ruling regarding genocide against the Rohingya, which relates to legal and political aspects of migration but is a general political declaration rather than a specific migration event or early warning. Therefore, it does not fully meet criteria for the LEGAL_MIGRATION_SIGNAL"
+    },
+    "signal:1514": {
+      "decision": "PUBLISH",
+      "reason": "The record reports concrete, recent migration-related data on family entry-clearance visa grants and changes in refugee family reunion grants, which directly pertain to migration pressures and early warning signals regarding policy and access changes. The event is correctly typified as a PRESSURE_EARLY_WARNING reflecting evolving entry-clearance tr"
+    },
+    "signal:1515": {
+      "decision": "EXCLUDE",
+      "reason": "The record is a cancellation notification for a planned protest action against the European Migration Pact, not a concrete migration event or early warning. It lacks a contemporary migration-specific operational event. It is a narrative about planned mobilization that did not occur and does not itself report an active migration-related movement or "
     }
   }
 }
