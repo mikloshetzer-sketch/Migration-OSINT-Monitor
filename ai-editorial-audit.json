@@ -1,18 +1,10 @@
 {
-  "generated_at": "2026-11-26T22:43:31.516698+00:00",
+  "generated_at": "2026-11-27T05:43:37.901657+00:00",
   "version": "3.0",
-  "candidates": 513,
-  "new_ai_calls": 7,
+  "candidates": 517,
+  "new_ai_calls": 8,
   "conflicting_identity_ids": [],
   "decisions": {
-    "post:957": {
-      "decision": "EXCLUDE",
-      "reason": "The content is a general opinion on deportation policy, not a report of a specific, concrete migration-related event. There is no actual event of deportation described or reported."
-    },
-    "post:960": {
-      "decision": "PUBLISH",
-      "reason": "The post reports concrete and recent border crossing events involving migration to the Canary Islands in November 2026, with detailed numbers from official sources and media, clearly related to a migration-specific event at the borders."
-    },
     "post:961": {
       "decision": "EXCLUDE",
       "reason": "The post references 'Illegal Migrants Arrested At Sea-Tac Airport' but provides no concrete, specific information about an actual current detention event, lacks corroborated details, and the location is unspecified; the event appears dated to a future time beyond knowledge cutoff and is not verifiable."
@@ -85,6 +77,14 @@
       "decision": "REVIEW",
       "reason": "The post discusses net migration statistics and illegal crossings, but it lacks a clear, specific event of migration or border crossing with definitive details. The numbers are given without a concrete event or verified source linkage, making it uncertain if this is a migration event report or just commentary on migration data."
     },
+    "post:979": {
+      "decision": "REVIEW",
+      "reason": "The post reports a future date (January 2026) at the time of publication (November 2026), which is inconsistent or possibly a typographical error. The event concerns a deportation claim from Algeria to Niger citing an NGO, but the timing is unclear and there is no direct external verification provided. The source is a social post without additional"
+    },
+    "post:980": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a question about Medicaid payments by refugees, not reporting a concrete migration event. It lacks a specific, contemporary migration event or early warning."
+    },
     "signal:1513": {
       "decision": "REVIEW",
       "reason": "The post discusses Myanmar's refusal to comply with an international court ruling regarding genocide against the Rohingya, which relates to legal and political aspects of migration but is a general political declaration rather than a specific migration event or early warning. Therefore, it does not fully meet criteria for the LEGAL_MIGRATION_SIGNAL"
@@ -105,17 +105,25 @@
       "decision": "PUBLISH",
       "reason": "The record describes a concrete, contemporary signal related to migration: the USAID director addressing Facebook groups organizing an immigrant caravan, indicating coordination efforts pertinent to migration control policies. This aligns with an early warning or policy action regarding a migration-specific event."
     },
+    "signal:1518": {
+      "decision": "REVIEW",
+      "reason": "The report alleges abuse by border police against migrants at the Turkish-Bulgarian border, which is consistent with a route-specific early warning signal. However, the claim is severe and lacks corroboration or precise location details to confirm the event as a current migration-specific operational event or verified early warning."
+    },
+    "signal:1519": {
+      "decision": "PUBLISH",
+      "reason": "This is a concrete migration-related early warning signal reporting on ongoing systemic forced labor, sexual exploitation, enslavement, and ransom of migrants in Libya, based on a February 2026 UNSMIL-OHCHR report. The event type FACILITATION_EARLY_WARNING is appropriate as it warns about trafficking and forced labor affecting migrants. Although no"
+    },
+    "signal:1520": {
+      "decision": "REVIEW",
+      "reason": "The post expresses an opinion about illegal migrants and troop deployment, but does not report a concrete, specific migration-related event or actionable early warning. It lacks details of facilitation or early warning event."
+    },
+    "signal:1521": {
+      "decision": "EXCLUDE",
+      "reason": "The content explicitly states the video is old (from 2022) and recycled with false framing. It refers to a past event and does not report a new or current migration-related event. Also, the event_type 'RECRUITMENT_COORDINATION' is not supported by the content, which describes the discovery of smuggled migrants, not recruitment activities."
+    },
     "group:693": {
       "decision": "EXCLUDE",
       "reason": "The event_type 'DEPORTATION' does not match the described event, which reports arrivals of migrants, not deportations. The event is migration-related and contemporary, but the event_type assigned is incorrect, so cannot publish under the incorrect type."
-    },
-    "group:759": {
-      "decision": "REVIEW",
-      "reason": "The post claims a deportation event involving Kilmar Abrego García, but the event date is in the future (2026-11-24) and the article cannot be independently verified or trusted as authentic. The story includes complex elements (forced return, threat of deportation to Africa) needing corroboration. No reliable source or current confirmation present."
-    },
-    "group:760": {
-      "decision": "EXCLUDE",
-      "reason": "The post refers to a past event about a man damaging an abandoned boat used by smugglers, but it does not report a specific, concrete migration-related operational event. There is no clear current or completed migration event described, and the information is anecdotal with no direct migration event details."
     },
     "group:761": {
       "decision": "EXCLUDE",
@@ -144,6 +152,14 @@
     "group:767": {
       "decision": "REVIEW",
       "reason": "The post references migration figures and illegal crossings but presents a political critique without reporting a concrete, ongoing migration event or specific operational details. The type BORDER_CROSSING is not clearly supported as no specific incident is reported. No verifiable external corroboration is provided."
+    },
+    "group:768": {
+      "decision": "REVIEW",
+      "reason": "The event reports approximately 32,000 migrants expelled by Algeria to Niger since January 2026, indicating a migration-specific event related to deportations. However, the source is unspecified and no independent verification is provided. The event date is current, but corroboration is lacking."
+    },
+    "group:769": {
+      "decision": "EXCLUDE",
+      "reason": "The post is a question regarding refugees and Medicaid payments, without reporting a concrete migration event or specific border crossing incident."
     },
     "signal:1034": {
       "decision": "REVIEW",
