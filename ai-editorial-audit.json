@@ -1,29 +1,15 @@
 {
-  "generated_at": "2026-11-27T15:49:35.890941+00:00",
+  "generated_at": "2026-11-27T23:52:21.117751+00:00",
   "version": "3.0",
   "candidates": 521,
-  "new_ai_calls": 14,
-  "conflicting_identity_ids": [],
+  "new_ai_calls": 6,
+  "conflicting_identity_ids": [
+    "group:775"
+  ],
   "decisions": {
-    "post:966": {
-      "decision": "REVIEW",
-      "reason": "The post describes a deportation event involving Kilmar Abrego García with complex circumstances and references a future date (2026-11-24), which raises doubts about the accuracy and contemporaneity of the event. The story involves claims of illegal deportation, court intervention, and threats involving extraordinary rendition. There is a lack of c"
-    },
-    "post:967": {
-      "decision": "EXCLUDE",
-      "reason": "The post discusses sentencing related to damages on an abandoned boat used by smugglers but does not report a concrete, contemporary migration-related event such as successful smuggling, interception, or a current migration flow. It focuses on legal consequences rather than an operational smuggling event. The event type SMUGGLING_ACTIVITY is not di"
-    },
-    "post:968": {
-      "decision": "REVIEW",
-      "reason": "The post claims a migration-related event involving boats arriving with migrants, but provides no verification or external corroboration, and includes serious allegations without evidence. The event date and location are unclear."
-    },
     "post:969": {
       "decision": "EXCLUDE",
       "reason": "The post is a query asking for information but does not report a concrete, contemporary migration-related event or provide specific data on migration."
-    },
-    "post:970": {
-      "decision": "PUBLISH",
-      "reason": "The post reports a specific, concrete migration event with a date, location, and number of asylum seekers/refugees arriving at the island of El Hierro. The event type 'BORDER_CROSSING' is appropriate and contemporary to the publication date."
     },
     "post:971": {
       "decision": "REVIEW",
@@ -85,13 +71,21 @@
       "decision": "EXCLUDE",
       "reason": "The post discusses income inequality among Asians and migrants but does not report a concrete, contemporary migration-related event such as a border crossing or migration movement. The event_type 'BORDER_CROSSING' is not supported by the content."
     },
-    "signal:1516": {
-      "decision": "EXCLUDE",
-      "reason": "The text discusses COVID-19 testing positivity rates among immigrants but does not report a concrete, contemporary migration-related event or an early warning about migration. It is a general statement without a clear migration-specific operational event or policy action."
+    "post:986": {
+      "decision": "REVIEW",
+      "reason": "The post claims DHS confirmed arrests related to human trafficking involving illegal migrants, but lacks sufficient detail or verification about the migration-related event and the timing."
     },
-    "signal:1517": {
-      "decision": "PUBLISH",
-      "reason": "The record describes a concrete, contemporary signal related to migration: the USAID director addressing Facebook groups organizing an immigrant caravan, indicating coordination efforts pertinent to migration control policies. This aligns with an early warning or policy action regarding a migration-specific event."
+    "post:987": {
+      "decision": "REVIEW",
+      "reason": "The post reports arrests related to human trafficking and mentions illegal migrants, but lacks detail confirming a specific migration-related event or detention directly linked to a migration operation. 'Illegal migrants' is mentioned, but the event details and location are vague, and the source is not corroborated. More information is needed to ve"
+    },
+    "post:988": {
+      "decision": "REVIEW",
+      "reason": "The post references migration data including numbers of British citizens leaving and migrants arriving or granted indefinite leave to remain, but does not specify an actual event such as a specific cross-border movement or a discrete operational migration event occurring at a particular time. The 'event_type' 'BORDER_CROSSING' is not clearly suppor"
+    },
+    "post:989": {
+      "decision": "REVIEW",
+      "reason": "The event reports a specific high number of illegal migrant arrivals in Spain and the Canary Islands on a recent date, which is migration-relevant. However, the publication date is in the future (2026), making the timing suspicious. Event details need verification or updated from a current source before publishing."
     },
     "signal:1518": {
       "decision": "REVIEW",
@@ -125,17 +119,13 @@
       "decision": "REVIEW",
       "reason": "The content discusses income inequality among migrants in the U.S. but does not report a specific, concrete migration policy action, early warning, or route/access signal. The event_type 'POLICY_SIGNAL' is not clearly supported by the text as an actual policy event or signal."
     },
-    "group:765": {
+    "group:693": {
       "decision": "EXCLUDE",
-      "reason": "The post expresses an opinion on immigration enforcement but does not report a concrete, contemporary migration-related event such as an actual deportation activity."
+      "reason": "The event_type is incorrectly labeled as DEPORTATION, but the content describes migrant arrivals, not deportations. The event concerns migrant arrivals to El Hierro and Tenerife, which indicates an influx event. However, the event_type must be relevant and correct for publication. Without a proper event type such as ARRIVAL or INFLUX, we cannot pub"
     },
     "group:766": {
       "decision": "EXCLUDE",
       "reason": "The post does not report any concrete migration event; it is a question about statistics without data or report of actual border crossings or migration movements."
-    },
-    "group:767": {
-      "decision": "REVIEW",
-      "reason": "The post references migration figures and illegal crossings but presents a political critique without reporting a concrete, ongoing migration event or specific operational details. The type BORDER_CROSSING is not clearly supported as no specific incident is reported. No verifiable external corroboration is provided."
     },
     "group:768": {
       "decision": "REVIEW",
@@ -155,7 +145,7 @@
     },
     "group:772": {
       "decision": "REVIEW",
-      "reason": "The report mentions arrests related to human trafficking involving illegal migrants but lacks sufficient detail about the event's timing, location, or confirmation. The event type 'DETENTION' is plausible but unconfirmed. The source is missing, so verification is not possible."
+      "reason": "The report claims arrests related to human trafficking involving illegal migrants, which relates to migration and detention. However, the location is unspecified and the claim is based on a secondary source (Breitbart) with no corroborated details. Verification of event specifics and timing is needed to confirm it as a contemporary, concrete migrat"
     },
     "group:773": {
       "decision": "EXCLUDE",
@@ -164,6 +154,10 @@
     "group:774": {
       "decision": "EXCLUDE",
       "reason": "The post discusses income inequality among Asian groups and mentions refugee resettlement, family reunification, and labor-based migration, but it does not report a concrete, contemporary migration-related event such as a border crossing or migration movement."
+    },
+    "group:775": {
+      "decision": "REVIEW",
+      "reason": "Conflicting content for the same ID across dashboard sections"
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -2088,6 +2082,14 @@
     "signal:1515": {
       "decision": "EXCLUDE",
       "reason": "The record is a cancellation notification for a planned protest action against the European Migration Pact, not a concrete migration event or early warning. It lacks a contemporary migration-specific operational event. It is a narrative about planned mobilization that did not occur and does not itself report an active migration-related movement or "
+    },
+    "signal:1516": {
+      "decision": "EXCLUDE",
+      "reason": "The text discusses COVID-19 testing positivity rates among immigrants but does not report a concrete, contemporary migration-related event or an early warning about migration. It is a general statement without a clear migration-specific operational event or policy action."
+    },
+    "signal:1517": {
+      "decision": "PUBLISH",
+      "reason": "The record describes a concrete, contemporary signal related to migration: the USAID director addressing Facebook groups organizing an immigrant caravan, indicating coordination efforts pertinent to migration control policies. This aligns with an early warning or policy action regarding a migration-specific event."
     }
   }
 }
