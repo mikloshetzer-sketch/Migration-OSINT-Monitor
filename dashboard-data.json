@@ -1,24 +1,24 @@
 {
   "schema_version": "3.0",
-  "updated_at": "2026-11-27T23:50:46Z",
-  "generated_at": "2026-11-27T23:50:46Z",
+  "updated_at": "2026-11-28T05:17:42Z",
+  "generated_at": "2026-11-28T05:17:42Z",
   "current_run": {
     "available": true,
-    "id": 466,
-    "run_uuid": "7201e7ed-9edb-45c6-b519-7d27d3c5312f",
-    "started_at": "2026-11-27T23:48:01Z",
-    "completed_at": "2026-11-27T23:50:45Z",
+    "id": 467,
+    "run_uuid": "e1ccfce4-ff10-4c35-a6b0-f8ee35de1700",
+    "started_at": "2026-11-28T05:14:52Z",
+    "completed_at": "2026-11-28T05:17:40Z",
     "status": "SUCCESS",
     "posts_returned": 130,
-    "unique_posts_collected": 84,
+    "unique_posts_collected": 85,
     "x_posts_returned": 50,
     "reddit_posts_returned": 0,
     "mastodon_posts_returned": 50,
-    "unique_x_posts": 44,
+    "unique_x_posts": 46,
     "unique_reddit_posts": 0,
-    "unique_mastodon_posts": 20,
+    "unique_mastodon_posts": 19,
     "noise_filtered": 0,
-    "non_operational_filtered": 79,
+    "non_operational_filtered": 82,
     "historical_references_filtered": 1,
     "influence_signals": 0,
     "influence_signals_detected": 0,
@@ -30,46 +30,78 @@
     "mobilization_report_signals": 0,
     "decision_influence_signals": 0,
     "online_influence_report_signals": 0,
-    "operational_events": 4,
-    "operational_events_analyzed": 4,
-    "historical_events_available": 41,
-    "new_correlations": 3,
-    "correlated_events": 3,
+    "operational_events": 2,
+    "operational_events_analyzed": 2,
+    "historical_events_available": 43,
+    "new_correlations": 1,
+    "correlated_events": 1,
     "new_correlation_groups": 1,
-    "database_correlations": 2,
-    "current_run_correlations": 1,
-    "new_events": 4,
-    "new_events_saved": 4,
+    "database_correlations": 1,
+    "current_run_correlations": 0,
+    "new_events": 2,
+    "new_events_saved": 2,
     "events_already_existing": 0,
     "new_event_groups": 1,
-    "updated_event_groups": 3,
+    "updated_event_groups": 1,
     "bootstrapped_event_groups": 0,
     "existing_event_groups_reused": 0,
-    "event_group_sources_linked": 4,
+    "event_group_sources_linked": 2,
     "x_collector_errors": 0,
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "error_message": null
   },
   "kpis": {
-    "operational_events": 11,
-    "new_events": 4,
-    "correlated_events": 3,
-    "active_event_groups": 756,
+    "operational_events": 12,
+    "new_events": 2,
+    "correlated_events": 4,
+    "active_event_groups": 757,
     "sources": 3,
     "regions": 3,
-    "collected_posts_24h": 185,
-    "influence_signals": 8,
+    "collected_posts_24h": 204,
+    "influence_signals": 9,
     "access_signals": 0,
     "high_priority": 0,
-    "current_run_operational_events": 4,
-    "current_run_unique_posts": 84,
+    "current_run_operational_events": 2,
+    "current_run_unique_posts": 85,
     "access_signals_raw": 0,
-    "influence_signals_raw": 8,
+    "influence_signals_raw": 9,
     "influence_narratives": 3
   },
   "live_events": [],
-  "event_groups": [],
+  "event_groups": [
+    {
+      "id": 776,
+      "group_id": 776,
+      "event_type": "RESCUE_OPERATION",
+      "dominant_event_type": "RESCUE_OPERATION",
+      "title": "RESCUE_OPERATION - Crete",
+      "representative_text": "Around 184 Migrants Rescued in Two Operations off Southern Crete\n\nAround 184 migrants were picked up from three boats south-east of Kaloi Limenes, Crete, in two Coast Guard operations after Frontex drones spotted them.\n\n#GreekCityTimes #Crete #Greece #H...\nhttps://t.co/1fluv2eHsq",
+      "region": "EASTERN_MEDITERRANEAN",
+      "primary_region": "EASTERN_MEDITERRANEAN",
+      "primary_location": "Crete",
+      "country": "Greece",
+      "latitude": 35.2401,
+      "longitude": 24.8093,
+      "first_seen": "2026-11-28T04:36:48Z",
+      "last_seen": "2026-11-28T04:36:48Z",
+      "source_count": 1,
+      "sources_count": 1,
+      "source_types": [
+        "X"
+      ],
+      "sources": [
+        "X"
+      ],
+      "status": "ACTIVE",
+      "confidence": 0.7,
+      "average_confidence": 0.7,
+      "created_at": "2026-11-28T05:16:17Z",
+      "updated_at": "2026-11-28T05:16:17Z",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    }
+  ],
   "regions": [
     {
       "name": "GLOBAL",
@@ -86,8 +118,8 @@
       "percentage": 11.11
     },
     {
-      "name": "SAHEL",
-      "region": "SAHEL",
+      "name": "EASTERN_MEDITERRANEAN",
+      "region": "EASTERN_MEDITERRANEAN",
       "count": 1,
       "events": 1,
       "percentage": 11.11
@@ -97,23 +129,23 @@
     {
       "source": "X",
       "name": "X",
-      "count": 136,
-      "posts": 136,
-      "percentage": 73.51
+      "count": 160,
+      "posts": 160,
+      "percentage": 78.43
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 35,
-      "posts": 35,
-      "percentage": 18.92
+      "count": 31,
+      "posts": 31,
+      "percentage": 15.2
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 14,
-      "posts": 14,
-      "percentage": 7.57
+      "count": 13,
+      "posts": 13,
+      "percentage": 6.37
     }
   ],
   "region_activity": [
@@ -132,8 +164,8 @@
       "percentage": 11.11
     },
     {
-      "name": "SAHEL",
-      "region": "SAHEL",
+      "name": "EASTERN_MEDITERRANEAN",
+      "region": "EASTERN_MEDITERRANEAN",
       "count": 1,
       "events": 1,
       "percentage": 11.11
@@ -143,34 +175,34 @@
     {
       "source": "X",
       "name": "X",
-      "count": 136,
-      "posts": 136,
-      "percentage": 73.51
+      "count": 160,
+      "posts": 160,
+      "percentage": 78.43
     },
     {
       "source": "MASTODON",
       "name": "MASTODON",
-      "count": 35,
-      "posts": 35,
-      "percentage": 18.92
+      "count": 31,
+      "posts": 31,
+      "percentage": 15.2
     },
     {
       "source": "TELEGRAM",
       "name": "TELEGRAM",
-      "count": 14,
-      "posts": 14,
-      "percentage": 7.57
+      "count": 13,
+      "posts": 13,
+      "percentage": 6.37
     }
   ],
   "correlation": {
-    "correlated_events": 3,
-    "correlated_sources": 3,
-    "grouped_sources": 11,
-    "event_groups": 756,
-    "active_groups": 756,
+    "correlated_events": 4,
+    "correlated_sources": 4,
+    "grouped_sources": 12,
+    "event_groups": 757,
+    "active_groups": 757,
     "multi_source_groups": 70,
     "strongest_match": 1.0,
-    "correlation_rate": 27.27
+    "correlation_rate": 33.33
   },
   "technical_health": "HEALTHY",
   "collector_health": "HEALTHY",
@@ -183,44 +215,44 @@
     "reddit_collector_errors": 0,
     "mastodon_collector_errors": 0,
     "database": "AVAILABLE",
-    "last_run_id": 466,
-    "last_completed_at": "2026-11-27T23:50:45Z"
+    "last_run_id": 467,
+    "last_completed_at": "2026-11-28T05:17:40Z"
   },
   "operational_assessment": {
-    "operational_events_24h": 11,
-    "influence_signals_24h": 8,
+    "operational_events_24h": 12,
+    "influence_signals_24h": 9,
     "access_signals_24h": 0,
-    "correlated_events_24h": 3,
-    "active_event_groups": 756,
+    "correlated_events_24h": 4,
+    "active_event_groups": 757,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "hotspot": "WESTERN_MEDITERRANEAN",
-    "dominant_event_type": "BORDER_CROSSING",
+    "dominant_event_type": "DETENTION",
     "dominant_source": "X",
     "average_confidence": 0.429,
     "confidence_level": "LOW",
-    "correlation_rate": 27.27,
+    "correlation_rate": 33.33,
     "activity_level": "ELEVATED",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 11 operatív migrációs eseményt, 8 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 3 friss eseményforrás korrelált más forrással. Jelenleg 756 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.43. A jelenlegi aktivitási szint: ELEVATED.",
+    "summary": "Az elmúlt 24 órában a rendszer 12 operatív migrációs eseményt, 9 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 4 friss eseményforrás korrelált más forrással. Jelenleg 757 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Detention. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.43. A jelenlegi aktivitási szint: ELEVATED.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
   "analytical_assessment": {
-    "operational_events_24h": 11,
-    "influence_signals_24h": 8,
+    "operational_events_24h": 12,
+    "influence_signals_24h": 9,
     "access_signals_24h": 0,
-    "correlated_events_24h": 3,
-    "active_event_groups": 756,
+    "correlated_events_24h": 4,
+    "active_event_groups": 757,
     "dominant_region": "WESTERN_MEDITERRANEAN",
     "hotspot": "WESTERN_MEDITERRANEAN",
-    "dominant_event_type": "BORDER_CROSSING",
+    "dominant_event_type": "DETENTION",
     "dominant_source": "X",
     "average_confidence": 0.429,
     "confidence_level": "LOW",
-    "correlation_rate": 27.27,
+    "correlation_rate": 33.33,
     "activity_level": "ELEVATED",
     "system_health": "HEALTHY",
-    "summary": "Az elmúlt 24 órában a rendszer 11 operatív migrációs eseményt, 8 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 3 friss eseményforrás korrelált más forrással. Jelenleg 756 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Border Crossing. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.43. A jelenlegi aktivitási szint: ELEVATED.",
+    "summary": "Az elmúlt 24 órában a rendszer 12 operatív migrációs eseményt, 9 influence/early-warning jelzést és 0 átkelési vagy bejutási jelzést tart nyilván. 4 friss eseményforrás korrelált más forrással. Jelenleg 757 aktív eseménycsoport szerepel az adatbázisban. A legerősebb regionális aktivitás: Western Mediterranean. A domináns operatív eseménytípus: Detention. A legaktívabb adatforrás: X. Az aktív eseménycsoportok átlagos konfidenciája 0.43. A jelenlegi aktivitási szint: ELEVATED.",
     "historical_review_status": "PROVISIONAL_UNRECALCULATED",
     "historical_review_warning": "Before 2026-10-17: historical, not AI-reviewed. Only newly ingested candidates from cutoff onward are AI gated. REVIEW/EXCLUDE are withheld, not deleted from database. Legacy KPI/risk metrics remain provisional; no independent fact-checking."
   },
@@ -380,6 +412,89 @@
     }
   ],
   "high_priority_intelligence": [
+    {
+      "id": 1528,
+      "source": "X",
+      "source_post_id": "2126540008056115517",
+      "author": "WorldwideNNX",
+      "language": "en",
+      "published_at": "2026-11-28T04:53:41Z",
+      "first_detected_at": "2026-11-28T05:16:17Z",
+      "last_detected_at": "2026-11-28T05:16:17Z",
+      "detection_count": 1,
+      "text": "A tragic ending for a number of migrants attempting to make their way to Spain. Here's Janice Kirkel:: “At least 8 migrants were found dead when a boat carrying about 100 people was rescued near Spain's Canary Islands. The surge in arrivals to Spain has overwhelmed regional... https://t.co/1MB9PpWD82",
+      "text_excerpt": "A tragic ending for a number of migrants attempting to make their way to Spain. Here's Janice Kirkel:: “At least 8 migrants were found dead when a boat carrying about 100 people was rescued near Spain's Canary Islands. The surge in arrivals to Spain has overwhelmed regional... https://t.co/1MB9PpWD82",
+      "url": "https://x.com/WorldwideNNX/status/2126540008056115517",
+      "source_url": "https://x.com/WorldwideNNX/status/2126540008056115517",
+      "primary_signal": "PRESSURE_EARLY_WARNING",
+      "signal_type": "PRESSURE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "PRESSURE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.9,
+      "score": 12.25,
+      "matched_signals": [
+        "PRESSURE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "boat"
+        ],
+        [
+          "enforcement",
+          "rescued"
+        ],
+        [
+          "pressure",
+          "surge"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT",
+        "PRESSURE"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "surge"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Canary Islands",
+      "primary_location": "Canary Islands",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 28.2916,
+      "longitude": -16.6291,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 42.5,
+      "analyst_priority": "MEDIUM",
+      "related_posts_count": 1,
+      "related_post_ids": [
+        "2126540008056115517"
+      ],
+      "related_authors": [
+        "WorldwideNNX"
+      ],
+      "related_urls": [
+        "https://x.com/WorldwideNNX/status/2126540008056115517"
+      ],
+      "related_sources": [
+        "X"
+      ],
+      "independent_author_count": 1,
+      "platform_count": 1,
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
     {
       "id": 752,
       "group_id": 752,
@@ -573,6 +688,257 @@
   ],
   "influence_signals": [
     {
+      "id": 1528,
+      "source": "X",
+      "source_post_id": "2126540008056115517",
+      "author": "WorldwideNNX",
+      "language": "en",
+      "published_at": "2026-11-28T04:53:41Z",
+      "first_detected_at": "2026-11-28T05:16:17Z",
+      "last_detected_at": "2026-11-28T05:16:17Z",
+      "detection_count": 1,
+      "text": "A tragic ending for a number of migrants attempting to make their way to Spain. Here's Janice Kirkel:: “At least 8 migrants were found dead when a boat carrying about 100 people was rescued near Spain's Canary Islands. The surge in arrivals to Spain has overwhelmed regional... https://t.co/1MB9PpWD82",
+      "text_excerpt": "A tragic ending for a number of migrants attempting to make their way to Spain. Here's Janice Kirkel:: “At least 8 migrants were found dead when a boat carrying about 100 people was rescued near Spain's Canary Islands. The surge in arrivals to Spain has overwhelmed regional... https://t.co/1MB9PpWD82",
+      "url": "https://x.com/WorldwideNNX/status/2126540008056115517",
+      "source_url": "https://x.com/WorldwideNNX/status/2126540008056115517",
+      "primary_signal": "PRESSURE_EARLY_WARNING",
+      "signal_type": "PRESSURE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "PRESSURE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.9,
+      "score": 12.25,
+      "matched_signals": [
+        "PRESSURE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "boat"
+        ],
+        [
+          "enforcement",
+          "rescued"
+        ],
+        [
+          "pressure",
+          "surge"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT",
+        "PRESSURE"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "surge"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Canary Islands",
+      "primary_location": "Canary Islands",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 28.2916,
+      "longitude": -16.6291,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 42.5,
+      "analyst_priority": "MEDIUM",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
+      "id": 1526,
+      "source": "X",
+      "source_post_id": "2126544684508172304",
+      "author": "AsiaOne_News",
+      "language": "en",
+      "published_at": "2026-11-28T05:12:16Z",
+      "first_detected_at": "2026-11-28T05:16:16Z",
+      "last_detected_at": "2026-11-28T05:16:16Z",
+      "detection_count": 1,
+      "text": "At Least 14 Migrants Found Dead on Boat Rescued Near Canary Islands | Asia One News\n\n#Asiaone #AsiaOneNews #EnglishNews #Spain #CanaryIslands #ElHierro #Migrants #Gambia https://t.co/oi3jZVKVWO",
+      "text_excerpt": "At Least 14 Migrants Found Dead on Boat Rescued Near Canary Islands | Asia One News\n\n#Asiaone #AsiaOneNews #EnglishNews #Spain #CanaryIslands #ElHierro #Migrants #Gambia https://t.co/oi3jZVKVWO",
+      "url": "https://x.com/AsiaOne_News/status/2126544684508172304",
+      "source_url": "https://x.com/AsiaOne_News/status/2126544684508172304",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.25,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "Boat"
+        ],
+        [
+          "enforcement",
+          "Rescued"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "Migrants"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Canary Islands",
+      "primary_location": "Canary Islands",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 28.2916,
+      "longitude": -16.6291,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 36.2,
+      "analyst_priority": "LOW",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
+      "id": 1527,
+      "source": "X",
+      "source_post_id": "2126540518469533905",
+      "author": "thesavera_times",
+      "language": "en",
+      "published_at": "2026-11-28T04:55:43Z",
+      "first_detected_at": "2026-11-28T05:16:17Z",
+      "last_detected_at": "2026-11-28T05:16:17Z",
+      "detection_count": 1,
+      "text": "Live | 14 Migrants De*ad, 90 Rescued After Boat Drifts Near Spain's Canary Islands\n#Spain #CanaryIslands #MigrantBoat #BoatTragedy #SpainNews #MigrantDeaths #RescueOperation #BreakingNews https://t.co/FmypotutnX",
+      "text_excerpt": "Live | 14 Migrants De*ad, 90 Rescued After Boat Drifts Near Spain's Canary Islands\n#Spain #CanaryIslands #MigrantBoat #BoatTragedy #SpainNews #MigrantDeaths #RescueOperation #BreakingNews https://t.co/FmypotutnX",
+      "url": "https://x.com/thesavera_times/status/2126540518469533905",
+      "source_url": "https://x.com/thesavera_times/status/2126540518469533905",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.25,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "Boat"
+        ],
+        [
+          "enforcement",
+          "Rescued"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "Migrants"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Canary Islands",
+      "primary_location": "Canary Islands",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 28.2916,
+      "longitude": -16.6291,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 36.2,
+      "analyst_priority": "LOW",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
+      "id": 1529,
+      "source": "X",
+      "source_post_id": "2126534048092918006",
+      "author": "AJEnglish",
+      "language": "en",
+      "published_at": "2026-11-28T04:30:00Z",
+      "first_detected_at": "2026-11-28T05:16:17Z",
+      "last_detected_at": "2026-11-28T05:16:17Z",
+      "detection_count": 1,
+      "text": "At least eight migrants have been found dead on a boat carrying about 100 people rescued near Spain’s Canary Islands.   \n\nSix others were airlifted to hospital in serious condition, authorities say https://t.co/PU6XoeLt5H https://t.co/WyZzmpKZsX",
+      "text_excerpt": "At least eight migrants have been found dead on a boat carrying about 100 people rescued near Spain’s Canary Islands.   \n\nSix others were airlifted to hospital in serious condition, authorities say https://t.co/PU6XoeLt5H https://t.co/WyZzmpKZsX",
+      "url": "https://x.com/AJEnglish/status/2126534048092918006",
+      "source_url": "https://x.com/AJEnglish/status/2126534048092918006",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.25,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "boat"
+        ],
+        [
+          "enforcement",
+          "rescued"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Canary Islands",
+      "primary_location": "Canary Islands",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 28.2916,
+      "longitude": -16.6291,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 36.2,
+      "analyst_priority": "LOW",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
       "id": 1519,
       "source": "X",
       "source_post_id": "2126184284419416278",
@@ -632,6 +998,257 @@
     }
   ],
   "early_warning_signals": [
+    {
+      "id": 1528,
+      "source": "X",
+      "source_post_id": "2126540008056115517",
+      "author": "WorldwideNNX",
+      "language": "en",
+      "published_at": "2026-11-28T04:53:41Z",
+      "first_detected_at": "2026-11-28T05:16:17Z",
+      "last_detected_at": "2026-11-28T05:16:17Z",
+      "detection_count": 1,
+      "text": "A tragic ending for a number of migrants attempting to make their way to Spain. Here's Janice Kirkel:: “At least 8 migrants were found dead when a boat carrying about 100 people was rescued near Spain's Canary Islands. The surge in arrivals to Spain has overwhelmed regional... https://t.co/1MB9PpWD82",
+      "text_excerpt": "A tragic ending for a number of migrants attempting to make their way to Spain. Here's Janice Kirkel:: “At least 8 migrants were found dead when a boat carrying about 100 people was rescued near Spain's Canary Islands. The surge in arrivals to Spain has overwhelmed regional... https://t.co/1MB9PpWD82",
+      "url": "https://x.com/WorldwideNNX/status/2126540008056115517",
+      "source_url": "https://x.com/WorldwideNNX/status/2126540008056115517",
+      "primary_signal": "PRESSURE_EARLY_WARNING",
+      "signal_type": "PRESSURE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "PRESSURE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.9,
+      "score": 12.25,
+      "matched_signals": [
+        "PRESSURE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "boat"
+        ],
+        [
+          "enforcement",
+          "rescued"
+        ],
+        [
+          "pressure",
+          "surge"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT",
+        "PRESSURE"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "surge"
+      ],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Canary Islands",
+      "primary_location": "Canary Islands",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 28.2916,
+      "longitude": -16.6291,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 42.5,
+      "analyst_priority": "MEDIUM",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
+      "id": 1526,
+      "source": "X",
+      "source_post_id": "2126544684508172304",
+      "author": "AsiaOne_News",
+      "language": "en",
+      "published_at": "2026-11-28T05:12:16Z",
+      "first_detected_at": "2026-11-28T05:16:16Z",
+      "last_detected_at": "2026-11-28T05:16:16Z",
+      "detection_count": 1,
+      "text": "At Least 14 Migrants Found Dead on Boat Rescued Near Canary Islands | Asia One News\n\n#Asiaone #AsiaOneNews #EnglishNews #Spain #CanaryIslands #ElHierro #Migrants #Gambia https://t.co/oi3jZVKVWO",
+      "text_excerpt": "At Least 14 Migrants Found Dead on Boat Rescued Near Canary Islands | Asia One News\n\n#Asiaone #AsiaOneNews #EnglishNews #Spain #CanaryIslands #ElHierro #Migrants #Gambia https://t.co/oi3jZVKVWO",
+      "url": "https://x.com/AsiaOne_News/status/2126544684508172304",
+      "source_url": "https://x.com/AsiaOne_News/status/2126544684508172304",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.25,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "Boat"
+        ],
+        [
+          "enforcement",
+          "Rescued"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "Migrants"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Canary Islands",
+      "primary_location": "Canary Islands",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 28.2916,
+      "longitude": -16.6291,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 36.2,
+      "analyst_priority": "LOW",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
+      "id": 1527,
+      "source": "X",
+      "source_post_id": "2126540518469533905",
+      "author": "thesavera_times",
+      "language": "en",
+      "published_at": "2026-11-28T04:55:43Z",
+      "first_detected_at": "2026-11-28T05:16:17Z",
+      "last_detected_at": "2026-11-28T05:16:17Z",
+      "detection_count": 1,
+      "text": "Live | 14 Migrants De*ad, 90 Rescued After Boat Drifts Near Spain's Canary Islands\n#Spain #CanaryIslands #MigrantBoat #BoatTragedy #SpainNews #MigrantDeaths #RescueOperation #BreakingNews https://t.co/FmypotutnX",
+      "text_excerpt": "Live | 14 Migrants De*ad, 90 Rescued After Boat Drifts Near Spain's Canary Islands\n#Spain #CanaryIslands #MigrantBoat #BoatTragedy #SpainNews #MigrantDeaths #RescueOperation #BreakingNews https://t.co/FmypotutnX",
+      "url": "https://x.com/thesavera_times/status/2126540518469533905",
+      "source_url": "https://x.com/thesavera_times/status/2126540518469533905",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.25,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "Boat"
+        ],
+        [
+          "enforcement",
+          "Rescued"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "Migrants"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Canary Islands",
+      "primary_location": "Canary Islands",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 28.2916,
+      "longitude": -16.6291,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 36.2,
+      "analyst_priority": "LOW",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
+    {
+      "id": 1529,
+      "source": "X",
+      "source_post_id": "2126534048092918006",
+      "author": "AJEnglish",
+      "language": "en",
+      "published_at": "2026-11-28T04:30:00Z",
+      "first_detected_at": "2026-11-28T05:16:17Z",
+      "last_detected_at": "2026-11-28T05:16:17Z",
+      "detection_count": 1,
+      "text": "At least eight migrants have been found dead on a boat carrying about 100 people rescued near Spain’s Canary Islands.   \n\nSix others were airlifted to hospital in serious condition, authorities say https://t.co/PU6XoeLt5H https://t.co/WyZzmpKZsX",
+      "text_excerpt": "At least eight migrants have been found dead on a boat carrying about 100 people rescued near Spain’s Canary Islands.   \n\nSix others were airlifted to hospital in serious condition, authorities say https://t.co/PU6XoeLt5H https://t.co/WyZzmpKZsX",
+      "url": "https://x.com/AJEnglish/status/2126534048092918006",
+      "source_url": "https://x.com/AJEnglish/status/2126534048092918006",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.72,
+      "score": 7.25,
+      "matched_signals": [
+        "ROUTE_EARLY_WARNING"
+      ],
+      "matched_phrases": [
+        [
+          "route",
+          "boat"
+        ],
+        [
+          "enforcement",
+          "rescued"
+        ]
+      ],
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT"
+      ],
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [],
+      "signal_context_rejections": [],
+      "migration_context": true,
+      "human_migration_context": true,
+      "historical_reference": false,
+      "historical_reason": null,
+      "historical_reference_text": null,
+      "location": "Canary Islands",
+      "primary_location": "Canary Islands",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 28.2916,
+      "longitude": -16.6291,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 36.2,
+      "analyst_priority": "LOW",
+      "ai_review_status": "AI_REVIEWED",
+      "ai_editorial_decision": "PUBLISH"
+    },
     {
       "id": 1519,
       "source": "X",
@@ -693,66 +1310,79 @@
   ],
   "influence_narratives": [
     {
-      "id": 1521,
+      "id": 1528,
       "source": "X",
-      "source_post_id": "2126168978506883253",
-      "author": "Mrbandot1",
+      "source_post_id": "2126540008056115517",
+      "author": "WorldwideNNX",
       "language": "en",
-      "published_at": "2026-11-27T04:19:21Z",
-      "first_detected_at": "2026-11-27T05:39:30Z",
-      "last_detected_at": "2026-11-27T05:39:30Z",
+      "published_at": "2026-11-28T04:53:41Z",
+      "first_detected_at": "2026-11-28T05:16:17Z",
+      "last_detected_at": "2026-11-28T05:16:17Z",
       "detection_count": 1,
-      "text": "@DeepLeaksHQ 🐂💩Old video from 2022, recycled with false framing.\n\nIt first appeared on TikTok on 19 January 2022 (account @ramo_repus). The original caption described children and adults found in a truck after a dangerous journey to the UK — consistent with migrant smuggling, not a",
-      "text_excerpt": "@DeepLeaksHQ 🐂💩Old video from 2022, recycled with false framing.\n\nIt first appeared on TikTok on 19 January 2022 (account @ramo_repus). The original caption described children and adults found in a truck after a dangerous journey to the UK — consistent with migrant smuggling, not a",
-      "url": "https://x.com/Mrbandot1/status/2126168978506883253",
-      "source_url": "https://x.com/Mrbandot1/status/2126168978506883253",
-      "primary_signal": "RECRUITMENT_COORDINATION",
-      "signal_type": "RECRUITMENT_COORDINATION",
-      "signal_mode": "DIRECT",
-      "signal_intent": "RECRUITMENT_COORDINATION",
-      "priority": "HIGH",
-      "confidence": 0.97,
-      "score": 16.0,
+      "text": "A tragic ending for a number of migrants attempting to make their way to Spain. Here's Janice Kirkel:: “At least 8 migrants were found dead when a boat carrying about 100 people was rescued near Spain's Canary Islands. The surge in arrivals to Spain has overwhelmed regional... https://t.co/1MB9PpWD82",
+      "text_excerpt": "A tragic ending for a number of migrants attempting to make their way to Spain. Here's Janice Kirkel:: “At least 8 migrants were found dead when a boat carrying about 100 people was rescued near Spain's Canary Islands. The surge in arrivals to Spain has overwhelmed regional... https://t.co/1MB9PpWD82",
+      "url": "https://x.com/WorldwideNNX/status/2126540008056115517",
+      "source_url": "https://x.com/WorldwideNNX/status/2126540008056115517",
+      "primary_signal": "PRESSURE_EARLY_WARNING",
+      "signal_type": "PRESSURE_EARLY_WARNING",
+      "signal_mode": "ANALYST_REVIEW",
+      "signal_intent": "PRESSURE_REVIEW",
+      "priority": "MEDIUM",
+      "confidence": 0.9,
+      "score": 12.25,
       "matched_signals": [
-        "RECRUITMENT_COORDINATION"
+        "PRESSURE_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
-          "smuggling_ecosystem",
-          "migrant smuggling"
+          "route",
+          "boat"
+        ],
+        [
+          "enforcement",
+          "rescued"
+        ],
+        [
+          "pressure",
+          "surge"
         ]
       ],
-      "matched_groups": [],
-      "context_matches": [
-        "migrant",
-        "migrant smuggling"
+      "matched_groups": [
+        "ROUTE",
+        "ENFORCEMENT",
+        "PRESSURE"
       ],
-      "high_value_matches": false,
-      "signal_context_rejections": {},
+      "context_matches": [
+        "migrants"
+      ],
+      "high_value_matches": [
+        "surge"
+      ],
+      "signal_context_rejections": [],
       "migration_context": true,
-      "human_migration_context": null,
+      "human_migration_context": true,
       "historical_reference": false,
       "historical_reason": null,
       "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
-      "rules_version": "2.6",
-      "priority_score": 57.95,
+      "location": "Canary Islands",
+      "primary_location": "Canary Islands",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 28.2916,
+      "longitude": -16.6291,
+      "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
+      "priority_score": 42.5,
       "analyst_priority": "MEDIUM",
       "related_posts_count": 1,
       "related_post_ids": [
-        "2126168978506883253"
+        "2126540008056115517"
       ],
       "related_authors": [
-        "Mrbandot1"
+        "WorldwideNNX"
       ],
       "related_urls": [
-        "https://x.com/Mrbandot1/status/2126168978506883253"
+        "https://x.com/WorldwideNNX/status/2126540008056115517"
       ],
       "related_sources": [
         "X"
@@ -833,74 +1463,72 @@
       "platform_count": 1
     },
     {
-      "id": 1523,
+      "id": 1526,
       "source": "X",
-      "source_post_id": "2126335091269906718",
-      "author": "TranslateMom",
+      "source_post_id": "2126544684508172304",
+      "author": "AsiaOne_News",
       "language": "en",
-      "published_at": "2026-11-27T15:19:25Z",
-      "first_detected_at": "2026-11-27T15:45:53Z",
-      "last_detected_at": "2026-11-27T15:45:53Z",
+      "published_at": "2026-11-28T05:12:16Z",
+      "first_detected_at": "2026-11-28T05:16:16Z",
+      "last_detected_at": "2026-11-28T05:16:16Z",
       "detection_count": 1,
-      "text": "@jetsetpapi @laamendegoku @QBoro2Thoro @YotinSeg @savege509 @Chalana305 @got_cake @keriexotic1 @Galoa2257 @HaytiZoe @MrBlack27073911 This clip shows a shocked reaction to armed migrants arriving by boat...\n\nNow ready with English captions.\n\nhttps://t.co/HL90KVwWW0\n\nMore videos: reply with @TranslateMom + your target language.\n\nBlack Friday · 67% off your first year vs. paying monthly. https://t.co/ljVMGvn7HE https://t.co/PBYOSxag2S",
-      "text_excerpt": "@jetsetpapi @laamendegoku @QBoro2Thoro @YotinSeg @savege509 @Chalana305 @got_cake @keriexotic1 @Galoa2257 @HaytiZoe @MrBlack27073911 This clip shows a shocked reaction to armed migrants arriving by boat...\n\nNow ready with English captions.\n\nhttps://t.co/HL90KVwWW0\n\nMore videos: reply with @TranslateMom + your target language.\n\nBlack Friday · 67% off your first year vs. paying monthly. https://t.co/ljVMGvn7HE https://t.co/PBYOSxag2S",
-      "url": "https://x.com/TranslateMom/status/2126335091269906718",
-      "source_url": "https://x.com/TranslateMom/status/2126335091269906718",
-      "primary_signal": "MOVEMENT_EARLY_WARNING",
-      "signal_type": "MOVEMENT_EARLY_WARNING",
+      "text": "At Least 14 Migrants Found Dead on Boat Rescued Near Canary Islands | Asia One News\n\n#Asiaone #AsiaOneNews #EnglishNews #Spain #CanaryIslands #ElHierro #Migrants #Gambia https://t.co/oi3jZVKVWO",
+      "text_excerpt": "At Least 14 Migrants Found Dead on Boat Rescued Near Canary Islands | Asia One News\n\n#Asiaone #AsiaOneNews #EnglishNews #Spain #CanaryIslands #ElHierro #Migrants #Gambia https://t.co/oi3jZVKVWO",
+      "url": "https://x.com/AsiaOne_News/status/2126544684508172304",
+      "source_url": "https://x.com/AsiaOne_News/status/2126544684508172304",
+      "primary_signal": "ROUTE_EARLY_WARNING",
+      "signal_type": "ROUTE_EARLY_WARNING",
       "signal_mode": "ANALYST_REVIEW",
-      "signal_intent": "MOVEMENT_REVIEW",
+      "signal_intent": "ROUTE_REVIEW",
       "priority": "MEDIUM",
-      "confidence": 0.8,
-      "score": 8.25,
+      "confidence": 0.72,
+      "score": 7.25,
       "matched_signals": [
-        "MOVEMENT_EARLY_WARNING"
+        "ROUTE_EARLY_WARNING"
       ],
       "matched_phrases": [
         [
-          "movement",
-          "migrants arriving"
+          "route",
+          "Boat"
         ],
         [
-          "route",
-          "boat"
+          "enforcement",
+          "Rescued"
         ]
       ],
       "matched_groups": [
-        "MOVEMENT",
-        "ROUTE"
+        "ROUTE",
+        "ENFORCEMENT"
       ],
       "context_matches": [
-        "migrants"
+        "Migrants"
       ],
-      "high_value_matches": [
-        "migrants arriving"
-      ],
+      "high_value_matches": [],
       "signal_context_rejections": [],
       "migration_context": true,
       "human_migration_context": true,
       "historical_reference": false,
       "historical_reason": null,
       "historical_reference_text": null,
-      "location": "-",
-      "primary_location": "-",
-      "country": "-",
-      "region": "GLOBAL",
-      "primary_region": "GLOBAL",
-      "latitude": null,
-      "longitude": null,
+      "location": "Canary Islands",
+      "primary_location": "Canary Islands",
+      "country": "Spain",
+      "region": "WESTERN_MEDITERRANEAN",
+      "primary_region": "WESTERN_MEDITERRANEAN",
+      "latitude": 28.2916,
+      "longitude": -16.6291,
       "rules_version": "EARLY_WARNING_REVIEW_V1_3_7_NORWEGIAN",
-      "priority_score": 28.0,
+      "priority_score": 36.2,
       "analyst_priority": "LOW",
       "related_posts_count": 1,
       "related_post_ids": [
-        "2126335091269906718"
+        "2126544684508172304"
       ],
       "related_authors": [
-        "TranslateMom"
+        "AsiaOne_News"
       ],
       "related_urls": [
-        "https://x.com/TranslateMom/status/2126335091269906718"
+        "https://x.com/AsiaOne_News/status/2126544684508172304"
       ],
       "related_sources": [
         "X"
@@ -1038,13 +1666,13 @@
       "label": "W48",
       "week_label": "W48",
       "week_start": "2026-11-23T00:00:00Z",
-      "posts": 816,
-      "post_count": 816,
-      "operational_posts": 40,
-      "influence_signals": 30,
+      "posts": 867,
+      "post_count": 867,
+      "operational_posts": 42,
+      "influence_signals": 34,
       "source_counts": {
-        "X": 597,
-        "MASTODON": 150,
+        "X": 643,
+        "MASTODON": 155,
         "TELEGRAM": 69
       }
     }
@@ -1174,32 +1802,32 @@
       "label": "W48",
       "week_label": "W48",
       "week_start": "2026-11-23T00:00:00Z",
-      "posts": 816,
-      "post_count": 816,
-      "operational_posts": 40,
-      "influence_signals": 30,
+      "posts": 867,
+      "post_count": 867,
+      "operational_posts": 42,
+      "influence_signals": 34,
       "source_counts": {
-        "X": 597,
-        "MASTODON": 150,
+        "X": 643,
+        "MASTODON": 155,
         "TELEGRAM": 69
       }
     }
   ],
   "information_activity_summary": {
-    "current_week": 816,
-    "previous_week": 977,
-    "current_week_to_date": 816,
-    "previous_week_same_period": 977,
+    "current_week": 867,
+    "previous_week": 1035,
+    "current_week_to_date": 867,
+    "previous_week_same_period": 1035,
     "previous_week_full": 1391,
     "comparison_basis": "WEEK_TO_DATE_SAME_PERIOD",
-    "change_percent": -16.48,
-    "change_label": "-16.5%",
+    "change_percent": -16.23,
+    "change_label": "-16.2%",
     "direction": "DOWN",
     "comparable": true,
-    "elapsed_hours": 119.8,
+    "elapsed_hours": 125.3,
     "current_period_start": "2026-11-23T00:00:00Z",
     "previous_period_start": "2026-11-16T00:00:00Z",
-    "previous_period_end": "2026-11-20T23:50:45Z"
+    "previous_period_end": "2026-11-21T05:17:41Z"
   },
   "signal_timeline": {
     "schema_version": "2.0",
@@ -1211,38 +1839,38 @@
       72,
       168
     ],
-    "generated_at": "2026-11-27T23:50:46Z",
-    "total_items": 1878,
-    "information_count": 240,
-    "early_warning_count": 807,
-    "operational_count": 681,
-    "correlated_count": 150,
+    "generated_at": "2026-11-28T05:17:42Z",
+    "total_items": 1888,
+    "information_count": 243,
+    "early_warning_count": 811,
+    "operational_count": 683,
+    "correlated_count": 151,
     "layer_counts": {
-      "INFORMATION": 240,
-      "CORRELATED": 150,
-      "EARLY_WARNING": 807,
-      "OPERATIONAL": 681
+      "INFORMATION": 243,
+      "EARLY_WARNING": 811,
+      "CORRELATED": 151,
+      "OPERATIONAL": 683
     },
     "source_counts": {
-      "X": 1424,
-      "MASTODON": 96,
-      "TELEGRAM": 48,
+      "X": 1434,
+      "MASTODON": 95,
+      "TELEGRAM": 49,
       "REDDIT": 310
     },
     "type_counts": {
-      "INFORMATION_SIGNAL": 240,
-      "DETENTION": 89,
+      "INFORMATION_SIGNAL": 243,
+      "ROUTE_EARLY_WARNING": 132,
+      "PRESSURE_EARLY_WARNING": 37,
+      "DETENTION": 91,
       "DEPORTATION": 153,
       "FACILITATION_EARLY_WARNING": 154,
       "RECRUITMENT_COORDINATION": 17,
-      "PRESSURE_EARLY_WARNING": 36,
       "MOVEMENT_EARLY_WARNING": 286,
-      "BORDER_CROSSING": 375,
+      "BORDER_CROSSING": 376,
       "SMUGGLING_ACTIVITY": 33,
       "CASUALTY": 25,
       "RESCUE_OPERATION": 40,
       "INTERCEPTION": 40,
-      "ROUTE_EARLY_WARNING": 129,
       "MOBILIZATION_COORDINATION": 22,
       "BORDER_MEASURE": 19,
       "LEGAL_MIGRATION_SIGNAL": 75,
@@ -1255,6 +1883,366 @@
       "DECISION_INFLUENCE": 3
     },
     "items": [
+      {
+        "timeline_id": "information:29392",
+        "timestamp": "2026-11-28T05:15:00Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2126545370368868564",
+        "author": "TRTWorldNow",
+        "url": "https://x.com/TRTWorldNow/status/2126545370368868564",
+        "source_url": "https://x.com/TRTWorldNow/status/2126545370368868564",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "route",
+          "boat",
+          "arrival"
+        ],
+        "freshness_cues": [],
+        "text": "Fourteen migrant bodies are recovered in Spain’s Canary Islands as boat arrivals surge on the deadly route, while immigration dominates Sunday’s election campaign https://t.co/xbySfYsOAJ",
+        "text_excerpt": "Fourteen migrant bodies are recovered in Spain’s Canary Islands as boat arrivals surge on the deadly route, while immigration dominates Sunday’s election campaign https://t.co/xbySfYsOAJ",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-28T05:15:51Z",
+        "last_collected_at": "2026-11-28T05:15:51Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "early_warning:1526",
+        "timestamp": "2026-11-28T05:12:16Z",
+        "layer": "EARLY_WARNING",
+        "type": "ROUTE_EARLY_WARNING",
+        "signal_type": "ROUTE_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2126544684508172304",
+        "author": "AsiaOne_News",
+        "url": "https://x.com/AsiaOne_News/status/2126544684508172304",
+        "source_url": "https://x.com/AsiaOne_News/status/2126544684508172304",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "Canary Islands",
+        "primary_location": "Canary Islands",
+        "country": "Spain",
+        "confidence": 0.72,
+        "priority": "MEDIUM",
+        "priority_score": 36.2,
+        "analyst_priority": "LOW",
+        "text": "At Least 14 Migrants Found Dead on Boat Rescued Near Canary Islands | Asia One News\n\n#Asiaone #AsiaOneNews #EnglishNews #Spain #CanaryIslands #ElHierro #Migrants #Gambia https://t.co/oi3jZVKVWO",
+        "text_excerpt": "At Least 14 Migrants Found Dead on Boat Rescued Near Canary Islands | Asia One News\n\n#Asiaone #AsiaOneNews #EnglishNews #Spain #CanaryIslands #ElHierro #Migrants #Gambia https://t.co/oi3jZVKVWO",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "ROUTE_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-11-28T05:16:16Z",
+        "last_detected_at": "2026-11-28T05:16:16Z",
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
+      {
+        "timeline_id": "information:29394",
+        "timestamp": "2026-11-28T05:04:48Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2126542805577134402",
+        "author": "geria_denis",
+        "url": "https://x.com/geria_denis/status/2126542805577134402",
+        "source_url": "https://x.com/geria_denis/status/2126542805577134402",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "crossing",
+          "smuggling"
+        ],
+        "freshness_cues": [],
+        "text": "@job_matua That 800km is not a line on a map. That is 800km of traders, farmers, families, refugees, ADF terrorists, smugglers and Ebola crossing into Uganda every day",
+        "text_excerpt": "@job_matua That 800km is not a line on a map. That is 800km of traders, farmers, families, refugees, ADF terrorists, smugglers and Ebola crossing into Uganda every day",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-28T05:15:51Z",
+        "last_collected_at": "2026-11-28T05:15:51Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "information:29395",
+        "timestamp": "2026-11-28T05:02:05Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2126542121524232581",
+        "author": "Jenn02175257781",
+        "url": "https://x.com/Jenn02175257781/status/2126542121524232581",
+        "source_url": "https://x.com/Jenn02175257781/status/2126542121524232581",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "border",
+          "trafficking"
+        ],
+        "freshness_cues": [],
+        "text": "X22 Report\n\n·14h@X22Report\n\nDHS confirms 4 of 6 suspects in a South Carolina human trafficking ring are illegal migrants from China.\nThis is what an open border built.",
+        "text_excerpt": "X22 Report\n\n·14h@X22Report\n\nDHS confirms 4 of 6 suspects in a South Carolina human trafficking ring are illegal migrants from China.\nThis is what an open border built.",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-28T05:15:51Z",
+        "last_collected_at": "2026-11-28T05:15:51Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "early_warning:1527",
+        "timestamp": "2026-11-28T04:55:43Z",
+        "layer": "EARLY_WARNING",
+        "type": "ROUTE_EARLY_WARNING",
+        "signal_type": "ROUTE_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2126540518469533905",
+        "author": "thesavera_times",
+        "url": "https://x.com/thesavera_times/status/2126540518469533905",
+        "source_url": "https://x.com/thesavera_times/status/2126540518469533905",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "Canary Islands",
+        "primary_location": "Canary Islands",
+        "country": "Spain",
+        "confidence": 0.72,
+        "priority": "MEDIUM",
+        "priority_score": 36.2,
+        "analyst_priority": "LOW",
+        "text": "Live | 14 Migrants De*ad, 90 Rescued After Boat Drifts Near Spain's Canary Islands\n#Spain #CanaryIslands #MigrantBoat #BoatTragedy #SpainNews #MigrantDeaths #RescueOperation #BreakingNews https://t.co/FmypotutnX",
+        "text_excerpt": "Live | 14 Migrants De*ad, 90 Rescued After Boat Drifts Near Spain's Canary Islands\n#Spain #CanaryIslands #MigrantBoat #BoatTragedy #SpainNews #MigrantDeaths #RescueOperation #BreakingNews https://t.co/FmypotutnX",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "ROUTE_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-11-28T05:16:17Z",
+        "last_detected_at": "2026-11-28T05:16:17Z",
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
+      {
+        "timeline_id": "early_warning:1528",
+        "timestamp": "2026-11-28T04:53:41Z",
+        "layer": "EARLY_WARNING",
+        "type": "PRESSURE_EARLY_WARNING",
+        "signal_type": "PRESSURE_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2126540008056115517",
+        "author": "WorldwideNNX",
+        "url": "https://x.com/WorldwideNNX/status/2126540008056115517",
+        "source_url": "https://x.com/WorldwideNNX/status/2126540008056115517",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "Canary Islands",
+        "primary_location": "Canary Islands",
+        "country": "Spain",
+        "confidence": 0.9,
+        "priority": "MEDIUM",
+        "priority_score": 42.5,
+        "analyst_priority": "MEDIUM",
+        "text": "A tragic ending for a number of migrants attempting to make their way to Spain. Here's Janice Kirkel:: “At least 8 migrants were found dead when a boat carrying about 100 people was rescued near Spain's Canary Islands. The surge in arrivals to Spain has overwhelmed regional... https://t.co/1MB9PpWD82",
+        "text_excerpt": "A tragic ending for a number of migrants attempting to make their way to Spain. Here's Janice Kirkel:: “At least 8 migrants were found dead when a boat carrying about 100 people was rescued near Spain's Canary Islands. The surge in arrivals to Spain has overwhelmed regional... https://t.co/1MB9PpWD82",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "PRESSURE_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-11-28T05:16:17Z",
+        "last_detected_at": "2026-11-28T05:16:17Z",
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
+      {
+        "timeline_id": "information:29398",
+        "timestamp": "2026-11-28T04:45:00Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2126537820449767690",
+        "author": "DDIndialive",
+        "url": "https://x.com/DDIndialive/status/2126537820449767690",
+        "source_url": "https://x.com/DDIndialive/status/2126537820449767690",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 30,
+        "information_score": 3,
+        "matched_information_cues": [
+          "crossing",
+          "boat",
+          "interception"
+        ],
+        "freshness_cues": [],
+        "text": "At least eight migrants have died and six are airlifted in serious condition after rescuers intercept a boat carrying around 100 people south of #ElHierro in #Spain’s #CanaryIslands.\n\nThe tragedy highlights the dangers of the perilous Atlantic crossing from West Africa, https://t.co/JMX8LmAnVx",
+        "text_excerpt": "At least eight migrants have died and six are airlifted in serious condition after rescuers intercept a boat carrying around 100 people south of #ElHierro in #Spain’s #CanaryIslands.\n\nThe tragedy highlights the dangers of the perilous Atlantic crossing from West Africa, https://t.co/JMX8LmAnVx",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-28T05:15:52Z",
+        "last_collected_at": "2026-11-28T05:15:52Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "early_warning:1529",
+        "timestamp": "2026-11-28T04:30:00Z",
+        "layer": "EARLY_WARNING",
+        "type": "ROUTE_EARLY_WARNING",
+        "signal_type": "ROUTE_EARLY_WARNING",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2126534048092918006",
+        "author": "AJEnglish",
+        "url": "https://x.com/AJEnglish/status/2126534048092918006",
+        "source_url": "https://x.com/AJEnglish/status/2126534048092918006",
+        "region": "WESTERN_MEDITERRANEAN",
+        "primary_region": "WESTERN_MEDITERRANEAN",
+        "location": "Canary Islands",
+        "primary_location": "Canary Islands",
+        "country": "Spain",
+        "confidence": 0.72,
+        "priority": "MEDIUM",
+        "priority_score": 36.2,
+        "analyst_priority": "LOW",
+        "text": "At least eight migrants have been found dead on a boat carrying about 100 people rescued near Spain’s Canary Islands.   \n\nSix others were airlifted to hospital in serious condition, authorities say https://t.co/PU6XoeLt5H https://t.co/WyZzmpKZsX",
+        "text_excerpt": "At least eight migrants have been found dead on a boat carrying about 100 people rescued near Spain’s Canary Islands.   \n\nSix others were airlifted to hospital in serious condition, authorities say https://t.co/PU6XoeLt5H https://t.co/WyZzmpKZsX",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "signal_mode": "ANALYST_REVIEW",
+        "signal_intent": "ROUTE_REVIEW",
+        "detection_count": 1,
+        "first_detected_at": "2026-11-28T05:16:17Z",
+        "last_detected_at": "2026-11-28T05:16:17Z",
+        "ai_review_status": "AI_REVIEWED",
+        "ai_editorial_decision": "PUBLISH"
+      },
+      {
+        "timeline_id": "information:29400",
+        "timestamp": "2026-11-28T04:19:59Z",
+        "layer": "INFORMATION",
+        "type": "INFORMATION_SIGNAL",
+        "signal_type": "INFORMATION_SIGNAL",
+        "event_type": null,
+        "source": "X",
+        "source_post_id": "2126531524262854712",
+        "author": "DalenaReporters",
+        "url": "https://x.com/DalenaReporters/status/2126531524262854712",
+        "source_url": "https://x.com/DalenaReporters/status/2126531524262854712",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "confidence": 0.1,
+        "priority": "INFO",
+        "priority_score": 20,
+        "information_score": 2,
+        "matched_information_cues": [
+          "crossing",
+          "boat"
+        ],
+        "freshness_cues": [],
+        "text": "14 Migrants Found Dead on Boat Off Spain’s Canary Islands as Atlantic Crossing Crisis Deepens... Read More https://t.co/cORDUD07Vy https://t.co/fmUu0pMCKa",
+        "text_excerpt": "14 Migrants Found Dead on Boat Off Spain’s Canary Islands as Atlantic Crossing Crisis Deepens... Read More https://t.co/cORDUD07Vy https://t.co/fmUu0pMCKa",
+        "event_group_id": null,
+        "correlation_score": null,
+        "related_source_count": null,
+        "is_operational": false,
+        "influence_detected": false,
+        "first_collected_at": "2026-11-28T05:15:52Z",
+        "last_collected_at": "2026-11-28T05:15:52Z",
+        "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "correlated:989",
+        "timestamp": "2026-11-28T03:45:21Z",
+        "layer": "CORRELATED",
+        "type": "DETENTION",
+        "signal_type": "DETENTION",
+        "event_type": "DETENTION",
+        "source": "X",
+        "source_post_id": "2126522811229573152",
+        "author": "DonnaWi62318154",
+        "url": "https://x.com/DonnaWi62318154/status/2126522811229573152",
+        "source_url": "https://x.com/DonnaWi62318154/status/2126522811229573152",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.25,
+        "priority": "MEDIUM",
+        "priority_score": 25.0,
+        "text": "DHS Confirms 4 of 6 Arrested in SC for Human Trafficking are Illegal Migrants https://t.co/gV8zrlmXLW via @BreitbartNews",
+        "text_excerpt": "DHS Confirms 4 of 6 Arrested in SC for Human Trafficking are Illegal Migrants https://t.co/gV8zrlmXLW via @BreitbartNews",
+        "event_group_id": 772,
+        "correlation_score": 0.64,
+        "related_source_count": 4,
+        "source_types": [
+          "X"
+        ],
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
       {
         "timeline_id": "information:29340",
         "timestamp": "2026-11-27T23:44:32Z",
@@ -1319,7 +2307,7 @@
         "text_excerpt": "@GenFlynn @RealCraigSawyer \nDHS Confirms 4 of 6 Arrested in SC for Human Trafficking are Illegal Migrants https://t.co/s8Xw5w98IY via @BreitbartNews",
         "event_group_id": 772,
         "correlation_score": 0.59,
-        "related_source_count": 3,
+        "related_source_count": 4,
         "source_types": [
           "X"
         ],
@@ -1351,7 +2339,7 @@
         "text_excerpt": "DHS Confirms 4 of 6 Arrested in SC for Human Trafficking are Illegal Migrants https://t.co/5YuVjHVCPP via @BreitbartNews",
         "event_group_id": 772,
         "correlation_score": 0.63,
-        "related_source_count": 3,
+        "related_source_count": 4,
         "source_types": [
           "X"
         ],
@@ -3171,6 +4159,38 @@
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
+        "timeline_id": "operational:971",
+        "timestamp": "2026-11-25T18:20:19Z",
+        "layer": "OPERATIONAL",
+        "type": "DETENTION",
+        "signal_type": "DETENTION",
+        "event_type": "DETENTION",
+        "source": "TELEGRAM",
+        "source_post_id": "1983050450:25816",
+        "author": "migranty_draki",
+        "url": "https://t.me/migranty_draki/25816",
+        "source_url": "https://t.me/migranty_draki/25816",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.2,
+        "priority": "LOW",
+        "priority_score": 20.0,
+        "text": "Курьер на электроскутере устроил GTA-погоню на Новоясеневском проспекте\n\nПолицейские на Новоясеневском проспекте заметили водителя электроскутера, который ехал посередине проезжей части, и погнались за ним. Мигрант пытался скрыться по улицам и дворам, но его всё-таки задержали.\n\nОказалось, что иностранный специалист находился в России незаконно и был включён в реестр контролируемых лиц — но это не мешало ему работать курьером и зарабатывать деньги. Ему выписали штрафы на сумму свыше 35 тыс. рублей и предписали покинуть страну (разумеется, он на это забьёт).",
+        "text_excerpt": "Курьер на электроскутере устроил GTA-погоню на Новоясеневском проспекте\n\nПолицейские на Новоясеневском проспекте заметили водителя электроскутера, который ехал посередине проезжей части, и погнались за ним. Мигрант пытался скрыться по улицам и дворам, но его всё-таки задержали.\n\nОказалось, что иностранный специалист находился в России незаконно и был включён в реестр контролируемых лиц — но это не мешало ему работать…",
+        "event_group_id": 762,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
         "timeline_id": "information:28941",
         "timestamp": "2026-11-25T10:25:53Z",
         "layer": "INFORMATION",
@@ -3394,6 +4414,38 @@
         "first_collected_at": "2026-11-25T10:40:22Z",
         "last_collected_at": "2026-11-25T10:40:22Z",
         "collection_count": 1,
+        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
+      },
+      {
+        "timeline_id": "operational:969",
+        "timestamp": "2026-11-25T09:59:07Z",
+        "layer": "OPERATIONAL",
+        "type": "BORDER_CROSSING",
+        "signal_type": "BORDER_CROSSING",
+        "event_type": "BORDER_CROSSING",
+        "source": "X",
+        "source_post_id": "2125529708569751804",
+        "author": "LeftHandedSWM",
+        "url": "https://x.com/LeftHandedSWM/status/2125529708569751804",
+        "source_url": "https://x.com/LeftHandedSWM/status/2125529708569751804",
+        "region": "GLOBAL",
+        "primary_region": "GLOBAL",
+        "location": "-",
+        "primary_location": "-",
+        "country": "-",
+        "latitude": null,
+        "longitude": null,
+        "confidence": 0.25,
+        "priority": "LOW",
+        "priority_score": 25.0,
+        "text": "@DailyMail @grok how many migrants have arrived to date?",
+        "text_excerpt": "@DailyMail @grok how many migrants have arrived to date?",
+        "event_group_id": 761,
+        "correlation_score": null,
+        "related_source_count": null,
+        "event_time_text": null,
+        "event_time_normalized": null,
+        "event_time_confidence": null,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -14154,86 +15206,6 @@
         "event_time_text": null,
         "event_time_normalized": null,
         "event_time_confidence": null,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:26716",
-        "timestamp": "2026-11-13T22:35:17Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "MASTODON",
-        "source_post_id": "mastodon_117611516231696602",
-        "author": null,
-        "url": "https://mastodon.social/@WINGS_radio/117611516231696602",
-        "source_url": "https://mastodon.social/@WINGS_radio/117611516231696602",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 50,
-        "information_score": 5,
-        "matched_information_cues": [
-          "border",
-          "deportation",
-          "arrival"
-        ],
-        "freshness_cues": [
-          "breaking"
-        ],
-        "text": "BREAKING: Justices Will Review If Trump Can Bypass Asylum At Border By Britain Eakin The U.S. # SupremeCourt on Friday (13 November) said it will review whether President Donald # Trump 's # proclamation # declaring an # invasion and imposing # restrictions on # entering the country # allows the administration to # quickly # deport # people arriving at the # border and # block them from # seeking # asylum . [via Law360]",
-        "text_excerpt": "BREAKING: Justices Will Review If Trump Can Bypass Asylum At Border By Britain Eakin The U.S. # SupremeCourt on Friday (13 November) said it will review whether President Donald # Trump 's # proclamation # declaring an # invasion and imposing # restrictions on # entering the country # allows the administration to # quickly # deport # people arriving at the # border and # block them from # seeking # asylum . [via Law3…",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-14T00:32:27Z",
-        "last_collected_at": "2026-11-14T16:12:45Z",
-        "collection_count": 3,
-        "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
-      },
-      {
-        "timeline_id": "information:26662",
-        "timestamp": "2026-11-13T18:52:01Z",
-        "layer": "INFORMATION",
-        "type": "INFORMATION_SIGNAL",
-        "signal_type": "INFORMATION_SIGNAL",
-        "event_type": null,
-        "source": "X",
-        "source_post_id": "2121315162682536411",
-        "author": "ItsFederico",
-        "url": "https://x.com/ItsFederico/status/2121315162682536411",
-        "source_url": "https://x.com/ItsFederico/status/2121315162682536411",
-        "region": "GLOBAL",
-        "primary_region": "GLOBAL",
-        "location": "-",
-        "primary_location": "-",
-        "country": "-",
-        "confidence": 0.1,
-        "priority": "INFO",
-        "priority_score": 30,
-        "information_score": 3,
-        "matched_information_cues": [
-          "route",
-          "boat",
-          "arrival"
-        ],
-        "freshness_cues": [],
-        "text": "THE CANARY ISLANDS ARE BEING FLOODED BY MIGRANT BOATS.\n\n49 BOATS. 4587 ARRIVALS. IN JUST SIX DAYS.\n\nAnd Frontex says October arrivals on the route were FOUR TIMES higher than a year ago.\n\nSo tell me: how is this supposed to be “under control”?",
-        "text_excerpt": "THE CANARY ISLANDS ARE BEING FLOODED BY MIGRANT BOATS.\n\n49 BOATS. 4587 ARRIVALS. IN JUST SIX DAYS.\n\nAnd Frontex says October arrivals on the route were FOUR TIMES higher than a year ago.\n\nSo tell me: how is this supposed to be “under control”?",
-        "event_group_id": null,
-        "correlation_score": null,
-        "related_source_count": null,
-        "is_operational": false,
-        "influence_detected": false,
-        "first_collected_at": "2026-11-13T18:52:44Z",
-        "last_collected_at": "2026-11-13T18:52:44Z",
-        "collection_count": 1,
         "ai_review_status": "HISTORICAL_NOT_AI_REVIEWED"
       },
       {
@@ -64021,19 +64993,19 @@
     "review_start_date": "2026-10-17",
     "review_cohort": "FIRST_RECORDED_ON_OR_AFTER_CUTOFF",
     "decisions": {
-      "EXCLUDE": 190,
-      "REVIEW": 191,
-      "PUBLISH": 140
+      "REVIEW": 192,
+      "EXCLUDE": 188,
+      "PUBLISH": 145
     },
     "removed_display_items": {
       "live_events": 20,
       "high_confidence_events": 1,
-      "event_groups": 10,
-      "influence_signals": 7,
-      "early_warning_signals": 7,
+      "event_groups": 9,
+      "influence_signals": 4,
+      "early_warning_signals": 4,
       "crossing_access_signals": 0,
       "top_crossing_access_posts": 0,
-      "high_priority_intelligence": 2,
+      "high_priority_intelligence": 1,
       "access_signals": 0,
       "timeline": 372
     },

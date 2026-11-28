@@ -1,20 +1,12 @@
 {
-  "generated_at": "2026-11-27T23:52:21.117751+00:00",
+  "generated_at": "2026-11-28T05:18:55.497868+00:00",
   "version": "3.0",
-  "candidates": 521,
-  "new_ai_calls": 6,
+  "candidates": 525,
+  "new_ai_calls": 8,
   "conflicting_identity_ids": [
     "group:775"
   ],
   "decisions": {
-    "post:969": {
-      "decision": "EXCLUDE",
-      "reason": "The post is a query asking for information but does not report a concrete, contemporary migration-related event or provide specific data on migration."
-    },
-    "post:971": {
-      "decision": "REVIEW",
-      "reason": "The post describes a detention of an illegal migrant who attempted to flee police on an electric scooter. However, the event's date is in the future (2026), making it uncertain if this is a contemporary event or a fictional/incorrectly dated claim. Location is not clearly specified and event details lack external verification, so more corroboration"
-    },
     "post:972": {
       "decision": "REVIEW",
       "reason": "Inconsistent approval: The post reports a concrete, contemporary migration-related event: a level 2 emergency declared in the Canary Islands specifically due to a mass arrival of migrants by sea, supporting the BORDER_CROSSING event type."
@@ -87,21 +79,17 @@
       "decision": "REVIEW",
       "reason": "The event reports a specific high number of illegal migrant arrivals in Spain and the Canary Islands on a recent date, which is migration-relevant. However, the publication date is in the future (2026), making the timing suspicious. Event details need verification or updated from a current source before publishing."
     },
-    "signal:1518": {
+    "post:990": {
       "decision": "REVIEW",
-      "reason": "The report alleges abuse by border police against migrants at the Turkish-Bulgarian border, which is consistent with a route-specific early warning signal. However, the claim is severe and lacks corroboration or precise location details to confirm the event as a current migration-specific operational event or verified early warning."
+      "reason": "The posted event describes a rescue operation of migrants which fits the migration operational event criteria, but the event date appears to be far in the future (2026), inconsistent with current or contemporary reporting. Without verification of the event's timing, it cannot be confirmed as a current event yet."
+    },
+    "post:991": {
+      "decision": "REVIEW",
+      "reason": "The event claims detention related to human trafficking involving illegal migrants, which is potentially migration-specific. However, the report lacks concrete details such as date of the incident, location specifics, or corroboration. The future publication date (2026) also suggests possible misinformation or error. Further verification needed."
     },
     "signal:1519": {
       "decision": "PUBLISH",
       "reason": "This is a concrete migration-related early warning signal reporting on ongoing systemic forced labor, sexual exploitation, enslavement, and ransom of migrants in Libya, based on a February 2026 UNSMIL-OHCHR report. The event type FACILITATION_EARLY_WARNING is appropriate as it warns about trafficking and forced labor affecting migrants. Although no"
-    },
-    "signal:1520": {
-      "decision": "REVIEW",
-      "reason": "The post expresses an opinion about illegal migrants and troop deployment, but does not report a concrete, specific migration-related event or actionable early warning. It lacks details of facilitation or early warning event."
-    },
-    "signal:1521": {
-      "decision": "EXCLUDE",
-      "reason": "The content explicitly states the video is old (from 2022) and recycled with false framing. It refers to a past event and does not report a new or current migration-related event. Also, the event_type 'RECRUITMENT_COORDINATION' is not supported by the content, which describes the discovery of smuggled migrants, not recruitment activities."
     },
     "signal:1522": {
       "decision": "EXCLUDE",
@@ -119,13 +107,25 @@
       "decision": "REVIEW",
       "reason": "The content discusses income inequality among migrants in the U.S. but does not report a specific, concrete migration policy action, early warning, or route/access signal. The event_type 'POLICY_SIGNAL' is not clearly supported by the text as an actual policy event or signal."
     },
+    "signal:1526": {
+      "decision": "PUBLISH",
+      "reason": "The report details a concrete, contemporary migration event involving the discovery of 14 deceased migrants on a boat near the Canary Islands, which is a significant migration-related incident and fits the early warning about route hazards or risks."
+    },
+    "signal:1527": {
+      "decision": "PUBLISH",
+      "reason": "The record reports a specific, contemporary migration-related event involving migrants dead and rescued after a boat drift near the Canary Islands, which is migration-specific and aligns with a route early warning signal about dangerous sea crossings in the region."
+    },
+    "signal:1528": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a specific, contemporary migration-related event involving migrant deaths near Spain's Canary Islands, fitting the migration-specific early warning event type."
+    },
+    "signal:1529": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete and contemporary migration-related early warning event involving a boat carrying about 100 migrants near the Canary Islands, with casualties and rescues. The event type ROUTE_EARLY_WARNING is appropriate given the description of a migrant route incident and rescue operation. This is a valid migration-specific signal."
+    },
     "group:693": {
       "decision": "EXCLUDE",
       "reason": "The event_type is incorrectly labeled as DEPORTATION, but the content describes migrant arrivals, not deportations. The event concerns migrant arrivals to El Hierro and Tenerife, which indicates an influx event. However, the event_type must be relevant and correct for publication. Without a proper event type such as ARRIVAL or INFLUX, we cannot pub"
-    },
-    "group:766": {
-      "decision": "EXCLUDE",
-      "reason": "The post does not report any concrete migration event; it is a question about statistics without data or report of actual border crossings or migration movements."
     },
     "group:768": {
       "decision": "REVIEW",
@@ -145,7 +145,7 @@
     },
     "group:772": {
       "decision": "REVIEW",
-      "reason": "The report claims arrests related to human trafficking involving illegal migrants, which relates to migration and detention. However, the location is unspecified and the claim is based on a secondary source (Breitbart) with no corroborated details. Verification of event specifics and timing is needed to confirm it as a contemporary, concrete migrat"
+      "reason": "The post claims a detention event related to illegal migrants arrested for human trafficking, but lacks specific details such as location, date, and source verification. The event's timing and authenticity cannot be confirmed from the given data."
     },
     "group:773": {
       "decision": "EXCLUDE",
@@ -158,6 +158,10 @@
     "group:775": {
       "decision": "REVIEW",
       "reason": "Conflicting content for the same ID across dashboard sections"
+    },
+    "group:776": {
+      "decision": "PUBLISH",
+      "reason": "The post reports a concrete, contemporary migration event involving the rescue of around 184 migrants in two Coast Guard operations off southern Crete. The event type 'RESCUE_OPERATION' is appropriate and matches the content. Although the event date is not explicitly given, the COVID-19-era context and presence of Frontex drones provide sufficient "
     },
     "signal:1034": {
       "decision": "REVIEW",
@@ -2090,6 +2094,18 @@
     "signal:1517": {
       "decision": "PUBLISH",
       "reason": "The record describes a concrete, contemporary signal related to migration: the USAID director addressing Facebook groups organizing an immigrant caravan, indicating coordination efforts pertinent to migration control policies. This aligns with an early warning or policy action regarding a migration-specific event."
+    },
+    "signal:1518": {
+      "decision": "REVIEW",
+      "reason": "The report alleges abuse by border police against migrants at the Turkish-Bulgarian border, which is consistent with a route-specific early warning signal. However, the claim is severe and lacks corroboration or precise location details to confirm the event as a current migration-specific operational event or verified early warning."
+    },
+    "signal:1520": {
+      "decision": "REVIEW",
+      "reason": "The post expresses an opinion about illegal migrants and troop deployment, but does not report a concrete, specific migration-related event or actionable early warning. It lacks details of facilitation or early warning event."
+    },
+    "signal:1521": {
+      "decision": "EXCLUDE",
+      "reason": "The content explicitly states the video is old (from 2022) and recycled with false framing. It refers to a past event and does not report a new or current migration-related event. Also, the event_type 'RECRUITMENT_COORDINATION' is not supported by the content, which describes the discovery of smuggled migrants, not recruitment activities."
     }
   }
 }

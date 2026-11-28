@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-11-27T23:52:21.430851+00:00",
+  "generated_at": "2026-11-28T05:18:55.767340+00:00",
   "source": "dashboard-data.json / signal_timeline.items",
   "date_basis": "UTC source publication date; dashboard uses browser local dates",
   "selection": "daily dominant hotspot, matching matrixResolvedHotspot",
@@ -1028,7 +1028,7 @@
         "X": 3
       },
       "marker": null,
-      "total_timeline_items": 11
+      "total_timeline_items": 9
     },
     {
       "date": "2026-11-14",
@@ -1196,7 +1196,7 @@
         "longitude": -4.0,
         "precision": "illustrative_region"
       },
-      "total_timeline_items": 21
+      "total_timeline_items": 23
     },
     {
       "date": "2026-11-26",
@@ -1227,6 +1227,21 @@
         "precision": "illustrative_region"
       },
       "total_timeline_items": 25
+    },
+    {
+      "date": "2026-11-28",
+      "region": "WESTERN_MEDITERRANEAN",
+      "location": "Canary Islands",
+      "records": 4,
+      "sources": {
+        "X": 4
+      },
+      "marker": {
+        "latitude": 28.2916,
+        "longitude": -16.6291,
+        "precision": "configured_location"
+      },
+      "total_timeline_items": 10
     }
   ],
   "seven_day_windows": [
@@ -5956,11 +5971,59 @@
         }
       ],
       "unresolved_records": 4
+    },
+    {
+      "start_date": "2026-11-22",
+      "end_date": "2026-11-28",
+      "hotspots": [
+        {
+          "region": "WESTERN_MEDITERRANEAN",
+          "location": null,
+          "records": 6,
+          "active_days": 4,
+          "dates": [
+            "2026-11-24",
+            "2026-11-25",
+            "2026-11-26",
+            "2026-11-27"
+          ],
+          "marker": {
+            "latitude": 36.0,
+            "longitude": -4.0,
+            "precision": "illustrative_region"
+          }
+        },
+        {
+          "region": "WESTERN_MEDITERRANEAN",
+          "location": "Canary Islands",
+          "records": 4,
+          "active_days": 1,
+          "dates": [
+            "2026-11-28"
+          ],
+          "marker": {
+            "latitude": 28.2916,
+            "longitude": -16.6291,
+            "precision": "configured_location"
+          }
+        },
+        {
+          "region": "MIDDLE_EAST",
+          "location": null,
+          "records": 1,
+          "active_days": 1,
+          "dates": [
+            "2026-11-22"
+          ],
+          "marker": null
+        }
+      ],
+      "unresolved_records": 4
     }
   ],
   "latest_window": {
-    "start_date": "2026-11-21",
-    "end_date": "2026-11-27",
+    "start_date": "2026-11-22",
+    "end_date": "2026-11-28",
     "hotspots": [
       {
         "region": "WESTERN_MEDITERRANEAN",
@@ -5981,15 +6044,15 @@
       },
       {
         "region": "WESTERN_MEDITERRANEAN",
-        "location": "Ceuta",
-        "records": 3,
+        "location": "Canary Islands",
+        "records": 4,
         "active_days": 1,
         "dates": [
-          "2026-11-21"
+          "2026-11-28"
         ],
         "marker": {
-          "latitude": 35.8894,
-          "longitude": -5.3213,
+          "latitude": 28.2916,
+          "longitude": -16.6291,
           "precision": "configured_location"
         }
       },
@@ -6007,7 +6070,7 @@
     "unresolved_records": 4
   },
   "summary": {
-    "days_with_data": 89,
-    "available_windows": 89
+    "days_with_data": 90,
+    "available_windows": 90
   }
 }
